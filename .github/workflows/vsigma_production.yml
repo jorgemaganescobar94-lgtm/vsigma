@@ -1,10 +1,10 @@
-﻿name: vSIGMA Daily Automation
+﻿name: vSIGMA Production
 
 on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "Modo: pre | prelock | post | post-yesterday | health"
+        description: "Modo: health | pre | prelock | post | post-yesterday"
         required: true
         default: "health"
         type: choice
@@ -20,39 +20,40 @@ on:
         default: ""
 
   schedule:
-    # PRE diario 09:00 Atlantic/Canary
+    # 08:15 Atlantic/Canary - backup de resultados de ayer
+    - cron: "15 8 * * *"
+      timezone: "Atlantic/Canary"
+
+    # 09:00 Atlantic/Canary - PRE
     - cron: "0 9 * * *"
       timezone: "Atlantic/Canary"
 
-    # PRELOCK versión gratis/controlada
+    # PRELOCK free-safe: 11:00, 13:00, 15:00, 17:00, 19:00, 21:00, 23:00
     - cron: "0 11,13,15,17,19,21,23 * * *"
       timezone: "Atlantic/Canary"
 
-    # POST diario 23:55 Atlantic/Canary
+    # 23:55 Atlantic/Canary - POST
     - cron: "55 23 * * *"
-      timezone: "Atlantic/Canary"
-
-    # POST backup yesterday 08:15 Atlantic/Canary
-    - cron: "15 8 * * *"
       timezone: "Atlantic/Canary"
 
 permissions:
   contents: write
 
 concurrency:
-  group: vsigma-daily-main
+  group: vsigma-production-main
   cancel-in-progress: false
 
 jobs:
   run-vsigma:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
 
     steps:
-            - name: Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 0
           token: ${{ github.token }}
 
       - name: Setup Python
@@ -92,6 +93,10 @@ jobs:
 
           if [ "$EVENT_NAME" = "schedule" ]; then
             case "$SCHEDULE" in
+              "15 8 * * *")
+                MODE="post-yesterday"
+                DATE_INPUT="$YESTERDAY"
+                ;;
               "0 9 * * *")
                 MODE="pre"
                 DATE_INPUT="$TODAY"
@@ -103,10 +108,6 @@ jobs:
               "55 23 * * *")
                 MODE="post"
                 DATE_INPUT="$TODAY"
-                ;;
-              "15 8 * * *")
-                MODE="post-yesterday"
-                DATE_INPUT="$YESTERDAY"
                 ;;
               *)
                 MODE="health"
@@ -134,7 +135,10 @@ jobs:
         run: |
           echo "Running vSIGMA mode=$VSIGMA_MODE date=$VSIGMA_DATE"
 
-          if [ "$VSIGMA_MODE" = "pre" ]; then
+          if [ "$VSIGMA_MODE" = "health" ]; then
+            python scripts/run_vsigma_healthcheck.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --mode full
+
+          elif [ "$VSIGMA_MODE" = "pre" ]; then
             python scripts/run_today_match_pipeline.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
           elif [ "$VSIGMA_MODE" = "prelock" ]; then
@@ -146,11 +150,8 @@ jobs:
           elif [ "$VSIGMA_MODE" = "post-yesterday" ]; then
             python scripts/run_today_post_results_pipeline.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
-          elif [ "$VSIGMA_MODE" = "health" ]; then
-            python scripts/run_vsigma_healthcheck.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --mode full
-
           else
-            echo "Modo no válido: $VSIGMA_MODE"
+            echo "Invalid mode: $VSIGMA_MODE"
             exit 2
           fi
 
@@ -160,11 +161,14 @@ jobs:
           git config user.name "vSIGMA GitHub Actions Bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          git status --short
+
           git add \
             data/raw \
             data/processed/today \
             data/processed/ledger \
             data/processed/governance \
+            data/processed/health \
             data/processed/daily_supervisor_latest.md \
             notes/competition_versions.md \
             notes/competition_scoreboard.md \
@@ -176,6 +180,5 @@ jobs:
             exit 0
           fi
 
-                    git commit -m "vSIGMA ${VSIGMA_MODE} ${VSIGMA_DATE} [skip ci]"
-          git pull --rebase origin main || true
+          git commit -m "vSIGMA ${VSIGMA_MODE} ${VSIGMA_DATE} [skip ci]"
           git push origin HEAD:main
