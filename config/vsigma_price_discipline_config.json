@@ -1,0 +1,72 @@
+{
+  "default_rule": {
+    "market_family": "DEFAULT",
+    "failure_mode": "ANY",
+    "min_edge": 0.055,
+    "min_calibrated_probability": 0.62,
+    "drift_status_penalty": {
+      "UNKNOWN": 0.0,
+      "SAMPLE_TOO_SMALL": 0.0,
+      "NO_DRIFT": 0.0,
+      "WATCH_PATTERN": 0.018,
+      "ACTIVE_DRIFT": 0.04,
+      "NEEDS_RECALIBRATION": 0.08
+    },
+    "allow_secondary_only": true,
+    "require_prelock_if_watch_pattern": false
+  },
+  "rules": [
+    {
+      "market_family": "OVER_1_5",
+      "failure_mode": "LOW_CONVERSION",
+      "min_edge": 0.125,
+      "min_calibrated_probability": 0.77,
+      "drift_status_penalty": {
+        "WATCH_PATTERN": 0.018,
+        "ACTIVE_DRIFT": 0.045,
+        "NEEDS_RECALIBRATION": 0.09
+      },
+      "allow_secondary_only": true,
+      "require_prelock_if_watch_pattern": true
+    },
+    {
+      "market_family": "OVER_2_5",
+      "failure_mode": "LOW_CONVERSION",
+      "min_edge": 0.155,
+      "min_calibrated_probability": 0.72,
+      "drift_status_penalty": {
+        "WATCH_PATTERN": 0.025,
+        "ACTIVE_DRIFT": 0.05,
+        "NEEDS_RECALIBRATION": 0.10
+      },
+      "allow_secondary_only": true,
+      "require_prelock_if_watch_pattern": true
+    },
+    {
+      "market_family": "BTTS_YES",
+      "failure_mode": "BTTS_BREAK",
+      "min_edge": 0.105,
+      "min_calibrated_probability": 0.66,
+      "drift_status_penalty": {
+        "WATCH_PATTERN": 0.02,
+        "ACTIVE_DRIFT": 0.045,
+        "NEEDS_RECALIBRATION": 0.09
+      },
+      "allow_secondary_only": true,
+      "require_prelock_if_watch_pattern": true
+    },
+    {
+      "market_family": "WIN",
+      "failure_mode": "DRAW_LIVE",
+      "min_edge": 0.115,
+      "min_calibrated_probability": 0.58,
+      "drift_status_penalty": {
+        "WATCH_PATTERN": 0.02,
+        "ACTIVE_DRIFT": 0.045,
+        "NEEDS_RECALIBRATION": 0.09
+      },
+      "allow_secondary_only": true,
+      "require_prelock_if_watch_pattern": true
+    }
+  ]
+}

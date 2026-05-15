@@ -1,0 +1,6 @@
+target_date,fixture_id,league,home_team,away_team,market_primary,experiment_id,source_candidate_version,pre_price,prelock_price,close_proxy_price,clv_delta,clv_percent,clv_direction,clv_interpretation,result,profit_units,snapshot_rebuild_mode,true_pre_snapshot_available_flag,clv_usable_for_threshold_calibration_flag,source_snapshot_stage,source_snapshot_note
+2026-05-09,1391176,La Liga,Real Madrid,Oviedo,BTTS_YES,OFFICIAL_BASELINE,OFFICIAL_RESULTS,,,1.91,,,CLV_UNAVAILABLE,CLV_TRACKING_INSUFFICIENT_TRUE_PRE_MISSING,,,,0,0,,
+2026-05-09,1391177,La Liga,Valencia,Rayo Vallecano,OVER_1_5,CANDIDATE_V2_SCHEDULE_ANOMALY,CANDIDATE_V2_RESULTS,,,1.4,,,CLV_UNAVAILABLE,CLV_TRACKING_INSUFFICIENT_TRUE_PRE_MISSING,,,,0,0,,
+2026-05-09,1391177,La Liga,Valencia,Rayo Vallecano,OVER_1_5,OFFICIAL_BASELINE,OFFICIAL_BASELINE_PRELOCK;OFFICIAL_RESULTS,,,1.4,,,CLV_UNAVAILABLE,CLV_TRACKING_INSUFFICIENT_TRUE_PRE_MISSING,,,,0,0,,
+2026-05-09,1544064,League One,Bradford,Bolton,OVER_1_5,CANDIDATE_V2_SCHEDULE_ANOMALY,CANDIDATE_V2_RESULTS,,,1.33,,,CLV_UNAVAILABLE,CLV_TRACKING_INSUFFICIENT_TRUE_PRE_MISSING,,,,0,0,,
+2026-05-09,1544064,League One,Bradford,Bolton,OVER_1_5,OFFICIAL_BASELINE,OFFICIAL_BASELINE_PRELOCK;OFFICIAL_RESULTS,,,1.33,,,CLV_UNAVAILABLE,CLV_TRACKING_INSUFFICIENT_TRUE_PRE_MISSING,,,,0,0,,

@@ -1,0 +1,26 @@
+country,league,league_tier,league_filter_reason,matches
+Switzerland,Challenge League,REJECT,country_league_not_allowlisted,5
+Colombia,Liga Femenina,REJECT,hard_reject_noise_league,4
+Argentina,Primera C,REJECT,country_league_not_allowlisted,3
+Brazil,Brasileiro Women,REJECT,hard_reject_noise_league,3
+Cameroon,Elite Two,REJECT,country_league_not_allowlisted,3
+Argentina,Primera Nacional,REJECT,country_league_not_allowlisted,2
+Colombia,Copa Colombia,REJECT,country_league_not_allowlisted,2
+England,Professional Development League,REJECT,country_league_not_allowlisted,2
+Morocco,Botola Pro,REJECT,country_league_not_allowlisted,2
+Paraguay,Division Intermedia,REJECT,country_league_not_allowlisted,2
+Angola,Girabola,REJECT,country_league_not_allowlisted,1
+Barbados,Premier League,REJECT,country_league_not_allowlisted,1
+Bolivia,Primera División,REJECT,country_league_not_allowlisted,1
+Brazil,Serie D,REJECT,country_league_not_allowlisted,1
+Paraguay,Division Profesional - Apertura,REJECT,country_league_not_allowlisted,1
+Peru,Primera División,REJECT,country_league_not_allowlisted,1
+Romania,Liga I,REJECT,country_league_not_allowlisted,1
+Saudi-Arabia,Pro League,REJECT,country_league_not_allowlisted,1
+Uruguay,Primera División - Apertura,REJECT,country_league_not_allowlisted,1
+Portugal,Primeira Liga,TIER_1,portugal_primeira_liga,7
+England,Championship,TIER_1,england_championship,1
+England,Premier League,TIER_1,england_premier_league,1
+Italy,Serie A,TIER_1,italy_serie_a,1
+Spain,La Liga,TIER_1,spain_la_liga,1
+Spain,Segunda División,TIER_1,spain_segunda,1

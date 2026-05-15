@@ -1,0 +1,3 @@
+segment,rows_total,graded_rows,wins,losses,pushes,voids,profit_units_total,roi_percent
+ACCURACY_CORE,6,6,5,1,0,0,2.48,41.333333
+ACCURACY_EXTENDED_STRONG,3,3,2,1,0,0,-0.2,-6.666667

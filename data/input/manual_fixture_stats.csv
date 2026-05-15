@@ -1,0 +1,9 @@
+﻿fixture_id,date,country,league,league_tier,home_team,away_team,home_form_pts,away_form_pts,home_goals_for_pg,away_goals_for_pg,home_goals_against_pg,away_goals_against_pg,home_scored_rate,away_scored_rate,home_clean_sheet_rate,away_clean_sheet_rate,home_btts_rate,away_btts_rate,home_over15_rate,away_over15_rate,home_over25_rate,away_over25_rate,manual_notes
+1535293,2026-05-05,World,CONMEBOL Libertadores,TIER_1,Rosario Central,Libertad Asuncion,,,,,,,,,,,,,,,,,
+1535295,2026-05-05,World,CONMEBOL Libertadores,TIER_1,Sporting Cristal,Palmeiras,,,,,,,,,,,,,,,,,
+1543677,2026-05-05,Netherlands,Eredivisie,TIER_1,Waalwijk,Willem II,,,,,,,,,,,,,,,,,
+1540843,2026-05-05,World,UEFA Champions League,TIER_1,Arsenal,Atletico Madrid,,,,,,,,,,,,,,,,,
+1535194,2026-05-05,World,CONMEBOL Sudamericana,TIER_2,Deportivo Riestra,Gremio,,,,,,,,,,,,,,,,,
+1535195,2026-05-05,World,CONMEBOL Sudamericana,TIER_2,Independiente Petrolero,Caracas FC,,,,,,,,,,,,,,,,,
+1535196,2026-05-05,World,CONMEBOL Sudamericana,TIER_2,Juventud,Atletico-MG,,,,,,,,,,,,,,,,,
+1543679,2026-05-05,Scotland,Premiership,TIER_2,Dunfermline,Arbroath,,,,,,,,,,,,,,,,,

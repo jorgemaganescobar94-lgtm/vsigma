@@ -1,0 +1,88 @@
+{
+  "experiments": [
+    {
+      "experiment_id": "OFFICIAL_BASELINE",
+      "display_name": "vSIGMA Competition Accuracy Mode + Probability Calibration",
+      "status": "OFFICIAL",
+      "description": "Frozen official baseline selector used for daily competition picks.",
+      "parent_version": null,
+      "allowed_to_select_officially": true,
+      "selection_role": "official_selector",
+      "current_verdict": "FROZEN_OFFICIAL_BASELINE",
+      "created_date": null,
+      "notes": "Do not change selection logic through registry or ledger work."
+    },
+    {
+      "experiment_id": "CANDIDATE_V2_SCHEDULE_ANOMALY",
+      "display_name": "Candidate v2 Schedule Strength + Anomaly Cleaning",
+      "status": "SHADOW",
+      "description": "Main shadow retender using schedule strength and anomaly cleaning.",
+      "parent_version": "OFFICIAL_BASELINE",
+      "allowed_to_select_officially": false,
+      "selection_role": "shadow_selector",
+      "current_verdict": "MAIN_SHADOW_RETENDER_NOT_PROMOTED",
+      "created_date": null,
+      "notes": "Tracked separately from the official baseline."
+    },
+    {
+      "experiment_id": "CANDIDATE_V3_ODDS_DEPTH",
+      "display_name": "Candidate v3 Odds Structure Depth",
+      "status": "NOT_PROMOTED",
+      "description": "Partial odds depth experiment retained for audit context.",
+      "parent_version": "CANDIDATE_V2_SCHEDULE_ANOMALY",
+      "allowed_to_select_officially": false,
+      "selection_role": "audit_layer",
+      "current_verdict": "PARTIAL_NOT_PROMOTED",
+      "created_date": null,
+      "notes": "Optional output may be unavailable on daily runs."
+    },
+    {
+      "experiment_id": "CANDIDATE_V4_O25_FIREWALL",
+      "display_name": "Candidate v4 O2.5 Low Conversion Firewall",
+      "status": "SHADOW",
+      "description": "Shadow-only firewall for low-conversion Over 2.5 failure modes.",
+      "parent_version": "CANDIDATE_V2_SCHEDULE_ANOMALY",
+      "allowed_to_select_officially": false,
+      "selection_role": "shadow_selector",
+      "current_verdict": "PARTIAL_NOT_PROMOTED",
+      "created_date": null,
+      "notes": "Does not overwrite candidate v2 or official outputs."
+    },
+    {
+      "experiment_id": "CANDIDATE_V5_PLAYER_IMPACT",
+      "display_name": "Candidate v5 Player Impact Layer",
+      "status": "SHADOW",
+      "description": "Shadow-only player impact layer using reliable player coverage only.",
+      "parent_version": "CANDIDATE_V2_SCHEDULE_ANOMALY",
+      "allowed_to_select_officially": false,
+      "selection_role": "shadow_selector",
+      "current_verdict": "PARTIAL_NOT_PROMOTED",
+      "created_date": null,
+      "notes": "Missing player coverage is uncertainty, not weakness."
+    },
+    {
+      "experiment_id": "CANDIDATE_V6_API_PREDICTIONS",
+      "display_name": "Candidate v6 API Predictions Benchmark",
+      "status": "AUDIT_ONLY",
+      "description": "External API predictions benchmark used only to audit vSIGMA picks.",
+      "parent_version": "CANDIDATE_V2_SCHEDULE_ANOMALY",
+      "allowed_to_select_officially": false,
+      "selection_role": "audit_layer",
+      "current_verdict": "PARTIAL_NOT_PROMOTED",
+      "created_date": null,
+      "notes": "API predictions must not create picks by themselves."
+    },
+    {
+      "experiment_id": "CANDIDATE_V7_PRICE_DISCIPLINE",
+      "display_name": "Candidate v7 Price Discipline + CLV + Drift Execution Guard",
+      "status": "SHADOW",
+      "description": "Shadow-only execution governance layer using price discipline, CLV tracking, and drift-aware guards.",
+      "parent_version": "CANDIDATE_V2_SCHEDULE_ANOMALY",
+      "allowed_to_select_officially": false,
+      "selection_role": "shadow_selector",
+      "current_verdict": "PRICE_DISCIPLINE_UNTESTED",
+      "created_date": null,
+      "notes": "Does not create picks and does not alter official baseline selection logic."
+    }
+  ]
+}

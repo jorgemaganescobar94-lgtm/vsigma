@@ -1,0 +1,76 @@
+VSIGMA EXECUTION MODE COMPARISON
+
+Best mode: COMPETITION_ACCURACY_MODE | ROI=26.4% | profit=2.64u | graded=10
+
+Overall
+                     mode  rows_total  graded_rows  wins  losses  pushes  voids  hit_rate  profit_units_total  roi_percent  avg_odds  avg_edge  avg_execution_score  max_drawdown
+                CORE_ONLY          11           11     9       2       0      0 81.818182                2.77    25.181818  1.512727  0.194943           136.682450         -1.04
+       CORE_PLUS_STANDARD          14           14    11       3       0      0 78.571429                2.86    20.428571  1.520000  0.177635           133.603544         -1.04
+           FULL_SHORTLIST          20           20    16       4       0      0 80.000000                4.07    20.350000  1.493500  0.177766           124.640553         -0.74
+COMPETITION_ACCURACY_MODE          10           10     8       2       0      0 80.000000                2.64    26.400000  1.555000  0.214407           135.497683         -1.00
+
+Profit by date sequence
+                     mode historical_batch_date  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent  equity_units
+                CORE_ONLY            2026-05-04           1            1     1       0       0      0                0.50    50.000000          0.50
+                CORE_ONLY            2026-05-05           2            2     1       1       0      0               -0.67   -33.500000         -0.17
+                CORE_ONLY            2026-05-06           3            3     2       1       0      0               -0.37   -12.333333         -0.54
+                CORE_ONLY            2026-05-07           3            3     3       0       0      0                1.98    66.000000          1.44
+                CORE_ONLY            2026-05-08           2            2     2       0       0      0                1.33    66.500000          2.77
+       CORE_PLUS_STANDARD            2026-05-04           1            1     1       0       0      0                0.50    50.000000          0.50
+       CORE_PLUS_STANDARD            2026-05-05           2            2     1       1       0      0               -0.67   -33.500000         -0.17
+       CORE_PLUS_STANDARD            2026-05-06           3            3     2       1       0      0               -0.37   -12.333333         -0.54
+       CORE_PLUS_STANDARD            2026-05-07           3            3     3       0       0      0                1.98    66.000000          1.44
+       CORE_PLUS_STANDARD            2026-05-08           5            5     4       1       0      0                1.42    28.400000          2.86
+           FULL_SHORTLIST            2026-05-04           4            4     3       1       0      0                0.52    13.000000          0.52
+           FULL_SHORTLIST            2026-05-05           3            3     2       1       0      0               -0.37   -12.333333          0.15
+           FULL_SHORTLIST            2026-05-06           3            3     2       1       0      0               -0.37   -12.333333         -0.22
+           FULL_SHORTLIST            2026-05-07           3            3     3       0       0      0                1.98    66.000000          1.76
+           FULL_SHORTLIST            2026-05-08           7            7     6       1       0      0                2.31    33.000000          4.07
+COMPETITION_ACCURACY_MODE            2026-05-04           2            2     1       1       0      0               -0.50   -25.000000         -0.50
+COMPETITION_ACCURACY_MODE            2026-05-05           1            1     1       0       0      0                0.33    33.000000         -0.17
+COMPETITION_ACCURACY_MODE            2026-05-06           1            1     0       1       0      0               -1.00  -100.000000         -1.17
+COMPETITION_ACCURACY_MODE            2026-05-07           3            3     3       0       0      0                1.98    66.000000          0.81
+COMPETITION_ACCURACY_MODE            2026-05-08           3            3     3       0       0      0                1.83    61.000000          2.64
+
+Source mix
+                     mode execution_shortlist_source  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total roi_percent
+                CORE_ONLY               PREMIUM_CORE          11           11     9       2       0      0                2.77   25.181818
+       CORE_PLUS_STANDARD               PREMIUM_CORE          11           11     9       2       0      0                2.77   25.181818
+       CORE_PLUS_STANDARD              STANDARD_FILL           3            3     2       1       0      0                0.09         3.0
+           FULL_SHORTLIST               PREMIUM_CORE          11           11     9       2       0      0                2.77   25.181818
+           FULL_SHORTLIST           PREMIUM_EXTENDED           6            6     5       1       0      0                1.21   20.166667
+           FULL_SHORTLIST              STANDARD_FILL           3            3     2       1       0      0                0.09         3.0
+COMPETITION_ACCURACY_MODE               PREMIUM_CORE           8            8     7       1       0      0                3.14       39.25
+COMPETITION_ACCURACY_MODE           PREMIUM_EXTENDED           2            2     1       1       0      0               -0.50       -25.0
+COMPETITION_ACCURACY_MODE              STANDARD_FILL           0            0     0       0       0      0                0.00        <NA>
+
+Market composition
+                     mode market_primary  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+                CORE_ONLY       AWAY_WIN           1            1     1       0       0      0                1.00   100.000000
+                CORE_ONLY       BTTS_YES           1            1     1       0       0      0                0.31    31.000000
+                CORE_ONLY       OVER_1_5           7            7     5       2       0      0                0.04     0.571429
+                CORE_ONLY       OVER_2_5           2            2     2       0       0      0                1.42    71.000000
+       CORE_PLUS_STANDARD       AWAY_WIN           1            1     1       0       0      0                1.00   100.000000
+       CORE_PLUS_STANDARD       BTTS_YES           2            2     2       0       0      0                0.86    43.000000
+       CORE_PLUS_STANDARD       OVER_1_5           7            7     5       2       0      0                0.04     0.571429
+       CORE_PLUS_STANDARD       OVER_2_5           4            4     3       1       0      0                0.96    24.000000
+           FULL_SHORTLIST       AWAY_WIN           1            1     1       0       0      0                1.00   100.000000
+           FULL_SHORTLIST       BTTS_YES           2            2     2       0       0      0                0.86    43.000000
+           FULL_SHORTLIST       OVER_1_5          10           10     7       3       0      0               -0.16    -1.600000
+           FULL_SHORTLIST       OVER_2_5           5            5     4       1       0      0                1.68    33.600000
+           FULL_SHORTLIST      UNDER_3_5           2            2     2       0       0      0                0.69    34.500000
+COMPETITION_ACCURACY_MODE       AWAY_WIN           1            1     1       0       0      0                1.00   100.000000
+COMPETITION_ACCURACY_MODE       OVER_1_5           7            7     5       2       0      0                0.22     3.142857
+COMPETITION_ACCURACY_MODE       OVER_2_5           2            2     2       0       0      0                1.42    71.000000
+
+Bucket composition
+                     mode     accuracy_mode_bucket  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+                CORE_ONLY            ACCURACY_CORE           8            8     7       1       0      0                3.14    39.250000
+                CORE_ONLY        ACCURACY_REJECTED           3            3     2       1       0      0               -0.37   -12.333333
+       CORE_PLUS_STANDARD            ACCURACY_CORE           8            8     7       1       0      0                3.14    39.250000
+       CORE_PLUS_STANDARD        ACCURACY_REJECTED           6            6     4       2       0      0               -0.28    -4.666667
+           FULL_SHORTLIST            ACCURACY_CORE           8            8     7       1       0      0                3.14    39.250000
+           FULL_SHORTLIST ACCURACY_EXTENDED_STRONG           2            2     1       1       0      0               -0.50   -25.000000
+           FULL_SHORTLIST        ACCURACY_REJECTED          10           10     8       2       0      0                1.43    14.300000
+COMPETITION_ACCURACY_MODE            ACCURACY_CORE           8            8     7       1       0      0                3.14    39.250000
+COMPETITION_ACCURACY_MODE ACCURACY_EXTENDED_STRONG           2            2     1       1       0      0               -0.50   -25.000000

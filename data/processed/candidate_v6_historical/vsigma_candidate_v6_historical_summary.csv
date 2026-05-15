@@ -1,0 +1,6 @@
+mode,segment,rows,settled_rows,wins,losses,hit_rate,profit_units,roi_percent,brier_score,market_mix,api_prediction_available_rows,api_prediction_aligned_rows,api_prediction_disagreement_rows,api_prediction_strengthened_rows,api_prediction_weakened_rows,api_prediction_secondary_rows,api_calls_made,cache_hits,api_errors
+BASELINE_OFFICIAL,OVERALL,9,9,7,2,77.777778,2.03,22.555556,0.16861,AWAY_WIN:1;OVER_1_5:6;OVER_2_5:2,,,,,,,,,
+SHADOW_CANDIDATE_V2,OVERALL,8,8,6,2,75.0,1.67,20.875,0.183962,AWAY_WIN:1;OVER_1_5:5;OVER_2_5:2,,,,,,,,,
+SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK,OVERALL,6,6,4,2,66.666667,0.25,4.166667,0.230726,AWAY_WIN:1;OVER_1_5:5,22.0,5.0,5.0,5.0,0.0,5.0,22.0,0.0,0.0
+SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK,API_ALIGNED_SUBSET,1,1,1,0,100.0,1.0,100.0,0.014157,AWAY_WIN:1,,,,,,,,,
+SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK,API_DISAGREEMENT_SUBSET,0,0,0,0,,0.0,,,,,,,,,,,,

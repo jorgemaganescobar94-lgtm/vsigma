@@ -1,0 +1,61 @@
+country,league,league_tier,league_filter_reason,matches
+Tunisia,Ligue 2,REJECT,country_league_not_allowlisted,7
+Argentina,Reserve League,REJECT,hard_reject_noise_league,6
+Czech-Republic,Czech Liga,REJECT,country_league_not_allowlisted,4
+Gambia,GFA League,REJECT,country_league_not_allowlisted,4
+World,AFC U17 Asian Cup,REJECT,hard_reject_noise_league,4
+Greece,Super League 1,REJECT,country_league_not_allowlisted,3
+United-Arab-Emirates,Pro League U23,REJECT,hard_reject_noise_league,3
+Algeria,Ligue 1,REJECT,country_league_not_allowlisted,2
+Bolivia,Primera División,REJECT,country_league_not_allowlisted,2
+Brazil,Brasileiro U20 A,REJECT,hard_reject_noise_league,2
+Bulgaria,First League,REJECT,country_league_not_allowlisted,2
+Colombia,Copa Colombia,REJECT,country_league_not_allowlisted,2
+Finland,Suomen Cup,REJECT,country_league_not_allowlisted,2
+Germany,Oberliga - Hamburg,REJECT,hard_reject_noise_league,2
+Israel,Ligat Ha'al,REJECT,country_league_not_allowlisted,2
+Jordan,Cup,REJECT,country_league_not_allowlisted,2
+Latvia,Virsliga,REJECT,country_league_not_allowlisted,2
+San-Marino,Campionato,REJECT,country_league_not_allowlisted,2
+Saudi-Arabia,Pro League,REJECT,country_league_not_allowlisted,2
+Serbia,Prva Liga,REJECT,country_league_not_allowlisted,2
+Sweden,Superettan,REJECT,country_league_not_allowlisted,2
+Ukraine,Premier League,REJECT,country_league_not_allowlisted,2
+Argentina,Liga Profesional Argentina,REJECT,country_league_not_allowlisted,1
+Armenia,First League,REJECT,country_league_not_allowlisted,1
+Botswana,Premier League,REJECT,country_league_not_allowlisted,1
+Brazil,Brasileiro U20 B,REJECT,hard_reject_noise_league,1
+Brazil,Catarinense - 2,REJECT,country_league_not_allowlisted,1
+Brazil,Copa Do Brasil,REJECT,country_league_not_allowlisted,1
+Colombia,Primera B,REJECT,country_league_not_allowlisted,1
+Congo-DR,Ligue 1,REJECT,country_league_not_allowlisted,1
+Czech-Republic,4. liga - Divizie E,REJECT,hard_reject_noise_league,1
+Czech-Republic,FNL,REJECT,country_league_not_allowlisted,1
+Gabon,Championnat D1,REJECT,country_league_not_allowlisted,1
+Germany,Oberliga - Rheinland-Pfalz / Saar,REJECT,hard_reject_noise_league,1
+Ivory-Coast,Ligue 1,REJECT,country_league_not_allowlisted,1
+Lebanon,Premier League,REJECT,country_league_not_allowlisted,1
+Mauritania,Premier League,REJECT,country_league_not_allowlisted,1
+Netherlands,U19 Divisie 1,REJECT,hard_reject_noise_league,1
+Northern-Ireland,Premiership,REJECT,country_league_not_allowlisted,1
+Oman,Professional League,REJECT,country_league_not_allowlisted,1
+Poland,III Liga - Group 3,REJECT,country_league_not_allowlisted,1
+Romania,Liga II,REJECT,country_league_not_allowlisted,1
+Rwanda,National Soccer League,REJECT,country_league_not_allowlisted,1
+Sweden,Damallsvenskan,REJECT,country_league_not_allowlisted,1
+Tunisia,Ligue 1,REJECT,country_league_not_allowlisted,1
+Uganda,Premier League,REJECT,country_league_not_allowlisted,1
+Venezuela,Primera División,REJECT,country_league_not_allowlisted,1
+World,Premier League International Cup,REJECT,country_league_not_allowlisted,1
+Zambia,Super League,REJECT,country_league_not_allowlisted,1
+Spain,La Liga,TIER_1,spain_la_liga,3
+Italy,Serie B,TIER_1,italy_serie_b,2
+England,Championship,TIER_1,england_championship,1
+France,Ligue 1,TIER_1,france_ligue_1,1
+Scotland,Premiership,TIER_2,scotland_premiership,4
+Switzerland,Super League,TIER_2,switzerland_super_league,3
+Egypt,Premier League,TIER_3,egypt_premier_league_noisy,3
+Brazil,Serie B,TIER_3,brazil_serie_b_noisy,1
+Scotland,League One,TIER_3,scotland_league_one_noisy,1
+South-Africa,Premier Soccer League,TIER_3,south_africa_psl_noisy,1
+Ecuador,Copa Ecuador,TIER_4,ecuador_cup_context_only,1

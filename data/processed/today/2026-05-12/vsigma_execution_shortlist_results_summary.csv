@@ -1,0 +1,161 @@
+summary_scope,metric,rows_total,value_num,value_text
+overall,shortlist_rows,4,4.0,
+overall,result_available_rows,4,4.0,
+overall,pending_rows,4,0.0,
+overall,unmatched_rows,4,0.0,
+overall,bet_rows,4,4.0,
+overall,lean_play_rows,4,0.0,
+overall,premium_rows,4,4.0,
+overall,standard_rows,4,0.0,
+overall,wins,4,1.0,
+overall,losses,4,3.0,
+overall,pushes,4,0.0,
+overall,voids,4,0.0,
+overall,profit_units_total,4,-2.58,
+overall,roi_percent,4,-64.5,
+overall,avg_execution_score,4,122.629974,
+overall,avg_primary_edge,4,0.190975,
+by_final_execution_bucket,shortlist_rows,4,4.0,APPROVED_PREMIUM
+by_final_execution_bucket,result_available_rows,4,4.0,APPROVED_PREMIUM
+by_final_execution_bucket,pending_rows,4,0.0,APPROVED_PREMIUM
+by_final_execution_bucket,unmatched_rows,4,0.0,APPROVED_PREMIUM
+by_final_execution_bucket,bet_rows,4,4.0,APPROVED_PREMIUM
+by_final_execution_bucket,lean_play_rows,4,0.0,APPROVED_PREMIUM
+by_final_execution_bucket,premium_rows,4,4.0,APPROVED_PREMIUM
+by_final_execution_bucket,standard_rows,4,0.0,APPROVED_PREMIUM
+by_final_execution_bucket,wins,4,1.0,APPROVED_PREMIUM
+by_final_execution_bucket,losses,4,3.0,APPROVED_PREMIUM
+by_final_execution_bucket,pushes,4,0.0,APPROVED_PREMIUM
+by_final_execution_bucket,voids,4,0.0,APPROVED_PREMIUM
+by_final_execution_bucket,profit_units_total,4,-2.58,APPROVED_PREMIUM
+by_final_execution_bucket,roi_percent,4,-64.5,APPROVED_PREMIUM
+by_final_execution_bucket,avg_execution_score,4,122.629974,APPROVED_PREMIUM
+by_final_execution_bucket,avg_primary_edge,4,0.190975,APPROVED_PREMIUM
+by_final_recommendation,shortlist_rows,4,4.0,BET
+by_final_recommendation,result_available_rows,4,4.0,BET
+by_final_recommendation,pending_rows,4,0.0,BET
+by_final_recommendation,unmatched_rows,4,0.0,BET
+by_final_recommendation,bet_rows,4,4.0,BET
+by_final_recommendation,lean_play_rows,4,0.0,BET
+by_final_recommendation,premium_rows,4,4.0,BET
+by_final_recommendation,standard_rows,4,0.0,BET
+by_final_recommendation,wins,4,1.0,BET
+by_final_recommendation,losses,4,3.0,BET
+by_final_recommendation,pushes,4,0.0,BET
+by_final_recommendation,voids,4,0.0,BET
+by_final_recommendation,profit_units_total,4,-2.58,BET
+by_final_recommendation,roi_percent,4,-64.5,BET
+by_final_recommendation,avg_execution_score,4,122.629974,BET
+by_final_recommendation,avg_primary_edge,4,0.190975,BET
+by_execution_shortlist_source,shortlist_rows,2,2.0,PREMIUM_CORE
+by_execution_shortlist_source,result_available_rows,2,2.0,PREMIUM_CORE
+by_execution_shortlist_source,pending_rows,2,0.0,PREMIUM_CORE
+by_execution_shortlist_source,unmatched_rows,2,0.0,PREMIUM_CORE
+by_execution_shortlist_source,bet_rows,2,2.0,PREMIUM_CORE
+by_execution_shortlist_source,lean_play_rows,2,0.0,PREMIUM_CORE
+by_execution_shortlist_source,premium_rows,2,2.0,PREMIUM_CORE
+by_execution_shortlist_source,standard_rows,2,0.0,PREMIUM_CORE
+by_execution_shortlist_source,wins,2,0.0,PREMIUM_CORE
+by_execution_shortlist_source,losses,2,2.0,PREMIUM_CORE
+by_execution_shortlist_source,pushes,2,0.0,PREMIUM_CORE
+by_execution_shortlist_source,voids,2,0.0,PREMIUM_CORE
+by_execution_shortlist_source,profit_units_total,2,-2.0,PREMIUM_CORE
+by_execution_shortlist_source,roi_percent,2,-100.0,PREMIUM_CORE
+by_execution_shortlist_source,avg_execution_score,2,137.608975,PREMIUM_CORE
+by_execution_shortlist_source,avg_primary_edge,2,0.21149,PREMIUM_CORE
+by_execution_shortlist_source,shortlist_rows,2,2.0,PREMIUM_EXTENDED
+by_execution_shortlist_source,result_available_rows,2,2.0,PREMIUM_EXTENDED
+by_execution_shortlist_source,pending_rows,2,0.0,PREMIUM_EXTENDED
+by_execution_shortlist_source,unmatched_rows,2,0.0,PREMIUM_EXTENDED
+by_execution_shortlist_source,bet_rows,2,2.0,PREMIUM_EXTENDED
+by_execution_shortlist_source,lean_play_rows,2,0.0,PREMIUM_EXTENDED
+by_execution_shortlist_source,premium_rows,2,2.0,PREMIUM_EXTENDED
+by_execution_shortlist_source,standard_rows,2,0.0,PREMIUM_EXTENDED
+by_execution_shortlist_source,wins,2,1.0,PREMIUM_EXTENDED
+by_execution_shortlist_source,losses,2,1.0,PREMIUM_EXTENDED
+by_execution_shortlist_source,pushes,2,0.0,PREMIUM_EXTENDED
+by_execution_shortlist_source,voids,2,0.0,PREMIUM_EXTENDED
+by_execution_shortlist_source,profit_units_total,2,-0.58,PREMIUM_EXTENDED
+by_execution_shortlist_source,roi_percent,2,-29.0,PREMIUM_EXTENDED
+by_execution_shortlist_source,avg_execution_score,2,107.650974,PREMIUM_EXTENDED
+by_execution_shortlist_source,avg_primary_edge,2,0.17046,PREMIUM_EXTENDED
+by_league,shortlist_rows,1,1.0,Championship
+by_league,result_available_rows,1,1.0,Championship
+by_league,pending_rows,1,0.0,Championship
+by_league,unmatched_rows,1,0.0,Championship
+by_league,bet_rows,1,1.0,Championship
+by_league,lean_play_rows,1,0.0,Championship
+by_league,premium_rows,1,1.0,Championship
+by_league,standard_rows,1,0.0,Championship
+by_league,wins,1,0.0,Championship
+by_league,losses,1,1.0,Championship
+by_league,pushes,1,0.0,Championship
+by_league,voids,1,0.0,Championship
+by_league,profit_units_total,1,-1.0,Championship
+by_league,roi_percent,1,-100.0,Championship
+by_league,avg_execution_score,1,142.174078,Championship
+by_league,avg_primary_edge,1,0.250341,Championship
+by_league,shortlist_rows,2,2.0,Serie B
+by_league,result_available_rows,2,2.0,Serie B
+by_league,pending_rows,2,0.0,Serie B
+by_league,unmatched_rows,2,0.0,Serie B
+by_league,bet_rows,2,2.0,Serie B
+by_league,lean_play_rows,2,0.0,Serie B
+by_league,premium_rows,2,2.0,Serie B
+by_league,standard_rows,2,0.0,Serie B
+by_league,wins,2,1.0,Serie B
+by_league,losses,2,1.0,Serie B
+by_league,pushes,2,0.0,Serie B
+by_league,voids,2,0.0,Serie B
+by_league,profit_units_total,2,-0.58,Serie B
+by_league,roi_percent,2,-29.0,Serie B
+by_league,avg_execution_score,2,107.650974,Serie B
+by_league,avg_primary_edge,2,0.17046,Serie B
+by_league,shortlist_rows,1,1.0,Super League
+by_league,result_available_rows,1,1.0,Super League
+by_league,pending_rows,1,0.0,Super League
+by_league,unmatched_rows,1,0.0,Super League
+by_league,bet_rows,1,1.0,Super League
+by_league,lean_play_rows,1,0.0,Super League
+by_league,premium_rows,1,1.0,Super League
+by_league,standard_rows,1,0.0,Super League
+by_league,wins,1,0.0,Super League
+by_league,losses,1,1.0,Super League
+by_league,pushes,1,0.0,Super League
+by_league,voids,1,0.0,Super League
+by_league,profit_units_total,1,-1.0,Super League
+by_league,roi_percent,1,-100.0,Super League
+by_league,avg_execution_score,1,133.043871,Super League
+by_league,avg_primary_edge,1,0.172639,Super League
+by_market_primary,shortlist_rows,2,2.0,OVER_1_5
+by_market_primary,result_available_rows,2,2.0,OVER_1_5
+by_market_primary,pending_rows,2,0.0,OVER_1_5
+by_market_primary,unmatched_rows,2,0.0,OVER_1_5
+by_market_primary,bet_rows,2,2.0,OVER_1_5
+by_market_primary,lean_play_rows,2,0.0,OVER_1_5
+by_market_primary,premium_rows,2,2.0,OVER_1_5
+by_market_primary,standard_rows,2,0.0,OVER_1_5
+by_market_primary,wins,2,1.0,OVER_1_5
+by_market_primary,losses,2,1.0,OVER_1_5
+by_market_primary,pushes,2,0.0,OVER_1_5
+by_market_primary,voids,2,0.0,OVER_1_5
+by_market_primary,profit_units_total,2,-0.58,OVER_1_5
+by_market_primary,roi_percent,2,-29.0,OVER_1_5
+by_market_primary,avg_execution_score,2,107.650974,OVER_1_5
+by_market_primary,avg_primary_edge,2,0.17046,OVER_1_5
+by_market_primary,shortlist_rows,2,2.0,OVER_2_5
+by_market_primary,result_available_rows,2,2.0,OVER_2_5
+by_market_primary,pending_rows,2,0.0,OVER_2_5
+by_market_primary,unmatched_rows,2,0.0,OVER_2_5
+by_market_primary,bet_rows,2,2.0,OVER_2_5
+by_market_primary,lean_play_rows,2,0.0,OVER_2_5
+by_market_primary,premium_rows,2,2.0,OVER_2_5
+by_market_primary,standard_rows,2,0.0,OVER_2_5
+by_market_primary,wins,2,0.0,OVER_2_5
+by_market_primary,losses,2,2.0,OVER_2_5
+by_market_primary,pushes,2,0.0,OVER_2_5
+by_market_primary,voids,2,0.0,OVER_2_5
+by_market_primary,profit_units_total,2,-2.0,OVER_2_5
+by_market_primary,roi_percent,2,-100.0,OVER_2_5
+by_market_primary,avg_execution_score,2,137.608975,OVER_2_5
+by_market_primary,avg_primary_edge,2,0.21149,OVER_2_5

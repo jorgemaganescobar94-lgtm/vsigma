@@ -1,0 +1,13 @@
+vSIGMA recent schedule-strength lab layer
+
+Purpose: adjust trust in recent form/process samples for opponent difficulty.
+Method: last five prior completed team fixtures; opponent strength from API standings rank plus points-per-game.
+Activation: neutral when standings context is missing; no hard vetoes.
+
+    summary_scope  rows_processed  home_full_or_partial  away_full_or_partial  avg_home_opponent_strength  avg_away_opponent_strength  standings_api_calls  standings_cache_hits  standings_errors                 generated_at_utc    flag  rows
+          overall            85.0                  84.0                  85.0                       0.622                       0.616                  1.0                 849.0               0.0 2026-05-13T14:00:34.614658+00:00     NaN   NaN
+home_quality_flag             NaN                   NaN                   NaN                         NaN                         NaN                  NaN                   NaN               NaN                              NaN    FULL  60.0
+home_quality_flag             NaN                   NaN                   NaN                         NaN                         NaN                  NaN                   NaN               NaN                              NaN PARTIAL  24.0
+home_quality_flag             NaN                   NaN                   NaN                         NaN                         NaN                  NaN                   NaN               NaN                              NaN  SPARSE   1.0
+away_quality_flag             NaN                   NaN                   NaN                         NaN                         NaN                  NaN                   NaN               NaN                              NaN    FULL  66.0
+away_quality_flag             NaN                   NaN                   NaN                         NaN                         NaN                  NaN                   NaN               NaN                              NaN PARTIAL  19.0

@@ -1,0 +1,4 @@
+version,rows_total,graded_rows,wins,losses,profit_units_total,roi_percent,premium_core_rows,premium_extended_rows,standard_fill_rows,premium_core_roi_percent,premium_extended_roi_percent,standard_fill_roi_percent,delta_profit_vs_recalibrated,delta_roi_vs_recalibrated_pct_points,delta_profit_vs_stats_only,delta_roi_vs_stats_only_pct_points
+recalibrated_injuries_baseline,34,19,14,5,0.61,3.210526,15,16,3,-3.555556,6.5,20.5,0.0,0.0,-8.3,-21.539474
+advisory_mode_version,27,25,16,9,3.49,13.96,14,13,0,22.416667,6.153846,,2.8800000000000003,10.749474000000001,-5.42,-10.79
+stats_only_baseline,36,36,26,10,8.91,24.75,21,15,0,34.238095,11.466667,,8.3,21.539474,0.0,0.0

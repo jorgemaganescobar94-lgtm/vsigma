@@ -1,0 +1,32 @@
+VSIGMA COMPETITION ACCURACY MODE HISTORICAL BACKTEST
+
+Dates covered: 2026-04-23, 2026-04-24, 2026-04-25, 2026-04-26, 2026-04-27, 2026-04-28, 2026-04-29, 2026-04-30, 2026-05-01, 2026-05-02, 2026-05-03, 2026-05-04, 2026-05-05, 2026-05-06, 2026-05-07, 2026-05-08
+
+Standard shortlist overall
+segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+    ALL          21           21    17       4       0      0                6.29    29.952381
+
+Competition accuracy mode overall
+segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+    ALL           9            9     7       2       0      0                2.31    25.666667
+
+Competition bucket composition
+                 segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+           ACCURACY_CORE           7            7     6       1       0      0                2.81    40.142857
+ACCURACY_EXTENDED_STRONG           2            2     1       1       0      0               -0.50   -25.000000
+
+Competition market composition
+ segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+AWAY_WIN           1            1     1       0       0      0                1.00   100.000000
+OVER_1_5           6            6     4       2       0      0               -0.11    -1.833333
+OVER_2_5           2            2     2       0       0      0                1.42    71.000000
+
+Standard source mix
+         segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+    PREMIUM_CORE          16           16    13       3       0      0                5.65      35.3125
+PREMIUM_EXTENDED           5            5     4       1       0      0                0.64      12.8000
+
+Competition source mix
+         segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+    PREMIUM_CORE           7            7     6       1       0      0                2.81    40.142857
+PREMIUM_EXTENDED           2            2     1       1       0      0               -0.50   -25.000000

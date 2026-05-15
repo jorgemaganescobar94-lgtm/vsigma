@@ -1,0 +1,6 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-05-14,OK,API-SPORTS_DIRECT,273.0,,,,,,
+2026-05-14T18:00:00+01:00,MATCHED,,,1391177.0,FT,Valencia,Rayo Vallecano,1.0,1.0
+2026-05-14T19:00:00+01:00,MATCHED,,,1391174.0,FT,Girona,Real Sociedad,1.0,1.0
+2026-05-14T20:00:00+01:00,MATCHED,,,1544064.0,FT,Bradford,Bolton,0.0,1.0
+2026-05-14T20:30:00+01:00,MATCHED,,,1391176.0,FT,Real Madrid,Oviedo,2.0,0.0

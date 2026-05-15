@@ -1,0 +1,14 @@
+vSIGMA TODAY BASELINE VS CANDIDATE V2 VS CANDIDATE V5
+
+Baseline: official frozen Competition Accuracy Mode + Probability Calibration.
+Candidate v2: shadow schedule-strength + anomaly-cleaning layer.
+Candidate v5: candidate v2 + conservative player-impact layer.
+
+Baseline official picks: 1
+Candidate v2 shadow picks: 1
+Candidate v5 shadow picks: 1
+Candidate v5 player-impact adjustments in top: 0
+
+Side-by-side picks
+                 comparison_status  fixture_id          fixture  league  baseline_rank  candidate_v2_rank  candidate_v5_rank baseline_market candidate_v2_market candidate_v5_market candidate_v5_original_market candidate_v5_action                          candidate_v5_hint       baseline_primary_risk   candidate_v2_primary_risk   candidate_v5_primary_risk
+BASELINE+CANDIDATE_V2+CANDIDATE_V5     1544651 Bari vs Sudtirol Serie B              1                  1                  1        OVER_1_5            OVER_1_5            OVER_1_5                     OVER_1_5         NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE FAILURE_MODE_LOW_CONVERSION FAILURE_MODE_LOW_CONVERSION FAILURE_MODE_LOW_CONVERSION

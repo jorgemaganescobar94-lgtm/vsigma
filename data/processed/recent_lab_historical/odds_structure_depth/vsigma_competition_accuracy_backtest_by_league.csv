@@ -1,0 +1,6 @@
+segment,rows_total,graded_rows,wins,losses,pushes,voids,profit_units_total,roi_percent
+CONMEBOL Libertadores,4,4,3,1,0,0,0.56,14.0
+La Liga,1,1,0,1,0,0,-1.0,-100.0
+Segunda División,2,2,2,0,0,0,1.5,75.0
+Serie B,1,1,1,0,0,0,0.33,33.0
+UEFA Europa League,1,1,1,0,0,0,0.92,92.0

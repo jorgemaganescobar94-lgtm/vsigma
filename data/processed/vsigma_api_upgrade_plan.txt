@@ -1,0 +1,124 @@
+vSIGMA API-Football usage audit
+Generated from filesystem/code/cache inspection only. No git used.
+
+Final verdict: CLEAR_UNDERUSE
+
+Business answer
+vSIGMA is not using the paid API-Football plan close to its maximum practical value for pre-match prediction. It uses the API well for base fixtures, recent goal-form reconstruction, standings context, selected odds markets, and a narrow two-leg tie state. But the model is still mostly goals/results/standings/odds driven. The most important paid-data layers for prediction quality - fixture statistics, injuries/availability, lineups/player strength, events/player stats, and API prediction/coverage metadata - are not integrated into production scoring.
+
+Endpoints currently used
+Production today/historical/post-results: /fixtures, /standings, /odds, /fixtures/headtohead.
+Reference/diagnostic only: /odds/bets, /odds/bookmakers, /status, /leagues, /fixtures/statistics, /fixtures/lineups.
+Client helpers present but unused: /injuries, /predictions.
+
+Current practical signal families
+- Fixtures/results: STRONG_USE. Base fixture identity, teams, league, status, and results are central to today, historical, and post-results flows.
+- Recent form: STRONG_USE. Last team fixtures are fetched and converted into goals/form/scored/clean-sheet/BTTS/over rates. This is derived locally from /fixtures, not a native team-stat endpoint.
+- Standings: PARTIAL_USE. Rank, points, goal difference, played, and urgency are used. Home/away splits, form string, group/description/status/update are ignored.
+- Odds: PARTIAL_USE. Selected pre-match markets are parsed and used for edge calculation, but many markets, bookmaker identities, market dispersion, and movement are ignored. Initial vSIGMA pre-score mostly ranks without odds.
+- Tie context: PARTIAL_USE. Valuable for two-leg ties, but only first-leg aggregate state is used.
+- Fixture statistics: NOT_USED in production. Only one diagnostic cache row exists.
+- Events: NOT_USED. No endpoint/method/cached responses found.
+- Lineups: NOT_USED in production. Only one diagnostic cache row exists.
+- Injuries: NOT_USED. home_absences/away_absences are zero placeholders.
+- Players/player statistics: NOT_USED. No endpoint calls found.
+- Predictions: NOT_USED. Client helper exists but no calls/cache/features.
+- Venue/referee/context fields: WEAK_USE/NOT_USED. Fixture payload includes referee and venue, but current normalization ignores them.
+- Coverage metadata: WEAK_USE. /leagues is only used by check_api_plan; production does not adjust by endpoint coverage.
+
+Most important underused premium opportunities
+1. Fixture statistics rolling form: HIGH expected value. Pull /fixtures/statistics for recent finished fixtures used by enrich_recent_form_v2. Derive rolling shots, shots on target, corners, possession, cards, fouls, and attacking pressure features where available. This improves process-quality estimation beyond noisy goal counts. Pre-match usable when restricted to fixtures completed before kickoff.
+2. Injuries and availability: HIGH expected value. Use /injuries by fixture/team/league/season where available and keep unknown separate from zero absences. Derive absence_count, key_absence_count, questionable_count, squad_risk_score, and team-specific missingness flags. Pre-match usable if fetched before kickoff and not backfilled from post-match knowledge.
+3. Lineups/player-strength layer: MEDIUM-HIGH expected value near kickoff. Use /fixtures/lineups when available pre-match to detect formations, starter continuity, rotation, and bench depth. Strong value close to kickoff, lower value for early-day predictions due to availability timing.
+4. Player statistics/events backfill: MEDIUM expected value. Use historical player/team performance to weight injuries and lineup changes. Requires more engineering and careful leakage boundaries.
+5. API predictions: MEDIUM expected value as an external benchmark/ensemble/calibration feature, not as a blind replacement for vSIGMA.
+6. Venue/referee/context: LOW-MEDIUM expected value. Useful for home venue, neutral site, referee cards/penalties profile, travel, and weather joins, but less important than statistics/injuries.
+7. Coverage profiles: HIGH operational value. Not directly predictive, but prevents silent bad features from being trusted.
+
+Coverage-risk summary
+The current project does not sufficiently protect itself against uneven API coverage. It relies on allowlisted league tiers and observed NaNs/status strings, but it does not maintain per-league/season coverage flags for odds, standings, statistics, lineups, injuries, or predictions. The biggest issue is that several advanced columns are initialized to 0.0 even though they are not sourced from API. In score_matches_v3, old_core columns such as xG/SOT/big placeholders are non-null, so they can inflate data_quality_score despite being synthetic zeros.
+
+Top 3 recommended upgrades
+1. Integrate rolling fixture statistics into recent form and scoring.
+2. Integrate injuries/availability with explicit unknown-vs-zero semantics.
+3. Add coverage-aware feature flags and remove zero-filled advanced placeholders from data-quality scoring until genuinely sourced.
+
+Concrete engineering plan
+
+Phase 1 = highest-value / lowest-risk additions
+Scripts to create/edit:
+- Create scripts/enrich_recent_statistics_context.py.
+- Edit scripts/score_matches_v3.py.
+- Edit scripts/run_today_match_pipeline.py and scripts/run_historical_labeling_pipeline.py to run the new enricher after enrich_recent_form_v2 and before scoring.
+- Optionally edit scripts/enrich_recent_form_v2.py to expose recent fixture ids per team, or reuse team_recent_fixtures_cache_v2.json.
+
+Expected new columns/features:
+- home_stat_fixtures, away_stat_fixtures, home_sot_for_pg, away_sot_for_pg, home_sot_against_pg, away_sot_against_pg, home_shots_for_pg, away_shots_for_pg, home_corners_for_pg, away_corners_for_pg, home_cards_pg, away_cards_pg, home_stats_coverage_rate, away_stats_coverage_rate.
+- stats_context_status and stats_context_error.
+
+Pipeline flow:
+- Pull /fixtures/statistics only for completed fixtures strictly before match kickoff.
+- Write features into data/raw/matches.csv, then filter_leagues carries them into processed files.
+- score_matches_v3 should use these columns in attack/process quality and data_quality_score.
+
+Validation/test strategy:
+- Unit test parser against cached /fixtures/statistics response.
+- Run one date with cache and confirm non-null stats only where endpoint returns data.
+- Assert no future fixture ids are used for pre-match rows.
+- Compare data_quality_score before/after and confirm zero placeholders no longer inflate old_data_count.
+
+Leakage risks to avoid:
+- Do not use statistics from the target fixture before it is played.
+- Do not fetch post-match statistics for current-day upcoming fixtures and write them as pre-match facts.
+
+Phase 2 = next useful layer
+Scripts to create/edit:
+- Create scripts/enrich_injuries_context.py.
+- Edit scripts/score_matches_v3.py, scripts/select_core_candidates.py, scripts/deep_analysis_candidates.py.
+- Add the new step to today and historical pipelines.
+
+Expected new columns/features:
+- home_injury_count, away_injury_count, home_questionable_count, away_questionable_count, home_absence_risk_score, away_absence_risk_score, injuries_context_status, injuries_coverage_flag.
+- Replace or deprecate raw home_absences/away_absences placeholders unless manually populated.
+
+Pipeline flow:
+- Query /injuries by fixture where available, fallback by team/league/season/date only if API behavior is confirmed.
+- Aggregate by team and injury status. Keep UNKNOWN distinct from NONE.
+- Feed risk scores into absences_noise_penalty and team_edge adjustments.
+
+Validation/test strategy:
+- Parser fixture tests for empty, unavailable, and populated injury responses.
+- Coverage report by league to ensure missing injury coverage does not equal zero absences.
+- Spot-check high-profile matches manually from raw cached payloads.
+
+Leakage risks to avoid:
+- Do not backfill injury records added after kickoff into historical pre-match training rows without a fetched_at/as_of timestamp.
+
+Phase 3 = optional / lower-priority enrichments
+Scripts to create/edit:
+- Create scripts/enrich_lineups_context.py for near-kickoff runs.
+- Create scripts/enrich_api_predictions_context.py for benchmark/ensemble features.
+- Create scripts/build_api_coverage_profile.py using /leagues and observed endpoint fill rates.
+- Optionally create player/event backfill scripts once Phase 1 and 2 are stable.
+
+Expected new columns/features:
+- lineups_available, home_formation, away_formation, home_starter_count_known, away_starter_count_known, home_rotation_score, away_rotation_score, coach ids/names where stable.
+- api_pred_home_pct, api_pred_draw_pct, api_pred_away_pct, api_pred_advice_family, api_pred_conflict_flag.
+- coverage_odds, coverage_standings, coverage_stats, coverage_injuries, coverage_lineups by league/season.
+
+Pipeline flow:
+- Lineups should run in a separate near-kickoff refresh path, not early morning baseline scoring.
+- Predictions should be compared against vSIGMA probability and odds edge, never used as an ungoverned override.
+- Coverage profile should feed data_quality_score and candidate eligibility.
+
+Validation/test strategy:
+- Date-scoped snapshot tests.
+- Coverage and missingness reports per league tier.
+- Backtest with and without each new feature family before promoting to production scoring.
+
+Leakage risks to avoid:
+- Lineups may only become available shortly before kickoff; historical rows need an as_of discipline.
+- API predictions and player stats may include information updated after earlier prediction times unless fetched snapshots are retained.
+
+Bottom line
+vSIGMA uses API-Football partially and productively, but not close to the practical ceiling of a paid plan. The current model extracts value from fixtures, standings, odds, and recent results, while leaving several premium pre-match layers unused or only diagnostically probed.

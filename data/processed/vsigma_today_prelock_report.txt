@@ -1,0 +1,5 @@
+# vSIGMA Pre-Lock Report
+
+- Target date: 2026-05-15
+- Status: PRELOCK_NO_FIXTURES_IN_WINDOW
+- No stale pre-lock rows reused.

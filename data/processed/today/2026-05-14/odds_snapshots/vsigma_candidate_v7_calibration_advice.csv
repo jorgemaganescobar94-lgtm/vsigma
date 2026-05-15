@@ -1,0 +1,3 @@
+market_family,failure_mode,drift_status,clv_direction,league,n,wins,losses,profit_units,roi_percent,avg_clv_delta,recommendation,recommendation_reason
+OVER_1_5,LOW_CONVERSION,WATCH_PATTERN,CLV_NEGATIVE,ALL,11,0,11,-11.0,-100.0,0.05,RAISE_MIN_EDGE,ROI is negative and CLV is negative; suggest stricter v7 edge requirement.
+OVER_1_5,LOW_CONVERSION,WATCH_PATTERN,CLV_NEGATIVE,League A,11,0,11,-11.0,-100.0,0.05,RAISE_MIN_EDGE,ROI is negative and CLV is negative; suggest stricter v7 edge requirement.

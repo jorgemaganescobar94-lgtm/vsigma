@@ -1,0 +1,15 @@
+vSIGMA MATCH SCRIPT + STATS FORECASTS
+
+Source: shadow candidate v4 competition top
+Role: explanation layer only; this file does not select, remove, or promote picks.
+Forecast style: deterministic bands and modal scripts, not exact-stat certainty.
+
+Forecast rows: 1
+
+#1 Stockport County vs Stevenage | League One | OVER_1_5
+Script: Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.5; stats=FULL.
+Scores: main 2-2 | alt 1-2
+xG: home 1.5-2.2 | away 1.3-2.0 | total 2.9-4.0
+Stats: shots 14-18 vs 8-12; SOT 5-7 vs 4-6; corners 8-12; possession home 56-64% / away 36-44%
+Path: Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path.
+Breaker: Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market.

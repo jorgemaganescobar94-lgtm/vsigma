@@ -1,0 +1,36 @@
+# Entorno virtual local
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Variables secretas / API keys
+.env
+.env.*
+*.env
+
+# Logs
+logs/
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Temporales
+data/tmp/
+tmp/
+.cache/
+
+# Backups locales
+*.bak
+*.backup
+
+# Local API cache / databases
+data/cache/
+data/cache/*.sqlite3
+data/cache/*.sqlite3-wal
+data/cache/*.sqlite3-shm

@@ -1,0 +1,10 @@
+summary_scope,final_execution_bucket,production_governance_status,final_recommendation,execution_verdict,production_governance_best_evidence_tier,rows_total,base_actionable_rows,final_actionable_rows,bet_rows,lean_play_rows,avg_selection_score,avg_primary_edge,avg_production_governance_rule_count,avg_production_governance_premium_rule_count,avg_production_governance_standard_rule_count,avg_production_governance_generic_rule_count
+overall,,,,,,119,0,0,0,0,90.5323,,14.7479,5.0168,0.0,9.7311
+by_final_execution_bucket,WATCH,,,,,119,0,0,0,0,90.5323,,14.7479,5.0168,0.0,9.7311
+by_bucket_and_governance_status,WATCH,ANNOTATED_NON_ACTIONABLE_RULE_MATCH,,,,119,0,0,0,0,90.5323,,14.7479,5.0168,0.0,9.7311
+by_bucket_and_final_recommendation,WATCH,,MODEL_ONLY,,,119,0,0,0,0,90.5323,,14.7479,5.0168,0.0,9.7311
+by_bucket_and_execution_verdict,WATCH,,,CORE_SHORTLIST,,3,0,0,0,0,103.26,,17.0,7.0,0.0,10.0
+by_bucket_and_execution_verdict,WATCH,,,TOP_CORE,,2,0,0,0,0,104.39,,17.0,7.0,0.0,10.0
+by_bucket_and_execution_verdict,WATCH,,,WATCH,,114,0,0,0,0,89.9542,,14.6491,4.9298,0.0,9.7193
+by_bucket_and_best_evidence_tier,WATCH,,,,GENERIC_BROAD,19,0,0,0,0,86.21,,9.5263,0.0,0.0,9.5263
+by_bucket_and_best_evidence_tier,WATCH,,,,PREMIUM_EVIDENCE,100,0,0,0,0,91.3535,,15.74,5.97,0.0,9.77

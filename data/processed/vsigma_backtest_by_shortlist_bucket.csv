@@ -1,0 +1,4 @@
+group_value,rows_total,actionable_rows,non_actionable_rows,graded_bets,wins,losses,pushes,voids,blocked_win,blocked_loss,blocked_push,blocked_void,blocked_no_bet,stake_units,profit_units,roi_pct,hit_rate_decided_pct,avg_odds_actionable,avg_model_edge_pct,avg_model_edge_abs
+CORE_SHORTLIST,48,7,41,7,6,1,0,0,0,0,0,0,41,7.0,2.7,38.5714,85.7143,1.5771,,0.215
+TOP_CORE,32,7,25,7,5,2,0,0,0,0,0,0,25,7.0,0.14,2.0,71.4286,1.46,,0.147
+WATCHLIST,567,48,519,48,33,15,0,0,0,0,0,0,519,48.0,-0.98,-2.0417,68.75,1.419,,0.1349

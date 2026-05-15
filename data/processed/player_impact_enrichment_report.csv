@@ -1,0 +1,2 @@
+rows_processed,full_rows,partial_rows,none_rows,attack_weakened_rows,defense_or_gk_risk_rows,input_columns,output_columns,generated_at_utc
+10,0,0,10,0,0,199,210,2026-05-14T14:43:36.880262+00:00

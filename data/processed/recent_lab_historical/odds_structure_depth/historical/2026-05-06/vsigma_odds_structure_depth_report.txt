@@ -1,0 +1,56 @@
+vSIGMA ODDS STRUCTURE DEPTH
+
+Purpose: lab-only market translation governance from paid odds ladder depth.
+Missing or thin odds are treated as uncertainty, not as a negative football signal.
+
+Summary
+                summary_scope                 metric  rows_total
+                      overall        target_fixtures          22
+  odds_structure_depth_status                     OK          15
+  odds_structure_depth_status FALLBACK_EXISTING_ODDS           6
+  odds_structure_depth_status          NO_ODDS_FOUND           1
+odds_structure_coherence_flag          RICH_COHERENT          15
+odds_structure_coherence_flag             RICH_MIXED           6
+odds_structure_coherence_flag      NO_ODDS_UNCERTAIN           1
+      odds_total_ladder_shape             MILD_GOALS           8
+      odds_total_ladder_shape               BALANCED           8
+      odds_total_ladder_shape              LOW_GOALS           3
+      odds_total_ladder_shape            BROAD_GOALS           1
+      odds_total_ladder_shape                UNKNOWN           1
+      odds_total_ladder_shape             WIDE_GOALS           1
+ odds_market_translation_hint    PREFER_MILDER_TOTAL          11
+ odds_market_translation_hint   CAUTION_FRAGILE_SIDE           5
+ odds_market_translation_hint                NEUTRAL           2
+ odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL           2
+ odds_market_translation_hint           CAUTION_BTTS           1
+ odds_market_translation_hint   ODDS_DEPTH_UNCERTAIN           1
+    odds_line_aggression_flag        PREFER_OVER_1_5           8
+    odds_line_aggression_flag                NEUTRAL           8
+    odds_line_aggression_flag AVOID_AGGRESSIVE_OVERS           3
+    odds_line_aggression_flag     OVER_2_5_SUPPORTED           2
+    odds_line_aggression_flag                UNKNOWN           1
+
+Fixture preview
+ fixture_id                league           home_team               away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
+    1535282 CONMEBOL Libertadores        Always Ready                   Lanus                 RICH_COHERENT                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.0000                            -0.010
+    1535283 CONMEBOL Libertadores        Barcelona SC            Boca Juniors                 RICH_COHERENT               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.0000                            -0.015
+    1535285 CONMEBOL Libertadores               Cusco        Estudiantes L.P.                 RICH_COHERENT               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.2968                            -0.015
+    1535290 CONMEBOL Libertadores Deportivo La Guaira                 Bolívar                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3362                            -0.015
+    1535297 CONMEBOL Libertadores                 UCV Independiente del Valle                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.0000                            -0.015
+    1540844 UEFA Champions League      Bayern München     Paris Saint Germain                 RICH_COHERENT              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2845                             0.030
+    1535186 CONMEBOL Sudamericana         A. Italiano           Vasco DA Gama                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3189                            -0.015
+    1535198 CONMEBOL Sudamericana     Atletico Torque               Palestino                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.4185                            -0.015
+    1535193 CONMEBOL Sudamericana    Deportivo Cuenca             San Lorenzo                 RICH_COHERENT               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.0000                            -0.015
+    1535201 CONMEBOL Sudamericana  Deportivo Recoleta                  Santos                 RICH_COHERENT                BALANCED                      NEUTRAL                   NEUTRAL                 0.0000                             0.000
+    1535200 CONMEBOL Sudamericana      Puerto Cabello               Cienciano                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.0000                            -0.015
+    1544646        Eerste Divisie      Almere City FC           De Graafschap             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                 0.0000                             0.000
+    1504791             J1 League      Avispa Fukuoka             Kyoto Sanga                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3629                            -0.015
+    1504793             J1 League            FC Tokyo        JEF United Chiba                    RICH_MIXED                BALANCED                      NEUTRAL                   NEUTRAL                 0.3646                             0.000
+    1504795             J1 League             Kashima          Mito Hollyhock                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2804                            -0.015
+    1504798             J1 League      Kashiwa Reysol                   Urawa                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3199                            -0.015
+    1504797             J1 League   Kawasaki Frontale             Tokyo Verdy                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3625                            -0.015
+    1504796             J1 League      Machida Zelvia     Yokohama F. Marinos                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3168                            -0.015
+    1504792             J1 League      Nagoya Grampus             Gamba Osaka                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3358                             0.030
+    1504794             J1 League Sanfrecce Hiroshima             Vissel Kobe                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2382                            -0.015
+    1504789             J1 League     Shimizu S-pulse            Cerezo Osaka                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3508                            -0.015
+    1504790             J1 League    V-varen Nagasaki         Fagiano Okayama                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.4423                            -0.015

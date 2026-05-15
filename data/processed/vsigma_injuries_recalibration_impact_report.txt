@@ -1,0 +1,39 @@
+vSIGMA injuries / availability recalibration impact report
+Generated: 2026-05-10
+Range rebuilt: 2026-04-23 through 2026-05-08
+
+Calibration changes
+- NONE/SPARSE/PARTIAL injury coverage now adds only small uncertainty penalties instead of acting like a major negative signal.
+- Absence risk is coverage-weighted in scoring; FULL coverage keeps full risk weight, PARTIAL/SPARSE are damped, NONE remains unknown/NaN for team absence values.
+- Weak injury coverage no longer flips OVER/BTTS hints to under-family by itself.
+- Deep-analysis execution downgrades now require reliable FULL high absence risk; weak coverage remains a caution/note, not an automatic execution death.
+- Select-core sample penalties for missing injury coverage were reduced materially.
+
+Historical rebuild coverage
+- Dates covered: 16 (2026-04-23 through 2026-05-08).
+- Injury report rows processed: 647.
+- FULL: 298; PARTIAL: 0; SPARSE: 0; NONE/unknown: 349.
+- API calls: 0; cache hits: 647; API errors: 0; plan-limit errors: 0.
+- Unknown injury values remained unknown/NaN; they were not converted into clean zero-risk values.
+
+Recalibrated execution results
+- Overall: 34 rows, 19 graded, 14 / 5, +0.61u, ROI 3.210526%.
+- Source mix: PREMIUM_CORE 15 rows (9 graded, 6 / 3, -0.32u, ROI -3.555556%); PREMIUM_EXTENDED 16 rows (8 graded, 6 / 2, +0.52u, ROI 6.5%); STANDARD_FILL 3 rows (2 graded, 2 / 0, +0.41u, ROI 20.5%).
+- Mode comparison: CORE_ONLY 15 rows, 9 graded, -0.32u, ROI -3.555556%, max DD -1.68u; CORE_PLUS_STANDARD 18 rows, 11 graded, +0.09u, ROI 0.818182%, max DD -1.57u; FULL_SHORTLIST 34 rows, 19 graded, +0.61u, ROI 3.210526%, max DD -1.02u.
+
+Delta versus harmful injuries baseline
+- Rows: +17 (34 vs 17); graded rows: +2 (19 vs 17).
+- Premium/core survival improved structurally: PREMIUM_CORE 15 rows vs 0, PREMIUM_EXTENDED 16 rows vs 0, STANDARD_FILL 3 rows vs 17.
+- Profit: -0.09u (+0.61u vs +0.70u); ROI: -0.907121 percentage points (3.210526% vs 4.117647%).
+- FULL_SHORTLIST drawdown improved by +0.98u (-1.02u vs -2.00u).
+
+Delta versus stats-only baseline
+- Rows: -2 (34 vs 36); graded rows: -17 (19 vs 36).
+- Profit: -8.30u (+0.61u vs +8.91u); ROI: -21.539474 percentage points (3.210526% vs 24.75%).
+- PREMIUM_CORE rows: -6 (15 vs 21); PREMIUM_EXTENDED rows: +1 (16 vs 15); STANDARD_FILL rows: +3 (3 vs 0).
+
+Interpretation
+The recalibration succeeded at making injuries a soft modifier operationally: weak coverage no longer kills execution, and premium/core rows survive again. It did not yet restore healthy execution quality. FULL_SHORTLIST remains slightly worse than the harmful baseline on profit and ROI, although row count, drawdown, and premium/core architecture improved. The layer is usable as a soft modifier, but the current premium governance/execution ordering still needs calibration before this can be called a full success.
+
+Verdict
+INJURIES_RECALIBRATION_PARTIAL

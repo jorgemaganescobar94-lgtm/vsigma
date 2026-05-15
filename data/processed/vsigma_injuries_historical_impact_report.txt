@@ -1,0 +1,70 @@
+vSIGMA injuries / availability historical impact report
+Generated: 2026-05-10
+Range rebuilt: 2026-04-23 through 2026-05-08
+Layers enabled: recent fixture statistics plus injuries / availability
+
+Completeness
+- Historical snapshot folders were present for all 16 dates from 2026-04-23 through 2026-05-08.
+- Required per-date files were present for every rebuilt date: vsigma_final_approved_premium_candidates.csv, vsigma_final_approved_standard_candidates.csv, vsigma_market_results_labeled.csv, recent_fixture_statistics_enrichment_report.csv, injuries_availability_enrichment_report.csv.
+- Populated execution-shortlist dates after injuries: 2026-05-03 through 2026-05-08.
+
+Injuries coverage
+- Rows processed across per-date injury reports: 647.
+- FULL coverage rows: 298.
+- PARTIAL coverage rows: 0.
+- SPARSE coverage rows: 0.
+- NONE / unknown coverage rows: 349.
+- API calls made: 647. Cache hits reported in these historical per-date runs: 0. API errors: 0. Plan-limit errors: 0.
+- Unknown injury coverage remained unknown; it was not converted into zero injuries.
+
+Historical execution-shortlist after injuries
+- Total rows: 17.
+- Graded rows: 17.
+- Wins / losses / pushes / voids: 11 / 6 / 0 / 0.
+- Profit: +0.70 units.
+- ROI: 4.117647%.
+- Source mix: STANDARD_FILL only, 17 rows, 11 / 6, +0.70 units, 4.117647% ROI.
+- Final bucket mix: APPROVED_STANDARD only, 17 rows, 11 / 6, +0.70 units, 4.117647% ROI.
+
+Market breakdown after injuries
+- BTTS_YES: 1 row, 0 / 1, -1.00 units, -100.000000% ROI.
+- HOME_WIN: 2 rows, 1 / 1, +1.18 units, 59.000000% ROI.
+- OVER_1_5: 9 rows, 7 / 2, +1.02 units, 11.333333% ROI.
+- UNDER_3_5: 5 rows, 3 / 2, -0.50 units, -10.000000% ROI.
+- AWAY_WIN and OVER_2_5 did not survive into the final execution shortlist after injuries.
+
+League breakdown after injuries
+- Allsvenskan: 2 rows, 1 / 1, -0.64 units, -32.000000% ROI.
+- CONMEBOL Libertadores: 5 rows, 4 / 1, +0.88 units, 17.600000% ROI.
+- CONMEBOL Sudamericana: 1 row, 1 / 0, +0.45 units, 45.000000% ROI.
+- Eliteserien: 2 rows, 1 / 1, +1.18 units, 59.000000% ROI.
+- La Liga: 1 row, 0 / 1, -1.00 units, -100.000000% ROI.
+- Premiership: 2 rows, 2 / 0, +0.69 units, 34.500000% ROI.
+- Serie B: 2 rows, 1 / 1, -0.67 units, -33.500000% ROI.
+- Superliga: 2 rows, 1 / 1, -0.19 units, -9.500000% ROI.
+
+Execution mode comparison after injuries
+- CORE_ONLY: 0 rows, 0 graded. Hit rate, ROI, averages, and max drawdown are undefined because no core rows survived.
+- CORE_PLUS_STANDARD: 17 rows, 17 graded, 11 / 6, 64.705882% hit rate, +0.70 units, 4.117647% ROI, avg odds 1.615882, avg edge 0.182660, avg execution score 107.415440, max drawdown -2.00 units.
+- FULL_SHORTLIST: 17 rows, 17 graded, 11 / 6, 64.705882% hit rate, +0.70 units, 4.117647% ROI, avg odds 1.615882, avg edge 0.182660, avg execution score 107.415440, max drawdown -2.00 units.
+
+Comparison to stats-only pre-injuries baseline
+- Overall rows fell from 36 to 17, a change of -19 rows.
+- Graded rows fell from 36 to 17, a change of -19 graded rows.
+- Wins fell from 26 to 11; losses fell from 10 to 6.
+- Profit fell from +8.91 units to +0.70 units, a delta of -8.21 units.
+- ROI fell from 24.75% to 4.117647%, a delta of -20.632353 percentage points.
+- FULL_SHORTLIST hit rate fell from 72.222222% to 64.705882%, a delta of -7.516340 percentage points.
+- FULL_SHORTLIST max drawdown worsened from -0.47 units to -2.00 units, a delta of -1.53 units.
+- CORE_ONLY fell from 21 rows and +7.19 units to zero surviving rows, so after-injuries CORE quality cannot be evaluated from executed rows; operationally, core coverage was eliminated.
+- PREMIUM_CORE fell from 21 rows to 0; PREMIUM_EXTENDED fell from 15 rows to 0; STANDARD_FILL rose from 0 rows to 17. This is a material final execution mix change, not a same-row quality comparison.
+
+Interpretation
+Adding injuries / availability did not improve historical execution quality on this rebuilt sample. The effect was materially negative at the execution layer: fewer rows, no premium/core survivors, lower hit rate, much lower profit and ROI, and worse drawdown.
+
+The result is not a clean causal same-row comparison because row composition changed materially. The injuries layer changed row inclusion/exclusion, market-fit survival, premium/core composition, and final execution mix. The clearest structural effect is that premium execution collapsed to zero rows and the final shortlist became entirely STANDARD_FILL / APPROVED_STANDARD.
+
+There was one useful directional behavior: fragile AWAY_WIN and OVER_2_5 exposure was removed from the final shortlist. However, that did not translate into better execution quality. The surviving slate was smaller and weaker, and UNDER_3_5 still lost money in the post-injuries shortlist.
+
+Verdict
+INJURIES_LAYER_HARMFUL

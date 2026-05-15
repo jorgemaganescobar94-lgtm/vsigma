@@ -1,0 +1,8 @@
+fixture_id,home_team,away_team,tie_state_label,market_family_hint,vsigma_pre_score,vsigma_priority,tie_adjustment_note
+1391176,Real Madrid,Oviedo,,HOME_SIDE_OR_HOME_TEAM_TOTAL_CHECK,97.37,A_ANALIZAR_PRIMERO,
+1391174,Girona,Real Sociedad,,AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK,84.99,A_ANALIZAR_PRIMERO,
+1391177,Valencia,Rayo Vallecano,,AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK,83.66,A_ANALIZAR_PRIMERO,
+1544064,Bradford,Bolton,,OVER_OR_BTTS_CHECK,76.31,A_ANALIZAR_PRIMERO,
+1541904,Hapoel Hadera,Hapoel Ra'anana,,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,21.0,NO_DATA_BLOCKED,
+1541903,Ironi Modi'in,Hapoel Acre,,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,21.0,NO_DATA_BLOCKED,
+1542925,Astillero FC (Ecu),Guayaquil City FC,,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,0.0,NO_DATA_BLOCKED,

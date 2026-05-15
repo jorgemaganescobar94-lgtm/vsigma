@@ -1,0 +1,3 @@
+execution_rank,execution_shortlist_source,fixture_id,date,league,home_team,away_team,market_primary,final_execution_bucket,final_recommendation,execution_score,selection_score,primary_model_prob,primary_odds_used,primary_edge,actionable_result,actionable_profit_units,primary_result,primary_profit_units,ledger_result_status
+1,PREMIUM_CORE,1396527,2026-05-11,Primeira Liga,Benfica,SC Braga,BTTS_YES,APPROVED_PREMIUM,BET,143.1039790575916,100.0,0.7646,1.91,0.2410397905759161,WIN,0.91,WIN,0.91,RESULT_AVAILABLE
+2,PREMIUM_CORE,1378220,2026-05-11,Serie A,Napoli,Bologna,HOME_WIN,APPROVED_PREMIUM,BET,131.94819875776398,97.46,0.776,1.61,0.1548819875776398,LOSS,-1.0,LOSS,-1.0,RESULT_AVAILABLE

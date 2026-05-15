@@ -1,0 +1,40 @@
+vSIGMA LINEUPS INTEGRATION REPORT
+Generated: 2026-05-10T19:58:46.658947+00:00
+
+Implementation
+- Added scripts/enrich_fixture_lineups.py using /fixtures/lineups with cache-aware API calls.
+- Added explicit lineup availability, quality, starter-count, bench, role-count, goalkeeper, continuity, confirmation, and uncertainty fields.
+- Unknown/unavailable lineups remain NONE/NaN with a small uncertainty penalty only; they are not treated as weak or rotated XIs.
+- Scoring consumes lineups via a capped confirmation nudge; deep analysis consumes them in goal projection, market-fit tie-breaks, and reasoning notes.
+- Core selection and execution governance keep architecture stable; there is no lineup hard veto.
+
+Today Coverage 2026-05-10
+- Target Tier 1/2 rows processed: 6
+- FULL/PARTIAL/NONE: 1/0/5
+- Available/unavailable rows: 1/5
+- API calls/cache hits/errors/plan errors: 6/0/0/0
+
+Historical Coverage 2026-04-23 Through 2026-05-08
+- Dates rebuilt: 16
+- Target rows processed: 647
+- FULL/PARTIAL/NONE: 647/0/0
+- API calls/cache hits/errors/plan errors: 647/0/0/0
+
+Historical Execution Impact
+- Current lineups run: rows=25, graded=25, W/L=16/9, profit=+1.73u, ROI=6.920000%
+- PREMIUM_CORE: rows=14, graded=14, W/L=11/3, profit=+4.77u, ROI=34.071429%
+- PREMIUM_EXTENDED: rows=11, graded=11, W/L=5/6, profit=-3.04u, ROI=-27.636364%
+- Prior advisory baseline: rows=27, graded=25, W/L=16/9, profit=+3.49u, ROI=13.96%.
+- Stats-only reference: rows=36, graded=36, W/L=26/10, profit=+8.91u, ROI=24.75%.
+- Sample changed, so this is not a clean A/B test. Core quality improved, but full-shortlist ROI fell versus the advisory baseline.
+
+Mode Comparison
+- CORE_ONLY: rows=14, graded=14, W/L=11/3, profit=+4.77u, ROI=34.071429%, maxDD=-1.00u
+- CORE_PLUS_STANDARD: rows=14, graded=14, W/L=11/3, profit=+4.77u, ROI=34.071429%, maxDD=-1.00u
+- FULL_SHORTLIST: rows=25, graded=25, W/L=16/9, profit=+1.73u, ROI=6.920000%, maxDD=-0.55u
+
+Verdict
+- Lineups are now consumed in production as a confirmation layer, not a destructive veto.
+- Today coverage is patchy, and historical full-shortlist performance did not improve versus the previous advisory baseline.
+- Premium/core architecture survived and CORE_ONLY improved, so the layer is usable but should be treated as PARTIAL until more live coverage/outcome evidence accumulates.
+BLUNT_VERDICT: LINEUPS_LAYER_PARTIAL

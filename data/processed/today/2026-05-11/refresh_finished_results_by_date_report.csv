@@ -1,0 +1,14 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-05-11,OK,API-SPORTS_DIRECT,189.0,,,,,,
+2026-05-11T19:30:00+01:00,MATCHED,,,1392187.0,FT,Huesca,Real Sociedad II,1.0,2.0
+2026-05-11T19:45:00+01:00,MATCHED,,,1378220.0,FT,Napoli,Bologna,2.0,3.0
+2026-05-11T20:00:00+01:00,MATCHED,,,1379327.0,FT,Tottenham,Leeds,1.0,1.0
+2026-05-11T20:00:00+01:00,MATCHED,,,1391165.0,FT,Rayo Vallecano,Girona,1.0,1.0
+2026-05-11T20:00:00+01:00,MATCHED,,,1543788.0,FT,Millwall,Hull City,0.0,2.0
+2026-05-11T20:15:00+01:00,MATCHED,,,1396527.0,FT,Benfica,SC Braga,2.0,2.0
+2026-05-11T20:15:00+01:00,MATCHED,,,1396528.0,FT,Estrela,Famalicao,0.0,0.0
+2026-05-11T20:15:00+01:00,MATCHED,,,1396529.0,FT,GIL Vicente,Arouca,1.0,3.0
+2026-05-11T20:15:00+01:00,MATCHED,,,1396530.0,FT,Rio Ave,Sporting CP,1.0,4.0
+2026-05-11T20:15:00+01:00,MATCHED,,,1396531.0,FT,Santa Clara,Nacional,2.0,0.0
+2026-05-11T20:15:00+01:00,MATCHED,,,1396532.0,FT,Tondela,Moreirense,2.0,0.0
+2026-05-11T20:15:00+01:00,MATCHED,,,1396533.0,FT,Guimaraes,Casa Pia,0.0,1.0

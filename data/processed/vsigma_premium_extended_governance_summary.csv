@@ -1,0 +1,7 @@
+segment,before_rows_total,after_rows_total,delta_rows_total,before_graded_rows,after_graded_rows,delta_graded_rows,before_wins,after_wins,delta_wins,before_losses,after_losses,delta_losses,before_profit_units_total,after_profit_units_total,delta_profit_units_total,before_roi_percent,after_roi_percent,delta_roi_percent
+PREMIUM_CORE,14,11,-3.0,14,11,-3.0,12,9,-3.0,2,2,0.0,4.16,2.77,-1.39,29.714286,25.181818,-4.532468
+PREMIUM_EXTENDED,13,6,-7.0,13,6,-7.0,8,5,-3.0,5,1,-4.0,-2.03,1.21,3.24,-15.615385,20.166667,35.782052
+STANDARD_FILL,3,3,0.0,3,3,0.0,2,2,0.0,1,1,0.0,0.0,0.09,0.09,0.0,3.0,3.0
+FULL_SHORTLIST,30,20,-10.0,30,20,-10.0,22,16,-6.0,8,4,-4.0,2.13,4.07,1.94,7.1,20.35,13.25
+CORE_ONLY,14,11,-3.0,14,11,-3.0,12,9,-3.0,2,2,0.0,4.16,2.77,-1.39,29.714286,25.181818,-4.532468
+CORE_PLUS_STANDARD,17,14,-3.0,17,14,-3.0,14,11,-3.0,3,3,0.0,4.16,2.86,-1.3,24.470588,20.428571,-4.042017

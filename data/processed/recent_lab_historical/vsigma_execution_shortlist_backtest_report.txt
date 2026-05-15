@@ -1,0 +1,58 @@
+VSIGMA EXECUTION SHORTLIST HISTORICAL BACKTEST
+
+Dates covered: 2026-04-23, 2026-04-24, 2026-04-25, 2026-04-26, 2026-04-27, 2026-04-28, 2026-04-29, 2026-04-30, 2026-05-01, 2026-05-02, 2026-05-03, 2026-05-04, 2026-05-05, 2026-05-06, 2026-05-07, 2026-05-08
+Total shortlist rows: 22
+Graded rows: 22
+Profit units: 7.340000
+ROI percent: 33.363636
+
+Source breakdown
+         segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+    PREMIUM_CORE          16           16    13       3       0      0                6.40    40.000000
+PREMIUM_EXTENDED           6            6     5       1       0      0                0.94    15.666667
+
+Bucket breakdown
+         segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+APPROVED_PREMIUM          22           22    18       4       0      0                7.34    33.363636
+
+Market breakdown
+  segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+ AWAY_WIN           2            2     2       0       0      0                2.44   122.000000
+ BTTS_YES           2            2     1       1       0      0               -0.69   -34.500000
+ HOME_WIN           1            1     1       0       0      0                0.32    32.000000
+ OVER_1_5           9            9     6       3       0      0               -0.37    -4.111111
+ OVER_2_5           6            6     6       0       0      0                4.95    82.500000
+UNDER_3_5           2            2     2       0       0      0                0.69    34.500000
+
+League breakdown
+                      segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+                  Allsvenskan           1            1     1       0       0      0                0.30         30.0
+        CONMEBOL Libertadores           6            6     4       2       0      0               -0.12         -2.0
+        CONMEBOL Sudamericana           1            1     1       0       0      0                0.45         45.0
+                    J1 League           1            1     1       0       0      0                0.85         85.0
+                   K League 1           2            2     1       1       0      0               -0.68        -34.0
+                      La Liga           1            1     0       1       0      0               -1.00       -100.0
+               Premier League           1            1     1       0       0      0                0.65         65.0
+                  Premiership           2            2     2       0       0      0                0.69         34.5
+             Segunda División           2            2     2       0       0      0                1.50         75.0
+                      Serie A           1            1     1       0       0      0                1.44        144.0
+                      Serie B           1            1     1       0       0      0                1.08        108.0
+        UEFA Champions League           1            1     1       0       0      0                0.31         31.0
+UEFA Europa Conference League           1            1     1       0       0      0                0.95         95.0
+           UEFA Europa League           1            1     1       0       0      0                0.92         92.0
+
+Best segments by ROI
+  summary                       segment  graded_rows  profit_units_total  roi_percent
+by_league                       Serie A            1                1.44        144.0
+by_market                      AWAY_WIN            2                2.44        122.0
+by_league                       Serie B            1                1.08        108.0
+by_league UEFA Europa Conference League            1                0.95         95.0
+by_league            UEFA Europa League            1                0.92         92.0
+
+Worst segments by ROI
+  summary               segment  graded_rows  profit_units_total  roi_percent
+by_league               La Liga            1               -1.00  -100.000000
+by_market              BTTS_YES            2               -0.69   -34.500000
+by_league            K League 1            2               -0.68   -34.000000
+by_market              OVER_1_5            9               -0.37    -4.111111
+by_league CONMEBOL Libertadores            6               -0.12    -2.000000

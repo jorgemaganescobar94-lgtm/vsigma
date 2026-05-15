@@ -1,0 +1,29 @@
+model = "gpt-5.5"
+model_reasoning_effort = "high"
+
+# Modo recomendado para empezar:
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+default_permissions = ":workspace"
+web_search = "live"
+
+[windows]
+sandbox = "elevated"
+
+[shell_environment_policy]
+include_only = [
+  "PATH",
+  "USERPROFILE",
+  "HOMEDRIVE",
+  "HOMEPATH",
+  "SystemRoot",
+  "ComSpec",
+  "TEMP",
+  "TMP",
+  "VIRTUAL_ENV"
+]
+
+[features]
+multi_agent = true
+codex_hooks = true
+shell_tool = true

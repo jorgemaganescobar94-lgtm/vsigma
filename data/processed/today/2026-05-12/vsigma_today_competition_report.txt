@@ -1,0 +1,21 @@
+VSIGMA COMPETITION ACCURACY MODE
+
+Mode: COMPETITION_ACCURACY_MODE
+Normal execution shortlist rows: 4
+Competition shortlist rows: 4
+Competition top rows: 3
+
+Principle: prefer no pick over weak pick; prioritize stable markets, premium core evidence, strong rolling stats, clean market-fit, and high model probability.
+
+Competition shortlist
+ accuracy_mode_rank  fixture_id       league   home_team     away_team market_primary execution_shortlist_source  competition_raw_prob  competition_calibrated_prob  accuracy_confidence_score     accuracy_mode_bucket                                                                                                              accuracy_mode_reason       accuracy_primary_risk  competition_prob_calibration_reason
+                  1     1543789 Championship Southampton Middlesbrough       OVER_2_5               PREMIUM_CORE                0.8090                     0.826125                    142.720            ACCURACY_CORE                                                   ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_BUCKET_RELIABILITY_UPLIFT
+                  2     1538479 Super League Servette FC      Lausanne       OVER_2_5               PREMIUM_CORE                0.8178                     0.834925                    140.704            ACCURACY_CORE                                                   ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_BUCKET_RELIABILITY_UPLIFT
+                  3     1544650      Serie B   Catanzaro      Avellino       OVER_1_5           PREMIUM_EXTENDED                0.8899                     0.809900                    121.799 ACCURACY_EXTENDED_STRONG ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION     CALIBRATED_MARKET_OVERCONFIDENCE
+                  4     1544649      Serie B      Modena   Juve Stabia       OVER_1_5           PREMIUM_EXTENDED                0.8449                     0.764900                    113.257 ACCURACY_EXTENDED_STRONG ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION     CALIBRATED_MARKET_OVERCONFIDENCE
+
+Competition top
+ accuracy_mode_rank  fixture_id       league   home_team     away_team market_primary  competition_raw_prob  competition_calibrated_prob  primary_edge  accuracy_confidence_score                                                                                                              accuracy_mode_reason       accuracy_primary_risk  competition_prob_calibration_reason
+                  1     1543789 Championship Southampton Middlesbrough       OVER_2_5                0.8090                     0.826125      0.250341                    142.720                                                   ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_BUCKET_RELIABILITY_UPLIFT
+                  2     1538479 Super League Servette FC      Lausanne       OVER_2_5                0.8178                     0.834925      0.172639                    140.704                                                   ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_BUCKET_RELIABILITY_UPLIFT
+                  3     1544650      Serie B   Catanzaro      Avellino       OVER_1_5                0.8899                     0.809900      0.185675                    121.799 ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION     CALIBRATED_MARKET_OVERCONFIDENCE

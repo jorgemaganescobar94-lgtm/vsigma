@@ -1,0 +1,4 @@
+group_value,rows_total,actionable_rows,non_actionable_rows,graded_bets,wins,losses,pushes,voids,blocked_win,blocked_loss,blocked_push,blocked_void,blocked_no_bet,stake_units,profit_units,roi_pct,hit_rate_decided_pct,avg_odds_actionable,avg_model_edge_pct,avg_model_edge_abs
+MEDIUM,4,2,2,2,2,0,0,0,0,0,0,0,2,2.0,0.69,34.5,100.0,1.345,,0.147
+MEDIUM_HIGH,121,12,109,12,9,3,0,0,0,0,0,0,109,12.0,0.62,5.1667,75.0,1.4133,,0.1106
+HIGH,522,48,474,48,33,15,0,0,0,0,0,0,474,48.0,0.55,1.1458,68.75,1.4525,,0.154

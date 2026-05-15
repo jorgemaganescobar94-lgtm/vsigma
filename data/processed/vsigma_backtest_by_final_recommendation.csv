@@ -1,0 +1,5 @@
+group_value,rows_total,actionable_rows,non_actionable_rows,graded_bets,wins,losses,pushes,voids,blocked_win,blocked_loss,blocked_push,blocked_void,blocked_no_bet,stake_units,profit_units,roi_pct,hit_rate_decided_pct,avg_odds_actionable,avg_model_edge_pct,avg_model_edge_abs
+BET,59,59,0,59,41,18,0,0,0,0,0,0,0,59.0,1.14,1.9322,69.4915,1.4517,,0.1507
+LEAN_PLAY,3,3,0,3,3,0,0,0,0,0,0,0,0,3.0,0.72,24.0,100.0,1.24,,0.041
+MODEL_ONLY,556,0,556,0,0,0,0,0,0,0,0,0,556,0.0,0.0,,,,,
+WATCH,29,0,29,0,0,0,0,0,0,0,0,0,29,0.0,0.0,,,,,

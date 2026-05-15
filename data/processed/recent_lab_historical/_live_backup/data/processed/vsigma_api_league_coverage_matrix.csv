@@ -1,0 +1,11 @@
+league_id,league,country,season,league_type,coverage_season_current,coverage_season_start,coverage_season_end,league_has_fixtures_coverage,league_has_standings_coverage,league_has_odds_coverage,league_has_events_coverage,league_has_lineups_coverage,league_has_fixture_stats_coverage,league_has_player_stats_coverage,league_has_players_coverage,league_has_injuries_coverage,league_has_predictions_coverage,league_has_top_scorers_coverage,league_has_top_assists_coverage,league_has_top_cards_coverage,league_coverage_class,league_coverage_rich_flag,league_data_reliability_score,league_coverage_source_status,league_coverage_note,coverage_matrix_generated_at_utc
+39,Premier League,England,2025,League,1,2025-08-15,2026-05-24,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-13T07:14:24.449277+00:00
+41,League One,England,2025,League,1,2025-08-01,2026-05-14,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-13T07:14:24.866489+00:00
+61,Ligue 1,France,2025,League,1,2025-08-15,2026-05-17,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-13T07:14:24.869003+00:00
+89,Eerste Divisie,Netherlands,2025,League,1,2025-08-08,2026-05-16,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-13T07:14:25.251820+00:00
+98,J1 League,Japan,2026,League,1,2026-02-06,2026-05-24,1,1,1,1,1,1,1,1,0,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-13T07:14:26.697465+00:00
+140,La Liga,Spain,2025,League,1,2025-08-15,2026-05-24,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-13T07:14:26.700439+00:00
+179,Premiership,Scotland,2025,League,1,2025-08-02,2026-05-17,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-13T07:14:26.703045+00:00
+180,Championship,Scotland,2025,League,1,2025-08-01,2026-05-16,1,1,1,1,1,0,0,1,1,1,1,1,1,COVERAGE_GOOD,1,0.85,OFFICIAL_API,,2026-05-13T07:14:27.073978+00:00
+233,Premier League,Egypt,2025,League,1,2025-08-08,2026-05-28,1,1,1,1,1,1,1,1,0,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-13T07:14:27.075810+00:00
+292,K League 1,South-Korea,2026,League,1,2026-02-28,2026-12-30,1,1,1,1,1,1,1,1,0,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-13T07:14:27.077714+00:00

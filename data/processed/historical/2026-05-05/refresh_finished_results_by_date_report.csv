@@ -1,0 +1,16 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-05-05,OK,API-SPORTS_DIRECT,198.0,,,,,,
+2026-05-05T06:00:00+01:00,MATCHED,,,1506962.0,FT,Bucheon FC 1995,Jeju United FC,0.0,1.0
+2026-05-05T06:00:00+01:00,MATCHED,,,1506963.0,FT,Jeonbuk Motors,Gwangju FC,4.0,0.0
+2026-05-05T08:30:00+01:00,MATCHED,,,1506964.0,FT,Daejeon Citizen,Incheon United,0.0,0.0
+2026-05-05T08:30:00+01:00,MATCHED,,,1506965.0,FT,Gangwon FC,Pohang Steelers,1.0,1.0
+2026-05-05T08:30:00+01:00,MATCHED,,,1506966.0,FT,Gimcheon Sangmu FC,Ulsan Hyundai FC,1.0,2.0
+2026-05-05T11:00:00+01:00,MATCHED,,,1506967.0,FT,FC Seoul,FC Anyang,0.0,0.0
+2026-05-05T17:45:00+01:00,MATCHED,,,1544645.0,FT,Waalwijk,Willem II,0.0,1.0
+2026-05-05T19:45:00+01:00,MATCHED,,,1543679.0,FT,Dunfermline,Arbroath,1.0,0.0
+2026-05-05T20:00:00+01:00,MATCHED,,,1540843.0,FT,Arsenal,Atletico Madrid,1.0,0.0
+2026-05-05T23:00:00+01:00,MATCHED,,,1535194.0,FT,Deportivo Riestra,Gremio,0.0,3.0
+2026-05-05T23:00:00+01:00,MATCHED,,,1535195.0,FT,Independiente Petrolero,Caracas FC,2.0,3.0
+2026-05-05T23:00:00+01:00,MATCHED,,,1535196.0,FT,Juventud,Atletico-MG,2.0,2.0
+2026-05-05T23:00:00+01:00,MATCHED,,,1535293.0,FT,Rosario Central,Libertad Asuncion,1.0,0.0
+2026-05-05T23:00:00+01:00,MATCHED,,,1535295.0,FT,Sporting Cristal,Palmeiras,0.0,2.0

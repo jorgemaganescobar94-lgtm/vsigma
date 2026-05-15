@@ -1,0 +1,306 @@
+country,league,league_tier,league_filter_reason,matches
+Brazil,Serie D,REJECT,country_league_not_allowlisted,24
+Italy,Campionato Primavera - 2,REJECT,country_league_not_allowlisted,15
+Germany,U19 Bundesliga,REJECT,hard_reject_noise_league,12
+Angola,Girabola,REJECT,country_league_not_allowlisted,10
+Ghana,Division One League,REJECT,country_league_not_allowlisted,10
+Algeria,Ligue 2,REJECT,country_league_not_allowlisted,9
+Brazil,Baiano U20,REJECT,hard_reject_noise_league,9
+Bulgaria,Third League - Southeast,REJECT,country_league_not_allowlisted,9
+Bulgaria,Third League - Southwest,REJECT,country_league_not_allowlisted,9
+Netherlands,Derde Divisie - Saturday,REJECT,country_league_not_allowlisted,9
+Netherlands,Tweede Divisie,REJECT,country_league_not_allowlisted,9
+Portugal,Segunda Liga,REJECT,country_league_not_allowlisted,9
+Romania,Liga III - Play-offs,REJECT,country_league_not_allowlisted,9
+Saudi-Arabia,Division 1,REJECT,country_league_not_allowlisted,9
+Spain,Tercera División RFEF - Group 15,REJECT,country_league_not_allowlisted,9
+Spain,Tercera División RFEF - Group 3,REJECT,country_league_not_allowlisted,9
+Spain,Tercera División RFEF - Group 6,REJECT,country_league_not_allowlisted,9
+Argentina,Primera B Metropolitana,REJECT,country_league_not_allowlisted,8
+Austria,Landesliga - Burgenland,REJECT,hard_reject_noise_league,8
+Austria,Landesliga - Oberosterreich,REJECT,hard_reject_noise_league,8
+Austria,Landesliga - Salzburg,REJECT,hard_reject_noise_league,8
+Cameroon,Elite Two,REJECT,country_league_not_allowlisted,8
+Croatia,Second NL,REJECT,country_league_not_allowlisted,8
+France,National 1,REJECT,country_league_not_allowlisted,8
+France,National 2 - Group A,REJECT,country_league_not_allowlisted,8
+France,National 2 - Group B,REJECT,country_league_not_allowlisted,8
+France,National 2 - Group C,REJECT,country_league_not_allowlisted,8
+Kosovo,Liga E Pare,REJECT,country_league_not_allowlisted,8
+Serbia,Srpska Liga - West,REJECT,country_league_not_allowlisted,8
+Spain,Tercera División RFEF - Group 4,REJECT,country_league_not_allowlisted,8
+Switzerland,1. Liga Promotion,REJECT,country_league_not_allowlisted,8
+Argentina,Primera Nacional,REJECT,country_league_not_allowlisted,7
+Austria,Landesliga - Tirol,REJECT,hard_reject_noise_league,7
+Bulgaria,Third League - Northeast,REJECT,country_league_not_allowlisted,7
+Burundi,Ligue A,REJECT,country_league_not_allowlisted,7
+Croatia,Third NL - Jug,REJECT,country_league_not_allowlisted,7
+France,National 3 - Group A,REJECT,country_league_not_allowlisted,7
+France,National 3 - Group B,REJECT,country_league_not_allowlisted,7
+France,National 3 - Group C,REJECT,country_league_not_allowlisted,7
+France,National 3 - Group D,REJECT,country_league_not_allowlisted,7
+France,National 3 - Group E,REJECT,country_league_not_allowlisted,7
+France,National 3 - Group F,REJECT,country_league_not_allowlisted,7
+France,National 3 - Group G,REJECT,country_league_not_allowlisted,7
+France,National 3 - Group H,REJECT,country_league_not_allowlisted,7
+Switzerland,1. Liga Classic - Group 1,REJECT,country_league_not_allowlisted,7
+Switzerland,1. Liga Classic - Group 3,REJECT,country_league_not_allowlisted,7
+Zimbabwe,Premier Soccer League,REJECT,country_league_not_allowlisted,7
+Austria,Regionalliga - West,REJECT,hard_reject_noise_league,6
+Brazil,Carioca A2,REJECT,country_league_not_allowlisted,6
+Brazil,Goiano U20,REJECT,hard_reject_noise_league,6
+Brazil,Paranaense U20,REJECT,hard_reject_noise_league,6
+Iceland,2. Deild,REJECT,country_league_not_allowlisted,6
+Rwanda,National Soccer League,REJECT,country_league_not_allowlisted,6
+Serbia,Srpska Liga - East,REJECT,country_league_not_allowlisted,6
+Serbia,Srpska Liga - Vojvodina,REJECT,country_league_not_allowlisted,6
+Slovakia,3. liga - West,REJECT,country_league_not_allowlisted,6
+Argentina,Primera C,REJECT,country_league_not_allowlisted,5
+Benin,Championnat National,REJECT,country_league_not_allowlisted,5
+Brazil,Catarinense U20,REJECT,hard_reject_noise_league,5
+Brazil,Cearense U20,REJECT,hard_reject_noise_league,5
+Brazil,Paulista Série B,REJECT,country_league_not_allowlisted,5
+Bulgaria,Third League - Northwest,REJECT,country_league_not_allowlisted,5
+Eswatini,Premier League,REJECT,country_league_not_allowlisted,5
+Germany,Oberliga - Baden-Württemberg,REJECT,hard_reject_noise_league,5
+Germany,Oberliga - Rheinland-Pfalz / Saar,REJECT,hard_reject_noise_league,5
+Netherlands,Derde Divisie - Sunday,REJECT,country_league_not_allowlisted,5
+Poland,III Liga - Group 4,REJECT,country_league_not_allowlisted,5
+Slovakia,3. liga - East,REJECT,country_league_not_allowlisted,5
+Slovenia,3. SNL - West,REJECT,hard_reject_noise_league,5
+Spain,Primera División RFEF - Group 1,REJECT,country_league_not_allowlisted,5
+Switzerland,1. Liga Classic - Group 2,REJECT,country_league_not_allowlisted,5
+Venezuela,Segunda División,REJECT,country_league_not_allowlisted,5
+World,All-Island Cup - Women,REJECT,hard_reject_noise_league,5
+Bosnia,1st League - FBiH,REJECT,country_league_not_allowlisted,4
+Bosnia,1st League - RS,REJECT,country_league_not_allowlisted,4
+Chile,Segunda División,REJECT,country_league_not_allowlisted,4
+Finland,Ykkönen,REJECT,country_league_not_allowlisted,4
+Gabon,Championnat D1,REJECT,country_league_not_allowlisted,4
+Germany,Oberliga - Hessen,REJECT,hard_reject_noise_league,4
+Israel,Ligat Ha'al,REJECT,country_league_not_allowlisted,4
+Lesotho,Premier League,REJECT,country_league_not_allowlisted,4
+Moldova,Super Liga,REJECT,country_league_not_allowlisted,4
+Morocco,Botola 2,REJECT,country_league_not_allowlisted,4
+Norway,3. Division - Girone 2,REJECT,country_league_not_allowlisted,4
+Peru,Segunda División,REJECT,country_league_not_allowlisted,4
+Poland,III Liga - Group 2,REJECT,country_league_not_allowlisted,4
+Poland,III Liga - Group 3,REJECT,country_league_not_allowlisted,4
+Slovenia,3. SNL - East,REJECT,hard_reject_noise_league,4
+Spain,Segunda División RFEF - Play-offs,REJECT,country_league_not_allowlisted,4
+Sweden,Ettan - Norra,REJECT,country_league_not_allowlisted,4
+Sweden,Ettan - Södra,REJECT,country_league_not_allowlisted,4
+World,AFC U17 Asian Cup,REJECT,hard_reject_noise_league,4
+Australia,Tasmania Northern Championship,REJECT,country_league_not_allowlisted,3
+Austria,Regionalliga - Ost,REJECT,hard_reject_noise_league,3
+Bosnia,Premijer Liga,REJECT,country_league_not_allowlisted,3
+Brazil,Baiano - 2,REJECT,country_league_not_allowlisted,3
+Chile,Copa De La Liga,REJECT,country_league_not_allowlisted,3
+Cyprus,1. Division,REJECT,country_league_not_allowlisted,3
+Czech-Republic,3. liga - CFL B,REJECT,country_league_not_allowlisted,3
+Czech-Republic,4. liga - Divizie C,REJECT,hard_reject_noise_league,3
+Czech-Republic,4. liga - Divizie E,REJECT,hard_reject_noise_league,3
+Ecuador,Liga Pro,REJECT,country_league_not_allowlisted,3
+Faroe-Islands,1. Deild,REJECT,country_league_not_allowlisted,3
+Finland,Kakkonen - Lohko C,REJECT,country_league_not_allowlisted,3
+Germany,Oberliga - Bayern Süd,REJECT,hard_reject_noise_league,3
+Germany,Oberliga - Bremen,REJECT,hard_reject_noise_league,3
+Germany,Oberliga - Niedersachsen,REJECT,hard_reject_noise_league,3
+Germany,Regionalliga - Nord,REJECT,hard_reject_noise_league,3
+Greece,Super League 1,REJECT,country_league_not_allowlisted,3
+Iceland,1. Deild,REJECT,country_league_not_allowlisted,3
+Kazakhstan,Premier League,REJECT,country_league_not_allowlisted,3
+Kyrgyzstan,Premier League,REJECT,country_league_not_allowlisted,3
+Latvia,1. Liga,REJECT,country_league_not_allowlisted,3
+Macedonia,First League,REJECT,country_league_not_allowlisted,3
+Malawi,Super League,REJECT,country_league_not_allowlisted,3
+Netherlands,U19 Divisie 1,REJECT,hard_reject_noise_league,3
+Norway,1. Division Women,REJECT,hard_reject_noise_league,3
+Poland,Ekstraklasa,REJECT,country_league_not_allowlisted,3
+Poland,I Liga,REJECT,country_league_not_allowlisted,3
+Romania,Liga III - Serie 2,REJECT,country_league_not_allowlisted,3
+Romania,Liga III - Serie 4,REJECT,country_league_not_allowlisted,3
+Saudi-Arabia,Pro League,REJECT,country_league_not_allowlisted,3
+Serbia,Super Liga,REJECT,country_league_not_allowlisted,3
+Slovakia,3. liga - Center,REJECT,country_league_not_allowlisted,3
+Slovenia,1. SNL,REJECT,country_league_not_allowlisted,3
+Sweden,Superettan,REJECT,country_league_not_allowlisted,3
+Switzerland,AXA Women’s Super League,REJECT,hard_reject_noise_league,3
+Syria,Premier League,REJECT,country_league_not_allowlisted,3
+Tajikistan,Vysshaya Liga,REJECT,country_league_not_allowlisted,3
+Tanzania,Ligi kuu Bara,REJECT,country_league_not_allowlisted,3
+Tunisia,Ligue 1,REJECT,country_league_not_allowlisted,3
+USA,MLS Next Pro,REJECT,hard_reject_noise_league,3
+USA,USL League Two,REJECT,country_league_not_allowlisted,3
+Ukraine,Premier League,REJECT,country_league_not_allowlisted,3
+Uruguay,Segunda División,REJECT,country_league_not_allowlisted,3
+Albania,1st Division,REJECT,country_league_not_allowlisted,2
+Argentina,Liga Profesional Argentina,REJECT,country_league_not_allowlisted,2
+Australia,Tasmania Southern Championship,REJECT,country_league_not_allowlisted,2
+Austria,Frauenliga,REJECT,country_league_not_allowlisted,2
+Austria,Landesliga - Steiermark,REJECT,hard_reject_noise_league,2
+Azerbaijan,Premyer Liqa,REJECT,country_league_not_allowlisted,2
+Belarus,Premier League,REJECT,country_league_not_allowlisted,2
+Belgium,Super League Women,REJECT,hard_reject_noise_league,2
+Bolivia,Primera División,REJECT,country_league_not_allowlisted,2
+Brazil,Brasileiro Women,REJECT,hard_reject_noise_league,2
+Brazil,Cearense - 2,REJECT,country_league_not_allowlisted,2
+Brazil,Matogrossense 2,REJECT,country_league_not_allowlisted,2
+Brazil,Mineiro U20,REJECT,hard_reject_noise_league,2
+Bulgaria,First League,REJECT,country_league_not_allowlisted,2
+Chile,Primera B,REJECT,country_league_not_allowlisted,2
+Congo-DR,Ligue 1,REJECT,country_league_not_allowlisted,2
+Croatia,First NL,REJECT,country_league_not_allowlisted,2
+Croatia,HNL,REJECT,country_league_not_allowlisted,2
+Czech-Republic,3. liga - CFL A,REJECT,country_league_not_allowlisted,2
+Czech-Republic,3. liga - MSFL,REJECT,country_league_not_allowlisted,2
+Czech-Republic,4. liga - Divizie F,REJECT,hard_reject_noise_league,2
+Czech-Republic,Czech Liga,REJECT,country_league_not_allowlisted,2
+Denmark,Kvindeliga,REJECT,hard_reject_noise_league,2
+Estonia,Esiliiga B,REJECT,country_league_not_allowlisted,2
+Ethiopia,Premier League,REJECT,country_league_not_allowlisted,2
+Finland,Kakkonen - Lohko A,REJECT,country_league_not_allowlisted,2
+Finland,Kakkonen - Lohko B,REJECT,country_league_not_allowlisted,2
+Finland,Ykkösliiga,REJECT,country_league_not_allowlisted,2
+Germany,Oberliga - Bayern Nord,REJECT,hard_reject_noise_league,2
+Germany,Oberliga - Nordost-Süd,REJECT,hard_reject_noise_league,2
+Italy,Campionato Primavera - 1,REJECT,country_league_not_allowlisted,2
+Ivory-Coast,Ligue 1,REJECT,country_league_not_allowlisted,2
+Kosovo,Superliga,REJECT,country_league_not_allowlisted,2
+Malta,Premier League,REJECT,country_league_not_allowlisted,2
+Mauritania,Premier League,REJECT,country_league_not_allowlisted,2
+Netherlands,U21 Divisie 1,REJECT,hard_reject_noise_league,2
+Norway,2. Division - Group 2,REJECT,country_league_not_allowlisted,2
+Paraguay,Division Intermedia,REJECT,country_league_not_allowlisted,2
+Peru,Primera División,REJECT,country_league_not_allowlisted,2
+Poland,Central Youth League,REJECT,hard_reject_noise_league,2
+Poland,II Liga - East,REJECT,country_league_not_allowlisted,2
+Portugal,Liga 3,REJECT,country_league_not_allowlisted,2
+Romania,Liga I,REJECT,country_league_not_allowlisted,2
+Romania,Liga III - Serie 1,REJECT,country_league_not_allowlisted,2
+Romania,Liga III - Serie 3,REJECT,country_league_not_allowlisted,2
+Romania,Liga III - Serie 5,REJECT,country_league_not_allowlisted,2
+San-Marino,Campionato,REJECT,country_league_not_allowlisted,2
+Serbia,Prva Liga,REJECT,country_league_not_allowlisted,2
+Slovakia,I Liga - Women,REJECT,hard_reject_noise_league,2
+Slovenia,2. SNL,REJECT,country_league_not_allowlisted,2
+Spain,Primera División Femenina,REJECT,hard_reject_noise_league,2
+Spain,Primera División RFEF - Group 2,REJECT,country_league_not_allowlisted,2
+Spain,Tercera División RFEF - Group 17,REJECT,country_league_not_allowlisted,2
+Spain,Tercera División RFEF - Group 18,REJECT,country_league_not_allowlisted,2
+Spain,Tercera División RFEF - Group 5,REJECT,country_league_not_allowlisted,2
+Sweden,Damallsvenskan,REJECT,country_league_not_allowlisted,2
+Sweden,Division 2 - Norra Svealand,REJECT,country_league_not_allowlisted,2
+Sweden,Division 2 - Södra Svealand,REJECT,country_league_not_allowlisted,2
+Uruguay,Primera División - Apertura,REJECT,country_league_not_allowlisted,2
+Algeria,Ligue 1,REJECT,country_league_not_allowlisted,1
+Argentina,Torneo Federal A,REJECT,country_league_not_allowlisted,1
+Armenia,Premier League,REJECT,country_league_not_allowlisted,1
+Aruba,Division di Honor,REJECT,country_league_not_allowlisted,1
+Australia,Capital Territory NPL,REJECT,country_league_not_allowlisted,1
+Australia,New South Wales NPL 2,REJECT,country_league_not_allowlisted,1
+Austria,Landesliga - Karnten,REJECT,hard_reject_noise_league,1
+Austria,Regionalliga - Mitte,REJECT,hard_reject_noise_league,1
+Brazil,Copa Espírito Santo,REJECT,country_league_not_allowlisted,1
+Brazil,Estadual Junior U20,REJECT,hard_reject_noise_league,1
+Brazil,Paranaense - 2,REJECT,country_league_not_allowlisted,1
+Brazil,Paulista - A4,REJECT,country_league_not_allowlisted,1
+Cameroon,Elite One,REJECT,country_league_not_allowlisted,1
+Colombia,Copa Colombia,REJECT,country_league_not_allowlisted,1
+Colombia,Liga Femenina,REJECT,hard_reject_noise_league,1
+Colombia,Primera A,REJECT,country_league_not_allowlisted,1
+Czech-Republic,1. Liga Women,REJECT,hard_reject_noise_league,1
+Czech-Republic,4. liga - Divizie A,REJECT,hard_reject_noise_league,1
+Czech-Republic,FNL,REJECT,country_league_not_allowlisted,1
+Denmark,1. Division,REJECT,country_league_not_allowlisted,1
+Denmark,2. Division,REJECT,country_league_not_allowlisted,1
+Dominican-Republic,Liga Mayor,REJECT,country_league_not_allowlisted,1
+Ecuador,Liga Pro Serie B,REJECT,country_league_not_allowlisted,1
+England,National League - South,REJECT,country_league_not_allowlisted,1
+England,U18 Premier League - North,REJECT,hard_reject_noise_league,1
+Estonia,Esiliiga A,REJECT,country_league_not_allowlisted,1
+Estonia,Meistriliiga,REJECT,country_league_not_allowlisted,1
+Faroe-Islands,Meistaradeildin,REJECT,country_league_not_allowlisted,1
+Finland,Kansallinen Liiga,REJECT,country_league_not_allowlisted,1
+Germany,Frauen Bundesliga,REJECT,country_league_not_allowlisted,1
+Germany,Oberliga - Niederrhein,REJECT,hard_reject_noise_league,1
+Germany,Oberliga - Schleswig-Holstein,REJECT,hard_reject_noise_league,1
+Germany,Oberliga - Westfalen,REJECT,hard_reject_noise_league,1
+Germany,Regionalliga - Nordost,REJECT,hard_reject_noise_league,1
+Hungary,Magyar Kupa,REJECT,country_league_not_allowlisted,1
+India,I-League,REJECT,country_league_not_allowlisted,1
+India,I-League - 2nd Division,REJECT,country_league_not_allowlisted,1
+India,Indian Super League,REJECT,country_league_not_allowlisted,1
+Italy,Serie A Women,REJECT,hard_reject_noise_league,1
+Italy,Serie C - Supercoppa Lega Finals,REJECT,country_league_not_allowlisted,1
+Italy,Serie D - Girone A,REJECT,country_league_not_allowlisted,1
+Kenya,FKF Premier League,REJECT,country_league_not_allowlisted,1
+Kenya,Super League,REJECT,country_league_not_allowlisted,1
+Lithuania,1 Lyga,REJECT,country_league_not_allowlisted,1
+Macao,Primeira Divisão,REJECT,country_league_not_allowlisted,1
+Malaysia,Super League,REJECT,country_league_not_allowlisted,1
+Mali,Première Division,REJECT,country_league_not_allowlisted,1
+Mexico,Liga MX U21,REJECT,hard_reject_noise_league,1
+Montenegro,First League,REJECT,country_league_not_allowlisted,1
+Morocco,Botola Pro,REJECT,country_league_not_allowlisted,1
+Northern-Ireland,Premiership,REJECT,country_league_not_allowlisted,1
+Norway,2. Division - Group 1,REJECT,country_league_not_allowlisted,1
+Norway,3. Division - Girone 3,REJECT,country_league_not_allowlisted,1
+Norway,3. Division - Girone 4,REJECT,country_league_not_allowlisted,1
+Norway,3. Division - Girone 5,REJECT,country_league_not_allowlisted,1
+Norway,3. Division - Girone 6,REJECT,country_league_not_allowlisted,1
+Norway,NM Cupen,REJECT,country_league_not_allowlisted,1
+Paraguay,Division Profesional - Apertura,REJECT,country_league_not_allowlisted,1
+Poland,Ekstraliga Women,REJECT,hard_reject_noise_league,1
+Poland,III Liga - Group 1,REJECT,country_league_not_allowlisted,1
+Portugal,Júniores U19,REJECT,hard_reject_noise_league,1
+Qatar,Emir Cup,REJECT,country_league_not_allowlisted,1
+Romania,Liga III - Serie 6,REJECT,country_league_not_allowlisted,1
+Romania,Liga III - Serie 7,REJECT,country_league_not_allowlisted,1
+Romania,Liga III - Serie 8,REJECT,country_league_not_allowlisted,1
+Scotland,League Two,REJECT,country_league_not_allowlisted,1
+South-Africa,Diski Challenge,REJECT,country_league_not_allowlisted,1
+Spain,Tercera División RFEF - Group 1,REJECT,country_league_not_allowlisted,1
+Spain,Tercera División RFEF - Group 11,REJECT,country_league_not_allowlisted,1
+Spain,Tercera División RFEF - Group 13,REJECT,country_league_not_allowlisted,1
+Spain,Tercera División RFEF - Group 14,REJECT,country_league_not_allowlisted,1
+Spain,Tercera División RFEF - Group 16,REJECT,country_league_not_allowlisted,1
+Spain,Tercera División RFEF - Group 2,REJECT,country_league_not_allowlisted,1
+Sweden,Division 2 - Östra Götaland,REJECT,country_league_not_allowlisted,1
+Sweden,Elitettan,REJECT,country_league_not_allowlisted,1
+Turkey,2. Lig,REJECT,country_league_not_allowlisted,1
+USA,NWSL Women,REJECT,hard_reject_noise_league,1
+USA,USL League One,REJECT,country_league_not_allowlisted,1
+USA,USL W League,REJECT,country_league_not_allowlisted,1
+Uganda,Premier League,REJECT,country_league_not_allowlisted,1
+Ukraine,Persha Liga,REJECT,country_league_not_allowlisted,1
+Ukraine,U19 League,REJECT,hard_reject_noise_league,1
+Venezuela,Primera División,REJECT,country_league_not_allowlisted,1
+World,CAF Confederation Cup,REJECT,country_league_not_allowlisted,1
+France,Ligue 2,TIER_1,france_ligue_2,9
+Germany,Bundesliga,TIER_1,germany_bundesliga,5
+Belgium,Jupiler Pro League,TIER_1,belgium_jupiler,4
+England,Premier League,TIER_1,england_premier_league,4
+Spain,Segunda División,TIER_1,spain_segunda,4
+Italy,Serie A,TIER_1,italy_serie_a,3
+Spain,La Liga,TIER_1,spain_la_liga,3
+Germany,2. Bundesliga,TIER_1,germany_2_bundesliga,1
+Turkey,Süper Lig,TIER_2,turkey_super_lig,9
+Scotland,Premiership,TIER_2,scotland_premiership,5
+Austria,Bundesliga,TIER_2,austria_bundesliga,3
+Sweden,Allsvenskan,TIER_2,sweden_allsvenskan,3
+Switzerland,Super League,TIER_2,switzerland_super_league,3
+USA,Major League Soccer,TIER_2,usa_mls,3
+Brazil,Serie A,TIER_2,brazil_serie_a,2
+England,League One,TIER_2,england_league_one,2
+Netherlands,Eerste Divisie,TIER_2,netherlands_eerste_divisie,2
+South-Africa,Premier Soccer League,TIER_3,south_africa_psl_noisy,6
+Brazil,Serie B,TIER_3,brazil_serie_b_noisy,4
+Slovakia,Super Liga,TIER_3,slovakia_super_liga_noisy,4
+Brazil,Serie C,TIER_3,brazil_serie_c_noisy,3
+Scotland,Championship,TIER_3,scotland_championship_noisy,2
+Scotland,League One,TIER_3,scotland_league_one_noisy,2
+Canada,Canadian Championship,TIER_3,canada_cup_noisy,1
+Finland,Veikkausliiga,TIER_3,finland_veikkausliiga_noisy,1
+Germany,3. Liga,TIER_3,germany_3_liga_noisy,1
+Lithuania,A Lyga,TIER_3,lithuania_a_lyga_noisy,1

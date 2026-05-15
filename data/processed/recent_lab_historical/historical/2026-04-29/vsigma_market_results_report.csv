@@ -1,0 +1,8 @@
+market_primary,n_total,n_settled,wins,losses,pushes,win_rate_no_push,roi_units,avg_primary_edge,report_type,edge_floor_band,execution_verdict
+HOME_DNB,1.0,1.0,0.0,0.0,1.0,,0.0,,by_market_primary,,
+OVER_1_5,25.0,25.0,21.0,4.0,0.0,0.84,-4.0,,by_market_primary,,
+UNDER_3_5,1.0,1.0,1.0,0.0,0.0,1.0,0.0,,by_market_primary,,
+,27.0,27.0,22.0,4.0,1.0,0.8462,-4.0,,by_edge_floor_band,NO_ODDS,
+,3.0,3.0,3.0,0.0,0.0,1.0,0.0,,by_execution_verdict,,CORE_SHORTLIST
+,2.0,2.0,0.0,1.0,1.0,0.0,-1.0,,by_execution_verdict,,TOP_CORE
+,22.0,22.0,19.0,3.0,0.0,0.8636,-3.0,,by_execution_verdict,,WATCH

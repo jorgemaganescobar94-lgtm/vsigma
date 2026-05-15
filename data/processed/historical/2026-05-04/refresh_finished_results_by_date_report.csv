@@ -1,0 +1,17 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-05-04,OK,API-SPORTS_DIRECT,186.0,,,,,,
+2026-05-04T00:30:00+01:00,MATCHED,,,1492246.0,FT,Mirassol,Corinthians,2.0,1.0
+2026-05-04T15:00:00+01:00,MATCHED,,,1379313.0,FT,Chelsea,Nottingham Forest,1.0,3.0
+2026-05-04T17:30:00+01:00,MATCHED,,,1378207.0,FT,Cremonese,Lazio,1.0,2.0
+2026-05-04T17:30:00+01:00,MATCHED,,,1531280.0,FT,SCR Altach,Wolfsberger AC,1.0,4.0
+2026-05-04T17:30:00+01:00,MATCHED,,,1540025.0,FT,Heart Of Midlothian,Rangers,2.0,1.0
+2026-05-04T18:00:00+01:00,MATCHED,,,1494154.0,FT,Djurgardens IF,IFK Goteborg,6.0,0.0
+2026-05-04T18:00:00+01:00,MATCHED,,,1494157.0,FT,Halmstad,IF Brommapojkarna,1.0,3.0
+2026-05-04T18:00:00+01:00,MATCHED,,,1494651.0,FT,Bodo/Glimt,Molde,0.0,1.0
+2026-05-04T18:00:00+01:00,MATCHED,,,1530582.0,FT,FC Midtjylland,Viborg,3.0,3.0
+2026-05-04T19:30:00+01:00,MATCHED,,,1392179.0,FT,Almeria,Mirandes,4.0,2.0
+2026-05-04T19:30:00+01:00,MATCHED,,,1531252.0,FT,Lask Linz,Rapid Vienna,3.0,1.0
+2026-05-04T19:45:00+01:00,MATCHED,,,1378211.0,FT,AS Roma,Fiorentina,4.0,0.0
+2026-05-04T20:00:00+01:00,MATCHED,,,1379314.0,FT,Everton,Manchester City,3.0,3.0
+2026-05-04T20:00:00+01:00,MATCHED,,,1391156.0,FT,Sevilla,Real Sociedad,1.0,0.0
+2026-05-04T20:15:00+01:00,MATCHED,,,1396524.0,FT,Sporting CP,Guimaraes,5.0,1.0

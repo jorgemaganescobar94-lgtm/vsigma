@@ -1,0 +1,29 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-04-29,OK,API-SPORTS_DIRECT,311.0,,,,,,
+2026-04-29T01:00:00+01:00,MATCHED,,,1535171.0,FT,Barracas Central,A. Italiano,1.0,1.0
+2026-04-29T01:00:00+01:00,MATCHED,,,1535281.0,FT,UCV,Rosario Central,0.0,3.0
+2026-04-29T01:30:00+01:00,MATCHED,,,1535179.0,FT,Millonarios,Sao Paulo,0.0,0.0
+2026-04-29T01:30:00+01:00,MATCHED,,,1535182.0,FT,Deportivo Recoleta,Deportivo Cuenca,0.0,0.0
+2026-04-29T01:30:00+01:00,MATCHED,,,1535270.0,FT,Cruzeiro,Boca Juniors,1.0,0.0
+2026-04-29T03:00:00+01:00,MATCHED,,,1535180.0,FT,O'Higgins,Boston River,2.0,0.0
+2026-04-29T03:00:00+01:00,MATCHED,,,1535271.0,FT,Deportes Tolima,Coquimbo Unido,3.0,0.0
+2026-04-29T03:00:00+01:00,MATCHED,,,1535279.0,FT,Sporting Cristal,Junior,2.0,0.0
+2026-04-29T05:00:00+01:00,MATCHED,,,1504769.0,FT,Shimizu S-pulse,V-varen Nagasaki,1.0,2.0
+2026-04-29T05:00:00+01:00,MATCHED,,,1504770.0,FT,Tokyo Verdy,Kashima,2.0,1.0
+2026-04-29T06:00:00+01:00,MATCHED,,,1504771.0,PEN,Avispa Fukuoka,Sanfrecce Hiroshima,2.0,2.0
+2026-04-29T06:00:00+01:00,MATCHED,,,1504772.0,FT,JEF United Chiba,Yokohama F. Marinos,2.0,3.0
+2026-04-29T06:00:00+01:00,MATCHED,,,1504773.0,PEN,Vissel Kobe,Cerezo Osaka,0.0,0.0
+2026-04-29T07:00:00+01:00,MATCHED,,,1504774.0,PEN,Kyoto Sanga,Gamba Osaka,1.0,1.0
+2026-04-29T07:00:00+01:00,MATCHED,,,1504775.0,PEN,Nagoya Grampus,Fagiano Okayama,1.0,1.0
+2026-04-29T07:00:00+01:00,MATCHED,,,1504776.0,FT,Urawa,Kawasaki Frontale,2.0,0.0
+2026-04-29T08:00:00+01:00,MATCHED,,,1504777.0,FT,Kashiwa Reysol,FC Tokyo,1.0,3.0
+2026-04-29T08:00:00+01:00,MATCHED,,,1504778.0,PEN,Mito Hollyhock,Machida Zelvia,2.0,2.0
+2026-04-29T17:45:00+01:00,MATCHED,,,1544642.0,FT,Den Bosch,Almere City FC,2.0,3.0
+2026-04-29T18:00:00+01:00,MATCHED,,,1494724.0,FT,Tromso,Brann,0.0,5.0
+2026-04-29T20:00:00+01:00,MATCHED,,,1540842.0,FT,Atletico Madrid,Arsenal,1.0,1.0
+2026-04-29T20:15:00+01:00,MATCHED,,,1396469.0,FT,Sporting CP,Tondela,2.0,2.0
+2026-04-29T23:00:00+01:00,MATCHED,,,1535175.0,FT,Caracas FC,Racing Club,1.0,1.0
+2026-04-29T23:00:00+01:00,MATCHED,,,1535177.0,FT,Deportivo Riestra,Atletico Torque,2.0,1.0
+2026-04-29T23:00:00+01:00,MATCHED,,,1535178.0,FT,Juventud,Puerto Cabello,4.0,0.0
+2026-04-29T23:00:00+01:00,MATCHED,,,1535277.0,FT,Mirassol,Always Ready,2.0,0.0
+2026-04-29T23:00:00+01:00,MATCHED,,,1535278.0,FT,Platense,Santa Fe,2.0,1.0

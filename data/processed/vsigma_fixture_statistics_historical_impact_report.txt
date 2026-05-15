@@ -1,0 +1,86 @@
+VSIGMA FIXTURE STATISTICS HISTORICAL IMPACT REPORT
+
+Range rebuilt: 2026-04-23 through 2026-05-08
+Historical snapshot dates present: 2026-04-23, 2026-04-24, 2026-04-25, 2026-04-26, 2026-04-27, 2026-04-28, 2026-04-29, 2026-04-30, 2026-05-01, 2026-05-02, 2026-05-03, 2026-05-04, 2026-05-05, 2026-05-06, 2026-05-07, 2026-05-08
+Populated execution-shortlist dates: 2026-05-03, 2026-05-04, 2026-05-05, 2026-05-06, 2026-05-07, 2026-05-08
+
+Stats enrichment verification:
+- recent_fixture_statistics_enrichment_report.csv present for every historical date: True
+- rows_processed=647, full=512, partial=101, sparse=33, none=1
+- api_calls_made=1539, cache_hits=4931, api_errors=0, plan_limit_errors=0
+
+Snapshot completeness:
+- required files present for every date: True
+- premium approved rows by date: 2026-04-23:0, 2026-04-24:0, 2026-04-25:0, 2026-04-26:0, 2026-04-27:0, 2026-04-28:0, 2026-04-29:0, 2026-04-30:0, 2026-05-01:0, 2026-05-02:0, 2026-05-03:30, 2026-05-04:8, 2026-05-05:9, 2026-05-06:16, 2026-05-07:14, 2026-05-08:20
+- standard approved rows by date: 2026-04-23:0, 2026-04-24:0, 2026-04-25:0, 2026-04-26:0, 2026-04-27:0, 2026-04-28:0, 2026-04-29:0, 2026-04-30:0, 2026-05-01:0, 2026-05-02:0, 2026-05-03:0, 2026-05-04:0, 2026-05-05:0, 2026-05-06:0, 2026-05-07:0, 2026-05-08:0
+
+New execution-shortlist backtest:
+segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+    ALL          36           36    26      10       0      0                8.91        24.75
+
+By source:
+         segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+    PREMIUM_CORE          21           21    17       4       0      0                7.19    34.238095
+PREMIUM_EXTENDED          15           15     9       6       0      0                1.72    11.466667
+
+By bucket:
+         segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+APPROVED_PREMIUM          36           36    26      10       0      0                8.91        24.75
+
+By market:
+  segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+ AWAY_WIN           2            2     2       0       0      0                2.44   122.000000
+ BTTS_YES           6            6     2       4       0      0               -3.14   -52.333333
+ HOME_WIN           5            5     2       3       0      0                1.04    20.800000
+ OVER_1_5          11           11     8       3       0      0                0.14     1.272727
+ OVER_2_5          11           11    11       0       0      0                8.13    73.909091
+UNDER_3_5           1            1     1       0       0      0                0.30    30.000000
+
+By league:
+                      segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+                2. Bundesliga           2            2     2       0       0      0                3.53   176.500000
+                  Allsvenskan           1            1     0       1       0      0               -1.00  -100.000000
+                   Bundesliga           1            1     0       1       0      0               -1.00  -100.000000
+        CONMEBOL Libertadores           7            7     5       2       0      0                0.21     3.000000
+        CONMEBOL Sudamericana           2            2     1       1       0      0               -0.14    -7.000000
+                  Eliteserien           1            1     0       1       0      0               -1.00  -100.000000
+                    J1 League           2            2     2       0       0      0                1.72    86.000000
+           Jupiler Pro League           2            2     2       0       0      0                1.53    76.500000
+                   K League 1           2            2     1       1       0      0               -0.10    -5.000000
+                      La Liga           2            2     1       1       0      0               -0.70   -35.000000
+               Premier League           2            2     1       1       0      0               -0.35   -17.500000
+                  Premiership           1            1     1       0       0      0                0.30    30.000000
+             Segunda División           3            3     3       0       0      0                2.12    70.666667
+                      Serie A           3            3     2       1       0      0                0.74    24.666667
+                      Serie B           2            2     2       0       0      0                0.87    43.500000
+        UEFA Champions League           1            1     1       0       0      0                0.31    31.000000
+UEFA Europa Conference League           1            1     1       0       0      0                0.95    95.000000
+           UEFA Europa League           1            1     1       0       0      0                0.92    92.000000
+
+Execution mode comparison:
+              mode  rows_total  graded_rows  wins  losses  pushes  voids  hit_rate  profit_units_total  roi_percent  avg_odds  avg_edge  avg_execution_score  max_drawdown
+         CORE_ONLY          21           21    17       4       0      0 80.952381                7.19    34.238095  1.694286  0.203347           137.932303         -0.77
+CORE_PLUS_STANDARD          21           21    17       4       0      0 80.952381                7.19    34.238095  1.694286  0.203347           137.932303         -0.77
+    FULL_SHORTLIST          36           36    26      10       0      0 72.222222                8.91    24.750000  1.920833  0.201725           128.748865         -0.47
+
+Before vs after summary:
+category            segment  before_rows_total  after_rows_total  delta_rows_total  before_graded_rows  after_graded_rows  delta_graded_rows  before_wins  after_wins  delta_wins  before_losses  after_losses  delta_losses  before_profit_units_total  after_profit_units_total  delta_profit_units_total  before_roi_percent  after_roi_percent  delta_roi_percent  before_max_drawdown  after_max_drawdown  delta_max_drawdown
+    mode          CORE_ONLY               10.0                21              11.0                10.0                 21               11.0          9.0          17         8.0            1.0             4           3.0                       4.08                      7.19                      3.11           40.800000          34.238095          -6.561905                -0.68               -0.77               -0.09
+    mode CORE_PLUS_STANDARD                NaN                21               NaN                 NaN                 21                NaN          NaN          17         NaN            NaN             4           NaN                       4.30                      7.19                      2.89           25.290000          34.238095           8.948095                  NaN               -0.77                 NaN
+    mode     FULL_SHORTLIST               39.0                36              -3.0                39.0                 36               -3.0         29.0          26        -3.0           10.0            10           0.0                       4.27                      8.91                      4.64           10.950000          24.750000          13.800000                -0.44               -0.47               -0.03
+ overall                ALL               39.0                36              -3.0                39.0                 36               -3.0         29.0          26        -3.0           10.0            10           0.0                       4.27                      8.91                      4.64           10.948718          24.750000          13.801282                  NaN                 NaN                 NaN
+  source       PREMIUM_CORE               10.0                21              11.0                10.0                 21               11.0          NaN          17         NaN            NaN             4           NaN                       4.08                      7.19                      3.11           40.800000          34.238095          -6.561905                  NaN                 NaN                 NaN
+  source   PREMIUM_EXTENDED               22.0                15              -7.0                22.0                 15               -7.0          NaN           9         NaN            NaN             6           NaN                      -0.03                      1.72                      1.75           -0.140000          11.466667          11.606667                  NaN                 NaN                 NaN
+  source      STANDARD_FILL                7.0                 0              -7.0                 7.0                  0               -7.0          NaN           0         NaN            NaN             0           NaN                       0.22                      0.00                     -0.22            3.140000                NaN                NaN                  NaN                 NaN                 NaN
+
+Interpretation:
+- The rebuilt FULL_SHORTLIST sample improved from +4.27u / 10.95% ROI to +8.91u / 24.75% ROI, with rows falling from 39 to 36.
+- The improvement is not a pure same-row outcome improvement. Row composition changed materially: PREMIUM_CORE increased 10 -> 21 rows, PREMIUM_EXTENDED fell 22 -> 15, and STANDARD_FILL fell 7 -> 0.
+- CORE_ONLY improved in profit (+4.08u -> +7.19u) but ROI fell (40.80% -> 34.24%) and max drawdown worsened slightly (-0.68u -> -0.77u), because the rebuilt CORE sample is much larger.
+- Expanded execution improved sharply: PREMIUM_EXTENDED moved from -0.03u / -0.14% ROI to +1.72u / 11.47% ROI, while FULL_SHORTLIST drawdown was similar/slightly worse (-0.44u -> -0.47u).
+- CORE_PLUS_STANDARD now equals CORE_ONLY because no STANDARD_FILL rows survived in the rebuilt execution shortlist. This is an execution survival/ranking change, not evidence that standard rows became better.
+- Fragile requested markets had no current losses: AWAY_WIN 2-0 +2.44u, OVER_2_5 11-0 +8.13u, UNDER_3_5 1-0 +0.30u. Current losses came from BTTS_YES, HOME_WIN, and OVER_1_5.
+- Without a saved pre-stats row-level artifact, same-row overlap and same-row outcome deltas cannot be proven. The measured effect includes new row inclusion/exclusion, market mix changes, ranking changes, and execution survival changes.
+
+Verdict: STATS_LAYER_HELPFUL
+Reason: historical execution quality improved on profit and FULL_SHORTLIST ROI, and expanded premium stopped being negative, but the conclusion is mixed because CORE ROI fell and the sample composition changed materially.

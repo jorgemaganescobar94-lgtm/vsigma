@@ -1,0 +1,14 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-05-13,OK,API-SPORTS_DIRECT,323.0,,,,,,
+2026-05-13T18:00:00+01:00,MATCHED,,,1387951.0,FT,Stade Brestois 29,Strasbourg,1.0,2.0
+2026-05-13T18:00:00+01:00,MATCHED,,,1391172.0,FT,Espanyol,Athletic Club,2.0,0.0
+2026-05-13T18:00:00+01:00,MATCHED,,,1391178.0,FT,Villarreal,Sevilla,2.0,3.0
+2026-05-13T19:00:00+01:00,MATCHED,,,1544690.0,FT,Almere City FC,Willem II,0.0,1.0
+2026-05-13T20:00:00+01:00,MATCHED,,,1379275.0,FT,Manchester City,Crystal Palace,3.0,0.0
+2026-05-13T20:00:00+01:00,MATCHED,,,1387952.0,FT,Lens,Paris Saint Germain,0.0,2.0
+2026-05-13T20:00:00+01:00,MATCHED,,,1540029.0,FT,Heart Of Midlothian,Falkirk,3.0,0.0
+2026-05-13T20:00:00+01:00,MATCHED,,,1540030.0,FT,Motherwell,Celtic,2.0,3.0
+2026-05-13T20:00:00+01:00,MATCHED,,,1540031.0,FT,Rangers,Hibernian,1.0,2.0
+2026-05-13T20:00:00+01:00,MATCHED,,,1544063.0,FT,Stockport County,Stevenage,2.0,0.0
+2026-05-13T20:30:00+01:00,MATCHED,,,1391169.0,FT,Alaves,Barcelona,1.0,0.0
+2026-05-13T20:30:00+01:00,MATCHED,,,1391173.0,FT,Getafe,Mallorca,3.0,1.0

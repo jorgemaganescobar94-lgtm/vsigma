@@ -1,0 +1,14 @@
+check_name,expected,observed,status
+combined_deep_rows,15,15,PASS
+final_export_total_rows,15,15,PASS
+approved_premium_export_rows,7,7,PASS
+approved_standard_export_rows,1,1,PASS
+downgraded_export_rows,6,6,PASS
+blocked_export_rows,0,0,PASS
+watch_export_rows,1,1,PASS
+summary_overall_rows,15,15,PASS
+summary_approved_premium_rows,7,7,PASS
+summary_approved_standard_rows,1,1,PASS
+summary_downgraded_rows,6,6,PASS
+summary_blocked_rows,0,0,PASS
+summary_watch_rows,1,1,PASS
