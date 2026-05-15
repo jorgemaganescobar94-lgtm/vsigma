@@ -9,7 +9,7 @@ Candidate v6 competition top rows: 1
 API prediction available rows: 1
 API prediction aligned rows: 0
 API prediction disagreement rows: 0
-API calls: 0 | cache hits: 1 | errors: 0
+API calls: 1 | cache hits: 0 | errors: 0
 
 API Predictions Benchmark action mix
 api_prediction_benchmark_action

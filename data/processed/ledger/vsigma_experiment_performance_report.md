@@ -1,7 +1,7 @@
 # vSIGMA Experiment Performance Report
 
-- Generated for ledger: C:\vsigma\data\processed\ledger\vsigma_immutable_daily_pick_ledger.csv
-- Registry: C:\vsigma\config\vsigma_experiment_registry.json
+- Generated for ledger: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv
+- Registry: /home/runner/work/vsigma/vsigma/config/vsigma_experiment_registry.json
 
 ## Official Baseline
 | experiment_id | display_name | status | selection_role | allowed_to_select_officially | total_days_observed | pick_days | no_bet_days | picks_total | settled_picks | wins | losses | pushes | voids | hit_rate | profit_units | roi_percent | average_calibrated_probability | brier_score | max_drawdown | market_mix | failure_mode_mix | current_verdict |

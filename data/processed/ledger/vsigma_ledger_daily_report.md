@@ -1,8 +1,8 @@
 # vSIGMA Immutable Ledger Daily Report - 2026-05-15
 
 ## Ledger Update Status
-- Ledger CSV: C:\vsigma\data\processed\ledger\vsigma_immutable_daily_pick_ledger.csv
-- JSONL event log: C:\vsigma\data\processed\ledger\vsigma_immutable_daily_pick_ledger.jsonl
+- Ledger CSV: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv
+- JSONL event log: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.jsonl
 - Official picks registered: 1
 - Shadow picks registered: 5
 - No-bet records: 1
@@ -67,10 +67,4 @@
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1544651 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
 
 ## Freshness Warnings
-| file_name | status | detail |
-| --- | --- | --- |
-| vsigma_today_candidate_v7_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| vsigma_today_prelock_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| vsigma_today_prelock_comparison.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| vsigma_today_candidate_v7_results_ledger.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| today_post_results_report.csv | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet |
+_No rows._
