@@ -1,0 +1,49 @@
+VSIGMA INJURIES ADVISORY MODE REPORT
+
+Decision power removed
+- Injury unknown/NONE/SPARSE/PARTIAL coverage no longer changes scoring, shortlist sample penalties, market-fit bonuses, pick-mode ordering, or execution downgrade gates.
+- FULL + HIGH known absence risk is retained as advisory context and a tiny scoring nudge only.
+- Availability notes remain in deep-analysis reasoning: AVAILABILITY_SAFE, AVAILABILITY_UNCERTAIN, ABSENCE_RISK_HIGH, COVERAGE_TOO_WEAK_FOR_CONFIDENCE.
+- Unknown-vs-zero semantics remain intact: unknown counts/risk stay NaN with explicit coverage/severity flags.
+
+Production architecture note
+- The validated 16-day calibration window could not produce premium rules under the old 5-window/25-bet premium threshold, causing a standard-only rebuild even after injury decision power was removed.
+- Premium rule tiering was aligned to this validated window by requiring 2 validation windows and 14 validation graded bets while keeping generic broad rules excluded.
+
+Historical rebuilt coverage
+- Dates covered: 2026-05-03, 2026-05-04, 2026-05-05, 2026-05-06, 2026-05-07, 2026-05-08
+- Rows: 27 | graded: 25 | W/L: 16/9 | profit: 3.49u | ROI: 13.960000%
+
+Premium/core survival
+- PREMIUM_CORE rows: 14 | ROI: 22.4167%
+- PREMIUM_EXTENDED rows: 13 | ROI: 6.15385%
+- STANDARD_FILL rows: 0 | ROI: N/A%
+
+Mode comparison
+              mode  rows_total  graded_rows  wins  losses  pushes  voids  hit_rate  profit_units_total  roi_percent  avg_odds  avg_edge  avg_execution_score  max_drawdown
+         CORE_ONLY          14           12     9       3       0      0      75.0                2.69    22.416667  1.728333  0.241307           142.407840         -1.00
+CORE_PLUS_STANDARD          14           12     9       3       0      0      75.0                2.69    22.416667  1.728333  0.241307           142.407840         -1.00
+    FULL_SHORTLIST          27           25    16       9       0      0      64.0                3.49    13.960000  2.038000  0.236645           129.363751         -0.55
+
+Source breakdown
+         segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+    PREMIUM_CORE          14           12     9       3       0      0                2.69    22.416667
+PREMIUM_EXTENDED          13           13     7       6       0      0                0.80     6.153846
+
+Production rule tiers
+production_rule_tier
+GENERIC_BROAD       20
+PREMIUM_EVIDENCE     5
+
+Today pipeline counts
+- API fixtures: 1223 | upcoming: 119 | filtered: 15 | scored: 15 | shortlist: 7 | deep: 7
+- approved premium: 1 | approved standard: 0 | approved total: 1 | downgraded: 3 | blocked: 0 | watch: 3
+
+Delta vs recalibrated injuries baseline
+- Rows: -7 | graded: +6 | profit: +2.88u | ROI: +10.749474 pp
+
+Delta vs stats-only baseline
+- Rows: -9 | graded: -11 | profit: -5.42u | ROI: -10.790000 pp
+
+Verdict
+INJURIES_ADVISORY_MODE_SUCCESS

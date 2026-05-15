@@ -1,0 +1,65 @@
+vSIGMA recent lab historical evaluation
+
+Lab layers: recent schedule strength + recent fixture anomaly cleaning.
+Baseline: frozen historical execution-mode outputs in data/processed.
+Generated at UTC: 2026-05-13T14:02:54.561353+00:00
+
+Batch status
+      date status  rows  graded_rows  fallback_rows
+2026-04-23     OK    28            0              0
+2026-04-24     OK    32            0              0
+2026-04-25     OK   109            0              0
+2026-04-26     OK    79            0              0
+2026-04-27     OK    21            0              0
+2026-04-28     OK    10            0              0
+2026-04-29     OK    27            0              0
+2026-04-30     OK    15            0              0
+2026-05-01     OK    28            0              0
+2026-05-02     OK   119            0              0
+2026-05-03     OK    85            0              0
+2026-05-04     OK    15            8              0
+2026-05-05     OK    14            5              0
+2026-05-06     OK    22           15              0
+2026-05-07     OK    16           14              0
+2026-05-08     OK    27           15              0
+
+Baseline vs experimental
+                     mode  baseline_rows  experimental_rows  baseline_wins  experimental_wins  baseline_losses  experimental_losses  baseline_hit_rate  experimental_hit_rate  baseline_profit  experimental_profit  baseline_roi  experimental_roi
+                CORE_ONLY             11                 16              9                 13                2                    3          81.818182              81.250000             2.77                 6.40     25.181818         40.000000
+       CORE_PLUS_STANDARD             14                 16             11                 13                3                    3          78.571429              81.250000             2.86                 6.40     20.428571         40.000000
+           FULL_SHORTLIST             20                 22             16                 18                4                    4          80.000000              81.818182             4.07                 7.34     20.350000         33.363636
+COMPETITION_ACCURACY_MODE             10                  9              8                  7                2                    2          80.000000              77.777778             2.64                 2.28     26.400000         25.333333
+
+Experimental market-family breakdown
+  segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+ AWAY_WIN           2            2     2       0       0      0                2.44   122.000000
+ BTTS_YES           2            2     1       1       0      0               -0.69   -34.500000
+ HOME_WIN           1            1     1       0       0      0                0.32    32.000000
+ OVER_1_5           9            9     6       3       0      0               -0.37    -4.111111
+ OVER_2_5           6            6     6       0       0      0                4.95    82.500000
+UNDER_3_5           2            2     2       0       0      0                0.69    34.500000
+
+Experimental CORE / EXTENDED / STANDARD breakdown
+         segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+    PREMIUM_CORE          16           16    13       3       0      0                6.40    40.000000
+PREMIUM_EXTENDED           6            6     5       1       0      0                0.94    15.666667
+
+Experimental probability/Brier summary
+     summary_scope                   segment  rows_total  graded_rows  wins  losses   hit_rate  brier_score  brier_score_raw  brier_score_calibrated  avg_probability  avg_probability_raw  avg_probability_calibrated  avg_edge  profit_units_total  roi_percent
+           overall            FULL_SHORTLIST          22           22    18       4  81.818182     0.141786         0.148961                0.141786         0.817807             0.841109                    0.817807  0.204986                7.34    33.363636
+              mode COMPETITION_ACCURACY_MODE           9            9     7       2  77.777778     0.169789         0.187328                0.169789         0.808850             0.865811                    0.808850  0.219989                2.28    25.333333
+            bucket              PREMIUM_CORE          16           16    13       3  81.250000     0.147383         0.151178                0.147383         0.804384             0.821425                    0.804384  0.217934                6.40    40.000000
+            bucket          PREMIUM_EXTENDED           6            6     5       1  83.333333     0.126862         0.143048                0.126862         0.853600             0.893600                    0.853600  0.170459                0.94    15.666667
+     market_family                  AWAY_WIN           2            2     2       0 100.000000     0.029008         0.027707                0.029008         0.834558             0.840000                    0.834558  0.385082                2.44   122.000000
+     market_family                  BTTS_YES           2            2     1       1  50.000000     0.244688         0.244688                0.244688         0.794350             0.794350                    0.794350  0.198078               -0.69   -34.500000
+     market_family                  HOME_WIN           1            1     1       0 100.000000     0.011046         0.011046                0.011046         0.894900             0.894900                    0.894900  0.137324                0.32    32.000000
+     market_family                  OVER_1_5           9            9     6       3  66.666667     0.244369         0.263169                0.244369         0.830011             0.883344                    0.830011  0.181300               -0.37    -4.111111
+     market_family                  OVER_2_5           6            6     6       0 100.000000     0.056076         0.054618                0.056076         0.765472             0.769100                    0.765472  0.214485                4.95    82.500000
+     market_family                 UNDER_3_5           2            2     2       0 100.000000     0.012543         0.012543                0.012543         0.888050             0.888050                    0.888050  0.143722                0.69    34.500000
+calibration_bucket                 0.00-0.60           0            0     0       0        NaN          NaN              NaN                     NaN              NaN                  NaN                         NaN       NaN                0.00          NaN
+calibration_bucket                 0.60-0.70           1            1     0       1   0.000000     0.478726         0.478726                0.478726         0.691900             0.691900                    0.691900  0.262715               -1.00  -100.000000
+calibration_bucket                 0.70-0.75           2            2     2       0 100.000000     0.075680         0.075680                0.075680         0.724900             0.724900                    0.724900  0.151599                1.50    75.000000
+calibration_bucket                 0.75-0.80           4            4     4       0 100.000000     0.047991         0.046800                0.047991         0.781404             0.784125                    0.781404  0.303060                4.39   109.750000
+calibration_bucket                 0.80-0.85           2            2     2       0 100.000000     0.045966         0.028174                0.045966         0.787008             0.832450                    0.787008  0.188558                1.11    55.500000
+calibration_bucket                 0.85-0.90          10           10     7       3  70.000000     0.214687         0.238458                0.214687         0.854802             0.879890                    0.854802  0.178550                0.22     2.200000
+calibration_bucket                 0.90-1.00           3            3     3       0 100.000000     0.019483         0.006310                0.019483         0.867467             0.920800                    0.867467  0.189642                1.12    37.333333

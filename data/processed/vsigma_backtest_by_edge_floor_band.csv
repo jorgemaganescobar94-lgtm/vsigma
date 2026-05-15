@@ -1,0 +1,4 @@
+group_value,rows_total,actionable_rows,non_actionable_rows,graded_bets,wins,losses,pushes,voids,blocked_win,blocked_loss,blocked_push,blocked_void,blocked_no_bet,stake_units,profit_units,roi_pct,hit_rate_decided_pct,avg_odds_actionable,avg_model_edge_pct,avg_model_edge_abs
+STRONG,86,59,27,59,41,18,0,0,0,0,0,0,27,59.0,1.14,1.9322,69.4915,1.4517,,0.1507
+PLAYABLE,5,3,2,3,3,0,0,0,0,0,0,0,2,3.0,0.72,24.0,100.0,1.24,,0.041
+NO_ODDS,556,0,556,0,0,0,0,0,0,0,0,0,556,0.0,0.0,,,,,

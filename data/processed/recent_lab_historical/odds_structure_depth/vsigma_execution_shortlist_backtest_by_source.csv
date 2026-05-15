@@ -1,0 +1,3 @@
+segment,rows_total,graded_rows,wins,losses,pushes,voids,profit_units_total,roi_percent
+PREMIUM_CORE,16,16,13,3,0,0,5.65,35.3125
+PREMIUM_EXTENDED,5,5,4,1,0,0,0.64,12.8

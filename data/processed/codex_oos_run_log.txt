@@ -1,0 +1,44 @@
+﻿**Files Changed**
+- [scripts/calibrate_vsigma_thresholds.py](C:/vsigma/scripts/calibrate_vsigma_thresholds.py)
+- [scripts/run_vsigma_backtest_calibration.py](C:/vsigma/scripts/run_vsigma_backtest_calibration.py)
+- [tests/test_vsigma_backtest_calibration.py](C:/vsigma/tests/test_vsigma_backtest_calibration.py)
+- [data/processed/vsigma_threshold_rolling_splits.csv](C:/vsigma/data/processed/vsigma_threshold_rolling_splits.csv)
+- [data/processed/vsigma_threshold_rolling_validation.csv](C:/vsigma/data/processed/vsigma_threshold_rolling_validation.csv)
+- [data/processed/vsigma_threshold_promoted_rules.csv](C:/vsigma/data/processed/vsigma_threshold_promoted_rules.csv)
+- [data/processed/vsigma_threshold_calibration_report.txt](C:/vsigma/data/processed/vsigma_threshold_calibration_report.txt)
+- [data/processed/vsigma_threshold_calibration_candidates.csv](C:/vsigma/data/processed/vsigma_threshold_calibration_candidates.csv)
+- [data/processed/codex_oos_run_log.txt](C:/vsigma/data/processed/codex_oos_run_log.txt)
+
+**What Changed**
+- Rolling train/validation calibration now filters train-window candidate rules before OOS validation.
+- Default train gates require `train_profit_units >= 0` and `train_roi_pct >= 0`.
+- Added CLI options: `--min-train-roi-pct` and `--min-train-profit-units`.
+- Runner script forwards the new train gates to calibration.
+- Calibration report now records train candidate rows before and after train filters.
+- Tests now assert that an unprofitable train rule is not evaluated or promoted even if it wins in the future validation window.
+
+**Commands Run**
+- `Get-Content AGENTS.md`
+- `rg --files`
+- `.\.venv\Scripts\python.exe -m unittest tests.test_vsigma_backtest_calibration`
+- `.\.venv\Scripts\python.exe -m compileall scripts\calibrate_vsigma_thresholds.py scripts\run_vsigma_backtest_calibration.py tests\test_vsigma_backtest_calibration.py`
+- `.\.venv\Scripts\python.exe scripts\calibrate_vsigma_thresholds.py --source-csv data\processed\vsigma_backtest_enriched_source.csv --output-dir data\processed --min-graded 3`
+- `.\.venv\Scripts\python.exe scripts\run_vsigma_backtest_calibration.py --help`
+- Artifact verification via `Import-Csv`, `Get-Content`, and `.venv` commands.
+
+`git status --short` could not run because `git` is not available on PATH in this shell.
+
+**Validation**
+Passed.
+
+Focused unittest suite: `Ran 5 tests ... OK`.
+
+Regenerated processed calibration state:
+- rolling splits: `2`
+- train candidate rows before filters: `299`
+- train candidate rows after train filters: `78`
+- rolling validation rows: `71`
+- promoted rules: `25`
+
+**Next Engineering Step**
+Run the full end-to-end wrapper after the next labeled-results refresh: `.\.venv\Scripts\python.exe scripts\run_vsigma_backtest_calibration.py`, then compare promoted rules across at least five chronological validation windows before changing live execution thresholds.

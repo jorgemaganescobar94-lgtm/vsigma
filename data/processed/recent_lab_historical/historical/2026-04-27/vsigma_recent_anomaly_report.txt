@@ -1,0 +1,9 @@
+vSIGMA recent fixture anomaly lab layer
+
+Purpose: reduce trust in recent samples structurally distorted by fixture events.
+Flags: early red <= 35', early penalty <= 25', first-half shock <= 30', exceptional fixture status.
+Activation: event API is used only when official league coverage says events are supported.
+Missing or unsupported event coverage is uncertainty, not weakness; it does not create a penalty.
+
+ rows_processed  clean_rows  mixed_rows  polluted_rows  unknown_event_rows  home_anomalies  away_anomalies  event_fixture_requests  event_api_calls  event_cache_hits  event_errors  event_coverage_unknown  event_coverage_unsupported                 generated_at_utc
+             21           4          14              3                   0              16              15                     162               18               144             0                      48                           0 2026-05-13T13:56:36.787477+00:00

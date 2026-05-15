@@ -1,0 +1,4 @@
+mode,rows,settled_rows,wins,losses,hit_rate,profit_units,roi_percent,brier_score,market_mix,player_impact_adjusted_rows,player_impact_strengthened_rows,player_impact_downgraded_rows,player_impact_blocked_rows
+BASELINE_OFFICIAL,9,9,7,2,77.777778,2.03,22.555556,0.16861,AWAY_WIN:1;OVER_1_5:6;OVER_2_5:2,,,,
+SHADOW_CANDIDATE_V2,8,8,6,2,75.0,1.67,20.875,0.183962,AWAY_WIN:1;OVER_1_5:5;OVER_2_5:2,,,,
+SHADOW_CANDIDATE_V5_PLAYER_IMPACT,8,8,6,2,75.0,1.67,20.875,0.183962,AWAY_WIN:1;OVER_1_5:5;OVER_2_5:2,3.0,2.0,1.0,0.0

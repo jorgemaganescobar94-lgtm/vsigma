@@ -1,0 +1,18 @@
+# vSIGMA Pre-Lock Orchestrator Report
+
+- Target date: 2026-05-15
+- Status: PRELOCK_NO_FIXTURES_IN_WINDOW
+- Fixtures checked: 1
+- Fixtures inside window: 0
+- Fixtures outside window: 1
+- Stale pre-lock excluded: 0
+- Candidate v7 waiting: 1
+- Candidate v7 confirmed: 0
+- Candidate v7 rejected/secondary: 0
+- Candidate v7 unavailable: 0
+- Odds snapshot status: NOT_RUN
+- Ledger update status: PASS
+
+## Fixtures Checked
+ fixture_id home_team away_team market_primary  minutes_to_kickoff  prelock_window_status
+    1544651      Bari  Sudtirol       OVER_1_5              298.92 OUTSIDE_PRELOCK_WINDOW

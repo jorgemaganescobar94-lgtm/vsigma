@@ -1,0 +1,24 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-05-06,OK,API-SPORTS_DIRECT,329.0,,,,,,
+2026-05-06T01:00:00+01:00,MATCHED,,,1535283.0,FT,Barcelona SC,Boca Juniors,1.0,0.0
+2026-05-06T01:00:00+01:00,MATCHED,,,1535297.0,FT,UCV,Independiente del Valle,2.0,0.0
+2026-05-06T01:30:00+01:00,MATCHED,,,1535200.0,FT,Puerto Cabello,Cienciano,3.0,0.0
+2026-05-06T01:30:00+01:00,MATCHED,,,1535201.0,FT,Deportivo Recoleta,Santos,1.0,1.0
+2026-05-06T01:30:00+01:00,MATCHED,,,1535282.0,FT,Always Ready,Lanus,4.0,0.0
+2026-05-06T03:00:00+01:00,MATCHED,,,1535193.0,FT,Deportivo Cuenca,San Lorenzo,0.0,0.0
+2026-05-06T05:03:00+01:00,MATCHED,,,1504789.0,PEN,Shimizu S-pulse,Cerezo Osaka,1.0,1.0
+2026-05-06T05:03:00+01:00,MATCHED,,,1504790.0,FT,V-varen Nagasaki,Fagiano Okayama,2.0,1.0
+2026-05-06T06:00:00+01:00,MATCHED,,,1504791.0,PEN,Avispa Fukuoka,Kyoto Sanga,1.0,1.0
+2026-05-06T06:00:00+01:00,MATCHED,,,1504792.0,FT,Nagoya Grampus,Gamba Osaka,2.0,1.0
+2026-05-06T07:00:00+01:00,MATCHED,,,1504793.0,FT,FC Tokyo,JEF United Chiba,0.0,3.0
+2026-05-06T07:00:00+01:00,MATCHED,,,1504794.0,PEN,Sanfrecce Hiroshima,Vissel Kobe,1.0,1.0
+2026-05-06T08:00:00+01:00,MATCHED,,,1504795.0,FT,Kashima,Mito Hollyhock,3.0,0.0
+2026-05-06T08:00:00+01:00,MATCHED,,,1504796.0,FT,Machida Zelvia,Yokohama F. Marinos,2.0,0.0
+2026-05-06T09:00:00+01:00,MATCHED,,,1504797.0,FT,Kawasaki Frontale,Tokyo Verdy,1.0,0.0
+2026-05-06T11:00:00+01:00,MATCHED,,,1504798.0,FT,Kashiwa Reysol,Urawa,0.0,1.0
+2026-05-06T17:45:00+01:00,MATCHED,,,1544646.0,FT,Almere City FC,De Graafschap,3.0,1.0
+2026-05-06T20:00:00+01:00,MATCHED,,,1540844.0,FT,Bayern München,Paris Saint Germain,1.0,1.0
+2026-05-06T23:00:00+01:00,MATCHED,,,1535186.0,FT,A. Italiano,Vasco DA Gama,1.0,2.0
+2026-05-06T23:00:00+01:00,MATCHED,,,1535198.0,FT,Atletico Torque,Palestino,1.0,0.0
+2026-05-06T23:00:00+01:00,MATCHED,,,1535285.0,FT,Cusco,Estudiantes L.P.,1.0,1.0
+2026-05-06T23:00:00+01:00,MATCHED,,,1535290.0,FT,Deportivo La Guaira,Bolívar,1.0,1.0

@@ -1,0 +1,7 @@
+summary_scope,metric,rows_total
+overall,target_fixtures,32
+odds_structure_depth_status,NO_ODDS_FOUND,32
+odds_structure_coherence_flag,NO_ODDS_UNCERTAIN,32
+odds_total_ladder_shape,UNKNOWN,32
+odds_market_translation_hint,ODDS_DEPTH_UNCERTAIN,32
+odds_line_aggression_flag,UNKNOWN,32

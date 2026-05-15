@@ -1,0 +1,72 @@
+{
+  "generated_at_utc": "2026-05-07T17:48:56.817348+00:00",
+  "test_league_id": 39,
+  "test_allowed_season": 2024,
+  "test_current_season": 2026,
+  "checks": [
+    {
+      "check_name": "status_endpoint",
+      "result": "OK",
+      "response_count": 1,
+      "note": ""
+    },
+    {
+      "check_name": "leagues_allowed_season_2024",
+      "result": "OK",
+      "response_count": 1,
+      "note": ""
+    },
+    {
+      "check_name": "leagues_current_season_2026",
+      "result": "OK",
+      "response_count": 0,
+      "note": ""
+    },
+    {
+      "check_name": "fixtures_allowed_season_2024_last1",
+      "result": "OK",
+      "response_count": 1,
+      "note": ""
+    },
+    {
+      "check_name": "fixtures_current_season_2026_last1",
+      "result": "OK",
+      "response_count": 0,
+      "note": ""
+    },
+    {
+      "check_name": "team_recent_fixtures_2024_last8",
+      "result": "OK",
+      "response_count": 8,
+      "note": ""
+    },
+    {
+      "check_name": "standings_2024",
+      "result": "OK",
+      "response_count": 1,
+      "note": ""
+    },
+    {
+      "check_name": "fixture_statistics_1208399",
+      "result": "OK",
+      "response_count": 2,
+      "note": ""
+    },
+    {
+      "check_name": "fixture_lineups_1208399",
+      "result": "OK",
+      "response_count": 2,
+      "note": ""
+    }
+  ],
+  "derived_flags": {
+    "can_use_status": true,
+    "can_use_leagues_2024": true,
+    "can_use_leagues_current": true,
+    "can_use_fixtures_2024": true,
+    "can_use_fixtures_current": true,
+    "can_use_team_recent_last8_2024": true,
+    "can_use_standings_2024": true,
+    "current_season_blocked": false
+  }
+}

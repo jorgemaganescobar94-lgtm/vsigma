@@ -1,0 +1,55 @@
+﻿vSIGMA - ESTADO VALIDADO ACTUAL
+
+Fecha de trabajo:
+2026-05-09
+
+Estado general:
+- today pipeline OK
+- premium/standard split OK
+- execution shortlist layer OK
+- post-results daily pipeline OK
+- historical execution-shortlist backtest OK
+- execution-mode comparison OK
+
+Ficheros clave actuales:
+- data/processed/vsigma_final_approved_premium_candidates.csv
+- data/processed/vsigma_final_approved_standard_candidates.csv
+- data/processed/vsigma_today_execution_shortlist.csv
+- data/processed/vsigma_today_execution_bets_only.csv
+- data/processed/vsigma_today_execution_summary.csv
+- data/processed/vsigma_execution_shortlist_results_ledger.csv
+- data/processed/vsigma_execution_shortlist_results_summary.csv
+- data/processed/vsigma_execution_shortlist_backtest_overall.csv
+- data/processed/vsigma_execution_mode_comparison_overall.csv
+
+Today counts:
+- approved_premium: 22
+- approved_standard: 11
+- approved_total: 33
+- downgraded: 29
+- blocked: 5
+- watch: 5
+
+Execution shortlist counts:
+- premium_core: 1
+- execution_shortlist: 8
+- execution_bets_only: 8
+
+Top 8 execution shortlist:
+1) Grenoble vs Estac Troyes — AWAY_WIN
+2) IFK Goteborg vs Hammarby FF — AWAY_WIN
+3) Fulham vs Bournemouth — UNDER_3_5
+4) Middlesbrough vs Southampton — OVER_1_5
+5) Elche vs Alaves — OVER_1_5
+6) Toronto FC vs Inter Miami — OVER_2_5
+7) Beerschot VA vs Lommel United — OVER_2_5
+8) Valladolid vs Zaragoza — UNDER_3_5
+
+Historical execution mode:
+- CORE_ONLY: 10 rows, 9W-1L, +4.08u, ROI 40.80%
+- FULL_SHORTLIST: 39 rows, 29W-10L, +4.27u, ROI 10.95%
+- Mejor eficiencia: CORE_ONLY
+- Mejor beneficio absoluto: CORE_PLUS_STANDARD
+
+Siguiente paso recomendado:
+- Cuando se resetee el límite, seguir con mejora del sistema o rerun post-results cuando acaben partidos.

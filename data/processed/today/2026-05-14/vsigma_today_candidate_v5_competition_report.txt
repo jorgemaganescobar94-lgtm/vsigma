@@ -1,0 +1,18 @@
+vSIGMA SHADOW CANDIDATE V5
+
+Layer: candidate v2 + conservative player impact.
+Status: experimental shadow; official baseline and candidate v2 outputs are not replaced.
+
+Candidate v2 input rows: 2
+Candidate v5 competition shortlist rows: 2
+Candidate v5 competition top rows: 2
+Player-impact adjustments made: 0
+
+Player-impact action mix
+player_impact_adjustment_action
+NOT_APPLIED    2
+
+Candidate v5 Top
+ accuracy_mode_rank  fixture_id     league home_team      away_team market_primary  competition_calibrated_prob  accuracy_confidence_score player_impact_adjustment_action      player_impact_market_translation_hint
+                  1     1391177    La Liga  Valencia Rayo Vallecano       OVER_1_5                      0.78186                    149.998                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
+                  2     1544064 League One  Bradford         Bolton       OVER_1_5                      0.82046                    143.721                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE

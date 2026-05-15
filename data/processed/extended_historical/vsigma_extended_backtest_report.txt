@@ -1,0 +1,16 @@
+# vSIGMA Extended Historical Evaluation
+
+- Range: 2026-04-23 to 2026-05-08
+- Timezone: Atlantic/Canary
+- Modes: baseline, candidate_v2, candidate_v4, candidate_v5, candidate_v6
+- Ledger rows: 37
+
+## Summary
+                                           mode segment  rows  settled_rows  wins  losses  pushes  hit_rate  profit_units  roi_percent  brier_score  max_drawdown
+                              BASELINE_OFFICIAL OVERALL     9             9     7       2       0 77.777778          2.03    22.555556     0.168610         -1.67
+                            SHADOW_CANDIDATE_V2 OVERALL     8             8     6       2       0 75.000000          1.67    20.875000     0.183962         -2.00
+SHADOW_CANDIDATE_V4_O25_LOW_CONVERSION_FIREWALL OVERALL     6             6     4       2       0 66.666667          0.25     4.166667     0.230970         -1.00
+              SHADOW_CANDIDATE_V5_PLAYER_IMPACT OVERALL     8             8     6       2       0 75.000000          1.67    20.875000     0.183962         -2.00
+  SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK OVERALL     6             6     4       2       0 66.666667          0.25     4.166667     0.230726         -1.00
+
+This evaluation does not alter official baseline selection logic or promote candidates.

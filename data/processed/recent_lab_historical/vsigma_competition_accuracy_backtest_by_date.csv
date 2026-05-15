@@ -1,0 +1,5 @@
+segment,rows_total,graded_rows,wins,losses,pushes,voids,profit_units_total,roi_percent
+2026-05-04,2,2,1,1,0,0,-0.5,-25.0
+2026-05-06,1,1,0,1,0,0,-1.0,-100.0
+2026-05-07,3,3,3,0,0,0,1.98,66.0
+2026-05-08,3,3,3,0,0,0,1.8,60.0

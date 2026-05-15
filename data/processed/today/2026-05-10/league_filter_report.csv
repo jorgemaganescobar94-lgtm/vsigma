@@ -1,0 +1,47 @@
+country,league,league_tier,league_filter_reason,matches
+Austria,Landesliga - Karnten,REJECT,hard_reject_noise_league,7
+Cameroon,Elite One,REJECT,country_league_not_allowlisted,7
+Austria,Landesliga - Niederosterreich,REJECT,hard_reject_noise_league,6
+Austria,Landesliga - Wien,REJECT,hard_reject_noise_league,4
+Ghana,Division One League,REJECT,country_league_not_allowlisted,4
+Angola,Girabola,REJECT,country_league_not_allowlisted,3
+Brazil,Serie D,REJECT,country_league_not_allowlisted,3
+Eswatini,Premier League,REJECT,country_league_not_allowlisted,3
+USA,USL W League,REJECT,country_league_not_allowlisted,3
+Aruba,Division di Honor,REJECT,country_league_not_allowlisted,2
+Austria,Landesliga - Vorarlbergliga,REJECT,hard_reject_noise_league,2
+Barbados,Premier League,REJECT,country_league_not_allowlisted,2
+Italy,Serie D - Girone C,REJECT,country_league_not_allowlisted,2
+Italy,Serie D - Girone F,REJECT,country_league_not_allowlisted,2
+Argentina,Liga Profesional Argentina,REJECT,country_league_not_allowlisted,1
+Argentina,Primera C,REJECT,country_league_not_allowlisted,1
+Argentina,Primera Nacional,REJECT,country_league_not_allowlisted,1
+Austria,Frauenliga,REJECT,country_league_not_allowlisted,1
+Bolivia,Primera División,REJECT,country_league_not_allowlisted,1
+Brazil,Baiano U20,REJECT,hard_reject_noise_league,1
+Brazil,Cearense - 2,REJECT,country_league_not_allowlisted,1
+Brazil,Cearense U20,REJECT,hard_reject_noise_league,1
+Brazil,Copa Espírito Santo,REJECT,country_league_not_allowlisted,1
+Brazil,Matogrossense 2,REJECT,country_league_not_allowlisted,1
+Chile,Copa De La Liga,REJECT,country_league_not_allowlisted,1
+Colombia,Primera B,REJECT,country_league_not_allowlisted,1
+Costa-Rica,Primera División,REJECT,country_league_not_allowlisted,1
+Dominican-Republic,Liga Mayor,REJECT,country_league_not_allowlisted,1
+Ecuador,Liga Pro,REJECT,country_league_not_allowlisted,1
+Greece,Gamma Ethniki - Promotion Group,REJECT,country_league_not_allowlisted,1
+Jamaica,Premier League,REJECT,country_league_not_allowlisted,1
+Lesotho,Premier League,REJECT,country_league_not_allowlisted,1
+Mauritania,Premier League,REJECT,country_league_not_allowlisted,1
+Panama,Liga Panameña de Fútbol,REJECT,country_league_not_allowlisted,1
+Paraguay,Division Profesional - Apertura,REJECT,country_league_not_allowlisted,1
+Peru,Primera División,REJECT,country_league_not_allowlisted,1
+Suriname,Eerste Divisie,REJECT,country_league_not_allowlisted,1
+USA,MLS Next Pro,REJECT,hard_reject_noise_league,1
+USA,USL League One,REJECT,country_league_not_allowlisted,1
+Uruguay,Primera División - Apertura,REJECT,country_league_not_allowlisted,1
+Uruguay,Segunda División,REJECT,country_league_not_allowlisted,1
+Brazil,Serie A,TIER_2,brazil_serie_a,5
+USA,Major League Soccer,TIER_2,usa_mls,1
+Brazil,Serie B,TIER_3,brazil_serie_b_noisy,2
+Brazil,Serie C,TIER_3,brazil_serie_c_noisy,2
+Canada,Canadian Championship,TIER_3,canada_cup_noisy,1

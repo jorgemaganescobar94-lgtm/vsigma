@@ -1,0 +1,26 @@
+VSIGMA PREMIUM_EXTENDED GOVERNANCE REPORT
+
+Change implemented
+- PREMIUM_CORE admission logic was left unchanged.
+- PREMIUM_EXTENDED now requires an approved premium row to be a BET, use a robust total market (OVER_1_5, OVER_2_5, UNDER_3_5), have primary_edge >= 0.08, primary_model_prob >= 0.82, usable primary odds, clean market-fit status, and explicit premium promoted-rule evidence when evidence columns are present.
+- Rows that only look plausible are labeled with stable governance statuses such as EXTENDED_EDGE_TOO_THIN, EXTENDED_MARKET_FIT_WEAK, EXTENDED_EVIDENCE_TOO_GENERIC, EXTENDED_STRUCTURE_TOO_THIN, or EXTENDED_DOWNGRADED_TO_WATCH and do not enter the execution shortlist.
+
+Historical rebuild range
+- 2026-04-23 through 2026-05-08.
+
+Before vs after
+- PREMIUM_CORE: rows 14 -> 11, profit 4.16u -> 2.77u, ROI 29.714286% -> 25.181818%.
+- PREMIUM_EXTENDED: rows 13 -> 6, profit -2.03u -> 1.21u, ROI -15.615385% -> 20.166667%.
+- STANDARD_FILL: rows 3 -> 3, profit 0.00u -> 0.09u, ROI 0.000000% -> 3.000000%.
+- FULL_SHORTLIST: rows 30 -> 20, profit 2.13u -> 4.07u, ROI 7.100000% -> 20.350000%.
+- CORE_ONLY: rows 14 -> 11, profit 4.16u -> 2.77u, ROI 29.714286% -> 25.181818%.
+- CORE_PLUS_STANDARD: rows 17 -> 14, profit 4.16u -> 2.86u, ROI 24.470588% -> 20.428571%.
+
+Assessment
+- PREMIUM_EXTENDED row count decreased by -7 rows and ROI improved by 35.782052 percentage points.
+- FULL_SHORTLIST row count decreased by -10 rows and ROI improved by 13.250000 percentage points.
+- CORE governance was not tightened in code; the regenerated historical run produced fewer CORE rows than the supplied baseline, so the code-level protection held while the refreshed upstream snapshots are not numerically identical to the prior validated run.
+- The system is cleaner: weak extended rows no longer crowd execution, and fewer executable rows are accepted when extended support is thin.
+
+Verdict
+PREMIUM_EXTENDED_GOVERNANCE_SUCCESS

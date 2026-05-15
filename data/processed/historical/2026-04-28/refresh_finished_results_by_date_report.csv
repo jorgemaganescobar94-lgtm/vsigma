@@ -1,0 +1,12 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-04-28,OK,API-SPORTS_DIRECT,150.0,,,,,,
+2026-04-28T17:45:00+01:00,MATCHED,,,1544249.0,FT,Roda,Waalwijk,1.0,1.0
+2026-04-28T19:45:00+01:00,MATCHED,,,1387028.0,FT,Southampton,Ipswich,2.0,2.0
+2026-04-28T19:45:00+01:00,MATCHED,,,1387576.0,FT,Northampton,Barnsley,0.0,1.0
+2026-04-28T19:45:00+01:00,MATCHED,,,1387577.0,FT,Peterborough,Mansfield Town,0.0,0.0
+2026-04-28T19:45:00+01:00,MATCHED,,,1387616.0,FT,Stockport County,Port Vale,1.0,2.0
+2026-04-28T20:00:00+01:00,MATCHED,,,1540841.0,FT,Paris Saint Germain,Bayern München,5.0,4.0
+2026-04-28T23:00:00+01:00,MATCHED,,,1535172.0,FT,Botafogo,Independiente Petrolero,3.0,0.0
+2026-04-28T23:00:00+01:00,MATCHED,,,1535183.0,FT,San Lorenzo,Santos,1.0,1.0
+2026-04-28T23:00:00+01:00,MATCHED,,,1535275.0,FT,Lanus,LDU de Quito,1.0,0.0
+2026-04-28T23:00:00+01:00,MATCHED,,,1535276.0,FT,Libertad Asuncion,Independiente del Valle,2.0,3.0

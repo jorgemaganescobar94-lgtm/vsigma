@@ -1,0 +1,31 @@
+vSIGMA ODDS STRUCTURE DEPTH
+
+Purpose: lab-only market translation governance from paid odds ladder depth.
+Missing or thin odds are treated as uncertainty, not as a negative football signal.
+
+Summary
+                summary_scope               metric  rows_total
+                      overall      target_fixtures          15
+  odds_structure_depth_status        NO_ODDS_FOUND          15
+odds_structure_coherence_flag    NO_ODDS_UNCERTAIN          15
+      odds_total_ladder_shape              UNKNOWN          15
+ odds_market_translation_hint ODDS_DEPTH_UNCERTAIN          15
+    odds_line_aggression_flag              UNKNOWN          15
+
+Fixture preview
+ fixture_id                        league           home_team           away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
+    1535266         CONMEBOL Libertadores        Barcelona SC         U. Catolica             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535267         CONMEBOL Libertadores             Bolívar          Fluminense             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535268         CONMEBOL Libertadores       Cerro Porteno           Palmeiras             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535272         CONMEBOL Libertadores    Estudiantes L.P.            Flamengo             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535274         CONMEBOL Libertadores Independ. Rivadavia Deportivo La Guaira             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535280         CONMEBOL Libertadores       Universitario       Club Nacional             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1540879 UEFA Europa Conference League      Rayo Vallecano          Strasbourg             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1540880 UEFA Europa Conference League    Shakhtar Donetsk      Crystal Palace             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1540872            UEFA Europa League   Nottingham Forest         Aston Villa             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1540871            UEFA Europa League            SC Braga         SC Freiburg             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535174         CONMEBOL Sudamericana         Carabobo FC            Blooming             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535176         CONMEBOL Sudamericana           Cienciano         Atletico-MG             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535181         CONMEBOL Sudamericana           Palestino              Gremio             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535185         CONMEBOL Sudamericana       Vasco DA Gama             Olimpia             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1494732                   Eliteserien          Bodo/Glimt               Start             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0

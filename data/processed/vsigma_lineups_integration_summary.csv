@@ -1,0 +1,106 @@
+section,version,metric,value,quality_flag,availability_flag,source,mode,note
+today_lineup_coverage,lineups_current,rows_processed,6.0,,,,,
+today_lineup_coverage,lineups_current,full_rows,1.0,,,,,
+today_lineup_coverage,lineups_current,partial_rows,0.0,,,,,
+today_lineup_coverage,lineups_current,none_rows,5.0,,,,,
+today_lineup_coverage,lineups_current,lineup_available_rows,1.0,,,,,
+today_lineup_coverage,lineups_current,lineup_unavailable_rows,5.0,,,,,
+today_lineup_coverage,lineups_current,api_calls_made,6.0,,,,,
+today_lineup_coverage,lineups_current,cache_hits,0.0,,,,,
+today_lineup_coverage,lineups_current,api_errors,0.0,,,,,
+today_lineup_coverage,lineups_current,plan_limit_errors,0.0,,,,,
+today_lineup_coverage,lineups_current,avg_known_starters_count,11.0,,,,,
+today_quality_counts,lineups_current,rows,1.0,FULL,,,,
+today_quality_counts,lineups_current,rows,0.0,PARTIAL,,,,
+today_quality_counts,lineups_current,rows,5.0,NONE,,,,
+today_availability_counts,lineups_current,rows,1.0,,AVAILABLE,,,
+today_availability_counts,lineups_current,rows,5.0,,UNAVAILABLE,,,
+today_scored_usage,lineups_current,rows_total,14.0,,,,,
+today_scored_usage,lineups_current,rows,8.0,NA,,,,
+today_scored_usage,lineups_current,rows,5.0,NONE,,,,
+today_scored_usage,lineups_current,rows,1.0,FULL,,,,
+today_deep_usage,lineups_current,rows_total,6.0,,,,,
+today_deep_usage,lineups_current,rows,5.0,NONE,,,,
+today_deep_usage,lineups_current,rows,1.0,FULL,,,,
+today_execution_usage,lineups_current,rows_total,1.0,,,,,
+today_execution_usage,lineups_current,rows,1.0,NONE,,,,
+today_execution_usage,lineups_current,rows,1.0,,,PREMIUM_CORE,,
+historical_lineup_coverage_2026-04-23_to_2026-05-08,lineups_current,rows_processed,647.0,,,,,
+historical_lineup_coverage_2026-04-23_to_2026-05-08,lineups_current,full_rows,647.0,,,,,
+historical_lineup_coverage_2026-04-23_to_2026-05-08,lineups_current,partial_rows,0.0,,,,,
+historical_lineup_coverage_2026-04-23_to_2026-05-08,lineups_current,none_rows,0.0,,,,,
+historical_lineup_coverage_2026-04-23_to_2026-05-08,lineups_current,lineup_available_rows,647.0,,,,,
+historical_lineup_coverage_2026-04-23_to_2026-05-08,lineups_current,lineup_unavailable_rows,0.0,,,,,
+historical_lineup_coverage_2026-04-23_to_2026-05-08,lineups_current,api_calls_made,647.0,,,,,
+historical_lineup_coverage_2026-04-23_to_2026-05-08,lineups_current,cache_hits,0.0,,,,,
+historical_lineup_coverage_2026-04-23_to_2026-05-08,lineups_current,api_errors,0.0,,,,,
+historical_lineup_coverage_2026-04-23_to_2026-05-08,lineups_current,plan_limit_errors,0.0,,,,,
+historical_quality_counts,lineups_current,rows,647.0,FULL,,,,
+historical_quality_counts,lineups_current,rows,0.0,PARTIAL,,,,
+historical_quality_counts,lineups_current,rows,0.0,NONE,,,,
+historical_availability_counts,lineups_current,rows,647.0,,AVAILABLE,,,
+historical_availability_counts,lineups_current,rows,0.0,,UNAVAILABLE,,,
+historical_lineup_coverage_2026-04-23_to_2026-05-08,lineups_current,dates_rebuilt,16.0,,,,,
+historical_deep_usage,lineups_current,rows_total,647.0,,,,,
+historical_deep_usage,lineups_current,rows,647.0,FULL,,,,
+historical_labeled_usage,lineups_current,rows_total,647.0,,,,,
+historical_labeled_usage,lineups_current,rows,647.0,FULL,,,,
+historical_execution_backtest,lineups_current,rows_total,25.0,,,,,
+historical_execution_backtest,lineups_current,graded_rows,25.0,,,,,
+historical_execution_backtest,lineups_current,wins,16.0,,,,,
+historical_execution_backtest,lineups_current,losses,9.0,,,,,
+historical_execution_backtest,lineups_current,profit_units_total,1.73,,,,,
+historical_execution_backtest,lineups_current,roi_percent,6.92,,,,,
+historical_execution_by_source,lineups_current,rows_total,14.0,,,PREMIUM_CORE,,
+historical_execution_by_source,lineups_current,graded_rows,14.0,,,PREMIUM_CORE,,
+historical_execution_by_source,lineups_current,wins,11.0,,,PREMIUM_CORE,,
+historical_execution_by_source,lineups_current,losses,3.0,,,PREMIUM_CORE,,
+historical_execution_by_source,lineups_current,profit_units_total,4.77,,,PREMIUM_CORE,,
+historical_execution_by_source,lineups_current,roi_percent,34.071429,,,PREMIUM_CORE,,
+historical_execution_by_source,lineups_current,rows_total,11.0,,,PREMIUM_EXTENDED,,
+historical_execution_by_source,lineups_current,graded_rows,11.0,,,PREMIUM_EXTENDED,,
+historical_execution_by_source,lineups_current,wins,5.0,,,PREMIUM_EXTENDED,,
+historical_execution_by_source,lineups_current,losses,6.0,,,PREMIUM_EXTENDED,,
+historical_execution_by_source,lineups_current,profit_units_total,-3.04,,,PREMIUM_EXTENDED,,
+historical_execution_by_source,lineups_current,roi_percent,-27.636364,,,PREMIUM_EXTENDED,,
+historical_execution_mode_comparison,lineups_current,rows_total,14.0,,,,CORE_ONLY,
+historical_execution_mode_comparison,lineups_current,graded_rows,14.0,,,,CORE_ONLY,
+historical_execution_mode_comparison,lineups_current,wins,11.0,,,,CORE_ONLY,
+historical_execution_mode_comparison,lineups_current,losses,3.0,,,,CORE_ONLY,
+historical_execution_mode_comparison,lineups_current,profit_units_total,4.77,,,,CORE_ONLY,
+historical_execution_mode_comparison,lineups_current,roi_percent,34.071429,,,,CORE_ONLY,
+historical_execution_mode_comparison,lineups_current,max_drawdown,-1.0,,,,CORE_ONLY,
+historical_execution_mode_comparison,lineups_current,rows_total,14.0,,,,CORE_PLUS_STANDARD,
+historical_execution_mode_comparison,lineups_current,graded_rows,14.0,,,,CORE_PLUS_STANDARD,
+historical_execution_mode_comparison,lineups_current,wins,11.0,,,,CORE_PLUS_STANDARD,
+historical_execution_mode_comparison,lineups_current,losses,3.0,,,,CORE_PLUS_STANDARD,
+historical_execution_mode_comparison,lineups_current,profit_units_total,4.77,,,,CORE_PLUS_STANDARD,
+historical_execution_mode_comparison,lineups_current,roi_percent,34.071429,,,,CORE_PLUS_STANDARD,
+historical_execution_mode_comparison,lineups_current,max_drawdown,-1.0,,,,CORE_PLUS_STANDARD,
+historical_execution_mode_comparison,lineups_current,rows_total,25.0,,,,FULL_SHORTLIST,
+historical_execution_mode_comparison,lineups_current,graded_rows,25.0,,,,FULL_SHORTLIST,
+historical_execution_mode_comparison,lineups_current,wins,16.0,,,,FULL_SHORTLIST,
+historical_execution_mode_comparison,lineups_current,losses,9.0,,,,FULL_SHORTLIST,
+historical_execution_mode_comparison,lineups_current,profit_units_total,1.73,,,,FULL_SHORTLIST,
+historical_execution_mode_comparison,lineups_current,roi_percent,6.92,,,,FULL_SHORTLIST,
+historical_execution_mode_comparison,lineups_current,max_drawdown,-0.55,,,,FULL_SHORTLIST,
+historical_execution_backtest_reference,advisory_pre_lineups_baseline,rows_total,27.0,,,,,previous validated injuries-advisory run; sample not identical
+historical_execution_backtest_reference,advisory_pre_lineups_baseline,graded_rows,25.0,,,,,previous validated injuries-advisory run; sample not identical
+historical_execution_backtest_reference,advisory_pre_lineups_baseline,wins,16.0,,,,,previous validated injuries-advisory run; sample not identical
+historical_execution_backtest_reference,advisory_pre_lineups_baseline,losses,9.0,,,,,previous validated injuries-advisory run; sample not identical
+historical_execution_backtest_reference,advisory_pre_lineups_baseline,profit_units_total,3.49,,,,,previous validated injuries-advisory run; sample not identical
+historical_execution_backtest_reference,advisory_pre_lineups_baseline,roi_percent,13.96,,,,,previous validated injuries-advisory run; sample not identical
+historical_execution_backtest_reference,stats_only_reference,rows_total,36.0,,,,,pre-injuries stats-only reference; not same feature stack
+historical_execution_backtest_reference,stats_only_reference,graded_rows,36.0,,,,,pre-injuries stats-only reference; not same feature stack
+historical_execution_backtest_reference,stats_only_reference,wins,26.0,,,,,pre-injuries stats-only reference; not same feature stack
+historical_execution_backtest_reference,stats_only_reference,losses,10.0,,,,,pre-injuries stats-only reference; not same feature stack
+historical_execution_backtest_reference,stats_only_reference,profit_units_total,8.91,,,,,pre-injuries stats-only reference; not same feature stack
+historical_execution_backtest_reference,stats_only_reference,roi_percent,24.75,,,,,pre-injuries stats-only reference; not same feature stack
+historical_execution_delta,advisory_pre_lineups_baseline,rows_total_delta,-2.0,,,,,previous validated injuries-advisory run; sample not identical
+historical_execution_delta,advisory_pre_lineups_baseline,graded_rows_delta,0.0,,,,,previous validated injuries-advisory run; sample not identical
+historical_execution_delta,advisory_pre_lineups_baseline,profit_units_delta,-1.76,,,,,previous validated injuries-advisory run; sample not identical
+historical_execution_delta,advisory_pre_lineups_baseline,roi_percent_delta,-7.04,,,,,previous validated injuries-advisory run; sample not identical
+historical_execution_delta,stats_only_reference,rows_total_delta,-11.0,,,,,pre-injuries stats-only reference; not same feature stack
+historical_execution_delta,stats_only_reference,graded_rows_delta,-11.0,,,,,pre-injuries stats-only reference; not same feature stack
+historical_execution_delta,stats_only_reference,profit_units_delta,-7.18,,,,,pre-injuries stats-only reference; not same feature stack
+historical_execution_delta,stats_only_reference,roi_percent_delta,-17.83,,,,,pre-injuries stats-only reference; not same feature stack

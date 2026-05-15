@@ -1,0 +1,17 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-04-30,OK,API-SPORTS_DIRECT,211.0,,,,,,
+2026-04-30T01:00:00+01:00,MATCHED,,,1535266.0,FT,Barcelona SC,U. Catolica,1.0,2.0
+2026-04-30T01:30:00+01:00,MATCHED,,,1535176.0,FT,Cienciano,Atletico-MG,1.0,0.0
+2026-04-30T01:30:00+01:00,MATCHED,,,1535181.0,FT,Palestino,Gremio,0.0,0.0
+2026-04-30T01:30:00+01:00,MATCHED,,,1535268.0,FT,Cerro Porteno,Palmeiras,1.0,1.0
+2026-04-30T01:30:00+01:00,MATCHED,,,1535272.0,FT,Estudiantes L.P.,Flamengo,1.0,1.0
+2026-04-30T03:00:00+01:00,MATCHED,,,1535280.0,FT,Universitario,Club Nacional,4.0,2.0
+2026-04-30T18:00:00+01:00,MATCHED,,,1494732.0,FT,Bodo/Glimt,Start,5.0,0.0
+2026-04-30T20:00:00+01:00,MATCHED,,,1540871.0,FT,SC Braga,SC Freiburg,2.0,1.0
+2026-04-30T20:00:00+01:00,MATCHED,,,1540872.0,FT,Nottingham Forest,Aston Villa,1.0,0.0
+2026-04-30T20:00:00+01:00,MATCHED,,,1540879.0,FT,Rayo Vallecano,Strasbourg,1.0,0.0
+2026-04-30T20:00:00+01:00,MATCHED,,,1540880.0,FT,Shakhtar Donetsk,Crystal Palace,1.0,3.0
+2026-04-30T23:00:00+01:00,MATCHED,,,1535174.0,FT,Carabobo FC,Blooming,2.0,0.0
+2026-04-30T23:00:00+01:00,MATCHED,,,1535185.0,FT,Vasco DA Gama,Olimpia,3.0,0.0
+2026-04-30T23:00:00+01:00,MATCHED,,,1535267.0,FT,Bolívar,Fluminense,2.0,0.0
+2026-04-30T23:00:00+01:00,MATCHED,,,1535274.0,FT,Independ. Rivadavia,Deportivo La Guaira,4.0,1.0

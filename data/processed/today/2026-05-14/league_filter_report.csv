@@ -1,0 +1,39 @@
+country,league,league_tier,league_filter_reason,matches
+Argentina,Reserve League,REJECT,hard_reject_noise_league,7
+Saudi-Arabia,Division 1,REJECT,country_league_not_allowlisted,5
+Brazil,Copa Do Brasil,REJECT,country_league_not_allowlisted,4
+Liberia,LFA First Division,REJECT,country_league_not_allowlisted,3
+Mali,Première Division,REJECT,country_league_not_allowlisted,3
+Saudi-Arabia,Pro League,REJECT,country_league_not_allowlisted,3
+World,CAF Cup of Nations - U17,REJECT,hard_reject_noise_league,3
+Austria,Landesliga - Karnten,REJECT,hard_reject_noise_league,2
+Bolivia,Primera División,REJECT,country_league_not_allowlisted,2
+Brazil,Brasileiro U20 B,REJECT,hard_reject_noise_league,2
+Ecuador,Liga Pro Serie B,REJECT,country_league_not_allowlisted,2
+Iran,Azadegan League,REJECT,country_league_not_allowlisted,2
+Paraguay,Division Intermedia,REJECT,country_league_not_allowlisted,2
+Angola,Girabola,REJECT,country_league_not_allowlisted,1
+Austria,Regionalliga - Ost,REJECT,hard_reject_noise_league,1
+Brazil,Brasileiro U20 A,REJECT,hard_reject_noise_league,1
+Brazil,Goiano U20,REJECT,hard_reject_noise_league,1
+Bulgaria,First League,REJECT,country_league_not_allowlisted,1
+Bulgaria,Third League - Southwest,REJECT,country_league_not_allowlisted,1
+Colombia,Primera B,REJECT,country_league_not_allowlisted,1
+England,FA Youth Cup,REJECT,hard_reject_noise_league,1
+England,Premier League Cup,REJECT,country_league_not_allowlisted,1
+Estonia,Esiliiga A,REJECT,country_league_not_allowlisted,1
+Iraq,Iraqi League,REJECT,country_league_not_allowlisted,1
+Ireland,FAI Cup,REJECT,country_league_not_allowlisted,1
+Kuwait,Premier League,REJECT,country_league_not_allowlisted,1
+Norway,3. Division - Girone 1,REJECT,country_league_not_allowlisted,1
+Norway,3. Division - Girone 3,REJECT,country_league_not_allowlisted,1
+Norway,3. Division - Girone 6,REJECT,country_league_not_allowlisted,1
+Oman,Professional League,REJECT,country_league_not_allowlisted,1
+Paraguay,Division Profesional - Apertura,REJECT,country_league_not_allowlisted,1
+Sweden,Division 2 - Södra Svealand,REJECT,country_league_not_allowlisted,1
+USA,USL W League,REJECT,country_league_not_allowlisted,1
+World,UEFA U17 Championship - Women,REJECT,hard_reject_noise_league,1
+Spain,La Liga,TIER_1,spain_la_liga,3
+England,League One,TIER_2,england_league_one,1
+Israel,Liga Leumit,TIER_3,israel_liga_leumit_noisy,2
+Ecuador,Copa Ecuador,TIER_4,ecuador_cup_context_only,1

@@ -1,0 +1,37 @@
+summary_scope,pick_mode,metric,rows_total,final_execution_bucket,final_recommendation,league,market_primary
+input,ALL,input_shortlist_rows,8,,,,
+input,ALL,bets_only_rows,8,,,,
+mode,SAFE_TOP5,safe_top5_rows,5,,,,
+mode,BALANCED_TOP5,balanced_top5_rows,5,,,,
+mode,AGGRESSIVE_TOP5,aggressive_top5_rows,5,,,,
+SAFE_TOP5,SAFE_TOP5,rows_total,5,,,,
+by_final_execution_bucket,SAFE_TOP5,final_execution_bucket,5,APPROVED_PREMIUM,,,
+by_final_recommendation,SAFE_TOP5,final_recommendation,5,,BET,,
+by_league,SAFE_TOP5,league,1,,,Bundesliga,
+by_league,SAFE_TOP5,league,1,,,Ligue 2,
+by_league,SAFE_TOP5,league,1,,,Premier League,
+by_league,SAFE_TOP5,league,1,,,Segunda División,
+by_league,SAFE_TOP5,league,1,,,Serie A,
+by_market_primary,SAFE_TOP5,market_primary,1,,,,AWAY_WIN
+by_market_primary,SAFE_TOP5,market_primary,1,,,,HOME_WIN
+by_market_primary,SAFE_TOP5,market_primary,1,,,,OVER_1_5
+by_market_primary,SAFE_TOP5,market_primary,1,,,,OVER_2_5
+by_market_primary,SAFE_TOP5,market_primary,1,,,,UNDER_3_5
+BALANCED_TOP5,BALANCED_TOP5,rows_total,5,,,,
+by_final_execution_bucket,BALANCED_TOP5,final_execution_bucket,5,APPROVED_PREMIUM,,,
+by_final_recommendation,BALANCED_TOP5,final_recommendation,5,,BET,,
+by_league,BALANCED_TOP5,league,2,,,Ligue 2,
+by_league,BALANCED_TOP5,league,2,,,Segunda División,
+by_league,BALANCED_TOP5,league,1,,,Serie A,
+by_market_primary,BALANCED_TOP5,market_primary,2,,,,AWAY_WIN
+by_market_primary,BALANCED_TOP5,market_primary,1,,,,HOME_WIN
+by_market_primary,BALANCED_TOP5,market_primary,2,,,,OVER_2_5
+AGGRESSIVE_TOP5,AGGRESSIVE_TOP5,rows_total,5,,,,
+by_final_execution_bucket,AGGRESSIVE_TOP5,final_execution_bucket,5,APPROVED_PREMIUM,,,
+by_final_recommendation,AGGRESSIVE_TOP5,final_recommendation,5,,BET,,
+by_league,AGGRESSIVE_TOP5,league,2,,,Ligue 2,
+by_league,AGGRESSIVE_TOP5,league,2,,,Segunda División,
+by_league,AGGRESSIVE_TOP5,league,1,,,Serie A,
+by_market_primary,AGGRESSIVE_TOP5,market_primary,2,,,,AWAY_WIN
+by_market_primary,AGGRESSIVE_TOP5,market_primary,1,,,,HOME_WIN
+by_market_primary,AGGRESSIVE_TOP5,market_primary,2,,,,OVER_2_5

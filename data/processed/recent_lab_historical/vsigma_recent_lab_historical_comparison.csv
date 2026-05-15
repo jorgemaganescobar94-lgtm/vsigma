@@ -1,0 +1,5 @@
+mode,baseline_rows,experimental_rows,baseline_wins,experimental_wins,baseline_losses,experimental_losses,baseline_hit_rate,experimental_hit_rate,baseline_profit,experimental_profit,baseline_roi,experimental_roi
+CORE_ONLY,11,16,9,13,2,3,81.818182,81.25,2.77,6.4,25.181818,40.0
+CORE_PLUS_STANDARD,14,16,11,13,3,3,78.571429,81.25,2.86,6.4,20.428571,40.0
+FULL_SHORTLIST,20,22,16,18,4,4,80.0,81.818182,4.07,7.34,20.35,33.363636
+COMPETITION_ACCURACY_MODE,10,9,8,7,2,2,80.0,77.777778,2.64,2.28,26.4,25.333333

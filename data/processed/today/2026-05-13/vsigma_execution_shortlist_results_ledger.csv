@@ -1,0 +1,5 @@
+execution_rank,execution_shortlist_source,fixture_id,date,league,home_team,away_team,market_primary,final_execution_bucket,final_recommendation,execution_score,selection_score,primary_model_prob,primary_odds_used,primary_edge,actionable_result,actionable_profit_units,primary_result,primary_profit_units,ledger_result_status
+1,PREMIUM_CORE,1391178,2026-05-13,La Liga,Villarreal,Sevilla,HOME_WIN,APPROVED_PREMIUM,BET,147.76663507109004,100.15,0.7601,2.11,0.2861663507109004,LOSS,-1.0,LOSS,-1.0,RESULT_AVAILABLE
+2,PREMIUM_CORE,1391169,2026-05-13,La Liga,Alaves,Barcelona,OVER_2_5,APPROVED_PREMIUM,BET,143.4288607594937,104.68,0.8304,1.58,0.1974886075949368,LOSS,-1.0,LOSS,-1.0,RESULT_AVAILABLE
+3,PREMIUM_CORE,1387952,2026-05-13,Ligue 1,Lens,Paris Saint Germain,OVER_2_5,APPROVED_PREMIUM,BET,134.23278911564626,97.44,0.8582,1.47,0.1779278911564625,LOSS,-1.0,LOSS,-1.0,RESULT_AVAILABLE
+4,PREMIUM_EXTENDED,1544063,2026-05-13,League One,Stockport County,Stevenage,OVER_1_5,APPROVED_PREMIUM,BET,104.01555555555557,81.04,0.8742,1.44,0.1797555555555555,WIN,0.44,WIN,0.44,RESULT_AVAILABLE

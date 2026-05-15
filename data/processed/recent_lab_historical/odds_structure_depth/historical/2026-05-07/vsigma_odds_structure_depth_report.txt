@@ -1,0 +1,39 @@
+vSIGMA ODDS STRUCTURE DEPTH
+
+Purpose: lab-only market translation governance from paid odds ladder depth.
+Missing or thin odds are treated as uncertainty, not as a negative football signal.
+
+Summary
+                summary_scope                 metric  rows_total
+                      overall        target_fixtures          16
+  odds_structure_depth_status                     OK          16
+odds_structure_coherence_flag          RICH_COHERENT           9
+odds_structure_coherence_flag             RICH_MIXED           7
+      odds_total_ladder_shape               BALANCED           6
+      odds_total_ladder_shape              LOW_GOALS           5
+      odds_total_ladder_shape             MILD_GOALS           5
+ odds_market_translation_hint    PREFER_MILDER_TOTAL          10
+ odds_market_translation_hint   CAUTION_FRAGILE_SIDE           4
+ odds_market_translation_hint                NEUTRAL           2
+    odds_line_aggression_flag                NEUTRAL           6
+    odds_line_aggression_flag AVOID_AGGRESSIVE_OVERS           5
+    odds_line_aggression_flag        PREFER_OVER_1_5           5
+
+Fixture preview
+ fixture_id                        league           home_team         away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
+    1535286         CONMEBOL Libertadores     Deportes Tolima     Club Nacional                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3048                            -0.015
+    1535288         CONMEBOL Libertadores Independ. Rivadavia        Fluminense                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3075                            -0.015
+    1535291         CONMEBOL Libertadores            Mirassol      LDU de Quito                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3554                            -0.015
+    1535292         CONMEBOL Libertadores            Platense           Penarol                    RICH_MIXED               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.4740                            -0.015
+    1535294         CONMEBOL Libertadores            Santa Fe       Corinthians                    RICH_MIXED               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.4211                            -0.015
+    1535296         CONMEBOL Libertadores         U. Catolica          Cruzeiro                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3205                            -0.015
+    1540881 UEFA Europa Conference League      Crystal Palace  Shakhtar Donetsk                 RICH_COHERENT                BALANCED                      NEUTRAL                   NEUTRAL                 0.2449                             0.000
+    1540882 UEFA Europa Conference League          Strasbourg    Rayo Vallecano                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.2694                            -0.015
+    1540873            UEFA Europa League         Aston Villa Nottingham Forest                 RICH_COHERENT                BALANCED                      NEUTRAL                   NEUTRAL                 0.2650                             0.000
+    1540874            UEFA Europa League         SC Freiburg          SC Braga                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.4170                            -0.015
+    1535187         CONMEBOL Sudamericana    Alianza Atletico   America de Cali                    RICH_MIXED               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.4090                            -0.015
+    1535188         CONMEBOL Sudamericana    Barracas Central           Olimpia                 RICH_COHERENT               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.3020                            -0.015
+    1535190         CONMEBOL Sudamericana        Boston River       Millonarios                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.4450                            -0.015
+    1535191         CONMEBOL Sudamericana            Botafogo       Racing Club                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3735                            -0.015
+    1535197         CONMEBOL Sudamericana              Macara             Tigre                 RICH_COHERENT               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.3296                            -0.015
+    1535199         CONMEBOL Sudamericana           O'Higgins         Sao Paulo                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3166                            -0.015

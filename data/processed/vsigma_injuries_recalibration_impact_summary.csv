@@ -1,0 +1,22 @@
+version,segment_type,segment,rows_total,graded_rows,wins,losses,profit_units_total,roi_percent,hit_rate_percent,max_drawdown,note,delta_vs_harmful_rows_total,delta_vs_harmful_graded_rows,delta_vs_harmful_wins,delta_vs_harmful_losses,delta_vs_harmful_profit_units_total,delta_vs_harmful_roi_percent,delta_vs_harmful_hit_rate_percent,delta_vs_harmful_max_drawdown,delta_vs_stats_only_rows_total,delta_vs_stats_only_graded_rows,delta_vs_stats_only_wins,delta_vs_stats_only_losses,delta_vs_stats_only_profit_units_total,delta_vs_stats_only_roi_percent,delta_vs_stats_only_hit_rate_percent,delta_vs_stats_only_max_drawdown
+harmful_injuries_baseline,overall,ALL,17,17,11,6,0.7,4.117647,64.705882,,Previous injuries-enabled harmful baseline.,,,,,,,,,,,,,,,,
+harmful_injuries_baseline,source,PREMIUM_CORE,0,0,0,0,0.0,,,,No premium core survived.,,,,,,,,,,,,,,,,
+harmful_injuries_baseline,source,PREMIUM_EXTENDED,0,0,0,0,0.0,,,,No premium extended survived.,,,,,,,,,,,,,,,,
+harmful_injuries_baseline,source,STANDARD_FILL,17,17,11,6,0.7,4.117647,64.705882,,All surviving rows were standard fill.,,,,,,,,,,,,,,,,
+harmful_injuries_baseline,mode,CORE_ONLY,0,0,0,0,0.0,,,,No core rows survived.,,,,,,,,,,,,,,,,
+harmful_injuries_baseline,mode,CORE_PLUS_STANDARD,17,17,11,6,0.7,4.117647,64.705882,-2.0,,,,,,,,,,,,,,,,,
+harmful_injuries_baseline,mode,FULL_SHORTLIST,17,17,11,6,0.7,4.117647,64.705882,-2.0,,,,,,,,,,,,,,,,,
+stats_only_baseline,overall,ALL,36,36,26,10,8.91,24.75,72.222222,,Healthier pre-injuries stats-only baseline.,,,,,,,,,,,,,,,,
+stats_only_baseline,source,PREMIUM_CORE,21,21,17,4,7.19,34.238095,80.952381,,,,,,,,,,,,,,,,,,
+stats_only_baseline,source,PREMIUM_EXTENDED,15,15,9,6,1.72,11.466667,60.0,,,,,,,,,,,,,,,,,,
+stats_only_baseline,source,STANDARD_FILL,0,0,0,0,0.0,,,,Stats-only baseline required no standard fill.,,,,,,,,,,,,,,,,
+stats_only_baseline,mode,CORE_ONLY,21,21,17,4,7.19,34.238095,80.952381,-0.77,,,,,,,,,,,,,,,,,
+stats_only_baseline,mode,CORE_PLUS_STANDARD,21,21,17,4,7.19,34.238095,80.952381,-0.77,Matched CORE_ONLY because standard fill was zero.,,,,,,,,,,,,,,,,
+stats_only_baseline,mode,FULL_SHORTLIST,36,36,26,10,8.91,24.75,72.222222,-0.47,,,,,,,,,,,,,,,,,
+recalibrated_injuries,overall,ALL,34,19,14,5,0.61,3.210526,73.684211,,Final validation after per-date exports were refreshed with current production rules.,17,2,3,-1,-0.08999999999999997,-0.9071209999999996,8.978329000000002,,-2,-17,-12,-5,-8.3,-21.539474,1.4619890000000026,
+recalibrated_injuries,source,PREMIUM_CORE,15,9,6,3,-0.32,-3.555556,66.666667,,,15,9,6,3,-0.32,,,,-6,-12,-11,-1,-7.510000000000001,-37.793651000000004,-14.285713999999999,
+recalibrated_injuries,source,PREMIUM_EXTENDED,16,8,6,2,0.52,6.5,75.0,,,16,8,6,2,0.52,,,,1,-7,-3,-4,-1.2,-4.966666999999999,15.0,
+recalibrated_injuries,source,STANDARD_FILL,3,2,2,0,0.41,20.5,100.0,,,-14,-15,-9,-6,-0.29,16.382353000000002,35.294118,,3,2,2,0,0.41,,,
+recalibrated_injuries,mode,CORE_ONLY,15,9,6,3,-0.32,-3.555556,66.666667,-1.68,,15,9,6,3,-0.32,,,,-6,-12,-11,-1,-7.510000000000001,-37.793651000000004,-14.285713999999999,-0.9099999999999999
+recalibrated_injuries,mode,CORE_PLUS_STANDARD,18,11,8,3,0.09,0.818182,72.727273,-1.57,,1,-6,-3,-3,-0.61,-3.2994649999999996,8.021390999999994,0.42999999999999994,-3,-10,-9,-1,-7.1000000000000005,-33.419913,-8.225108000000006,-0.8
+recalibrated_injuries,mode,FULL_SHORTLIST,34,19,14,5,0.61,3.210526,73.684211,-1.02,,17,2,3,-1,-0.08999999999999997,-0.9071209999999996,8.978329000000002,0.98,-2,-17,-12,-5,-8.3,-21.539474,1.4619890000000026,-0.55

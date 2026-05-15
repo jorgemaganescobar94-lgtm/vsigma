@@ -1,0 +1,70 @@
+vSIGMA ODDS STRUCTURE DEPTH HISTORICAL EVALUATION
+
+Variant definitions
+FROZEN_BASELINE: official competition accuracy mode + probability calibration.
+CANDIDATE_V2_RECENT_LAB: schedule strength + anomaly cleaning.
+CANDIDATE_V3_ODDS_STRUCTURE_DEPTH: candidate v2 plus odds ladder/dispersion market translation.
+
+Generated at UTC: 2026-05-13T15:01:49.416025+00:00
+
+Batch status
+      date status  rows  graded_rows  fallback_rows
+2026-04-23     OK    28            0              0
+2026-04-24     OK    32            0              0
+2026-04-25     OK   109            0              0
+2026-04-26     OK    79            0              0
+2026-04-27     OK    21            0              0
+2026-04-28     OK    10            0              0
+2026-04-29     OK    27            0              0
+2026-04-30     OK    15            0              0
+2026-05-01     OK    28            0              0
+2026-05-02     OK   119            0              0
+2026-05-03     OK    85            0              0
+2026-05-04     OK    15            8              0
+2026-05-05     OK    14            5              0
+2026-05-06     OK    22           15              0
+2026-05-07     OK    16           14              0
+2026-05-08     OK    27           13              0
+
+Baseline vs candidate v2 vs candidate v3
+                          variant  rows  graded_rows  wins  losses  hit_rate  profit       roi    brier  avg_probability  market_changes_vs_candidate_v2
+                  FROZEN_BASELINE    10           10     8       2 80.000000    2.64 26.400000 0.156817         0.824418                               0
+          CANDIDATE_V2_RECENT_LAB     9            9     7       2 77.777778    2.28 25.333333 0.169789         0.808850                               0
+CANDIDATE_V3_ODDS_STRUCTURE_DEPTH     9            9     7       2 77.777778    2.31 25.666667 0.168394         0.812887                               1
+
+Candidate v3 market-family composition
+                     mode market_primary  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+                CORE_ONLY       AWAY_WIN           2            2     2       0       0      0                2.44   122.000000
+                CORE_ONLY       BTTS_YES           2            2     1       1       0      0               -0.69   -34.500000
+                CORE_ONLY       HOME_WIN           1            1     1       0       0      0                0.32    32.000000
+                CORE_ONLY       OVER_1_5           6            6     4       2       0      0               -0.29    -4.833333
+                CORE_ONLY       OVER_2_5           5            5     5       0       0      0                3.87    77.400000
+       CORE_PLUS_STANDARD       AWAY_WIN           2            2     2       0       0      0                2.44   122.000000
+       CORE_PLUS_STANDARD       BTTS_YES           2            2     1       1       0      0               -0.69   -34.500000
+       CORE_PLUS_STANDARD       HOME_WIN           1            1     1       0       0      0                0.32    32.000000
+       CORE_PLUS_STANDARD       OVER_1_5           6            6     4       2       0      0               -0.29    -4.833333
+       CORE_PLUS_STANDARD       OVER_2_5           5            5     5       0       0      0                3.87    77.400000
+           FULL_SHORTLIST       AWAY_WIN           2            2     2       0       0      0                2.44   122.000000
+           FULL_SHORTLIST       BTTS_YES           2            2     1       1       0      0               -0.69   -34.500000
+           FULL_SHORTLIST       HOME_WIN           1            1     1       0       0      0                0.32    32.000000
+           FULL_SHORTLIST       OVER_1_5           9            9     6       3       0      0               -0.34    -3.777778
+           FULL_SHORTLIST       OVER_2_5           5            5     5       0       0      0                3.87    77.400000
+           FULL_SHORTLIST      UNDER_3_5           2            2     2       0       0      0                0.69    34.500000
+COMPETITION_ACCURACY_MODE       AWAY_WIN           1            1     1       0       0      0                1.00   100.000000
+COMPETITION_ACCURACY_MODE       OVER_1_5           6            6     4       2       0      0               -0.11    -1.833333
+COMPETITION_ACCURACY_MODE       OVER_2_5           2            2     2       0       0      0                1.42    71.000000
+
+Candidate v3 CORE / EXTENDED composition
+                     mode     accuracy_mode_bucket  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+                CORE_ONLY            ACCURACY_CORE           7            7     6       1       0      0                2.81    40.142857
+                CORE_ONLY        ACCURACY_REJECTED           9            9     7       2       0      0                2.84    31.555556
+       CORE_PLUS_STANDARD            ACCURACY_CORE           7            7     6       1       0      0                2.81    40.142857
+       CORE_PLUS_STANDARD        ACCURACY_REJECTED           9            9     7       2       0      0                2.84    31.555556
+           FULL_SHORTLIST            ACCURACY_CORE           7            7     6       1       0      0                2.81    40.142857
+           FULL_SHORTLIST ACCURACY_EXTENDED_STRONG           2            2     1       1       0      0               -0.50   -25.000000
+           FULL_SHORTLIST        ACCURACY_REJECTED          12           12    10       2       0      0                3.98    33.166667
+COMPETITION_ACCURACY_MODE            ACCURACY_CORE           7            7     6       1       0      0                2.81    40.142857
+COMPETITION_ACCURACY_MODE ACCURACY_EXTENDED_STRONG           2            2     1       1       0      0               -0.50   -25.000000
+
+Interpretation
+This layer is intended to change market translation and confidence modestly. Thin/no odds depth is neutral uncertainty. Any observed gain should be read as sample-sensitive unless it persists across larger labeled windows.

@@ -1,0 +1,2 @@
+target_date,fixture_id,league,home_team,away_team,market_primary,experiment_id,source_candidate_version,pre_price,prelock_price,close_proxy_price,clv_delta,clv_percent,clv_direction,clv_interpretation,result,profit_units,snapshot_rebuild_mode,true_pre_snapshot_available_flag,clv_usable_for_threshold_calibration_flag,source_snapshot_stage,source_snapshot_note
+2026-05-14,14,,,,OVER_1_5,OFFICIAL_BASELINE,,1.4,,1.35,-0.05,3.571429,CLV_POSITIVE,Price shortened after PRE; vSIGMA beat the close proxy.,,,,1,1,CLOSE_PROXY;PRE,

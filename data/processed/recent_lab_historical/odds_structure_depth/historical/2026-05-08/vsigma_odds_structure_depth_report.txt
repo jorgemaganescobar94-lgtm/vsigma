@@ -1,0 +1,52 @@
+vSIGMA ODDS STRUCTURE DEPTH
+
+Purpose: lab-only market translation governance from paid odds ladder depth.
+Missing or thin odds are treated as uncertainty, not as a negative football signal.
+
+Summary
+                summary_scope                 metric  rows_total
+                      overall        target_fixtures          27
+  odds_structure_depth_status                     OK          27
+odds_structure_coherence_flag          RICH_COHERENT          20
+odds_structure_coherence_flag             RICH_MIXED           7
+      odds_total_ladder_shape            BROAD_GOALS          10
+      odds_total_ladder_shape               BALANCED           9
+      odds_total_ladder_shape             MILD_GOALS           5
+      odds_total_ladder_shape             WIDE_GOALS           3
+ odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL          13
+ odds_market_translation_hint   CAUTION_FRAGILE_SIDE           8
+ odds_market_translation_hint    PREFER_MILDER_TOTAL           5
+ odds_market_translation_hint                NEUTRAL           1
+    odds_line_aggression_flag     OVER_2_5_SUPPORTED          13
+    odds_line_aggression_flag                NEUTRAL           9
+    odds_line_aggression_flag        PREFER_OVER_1_5           5
+
+Fixture preview
+ fixture_id                league            home_team           away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
+    1388907         2. Bundesliga 1. FC Kaiserslautern   Arminia Bielefeld                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2256                             0.030
+    1388909         2. Bundesliga      SC Paderborn 07       Karlsruher SC                 RICH_COHERENT              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2975                             0.030
+    1388597            Bundesliga    Borussia Dortmund Eintracht Frankfurt                 RICH_COHERENT              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2614                             0.030
+    1535284 CONMEBOL Libertadores       Coquimbo Unido       Universitario                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3203                            -0.015
+    1535289 CONMEBOL Libertadores               Junior       Cerro Porteno                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3531                            -0.015
+    1543786          Championship            Hull City            Millwall                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2264                            -0.015
+    1536954    Jupiler Pro League       Standard Liege           OH Leuven                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3256                             0.030
+    1391163               La Liga              Levante             Osasuna                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3403                            -0.015
+    1387989               Ligue 1                 Lens              Nantes                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2573                             0.030
+    1392192      Segunda División                Cadiz Deportivo La Coruna                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3009                            -0.015
+    1378222               Serie A               Torino            Sassuolo                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3261                            -0.015
+    1419962               Serie B             Avellino              Modena                 RICH_COHERENT                BALANCED                      NEUTRAL                   NEUTRAL                 0.3228                             0.000
+    1419970               Serie B            Catanzaro                Bari                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3646                            -0.015
+    1419966               Serie B               Cesena              Padova                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3623                             0.025
+    1419969               Serie B            Frosinone             Mantova                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2948                             0.030
+    1419968               Serie B                Monza              Empoli                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2942                             0.030
+    1419961               Serie B              Pescara              Spezia                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3352                             0.030
+    1419967               Serie B             Reggiana           Sampdoria                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2966                            -0.015
+    1419964               Serie B             Sudtirol         Juve Stabia                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3613                            -0.015
+    1419965               Serie B              Venezia             Palermo                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2634                             0.030
+    1419963               Serie B       Virtus Entella           Carrarese                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3360                             0.030
+    1494163           Allsvenskan          IF Elfsborg   IF Brommapojkarna                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.4224                            -0.015
+    1535189 CONMEBOL Sudamericana             Blooming       RB Bragantino                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3265                            -0.015
+    1535192 CONMEBOL Sudamericana          Carabobo FC         River Plate                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3611                            -0.015
+    1494652           Eliteserien              Ham-Kam           Valerenga                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2828                             0.030
+    1543680           Premiership             Arbroath         Dunfermline                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3541                            -0.015
+    1530585             Superliga               Viborg         Sonderjyske                 RICH_COHERENT              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2873                             0.030

@@ -1,0 +1,17 @@
+date,status,baseline_rows,baseline_wins,baseline_losses,baseline_profit,candidate_v2_rows,candidate_v2_wins,candidate_v2_losses,candidate_v2_profit,candidate_v5_rows,candidate_v5_wins,candidate_v5_losses,candidate_v5_profit,player_impact_adjusted_rows,player_impact_strengthened_rows,player_impact_downgraded_rows,player_impact_blocked_rows
+2026-04-23,MISSING_INPUT,,,,,,,,,,,,,,,,
+2026-04-24,MISSING_INPUT,,,,,,,,,,,,,,,,
+2026-04-25,MISSING_INPUT,,,,,,,,,,,,,,,,
+2026-04-26,MISSING_INPUT,,,,,,,,,,,,,,,,
+2026-04-27,MISSING_INPUT,,,,,,,,,,,,,,,,
+2026-04-28,MISSING_INPUT,,,,,,,,,,,,,,,,
+2026-04-29,MISSING_INPUT,,,,,,,,,,,,,,,,
+2026-04-30,MISSING_INPUT,,,,,,,,,,,,,,,,
+2026-05-01,MISSING_INPUT,,,,,,,,,,,,,,,,
+2026-05-02,MISSING_INPUT,,,,,,,,,,,,,,,,
+2026-05-03,MISSING_INPUT,,,,,,,,,,,,,,,,
+2026-05-04,OK,2.0,1.0,1.0,-0.5,2.0,1.0,1.0,-0.5,2.0,1.0,1.0,-0.5,1.0,0.0,1.0,0.0
+2026-05-05,OK,1.0,1.0,0.0,0.33,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0
+2026-05-06,OK,1.0,0.0,1.0,-1.0,1.0,0.0,1.0,-1.0,1.0,0.0,1.0,-1.0,1.0,1.0,0.0,0.0
+2026-05-07,OK,2.0,2.0,0.0,1.37,2.0,2.0,0.0,1.37,2.0,2.0,0.0,1.37,0.0,0.0,0.0,0.0
+2026-05-08,OK,3.0,3.0,0.0,1.83,3.0,3.0,0.0,1.8,3.0,3.0,0.0,1.8,0.0,0.0,0.0,0.0

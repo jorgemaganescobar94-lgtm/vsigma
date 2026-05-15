@@ -1,0 +1,2 @@
+mode,pick_count,settled_rows,pending_rows,unmatched_rows,wins,losses,pushes,voids,profit_units,roi_percent
+SHADOW_CANDIDATE_V2,2,2,0,0,1,1,0,0,-0.56,-28.0

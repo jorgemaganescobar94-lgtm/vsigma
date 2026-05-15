@@ -1,0 +1,21 @@
+# vSIGMA Pre-Lock Report
+
+- Target date: 2026-05-14
+- Timezone: Atlantic/Canary
+- Window minutes: 90
+- Morning official picks reviewed: 2
+- In-window pre-lock picks retained: 1
+- Generated at: 2026-05-14T15:53:02+00:00
+
+## Refresh Steps
+                                   step status
+scripts/enrich_injuries_availability.py   PASS
+      scripts/enrich_fixture_lineups.py   PASS
+      scripts/enrich_odds_context_v3.py   PASS
+ scripts/enrich_odds_structure_depth.py   PASS
+
+## Decisions
+ PRELOCK_NO_CHANGE  PRELOCK_NOT_AVAILABLE
+                 1                      1
+
+Missing pre-lock data is treated as uncertainty, not weakness. No official morning file is overwritten.

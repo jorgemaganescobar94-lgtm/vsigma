@@ -1,0 +1,16 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-05-12,OK,API-SPORTS_DIRECT,156.0,,,,,,
+2026-05-12T17:45:00+01:00,MATCHED,,,1544649.0,FT,Modena,Juve Stabia,0.0,1.0
+2026-05-12T18:00:00+01:00,MATCHED,,,1391171.0,FT,Celta Vigo,Levante,2.0,3.0
+2026-05-12T19:00:00+01:00,MATCHED,,,1391170.0,FT,Real Betis,Elche,2.0,1.0
+2026-05-12T19:30:00+01:00,MATCHED,,,1538477.0,FT,Grasshoppers,FC Winterthur,3.0,2.0
+2026-05-12T19:30:00+01:00,MATCHED,,,1538478.0,FT,FC Luzern,FC Zurich,1.0,0.0
+2026-05-12T19:30:00+01:00,MATCHED,,,1538479.0,FT,Servette FC,Lausanne,2.0,0.0
+2026-05-12T19:30:00+01:00,MATCHED,,,1544684.0,FT,RED Star FC 93,Rodez,2.0,3.0
+2026-05-12T19:45:00+01:00,MATCHED,,,1540014.0,FT,Aberdeen,ST Mirren,0.0,2.0
+2026-05-12T19:45:00+01:00,MATCHED,,,1540015.0,FT,Dundee Utd,Livingston,0.0,0.0
+2026-05-12T19:45:00+01:00,MATCHED,,,1540016.0,FT,Kilmarnock,Dundee,3.0,1.0
+2026-05-12T19:45:00+01:00,MATCHED,,,1544661.0,FT,Dunfermline,Partick,1.0,1.0
+2026-05-12T20:00:00+01:00,MATCHED,,,1543789.0,AET,Southampton,Middlesbrough,1.0,1.0
+2026-05-12T20:00:00+01:00,MATCHED,,,1544650.0,FT,Catanzaro,Avellino,3.0,0.0
+2026-05-12T20:30:00+01:00,MATCHED,,,1391175.0,FT,Osasuna,Atletico Madrid,1.0,2.0

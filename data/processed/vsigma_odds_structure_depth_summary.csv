@@ -1,0 +1,12 @@
+summary_scope,metric,rows_total
+overall,target_fixtures,4
+odds_structure_depth_status,OK,4
+odds_structure_coherence_flag,RICH_COHERENT,3
+odds_structure_coherence_flag,RICH_MIXED,1
+odds_total_ladder_shape,MILD_GOALS,2
+odds_total_ladder_shape,BROAD_GOALS,1
+odds_total_ladder_shape,WIDE_GOALS,1
+odds_market_translation_hint,PREFER_MILDER_TOTAL,2
+odds_market_translation_hint,ALLOW_AGGRESSIVE_TOTAL,2
+odds_line_aggression_flag,PREFER_OVER_1_5,2
+odds_line_aggression_flag,OVER_2_5_SUPPORTED,2

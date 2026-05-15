@@ -1,0 +1,44 @@
+vSIGMA ODDS STRUCTURE DEPTH
+
+Purpose: lab-only market translation governance from paid odds ladder depth.
+Missing or thin odds are treated as uncertainty, not as a negative football signal.
+
+Summary
+                summary_scope               metric  rows_total
+                      overall      target_fixtures          28
+  odds_structure_depth_status        NO_ODDS_FOUND          28
+odds_structure_coherence_flag    NO_ODDS_UNCERTAIN          28
+      odds_total_ladder_shape              UNKNOWN          28
+ odds_market_translation_hint ODDS_DEPTH_UNCERTAIN          28
+    odds_line_aggression_flag              UNKNOWN          28
+
+Fixture preview
+ fixture_id              league            home_team              away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
+    1381139          Eredivisie      GO Ahead Eagles             AZ Alkmaar             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1381143          Eredivisie        PSV Eindhoven             PEC Zwolle             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1541758  Jupiler Pro League        Lommel United                  Liège             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1541759  Jupiler Pro League         Patro Eisden           Beerschot VA             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1536987  Jupiler Pro League          St. Truiden             Anderlecht             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1391143             La Liga              Levante                Sevilla             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1391148             La Liga               Oviedo             Villarreal             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1391145             La Liga       Rayo Vallecano               Espanyol             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1396464       Primeira Liga             Casa Pia               SC Braga             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1494137         Allsvenskan         Degerfors IF          AIK Stockholm             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1494139         Allsvenskan                 Gais            Mjallby AIF             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1494141         Allsvenskan            Kalmar FF           IFK Goteborg             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1494142         Allsvenskan             Malmo FF                 Sirius             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1386532          League Two         Salford City                Bromley             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1490229 Major League Soccer    Atlanta United FC New England Revolution             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1490225 Major League Soccer        Columbus Crew     Los Angeles Galaxy             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1490231 Major League Soccer            FC Dallas    Minnesota United FC             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1490232 Major League Soccer       Houston Dynamo              San Diego             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1490234 Major League Soccer       Los Angeles FC        Colorado Rapids             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1490226 Major League Soccer     New York City FC          FC Cincinnati             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1490230 Major League Soccer   New York Red Bulls              DC United             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1490228 Major League Soccer      Orlando City SC              Charlotte             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1490233 Major League Soccer       Real Salt Lake            Inter Miami             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1490235 Major League Soccer San Jose Earthquakes                 Austin             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1490227 Major League Soccer           Toronto FC     Philadelphia Union             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1530575           Superliga     FC Nordsjaelland                 Aarhus             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1530546           Superliga           Randers FC          FC Fredericia             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1530576           Superliga          Sonderjyske         FC Midtjylland             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0

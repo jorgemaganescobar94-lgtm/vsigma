@@ -1,0 +1,43 @@
+vSIGMA ODDS STRUCTURE DEPTH
+
+Purpose: lab-only market translation governance from paid odds ladder depth.
+Missing or thin odds are treated as uncertainty, not as a negative football signal.
+
+Summary
+                summary_scope               metric  rows_total
+                      overall      target_fixtures          27
+  odds_structure_depth_status        NO_ODDS_FOUND          27
+odds_structure_coherence_flag    NO_ODDS_UNCERTAIN          27
+      odds_total_ladder_shape              UNKNOWN          27
+ odds_market_translation_hint ODDS_DEPTH_UNCERTAIN          27
+    odds_line_aggression_flag              UNKNOWN          27
+
+Fixture preview
+ fixture_id                league          home_team           away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
+    1535270 CONMEBOL Libertadores           Cruzeiro        Boca Juniors             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535271 CONMEBOL Libertadores    Deportes Tolima      Coquimbo Unido             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535277 CONMEBOL Libertadores           Mirassol        Always Ready             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535278 CONMEBOL Libertadores           Platense            Santa Fe             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535279 CONMEBOL Libertadores   Sporting Cristal              Junior             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535281 CONMEBOL Libertadores                UCV     Rosario Central             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1396469         Primeira Liga        Sporting CP             Tondela             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1540842 UEFA Champions League    Atletico Madrid             Arsenal             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535171 CONMEBOL Sudamericana   Barracas Central         A. Italiano             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535175 CONMEBOL Sudamericana         Caracas FC         Racing Club             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535182 CONMEBOL Sudamericana Deportivo Recoleta    Deportivo Cuenca             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535177 CONMEBOL Sudamericana  Deportivo Riestra     Atletico Torque             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535178 CONMEBOL Sudamericana           Juventud      Puerto Cabello             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535179 CONMEBOL Sudamericana        Millonarios           Sao Paulo             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535180 CONMEBOL Sudamericana          O'Higgins        Boston River             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1544642        Eerste Divisie          Den Bosch      Almere City FC             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1494724           Eliteserien             Tromso               Brann             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1504771             J1 League     Avispa Fukuoka Sanfrecce Hiroshima             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1504772             J1 League   JEF United Chiba Yokohama F. Marinos             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1504777             J1 League     Kashiwa Reysol            FC Tokyo             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1504774             J1 League        Kyoto Sanga         Gamba Osaka             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1504778             J1 League     Mito Hollyhock      Machida Zelvia             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1504775             J1 League     Nagoya Grampus     Fagiano Okayama             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1504769             J1 League    Shimizu S-pulse    V-varen Nagasaki             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1504770             J1 League        Tokyo Verdy             Kashima             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1504776             J1 League              Urawa   Kawasaki Frontale             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1504773             J1 League        Vissel Kobe        Cerezo Osaka             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0

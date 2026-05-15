@@ -1,0 +1,5 @@
+mode,rows_total,graded_rows,wins,losses,pushes,voids,hit_rate,profit_units_total,roi_percent,avg_odds,avg_edge,avg_execution_score,max_drawdown
+CORE_ONLY,16,16,13,3,0,0,81.25,6.4,40.0,1.725,0.217934,138.06026,-1.68
+CORE_PLUS_STANDARD,16,16,13,3,0,0,81.25,6.4,40.0,1.725,0.217934,138.06026,-1.68
+FULL_SHORTLIST,22,22,18,4,0,0,81.818182,7.34,33.363636,1.632727,0.204986,128.387709,-0.93
+COMPETITION_ACCURACY_MODE,9,9,7,2,0,0,77.777778,2.28,25.333333,1.576667,0.219989,132.679966,-1.0

@@ -1,0 +1,18 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-05-07,OK,API-SPORTS_DIRECT,166.0,,,,,,
+2026-05-07T01:00:00+01:00,MATCHED,,,1535188.0,FT,Barracas Central,Olimpia,1.0,2.0
+2026-05-07T01:00:00+01:00,MATCHED,,,1535197.0,FT,Macara,Tigre,2.0,2.0
+2026-05-07T01:30:00+01:00,MATCHED,,,1535191.0,FT,Botafogo,Racing Club,2.0,1.0
+2026-05-07T01:30:00+01:00,MATCHED,,,1535288.0,FT,Independ. Rivadavia,Fluminense,1.0,1.0
+2026-05-07T01:30:00+01:00,MATCHED,,,1535294.0,FT,Santa Fe,Corinthians,1.0,1.0
+2026-05-07T03:00:00+01:00,MATCHED,,,1535187.0,FT,Alianza Atletico,America de Cali,0.0,2.0
+2026-05-07T03:00:00+01:00,MATCHED,,,1535286.0,FT,Deportes Tolima,Club Nacional,3.0,0.0
+2026-05-07T03:00:00+01:00,MATCHED,,,1535296.0,FT,U. Catolica,Cruzeiro,0.0,0.0
+2026-05-07T20:00:00+01:00,MATCHED,,,1540873.0,FT,Aston Villa,Nottingham Forest,4.0,0.0
+2026-05-07T20:00:00+01:00,MATCHED,,,1540874.0,FT,SC Freiburg,SC Braga,3.0,1.0
+2026-05-07T20:00:00+01:00,MATCHED,,,1540881.0,FT,Crystal Palace,Shakhtar Donetsk,2.0,1.0
+2026-05-07T20:00:00+01:00,MATCHED,,,1540882.0,FT,Strasbourg,Rayo Vallecano,0.0,1.0
+2026-05-07T23:00:00+01:00,MATCHED,,,1535190.0,FT,Boston River,Millonarios,2.0,4.0
+2026-05-07T23:00:00+01:00,MATCHED,,,1535199.0,FT,O'Higgins,Sao Paulo,0.0,0.0
+2026-05-07T23:00:00+01:00,MATCHED,,,1535291.0,FT,Mirassol,LDU de Quito,2.0,0.0
+2026-05-07T23:00:00+01:00,MATCHED,,,1535292.0,FT,Platense,Penarol,1.0,1.0

@@ -1,0 +1,10 @@
+﻿check_name,result,response_count,note
+status_endpoint,OK,1,
+leagues_allowed_season_2024,OK,1,
+leagues_current_season_2026,OK,0,
+fixtures_allowed_season_2024_last1,OK,1,
+fixtures_current_season_2026_last1,OK,0,
+team_recent_fixtures_2024_last8,OK,8,
+standings_2024,OK,1,
+fixture_statistics_1208399,OK,2,
+fixture_lineups_1208399,OK,2,

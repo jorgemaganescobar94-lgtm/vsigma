@@ -1,0 +1,7 @@
+segment,rows_total,graded_rows,wins,losses,pushes,voids,profit_units_total,roi_percent
+AWAY_WIN,2,2,2,0,0,0,2.44,122.0
+BTTS_YES,2,2,1,1,0,0,-0.69,-34.5
+HOME_WIN,1,1,1,0,0,0,0.32,32.0
+OVER_1_5,9,9,6,3,0,0,-0.34,-3.777778
+OVER_2_5,5,5,5,0,0,0,3.87,77.4
+UNDER_3_5,2,2,2,0,0,0,0.69,34.5

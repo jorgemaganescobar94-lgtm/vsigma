@@ -1,0 +1,26 @@
+vSIGMA ODDS STRUCTURE DEPTH
+
+Purpose: lab-only market translation governance from paid odds ladder depth.
+Missing or thin odds are treated as uncertainty, not as a negative football signal.
+
+Summary
+                summary_scope               metric  rows_total
+                      overall      target_fixtures          10
+  odds_structure_depth_status        NO_ODDS_FOUND          10
+odds_structure_coherence_flag    NO_ODDS_UNCERTAIN          10
+      odds_total_ladder_shape              UNKNOWN          10
+ odds_market_translation_hint ODDS_DEPTH_UNCERTAIN          10
+    odds_line_aggression_flag              UNKNOWN          10
+
+Fixture preview
+ fixture_id                league           home_team               away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
+    1535275 CONMEBOL Libertadores               Lanus            LDU de Quito             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535276 CONMEBOL Libertadores   Libertad Asuncion Independiente del Valle             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1387028          Championship         Southampton                 Ipswich             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1540841 UEFA Champions League Paris Saint Germain          Bayern München             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535172 CONMEBOL Sudamericana            Botafogo Independiente Petrolero             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1535183 CONMEBOL Sudamericana         San Lorenzo                  Santos             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1544249        Eerste Divisie                Roda                Waalwijk             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1387576            League One         Northampton                Barnsley             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1387577            League One        Peterborough          Mansfield Town             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0
+    1387616            League One    Stockport County               Port Vale             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                    0.0                               0.0

@@ -1,0 +1,22 @@
+VSIGMA COMPETITION ACCURACY MODE
+
+Mode: COMPETITION_ACCURACY_MODE
+Normal execution shortlist rows: 3
+Competition shortlist rows: 2
+Competition top rows: 2
+
+Principle: prefer no pick over weak pick; prioritize stable markets, premium core evidence, strong rolling stats, clean market-fit, and high model probability.
+
+Competition shortlist
+ accuracy_mode_rank  fixture_id     league        home_team           away_team market_primary execution_shortlist_source  competition_raw_prob  competition_calibrated_prob  accuracy_confidence_score     accuracy_mode_bucket                                                                                                              accuracy_mode_reason       accuracy_primary_risk  competition_prob_calibration_reason
+                  1     1387952    Ligue 1             Lens Paris Saint Germain       OVER_2_5               PREMIUM_CORE                0.8384                     0.855525                    138.566            ACCURACY_CORE                          ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_BUCKET_RELIABILITY_UPLIFT
+                  2     1544063 League One Stockport County           Stevenage       OVER_1_5           PREMIUM_EXTENDED                0.8586                     0.778600                    111.781 ACCURACY_EXTENDED_STRONG ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION     CALIBRATED_MARKET_OVERCONFIDENCE
+
+Competition top
+ accuracy_mode_rank  fixture_id     league        home_team           away_team market_primary  competition_raw_prob  competition_calibrated_prob  primary_edge  accuracy_confidence_score                                                                                                              accuracy_mode_reason       accuracy_primary_risk  competition_prob_calibration_reason
+                  1     1387952    Ligue 1             Lens Paris Saint Germain       OVER_2_5                0.8384                     0.855525      0.158128                    138.566                          ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_BUCKET_RELIABILITY_UPLIFT
+                  2     1544063 League One Stockport County           Stevenage       OVER_1_5                0.8586                     0.778600      0.164156                    111.781 ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION     CALIBRATED_MARKET_OVERCONFIDENCE
+
+Most common rejection tags
+accuracy_mode_reason
+ACCURACY_CORE_PRIORITY;ACCURACY_SIDE_TOO_FRAGILE    1

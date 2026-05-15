@@ -1,0 +1,5 @@
+execution_rank,execution_shortlist_source,fixture_id,date,league,home_team,away_team,market_primary,final_execution_bucket,final_recommendation,execution_score,selection_score,primary_model_prob,primary_odds_used,primary_edge,actionable_result,actionable_profit_units,primary_result,primary_profit_units,ledger_result_status
+1,PREMIUM_CORE,1543789,2026-05-12,Championship,Southampton,Middlesbrough,OVER_2_5,APPROVED_PREMIUM,BET,142.1740782122905,98.14,0.809,1.79,0.2503407821229051,LOSS,-1.0,LOSS,-1.0,RESULT_AVAILABLE
+2,PREMIUM_CORE,1538479,2026-05-12,Super League,Servette FC,Lausanne,OVER_2_5,APPROVED_PREMIUM,BET,133.04387096774192,96.78,0.8178,1.55,0.1726387096774193,LOSS,-1.0,LOSS,-1.0,RESULT_AVAILABLE
+3,PREMIUM_EXTENDED,1544650,2026-05-12,Serie B,Catanzaro,Avellino,OVER_1_5,APPROVED_PREMIUM,BET,111.0474647887324,87.48,0.8899,1.42,0.1856746478873239,WIN,0.42,WIN,0.42,RESULT_AVAILABLE
+4,PREMIUM_EXTENDED,1544649,2026-05-12,Serie B,Modena,Juve Stabia,OVER_1_5,APPROVED_PREMIUM,BET,104.25448275862068,83.73,0.8449,1.45,0.1552448275862068,LOSS,-1.0,LOSS,-1.0,RESULT_AVAILABLE

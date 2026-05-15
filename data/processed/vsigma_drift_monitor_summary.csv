@@ -1,0 +1,10 @@
+pattern,settled_rows,wins,losses,profit_units,roi_percent,drift_status
+OVER_2_5 + FAILURE_MODE_LOW_CONVERSION,6,6,0,4.26,71.0,NO_DRIFT
+OVER_1_5 + FAILURE_MODE_LOW_CONVERSION,26,16,10,-3.39,-13.038462,WATCH_PATTERN
+BTTS_YES + FAILURE_MODE_BTTS_BREAK,0,0,0,0.0,,SAMPLE_TOO_SMALL
+HOME/AWAY_WIN + FAILURE_MODE_DRAW_LIVE,5,5,0,5.0,100.0,NO_DRIFT
+candidate v2 vs baseline daily winner,8,6,2,1.67,20.875,NO_DRIFT
+candidate v4 firewall performance,6,4,2,0.25,4.166667,NO_DRIFT
+candidate v5 player-impact adjusted subset,8,6,2,1.67,20.875,NO_DRIFT
+candidate v6 API-prediction aligned subset,1,1,0,1.0,100.0,SAMPLE_TOO_SMALL
+candidate v6 API-prediction disagreement subset,0,0,0,0.0,,SAMPLE_TOO_SMALL

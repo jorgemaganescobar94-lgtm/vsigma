@@ -1,0 +1,32 @@
+=== vSIGMA LINEUPS ACTIVATION GOVERNANCE REPORT ===
+
+Policy implemented:
+- ACTIVE only when lineup_quality_flag is FULL, both lineups are available, structure is complete, goalkeeper flags are known, and kickoff is inside the 90-minute activation window.
+- ADVISORY_ONLY keeps lineup notes/reasoning but applies zero numeric score nudge.
+- INACTIVE applies zero downstream decision effect for NONE/unavailable lineups.
+
+Timing behavior:
+- Activation window: 90 minutes to kickoff.
+- Historical rebuild was conservative: because the rebuild ran after these fixtures, stored fixture datetimes produced negative minutes_to_kickoff, so FULL historical lineups were ADVISORY_ONLY rather than ACTIVE.
+- Today behavior supports late confirmation: near-kickoff FULL lineups can become ACTIVE, while early/missing lineups stay advisory/inactive.
+
+Today activation counts: {'INACTIVE': 5, 'ADVISORY_ONLY': 1}
+Historical activation counts: {'ADVISORY_ONLY': 647}
+
+Historical backtest after governance:
+- Overall: rows=30, graded=30, wins/losses=22/8, profit=2.13u, ROI=7.1%.
+- PREMIUM_CORE: rows=14, profit=4.16u, ROI=29.714286%.
+- PREMIUM_EXTENDED: rows=13, profit=-2.03u, ROI=-15.615385%.
+- STANDARD_FILL: rows=3, profit=0.0u, ROI=0.0%.
+
+Mode comparison after governance:
+- CORE_ONLY: rows=14, graded=14, profit=4.16u, ROI=29.714286%, maxDD=-1.04u.
+- CORE_PLUS_STANDARD: rows=17, graded=17, profit=4.16u, ROI=24.470588%, maxDD=-1.04u.
+- FULL_SHORTLIST: rows=30, graded=30, profit=2.13u, ROI=7.1%, maxDD=-1.08u.
+
+Comparison:
+- Versus pre-governance lineups baseline: FULL_SHORTLIST profit improved from +1.73u to +2.13u and ROI from 6.92% to 7.10%, while CORE_ONLY remained strong at +4.16u / 29.71% ROI.
+- Versus advisory-pre-lineups benchmark: FULL_SHORTLIST remains weaker (+2.13u / 7.10% vs +3.49u / 13.96%), mainly because PREMIUM_EXTENDED still drags results.
+
+Verdict:
+LINEUPS_GOVERNANCE_PARTIAL

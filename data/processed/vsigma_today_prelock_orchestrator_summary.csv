@@ -1,0 +1,2 @@
+target_date,timezone,window_minutes,orchestrator_status,fixtures_checked,fixtures_inside_window,fixtures_outside_window,stale_input_rows_excluded,stale_prelock_excluded,stale_prelock_dates,v7_rerun_status,odds_snapshot_status,ledger_update_status,run_finished_at,v7_waiting_for_prelock,v7_prelock_confirmed,v7_prelock_rejected,v7_prelock_unavailable
+2026-05-15,Atlantic/Canary,90,PRELOCK_NO_FIXTURES_IN_WINDOW,1,0,1,0,0,,PASS,NOT_RUN,PASS,2026-05-15T13:23:59+00:00,1,0,0,0

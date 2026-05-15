@@ -1,0 +1,12 @@
+segment,rows_total,graded_rows,wins,losses,pushes,voids,profit_units_total,roi_percent
+2. Bundesliga,1,1,1,0,0,0,0.55,55.0
+CONMEBOL Libertadores,6,6,5,1,0,0,1.21,20.166667
+K League 1,1,1,0,1,0,0,-1.0,-100.0
+La Liga,1,1,0,1,0,0,-1.0,-100.0
+Ligue 1,1,1,0,1,0,0,-1.0,-100.0
+Premiership,3,3,3,0,0,0,1.41,47.0
+Segunda División,2,2,2,0,0,0,1.5,75.0
+Serie A,1,1,1,0,0,0,0.3,30.0
+Serie B,2,2,2,0,0,0,0.87,43.5
+UEFA Champions League,1,1,1,0,0,0,0.31,31.0
+UEFA Europa League,1,1,1,0,0,0,0.92,92.0

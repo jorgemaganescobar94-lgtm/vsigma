@@ -1,0 +1,56 @@
+VSIGMA EXECUTION SHORTLIST HISTORICAL BACKTEST
+
+Dates covered: 2026-04-23, 2026-04-24, 2026-04-25, 2026-04-26, 2026-04-27, 2026-04-28, 2026-04-29, 2026-04-30, 2026-05-01, 2026-05-02, 2026-05-03, 2026-05-04, 2026-05-05, 2026-05-06, 2026-05-07, 2026-05-08
+Total shortlist rows: 20
+Graded rows: 20
+Profit units: 4.070000
+ROI percent: 20.35
+
+Source breakdown
+         segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+    PREMIUM_CORE          11           11     9       2       0      0                2.77    25.181818
+PREMIUM_EXTENDED           6            6     5       1       0      0                1.21    20.166667
+   STANDARD_FILL           3            3     2       1       0      0                0.09     3.000000
+
+Bucket breakdown
+          segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+ APPROVED_PREMIUM          17           17    14       3       0      0                3.98    23.411765
+APPROVED_STANDARD           3            3     2       1       0      0                0.09     3.000000
+
+Market breakdown
+  segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+ AWAY_WIN           1            1     1       0       0      0                1.00        100.0
+ BTTS_YES           2            2     2       0       0      0                0.86         43.0
+ OVER_1_5          10           10     7       3       0      0               -0.16         -1.6
+ OVER_2_5           5            5     4       1       0      0                1.68         33.6
+UNDER_3_5           2            2     2       0       0      0                0.69         34.5
+
+League breakdown
+              segment  rows_total  graded_rows  wins  losses  pushes  voids  profit_units_total  roi_percent
+        2. Bundesliga           1            1     1       0       0      0                0.55    55.000000
+CONMEBOL Libertadores           6            6     5       1       0      0                1.21    20.166667
+           K League 1           1            1     0       1       0      0               -1.00  -100.000000
+              La Liga           1            1     0       1       0      0               -1.00  -100.000000
+              Ligue 1           1            1     0       1       0      0               -1.00  -100.000000
+          Premiership           3            3     3       0       0      0                1.41    47.000000
+     Segunda División           2            2     2       0       0      0                1.50    75.000000
+              Serie A           1            1     1       0       0      0                0.30    30.000000
+              Serie B           2            2     2       0       0      0                0.87    43.500000
+UEFA Champions League           1            1     1       0       0      0                0.31    31.000000
+   UEFA Europa League           1            1     1       0       0      0                0.92    92.000000
+
+Best segments by ROI
+  summary            segment  graded_rows  profit_units_total  roi_percent
+by_market           AWAY_WIN            1                1.00        100.0
+by_league UEFA Europa League            1                0.92         92.0
+by_league   Segunda División            2                1.50         75.0
+by_league      2. Bundesliga            1                0.55         55.0
+by_league        Premiership            3                1.41         47.0
+
+Worst segments by ROI
+  summary       segment  graded_rows  profit_units_total  roi_percent
+by_league    K League 1            1               -1.00       -100.0
+by_league       La Liga            1               -1.00       -100.0
+by_league       Ligue 1            1               -1.00       -100.0
+by_market      OVER_1_5           10               -0.16         -1.6
+by_source STANDARD_FILL            3                0.09          3.0

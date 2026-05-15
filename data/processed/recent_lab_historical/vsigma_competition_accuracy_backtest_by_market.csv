@@ -1,0 +1,4 @@
+segment,rows_total,graded_rows,wins,losses,pushes,voids,profit_units_total,roi_percent
+AWAY_WIN,1,1,1,0,0,0,1.0,100.0
+OVER_1_5,6,6,4,2,0,0,-0.14,-2.333333
+OVER_2_5,2,2,2,0,0,0,1.42,71.0
