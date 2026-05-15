@@ -1,0 +1,180 @@
+﻿name: vSIGMA Daily Automation
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Modo: pre | prelock | post | post-yesterday | health"
+        required: true
+        default: "health"
+        type: choice
+        options:
+          - health
+          - pre
+          - prelock
+          - post
+          - post-yesterday
+      date:
+        description: "Fecha YYYY-MM-DD. Vacío = hoy en Atlantic/Canary"
+        required: false
+        default: ""
+
+  schedule:
+    # PRE diario 09:00 Atlantic/Canary
+    - cron: "0 9 * * *"
+      timezone: "Atlantic/Canary"
+
+    # PRELOCK versión gratis/controlada
+    - cron: "0 11,13,15,17,19,21,23 * * *"
+      timezone: "Atlantic/Canary"
+
+    # POST diario 23:55 Atlantic/Canary
+    - cron: "55 23 * * *"
+      timezone: "Atlantic/Canary"
+
+    # POST backup yesterday 08:15 Atlantic/Canary
+    - cron: "15 8 * * *"
+      timezone: "Atlantic/Canary"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vsigma-daily-main
+  cancel-in-progress: false
+
+jobs:
+  run-vsigma:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ github.token }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Restore .env from GitHub Secret
+        env:
+          VSIGMA_ENV_B64: ${{ secrets.VSIGMA_ENV_B64 }}
+        run: |
+          if [ -z "$VSIGMA_ENV_B64" ]; then
+            echo "::error::Missing secret VSIGMA_ENV_B64"
+            exit 1
+          fi
+
+          echo "$VSIGMA_ENV_B64" | base64 --decode > .env
+          chmod 600 .env
+          echo ".env restored"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip wheel setuptools
+          pip install -r requirements.txt
+
+      - name: Decide vSIGMA mode and date
+        shell: bash
+        run: |
+          EVENT_NAME="${{ github.event_name }}"
+          SCHEDULE="${{ github.event.schedule }}"
+          MODE="${{ github.event.inputs.mode }}"
+          DATE_INPUT="${{ github.event.inputs.date }}"
+
+          TODAY="$(TZ=Atlantic/Canary date +%F)"
+          YESTERDAY="$(TZ=Atlantic/Canary date -d 'yesterday' +%F)"
+
+          if [ "$EVENT_NAME" = "schedule" ]; then
+            case "$SCHEDULE" in
+              "0 9 * * *")
+                MODE="pre"
+                DATE_INPUT="$TODAY"
+                ;;
+              "0 11,13,15,17,19,21,23 * * *")
+                MODE="prelock"
+                DATE_INPUT="$TODAY"
+                ;;
+              "55 23 * * *")
+                MODE="post"
+                DATE_INPUT="$TODAY"
+                ;;
+              "15 8 * * *")
+                MODE="post-yesterday"
+                DATE_INPUT="$YESTERDAY"
+                ;;
+              *)
+                MODE="health"
+                DATE_INPUT="$TODAY"
+                ;;
+            esac
+          fi
+
+          if [ -z "$MODE" ]; then
+            MODE="health"
+          fi
+
+          if [ -z "$DATE_INPUT" ]; then
+            DATE_INPUT="$TODAY"
+          fi
+
+          echo "VSIGMA_MODE=$MODE" >> "$GITHUB_ENV"
+          echo "VSIGMA_DATE=$DATE_INPUT" >> "$GITHUB_ENV"
+
+          echo "Mode: $MODE"
+          echo "Date: $DATE_INPUT"
+
+      - name: Run vSIGMA
+        shell: bash
+        run: |
+          echo "Running vSIGMA mode=$VSIGMA_MODE date=$VSIGMA_DATE"
+
+          if [ "$VSIGMA_MODE" = "pre" ]; then
+            python scripts/run_today_match_pipeline.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+          elif [ "$VSIGMA_MODE" = "prelock" ]; then
+            python scripts/run_today_prelock_pipeline.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --window-minutes 90
+
+          elif [ "$VSIGMA_MODE" = "post" ]; then
+            python scripts/run_today_post_results_pipeline.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+          elif [ "$VSIGMA_MODE" = "post-yesterday" ]; then
+            python scripts/run_today_post_results_pipeline.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+          elif [ "$VSIGMA_MODE" = "health" ]; then
+            python scripts/run_vsigma_healthcheck.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --mode full
+
+          else
+            echo "Modo no válido: $VSIGMA_MODE"
+            exit 2
+          fi
+
+      - name: Commit vSIGMA outputs
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add \
+            data/raw \
+            data/processed/today \
+            data/processed/ledger \
+            data/processed/governance \
+            data/processed/daily_supervisor_latest.md \
+            notes/competition_versions.md \
+            notes/competition_scoreboard.md \
+            outputs \
+            2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No output changes to commit."
+            exit 0
+          fi
+
+          git commit -m "vSIGMA ${VSIGMA_MODE} ${VSIGMA_DATE} [skip ci]"
+          git pull --rebase
+          git push
