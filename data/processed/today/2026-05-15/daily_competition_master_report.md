@@ -37,33 +37,33 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 ## Match Script Forecasts
 | forecast_rank | fixture_id | league | home_team | away_team | market_primary | predicted_match_script | predicted_score_main | predicted_score_alt | predicted_home_xg_range | predicted_away_xg_range | predicted_home_shots_range | predicted_away_shots_range | predicted_home_sot_range | predicted_away_sot_range | predicted_total_corners_range | predicted_possession_split | predicted_pick_path | predicted_pick_breaker | predicted_total_goals_range | predicted_first_goal_side | predicted_state_gravity | forecast_confidence_band | forecast_inputs_used | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1544651 | Serie B | Bari | Sudtirol | OVER_1_5 | Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.4; stats=FULL. | 2-2 | 1-2 | 1.5-2.2 | 1.2-1.9 | 8-12 | 12-16 | 2-4 | 4-6 | 6-10 | home 41-49% / away 51-59% | Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 2.9-4.0 | Either side | open exchange | MEDIUM_HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-05-15 | 2026-05-15T16:05:22+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-05-15-20260515T160522Z |
+| 1 | 1544651 | Serie B | Bari | Sudtirol | OVER_1_5 | Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.4; stats=FULL. | 2-2 | 1-2 | 1.5-2.2 | 1.2-1.9 | 8-12 | 12-16 | 2-4 | 4-6 | 6-10 | home 41-49% / away 51-59% | Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 2.9-4.0 | Either side | open exchange | MEDIUM_HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-05-15 | 2026-05-15T16:13:57+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-05-15-20260515T161357Z |
 
 ## Baseline vs Candidate Comparison
 ### Candidate v2
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | baseline_market | candidate_v2_market | baseline_raw_prob | candidate_v2_raw_prob | baseline_calibrated_prob | candidate_v2_calibrated_prob | baseline_confidence_score | candidate_v2_confidence_score | baseline_bucket | candidate_v2_bucket | baseline_main_reason | candidate_v2_main_reason | baseline_primary_risk | candidate_v2_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BOTH | 1544651 | Bari vs Sudtirol | Serie B | 1 | 1 | OVER_1_5 | OVER_1_5 | 0.8553 | 0.8541 | 0.7753 | 0.78646 | 119.126 | 149.416 | ACCURACY_EXTENDED_STRONG | ACCURACY_CORE | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-15 | 2026-05-15T16:05:22+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-15-20260515T160522Z |
+| BOTH | 1544651 | Bari vs Sudtirol | Serie B | 1 | 1 | OVER_1_5 | OVER_1_5 | 0.8553 | 0.8541 | 0.7753 | 0.78646 | 119.126 | 149.416 | ACCURACY_EXTENDED_STRONG | ACCURACY_CORE | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-15 | 2026-05-15T16:13:57+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-15-20260515T161357Z |
 
 ### Candidate v4
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v4_rank | baseline_market | candidate_v2_market | candidate_v4_market | candidate_v4_original_market | candidate_v4_firewall_decision | candidate_v4_firewall_score | candidate_v4_firewall_action | baseline_primary_risk | candidate_v2_primary_risk | candidate_v4_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1544651 | Bari vs Sudtirol | Serie B | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-15 | 2026-05-15T16:05:22+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-15-20260515T160522Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1544651 | Bari vs Sudtirol | Serie B | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-15 | 2026-05-15T16:13:57+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-15-20260515T161357Z |
 
 ### Candidate v5
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v5_rank | baseline_market | candidate_v2_market | candidate_v5_market | candidate_v5_original_market | candidate_v5_action | candidate_v5_hint | baseline_primary_risk | candidate_v2_primary_risk | candidate_v5_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1544651 | Bari vs Sudtirol | Serie B | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-15 | 2026-05-15T16:05:22+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-15-20260515T160522Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1544651 | Bari vs Sudtirol | Serie B | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-15 | 2026-05-15T16:13:57+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-15-20260515T161357Z |
 
 ### Candidate v6
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v6_rank | baseline_market | candidate_v2_market | candidate_v6_market | candidate_v6_action | candidate_v6_alignment | candidate_v6_confidence_adjustment | baseline_primary_risk | candidate_v2_primary_risk | candidate_v6_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V6 | 1544651 | Bari vs Sudtirol | Serie B | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | NEUTRAL | 0.0 | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-15 | 2026-05-15T16:05:22+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-15-20260515T160522Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V6 | 1544651 | Bari vs Sudtirol | Serie B | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | NEUTRAL | 0.0 | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-15 | 2026-05-15T16:13:57+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-15-20260515T161357Z |
 
 ### Candidate v7
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v7_rank | baseline_market | candidate_v2_market | candidate_v7_market | candidate_v7_decision | candidate_v7_required_edge | candidate_v7_actual_edge | candidate_v7_drift_status | candidate_v7_clv_direction | candidate_v7_execution_status | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2 | 1544651 | Bari vs Sudtirol | Serie B | 1 | 1 |  | OVER_1_5 | OVER_1_5 |  |  |  |  |  |  |  | 2026-05-15 | 2026-05-15T16:05:22+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-15-20260515T160522Z |
+| BASELINE+CANDIDATE_V2 | 1544651 | Bari vs Sudtirol | Serie B | 1 | 1 |  | OVER_1_5 | OVER_1_5 |  |  |  |  |  |  |  | 2026-05-15 | 2026-05-15T16:13:57+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-15-20260515T161357Z |
 
 ## Price Discipline / CLV / Drift Execution Guard
 | fixture_id | home_team | away_team | market_primary | price_discipline_decision | price_discipline_min_edge_required | price_discipline_actual_edge | price_discipline_edge_surplus | price_discipline_drift_status | candidate_v7_prelock_status | candidate_v7_execution_status | clv_direction | price_discipline_reason |
@@ -96,28 +96,20 @@ _No stale pre-lock rows excluded._
 | fixture_id | home_team | away_team | market_primary | experiment_id | pre_price | prelock_price | close_proxy_price | clv_delta | clv_direction | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1379330 | Aston Villa | Liverpool | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.81 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1379330 | Aston Villa | Liverpool | OVER_2_5 | OFFICIAL_BASELINE | 1.81 |  | 1.81 | 0.0 | CLV_FLAT | PENDING |  |
+| 1379330 | Aston Villa | Liverpool | OVER_2_5 | OFFICIAL_BASELINE | 1.81 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1392200 | Cordoba | Albacete | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.61 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1392200 | Cordoba | Albacete | OVER_2_5 | OFFICIAL_BASELINE | 1.61 |  | 1.61 | 0.0 | CLV_FLAT | PENDING |  |
-| 1544651 | Bari | Sudtirol | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.53 |  | 1.53 | 0.0 | CLV_FLAT | PENDING |  |
+| 1392200 | Cordoba | Albacete | OVER_2_5 | OFFICIAL_BASELINE | 1.61 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1544651 | Bari | Sudtirol | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.53 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1544651 | Bari | Sudtirol | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.53 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1544651 | Bari | Sudtirol | OVER_1_5 | OFFICIAL_BASELINE | 1.53 |  | 1.53 | 0.0 | CLV_FLAT | PENDING |  |
+| 1544651 | Bari | Sudtirol | OVER_1_5 | OFFICIAL_BASELINE | 1.53 |  |  |  | CLV_UNAVAILABLE |  |  |
 
 ### Candidate v7 Calibration Advice
 | market_family | failure_mode | drift_status | clv_direction | n | profit_units | roi_percent | recommendation | recommendation_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_FLAT | 2 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 4 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 6 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 
 ## Post-Results Summary
-| mode | pick_count | wins | losses | profit_units | roi_percent | pending_rows | candidate_version |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_EXECUTION_SHORTLIST | 3.0 | 0.0 | 0.0 | 0.0 |  | 3.0 | OFFICIAL_RESULTS |
-| SHADOW_CANDIDATE_V2 | 1.0 | 0.0 | 0.0 | 0.0 |  | 1.0 | CANDIDATE_V2_RESULTS |
-| SHADOW_CANDIDATE_V4_O25_LOW_CONVERSION_FIREWALL | 1.0 | 0.0 | 0.0 | 0.0 |  | 1.0 | CANDIDATE_V4_RESULTS |
-| SHADOW_CANDIDATE_V5_PLAYER_IMPACT | 1.0 | 0.0 | 0.0 | 0.0 |  | 1.0 | CANDIDATE_V5_RESULTS |
-| SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK | 1.0 | 0.0 | 0.0 | 0.0 |  | 1.0 | CANDIDATE_V6_RESULTS |
-| SHADOW_CANDIDATE_V7_PRICE_DISCIPLINE_CLV_DRIFT_GUARD | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V7_RESULTS |
+_No rows._
 
 ## Pre-Lock Status
 _No rows._
@@ -173,12 +165,12 @@ _No rows._
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1544651.0 | Bari | Sudtirol | OVER_1_5 |  | PENDING |  | PENDING |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544651.0 | Bari | Sudtirol | OVER_1_5 |  | PENDING |  | PENDING |
+| OFFICIAL_BASELINE | 1544651.0 | Bari | Sudtirol | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544651.0 | Bari | Sudtirol | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V4_O25_FIREWALL | 1544651.0 | Bari | Sudtirol | OVER_1_5 |  | PENDING |  | PENDING |
-| CANDIDATE_V5_PLAYER_IMPACT | 1544651.0 | Bari | Sudtirol | OVER_1_5 |  | PENDING |  | PENDING |
-| CANDIDATE_V6_API_PREDICTIONS | 1544651.0 | Bari | Sudtirol | OVER_1_5 |  | PENDING |  | PENDING |
+| CANDIDATE_V4_O25_FIREWALL | 1544651.0 | Bari | Sudtirol | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1544651.0 | Bari | Sudtirol | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V6_API_PREDICTIONS | 1544651.0 | Bari | Sudtirol | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1544651.0 | Bari | Sudtirol | OVER_1_5 | WAITING_FOR_PRELOCK | PENDING |  | PRE_REGISTERED |
 
 ### Experiment Performance Summary
@@ -210,13 +202,12 @@ _No rows._
 ### Threshold Recommendations
 | market_family | failure_mode | experiment_id | settled_rows | roi_percent | clv_direction | threshold_recommendation |
 | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 4 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 6 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V4_O25_FIREWALL | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
 
 - CLV data sufficiency: INSUFFICIENT_CLV_DATA
@@ -254,14 +245,8 @@ _No rows._
 | vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | PASS | output is fresh for requested target date | 1 |
 | vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_execution_shortlist_results_ledger.csv | OFFICIAL_RESULTS | PASS | output is fresh for requested target date | 3 |
-| vsigma_execution_shortlist_results_summary.csv | OFFICIAL_RESULTS | PASS | output is fresh for requested target date | 160 |
-| vsigma_today_candidate_v2_results_ledger.csv | CANDIDATE_V2_RESULTS | PASS | output is fresh for requested target date | 1 |
-| vsigma_today_candidate_v2_results_summary.csv | CANDIDATE_V2_RESULTS | PASS | output is fresh for requested target date | 1 |
-| vsigma_today_candidate_v4_results_ledger.csv | CANDIDATE_V4_RESULTS | PASS | output is fresh for requested target date | 1 |
-| vsigma_today_candidate_v4_results_summary.csv | CANDIDATE_V4_RESULTS | PASS | output is fresh for requested target date | 1 |
-| vsigma_today_candidate_v5_results_ledger.csv | CANDIDATE_V5_RESULTS | PASS | output is fresh for requested target date | 1 |
-| vsigma_today_candidate_v5_results_summary.csv | CANDIDATE_V5_RESULTS | PASS | output is fresh for requested target date | 1 |
+| today_pipeline_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
+| today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
 
 ## Candidate Isolation
 | check_name | file_name | status | detail |
