@@ -35,16 +35,16 @@
 ## Official Picks
 | experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1 | 1544651 | Bari | Sudtirol | OVER_1_5 | 0.7753 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.202; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1 | 1544651 | Bari | Sudtirol | OVER_1_5 | 0.7753 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.202; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 
 ## Shadow Picks
 | experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1544651 | Bari | Sudtirol | OVER_1_5 | 0.78646 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.201; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
-| CANDIDATE_V4_O25_FIREWALL | 1 | 1544651 | Bari | Sudtirol | OVER_1_5 | 0.78646 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.201; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1544651 | Bari | Sudtirol | OVER_1_5 | 0.78646 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.201; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
-| CANDIDATE_V6_API_PREDICTIONS | 1 | 1544651 | Bari | Sudtirol | OVER_1_5 | 0.78646 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.201; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1544651 | Bari | Sudtirol | OVER_1_5 | 0.78646 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.201; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1544651 | Bari | Sudtirol | OVER_1_5 | 0.78646 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.201; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+| CANDIDATE_V4_O25_FIREWALL | 1 | 1544651 | Bari | Sudtirol | OVER_1_5 | 0.78646 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.201; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1544651 | Bari | Sudtirol | OVER_1_5 | 0.78646 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.201; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+| CANDIDATE_V6_API_PREDICTIONS | 1 | 1544651 | Bari | Sudtirol | OVER_1_5 | 0.78646 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.201; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1544651 | Bari | Sudtirol | OVER_1_5 | 0.78646 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.201; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 
 ## No-Bet Modes
 | experiment_id | record_status | reason_tags | source_file |
@@ -54,17 +54,28 @@
 ## Pre-Lock Changes
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1544651 | Bari | Sudtirol | OVER_1_5 |  | WAITING_FOR_PRELOCK |  |
+| OFFICIAL_BASELINE | 1544651 | Bari | Sudtirol | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544651 | Bari | Sudtirol | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V4_O25_FIREWALL | 1544651 | Bari | Sudtirol | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V5_PLAYER_IMPACT | 1544651 | Bari | Sudtirol | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V6_API_PREDICTIONS | 1544651 | Bari | Sudtirol | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1544651 | Bari | Sudtirol | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 
 ## Result State
 | experiment_id | fixture_id | market_primary | result_status | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1544651 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544651 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V4_O25_FIREWALL | 1544651 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1544651 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V6_API_PREDICTIONS | 1544651 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1544651 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1544651 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544651 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V4_O25_FIREWALL | 1544651 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1544651 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V6_API_PREDICTIONS | 1544651 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1544651 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
 
 ## Freshness Warnings
-_No rows._
+| file_name | status | detail |
+| --- | --- | --- |
+| vsigma_today_candidate_v7_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_prelock_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_prelock_comparison.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v7_results_ledger.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| today_post_results_report.csv | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet |

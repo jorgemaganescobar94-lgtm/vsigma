@@ -71,7 +71,7 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 | 1544651 | Bari | Sudtirol | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.200505 | 0.057505 | WATCH_PATTERN | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | CLV_UNAVAILABLE | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
 
 ## Pre-Lock Execution Status
-- Pre-lock data fresh: NO_CURRENT_PRELOCK_ROWS
+- Pre-lock data fresh: YES
 - Stale pre-lock excluded: NO
 - Execution allowed by v7: 0
 
@@ -86,7 +86,9 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 | 1544651 | Bari | Sudtirol | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | 0 | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
 
 ### Active Pre-Lock Decisions
-_No rows._
+| fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1544651 | Bari | Sudtirol | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 298.92 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 
 ### Stale Pre-Lock Warning
 _No stale pre-lock rows excluded._
@@ -109,10 +111,14 @@ _No stale pre-lock rows excluded._
 | OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 6 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 
 ## Post-Results Summary
-_No rows._
+| mode | pick_count | wins | losses | profit_units | roi_percent | pending_rows | candidate_version |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| SHADOW_CANDIDATE_V7_PRICE_DISCIPLINE_CLV_DRIFT_GUARD | 0 | 0 | 0 | 0.0 |  | 0 | CANDIDATE_V7 |
 
 ## Pre-Lock Status
-_No rows._
+| fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1544651 | Bari | Sudtirol | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 298.92 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 
 ## Drift Monitor Status
 | pattern | settled_rows | wins | losses | profit_units | drift_status |
@@ -165,13 +171,13 @@ _No rows._
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1544651.0 | Bari | Sudtirol | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544651.0 | Bari | Sudtirol | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1544651.0 | Bari | Sudtirol | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544651.0 | Bari | Sudtirol | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V4_O25_FIREWALL | 1544651.0 | Bari | Sudtirol | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1544651.0 | Bari | Sudtirol | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V6_API_PREDICTIONS | 1544651.0 | Bari | Sudtirol | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1544651.0 | Bari | Sudtirol | OVER_1_5 | WAITING_FOR_PRELOCK | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 1544651.0 | Bari | Sudtirol | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1544651.0 | Bari | Sudtirol | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V6_API_PREDICTIONS | 1544651.0 | Bari | Sudtirol | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1544651.0 | Bari | Sudtirol | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
