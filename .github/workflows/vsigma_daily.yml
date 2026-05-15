@@ -49,9 +49,10 @@ jobs:
     timeout-minutes: 45
 
     steps:
-      - name: Checkout repository
+            - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          ref: main
           token: ${{ github.token }}
 
       - name: Setup Python
@@ -175,6 +176,6 @@ jobs:
             exit 0
           fi
 
-          git commit -m "vSIGMA ${VSIGMA_MODE} ${VSIGMA_DATE} [skip ci]"
-          git pull --rebase
-          git push
+                    git commit -m "vSIGMA ${VSIGMA_MODE} ${VSIGMA_DATE} [skip ci]"
+          git pull --rebase origin main || true
+          git push origin HEAD:main
