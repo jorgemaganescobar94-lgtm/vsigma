@@ -25,7 +25,6 @@ Paraguay,Division Intermedia,REJECT,country_league_not_allowlisted,2
 Paraguay,Division Profesional - Apertura,REJECT,country_league_not_allowlisted,2
 Portugal,Segunda Liga,REJECT,country_league_not_allowlisted,2
 Romania,Liga III - Play-offs,REJECT,country_league_not_allowlisted,2
-Saudi-Arabia,Pro League,REJECT,country_league_not_allowlisted,2
 Sudan,Sudani Premier League,REJECT,country_league_not_allowlisted,2
 Sweden,Division 2 - Norra Götaland,REJECT,country_league_not_allowlisted,2
 Sweden,Division 2 - Södra Svealand,REJECT,country_league_not_allowlisted,2
@@ -65,6 +64,7 @@ Romania,Liga III - Serie 2,REJECT,country_league_not_allowlisted,1
 Romania,Liga III - Serie 5,REJECT,country_league_not_allowlisted,1
 Romania,Liga III - Serie 6,REJECT,country_league_not_allowlisted,1
 Romania,Liga III - Serie 8,REJECT,country_league_not_allowlisted,1
+Saudi-Arabia,Pro League,REJECT,country_league_not_allowlisted,1
 Slovakia,3. liga - West,REJECT,country_league_not_allowlisted,1
 South-Korea,WK-League,REJECT,country_league_not_allowlisted,1
 Sweden,Damallsvenskan,REJECT,country_league_not_allowlisted,1
