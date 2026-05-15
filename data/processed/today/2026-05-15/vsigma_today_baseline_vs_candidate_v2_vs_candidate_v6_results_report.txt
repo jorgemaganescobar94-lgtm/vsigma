@@ -1,0 +1,15 @@
+vSIGMA TODAY BASELINE VS CANDIDATE V2 VS CANDIDATE V6 RESULTS
+
+Mode summary
+                                         mode  pick_count  settled_rows  pending_rows  unmatched_rows  wins  losses  pushes  voids  profit_units roi_percent
+                            BASELINE_OFFICIAL           1             0             1               0     0       0       0      0           0.0        <NA>
+                          SHADOW_CANDIDATE_V2           1             0             1               0     0       0       0      0           0.0        <NA>
+SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK           1             0             1               0     0       0       0      0           0.0        <NA>
+
+API Predictions Benchmark
+ candidate_v6_strengthened_rows  candidate_v6_weakened_rows  candidate_v6_secondary_rows
+                              0                           0                            0
+
+Pick result comparison
+                 comparison_status  fixture_id          fixture  league  baseline_rank  candidate_v2_rank  candidate_v6_rank baseline_market candidate_v2_market candidate_v6_market candidate_v6_action candidate_v6_alignment baseline_result candidate_v2_result candidate_v6_result baseline_profit_units candidate_v2_profit_units candidate_v6_profit_units
+BASELINE+CANDIDATE_V2+CANDIDATE_V6     1544651 Bari vs Sudtirol Serie B              1                  1                  1        OVER_1_5            OVER_1_5            OVER_1_5         NOT_APPLIED                NEUTRAL         PENDING             PENDING             PENDING                  <NA>                      <NA>                      <NA>

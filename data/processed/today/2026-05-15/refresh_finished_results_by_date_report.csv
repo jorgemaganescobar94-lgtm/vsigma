@@ -1,0 +1,12 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-05-15,OK,API-SPORTS_DIRECT,373.0,,,,,,
+2026-05-15T18:00:00+01:00,MATCHED,,,1394736.0,NS,Rizespor,Beşiktaş,,
+2026-05-15T19:00:00+01:00,MATCHED,,,1544651.0,NS,Bari,Sudtirol,,
+2026-05-15T19:15:00+01:00,MATCHED,,,1543762.0,NS,Salford City,Grimsby,,
+2026-05-15T19:30:00+01:00,MATCHED,,,1392201.0,NS,Castellón,Cadiz,,
+2026-05-15T19:30:00+01:00,MATCHED,,,1544972.0,NS,Saint Etienne,Rodez,,
+2026-05-15T19:45:00+01:00,MATCHED,,,1536959.0,NS,OH Leuven,Antwerp,,
+2026-05-15T19:45:00+01:00,MATCHED,,,1544662.0,NS,Partick,Dunfermline,,
+2026-05-15T20:00:00+01:00,MATCHED,,,1379330.0,NS,Aston Villa,Liverpool,,
+2026-05-15T20:00:00+01:00,MATCHED,,,1392200.0,NS,Cordoba,Albacete,,
+2026-05-15T20:00:00+01:00,MATCHED,,,1543763.0,NS,Notts County,Chesterfield,,
