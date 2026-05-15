@@ -1,0 +1,113 @@
+﻿name: vSIGMA Smoke Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Modo: health | pre | prelock | post"
+        required: true
+        default: "health"
+        type: choice
+        options:
+          - health
+          - pre
+          - prelock
+          - post
+      date:
+        description: "Fecha YYYY-MM-DD. Vacío = hoy en Atlantic/Canary"
+        required: false
+        default: ""
+
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/vsigma_smoke_test.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show repository files
+        run: |
+          pwd
+          ls -la
+          ls -la scripts | head -50
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Restore .env from GitHub Secret
+        env:
+          VSIGMA_ENV_B64: ${{ secrets.VSIGMA_ENV_B64 }}
+        run: |
+          if [ -z "$VSIGMA_ENV_B64" ]; then
+            echo "::error::Missing secret VSIGMA_ENV_B64"
+            exit 1
+          fi
+
+          echo "$VSIGMA_ENV_B64" | base64 --decode > .env
+          chmod 600 .env
+          echo ".env restored"
+          echo "Env file lines:"
+          wc -l .env
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip wheel setuptools
+          pip install -r requirements.txt
+
+      - name: Decide mode and date
+        shell: bash
+        run: |
+          MODE="${{ github.event.inputs.mode }}"
+          DATE_INPUT="${{ github.event.inputs.date }}"
+
+          TODAY="$(TZ=Atlantic/Canary date +%F)"
+
+          if [ -z "$MODE" ]; then
+            MODE="health"
+          fi
+
+          if [ -z "$DATE_INPUT" ]; then
+            DATE_INPUT="$TODAY"
+          fi
+
+          echo "VSIGMA_MODE=$MODE" >> "$GITHUB_ENV"
+          echo "VSIGMA_DATE=$DATE_INPUT" >> "$GITHUB_ENV"
+
+          echo "Mode: $MODE"
+          echo "Date: $DATE_INPUT"
+
+      - name: Run vSIGMA smoke command
+        shell: bash
+        run: |
+          echo "Running vSIGMA smoke mode=$VSIGMA_MODE date=$VSIGMA_DATE"
+
+          if [ "$VSIGMA_MODE" = "health" ]; then
+            python scripts/run_vsigma_healthcheck.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --mode full
+
+          elif [ "$VSIGMA_MODE" = "pre" ]; then
+            python scripts/run_today_match_pipeline.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+          elif [ "$VSIGMA_MODE" = "prelock" ]; then
+            python scripts/run_today_prelock_pipeline.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --window-minutes 90
+
+          elif [ "$VSIGMA_MODE" = "post" ]; then
+            python scripts/run_today_post_results_pipeline.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+          else
+            echo "Invalid mode: $VSIGMA_MODE"
+            exit 2
+          fi
