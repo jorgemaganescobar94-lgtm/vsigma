@@ -1,2 +1,2 @@
 comparison_status,fixture_id,fixture,league,baseline_rank,candidate_v2_rank,candidate_v7_rank,baseline_market,candidate_v2_market,candidate_v7_market,candidate_v7_decision,candidate_v7_required_edge,candidate_v7_actual_edge,candidate_v7_drift_status,candidate_v7_clv_direction,candidate_v7_execution_status,target_date,generated_at,pipeline_mode,candidate_version,source_file_date_check,run_id
-BASELINE+CANDIDATE_V2,1544651,Bari vs Sudtirol,Serie B,1,1,,OVER_1_5,OVER_1_5,,,,,,,,2026-05-15,2026-05-15T16:05:22+00:00,PRE,COMPARISON,NO_DATE_COLUMN,2026-05-15-20260515T160522Z
+BASELINE+CANDIDATE_V2,1544651,Bari vs Sudtirol,Serie B,1,1,,OVER_1_5,OVER_1_5,,,,,,,,2026-05-15,2026-05-15T16:13:57+00:00,PRE,COMPARISON,NO_DATE_COLUMN,2026-05-15-20260515T161357Z

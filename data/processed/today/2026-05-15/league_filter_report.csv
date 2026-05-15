@@ -16,7 +16,6 @@ Brazil,Paulista Série B,REJECT,country_league_not_allowlisted,2
 Germany,Oberliga - Hessen,REJECT,hard_reject_noise_league,2
 Germany,Oberliga - Nordost-Nord,REJECT,hard_reject_noise_league,2
 Germany,Oberliga - Rheinland-Pfalz / Saar,REJECT,hard_reject_noise_league,2
-Germany,U19 Bundesliga,REJECT,hard_reject_noise_league,2
 Ghana,Division One League,REJECT,country_league_not_allowlisted,2
 Iceland,2. Deild,REJECT,country_league_not_allowlisted,2
 Iraq,Iraqi League,REJECT,country_league_not_allowlisted,2
@@ -33,14 +32,10 @@ Sweden,Division 2 - Södra Svealand,REJECT,country_league_not_allowlisted,2
 Sweden,Elitettan,REJECT,country_league_not_allowlisted,2
 Australia,Queensland NPL,REJECT,country_league_not_allowlisted,1
 Austria,Landesliga - Burgenland,REJECT,hard_reject_noise_league,1
-Bahrain,Premier League,REJECT,country_league_not_allowlisted,1
 Belarus,Premier League,REJECT,country_league_not_allowlisted,1
 Brazil,Baiano - 2,REJECT,country_league_not_allowlisted,1
 Brazil,Brasileiro U20 A,REJECT,hard_reject_noise_league,1
 Colombia,Copa Colombia,REJECT,country_league_not_allowlisted,1
-Croatia,HNL,REJECT,country_league_not_allowlisted,1
-Cyprus,1. Division,REJECT,country_league_not_allowlisted,1
-Czech-Republic,3. liga - CFL A,REJECT,country_league_not_allowlisted,1
 Czech-Republic,3. liga - MSFL,REJECT,country_league_not_allowlisted,1
 Denmark,1. Division,REJECT,country_league_not_allowlisted,1
 Ecuador,Liga Pro,REJECT,country_league_not_allowlisted,1
@@ -48,6 +43,7 @@ England,Professional Development League,REJECT,country_league_not_allowlisted,1
 Germany,Oberliga - Baden-Württemberg,REJECT,hard_reject_noise_league,1
 Germany,Oberliga - Mittelrhein,REJECT,hard_reject_noise_league,1
 Germany,Oberliga - Niederrhein,REJECT,hard_reject_noise_league,1
+Germany,U19 Bundesliga,REJECT,hard_reject_noise_league,1
 Honduras,Liga Nacional,REJECT,country_league_not_allowlisted,1
 Hungary,NB I,REJECT,country_league_not_allowlisted,1
 Ireland,FAI Cup,REJECT,country_league_not_allowlisted,1

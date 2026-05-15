@@ -1,2 +1,2 @@
 rows_processed,avg_home_matches_used,avg_away_matches_used,full_rows,partial_rows,sparse_rows,none_rows,stats_fixture_requests,api_calls_made,cache_hits,api_errors,plan_limit_errors,generated_at_utc
-10,4.5,4.6,9,0,1,0,100,96,4,0,0,2026-05-15T16:04:18.842130+00:00
+10,4.5,4.6,9,0,1,0,100,96,4,0,0,2026-05-15T16:12:55.814363+00:00
