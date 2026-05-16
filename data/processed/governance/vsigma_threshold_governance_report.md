@@ -2,17 +2,15 @@
 
 This report recommends review actions only. It never edits threshold configuration.
 
-- CLV sufficiency: INSUFFICIENT_CLV_DATA: usable=0, available_direction_rows=0; do not change thresholds from CLV yet.
+- CLV sufficiency: INSUFFICIENT_CLV_DATA: no CLV summary available.
 
 ## Threshold Recommendations
 | market_family | failure_mode | experiment_id | drift_status | clv_direction | settled_rows | hit_rate | profit_units | roi_percent | threshold_recommendation | threshold_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | WATCH_PATTERN | CLV_UNAVAILABLE | 12 |  | 0.0 | 0.0 | INSUFFICIENT_CLV_DATA | CLV_TRACKING_INSUFFICIENT_TRUE_PRE_MISSING; do not change thresholds. |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | WATCH_PATTERN |  | 2 | 50.0 | -0.6 | -30.0 | SAMPLE_TOO_SMALL | Only 2 settled rows; minimum threshold-review sample is 10. |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V4_O25_FIREWALL | WATCH_PATTERN |  | 2 | 50.0 | -0.6 | -30.0 | SAMPLE_TOO_SMALL | Only 2 settled rows; minimum threshold-review sample is 10. |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | WATCH_PATTERN |  | 2 | 50.0 | -0.6 | -30.0 | SAMPLE_TOO_SMALL | Only 2 settled rows; minimum threshold-review sample is 10. |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | WATCH_PATTERN |  | 2 | 50.0 | -0.6 | -30.0 | SAMPLE_TOO_SMALL | Only 2 settled rows; minimum threshold-review sample is 10. |
 | OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | WATCH_PATTERN |  | 2 | 50.0 | -0.6 | -30.0 | SAMPLE_TOO_SMALL | Only 2 settled rows; minimum threshold-review sample is 10. |
-| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | NO_DRIFT | CLV_UNAVAILABLE | 1 |  | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | WATCH_PATTERN |  | 0 |  | 0.0 |  | SAMPLE_TOO_SMALL | Only 0 settled rows; minimum threshold-review sample is 10. |
 | OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | NO_DRIFT |  | 0 |  | 0.0 |  | SAMPLE_TOO_SMALL | Only 0 settled rows; minimum threshold-review sample is 10. |
