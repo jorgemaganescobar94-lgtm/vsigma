@@ -1,0 +1,16 @@
+# vSIGMA Candidate v7 Calibration Advisor
+
+- Target date context: 2026-05-16
+- Advisory only: this report never edits config/vsigma_price_discipline_config.json.
+- CLV tracking status: CLV_TRACKING_AVAILABLE_OR_NOT_REQUIRED
+
+## Recommendation Mix
+_No rows._
+
+## Advice
+_No rows._
+
+## Date Validation
+
+- LEDGER: CLV_DATE_MISMATCH; excluded_rows=19; mismatched_dates=2026-05-14, 2026-05-15
+- CLV: PASS; excluded_rows=0; mismatched_dates=None
