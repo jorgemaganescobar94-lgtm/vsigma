@@ -155,9 +155,9 @@ vSIGMA Competition Accuracy Mode + Probability Calibration
 
 | mode | status | picks | wins | losses | profit | roi | pending | top_file |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE | PICKS_AVAILABLE | 1 | 0 | 0 | 0.0 |  | 0 | vsigma_today_competition_top.csv |
-| CANDIDATE_V2 | PICKS_AVAILABLE | 1 | 0 | 0 | 0.0 |  | 0 | vsigma_today_candidate_v2_competition_top.csv |
-| CANDIDATE_V4 | PICKS_AVAILABLE | 1 | 0 | 0 | 0.0 |  | 0 | vsigma_today_candidate_v4_competition_top.csv |
-| CANDIDATE_V5 | PICKS_AVAILABLE | 1 | 0 | 0 | 0.0 |  | 0 | vsigma_today_candidate_v5_competition_top.csv |
-| CANDIDATE_V6 | PICKS_AVAILABLE | 1 | 0 | 0 | 0.0 |  | 0 | vsigma_today_candidate_v6_competition_top.csv |
+| BASELINE | PICKS_AVAILABLE | 2 | 0 | 0 | 0.0 |  | 2 | vsigma_today_competition_top.csv |
+| CANDIDATE_V2 | PICKS_AVAILABLE | 2 | 0 | 0 | 0.0 |  | 2 | vsigma_today_candidate_v2_competition_top.csv |
+| CANDIDATE_V4 | PICKS_AVAILABLE | 2 | 0 | 0 | 0.0 |  | 2 | vsigma_today_candidate_v4_competition_top.csv |
+| CANDIDATE_V5 | PICKS_AVAILABLE | 2 | 0 | 0 | 0.0 |  | 2 | vsigma_today_candidate_v5_competition_top.csv |
+| CANDIDATE_V6 | PICKS_AVAILABLE | 2 | 0 | 0 | 0.0 |  | 2 | vsigma_today_candidate_v6_competition_top.csv |
 <!-- VSIGMA_SCOREBOARD_END 2026-05-16 -->

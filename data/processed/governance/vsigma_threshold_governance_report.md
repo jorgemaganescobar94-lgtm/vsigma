@@ -2,7 +2,7 @@
 
 This report recommends review actions only. It never edits threshold configuration.
 
-- CLV sufficiency: INSUFFICIENT_CLV_DATA: no CLV summary available.
+- CLV sufficiency: INSUFFICIENT_CLV_DATA: usable=0, available_direction_rows=0; do not change thresholds from CLV yet.
 
 ## Threshold Recommendations
 | market_family | failure_mode | experiment_id | drift_status | clv_direction | settled_rows | hit_rate | profit_units | roi_percent | threshold_recommendation | threshold_reason |

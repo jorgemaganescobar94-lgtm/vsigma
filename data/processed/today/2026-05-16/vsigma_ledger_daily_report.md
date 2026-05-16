@@ -3,10 +3,10 @@
 ## Ledger Update Status
 - Ledger CSV: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv
 - JSONL event log: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.jsonl
-- Official picks registered: 0
-- Shadow picks registered: 0
-- No-bet records: 0
-- Pending records: 0
+- Official picks registered: 2
+- Shadow picks registered: 10
+- No-bet records: 1
+- Pending records: 12
 - Settled records: 0
 - Daily winner: NO_SETTLED_RESULTS
 
@@ -22,28 +22,61 @@
 | CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | shadow_selector | False | PRICE_DISCIPLINE_UNTESTED |
 
 ## Daily Summary By Experiment
-_No rows._
+| experiment_id | records | picks | no_bet_records | pending | settled | profit_units |
+| --- | --- | --- | --- | --- | --- | --- |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 2 | 2 | 0 | 2 | 0 | 0.0 |
+| CANDIDATE_V3_ODDS_DEPTH | 1 | 0 | 1 | 0 | 0 | 0.0 |
+| CANDIDATE_V4_O25_FIREWALL | 2 | 2 | 0 | 2 | 0 | 0.0 |
+| CANDIDATE_V5_PLAYER_IMPACT | 2 | 2 | 0 | 2 | 0 | 0.0 |
+| CANDIDATE_V6_API_PREDICTIONS | 2 | 2 | 0 | 2 | 0 | 0.0 |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 2 | 0 | 2 | 0 | 0.0 |
+| OFFICIAL_BASELINE | 2 | 2 | 0 | 2 | 0 | 0.0 |
 
 ## Official Picks
-_No rows._
+| experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| OFFICIAL_BASELINE | 1 | 1392194 | Granada CF | Burgos | OVER_1_5 | 0.8132 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.240; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 2 | 1544949 | Juve Stabia | Monza | OVER_1_5 | 0.7672 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.167; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
 
 ## Shadow Picks
-_No rows._
+| experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1392194 | Granada CF | Burgos | OVER_1_5 | 0.796 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.222; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 2 | 1544949 | Juve Stabia | Monza | OVER_1_5 | 0.7637 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.163; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 1 | 1392194 | Granada CF | Burgos | OVER_1_5 | 0.796 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.222; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 2 | 1544949 | Juve Stabia | Monza | OVER_1_5 | 0.7637 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.163; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1392194 | Granada CF | Burgos | OVER_1_5 | 0.796 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.222; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 2 | 1544949 | Juve Stabia | Monza | OVER_1_5 | 0.7637 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.163; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V6_API_PREDICTIONS | 1 | 1392194 | Granada CF | Burgos | OVER_1_5 | 0.796 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.222; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V6_API_PREDICTIONS | 2 | 1544949 | Juve Stabia | Monza | OVER_1_5 | 0.7637 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.163; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1392194 | Granada CF | Burgos | OVER_1_5 | 0.796 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.222; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 1544949 | Juve Stabia | Monza | OVER_1_5 | 0.7637 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.163; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
 
 ## No-Bet Modes
-_No rows._
+| experiment_id | record_status | reason_tags | source_file |
+| --- | --- | --- | --- |
+| CANDIDATE_V3_ODDS_DEPTH | NO_BET_RECORD | NO_BET; SOURCE_FILE_MISSING_OR_NOT_AVAILABLE | vsigma_today_candidate_v3_competition_top.csv |
 
 ## Pre-Lock Changes
-_No rows._
+| experiment_id | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_decision | prelock_decision_reason |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1392194 | Granada CF | Burgos | OVER_1_5 |  | WAITING_FOR_PRELOCK |  |
 
 ## Result State
-_No rows._
+| experiment_id | fixture_id | market_primary | result_status | result | profit_units | record_status |
+| --- | --- | --- | --- | --- | --- | --- |
+| OFFICIAL_BASELINE | 1392194 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1544949 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1392194 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544949 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 1392194 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 1544949 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1392194 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1544949 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V6_API_PREDICTIONS | 1392194 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V6_API_PREDICTIONS | 1544949 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1392194 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1544949 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
 
 ## Freshness Warnings
-| file_name | status | detail |
-| --- | --- | --- |
-| vsigma_today_candidate_v7_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| vsigma_today_prelock_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| vsigma_today_prelock_comparison.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| vsigma_today_candidate_v7_results_ledger.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| today_post_results_report.csv | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet |
+_No rows._

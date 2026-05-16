@@ -1,6 +1,6 @@
 # vSIGMA Candidate v7 Calibration Advisor
 
-- Target date context: 2026-05-09
+- Target date context: 2026-05-16
 - Advisory only: this report never edits config/vsigma_price_discipline_config.json.
 - CLV tracking status: CLV_TRACKING_AVAILABLE_OR_NOT_REQUIRED
 
