@@ -28,8 +28,8 @@ on:
     - cron: "0 9 * * *"
       timezone: "Atlantic/Canary"
 
-    # PRELOCK free-safe: 11:00, 13:00, 15:00, 17:00, 19:00, 21:00, 23:00
-    - cron: "0 11,13,15,17,19,21,23 * * *"
+    # PRELOCK hourly: every hour from 10:00 to 23:00 Atlantic/Canary
+    - cron: "0 10-23 * * *"
       timezone: "Atlantic/Canary"
 
     # 23:55 Atlantic/Canary - POST
@@ -101,7 +101,7 @@ jobs:
                 MODE="pre"
                 DATE_INPUT="$TODAY"
                 ;;
-              "0 11,13,15,17,19,21,23 * * *")
+              "0 10-23 * * *")
                 MODE="prelock"
                 DATE_INPUT="$TODAY"
                 ;;
@@ -177,4 +177,5 @@ jobs:
 
           git commit -m "vSIGMA ${VSIGMA_MODE} ${VSIGMA_DATE} [skip ci]"
           git push origin HEAD:main
+
 
