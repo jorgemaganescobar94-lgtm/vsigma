@@ -110,8 +110,9 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 ### Active Pre-Lock Decisions
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1392194 | Granada CF | Burgos | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 496.25 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| 1544949 | Juve Stabia | Monza | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 586.23 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1388609 | SC Freiburg | RB Leipzig | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 113.17 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1392194 | Granada CF | Burgos | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 293.05 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1544949 | Juve Stabia | Monza | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 383.03 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 
 ### Stale Pre-Lock Warning
 _No stale pre-lock rows excluded._
@@ -155,6 +156,7 @@ _No stale pre-lock rows excluded._
 | market_family | failure_mode | drift_status | clv_direction | n | profit_units | roi_percent | recommendation | recommendation_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 12 | 0.0 | 0.0 | INSUFFICIENT_CLV_DATA | CLV_TRACKING_INSUFFICIENT_TRUE_PRE_MISSING; do not change thresholds. |
+| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_UNAVAILABLE | 1 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 
 ## Post-Results Summary
 _No rows._
@@ -162,8 +164,9 @@ _No rows._
 ## Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1392194 | Granada CF | Burgos | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 496.25 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| 1544949 | Juve Stabia | Monza | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 586.23 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1388609 | SC Freiburg | RB Leipzig | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 113.17 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1392194 | Granada CF | Burgos | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 293.05 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1544949 | Juve Stabia | Monza | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 383.03 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 
 ## Drift Monitor Status
 | pattern | settled_rows | wins | losses | profit_units | drift_status |
@@ -216,20 +219,20 @@ _No rows._
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| OFFICIAL_BASELINE | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| OFFICIAL_BASELINE | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V4_O25_FIREWALL | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V4_O25_FIREWALL | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V6_API_PREDICTIONS | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V6_API_PREDICTIONS | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1392194.0 | Granada CF | Burgos | OVER_1_5 | WAITING_FOR_PRELOCK | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V4_O25_FIREWALL | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V6_API_PREDICTIONS | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V6_API_PREDICTIONS | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| OFFICIAL_BASELINE | 1388609.0 | SC Freiburg | RB Leipzig | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1388609.0 | SC Freiburg | RB Leipzig | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
@@ -266,6 +269,7 @@ _No rows._
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 0 |  |  | SAMPLE_TOO_SMALL |
 

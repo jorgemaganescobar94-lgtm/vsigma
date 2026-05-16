@@ -13,5 +13,6 @@ This report recommends review actions only. It never edits threshold configurati
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | WATCH_PATTERN |  | 2 | 50.0 | -0.6 | -30.0 | SAMPLE_TOO_SMALL | Only 2 settled rows; minimum threshold-review sample is 10. |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | WATCH_PATTERN |  | 2 | 50.0 | -0.6 | -30.0 | SAMPLE_TOO_SMALL | Only 2 settled rows; minimum threshold-review sample is 10. |
 | OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | WATCH_PATTERN |  | 2 | 50.0 | -0.6 | -30.0 | SAMPLE_TOO_SMALL | Only 2 settled rows; minimum threshold-review sample is 10. |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | NO_DRIFT | CLV_UNAVAILABLE | 1 |  | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | WATCH_PATTERN |  | 0 |  | 0.0 |  | SAMPLE_TOO_SMALL | Only 0 settled rows; minimum threshold-review sample is 10. |
 | OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | NO_DRIFT |  | 0 |  | 0.0 |  | SAMPLE_TOO_SMALL | Only 0 settled rows; minimum threshold-review sample is 10. |
