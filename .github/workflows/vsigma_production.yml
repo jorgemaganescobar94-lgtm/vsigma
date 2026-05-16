@@ -155,6 +155,11 @@ jobs:
             exit 2
           fi
 
+      - name: Build PRELOCK exclusion audit
+        shell: bash
+        run: |
+          python scripts/build_prelock_exclusion_audit.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Commit vSIGMA outputs
         shell: bash
         run: |
@@ -177,5 +182,6 @@ jobs:
 
           git commit -m "vSIGMA ${VSIGMA_MODE} ${VSIGMA_DATE} [skip ci]"
           git push origin HEAD:main
+
 
 
