@@ -7,10 +7,10 @@
 
 ## Shadow Counts
 
-- Baseline official competition rows: 2
+- Baseline official competition rows: 3
 - Candidate v2 competition rows: 2
 - Overlap rows: 2
-- Baseline-only rows: 0
+- Baseline-only rows: 1
 - Candidate-only rows: 0
 
 ## Candidate v2 Shadow Top
@@ -18,7 +18,7 @@
 | Rank | Fixture | League | Market | Rec | Bucket | Score | Why | Risk |
 | --- | --- | --- | --- | --- | --- | ---: | --- | --- |
 | 1 | Granada CF vs Burgos | Segunda División | OVER_1_5 | BET | PREMIUM_EXTENDED | 119.131 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.222; market_fit=SAFE_OK |
-| 2 | Juve Stabia vs Monza | Serie B | OVER_1_5 | BET | PREMIUM_EXTENDED | 119.723 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.163; market_fit=SAFE_OK |
+| 2 | Juve Stabia vs Monza | Serie B | OVER_1_5 | BET | PREMIUM_EXTENDED | 123.234 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.199; market_fit=SAFE_OK |
 
 ## Candidate v2 Match Script Forecasts
 
@@ -46,5 +46,6 @@
 
 | Status | Fixture | Base Rank | Cand Rank | Base Market | Cand Market | Base Prob | Cand Prob | Base Score | Cand Score |
 | --- | --- | ---: | ---: | --- | --- | ---: | ---: | ---: | ---: |
-| BOTH | Granada CF vs Burgos | 1 | 1 | OVER_1_5 | OVER_1_5 | 0.813 | 0.796 | 128.374 | 126.113 |
-| BOTH | Juve Stabia vs Monza | 2 | 2 | OVER_1_5 | OVER_1_5 | 0.767 | 0.764 | 121.691 | 121.031 |
+| BASELINE_ONLY | SC Freiburg vs RB Leipzig | 1 | NA | OVER_2_5 | NA | 0.798 | NA | 132.750 | NA |
+| BOTH | Granada CF vs Burgos | 2 | 1.0 | OVER_1_5 | OVER_1_5 | 0.813 | 0.796 | 128.374 | 126.113 |
+| BOTH | Juve Stabia vs Monza | 3 | 2.0 | OVER_1_5 | OVER_1_5 | 0.767 | 0.764 | 124.149 | 123.489 |

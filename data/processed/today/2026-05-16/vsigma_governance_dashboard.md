@@ -26,6 +26,7 @@
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 0 |  |  | SAMPLE_TOO_SMALL |
 
 ## Drift Alerts
 | alert_level | pattern | settled_rows | profit_units | roi_percent | drift_status | governance_action |

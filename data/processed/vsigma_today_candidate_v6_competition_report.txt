@@ -18,4 +18,4 @@ NOT_APPLIED    2
 Candidate v6 Top
  accuracy_mode_rank  fixture_id           league   home_team away_team market_primary  competition_calibrated_prob  accuracy_confidence_score api_prediction_alignment_flag api_prediction_benchmark_action
                   1     1392194 Segunda División  Granada CF    Burgos       OVER_1_5                       0.7960                    126.113                       NEUTRAL                     NOT_APPLIED
-                  2     1544949          Serie B Juve Stabia     Monza       OVER_1_5                       0.7637                    121.031                       NEUTRAL                     NOT_APPLIED
+                  2     1544949          Serie B Juve Stabia     Monza       OVER_1_5                       0.7637                    123.489                       NEUTRAL                     NOT_APPLIED
