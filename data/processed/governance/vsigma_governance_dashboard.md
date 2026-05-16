@@ -44,9 +44,10 @@
 | --- | --- | --- |
 | 2026-05-14 | TIE | Top experiments tied on profit and hit rate. |
 | 2026-05-15 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
+| 2026-05-16 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
 
 ## CLV Data Sufficiency
-INSUFFICIENT_CLV_DATA: no CLV summary available.
+INSUFFICIENT_CLV_DATA: usable=0, available_direction_rows=0; do not change thresholds from CLV yet.
 
 ## Evidence Status
 - All primary governance inputs available.
