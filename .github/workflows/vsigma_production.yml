@@ -139,16 +139,16 @@ jobs:
             python scripts/run_vsigma_healthcheck.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --mode full
 
           elif [ "$VSIGMA_MODE" = "pre" ]; then
-            python scripts/run_today_match_pipeline.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+            python scripts/run_daily_competition_controller.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --mode pre
 
           elif [ "$VSIGMA_MODE" = "prelock" ]; then
             python scripts/run_today_prelock_pipeline.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --window-minutes 90
 
           elif [ "$VSIGMA_MODE" = "post" ]; then
-            python scripts/run_today_post_results_pipeline.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+            python scripts/run_daily_competition_controller.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --mode post
 
           elif [ "$VSIGMA_MODE" = "post-yesterday" ]; then
-            python scripts/run_today_post_results_pipeline.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+            python scripts/run_daily_competition_controller.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --mode post
 
           else
             echo "Invalid mode: $VSIGMA_MODE"
@@ -165,13 +165,8 @@ jobs:
 
           git add \
             data/raw \
-            data/processed/today \
-            data/processed/ledger \
-            data/processed/governance \
-            data/processed/health \
-            data/processed/daily_supervisor_latest.md \
-            notes/competition_versions.md \
-            notes/competition_scoreboard.md \
+            data/processed \
+            notes \
             outputs \
             2>/dev/null || true
 
@@ -182,3 +177,4 @@ jobs:
 
           git commit -m "vSIGMA ${VSIGMA_MODE} ${VSIGMA_DATE} [skip ci]"
           git push origin HEAD:main
+
