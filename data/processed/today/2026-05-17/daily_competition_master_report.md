@@ -203,7 +203,7 @@ _No rows._
 - Global health status: BROKEN
 - Critical warnings: venv_python_exists: BROKEN - .venv Python missing
 - Recovery command: `Create or repair .venv, then install project requirements.`
-- Report path: /home/runner/work/vsigma/vsigma/data/processed/health/vsigma_healthcheck_report.md
+- Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-17/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
