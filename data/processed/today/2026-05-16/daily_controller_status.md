@@ -2,15 +2,15 @@
 
 ## Step State
 - PRE: DONE
-- Pre-lock: ['PENDING_OUTSIDE_WINDOW', 'PRELOCK_NOT_AVAILABLE']
+- Pre-lock: ['PRELOCK_NOT_AVAILABLE']
 - POST: PENDING
-- Ledger: PRELOCK_UPDATED
+- Ledger: POST_UPDATED
 - Governance: AVAILABLE
 - Stale warnings: NONE
 
 ## Next Operator Command
-- Action: WAIT_FOR_PRELOCK
-- Command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-16 --timezone Atlantic/Canary --mode prelock --window-minutes 90`
+- Action: RUN_POST_AFTER_FINISH
+- Command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-16 --timezone Atlantic/Canary --mode post`
 
 ## Official Baseline Picks
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank |
@@ -38,27 +38,26 @@
 ## Pre-Lock Timing
 | fixture_id | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1388609 | SC Freiburg | RB Leipzig | OVER_2_5 | 2026-05-16T13:33:09.200000+00:00 | 113.1 | 2026-05-16T12:03:09.200000+00:00 | PENDING_OUTSIDE_WINDOW | WAIT_FOR_PRELOCK |
-| 1392194 | Granada CF | Burgos | OVER_1_5 | 2026-05-16T16:33:02+00:00 | 292.98 | 2026-05-16T15:03:02+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
-| 1544949 | Juve Stabia | Monza | OVER_1_5 | 2026-05-16T18:03:00.800000+00:00 | 382.96 | 2026-05-16T16:33:00.800000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1388609 | SC Freiburg | RB Leipzig | OVER_2_5 | 2026-05-16T13:33:09.200000+00:00 | -1324.32 | 2026-05-16T12:03:09.200000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1392194 | Granada CF | Burgos | OVER_1_5 | 2026-05-16T16:33:02+00:00 | -1144.44 | 2026-05-16T15:03:02+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1544949 | Juve Stabia | Monza | OVER_1_5 | 2026-05-16T18:03:00.800000+00:00 | -1054.46 | 2026-05-16T16:33:00.800000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
 
 ## Ledger State
 | experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| OFFICIAL_BASELINE | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
+| OFFICIAL_BASELINE | 1392194.0 | Granada CF | Burgos | OVER_1_5 | POST | SETTLED | RESULT_AVAILABLE | LOSS | -1.0 |
+| OFFICIAL_BASELINE | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | POST | SETTLED | RESULT_AVAILABLE | WIN | 0.55 |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1392194.0 | Granada CF | Burgos | OVER_1_5 | POST | SETTLED | RESULT_AVAILABLE | LOSS | -1.0 |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | POST | SETTLED | RESULT_AVAILABLE | WIN | 0.55 |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V4_O25_FIREWALL | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V4_O25_FIREWALL | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V5_PLAYER_IMPACT | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V5_PLAYER_IMPACT | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V6_API_PREDICTIONS | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V6_API_PREDICTIONS | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | PRELOCK | PRELOCK_UPDATED | PENDING | PENDING |  |
-| OFFICIAL_BASELINE | 1388609.0 | SC Freiburg | RB Leipzig | OVER_2_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
+| CANDIDATE_V4_O25_FIREWALL | 1392194.0 | Granada CF | Burgos | OVER_1_5 | POST | SETTLED | RESULT_AVAILABLE | LOSS | -1.0 |
+| CANDIDATE_V4_O25_FIREWALL | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | POST | SETTLED | RESULT_AVAILABLE | WIN | 0.55 |
+| CANDIDATE_V5_PLAYER_IMPACT | 1392194.0 | Granada CF | Burgos | OVER_1_5 | POST | SETTLED | RESULT_AVAILABLE | LOSS | -1.0 |
+| CANDIDATE_V5_PLAYER_IMPACT | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | POST | SETTLED | RESULT_AVAILABLE | WIN | 0.55 |
+| CANDIDATE_V6_API_PREDICTIONS | 1392194.0 | Granada CF | Burgos | OVER_1_5 | POST | SETTLED | RESULT_AVAILABLE | LOSS | -1.0 |
+| CANDIDATE_V6_API_PREDICTIONS | 1544949.0 | Juve Stabia | Monza | OVER_1_5 | POST | SETTLED | RESULT_AVAILABLE | WIN | 0.55 |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1392194.0 | Granada CF | Burgos | OVER_1_5 | PRELOCK | PRELOCK_UPDATED | PENDING | PENDING |  |
+| OFFICIAL_BASELINE | 1388609.0 | SC Freiburg | RB Leipzig | OVER_2_5 | POST | SETTLED | RESULT_AVAILABLE | WIN | 0.52 |
 
 ## Controller Outputs
 - Plan CSV: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-16/daily_run_plan.csv
