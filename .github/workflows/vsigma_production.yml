@@ -4,13 +4,14 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "Modo: health | pre | prelock | post | post-yesterday"
+        description: "Modo: health | pre | auto | prelock | post | post-yesterday"
         required: true
         default: "health"
         type: choice
         options:
           - health
           - pre
+          - auto
           - prelock
           - post
           - post-yesterday
@@ -28,7 +29,7 @@ on:
     - cron: "0 9 * * *"
       timezone: "Atlantic/Canary"
 
-    # PRELOCK hourly: every hour from 10:00 to 23:00 Atlantic/Canary
+    # AUTO hourly: every hour from 10:00 to 23:00 Atlantic/Canary
     - cron: "0 10-23 * * *"
       timezone: "Atlantic/Canary"
 
@@ -102,7 +103,7 @@ jobs:
                 DATE_INPUT="$TODAY"
                 ;;
               "0 10-23 * * *")
-                MODE="prelock"
+                MODE="auto"
                 DATE_INPUT="$TODAY"
                 ;;
               "55 23 * * *")
@@ -141,6 +142,9 @@ jobs:
           elif [ "$VSIGMA_MODE" = "pre" ]; then
             python scripts/run_daily_competition_controller.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --mode pre
 
+          elif [ "$VSIGMA_MODE" = "auto" ]; then
+            python scripts/run_vsigma_auto_controller.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --window-minutes 90
+
           elif [ "$VSIGMA_MODE" = "prelock" ]; then
             python scripts/run_today_prelock_pipeline.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --window-minutes 90
 
@@ -158,7 +162,11 @@ jobs:
       - name: Build PRELOCK exclusion audit
         shell: bash
         run: |
-          python scripts/build_prelock_exclusion_audit.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          if [ "$VSIGMA_MODE" = "auto" ]; then
+            echo "PRELOCK exclusion audit already built by auto controller."
+          else
+            python scripts/build_prelock_exclusion_audit.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          fi
 
       - name: Commit vSIGMA outputs
         shell: bash

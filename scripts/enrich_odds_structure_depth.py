@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 import shutil
+import sys
 from typing import Any
 
 import numpy as np
@@ -118,6 +119,12 @@ def norm_text(value: object) -> str:
     if value is None:
         return ""
     return str(value).strip().lower()
+
+
+def print_console(value: object = "") -> None:
+    text = str(value)
+    encoding = sys.stdout.encoding or "utf-8"
+    print(text.encode(encoding, errors="replace").decode(encoding, errors="replace"))
 
 
 def empty_market_values() -> dict[str, list[float]]:
@@ -344,6 +351,8 @@ def ensure_depth_columns(raw: pd.DataFrame) -> pd.DataFrame:
     for col in ODDS_DEPTH_TEXT_FIELDS:
         if col not in raw.columns:
             missing[col] = ""
+        else:
+            raw[col] = raw[col].astype("object")
     if missing:
         raw = pd.concat([raw, pd.DataFrame(missing, index=raw.index)], axis=1)
     return raw
@@ -506,7 +515,7 @@ def main() -> None:
             "odds_line_aggression_flag",
             "odds_confidence_adjustment_score",
         ]
-        print(preview[[c for c in display_cols if c in preview.columns]].to_string(index=False))
+        print_console(preview[[c for c in display_cols if c in preview.columns]].to_string(index=False))
 
 
 if __name__ == "__main__":
