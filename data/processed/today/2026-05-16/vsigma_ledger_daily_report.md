@@ -94,4 +94,5 @@
 | --- | --- | --- |
 | vsigma_today_candidate_v7_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
 | vsigma_today_prelock_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_prelock_comparison.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
 | today_post_results_report.csv | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet |
