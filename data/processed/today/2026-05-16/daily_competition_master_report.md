@@ -90,7 +90,7 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 | 1544949 | Juve Stabia | Monza | OVER_1_5 | PRICE_REJECTED | 0.143 | 0.198539 | 0.055539 | WATCH_PATTERN | V7_PRELOCK_UNAVAILABLE | V7_PRELOCK_UNAVAILABLE | CLV_POSITIVE | Calibrated probability 0.764 below required 0.770. |
 
 ## Pre-Lock Execution Status
-- Pre-lock data fresh: YES
+- Pre-lock data fresh: NO_CURRENT_PRELOCK_ROWS
 - Stale pre-lock excluded: NO
 - Execution allowed by v7: 0
 
@@ -108,11 +108,7 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 | 1544949 | Juve Stabia | Monza | OVER_1_5 | PRICE_REJECTED | V7_PRELOCK_UNAVAILABLE | V7_PRELOCK_UNAVAILABLE | 0 | Calibrated probability 0.764 below required 0.770. |
 
 ### Active Pre-Lock Decisions
-| fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1388609 | SC Freiburg | RB Leipzig | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 113.17 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| 1392194 | Granada CF | Burgos | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 293.05 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| 1544949 | Juve Stabia | Monza | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 383.03 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+_No rows._
 
 ### Stale Pre-Lock Warning
 _No stale pre-lock rows excluded._
@@ -124,14 +120,14 @@ _No stale pre-lock rows excluded._
 | 1388605 | Bayer Leverkusen | Hamburger SV | BTTS_YES | DEEP_ANALYSIS_CANDIDATES | 1.57 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1388605 | Bayer Leverkusen | Hamburger SV | BTTS_YES | OFFICIAL_BASELINE | 1.57 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1388606 | Bayern München | 1. FC Köln | BTTS_YES | DEEP_ANALYSIS_CANDIDATES | 1.5 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1388606 | Bayern München | 1. FC Köln | BTTS_YES | OFFICIAL_BASELINE | 1.5 |  | 1.5 | 0.0 | CLV_FLAT | WIN | 0.5 |
+| 1388606 | Bayern München | 1. FC Köln | BTTS_YES | OFFICIAL_BASELINE | 1.5 |  | 1.5 | 0.0 | CLV_FLAT |  |  |
 | 1388609 | SC Freiburg | RB Leipzig | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.52 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1388609 | SC Freiburg | RB Leipzig | OVER_2_5 | OFFICIAL_BASELINE | 1.52 |  | 1.52 | 0.0 | CLV_FLAT | WIN | 0.52 |
-| 1392194 | Granada CF | Burgos | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.53 |  | 1.53 | 0.0 | CLV_FLAT | LOSS | -1.0 |
+| 1388609 | SC Freiburg | RB Leipzig | OVER_2_5 | OFFICIAL_BASELINE | 1.52 |  | 1.52 | 0.0 | CLV_FLAT |  |  |
+| 1392194 | Granada CF | Burgos | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.53 |  | 1.53 | 0.0 | CLV_FLAT |  |  |
 | 1392194 | Granada CF | Burgos | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.53 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1392194 | Granada CF | Burgos | OVER_1_5 | OFFICIAL_BASELINE | 1.53 |  | 1.53 | 0.0 | CLV_FLAT | LOSS | -1.0 |
+| 1392194 | Granada CF | Burgos | OVER_1_5 | OFFICIAL_BASELINE | 1.53 |  | 1.53 | 0.0 | CLV_FLAT |  |  |
 | 1392195 | Almeria | Las Palmas | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.75 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1392195 | Almeria | Las Palmas | OVER_2_5 | OFFICIAL_BASELINE | 1.75 |  | 1.75 | 0.0 | CLV_FLAT | WIN | 0.75 |
+| 1392195 | Almeria | Las Palmas | OVER_2_5 | OFFICIAL_BASELINE | 1.75 |  | 1.75 | 0.0 | CLV_FLAT |  |  |
 | 1392199 | AD Ceuta FC | Malaga | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.69 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1394737 | Samsunspor | Göztepe | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.8 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1396534 | Arouca | Tondela | HOME_WIN | DEEP_ANALYSIS_CANDIDATES | 3.26 |  |  |  | CLV_UNAVAILABLE |  |  |
@@ -148,16 +144,16 @@ _No stale pre-lock rows excluded._
 | 1540033 | Falkirk | Rangers | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.65 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1540033 | Falkirk | Rangers | OVER_2_5 | OFFICIAL_BASELINE | 1.65 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1544691 | Willem II | Almere City FC | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.6 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1544949 | Juve Stabia | Monza | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.55 |  | 1.55 | 0.0 | CLV_FLAT | WIN | 0.55 |
+| 1544949 | Juve Stabia | Monza | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.55 |  | 1.55 | 0.0 | CLV_FLAT |  |  |
 | 1544949 | Juve Stabia | Monza | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.55 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1544949 | Juve Stabia | Monza | OVER_1_5 | OFFICIAL_BASELINE | 1.55 |  | 1.55 | 0.0 | CLV_FLAT | WIN | 0.55 |
+| 1544949 | Juve Stabia | Monza | OVER_1_5 | OFFICIAL_BASELINE | 1.55 |  | 1.55 | 0.0 | CLV_FLAT |  |  |
 
 ### Candidate v7 Calibration Advice
 | market_family | failure_mode | drift_status | clv_direction | n | profit_units | roi_percent | recommendation | recommendation_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_FLAT | 4 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 8 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_FLAT | 1 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_FLAT | 4 | -0.9 | -22.5 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 7 | -1.35 | -19.285714 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_FLAT | 1 | 0.52 | 52.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 
 ## Post-Results Summary
 | mode | pick_count | wins | losses | profit_units | roi_percent | pending_rows | candidate_version |
@@ -170,11 +166,7 @@ _No stale pre-lock rows excluded._
 | SHADOW_CANDIDATE_V7_PRICE_DISCIPLINE_CLV_DRIFT_GUARD | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V7_RESULTS |
 
 ## Pre-Lock Status
-| fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1388609 | SC Freiburg | RB Leipzig | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 113.17 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| 1392194 | Granada CF | Burgos | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 293.05 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| 1544949 | Juve Stabia | Monza | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 383.03 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+_No rows._
 
 ## Drift Monitor Status
 | pattern | settled_rows | wins | losses | profit_units | drift_status |
@@ -222,7 +214,7 @@ _No stale pre-lock rows excluded._
 - Global health status: BROKEN
 - Critical warnings: venv_python_exists: BROKEN - .venv Python missing
 - Recovery command: `Create or repair .venv, then install project requirements.`
-- Report path: /home/runner/work/vsigma/vsigma/data/processed/health/vsigma_healthcheck_report.md
+- Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-16/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
@@ -244,13 +236,13 @@ _No stale pre-lock rows excluded._
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | OFFICIAL | 6 | 5 | 3 | 2 | -0.53 | -10.6 | FROZEN_OFFICIAL_BASELINE |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 5 | 4 | 2 | 2 | -1.05 | -26.25 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
+| OFFICIAL_BASELINE | OFFICIAL | 8 | 5 | 3 | 2 | -0.53 | -10.6 | FROZEN_OFFICIAL_BASELINE |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 7 | 4 | 2 | 2 | -1.05 | -26.25 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
 | CANDIDATE_V3_ODDS_DEPTH | NOT_PROMOTED | 0 | 0 | 0 | 0 | 0.0 |  | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V4_O25_FIREWALL | SHADOW | 5 | 4 | 2 | 2 | -1.05 | -26.25 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V5_PLAYER_IMPACT | SHADOW | 5 | 4 | 2 | 2 | -1.05 | -26.25 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V6_API_PREDICTIONS | AUDIT_ONLY | 5 | 4 | 2 | 2 | -1.05 | -26.25 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | 2 | 0 | 0 | 0 | 0.0 |  | PRICE_DISCIPLINE_UNTESTED |
+| CANDIDATE_V4_O25_FIREWALL | SHADOW | 7 | 4 | 2 | 2 | -1.05 | -26.25 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V5_PLAYER_IMPACT | SHADOW | 7 | 4 | 2 | 2 | -1.05 | -26.25 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V6_API_PREDICTIONS | AUDIT_ONLY | 7 | 4 | 2 | 2 | -1.05 | -26.25 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | 4 | 0 | 0 | 0 | 0.0 |  | PRICE_DISCIPLINE_UNTESTED |
 
 ## Promotion & Threshold Governance
 - Official baseline status: KEEP_OFFICIAL_BASELINE
@@ -270,15 +262,15 @@ _No stale pre-lock rows excluded._
 ### Threshold Recommendations
 | market_family | failure_mode | experiment_id | settled_rows | roi_percent | clv_direction | threshold_recommendation |
 | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 8 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 7 | -19.285714 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V4_O25_FIREWALL | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 4 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
-| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 4 | -22.5 | CLV_FLAT | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 1 | 52.0 |  | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 52.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
 
 - CLV data sufficiency: INSUFFICIENT_CLV_DATA
