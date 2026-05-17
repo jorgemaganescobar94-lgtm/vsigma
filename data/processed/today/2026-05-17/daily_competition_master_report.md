@@ -6,34 +6,33 @@ PRE_LOCK_PENDING
 ## Official Baseline Top Picks
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1388609 | Bundesliga | SC Freiburg | RB Leipzig | OVER_2_5 | 0.797925 | 132.75 | FAILURE_MODE_LOW_CONVERSION |
-| 2 | 1392194 | Segunda División | Granada CF | Burgos | OVER_1_5 | 0.8132 | 128.374 | FAILURE_MODE_LOW_CONVERSION |
-| 3 | 1544949 | Serie B | Juve Stabia | Monza | OVER_1_5 | 0.7672 | 124.149 | FAILURE_MODE_LOW_CONVERSION |
+| 1 | 1544950 | Serie B | Catanzaro | Palermo | OVER_1_5 | 0.8274 | 127.553 | FAILURE_MODE_LOW_CONVERSION |
+| 2 | 1492260 | Serie A | Atletico Paranaense | Flamengo | OVER_1_5 | 0.8015 | 123.472 | FAILURE_MODE_LOW_CONVERSION |
 
 ## Candidate v2 Top Picks
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1392194 | Segunda División | Granada CF | Burgos | OVER_1_5 | 0.796 | 126.113 | FAILURE_MODE_LOW_CONVERSION |
-| 2 | 1544949 | Serie B | Juve Stabia | Monza | OVER_1_5 | 0.7637 | 123.489 | FAILURE_MODE_LOW_CONVERSION |
+| 1 | 1544950 | Serie B | Catanzaro | Palermo | OVER_1_5 | 0.8296 | 127.988 | FAILURE_MODE_LOW_CONVERSION |
+| 2 | 1492260 | Serie A | Atletico Paranaense | Flamengo | OVER_1_5 | 0.8033 | 123.74 | FAILURE_MODE_LOW_CONVERSION |
 
 ## Candidate v4/v5/v6 Top Picks
 ### Candidate v4
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1392194 | Segunda División | Granada CF | Burgos | OVER_1_5 | 0.796 | 126.113 | FAILURE_MODE_LOW_CONVERSION |
-| 2 | 1544949 | Serie B | Juve Stabia | Monza | OVER_1_5 | 0.7637 | 123.489 | FAILURE_MODE_LOW_CONVERSION |
+| 1 | 1544950 | Serie B | Catanzaro | Palermo | OVER_1_5 | 0.8296 | 127.988 | FAILURE_MODE_LOW_CONVERSION |
+| 2 | 1492260 | Serie A | Atletico Paranaense | Flamengo | OVER_1_5 | 0.8033 | 123.74 | FAILURE_MODE_LOW_CONVERSION |
 
 ### Candidate v5
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1392194 | Segunda División | Granada CF | Burgos | OVER_1_5 | 0.796 | 126.113 | FAILURE_MODE_LOW_CONVERSION |
-| 2 | 1544949 | Serie B | Juve Stabia | Monza | OVER_1_5 | 0.7637 | 123.489 | FAILURE_MODE_LOW_CONVERSION |
+| 1 | 1544950 | Serie B | Catanzaro | Palermo | OVER_1_5 | 0.8296 | 127.988 | FAILURE_MODE_LOW_CONVERSION |
+| 2 | 1492260 | Serie A | Atletico Paranaense | Flamengo | OVER_1_5 | 0.8033 | 123.74 | FAILURE_MODE_LOW_CONVERSION |
 
 ### Candidate v6
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1392194 | Segunda División | Granada CF | Burgos | OVER_1_5 | 0.796 | 126.113 | FAILURE_MODE_LOW_CONVERSION |
-| 2 | 1544949 | Serie B | Juve Stabia | Monza | OVER_1_5 | 0.7637 | 123.489 | FAILURE_MODE_LOW_CONVERSION |
+| 1 | 1544950 | Serie B | Catanzaro | Palermo | OVER_1_5 | 0.8296 | 127.988 | FAILURE_MODE_LOW_CONVERSION |
+| 2 | 1492260 | Serie A | Atletico Paranaense | Flamengo | OVER_1_5 | 0.8033 | 123.74 | FAILURE_MODE_LOW_CONVERSION |
 
 ### Candidate v7
 
@@ -43,51 +42,45 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 ## Match Script Forecasts
 | forecast_rank | fixture_id | league | home_team | away_team | market_primary | predicted_match_script | predicted_score_main | predicted_score_alt | predicted_home_xg_range | predicted_away_xg_range | predicted_home_shots_range | predicted_away_shots_range | predicted_home_sot_range | predicted_away_sot_range | predicted_total_corners_range | predicted_possession_split | predicted_pick_path | predicted_pick_breaker | predicted_total_goals_range | predicted_first_goal_side | predicted_state_gravity | forecast_confidence_band | forecast_inputs_used | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1388609 | Bundesliga | SC Freiburg | RB Leipzig | OVER_2_5 | Open, active match with both penalty boxes reached often; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 4.1; stats=FULL. | 2-2 | 1-2 | 1.3-2.0 | 2.1-2.8 | 12-16 | 15-19 | 3-5 | 5-7 | 7-11 | home 42-50% / away 50-58% | Pick wins if the projected chance volume turns into three goals, usually via early tempo or both teams contributing. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 3.6-4.7 | Away slight lean | open exchange | MEDIUM_HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
-| 2 | 1392194 | Segunda División | Granada CF | Burgos | OVER_1_5 | Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.8; stats=FULL. | 2-2 | 1-2 | 1.2-1.9 | 1.9-2.6 | 9-13 | 8-12 | 3-5 | 3-5 | 6-10 | home 50-58% / away 42-50% | Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 3.3-4.4 | Away slight lean | open exchange | MEDIUM_HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
-| 3 | 1544949 | Serie B | Juve Stabia | Monza | OVER_1_5 | Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.3; stats=FULL. | 1-2 | 0-2 | 1.0-1.7 | 1.6-2.3 | 10-14 | 14-18 | 3-5 | 4-6 | 7-11 | home 46-54% / away 46-54% | Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 2.8-3.9 | Away slight lean | open exchange | MEDIUM_HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
+| 1 | 1544950 | Serie B | Catanzaro | Palermo | OVER_1_5 | Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 4.0; stats=FULL. | 2-2 | 1-2 | 1.4-2.1 | 1.9-2.6 | 11-15 | 10-14 | 5-7 | 4-6 | 7-11 | home 52-60% / away 40-48% | Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 3.4-4.5 | Away slight lean | open exchange | MEDIUM_HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-05-17 | 2026-05-17T11:53:28+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-05-17-20260517T115328Z |
+| 2 | 1492260 | Serie A | Atletico Paranaense | Flamengo | OVER_1_5 | Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.7; stats=FULL. | 1-2 | 0-2 | 0.8-1.5 | 2.1-2.8 | 12-16 | 9-13 | 4-6 | 3-5 | 6-10 | home 48-56% / away 44-52% | Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 3.1-4.2 | Away slight lean | open exchange | MEDIUM_HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-05-17 | 2026-05-17T11:53:28+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-05-17-20260517T115328Z |
 
 ## Baseline vs Candidate Comparison
 ### Candidate v2
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | baseline_market | candidate_v2_market | baseline_raw_prob | candidate_v2_raw_prob | baseline_calibrated_prob | candidate_v2_calibrated_prob | baseline_confidence_score | candidate_v2_confidence_score | baseline_bucket | candidate_v2_bucket | baseline_main_reason | candidate_v2_main_reason | baseline_primary_risk | candidate_v2_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE_ONLY | 1388609 | SC Freiburg vs RB Leipzig | Bundesliga | 1 |  | OVER_2_5 |  | 0.7808 |  | 0.797925 |  | 132.75 |  | ACCURACY_CORE |  | ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_FAILURE_MODE_ACCEPTABLE |  | FAILURE_MODE_LOW_CONVERSION |  | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
-| BOTH | 1392194 | Granada CF vs Burgos | Segunda División | 2 | 1.0 | OVER_1_5 | OVER_1_5 | 0.8932 | 0.876 | 0.8132 | 0.796 | 128.374 | 126.113 | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
-| BOTH | 1544949 | Juve Stabia vs Monza | Serie B | 3 | 2.0 | OVER_1_5 | OVER_1_5 | 0.8472 | 0.8437 | 0.7672 | 0.7637 | 124.149 | 123.489 | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
+| BOTH | 1492260 | Atletico Paranaense vs Flamengo | Serie A | 2 | 2 | OVER_1_5 | OVER_1_5 | 0.8815 | 0.8833 | 0.8015 | 0.8033 | 123.472 | 123.74 | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-17 | 2026-05-17T11:53:28+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-17-20260517T115328Z |
+| BOTH | 1544950 | Catanzaro vs Palermo | Serie B | 1 | 1 | OVER_1_5 | OVER_1_5 | 0.9074 | 0.9096 | 0.8274 | 0.8296 | 127.553 | 127.988 | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-17 | 2026-05-17T11:53:28+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-17-20260517T115328Z |
 
 ### Candidate v4
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v4_rank | baseline_market | candidate_v2_market | candidate_v4_market | candidate_v4_original_market | candidate_v4_firewall_decision | candidate_v4_firewall_score | candidate_v4_firewall_action | baseline_primary_risk | candidate_v2_primary_risk | candidate_v4_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE | 1388609 | SC Freiburg vs RB Leipzig | Bundesliga | 1 |  |  | OVER_2_5 |  |  |  |  |  |  | FAILURE_MODE_LOW_CONVERSION |  |  | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1392194 | Granada CF vs Burgos | Segunda División | 2 | 1.0 | 1.0 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1544949 | Juve Stabia vs Monza | Serie B | 3 | 2.0 | 2.0 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1492260 | Atletico Paranaense vs Flamengo | Serie A | 2 | 2 | 2 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-17 | 2026-05-17T11:53:28+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-17-20260517T115328Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1544950 | Catanzaro vs Palermo | Serie B | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-17 | 2026-05-17T11:53:28+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-17-20260517T115328Z |
 
 ### Candidate v5
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v5_rank | baseline_market | candidate_v2_market | candidate_v5_market | candidate_v5_original_market | candidate_v5_action | candidate_v5_hint | baseline_primary_risk | candidate_v2_primary_risk | candidate_v5_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE | 1388609 | SC Freiburg vs RB Leipzig | Bundesliga | 1 |  |  | OVER_2_5 |  |  |  |  |  | FAILURE_MODE_LOW_CONVERSION |  |  | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1392194 | Granada CF vs Burgos | Segunda División | 2 | 1.0 | 1.0 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1544949 | Juve Stabia vs Monza | Serie B | 3 | 2.0 | 2.0 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1492260 | Atletico Paranaense vs Flamengo | Serie A | 2 | 2 | 2 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-17 | 2026-05-17T11:53:28+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-17-20260517T115328Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1544950 | Catanzaro vs Palermo | Serie B | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-17 | 2026-05-17T11:53:28+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-17-20260517T115328Z |
 
 ### Candidate v6
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v6_rank | baseline_market | candidate_v2_market | candidate_v6_market | candidate_v6_action | candidate_v6_alignment | candidate_v6_confidence_adjustment | baseline_primary_risk | candidate_v2_primary_risk | candidate_v6_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE | 1388609 | SC Freiburg vs RB Leipzig | Bundesliga | 1 |  |  | OVER_2_5 |  |  |  |  |  | FAILURE_MODE_LOW_CONVERSION |  |  | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V6 | 1392194 | Granada CF vs Burgos | Segunda División | 2 | 1.0 | 1.0 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | NEUTRAL | 0.0 | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V6 | 1544949 | Juve Stabia vs Monza | Serie B | 3 | 2.0 | 2.0 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | NEUTRAL | 0.0 | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V6 | 1492260 | Atletico Paranaense vs Flamengo | Serie A | 2 | 2 | 2 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | NEUTRAL | 0.0 | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-17 | 2026-05-17T11:53:28+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-17-20260517T115328Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V6 | 1544950 | Catanzaro vs Palermo | Serie B | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | NEUTRAL | 0.0 | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-17 | 2026-05-17T11:53:28+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-17-20260517T115328Z |
 
 ### Candidate v7
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v7_rank | baseline_market | candidate_v2_market | candidate_v7_market | candidate_v7_decision | candidate_v7_required_edge | candidate_v7_actual_edge | candidate_v7_drift_status | candidate_v7_clv_direction | candidate_v7_execution_status | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE | 1388609 | SC Freiburg vs RB Leipzig | Bundesliga | 1 |  |  | OVER_2_5 |  |  |  |  |  |  |  |  | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
-| BASELINE+CANDIDATE_V2 | 1392194 | Granada CF vs Burgos | Segunda División | 2 | 1.0 |  | OVER_1_5 | OVER_1_5 |  |  |  |  |  |  |  | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
-| BASELINE+CANDIDATE_V2 | 1544949 | Juve Stabia vs Monza | Serie B | 3 | 2.0 |  | OVER_1_5 | OVER_1_5 |  |  |  |  |  |  |  | 2026-05-16 | 2026-05-16T11:39:59+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-16-20260516T113959Z |
+| BASELINE+CANDIDATE_V2 | 1492260 | Atletico Paranaense vs Flamengo | Serie A | 2 | 2 |  | OVER_1_5 | OVER_1_5 |  |  |  |  |  |  |  | 2026-05-17 | 2026-05-17T11:53:28+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-17-20260517T115328Z |
+| BASELINE+CANDIDATE_V2 | 1544950 | Catanzaro vs Palermo | Serie B | 1 | 1 |  | OVER_1_5 | OVER_1_5 |  |  |  |  |  |  |  | 2026-05-17 | 2026-05-17T11:53:28+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-17-20260517T115328Z |
 
 ## Price Discipline / CLV / Drift Execution Guard
 | fixture_id | home_team | away_team | market_primary | price_discipline_decision | price_discipline_min_edge_required | price_discipline_actual_edge | price_discipline_edge_surplus | price_discipline_drift_status | candidate_v7_prelock_status | candidate_v7_execution_status | clv_direction | price_discipline_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1392194 | Granada CF | Burgos | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.222405 | 0.079405 | WATCH_PATTERN | V7_PRELOCK_UNAVAILABLE | V7_PRELOCK_UNAVAILABLE | CLV_FLAT | Fresh pre-lock review is unavailable; v7 cannot confirm execution. |
-| 1544949 | Juve Stabia | Monza | OVER_1_5 | PRICE_REJECTED | 0.143 | 0.198539 | 0.055539 | WATCH_PATTERN | V7_PRELOCK_UNAVAILABLE | V7_PRELOCK_UNAVAILABLE | CLV_POSITIVE | Calibrated probability 0.764 below required 0.770. |
+| 1544950 | Catanzaro | Palermo | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.190176 | 0.047176 | WATCH_PATTERN | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | CLV_UNAVAILABLE | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
+| 1492260 | Atletico Paranaense | Flamengo | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.169014 | 0.026014 | WATCH_PATTERN | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | CLV_UNAVAILABLE | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
 
 ## Pre-Lock Execution Status
 - Pre-lock data fresh: NO_CURRENT_PRELOCK_ROWS
@@ -97,15 +90,14 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 ### Official Baseline Picks
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank | competition_calibrated_prob |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1388609 | Bundesliga | SC Freiburg | RB Leipzig | OVER_2_5 | 1 | 0.797925 |
-| 1392194 | Segunda División | Granada CF | Burgos | OVER_1_5 | 2 | 0.8132 |
-| 1544949 | Serie B | Juve Stabia | Monza | OVER_1_5 | 3 | 0.7672 |
+| 1544950 | Serie B | Catanzaro | Palermo | OVER_1_5 | 1 | 0.8274 |
+| 1492260 | Serie A | Atletico Paranaense | Flamengo | OVER_1_5 | 2 | 0.8015 |
 
 ### Candidate v7 Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | price_discipline_decision | candidate_v7_prelock_status | candidate_v7_execution_status | candidate_v7_execution_allowed_flag | price_discipline_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1392194 | Granada CF | Burgos | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | V7_PRELOCK_UNAVAILABLE | V7_PRELOCK_UNAVAILABLE | 0 | Fresh pre-lock review is unavailable; v7 cannot confirm execution. |
-| 1544949 | Juve Stabia | Monza | OVER_1_5 | PRICE_REJECTED | V7_PRELOCK_UNAVAILABLE | V7_PRELOCK_UNAVAILABLE | 0 | Calibrated probability 0.764 below required 0.770. |
+| 1544950 | Catanzaro | Palermo | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | 0 | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
+| 1492260 | Atletico Paranaense | Flamengo | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | 0 | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
 
 ### Active Pre-Lock Decisions
 _No rows._
@@ -115,7 +107,38 @@ _No stale pre-lock rows excluded._
 
 ## Odds Snapshot / CLV Calibration
 ### CLV Summary
-_No rows._
+| fixture_id | home_team | away_team | market_primary | experiment_id | pre_price | prelock_price | close_proxy_price | clv_delta | clv_direction | result | profit_units |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1378225 | Cagliari | Torino | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.44 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1378232 | Sassuolo | Lecce | HOME_WIN | DEEP_ANALYSIS_CANDIDATES | 2.93 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1378233 | Udinese | Cremonese | HOME_WIN | DEEP_ANALYSIS_CANDIDATES | 2.56 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1379334 | Everton | Sunderland | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.88 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1379335 | Leeds | Brighton | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.97 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1387998 | Lyon | Lens | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.6 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1388000 | Nantes | Toulouse | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.81 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1388918 | FC Schalke 04 | Eintracht Braunschweig | HOME_WIN | DEEP_ANALYSIS_CANDIDATES | 1.93 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1391179 | Athletic Club | Celta Vigo | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.39 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1391182 | Elche | Getafe | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.61 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1391183 | Levante | Mallorca | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.93 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1391185 | Rayo Vallecano | Villarreal | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.77 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1391186 | Real Sociedad | Valencia | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.89 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1391187 | Oviedo | Alaves | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 2.01 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1394734 | Kasımpaşa | Galatasaray | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.8 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1394738 | Trabzonspor | Gençlerbirliği S.K. | HOME_WIN | DEEP_ANALYSIS_CANDIDATES | 3.0 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1396988 | Deportivo La Coruna | FC Andorra | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.65 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1492260 | Atletico Paranaense | Flamengo | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.4 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1492260 | Atletico Paranaense | Flamengo | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.4 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1492260 | Atletico Paranaense | Flamengo | OVER_1_5 | OFFICIAL_BASELINE | 1.4 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1492263 | Botafogo | Corinthians | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.42 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1492264 | RB Bragantino | Vitoria | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.36 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1494169 | IF Brommapojkarna | Kalmar FF | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.4 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1494173 | Hammarby FF | Malmo FF | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.62 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1494174 | Mjallby AIF | BK Hacken | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.79 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1494176 | Vasteras SK FK | AIK Stockholm | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.33 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1530556 | FC Copenhagen | Randers FC | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.52 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1530557 | FC Fredericia | Silkeborg | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.5 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1531257 | Austria Vienna | Lask Linz | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 2.08 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1531257 | Austria Vienna | Lask Linz | OVER_2_5 | OFFICIAL_BASELINE | 2.08 |  |  |  | CLV_UNAVAILABLE |  |  |
 
 ### Candidate v7 Calibration Advice
 _No rows._
@@ -149,21 +172,21 @@ _No rows._
 | SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK | 6 | 6 | 4 | 2 | 0.25 | 4.166667 | -1.0 |
 
 ## Immutable Ledger / Experiment Registry
-- Ledger update status: NOT_AVAILABLE
-- Official picks registered: 0
-- Shadow picks registered: 0
-- No-bet records: 0
+- Ledger update status: AVAILABLE
+- Official picks registered: 2
+- Shadow picks registered: 10
+- No-bet records: 1
 - Ledger report: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-17/vsigma_ledger_daily_report.md
 
 ## Daily Controller Status
-- Next recommended action: CONTROLLER_STATUS_NOT_AVAILABLE
-- Pre-lock due time: NOT_AVAILABLE
-- Status path: NOT_AVAILABLE
+- Next recommended action: WAIT_FOR_PRELOCK
+- Pre-lock due time: 2026-05-17T16:34:26.800000+00:00
+- Status path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-17/daily_controller_status.md
 
 ## Daily Supervisor
 - Supervisor latest status: SUPERVISOR_STATUS_NOT_AVAILABLE
 - Last run mode/time: NOT_AVAILABLE / NOT_AVAILABLE
-- Next recommended action: CONTROLLER_STATUS_NOT_AVAILABLE
+- Next recommended action: WAIT_FOR_PRELOCK
 - Scheduled automation status: REGISTRATION_SCRIPT_AVAILABLE_STATUS_NOT_QUERIED
 - Logs path: C:\vsigma\automation_logs\supervisor
 - Report path: NOT_AVAILABLE
@@ -175,18 +198,32 @@ _No rows._
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/health/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
-_No rows._
+| experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| OFFICIAL_BASELINE | 1544950.0 | Catanzaro | Palermo | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1492260.0 | Atletico Paranaense | Flamengo | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544950.0 | Catanzaro | Palermo | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1492260.0 | Atletico Paranaense | Flamengo | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
+| CANDIDATE_V4_O25_FIREWALL | 1544950.0 | Catanzaro | Palermo | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 1492260.0 | Atletico Paranaense | Flamengo | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1544950.0 | Catanzaro | Palermo | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1492260.0 | Atletico Paranaense | Flamengo | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V6_API_PREDICTIONS | 1544950.0 | Catanzaro | Palermo | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V6_API_PREDICTIONS | 1492260.0 | Atletico Paranaense | Flamengo | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1544950.0 | Catanzaro | Palermo | OVER_1_5 | WAITING_FOR_PRELOCK | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1492260.0 | Atletico Paranaense | Flamengo | OVER_1_5 | WAITING_FOR_PRELOCK | PENDING |  | PRE_REGISTERED |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | OFFICIAL | 6 | 2 | 1 | 1 | -0.6 | -30.0 | FROZEN_OFFICIAL_BASELINE |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 5 | 2 | 1 | 1 | -0.6 | -30.0 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
+| OFFICIAL_BASELINE | OFFICIAL | 8 | 5 | 3 | 2 | -0.53 | -10.6 | FROZEN_OFFICIAL_BASELINE |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 7 | 4 | 2 | 2 | -1.05 | -26.25 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
 | CANDIDATE_V3_ODDS_DEPTH | NOT_PROMOTED | 0 | 0 | 0 | 0 | 0.0 |  | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V4_O25_FIREWALL | SHADOW | 5 | 2 | 1 | 1 | -0.6 | -30.0 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V5_PLAYER_IMPACT | SHADOW | 5 | 2 | 1 | 1 | -0.6 | -30.0 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V6_API_PREDICTIONS | AUDIT_ONLY | 5 | 2 | 1 | 1 | -0.6 | -30.0 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | 3 | 0 | 0 | 0 | 0.0 |  | PRICE_DISCIPLINE_UNTESTED |
+| CANDIDATE_V4_O25_FIREWALL | SHADOW | 7 | 4 | 2 | 2 | -1.05 | -26.25 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V5_PLAYER_IMPACT | SHADOW | 7 | 4 | 2 | 2 | -1.05 | -26.25 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V6_API_PREDICTIONS | AUDIT_ONLY | 7 | 4 | 2 | 2 | -1.05 | -26.25 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | 4 | 0 | 0 | 0 | 0.0 |  | PRICE_DISCIPLINE_UNTESTED |
 
 ## Promotion & Threshold Governance
 - Official baseline status: KEEP_OFFICIAL_BASELINE
@@ -195,24 +232,24 @@ _No rows._
 ### Candidate Promotion Recommendations
 | experiment_id | settled_picks | roi_percent | brier_score | promotion_recommendation | required_next_evidence |
 | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 2 | -30.0 | 0.363646 | KEEP_OFFICIAL_BASELINE | Continue accumulating official settled outcomes and compare challengers against it. |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 2 | -30.0 | 0.36037 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
+| OFFICIAL_BASELINE | 5 | -10.6 | 0.296723 | KEEP_OFFICIAL_BASELINE | Continue accumulating official settled outcomes and compare challengers against it. |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 4 | -26.25 | 0.352548 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
 | CANDIDATE_V3_ODDS_DEPTH | 0 |  |  | AUDIT_ONLY | Keep as an audit comparator unless registry governance explicitly changes its role. |
-| CANDIDATE_V4_O25_FIREWALL | 2 | -30.0 | 0.36037 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
-| CANDIDATE_V5_PLAYER_IMPACT | 2 | -30.0 | 0.36037 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
-| CANDIDATE_V6_API_PREDICTIONS | 2 | -30.0 | 0.36037 | AUDIT_ONLY | Keep as an audit comparator unless registry governance explicitly changes its role. |
+| CANDIDATE_V4_O25_FIREWALL | 4 | -26.25 | 0.352548 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
+| CANDIDATE_V5_PLAYER_IMPACT | 4 | -26.25 | 0.352548 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
+| CANDIDATE_V6_API_PREDICTIONS | 4 | -26.25 | 0.352548 | AUDIT_ONLY | Keep as an audit comparator unless registry governance explicitly changes its role. |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
 
 ### Threshold Recommendations
 | market_family | failure_mode | experiment_id | settled_rows | roi_percent | clv_direction | threshold_recommendation |
 | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V4_O25_FIREWALL | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V4_O25_FIREWALL | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 1 | 52.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 0 |  |  | SAMPLE_TOO_SMALL |
 
 - CLV data sufficiency: INSUFFICIENT_CLV_DATA
 - Drift alerts: 0
@@ -220,18 +257,17 @@ _No rows._
 ## Failure Mode Summary
 | failure_mode | rows |
 | --- | --- |
-| FAILURE_MODE_LOW_CONVERSION | 11 |
-| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.222; market_fit=SAFE_OK | 4 |
-| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.199; market_fit=SAFE_OK | 4 |
-| FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.123; market_fit=SAFE_OK | 1 |
-| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.240; market_fit=SAFE_OK | 1 |
-| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.202; market_fit=SAFE_OK | 1 |
+| FAILURE_MODE_LOW_CONVERSION | 10 |
+| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.190; market_fit=SAFE_OK | 4 |
+| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.169; market_fit=SAFE_OK | 4 |
+| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.188; market_fit=SAFE_OK | 1 |
+| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.167; market_fit=SAFE_OK | 1 |
 
 ## Freshness Validation
 | file_name | candidate_version | status | detail | rows |
 | --- | --- | --- | --- | --- |
-| vsigma_today_competition_shortlist.csv | OFFICIAL_BASELINE | PASS | output is fresh for requested target date | 3 |
-| vsigma_today_competition_top.csv | OFFICIAL_BASELINE | PASS | output is fresh for requested target date | 3 |
+| vsigma_today_competition_shortlist.csv | OFFICIAL_BASELINE | PASS | output is fresh for requested target date | 2 |
+| vsigma_today_competition_top.csv | OFFICIAL_BASELINE | PASS | output is fresh for requested target date | 2 |
 | vsigma_today_candidate_v2_competition_shortlist.csv | CANDIDATE_V2 | PASS | output is fresh for requested target date | 2 |
 | vsigma_today_candidate_v2_competition_top.csv | CANDIDATE_V2 | PASS | output is fresh for requested target date | 2 |
 | vsigma_today_candidate_v4_competition_shortlist.csv | CANDIDATE_V4 | PASS | output is fresh for requested target date | 2 |
@@ -242,16 +278,16 @@ _No rows._
 | vsigma_today_candidate_v6_competition_top.csv | CANDIDATE_V6 | PASS | output is fresh for requested target date | 2 |
 | vsigma_today_candidate_v7_competition_shortlist.csv | CANDIDATE_V7 | PASS | output is fresh for requested target date | 2 |
 | vsigma_today_candidate_v7_competition_top.csv | CANDIDATE_V7 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_baseline_vs_candidate_v2.csv | COMPARISON | PASS | output is fresh for requested target date | 3 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v4.csv | COMPARISON | PASS | output is fresh for requested target date | 3 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v5.csv | COMPARISON | PASS | output is fresh for requested target date | 3 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v6.csv | COMPARISON | PASS | output is fresh for requested target date | 3 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v7.csv | COMPARISON | PASS | output is fresh for requested target date | 3 |
-| vsigma_today_match_script_forecasts.csv | FORECAST | PASS | output is fresh for requested target date | 3 |
+| vsigma_today_baseline_vs_candidate_v2.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v4.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v5.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v6.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v7.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
+| vsigma_today_match_script_forecasts.csv | FORECAST | PASS | output is fresh for requested target date | 2 |
 | vsigma_today_candidate_v2_match_script_forecasts.csv | FORECAST_CANDIDATE_V2 | PASS | output is fresh for requested target date | 2 |
 | vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | PASS | output is fresh for requested target date | 2 |
 | vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | PASS | output is fresh for requested target date | 2 |
+| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | today_pipeline_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
 | today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet | 0 |
 
@@ -276,12 +312,12 @@ _No rows._
 | candidate_does_not_overwrite_baseline_path | vsigma_today_candidate_v5_competition_top.csv | PASS | candidate path is isolated from official baseline paths |
 | candidate_does_not_overwrite_baseline_path | vsigma_today_candidate_v6_competition_top.csv | PASS | candidate path is isolated from official baseline paths |
 | candidate_does_not_overwrite_baseline_path | vsigma_today_candidate_v7_competition_top.csv | PASS | candidate path is isolated from official baseline paths |
-| snapshot_contains_expected_file | vsigma_today_competition_top.csv | PASS | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-16/vsigma_today_competition_top.csv |
-| snapshot_contains_expected_file | vsigma_today_candidate_v2_competition_top.csv | PASS | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-16/vsigma_today_candidate_v2_competition_top.csv |
-| snapshot_contains_expected_file | vsigma_today_candidate_v4_competition_top.csv | PASS | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-16/vsigma_today_candidate_v4_competition_top.csv |
-| snapshot_contains_expected_file | vsigma_today_candidate_v5_competition_top.csv | PASS | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-16/vsigma_today_candidate_v5_competition_top.csv |
-| snapshot_contains_expected_file | vsigma_today_candidate_v6_competition_top.csv | PASS | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-16/vsigma_today_candidate_v6_competition_top.csv |
-| snapshot_contains_expected_file | vsigma_today_candidate_v7_competition_top.csv | PASS | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-16/vsigma_today_candidate_v7_competition_top.csv |
+| snapshot_contains_expected_file | vsigma_today_competition_top.csv | PASS | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-17/vsigma_today_competition_top.csv |
+| snapshot_contains_expected_file | vsigma_today_candidate_v2_competition_top.csv | PASS | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-17/vsigma_today_candidate_v2_competition_top.csv |
+| snapshot_contains_expected_file | vsigma_today_candidate_v4_competition_top.csv | PASS | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-17/vsigma_today_candidate_v4_competition_top.csv |
+| snapshot_contains_expected_file | vsigma_today_candidate_v5_competition_top.csv | PASS | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-17/vsigma_today_candidate_v5_competition_top.csv |
+| snapshot_contains_expected_file | vsigma_today_candidate_v6_competition_top.csv | PASS | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-17/vsigma_today_candidate_v6_competition_top.csv |
+| snapshot_contains_expected_file | vsigma_today_candidate_v7_competition_top.csv | PASS | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-17/vsigma_today_candidate_v7_competition_top.csv |
 
 ## Pre-Lock
 PRE_LOCK_ACTIVE: pre-lock review writes separate PRELOCK outputs and never overwrites the frozen morning official baseline.
