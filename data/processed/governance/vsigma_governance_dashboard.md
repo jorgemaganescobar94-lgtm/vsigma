@@ -1,4 +1,4 @@
-# vSIGMA Governance Dashboard - 2026-05-17
+# vSIGMA Governance Dashboard - 2026-05-16
 
 ## Version Leader
 | official_version | current_best_official | main_challenger | best_roi_candidate | best_hit_rate_candidate | best_brier_candidate | most_stable_candidate | small_sample_candidates | audit_only_candidates |
@@ -8,24 +8,27 @@
 ## Promotion Status
 | experiment_id | settled_picks | roi_percent | brier_score | promotion_recommendation | required_next_evidence |
 | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 2 | -30.0 | 0.363646 | KEEP_OFFICIAL_BASELINE | Continue accumulating official settled outcomes and compare challengers against it. |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 2 | -30.0 | 0.36037 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
+| OFFICIAL_BASELINE | 5 | -10.6 | 0.296723 | KEEP_OFFICIAL_BASELINE | Continue accumulating official settled outcomes and compare challengers against it. |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 4 | -26.25 | 0.352548 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
 | CANDIDATE_V3_ODDS_DEPTH | 0 |  |  | AUDIT_ONLY | Keep as an audit comparator unless registry governance explicitly changes its role. |
-| CANDIDATE_V4_O25_FIREWALL | 2 | -30.0 | 0.36037 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
-| CANDIDATE_V5_PLAYER_IMPACT | 2 | -30.0 | 0.36037 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
-| CANDIDATE_V6_API_PREDICTIONS | 2 | -30.0 | 0.36037 | AUDIT_ONLY | Keep as an audit comparator unless registry governance explicitly changes its role. |
+| CANDIDATE_V4_O25_FIREWALL | 4 | -26.25 | 0.352548 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
+| CANDIDATE_V5_PLAYER_IMPACT | 4 | -26.25 | 0.352548 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
+| CANDIDATE_V6_API_PREDICTIONS | 4 | -26.25 | 0.352548 | AUDIT_ONLY | Keep as an audit comparator unless registry governance explicitly changes its role. |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
 
 ## Threshold Alerts
 | market_family | failure_mode | experiment_id | settled_rows | roi_percent | clv_direction | threshold_recommendation |
 | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V4_O25_FIREWALL | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 2 | -30.0 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 8 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V4_O25_FIREWALL | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 4 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 1 | 52.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 0 |  |  | SAMPLE_TOO_SMALL |
 
 ## Drift Alerts
 | alert_level | pattern | settled_rows | profit_units | roi_percent | drift_status | governance_action |
@@ -45,10 +48,10 @@
 | --- | --- | --- |
 | 2026-05-14 | TIE | Top experiments tied on profit and hit rate. |
 | 2026-05-15 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
-| 2026-05-16 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
+| 2026-05-16 | OFFICIAL_BASELINE | OFFICIAL_BASELINE led on profit=0.07, hit_rate=66.666667, settled=3. |
 
 ## CLV Data Sufficiency
-INSUFFICIENT_CLV_DATA: no CLV summary available.
+INSUFFICIENT_CLV_DATA: usable=7, available_direction_rows=7; do not change thresholds from CLV yet.
 
 ## Evidence Status
 - All primary governance inputs available.

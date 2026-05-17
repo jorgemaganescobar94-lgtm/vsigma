@@ -1,0 +1,19 @@
+vSIGMA TODAY BASELINE VS CANDIDATE V2 VS CANDIDATE V7 RESULTS
+
+CANDIDATE_V7_NO_BET
+reason: candidate v7 top empty after price discipline
+
+Mode summary
+                                                mode  pick_count  settled_rows  pending_rows  unmatched_rows  wins  losses  pushes  voids  profit_units roi_percent
+                                   BASELINE_OFFICIAL           3             3             0               0     2       1       0      0          0.07    2.333333
+                                 SHADOW_CANDIDATE_V2           2             2             0               0     1       1       0      0         -0.45       -22.5
+SHADOW_CANDIDATE_V7_PRICE_DISCIPLINE_CLV_DRIFT_GUARD           0             0             0               0     0       0       0      0          0.00        <NA>
+
+Price discipline decision mix
+No v7 picks to grade.
+
+Pick result comparison
+    comparison_status  fixture_id                   fixture           league  baseline_rank candidate_v2_rank candidate_v7_rank baseline_market candidate_v2_market candidate_v7_market candidate_v7_decision baseline_result candidate_v2_result candidate_v7_result  baseline_profit_units candidate_v2_profit_units candidate_v7_profit_units
+             BASELINE     1388609 SC Freiburg vs RB Leipzig       Bundesliga              1              <NA>              <NA>        OVER_2_5                 NaN                <NA>                  <NA>             WIN                 NaN                <NA>                   0.52                      <NA>                      <NA>
+BASELINE+CANDIDATE_V2     1392194      Granada CF vs Burgos Segunda División              2                 1              <NA>        OVER_1_5            OVER_1_5                <NA>                  <NA>            LOSS                LOSS                <NA>                  -1.00                      -1.0                      <NA>
+BASELINE+CANDIDATE_V2     1544949      Juve Stabia vs Monza          Serie B              3                 2              <NA>        OVER_1_5            OVER_1_5                <NA>                  <NA>             WIN                 WIN                <NA>                   0.55                      0.55                      <NA>

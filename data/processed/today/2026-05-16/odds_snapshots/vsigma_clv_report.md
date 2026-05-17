@@ -13,13 +13,14 @@
 | --- | --- |
 | true_pre_rows | 30 |
 | backfilled_rows | 0 |
-| calibration_usable_rows | 0 |
-| audit_only_rows | 30 |
+| calibration_usable_rows | 7 |
+| audit_only_rows | 23 |
 
 ## CLV Direction Mix
 | clv_direction | rows |
 | --- | --- |
-| CLV_UNAVAILABLE | 30 |
+| CLV_UNAVAILABLE | 23 |
+| CLV_FLAT | 7 |
 
 ## CLV Rows
 | target_date | fixture_id | league | home_team | away_team | market_primary | experiment_id | source_candidate_version | pre_price | prelock_price | close_proxy_price | clv_delta | clv_percent | clv_direction | clv_interpretation | result | profit_units | snapshot_rebuild_mode | true_pre_snapshot_available_flag | clv_usable_for_threshold_calibration_flag | source_snapshot_stage | source_snapshot_note |
@@ -27,14 +28,14 @@
 | 2026-05-16 | 1388605 | Bundesliga | Bayer Leverkusen | Hamburger SV | BTTS_YES | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.57 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-16 | 1388605 | Bundesliga | Bayer Leverkusen | Hamburger SV | BTTS_YES | OFFICIAL_BASELINE | EXECUTION_SHORTLIST | 1.57 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-16 | 1388606 | Bundesliga | Bayern München | 1. FC Köln | BTTS_YES | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.5 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
-| 2026-05-16 | 1388606 | Bundesliga | Bayern München | 1. FC Köln | BTTS_YES | OFFICIAL_BASELINE | EXECUTION_SHORTLIST | 1.5 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-16 | 1388606 | Bundesliga | Bayern München | 1. FC Köln | BTTS_YES | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_RESULTS | 1.5 |  | 1.5 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. | WIN | 0.5 | CANONICAL_CAPTURED | 1 | 1 | POST;PRE | Captured by odds snapshot pipeline. |
 | 2026-05-16 | 1388609 | Bundesliga | SC Freiburg | RB Leipzig | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.52 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
-| 2026-05-16 | 1388609 | Bundesliga | SC Freiburg | RB Leipzig | OVER_2_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE | 1.52 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
-| 2026-05-16 | 1392194 | Segunda División | Granada CF | Burgos | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | CANDIDATE_V2 | 1.53 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-16 | 1388609 | Bundesliga | SC Freiburg | RB Leipzig | OVER_2_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE;OFFICIAL_RESULTS | 1.52 |  | 1.52 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. | WIN | 0.52 | CANONICAL_CAPTURED | 1 | 1 | POST;PRE | Captured by odds snapshot pipeline. |
+| 2026-05-16 | 1392194 | Segunda División | Granada CF | Burgos | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | CANDIDATE_V2;CANDIDATE_V2_RESULTS | 1.53 |  | 1.53 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. | LOSS | -1.0 | CANONICAL_CAPTURED | 1 | 1 | POST;PRE | Captured by odds snapshot pipeline. |
 | 2026-05-16 | 1392194 | Segunda División | Granada CF | Burgos | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.53 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
-| 2026-05-16 | 1392194 | Segunda División | Granada CF | Burgos | OVER_1_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE | 1.53 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-16 | 1392194 | Segunda División | Granada CF | Burgos | OVER_1_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE;OFFICIAL_RESULTS | 1.53 |  | 1.53 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. | LOSS | -1.0 | CANONICAL_CAPTURED | 1 | 1 | POST;PRE | Captured by odds snapshot pipeline. |
 | 2026-05-16 | 1392195 | Segunda División | Almeria | Las Palmas | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.75 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
-| 2026-05-16 | 1392195 | Segunda División | Almeria | Las Palmas | OVER_2_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST | 1.75 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-16 | 1392195 | Segunda División | Almeria | Las Palmas | OVER_2_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_RESULTS | 1.75 |  | 1.75 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. | WIN | 0.75 | CANONICAL_CAPTURED | 1 | 1 | POST;PRE | Captured by odds snapshot pipeline. |
 | 2026-05-16 | 1392199 | Segunda División | AD Ceuta FC | Malaga | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.69 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-16 | 1394737 | Süper Lig | Samsunspor | Göztepe | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.8 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-16 | 1396534 | Primeira Liga | Arouca | Tondela | HOME_WIN | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 3.26 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
@@ -51,8 +52,8 @@
 | 2026-05-16 | 1540033 | Premiership | Falkirk | Rangers | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.65 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-16 | 1540033 | Premiership | Falkirk | Rangers | OVER_2_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST | 1.65 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-16 | 1544691 | Eerste Divisie | Willem II | Almere City FC | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.6 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
-| 2026-05-16 | 1544949 | Serie B | Juve Stabia | Monza | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | CANDIDATE_V2 | 1.55 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-16 | 1544949 | Serie B | Juve Stabia | Monza | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | CANDIDATE_V2;CANDIDATE_V2_RESULTS | 1.55 |  | 1.55 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. | WIN | 0.55 | CANONICAL_CAPTURED | 1 | 1 | POST;PRE | Captured by odds snapshot pipeline. |
 | 2026-05-16 | 1544949 | Serie B | Juve Stabia | Monza | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.55 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
-| 2026-05-16 | 1544949 | Serie B | Juve Stabia | Monza | OVER_1_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE | 1.55 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-16 | 1544949 | Serie B | Juve Stabia | Monza | OVER_1_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE;OFFICIAL_RESULTS | 1.55 |  | 1.55 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. | WIN | 0.55 | CANONICAL_CAPTURED | 1 | 1 | POST;PRE | Captured by odds snapshot pipeline. |
 
 Interpretation note: close_proxy_price may come from CLOSE_PROXY, POST, or PRELOCK snapshots. It is not treated as true closing odds unless that data exists.
