@@ -5,9 +5,10 @@ import os
 import subprocess
 import sys
 from dataclasses import dataclass
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from typing import Iterable
+from zoneinfo import ZoneInfo
 
 import pandas as pd
 
@@ -71,6 +72,40 @@ class AutoRunResult:
     refresh_reasons: list[str]
     summary_paths: dict[str, Path]
     summary: pd.DataFrame
+    technical_warnings: "TechnicalWarnings"
+
+
+@dataclass(frozen=True)
+class StepResult:
+    script_path: str
+    args: list[str]
+    returncode: int
+    error: str = ""
+
+    @property
+    def ok(self) -> bool:
+        return self.returncode == 0
+
+
+@dataclass(frozen=True)
+class TechnicalWarnings:
+    healthcheck_status: str = "NOT_RUN"
+    pre_refresh_attempted: bool = False
+    pre_refresh_failed: bool = False
+    pre_refresh_skipped_reason: str = ""
+    pre_refresh_error: str = ""
+    prelock_failed: bool = False
+    prelock_error: str = ""
+    audit_failed: bool = False
+    audit_error: str = ""
+
+    def has_failure(self) -> bool:
+        return (
+            self.healthcheck_status == "BROKEN"
+            or self.pre_refresh_failed
+            or self.prelock_failed
+            or self.audit_failed
+        )
 
 
 def norm_text(value: object) -> str:
@@ -89,16 +124,37 @@ def snapshot_dir(processed_dir: Path, target_date: str) -> Path:
     return processed_dir / "today" / target_date
 
 
-def run_step(script_path: str, args: list[str]) -> None:
+def today_in_timezone(timezone_name: str) -> str:
+    return datetime.now(ZoneInfo(timezone_name)).date().isoformat()
+
+
+def run_step(script_path: str, args: list[str], allow_failure: bool = False) -> StepResult:
     command = [sys.executable, script_path, *args]
     env = os.environ.copy()
     env["PYTHONIOENCODING"] = "utf-8"
     env["PYTHONUTF8"] = "1"
     print("\n=== AUTO RUNNING ===", flush=True)
     print(" ".join(command), flush=True)
-    completed = subprocess.run(command, cwd=ROOT, check=False, env=env)
+    try:
+        completed = subprocess.run(command, cwd=ROOT, check=False, env=env)
+    except OSError as exc:
+        result = StepResult(script_path=script_path, args=list(args), returncode=1, error=f"{script_path} failed to start: {exc}")
+        if allow_failure:
+            print(f"WARNING: {result.error}", flush=True)
+            return result
+        raise RuntimeError(result.error) from exc
+    result = StepResult(
+        script_path=script_path,
+        args=list(args),
+        returncode=int(completed.returncode),
+        error="" if completed.returncode == 0 else f"{script_path} exited with {completed.returncode}",
+    )
     if completed.returncode != 0:
-        raise RuntimeError(f"{script_path} exited with {completed.returncode}")
+        if allow_failure:
+            print(f"WARNING: {result.error}", flush=True)
+            return result
+        raise RuntimeError(result.error)
+    return result
 
 
 def read_text_optional(path: Path) -> str:
@@ -184,6 +240,17 @@ def health_summary_requires_pre(summary: pd.DataFrame) -> list[str]:
     return reasons
 
 
+def read_healthcheck_status(processed_dir: Path, target_date: str, fallback: str) -> str:
+    summary_path = processed_dir / "health" / "vsigma_healthcheck_summary.csv"
+    summary = read_csv_lenient(summary_path)
+    if summary.empty or "global_health_status" not in summary.columns:
+        return fallback
+    rows = fresh_rows(summary, target_date)
+    source = rows if not rows.empty else summary
+    status = norm_upper(source.iloc[0].get("global_health_status"))
+    return status or fallback
+
+
 def detect_pre_refresh_needed(processed_dir: Path, target_date: str) -> list[str]:
     reasons: list[str] = []
     snap = snapshot_dir(processed_dir, target_date)
@@ -252,7 +319,20 @@ def map_decision_state(
     prelock_retained: object = "",
     prelock_decision: object = "",
     minutes_to_kickoff: object = "",
+    *,
+    no_candidates: bool = False,
+    technical_warning: bool = False,
+    past_target_date: bool = False,
 ) -> str:
+    if technical_warning:
+        return "TECHNICAL_WARNING"
+    if past_target_date and no_candidates:
+        return "PAST_DATE_NO_PRE_REFRESH"
+    if no_candidates:
+        return "NO_BET"
+    if past_target_date:
+        return "POST_ONLY"
+
     retained = norm_upper(prelock_retained) in {"YES", "TRUE", "1"}
     decision = norm_upper(prelock_decision)
     exclusion = norm_upper(exclusion_reason)
@@ -287,6 +367,12 @@ def decision_reason_for(state: str, exclusion_reason: str, prelock_decision: str
         return "Kickoff has passed and post-result grading is still pending."
     if state == "NO_BET":
         return "No current official baseline candidates exist for the target date."
+    if state == "TECHNICAL_WARNING":
+        return "A technical step failed in AUTO mode; execution must wait for review of the warning fields."
+    if state == "POST_ONLY":
+        return "Target date is in the past; AUTO skipped PRE recovery and execution is not applicable."
+    if state == "PAST_DATE_NO_PRE_REFRESH":
+        return "Target date is in the past and no current candidates exist; AUTO skipped PRE recovery."
     if exclusion_reason:
         return f"PRELOCK did not retain the pick; audit reason: {exclusion_reason}."
     return "Candidates exist but PRELOCK retained no row and no specific audit reason was available."
@@ -297,6 +383,12 @@ def next_action_for(state: str, audit_action: str) -> str:
         return "EXECUTE_GOVERNED_PICK"
     if state == "NO_BET":
         return "NO_ACTION"
+    if state == "TECHNICAL_WARNING":
+        return "REVIEW_AUTO_TECHNICAL_WARNINGS"
+    if state == "POST_ONLY":
+        return "RUN_POST_WHEN_RESULTS_AVAILABLE"
+    if state == "PAST_DATE_NO_PRE_REFRESH":
+        return "NO_PRE_REFRESH_FOR_PAST_DATE"
     if audit_action:
         return audit_action
     return {
@@ -315,11 +407,14 @@ def build_decision_summary(
     window_minutes: int = 90,
     pre_refreshed: bool = False,
     refresh_reasons: list[str] | None = None,
+    technical_warnings: TechnicalWarnings | None = None,
+    past_target_date: bool = False,
 ) -> tuple[pd.DataFrame, dict[str, Path]]:
     target_date = pd.Timestamp(target_date or date.today().isoformat()).date().isoformat()
     snap = snapshot_dir(processed_dir, target_date)
     snap.mkdir(parents=True, exist_ok=True)
     refresh_reasons = refresh_reasons or []
+    technical_warnings = technical_warnings or TechnicalWarnings()
 
     candidates, candidate_source = source_candidate_rows(processed_dir, target_date)
     prelock_path = snap / PRELOCK_TOP
@@ -334,7 +429,11 @@ def build_decision_summary(
 
     rows: list[dict[str, object]] = []
     if candidates.empty:
-        state = "NO_BET"
+        state = map_decision_state(
+            "",
+            no_candidates=True,
+            past_target_date=past_target_date,
+        )
         rows.append(
             {
                 "target_date": target_date,
@@ -373,7 +472,14 @@ def build_decision_summary(
             exclusion_reason = norm_upper(first_available(audit_row, ["exclusion_reason"]))
             audit_action = norm_text(first_available(audit_row, ["next_action"]))
             minutes = first_available(audit_row, ["minutes_to_kickoff"])
-            state = map_decision_state(exclusion_reason, "YES" if retained else "NO", prelock_decision, minutes)
+            state = map_decision_state(
+                exclusion_reason,
+                "YES" if retained else "NO",
+                prelock_decision,
+                minutes,
+                technical_warning=technical_warnings.has_failure(),
+                past_target_date=past_target_date,
+            )
             rows.append(
                 {
                     "target_date": target_date,
@@ -407,11 +513,25 @@ def build_decision_summary(
     blocked = summary[summary["decision_state"].eq("IN_WINDOW_BUT_BLOCKED")]
     data_problem = summary[summary["decision_state"].eq("DATA_PROBLEM")]
     prelock_unavailable = summary[summary["decision_state"].eq("PRELOCK_NOT_AVAILABLE")]
-    candidate_count = 0 if summary["decision_state"].eq("NO_BET").all() else len(summary)
+    no_candidate_states = {"NO_BET", "PAST_DATE_NO_PRE_REFRESH"}
+    candidate_count = 0 if set(summary["decision_state"].astype(str)).issubset(no_candidate_states) else len(summary)
     next_auto = automatic_next_action(summary)
     prelock_empty_note = "YES" if prelock.empty else "NO"
 
-    wait_blocked = summary[summary["decision_state"].isin(["WAITING_FOR_PRELOCK_WINDOW", "IN_WINDOW_BUT_BLOCKED", "DATA_PROBLEM", "POST_PENDING", "PRELOCK_NOT_AVAILABLE"])]
+    wait_blocked = summary[
+        summary["decision_state"].isin(
+            [
+                "WAITING_FOR_PRELOCK_WINDOW",
+                "IN_WINDOW_BUT_BLOCKED",
+                "DATA_PROBLEM",
+                "POST_PENDING",
+                "PRELOCK_NOT_AVAILABLE",
+                "TECHNICAL_WARNING",
+                "POST_ONLY",
+                "PAST_DATE_NO_PRE_REFRESH",
+            ]
+        )
+    ]
     lines = [
         f"# vSIGMA Cloud Decision Summary - {target_date}",
         "",
@@ -430,6 +550,17 @@ def build_decision_summary(
         "",
         "## Waiting / Blocked Picks",
         format_markdown_table(wait_blocked, ["fixture_id", "league", "home_team", "away_team", "market_primary", "fixture_datetime", "minutes_to_kickoff", "decision_state", "exclusion_reason", "next_action"], max_rows=50),
+        "",
+        "## Technical Warnings",
+        f"- healthcheck_status: {technical_warnings.healthcheck_status}",
+        f"- pre_refresh_attempted: {'YES' if technical_warnings.pre_refresh_attempted else 'NO'}",
+        f"- pre_refresh_failed: {'YES' if technical_warnings.pre_refresh_failed else 'NO'}",
+        f"- pre_refresh_skipped_reason: {technical_warnings.pre_refresh_skipped_reason or 'none'}",
+        f"- pre_refresh_error: {technical_warnings.pre_refresh_error or 'none'}",
+        f"- prelock_failed: {'YES' if technical_warnings.prelock_failed else 'NO'}",
+        f"- prelock_error: {technical_warnings.prelock_error or 'none'}",
+        f"- audit_failed: {'YES' if technical_warnings.audit_failed else 'NO'}",
+        f"- audit_error: {technical_warnings.audit_error or 'none'}",
         "",
         "## Technical Notes",
         f"- Timezone: {timezone_name}",
@@ -453,6 +584,12 @@ def build_decision_summary(
 def overall_auto_status(summary: pd.DataFrame) -> str:
     if summary.empty or summary["decision_state"].eq("NO_BET").all():
         return "NO_BET"
+    if summary["decision_state"].eq("PAST_DATE_NO_PRE_REFRESH").all():
+        return "PAST_DATE_NO_PRE_REFRESH"
+    if summary["decision_state"].eq("TECHNICAL_WARNING").any():
+        return "TECHNICAL_WARNING"
+    if summary["decision_state"].eq("POST_ONLY").any():
+        return "POST_ONLY"
     if summary["decision_state"].eq("EXECUTABLE").any():
         return "EXECUTABLE"
     if summary["decision_state"].eq("DATA_PROBLEM").any():
@@ -470,6 +607,9 @@ def automatic_next_action(summary: pd.DataFrame) -> str:
     status = overall_auto_status(summary)
     return {
         "NO_BET": "NO_ACTION",
+        "TECHNICAL_WARNING": "REVIEW_AUTO_TECHNICAL_WARNINGS",
+        "POST_ONLY": "RUN_POST_WHEN_RESULTS_AVAILABLE",
+        "PAST_DATE_NO_PRE_REFRESH": "NO_PRE_REFRESH_FOR_PAST_DATE",
         "EXECUTABLE": "EXECUTE_GOVERNED_PICK",
         "DATA_PROBLEM": "FIX_DATA_PROBLEMS",
         "BLOCKED": "NO_EXECUTION_REVIEW_BLOCKS",
@@ -481,22 +621,84 @@ def automatic_next_action(summary: pd.DataFrame) -> str:
 
 def run_auto_controller(target_date: str, timezone_name: str, window_minutes: int, processed_dir: Path = PROCESSED_DIR) -> AutoRunResult:
     target_date = pd.Timestamp(target_date).date().isoformat()
-    run_step("scripts/run_vsigma_healthcheck.py", ["--date", target_date, "--timezone", timezone_name, "--mode", "full"])
+    local_today = today_in_timezone(timezone_name)
+    past_target_date = target_date < local_today
 
-    refresh_reasons = detect_pre_refresh_needed(processed_dir, target_date)
-    pre_refreshed = bool(refresh_reasons)
-    if pre_refreshed:
+    healthcheck = run_step(
+        "scripts/run_vsigma_healthcheck.py",
+        ["--date", target_date, "--timezone", timezone_name, "--mode", "full"],
+        allow_failure=True,
+    )
+    healthcheck_status = read_healthcheck_status(
+        processed_dir,
+        target_date,
+        "OK" if healthcheck.ok else "BROKEN",
+    )
+    if not healthcheck.ok:
+        healthcheck_status = "BROKEN"
+
+    try:
+        refresh_reasons = detect_pre_refresh_needed(processed_dir, target_date)
+    except Exception as exc:
+        refresh_reasons = [f"pre refresh detection failed: {exc}"]
+
+    pre_refreshed = False
+    pre_refresh_attempted = False
+    pre_refresh_failed = False
+    pre_refresh_skipped_reason = "PAST_TARGET_DATE" if past_target_date else ""
+    pre_refresh_error = ""
+
+    if past_target_date:
+        print("\n=== AUTO PRE REFRESH SKIPPED ===", flush=True)
+        print(f"- target_date {target_date} is before local today {local_today}", flush=True)
+    elif refresh_reasons:
         print("\n=== AUTO PRE REFRESH TRIGGERED ===", flush=True)
         for reason in refresh_reasons:
             print(f"- {reason}", flush=True)
-        run_step("scripts/run_daily_competition_controller.py", ["--date", target_date, "--timezone", timezone_name, "--mode", "pre"])
+        pre_refresh_attempted = True
+        pre_refresh = run_step(
+            "scripts/run_daily_competition_controller.py",
+            ["--date", target_date, "--timezone", timezone_name, "--mode", "pre"],
+            allow_failure=True,
+        )
+        pre_refreshed = pre_refresh.ok
+        pre_refresh_failed = not pre_refresh.ok
+        pre_refresh_error = pre_refresh.error
     else:
         print("\n=== AUTO PRE REFRESH NOT REQUIRED ===", flush=True)
 
-    run_step("scripts/run_today_prelock_pipeline.py", ["--date", target_date, "--timezone", timezone_name, "--window-minutes", str(window_minutes)])
-    run_step("scripts/build_prelock_exclusion_audit.py", ["--date", target_date, "--timezone", timezone_name, "--window-minutes", str(window_minutes)])
-    summary, paths = build_decision_summary(processed_dir, target_date, timezone_name, window_minutes, pre_refreshed, refresh_reasons)
-    return AutoRunResult(pre_refreshed, refresh_reasons, paths, summary)
+    prelock = run_step(
+        "scripts/run_today_prelock_pipeline.py",
+        ["--date", target_date, "--timezone", timezone_name, "--window-minutes", str(window_minutes)],
+        allow_failure=True,
+    )
+    audit = run_step(
+        "scripts/build_prelock_exclusion_audit.py",
+        ["--date", target_date, "--timezone", timezone_name, "--window-minutes", str(window_minutes)],
+        allow_failure=True,
+    )
+    technical_warnings = TechnicalWarnings(
+        healthcheck_status=healthcheck_status,
+        pre_refresh_attempted=pre_refresh_attempted,
+        pre_refresh_failed=pre_refresh_failed,
+        pre_refresh_skipped_reason=pre_refresh_skipped_reason,
+        pre_refresh_error=pre_refresh_error,
+        prelock_failed=not prelock.ok,
+        prelock_error=prelock.error,
+        audit_failed=not audit.ok,
+        audit_error=audit.error,
+    )
+    summary, paths = build_decision_summary(
+        processed_dir,
+        target_date,
+        timezone_name,
+        window_minutes,
+        pre_refreshed,
+        refresh_reasons,
+        technical_warnings,
+        past_target_date,
+    )
+    return AutoRunResult(pre_refreshed, refresh_reasons, paths, summary, technical_warnings)
 
 
 def parse_args() -> argparse.Namespace:
@@ -511,9 +713,14 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     target_date = pd.Timestamp(args.date).date().isoformat()
-    result = run_auto_controller(target_date, args.timezone, args.window_minutes, args.processed_dir)
+    try:
+        result = run_auto_controller(target_date, args.timezone, args.window_minutes, args.processed_dir)
+    except Exception as exc:
+        print(f"ERROR: AUTO controller could not generate decision summary: {exc}", file=sys.stderr)
+        raise SystemExit(1) from exc
     summary = result.summary
-    candidates = 0 if summary["decision_state"].eq("NO_BET").all() else len(summary)
+    no_candidate_states = {"NO_BET", "PAST_DATE_NO_PRE_REFRESH"}
+    candidates = 0 if set(summary["decision_state"].astype(str)).issubset(no_candidate_states) else len(summary)
     executable = int(summary["decision_state"].eq("EXECUTABLE").sum())
     waiting = int(summary["decision_state"].eq("WAITING_FOR_PRELOCK_WINDOW").sum())
     blocked = int(summary["decision_state"].eq("IN_WINDOW_BUT_BLOCKED").sum())
@@ -527,6 +734,12 @@ def main() -> None:
     print(f"Waiting count: {waiting}")
     print(f"Blocked count: {blocked}")
     print(f"Data problem count: {data_problem}")
+    print(f"Healthcheck status: {result.technical_warnings.healthcheck_status}")
+    print(f"PRE refresh attempted: {'YES' if result.technical_warnings.pre_refresh_attempted else 'NO'}")
+    print(f"PRE refresh failed: {'YES' if result.technical_warnings.pre_refresh_failed else 'NO'}")
+    print(f"PRE refresh skipped reason: {result.technical_warnings.pre_refresh_skipped_reason or 'none'}")
+    print(f"PRELOCK failed: {'YES' if result.technical_warnings.prelock_failed else 'NO'}")
+    print(f"Audit failed: {'YES' if result.technical_warnings.audit_failed else 'NO'}")
     print(f"Summary CSV: {result.summary_paths['summary_csv']}")
     print(f"Summary MD: {result.summary_paths['summary_md']}")
 
