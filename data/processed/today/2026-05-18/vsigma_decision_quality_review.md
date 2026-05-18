@@ -1,7 +1,7 @@
 # vSIGMA Decision Quality Review - 2026-05-18
 
 ## Executive Summary
-- generated_at: 2026-05-18T21:50:33+01:00
+- generated_at: 2026-05-18T22:55:10+01:00
 - rows reviewed: 1
 - actionable rows: 0
 - non-actionable rows: 1
