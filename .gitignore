@@ -34,3 +34,5 @@ data/cache/
 data/cache/*.sqlite3
 data/cache/*.sqlite3-wal
 data/cache/*.sqlite3-shm
+# Pytest cache
+.pytest_cache/
