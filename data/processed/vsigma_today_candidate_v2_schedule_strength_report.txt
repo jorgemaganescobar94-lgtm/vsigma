@@ -5,7 +5,7 @@ Method: last five prior completed team fixtures; opponent strength from API stan
 Activation: neutral when standings context is missing; no hard vetoes.
 
     summary_scope  rows_processed  home_full_or_partial  away_full_or_partial  avg_home_opponent_strength  avg_away_opponent_strength  standings_api_calls  standings_cache_hits  standings_errors                 generated_at_utc    flag  rows
-          overall             5.0                   5.0                   5.0                        0.62                        0.61                  1.0                  49.0               0.0 2026-05-18T00:14:30.327127+00:00     NaN   NaN
-home_quality_flag             NaN                   NaN                   NaN                         NaN                         NaN                  NaN                   NaN               NaN                              NaN    FULL   5.0
-away_quality_flag             NaN                   NaN                   NaN                         NaN                         NaN                  NaN                   NaN               NaN                              NaN    FULL   4.0
+          overall             3.0                   3.0                   3.0                       0.649                       0.662                  0.0                  30.0               0.0 2026-05-18T17:36:08.575437+00:00     NaN   NaN
+home_quality_flag             NaN                   NaN                   NaN                         NaN                         NaN                  NaN                   NaN               NaN                              NaN    FULL   3.0
+away_quality_flag             NaN                   NaN                   NaN                         NaN                         NaN                  NaN                   NaN               NaN                              NaN    FULL   2.0
 away_quality_flag             NaN                   NaN                   NaN                         NaN                         NaN                  NaN                   NaN               NaN                              NaN PARTIAL   1.0

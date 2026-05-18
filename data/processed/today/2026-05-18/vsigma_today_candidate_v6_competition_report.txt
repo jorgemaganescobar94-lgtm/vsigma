@@ -3,20 +3,18 @@ vSIGMA SHADOW CANDIDATE V6
 Layer: candidate v2 + API Predictions Benchmark.
 Status: experimental shadow; API predictions never create picks.
 
-Candidate v2 input rows: 2
-Candidate v6 competition shortlist rows: 2
-Candidate v6 competition top rows: 2
-API prediction available rows: 2
-API prediction aligned rows: 1
+Candidate v2 input rows: 1
+Candidate v6 competition shortlist rows: 1
+Candidate v6 competition top rows: 1
+API prediction available rows: 1
+API prediction aligned rows: 0
 API prediction disagreement rows: 0
-API calls: 2 | cache hits: 0 | errors: 0
+API calls: 1 | cache hits: 0 | errors: 0
 
 API Predictions Benchmark action mix
 api_prediction_benchmark_action
-NOT_APPLIED                          1
-API_PREDICTION_ALIGNED_STRENGTHEN    1
+NOT_APPLIED    1
 
 Candidate v6 Top
- accuracy_mode_rank  fixture_id           league      home_team away_team market_primary  competition_calibrated_prob  accuracy_confidence_score api_prediction_alignment_flag   api_prediction_benchmark_action
-                  1     1392197 Segunda División        Leganes    Huesca       OVER_1_5                     0.815960                    152.061                       NEUTRAL                       NOT_APPLIED
-                  2     1494170      Allsvenskan Djurgardens IF    Sirius       OVER_2_5                     0.867825                    142.091                       ALIGNED API_PREDICTION_ALIGNED_STRENGTHEN
+ accuracy_mode_rank  fixture_id           league home_team away_team market_primary  competition_calibrated_prob  accuracy_confidence_score api_prediction_alignment_flag api_prediction_benchmark_action
+                  1     1392197 Segunda División   Leganes    Huesca       OVER_1_5                      0.81596                    151.662                       NEUTRAL                     NOT_APPLIED
