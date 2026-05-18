@@ -16,44 +16,41 @@
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank |
 | --- | --- | --- | --- | --- | --- |
 | 1392197 | Segunda División | Leganes | Huesca | OVER_1_5 | 1 |
-| 1494170 | Allsvenskan | Djurgardens IF | Sirius | OVER_2_5 | 2 |
 
 ## Candidate v2 Picks
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank |
 | --- | --- | --- | --- | --- | --- |
 | 1392197 | Segunda División | Leganes | Huesca | OVER_1_5 | 1 |
-| 1494170 | Allsvenskan | Djurgardens IF | Sirius | OVER_2_5 | 2 |
 
 ## Candidate v7 Decisions
-- Waiting: 1
+- Waiting: 0
 - Confirmed: 0
 - Rejected: 0
-- Unavailable: 0
+- Unavailable: 1
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank | candidate_v7_execution_status | price_discipline_decision |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1392197 | Segunda División | Leganes | Huesca | OVER_1_5 | 1 | V7_WAITING_FOR_PRELOCK | PRICE_THIN_SECONDARY_ONLY |
-| 1494170 | Allsvenskan | Djurgardens IF | Sirius | OVER_2_5 | 2 | PRICE_OK | PRICE_OK |
+| 1392197 | Segunda División | Leganes | Huesca | OVER_1_5 | 1 | V7_PRELOCK_UNAVAILABLE | PRICE_THIN_SECONDARY_ONLY |
 
 ## Pre-Lock Timing
 | fixture_id | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1392197 | Leganes | Huesca | OVER_1_5 | 2026-05-18T18:30:36.600000+00:00 | 384.67 | 2026-05-18T17:00:36.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
-| 1494170 | Djurgardens IF | Sirius | OVER_2_5 | 2026-05-18T17:00:36.600000+00:00 | 294.67 | 2026-05-18T15:30:36.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1392197 | Leganes | Huesca | OVER_1_5 | 2026-05-18T18:30:28+00:00 | 53.99 | 2026-05-18T17:00:28+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
 
 ## Ledger State
 | experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1392197.0 | Leganes | Huesca | OVER_1_5 | POST | PENDING | PENDING | PENDING |  |
+| OFFICIAL_BASELINE | 1392197.0 | Leganes | Huesca | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
 | OFFICIAL_BASELINE | 1494170.0 | Djurgardens IF | Sirius | OVER_2_5 | POST | PENDING | PENDING | PENDING |  |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1392197.0 | Leganes | Huesca | OVER_1_5 | POST | PENDING | PENDING | PENDING |  |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1392197.0 | Leganes | Huesca | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1494170.0 | Djurgardens IF | Sirius | OVER_2_5 | POST | PENDING | PENDING | PENDING |  |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V4_O25_FIREWALL | 1392197.0 | Leganes | Huesca | OVER_1_5 | POST | PENDING | PENDING | PENDING |  |
-| CANDIDATE_V5_PLAYER_IMPACT | 1392197.0 | Leganes | Huesca | OVER_1_5 | POST | PENDING | PENDING | PENDING |  |
+| CANDIDATE_V4_O25_FIREWALL | 1392197.0 | Leganes | Huesca | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
+| CANDIDATE_V5_PLAYER_IMPACT | 1392197.0 | Leganes | Huesca | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
 | CANDIDATE_V5_PLAYER_IMPACT | 1494170.0 | Djurgardens IF | Sirius | OVER_2_5 | POST | PENDING | PENDING | PENDING |  |
-| CANDIDATE_V6_API_PREDICTIONS | 1392197.0 | Leganes | Huesca | OVER_1_5 | POST | PENDING | PENDING | PENDING |  |
+| CANDIDATE_V6_API_PREDICTIONS | 1392197.0 | Leganes | Huesca | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
 | CANDIDATE_V6_API_PREDICTIONS | 1494170.0 | Djurgardens IF | Sirius | OVER_2_5 | POST | PENDING | PENDING | PENDING |  |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1494170.0 | Djurgardens IF | Sirius | OVER_2_5 | POST | PENDING | PENDING | PENDING |  |
+| CANDIDATE_V7_PRICE_DISCIPLINE |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
 
 ## Controller Outputs
 - Plan CSV: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-18/daily_run_plan.csv

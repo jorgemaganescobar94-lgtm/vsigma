@@ -1,62 +1,21 @@
 country,league,league_tier,league_filter_reason,matches
-Oman,Professional League,REJECT,country_league_not_allowlisted,7
-USA,USL League Two,REJECT,country_league_not_allowlisted,5
-Bulgaria,First League,REJECT,country_league_not_allowlisted,4
 Iceland,1. Deild,REJECT,country_league_not_allowlisted,4
-Israel,Ligat Ha'al,REJECT,country_league_not_allowlisted,4
-Romania,Liga I,REJECT,country_league_not_allowlisted,4
-Sudan,Sudani Premier League,REJECT,country_league_not_allowlisted,3
-Sweden,Ettan - Södra,REJECT,country_league_not_allowlisted,3
-USA,MLS Next Pro,REJECT,hard_reject_noise_league,3
+Liberia,LFA First Division,REJECT,country_league_not_allowlisted,3
 Argentina,Primera C,REJECT,country_league_not_allowlisted,2
-Armenia,Premier League,REJECT,country_league_not_allowlisted,2
-Colombia,Primera B,REJECT,country_league_not_allowlisted,2
-Congo-DR,Ligue 1,REJECT,country_league_not_allowlisted,2
-Faroe-Islands,Meistaradeildin,REJECT,country_league_not_allowlisted,2
-Lebanon,Premier League,REJECT,country_league_not_allowlisted,2
-Saudi-Arabia,Division 1,REJECT,country_league_not_allowlisted,2
-Sweden,Superettan,REJECT,country_league_not_allowlisted,2
 USA,USL W League,REJECT,country_league_not_allowlisted,2
-Ukraine,Premier League,REJECT,country_league_not_allowlisted,2
-World,UEFA U19 Championship - Qualification,REJECT,hard_reject_noise_league,2
 Argentina,Primera B Metropolitana,REJECT,country_league_not_allowlisted,1
 Argentina,Primera Nacional,REJECT,country_league_not_allowlisted,1
-Armenia,First League,REJECT,country_league_not_allowlisted,1
-Australia,Victoria NPL,REJECT,country_league_not_allowlisted,1
-Barbados,Premier League,REJECT,country_league_not_allowlisted,1
-Bhutan,Premier League,REJECT,country_league_not_allowlisted,1
+Austria,Landesliga - Tirol,REJECT,hard_reject_noise_league,1
 Brazil,Brasileiro U20 A,REJECT,hard_reject_noise_league,1
 Brazil,Brasileiro Women,REJECT,hard_reject_noise_league,1
 Brazil,Serie D,REJECT,country_league_not_allowlisted,1
-Canada,Canadian Premier League,REJECT,country_league_not_allowlisted,1
 Canada,Northern Super League,REJECT,country_league_not_allowlisted,1
-Colombia,Copa Colombia,REJECT,country_league_not_allowlisted,1
-El-Salvador,Primera Division,REJECT,country_league_not_allowlisted,1
-Faroe-Islands,1. Deild,REJECT,country_league_not_allowlisted,1
-Finland,Kakkonen - Lohko A,REJECT,country_league_not_allowlisted,1
-Finland,Kakkonen - Lohko B,REJECT,country_league_not_allowlisted,1
-Finland,Kakkonen - Lohko C,REJECT,country_league_not_allowlisted,1
-Finland,Ykkösliiga,REJECT,country_league_not_allowlisted,1
-Gambia,GFA League,REJECT,country_league_not_allowlisted,1
-India,Indian Super League,REJECT,country_league_not_allowlisted,1
+Colombia,Primera B,REJECT,country_league_not_allowlisted,1
 Ireland,Premier Division,REJECT,country_league_not_allowlisted,1
-Italy,Campionato Primavera - 2,REJECT,country_league_not_allowlisted,1
-Ivory-Coast,Ligue 1,REJECT,country_league_not_allowlisted,1
-Jamaica,Premier League,REJECT,country_league_not_allowlisted,1
-Kuwait,Crown Prince Cup,REJECT,country_league_not_allowlisted,1
-Kuwait,Premier League,REJECT,country_league_not_allowlisted,1
-Mauritania,Premier League,REJECT,country_league_not_allowlisted,1
-Mexico,Liga MX,REJECT,country_league_not_allowlisted,1
-Poland,Ekstraklasa,REJECT,country_league_not_allowlisted,1
-Poland,I Liga,REJECT,country_league_not_allowlisted,1
-Russia,Second League - Group 4,REJECT,country_league_not_allowlisted,1
-Singapore,Premier League,REJECT,country_league_not_allowlisted,1
-Sweden,Ettan - Norra,REJECT,country_league_not_allowlisted,1
+Lebanon,Premier League,REJECT,country_league_not_allowlisted,1
+Saudi-Arabia,Division 1,REJECT,country_league_not_allowlisted,1
 Uruguay,Primera División - Apertura,REJECT,country_league_not_allowlisted,1
 England,Premier League,TIER_1,england_premier_league,1
 Spain,Segunda División,TIER_1,spain_segunda,1
-Sweden,Allsvenskan,TIER_2,sweden_allsvenskan,2
 Switzerland,Super League,TIER_2,switzerland_super_league,1
-Egypt,Premier League,TIER_3,egypt_premier_league_noisy,4
 Brazil,Serie B,TIER_3,brazil_serie_b_noisy,1
-Finland,Veikkausliiga,TIER_3,finland_veikkausliiga_noisy,1

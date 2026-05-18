@@ -5,11 +5,8 @@ Source: official API-Football /leagues coverage metadata. Historical runs use cu
 Data-rich / good leagues:
     country           league  season league_coverage_class  league_data_reliability_score  league_has_fixture_stats_coverage  league_has_odds_coverage  league_has_injuries_coverage  league_has_lineups_coverage league_coverage_source_status
      Brazil          Serie B    2026         COVERAGE_RICH                           0.95                                  1                         1                             0                            1                  OFFICIAL_API
-      Egypt   Premier League    2025         COVERAGE_RICH                           0.95                                  1                         1                             0                            1                  OFFICIAL_API
     England   Premier League    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
-    Finland    Veikkausliiga    2026         COVERAGE_RICH                           0.95                                  1                         1                             0                            1                  OFFICIAL_API
       Spain Segunda División    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
-     Sweden      Allsvenskan    2026         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
 Switzerland     Super League    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
 
 Partial leagues:

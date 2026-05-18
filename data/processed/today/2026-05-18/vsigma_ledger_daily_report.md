@@ -5,7 +5,7 @@
 - JSONL event log: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.jsonl
 - Official picks registered: 2
 - Shadow picks registered: 8
-- No-bet records: 1
+- No-bet records: 2
 - Pending records: 10
 - Settled records: 0
 - Daily winner: NO_SETTLED_RESULTS
@@ -29,24 +29,24 @@
 | CANDIDATE_V4_O25_FIREWALL | 1 | 1 | 0 | 1 | 0 | 0.0 |
 | CANDIDATE_V5_PLAYER_IMPACT | 2 | 2 | 0 | 2 | 0 | 0.0 |
 | CANDIDATE_V6_API_PREDICTIONS | 2 | 2 | 0 | 2 | 0 | 0.0 |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1 | 0 | 1 | 0 | 0.0 |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 1 | 1 | 1 | 0 | 0.0 |
 | OFFICIAL_BASELINE | 2 | 2 | 0 | 2 | 0 | 0.0 |
 
 ## Official Picks
 | experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1 | 1392197 | Leganes | Huesca | OVER_1_5 | 0.81596 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.132; market_fit=SAFE_OK; LOW_CONVERSION | PENDING |
+| OFFICIAL_BASELINE | 1 | 1392197 | Leganes | Huesca | OVER_1_5 | 0.81596 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.126; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
 | OFFICIAL_BASELINE | 2 | 1494170 | Djurgardens IF | Sirius | OVER_2_5 | 0.874525 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.259; market_fit=SAFE_OK; LOW_CONVERSION | PENDING |
 
 ## Shadow Picks
 | experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1392197 | Leganes | Huesca | OVER_1_5 | 0.81596 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.132; market_fit=SAFE_OK; LOW_CONVERSION | PENDING |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1392197 | Leganes | Huesca | OVER_1_5 | 0.81596 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.126; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
 | CANDIDATE_V2_SCHEDULE_ANOMALY | 2 | 1494170 | Djurgardens IF | Sirius | OVER_2_5 | 0.861825 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.246; market_fit=SAFE_OK; LOW_CONVERSION | PENDING |
-| CANDIDATE_V4_O25_FIREWALL | 1 | 1392197 | Leganes | Huesca | OVER_1_5 | 0.81596 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.132; market_fit=SAFE_OK; LOW_CONVERSION | PENDING |
-| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1392197 | Leganes | Huesca | OVER_1_5 | 0.81596 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.132; market_fit=SAFE_OK; LOW_CONVERSION | PENDING |
+| CANDIDATE_V4_O25_FIREWALL | 1 | 1392197 | Leganes | Huesca | OVER_1_5 | 0.81596 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.126; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1392197 | Leganes | Huesca | OVER_1_5 | 0.81596 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.126; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
 | CANDIDATE_V5_PLAYER_IMPACT | 2 | 1494170 | Djurgardens IF | Sirius | OVER_2_5 | 0.861825 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.246; market_fit=SAFE_OK; LOW_CONVERSION | PENDING |
-| CANDIDATE_V6_API_PREDICTIONS | 1 | 1392197 | Leganes | Huesca | OVER_1_5 | 0.81596 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.132; market_fit=SAFE_OK; LOW_CONVERSION | PENDING |
+| CANDIDATE_V6_API_PREDICTIONS | 1 | 1392197 | Leganes | Huesca | OVER_1_5 | 0.81596 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.126; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
 | CANDIDATE_V6_API_PREDICTIONS | 2 | 1494170 | Djurgardens IF | Sirius | OVER_2_5 | 0.867825 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.246; market_fit=SAFE_OK; LOW_CONVERSION | PENDING |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1494170 | Djurgardens IF | Sirius | OVER_2_5 | 0.861825 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.246; market_fit=SAFE_OK; LOW_CONVERSION | PENDING |
 
@@ -54,6 +54,7 @@
 | experiment_id | record_status | reason_tags | source_file |
 | --- | --- | --- | --- |
 | CANDIDATE_V3_ODDS_DEPTH | NO_BET_RECORD | NO_BET; SOURCE_FILE_MISSING_OR_NOT_AVAILABLE | vsigma_today_candidate_v3_competition_top.csv |
+| CANDIDATE_V7_PRICE_DISCIPLINE | NO_BET_RECORD | NO_BET; no competition top rows | vsigma_today_candidate_v7_competition_top.csv |
 
 ## Pre-Lock Changes
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_decision | prelock_decision_reason |
@@ -72,20 +73,16 @@
 ## Result State
 | experiment_id | fixture_id | market_primary | result_status | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1392197 | OVER_1_5 | PENDING | PENDING |  | PENDING |
+| OFFICIAL_BASELINE | 1392197 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
 | OFFICIAL_BASELINE | 1494170 | OVER_2_5 | PENDING | PENDING |  | PENDING |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1392197 | OVER_1_5 | PENDING | PENDING |  | PENDING |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1392197 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1494170 | OVER_2_5 | PENDING | PENDING |  | PENDING |
-| CANDIDATE_V4_O25_FIREWALL | 1392197 | OVER_1_5 | PENDING | PENDING |  | PENDING |
-| CANDIDATE_V5_PLAYER_IMPACT | 1392197 | OVER_1_5 | PENDING | PENDING |  | PENDING |
+| CANDIDATE_V4_O25_FIREWALL | 1392197 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1392197 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
 | CANDIDATE_V5_PLAYER_IMPACT | 1494170 | OVER_2_5 | PENDING | PENDING |  | PENDING |
-| CANDIDATE_V6_API_PREDICTIONS | 1392197 | OVER_1_5 | PENDING | PENDING |  | PENDING |
+| CANDIDATE_V6_API_PREDICTIONS | 1392197 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
 | CANDIDATE_V6_API_PREDICTIONS | 1494170 | OVER_2_5 | PENDING | PENDING |  | PENDING |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1494170 | OVER_2_5 | PENDING | PENDING |  | PENDING |
 
 ## Freshness Warnings
-| file_name | status | detail |
-| --- | --- | --- |
-| vsigma_today_prelock_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| vsigma_today_prelock_comparison.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| today_post_results_report.csv | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet |
+_No rows._
