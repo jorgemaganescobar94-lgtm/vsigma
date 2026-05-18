@@ -1,14 +1,14 @@
 # vSIGMA Cloud Decision Summary - 2026-05-18
 
 ## Status
-- Auto status: TECHNICAL_WARNING
+- Auto status: WAITING_OR_BLOCKED
 - PRE refreshed: NO
 - Candidates reviewed: 1
 - Executable picks: 0
 - Waiting picks: 0
-- Blocked picks: 0
+- Blocked picks: 1
 - Data problem picks: 0
-- Next automatic action: REVIEW_AUTO_TECHNICAL_WARNINGS
+- Next automatic action: WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW
 
 ## Executable Picks
 _No rows._
@@ -16,10 +16,10 @@ _No rows._
 ## Waiting / Blocked Picks
 | fixture_id | league | home_team | away_team | market_primary | fixture_datetime | minutes_to_kickoff | decision_state | exclusion_reason | next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1392197 | Segunda División | Leganes | Huesca | OVER_1_5 | 2026-05-18T19:30+01:00 | 51.91 | TECHNICAL_WARNING | PRELOCK_NOT_AVAILABLE | REVIEW_AUTO_TECHNICAL_WARNINGS |
+| 1392197 | Segunda División | Leganes | Huesca | OVER_1_5 | 2026-05-18T19:30+01:00 | -56.76 | PRELOCK_BLOCKED | PRELOCK_NOT_AVAILABLE | WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW |
 
 ## Technical Warnings
-- healthcheck_status: BROKEN
+- healthcheck_status: WARNING
 - pre_refresh_attempted: NO
 - pre_refresh_failed: NO
 - pre_refresh_skipped_reason: none
@@ -35,7 +35,7 @@ _No rows._
 - PRE refreshed by auto controller: NO
 - PRE refresh reasons: none
 - PRELOCK retained no rows: NO
-- PRELOCK unavailable rows: 0
+- PRELOCK unavailable rows: 1
 - Candidate source used: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-18/vsigma_today_competition_top.csv
 - Global candidate fallback: /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_competition_top.csv
 - PRELOCK source: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-18/vsigma_today_prelock_competition_top.csv
