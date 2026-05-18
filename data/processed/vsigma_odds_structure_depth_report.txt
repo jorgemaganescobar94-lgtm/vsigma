@@ -21,4 +21,4 @@ Fixture preview
  fixture_id           league home_team    away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
     1379329   Premier League   Arsenal      Burnley                    RICH_MIXED              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.5698                             0.025
     1392197 Segunda División   Leganes       Huesca                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3705                            -0.015
-    1545230     Super League  FC Aarau Grasshoppers                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3473                             0.030
+    1545230     Super League  FC Aarau Grasshoppers                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2978                             0.030

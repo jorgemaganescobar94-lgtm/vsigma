@@ -12,12 +12,12 @@
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Leganes vs Huesca | OVER_1_5 | 2026-05-18T19:30+01:00 | -102.75 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
+| Leganes vs Huesca | OVER_1_5 | 2026-05-18T19:30+01:00 | -120.25 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
 
 ## Data Gaps
-- odds missing: 1
-- lineups missing: 1
-- availability missing: 1
+- odds missing: 0
+- lineups missing: 0
+- availability missing: 0
 
 ## Notes
 This resolver does not change predictions, thresholds, calibration, probability formulas, or base selection. It only translates PRELOCK state into an operational execution decision.
