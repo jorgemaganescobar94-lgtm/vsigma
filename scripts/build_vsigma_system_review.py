@@ -399,6 +399,7 @@ def build_improvement_queue(
     health_status: str,
     decisions: pd.DataFrame,
     decision_outcome_ledger: pd.DataFrame,
+    decision_quality: pd.DataFrame,
     current_source: pd.DataFrame,
     audit: pd.DataFrame,
     closed_picks: int,
@@ -542,6 +543,59 @@ def build_improvement_queue(
                 f"no_bet_lineups_not_available={int(lineups_no_bet.sum())}",
             )
 
+    if not decision_quality.empty:
+        labels = decision_quality.get("decision_quality_label", pd.Series("", index=decision_quality.index)).astype(str).str.upper()
+        buckets = decision_quality.get("quality_bucket", pd.Series("", index=decision_quality.index)).astype(str).str.upper()
+        result_status = decision_quality.get("result_status", pd.Series("", index=decision_quality.index)).astype(str).str.upper()
+        missed_opportunities = int(labels.isin(["NO_BET_MISSED_WIN", "WAIT_MISSED_WIN"]).sum())
+        actionable_losses = int(labels.eq("ACTIONABLE_LOSS").sum())
+        resolved_quality_rows = int((~result_status.eq("UNRESOLVED")).sum())
+
+        if missed_opportunities >= 3:
+            add_recommendation(
+                rows,
+                target_date,
+                "P1",
+                "execution",
+                "Review missed decision opportunities",
+                "Decision Quality Review found repeated missed wins in non-actionable rows.",
+                "May improve execution governance without touching predictive scoring.",
+                "Medium; requires sample review before changing block rules.",
+                "Inspect shared final_block_reason patterns and propose execution-only adjustments.",
+                "NO",
+                f"missed_opportunities={missed_opportunities}",
+            )
+
+        if actionable_losses >= 3:
+            add_recommendation(
+                rows,
+                target_date,
+                "P2",
+                "model_market_review",
+                "Review actionable loss cluster",
+                "Decision Quality Review found repeated actionable losses.",
+                "Focuses later review on market/risk segments with real losses.",
+                "Medium; no thresholds or scoring should change from this queue item alone.",
+                "Group losses by market and accuracy risk, then collect enough closed outcomes before proposing changes.",
+                "NO",
+                f"actionable_losses={actionable_losses}; bad_decisions={int(buckets.eq('BAD_DECISION').sum())}",
+            )
+
+        if resolved_quality_rows < 30:
+            add_recommendation(
+                rows,
+                target_date,
+                "P3",
+                "decision_quality",
+                "Collect more closed decision quality outcomes",
+                "Decision Quality Review has fewer than 30 resolved rows.",
+                "Avoids premature recalibration or execution-rule changes from a thin sample.",
+                "Low; reporting only.",
+                "Keep building the quality review after POST labels are available.",
+                "NO",
+                f"resolved_quality_rows={resolved_quality_rows}",
+            )
+
     api_data_evidence = api_gap_evidence(current_source, audit, exclude_fixture_ids=expired_fixture_ids)
     if api_data_evidence:
         add_recommendation(
@@ -680,6 +734,68 @@ def official_action_summary(decisions: pd.DataFrame) -> str:
     return "MIXED"
 
 
+def load_decision_quality_review(processed_dir: Path, target_date: str) -> pd.DataFrame:
+    snap = snapshot_dir(processed_dir, target_date)
+    for path in [
+        snap / "vsigma_decision_quality_review.csv",
+        processed_dir / "governance" / "vsigma_decision_quality_review.csv",
+    ]:
+        if not path.exists():
+            continue
+        rows = target_date_rows(read_csv_lenient(path), target_date)
+        if not rows.empty:
+            return rows
+    return pd.DataFrame()
+
+
+def decision_quality_metric(decision_quality: pd.DataFrame, column: str, value: str) -> int:
+    if decision_quality.empty or column not in decision_quality.columns:
+        return 0
+    return int(decision_quality[column].astype(str).str.upper().eq(value).sum())
+
+
+def decision_quality_top_signal(decision_quality: pd.DataFrame) -> str:
+    if decision_quality.empty or "improvement_signal" not in decision_quality.columns:
+        return "NONE"
+    values = decision_quality["improvement_signal"].dropna().astype(str).str.strip()
+    values = values[values.ne("")]
+    if values.empty:
+        return "NONE"
+    counts = values.value_counts()
+    return f"{counts.index[0]} ({int(counts.iloc[0])})"
+
+
+def decision_quality_recalibration_allowed(decision_quality: pd.DataFrame) -> str:
+    if decision_quality.empty or "result_status" not in decision_quality.columns:
+        return "NO"
+    resolved = int((~decision_quality["result_status"].astype(str).str.upper().eq("UNRESOLVED")).sum())
+    return "YES" if resolved >= 30 else "NO"
+
+
+def summarize_decision_quality(decision_quality: pd.DataFrame) -> list[str]:
+    if decision_quality.empty:
+        return [
+            "- status: NOT_AVAILABLE",
+            "- good decisions: 0",
+            "- bad decisions: 0",
+            "- unresolved: 0",
+            "- top improvement signal: NONE",
+            "- recalibration_allowed_from_quality: NO",
+        ]
+    good = decision_quality_metric(decision_quality, "quality_bucket", "GOOD_DECISION")
+    bad = decision_quality_metric(decision_quality, "quality_bucket", "BAD_DECISION")
+    unresolved = decision_quality_metric(decision_quality, "result_status", "UNRESOLVED")
+    return [
+        "- status: AVAILABLE",
+        f"- rows reviewed: {len(decision_quality)}",
+        f"- good decisions: {good}",
+        f"- bad decisions: {bad}",
+        f"- unresolved: {unresolved}",
+        f"- top improvement signal: {decision_quality_top_signal(decision_quality)}",
+        f"- recalibration_allowed_from_quality: {decision_quality_recalibration_allowed(decision_quality)}",
+    ]
+
+
 def build_system_review(
     target_date: str,
     timezone_name: str = "Atlantic/Canary",
@@ -719,6 +835,7 @@ def build_system_review(
     audit = read_csv_lenient(paths["vsigma_prelock_exclusion_audit.csv"])
     ledger = read_csv_lenient(paths["vsigma_immutable_daily_pick_ledger.csv"])
     decision_outcome_ledger = read_csv_lenient(paths["vsigma_decision_outcome_ledger.csv"])
+    decision_quality = load_decision_quality_review(processed_dir, target_date)
     labeled = read_csv_lenient(paths["vsigma_market_results_labeled.csv"])
     calibration_table = read_csv_lenient(paths["vsigma_probability_calibration_table.csv"])
     coverage_matrix = read_csv_lenient(paths["vsigma_api_league_coverage_matrix.csv"])
@@ -763,6 +880,7 @@ def build_system_review(
         health_status,
         decisions,
         decision_outcome_ledger,
+        decision_quality,
         current_source,
         audit,
         closed_picks,
@@ -802,6 +920,9 @@ def build_system_review(
         f"- Decision outcome ledger blocked rows: {decision_ledger_blocked}",
         f"- Decision outcome ledger technical review rows: {decision_ledger_technical}",
         f"- Current operational verdict: {verdict}",
+        "",
+        "## Decision Quality Review",
+        *summarize_decision_quality(decision_quality),
         "",
         "## Current Picks / Decisions",
         format_markdown_table(current_decisions, DECISION_COLUMNS, max_rows=50),
