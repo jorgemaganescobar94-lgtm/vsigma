@@ -839,6 +839,13 @@ def run_auto_controller(target_date: str, timezone_name: str, window_minutes: in
         technical_warnings,
         past_target_date,
     )
+    decision_ledger = run_step(
+        "scripts/update_vsigma_decision_outcome_ledger.py",
+        ["--date", target_date, "--timezone", timezone_name, "--processed-dir", str(processed_dir)],
+        allow_failure=True,
+    )
+    if not decision_ledger.ok:
+        print(f"WARNING: decision outcome ledger update failed but AUTO will continue: {decision_ledger.error}", flush=True)
     system_review = run_step(
         "scripts/build_vsigma_system_review.py",
         ["--date", target_date, "--timezone", timezone_name, "--processed-dir", str(processed_dir)],
