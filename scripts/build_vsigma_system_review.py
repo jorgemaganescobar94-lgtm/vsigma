@@ -398,6 +398,7 @@ def build_improvement_queue(
     auto_status: str,
     health_status: str,
     decisions: pd.DataFrame,
+    decision_outcome_ledger: pd.DataFrame,
     current_source: pd.DataFrame,
     audit: pd.DataFrame,
     closed_picks: int,
@@ -484,7 +485,64 @@ def build_improvement_queue(
             f"blocked={blocked}; waiting={waiting}; auto_status={auto_status}",
         )
 
-    api_data_evidence = api_gap_evidence(current_source, audit)
+    expired_fixture_ids: set[str] = set()
+    if not decision_outcome_ledger.empty:
+        target_ledger = target_date_rows(decision_outcome_ledger, target_date)
+        reasons = target_ledger.get("final_block_reason", pd.Series("", index=target_ledger.index)).astype(str).str.upper()
+        actions = target_ledger.get("official_action", pd.Series("", index=target_ledger.index)).astype(str).str.upper()
+        expired = target_ledger.get("is_expired", pd.Series("", index=target_ledger.index)).astype(str).str.upper().eq("YES")
+        expired_fixture_ids = set(target_ledger.loc[expired, "fixture_id"].fillna("").astype(str).str.strip())
+        prelock_not_available = reasons.str.contains("PRELOCK_NOT_AVAILABLE", regex=False)
+        no_bet = actions.eq("NO_BET")
+        odds_no_bet = no_bet & reasons.str.contains("ODDS_NOT_AVAILABLE", regex=False)
+        lineups_no_bet = no_bet & reasons.str.contains("LINEUPS_NOT_AVAILABLE", regex=False)
+
+        if int((prelock_not_available | expired).sum()) > 0:
+            add_recommendation(
+                rows,
+                target_date,
+                "P1",
+                "execution",
+                "Improve prelock timing schedule",
+                "Decision outcome ledger includes expired or prelock unavailable decisions.",
+                "Reduces non-actionable PRELOCK outcomes caused by late or missing execution windows.",
+                "Low if limited to scheduling and reporting diagnostics.",
+                "Review AUTO/PRELOCK timing so resolver runs before kickoff and captures a useful in-window slot.",
+                "YES",
+                f"prelock_not_available={int(prelock_not_available.sum())}; expired={int(expired.sum())}",
+            )
+
+        if int(odds_no_bet.sum()) > 0:
+            add_recommendation(
+                rows,
+                target_date,
+                "P1",
+                "odds",
+                "Improve in-window odds refresh",
+                "Decision outcome ledger has NO_BET rows blocked by missing odds.",
+                "Improves executable pick retention when model selection is already available.",
+                "Medium; API quota and cache growth must remain bounded.",
+                "Refresh odds for candidate fixtures inside the PRELOCK window before resolving final action.",
+                "YES",
+                f"no_bet_odds_not_available={int(odds_no_bet.sum())}",
+            )
+
+        if int(lineups_no_bet.sum()) > 0:
+            add_recommendation(
+                rows,
+                target_date,
+                "P2",
+                "api_data",
+                "Fetch candidate lineups in-window",
+                "Decision outcome ledger has NO_BET rows blocked by missing lineups.",
+                "Improves PRELOCK evidence for candidate fixtures without broad calendar enrichment.",
+                "Medium; lineup availability varies by league and kickoff timing.",
+                "Target lineup fetches to candidate fixtures inside the PRELOCK window.",
+                "YES",
+                f"no_bet_lineups_not_available={int(lineups_no_bet.sum())}",
+            )
+
+    api_data_evidence = api_gap_evidence(current_source, audit, exclude_fixture_ids=expired_fixture_ids)
     if api_data_evidence:
         add_recommendation(
             rows,
@@ -563,9 +621,14 @@ def build_improvement_queue(
     return out.sort_values(["priority", "category", "title"], key=lambda col: col.map(order) if col.name == "priority" else col).reset_index(drop=True)
 
 
-def api_gap_evidence(current_source: pd.DataFrame, audit: pd.DataFrame) -> str:
+def api_gap_evidence(current_source: pd.DataFrame, audit: pd.DataFrame, exclude_fixture_ids: set[str] | None = None) -> str:
     evidence: list[str] = []
+    exclude_fixture_ids = {fixture_id for fixture_id in (exclude_fixture_ids or set()) if fixture_id}
     for df in [current_source, audit]:
+        if df.empty:
+            continue
+        if exclude_fixture_ids and "fixture_id" in df.columns:
+            df = df[~df["fixture_id"].fillna("").astype(str).str.strip().isin(exclude_fixture_ids)].copy()
         if df.empty:
             continue
         if "data_gap_flags" in df.columns:
@@ -638,6 +701,7 @@ def build_system_review(
         "vsigma_today_prelock_competition_top.csv": snap / "vsigma_today_prelock_competition_top.csv",
         "vsigma_ledger_daily_report.md": snap / "vsigma_ledger_daily_report.md",
         "vsigma_immutable_daily_pick_ledger.csv": processed_dir / "ledger" / "vsigma_immutable_daily_pick_ledger.csv",
+        "vsigma_decision_outcome_ledger.csv": processed_dir / "ledger" / "vsigma_decision_outcome_ledger.csv",
         "vsigma_experiment_performance_report.md": processed_dir / "ledger" / "vsigma_experiment_performance_report.md",
         "vsigma_governance_dashboard.md": governance_dir / "vsigma_governance_dashboard.md",
         "vsigma_probability_calibration_report.txt": processed_dir / "vsigma_probability_calibration_report.txt",
@@ -654,6 +718,7 @@ def build_system_review(
     decisions = resolver_decisions if not resolver_decisions.empty else cloud_decisions
     audit = read_csv_lenient(paths["vsigma_prelock_exclusion_audit.csv"])
     ledger = read_csv_lenient(paths["vsigma_immutable_daily_pick_ledger.csv"])
+    decision_outcome_ledger = read_csv_lenient(paths["vsigma_decision_outcome_ledger.csv"])
     labeled = read_csv_lenient(paths["vsigma_market_results_labeled.csv"])
     calibration_table = read_csv_lenient(paths["vsigma_probability_calibration_table.csv"])
     coverage_matrix = read_csv_lenient(paths["vsigma_api_league_coverage_matrix.csv"])
@@ -677,6 +742,14 @@ def build_system_review(
     health_status = parse_bullet_value(decision_md, "healthcheck_status", "UNKNOWN")
     ledger_total = int(len(ledger)) if not ledger.empty else 0
     ledger_target = int(len(target_date_rows(ledger, target_date))) if not ledger.empty else 0
+    decision_ledger_total = int(len(decision_outcome_ledger)) if not decision_outcome_ledger.empty else 0
+    decision_ledger_actionable = int(decision_outcome_ledger.get("is_actionable", pd.Series("", index=decision_outcome_ledger.index)).astype(str).str.upper().eq("YES").sum()) if not decision_outcome_ledger.empty else 0
+    decision_ledger_non_actionable = int(decision_outcome_ledger.get("is_non_actionable", pd.Series("", index=decision_outcome_ledger.index)).astype(str).str.upper().eq("YES").sum()) if not decision_outcome_ledger.empty else 0
+    decision_ledger_no_bet = int(decision_outcome_ledger.get("official_action", pd.Series("", index=decision_outcome_ledger.index)).astype(str).str.upper().eq("NO_BET").sum()) if not decision_outcome_ledger.empty else 0
+    decision_ledger_expired = int(decision_outcome_ledger.get("is_expired", pd.Series("", index=decision_outcome_ledger.index)).astype(str).str.upper().eq("YES").sum()) if not decision_outcome_ledger.empty else 0
+    decision_ledger_waiting = int(decision_outcome_ledger.get("is_waiting", pd.Series("", index=decision_outcome_ledger.index)).astype(str).str.upper().eq("YES").sum()) if not decision_outcome_ledger.empty else 0
+    decision_ledger_blocked = int(decision_outcome_ledger.get("is_blocked", pd.Series("", index=decision_outcome_ledger.index)).astype(str).str.upper().eq("YES").sum()) if not decision_outcome_ledger.empty else 0
+    decision_ledger_technical = int(decision_outcome_ledger.get("is_technical_review", pd.Series("", index=decision_outcome_ledger.index)).astype(str).str.upper().eq("YES").sum()) if not decision_outcome_ledger.empty else 0
     verdict = current_verdict(auto_status, health_status, executable, blocked, waiting)
 
     calibration_rows, closed_picks, enough_sample, recalibration_allowed = calibration_review(
@@ -689,6 +762,7 @@ def build_system_review(
         auto_status,
         health_status,
         decisions,
+        decision_outcome_ledger,
         current_source,
         audit,
         closed_picks,
@@ -719,6 +793,14 @@ def build_system_review(
         f"- Healthcheck status: {health_status}",
         f"- Ledger rows total: {ledger_total}",
         f"- Ledger rows for target date: {ledger_target}",
+        f"- Decision outcome ledger rows total: {decision_ledger_total}",
+        f"- Decision outcome ledger actionable rows: {decision_ledger_actionable}",
+        f"- Decision outcome ledger non-actionable rows: {decision_ledger_non_actionable}",
+        f"- Decision outcome ledger no bet rows: {decision_ledger_no_bet}",
+        f"- Decision outcome ledger expired rows: {decision_ledger_expired}",
+        f"- Decision outcome ledger waiting rows: {decision_ledger_waiting}",
+        f"- Decision outcome ledger blocked rows: {decision_ledger_blocked}",
+        f"- Decision outcome ledger technical review rows: {decision_ledger_technical}",
         f"- Current operational verdict: {verdict}",
         "",
         "## Current Picks / Decisions",

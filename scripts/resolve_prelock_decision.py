@@ -56,6 +56,19 @@ OUTPUT_COLUMNS = [
 
 BLOCKING_PRELOCK_DECISIONS = {"PRELOCK_REMOVED", "PRELOCK_DOWNGRADED", "PRELOCK_NOT_AVAILABLE"}
 
+DECISION_REASON_PRIORITY = [
+    "EXECUTABLE_CONFIRMED",
+    "KICKOFF_ALREADY_PASSED",
+    "NO_CANDIDATES",
+    "OUTSIDE_PRELOCK_WINDOW",
+    "ODDS_NOT_AVAILABLE",
+    "LINEUPS_NOT_AVAILABLE",
+    "AVAILABILITY_NOT_AVAILABLE",
+    "PRELOCK_GOVERNANCE_NOT_RETAINED",
+    "PRELOCK_NOT_AVAILABLE_UNCLASSIFIED",
+    "TECHNICAL_REVIEW",
+]
+
 
 @dataclass(frozen=True)
 class ResolverPaths:
@@ -280,6 +293,18 @@ def resolve_row(
             final_block_reason = "OUTSIDE_PRELOCK_WINDOW"
             retry_allowed = "YES" if retry_slot is not None else "NO"
             execution_family_status = "WAITING_FOR_WINDOW"
+        elif flags and (
+            prelock_decision == "PRELOCK_NOT_AVAILABLE"
+            or exclusion_reason in {"PRELOCK_NOT_AVAILABLE", "IN_WINDOW_BUT_NOT_RETAINED"}
+        ):
+            final_block_reason = final_reason_from_flags(flags)
+            retry_allowed = "YES" if retry_slot is not None else "NO"
+            if "ODDS_MISSING" in flags:
+                official_action = "NO_BET"
+                execution_family_status = "DATA_GAP_BLOCKED"
+            else:
+                official_action = "WAIT" if retry_slot is not None else "NO_BET"
+                execution_family_status = "WAITING_FOR_PRELOCK_DATA" if retry_slot is not None else "DATA_GAP_BLOCKED"
         elif exclusion_reason == "IN_WINDOW_BUT_NOT_RETAINED":
             official_action = "NO_BET"
             final_block_reason = "PRELOCK_GOVERNANCE_NOT_RETAINED"
@@ -320,6 +345,8 @@ def resolve_row(
 
     if retry_allowed == "NO":
         next_retry_time = ""
+    if execution_family_status == "EXPIRED":
+        flags = []
 
     return {
         "target_date": target_date,
@@ -371,7 +398,11 @@ def write_markdown(resolver: pd.DataFrame, paths: ResolverPaths, target_date: st
     technical = int(resolver["official_action"].astype(str).eq("TECHNICAL_REVIEW").sum())
     retry_values = [value for value in resolver["next_retry_time"].dropna().astype(str).tolist() if value.strip()]
     next_retry = min(retry_values) if retry_values else "NONE"
-    gap_series = resolver["data_gap_flags"].fillna("").astype(str)
+    actionable_gap_rows = resolver[
+        ~resolver["execution_family_status"].fillna("").astype(str).str.upper().eq("EXPIRED")
+        & ~resolver["final_block_reason"].fillna("").astype(str).str.upper().eq("KICKOFF_ALREADY_PASSED")
+    ]
+    gap_series = actionable_gap_rows["data_gap_flags"].fillna("").astype(str)
     odds_missing = int(gap_series.str.contains("ODDS_MISSING", regex=False).sum())
     lineups_missing = int(gap_series.str.contains("LINEUPS_MISSING", regex=False).sum())
     availability_missing = int(gap_series.str.contains("AVAILABILITY_MISSING", regex=False).sum())

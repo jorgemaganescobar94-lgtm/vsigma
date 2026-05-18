@@ -150,6 +150,42 @@ class PrelockDecisionResolverTests(unittest.TestCase):
         self.assertEqual(resolver.loc[0, "final_block_reason"], "KICKOFF_ALREADY_PASSED")
         self.assertEqual(resolver.loc[0, "execution_family_status"], "EXPIRED")
 
+    def test_kickoff_passed_does_not_mark_actionable_data_gaps(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            processed_dir = Path(tmp) / "data" / "processed"
+            today_dir = processed_dir / "today" / self.target_date
+            today_dir.mkdir(parents=True)
+            self.write_candidate(today_dir, kickoff="2026-05-18T11:30:00+01:00")
+            self.write_prelock(
+                today_dir,
+                kickoff="2026-05-18T11:30:00+01:00",
+                prelock_decision="PRELOCK_NOT_AVAILABLE",
+                lineup_state="LINEUPS_NOT_AVAILABLE",
+                odds_state="ODDS_NOT_AVAILABLE",
+                availability_state="AVAILABILITY_NOT_AVAILABLE",
+            )
+            self.write_audit(
+                today_dir,
+                kickoff="2026-05-18T11:30:00+01:00",
+                retained="YES",
+                prelock_decision="PRELOCK_NOT_AVAILABLE",
+                exclusion_reason="PRELOCK_NOT_AVAILABLE",
+                lineup_state="LINEUPS_NOT_AVAILABLE",
+                odds_state="ODDS_NOT_AVAILABLE",
+                availability_state="AVAILABILITY_NOT_AVAILABLE",
+            )
+
+            resolver = self.run_resolver(processed_dir)
+            markdown = (processed_dir / "today" / self.target_date / "vsigma_prelock_decision_resolver.md").read_text(encoding="utf-8")
+
+        self.assertEqual(resolver.loc[0, "official_action"], "NO_BET")
+        self.assertEqual(resolver.loc[0, "final_block_reason"], "KICKOFF_ALREADY_PASSED")
+        self.assertEqual(resolver.loc[0, "execution_family_status"], "EXPIRED")
+        self.assertEqual(resolver.loc[0, "data_gap_flags"], "")
+        self.assertIn("- odds missing: 0", markdown)
+        self.assertIn("- lineups missing: 0", markdown)
+        self.assertIn("- availability missing: 0", markdown)
+
     def test_prelock_retained_confirmed_is_executable(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             processed_dir = Path(tmp) / "data" / "processed"
