@@ -111,26 +111,35 @@ _No stale pre-lock rows excluded._
 ### CLV Summary
 | fixture_id | home_team | away_team | market_primary | experiment_id | pre_price | prelock_price | close_proxy_price | clv_delta | clv_direction | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1392197 | Leganes | Huesca | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.33 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1392197 | Leganes | Huesca | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.33 |  | 1.33 | 0.0 | CLV_FLAT | PENDING |  |
 | 1392197 | Leganes | Huesca | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.33 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1392197 | Leganes | Huesca | OVER_1_5 | OFFICIAL_BASELINE | 1.33 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1494170 | Djurgardens IF | Sirius | OVER_2_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.67 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1494170 | Djurgardens IF | Sirius | OVER_2_5 | CANDIDATE_V7_PRICE_DISCIPLINE | 1.67 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1392197 | Leganes | Huesca | OVER_1_5 | OFFICIAL_BASELINE | 1.33 |  | 1.33 | 0.0 | CLV_FLAT | PENDING |  |
+| 1494170 | Djurgardens IF | Sirius | OVER_2_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.67 |  | 1.67 | 0.0 | CLV_FLAT | PENDING |  |
+| 1494170 | Djurgardens IF | Sirius | OVER_2_5 | CANDIDATE_V7_PRICE_DISCIPLINE | 1.67 |  | 1.67 | 0.0 | CLV_FLAT | PENDING |  |
 | 1494170 | Djurgardens IF | Sirius | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.67 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1494170 | Djurgardens IF | Sirius | OVER_2_5 | OFFICIAL_BASELINE | 1.67 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1494170 | Djurgardens IF | Sirius | OVER_2_5 | OFFICIAL_BASELINE | 1.67 |  | 1.67 | 0.0 | CLV_FLAT | PENDING |  |
 | 1494175 | Orgryte IS | IFK Goteborg | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.81 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1494175 | Orgryte IS | IFK Goteborg | OVER_2_5 | OFFICIAL_BASELINE | 1.81 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1494175 | Orgryte IS | IFK Goteborg | OVER_2_5 | OFFICIAL_BASELINE | 1.81 |  | 1.81 | 0.0 | CLV_FLAT | PENDING |  |
 | 1545230 | FC Aarau | Grasshoppers | HOME_WIN | DEEP_ANALYSIS_CANDIDATES | 2.23 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1545230 | FC Aarau | Grasshoppers | HOME_WIN | OFFICIAL_BASELINE | 2.23 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1545230 | FC Aarau | Grasshoppers | HOME_WIN | OFFICIAL_BASELINE | 2.23 |  | 2.23 | 0.0 | CLV_FLAT | PENDING |  |
 
 ### Candidate v7 Calibration Advice
 | market_family | failure_mode | drift_status | clv_direction | n | profit_units | roi_percent | recommendation | recommendation_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 5 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_UNAVAILABLE | 5 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_FLAT | 2 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 3 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_FLAT | 3 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_UNAVAILABLE | 2 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 
 ## Post-Results Summary
-_No rows._
+| mode | pick_count | wins | losses | profit_units | roi_percent | pending_rows | candidate_version |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| OFFICIAL_EXECUTION_SHORTLIST | 4.0 | 0.0 | 0.0 | 0.0 |  | 4.0 | OFFICIAL_RESULTS |
+| SHADOW_CANDIDATE_V2 | 2.0 | 0.0 | 0.0 | 0.0 |  | 2.0 | CANDIDATE_V2_RESULTS |
+| SHADOW_CANDIDATE_V4_O25_LOW_CONVERSION_FIREWALL | 1.0 | 0.0 | 0.0 | 0.0 |  | 1.0 | CANDIDATE_V4_RESULTS |
+| SHADOW_CANDIDATE_V5_PLAYER_IMPACT | 2.0 | 0.0 | 0.0 | 0.0 |  | 2.0 | CANDIDATE_V5_RESULTS |
+| SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK | 2.0 | 0.0 | 0.0 | 0.0 |  | 2.0 | CANDIDATE_V6_RESULTS |
+| SHADOW_CANDIDATE_V7_PRICE_DISCIPLINE_CLV_DRIFT_GUARD | 1.0 | 0.0 | 0.0 | 0.0 |  | 1.0 | CANDIDATE_V7_RESULTS |
 
 ## Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
@@ -168,14 +177,14 @@ _No rows._
 - Ledger report: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-18/vsigma_ledger_daily_report.md
 
 ## Daily Controller Status
-- Next recommended action: WAIT_FOR_PRELOCK
+- Next recommended action: RUN_POST_AFTER_FINISH
 - Pre-lock due time: 2026-05-18T15:30:36.600000+00:00
 - Status path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-18/daily_controller_status.md
 
 ## Daily Supervisor
 - Supervisor latest status: SUPERVISOR_STATUS_NOT_AVAILABLE
 - Last run mode/time: NOT_AVAILABLE / NOT_AVAILABLE
-- Next recommended action: WAIT_FOR_PRELOCK
+- Next recommended action: RUN_POST_AFTER_FINISH
 - Scheduled automation status: REGISTRATION_SCRIPT_AVAILABLE_STATUS_NOT_QUERIED
 - Logs path: C:\vsigma\automation_logs\supervisor
 - Report path: NOT_AVAILABLE
@@ -189,17 +198,17 @@ _No rows._
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1392197.0 | Leganes | Huesca | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| OFFICIAL_BASELINE | 1494170.0 | Djurgardens IF | Sirius | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1392197.0 | Leganes | Huesca | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1494170.0 | Djurgardens IF | Sirius | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| OFFICIAL_BASELINE | 1392197.0 | Leganes | Huesca | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
+| OFFICIAL_BASELINE | 1494170.0 | Djurgardens IF | Sirius | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1392197.0 | Leganes | Huesca | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1494170.0 | Djurgardens IF | Sirius | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V4_O25_FIREWALL | 1392197.0 | Leganes | Huesca | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1392197.0 | Leganes | Huesca | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1494170.0 | Djurgardens IF | Sirius | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V6_API_PREDICTIONS | 1392197.0 | Leganes | Huesca | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V6_API_PREDICTIONS | 1494170.0 | Djurgardens IF | Sirius | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1494170.0 | Djurgardens IF | Sirius | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V4_O25_FIREWALL | 1392197.0 | Leganes | Huesca | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
+| CANDIDATE_V5_PLAYER_IMPACT | 1392197.0 | Leganes | Huesca | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
+| CANDIDATE_V5_PLAYER_IMPACT | 1494170.0 | Djurgardens IF | Sirius | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
+| CANDIDATE_V6_API_PREDICTIONS | 1392197.0 | Leganes | Huesca | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
+| CANDIDATE_V6_API_PREDICTIONS | 1494170.0 | Djurgardens IF | Sirius | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1494170.0 | Djurgardens IF | Sirius | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
@@ -230,13 +239,15 @@ _No rows._
 ### Threshold Recommendations
 | market_family | failure_mode | experiment_id | settled_rows | roi_percent | clv_direction | threshold_recommendation |
 | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 5 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
-| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 5 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V4_O25_FIREWALL | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 1 | 52.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 0 |  |  | SAMPLE_TOO_SMALL |
@@ -279,9 +290,15 @@ _No rows._
 | vsigma_today_candidate_v2_match_script_forecasts.csv | FORECAST_CANDIDATE_V2 | PASS | output is fresh for requested target date | 2 |
 | vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | PASS | output is fresh for requested target date | 1 |
 | vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| today_pipeline_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
-| today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet | 0 |
+| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | PASS | output is fresh for requested target date | 2 |
+| vsigma_execution_shortlist_results_ledger.csv | OFFICIAL_RESULTS | PASS | output is fresh for requested target date | 4 |
+| vsigma_execution_shortlist_results_summary.csv | OFFICIAL_RESULTS | PASS | output is fresh for requested target date | 160 |
+| vsigma_today_candidate_v2_results_ledger.csv | CANDIDATE_V2_RESULTS | PASS | output is fresh for requested target date | 2 |
+| vsigma_today_candidate_v2_results_summary.csv | CANDIDATE_V2_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v4_results_ledger.csv | CANDIDATE_V4_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v4_results_summary.csv | CANDIDATE_V4_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v5_results_ledger.csv | CANDIDATE_V5_RESULTS | PASS | output is fresh for requested target date | 2 |
+| vsigma_today_candidate_v5_results_summary.csv | CANDIDATE_V5_RESULTS | PASS | output is fresh for requested target date | 1 |
 
 ## Candidate Isolation
 | check_name | file_name | status | detail |
