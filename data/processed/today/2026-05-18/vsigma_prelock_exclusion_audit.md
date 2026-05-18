@@ -1,13 +1,13 @@
 # vSIGMA PRELOCK Exclusion Audit - 2026-05-18
 
-- Generated at: 2026-05-18T18:36:29+01:00
+- Generated at: 2026-05-18T18:38:05+01:00
 - Timezone: Atlantic/Canary
 - Candidates reviewed: 1
 - In current 90-minute window: 1
-- Retained by PRELOCK output: 0
+- Retained by PRELOCK output: 1
 
 ## Audit
 
 | fixture_id | fixture | market | kickoff | min_to_ko | in_window | retained | exclusion_reason | next_action |
 | --- | --- | --- | --- | ---: | --- | --- | --- | --- |
-| 1392197 | Leganes vs Huesca | OVER_1_5 | 2026-05-18T19:30+01:00 | 53.51 | YES | NO | IN_WINDOW_BUT_NOT_RETAINED | CHECK_ODDS_LINEUPS_AVAILABILITY_OR_V7_GOVERNANCE |
+| 1392197 | Leganes vs Huesca | OVER_1_5 | 2026-05-18T19:30+01:00 | 51.91 | YES | YES | PRELOCK_NOT_AVAILABLE | REVIEW_PRELOCK_DECISION |
