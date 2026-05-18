@@ -24,6 +24,7 @@ OFFICIAL_TOP = "vsigma_today_competition_top.csv"
 PRELOCK_TOP = "vsigma_today_prelock_competition_top.csv"
 PRELOCK_REPORT = "vsigma_today_prelock_report.txt"
 PRELOCK_AUDIT = "vsigma_prelock_exclusion_audit.csv"
+PRELOCK_RESOLVER = "vsigma_prelock_decision_resolver.csv"
 DECISION_SUMMARY_CSV = "vsigma_cloud_decision_summary.csv"
 DECISION_SUMMARY_MD = "vsigma_cloud_decision_summary.md"
 
@@ -54,6 +55,13 @@ SUMMARY_COLUMNS = [
     "accuracy_primary_risk",
     "fixture_datetime",
     "minutes_to_kickoff",
+    "official_action",
+    "executable_now",
+    "final_block_reason",
+    "retry_allowed",
+    "next_retry_time",
+    "data_gap_flags",
+    "execution_family_status",
     "prelock_retained",
     "prelock_decision",
     "prelock_decision_reason",
@@ -61,6 +69,16 @@ SUMMARY_COLUMNS = [
     "decision_state",
     "decision_reason",
     "next_action",
+]
+
+RESOLVER_ENRICHMENT_COLUMNS = [
+    "official_action",
+    "executable_now",
+    "final_block_reason",
+    "retry_allowed",
+    "next_retry_time",
+    "data_gap_flags",
+    "execution_family_status",
 ]
 
 BLOCKING_PRELOCK_DECISIONS = {"PRELOCK_REMOVED", "PRELOCK_DOWNGRADED", "PRELOCK_NOT_AVAILABLE"}
@@ -429,6 +447,82 @@ def next_action_for(state: str, audit_action: str) -> str:
     }.get(state, "CHECK_PRELOCK_OUTPUTS")
 
 
+def fallback_resolver_fields(state: str, exclusion_reason: str = "") -> dict[str, object]:
+    if state == "EXECUTABLE":
+        return {
+            "official_action": "EXECUTABLE",
+            "executable_now": "YES",
+            "final_block_reason": "NONE",
+            "retry_allowed": "NO",
+            "next_retry_time": "",
+            "data_gap_flags": "",
+            "execution_family_status": "PRELOCK_CONFIRMED",
+        }
+    if state == "WAITING_FOR_PRELOCK_WINDOW":
+        return {
+            "official_action": "WAIT",
+            "executable_now": "NO",
+            "final_block_reason": "OUTSIDE_PRELOCK_WINDOW",
+            "retry_allowed": "YES",
+            "next_retry_time": "",
+            "data_gap_flags": "",
+            "execution_family_status": "WAITING_FOR_WINDOW",
+        }
+    if state in {"NO_BET", "PAST_DATE_NO_PRE_REFRESH", "POST_ONLY", "POST_PENDING"}:
+        return {
+            "official_action": "NO_BET",
+            "executable_now": "NO",
+            "final_block_reason": exclusion_reason or state,
+            "retry_allowed": "NO",
+            "next_retry_time": "",
+            "data_gap_flags": "",
+            "execution_family_status": state,
+        }
+    if state in {"TECHNICAL_WARNING", "DATA_PROBLEM"}:
+        return {
+            "official_action": "TECHNICAL_REVIEW",
+            "executable_now": "NO",
+            "final_block_reason": exclusion_reason or state,
+            "retry_allowed": "NO",
+            "next_retry_time": "",
+            "data_gap_flags": "",
+            "execution_family_status": "TECHNICAL_REVIEW",
+        }
+    return {
+        "official_action": "NO_BET",
+        "executable_now": "NO",
+        "final_block_reason": exclusion_reason or state or "PRELOCK_BLOCKED",
+        "retry_allowed": "NO",
+        "next_retry_time": "",
+        "data_gap_flags": "",
+        "execution_family_status": "PRELOCK_BLOCKED",
+    }
+
+
+def resolver_fields(resolver_row: pd.Series | None, state: str, exclusion_reason: str = "") -> dict[str, object]:
+    fields = fallback_resolver_fields(state, exclusion_reason)
+    if resolver_row is None:
+        return fields
+    for column in RESOLVER_ENRICHMENT_COLUMNS:
+        if column in resolver_row.index and norm_text(resolver_row.get(column)):
+            fields[column] = resolver_row.get(column)
+    return fields
+
+
+def official_action_summary(summary: pd.DataFrame) -> str:
+    if summary.empty or "official_action" not in summary.columns:
+        return "NO_BET"
+    actions = [norm_upper(value) for value in summary["official_action"].tolist() if norm_upper(value)]
+    if not actions:
+        return "NO_BET"
+    unique = set(actions)
+    if len(unique) == 1:
+        return actions[0]
+    if "TECHNICAL_REVIEW" in unique:
+        return "TECHNICAL_REVIEW"
+    return "MIXED"
+
+
 def build_decision_summary(
     processed_dir: Path = PROCESSED_DIR,
     target_date: str | None = None,
@@ -448,13 +542,16 @@ def build_decision_summary(
     candidates, candidate_source = source_candidate_rows(processed_dir, target_date)
     prelock_path = snap / PRELOCK_TOP
     audit_path = snap / PRELOCK_AUDIT
+    resolver_path = snap / PRELOCK_RESOLVER
     prelock_report_path = snap / PRELOCK_REPORT
     global_candidate_source = processed_dir / OFFICIAL_TOP
 
     prelock = read_fresh_csv(prelock_path, target_date)
     audit = read_fresh_csv(audit_path, target_date)
+    resolver = read_fresh_csv(resolver_path, target_date)
     prelock_index = index_by_key(prelock)
     audit_index = index_by_key(audit)
+    resolver_index = index_by_key(resolver)
 
     rows: list[dict[str, object]] = []
     if candidates.empty:
@@ -476,6 +573,7 @@ def build_decision_summary(
                 "accuracy_primary_risk": "",
                 "fixture_datetime": "",
                 "minutes_to_kickoff": "",
+                **fallback_resolver_fields(state),
                 "prelock_retained": "NO",
                 "prelock_decision": "",
                 "prelock_decision_reason": "",
@@ -491,6 +589,7 @@ def build_decision_summary(
         for _, candidate in candidates.iterrows():
             audit_row = lookup_row(audit_index, candidate)
             prelock_row = lookup_row(prelock_index, candidate)
+            resolver_row = lookup_row(resolver_index, candidate)
             retained = prelock_row is not None
             prelock_decision = norm_upper(first_available(prelock_row, ["prelock_decision"]))
             prelock_reason = norm_text(first_available(prelock_row, ["prelock_decision_reason"]))
@@ -509,6 +608,7 @@ def build_decision_summary(
                 technical_warning=technical_warnings.has_failure(),
                 past_target_date=past_target_date,
             )
+            official_fields = resolver_fields(resolver_row, state, exclusion_reason)
             rows.append(
                 {
                     "target_date": target_date,
@@ -522,6 +622,7 @@ def build_decision_summary(
                     "accuracy_primary_risk": first_available(audit_row, ["accuracy_primary_risk"]) or candidate.get("accuracy_primary_risk", ""),
                     "fixture_datetime": first_available(audit_row, ["fixture_datetime"]) or first_available(candidate, ["fixture_datetime", "fixture_datetime_utc", "date"]),
                     "minutes_to_kickoff": minutes,
+                    **official_fields,
                     "prelock_retained": "YES" if retained else "NO",
                     "prelock_decision": prelock_decision,
                     "prelock_decision_reason": prelock_reason,
@@ -573,12 +674,13 @@ def build_decision_summary(
         f"- Blocked picks: {len(blocked)}",
         f"- Data problem picks: {len(data_problem)}",
         f"- Next automatic action: {next_auto}",
+        f"- OFFICIAL_ACTION_SUMMARY: {official_action_summary(summary)}",
         "",
         "## Executable Picks",
-        format_markdown_table(executable, ["fixture_id", "league", "home_team", "away_team", "market_primary", "competition_calibrated_prob", "prelock_decision", "next_action"], max_rows=50),
+        format_markdown_table(executable, ["fixture_id", "league", "home_team", "away_team", "market_primary", "competition_calibrated_prob", "official_action", "executable_now", "prelock_decision", "next_action"], max_rows=50),
         "",
         "## Waiting / Blocked Picks",
-        format_markdown_table(wait_blocked, ["fixture_id", "league", "home_team", "away_team", "market_primary", "fixture_datetime", "minutes_to_kickoff", "decision_state", "exclusion_reason", "next_action"], max_rows=50),
+        format_markdown_table(wait_blocked, ["fixture_id", "league", "home_team", "away_team", "market_primary", "fixture_datetime", "minutes_to_kickoff", "official_action", "executable_now", "final_block_reason", "retry_allowed", "next_retry_time", "decision_state", "exclusion_reason", "next_action"], max_rows=50),
         "",
         "## Technical Warnings",
         f"- healthcheck_status: {technical_warnings.healthcheck_status}",
@@ -602,6 +704,7 @@ def build_decision_summary(
         f"- Global candidate fallback: {global_candidate_source}",
         f"- PRELOCK source: {prelock_path}",
         f"- Audit source: {audit_path}",
+        f"- PRELOCK resolver source: {resolver_path}",
         f"- PRELOCK report: {prelock_report_path}",
         f"- Summary CSV: {csv_path}",
         "",
@@ -708,6 +811,13 @@ def run_auto_controller(target_date: str, timezone_name: str, window_minutes: in
         ["--date", target_date, "--timezone", timezone_name, "--window-minutes", str(window_minutes)],
         allow_failure=True,
     )
+    resolver = run_step(
+        "scripts/resolve_prelock_decision.py",
+        ["--date", target_date, "--timezone", timezone_name, "--window-minutes", str(window_minutes), "--processed-dir", str(processed_dir)],
+        allow_failure=True,
+    )
+    if not resolver.ok:
+        print(f"WARNING: PRELOCK decision resolver failed but AUTO will continue: {resolver.error}", flush=True)
     technical_warnings = TechnicalWarnings(
         healthcheck_status=healthcheck_status,
         pre_refresh_attempted=pre_refresh_attempted,
@@ -772,6 +882,7 @@ def main() -> None:
     print(f"Waiting count: {waiting}")
     print(f"Blocked count: {blocked}")
     print(f"Data problem count: {data_problem}")
+    print(f"OFFICIAL_ACTION_SUMMARY: {official_action_summary(summary)}")
     print(f"Healthcheck status: {result.technical_warnings.healthcheck_status}")
     print(f"PRE refresh attempted: {'YES' if result.technical_warnings.pre_refresh_attempted else 'NO'}")
     print(f"PRE refresh failed: {'YES' if result.technical_warnings.pre_refresh_failed else 'NO'}")
