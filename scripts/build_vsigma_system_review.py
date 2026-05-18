@@ -38,6 +38,13 @@ DECISION_COLUMNS = [
     "home_team",
     "away_team",
     "market_primary",
+    "official_action",
+    "executable_now",
+    "final_block_reason",
+    "retry_allowed",
+    "next_retry_time",
+    "data_gap_flags",
+    "execution_family_status",
     "decision_state",
     "exclusion_reason",
     "next_action",
@@ -118,6 +125,10 @@ def parse_bullet_value(text: str, label: str, default: str = "UNKNOWN") -> str:
 def decision_candidate_count(decisions: pd.DataFrame) -> int:
     if decisions.empty:
         return 0
+    if "final_block_reason" in decisions.columns:
+        reasons = set(decisions.get("final_block_reason", pd.Series("", index=decisions.index)).astype(str))
+        if reasons and reasons.issubset({"NO_CANDIDATES"}):
+            return 0
     states = set(decisions.get("decision_state", pd.Series("", index=decisions.index)).astype(str))
     if states and states.issubset({"NO_BET", "PAST_DATE_NO_PRE_REFRESH"}):
         return 0
@@ -426,7 +437,16 @@ def build_improvement_queue(
             "missing decision summary CSV",
         )
 
+    unresolved_prelock_unavailable = False
     if not audit.empty and audit.get("exclusion_reason", pd.Series("", index=audit.index)).astype(str).str.upper().eq("PRELOCK_NOT_AVAILABLE").any():
+        if "final_block_reason" in decisions.columns:
+            reasons = decisions.get("final_block_reason", pd.Series("", index=decisions.index)).astype(str).str.upper()
+            actions = decisions.get("official_action", pd.Series("", index=decisions.index)).astype(str).str.upper()
+            unresolved_prelock_unavailable = reasons.eq("PRELOCK_NOT_AVAILABLE_UNCLASSIFIED").any() or actions.eq("TECHNICAL_REVIEW").any()
+        else:
+            unresolved_prelock_unavailable = True
+
+    if unresolved_prelock_unavailable:
         add_recommendation(
             rows,
             target_date,
@@ -441,8 +461,14 @@ def build_improvement_queue(
             "exclusion_reason=PRELOCK_NOT_AVAILABLE",
         )
 
-    blocked = int(decisions.get("decision_state", pd.Series("", index=decisions.index)).astype(str).isin(["PRELOCK_BLOCKED", "IN_WINDOW_BUT_BLOCKED"]).sum()) if not decisions.empty else 0
-    waiting = int(decisions.get("decision_state", pd.Series("", index=decisions.index)).astype(str).eq("WAITING_FOR_PRELOCK_WINDOW").sum()) if not decisions.empty else 0
+    if not decisions.empty and "official_action" in decisions.columns:
+        fixture_present = decisions.get("fixture_id", pd.Series("", index=decisions.index)).fillna("").astype(str).str.strip().ne("")
+        actions = decisions.get("official_action", pd.Series("", index=decisions.index)).astype(str).str.upper()
+        blocked = int((fixture_present & actions.isin(["NO_BET", "TECHNICAL_REVIEW"])).sum())
+        waiting = int((fixture_present & actions.eq("WAIT")).sum())
+    else:
+        blocked = int(decisions.get("decision_state", pd.Series("", index=decisions.index)).astype(str).isin(["PRELOCK_BLOCKED", "IN_WINDOW_BUT_BLOCKED"]).sum()) if not decisions.empty else 0
+        waiting = int(decisions.get("decision_state", pd.Series("", index=decisions.index)).astype(str).eq("WAITING_FOR_PRELOCK_WINDOW").sum()) if not decisions.empty else 0
     if blocked or waiting:
         add_recommendation(
             rows,
@@ -542,6 +568,10 @@ def api_gap_evidence(current_source: pd.DataFrame, audit: pd.DataFrame) -> str:
     for df in [current_source, audit]:
         if df.empty:
             continue
+        if "data_gap_flags" in df.columns:
+            summary = value_counts_summary(df, "data_gap_flags", max_items=4)
+            if summary != "none":
+                evidence.append(f"data_gap_flags={summary}")
         for column in ["prelock_lineup_state", "prelock_odds_state", "prelock_availability_state"]:
             if column in df.columns:
                 summary = value_counts_summary(df, column, max_items=4)
@@ -573,6 +603,20 @@ def current_verdict(auto_status: str, health_status: str, executable: int, block
     return "MONITOR_ONLY"
 
 
+def official_action_summary(decisions: pd.DataFrame) -> str:
+    if decisions.empty or "official_action" not in decisions.columns:
+        return "UNKNOWN"
+    actions = [norm_upper(value) for value in decisions["official_action"].tolist() if norm_upper(value)]
+    if not actions:
+        return "UNKNOWN"
+    unique = set(actions)
+    if len(unique) == 1:
+        return actions[0]
+    if "TECHNICAL_REVIEW" in unique:
+        return "TECHNICAL_REVIEW"
+    return "MIXED"
+
+
 def build_system_review(
     target_date: str,
     timezone_name: str = "Atlantic/Canary",
@@ -587,6 +631,7 @@ def build_system_review(
     paths = {
         "vsigma_cloud_decision_summary.md": snap / "vsigma_cloud_decision_summary.md",
         "vsigma_cloud_decision_summary.csv": snap / "vsigma_cloud_decision_summary.csv",
+        "vsigma_prelock_decision_resolver.csv": snap / "vsigma_prelock_decision_resolver.csv",
         "daily_competition_master_report.md": snap / "daily_competition_master_report.md",
         "vsigma_prelock_exclusion_audit.csv": snap / "vsigma_prelock_exclusion_audit.csv",
         "vsigma_today_competition_top.csv": snap / "vsigma_today_competition_top.csv",
@@ -604,7 +649,9 @@ def build_system_review(
     missing = missing_input_names(paths)
 
     decision_md = read_text_optional(paths["vsigma_cloud_decision_summary.md"])
-    decisions = read_csv_lenient(paths["vsigma_cloud_decision_summary.csv"])
+    cloud_decisions = read_csv_lenient(paths["vsigma_cloud_decision_summary.csv"])
+    resolver_decisions = read_csv_lenient(paths["vsigma_prelock_decision_resolver.csv"])
+    decisions = resolver_decisions if not resolver_decisions.empty else cloud_decisions
     audit = read_csv_lenient(paths["vsigma_prelock_exclusion_audit.csv"])
     ledger = read_csv_lenient(paths["vsigma_immutable_daily_pick_ledger.csv"])
     labeled = read_csv_lenient(paths["vsigma_market_results_labeled.csv"])
@@ -620,6 +667,13 @@ def build_system_review(
     executable = safe_int(parse_bullet_value(decision_md, "Executable picks", ""), int(decisions.get("decision_state", pd.Series("", index=decisions.index)).astype(str).eq("EXECUTABLE").sum()) if not decisions.empty else 0)
     waiting = safe_int(parse_bullet_value(decision_md, "Waiting picks", ""), int(decisions.get("decision_state", pd.Series("", index=decisions.index)).astype(str).eq("WAITING_FOR_PRELOCK_WINDOW").sum()) if not decisions.empty else 0)
     blocked = safe_int(parse_bullet_value(decision_md, "Blocked picks", ""), int(decisions.get("decision_state", pd.Series("", index=decisions.index)).astype(str).isin(["IN_WINDOW_BUT_BLOCKED", "PRELOCK_BLOCKED"]).sum()) if not decisions.empty else 0)
+    if not resolver_decisions.empty and "official_action" in resolver_decisions.columns:
+        candidate_rows = resolver_decisions.get("fixture_id", pd.Series("", index=resolver_decisions.index)).fillna("").astype(str).str.strip().ne("")
+        actions = resolver_decisions.get("official_action", pd.Series("", index=resolver_decisions.index)).astype(str).str.upper()
+        candidates = decision_candidate_count(resolver_decisions)
+        executable = int((candidate_rows & actions.eq("EXECUTABLE")).sum())
+        waiting = int((candidate_rows & actions.eq("WAIT")).sum())
+        blocked = int((candidate_rows & actions.isin(["NO_BET", "TECHNICAL_REVIEW"])).sum())
     health_status = parse_bullet_value(decision_md, "healthcheck_status", "UNKNOWN")
     ledger_total = int(len(ledger)) if not ledger.empty else 0
     ledger_target = int(len(target_date_rows(ledger, target_date))) if not ledger.empty else 0
@@ -661,6 +715,7 @@ def build_system_review(
         f"- Executable picks: {executable}",
         f"- Waiting picks: {waiting}",
         f"- Blocked picks: {blocked}",
+        f"- Official action summary: {official_action_summary(decisions)}",
         f"- Healthcheck status: {health_status}",
         f"- Ledger rows total: {ledger_total}",
         f"- Ledger rows for target date: {ledger_target}",
