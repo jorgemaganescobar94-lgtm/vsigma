@@ -16,7 +16,7 @@ _No rows._
 ## Waiting / Blocked Picks
 | fixture_id | league | home_team | away_team | market_primary | fixture_datetime | minutes_to_kickoff | decision_state | exclusion_reason | next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1392197 | Segunda División | Leganes | Huesca | OVER_1_5 | 2026-05-18T19:30+01:00 | -56.76 | PRELOCK_BLOCKED | PRELOCK_NOT_AVAILABLE | WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW |
+| 1392197 | Segunda División | Leganes | Huesca | OVER_1_5 | 2026-05-18T19:30+01:00 | -82.14 | PRELOCK_BLOCKED | PRELOCK_NOT_AVAILABLE | WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW |
 
 ## Technical Warnings
 - healthcheck_status: WARNING
