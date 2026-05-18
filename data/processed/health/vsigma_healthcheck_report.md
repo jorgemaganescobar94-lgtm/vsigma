@@ -1,19 +1,18 @@
 # vSIGMA Healthcheck Report - 2026-05-18
 
-- Global health status: BROKEN
-- Generated at: 2026-05-18T18:37:55.704217+01:00
+- Global health status: WARNING
+- Generated at: 2026-05-18T20:26:36.041083+01:00
 - Mode: full
-- HEALTHY: 33
+- HEALTHY: 34
 - WARNING: 2
 - NEEDS_ATTENTION: 0
-- BROKEN: 1
+- BROKEN: 0
 - NOT_RUN_YET: 1
-- First recovery command: `Create or repair .venv, then install project requirements.`
+- First recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-18 --timezone Atlantic/Canary --mode post`
 
 ## Critical Warnings
 | check_name | status | detail | recovery_command |
 | --- | --- | --- | --- |
-| venv_python_exists | BROKEN | .venv Python missing | Create or repair .venv, then install project requirements. |
 | post_results_status | WARNING | post has 4 pending row(s) | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-18 --timezone Atlantic/Canary --mode post |
 | recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-18 --timezone Atlantic/Canary --mode status |
 
@@ -21,7 +20,7 @@
 | check_name | status | detail | recovery_command | evidence_path |
 | --- | --- | --- | --- | --- |
 | project_root_exists | HEALTHY | project root present |  | /home/runner/work/vsigma/vsigma |
-| venv_python_exists | BROKEN | .venv Python missing | Create or repair .venv, then install project requirements. | /home/runner/work/vsigma/vsigma/.venv/Scripts/python.exe |
+| venv_python_exists | HEALTHY | cloud runner python active; local .venv not required: /opt/hostedtoolcache/Python/3.11.15/x64/bin/python |  | /opt/hostedtoolcache/Python/3.11.15/x64/bin/python |
 | data_raw_exists | HEALTHY | data/raw present | Create data\raw or run the raw data fetch pipeline. | /home/runner/work/vsigma/vsigma/data/raw |
 | data_processed_exists | HEALTHY | data/processed present | Create data\processed or run the PRE pipeline. | /home/runner/work/vsigma/vsigma/data/processed |
 | required_script:scripts/run_daily_competition_controller.py | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/scripts/run_daily_competition_controller.py |
@@ -50,7 +49,7 @@
 | ledger_duplicate_ids | HEALTHY | no duplicate ledger_id values for target date |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | freshness_report | HEALTHY | validation report present without ERROR |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-18/vsigma_daily_freshness_report.csv |
 | candidate_isolation_report | HEALTHY | validation report present without ERROR |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-18/vsigma_candidate_isolation_report.csv |
-| prelock_freshness | HEALTHY | fresh prelock rows present: 2 |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-18/vsigma_today_prelock_comparison.csv |
+| prelock_freshness | HEALTHY | fresh prelock rows present: 1 |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-18/vsigma_today_prelock_comparison.csv |
 | post_results_status | WARNING | post has 4 pending row(s) | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-18 --timezone Atlantic/Canary --mode post | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-18/today_post_results_report.csv |
 | supervisor_latest_report | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/data/processed/daily_supervisor_latest.md |
 | windows_task_registration | NOT_RUN_YET | task registration check unavailable outside Windows | powershell.exe -NoProfile -ExecutionPolicy Bypass -File /home/runner/work/vsigma/vsigma/scripts/register_vsigma_windows_tasks.ps1 |  |

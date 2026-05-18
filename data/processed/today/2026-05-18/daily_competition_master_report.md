@@ -168,9 +168,9 @@ _No rows._
 - Report path: NOT_AVAILABLE
 
 ## Healthcheck
-- Global health status: BROKEN
-- Critical warnings: venv_python_exists: BROKEN - .venv Python missing
-- Recovery command: `Create or repair .venv, then install project requirements.`
+- Global health status: WARNING
+- Critical warnings: post_results_status: WARNING - post has 4 pending row(s)
+- Recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-18 --timezone Atlantic/Canary --mode post`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-18/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
