@@ -12895,5 +12895,117 @@
       "played": 5
     }
   ],
-  "259|2026": []
+  "259|2026": [],
+  "208|2025": [
+    {
+      "league_id": 208,
+      "league_name": "Challenge League",
+      "season": 2025,
+      "team_id": 660,
+      "team_name": "FC Vaduz",
+      "rank": 1,
+      "points": 81,
+      "goals_diff": 34,
+      "played": 36
+    },
+    {
+      "league_id": 208,
+      "league_name": "Challenge League",
+      "season": 2025,
+      "team_id": 2177,
+      "team_name": "FC Aarau",
+      "rank": 2,
+      "points": 80,
+      "goals_diff": 30,
+      "played": 36
+    },
+    {
+      "league_id": 208,
+      "league_name": "Challenge League",
+      "season": 2025,
+      "team_id": 6653,
+      "team_name": "Yverdon Sport",
+      "rank": 3,
+      "points": 67,
+      "goals_diff": 27,
+      "played": 36
+    },
+    {
+      "league_id": 208,
+      "league_name": "Challenge League",
+      "season": 2025,
+      "team_id": 4269,
+      "team_name": "Stade Lausanne-Ouchy",
+      "rank": 4,
+      "points": 50,
+      "goals_diff": 8,
+      "played": 36
+    },
+    {
+      "league_id": 208,
+      "league_name": "Challenge League",
+      "season": 2025,
+      "team_id": 1015,
+      "team_name": "Neuchatel Xamax FC",
+      "rank": 5,
+      "points": 49,
+      "goals_diff": -1,
+      "played": 36
+    },
+    {
+      "league_id": 208,
+      "league_name": "Challenge League",
+      "season": 2025,
+      "team_id": 2185,
+      "team_name": "Rapperswil",
+      "rank": 6,
+      "points": 44,
+      "goals_diff": -10,
+      "played": 36
+    },
+    {
+      "league_id": 208,
+      "league_name": "Challenge League",
+      "season": 2025,
+      "team_id": 6654,
+      "team_name": "Étoile Carouge",
+      "rank": 7,
+      "points": 40,
+      "goals_diff": -8,
+      "played": 36
+    },
+    {
+      "league_id": 208,
+      "league_name": "Challenge League",
+      "season": 2025,
+      "team_id": 2179,
+      "team_name": "FC WIL 1900",
+      "rank": 8,
+      "points": 40,
+      "goals_diff": -16,
+      "played": 36
+    },
+    {
+      "league_id": 208,
+      "league_name": "Challenge League",
+      "season": 2025,
+      "team_id": 6646,
+      "team_name": "Stade Nyonnais",
+      "rank": 9,
+      "points": 28,
+      "goals_diff": -27,
+      "played": 36
+    },
+    {
+      "league_id": 208,
+      "league_name": "Challenge League",
+      "season": 2025,
+      "team_id": 6616,
+      "team_name": "Bellinzona",
+      "rank": 10,
+      "points": 23,
+      "goals_diff": -37,
+      "played": 36
+    }
+  ]
 }
