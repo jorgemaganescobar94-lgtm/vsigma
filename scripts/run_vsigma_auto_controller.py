@@ -729,6 +729,13 @@ def run_auto_controller(target_date: str, timezone_name: str, window_minutes: in
         technical_warnings,
         past_target_date,
     )
+    system_review = run_step(
+        "scripts/build_vsigma_system_review.py",
+        ["--date", target_date, "--timezone", timezone_name, "--processed-dir", str(processed_dir)],
+        allow_failure=True,
+    )
+    if not system_review.ok:
+        print(f"WARNING: system review failed but AUTO will continue: {system_review.error}", flush=True)
     return AutoRunResult(pre_refreshed, refresh_reasons, paths, summary, technical_warnings)
 
 
