@@ -4,6 +4,7 @@ import argparse
 import os
 import shutil
 import subprocess
+import sys
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -339,6 +340,46 @@ def disk_space_check(root: Path) -> HealthCheck:
     return HealthCheck("disk_space", "HEALTHY", f"free disk space acceptable: {free_gb:.2f} GB")
 
 
+def venv_python_check(root: Path) -> HealthCheck:
+    venv_python = root / ".venv" / "Scripts" / "python.exe"
+    is_github_actions = os.getenv("GITHUB_ACTIONS", "").lower() == "true"
+    if not is_github_actions:
+        return HealthCheck(
+            "venv_python_exists",
+            "HEALTHY" if venv_python.exists() else "BROKEN",
+            ".venv Python present" if venv_python.exists() else ".venv Python missing",
+            "Create or repair .venv, then install project requirements.",
+            str(venv_python),
+        )
+
+    active_python = Path(sys.executable) if sys.executable else Path()
+    if not sys.executable or not active_python.exists():
+        return HealthCheck(
+            "venv_python_exists",
+            "WARNING",
+            f"cloud runner python active; local .venv not required, but sys.executable is not a valid path: {sys.executable or '<empty>'}",
+            evidence_path=sys.executable,
+        )
+    completed = subprocess.run(
+        [sys.executable, "-c", "import sys; raise SystemExit(0 if sys.executable else 1)"],
+        cwd=root,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if completed.returncode != 0:
+        detail = "cloud runner python active; local .venv not required, but active Python self-check failed"
+        if completed.stderr.strip():
+            detail += f": {completed.stderr.strip()}"
+        return HealthCheck("venv_python_exists", "WARNING", detail, evidence_path=str(active_python))
+    return HealthCheck(
+        "venv_python_exists",
+        "HEALTHY",
+        f"cloud runner python active; local .venv not required: {active_python}",
+        evidence_path=str(active_python),
+    )
+
+
 def global_status(checks: list[HealthCheck]) -> str:
     if not checks:
         return "BROKEN"
@@ -421,17 +462,10 @@ def run_healthcheck(
     generated_at = now_local(timezone_name).isoformat()
     snap = snapshot_dir(processed_dir, target_date)
     raw_dir = root / "data" / "raw"
-    venv_python = root / ".venv" / "Scripts" / "python.exe"
 
     checks: list[HealthCheck] = [
         HealthCheck("project_root_exists", "HEALTHY" if root.exists() else "BROKEN", "project root present" if root.exists() else "project root missing", evidence_path=str(root)),
-        HealthCheck(
-            "venv_python_exists",
-            "HEALTHY" if venv_python.exists() else "BROKEN",
-            ".venv Python present" if venv_python.exists() else ".venv Python missing",
-            "Create or repair .venv, then install project requirements.",
-            str(venv_python),
-        ),
+        venv_python_check(root),
         HealthCheck("data_raw_exists", "HEALTHY" if raw_dir.exists() else "WARNING", "data/raw present" if raw_dir.exists() else "data/raw missing", "Create data\\raw or run the raw data fetch pipeline.", str(raw_dir)),
         HealthCheck("data_processed_exists", "HEALTHY" if processed_dir.exists() else "BROKEN", "data/processed present" if processed_dir.exists() else "data/processed missing", "Create data\\processed or run the PRE pipeline.", str(processed_dir)),
     ]
