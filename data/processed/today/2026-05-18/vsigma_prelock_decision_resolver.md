@@ -12,7 +12,7 @@
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Leganes vs Huesca | OVER_1_5 | 2026-05-18T19:30+01:00 | -120.25 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
+| Leganes vs Huesca | OVER_1_5 | 2026-05-18T19:30+01:00 | -140.55 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
 
 ## Data Gaps
 - odds missing: 0
