@@ -40,6 +40,10 @@ class VsigmaAutoControllerSummaryTests(unittest.TestCase):
             module.map_decision_state("", technical_warning=True),
             "TECHNICAL_WARNING",
         )
+        self.assertEqual(
+            module.map_decision_state("PRELOCK_NOT_AVAILABLE"),
+            "PRELOCK_BLOCKED",
+        )
 
     def test_summary_handles_empty_csvs_with_headers(self) -> None:
         module = importlib.import_module("scripts.run_vsigma_auto_controller")
@@ -167,6 +171,140 @@ class VsigmaAutoControllerSummaryTests(unittest.TestCase):
             self.assertTrue(result.technical_warnings.pre_refresh_attempted)
             self.assertTrue(result.technical_warnings.pre_refresh_failed)
             self.assertEqual(result.summary["decision_state"].tolist(), ["TECHNICAL_WARNING"])
+
+    def test_prelock_not_available_maps_to_prelock_blocked(self) -> None:
+        module = importlib.import_module("scripts.run_vsigma_auto_controller")
+        self.assertEqual(module.map_decision_state("PRELOCK_NOT_AVAILABLE"), "PRELOCK_BLOCKED")
+        self.assertEqual(
+            module.next_action_for("PRELOCK_BLOCKED", "CHECK_PRELOCK_OUTPUTS"),
+            "WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW",
+        )
+
+    def test_cloud_venv_healthcheck_broken_is_not_fatal(self) -> None:
+        module = importlib.import_module("scripts.run_vsigma_auto_controller")
+        target_date = "2026-05-18"
+        with tempfile.TemporaryDirectory() as tmp:
+            processed_dir = Path(tmp) / "data" / "processed"
+            health_dir = processed_dir / "health"
+            today_dir = processed_dir / "today" / target_date
+            health_dir.mkdir(parents=True)
+            today_dir.mkdir(parents=True)
+            pd.DataFrame(
+                [
+                    {
+                        "target_date": target_date,
+                        "global_health_status": "BROKEN",
+                        "check_name": "venv_python_exists",
+                        "status": "BROKEN",
+                        "detail": "cloud runner python active; local .venv not required",
+                        "recovery_command": "",
+                        "evidence_path": "/opt/hostedtoolcache/Python/python",
+                    }
+                ]
+            ).to_csv(health_dir / "vsigma_healthcheck_summary.csv", index=False)
+            pd.DataFrame(
+                [
+                    {
+                        "target_date": target_date,
+                        "fixture_id": "123",
+                        "league": "Test League",
+                        "home_team": "Leganes",
+                        "away_team": "Huesca",
+                        "market_primary": "OVER_1_5",
+                    }
+                ]
+            ).to_csv(today_dir / "vsigma_today_competition_top.csv", index=False)
+            pd.DataFrame(
+                [
+                    {
+                        "target_date": target_date,
+                        "fixture_id": "123",
+                        "market_primary": "OVER_1_5",
+                        "exclusion_reason": "PRELOCK_NOT_AVAILABLE",
+                        "next_action": "CHECK_PRELOCK_OUTPUTS",
+                    }
+                ]
+            ).to_csv(today_dir / "vsigma_prelock_exclusion_audit.csv", index=False)
+
+            status = module.read_healthcheck_status(processed_dir, target_date, "BROKEN")
+            summary, _paths = module.build_decision_summary(
+                processed_dir=processed_dir,
+                target_date=target_date,
+                technical_warnings=module.TechnicalWarnings(healthcheck_status=status),
+            )
+
+            self.assertEqual(status, "WARNING")
+            self.assertNotEqual(module.overall_auto_status(summary), "TECHNICAL_WARNING")
+            self.assertEqual(summary["decision_state"].tolist(), ["PRELOCK_BLOCKED"])
+
+    def test_real_broken_healthcheck_is_technical_warning(self) -> None:
+        module = importlib.import_module("scripts.run_vsigma_auto_controller")
+        target_date = "2026-05-18"
+        with tempfile.TemporaryDirectory() as tmp:
+            processed_dir = Path(tmp) / "data" / "processed"
+            today_dir = processed_dir / "today" / target_date
+            today_dir.mkdir(parents=True)
+            pd.DataFrame(
+                [
+                    {
+                        "target_date": target_date,
+                        "fixture_id": "123",
+                        "league": "Test League",
+                        "home_team": "Leganes",
+                        "away_team": "Huesca",
+                        "market_primary": "OVER_1_5",
+                    }
+                ]
+            ).to_csv(today_dir / "vsigma_today_competition_top.csv", index=False)
+
+            summary, _paths = module.build_decision_summary(
+                processed_dir=processed_dir,
+                target_date=target_date,
+                technical_warnings=module.TechnicalWarnings(healthcheck_status="BROKEN"),
+            )
+
+            self.assertEqual(summary["decision_state"].tolist(), ["TECHNICAL_WARNING"])
+            self.assertEqual(module.overall_auto_status(summary), "TECHNICAL_WARNING")
+
+    def test_candidate_blocked_by_prelock_not_available_has_nontechnical_status(self) -> None:
+        module = importlib.import_module("scripts.run_vsigma_auto_controller")
+        target_date = "2026-05-18"
+        with tempfile.TemporaryDirectory() as tmp:
+            processed_dir = Path(tmp) / "data" / "processed"
+            today_dir = processed_dir / "today" / target_date
+            today_dir.mkdir(parents=True)
+            pd.DataFrame(
+                [
+                    {
+                        "target_date": target_date,
+                        "fixture_id": "456",
+                        "league": "Segunda",
+                        "home_team": "Leganes",
+                        "away_team": "Huesca",
+                        "market_primary": "OVER_1_5",
+                    }
+                ]
+            ).to_csv(today_dir / "vsigma_today_competition_top.csv", index=False)
+            pd.DataFrame(
+                [
+                    {
+                        "target_date": target_date,
+                        "fixture_id": "456",
+                        "market_primary": "OVER_1_5",
+                        "exclusion_reason": "PRELOCK_NOT_AVAILABLE",
+                    }
+                ]
+            ).to_csv(today_dir / "vsigma_prelock_exclusion_audit.csv", index=False)
+
+            summary, paths = module.build_decision_summary(
+                processed_dir=processed_dir,
+                target_date=target_date,
+            )
+
+            self.assertEqual(summary["decision_state"].tolist(), ["PRELOCK_BLOCKED"])
+            self.assertEqual(summary["next_action"].tolist(), ["WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW"])
+            self.assertIn(module.overall_auto_status(summary), {"NO_EXECUTABLE_PICK", "WAITING_OR_BLOCKED"})
+            self.assertIn("- Auto status: WAITING_OR_BLOCKED", paths["summary_md"].read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

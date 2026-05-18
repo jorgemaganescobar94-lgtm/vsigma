@@ -64,6 +64,7 @@ SUMMARY_COLUMNS = [
 ]
 
 BLOCKING_PRELOCK_DECISIONS = {"PRELOCK_REMOVED", "PRELOCK_DOWNGRADED", "PRELOCK_NOT_AVAILABLE"}
+CLOUD_RUNNER_PYTHON_MARKERS = ("cloud runner python active", "local .venv not required")
 
 
 @dataclass(frozen=True)
@@ -248,7 +249,29 @@ def read_healthcheck_status(processed_dir: Path, target_date: str, fallback: str
     rows = fresh_rows(summary, target_date)
     source = rows if not rows.empty else summary
     status = norm_upper(source.iloc[0].get("global_health_status"))
+    if status == "BROKEN" and is_nonfatal_cloud_venv_healthcheck(source, processed_dir):
+        return "WARNING"
     return status or fallback
+
+
+def is_nonfatal_cloud_venv_healthcheck(summary: pd.DataFrame, processed_dir: Path) -> bool:
+    if summary.empty:
+        return False
+    status = summary.get("status", pd.Series("", index=summary.index)).astype(str).str.upper()
+    broken = summary[status.eq("BROKEN")].copy()
+    if broken.empty:
+        return False
+    check_names = broken.get("check_name", pd.Series("", index=broken.index)).astype(str)
+    if not check_names.eq("venv_python_exists").all():
+        return False
+    detail_text = " ".join(
+        broken.get(column, pd.Series("", index=broken.index)).fillna("").astype(str).str.lower().str.cat(sep=" ")
+        for column in ["detail", "recovery_command", "evidence_path"]
+        if column in broken.columns
+    )
+    report_text = read_text_optional(processed_dir / "health" / "vsigma_healthcheck_report.md").lower()
+    combined = f"{detail_text} {report_text}"
+    return any(marker in combined for marker in CLOUD_RUNNER_PYTHON_MARKERS)
 
 
 def detect_pre_refresh_needed(processed_dir: Path, target_date: str) -> list[str]:
@@ -347,9 +370,11 @@ def map_decision_state(
         return "DATA_PROBLEM"
     if exclusion == "KICKOFF_ALREADY_PASSED":
         return "POST_PENDING"
+    if exclusion == "PRELOCK_NOT_AVAILABLE" or decision == "PRELOCK_NOT_AVAILABLE":
+        return "PRELOCK_BLOCKED"
     if retained:
         return "IN_WINDOW_BUT_BLOCKED"
-    return "PRELOCK_NOT_AVAILABLE"
+    return "PRELOCK_BLOCKED"
 
 
 def decision_reason_for(state: str, exclusion_reason: str, prelock_decision: str) -> str:
@@ -361,6 +386,8 @@ def decision_reason_for(state: str, exclusion_reason: str, prelock_decision: str
         if prelock_decision:
             return f"Prelock decision blocks execution: {prelock_decision}."
         return "Candidate is in the prelock window but was not retained by PRELOCK."
+    if state == "PRELOCK_BLOCKED":
+        return "PRELOCK was not available for this candidate; execution waits for the next AUTO PRELOCK cycle or no-bet review."
     if state == "DATA_PROBLEM":
         return "Kickoff datetime is missing or unusable."
     if state == "POST_PENDING":
@@ -389,6 +416,8 @@ def next_action_for(state: str, audit_action: str) -> str:
         return "RUN_POST_WHEN_RESULTS_AVAILABLE"
     if state == "PAST_DATE_NO_PRE_REFRESH":
         return "NO_PRE_REFRESH_FOR_PAST_DATE"
+    if state == "PRELOCK_BLOCKED":
+        return "WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW"
     if audit_action:
         return audit_action
     return {
@@ -396,7 +425,7 @@ def next_action_for(state: str, audit_action: str) -> str:
         "IN_WINDOW_BUT_BLOCKED": "DO_NOT_EXECUTE_REVIEW_BLOCK_REASON",
         "DATA_PROBLEM": "FIX_FIXTURE_TIME_FIELDS",
         "POST_PENDING": "RUN_POST_WHEN_RESULTS_AVAILABLE",
-        "PRELOCK_NOT_AVAILABLE": "CHECK_PRELOCK_OUTPUTS",
+        "PRELOCK_BLOCKED": "WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW",
     }.get(state, "CHECK_PRELOCK_OUTPUTS")
 
 
@@ -510,9 +539,9 @@ def build_decision_summary(
 
     executable = summary[summary["decision_state"].eq("EXECUTABLE")]
     waiting = summary[summary["decision_state"].eq("WAITING_FOR_PRELOCK_WINDOW")]
-    blocked = summary[summary["decision_state"].eq("IN_WINDOW_BUT_BLOCKED")]
+    blocked = summary[summary["decision_state"].isin(["IN_WINDOW_BUT_BLOCKED", "PRELOCK_BLOCKED"])]
     data_problem = summary[summary["decision_state"].eq("DATA_PROBLEM")]
-    prelock_unavailable = summary[summary["decision_state"].eq("PRELOCK_NOT_AVAILABLE")]
+    prelock_unavailable = summary[summary["decision_state"].eq("PRELOCK_BLOCKED")]
     no_candidate_states = {"NO_BET", "PAST_DATE_NO_PRE_REFRESH"}
     candidate_count = 0 if set(summary["decision_state"].astype(str)).issubset(no_candidate_states) else len(summary)
     next_auto = automatic_next_action(summary)
@@ -525,7 +554,7 @@ def build_decision_summary(
                 "IN_WINDOW_BUT_BLOCKED",
                 "DATA_PROBLEM",
                 "POST_PENDING",
-                "PRELOCK_NOT_AVAILABLE",
+                "PRELOCK_BLOCKED",
                 "TECHNICAL_WARNING",
                 "POST_ONLY",
                 "PAST_DATE_NO_PRE_REFRESH",
@@ -594,13 +623,11 @@ def overall_auto_status(summary: pd.DataFrame) -> str:
         return "EXECUTABLE"
     if summary["decision_state"].eq("DATA_PROBLEM").any():
         return "DATA_PROBLEM"
-    if summary["decision_state"].eq("IN_WINDOW_BUT_BLOCKED").any():
-        return "BLOCKED"
-    if summary["decision_state"].eq("WAITING_FOR_PRELOCK_WINDOW").any():
-        return "WAITING_FOR_PRELOCK_WINDOW"
+    if summary["decision_state"].isin(["IN_WINDOW_BUT_BLOCKED", "PRELOCK_BLOCKED", "WAITING_FOR_PRELOCK_WINDOW"]).any():
+        return "WAITING_OR_BLOCKED"
     if summary["decision_state"].eq("POST_PENDING").any():
         return "POST_PENDING"
-    return "PRELOCK_NOT_AVAILABLE"
+    return "NO_EXECUTABLE_PICK"
 
 
 def automatic_next_action(summary: pd.DataFrame) -> str:
@@ -612,10 +639,9 @@ def automatic_next_action(summary: pd.DataFrame) -> str:
         "PAST_DATE_NO_PRE_REFRESH": "NO_PRE_REFRESH_FOR_PAST_DATE",
         "EXECUTABLE": "EXECUTE_GOVERNED_PICK",
         "DATA_PROBLEM": "FIX_DATA_PROBLEMS",
-        "BLOCKED": "NO_EXECUTION_REVIEW_BLOCKS",
-        "WAITING_FOR_PRELOCK_WINDOW": "WAIT_FOR_NEXT_PRELOCK_WINDOW",
+        "WAITING_OR_BLOCKED": "WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW",
         "POST_PENDING": "RUN_POST_WHEN_RESULTS_AVAILABLE",
-        "PRELOCK_NOT_AVAILABLE": "CHECK_PRELOCK_OUTPUTS",
+        "NO_EXECUTABLE_PICK": "WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW",
     }.get(status, "CHECK_PRELOCK_OUTPUTS")
 
 
@@ -635,7 +661,12 @@ def run_auto_controller(target_date: str, timezone_name: str, window_minutes: in
         "OK" if healthcheck.ok else "BROKEN",
     )
     if not healthcheck.ok:
-        healthcheck_status = "BROKEN"
+        health_summary = read_csv_lenient(processed_dir / "health" / "vsigma_healthcheck_summary.csv")
+        health_source = fresh_rows(health_summary, target_date)
+        if health_source.empty:
+            health_source = health_summary
+        if not is_nonfatal_cloud_venv_healthcheck(health_source, processed_dir):
+            healthcheck_status = "BROKEN"
 
     try:
         refresh_reasons = detect_pre_refresh_needed(processed_dir, target_date)
@@ -723,7 +754,7 @@ def main() -> None:
     candidates = 0 if set(summary["decision_state"].astype(str)).issubset(no_candidate_states) else len(summary)
     executable = int(summary["decision_state"].eq("EXECUTABLE").sum())
     waiting = int(summary["decision_state"].eq("WAITING_FOR_PRELOCK_WINDOW").sum())
-    blocked = int(summary["decision_state"].eq("IN_WINDOW_BUT_BLOCKED").sum())
+    blocked = int(summary["decision_state"].isin(["IN_WINDOW_BUT_BLOCKED", "PRELOCK_BLOCKED"]).sum())
     data_problem = int(summary["decision_state"].eq("DATA_PROBLEM").sum())
 
     print("\n=== VSIGMA AUTO CONTROLLER ===")
