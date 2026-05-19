@@ -5,11 +5,11 @@
 - PRE refreshed: NO
 - Candidates reviewed: 1
 - Executable picks: 0
-- Waiting picks: 1
-- Blocked picks: 0
+- Waiting picks: 0
+- Blocked picks: 1
 - Data problem picks: 0
 - Next automatic action: WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW
-- OFFICIAL_ACTION_SUMMARY: WAIT
+- OFFICIAL_ACTION_SUMMARY: NO_BET
 
 ## Executable Picks
 _No rows._
@@ -17,7 +17,7 @@ _No rows._
 ## Waiting / Blocked Picks
 | fixture_id | league | home_team | away_team | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | retry_allowed | next_retry_time | decision_state | exclusion_reason | next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1535300 | CONMEBOL Libertadores | Coquimbo Unido | Deportes Tolima | OVER_1_5 | 2026-05-19T23:00+01:00 | 101.91 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | YES | 2026-05-19T22:00+01:00 | WAITING_FOR_PRELOCK_WINDOW | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-05-19T22:00+01:00 |
+| 1535300 | CONMEBOL Libertadores | Coquimbo Unido | Deportes Tolima | OVER_1_5 | 2026-05-19T23:00+01:00 | 88.03 | NO_BET | NO | PRELOCK_GOVERNANCE_NOT_RETAINED | YES | 2026-05-19T22:00+01:00 | IN_WINDOW_BUT_BLOCKED | IN_WINDOW_BUT_NOT_RETAINED | CHECK_ODDS_LINEUPS_AVAILABILITY_OR_V7_GOVERNANCE |
 
 ## Technical Warnings
 - healthcheck_status: WARNING

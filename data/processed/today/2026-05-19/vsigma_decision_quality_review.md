@@ -1,20 +1,20 @@
 # vSIGMA Decision Quality Review - 2026-05-19
 
 ## Executive Summary
-- generated_at: 2026-05-19T21:18:06+01:00
+- generated_at: 2026-05-19T21:31:59+01:00
 - daily_classification: WAITING_FOR_PRELOCK
 - no_bet_classification: NO_BET_VALID
 - operational_verdict: WAITING_FOR_PRELOCK
 - predictive_failure: NO
-- rows reviewed: 2
+- rows reviewed: 3
 - actionable rows: 0
-- non-actionable rows: 2
+- non-actionable rows: 3
 - resolved rows: 0
-- unresolved rows: 2
+- unresolved rows: 3
 - good decisions: 0
 - bad decisions: 0
-- neutral/unresolved: 2
-- top improvement signal: WAIT_FOR_POST_RESULTS (2)
+- neutral/unresolved: 3
+- top improvement signal: WAIT_FOR_POST_RESULTS (3)
 - current recommendation: Do not recalibrate; collect more labeled outcomes.
 - operational note: At least one candidate is waiting for the configured PRELOCK window or retry slot.
 
@@ -29,6 +29,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Monza vs Juve Stabia | OVER_1_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
 | Coquimbo Unido vs Deportes Tolima | OVER_1_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
+| Coquimbo Unido vs Deportes Tolima | OVER_1_5 | NO_BET | PRELOCK_GOVERNANCE_NOT_RETAINED | UNRESOLVED | NO_BET_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
 
 ## Block Quality Review
 - NO_BET_MISSED_WIN count: 0
@@ -42,13 +43,13 @@
 ## Market Quality Review
 | market_primary | rows | wins | losses | no_bet_missed_win | no_bet_correct_avoided_loss | unresolved | recommendation |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | 2 | 0 | 0 | 0 | 0 | 2 | WAIT_FOR_POST_RESULTS |
+| OVER_1_5 | 3 | 0 | 0 | 0 | 0 | 3 | WAIT_FOR_POST_RESULTS |
 
 ## System Recommendations
 | priority | category | title | reason | apply_now |
 | --- | --- | --- | --- | --- |
 | P3 | sample | Do not recalibrate from quality sample yet | resolved_rows=0 is below minimum 30. | NO |
-| P3 | post_results | Wait for POST results or improve labeling | unresolved_rows=2; resolved_rows=0. | NO |
+| P3 | post_results | Wait for POST results or improve labeling | unresolved_rows=3; resolved_rows=0. | NO |
 
 ## Guardrails
 - automatic scoring changes applied: NO
