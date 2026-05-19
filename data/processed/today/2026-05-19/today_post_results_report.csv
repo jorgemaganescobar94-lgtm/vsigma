@@ -1,0 +1,2 @@
+date,timezone,shortlist_rows,shortlist_bet_rows,ledger_rows,result_available_rows,pending_rows,unmatched_rows,win_rows,loss_rows,push_rows,void_rows,profit_units_total,roi_percent,snapshot_dir,run_finished_at
+2026-05-19,Atlantic/Canary,4,4,4,0,4,0,0,0,0,0,0.0,,/home/runner/work/vsigma/vsigma/data/processed/today/2026-05-19,2026-05-19T10:50:40.560016+00:00
