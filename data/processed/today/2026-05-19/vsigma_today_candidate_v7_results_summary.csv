@@ -1,0 +1,2 @@
+mode,pick_count,settled_rows,pending_rows,unmatched_rows,wins,losses,pushes,voids,profit_units,roi_percent,target_date,generated_at,pipeline_mode,candidate_version,source_file_date_check,run_id
+SHADOW_CANDIDATE_V7_PRICE_DISCIPLINE_CLV_DRIFT_GUARD,0,0,0,0,0,0,0,0,0.0,,2026-05-19,2026-05-19T10:50:44+00:00,POST,CANDIDATE_V7_RESULTS,NO_DATE_COLUMN,2026-05-19-20260519T105044Z
