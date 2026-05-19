@@ -1,19 +1,18 @@
 # vSIGMA PRELOCK Decision Resolver - 2026-05-19
 
 ## Summary
-- Candidates reviewed: 2
+- Candidates reviewed: 1
 - Executable now: 0
-- Waiting: 2
+- Waiting: 1
 - No bet: 0
 - Technical review: 0
-- Next automatic retry: 2026-05-19T18:00+01:00
+- Next automatic retry: 2026-05-19T22:00+01:00
 - OFFICIAL_ACTION_SUMMARY: WAIT
 
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Monza vs Juve Stabia | OVER_1_5 | 2026-05-19T19:00+01:00 | 429.96 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | 2026-05-19T18:00+01:00 |
-| Coquimbo Unido vs Deportes Tolima | OVER_1_5 | 2026-05-19T23:00+01:00 | 669.96 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | 2026-05-19T22:00+01:00 |
+| Coquimbo Unido vs Deportes Tolima | OVER_1_5 | 2026-05-19T23:00+01:00 | 218.9 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | 2026-05-19T22:00+01:00 |
 
 ## Data Gaps
 - odds missing: 0

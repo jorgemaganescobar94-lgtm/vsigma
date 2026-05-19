@@ -7,7 +7,6 @@ country                league  season league_coverage_class  league_data_reliabi
 Belgium    Jupiler Pro League    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
 England        Premier League    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
  France               Ligue 2    2025         COVERAGE_RICH                           0.95                                  1                         0                             1                            1                  OFFICIAL_API
-  Italy               Serie B    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
   World CONMEBOL Libertadores    2026         COVERAGE_RICH                           0.95                                  1                         1                             0                            1                  OFFICIAL_API
   World CONMEBOL Sudamericana    2026         COVERAGE_RICH                           0.95                                  1                         1                             0                            1                  OFFICIAL_API
 

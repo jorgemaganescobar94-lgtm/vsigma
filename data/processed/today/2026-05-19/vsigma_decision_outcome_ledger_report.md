@@ -3,7 +3,7 @@
 ## Summary
 - Rows total: 3
 - Rows for target date: 2
-- Rows updated this run: 2
+- Rows updated this run: 1
 - Actionable rows: 0
 - Non-actionable rows: 2
 - Expired rows: 0
