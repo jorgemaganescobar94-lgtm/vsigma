@@ -17,5 +17,5 @@ NOT_APPLIED    2
 
 Candidate v6 Top
  accuracy_mode_rank  fixture_id                league      home_team       away_team market_primary  competition_calibrated_prob  accuracy_confidence_score api_prediction_alignment_flag api_prediction_benchmark_action
-                  1     1544951               Serie B          Monza     Juve Stabia       OVER_1_5                      0.77606                    149.854                       NEUTRAL                     NOT_APPLIED
-                  2     1535300 CONMEBOL Libertadores Coquimbo Unido Deportes Tolima       OVER_1_5                      0.78710                    119.377                       NEUTRAL                     NOT_APPLIED
+                  1     1544951               Serie B          Monza     Juve Stabia       OVER_1_5                      0.78076                    154.306                       NEUTRAL                     NOT_APPLIED
+                  2     1535300 CONMEBOL Libertadores Coquimbo Unido Deportes Tolima       OVER_1_5                      0.78710                    120.061                       NEUTRAL                     NOT_APPLIED

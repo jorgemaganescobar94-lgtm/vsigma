@@ -1,9 +1,7 @@
 league_id,league,country,season,league_type,coverage_season_current,coverage_season_start,coverage_season_end,league_has_fixtures_coverage,league_has_standings_coverage,league_has_odds_coverage,league_has_events_coverage,league_has_lineups_coverage,league_has_fixture_stats_coverage,league_has_player_stats_coverage,league_has_players_coverage,league_has_injuries_coverage,league_has_predictions_coverage,league_has_top_scorers_coverage,league_has_top_assists_coverage,league_has_top_cards_coverage,league_coverage_class,league_coverage_rich_flag,league_data_reliability_score,league_coverage_source_status,league_coverage_note,coverage_matrix_generated_at_utc
-11,CONMEBOL Sudamericana,World,2026,Cup,1,2026-03-03,2026-05-29,1,1,1,1,1,1,1,1,0,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-19T10:48:00.447581+00:00
-13,CONMEBOL Libertadores,World,2026,Cup,1,2026-02-04,2026-05-29,1,1,1,1,1,1,1,1,0,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-19T10:48:00.812874+00:00
-39,Premier League,England,2025,League,1,2025-08-15,2026-05-24,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-19T10:48:01.214841+00:00
-62,Ligue 2,France,2025,League,1,2025-08-09,2026-05-24,1,1,0,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-19T10:48:01.613023+00:00
-136,Serie B,Italy,2025,League,1,2025-08-22,2026-05-22,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-19T10:48:02.011187+00:00
-144,Jupiler Pro League,Belgium,2025,League,1,2025-07-25,2026-05-24,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-19T10:48:02.406803+00:00
-218,Bundesliga,Austria,2025,League,1,2025-08-01,2026-05-19,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-19T10:48:02.827232+00:00
-382,Liga Leumit,Israel,2025,League,1,2025-08-24,2026-05-25,1,1,1,1,1,0,0,1,0,1,1,1,1,COVERAGE_PARTIAL,0,0.7,OFFICIAL_API,,2026-05-19T10:48:03.207013+00:00
+11,CONMEBOL Sudamericana,World,2026,Cup,1,2026-03-03,2026-05-29,1,1,1,1,1,1,1,1,0,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-19T17:42:12.483130+00:00
+13,CONMEBOL Libertadores,World,2026,Cup,1,2026-02-04,2026-05-29,1,1,1,1,1,1,1,1,0,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-19T17:42:12.874371+00:00
+39,Premier League,England,2025,League,1,2025-08-15,2026-05-24,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-19T17:42:13.277145+00:00
+62,Ligue 2,France,2025,League,1,2025-08-09,2026-05-24,1,1,0,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-19T17:42:13.678088+00:00
+136,Serie B,Italy,2025,League,1,2025-08-22,2026-05-22,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-19T17:42:14.077215+00:00
+144,Jupiler Pro League,Belgium,2025,League,1,2025-07-25,2026-05-24,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-19T17:42:14.473299+00:00

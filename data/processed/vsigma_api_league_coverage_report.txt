@@ -4,7 +4,6 @@ Source: official API-Football /leagues coverage metadata. Historical runs use cu
 
 Data-rich / good leagues:
 country                league  season league_coverage_class  league_data_reliability_score  league_has_fixture_stats_coverage  league_has_odds_coverage  league_has_injuries_coverage  league_has_lineups_coverage league_coverage_source_status
-Austria            Bundesliga    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
 Belgium    Jupiler Pro League    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
 England        Premier League    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
  France               Ligue 2    2025         COVERAGE_RICH                           0.95                                  1                         0                             1                            1                  OFFICIAL_API
@@ -13,8 +12,7 @@ England        Premier League    2025         COVERAGE_RICH                     
   World CONMEBOL Sudamericana    2026         COVERAGE_RICH                           0.95                                  1                         1                             0                            1                  OFFICIAL_API
 
 Partial leagues:
-country      league  season league_coverage_class  league_data_reliability_score  league_has_fixture_stats_coverage  league_has_odds_coverage  league_has_injuries_coverage  league_has_lineups_coverage league_coverage_source_status
- Israel Liga Leumit    2025      COVERAGE_PARTIAL                            0.7                                  0                         1                             0                            1                  OFFICIAL_API
+None
 
 Thin / minimal leagues:
 None

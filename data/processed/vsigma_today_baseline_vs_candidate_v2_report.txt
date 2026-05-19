@@ -11,8 +11,8 @@ Only candidate chose: 0
 
 Side-by-side picks
 comparison_status                           fixture  baseline_rank  candidate_v2_rank baseline_market candidate_v2_market  baseline_calibrated_prob  candidate_v2_calibrated_prob  baseline_confidence_score  candidate_v2_confidence_score
-             BOTH Coquimbo Unido vs Deportes Tolima              2                  2        OVER_1_5            OVER_1_5                   0.78400                       0.78710                    118.597                        119.377
-             BOTH              Monza vs Juve Stabia              1                  1        OVER_1_5            OVER_1_5                   0.77956                       0.77606                    153.514                        149.854
+             BOTH Coquimbo Unido vs Deportes Tolima              2                  2        OVER_1_5            OVER_1_5                   0.78400                       0.78710                    119.281                        120.061
+             BOTH              Monza vs Juve Stabia              1                  1        OVER_1_5            OVER_1_5                   0.78646                       0.78076                    155.296                        154.306
 
 Reason differences
 All compared picks overlap. Review probability/confidence deltas in the CSV.
