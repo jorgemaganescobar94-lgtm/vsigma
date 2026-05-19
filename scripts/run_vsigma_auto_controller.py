@@ -860,6 +860,13 @@ def run_auto_controller(target_date: str, timezone_name: str, window_minutes: in
     )
     if not system_review.ok:
         print(f"WARNING: system review failed but AUTO will continue: {system_review.error}", flush=True)
+    audit_bundle = run_step(
+        "scripts/materialize_daily_audit_bundle.py",
+        ["--date", target_date, "--processed-dir", str(processed_dir)],
+        allow_failure=True,
+    )
+    if not audit_bundle.ok:
+        print(f"WARNING: daily audit bundle materialization failed but AUTO will continue: {audit_bundle.error}", flush=True)
     return AutoRunResult(pre_refreshed, refresh_reasons, paths, summary, technical_warnings)
 
 
