@@ -1,4 +1,4 @@
-﻿name: vSIGMA Production
+name: vSIGMA Production
 
 on:
   workflow_dispatch:
@@ -170,6 +170,25 @@ jobs:
           else
             python scripts/build_prelock_exclusion_audit.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
           fi
+
+
+      - name: Upload daily audit artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vsigma-${{ env.VSIGMA_MODE }}-${{ env.VSIGMA_DATE }}-${{ github.run_id }}
+          if-no-files-found: warn
+          retention-days: 14
+          path: |
+            data/processed/today/${{ env.VSIGMA_DATE }}/
+            data/processed/snapshots/${{ env.VSIGMA_DATE }}/
+            data/processed/vsigma_daily_competition_master_report.*
+            data/processed/vsigma_prelock_exclusion_audit.*
+            data/processed/vsigma_prelock_decision_resolver.*
+            data/processed/vsigma_decision_outcome_ledger.*
+            data/processed/vsigma_clv_calibration_report.*
+            notes/
+            outputs/
 
       - name: Commit vSIGMA outputs
         shell: bash
