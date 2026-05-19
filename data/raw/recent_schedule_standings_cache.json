@@ -13007,5 +13007,194 @@
       "goals_diff": -37,
       "played": 36
     }
+  ],
+  "63|2025": [
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 89,
+      "team_name": "Dijon",
+      "rank": 1,
+      "points": 65,
+      "goals_diff": 27,
+      "played": 32
+    },
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 115,
+      "team_name": "Sochaux",
+      "rank": 2,
+      "points": 58,
+      "goals_diff": 25,
+      "played": 32
+    },
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 3221,
+      "team_name": "Rouen",
+      "rank": 3,
+      "points": 55,
+      "goals_diff": 14,
+      "played": 32
+    },
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 3179,
+      "team_name": "Fleury 91",
+      "rank": 4,
+      "points": 54,
+      "goals_diff": 17,
+      "played": 32
+    },
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 3131,
+      "team_name": "Versailles",
+      "rank": 5,
+      "points": 53,
+      "goals_diff": 12,
+      "played": 32
+    },
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 103,
+      "team_name": "Orleans",
+      "rank": 6,
+      "points": 51,
+      "goals_diff": 0,
+      "played": 32
+    },
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 3069,
+      "team_name": "Le Puy Foot",
+      "rank": 7,
+      "points": 47,
+      "goals_diff": 7,
+      "played": 32
+    },
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 88,
+      "team_name": "Caen",
+      "rank": 8,
+      "points": 40,
+      "goals_diff": 5,
+      "played": 32
+    },
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 1300,
+      "team_name": "Concarneau",
+      "rank": 9,
+      "points": 38,
+      "goals_diff": -5,
+      "played": 32
+    },
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 105,
+      "team_name": "Valenciennes",
+      "rank": 10,
+      "points": 37,
+      "goals_diff": -9,
+      "played": 32
+    },
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 9930,
+      "team_name": "Aubagne",
+      "rank": 11,
+      "points": 37,
+      "goals_diff": -8,
+      "played": 32
+    },
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 1302,
+      "team_name": "Villefranche",
+      "rank": 12,
+      "points": 37,
+      "goals_diff": -11,
+      "played": 32
+    },
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 431,
+      "team_name": "Quevilly",
+      "rank": 13,
+      "points": 33,
+      "goals_diff": -11,
+      "played": 32
+    },
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 9238,
+      "team_name": "Gobelins",
+      "rank": 14,
+      "points": 32,
+      "goals_diff": -15,
+      "played": 32
+    },
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 430,
+      "team_name": "Bourg-en-bresse 01",
+      "rank": 15,
+      "points": 31,
+      "goals_diff": -19,
+      "played": 32
+    },
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 107,
+      "team_name": "Chateauroux",
+      "rank": 16,
+      "points": 30,
+      "goals_diff": -14,
+      "played": 32
+    },
+    {
+      "league_id": 63,
+      "league_name": "National 1",
+      "season": 2025,
+      "team_id": 3229,
+      "team_name": "Stade Briochin",
+      "rank": 17,
+      "points": 27,
+      "goals_diff": -15,
+      "played": 32
+    }
   ]
 }
