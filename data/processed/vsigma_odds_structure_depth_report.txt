@@ -7,9 +7,8 @@ Summary
                 summary_scope                 metric  rows_total
                       overall        target_fixtures          11
   odds_structure_depth_status                     OK          11
-odds_structure_coherence_flag             RICH_MIXED           6
+odds_structure_coherence_flag             RICH_MIXED           7
 odds_structure_coherence_flag          RICH_COHERENT           4
-odds_structure_coherence_flag             RICH_NOISY           1
       odds_total_ladder_shape            BROAD_GOALS           6
       odds_total_ladder_shape               BALANCED           3
       odds_total_ladder_shape             MILD_GOALS           1
@@ -24,9 +23,9 @@ odds_structure_coherence_flag             RICH_NOISY           1
 
 Fixture preview
  fixture_id                league       home_team         away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
-    1535300 CONMEBOL Libertadores  Coquimbo Unido   Deportes Tolima                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3141                            -0.015
-    1535303 CONMEBOL Libertadores      Fluminense           Bolívar                    RICH_NOISY             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.7335                             0.015
-    1535311 CONMEBOL Libertadores Rosario Central               UCV                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.5808                             0.025
+    1535300 CONMEBOL Libertadores  Coquimbo Unido   Deportes Tolima                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.2944                            -0.015
+    1535303 CONMEBOL Libertadores      Fluminense           Bolívar                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.6357                             0.025
+    1535311 CONMEBOL Libertadores Rosario Central               UCV                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.5546                             0.025
     1536962    Jupiler Pro League       Charleroi         OH Leuven                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4650                             0.025
     1536961    Jupiler Pro League            Genk           Antwerp                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4162                             0.025
     1536960    Jupiler Pro League    KVC Westerlo    Standard Liege                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3368                             0.030

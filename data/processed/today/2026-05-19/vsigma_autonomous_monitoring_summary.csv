@@ -1,2 +1,2 @@
 target_date,generated_at,mode,daily_classification,operational_verdict,action_level,predictive_failure,evidence_basis,operator_action,run_url
-2026-05-19,2026-05-19T22:14:02+01:00,health,WAITING_FOR_PRELOCK,WAITING_FOR_PRELOCK,REVIEW_REQUIRED,NO,decision_quality_review,Wait for next scheduled AUTO/PRELOCK run or rerun prelock manually if timing is critical.,https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26125705256
+2026-05-19,2026-05-19T23:50:13+01:00,auto,EXPIRED_PRELOCK,NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA,REVIEW_REQUIRED,NO,decision_quality_review,Review AUTO/PRELOCK timing; do not count the row as predictive hit-rate failure.,https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26130042024
