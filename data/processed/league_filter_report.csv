@@ -1,48 +1,23 @@
 country,league,league_tier,league_filter_reason,matches
-Syria,Premier League,REJECT,country_league_not_allowlisted,8
-Uganda,Premier League,REJECT,country_league_not_allowlisted,7
 Argentina,Reserve League,REJECT,hard_reject_noise_league,6
-Iraq,Iraqi League,REJECT,country_league_not_allowlisted,5
-Algeria,Ligue 1,REJECT,country_league_not_allowlisted,4
-China,Super League,REJECT,country_league_not_allowlisted,4
-Lithuania,Cup,REJECT,country_league_not_allowlisted,4
-Mali,Première Division,REJECT,country_league_not_allowlisted,4
-World,CAF Cup of Nations - U17,REJECT,hard_reject_noise_league,4
-Israel,Ligat Ha'al,REJECT,country_league_not_allowlisted,3
-Paraguay,Division Intermedia,REJECT,country_league_not_allowlisted,3
 Brazil,Brasileiro U20 B,REJECT,hard_reject_noise_league,2
-Ethiopia,Premier League,REJECT,country_league_not_allowlisted,2
-Gabon,Championnat D1,REJECT,country_league_not_allowlisted,2
 Liberia,LFA First Division,REJECT,country_league_not_allowlisted,2
-Mauritania,Premier League,REJECT,country_league_not_allowlisted,2
-Sudan,Sudani Premier League,REJECT,country_league_not_allowlisted,2
-World,AFC U17 Asian Cup,REJECT,hard_reject_noise_league,2
-Armenia,First League,REJECT,country_league_not_allowlisted,1
-Armenia,Premier League,REJECT,country_league_not_allowlisted,1
+Mali,Première Division,REJECT,country_league_not_allowlisted,2
+World,CAF Cup of Nations - U17,REJECT,hard_reject_noise_league,2
+Algeria,Ligue 1,REJECT,country_league_not_allowlisted,1
 Bangladesh,Federation Cup,REJECT,country_league_not_allowlisted,1
-Bosnia,1st League - RS,REJECT,country_league_not_allowlisted,1
 Brazil,Brasileiro U20 A,REJECT,hard_reject_noise_league,1
 Brazil,Catarinense U20,REJECT,hard_reject_noise_league,1
 Brazil,Serie D,REJECT,country_league_not_allowlisted,1
 Colombia,Copa Colombia,REJECT,country_league_not_allowlisted,1
-Congo-DR,Ligue 1,REJECT,country_league_not_allowlisted,1
-Germany,Regionalliga - Bayern,REJECT,hard_reject_noise_league,1
-India,I-League,REJECT,country_league_not_allowlisted,1
-India,Indian Super League,REJECT,country_league_not_allowlisted,1
 Netherlands,U19 Divisie 1,REJECT,hard_reject_noise_league,1
-Norway,3. Division - Girone 3,REJECT,country_league_not_allowlisted,1
-Norway,3. Division - Girone 6,REJECT,country_league_not_allowlisted,1
-Slovakia,2. liga,REJECT,country_league_not_allowlisted,1
-Sweden,Superettan,REJECT,country_league_not_allowlisted,1
+Paraguay,Division Intermedia,REJECT,country_league_not_allowlisted,1
 USA,USL League Two,REJECT,country_league_not_allowlisted,1
 USA,USL W League,REJECT,country_league_not_allowlisted,1
-World,Friendlies,REJECT,hard_reject_noise_league,1
-World,Friendlies Clubs,REJECT,hard_reject_noise_league,1
+World,AFC U17 Asian Cup,REJECT,hard_reject_noise_league,1
 Belgium,Jupiler Pro League,TIER_1,belgium_jupiler,3
 World,CONMEBOL Libertadores,TIER_1,conmebol_libertadores,3
 England,Premier League,TIER_1,england_premier_league,2
 France,Ligue 2,TIER_1,france_ligue_2,1
 Italy,Serie B,TIER_1,italy_serie_b,1
 World,CONMEBOL Sudamericana,TIER_2,conmebol_sudamericana,2
-Austria,Bundesliga,TIER_2,austria_bundesliga,1
-Israel,Liga Leumit,TIER_3,israel_liga_leumit_noisy,4
