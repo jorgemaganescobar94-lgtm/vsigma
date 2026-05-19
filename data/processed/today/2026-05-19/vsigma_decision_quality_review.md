@@ -1,7 +1,11 @@
 # vSIGMA Decision Quality Review - 2026-05-19
 
 ## Executive Summary
-- generated_at: 2026-05-19T19:21:06+01:00
+- generated_at: 2026-05-19T20:38:43+01:00
+- daily_classification: WAITING_FOR_PRELOCK
+- no_bet_classification: NO_BET_VALID
+- operational_verdict: WAITING_FOR_PRELOCK
+- predictive_failure: NO
 - rows reviewed: 2
 - actionable rows: 0
 - non-actionable rows: 2
@@ -12,6 +16,13 @@
 - neutral/unresolved: 2
 - top improvement signal: WAIT_FOR_POST_RESULTS (2)
 - current recommendation: Do not recalibrate; collect more labeled outcomes.
+- operational note: At least one candidate is waiting for the configured PRELOCK window or retry slot.
+
+## Daily Operational Classification
+- classification: WAITING_FOR_PRELOCK
+- no_bet_validity: NO_BET_VALID
+- current_operational_verdict: WAITING_FOR_PRELOCK
+- explanation: At least one candidate is waiting for the configured PRELOCK window or retry slot.
 
 ## Decision Quality Table
 | fixture | market_primary | official_action | final_block_reason | result_status | decision_quality_label | quality_bucket | improvement_signal |
@@ -24,6 +35,7 @@
 - NO_BET_CORRECT_AVOIDED_LOSS count: 0
 - WAIT_MISSED_WIN count: 0
 - WAIT_CORRECT_AVOIDED_LOSS count: 0
+- EXPIRED_PRELOCK rows: 0
 - PRELOCK_NOT_AVAILABLE rows: 0
 - KICKOFF_ALREADY_PASSED rows: 0
 
