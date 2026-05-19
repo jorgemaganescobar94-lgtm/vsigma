@@ -42,6 +42,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: vsigma-production-main
@@ -185,6 +186,23 @@ jobs:
             --timezone Atlantic/Canary \
             --run-url "$RUN_URL" \
             || echo "::warning::Autonomous monitoring summary failed; inspect workflow logs."
+
+      - name: Dispatch monitoring notification
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TARGET_DATE="${VSIGMA_DATE:-$(TZ=Atlantic/Canary date +%F)}"
+          TARGET_MODE="${VSIGMA_MODE:-unknown}"
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+          python scripts/dispatch_autonomous_monitoring_notification.py \
+            --date "$TARGET_DATE" \
+            --mode "$TARGET_MODE" \
+            --repo "${{ github.repository }}" \
+            --run-url "$RUN_URL" \
+            || echo "::warning::Monitoring notification dispatch failed; inspect workflow logs."
 
       - name: Upload daily audit artifacts
         if: always()
