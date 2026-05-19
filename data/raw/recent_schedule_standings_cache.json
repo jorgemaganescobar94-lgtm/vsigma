@@ -13196,5 +13196,205 @@
       "goals_diff": -15,
       "played": 32
     }
+  ],
+  "95|2025": [
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 214,
+      "team_name": "Maritimo",
+      "rank": 1,
+      "points": 66,
+      "goals_diff": 21,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 238,
+      "team_name": "Academico Viseu",
+      "rank": 2,
+      "points": 59,
+      "goals_diff": 25,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 4799,
+      "team_name": "Torreense",
+      "rank": 3,
+      "points": 59,
+      "goals_diff": 13,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 810,
+      "team_name": "Vizela",
+      "rank": 4,
+      "points": 51,
+      "goals_diff": -1,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 243,
+      "team_name": "FC Porto B",
+      "rank": 5,
+      "points": 51,
+      "goals_diff": -1,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 4662,
+      "team_name": "União de Leiria",
+      "rank": 6,
+      "points": 50,
+      "goals_diff": 6,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 244,
+      "team_name": "Leixoes",
+      "rank": 7,
+      "points": 50,
+      "goals_diff": -9,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 213,
+      "team_name": "Feirense",
+      "rank": 8,
+      "points": 46,
+      "goals_diff": -3,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 223,
+      "team_name": "Chaves",
+      "rank": 9,
+      "points": 45,
+      "goals_diff": 2,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 229,
+      "team_name": "Benfica B",
+      "rank": 10,
+      "points": 44,
+      "goals_diff": -1,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 4744,
+      "team_name": "Felgueiras 1932",
+      "rank": 11,
+      "points": 44,
+      "goals_diff": -4,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 6358,
+      "team_name": "Lusitânia Lourosa",
+      "rank": 12,
+      "points": 43,
+      "goals_diff": -8,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 761,
+      "team_name": "Sporting CP B",
+      "rank": 13,
+      "points": 42,
+      "goals_diff": 7,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 235,
+      "team_name": "Penafiel",
+      "rank": 14,
+      "points": 41,
+      "goals_diff": -2,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 216,
+      "team_name": "Portimonense",
+      "rank": 15,
+      "points": 40,
+      "goals_diff": -10,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 231,
+      "team_name": "Farense",
+      "rank": 16,
+      "points": 40,
+      "goals_diff": -6,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 234,
+      "team_name": "Pacos Ferreira",
+      "rank": 17,
+      "points": 39,
+      "goals_diff": -14,
+      "played": 34
+    },
+    {
+      "league_id": 95,
+      "league_name": "Segunda Liga",
+      "season": 2025,
+      "team_id": 233,
+      "team_name": "Oliveirense",
+      "rank": 18,
+      "points": 34,
+      "goals_diff": -15,
+      "played": 34
+    }
   ]
 }
