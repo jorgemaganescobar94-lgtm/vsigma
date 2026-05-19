@@ -15,30 +15,26 @@
 ## Official Baseline Picks
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank |
 | --- | --- | --- | --- | --- | --- |
-| 1544951 | Serie B | Monza | Juve Stabia | OVER_1_5 | 1 |
-| 1535300 | CONMEBOL Libertadores | Coquimbo Unido | Deportes Tolima | OVER_1_5 | 2 |
+| 1535300 | CONMEBOL Libertadores | Coquimbo Unido | Deportes Tolima | OVER_1_5 | 1 |
 
 ## Candidate v2 Picks
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank |
 | --- | --- | --- | --- | --- | --- |
-| 1544951 | Serie B | Monza | Juve Stabia | OVER_1_5 | 1 |
-| 1535300 | CONMEBOL Libertadores | Coquimbo Unido | Deportes Tolima | OVER_1_5 | 2 |
+| 1535300 | CONMEBOL Libertadores | Coquimbo Unido | Deportes Tolima | OVER_1_5 | 1 |
 
 ## Candidate v7 Decisions
 - Waiting: 0
 - Confirmed: 0
 - Rejected: 0
-- Unavailable: 2
+- Unavailable: 1
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank | candidate_v7_execution_status | price_discipline_decision |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1544951 | Serie B | Monza | Juve Stabia | OVER_1_5 | 1 | V7_PRELOCK_UNAVAILABLE | PRICE_NEEDS_PRELOCK_CONFIRMATION |
-| 1535300 | CONMEBOL Libertadores | Coquimbo Unido | Deportes Tolima | OVER_1_5 | 2 | V7_PRELOCK_UNAVAILABLE | PRICE_NEEDS_PRELOCK_CONFIRMATION |
+| 1535300 | CONMEBOL Libertadores | Coquimbo Unido | Deportes Tolima | OVER_1_5 | 1 | V7_PRELOCK_UNAVAILABLE | PRICE_NEEDS_PRELOCK_CONFIRMATION |
 
 ## Pre-Lock Timing
 | fixture_id | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1544951 | Monza | Juve Stabia | OVER_1_5 | 2026-05-19T18:00:50.200000+00:00 | 16.86 | 2026-05-19T16:30:50.200000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
-| 1535300 | Coquimbo Unido | Deportes Tolima | OVER_1_5 | 2026-05-19T22:00:53.800000+00:00 | 256.92 | 2026-05-19T20:30:53.800000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1535300 | Coquimbo Unido | Deportes Tolima | OVER_1_5 | 2026-05-19T22:00:49+00:00 | 219.83 | 2026-05-19T20:30:49+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
 
 ## Ledger State
 | experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |

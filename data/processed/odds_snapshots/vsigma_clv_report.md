@@ -1,7 +1,7 @@
 # vSIGMA CLV Calibration Report
 
 - Target date: 2026-05-19
-- Rows: 13
+- Rows: 15
 - Date validation status: CLV_DATE_MISMATCH
 - Date-mismatched rows excluded: 190
 - Mismatched target dates observed: 2026-05-09, 2026-05-14, 2026-05-15, 2026-05-16, 2026-05-17, 2026-05-18
@@ -11,15 +11,15 @@
 ## Snapshot Provenance
 | metric | rows |
 | --- | --- |
-| true_pre_rows | 13 |
+| true_pre_rows | 15 |
 | backfilled_rows | 0 |
 | calibration_usable_rows | 6 |
-| audit_only_rows | 7 |
+| audit_only_rows | 9 |
 
 ## CLV Direction Mix
 | clv_direction | rows |
 | --- | --- |
-| CLV_UNAVAILABLE | 7 |
+| CLV_UNAVAILABLE | 9 |
 | CLV_POSITIVE | 5 |
 | CLV_NEGATIVE | 1 |
 
@@ -28,6 +28,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2026-05-19 | 1379333 | Premier League | Chelsea | Tottenham | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.87 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-19 | 1535202 | CONMEBOL Sudamericana | A. Italiano | Barracas Central | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.45 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-19 | 1535202 | CONMEBOL Sudamericana | A. Italiano | Barracas Central | OVER_1_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST | 1.45 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-19 | 1535300 | CONMEBOL Libertadores | Coquimbo Unido | Deportes Tolima | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | CANDIDATE_V2;CANDIDATE_V2_RESULTS | 1.44 |  | 1.42 | -0.02 | 1.388889 | CLV_POSITIVE | Price shortened after PRE; vSIGMA beat the close proxy. |  |  | CANONICAL_CAPTURED | 1 | 1 | POST;PRE | Captured by odds snapshot pipeline. |
 | 2026-05-19 | 1535300 | CONMEBOL Libertadores | Coquimbo Unido | Deportes Tolima | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.44 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-19 | 1535300 | CONMEBOL Libertadores | Coquimbo Unido | Deportes Tolima | OVER_1_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE;OFFICIAL_BASELINE_PRELOCK;OFFICIAL_RESULTS | 1.44 |  | 1.42 | -0.02 | 1.388889 | CLV_POSITIVE | Price shortened after PRE; vSIGMA beat the close proxy. |  |  | CANONICAL_CAPTURED | 1 | 1 | CLOSE_PROXY;POST;PRE | Captured by odds snapshot pipeline. |
@@ -36,6 +37,7 @@
 | 2026-05-19 | 1536960 | Jupiler Pro League | KVC Westerlo | Standard Liege | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.65 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-19 | 1536960 | Jupiler Pro League | KVC Westerlo | Standard Liege | OVER_2_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_RESULTS | 1.65 |  | 1.7 | 0.05 | -3.030303 | CLV_NEGATIVE | Price drifted higher after PRE; market moved against vSIGMA. |  |  | CANONICAL_CAPTURED | 1 | 1 | POST;PRE | Captured by odds snapshot pipeline. |
 | 2026-05-19 | 1536961 | Jupiler Pro League | Genk | Antwerp | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.72 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-19 | 1536961 | Jupiler Pro League | Genk | Antwerp | OVER_2_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST | 1.72 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-19 | 1544951 | Serie B | Monza | Juve Stabia | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | CANDIDATE_V2;CANDIDATE_V2_RESULTS | 1.44 |  | 1.42 | -0.02 | 1.388889 | CLV_POSITIVE | Price shortened after PRE; vSIGMA beat the close proxy. |  |  | CANONICAL_CAPTURED | 1 | 1 | POST;PRE | Captured by odds snapshot pipeline. |
 | 2026-05-19 | 1544951 | Serie B | Monza | Juve Stabia | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.44 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-19 | 1544951 | Serie B | Monza | Juve Stabia | OVER_1_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE;OFFICIAL_BASELINE_PRELOCK;OFFICIAL_RESULTS | 1.44 |  | 1.42 | -0.02 | 1.388889 | CLV_POSITIVE | Price shortened after PRE; vSIGMA beat the close proxy. |  |  | CANONICAL_CAPTURED | 1 | 1 | CLOSE_PROXY;POST;PRE | Captured by odds snapshot pipeline. |

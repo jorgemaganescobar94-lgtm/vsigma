@@ -3,17 +3,15 @@ vSIGMA SHADOW CANDIDATE V5
 Layer: candidate v2 + conservative player impact.
 Status: experimental shadow; official baseline and candidate v2 outputs are not replaced.
 
-Candidate v2 input rows: 2
-Candidate v5 competition shortlist rows: 2
-Candidate v5 competition top rows: 2
-Player-impact adjustments made: 1
+Candidate v2 input rows: 1
+Candidate v5 competition shortlist rows: 1
+Candidate v5 competition top rows: 1
+Player-impact adjustments made: 0
 
 Player-impact action mix
 player_impact_adjustment_action
-PLAYER_IMPACT_STRENGTHEN    1
-NOT_APPLIED                 1
+NOT_APPLIED    1
 
 Candidate v5 Top
  accuracy_mode_rank  fixture_id                league      home_team       away_team market_primary  competition_calibrated_prob  accuracy_confidence_score player_impact_adjustment_action      player_impact_market_translation_hint
-                  1     1544951               Serie B          Monza     Juve Stabia       OVER_1_5                      0.78876                    155.806        PLAYER_IMPACT_STRENGTHEN           LINEUPS_CONFIRM_ATTACKING_THESIS
-                  2     1535300 CONMEBOL Libertadores Coquimbo Unido Deportes Tolima       OVER_1_5                      0.78710                    120.061                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
+                  1     1535300 CONMEBOL Libertadores Coquimbo Unido Deportes Tolima       OVER_1_5                       0.7871                    120.061                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE

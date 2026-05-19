@@ -1,13 +1,11 @@
 country,league,league_tier,league_filter_reason,matches
-Argentina,Reserve League,REJECT,hard_reject_noise_league,6
-Brazil,Brasileiro U20 B,REJECT,hard_reject_noise_league,2
 Liberia,LFA First Division,REJECT,country_league_not_allowlisted,2
 Mali,Première Division,REJECT,country_league_not_allowlisted,2
 World,CAF Cup of Nations - U17,REJECT,hard_reject_noise_league,2
 Algeria,Ligue 1,REJECT,country_league_not_allowlisted,1
 Bangladesh,Federation Cup,REJECT,country_league_not_allowlisted,1
 Brazil,Brasileiro U20 A,REJECT,hard_reject_noise_league,1
-Brazil,Catarinense U20,REJECT,hard_reject_noise_league,1
+Brazil,Brasileiro U20 B,REJECT,hard_reject_noise_league,1
 Brazil,Serie D,REJECT,country_league_not_allowlisted,1
 Colombia,Copa Colombia,REJECT,country_league_not_allowlisted,1
 Netherlands,U19 Divisie 1,REJECT,hard_reject_noise_league,1
@@ -19,5 +17,4 @@ Belgium,Jupiler Pro League,TIER_1,belgium_jupiler,3
 World,CONMEBOL Libertadores,TIER_1,conmebol_libertadores,3
 England,Premier League,TIER_1,england_premier_league,2
 France,Ligue 2,TIER_1,france_ligue_2,1
-Italy,Serie B,TIER_1,italy_serie_b,1
 World,CONMEBOL Sudamericana,TIER_2,conmebol_sudamericana,2

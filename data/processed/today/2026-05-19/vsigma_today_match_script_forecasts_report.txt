@@ -4,17 +4,9 @@ Source: official competition top
 Role: explanation layer only; this file does not select, remove, or promote picks.
 Forecast style: deterministic bands and modal scripts, not exact-stat certainty.
 
-Forecast rows: 2
+Forecast rows: 1
 
-#1 Monza vs Juve Stabia | Serie B | OVER_1_5
-Script: Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.4; stats=FULL.
-Scores: main 2-1 | alt 1-1
-xG: home 1.6-2.4 | away 1.1-1.8 | total 2.9-4.0
-Stats: shots 14-18 vs 10-14; SOT 4-6 vs 3-5; corners 7-11; possession home 46-54% / away 46-54%
-Path: Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path.
-Breaker: Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market.
-
-#2 Coquimbo Unido vs Deportes Tolima | CONMEBOL Libertadores | OVER_1_5
+#1 Coquimbo Unido vs Deportes Tolima | CONMEBOL Libertadores | OVER_1_5
 Script: Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.5; stats=FULL.
 Scores: main 2-2 | alt 1-2
 xG: home 1.4-2.0 | away 1.5-2.1 | total 3.0-4.0
