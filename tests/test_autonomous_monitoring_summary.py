@@ -50,7 +50,7 @@ class AutonomousMonitoringSummaryTests(unittest.TestCase):
         self.assertEqual(verdict.action_level, "REVIEW_REQUIRED")
         self.assertEqual(verdict.predictive_failure, "NO")
         self.assertIn("- daily_classification: EXPIRED_PRELOCK", markdown)
-        self.assertIn("vsigma_decision_quality_review.md", markdown)
+        self.assertIn("- decision_quality_review: present", markdown)
         self.assertIn("EXPIRED_PRELOCK", csv_text)
 
     def test_system_review_no_bet_valid_when_decision_quality_missing(self) -> None:
