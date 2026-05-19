@@ -7,8 +7,8 @@ Summary
                 summary_scope                 metric  rows_total
                       overall        target_fixtures          11
   odds_structure_depth_status                     OK          11
-odds_structure_coherence_flag          RICH_COHERENT           6
-odds_structure_coherence_flag             RICH_MIXED           4
+odds_structure_coherence_flag             RICH_MIXED           6
+odds_structure_coherence_flag          RICH_COHERENT           4
 odds_structure_coherence_flag             RICH_NOISY           1
       odds_total_ladder_shape            BROAD_GOALS           6
       odds_total_ladder_shape               BALANCED           3
@@ -30,8 +30,8 @@ Fixture preview
     1536962    Jupiler Pro League       Charleroi         OH Leuven                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4650                             0.025
     1536961    Jupiler Pro League            Genk           Antwerp                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4162                             0.025
     1536960    Jupiler Pro League    KVC Westerlo    Standard Liege                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3368                             0.030
-    1545224               Ligue 2           Rouen             Laval                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3954                            -0.015
+    1545224               Ligue 2           Rouen             Laval                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.4105                            -0.015
     1379331        Premier League     Bournemouth   Manchester City                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3226                             0.030
     1379333        Premier League         Chelsea         Tottenham                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3024                            -0.015
-    1535202 CONMEBOL Sudamericana     A. Italiano  Barracas Central                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.2823                            -0.015
-    1535211 CONMEBOL Sudamericana Atletico Torque Deportivo Riestra                 RICH_COHERENT               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.3383                            -0.015
+    1535202 CONMEBOL Sudamericana     A. Italiano  Barracas Central                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3720                            -0.015
+    1535211 CONMEBOL Sudamericana Atletico Torque Deportivo Riestra                    RICH_MIXED               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.3795                            -0.015

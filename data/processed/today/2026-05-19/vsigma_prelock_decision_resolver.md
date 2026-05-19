@@ -12,7 +12,7 @@
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Coquimbo Unido vs Deportes Tolima | OVER_1_5 | 2026-05-19T23:00+01:00 | 141.29 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | 2026-05-19T22:00+01:00 |
+| Coquimbo Unido vs Deportes Tolima | OVER_1_5 | 2026-05-19T23:00+01:00 | 101.9 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | 2026-05-19T22:00+01:00 |
 
 ## Data Gaps
 - odds missing: 0
