@@ -3,7 +3,7 @@ param(
     [string]$PreTime = "09:00",
     [string]$PostTime = "23:55",
     [string]$PostBackupTime = "08:15",
-    [string]$PrelockStart = "10:00",
+    [string]$PrelockStart = "09:30",
     [int]$PrelockIntervalMinutes = 30,
     [int]$PrelockDurationHours = 14,
     [switch]$WhatIfOnly

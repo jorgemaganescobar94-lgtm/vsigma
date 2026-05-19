@@ -29,8 +29,11 @@ on:
     - cron: "0 9 * * *"
       timezone: "Atlantic/Canary"
 
-    # AUTO hourly: every hour from 10:00 to 23:00 Atlantic/Canary
+    # AUTO every 30 minutes from 09:30 to 23:30 Atlantic/Canary.
+    # The 09:30 start preserves the 90-minute PRELOCK window for early kickoffs.
     - cron: "0 10-23 * * *"
+      timezone: "Atlantic/Canary"
+    - cron: "30 9-23 * * *"
       timezone: "Atlantic/Canary"
 
     # 23:55 Atlantic/Canary - POST
@@ -102,7 +105,7 @@ jobs:
                 MODE="pre"
                 DATE_INPUT="$TODAY"
                 ;;
-              "0 10-23 * * *")
+              "0 10-23 * * *"|"30 9-23 * * *")
                 MODE="auto"
                 DATE_INPUT="$TODAY"
                 ;;
