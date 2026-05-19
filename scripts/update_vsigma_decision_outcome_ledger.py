@@ -12,8 +12,10 @@ import pandas as pd
 
 try:
     from daily_hardening import PROCESSED_DIR, format_markdown_table, read_csv_lenient, split_fresh_stale_rows
+    from materialize_daily_audit_bundle import materialize_daily_audit_bundle
 except ModuleNotFoundError:
     from scripts.daily_hardening import PROCESSED_DIR, format_markdown_table, read_csv_lenient, split_fresh_stale_rows
+    from scripts.materialize_daily_audit_bundle import materialize_daily_audit_bundle
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -381,6 +383,7 @@ def update_decision_outcome_ledger(
     ledger.to_csv(paths.csv_path, index=False)
     write_jsonl(ledger, paths.jsonl_path)
     write_report(ledger, new_rows, paths.report_path, target_date)
+    materialize_daily_audit_bundle(target_date, processed_dir)
     return ledger, paths
 
 
