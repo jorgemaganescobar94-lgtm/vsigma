@@ -89,6 +89,15 @@ class DecisionQualityPaths:
     today_csv: Path
 
 
+@dataclass(frozen=True)
+class OperationalDayClassification:
+    daily_classification: str
+    no_bet_classification: str
+    operational_verdict: str
+    predictive_failure: str
+    explanation: str
+
+
 def norm_text(value: object) -> str:
     if value is None or pd.isna(value):
         return ""
@@ -203,7 +212,16 @@ def classify_decision_quality(
         or norm_upper(is_expired) == "YES"
     )
 
-    if action == "EXECUTABLE":
+    if expired and action in {"NO_BET", "WAIT"}:
+        if result == "WIN":
+            label = "EXPIRED_PRELOCK_RESULT_WIN"
+        elif result == "LOSS":
+            label = "EXPIRED_PRELOCK_RESULT_LOSS"
+        elif result == "VOID":
+            label = "EXPIRED_PRELOCK_RESULT_VOID"
+        else:
+            label = "EXPIRED_PRELOCK_UNRESOLVED"
+    elif action == "EXECUTABLE":
         if result == "WIN":
             label = "ACTIONABLE_WIN"
         elif result == "LOSS":
@@ -245,6 +263,8 @@ def classify_decision_quality(
 def quality_bucket_for_label(label: str) -> str:
     if label.startswith("TECHNICAL_REVIEW"):
         return "TECHNICAL_REVIEW"
+    if label.startswith("EXPIRED_PRELOCK"):
+        return "NEUTRAL_OR_UNRESOLVED" if "UNRESOLVED" not in label else "NEEDS_MORE_DATA"
     if "UNRESOLVED" in label:
         return "NEEDS_MORE_DATA"
     if label in {"ACTIONABLE_WIN", "NO_BET_CORRECT_AVOIDED_LOSS", "WAIT_CORRECT_AVOIDED_LOSS"}:
@@ -260,6 +280,8 @@ def improvement_signal_for(row: pd.Series, label: str, result_source: str) -> st
     final_block_reason = norm_upper(row.get("final_block_reason"))
     market = norm_upper(row.get("market_primary"))
     risk = norm_upper(row.get("accuracy_primary_risk"))
+    if label.startswith("EXPIRED_PRELOCK"):
+        return "REVIEW_AUTO_TIMING"
     if not result_source:
         return "IMPROVE_POST_RESULT_LABELING"
     if "UNRESOLVED" in label:
@@ -282,6 +304,8 @@ def improvement_signal_for(row: pd.Series, label: str, result_source: str) -> st
 def quality_reason_for(row: pd.Series, label: str, result_status: str) -> str:
     action = norm_upper(row.get("official_action")) or "UNKNOWN"
     reason = norm_upper(row.get("final_block_reason")) or "NONE"
+    if label.startswith("EXPIRED_PRELOCK"):
+        return f"Expired before execution; result_status={result_status} is excluded from predictive accuracy metrics."
     if "UNRESOLVED" in label:
         return f"{action} decision cannot be graded yet; result_status={result_status}."
     if label == "ACTIONABLE_WIN":
@@ -300,6 +324,8 @@ def quality_reason_for(row: pd.Series, label: str, result_status: str) -> str:
 
 
 def followup_for(label: str, signal: str) -> str:
+    if label.startswith("EXPIRED_PRELOCK"):
+        return "Review AUTO/PRELOCK scheduling and keep expired rows out of predictive hit-rate metrics."
     if signal == "WAIT_FOR_POST_RESULTS":
         return "Run POST results labeling when finished scores are available."
     if signal == "IMPROVE_POST_RESULT_LABELING":
@@ -446,7 +472,128 @@ def system_recommendations(df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows, columns=["priority", "category", "title", "reason", "apply_now"])
 
 
-def build_markdown(df: pd.DataFrame, target_date: str, generated_at: str) -> str:
+def count_yes(df: pd.DataFrame, column: str) -> int:
+    if df.empty or column not in df.columns:
+        return 0
+    return int(df[column].fillna("").astype(str).str.upper().eq("YES").sum())
+
+
+def values_upper(df: pd.DataFrame, column: str) -> pd.Series:
+    if df.empty or column not in df.columns:
+        return pd.Series(dtype=object)
+    return df[column].fillna("").astype(str).str.upper()
+
+
+def classify_operational_day(
+    ledger_rows: pd.DataFrame,
+    cloud_summary: pd.DataFrame | None = None,
+    resolver: pd.DataFrame | None = None,
+) -> OperationalDayClassification:
+    cloud_summary = cloud_summary if cloud_summary is not None else pd.DataFrame()
+    resolver = resolver if resolver is not None else pd.DataFrame()
+    evidence = pd.concat([ledger_rows, cloud_summary, resolver], ignore_index=True, sort=False)
+
+    if evidence.empty:
+        return OperationalDayClassification(
+            daily_classification="BROKEN",
+            no_bet_classification="NO_BET_UNKNOWN",
+            operational_verdict="BROKEN",
+            predictive_failure="NO",
+            explanation="No decision evidence was available for the target date.",
+        )
+
+    final_reasons = values_upper(evidence, "final_block_reason")
+    family_status = values_upper(evidence, "execution_family_status")
+    official_actions = values_upper(evidence, "official_action")
+    decision_states = values_upper(evidence, "decision_state")
+
+    actionable = count_yes(evidence, "is_actionable") + int(
+        (official_actions.eq("EXECUTABLE") & values_upper(evidence, "executable_now").eq("YES")).sum()
+    )
+    expired = count_yes(evidence, "is_expired") + int(final_reasons.eq("KICKOFF_ALREADY_PASSED").sum()) + int(family_status.eq("EXPIRED").sum())
+    waiting = count_yes(evidence, "is_waiting") + int(
+        family_status.str.startswith("WAITING", na=False).sum()
+        + final_reasons.isin({"OUTSIDE_PRELOCK_WINDOW", "OUTSIDE_90_MIN_PRELOCK_WINDOW"}).sum()
+        + decision_states.eq("WAITING_FOR_PRELOCK_WINDOW").sum()
+    )
+    technical = count_yes(evidence, "is_technical_review") + int(
+        official_actions.eq("TECHNICAL_REVIEW").sum() + decision_states.eq("TECHNICAL_WARNING").sum()
+    )
+    data_blocked = int(
+        final_reasons.str.contains("ODDS_NOT_AVAILABLE|LINEUPS_NOT_AVAILABLE|AVAILABILITY_NOT_AVAILABLE|DATA_GAP|MISSING_KICKOFF_DATETIME|DATA_PROBLEM", regex=True).sum()
+        + family_status.str.contains("DATA_GAP|DATA_BLOCKED", regex=True).sum()
+        + decision_states.eq("DATA_PROBLEM").sum()
+    )
+    no_bet = int(official_actions.eq("NO_BET").sum())
+
+    if actionable > 0:
+        daily = "EXECUTION_OK"
+    elif expired > 0:
+        daily = "EXPIRED_PRELOCK"
+    elif waiting > 0:
+        daily = "WAITING_FOR_PRELOCK"
+    elif data_blocked > 0:
+        daily = "DATA_BLOCKED"
+    elif technical > 0:
+        daily = "TECHNICAL_WARNING"
+    elif no_bet > 0:
+        daily = "NO_BET_VALID"
+    else:
+        daily = "BROKEN"
+
+    if actionable > 0:
+        no_bet_status = "EXECUTION_ACTIONABLE_PRESENT"
+    elif no_bet > 0 or daily in {"EXPIRED_PRELOCK", "DATA_BLOCKED", "WAITING_FOR_PRELOCK", "NO_BET_VALID"}:
+        no_bet_status = "NO_BET_VALID"
+    else:
+        no_bet_status = "NO_BET_UNKNOWN"
+
+    if daily in {"EXPIRED_PRELOCK", "DATA_BLOCKED"}:
+        verdict = "NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA"
+    elif daily == "WAITING_FOR_PRELOCK":
+        verdict = "WAITING_FOR_PRELOCK"
+    elif daily == "TECHNICAL_WARNING":
+        verdict = "TECHNICAL_REVIEW"
+    elif daily == "EXECUTION_OK":
+        verdict = "EXECUTION_AVAILABLE"
+    elif daily == "NO_BET_VALID":
+        verdict = "NO_EXECUTION_NO_BET_VALID"
+    else:
+        verdict = "BROKEN"
+
+    if daily == "EXPIRED_PRELOCK":
+        explanation = (
+            "The candidate expired before execution, so the operational issue is AUTO/PRELOCK timing. "
+            "This is not a predictive failure and must not be counted in predictive hit-rate metrics."
+        )
+    elif daily == "DATA_BLOCKED":
+        explanation = "Execution was blocked by data or prelock availability, not by a scored market losing."
+    elif daily == "WAITING_FOR_PRELOCK":
+        explanation = "At least one candidate is waiting for the configured PRELOCK window or retry slot."
+    elif daily == "EXECUTION_OK":
+        explanation = "At least one row was executable at decision time."
+    elif daily == "NO_BET_VALID":
+        explanation = "The day resolved to no-bet with no executable row and no expired candidate."
+    elif daily == "TECHNICAL_WARNING":
+        explanation = "A technical warning requires review before interpreting execution quality."
+    else:
+        explanation = "Decision evidence is incomplete or inconsistent."
+
+    return OperationalDayClassification(
+        daily_classification=daily,
+        no_bet_classification=no_bet_status,
+        operational_verdict=verdict,
+        predictive_failure="NO" if daily in {"EXPIRED_PRELOCK", "DATA_BLOCKED", "WAITING_FOR_PRELOCK", "NO_BET_VALID"} else "UNKNOWN",
+        explanation=explanation,
+    )
+
+
+def build_markdown(
+    df: pd.DataFrame,
+    target_date: str,
+    generated_at: str,
+    day_classification: OperationalDayClassification | None = None,
+) -> str:
     rows_reviewed = len(df)
     actionable = int(df["is_actionable"].astype(str).eq("YES").sum()) if not df.empty else 0
     non_actionable = int(df["is_non_actionable"].astype(str).eq("YES").sum()) if not df.empty else 0
@@ -469,6 +616,7 @@ def build_markdown(df: pd.DataFrame, target_date: str, generated_at: str) -> str
         f"- NO_BET_CORRECT_AVOIDED_LOSS count: {count_label(df, 'NO_BET_CORRECT_AVOIDED_LOSS')}",
         f"- WAIT_MISSED_WIN count: {count_label(df, 'WAIT_MISSED_WIN')}",
         f"- WAIT_CORRECT_AVOIDED_LOSS count: {count_label(df, 'WAIT_CORRECT_AVOIDED_LOSS')}",
+        f"- EXPIRED_PRELOCK rows: {int(df['decision_quality_label'].astype(str).str.startswith('EXPIRED_PRELOCK').sum()) if not df.empty else 0}",
         f"- PRELOCK_NOT_AVAILABLE rows: {int(df['final_block_reason'].astype(str).str.contains('PRELOCK_NOT_AVAILABLE', regex=False).sum()) if not df.empty else 0}",
         f"- KICKOFF_ALREADY_PASSED rows: {int(df['final_block_reason'].astype(str).eq('KICKOFF_ALREADY_PASSED').sum()) if not df.empty else 0}",
     ]
@@ -503,11 +651,16 @@ def build_markdown(df: pd.DataFrame, target_date: str, generated_at: str) -> str
     )
 
     recommendation_df = system_recommendations(df)
+    day_classification = day_classification or classify_operational_day(df)
     lines = [
         f"# vSIGMA Decision Quality Review - {target_date}",
         "",
         "## Executive Summary",
         f"- generated_at: {generated_at}",
+        f"- daily_classification: {day_classification.daily_classification}",
+        f"- no_bet_classification: {day_classification.no_bet_classification}",
+        f"- operational_verdict: {day_classification.operational_verdict}",
+        f"- predictive_failure: {day_classification.predictive_failure}",
         f"- rows reviewed: {rows_reviewed}",
         f"- actionable rows: {actionable}",
         f"- non-actionable rows: {non_actionable}",
@@ -518,6 +671,13 @@ def build_markdown(df: pd.DataFrame, target_date: str, generated_at: str) -> str
         f"- neutral/unresolved: {neutral}",
         f"- top improvement signal: {top_signal}",
         f"- current recommendation: {current_recommendation}",
+        f"- operational note: {day_classification.explanation}",
+        "",
+        "## Daily Operational Classification",
+        f"- classification: {day_classification.daily_classification}",
+        f"- no_bet_validity: {day_classification.no_bet_classification}",
+        f"- current_operational_verdict: {day_classification.operational_verdict}",
+        f"- explanation: {day_classification.explanation}",
         "",
         "## Decision Quality Table",
         format_markdown_table(
@@ -572,8 +732,8 @@ def build_decision_quality_review(
     immutable_ledger = read_csv_lenient(processed_dir / "ledger" / "vsigma_immutable_daily_pick_ledger.csv")
     today_labeled = read_csv_lenient(snap / "vsigma_market_results_labeled.csv")
     global_labeled = read_csv_lenient(processed_dir / "vsigma_market_results_labeled.csv")
-    read_csv_lenient(snap / "vsigma_cloud_decision_summary.csv")
-    read_csv_lenient(snap / "vsigma_prelock_decision_resolver.csv")
+    cloud_summary = read_csv_lenient(snap / "vsigma_cloud_decision_summary.csv")
+    resolver = read_csv_lenient(snap / "vsigma_prelock_decision_resolver.csv")
     read_csv_lenient(snap / "vsigma_today_competition_top.csv")
 
     ledger_rows = target_date_rows(decision_ledger, target_date)
@@ -587,6 +747,11 @@ def build_decision_quality_review(
     ]
     result_index = build_result_index(result_sources, target_date)
     review = build_quality_rows(ledger_rows, result_index, target_date, generated_at)
+    day_classification = classify_operational_day(
+        ledger_rows=ledger_rows,
+        cloud_summary=target_date_rows(cloud_summary, target_date),
+        resolver=target_date_rows(resolver, target_date),
+    )
 
     paths = DecisionQualityPaths(
         governance_md=governance_dir / "vsigma_decision_quality_review.md",
@@ -594,7 +759,7 @@ def build_decision_quality_review(
         today_md=snap / "vsigma_decision_quality_review.md",
         today_csv=snap / "vsigma_decision_quality_review.csv",
     )
-    markdown = build_markdown(review, target_date, generated_at)
+    markdown = build_markdown(review, target_date, generated_at, day_classification)
     review.to_csv(paths.governance_csv, index=False)
     review.to_csv(paths.today_csv, index=False)
     paths.governance_md.write_text(markdown, encoding="utf-8")
