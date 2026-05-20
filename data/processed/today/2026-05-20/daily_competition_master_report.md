@@ -1,7 +1,7 @@
 # vSIGMA Daily Competition Master Report - 2026-05-20
 
 ## Daily Status
-PRE_LOCK_PENDING
+PRE_LOCK_REVIEWED
 
 ## Official Baseline Top Picks
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
@@ -88,7 +88,7 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 ### Active Pre-Lock Decisions
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 107.95 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | IN_PRELOCK_WINDOW | 55.86 | PRELOCK_NO_CHANGE | no explicit pre-lock contradiction detected |
 
 ### Stale Pre-Lock Warning
 _No stale pre-lock rows excluded._
@@ -111,7 +111,7 @@ _No stale pre-lock rows excluded._
 | 1535312 | Santa Fe | Platense | OVER_1_5 | OFFICIAL_BASELINE | 1.6 | 1.6 | 1.6 | 0.0 | CLV_FLAT |  |  |
 | 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.35 |  | 1.38 | 0.03 | CLV_NEGATIVE |  |  |
 | 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.35 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | OFFICIAL_BASELINE | 1.35 |  | 1.38 | 0.03 | CLV_NEGATIVE |  |  |
+| 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | OFFICIAL_BASELINE | 1.35 | 1.35 | 1.38 | 0.03 | CLV_NEGATIVE |  |  |
 | 1544952 | Palermo | Catanzaro | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.75 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1544952 | Palermo | Catanzaro | OVER_2_5 | OFFICIAL_BASELINE | 1.75 |  | 1.75 | 0.0 | CLV_FLAT |  |  |
 | 1545403 | Torreense | Casa Pia | HOME_WIN | DEEP_ANALYSIS_CANDIDATES | 2.5 |  |  |  | CLV_UNAVAILABLE |  |  |
@@ -131,7 +131,7 @@ _No rows._
 ## Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 107.95 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | IN_PRELOCK_WINDOW | 55.86 | PRELOCK_NO_CHANGE | no explicit pre-lock contradiction detected |
 
 ## Drift Monitor Status
 | pattern | settled_rows | wins | losses | profit_units | drift_status |
@@ -186,18 +186,18 @@ _No rows._
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | OFFICIAL_BASELINE | 1535312.0 | Santa Fe | Platense | OVER_1_5 | PRELOCK_CONFIRMED | WIN | 0.6 | SETTLED |
 | OFFICIAL_BASELINE | 1494229.0 | Gais | Hammarby FF | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
-| OFFICIAL_BASELINE | 1544596.0 | SC Freiburg | Aston Villa | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1544596.0 | SC Freiburg | Aston Villa | OVER_1_5 | PRELOCK_NO_CHANGE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1535312.0 | Santa Fe | Platense | OVER_1_5 | PRELOCK_CONFIRMED | WIN | 0.6 | SETTLED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544596.0 | SC Freiburg | Aston Villa | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544596.0 | SC Freiburg | Aston Villa | OVER_1_5 | PRELOCK_NO_CHANGE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
 | CANDIDATE_V4_O25_FIREWALL | 1535312.0 | Santa Fe | Platense | OVER_1_5 | PRELOCK_CONFIRMED | WIN | 0.6 | SETTLED |
-| CANDIDATE_V4_O25_FIREWALL | 1544596.0 | SC Freiburg | Aston Villa | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 1544596.0 | SC Freiburg | Aston Villa | OVER_1_5 | PRELOCK_NO_CHANGE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V5_PLAYER_IMPACT | 1535312.0 | Santa Fe | Platense | OVER_1_5 | PRELOCK_CONFIRMED | WIN | 0.6 | SETTLED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1544596.0 | SC Freiburg | Aston Villa | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1544596.0 | SC Freiburg | Aston Villa | OVER_1_5 | PRELOCK_NO_CHANGE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V6_API_PREDICTIONS | 1535312.0 | Santa Fe | Platense | OVER_1_5 | PRELOCK_CONFIRMED | WIN | 0.6 | SETTLED |
-| CANDIDATE_V6_API_PREDICTIONS | 1544596.0 | SC Freiburg | Aston Villa | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V6_API_PREDICTIONS | 1544596.0 | SC Freiburg | Aston Villa | OVER_1_5 | PRELOCK_NO_CHANGE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1535312.0 | Santa Fe | Platense | OVER_1_5 | PRELOCK_CONFIRMED | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1544596.0 | SC Freiburg | Aston Villa | OVER_1_5 | WAITING_FOR_PRELOCK | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1544596.0 | SC Freiburg | Aston Villa | OVER_1_5 | PRELOCK_NO_CHANGE | PENDING |  | PRELOCK_UPDATED |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |

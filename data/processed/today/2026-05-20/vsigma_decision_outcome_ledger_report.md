@@ -1,10 +1,10 @@
 # vSIGMA Decision Outcome Ledger - 2026-05-20
 
 ## Summary
-- Rows total: 8
-- Rows for target date: 4
+- Rows total: 9
+- Rows for target date: 5
 - Rows updated this run: 1
-- Actionable rows: 1
+- Actionable rows: 2
 - Non-actionable rows: 3
 - Expired rows: 0
 - Waiting rows: 2
@@ -18,3 +18,4 @@
 | 1494229 | Allsvenskan | Gais | Hammarby FF | OVER_2_5 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | WAITING_FOR_WINDOW | NO | NO | YES | NO | NO |
 | 1544596 | UEFA Europa League | SC Freiburg | Aston Villa | OVER_1_5 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | WAITING_FOR_WINDOW | NO | NO | YES | NO | NO |
 | 1544596 | UEFA Europa League | SC Freiburg | Aston Villa | OVER_1_5 | NO_BET | NO | PRELOCK_GOVERNANCE_NOT_RETAINED | PRELOCK_NOT_RETAINED | NO | NO | NO | YES | NO |
+| 1544596 | UEFA Europa League | SC Freiburg | Aston Villa | OVER_1_5 | EXECUTABLE | YES | NONE | PRELOCK_CONFIRMED | YES | NO | NO | NO | NO |
