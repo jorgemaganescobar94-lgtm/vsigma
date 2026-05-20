@@ -1,8 +1,8 @@
 # vSIGMA Daily Freshness Report
 
 - Target date: 2026-05-20
-- PASS: 23
-- EMPTY_OK_NO_BET: 1
+- PASS: 22
+- EMPTY_OK_NO_BET: 2
 - WARNING_STALE_GLOBAL_FILE: 0
 - ERROR_MISSING_REQUIRED_FILE: 0
 - EMPTY_UNEXPECTED: 0
@@ -30,7 +30,7 @@
 | 2026-05-20 | vsigma_today_match_script_forecasts.csv | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_match_script_forecasts.csv | PRE | FORECAST | PASS | output is fresh for requested target date | 1 | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-20/vsigma_today_match_script_forecasts.csv |
 | 2026-05-20 | vsigma_today_candidate_v2_match_script_forecasts.csv | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v2_match_script_forecasts.csv | PRE | FORECAST_CANDIDATE_V2 | PASS | output is fresh for requested target date | 1 | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-20/vsigma_today_candidate_v2_match_script_forecasts.csv |
 | 2026-05-20 | vsigma_today_candidate_v4_match_script_forecasts.csv | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v4_match_script_forecasts.csv | PRE | FORECAST_CANDIDATE_V4 | PASS | output is fresh for requested target date | 1 | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-20/vsigma_today_candidate_v4_match_script_forecasts.csv |
-| 2026-05-20 | vsigma_today_prelock_competition_top.csv | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_prelock_competition_top.csv | PRELOCK | OFFICIAL_BASELINE_PRELOCK | PASS | output is fresh for requested target date | 1 | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-20/vsigma_today_prelock_competition_top.csv |
-| 2026-05-20 | vsigma_today_prelock_comparison.csv | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_prelock_comparison.csv | PRELOCK | PRELOCK_COMPARISON | PASS | output is fresh for requested target date | 3 | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-20/vsigma_today_prelock_comparison.csv |
+| 2026-05-20 | vsigma_today_prelock_competition_top.csv | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_prelock_competition_top.csv | PRELOCK | OFFICIAL_BASELINE_PRELOCK | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-20/vsigma_today_prelock_competition_top.csv |
+| 2026-05-20 | vsigma_today_prelock_comparison.csv | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_prelock_comparison.csv | PRELOCK | PRELOCK_COMPARISON | PASS | output is fresh for requested target date | 1 | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-20/vsigma_today_prelock_comparison.csv |
 | 2026-05-20 | today_pipeline_report.csv | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-20/today_pipeline_report.csv | SNAPSHOT | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-20/today_pipeline_report.csv |
 | 2026-05-20 | today_post_results_report.csv | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-20/today_post_results_report.csv | SNAPSHOT | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-20/today_post_results_report.csv |

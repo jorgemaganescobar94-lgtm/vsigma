@@ -35,4 +35,4 @@
 
 | Status | Fixture | Base Rank | Cand Rank | Base Market | Cand Market | Base Prob | Cand Prob | Base Score | Cand Score |
 | --- | --- | ---: | ---: | --- | --- | ---: | ---: | ---: | ---: |
-| BOTH | SC Freiburg vs Aston Villa | 1 | 1 | OVER_1_5 | OVER_1_5 | 0.830 | 0.825 | 151.941 | 150.718 |
+| BOTH | SC Freiburg vs Aston Villa | 1 | 1 | OVER_1_5 | OVER_1_5 | 0.830 | 0.825 | 154.941 | 153.718 |
