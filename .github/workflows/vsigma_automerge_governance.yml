@@ -1,4 +1,4 @@
-name: vSIGMA Automerge Governance
+﻿name: vSIGMA Automerge Governance
 
 on:
   pull_request:
@@ -7,10 +7,12 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write
 
 jobs:
   automerge-governed:
     runs-on: ubuntu-latest
+
     steps:
       - name: Validate automerge eligibility
         env:
@@ -37,7 +39,9 @@ jobs:
           if [[ "$HEAD_REF" != vsigma-* && "$HEAD_REF" != codex/* ]]; then
             echo "Branch not eligible for guarded automerge: $HEAD_REF"
             exit 0
-          fi      - name: Checkout
+          fi
+
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -48,13 +52,17 @@ jobs:
           REPO_OWNER: ${{ github.repository_owner }}
         run: |
           set -euo pipefail
+
           TRUSTED=false
+
           if [[ "$PR_AUTHOR" == "$REPO_OWNER" ]]; then
             TRUSTED=true
           fi
+
           if [[ "$PR_AUTHOR" == "github-actions[bot]" || "$PR_AUTHOR" == "codex[bot]" || "$PR_AUTHOR" == "openai-codex[bot]" ]]; then
             TRUSTED=true
           fi
+
           if [[ "$TRUSTED" != "true" ]]; then
             echo "Untrusted PR author: $PR_AUTHOR"
             exit 1
@@ -80,10 +88,10 @@ jobs:
       - name: Validate clean patch formatting
         run: git diff --check
 
-      - name: Enable auto-merge (merge commit)
+      - name: Merge guarded PR
         if: success()
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           gh pr merge "$PR_NUMBER" --merge --delete-branch
@@ -91,12 +99,13 @@ jobs:
       - name: Summarize guarded automerge decision
         if: always()
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           if [[ "${{ job.status }}" == "success" ]]; then
-            BODY="✅ Guardrails passed; auto-merge enabled (merge commit) with branch deletion when possible."
+            BODY="✅ Guardrails passed; PR was merged with guarded automerge."
           else
             BODY="❌ Guardrails or checks failed; PR was not merged automatically. Review workflow logs for blocked file or failing check details."
           fi
+
           gh pr comment "$PR_NUMBER" --body "$BODY"
