@@ -1,0 +1,78 @@
+name: vSIGMA Automerge Governance
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, ready_for_review]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  automerge-governed:
+    runs-on: ubuntu-latest
+    if: >-
+      contains(github.event.pull_request.labels.*.name, 'automerge-safe') &&
+      github.event.pull_request.draft == false &&
+      (startsWith(github.head_ref, 'vsigma-') || startsWith(github.head_ref, 'codex/'))
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate trusted author
+        env:
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          REPO_OWNER: ${{ github.repository_owner }}
+        run: |
+          set -euo pipefail
+          TRUSTED=false
+          if [[ "$PR_AUTHOR" == "$REPO_OWNER" ]]; then
+            TRUSTED=true
+          fi
+          if [[ "$PR_AUTHOR" == "github-actions[bot]" || "$PR_AUTHOR" == "codex[bot]" || "$PR_AUTHOR" == "openai-codex[bot]" ]]; then
+            TRUSTED=true
+          fi
+          if [[ "$TRUSTED" != "true" ]]; then
+            echo "Untrusted PR author: $PR_AUTHOR"
+            exit 1
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run automerge guardrails
+        run: |
+          python scripts/check_automerge_guardrails.py \
+            --base-ref "origin/${{ github.base_ref }}" \
+            --head-ref "origin/${{ github.head_ref }}"
+
+      - name: Run relevant tests
+        run: python -m pytest tests/test_automerge_guardrails.py -q
+
+      - name: Validate clean patch formatting
+        run: git diff --check
+
+      - name: Enable auto-merge (merge commit)
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          gh pr merge "$PR_NUMBER" --merge --auto --delete-branch
+
+      - name: Summarize guarded automerge decision
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          if [[ "${{ job.status }}" == "success" ]]; then
+            BODY="✅ Guardrails passed; auto-merge enabled (merge commit) with branch deletion when possible."
+          else
+            BODY="❌ Guardrails or checks failed; PR was not merged automatically. Review workflow logs for blocked file or failing check details."
+          fi
+          gh pr comment "$PR_NUMBER" --body "$BODY"
