@@ -18,8 +18,8 @@ odds_structure_coherence_flag           RICH_MIXED           5
 
 Fixture preview
  fixture_id                league     home_team     away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
-    1535308 CONMEBOL Libertadores Club Nacional Universitario                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.5890                            -0.015
-    1544596    UEFA Europa League   SC Freiburg   Aston Villa                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3595                            -0.015
-    1535206 CONMEBOL Sudamericana  Boston River     O'Higgins                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3748                            -0.015
-    1535212 CONMEBOL Sudamericana       Olimpia Vasco DA Gama                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.5539                            -0.015
-    1535216 CONMEBOL Sudamericana        Santos   San Lorenzo                    RICH_MIXED                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.3630                            -0.010
+    1535308 CONMEBOL Libertadores Club Nacional Universitario                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.6133                            -0.015
+    1544596    UEFA Europa League   SC Freiburg   Aston Villa                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3910                            -0.015
+    1535206 CONMEBOL Sudamericana  Boston River     O'Higgins                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3816                            -0.015
+    1535212 CONMEBOL Sudamericana       Olimpia Vasco DA Gama                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.5465                            -0.015
+    1535216 CONMEBOL Sudamericana        Santos   San Lorenzo                    RICH_MIXED                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.3605                            -0.010
