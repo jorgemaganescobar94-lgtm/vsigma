@@ -50,6 +50,30 @@ class ShadowExperimentTests(unittest.TestCase):
         for proposal in proposals:
             self.assertFalse(self.module.is_shadow_eligible(proposal))
 
+    def test_operational_patterns_are_not_shadow_eligible(self) -> None:
+        proposals = [
+            {
+                "proposal_type": "MODEL_SHADOW_PROPOSAL",
+                "proposal_status": "SHADOW_CANDIDATE_REQUIRED",
+                "auto_apply": "NO",
+                "source_pattern_key": "WAITING_PRELOCK::OVER_1_5::FAILURE_MODE_LOW_CONVERSION::WAIT_FOR_POST_RESULTS",
+            },
+            {
+                "proposal_type": "MODEL_SHADOW_PROPOSAL",
+                "proposal_status": "SHADOW_CANDIDATE_REQUIRED",
+                "auto_apply": "NO",
+                "source_pattern_key": "EXPIRED_PRELOCK::OVER_1_5::FAILURE_MODE_LOW_CONVERSION",
+            },
+            {
+                "proposal_type": "MODEL_SHADOW_PROPOSAL",
+                "proposal_status": "SHADOW_CANDIDATE_REQUIRED",
+                "auto_apply": "NO",
+                "source_pattern_key": "DATA_BLOCKED::OVER_1_5::FAILURE_MODE_LOW_CONVERSION",
+            },
+        ]
+        for proposal in proposals:
+            self.assertFalse(self.module.is_shadow_eligible(proposal))
+
     def test_build_experiment_for_low_conversion_over15(self) -> None:
         proposal = {
             "proposal_id": "MODEL_SHADOW_PROPOSAL::MARKET_RISK_CLUSTER::OVER_1_5::FAILURE_MODE_LOW_CONVERSION",
