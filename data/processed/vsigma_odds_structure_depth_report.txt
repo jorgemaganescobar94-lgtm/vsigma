@@ -7,8 +7,8 @@ Summary
                 summary_scope                 metric  rows_total
                       overall        target_fixtures          21
   odds_structure_depth_status                     OK          21
-odds_structure_coherence_flag             RICH_MIXED          10
-odds_structure_coherence_flag          RICH_COHERENT           9
+odds_structure_coherence_flag             RICH_MIXED          11
+odds_structure_coherence_flag          RICH_COHERENT           8
 odds_structure_coherence_flag             RICH_NOISY           1
 odds_structure_coherence_flag         THIN_UNCERTAIN           1
       odds_total_ladder_shape               BALANCED           8
@@ -41,9 +41,9 @@ Fixture preview
     1537004    Jupiler Pro League              Anderlecht            St. Truiden                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2991                             0.030
     1537003    Jupiler Pro League                    Gent     Union St. Gilloise                 RICH_COHERENT                BALANCED                      NEUTRAL                   NEUTRAL                 0.3301                             0.000
     1537002    Jupiler Pro League             KV Mechelen         Club Brugge KV                    RICH_MIXED              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4869                             0.025
-    1494228           Allsvenskan             IF Elfsborg            Mjallby AIF                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2757                            -0.015
-    1535204 CONMEBOL Sudamericana             Atletico-MG              Cienciano                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.6254                             0.025
-    1535208 CONMEBOL Sudamericana                  Gremio              Palestino                 RICH_COHERENT                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.3273                            -0.010
+    1494228           Allsvenskan             IF Elfsborg            Mjallby AIF                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2707                            -0.015
+    1535204 CONMEBOL Sudamericana             Atletico-MG              Cienciano                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.6482                             0.025
+    1535208 CONMEBOL Sudamericana                  Gremio              Palestino                    RICH_MIXED                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.3970                            -0.010
     1535209 CONMEBOL Sudamericana Independiente Petrolero               Botafogo                    RICH_MIXED              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.5368                             0.025
     1535213 CONMEBOL Sudamericana          Puerto Cabello               Juventud                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3198                            -0.015
     1535215 CONMEBOL Sudamericana             River Plate          RB Bragantino                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.4601                            -0.015
