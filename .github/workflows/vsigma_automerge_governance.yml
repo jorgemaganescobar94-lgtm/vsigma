@@ -65,6 +65,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install test dependencies
+        run: python -m pip install --upgrade pip pytest
+
       - name: Run automerge guardrails
         run: |
           python scripts/check_automerge_guardrails.py \
@@ -83,7 +86,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
-          gh pr merge "$PR_NUMBER" --merge --auto --delete-branch
+          gh pr merge "$PR_NUMBER" --merge --delete-branch
 
       - name: Summarize guarded automerge decision
         if: always()
