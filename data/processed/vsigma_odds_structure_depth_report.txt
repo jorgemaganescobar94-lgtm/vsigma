@@ -4,22 +4,49 @@ Purpose: lab-only market translation governance from paid odds ladder depth.
 Missing or thin odds are treated as uncertainty, not as a negative football signal.
 
 Summary
-                summary_scope               metric  rows_total
-                      overall      target_fixtures           5
-  odds_structure_depth_status                   OK           5
-odds_structure_coherence_flag           RICH_MIXED           5
-      odds_total_ladder_shape           MILD_GOALS           3
-      odds_total_ladder_shape             BALANCED           2
- odds_market_translation_hint  PREFER_MILDER_TOTAL           3
- odds_market_translation_hint CAUTION_FRAGILE_SIDE           1
- odds_market_translation_hint         CAUTION_BTTS           1
-    odds_line_aggression_flag      PREFER_OVER_1_5           3
-    odds_line_aggression_flag              NEUTRAL           2
+                summary_scope                 metric  rows_total
+                      overall        target_fixtures          21
+  odds_structure_depth_status                     OK          21
+odds_structure_coherence_flag             RICH_MIXED          10
+odds_structure_coherence_flag          RICH_COHERENT           9
+odds_structure_coherence_flag             RICH_NOISY           1
+odds_structure_coherence_flag         THIN_UNCERTAIN           1
+      odds_total_ladder_shape               BALANCED           8
+      odds_total_ladder_shape             MILD_GOALS           6
+      odds_total_ladder_shape            BROAD_GOALS           4
+      odds_total_ladder_shape             WIDE_GOALS           2
+      odds_total_ladder_shape                UNKNOWN           1
+ odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL           6
+ odds_market_translation_hint    PREFER_MILDER_TOTAL           6
+ odds_market_translation_hint   CAUTION_FRAGILE_SIDE           4
+ odds_market_translation_hint           CAUTION_BTTS           2
+ odds_market_translation_hint                NEUTRAL           2
+ odds_market_translation_hint   ODDS_DEPTH_UNCERTAIN           1
+    odds_line_aggression_flag                NEUTRAL           8
+    odds_line_aggression_flag     OVER_2_5_SUPPORTED           6
+    odds_line_aggression_flag        PREFER_OVER_1_5           6
+    odds_line_aggression_flag                UNKNOWN           1
 
 Fixture preview
- fixture_id                league     home_team     away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
-    1535308 CONMEBOL Libertadores Club Nacional Universitario                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.6133                            -0.015
-    1544596    UEFA Europa League   SC Freiburg   Aston Villa                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3910                            -0.015
-    1535206 CONMEBOL Sudamericana  Boston River     O'Higgins                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3816                            -0.015
-    1535212 CONMEBOL Sudamericana       Olimpia Vasco DA Gama                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.5465                            -0.015
-    1535216 CONMEBOL Sudamericana        Santos   San Lorenzo                    RICH_MIXED                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.3605                            -0.010
+ fixture_id                league               home_team              away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
+    1545417            Bundesliga           VfL Wolfsburg        SC Paderborn 07                 RICH_COHERENT                BALANCED                      NEUTRAL                   NEUTRAL                 0.3346                             0.000
+    1535301 CONMEBOL Libertadores                   Cusco Independiente Medellin                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3938                            -0.015
+    1535306 CONMEBOL Libertadores     Deportivo La Guaira    Independ. Rivadavia                    RICH_MIXED                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.4544                            -0.010
+    1535302 CONMEBOL Libertadores                Flamengo       Estudiantes L.P.                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3280                            -0.015
+    1535305 CONMEBOL Libertadores                  Junior       Sporting Cristal                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3643                            -0.015
+    1535307 CONMEBOL Libertadores            LDU de Quito                  Lanus                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3637                            -0.015
+    1535309 CONMEBOL Libertadores               Palmeiras          Cerro Porteno                    RICH_NOISY              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.7303                            -0.025
+    1545411            Eredivisie                    Ajax              Groningen                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3566                             0.025
+    1545412            Eredivisie                 Utrecht             Heerenveen                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3404                             0.030
+    1537004    Jupiler Pro League              Anderlecht            St. Truiden                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2991                             0.030
+    1537003    Jupiler Pro League                    Gent     Union St. Gilloise                 RICH_COHERENT                BALANCED                      NEUTRAL                   NEUTRAL                 0.3301                             0.000
+    1537002    Jupiler Pro League             KV Mechelen         Club Brugge KV                    RICH_MIXED              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4869                             0.025
+    1494228           Allsvenskan             IF Elfsborg            Mjallby AIF                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2757                            -0.015
+    1535204 CONMEBOL Sudamericana             Atletico-MG              Cienciano                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.6254                             0.025
+    1535208 CONMEBOL Sudamericana                  Gremio              Palestino                 RICH_COHERENT                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.3273                            -0.010
+    1535209 CONMEBOL Sudamericana Independiente Petrolero               Botafogo                    RICH_MIXED              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.5368                             0.025
+    1535213 CONMEBOL Sudamericana          Puerto Cabello               Juventud                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3198                            -0.015
+    1535215 CONMEBOL Sudamericana             River Plate          RB Bragantino                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.4601                            -0.015
+    1545234           Premiership                 Partick              ST Mirren                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.4311                            -0.015
+    1545231          Super League            Grasshoppers               FC Aarau                THIN_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                 0.0838                             0.000
+    1545410             Superliga                 Brondby          FC Copenhagen                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3010                            -0.015
