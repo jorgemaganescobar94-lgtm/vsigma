@@ -1,6 +1,6 @@
 summary_scope,rows_processed,home_full_or_partial,away_full_or_partial,avg_home_opponent_strength,avg_away_opponent_strength,standings_api_calls,standings_cache_hits,standings_errors,generated_at_utc,flag,rows
-overall,19.0,19.0,19.0,0.632,0.602,1.0,189.0,0.0,2026-05-19T23:44:49.521477+00:00,,
-home_quality_flag,,,,,,,,,,FULL,13.0
-home_quality_flag,,,,,,,,,,PARTIAL,6.0
-away_quality_flag,,,,,,,,,,FULL,14.0
-away_quality_flag,,,,,,,,,,PARTIAL,5.0
+overall,8.0,8.0,8.0,0.666,0.618,0.0,80.0,0.0,2026-05-20T17:12:18.774237+00:00,,
+home_quality_flag,,,,,,,,,,FULL,5.0
+home_quality_flag,,,,,,,,,,PARTIAL,3.0
+away_quality_flag,,,,,,,,,,FULL,6.0
+away_quality_flag,,,,,,,,,,PARTIAL,2.0
