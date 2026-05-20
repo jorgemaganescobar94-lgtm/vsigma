@@ -1,7 +1,7 @@
 # vSIGMA Daily Command Center - 2026-05-20
 
 ## Executive Command
-- generated_at: 2026-05-20T19:19:50+01:00
+- generated_at: 2026-05-20T21:22:11+01:00
 - mode: auto
 - command_center_status: EXECUTION_READY
 - daily_classification: EXECUTION_OK
@@ -9,7 +9,7 @@
 - operational_verdict: EXECUTION_AVAILABLE
 - predictive_failure: UNKNOWN
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26181500847
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26187713520
 
 ## Next Operator Action
 - Review official executable picks and post-result quality once scores are labeled.
@@ -17,11 +17,11 @@
 ## Decision Snapshot
 - decision_outcome_rows: 5
 - official_action_counts: EXECUTABLE=2; WAIT=2; NO_BET=1
-- execution_family_status_counts: PRELOCK_CONFIRMED=2; WAITING_FOR_WINDOW=2; PRELOCK_NOT_RETAINED=1
+- execution_family_status_counts: PRELOCK_CONFIRMED=2; WAITING_FOR_WINDOW=2; EXPIRED=1
 
 ## Quality Snapshot
 - decision_quality_rows: 5
-- decision_quality_labels: WAIT_UNRESOLVED=2; ACTIONABLE_WIN=1; NO_BET_UNRESOLVED=1; ACTIONABLE_UNRESOLVED=1
+- decision_quality_labels: WAIT_UNRESOLVED=2; ACTIONABLE_WIN=1; ACTIONABLE_UNRESOLVED=1; EXPIRED_PRELOCK_UNRESOLVED=1
 - quality_buckets: NEEDS_MORE_DATA=4; GOOD_DECISION=1
 
 ## Source Coverage
