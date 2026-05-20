@@ -63,17 +63,17 @@
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | OFFICIAL_BASELINE | 1535312 | Santa Fe | Platense | OVER_1_5 | IN_PRELOCK_WINDOW | PRELOCK_CONFIRMED | lineups confirmed |
 | OFFICIAL_BASELINE | 1494229 | Gais | Hammarby FF | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| OFFICIAL_BASELINE | 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| OFFICIAL_BASELINE | 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | IN_PRELOCK_WINDOW | PRELOCK_NO_CHANGE | no explicit pre-lock contradiction detected |
 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1535312 | Santa Fe | Platense | OVER_1_5 | IN_PRELOCK_WINDOW | PRELOCK_CONFIRMED | lineups confirmed |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | IN_PRELOCK_WINDOW | PRELOCK_NO_CHANGE | no explicit pre-lock contradiction detected |
 | CANDIDATE_V4_O25_FIREWALL | 1535312 | Santa Fe | Platense | OVER_1_5 | IN_PRELOCK_WINDOW | PRELOCK_CONFIRMED | lineups confirmed |
-| CANDIDATE_V4_O25_FIREWALL | 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V4_O25_FIREWALL | 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | IN_PRELOCK_WINDOW | PRELOCK_NO_CHANGE | no explicit pre-lock contradiction detected |
 | CANDIDATE_V5_PLAYER_IMPACT | 1535312 | Santa Fe | Platense | OVER_1_5 | IN_PRELOCK_WINDOW | PRELOCK_CONFIRMED | lineups confirmed |
-| CANDIDATE_V5_PLAYER_IMPACT | 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V5_PLAYER_IMPACT | 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | IN_PRELOCK_WINDOW | PRELOCK_NO_CHANGE | no explicit pre-lock contradiction detected |
 | CANDIDATE_V6_API_PREDICTIONS | 1535312 | Santa Fe | Platense | OVER_1_5 | IN_PRELOCK_WINDOW | PRELOCK_CONFIRMED | lineups confirmed |
-| CANDIDATE_V6_API_PREDICTIONS | 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V6_API_PREDICTIONS | 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | IN_PRELOCK_WINDOW | PRELOCK_NO_CHANGE | no explicit pre-lock contradiction detected |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1535312 | Santa Fe | Platense | OVER_1_5 | IN_PRELOCK_WINDOW | PRELOCK_CONFIRMED | lineups confirmed |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | IN_PRELOCK_WINDOW | PRELOCK_NO_CHANGE | no explicit pre-lock contradiction detected |
 
 ## Result State
 | experiment_id | fixture_id | market_primary | result_status | result | profit_units | record_status |
@@ -96,3 +96,4 @@
 | file_name | status | detail |
 | --- | --- | --- |
 | vsigma_today_candidate_v7_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_prelock_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |

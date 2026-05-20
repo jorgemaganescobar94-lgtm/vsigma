@@ -1,23 +1,23 @@
 # vSIGMA Cloud Decision Summary - 2026-05-20
 
 ## Status
-- Auto status: WAITING_OR_BLOCKED
+- Auto status: EXECUTABLE
 - PRE refreshed: NO
 - Candidates reviewed: 1
-- Executable picks: 0
+- Executable picks: 1
 - Waiting picks: 0
-- Blocked picks: 1
+- Blocked picks: 0
 - Data problem picks: 0
-- Next automatic action: WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW
-- OFFICIAL_ACTION_SUMMARY: NO_BET
+- Next automatic action: EXECUTE_GOVERNED_PICK
+- OFFICIAL_ACTION_SUMMARY: EXECUTABLE
 
 ## Executable Picks
-_No rows._
+| fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | official_action | executable_now | prelock_decision | next_action |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1544596 | UEFA Europa League | SC Freiburg | Aston Villa | OVER_1_5 | 0.82976 | EXECUTABLE | YES | PRELOCK_NO_CHANGE | EXECUTE_GOVERNED_PICK |
 
 ## Waiting / Blocked Picks
-| fixture_id | league | home_team | away_team | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | retry_allowed | next_retry_time | decision_state | exclusion_reason | next_action |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1544596 | UEFA Europa League | SC Freiburg | Aston Villa | OVER_1_5 | 2026-05-20T20:00+01:00 | 69.19 | NO_BET | NO | PRELOCK_GOVERNANCE_NOT_RETAINED | YES | 2026-05-20T19:00+01:00 | IN_WINDOW_BUT_BLOCKED | IN_WINDOW_BUT_NOT_RETAINED | CHECK_ODDS_LINEUPS_AVAILABILITY_OR_V7_GOVERNANCE |
+_No rows._
 
 ## Technical Warnings
 - healthcheck_status: WARNING
@@ -35,7 +35,7 @@ _No rows._
 - Window minutes: 90
 - PRE refreshed by auto controller: NO
 - PRE refresh reasons: none
-- PRELOCK retained no rows: YES
+- PRELOCK retained no rows: NO
 - PRELOCK unavailable rows: 0
 - Candidate source used: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-20/vsigma_today_competition_top.csv
 - Global candidate fallback: /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_competition_top.csv

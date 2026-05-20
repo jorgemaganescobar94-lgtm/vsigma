@@ -1,2 +1,2 @@
 date,timezone,mode,baseline_competition_rows,candidate_v2_competition_rows,candidate_v7_competition_rows,price_ok_rows,price_thin_secondary_rows,price_rejected_rows,price_prelock_required_rows,v7_waiting_for_prelock_rows,v7_prelock_confirmed_rows,v7_prelock_rejected_rows,v7_prelock_unavailable_rows,price_drift_penalized_rows,official_baseline_preserved,candidate_v2_preserved,run_finished_at
-2026-05-20,Atlantic/Canary,SHADOW_CANDIDATE_V7_PRICE_DISCIPLINE_CLV_DRIFT_GUARD,1,1,0,0,0,0,1,0,0,0,1,0,1,1,2026-05-20T17:12:41.921751+00:00
+2026-05-20,Atlantic/Canary,SHADOW_CANDIDATE_V7_PRICE_DISCIPLINE_CLV_DRIFT_GUARD,1,1,0,0,0,0,1,0,0,0,1,0,1,1,2026-05-20T18:04:34.058622+00:00
