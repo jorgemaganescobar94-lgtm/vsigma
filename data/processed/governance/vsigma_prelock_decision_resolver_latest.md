@@ -12,7 +12,7 @@
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| SC Freiburg vs Aston Villa | OVER_1_5 | 2026-05-20T20:00+01:00 | -82.16 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
+| SC Freiburg vs Aston Villa | OVER_1_5 | 2026-05-20T20:00+01:00 | -95.25 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
 
 ## Data Gaps
 - odds missing: 0
