@@ -1,6 +1,6 @@
 # vSIGMA PRELOCK Exclusion Audit - 2026-05-20
 
-- Generated at: 2026-05-20T19:13:30+01:00
+- Generated at: 2026-05-20T19:19:48+01:00
 - Timezone: Atlantic/Canary
 - Candidates reviewed: 1
 - In current 90-minute window: 1
@@ -10,4 +10,4 @@
 
 | fixture_id | fixture | market | kickoff | min_to_ko | in_window | retained | exclusion_reason | next_action |
 | --- | --- | --- | --- | ---: | --- | --- | --- | --- |
-| 1544596 | SC Freiburg vs Aston Villa | OVER_1_5 | 2026-05-20T20:00+01:00 | 46.50 | YES | YES | PRELOCK_NO_CHANGE | REVIEW_PRELOCK_DECISION |
+| 1544596 | SC Freiburg vs Aston Villa | OVER_1_5 | 2026-05-20T20:00+01:00 | 40.20 | YES | YES | PRELOCK_NO_CHANGE | REVIEW_PRELOCK_DECISION |
