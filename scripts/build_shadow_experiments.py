@@ -31,6 +31,7 @@ EXPERIMENT_COLUMNS = [
 ]
 
 QUALITY_TOKENS = {"UNKNOWN_MARKET", "UNKNOWN_RISK", "UNRESOLVED", "NO_SIGNAL"}
+OPERATIONAL_TOKENS = {"WAITING_PRELOCK", "WAIT_FOR_POST_RESULTS", "EXPIRED_PRELOCK", "DATA_BLOCKED", "TECHNICAL_REVIEW"}
 
 
 @dataclass(frozen=True)
@@ -73,6 +74,18 @@ def has_quality_gap(value: str) -> bool:
     return any(token in text for token in QUALITY_TOKENS)
 
 
+def has_operational_gap(value: str) -> bool:
+    text = upper(value)
+    return any(token in text for token in OPERATIONAL_TOKENS)
+
+
+def is_pure_predictive_shadow_key(value: str) -> bool:
+    key = upper(value)
+    if not key or has_quality_gap(key) or has_operational_gap(key):
+        return False
+    return "LOW_CONVERSION" in key or "ACTIONABLE_LOSS" in key
+
+
 def is_shadow_eligible(proposal: dict[str, str]) -> bool:
     if upper(proposal.get("proposal_type")) != "MODEL_SHADOW_PROPOSAL":
         return False
@@ -81,7 +94,7 @@ def is_shadow_eligible(proposal: dict[str, str]) -> bool:
     if upper(proposal.get("auto_apply")) != "NO":
         return False
     pattern_key = norm(proposal.get("source_pattern_key"))
-    if not pattern_key or has_quality_gap(pattern_key):
+    if not is_pure_predictive_shadow_key(pattern_key):
         return False
     return True
 
