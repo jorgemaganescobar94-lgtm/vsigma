@@ -5269,8 +5269,8 @@
         "date": "2026-05-20T15:00:00+01:00",
         "timestamp": 1779285600,
         "periods": {
-          "first": null,
-          "second": null
+          "first": 1779285600,
+          "second": 1779289200
         },
         "venue": {
           "id": 3724,
@@ -5278,9 +5278,9 @@
           "city": "Luanda"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -5309,17 +5309,17 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -5768,9 +5768,9 @@
           "city": "Sfax"
         },
         "status": {
-          "long": "Extra Time",
-          "short": "ET",
-          "elapsed": 116,
+          "long": "Match Finished",
+          "short": "AET",
+          "elapsed": 120,
           "extra": null
         }
       },
@@ -6349,18 +6349,18 @@
           "id": 27575,
           "name": "Stade Migoveen",
           "logo": "https://media.api-sports.io/football/teams/27575.png",
-          "winner": false
+          "winner": null
         },
         "away": {
           "id": 21190,
           "name": "FC 105",
           "logo": "https://media.api-sports.io/football/teams/21190.png",
-          "winner": true
+          "winner": null
         }
       },
       "goals": {
-        "home": 1,
-        "away": 3
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
@@ -8358,8 +8358,8 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
+          "long": "Match Finished",
+          "short": "FT",
           "elapsed": 90,
           "extra": null
         }
@@ -8379,27 +8379,27 @@
           "id": 4052,
           "name": "Flint City Bucks",
           "logo": "https://media.api-sports.io/football/teams/4052.png",
-          "winner": true
+          "winner": null
         },
         "away": {
           "id": 18898,
           "name": "Lansing City",
           "logo": "https://media.api-sports.io/football/teams/18898.png",
-          "winner": false
+          "winner": null
         }
       },
       "goals": {
-        "home": 2,
-        "away": 1
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": 2,
-          "away": 1
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -8638,9 +8638,9 @@
           "city": "Telsiai"
         },
         "status": {
-          "long": "Extra Time",
-          "short": "ET",
-          "elapsed": 103,
+          "long": "Match Finished",
+          "short": "PEN",
+          "elapsed": 120,
           "extra": null
         }
       },
@@ -8659,13 +8659,13 @@
           "id": 3860,
           "name": "Džiugas Telšiai",
           "logo": "https://media.api-sports.io/football/teams/3860.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 3858,
           "name": "Banga",
           "logo": "https://media.api-sports.io/football/teams/3858.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
@@ -8686,8 +8686,8 @@
           "away": 0
         },
         "penalty": {
-          "home": null,
-          "away": null
+          "home": 4,
+          "away": 3
         }
       }
     },
@@ -8918,10 +8918,10 @@
           "city": "Dar es Salaam"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 83,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
         }
       },
       "league": {
@@ -8958,8 +8958,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -8988,10 +8988,10 @@
           "city": "Trinec"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 83,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
         }
       },
       "league": {
@@ -9028,8 +9028,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -9058,10 +9058,10 @@
           "city": "Vsetin"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 81,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
         }
       },
       "league": {
@@ -9090,7 +9090,7 @@
       },
       "goals": {
         "home": 1,
-        "away": 2
+        "away": 3
       },
       "score": {
         "halftime": {
@@ -9098,8 +9098,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 3
         },
         "extratime": {
           "home": null,
@@ -9128,10 +9128,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 85,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
         }
       },
       "league": {
@@ -9168,8 +9168,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -9198,10 +9198,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 84,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
         }
       },
       "league": {
@@ -9238,8 +9238,8 @@
           "away": 3
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 3
         },
         "extratime": {
           "home": null,
@@ -9268,10 +9268,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 83,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
         }
       },
       "league": {
@@ -9289,17 +9289,17 @@
           "id": 3739,
           "name": "Lovćen",
           "logo": "https://media.api-sports.io/football/teams/3739.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 3749,
           "name": "Kom",
           "logo": "https://media.api-sports.io/football/teams/3749.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
@@ -9308,8 +9308,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -9338,10 +9338,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 83,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
         }
       },
       "league": {
@@ -9378,8 +9378,8 @@
           "away": 2
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 4,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -9408,10 +9408,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 86,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
         }
       },
       "league": {
@@ -9448,8 +9448,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -9478,9 +9478,9 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 83,
+          "long": "Break Time",
+          "short": "BT",
+          "elapsed": null,
           "extra": null
         }
       },
@@ -9509,8 +9509,8 @@
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -9518,12 +9518,12 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "extratime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "penalty": {
           "home": null,
@@ -9548,10 +9548,10 @@
           "city": "Petah Tikva"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 71,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 8
         }
       },
       "league": {
@@ -9588,8 +9588,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -9618,10 +9618,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 71,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
         }
       },
       "league": {
@@ -9658,8 +9658,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -9688,10 +9688,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 69,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
         }
       },
       "league": {
@@ -9728,8 +9728,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -9758,10 +9758,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 69,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 8
         }
       },
       "league": {
@@ -9798,8 +9798,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -9828,10 +9828,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 56,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
         }
       },
       "league": {
@@ -9849,18 +9849,18 @@
           "id": 20825,
           "name": "Sparta Brno",
           "logo": "https://media.api-sports.io/football/teams/20825.png",
-          "winner": false
+          "winner": null
         },
         "away": {
           "id": 21650,
           "name": "Líšeň II",
           "logo": "https://media.api-sports.io/football/teams/21650.png",
-          "winner": true
+          "winner": null
         }
       },
       "goals": {
         "home": 0,
-        "away": 2
+        "away": 0
       },
       "score": {
         "halftime": {
@@ -9868,8 +9868,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 3
         },
         "extratime": {
           "home": null,
@@ -9898,10 +9898,10 @@
           "city": "Prague"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 55,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 9
         }
       },
       "league": {
@@ -9929,8 +9929,8 @@
         }
       },
       "goals": {
-        "home": 1,
-        "away": 1
+        "home": 2,
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -9938,8 +9938,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -9968,10 +9968,10 @@
           "city": "Pisek"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 51,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
         }
       },
       "league": {
@@ -9989,17 +9989,17 @@
           "id": 7334,
           "name": "Písek",
           "logo": "https://media.api-sports.io/football/teams/7334.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 7312,
           "name": "Králův Dvůr",
           "logo": "https://media.api-sports.io/football/teams/7312.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 1,
+        "home": 3,
         "away": 1
       },
       "score": {
@@ -10008,8 +10008,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -10038,10 +10038,10 @@
           "city": "Kristiansand"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 48,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
         }
       },
       "league": {
@@ -10070,7 +10070,7 @@
       },
       "goals": {
         "home": 1,
-        "away": 2
+        "away": 4
       },
       "score": {
         "halftime": {
@@ -10078,8 +10078,8 @@
           "away": 2
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 4
         },
         "extratime": {
           "home": null,
@@ -10108,10 +10108,10 @@
           "city": "Kuopio"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 48,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
         }
       },
       "league": {
@@ -10139,7 +10139,7 @@
         }
       },
       "goals": {
-        "home": 1,
+        "home": 3,
         "away": 0
       },
       "score": {
@@ -10148,8 +10148,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -10170,7 +10170,7 @@
         "timestamp": 1779292800,
         "periods": {
           "first": 1779292800,
-          "second": null
+          "second": 1779296400
         },
         "venue": {
           "id": null,
@@ -10178,9 +10178,9 @@
           "city": null
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -10209,7 +10209,7 @@
         }
       },
       "goals": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "score": {
@@ -10250,8 +10250,8 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 51,
-          "extra": null
+          "elapsed": 90,
+          "extra": 13
         }
       },
       "league": {
@@ -10269,17 +10269,17 @@
           "id": 662,
           "name": "Kalju Nomme",
           "logo": "https://media.api-sports.io/football/teams/662.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 18657,
           "name": "Laagri",
           "logo": "https://media.api-sports.io/football/teams/18657.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
@@ -10318,10 +10318,10 @@
           "city": "Kuressaare"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 57,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 8
         }
       },
       "league": {
@@ -10350,7 +10350,7 @@
       },
       "goals": {
         "home": 2,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -10358,8 +10358,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -10388,10 +10388,10 @@
           "city": "Narva"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 55,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 8
         }
       },
       "league": {
@@ -10409,17 +10409,17 @@
           "id": 2274,
           "name": "Trans Narva",
           "logo": "https://media.api-sports.io/football/teams/2274.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 3528,
           "name": "Paide",
           "logo": "https://media.api-sports.io/football/teams/3528.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
@@ -10428,8 +10428,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -10458,10 +10458,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 57,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
         }
       },
       "league": {
@@ -10490,7 +10490,7 @@
       },
       "goals": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -10498,8 +10498,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -10528,10 +10528,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 53,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
         }
       },
       "league": {
@@ -10549,17 +10549,17 @@
           "id": 14139,
           "name": "Dinamo Moskva II",
           "logo": "https://media.api-sports.io/football/teams/14139.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 16856,
           "name": "Dinamo Vladivostok",
           "logo": "https://media.api-sports.io/football/teams/16856.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 1,
+        "home": 2,
         "away": 1
       },
       "score": {
@@ -10568,8 +10568,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -10598,10 +10598,10 @@
           "city": "Hradec Kralove"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 50,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 8
         }
       },
       "league": {
@@ -10630,7 +10630,7 @@
       },
       "goals": {
         "home": 1,
-        "away": 2
+        "away": 3
       },
       "score": {
         "halftime": {
@@ -10638,8 +10638,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 3
         },
         "extratime": {
           "home": null,
@@ -10668,10 +10668,10 @@
           "city": "Mazeikiai"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 52,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
         }
       },
       "league": {
@@ -10700,7 +10700,7 @@
       },
       "goals": {
         "home": 0,
-        "away": 1
+        "away": 3
       },
       "score": {
         "halftime": {
@@ -10708,8 +10708,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 3
         },
         "extratime": {
           "home": null,
@@ -10738,10 +10738,10 @@
           "city": "Sirvintos"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 54,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
         }
       },
       "league": {
@@ -10769,7 +10769,7 @@
         }
       },
       "goals": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "score": {
@@ -10778,8 +10778,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -10810,8 +10810,8 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 52,
-          "extra": null
+          "elapsed": 90,
+          "extra": 14
         }
       },
       "league": {
@@ -10878,10 +10878,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 48,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 8
         }
       },
       "league": {
@@ -10910,7 +10910,7 @@
       },
       "goals": {
         "home": 2,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -10918,8 +10918,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -10948,10 +10948,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 53,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 8
         }
       },
       "league": {
@@ -10969,18 +10969,18 @@
           "id": 12499,
           "name": "Angola U17",
           "logo": "https://media.api-sports.io/football/teams/12499.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 27742,
           "name": "Mozambique U17",
           "logo": "https://media.api-sports.io/football/teams/27742.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 1,
-        "away": 1
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -10988,8 +10988,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -11018,10 +11018,10 @@
           "city": "Tizi Ouzou"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 53,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
         }
       },
       "league": {
@@ -11058,8 +11058,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -11088,10 +11088,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 53,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
         }
       },
       "league": {
@@ -11128,8 +11128,8 @@
           "away": 3
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 3
         },
         "extratime": {
           "home": null,
@@ -11150,7 +11150,7 @@
         "timestamp": 1779294600,
         "periods": {
           "first": 1779294600,
-          "second": null
+          "second": 1779298200
         },
         "venue": {
           "id": null,
@@ -11158,9 +11158,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 41,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 75,
           "extra": null
         }
       },
@@ -11189,7 +11189,7 @@
         }
       },
       "goals": {
-        "home": 2,
+        "home": 3,
         "away": 1
       },
       "score": {
@@ -11220,7 +11220,7 @@
         "timestamp": 1779294600,
         "periods": {
           "first": 1779294600,
-          "second": null
+          "second": 1779298200
         },
         "venue": {
           "id": null,
@@ -11228,9 +11228,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 31,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 65,
           "extra": null
         }
       },
@@ -11249,23 +11249,23 @@
           "id": 14787,
           "name": "Spelle-Venhaus",
           "logo": "https://media.api-sports.io/football/teams/14787.png",
-          "winner": true
+          "winner": false
         },
         "away": {
           "id": 163,
           "name": "Borussia Mönchengladbach",
           "logo": "https://media.api-sports.io/football/teams/163.png",
-          "winner": false
+          "winner": true
         }
       },
       "goals": {
-        "home": 1,
-        "away": 0
+        "home": 2,
+        "away": 5
       },
       "score": {
         "halftime": {
           "home": 1,
-          "away": 0
+          "away": 3
         },
         "fulltime": {
           "home": null,
@@ -11284,13 +11284,13 @@
     {
       "fixture": {
         "id": 1545413,
-        "referee": null,
+        "referee": "Igor Kaplenkov, Russia",
         "timezone": "Atlantic/Canary",
         "date": "2026-05-20T17:30:00+01:00",
         "timestamp": 1779294600,
         "periods": {
           "first": 1779294600,
-          "second": null
+          "second": 1779298200
         },
         "venue": {
           "id": 1348,
@@ -11298,9 +11298,9 @@
           "city": "Volgograd"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 39,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 72,
           "extra": null
         }
       },
@@ -11319,23 +11319,23 @@
           "id": 2010,
           "name": "Rotor Volgograd",
           "logo": "https://media.api-sports.io/football/teams/2010.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 6786,
           "name": "Akron",
           "logo": "https://media.api-sports.io/football/teams/6786.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 2
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -11360,7 +11360,7 @@
         "timestamp": 1779295500,
         "periods": {
           "first": 1779295500,
-          "second": null
+          "second": 1779299100
         },
         "venue": {
           "id": null,
@@ -11368,9 +11368,9 @@
           "city": "Chlef"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 23,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 53,
           "extra": null
         }
       },
@@ -11389,23 +11389,23 @@
           "id": 931,
           "name": "ASO Chlef",
           "logo": "https://media.api-sports.io/football/teams/931.png",
-          "winner": true
+          "winner": null
         },
         "away": {
           "id": 918,
           "name": "JS Kabylie",
           "logo": "https://media.api-sports.io/football/teams/918.png",
-          "winner": false
+          "winner": null
         }
       },
       "goals": {
         "home": 1,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 1,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -11430,7 +11430,7 @@
         "timestamp": 1779295500,
         "periods": {
           "first": 1779295500,
-          "second": null
+          "second": 1779299100
         },
         "venue": {
           "id": null,
@@ -11438,9 +11438,9 @@
           "city": "El Bayadh"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 26,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 59,
           "extra": null
         }
       },
@@ -11500,7 +11500,7 @@
         "timestamp": 1779295500,
         "periods": {
           "first": 1779295500,
-          "second": null
+          "second": 1779299100
         },
         "venue": {
           "id": null,
@@ -11508,9 +11508,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 23,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 52,
           "extra": null
         }
       },
@@ -11529,22 +11529,22 @@
           "id": 905,
           "name": "ES Setif",
           "logo": "https://media.api-sports.io/football/teams/905.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 906,
           "name": "MC Alger",
           "logo": "https://media.api-sports.io/football/teams/906.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -11570,7 +11570,7 @@
         "timestamp": 1779295500,
         "periods": {
           "first": 1779295500,
-          "second": null
+          "second": 1779299100
         },
         "venue": {
           "id": null,
@@ -11578,9 +11578,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 24,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 60,
           "extra": null
         }
       },
@@ -11640,7 +11640,7 @@
         "timestamp": 1779295500,
         "periods": {
           "first": 1779295500,
-          "second": null
+          "second": 1779299100
         },
         "venue": {
           "id": null,
@@ -11648,9 +11648,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 24,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 61,
           "extra": null
         }
       },
@@ -11710,7 +11710,7 @@
         "timestamp": 1779295500,
         "periods": {
           "first": 1779295500,
-          "second": null
+          "second": 1779299100
         },
         "venue": {
           "id": 1159,
@@ -11718,9 +11718,9 @@
           "city": "Tilburg"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 25,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 60,
           "extra": null
         }
       },
@@ -11749,7 +11749,7 @@
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 2
       },
       "score": {
@@ -11844,23 +11844,23 @@
     {
       "fixture": {
         "id": 1494229,
-        "referee": "M. Al-Hakim",
+        "referee": "Mohammed Al-Hakim, Sweden",
         "timezone": "Atlantic/Canary",
         "date": "2026-05-20T18:00:00+01:00",
         "timestamp": 1779296400,
         "periods": {
           "first": 1779296400,
-          "second": null
+          "second": 1779300000
         },
         "venue": {
           "id": null,
           "name": "Gamla Ullevi",
-          "city": null
+          "city": "Gothenburg"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 11,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 46,
           "extra": null
         }
       },
@@ -11879,22 +11879,22 @@
           "id": 2170,
           "name": "Gais",
           "logo": "https://media.api-sports.io/football/teams/2170.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 363,
           "name": "Hammarby FF",
           "logo": "https://media.api-sports.io/football/teams/363.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -11919,7 +11919,7 @@
         "date": "2026-05-20T18:00:00+01:00",
         "timestamp": 1779296400,
         "periods": {
-          "first": null,
+          "first": 1779296400,
           "second": null
         },
         "venue": {
@@ -11928,9 +11928,9 @@
           "city": null
         },
         "status": {
-          "long": "Match Postponed",
-          "short": "PST",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 17,
           "extra": null
         }
       },
@@ -11949,23 +11949,23 @@
           "id": 321,
           "name": "Lillestrom",
           "logo": "https://media.api-sports.io/football/teams/321.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 320,
           "name": "Kristiansund BK",
           "logo": "https://media.api-sports.io/football/teams/320.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -11990,7 +11990,7 @@
         "timestamp": 1779296400,
         "periods": {
           "first": 1779296400,
-          "second": null
+          "second": 1779300000
         },
         "venue": {
           "id": 20568,
@@ -11998,9 +11998,9 @@
           "city": "Stockholm"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 11,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 46,
           "extra": null
         }
       },
@@ -12019,22 +12019,22 @@
           "id": 15630,
           "name": "Hammarby W",
           "logo": "https://media.api-sports.io/football/teams/15630.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 21698,
           "name": "Malmö FF W",
           "logo": "https://media.api-sports.io/football/teams/21698.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -12060,7 +12060,7 @@
         "timestamp": 1779296400,
         "periods": {
           "first": 1779296400,
-          "second": null
+          "second": 1779300000
         },
         "venue": {
           "id": 12683,
@@ -12068,9 +12068,9 @@
           "city": "Bergen"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 12,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 48,
           "extra": null
         }
       },
@@ -12089,22 +12089,22 @@
           "id": 2148,
           "name": "Asane",
           "logo": "https://media.api-sports.io/football/teams/2148.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 2146,
           "name": "Sandnes ULF",
           "logo": "https://media.api-sports.io/football/teams/2146.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -12138,10 +12138,10 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 11,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 3
         }
       },
       "league": {
@@ -12200,7 +12200,7 @@
         "timestamp": 1779296400,
         "periods": {
           "first": 1779296400,
-          "second": null
+          "second": 1779300000
         },
         "venue": {
           "id": 1180,
@@ -12208,9 +12208,9 @@
           "city": "Kongsvinger"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 11,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 47,
           "extra": null
         }
       },
@@ -12229,23 +12229,23 @@
           "id": 2144,
           "name": "Kongsvinger",
           "logo": "https://media.api-sports.io/football/teams/2144.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 330,
           "name": "ODD Ballklubb",
           "logo": "https://media.api-sports.io/football/teams/330.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -12270,7 +12270,7 @@
         "timestamp": 1779296400,
         "periods": {
           "first": 1779296400,
-          "second": null
+          "second": 1779300000
         },
         "venue": {
           "id": null,
@@ -12278,9 +12278,9 @@
           "city": "Moss"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 12,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 47,
           "extra": null
         }
       },
@@ -12348,10 +12348,10 @@
           "city": "Trondheim"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 12,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 4
         }
       },
       "league": {
@@ -12369,23 +12369,23 @@
           "id": 322,
           "name": "Ranheim",
           "logo": "https://media.api-sports.io/football/teams/322.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 2150,
           "name": "hodd",
           "logo": "https://media.api-sports.io/football/teams/2150.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -12410,7 +12410,7 @@
         "timestamp": 1779296400,
         "periods": {
           "first": 1779296400,
-          "second": null
+          "second": 1779300000
         },
         "venue": {
           "id": 1189,
@@ -12418,9 +12418,9 @@
           "city": "Raufoss"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 11,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 48,
           "extra": null
         }
       },
@@ -12439,22 +12439,22 @@
           "id": 2153,
           "name": "Raufoss",
           "logo": "https://media.api-sports.io/football/teams/2153.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 2142,
           "name": "Bryne",
           "logo": "https://media.api-sports.io/football/teams/2142.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -12488,10 +12488,10 @@
           "city": "Sogndal"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 12,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 4
         }
       },
       "league": {
@@ -12520,12 +12520,12 @@
       },
       "goals": {
         "home": 2,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 2,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -12558,10 +12558,10 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 10,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 2
         }
       },
       "league": {
@@ -12579,23 +12579,23 @@
           "id": 2147,
           "name": "Strommen",
           "logo": "https://media.api-sports.io/football/teams/2147.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 328,
           "name": "Haugesund",
           "logo": "https://media.api-sports.io/football/teams/328.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 3
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 3
         },
         "fulltime": {
           "home": null,
@@ -12620,7 +12620,7 @@
         "timestamp": 1779296400,
         "periods": {
           "first": 1779296400,
-          "second": null
+          "second": 1779300000
         },
         "venue": {
           "id": 7053,
@@ -12628,9 +12628,9 @@
           "city": "Dusheti"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 13,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 47,
           "extra": null
         }
       },
@@ -12649,23 +12649,23 @@
           "id": 10015,
           "name": "Aragvi Dusheti",
           "logo": "https://media.api-sports.io/football/teams/10015.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 3507,
           "name": "Kolkheti Poti",
           "logo": "https://media.api-sports.io/football/teams/3507.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -12700,8 +12700,8 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 12,
-          "extra": null
+          "elapsed": 45,
+          "extra": 19
         }
       },
       "league": {
@@ -12760,7 +12760,7 @@
         "timestamp": 1779296400,
         "periods": {
           "first": 1779296400,
-          "second": null
+          "second": 1779300000
         },
         "venue": {
           "id": null,
@@ -12768,9 +12768,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 11,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 47,
           "extra": null
         }
       },
@@ -12800,12 +12800,12 @@
       },
       "goals": {
         "home": 0,
-        "away": 1
+        "away": 3
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 1
+          "away": 3
         },
         "fulltime": {
           "home": null,
@@ -12838,10 +12838,10 @@
           "city": "Alexandria"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 12,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 4
         }
       },
       "league": {
@@ -12908,10 +12908,10 @@
           "city": "Cairo"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 12,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 4
         }
       },
       "league": {
@@ -12939,13 +12939,13 @@
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": 0,
-          "away": 0
+          "home": 1,
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -12978,10 +12978,10 @@
           "city": "Cairo"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 9,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 3
         }
       },
       "league": {
@@ -13040,7 +13040,7 @@
         "timestamp": 1779296400,
         "periods": {
           "first": 1779296400,
-          "second": null
+          "second": 1779300000
         },
         "venue": {
           "id": null,
@@ -13048,9 +13048,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 11,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 47,
           "extra": null
         }
       },
@@ -13069,22 +13069,22 @@
           "id": 18864,
           "name": "Ataka Vilnius",
           "logo": "https://media.api-sports.io/football/teams/18864.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 3870,
           "name": "Šiauliai",
           "logo": "https://media.api-sports.io/football/teams/3870.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -13118,10 +13118,10 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 7,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 3
         }
       },
       "league": {
@@ -13139,23 +13139,23 @@
           "id": 8009,
           "name": "Al Quwa Al Jawiya",
           "logo": "https://media.api-sports.io/football/teams/8009.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 8010,
           "name": "Al Zawra'a",
           "logo": "https://media.api-sports.io/football/teams/8010.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -13188,10 +13188,10 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 7,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 5
         }
       },
       "league": {
@@ -13209,23 +13209,23 @@
           "id": 5242,
           "name": "Al Shorta",
           "logo": "https://media.api-sports.io/football/teams/5242.png",
-          "winner": true
+          "winner": false
         },
         "away": {
           "id": 11070,
           "name": "Erbil",
           "logo": "https://media.api-sports.io/football/teams/11070.png",
-          "winner": false
+          "winner": true
         }
       },
       "goals": {
-        "home": 1,
-        "away": 0
+        "home": 0,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": 1,
-          "away": 0
+          "home": 0,
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -13258,10 +13258,10 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 9,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 1
         }
       },
       "league": {
@@ -13279,23 +13279,23 @@
           "id": 189,
           "name": "SV Sandhausen",
           "logo": "https://media.api-sports.io/football/teams/189.png",
-          "winner": true
+          "winner": null
         },
         "away": {
           "id": 169,
           "name": "Eintracht Frankfurt",
           "logo": "https://media.api-sports.io/football/teams/169.png",
-          "winner": false
+          "winner": null
         }
       },
       "goals": {
         "home": 1,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 1,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -13314,7 +13314,7 @@
     {
       "fixture": {
         "id": 1545403,
-        "referee": null,
+        "referee": "David Rafael Oliveira da Silva, Portugal",
         "timezone": "Atlantic/Canary",
         "date": "2026-05-20T18:00:00+01:00",
         "timestamp": 1779296400,
@@ -13324,14 +13324,14 @@
         },
         "venue": {
           "id": null,
-          "name": "Estadio Manuel Marques",
+          "name": "Estádio Manuel Marques",
           "city": "Torres Vedras"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 9,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 1
         }
       },
       "league": {
@@ -13389,7 +13389,7 @@
         "date": "2026-05-20T18:30:00+01:00",
         "timestamp": 1779298200,
         "periods": {
-          "first": null,
+          "first": 1779298200,
           "second": null
         },
         "venue": {
@@ -13398,9 +13398,9 @@
           "city": "Koblenz"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 33,
           "extra": null
         }
       },
@@ -13429,13 +13429,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -13459,7 +13459,7 @@
         "date": "2026-05-20T18:30:00+01:00",
         "timestamp": 1779298200,
         "periods": {
-          "first": null,
+          "first": 1779298200,
           "second": null
         },
         "venue": {
@@ -13468,9 +13468,9 @@
           "city": "Ennepetal"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 29,
           "extra": null
         }
       },
@@ -13499,13 +13499,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -13529,7 +13529,7 @@
         "date": "2026-05-20T18:30:00+01:00",
         "timestamp": 1779298200,
         "periods": {
-          "first": null,
+          "first": 1779298200,
           "second": null
         },
         "venue": {
@@ -13538,9 +13538,9 @@
           "city": "Barysaw"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 34,
           "extra": null
         }
       },
@@ -13569,13 +13569,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -13669,7 +13669,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -13678,9 +13678,9 @@
           "city": "Dammam"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 3,
           "extra": null
         }
       },
@@ -13709,13 +13709,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -13739,7 +13739,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -13748,9 +13748,9 @@
           "city": "Buraidah"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 3,
           "extra": null
         }
       },
@@ -13779,13 +13779,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -13809,7 +13809,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -13818,9 +13818,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 2,
           "extra": null
         }
       },
@@ -13849,13 +13849,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -13879,7 +13879,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -13888,9 +13888,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 3,
           "extra": null
         }
       },
@@ -13919,13 +13919,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -13949,7 +13949,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -13958,9 +13958,9 @@
           "city": "Podgorica"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 3,
           "extra": null
         }
       },
@@ -13989,13 +13989,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -14019,7 +14019,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -14028,9 +14028,9 @@
           "city": "Tuzi"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 4,
           "extra": null
         }
       },
@@ -14059,13 +14059,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -14089,7 +14089,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -14098,9 +14098,9 @@
           "city": "Bijelo Polje"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 2,
           "extra": null
         }
       },
@@ -14129,13 +14129,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -14159,7 +14159,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -14168,9 +14168,9 @@
           "city": "Podgorica"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 3,
           "extra": null
         }
       },
@@ -14199,13 +14199,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -14229,7 +14229,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -14238,9 +14238,9 @@
           "city": "Bar"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 1,
           "extra": null
         }
       },
@@ -14269,13 +14269,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -14299,7 +14299,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -14308,9 +14308,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 4,
           "extra": null
         }
       },
@@ -14329,23 +14329,23 @@
           "id": 27412,
           "name": "Atl. Rafaela 2",
           "logo": "https://media.api-sports.io/football/teams/27412.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 18684,
           "name": "Defensa y Justicia Res.",
           "logo": "https://media.api-sports.io/football/teams/18684.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -14369,7 +14369,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -14378,9 +14378,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 4,
           "extra": null
         }
       },
@@ -14409,13 +14409,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -14439,7 +14439,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -14448,9 +14448,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 4,
           "extra": null
         }
       },
@@ -14469,23 +14469,23 @@
           "id": 18693,
           "name": "Platense Res.",
           "logo": "https://media.api-sports.io/football/teams/18693.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 18691,
           "name": "Newell's Old Boys Res.",
           "logo": "https://media.api-sports.io/football/teams/18691.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -14509,7 +14509,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -14518,9 +14518,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 4,
           "extra": null
         }
       },
@@ -14549,13 +14549,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -14579,7 +14579,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -14588,9 +14588,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 3,
           "extra": null
         }
       },
@@ -14619,13 +14619,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -14649,7 +14649,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -14658,9 +14658,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 2,
           "extra": null
         }
       },
@@ -14689,13 +14689,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -14719,7 +14719,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -14728,9 +14728,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 4,
           "extra": null
         }
       },
@@ -14759,13 +14759,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -14789,7 +14789,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -14798,9 +14798,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 4,
           "extra": null
         }
       },
@@ -14829,13 +14829,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -14859,7 +14859,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -14868,9 +14868,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 4,
           "extra": null
         }
       },
@@ -14899,13 +14899,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -14929,7 +14929,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -14938,9 +14938,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 2,
           "extra": null
         }
       },
@@ -14969,13 +14969,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -14999,7 +14999,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -15008,9 +15008,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 4,
           "extra": null
         }
       },
@@ -15039,13 +15039,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -15069,7 +15069,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -15078,9 +15078,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 4,
           "extra": null
         }
       },
@@ -15109,13 +15109,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -15139,7 +15139,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -15148,9 +15148,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 4,
           "extra": null
         }
       },
@@ -15179,13 +15179,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -15209,7 +15209,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -15218,9 +15218,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 4,
           "extra": null
         }
       },
@@ -15249,13 +15249,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -15349,7 +15349,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -15358,9 +15358,9 @@
           "city": "Skopje"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 3,
           "extra": null
         }
       },
@@ -15389,13 +15389,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -15419,7 +15419,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -15428,9 +15428,9 @@
           "city": "Palermo"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 1,
           "extra": null
         }
       },
@@ -15459,13 +15459,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -15489,7 +15489,7 @@
         "date": "2026-05-20T19:00:00+01:00",
         "timestamp": 1779300000,
         "periods": {
-          "first": null,
+          "first": 1779300000,
           "second": null
         },
         "venue": {
@@ -15498,9 +15498,9 @@
           "city": "Ascoli Piceno"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 3,
           "extra": null
         }
       },
@@ -15529,13 +15529,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,

@@ -34,7 +34,7 @@
 ## Pre-Lock Timing
 | fixture_id | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | 2026-05-20T19:00:40+00:00 | 107.89 | 2026-05-20T17:30:40+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1544596 | SC Freiburg | Aston Villa | OVER_1_5 | 2026-05-20T19:00:26.600000+00:00 | 55.8 | 2026-05-20T17:30:26.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
 
 ## Ledger State
 | experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |

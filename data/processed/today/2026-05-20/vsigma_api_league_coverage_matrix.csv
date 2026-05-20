@@ -1,7 +1,5 @@
 league_id,league,country,season,league_type,coverage_season_current,coverage_season_start,coverage_season_end,league_has_fixtures_coverage,league_has_standings_coverage,league_has_odds_coverage,league_has_events_coverage,league_has_lineups_coverage,league_has_fixture_stats_coverage,league_has_player_stats_coverage,league_has_players_coverage,league_has_injuries_coverage,league_has_predictions_coverage,league_has_top_scorers_coverage,league_has_top_assists_coverage,league_has_top_cards_coverage,league_coverage_class,league_coverage_rich_flag,league_data_reliability_score,league_coverage_source_status,league_coverage_note,coverage_matrix_generated_at_utc
-3,UEFA Europa League,World,2025,Cup,1,2025-07-10,2026-05-20,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-20T17:11:25.331186+00:00
-11,CONMEBOL Sudamericana,World,2026,Cup,1,2026-03-03,2026-05-29,1,1,1,1,1,1,1,1,0,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-20T17:11:25.731618+00:00
-13,CONMEBOL Libertadores,World,2026,Cup,1,2026-02-04,2026-05-29,1,1,1,1,1,1,1,1,0,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-20T17:11:26.130685+00:00
-103,Eliteserien,Norway,2026,League,1,2026-03-14,2026-12-06,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-20T17:11:26.533872+00:00
-136,Serie B,Italy,2025,League,1,2025-08-22,2026-05-22,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-20T17:11:26.933018+00:00
-917,Copa Ecuador,Ecuador,2025,Cup,1,2026-04-07,2026-06-04,1,0,0,1,1,0,0,1,0,1,1,1,1,COVERAGE_THIN,0,0.55,OFFICIAL_API,,2026-05-20T17:11:27.336484+00:00
+3,UEFA Europa League,World,2025,Cup,1,2025-07-10,2026-05-20,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-20T18:03:43.839195+00:00
+11,CONMEBOL Sudamericana,World,2026,Cup,1,2026-03-03,2026-05-29,1,1,1,1,1,1,1,1,0,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-20T18:03:44.219032+00:00
+13,CONMEBOL Libertadores,World,2026,Cup,1,2026-02-04,2026-05-29,1,1,1,1,1,1,1,1,0,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-20T18:03:44.627635+00:00
+917,Copa Ecuador,Ecuador,2025,Cup,1,2026-04-07,2026-06-04,1,0,0,1,1,0,0,1,0,1,1,1,1,COVERAGE_THIN,0,0.55,OFFICIAL_API,,2026-05-20T18:03:45.021645+00:00

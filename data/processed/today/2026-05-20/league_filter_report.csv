@@ -1,40 +1,28 @@
 country,league,league_tier,league_filter_reason,matches
 USA,USL League Two,REJECT,country_league_not_allowlisted,7
-Argentina,Reserve League,REJECT,hard_reject_noise_league,6
-Brazil,Brasileiro U20 B,REJECT,hard_reject_noise_league,5
-Montenegro,First League,REJECT,country_league_not_allowlisted,5
-Brazil,Brasileiro U20 A,REJECT,hard_reject_noise_league,4
-Italy,Serie C - Promotion - Play-offs,REJECT,country_league_not_allowlisted,4
 Venezuela,Segunda División,REJECT,country_league_not_allowlisted,4
-Brazil,Catarinense - 2,REJECT,country_league_not_allowlisted,2
+Italy,Serie C - Promotion - Play-offs,REJECT,country_league_not_allowlisted,3
+Brazil,Brasileiro U20 B,REJECT,hard_reject_noise_league,2
 Brazil,Copa Espírito Santo,REJECT,country_league_not_allowlisted,2
 Brazil,Copa Sul-Sudeste,REJECT,country_league_not_allowlisted,2
 Brazil,Copa do Brasil U17,REJECT,hard_reject_noise_league,2
 Colombia,Copa Colombia,REJECT,country_league_not_allowlisted,2
 Eswatini,Premier League,REJECT,country_league_not_allowlisted,2
-Saudi-Arabia,Pro League,REJECT,country_league_not_allowlisted,2
 World,CAF Cup of Nations - U17,REJECT,hard_reject_noise_league,2
 Algeria,Ligue 1,REJECT,country_league_not_allowlisted,1
-Angola,Girabola,REJECT,country_league_not_allowlisted,1
 Argentina,Copa Argentina,REJECT,country_league_not_allowlisted,1
-Belarus,Premier League,REJECT,country_league_not_allowlisted,1
+Argentina,Reserve League,REJECT,hard_reject_noise_league,1
 Botswana,Premier League,REJECT,country_league_not_allowlisted,1
-Brazil,Carioca A2,REJECT,country_league_not_allowlisted,1
+Brazil,Catarinense - 2,REJECT,country_league_not_allowlisted,1
 Brazil,Goiano U20,REJECT,hard_reject_noise_league,1
 Brazil,Matogrossense 2,REJECT,country_league_not_allowlisted,1
 Colombia,Liga Femenina,REJECT,hard_reject_noise_league,1
 Czech-Republic,3. liga - CFL B,REJECT,country_league_not_allowlisted,1
-Germany,Oberliga - Rheinland-Pfalz / Saar,REJECT,hard_reject_noise_league,1
-Germany,Oberliga - Westfalen,REJECT,hard_reject_noise_league,1
-Macedonia,Cup,REJECT,country_league_not_allowlisted,1
 Netherlands,U19 Divisie 1,REJECT,hard_reject_noise_league,1
 Paraguay,Division Intermedia,REJECT,country_league_not_allowlisted,1
 Switzerland,1. Liga Classic - Group 3,REJECT,country_league_not_allowlisted,1
-Tanzania,Ligi kuu Bara,REJECT,country_league_not_allowlisted,1
 USA,USL W League,REJECT,country_league_not_allowlisted,1
-Italy,Serie B,TIER_1,italy_serie_b,1
 World,CONMEBOL Libertadores,TIER_1,conmebol_libertadores,1
 World,UEFA Europa League,TIER_1,uefa_top_competition,1
 World,CONMEBOL Sudamericana,TIER_2,conmebol_sudamericana,3
-Norway,Eliteserien,TIER_2,norway_eliteserien,2
 Ecuador,Copa Ecuador,TIER_4,ecuador_cup_context_only,1
