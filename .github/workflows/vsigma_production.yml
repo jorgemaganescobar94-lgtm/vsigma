@@ -263,6 +263,17 @@ jobs:
             --timezone Atlantic/Canary \
             || echo "::warning::Shadow experiment engine failed; inspect workflow logs."
 
+      - name: Build shadow performance
+        if: always()
+        shell: bash
+        run: |
+          TARGET_DATE="${VSIGMA_DATE:-$(TZ=Atlantic/Canary date +%F)}"
+
+          python scripts/build_shadow_performance.py \
+            --date "$TARGET_DATE" \
+            --timezone Atlantic/Canary \
+            || echo "::warning::Shadow performance tracker failed; inspect workflow logs."
+
       - name: Upload daily audit artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -276,6 +287,7 @@ jobs:
             data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_learning_patterns.*
             data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_improvement_proposals.*
             data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_shadow_experiments.*
+            data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_shadow_performance.*
             data/processed/snapshots/${{ env.VSIGMA_DATE }}/
             data/processed/governance/vsigma_autonomous_monitoring_summary.*
             data/processed/governance/vsigma_daily_command_center.*
@@ -283,6 +295,7 @@ jobs:
             data/processed/governance/vsigma_learning_patterns.*
             data/processed/governance/vsigma_improvement_proposals.*
             data/processed/governance/vsigma_shadow_experiments.*
+            data/processed/governance/vsigma_shadow_performance.*
             data/processed/vsigma_daily_competition_master_report.*
             data/processed/vsigma_prelock_exclusion_audit.*
             data/processed/vsigma_prelock_decision_resolver.*
