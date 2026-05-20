@@ -11,12 +11,33 @@ permissions:
 jobs:
   automerge-governed:
     runs-on: ubuntu-latest
-    if: >-
-      contains(github.event.pull_request.labels.*.name, 'automerge-safe') &&
-      github.event.pull_request.draft == false &&
-      (startsWith(github.head_ref, 'vsigma-') || startsWith(github.head_ref, 'codex/'))
     steps:
-      - name: Checkout
+      - name: Validate automerge eligibility
+        env:
+          LABELS_JSON: ${{ toJson(github.event.pull_request.labels.*.name) }}
+          IS_DRAFT: ${{ github.event.pull_request.draft }}
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+
+          echo "labels: $LABELS_JSON"
+          echo "is_draft: $IS_DRAFT"
+          echo "head_ref: $HEAD_REF"
+
+          if [[ "$LABELS_JSON" != *"automerge-safe"* ]]; then
+            echo "No automerge-safe label; exiting without merge."
+            exit 0
+          fi
+
+          if [[ "$IS_DRAFT" == "true" ]]; then
+            echo "Draft PR; exiting without merge."
+            exit 0
+          fi
+
+          if [[ "$HEAD_REF" != vsigma-* && "$HEAD_REF" != codex/* ]]; then
+            echo "Branch not eligible for guarded automerge: $HEAD_REF"
+            exit 0
+          fi      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
