@@ -1,0 +1,2 @@
+mode,pick_count,settled_rows,pending_rows,unmatched_rows,wins,losses,pushes,voids,profit_units,roi_percent,target_date,generated_at,pipeline_mode,candidate_version,source_file_date_check,run_id
+SHADOW_CANDIDATE_V5_PLAYER_IMPACT,2,1,1,0,1,0,0,0,0.6,60.0,2026-05-20,2026-05-20T10:36:06+00:00,POST,CANDIDATE_V5_RESULTS,NO_DATE_COLUMN,2026-05-20-20260520T103606Z

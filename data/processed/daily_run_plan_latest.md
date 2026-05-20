@@ -1,14 +1,14 @@
 # vSIGMA Daily Run Plan - 2026-05-20
 
 - Timezone: Atlantic/Canary
-- Generated at: 2026-05-20T00:45:33.864923+01:00
+- Generated at: 2026-05-20T11:36:09.422910+01:00
 - Window minutes: 90
-- Next recommended action: CHECK_STALE_OUTPUTS
-- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-20 --timezone Atlantic/Canary --mode status`
+- Next recommended action: RUN_POST_AFTER_FINISH
+- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-20 --timezone Atlantic/Canary --mode post`
 
 ## Fixtures
 | fixture_id | league | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action | recommended_command |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1535312 | CONMEBOL Libertadores | Santa Fe | Platense | OVER_1_5 | 2026-05-20T00:01:06+00:00 | 15.54 | 2026-05-19T22:31:06+00:00 | DUE_NOW | CHECK_STALE_OUTPUTS | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-20 --timezone Atlantic/Canary --mode status |
-| 1494229 | Allsvenskan | Gais | Hammarby FF | OVER_2_5 | 2026-05-20T17:01:04.800000+00:00 | 1035.52 | 2026-05-20T15:31:04.800000+00:00 | PENDING_OUTSIDE_WINDOW | CHECK_STALE_OUTPUTS | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-20 --timezone Atlantic/Canary --mode status |
-| 1544596 | UEFA Europa League | SC Freiburg | Aston Villa | OVER_1_5 | 2026-05-20T19:01:04.800000+00:00 | 1155.52 | 2026-05-20T17:31:04.800000+00:00 | PENDING_OUTSIDE_WINDOW | CHECK_STALE_OUTPUTS | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-20 --timezone Atlantic/Canary --mode status |
+| 1535312 | CONMEBOL Libertadores | Santa Fe | Platense | OVER_1_5 | 2026-05-20T00:01:06+00:00 | -635.06 | 2026-05-19T22:31:06+00:00 | PRELOCK_CONFIRMED | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-20 --timezone Atlantic/Canary --mode post |
+| 1494229 | Allsvenskan | Gais | Hammarby FF | OVER_2_5 | 2026-05-20T17:01:04.800000+00:00 | 384.92 | 2026-05-20T15:31:04.800000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-20 --timezone Atlantic/Canary --mode post |
+| 1544596 | UEFA Europa League | SC Freiburg | Aston Villa | OVER_1_5 | 2026-05-20T19:01:04.800000+00:00 | 504.92 | 2026-05-20T17:31:04.800000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-20 --timezone Atlantic/Canary --mode post |

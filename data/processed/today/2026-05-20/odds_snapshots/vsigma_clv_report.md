@@ -13,33 +13,33 @@
 | --- | --- |
 | true_pre_rows | 17 |
 | backfilled_rows | 0 |
-| calibration_usable_rows | 1 |
-| audit_only_rows | 16 |
+| calibration_usable_rows | 7 |
+| audit_only_rows | 10 |
 
 ## CLV Direction Mix
 | clv_direction | rows |
 | --- | --- |
-| CLV_UNAVAILABLE | 16 |
-| CLV_FLAT | 1 |
+| CLV_UNAVAILABLE | 10 |
+| CLV_FLAT | 7 |
 
 ## CLV Rows
 | target_date | fixture_id | league | home_team | away_team | market_primary | experiment_id | source_candidate_version | pre_price | prelock_price | close_proxy_price | clv_delta | clv_percent | clv_direction | clv_interpretation | result | profit_units | snapshot_rebuild_mode | true_pre_snapshot_available_flag | clv_usable_for_threshold_calibration_flag | source_snapshot_stage | source_snapshot_note |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2026-05-20 | 1494229 | Allsvenskan | Gais | Hammarby FF | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.86 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
-| 2026-05-20 | 1494229 | Allsvenskan | Gais | Hammarby FF | OVER_2_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE | 1.86 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-20 | 1494229 | Allsvenskan | Gais | Hammarby FF | OVER_2_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE;OFFICIAL_BASELINE_PRELOCK;OFFICIAL_RESULTS | 1.86 |  | 1.86 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. | PENDING |  | CANONICAL_CAPTURED | 1 | 1 | CLOSE_PROXY;POST;PRE | Captured by odds snapshot pipeline. |
 | 2026-05-20 | 1535203 | CONMEBOL Sudamericana | America de Cali | Tigre | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.53 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-20 | 1535212 | CONMEBOL Sudamericana | Olimpia | Vasco DA Gama | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.42 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-20 | 1535299 | CONMEBOL Libertadores | Boca Juniors | Cruzeiro | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.57 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-20 | 1535304 | CONMEBOL Libertadores | Independiente del Valle | Libertad Asuncion | BTTS_YES | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 2.02 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
-| 2026-05-20 | 1535304 | CONMEBOL Libertadores | Independiente del Valle | Libertad Asuncion | BTTS_YES | OFFICIAL_BASELINE | EXECUTION_SHORTLIST | 2.02 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
-| 2026-05-20 | 1535312 | CONMEBOL Libertadores | Santa Fe | Platense | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | CANDIDATE_V2 | 1.6 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-20 | 1535304 | CONMEBOL Libertadores | Independiente del Valle | Libertad Asuncion | BTTS_YES | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_RESULTS | 2.02 |  | 2.02 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. | WIN | 1.02 | CANONICAL_CAPTURED | 1 | 1 | POST;PRE | Captured by odds snapshot pipeline. |
+| 2026-05-20 | 1535312 | CONMEBOL Libertadores | Santa Fe | Platense | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | CANDIDATE_V2;CANDIDATE_V2_RESULTS | 1.6 |  | 1.6 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. | WIN | 0.6 | CANONICAL_CAPTURED | 1 | 1 | POST;PRE | Captured by odds snapshot pipeline. |
 | 2026-05-20 | 1535312 | CONMEBOL Libertadores | Santa Fe | Platense | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.6 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
-| 2026-05-20 | 1535312 | CONMEBOL Libertadores | Santa Fe | Platense | OVER_1_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE;OFFICIAL_BASELINE_PRELOCK | 1.6 | 1.6 | 1.6 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. |  |  | CANONICAL_CAPTURED | 1 | 1 | PRE;PRELOCK | Captured by odds snapshot pipeline. |
-| 2026-05-20 | 1544596 | UEFA Europa League | SC Freiburg | Aston Villa | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | CANDIDATE_V2 | 1.38 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-20 | 1535312 | CONMEBOL Libertadores | Santa Fe | Platense | OVER_1_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE;OFFICIAL_BASELINE_PRELOCK;OFFICIAL_RESULTS | 1.6 | 1.6 | 1.6 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. | WIN | 0.6 | CANONICAL_CAPTURED | 1 | 1 | CLOSE_PROXY;POST;PRE;PRELOCK | Captured by odds snapshot pipeline. |
+| 2026-05-20 | 1544596 | UEFA Europa League | SC Freiburg | Aston Villa | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | CANDIDATE_V2;CANDIDATE_V2_RESULTS | 1.38 |  | 1.38 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. | PENDING |  | CANONICAL_CAPTURED | 1 | 1 | POST;PRE | Captured by odds snapshot pipeline. |
 | 2026-05-20 | 1544596 | UEFA Europa League | SC Freiburg | Aston Villa | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.38 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
-| 2026-05-20 | 1544596 | UEFA Europa League | SC Freiburg | Aston Villa | OVER_1_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE | 1.38 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-20 | 1544596 | UEFA Europa League | SC Freiburg | Aston Villa | OVER_1_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE;OFFICIAL_BASELINE_PRELOCK;OFFICIAL_RESULTS | 1.38 |  | 1.38 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. | PENDING |  | CANONICAL_CAPTURED | 1 | 1 | CLOSE_PROXY;POST;PRE | Captured by odds snapshot pipeline. |
 | 2026-05-20 | 1544952 | Serie B | Palermo | Catanzaro | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.75 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
-| 2026-05-20 | 1544952 | Serie B | Palermo | Catanzaro | OVER_2_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST | 1.75 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-20 | 1544952 | Serie B | Palermo | Catanzaro | OVER_2_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_RESULTS | 1.75 |  | 1.75 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. | PENDING |  | CANONICAL_CAPTURED | 1 | 1 | POST;PRE | Captured by odds snapshot pipeline. |
 | 2026-05-20 | 1545403 | Primeira Liga | Torreense | Casa Pia | HOME_WIN | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 2.5 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-20 | 1545424 | Eerste Divisie | Willem II | FC Volendam | HOME_WIN | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 2.2 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 
