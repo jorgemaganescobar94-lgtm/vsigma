@@ -4,35 +4,35 @@
 - Cloud AUTO status: WAITING_OR_BLOCKED
 - Candidates reviewed: 1
 - Executable picks: 0
-- Waiting picks: 1
-- Blocked picks: 0
-- Official action summary: WAIT
+- Waiting picks: 0
+- Blocked picks: 1
+- Official action summary: NO_BET
 - Healthcheck status: WARNING
 - Ledger rows total: 84
 - Ledger rows for target date: 14
-- Decision outcome ledger rows total: 7
+- Decision outcome ledger rows total: 8
 - Decision outcome ledger actionable rows: 1
-- Decision outcome ledger non-actionable rows: 6
-- Decision outcome ledger no bet rows: 2
+- Decision outcome ledger non-actionable rows: 7
+- Decision outcome ledger no bet rows: 3
 - Decision outcome ledger expired rows: 2
 - Decision outcome ledger waiting rows: 4
-- Decision outcome ledger blocked rows: 0
+- Decision outcome ledger blocked rows: 1
 - Decision outcome ledger technical review rows: 0
-- Current operational verdict: WAIT_FOR_NEXT_PRELOCK_SLOT
+- Current operational verdict: NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA
 
 ## Decision Quality Review
 - status: AVAILABLE
-- rows reviewed: 3
+- rows reviewed: 4
 - good decisions: 1
 - bad decisions: 0
-- unresolved: 2
-- top improvement signal: WAIT_FOR_POST_RESULTS (2)
+- unresolved: 3
+- top improvement signal: WAIT_FOR_POST_RESULTS (3)
 - recalibration_allowed_from_quality: NO
 
 ## Current Picks / Decisions
 | fixture_id | league | home_team | away_team | market_primary | official_action | executable_now | final_block_reason | retry_allowed | next_retry_time | data_gap_flags | execution_family_status | decision_state | exclusion_reason | next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1544596 | UEFA Europa League | SC Freiburg | Aston Villa | OVER_1_5 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | YES | 2026-05-20T19:00+01:00 |  | WAITING_FOR_WINDOW |  | OUTSIDE_90_MIN_PRELOCK_WINDOW |  |
+| 1544596 | UEFA Europa League | SC Freiburg | Aston Villa | OVER_1_5 | NO_BET | NO | PRELOCK_GOVERNANCE_NOT_RETAINED | YES | 2026-05-20T19:00+01:00 |  | PRELOCK_NOT_RETAINED |  | IN_WINDOW_BUT_NOT_RETAINED |  |
 
 ## Data Coverage Review
 - coverage rich / partial / weak: COVERAGE_RICH: 5; COVERAGE_THIN: 1
@@ -71,11 +71,11 @@
 ## System Improvement Queue
 | priority | category | title | reason | expected_impact | risk | recommended_action | apply_now | evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| P1 | execution | Keep actionable and non-actionable buckets separated | The current day has waiting or blocked decisions. | Keeps ledger/backtest interpretation aligned with execution reality. | Low; reporting-only validation. | Continue reporting all rows, actionable only, non-actionable, and graded bets separately. | YES | blocked=0; waiting=1; auto_status=WAITING_OR_BLOCKED |
+| P1 | execution | Keep actionable and non-actionable buckets separated | The current day has waiting or blocked decisions. | Keeps ledger/backtest interpretation aligned with execution reality. | Low; reporting-only validation. | Continue reporting all rows, actionable only, non-actionable, and graded bets separately. | YES | blocked=1; waiting=0; auto_status=WAITING_OR_BLOCKED |
 | P3 | decision_quality | Collect more closed decision quality outcomes | Decision Quality Review has fewer than 30 resolved rows. | Avoids premature recalibration or execution-rule changes from a thin sample. | Low; reporting only. | Keep building the quality review after POST labels are available. | NO | resolved_quality_rows=1 |
 | P3 | model_calibration | Defer recalibration until minimum closed-pick sample | Fewer than 30 closed picks are available. | Avoids fitting thresholds or probability adjustments to noise. | Low; no predictive change is applied. | Keep calibration reporting active and wait for at least 30 closed picks before suggestions. | NO | closed_picks=6; enough_sample=NO; recalibration_allowed=NO |
 
 ## Input Inventory
-- generated_at: 2026-05-20T18:12:53+01:00
+- generated_at: 2026-05-20T18:42:34+01:00
 - timezone: Atlantic/Canary
 - missing optional inputs: none
