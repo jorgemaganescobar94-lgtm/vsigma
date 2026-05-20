@@ -219,6 +219,17 @@ jobs:
             --run-url "$RUN_URL" \
             || echo "::warning::Daily command center failed; inspect workflow logs."
 
+      - name: Build learning ledger
+        if: always()
+        shell: bash
+        run: |
+          TARGET_DATE="${VSIGMA_DATE:-$(TZ=Atlantic/Canary date +%F)}"
+
+          python scripts/build_learning_ledger.py \
+            --date "$TARGET_DATE" \
+            --timezone Atlantic/Canary \
+            || echo "::warning::Learning ledger failed; inspect workflow logs."
+
       - name: Upload daily audit artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -228,9 +239,11 @@ jobs:
           retention-days: 14
           path: |
             data/processed/today/${{ env.VSIGMA_DATE }}/
+            data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_learning_ledger.*
             data/processed/snapshots/${{ env.VSIGMA_DATE }}/
             data/processed/governance/vsigma_autonomous_monitoring_summary.*
             data/processed/governance/vsigma_daily_command_center.*
+            data/processed/governance/vsigma_learning_ledger.*
             data/processed/vsigma_daily_competition_master_report.*
             data/processed/vsigma_prelock_exclusion_audit.*
             data/processed/vsigma_prelock_decision_resolver.*
