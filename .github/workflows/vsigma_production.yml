@@ -204,6 +204,21 @@ jobs:
             --run-url "$RUN_URL" \
             || echo "::warning::Monitoring notification dispatch failed; inspect workflow logs."
 
+      - name: Build daily command center
+        if: always()
+        shell: bash
+        run: |
+          TARGET_DATE="${VSIGMA_DATE:-$(TZ=Atlantic/Canary date +%F)}"
+          TARGET_MODE="${VSIGMA_MODE:-unknown}"
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+          python scripts/build_daily_command_center.py \
+            --date "$TARGET_DATE" \
+            --mode "$TARGET_MODE" \
+            --timezone Atlantic/Canary \
+            --run-url "$RUN_URL" \
+            || echo "::warning::Daily command center failed; inspect workflow logs."
+
       - name: Upload daily audit artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -215,6 +230,7 @@ jobs:
             data/processed/today/${{ env.VSIGMA_DATE }}/
             data/processed/snapshots/${{ env.VSIGMA_DATE }}/
             data/processed/governance/vsigma_autonomous_monitoring_summary.*
+            data/processed/governance/vsigma_daily_command_center.*
             data/processed/vsigma_daily_competition_master_report.*
             data/processed/vsigma_prelock_exclusion_audit.*
             data/processed/vsigma_prelock_decision_resolver.*
