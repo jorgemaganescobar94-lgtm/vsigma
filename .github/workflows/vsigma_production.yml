@@ -13,8 +13,8 @@ on:
           - pre
           - auto
           - prelock
-          - post
           - post-yesterday
+          - post
       date:
         description: "Fecha YYYY-MM-DD. Vacío = hoy en Atlantic/Canary"
         required: false
@@ -285,6 +285,23 @@ jobs:
             --timezone Atlantic/Canary \
             || echo "::warning::Review decision gate failed; inspect workflow logs."
 
+      - name: Dispatch learning autopilot alerts
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TARGET_DATE="${VSIGMA_DATE:-$(TZ=Atlantic/Canary date +%F)}"
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+          python scripts/dispatch_learning_autopilot_alerts.py \
+            --date "$TARGET_DATE" \
+            --timezone Atlantic/Canary \
+            --repo "${{ github.repository }}" \
+            --run-url "$RUN_URL" \
+            --dispatch \
+            || echo "::warning::Learning autopilot alert dispatch failed; inspect workflow logs."
+
       - name: Upload daily audit artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -300,6 +317,7 @@ jobs:
             data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_shadow_experiments.*
             data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_shadow_performance.*
             data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_promotion_gate.*
+            data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_learning_autopilot_alerts.*
             data/processed/snapshots/${{ env.VSIGMA_DATE }}/
             data/processed/governance/vsigma_autonomous_monitoring_summary.*
             data/processed/governance/vsigma_daily_command_center.*
@@ -309,6 +327,7 @@ jobs:
             data/processed/governance/vsigma_shadow_experiments.*
             data/processed/governance/vsigma_shadow_performance.*
             data/processed/governance/vsigma_promotion_gate.*
+            data/processed/governance/vsigma_learning_autopilot_alerts.*
             data/processed/vsigma_daily_competition_master_report.*
             data/processed/vsigma_prelock_exclusion_audit.*
             data/processed/vsigma_prelock_decision_resolver.*
