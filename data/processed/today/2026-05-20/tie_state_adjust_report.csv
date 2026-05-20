@@ -1,9 +1,6 @@
 fixture_id,home_team,away_team,tie_state_label,market_family_hint,vsigma_pre_score,vsigma_priority,tie_adjustment_note
-1544952,Palermo,Catanzaro,,HOME_SIDE_OR_HOME_TEAM_TOTAL_CHECK,91.31,A_ANALIZAR_PRIMERO,
-1494659,Aalesund,Brann,,AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK,88.22,A_ANALIZAR_PRIMERO,
 1535308,Club Nacional,Universitario,HOME_TRAILING,OVER_OR_BTTS_CHECK,89.7,A_ANALIZAR_PRIMERO,home_trailing_flip_away_to_over
 1544596,SC Freiburg,Aston Villa,,AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK,83.01,A_ANALIZAR_PRIMERO,
-1494609,Lillestrom,Kristiansund BK,,HOME_SIDE_OR_HOME_TEAM_TOTAL_CHECK,78.81,A_ANALIZAR_PRIMERO,
 1535206,Boston River,O'Higgins,HOME_TRAILING,OVER_OR_BTTS_CHECK,80.9,A_ANALIZAR_PRIMERO,home_trailing_flip_away_to_over
 1535212,Olimpia,Vasco DA Gama,HOME_TRAILING,OVER_OR_BTTS_CHECK,77.12,A_ANALIZAR_PRIMERO,home_trailing_boost
 1535216,Santos,San Lorenzo,LEVEL_TIE,OVER_OR_BTTS_CHECK,70.3,A_ANALIZAR_PRIMERO,level_tie_soft_opening
