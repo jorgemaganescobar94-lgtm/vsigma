@@ -103,6 +103,4 @@
 ## Freshness Warnings
 | file_name | status | detail |
 | --- | --- | --- |
-| vsigma_today_prelock_competition_top.csv | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-20'] does not match 2026-05-21 |
-| vsigma_today_prelock_comparison.csv | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-20'] does not match 2026-05-21 |
 | today_post_results_report.csv | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet |
