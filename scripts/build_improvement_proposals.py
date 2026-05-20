@@ -32,6 +32,7 @@ PROPOSAL_COLUMNS = [
 OPERATIONAL_TYPES = {"WAITING_PRELOCK_CLUSTER", "EXPIRED_PRELOCK_CLUSTER"}
 DATA_TYPES = {"DATA_BLOCKED_CLUSTER", "UNRESOLVED_DOMINANCE", "TECHNICAL_REVIEW_CLUSTER"}
 MODEL_SHADOW_TYPES = {"MARKET_RISK_CLUSTER", "SAMPLE_KEY_CLUSTER", "ACTIONABLE_LOSS_CLUSTER"}
+QUALITY_TOKENS = {"UNKNOWN_MARKET", "UNKNOWN_RISK", "UNRESOLVED", "NO_SIGNAL"}
 
 
 @dataclass(frozen=True)
@@ -69,7 +70,14 @@ def write_csv(path: Path, rows: list[dict[str, object]]) -> None:
             writer.writerow({column: row.get(column, "") for column in PROPOSAL_COLUMNS})
 
 
-def proposal_type_for(pattern_type: str) -> tuple[str, str, str]:
+def has_quality_gap(pattern_key: str) -> bool:
+    key = upper(pattern_key)
+    return any(token in key for token in QUALITY_TOKENS)
+
+
+def proposal_type_for(pattern_type: str, pattern_key: str = "") -> tuple[str, str, str]:
+    if has_quality_gap(pattern_key):
+        return "DATA_QUALITY_PROPOSAL", "data_quality", "data_quality_review"
     if pattern_type in OPERATIONAL_TYPES:
         return "OPERATIONAL_PROPOSAL", "operational", "operator_review"
     if pattern_type in DATA_TYPES:
@@ -79,7 +87,9 @@ def proposal_type_for(pattern_type: str) -> tuple[str, str, str]:
     return "MONITORING_PROPOSAL", "monitoring", "pattern_miner"
 
 
-def status_for(pattern_type: str, severity: str, sample_count: int) -> str:
+def status_for(pattern_type: str, severity: str, sample_count: int, proposal_type: str = "") -> str:
+    if proposal_type == "DATA_QUALITY_PROPOSAL":
+        return "PROPOSAL_ONLY"
     if pattern_type == "ACTIONABLE_LOSS_CLUSTER" and sample_count >= 3:
         return "SHADOW_CANDIDATE_REQUIRED"
     if pattern_type in MODEL_SHADOW_TYPES and severity in {"P1", "P2"} and sample_count >= 3:
@@ -94,6 +104,8 @@ def status_for(pattern_type: str, severity: str, sample_count: int) -> str:
 def recommended_action_for(pattern: dict[str, str], proposal_type: str, status: str) -> str:
     pattern_type = upper(pattern.get("pattern_type"))
     key = norm(pattern.get("pattern_key"))
+    if has_quality_gap(key):
+        return "Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate."
     if proposal_type == "OPERATIONAL_PROPOSAL":
         if pattern_type == "WAITING_PRELOCK_CLUSTER":
             return "Review AUTO/PRELOCK schedule, retry windows, and whether candidates remain waiting too close to kickoff."
@@ -113,7 +125,9 @@ def recommended_action_for(pattern: dict[str, str], proposal_type: str, status: 
     return "Review pattern evidence; no automatic production change allowed."
 
 
-def priority_for(severity: str, proposal_status: str) -> str:
+def priority_for(severity: str, proposal_status: str, proposal_type: str = "") -> str:
+    if proposal_type == "DATA_QUALITY_PROPOSAL" and severity in {"P1", "P2"}:
+        return severity
     if proposal_status == "SHADOW_CANDIDATE_REQUIRED" and severity in {"P1", "P2"}:
         return "P1"
     if severity == "P1":
@@ -125,14 +139,15 @@ def priority_for(severity: str, proposal_status: str) -> str:
 
 def build_proposal(pattern: dict[str, str], target_date: str, generated_at: str) -> dict[str, object]:
     pattern_type = upper(pattern.get("pattern_type"))
+    pattern_key = norm(pattern.get("pattern_key"))
     severity = upper(pattern.get("severity")) or "P3"
     sample_count = int(float(norm(pattern.get("sample_count")) or 0))
-    proposal_type, risk_class, next_engine = proposal_type_for(pattern_type)
-    proposal_status = status_for(pattern_type, severity, sample_count)
-    priority = priority_for(severity, proposal_status)
-    proposal_id = f"{proposal_type}::{pattern_type}::{norm(pattern.get('pattern_key'))}".replace(" ", "_")
+    proposal_type, risk_class, next_engine = proposal_type_for(pattern_type, pattern_key)
+    proposal_status = status_for(pattern_type, severity, sample_count, proposal_type)
+    priority = priority_for(severity, proposal_status, proposal_type)
+    proposal_id = f"{proposal_type}::{pattern_type}::{pattern_key}".replace(" ", "_")
     evidence_summary = (
-        f"pattern={pattern_type}; key={norm(pattern.get('pattern_key'))}; "
+        f"pattern={pattern_type}; key={pattern_key}; "
         f"severity={severity}; n={sample_count}; wins={norm(pattern.get('wins'))}; "
         f"losses={norm(pattern.get('losses'))}; unresolved={norm(pattern.get('unresolved'))}; "
         f"markets={norm(pattern.get('markets'))}"
@@ -143,7 +158,7 @@ def build_proposal(pattern: dict[str, str], target_date: str, generated_at: str)
         "proposal_id": proposal_id,
         "source_pattern_id": norm(pattern.get("pattern_id")),
         "source_pattern_type": pattern_type,
-        "source_pattern_key": norm(pattern.get("pattern_key")),
+        "source_pattern_key": pattern_key,
         "proposal_type": proposal_type,
         "proposal_status": proposal_status,
         "auto_apply": "NO",
