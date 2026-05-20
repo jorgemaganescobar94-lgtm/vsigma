@@ -241,6 +241,17 @@ jobs:
             --timezone Atlantic/Canary \
             || echo "::warning::Learning pattern miner failed; inspect workflow logs."
 
+      - name: Build improvement proposals
+        if: always()
+        shell: bash
+        run: |
+          TARGET_DATE="${VSIGMA_DATE:-$(TZ=Atlantic/Canary date +%F)}"
+
+          python scripts/build_improvement_proposals.py \
+            --date "$TARGET_DATE" \
+            --timezone Atlantic/Canary \
+            || echo "::warning::Improvement proposal engine failed; inspect workflow logs."
+
       - name: Upload daily audit artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -252,11 +263,13 @@ jobs:
             data/processed/today/${{ env.VSIGMA_DATE }}/
             data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_learning_ledger.*
             data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_learning_patterns.*
+            data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_improvement_proposals.*
             data/processed/snapshots/${{ env.VSIGMA_DATE }}/
             data/processed/governance/vsigma_autonomous_monitoring_summary.*
             data/processed/governance/vsigma_daily_command_center.*
             data/processed/governance/vsigma_learning_ledger.*
             data/processed/governance/vsigma_learning_patterns.*
+            data/processed/governance/vsigma_improvement_proposals.*
             data/processed/vsigma_daily_competition_master_report.*
             data/processed/vsigma_prelock_exclusion_audit.*
             data/processed/vsigma_prelock_decision_resolver.*
