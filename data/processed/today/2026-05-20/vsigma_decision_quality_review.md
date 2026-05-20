@@ -1,20 +1,20 @@
 # vSIGMA Decision Quality Review - 2026-05-20
 
 ## Executive Summary
-- generated_at: 2026-05-20T18:12:53+01:00
+- generated_at: 2026-05-20T18:42:33+01:00
 - daily_classification: EXECUTION_OK
 - no_bet_classification: EXECUTION_ACTIONABLE_PRESENT
 - operational_verdict: EXECUTION_AVAILABLE
 - predictive_failure: UNKNOWN
-- rows reviewed: 3
+- rows reviewed: 4
 - actionable rows: 1
-- non-actionable rows: 2
+- non-actionable rows: 3
 - resolved rows: 1
-- unresolved rows: 2
+- unresolved rows: 3
 - good decisions: 1
 - bad decisions: 0
-- neutral/unresolved: 2
-- top improvement signal: WAIT_FOR_POST_RESULTS (2)
+- neutral/unresolved: 3
+- top improvement signal: WAIT_FOR_POST_RESULTS (3)
 - current recommendation: Do not recalibrate; collect more labeled outcomes.
 - operational note: At least one row was executable at decision time.
 
@@ -30,6 +30,7 @@
 | Santa Fe vs Platense | OVER_1_5 | EXECUTABLE | NONE | WIN | ACTIONABLE_WIN | GOOD_DECISION | MONITOR_DECISION_QUALITY |
 | Gais vs Hammarby FF | OVER_2_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
 | SC Freiburg vs Aston Villa | OVER_1_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
+| SC Freiburg vs Aston Villa | OVER_1_5 | NO_BET | PRELOCK_GOVERNANCE_NOT_RETAINED | UNRESOLVED | NO_BET_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
 
 ## Block Quality Review
 - NO_BET_MISSED_WIN count: 0
@@ -43,14 +44,14 @@
 ## Market Quality Review
 | market_primary | rows | wins | losses | no_bet_missed_win | no_bet_correct_avoided_loss | unresolved | recommendation |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | 2 | 1 | 0 | 0 | 0 | 1 | MONITOR |
+| OVER_1_5 | 3 | 1 | 0 | 0 | 0 | 2 | MONITOR |
 | OVER_2_5 | 1 | 0 | 0 | 0 | 0 | 1 | WAIT_FOR_POST_RESULTS |
 
 ## System Recommendations
 | priority | category | title | reason | apply_now |
 | --- | --- | --- | --- | --- |
 | P3 | sample | Do not recalibrate from quality sample yet | resolved_rows=1 is below minimum 30. | NO |
-| P3 | post_results | Wait for POST results or improve labeling | unresolved_rows=2; resolved_rows=1. | NO |
+| P3 | post_results | Wait for POST results or improve labeling | unresolved_rows=3; resolved_rows=1. | NO |
 
 ## Guardrails
 - automatic scoring changes applied: NO
