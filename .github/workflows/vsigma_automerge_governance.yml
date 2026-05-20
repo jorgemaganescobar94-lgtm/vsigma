@@ -1,4 +1,4 @@
-name: vSIGMA Automerge Governance
+﻿name: vSIGMA Automerge Governance
 
 on:
   pull_request:
@@ -7,15 +7,40 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write
 
 jobs:
   automerge-governed:
     runs-on: ubuntu-latest
-    if: >-
-      contains(github.event.pull_request.labels.*.name, 'automerge-safe') &&
-      github.event.pull_request.draft == false &&
-      (startsWith(github.head_ref, 'vsigma-') || startsWith(github.head_ref, 'codex/'))
+
     steps:
+      - name: Validate automerge eligibility
+        env:
+          LABELS_JSON: ${{ toJson(github.event.pull_request.labels.*.name) }}
+          IS_DRAFT: ${{ github.event.pull_request.draft }}
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+
+          echo "labels: $LABELS_JSON"
+          echo "is_draft: $IS_DRAFT"
+          echo "head_ref: $HEAD_REF"
+
+          if [[ "$LABELS_JSON" != *"automerge-safe"* ]]; then
+            echo "No automerge-safe label; exiting without merge."
+            exit 0
+          fi
+
+          if [[ "$IS_DRAFT" == "true" ]]; then
+            echo "Draft PR; exiting without merge."
+            exit 0
+          fi
+
+          if [[ "$HEAD_REF" != vsigma-* && "$HEAD_REF" != codex/* ]]; then
+            echo "Branch not eligible for guarded automerge: $HEAD_REF"
+            exit 0
+          fi
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -27,13 +52,17 @@ jobs:
           REPO_OWNER: ${{ github.repository_owner }}
         run: |
           set -euo pipefail
+
           TRUSTED=false
+
           if [[ "$PR_AUTHOR" == "$REPO_OWNER" ]]; then
             TRUSTED=true
           fi
+
           if [[ "$PR_AUTHOR" == "github-actions[bot]" || "$PR_AUTHOR" == "codex[bot]" || "$PR_AUTHOR" == "openai-codex[bot]" ]]; then
             TRUSTED=true
           fi
+
           if [[ "$TRUSTED" != "true" ]]; then
             echo "Untrusted PR author: $PR_AUTHOR"
             exit 1
@@ -43,6 +72,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      - name: Install test dependencies
+        run: python -m pip install --upgrade pip pytest
 
       - name: Run automerge guardrails
         run: |
@@ -56,23 +88,24 @@ jobs:
       - name: Validate clean patch formatting
         run: git diff --check
 
-      - name: Enable auto-merge (merge commit)
+      - name: Merge guarded PR
         if: success()
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
-          gh pr merge "$PR_NUMBER" --merge --auto --delete-branch
+          gh pr merge "$PR_NUMBER" --merge --delete-branch
 
       - name: Summarize guarded automerge decision
         if: always()
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           if [[ "${{ job.status }}" == "success" ]]; then
-            BODY="✅ Guardrails passed; auto-merge enabled (merge commit) with branch deletion when possible."
+            BODY="✅ Guardrails passed; PR was merged with guarded automerge."
           else
             BODY="❌ Guardrails or checks failed; PR was not merged automatically. Review workflow logs for blocked file or failing check details."
           fi
+
           gh pr comment "$PR_NUMBER" --body "$BODY"
