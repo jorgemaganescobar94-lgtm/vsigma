@@ -1,0 +1,88 @@
+name: vSIGMA Failure Doctor
+
+on:
+  workflow_run:
+    workflows:
+      - vSIGMA Production
+    types:
+      - completed
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "Failed workflow run ID to diagnose"
+        required: true
+        default: ""
+      dispatch:
+        description: "Create or reuse a GitHub issue"
+        required: true
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+
+permissions:
+  actions: read
+  contents: read
+  issues: write
+
+concurrency:
+  group: vsigma-failure-doctor-${{ github.event.workflow_run.id || github.event.inputs.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  diagnose-failure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: >-
+      ${{
+        github.event_name == 'workflow_dispatch' ||
+        github.event.workflow_run.conclusion == 'failure'
+      }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Resolve run ID
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            RUN_ID="${{ github.event.inputs.run_id }}"
+            DISPATCH="${{ github.event.inputs.dispatch }}"
+          else
+            RUN_ID="${{ github.event.workflow_run.id }}"
+            DISPATCH="true"
+          fi
+
+          if [ -z "$RUN_ID" ]; then
+            echo "::error::Missing run_id"
+            exit 1
+          fi
+
+          echo "VSIGMA_FAILED_RUN_ID=$RUN_ID" >> "$GITHUB_ENV"
+          echo "VSIGMA_FAILURE_DISPATCH=$DISPATCH" >> "$GITHUB_ENV"
+          echo "Diagnosing run: $RUN_ID"
+          echo "Dispatch issue: $DISPATCH"
+
+      - name: Diagnose failed run
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          EXTRA_ARGS=""
+          if [ "$VSIGMA_FAILURE_DISPATCH" = "true" ]; then
+            EXTRA_ARGS="--dispatch"
+          fi
+
+          python scripts/diagnose_vsigma_workflow_failure.py \
+            --repo "${{ github.repository }}" \
+            --run-id "$VSIGMA_FAILED_RUN_ID" \
+            $EXTRA_ARGS
