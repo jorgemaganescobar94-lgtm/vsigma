@@ -144,6 +144,33 @@ def validate_shortlist_for_date(shortlist: pd.DataFrame, match_date: str) -> Non
         )
 
 
+def shortlist_snapshot_path(match_date: str) -> Path:
+    return TODAY_DIR / match_date / SHORTLIST_CSV.name
+
+
+def load_shortlist_for_date(match_date: str) -> tuple[pd.DataFrame, Path]:
+    snapshot_path = shortlist_snapshot_path(match_date)
+    if snapshot_path.exists():
+        shortlist = read_csv_required(
+            snapshot_path,
+            f"date-scoped today execution shortlist for {match_date}",
+        )
+        validate_shortlist_for_date(shortlist, match_date)
+        return shortlist, snapshot_path
+
+    shortlist = read_csv_required(SHORTLIST_CSV, "rolling today execution shortlist")
+    try:
+        validate_shortlist_for_date(shortlist, match_date)
+    except ValueError as exc:
+        raise ValueError(
+            f"No date-scoped execution shortlist found at {snapshot_path} and rolling shortlist "
+            f"{SHORTLIST_CSV} is not for requested date {match_date}. "
+            "Run PRE for that date or restore the snapshot before running post-results."
+        ) from exc
+
+    return shortlist, SHORTLIST_CSV
+
+
 def run_step(script_path: str) -> None:
     command = [sys.executable, script_path]
     env = os.environ.copy()
@@ -367,12 +394,12 @@ def write_post_results_report(
 
 
 def run_today_post_results_pipeline(match_date: str, timezone_name: str) -> tuple[Path, Path, pd.DataFrame]:
-    shortlist = read_csv_required(SHORTLIST_CSV, "today execution shortlist")
-    validate_shortlist_for_date(shortlist, match_date)
+    shortlist, shortlist_source = load_shortlist_for_date(match_date)
 
     print("\n=== TODAY POST-RESULTS PIPELINE ===")
     print(f"Date: {match_date}")
     print(f"Timezone: {timezone_name}")
+    print(f"Execution shortlist source: {shortlist_source}")
     print(f"Execution shortlist rows: {len(shortlist)}")
 
     for step in POST_RESULTS_STEPS:
