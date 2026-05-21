@@ -1,20 +1,20 @@
-# vSIGMA Autonomous Monitoring Summary - 2026-05-20
+# vSIGMA Autonomous Monitoring Summary - 2026-05-21
 
 ## Executive Status
-- generated_at: 2026-05-21T22:32:44+01:00
-- mode: post-yesterday
-- daily_classification: EXECUTION_OK
-- operational_verdict: EXECUTION_AVAILABLE
-- action_level: NO_ACTION_REQUIRED
-- predictive_failure: UNKNOWN
+- generated_at: 2026-05-21T23:50:49+01:00
+- mode: auto
+- daily_classification: EXPIRED_PRELOCK
+- operational_verdict: NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA
+- action_level: REVIEW_REQUIRED
+- predictive_failure: NO
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26254337425
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26257667419
 
 ## Operator Action
-- Review official executable picks and post-result quality once scores are labeled.
+- Review AUTO/PRELOCK timing; do not count the row as predictive hit-rate failure.
 
 ## Explanation
-- At least one row was executable at decision time.
+- The candidate expired before execution, so the operational issue is AUTO/PRELOCK timing. This is not a predictive failure and must not be counted in predictive hit-rate metrics.
 
 ## Source Coverage
 - decision_quality_review: present

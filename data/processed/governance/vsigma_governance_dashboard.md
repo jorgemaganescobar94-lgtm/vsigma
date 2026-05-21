@@ -1,4 +1,4 @@
-# vSIGMA Governance Dashboard - 2026-05-20
+# vSIGMA Governance Dashboard - 2026-05-21
 
 ## Version Leader
 | official_version | current_best_official | main_challenger | best_roi_candidate | best_hit_rate_candidate | best_brier_candidate | most_stable_candidate | small_sample_candidates | audit_only_candidates |
@@ -19,15 +19,17 @@
 ## Threshold Alerts
 | market_family | failure_mode | experiment_id | settled_rows | roi_percent | clv_direction | threshold_recommendation |
 | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 8 | 22.5 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 5 | -41.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V4_O25_FIREWALL | 5 | -41.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 5 | -41.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 5 | -41.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 5 | -41.0 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 0.0 | CLV_NEGATIVE | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 60.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
-| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 4 | -75.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
+| UNDER_3_5 | ANY | CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 36.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
+| UNDER_3_5 | ANY | CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 36.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 2 | -100.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | UNDER_3_5 | AVALANCHE_RISK | CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 36.0 |  | SAMPLE_TOO_SMALL |
 | UNDER_3_5 | AVALANCHE_RISK | CANDIDATE_V4_O25_FIREWALL | 1 | 36.0 |  | SAMPLE_TOO_SMALL |
 | UNDER_3_5 | AVALANCHE_RISK | CANDIDATE_V5_PLAYER_IMPACT | 1 | 36.0 |  | SAMPLE_TOO_SMALL |
@@ -67,7 +69,7 @@
 | 2026-05-21 | CANDIDATE_V7 | CANDIDATE_V7_PRICE_DISCIPLINE led on profit=0.36, hit_rate=100.0, settled=1. |
 
 ## CLV Data Sufficiency
-INSUFFICIENT_CLV_DATA: usable=8, available_direction_rows=8; do not change thresholds from CLV yet.
+CLV_DATA_SUFFICIENT_FOR_REVIEW: usable=10, available_direction_rows=10; advice remains reporting-only.
 
 ## Evidence Status
 - All primary governance inputs available.

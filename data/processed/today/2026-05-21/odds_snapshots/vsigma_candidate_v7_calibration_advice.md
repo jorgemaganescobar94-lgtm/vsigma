@@ -21,5 +21,5 @@
 
 ## Date Validation
 
-- LEDGER: CLV_DATE_MISMATCH; excluded_rows=84; mismatched_dates=2026-05-14, 2026-05-15, 2026-05-16, 2026-05-17, 2026-05-18, 2026-05-19, 2026-05-20
+- LEDGER: CLV_DATE_MISMATCH; excluded_rows=71; mismatched_dates=2026-05-14, 2026-05-15, 2026-05-16, 2026-05-17, 2026-05-18, 2026-05-19, 2026-05-20
 - CLV: PASS; excluded_rows=0; mismatched_dates=None
