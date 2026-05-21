@@ -263,6 +263,17 @@ jobs:
             --timezone Atlantic/Canary \
             || echo "::warning::Shadow experiment engine failed; inspect workflow logs."
 
+      - name: Build shadow candidates
+        if: always()
+        shell: bash
+        run: |
+          TARGET_DATE="${VSIGMA_DATE:-$(TZ=Atlantic/Canary date +%F)}"
+
+          python scripts/build_shadow_candidates.py \
+            --date "$TARGET_DATE" \
+            --timezone Atlantic/Canary \
+            || echo "::warning::Shadow candidate runner failed; inspect workflow logs."
+
       - name: Build shadow performance
         if: always()
         shell: bash
@@ -315,6 +326,7 @@ jobs:
             data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_learning_patterns.*
             data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_improvement_proposals.*
             data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_shadow_experiments.*
+            data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_shadow_candidates.*
             data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_shadow_performance.*
             data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_promotion_gate.*
             data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_learning_autopilot_alerts.*
@@ -325,6 +337,7 @@ jobs:
             data/processed/governance/vsigma_learning_patterns.*
             data/processed/governance/vsigma_improvement_proposals.*
             data/processed/governance/vsigma_shadow_experiments.*
+            data/processed/governance/vsigma_shadow_candidates.*
             data/processed/governance/vsigma_shadow_performance.*
             data/processed/governance/vsigma_promotion_gate.*
             data/processed/governance/vsigma_learning_autopilot_alerts.*
