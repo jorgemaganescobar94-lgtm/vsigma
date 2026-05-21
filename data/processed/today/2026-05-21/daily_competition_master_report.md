@@ -274,8 +274,8 @@ _No rows._
 | vsigma_today_match_script_forecasts.csv | FORECAST | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | vsigma_today_candidate_v2_match_script_forecasts.csv | FORECAST_CANDIDATE_V2 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | PASS | output is fresh for requested target date | 3 |
+| vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
+| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | today_pipeline_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
 | today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
 
