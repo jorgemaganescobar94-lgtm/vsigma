@@ -1,25 +1,23 @@
 # vSIGMA Candidate v7 Calibration Advisor
 
-- Target date context: 2026-05-21
+- Target date context: 2026-05-20
 - Advisory only: this report never edits config/vsigma_price_discipline_config.json.
 - CLV tracking status: CLV_TRACKING_INSUFFICIENT_TRUE_PRE_MISSING
 
 ## Recommendation Mix
 | recommendation | rows |
 | --- | --- |
-| SAMPLE_TOO_SMALL | 6 |
+| SAMPLE_TOO_SMALL | 4 |
 
 ## Advice
 | market_family | failure_mode | drift_status | clv_direction | league | n | wins | losses | profit_units | roi_percent | avg_clv_delta | recommendation | recommendation_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_FLAT | ALL | 2 | 0 | 2 | -2.0 | -100.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | ALL | 4 | 0 | 3 | -3.0 | -75.0 |  | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_FLAT | ALL | 3 | 0 | 0 | 0.0 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_UNAVAILABLE | ALL | 1 | 0 | 0 | 0.0 | 0.0 |  | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| UNDER_3_5 | ANY | UNKNOWN | CLV_FLAT | ALL | 3 | 3 | 0 | 1.08 | 36.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| UNDER_3_5 | ANY | UNKNOWN | CLV_UNAVAILABLE | ALL | 3 | 3 | 0 | 1.08 | 36.0 |  | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_FLAT | ALL | 2 | 2 | 0 | 1.2 | 60.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_NEGATIVE | ALL | 2 | 0 | 0 | 0.0 | 0.0 | 0.03 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | ALL | 8 | 3 | 0 | 1.8 | 22.5 |  | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_FLAT | ALL | 1 | 0 | 0 | 0.0 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 
 ## Date Validation
 
-- LEDGER: CLV_DATE_MISMATCH; excluded_rows=84; mismatched_dates=2026-05-14, 2026-05-15, 2026-05-16, 2026-05-17, 2026-05-18, 2026-05-19, 2026-05-20
+- LEDGER: CLV_DATE_MISMATCH; excluded_rows=93; mismatched_dates=2026-05-14, 2026-05-15, 2026-05-16, 2026-05-17, 2026-05-18, 2026-05-19, 2026-05-21
 - CLV: PASS; excluded_rows=0; mismatched_dates=None

@@ -1,14 +1,14 @@
 # vSIGMA Autonomous Monitoring Summary - 2026-05-20
 
 ## Executive Status
-- generated_at: 2026-05-20T22:14:03+01:00
-- mode: auto
+- generated_at: 2026-05-21T22:32:44+01:00
+- mode: post-yesterday
 - daily_classification: EXECUTION_OK
 - operational_verdict: EXECUTION_AVAILABLE
 - action_level: NO_ACTION_REQUIRED
 - predictive_failure: UNKNOWN
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26190329483
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26254337425
 
 ## Operator Action
 - Review official executable picks and post-result quality once scores are labeled.

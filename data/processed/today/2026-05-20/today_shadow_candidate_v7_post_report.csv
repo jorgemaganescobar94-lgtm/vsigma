@@ -1,2 +1,2 @@
 date,timezone,baseline_pick_count,candidate_v2_pick_count,candidate_v7_pick_count,baseline_wins,baseline_losses,baseline_profit_units,baseline_roi_percent,candidate_v2_wins,candidate_v2_losses,candidate_v2_profit_units,candidate_v2_roi_percent,candidate_v7_wins,candidate_v7_losses,candidate_v7_profit_units,candidate_v7_roi_percent,run_finished_at
-2026-05-20,Atlantic/Canary,3,2,0,1,0,0.6,60.0,1,0,0.6,60.0,0,0,0.0,,2026-05-20T10:36:04.298986+00:00
+2026-05-20,Atlantic/Canary,0,0,0,0,0,0.0,,0,0,0.0,,0,0,0.0,,2026-05-21T21:32:38.442940+00:00
