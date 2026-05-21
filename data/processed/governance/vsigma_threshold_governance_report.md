@@ -12,11 +12,11 @@ This report recommends review actions only. It never edits threshold configurati
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | WATCH_PATTERN |  | 6 | 50.0 | -1.45 | -24.166667 | SAMPLE_TOO_SMALL | Only 6 settled rows; minimum threshold-review sample is 10. |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | WATCH_PATTERN |  | 6 | 50.0 | -1.45 | -24.166667 | SAMPLE_TOO_SMALL | Only 6 settled rows; minimum threshold-review sample is 10. |
 | OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | WATCH_PATTERN |  | 6 | 50.0 | -1.45 | -24.166667 | SAMPLE_TOO_SMALL | Only 6 settled rows; minimum threshold-review sample is 10. |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | WATCH_PATTERN | CLV_UNAVAILABLE | 4 |  | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | WATCH_PATTERN | CLV_UNAVAILABLE | 4 | 0.0 | -3.0 | -75.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | NO_DRIFT | CLV_FLAT | 3 |  | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| UNDER_3_5 | ANY | CANDIDATE_V7_PRICE_DISCIPLINE | UNKNOWN | CLV_FLAT | 3 |  | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| UNDER_3_5 | ANY | CANDIDATE_V7_PRICE_DISCIPLINE | UNKNOWN | CLV_UNAVAILABLE | 3 |  | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | WATCH_PATTERN | CLV_FLAT | 2 |  | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| UNDER_3_5 | ANY | CANDIDATE_V7_PRICE_DISCIPLINE | UNKNOWN | CLV_FLAT | 3 | 100.0 | 1.08 | 36.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| UNDER_3_5 | ANY | CANDIDATE_V7_PRICE_DISCIPLINE | UNKNOWN | CLV_UNAVAILABLE | 3 | 100.0 | 1.08 | 36.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | WATCH_PATTERN | CLV_FLAT | 2 | 0.0 | -2.0 | -100.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | NO_DRIFT | CLV_UNAVAILABLE | 1 |  | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 | UNDER_3_5 | AVALANCHE_RISK | CANDIDATE_V2_SCHEDULE_ANOMALY | UNKNOWN |  | 1 | 100.0 | 0.36 | 36.0 | SAMPLE_TOO_SMALL | Only 1 settled rows; minimum threshold-review sample is 10. |
 | UNDER_3_5 | AVALANCHE_RISK | CANDIDATE_V4_O25_FIREWALL | UNKNOWN |  | 1 | 100.0 | 0.36 | 36.0 | SAMPLE_TOO_SMALL | Only 1 settled rows; minimum threshold-review sample is 10. |
