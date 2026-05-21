@@ -1,13 +1,13 @@
 # vSIGMA Promotion Gate - 2026-05-21
 
 ## Executive Gate Summary
-- generated_at: 2026-05-21T11:55:28+01:00
+- generated_at: 2026-05-21T15:20:37+01:00
 - experiments reviewed: 1
 - promotion_decision_counts: NOT_READY_SAMPLE_TOO_SMALL=1
 - auto_promote_counts: NO=1
 
 ## Gate Decisions
-- NOT_READY_SAMPLE_TOO_SMALL | LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | closed=1 | wins=1 | losses=0 | auto_promote=NO | production_change=NO | next=COLLECT_MORE_CLOSED_SAMPLES
+- NOT_READY_SAMPLE_TOO_SMALL | LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | closed=2 | wins=1 | losses=1 | auto_promote=NO | production_change=NO | next=COLLECT_MORE_CLOSED_SAMPLES
 
 ## Guardrails
 - auto_promote: NO for every gate decision

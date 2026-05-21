@@ -155,12 +155,12 @@ _No stale pre-lock rows excluded._
 ### Candidate v7 Calibration Advice
 | market_family | failure_mode | drift_status | clv_direction | n | profit_units | roi_percent | recommendation | recommendation_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_FLAT | 2 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 4 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_FLAT | 2 | -2.0 | -100.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 4 | -3.0 | -75.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 | OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_FLAT | 3 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 | OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_UNAVAILABLE | 1 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| UNDER_3_5 | ANY | UNKNOWN | CLV_FLAT | 3 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| UNDER_3_5 | ANY | UNKNOWN | CLV_UNAVAILABLE | 3 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| UNDER_3_5 | ANY | UNKNOWN | CLV_FLAT | 3 | 1.08 | 36.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| UNDER_3_5 | ANY | UNKNOWN | CLV_UNAVAILABLE | 3 | 1.08 | 36.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 
 ## Post-Results Summary
 | mode | pick_count | wins | losses | profit_units | roi_percent | pending_rows | candidate_version |
@@ -223,30 +223,30 @@ _No stale pre-lock rows excluded._
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: freshness_report: WARNING - validation report contains warning rows
-- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-21`
+- Critical warnings: post_results_status: WARNING - post has 2 pending row(s)
+- Recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-21 --timezone Atlantic/Canary --mode post`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1545410.0 | Brondby | FC Copenhagen | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
-| OFFICIAL_BASELINE | 1535302.0 | Flamengo | Estudiantes L.P. | OVER_1_5 | PRELOCK_NOT_AVAILABLE | LOSS | -1.0 | SETTLED |
-| OFFICIAL_BASELINE | 1535208.0 | Gremio | Palestino | UNDER_3_5 | PRELOCK_NOT_AVAILABLE | WIN | 0.36 | SETTLED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1545410.0 | Brondby | FC Copenhagen | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1535302.0 | Flamengo | Estudiantes L.P. | OVER_1_5 | PRELOCK_NOT_AVAILABLE | LOSS | -1.0 | SETTLED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1535208.0 | Gremio | Palestino | UNDER_3_5 | PRELOCK_NOT_AVAILABLE | WIN | 0.36 | SETTLED |
+| OFFICIAL_BASELINE | 1545410.0 | Brondby | FC Copenhagen | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| OFFICIAL_BASELINE | 1535302.0 | Flamengo | Estudiantes L.P. | OVER_1_5 | PRELOCK_NOT_AVAILABLE | LOSS | -1.0 | PRELOCK_UPDATED |
+| OFFICIAL_BASELINE | 1535208.0 | Gremio | Palestino | UNDER_3_5 | PRELOCK_NOT_AVAILABLE | WIN | 0.36 | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1545410.0 | Brondby | FC Copenhagen | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1535302.0 | Flamengo | Estudiantes L.P. | OVER_1_5 | PRELOCK_NOT_AVAILABLE | LOSS | -1.0 | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1535208.0 | Gremio | Palestino | UNDER_3_5 | PRELOCK_NOT_AVAILABLE | WIN | 0.36 | PRELOCK_UPDATED |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
 | CANDIDATE_V4_O25_FIREWALL | 1545410.0 | Brondby | FC Copenhagen | OVER_1_5 |  | PENDING |  | PENDING |
-| CANDIDATE_V4_O25_FIREWALL | 1535302.0 | Flamengo | Estudiantes L.P. | OVER_1_5 | PRELOCK_NOT_AVAILABLE | LOSS | -1.0 | SETTLED |
-| CANDIDATE_V4_O25_FIREWALL | 1535208.0 | Gremio | Palestino | UNDER_3_5 | PRELOCK_NOT_AVAILABLE | WIN | 0.36 | SETTLED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1545410.0 | Brondby | FC Copenhagen | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
-| CANDIDATE_V5_PLAYER_IMPACT | 1535302.0 | Flamengo | Estudiantes L.P. | OVER_1_5 | PRELOCK_NOT_AVAILABLE | LOSS | -1.0 | SETTLED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1535208.0 | Gremio | Palestino | UNDER_3_5 | PRELOCK_NOT_AVAILABLE | WIN | 0.36 | SETTLED |
-| CANDIDATE_V6_API_PREDICTIONS | 1535302.0 | Flamengo | Estudiantes L.P. | OVER_1_5 | PRELOCK_NOT_AVAILABLE | LOSS | -1.0 | SETTLED |
-| CANDIDATE_V6_API_PREDICTIONS | 1535208.0 | Gremio | Palestino | UNDER_3_5 | PRELOCK_NOT_AVAILABLE | WIN | 0.36 | SETTLED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1545410.0 | Brondby | FC Copenhagen | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1535208.0 | Gremio | Palestino | UNDER_3_5 | PRELOCK_NOT_AVAILABLE | WIN | 0.36 | SETTLED |
+| CANDIDATE_V4_O25_FIREWALL | 1535302.0 | Flamengo | Estudiantes L.P. | OVER_1_5 | PRELOCK_NOT_AVAILABLE | LOSS | -1.0 | PRELOCK_UPDATED |
+| CANDIDATE_V4_O25_FIREWALL | 1535208.0 | Gremio | Palestino | UNDER_3_5 | PRELOCK_NOT_AVAILABLE | WIN | 0.36 | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1545410.0 | Brondby | FC Copenhagen | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1535302.0 | Flamengo | Estudiantes L.P. | OVER_1_5 | PRELOCK_NOT_AVAILABLE | LOSS | -1.0 | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1535208.0 | Gremio | Palestino | UNDER_3_5 | PRELOCK_NOT_AVAILABLE | WIN | 0.36 | PRELOCK_UPDATED |
+| CANDIDATE_V6_API_PREDICTIONS | 1535302.0 | Flamengo | Estudiantes L.P. | OVER_1_5 | PRELOCK_NOT_AVAILABLE | LOSS | -1.0 | PRELOCK_UPDATED |
+| CANDIDATE_V6_API_PREDICTIONS | 1535208.0 | Gremio | Palestino | UNDER_3_5 | PRELOCK_NOT_AVAILABLE | WIN | 0.36 | PRELOCK_UPDATED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1545410.0 | Brondby | FC Copenhagen | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1535208.0 | Gremio | Palestino | UNDER_3_5 | PRELOCK_NOT_AVAILABLE | WIN | 0.36 | PRELOCK_UPDATED |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
@@ -282,11 +282,11 @@ _No stale pre-lock rows excluded._
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 6 | -24.166667 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 6 | -24.166667 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 6 | -24.166667 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 4 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 4 | -75.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
-| UNDER_3_5 | ANY | CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
-| UNDER_3_5 | ANY | CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
+| UNDER_3_5 | ANY | CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 36.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
+| UNDER_3_5 | ANY | CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 36.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 2 | -100.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | UNDER_3_5 | AVALANCHE_RISK | CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 36.0 |  | SAMPLE_TOO_SMALL |
 | UNDER_3_5 | AVALANCHE_RISK | CANDIDATE_V4_O25_FIREWALL | 1 | 36.0 |  | SAMPLE_TOO_SMALL |
