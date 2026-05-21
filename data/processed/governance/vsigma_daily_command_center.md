@@ -1,28 +1,28 @@
 # vSIGMA Daily Command Center - 2026-05-21
 
 ## Executive Command
-- generated_at: 2026-05-21T18:34:53+01:00
-- mode: pre
+- generated_at: 2026-05-21T18:36:57+01:00
+- mode: auto
 - command_center_status: REVIEW_HOLD
 - daily_classification: EXPIRED_PRELOCK
 - action_level: REVIEW_REQUIRED
 - operational_verdict: NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA
 - predictive_failure: NO
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26242431219
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26242501692
 
 ## Next Operator Action
 - Review AUTO/PRELOCK timing; do not count the row as predictive hit-rate failure.
 
 ## Decision Snapshot
-- decision_outcome_rows: 3
-- official_action_counts: NO_BET=2; WAIT=1
-- execution_family_status_counts: EXPIRED=2; WAITING_FOR_WINDOW=1
+- decision_outcome_rows: 4
+- official_action_counts: NO_BET=3; WAIT=1
+- execution_family_status_counts: EXPIRED=3; WAITING_FOR_WINDOW=1
 
 ## Quality Snapshot
-- decision_quality_rows: 3
-- decision_quality_labels: WAIT_UNRESOLVED=1; EXPIRED_PRELOCK_RESULT_LOSS=1; EXPIRED_PRELOCK_RESULT_WIN=1
-- quality_buckets: NEUTRAL_OR_UNRESOLVED=2; NEEDS_MORE_DATA=1
+- decision_quality_rows: 4
+- decision_quality_labels: WAIT_UNRESOLVED=1; EXPIRED_PRELOCK_UNRESOLVED=1; EXPIRED_PRELOCK_RESULT_LOSS=1; EXPIRED_PRELOCK_RESULT_WIN=1
+- quality_buckets: NEEDS_MORE_DATA=2; NEUTRAL_OR_UNRESOLVED=2
 
 ## Source Coverage
 - monitoring_summary: present — `data/processed/today/2026-05-21/vsigma_autonomous_monitoring_summary.md`

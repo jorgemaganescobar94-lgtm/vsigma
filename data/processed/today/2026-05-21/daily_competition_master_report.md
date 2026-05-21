@@ -57,7 +57,7 @@ _No rows._
 _No rows._
 
 ## Pre-Lock Execution Status
-- Pre-lock data fresh: YES
+- Pre-lock data fresh: NO_CURRENT_PRELOCK_ROWS
 - Stale pre-lock excluded: NO
 - Execution allowed by v7: 0
 
@@ -68,11 +68,7 @@ _No rows._
 _No rows._
 
 ### Active Pre-Lock Decisions
-| fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1545410 | Brondby | FC Copenhagen | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 998.39 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| 1535302 | Flamengo | Estudiantes L.P. | OVER_1_5 | IN_PRELOCK_WINDOW | 38.5 | PRELOCK_NOT_AVAILABLE | no reliable pre-lock data available; missing data is neutral |
-| 1535208 | Gremio | Palestino | UNDER_3_5 | IN_PRELOCK_WINDOW | 8.43 | PRELOCK_NOT_AVAILABLE | no reliable pre-lock data available; missing data is neutral |
+_No rows._
 
 ### Stale Pre-Lock Warning
 _No stale pre-lock rows excluded._
@@ -122,11 +118,7 @@ _No stale pre-lock rows excluded._
 _No rows._
 
 ## Pre-Lock Status
-| fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1545410 | Brondby | FC Copenhagen | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 998.39 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| 1535302 | Flamengo | Estudiantes L.P. | OVER_1_5 | IN_PRELOCK_WINDOW | 38.5 | PRELOCK_NOT_AVAILABLE | no reliable pre-lock data available; missing data is neutral |
-| 1535208 | Gremio | Palestino | UNDER_3_5 | IN_PRELOCK_WINDOW | 8.43 | PRELOCK_NOT_AVAILABLE | no reliable pre-lock data available; missing data is neutral |
+_No rows._
 
 ## Drift Monitor Status
 | pattern | settled_rows | wins | losses | profit_units | drift_status |

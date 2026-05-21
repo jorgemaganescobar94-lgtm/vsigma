@@ -1,7 +1,7 @@
 # vSIGMA Healthcheck Report - 2026-05-21
 
 - Global health status: WARNING
-- Generated at: 2026-05-21T15:20:07.079417+01:00
+- Generated at: 2026-05-21T18:35:19.335423+01:00
 - Mode: full
 - HEALTHY: 34
 - WARNING: 2
@@ -36,16 +36,16 @@
 | required_script:scripts/unregister_vsigma_windows_tasks.ps1 | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/scripts/unregister_vsigma_windows_tasks.ps1 |
 | api_config_available | HEALTHY | API configuration detected without exposing secrets | Set API_FOOTBALL_KEY, APISPORTS_KEY, RAPIDAPI_KEY, or X_RAPIDAPI_KEY in .env/environment. | /home/runner/work/vsigma/vsigma/.env |
 | today_snapshot_folder | HEALTHY | today snapshot folder present | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-21 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21 |
-| official_baseline_output | HEALTHY | present with 3 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_today_competition_top.csv |
-| candidate_output:CANDIDATE_V2 | HEALTHY | present with 3 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_today_candidate_v2_competition_top.csv |
-| candidate_output:CANDIDATE_V7 | HEALTHY | present with 2 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_today_candidate_v7_competition_top.csv |
-| candidate_output:CANDIDATE_V7_SHORTLIST | HEALTHY | present with 3 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_today_candidate_v7_competition_shortlist.csv |
-| candidate_output:CANDIDATE_V4 | HEALTHY | present with 3 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_today_candidate_v4_competition_top.csv |
-| candidate_output:CANDIDATE_V5 | HEALTHY | present with 3 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_today_candidate_v5_competition_top.csv |
-| candidate_output:CANDIDATE_V6 | HEALTHY | present with 2 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_today_candidate_v6_competition_top.csv |
+| official_baseline_output | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_today_competition_top.csv |
+| candidate_output:CANDIDATE_V2 | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_today_candidate_v2_competition_top.csv |
+| candidate_output:CANDIDATE_V7 | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_today_candidate_v7_competition_top.csv |
+| candidate_output:CANDIDATE_V7_SHORTLIST | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_today_candidate_v7_competition_shortlist.csv |
+| candidate_output:CANDIDATE_V4 | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_today_candidate_v4_competition_top.csv |
+| candidate_output:CANDIDATE_V5 | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_today_candidate_v5_competition_top.csv |
+| candidate_output:CANDIDATE_V6 | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_today_candidate_v6_competition_top.csv |
 | daily_master_report | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/daily_competition_master_report.md |
-| immutable_ledger_exists | HEALTHY | ledger present with 101 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
-| ledger_target_date_rows | HEALTHY | 17 row(s) for target date |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
+| immutable_ledger_exists | HEALTHY | ledger present with 107 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
+| ledger_target_date_rows | HEALTHY | 23 row(s) for target date |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | ledger_duplicate_ids | HEALTHY | no duplicate ledger_id values for target date |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | freshness_report | HEALTHY | validation report present without ERROR |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_daily_freshness_report.csv |
 | candidate_isolation_report | HEALTHY | validation report present without ERROR |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-21/vsigma_candidate_isolation_report.csv |

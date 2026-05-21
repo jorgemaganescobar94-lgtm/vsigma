@@ -107,4 +107,25 @@
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1535208 | UNDER_3_5 | RESULT_AVAILABLE | WIN | 0.36 | PRELOCK_UPDATED |
 
 ## Freshness Warnings
-_No rows._
+| file_name | status | detail |
+| --- | --- | --- |
+| vsigma_today_competition_shortlist.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v2_competition_shortlist.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v2_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v4_competition_shortlist.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v4_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v5_competition_shortlist.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v5_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v6_competition_shortlist.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v6_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v7_competition_shortlist.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v7_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_baseline_vs_candidate_v2.csv | EMPTY_UNEXPECTED | empty output was not expected for this report |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v4.csv | EMPTY_UNEXPECTED | empty output was not expected for this report |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v5.csv | EMPTY_UNEXPECTED | empty output was not expected for this report |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v6.csv | EMPTY_UNEXPECTED | empty output was not expected for this report |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v7.csv | EMPTY_UNEXPECTED | empty output was not expected for this report |
+| vsigma_today_match_script_forecasts.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v2_match_script_forecasts.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v4_match_script_forecasts.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
