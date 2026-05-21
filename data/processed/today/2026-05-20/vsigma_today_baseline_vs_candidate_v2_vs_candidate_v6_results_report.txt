@@ -1,0 +1,17 @@
+vSIGMA TODAY BASELINE VS CANDIDATE V2 VS CANDIDATE V6 RESULTS
+
+CANDIDATE_V6_NO_BET
+reason: candidate v6 top empty
+
+Mode summary
+                                         mode  pick_count  settled_rows  pending_rows  unmatched_rows  wins  losses  pushes  voids  profit_units roi_percent
+                            BASELINE_OFFICIAL           0             0             0               0     0       0       0      0           0.0        <NA>
+                          SHADOW_CANDIDATE_V2           0             0             0               0     0       0       0      0           0.0        <NA>
+SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK           0             0             0               0     0       0       0      0           0.0        <NA>
+
+API Predictions Benchmark
+ candidate_v6_strengthened_rows  candidate_v6_weakened_rows  candidate_v6_secondary_rows
+                              0                           0                            0
+
+Pick result comparison
+No compared picks.
