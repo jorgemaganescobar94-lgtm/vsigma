@@ -1,0 +1,3 @@
+target_date,generated_at,issue_number,title,url,lifecycle_status,recommended_action,reason,auto_close,production_change,guardrail_status
+2026-05-21,2026-05-21T16:01:29+01:00,38,vSIGMA DATA_QUALITY_REVIEW_REQUIRED 2026-05-21,https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/38,KEEP_OPEN_CURRENT_CONSOLIDATED,KEEP_OPEN,Current consolidated learning alert for this date/category.,NO,NO,LIFECYCLE_REPORT_ONLY_NO_AUTO_CLOSE
+2026-05-21,2026-05-21T16:01:29+01:00,37,vSIGMA OPERATIONAL_REVIEW_REQUIRED 2026-05-21,https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/37,KEEP_OPEN_CURRENT_CONSOLIDATED,KEEP_OPEN,Current consolidated learning alert for this date/category.,NO,NO,LIFECYCLE_REPORT_ONLY_NO_AUTO_CLOSE
