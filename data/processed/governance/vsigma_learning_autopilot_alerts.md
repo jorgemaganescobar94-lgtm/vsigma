@@ -1,20 +1,15 @@
 # vSIGMA Learning Autopilot Alerts - 2026-05-21
 
 ## Executive Alert Summary
-- generated_at: 2026-05-21T11:55:28+01:00
-- alerts generated: 7
-- alert_type_counts: DATA_QUALITY_REVIEW_REQUIRED=6; OPERATIONAL_REVIEW_REQUIRED=1
-- severity_counts: P2=5; P1=2
-- issues_opened_or_existing: 7
+- generated_at: 2026-05-21T15:20:38+01:00
+- alerts generated: 2
+- alert_type_counts: OPERATIONAL_REVIEW_REQUIRED=1; DATA_QUALITY_REVIEW_REQUIRED=1
+- severity_counts: P1=1; P2=1
+- issues_opened_or_existing: 2
 
 ## Alerts
-- P1 | DATA_QUALITY_REVIEW_REQUIRED | source=DATA_BLOCKED | issue=https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/29 | auto_apply=NO
-- P1 | OPERATIONAL_REVIEW_REQUIRED | source=WAITING_PRELOCK | issue=https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/30 | auto_apply=NO
-- P2 | DATA_QUALITY_REVIEW_REQUIRED | source=OVER_1_5::UNKNOWN_RISK | issue=https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/31 | auto_apply=NO
-- P2 | DATA_QUALITY_REVIEW_REQUIRED | source=UNKNOWN_MARKET::UNKNOWN_RISK | issue=https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/32 | auto_apply=NO
-- P2 | DATA_QUALITY_REVIEW_REQUIRED | source=UNRESOLVED::OVER_1_5::UNKNOWN_RISK::NO_SIGNAL | issue=https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/33 | auto_apply=NO
-- P2 | DATA_QUALITY_REVIEW_REQUIRED | source=UNRESOLVED::UNKNOWN_MARKET::UNKNOWN_RISK::NO_SIGNAL | issue=https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/34 | auto_apply=NO
-- P2 | DATA_QUALITY_REVIEW_REQUIRED | source=UNRESOLVED_RESULTS | issue=https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/35 | auto_apply=NO
+- P1 | OPERATIONAL_REVIEW_REQUIRED | sources=2 | issue=https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/37 | auto_apply=NO
+- P2 | DATA_QUALITY_REVIEW_REQUIRED | sources=5 | issue=https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/38 | auto_apply=NO
 
 ## Guardrails
 - auto_apply: NO for every alert
