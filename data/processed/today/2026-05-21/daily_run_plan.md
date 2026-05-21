@@ -1,14 +1,12 @@
 # vSIGMA Daily Run Plan - 2026-05-21
 
 - Timezone: Atlantic/Canary
-- Generated at: 2026-05-21T11:55:27.046645+01:00
+- Generated at: 2026-05-21T18:34:52.531378+01:00
 - Window minutes: 90
-- Next recommended action: RUN_POST_AFTER_FINISH
-- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-21 --timezone Atlantic/Canary --mode post`
+- Next recommended action: NO_BET_DAY
+- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-21 --timezone Atlantic/Canary --mode status`
 
 ## Fixtures
 | fixture_id | league | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action | recommended_command |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1545410 | Superliga | Brondby | FC Copenhagen | OVER_2_5 | 2026-05-21T16:31:08.400000+00:00 | 335.69 | 2026-05-21T15:01:08.400000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-21 --timezone Atlantic/Canary --mode post |
-| 1535302 | CONMEBOL Libertadores | Flamengo | Estudiantes L.P. | OVER_1_5 | 2026-05-21T00:31:15+00:00 | -624.2 | 2026-05-20T23:01:15+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-21 --timezone Atlantic/Canary --mode post |
-| 1535208 | CONMEBOL Sudamericana | Gremio | Palestino | UNDER_3_5 | 2026-05-21T00:01:10.800000+00:00 | -654.27 | 2026-05-20T22:31:10.800000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-21 --timezone Atlantic/Canary --mode post |
+|  |  |  |  |  |  |  |  | NO_CURRENT_PICKS | NO_BET_DAY | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-21 --timezone Atlantic/Canary --mode status |

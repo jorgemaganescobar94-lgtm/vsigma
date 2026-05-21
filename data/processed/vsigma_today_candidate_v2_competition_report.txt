@@ -1,25 +1,20 @@
 VSIGMA COMPETITION ACCURACY MODE
 
 Mode: COMPETITION_ACCURACY_MODE
-Normal execution shortlist rows: 5
-Competition shortlist rows: 3
-Competition top rows: 3
+Normal execution shortlist rows: 3
+Competition shortlist rows: 0
+Competition top rows: 0
 
 Principle: prefer no pick over weak pick; prioritize stable markets, premium core evidence, strong rolling stats, clean market-fit, and high model probability.
 
 Competition shortlist
- accuracy_mode_rank  fixture_id                league home_team        away_team market_primary execution_shortlist_source  competition_raw_prob  competition_calibrated_prob  accuracy_confidence_score     accuracy_mode_bucket                                                                                                              accuracy_mode_reason       accuracy_primary_risk  competition_prob_calibration_reason
-                  1     1545410             Superliga   Brondby    FC Copenhagen       OVER_2_5               PREMIUM_CORE                0.7802                     0.797325                    137.416            ACCURACY_CORE                                                   ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_BUCKET_RELIABILITY_UPLIFT
-                  2     1535302 CONMEBOL Libertadores  Flamengo Estudiantes L.P.       OVER_1_5           PREMIUM_EXTENDED                0.8981                     0.818100                    126.307 ACCURACY_EXTENDED_STRONG ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION     CALIBRATED_MARKET_OVERCONFIDENCE
-                  3     1535208 CONMEBOL Sudamericana    Gremio        Palestino      UNDER_3_5           PREMIUM_EXTENDED                0.9083                     0.858300                    110.922 ACCURACY_EXTENDED_STRONG                         ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_AVALANCHE_RISK           CALIBRATED_GLOBAL_FALLBACK
+ACCURACY_NO_BET_PREFERRED
 
 Competition top
- accuracy_mode_rank  fixture_id                league home_team        away_team market_primary  competition_raw_prob  competition_calibrated_prob  primary_edge  accuracy_confidence_score                                                                                                              accuracy_mode_reason       accuracy_primary_risk  competition_prob_calibration_reason
-                  1     1545410             Superliga   Brondby    FC Copenhagen       OVER_2_5                0.7802                     0.797325      0.248285                    137.416                                                   ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_BUCKET_RELIABILITY_UPLIFT
-                  2     1535302 CONMEBOL Libertadores  Flamengo Estudiantes L.P.       OVER_1_5                0.8981                     0.818100      0.193875                    126.307 ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION     CALIBRATED_MARKET_OVERCONFIDENCE
-                  3     1535208 CONMEBOL Sudamericana    Gremio        Palestino      UNDER_3_5                0.9083                     0.858300      0.173006                    110.922                         ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_AVALANCHE_RISK           CALIBRATED_GLOBAL_FALLBACK
+No top picks survived the stricter accuracy gate.
 
 Most common rejection tags
 accuracy_mode_reason
-ACCURACY_CORE_PRIORITY;ACCURACY_BTTS_SUPPORT_INSUFFICIENT                                                                                  1
 ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE;ACCURACY_STATS_SUPPORT_TOO_THIN    1
+ACCURACY_CORE_PRIORITY;ACCURACY_BTTS_SUPPORT_INSUFFICIENT                                                                                  1
+ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE;ACCURACY_EXTENDED_REJECTED       1
