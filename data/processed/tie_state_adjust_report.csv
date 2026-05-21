@@ -1,12 +1,4 @@
 fixture_id,home_team,away_team,tie_state_label,market_family_hint,vsigma_pre_score,vsigma_priority,tie_adjustment_note
-1537002,KV Mechelen,Club Brugge KV,,AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK,98.27,A_ANALIZAR_PRIMERO,
-1537003,Gent,Union St. Gilloise,,AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK,93.9,A_ANALIZAR_PRIMERO,
-1537004,Anderlecht,St. Truiden,,AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK,88.65,A_ANALIZAR_PRIMERO,
 1535306,Deportivo La Guaira,Independ. Rivadavia,HOME_TRAILING,OVER_OR_BTTS_CHECK,92.43,A_ANALIZAR_PRIMERO,home_trailing_flip_away_to_over
-1545412,Utrecht,Heerenveen,,OVER_OR_BTTS_CHECK,79.71,A_ANALIZAR_PRIMERO,
-1545417,VfL Wolfsburg,SC Paderborn 07,,OVER_OR_BTTS_CHECK,78.35,A_ANALIZAR_PRIMERO,
 1535213,Puerto Cabello,Juventud,HOME_TRAILING,OVER_OR_BTTS_CHECK,80.42,A_ANALIZAR_PRIMERO,home_trailing_flip_away_to_over
 1535204,Atletico-MG,Cienciano,HOME_TRAILING,OVER_OR_BTTS_CHECK,79.75,A_ANALIZAR_PRIMERO,home_trailing_flip_away_to_over
-1545231,Grasshoppers,FC Aarau,,AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK,72.86,A_ANALIZAR_PRIMERO,
-1545234,Partick,ST Mirren,,OVER_OR_BTTS_CHECK,60.26,B_ANALIZAR,
-1542920,San Antonio,Aucas,,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,0.0,NO_DATA_BLOCKED,
