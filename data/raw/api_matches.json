@@ -13118,10 +13118,10 @@
           "city": "Monteria"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
+          "long": "Match Finished",
+          "short": "FT",
           "elapsed": 90,
-          "extra": 1
+          "extra": 2
         }
       },
       "league": {
@@ -13158,8 +13158,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -13191,7 +13191,7 @@
           "long": "Second Half",
           "short": "2H",
           "elapsed": 90,
-          "extra": 2
+          "extra": 3
         }
       },
       "league": {
@@ -13398,8 +13398,8 @@
           "city": "Belo Horizonte"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
+          "long": "Halftime",
+          "short": "HT",
           "elapsed": 45,
           "extra": 5
         }
@@ -13538,10 +13538,10 @@
           "city": "Caracas"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
+          "long": "Halftime",
+          "short": "HT",
           "elapsed": 45,
-          "extra": 5
+          "extra": 6
         }
       },
       "league": {
