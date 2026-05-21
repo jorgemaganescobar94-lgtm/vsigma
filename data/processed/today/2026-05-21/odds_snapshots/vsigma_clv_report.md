@@ -3,7 +3,7 @@
 - Target date: 2026-05-21
 - Rows: 27
 - Date validation status: CLV_DATE_MISMATCH
-- Date-mismatched rows excluded: 297
+- Date-mismatched rows excluded: 299
 - Mismatched target dates observed: 2026-05-09, 2026-05-14, 2026-05-15, 2026-05-16, 2026-05-17, 2026-05-18, 2026-05-19, 2026-05-20
 - Missing PRE snapshot rows: 0
 - CLV tracking status: CLV_TRACKING_AVAILABLE_OR_NOT_REQUIRED

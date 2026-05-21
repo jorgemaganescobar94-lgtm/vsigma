@@ -1,4 +1,1 @@
 fixture_id,home_team,away_team,tie_state_label,market_family_hint,vsigma_pre_score,vsigma_priority,tie_adjustment_note
-1535306,Deportivo La Guaira,Independ. Rivadavia,HOME_TRAILING,OVER_OR_BTTS_CHECK,92.43,A_ANALIZAR_PRIMERO,home_trailing_flip_away_to_over
-1535213,Puerto Cabello,Juventud,HOME_TRAILING,OVER_OR_BTTS_CHECK,80.42,A_ANALIZAR_PRIMERO,home_trailing_flip_away_to_over
-1535204,Atletico-MG,Cienciano,HOME_TRAILING,OVER_OR_BTTS_CHECK,79.75,A_ANALIZAR_PRIMERO,home_trailing_flip_away_to_over

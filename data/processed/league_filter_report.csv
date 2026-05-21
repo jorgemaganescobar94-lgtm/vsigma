@@ -1,9 +1,4 @@
 country,league,league_tier,league_filter_reason,matches
-USA,USL W League,REJECT,country_league_not_allowlisted,2
-Argentina,Reserve League,REJECT,hard_reject_noise_league,1
-Brazil,Brasileiro U20 B,REJECT,hard_reject_noise_league,1
-Brazil,Cearense - 2,REJECT,country_league_not_allowlisted,1
 Bulgaria,Third League - Southwest,REJECT,country_league_not_allowlisted,1
-USA,USL League Two,REJECT,country_league_not_allowlisted,1
-World,CONMEBOL Libertadores,TIER_1,conmebol_libertadores,1
-World,CONMEBOL Sudamericana,TIER_2,conmebol_sudamericana,2
+Congo-DR,Ligue 1,REJECT,country_league_not_allowlisted,1
+USA,USL W League,REJECT,country_league_not_allowlisted,1

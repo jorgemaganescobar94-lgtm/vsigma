@@ -8,7 +8,7 @@
 - Blocked picks: 0
 - Official action summary: NO_BET
 - Healthcheck status: WARNING
-- Ledger rows total: 107
+- Ledger rows total: 94
 - Ledger rows for target date: 23
 - Decision outcome ledger rows total: 14
 - Decision outcome ledger actionable rows: 2
@@ -35,30 +35,30 @@
 |  |  |  |  |  | NO_BET | NO | NO_CANDIDATES | NO |  |  | NO_CANDIDATES |  |  |  |
 
 ## Data Coverage Review
-- coverage rich / partial / weak: COVERAGE_RICH: 7; COVERAGE_PARTIAL: 1
-- odds coverage: 8/8
-- fixture stats coverage: 7/8
-- injuries coverage: 5/8
-- lineups coverage: 8/8
-- predictions coverage: 8/8
-- odds structure depth: target_fixtures: 10; OK: 10; RICH_MIXED: 4; RICH_COHERENT: 4; RICH_NOISY: 2
-- API gaps detected: fixture_stats, injuries
+- coverage rich / partial / weak: none
+- odds coverage: UNKNOWN
+- fixture stats coverage: UNKNOWN
+- injuries coverage: UNKNOWN
+- lineups coverage: UNKNOWN
+- predictions coverage: UNKNOWN
+- odds structure depth: target_fixtures: 0
+- API gaps detected: none detected in available coverage inputs
 
 ## Model / Market Review
-- markets appearing in current/historical inputs: OVER_1_5: 82; OVER_2_5: 17; UNDER_3_5: 8; BTTS_YES: 3; AWAY_WIN: 2
-- failure modes principales: FAILURE_MODE_LOW_CONVERSION: 170; LOW_CONVERSION: 85; FAILURE_MODE_AVALANCHE_RISK: 12
-- OVER_1_5: appearances=82; calibration_sample=7; status=needs more sample
-- OVER_2_5: appearances=17; calibration_sample=2; status=needs more sample
-- sides / DNB / 1X / X2: appearances=2; calibration_sample=1; status=needs more sample
+- markets appearing in current/historical inputs: OVER_1_5: 70; OVER_2_5: 16; UNDER_3_5: 8; BTTS_YES: 3; AWAY_WIN: 2
+- failure modes principales: FAILURE_MODE_LOW_CONVERSION: 144; LOW_CONVERSION: 72; FAILURE_MODE_AVALANCHE_RISK: 12
+- OVER_1_5: appearances=70; calibration_sample=0; status=needs more sample
+- OVER_2_5: appearances=16; calibration_sample=0; status=needs more sample
+- sides / DNB / 1X / X2: appearances=2; calibration_sample=0; status=needs more sample
 - mercados con buena senal: none yet by sample rule
-- mercados que necesitan mas muestra: AWAY_WIN (1), OVER_1_5 (7), OVER_2_5 (2)
+- mercados que necesitan mas muestra: none detected
 
 ## Calibration Review
-- closed picks available: 8
+- closed picks available: 7
 - enough_sample: NO
 - recalibration_allowed: NO
 - recommendation: Do not recalibrate; keep collecting closed picks.
-- calibration report present: YES
+- calibration report present: NO
 - action applied: NO
 
 ## API Data Improvement Recommendations
@@ -73,9 +73,9 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | P1 | execution | Improve prelock timing schedule | Decision outcome ledger includes expired or prelock unavailable decisions. | Reduces non-actionable PRELOCK outcomes caused by late or missing execution windows. | Low if limited to scheduling and reporting diagnostics. | Review AUTO/PRELOCK timing so resolver runs before kickoff and captures a useful in-window slot. | YES | prelock_not_available=0; expired=3 |
 | P3 | decision_quality | Collect more closed decision quality outcomes | Decision Quality Review has fewer than 30 resolved rows. | Avoids premature recalibration or execution-rule changes from a thin sample. | Low; reporting only. | Keep building the quality review after POST labels are available. | NO | resolved_quality_rows=2 |
-| P3 | model_calibration | Defer recalibration until minimum closed-pick sample | Fewer than 30 closed picks are available. | Avoids fitting thresholds or probability adjustments to noise. | Low; no predictive change is applied. | Keep calibration reporting active and wait for at least 30 closed picks before suggestions. | NO | closed_picks=8; enough_sample=NO; recalibration_allowed=NO |
+| P3 | model_calibration | Defer recalibration until minimum closed-pick sample | Fewer than 30 closed picks are available. | Avoids fitting thresholds or probability adjustments to noise. | Low; no predictive change is applied. | Keep calibration reporting active and wait for at least 30 closed picks before suggestions. | NO | closed_picks=7; enough_sample=NO; recalibration_allowed=NO |
 
 ## Input Inventory
-- generated_at: 2026-05-21T18:39:09+01:00
+- generated_at: 2026-05-21T23:50:49+01:00
 - timezone: Atlantic/Canary
-- missing optional inputs: none
+- missing optional inputs: vsigma_probability_calibration_report.txt, vsigma_probability_calibration_table.csv

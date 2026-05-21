@@ -14,8 +14,8 @@
 ## Target Date Rows
 | fixture_id | league | home_team | away_team | market_primary | official_action | executable_now | final_block_reason | execution_family_status | is_actionable | is_expired | is_waiting | is_blocked | is_technical_review |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1545410 | Superliga | Brondby | FC Copenhagen | OVER_2_5 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | WAITING_FOR_WINDOW | NO | NO | YES | NO | NO |
-| 1545410 | Superliga | Brondby | FC Copenhagen | OVER_2_5 | NO_BET | NO | KICKOFF_ALREADY_PASSED | EXPIRED | NO | YES | NO | NO | NO |
-| 1535302 | CONMEBOL Libertadores | Flamengo | Estudiantes L.P. | OVER_1_5 | NO_BET | NO | KICKOFF_ALREADY_PASSED | EXPIRED | NO | YES | NO | NO | NO |
-| 1535208 | CONMEBOL Sudamericana | Gremio | Palestino | UNDER_3_5 | NO_BET | NO | KICKOFF_ALREADY_PASSED | EXPIRED | NO | YES | NO | NO | NO |
+| 1545410.0 | Superliga | Brondby | FC Copenhagen | OVER_2_5 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | WAITING_FOR_WINDOW | NO | NO | YES | NO | NO |
+| 1545410.0 | Superliga | Brondby | FC Copenhagen | OVER_2_5 | NO_BET | NO | KICKOFF_ALREADY_PASSED | EXPIRED | NO | YES | NO | NO | NO |
+| 1535302.0 | CONMEBOL Libertadores | Flamengo | Estudiantes L.P. | OVER_1_5 | NO_BET | NO | KICKOFF_ALREADY_PASSED | EXPIRED | NO | YES | NO | NO | NO |
+| 1535208.0 | CONMEBOL Sudamericana | Gremio | Palestino | UNDER_3_5 | NO_BET | NO | KICKOFF_ALREADY_PASSED | EXPIRED | NO | YES | NO | NO | NO |
 |  |  |  |  |  | NO_BET | NO | NO_CANDIDATES | NO_CANDIDATES | NO | NO | NO | YES | NO |
