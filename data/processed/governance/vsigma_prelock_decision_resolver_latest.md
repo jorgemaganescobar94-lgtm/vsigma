@@ -12,14 +12,14 @@
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Brondby vs FC Copenhagen | OVER_2_5 | 2026-05-21T17:30+01:00 | 997.06 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | 2026-05-21T16:00+01:00 |
-| Flamengo vs Estudiantes L.P. | OVER_1_5 | 2026-05-21T01:30+01:00 | 37.06 | NO_BET | NO | ODDS_NOT_AVAILABLE;LINEUPS_NOT_AVAILABLE;AVAILABILITY_NOT_AVAILABLE |  |
-| Gremio vs Palestino | UNDER_3_5 | 2026-05-21T01:00+01:00 | 7.06 | NO_BET | NO | ODDS_NOT_AVAILABLE;LINEUPS_NOT_AVAILABLE;AVAILABILITY_NOT_AVAILABLE |  |
+| Brondby vs FC Copenhagen | OVER_2_5 | 2026-05-21T17:30+01:00 | 129.41 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | 2026-05-21T16:00+01:00 |
+| Flamengo vs Estudiantes L.P. | OVER_1_5 | 2026-05-21T01:30+01:00 | -830.59 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
+| Gremio vs Palestino | UNDER_3_5 | 2026-05-21T01:00+01:00 | -860.59 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
 
 ## Data Gaps
-- odds missing: 2
-- lineups missing: 2
-- availability missing: 2
+- odds missing: 0
+- lineups missing: 0
+- availability missing: 0
 
 ## Notes
 This resolver does not change predictions, thresholds, calibration, probability formulas, or base selection. It only translates PRELOCK state into an operational execution decision.
