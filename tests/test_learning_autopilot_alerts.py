@@ -77,6 +77,39 @@ class LearningAutopilotAlertTests(unittest.TestCase):
         self.assertEqual(len(alerts), 2)
         self.assertEqual({alert["alert_type"] for alert in alerts}, {"OPERATIONAL_REVIEW_REQUIRED", "DATA_QUALITY_REVIEW_REQUIRED"})
 
+    def test_consolidates_data_quality_alerts_by_category(self) -> None:
+        rows = [
+            {
+                "proposal_type": "DATA_QUALITY_PROPOSAL",
+                "proposal_status": "PROPOSAL_ONLY",
+                "priority": "P2",
+                "source_pattern_key": "UNKNOWN_MARKET::UNKNOWN_RISK",
+                "recommended_action": "Improve data quality",
+            },
+            {
+                "proposal_type": "DATA_QUALITY_PROPOSAL",
+                "proposal_status": "PROPOSAL_ONLY",
+                "priority": "P2",
+                "source_pattern_key": "UNRESOLVED_RESULTS",
+                "recommended_action": "Improve post-results labeling",
+            },
+        ]
+        raw = self.module.proposal_alerts(
+            self.target_date,
+            "2026-05-20T12:00:00+01:00",
+            rows,
+            "",
+        )
+        consolidated = self.module.consolidate_alerts(
+            raw,
+            self.target_date,
+            "2026-05-20T12:00:00+01:00",
+        )
+        self.assertEqual(len(consolidated), 1)
+        self.assertEqual(consolidated[0]["alert_type"], "DATA_QUALITY_REVIEW_REQUIRED")
+        self.assertIn("UNKNOWN_MARKET::UNKNOWN_RISK", consolidated[0]["source_key"])
+        self.assertIn("UNRESOLVED_RESULTS", consolidated[0]["source_key"])
+
     def test_build_learning_autopilot_alerts_outputs_csv_and_markdown_dry_run(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             processed_dir = Path(tmp) / "data" / "processed"
