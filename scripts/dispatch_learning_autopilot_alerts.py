@@ -244,6 +244,88 @@ def dedupe_alerts(alerts: list[dict[str, object]]) -> list[dict[str, object]]:
     return deduped
 
 
+def consolidated_title(alert_type: str, target_date: str) -> str:
+    return f"vSIGMA {alert_type} {target_date}"
+
+
+def consolidate_alerts(alerts: list[dict[str, object]], target_date: str, generated_at: str) -> list[dict[str, object]]:
+    groups: dict[str, list[dict[str, object]]] = {}
+    for alert in alerts:
+        alert_type = str(alert.get("alert_type") or "UNKNOWN_ALERT")
+        groups.setdefault(alert_type, []).append(alert)
+
+    severity_rank = {"P1": 0, "P2": 1, "P3": 2}
+    consolidated: list[dict[str, object]] = []
+
+    for alert_type, group in groups.items():
+        severity = sorted(
+            [str(row.get("severity") or "P3") for row in group],
+            key=lambda item: severity_rank.get(item, 9),
+        )[0]
+        source_keys = [
+            str(row.get("source_key") or "").strip()
+            for row in group
+            if str(row.get("source_key") or "").strip()
+        ]
+        source_files = sorted({
+            str(row.get("source_file") or "").strip()
+            for row in group
+            if str(row.get("source_file") or "").strip()
+        })
+
+        title = consolidated_title(alert_type, target_date)
+
+        body_lines = [
+            f"# {title}",
+            "",
+            f"Consolidated vSIGMA learning autopilot alert for {target_date}.",
+            "",
+            "## Summary",
+            f"- alert_type: {alert_type}",
+            f"- severity: {severity}",
+            f"- source_count: {len(group)}",
+            f"- source_files: {';'.join(source_files) or 'UNKNOWN'}",
+            "",
+            "## Sources",
+        ]
+
+        for row in group:
+            body_lines.append(
+                f"- {str(row.get('source_key') or 'UNKNOWN')} :: {str(row.get('alert_type') or 'UNKNOWN')} :: {str(row.get('severity') or 'UNKNOWN')}"
+            )
+
+        body_lines.extend([
+            "",
+            "## Guardrails",
+            "- auto_apply: NO",
+            "- production_change: NO",
+            "- official picks changed: NO",
+            "- model changes applied: NO",
+        ])
+
+        consolidated.append({
+            "target_date": target_date,
+            "generated_at": generated_at,
+            "alert_id": f"{alert_type}::{target_date}",
+            "alert_type": alert_type,
+            "severity": severity,
+            "source_file": ";".join(source_files),
+            "source_key": ";".join(source_keys),
+            "title": title,
+            "body": "\n".join(body_lines),
+            "should_open_issue": "YES",
+            "issue_url": "",
+            "auto_apply": "NO",
+            "production_change": "NO",
+            "guardrail_status": "ALERT_ONLY_NO_AUTO_CHANGE",
+        })
+
+    return sorted(
+        consolidated,
+        key=lambda row: (severity_rank.get(str(row.get("severity")), 9), str(row.get("alert_type"))),
+    )
+
+
 def dispatch_alerts(alerts: list[dict[str, object]], repo: str, dry_run: bool) -> list[dict[str, object]]:
     if not repo and any(alert.get("should_open_issue") == "YES" for alert in alerts):
         raise RuntimeError("repo is required to open GitHub issues")
@@ -284,7 +366,7 @@ def build_markdown(target_date: str, generated_at: str, alerts: list[dict[str, o
     else:
         for alert in alerts[:20]:
             lines.append(
-                f"- {alert['severity']} | {alert['alert_type']} | source={alert['source_key']} | "
+                f"- {alert['severity']} | {alert['alert_type']} | sources={len([item for item in str(alert.get('source_key') or '').split(';') if item])} | "
                 f"issue={alert.get('issue_url') or 'N/A'} | auto_apply={alert['auto_apply']}"
             )
     lines.extend([
@@ -343,10 +425,11 @@ def build_learning_autopilot_alerts(
     governance = processed_dir / "governance"
     proposals = read_csv_rows(today / "vsigma_improvement_proposals.csv") or read_csv_rows(governance / "vsigma_improvement_proposals.csv")
     gates = read_csv_rows(today / "vsigma_promotion_gate.csv") or read_csv_rows(governance / "vsigma_promotion_gate.csv")
-    alerts = dedupe_alerts([
+    raw_alerts = dedupe_alerts([
         *proposal_alerts(target_date, generated_at, proposals, run_url),
         *promotion_alerts(target_date, generated_at, gates, run_url),
     ])
+    alerts = consolidate_alerts(raw_alerts, target_date, generated_at)
     if dispatch and alerts:
         alerts = dispatch_alerts(alerts, repo, dry_run)
     markdown = build_markdown(target_date, generated_at, alerts)
