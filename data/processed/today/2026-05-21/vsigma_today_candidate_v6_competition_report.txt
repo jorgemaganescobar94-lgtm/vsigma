@@ -3,21 +3,16 @@ vSIGMA SHADOW CANDIDATE V6
 Layer: candidate v2 + API Predictions Benchmark.
 Status: experimental shadow; API predictions never create picks.
 
-Candidate v2 input rows: 3
-Candidate v6 competition shortlist rows: 2
-Candidate v6 competition top rows: 2
-API prediction available rows: 3
-API prediction aligned rows: 1
-API prediction disagreement rows: 1
-API calls: 3 | cache hits: 0 | errors: 0
+Candidate v2 input rows: 0
+Candidate v6 competition shortlist rows: 0
+Candidate v6 competition top rows: 0
+API prediction available rows: 0
+API prediction aligned rows: 0
+API prediction disagreement rows: 0
+API calls: 0 | cache hits: 0 | errors: 0
 
 API Predictions Benchmark action mix
-api_prediction_benchmark_action
-API_PREDICTION_DISAGREEMENT_SECONDARY    1
-NOT_APPLIED                              1
-API_PREDICTION_ALIGNED_STRENGTHEN        1
+No rows.
 
 Candidate v6 Top
- accuracy_mode_rank  fixture_id                league home_team        away_team market_primary  competition_calibrated_prob  accuracy_confidence_score api_prediction_alignment_flag   api_prediction_benchmark_action
-                  1     1535302 CONMEBOL Libertadores  Flamengo Estudiantes L.P.       OVER_1_5                       0.8181                    126.307                       NEUTRAL                       NOT_APPLIED
-                  2     1535208 CONMEBOL Sudamericana    Gremio        Palestino      UNDER_3_5                       0.8643                    112.422                       ALIGNED API_PREDICTION_ALIGNED_STRENGTHEN
+No v6 competition top picks survived.

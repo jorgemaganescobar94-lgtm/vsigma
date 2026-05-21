@@ -5,7 +5,7 @@
 - JSONL event log: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.jsonl
 - Official picks registered: 3
 - Shadow picks registered: 13
-- No-bet records: 1
+- No-bet records: 7
 - Pending records: 16
 - Settled records: 0
 - Daily winner: NO_SETTLED_RESULTS
@@ -24,13 +24,13 @@
 ## Daily Summary By Experiment
 | experiment_id | records | picks | no_bet_records | pending | settled | profit_units |
 | --- | --- | --- | --- | --- | --- | --- |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 3 | 3 | 0 | 3 | 0 | -0.64 |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 4 | 3 | 1 | 3 | 0 | -0.64 |
 | CANDIDATE_V3_ODDS_DEPTH | 1 | 0 | 1 | 0 | 0 | 0.0 |
-| CANDIDATE_V4_O25_FIREWALL | 3 | 3 | 0 | 3 | 0 | -0.64 |
-| CANDIDATE_V5_PLAYER_IMPACT | 3 | 3 | 0 | 3 | 0 | -0.64 |
-| CANDIDATE_V6_API_PREDICTIONS | 2 | 2 | 0 | 2 | 0 | -0.64 |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 2 | 0 | 2 | 0 | 0.36 |
-| OFFICIAL_BASELINE | 3 | 3 | 0 | 3 | 0 | -0.64 |
+| CANDIDATE_V4_O25_FIREWALL | 4 | 3 | 1 | 3 | 0 | -0.64 |
+| CANDIDATE_V5_PLAYER_IMPACT | 4 | 3 | 1 | 3 | 0 | -0.64 |
+| CANDIDATE_V6_API_PREDICTIONS | 3 | 2 | 1 | 2 | 0 | -0.64 |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 2 | 1 | 2 | 0 | 0.36 |
+| OFFICIAL_BASELINE | 4 | 3 | 1 | 3 | 0 | -0.64 |
 
 ## Official Picks
 | experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
@@ -60,6 +60,12 @@
 | experiment_id | record_status | reason_tags | source_file |
 | --- | --- | --- | --- |
 | CANDIDATE_V3_ODDS_DEPTH | NO_BET_RECORD | NO_BET; SOURCE_FILE_MISSING_OR_NOT_AVAILABLE | vsigma_today_candidate_v3_competition_top.csv |
+| OFFICIAL_BASELINE | NO_BET_RECORD | NO_BET; no competition top rows | vsigma_today_competition_top.csv |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | NO_BET_RECORD | NO_BET; no competition top rows | vsigma_today_candidate_v2_competition_top.csv |
+| CANDIDATE_V4_O25_FIREWALL | NO_BET_RECORD | NO_BET; no competition top rows | vsigma_today_candidate_v4_competition_top.csv |
+| CANDIDATE_V5_PLAYER_IMPACT | NO_BET_RECORD | NO_BET; no competition top rows | vsigma_today_candidate_v5_competition_top.csv |
+| CANDIDATE_V6_API_PREDICTIONS | NO_BET_RECORD | NO_BET; no competition top rows | vsigma_today_candidate_v6_competition_top.csv |
+| CANDIDATE_V7_PRICE_DISCIPLINE | NO_BET_RECORD | NO_BET; no competition top rows | vsigma_today_candidate_v7_competition_top.csv |
 
 ## Pre-Lock Changes
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_decision | prelock_decision_reason |

@@ -3,17 +3,11 @@ vSIGMA TODAY BASELINE VS CANDIDATE V2
 Baseline: official frozen Competition Accuracy Mode + Probability Calibration.
 Candidate v2: SHADOW experimental schedule-strength + anomaly-cleaning layer.
 
-Baseline official picks: 3
-Candidate v2 shadow picks: 3
-Overlap: 3
+Baseline official picks: 0
+Candidate v2 shadow picks: 0
+Overlap: 0
 Only baseline chose: 0
 Only candidate chose: 0
 
 Side-by-side picks
-comparison_status                      fixture  baseline_rank  candidate_v2_rank baseline_market candidate_v2_market  baseline_calibrated_prob  candidate_v2_calibrated_prob  baseline_confidence_score  candidate_v2_confidence_score
-             BOTH          Gremio vs Palestino              3                  3       UNDER_3_5           UNDER_3_5                  0.861300                      0.858300                    111.027                        110.922
-             BOTH Flamengo vs Estudiantes L.P.              2                  2        OVER_1_5            OVER_1_5                  0.815700                      0.818100                    125.862                        126.307
-             BOTH     Brondby vs FC Copenhagen              1                  1        OVER_2_5            OVER_2_5                  0.801325                      0.797325                    137.736                        137.416
-
-Reason differences
-All compared picks overlap. Review probability/confidence deltas in the CSV.
+No comparable rows.

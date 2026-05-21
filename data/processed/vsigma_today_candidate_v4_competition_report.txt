@@ -1,20 +1,16 @@
 vSIGMA SHADOW CANDIDATE V4
 
+CANDIDATE_V4_NO_BET
+reason: candidate v2 shortlist empty
+
 Layer: candidate v2 signals + O2.5 Low Conversion Firewall.
 Status: experimental shadow; official baseline and candidate v2 outputs are not replaced.
 
-Candidate v2 input rows: 3
-Candidate v4 competition shortlist rows: 3
-Candidate v4 competition top rows: 3
+Baseline official picks: 0
+Candidate v2 shadow picks: 0
+Candidate v4 competition shortlist rows: 0
+Candidate v4 competition top rows: 0
 
 ## O2.5 Low Conversion Firewall
 
- fixture_id home_team     away_team over25_low_conversion_original_market over25_low_conversion_recommended_market over25_low_conversion_firewall_decision  over25_low_conversion_confirmation_score  over25_low_conversion_action                                                                                                                                                                                                                                                                                                     over25_low_conversion_firewall_reason
-    1545410   Brondby FC Copenhagen                              OVER_2_5                                 OVER_1_5                     DEGRADE_TO_OVER_1_5                                       8.5 MARKET_DOWNGRADED_TO_OVER_1_5 Clean O1.5 survival route exists and O2.5 confirmation was below exceptional threshold. Evidence: FORECAST_TOTAL_XG_USABLE;MODAL_SCORE_3_PLUS;ALT_SCORE_3_PLUS;PICK_PATH_3_GOAL_EXPLICIT;CALIBRATED_PROB_USABLE;ACCURACY_CONFIDENCE_HIGH;CORE_PRIORITY;NO_ODDS_AGGRESSION_WARNING;CANDIDATE_V2_TOP_AGREES;OVER15_CLEAN_SURVIVAL_AVAILABLE
-
-## Candidate v4 Top
-
- accuracy_mode_rank  fixture_id                league home_team        away_team market_primary  competition_calibrated_prob  accuracy_confidence_score over25_low_conversion_firewall_decision  over25_low_conversion_confirmation_score
-                  1     1545410             Superliga   Brondby    FC Copenhagen       OVER_1_5                      0.84996                    156.544                     DEGRADE_TO_OVER_1_5                                       8.5
-                  2     1535302 CONMEBOL Libertadores  Flamengo Estudiantes L.P.       OVER_1_5                      0.81810                    126.307                             NOT_APPLIED                                       0.0
-                  3     1535208 CONMEBOL Sudamericana    Gremio        Palestino      UNDER_3_5                      0.85830                    110.922                             NOT_APPLIED                                       0.0
+No OVER_2_5 + LOW_CONVERSION rows were checked because candidate v2 produced no competition shortlist.

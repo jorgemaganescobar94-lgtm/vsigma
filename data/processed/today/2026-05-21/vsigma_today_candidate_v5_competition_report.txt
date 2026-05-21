@@ -3,17 +3,13 @@ vSIGMA SHADOW CANDIDATE V5
 Layer: candidate v2 + conservative player impact.
 Status: experimental shadow; official baseline and candidate v2 outputs are not replaced.
 
-Candidate v2 input rows: 3
-Candidate v5 competition shortlist rows: 3
-Candidate v5 competition top rows: 3
+Candidate v2 input rows: 0
+Candidate v5 competition shortlist rows: 0
+Candidate v5 competition top rows: 0
 Player-impact adjustments made: 0
 
 Player-impact action mix
-player_impact_adjustment_action
-NOT_APPLIED    3
+No rows.
 
 Candidate v5 Top
- accuracy_mode_rank  fixture_id                league home_team        away_team market_primary  competition_calibrated_prob  accuracy_confidence_score player_impact_adjustment_action      player_impact_market_translation_hint
-                  1     1545410             Superliga   Brondby    FC Copenhagen       OVER_2_5                     0.797325                    137.416                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
-                  2     1535302 CONMEBOL Libertadores  Flamengo Estudiantes L.P.       OVER_1_5                     0.818100                    126.307                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
-                  3     1535208 CONMEBOL Sudamericana    Gremio        Palestino      UNDER_3_5                     0.858300                    110.922                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
+No v5 competition top picks survived.
