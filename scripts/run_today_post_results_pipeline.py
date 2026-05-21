@@ -5,6 +5,7 @@ import os
 import shutil
 import subprocess
 import sys
+import tempfile
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -19,6 +20,7 @@ except ModuleNotFoundError:
 
 ROOT = Path(__file__).resolve().parents[1]
 
+RAW_MATCHES_CSV = ROOT / "data" / "raw" / "matches.csv"
 PROCESSED_DIR = ROOT / "data" / "processed"
 TODAY_DIR = PROCESSED_DIR / "today"
 
@@ -83,6 +85,27 @@ POST_RESULTS_SNAPSHOT_FILES = [
     PROCESSED_DIR / "vsigma_candidate_isolation_report.csv",
     PROCESSED_DIR / "vsigma_candidate_isolation_report.txt",
 ]
+
+
+DATE_SCOPED_POST_INPUT_FILES = [
+    RAW_MATCHES_CSV,
+    PROCESSED_DIR / "vsigma_deep_analysis_candidates.csv",
+    PROCESSED_DIR / "vsigma_today_premium_core.csv",
+    SHORTLIST_CSV,
+    BETS_ONLY_CSV,
+    PROCESSED_DIR / "vsigma_today_execution_summary.csv",
+]
+
+REQUIRED_DATE_SCOPED_POST_INPUT_FILES = {
+    RAW_MATCHES_CSV,
+    PROCESSED_DIR / "vsigma_deep_analysis_candidates.csv",
+    SHORTLIST_CSV,
+}
+
+ROLLING_POST_WORKING_FILES = sorted(
+    {*DATE_SCOPED_POST_INPUT_FILES, *POST_RESULTS_SNAPSHOT_FILES},
+    key=lambda path: str(path),
+)
 
 POST_RESULTS_JOURNAL_FILES = [
     POST_SUMMARY_FILENAME,
@@ -290,6 +313,58 @@ def validate_date_scoped_file(path: Path, match_date: str) -> None:
         raise ValueError(f"Snapshot file {path} contains non-requested dates: {observed}")
 
 
+def snapshot_source_for_working_path(working_path: Path, match_date: str) -> Path:
+    return TODAY_DIR / match_date / working_path.name
+
+
+def backup_current_working_files(paths: list[Path], backup_dir: Path) -> dict[Path, bool]:
+    existed: dict[Path, bool] = {}
+    for working_path in paths:
+        existed[working_path] = working_path.exists()
+        if working_path.exists():
+            backup_path = backup_dir / working_path.relative_to(ROOT)
+            backup_path.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(working_path, backup_path)
+    return existed
+
+
+def restore_current_working_files(
+    paths: list[Path],
+    backup_dir: Path,
+    existed: dict[Path, bool],
+) -> None:
+    for working_path in reversed(paths):
+        backup_path = backup_dir / working_path.relative_to(ROOT)
+        if existed.get(working_path, False):
+            working_path.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(backup_path, working_path)
+        elif working_path.exists():
+            working_path.unlink()
+
+
+def activate_date_scoped_post_inputs(match_date: str) -> None:
+    snapshot_dir = TODAY_DIR / match_date
+    if not snapshot_dir.exists():
+        raise FileNotFoundError(f"Missing date-scoped snapshot directory for post-results: {snapshot_dir}")
+
+    for working_path in DATE_SCOPED_POST_INPUT_FILES:
+        source = snapshot_source_for_working_path(working_path, match_date)
+        required = working_path in REQUIRED_DATE_SCOPED_POST_INPUT_FILES
+
+        if not source.exists():
+            if required:
+                raise FileNotFoundError(
+                    f"Missing required date-scoped input for post-results: {source}"
+                )
+            if working_path.exists():
+                working_path.unlink()
+            continue
+
+        working_path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, working_path)
+        validate_date_scoped_file(working_path, match_date)
+
+
 def snapshot_post_results_outputs(match_date: str) -> Path:
     dest_dir = TODAY_DIR / match_date
     dest_dir.mkdir(parents=True, exist_ok=True)
@@ -396,28 +471,38 @@ def write_post_results_report(
 def run_today_post_results_pipeline(match_date: str, timezone_name: str) -> tuple[Path, Path, pd.DataFrame]:
     shortlist, shortlist_source = load_shortlist_for_date(match_date)
 
-    print("\n=== TODAY POST-RESULTS PIPELINE ===")
-    print(f"Date: {match_date}")
-    print(f"Timezone: {timezone_name}")
-    print(f"Execution shortlist source: {shortlist_source}")
-    print(f"Execution shortlist rows: {len(shortlist)}")
+    with tempfile.TemporaryDirectory(prefix="vsigma_post_results_backup_") as temp_dir:
+        backup_dir = Path(temp_dir)
+        existed = backup_current_working_files(ROLLING_POST_WORKING_FILES, backup_dir)
 
-    for step in POST_RESULTS_STEPS:
-        run_step(step)
+        try:
+            activate_date_scoped_post_inputs(match_date)
 
-    ledger = read_csv_required(LEDGER_CSV, "execution shortlist results ledger")
-    validate_ledger_against_shortlist(ledger, shortlist)
+            print("\n=== TODAY POST-RESULTS PIPELINE ===")
+            print(f"Date: {match_date}")
+            print(f"Timezone: {timezone_name}")
+            print(f"Execution shortlist source: {shortlist_source}")
+            print(f"Execution shortlist rows: {len(shortlist)}")
 
-    snapshot_dir = snapshot_post_results_outputs(match_date)
-    report_path = write_post_results_report(match_date, timezone_name, shortlist, ledger, snapshot_dir)
-    post_journal_path = build_post_summary(PROCESSED_DIR, TODAY_DIR, match_date, timezone_name)
-    run_shadow_candidate_v2_post_step(match_date, timezone_name)
-    run_shadow_candidate_v4_post_step(match_date, timezone_name)
-    run_shadow_candidate_v5_post_step(match_date, timezone_name)
-    run_shadow_candidate_v6_post_step(match_date, timezone_name)
-    run_shadow_candidate_v7_post_step(match_date, timezone_name)
-    run_odds_clv_post_steps(match_date)
-    run_daily_hardening_steps(match_date)
+            for step in POST_RESULTS_STEPS:
+                run_step(step)
+
+            ledger = read_csv_required(LEDGER_CSV, "execution shortlist results ledger")
+            validate_ledger_against_shortlist(ledger, shortlist)
+
+            snapshot_dir = snapshot_post_results_outputs(match_date)
+            report_path = write_post_results_report(match_date, timezone_name, shortlist, ledger, snapshot_dir)
+            post_journal_path = build_post_summary(PROCESSED_DIR, TODAY_DIR, match_date, timezone_name)
+            run_shadow_candidate_v2_post_step(match_date, timezone_name)
+            run_shadow_candidate_v4_post_step(match_date, timezone_name)
+            run_shadow_candidate_v5_post_step(match_date, timezone_name)
+            run_shadow_candidate_v6_post_step(match_date, timezone_name)
+            run_shadow_candidate_v7_post_step(match_date, timezone_name)
+            run_odds_clv_post_steps(match_date)
+            run_daily_hardening_steps(match_date)
+
+        finally:
+            restore_current_working_files(ROLLING_POST_WORKING_FILES, backup_dir, existed)
 
     print("\n=== TODAY POST-RESULTS PIPELINE COMPLETADO ===")
     print(f"Snapshot dir: {snapshot_dir}")
