@@ -1,31 +1,9 @@
 country,league,league_tier,league_filter_reason,matches
-Saudi-Arabia,Pro League,REJECT,country_league_not_allowlisted,7
-Argentina,Reserve League,REJECT,hard_reject_noise_league,6
-Brazil,Brasileiro U20 A,REJECT,hard_reject_noise_league,4
-Bosnia,Premijer Liga,REJECT,country_league_not_allowlisted,2
-Colombia,Copa Colombia,REJECT,country_league_not_allowlisted,2
-Peru,Liga Women,REJECT,hard_reject_noise_league,2
 USA,USL W League,REJECT,country_league_not_allowlisted,2
-Armenia,First League,REJECT,country_league_not_allowlisted,1
+Argentina,Reserve League,REJECT,hard_reject_noise_league,1
 Brazil,Brasileiro U20 B,REJECT,hard_reject_noise_league,1
 Brazil,Cearense - 2,REJECT,country_league_not_allowlisted,1
-Brazil,Copa Gaúcha,REJECT,country_league_not_allowlisted,1
 Bulgaria,Third League - Southwest,REJECT,country_league_not_allowlisted,1
-Chile,Primera B,REJECT,country_league_not_allowlisted,1
-Colombia,Primera B,REJECT,country_league_not_allowlisted,1
-Germany,Oberliga - Westfalen,REJECT,hard_reject_noise_league,1
-Iceland,2. Deild,REJECT,country_league_not_allowlisted,1
-Iceland,Úrvalsdeild,REJECT,country_league_not_allowlisted,1
-Kosovo,Cup,REJECT,country_league_not_allowlisted,1
-Lebanon,Premier League,REJECT,country_league_not_allowlisted,1
-Paraguay,Division Intermedia,REJECT,country_league_not_allowlisted,1
-Tanzania,Ligi kuu Bara,REJECT,country_league_not_allowlisted,1
 USA,USL League Two,REJECT,country_league_not_allowlisted,1
-Belgium,Jupiler Pro League,TIER_1,belgium_jupiler,3
-Germany,Bundesliga,TIER_1,germany_bundesliga,1
-Netherlands,Eredivisie,TIER_1,netherlands_eredivisie,1
 World,CONMEBOL Libertadores,TIER_1,conmebol_libertadores,1
 World,CONMEBOL Sudamericana,TIER_2,conmebol_sudamericana,2
-Scotland,Premiership,TIER_2,scotland_premiership,1
-Switzerland,Super League,TIER_2,switzerland_super_league,1
-Ecuador,Copa Ecuador,TIER_4,ecuador_cup_context_only,1

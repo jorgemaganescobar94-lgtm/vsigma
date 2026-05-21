@@ -78,7 +78,8 @@ _No stale pre-lock rows excluded._
 | fixture_id | home_team | away_team | market_primary | experiment_id | pre_price | prelock_price | close_proxy_price | clv_delta | clv_direction | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1494228 | IF Elfsborg | Mjallby AIF | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.38 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1535204 | Atletico-MG | Cienciano | BTTS_YES | DEEP_ANALYSIS_CANDIDATES | 2.5 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1535204 | Atletico-MG | Cienciano | BTTS_YES | DEEP_ANALYSIS_CANDIDATES | 2.62 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1535204 | Atletico-MG | Cienciano | BTTS_YES | OFFICIAL_BASELINE | 2.62 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1535208 | Gremio | Palestino | UNDER_3_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.36 |  | 1.36 | 0.0 | CLV_FLAT |  |  |
 | 1535208 | Gremio | Palestino | UNDER_3_5 | CANDIDATE_V7_PRICE_DISCIPLINE | 1.36 |  | 1.36 | 0.0 | CLV_FLAT |  |  |
 | 1535208 | Gremio | Palestino | UNDER_3_5 | DEEP_ANALYSIS_CANDIDATES | 1.36 |  |  |  | CLV_UNAVAILABLE |  |  |
@@ -93,8 +94,8 @@ _No stale pre-lock rows excluded._
 | 1535302 | Flamengo | Estudiantes L.P. | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.42 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1535302 | Flamengo | Estudiantes L.P. | OVER_1_5 | OFFICIAL_BASELINE | 1.42 | 1.42 | 1.42 | 0.0 | CLV_FLAT |  |  |
 | 1535305 | Junior | Sporting Cristal | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.34 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1535306 | Deportivo La Guaira | Independ. Rivadavia | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.67 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1535306 | Deportivo La Guaira | Independ. Rivadavia | OVER_1_5 | OFFICIAL_BASELINE | 1.67 |  | 1.5 | -0.17 | CLV_POSITIVE |  |  |
+| 1535306 | Deportivo La Guaira | Independ. Rivadavia | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.69 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1535306 | Deportivo La Guaira | Independ. Rivadavia | OVER_1_5 | OFFICIAL_BASELINE | 1.69 |  | 1.5 | -0.19 | CLV_POSITIVE |  |  |
 | 1535309 | Palmeiras | Cerro Porteno | BTTS_YES | DEEP_ANALYSIS_CANDIDATES | 3.0 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1545231 | Grasshoppers | FC Aarau | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.5 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1545410 | Brondby | FC Copenhagen | OVER_2_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.88 |  | 1.88 | 0.0 | CLV_FLAT |  |  |

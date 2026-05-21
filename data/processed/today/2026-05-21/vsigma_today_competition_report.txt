@@ -1,7 +1,7 @@
 VSIGMA COMPETITION ACCURACY MODE
 
 Mode: COMPETITION_ACCURACY_MODE
-Normal execution shortlist rows: 2
+Normal execution shortlist rows: 3
 Competition shortlist rows: 0
 Competition top rows: 0
 
@@ -16,3 +16,4 @@ No top picks survived the stricter accuracy gate.
 Most common rejection tags
 accuracy_mode_reason
 ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE;ACCURACY_STATS_SUPPORT_TOO_THIN    2
+ACCURACY_CORE_PRIORITY;ACCURACY_BTTS_SUPPORT_INSUFFICIENT                                                                                  1
