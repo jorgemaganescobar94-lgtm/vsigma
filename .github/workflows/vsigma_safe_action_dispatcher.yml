@@ -1,0 +1,90 @@
+name: vSIGMA Safe Action Dispatcher
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Fecha YYYY-MM-DD. Vacío = hoy en Atlantic/Canary"
+        required: false
+        default: ""
+  schedule:
+    # 01:00 Atlantic/Canary - build safe dispatch queue after action router
+    - cron: "0 1 * * *"
+      timezone: "Atlantic/Canary"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: vsigma-safe-action-dispatcher-main
+  cancel-in-progress: false
+
+jobs:
+  build-safe-dispatcher:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ github.token }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Decide dispatcher date
+        shell: bash
+        run: |
+          DATE_INPUT="${{ github.event.inputs.date }}"
+          TODAY="$(TZ=Atlantic/Canary date +%F)"
+
+          if [ -z "$DATE_INPUT" ]; then
+            DATE_INPUT="$TODAY"
+          fi
+
+          echo "VSIGMA_DATE=$DATE_INPUT" >> "$GITHUB_ENV"
+          echo "Safe action dispatcher date: $DATE_INPUT"
+
+      - name: Build safe action dispatcher
+        shell: bash
+        run: |
+          python scripts/build_safe_action_dispatcher.py \
+            --date "$VSIGMA_DATE" \
+            --timezone Atlantic/Canary
+
+      - name: Upload safe action dispatcher artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: vsigma-safe-action-dispatcher-${{ env.VSIGMA_DATE }}-${{ github.run_id }}
+          if-no-files-found: warn
+          retention-days: 14
+          path: |
+            data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_safe_action_dispatcher.*
+            data/processed/governance/vsigma_safe_action_dispatcher.*
+
+      - name: Commit safe action dispatcher outputs
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git status --short
+
+          git add \
+            data/processed/today/${VSIGMA_DATE}/vsigma_safe_action_dispatcher.* \
+            data/processed/governance/vsigma_safe_action_dispatcher.* \
+            2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No safe-action-dispatcher output changes to commit."
+            exit 0
+          fi
+
+          git commit -m "vSIGMA safe action dispatcher ${VSIGMA_DATE} [skip ci]"
+          git push origin HEAD:main
