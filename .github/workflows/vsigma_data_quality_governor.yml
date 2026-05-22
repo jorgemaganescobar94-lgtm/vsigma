@@ -1,0 +1,90 @@
+name: vSIGMA Data Quality Governor
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Fecha YYYY-MM-DD. Vacío = hoy en Atlantic/Canary"
+        required: false
+        default: ""
+  schedule:
+    # 00:30 Atlantic/Canary - daily data-quality review after self-improvement governor
+    - cron: "30 0 * * *"
+      timezone: "Atlantic/Canary"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: vsigma-data-quality-governor-main
+  cancel-in-progress: false
+
+jobs:
+  build-data-quality-governor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ github.token }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Decide data-quality date
+        shell: bash
+        run: |
+          DATE_INPUT="${{ github.event.inputs.date }}"
+          TODAY="$(TZ=Atlantic/Canary date +%F)"
+
+          if [ -z "$DATE_INPUT" ]; then
+            DATE_INPUT="$TODAY"
+          fi
+
+          echo "VSIGMA_DATE=$DATE_INPUT" >> "$GITHUB_ENV"
+          echo "Data quality date: $DATE_INPUT"
+
+      - name: Build data quality governor
+        shell: bash
+        run: |
+          python scripts/build_data_quality_governor.py \
+            --date "$VSIGMA_DATE" \
+            --timezone Atlantic/Canary
+
+      - name: Upload data quality artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: vsigma-data-quality-governor-${{ env.VSIGMA_DATE }}-${{ github.run_id }}
+          if-no-files-found: warn
+          retention-days: 14
+          path: |
+            data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_data_quality_governor.*
+            data/processed/governance/vsigma_data_quality_governor.*
+
+      - name: Commit data quality outputs
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git status --short
+
+          git add \
+            data/processed/today/${VSIGMA_DATE}/vsigma_data_quality_governor.* \
+            data/processed/governance/vsigma_data_quality_governor.* \
+            2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No data-quality output changes to commit."
+            exit 0
+          fi
+
+          git commit -m "vSIGMA data quality governor ${VSIGMA_DATE} [skip ci]"
+          git push origin HEAD:main
