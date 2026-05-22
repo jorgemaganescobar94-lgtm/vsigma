@@ -1,0 +1,23 @@
+vSIGMA MATCH SCRIPT + STATS FORECASTS
+
+Source: official competition top
+Role: explanation layer only; this file does not select, remove, or promote picks.
+Forecast style: deterministic bands and modal scripts, not exact-stat certainty.
+
+Forecast rows: 2
+
+#1 Sudtirol vs Bari | Serie B | OVER_1_5
+Script: Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.4; stats=FULL.
+Scores: main 2-2 | alt 1-2
+xG: home 1.2-1.9 | away 1.5-2.2 | total 2.9-4.0
+Stats: shots 12-16 vs 8-12; SOT 4-6 vs 2-4; corners 6-10; possession home 51-59% / away 41-49%
+Path: Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path.
+Breaker: Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market.
+
+#2 Djurgardens IF vs IF Brommapojkarna | Allsvenskan | OVER_2_5
+Script: Open, active match with both penalty boxes reached often; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 4.2; stats=FULL.
+Scores: main 3-2 | alt 2-1
+xG: home 2.3-3.0 | away 1.2-1.9 | total 3.6-4.7
+Stats: shots 13-17 vs 10-14; SOT 4-6 vs 3-5; corners 7-11; possession home 52-60% / away 40-48%
+Path: Pick wins if the projected chance volume turns into three goals, usually via early tempo or both teams contributing.
+Breaker: Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market.

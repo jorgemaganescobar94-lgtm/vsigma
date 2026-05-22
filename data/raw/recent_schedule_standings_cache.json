@@ -13396,5 +13396,227 @@
       "goals_diff": -15,
       "played": 34
     }
+  ],
+  "80|2025": [
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 1324,
+      "team_name": "VfL Osnabrück",
+      "rank": 1,
+      "points": 80,
+      "goals_diff": 32,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 1320,
+      "team_name": "Energie Cottbus",
+      "rank": 2,
+      "points": 72,
+      "goals_diff": 21,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 1621,
+      "team_name": "Rot-Weiß Essen",
+      "rank": 3,
+      "points": 70,
+      "goals_diff": 12,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 187,
+      "team_name": "MSV Duisburg",
+      "rank": 4,
+      "points": 68,
+      "goals_diff": 17,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 1321,
+      "team_name": "Hansa Rostock",
+      "rank": 5,
+      "points": 67,
+      "goals_diff": 25,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 4265,
+      "team_name": "Verl",
+      "rank": 6,
+      "points": 64,
+      "goals_diff": 34,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 4259,
+      "team_name": "Alemannia Aachen",
+      "rank": 7,
+      "points": 64,
+      "goals_diff": 19,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 786,
+      "team_name": "TSV 1860 München",
+      "rank": 8,
+      "points": 56,
+      "goals_diff": 1,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 1319,
+      "team_name": "SV Wehen",
+      "rank": 9,
+      "points": 53,
+      "goals_diff": 2,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 4268,
+      "team_name": "Waldhof Mannheim",
+      "rank": 10,
+      "points": 52,
+      "goals_diff": -13,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 1620,
+      "team_name": "FC Viktoria Köln",
+      "rank": 11,
+      "points": 51,
+      "goals_diff": -2,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 184,
+      "team_name": "FC Ingolstadt 04",
+      "rank": 12,
+      "points": 49,
+      "goals_diff": 9,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 177,
+      "team_name": "SSV Jahn Regensburg",
+      "rank": 13,
+      "points": 49,
+      "goals_diff": -4,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 12867,
+      "team_name": "Stuttgart II",
+      "rank": 14,
+      "points": 46,
+      "goals_diff": -12,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 1639,
+      "team_name": "FC Saarbrücken",
+      "rank": 15,
+      "points": 44,
+      "goals_diff": -6,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 9364,
+      "team_name": "Hoffenheim II",
+      "rank": 16,
+      "points": 43,
+      "goals_diff": -6,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 9342,
+      "team_name": "Havelse",
+      "rank": 17,
+      "points": 35,
+      "goals_diff": -32,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 190,
+      "team_name": "Erzgebirge Aue",
+      "rank": 18,
+      "points": 34,
+      "goals_diff": -19,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 1652,
+      "team_name": "SSV Ulm 1846",
+      "rank": 19,
+      "points": 33,
+      "goals_diff": -29,
+      "played": 38
+    },
+    {
+      "league_id": 80,
+      "league_name": "3. Liga",
+      "season": 2025,
+      "team_id": 1635,
+      "team_name": "FC Schweinfurt 05",
+      "rank": 20,
+      "points": 21,
+      "goals_diff": -49,
+      "played": 38
+    }
   ]
 }
