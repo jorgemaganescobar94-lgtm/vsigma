@@ -1,0 +1,17 @@
+vSIGMA SHADOW CANDIDATE V4
+
+Layer: candidate v2 signals + O2.5 Low Conversion Firewall.
+Status: experimental shadow; official baseline and candidate v2 outputs are not replaced.
+
+Candidate v2 input rows: 1
+Candidate v4 competition shortlist rows: 1
+Candidate v4 competition top rows: 1
+
+## O2.5 Low Conversion Firewall
+
+No OVER_2_5 + LOW_CONVERSION rows were checked.
+
+## Candidate v4 Top
+
+ accuracy_mode_rank  fixture_id  league home_team away_team market_primary  competition_calibrated_prob  accuracy_confidence_score over25_low_conversion_firewall_decision  over25_low_conversion_confirmation_score
+                  1     1544652 Serie B  Sudtirol      Bari       OVER_1_5                      0.78646                    146.556                             NOT_APPLIED                                       0.0
