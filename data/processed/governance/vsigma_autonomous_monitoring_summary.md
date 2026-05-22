@@ -1,28 +1,28 @@
-# vSIGMA Autonomous Monitoring Summary - 2026-05-22
+# vSIGMA Autonomous Monitoring Summary - 2026-05-21
 
 ## Executive Status
-- generated_at: 2026-05-22T14:25:22+01:00
-- mode: prelock
-- daily_classification: BROKEN
-- operational_verdict: BROKEN
-- action_level: ACTION_REQUIRED
-- predictive_failure: UNKNOWN
-- evidence_basis: missing_sources
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26290441055
+- generated_at: 2026-05-22T17:11:37+01:00
+- mode: post-yesterday
+- daily_classification: EXPIRED_PRELOCK
+- operational_verdict: NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA
+- action_level: REVIEW_REQUIRED
+- predictive_failure: NO
+- evidence_basis: decision_quality_review
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26298796985
 
 ## Operator Action
-- Inspect workflow logs and required daily reports; monitoring evidence is incomplete.
+- Review AUTO/PRELOCK timing; do not count the row as predictive hit-rate failure.
 
 ## Explanation
-- Classification inferred from missing_sources; health_status=UNKNOWN; official_summary=UNKNOWN.
+- The candidate expired before execution, so the operational issue is AUTO/PRELOCK timing. This is not a predictive failure and must not be counted in predictive hit-rate metrics.
 
 ## Source Coverage
-- decision_quality_review: missing
-- system_review: missing
-- healthcheck_report: missing
-- cloud_decision_summary: missing
-- prelock_decision_resolver: missing
-- decision_outcome_ledger_rows: 0
+- decision_quality_review: present
+- system_review: present
+- healthcheck_report: present
+- cloud_decision_summary: present
+- prelock_decision_resolver: present
+- decision_outcome_ledger_rows: 5
 
 ## Classification Contract
 - EXECUTION_OK: at least one executable decision exists.
