@@ -1,8 +1,7 @@
 summary_scope,metric,rows_total
 overall,target_fixtures,5
 odds_structure_depth_status,OK,5
-odds_structure_coherence_flag,RICH_COHERENT,4
-odds_structure_coherence_flag,RICH_MIXED,1
+odds_structure_coherence_flag,RICH_COHERENT,5
 odds_total_ladder_shape,BROAD_GOALS,3
 odds_total_ladder_shape,MILD_GOALS,2
 odds_market_translation_hint,ALLOW_AGGRESSIVE_TOTAL,3
