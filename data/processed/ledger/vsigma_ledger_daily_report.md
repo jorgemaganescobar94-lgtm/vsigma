@@ -1,12 +1,12 @@
-# vSIGMA Immutable Ledger Daily Report - 2026-05-21
+# vSIGMA Immutable Ledger Daily Report - 2026-05-22
 
 ## Ledger Update Status
 - Ledger CSV: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv
 - JSONL event log: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.jsonl
-- Official picks registered: 0
-- Shadow picks registered: 4
+- Official picks registered: 2
+- Shadow picks registered: 5
 - No-bet records: 1
-- Pending records: 4
+- Pending records: 7
 - Settled records: 0
 - Daily winner: NO_SETTLED_RESULTS
 
@@ -29,17 +29,23 @@
 | CANDIDATE_V4_O25_FIREWALL | 1 | 1 | 0 | 1 | 0 | 0.0 |
 | CANDIDATE_V5_PLAYER_IMPACT | 1 | 1 | 0 | 1 | 0 | 0.0 |
 | CANDIDATE_V6_API_PREDICTIONS | 1 | 1 | 0 | 1 | 0 | 0.0 |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1 | 0 | 1 | 0 | 0.0 |
+| OFFICIAL_BASELINE | 2 | 2 | 0 | 2 | 0 | 0.0 |
 
 ## Official Picks
-_No rows._
+| experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| OFFICIAL_BASELINE | 1 | 1544652 | Sudtirol | Bari | OVER_1_5 | 0.78766 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.161; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 2 | 1494177 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | 0.804225 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.134; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
 
 ## Shadow Picks
 | experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| CANDIDATE_V2_SCHEDULE_ANOMALY |  | 1544652 | Sudtirol | Bari | OVER_1_5 |  |  | PENDING |
-| CANDIDATE_V4_O25_FIREWALL |  | 1544652 | Sudtirol | Bari | OVER_1_5 |  |  | PENDING |
-| CANDIDATE_V5_PLAYER_IMPACT |  | 1544652 | Sudtirol | Bari | OVER_1_5 |  |  | PENDING |
-| CANDIDATE_V6_API_PREDICTIONS |  | 1544652 | Sudtirol | Bari | OVER_1_5 |  |  | PENDING |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1544652 | Sudtirol | Bari | OVER_1_5 | 0.78646 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.160; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 1 | 1544652 | Sudtirol | Bari | OVER_1_5 | 0.78646 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.160; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1544652 | Sudtirol | Bari | OVER_1_5 | 0.78646 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.160; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V6_API_PREDICTIONS | 1 | 1544652 | Sudtirol | Bari | OVER_1_5 | 0.78646 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.160; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1544652 | Sudtirol | Bari | OVER_1_5 | 0.78646 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.160; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
 
 ## No-Bet Modes
 | experiment_id | record_status | reason_tags | source_file |
@@ -47,20 +53,26 @@ _No rows._
 | CANDIDATE_V3_ODDS_DEPTH | NO_BET_RECORD | NO_BET; SOURCE_FILE_MISSING_OR_NOT_AVAILABLE | vsigma_today_candidate_v3_competition_top.csv |
 
 ## Pre-Lock Changes
-_No rows._
+| experiment_id | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_decision | prelock_decision_reason |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| OFFICIAL_BASELINE | 1544652 | Sudtirol | Bari | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| OFFICIAL_BASELINE | 1494177 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544652 | Sudtirol | Bari | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V4_O25_FIREWALL | 1544652 | Sudtirol | Bari | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V5_PLAYER_IMPACT | 1544652 | Sudtirol | Bari | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V6_API_PREDICTIONS | 1544652 | Sudtirol | Bari | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1544652 | Sudtirol | Bari | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | WAITING_FOR_PRELOCK | fixture is outside requested pre-lock window |
 
 ## Result State
 | experiment_id | fixture_id | market_primary | result_status | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544652 | OVER_1_5 | UNMATCHED | UNMATCHED |  | PENDING |
-| CANDIDATE_V4_O25_FIREWALL | 1544652 | OVER_1_5 | UNMATCHED | UNMATCHED |  | PENDING |
-| CANDIDATE_V5_PLAYER_IMPACT | 1544652 | OVER_1_5 | UNMATCHED | UNMATCHED |  | PENDING |
-| CANDIDATE_V6_API_PREDICTIONS | 1544652 | OVER_1_5 | UNMATCHED | UNMATCHED |  | PENDING |
+| OFFICIAL_BASELINE | 1544652 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1494177 | OVER_2_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544652 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 1544652 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1544652 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V6_API_PREDICTIONS | 1544652 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1544652 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
 
 ## Freshness Warnings
-| file_name | status | detail |
-| --- | --- | --- |
-| vsigma_today_candidate_v7_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| vsigma_today_prelock_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| vsigma_today_prelock_comparison.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| today_post_results_report.csv | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet |
+_No rows._

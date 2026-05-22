@@ -1,36 +1,36 @@
-# vSIGMA Daily Command Center - 2026-05-21
+# vSIGMA Daily Command Center - 2026-05-22
 
 ## Executive Command
-- generated_at: 2026-05-22T17:11:37+01:00
-- mode: post-yesterday
-- command_center_status: REVIEW_HOLD
-- daily_classification: EXPIRED_PRELOCK
-- action_level: REVIEW_REQUIRED
-- operational_verdict: NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA
-- predictive_failure: NO
-- evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26298796985
+- generated_at: 2026-05-22T17:40:56+01:00
+- mode: pre
+- command_center_status: ACTION_REQUIRED
+- daily_classification: BROKEN
+- action_level: ACTION_REQUIRED
+- operational_verdict: BROKEN
+- predictive_failure: UNKNOWN
+- evidence_basis: missing_sources
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26300112039
 
 ## Next Operator Action
-- Review AUTO/PRELOCK timing; do not count the row as predictive hit-rate failure.
+- Inspect workflow logs and required daily reports; monitoring evidence is incomplete.
 
 ## Decision Snapshot
-- decision_outcome_rows: 5
-- official_action_counts: NO_BET=4; WAIT=1
-- execution_family_status_counts: EXPIRED=3; WAITING_FOR_WINDOW=1; NO_CANDIDATES=1
+- decision_outcome_rows: 0
+- official_action_counts: none
+- execution_family_status_counts: none
 
 ## Quality Snapshot
-- decision_quality_rows: 4
-- decision_quality_labels: WAIT_UNRESOLVED=1; EXPIRED_PRELOCK_UNRESOLVED=1; EXPIRED_PRELOCK_RESULT_LOSS=1; EXPIRED_PRELOCK_RESULT_WIN=1
-- quality_buckets: NEEDS_MORE_DATA=2; NEUTRAL_OR_UNRESOLVED=2
+- decision_quality_rows: 0
+- decision_quality_labels: none
+- quality_buckets: none
 
 ## Source Coverage
-- monitoring_summary: present — `data/processed/today/2026-05-21/vsigma_autonomous_monitoring_summary.md`
-- decision_quality_review: present — `data/processed/today/2026-05-21/vsigma_decision_quality_review.md`
-- system_review: present — `data/processed/today/2026-05-21/vsigma_system_review.md`
-- prelock_resolver: present — `data/processed/today/2026-05-21/vsigma_prelock_decision_resolver.md`
-- cloud_decision_summary: present — `data/processed/today/2026-05-21/vsigma_cloud_decision_summary.md`
-- decision_outcome_ledger: present — `data/processed/today/2026-05-21/vsigma_decision_outcome_ledger.csv`
+- monitoring_summary: present — `data/processed/today/2026-05-22/vsigma_autonomous_monitoring_summary.md`
+- decision_quality_review: missing — `data/processed/today/2026-05-22/vsigma_decision_quality_review.md`
+- system_review: missing — `data/processed/today/2026-05-22/vsigma_system_review.md`
+- prelock_resolver: missing — `data/processed/today/2026-05-22/vsigma_prelock_decision_resolver.md`
+- cloud_decision_summary: missing — `data/processed/today/2026-05-22/vsigma_cloud_decision_summary.md`
+- decision_outcome_ledger: missing — `data/processed/today/2026-05-22/vsigma_decision_outcome_ledger.csv`
 
 ## Operating Rules
 - ACTION_REQUIRED: inspect before trusting the day.

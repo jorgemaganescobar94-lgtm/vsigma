@@ -35,5 +35,5 @@
 
 | Status | Fixture | Base Rank | Cand Rank | Base Market | Cand Market | Base Prob | Cand Prob | Base Score | Cand Score |
 | --- | --- | ---: | ---: | --- | --- | ---: | ---: | ---: | ---: |
-| BASELINE_ONLY | Djurgardens IF vs IF Brommapojkarna | 2 | NA | OVER_2_5 | NA | 0.803 | NA | 134.444 | NA |
+| BASELINE_ONLY | Djurgardens IF vs IF Brommapojkarna | 2 | NA | OVER_2_5 | NA | 0.804 | NA | 134.088 | NA |
 | BOTH | Sudtirol vs Bari | 1 | 1.0 | OVER_1_5 | OVER_1_5 | 0.788 | 0.786 | 146.766 | 146.556 |

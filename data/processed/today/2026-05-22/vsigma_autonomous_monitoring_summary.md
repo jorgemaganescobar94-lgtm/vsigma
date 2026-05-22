@@ -1,14 +1,14 @@
 # vSIGMA Autonomous Monitoring Summary - 2026-05-22
 
 ## Executive Status
-- generated_at: 2026-05-22T14:25:22+01:00
-- mode: prelock
+- generated_at: 2026-05-22T17:40:54+01:00
+- mode: pre
 - daily_classification: BROKEN
 - operational_verdict: BROKEN
 - action_level: ACTION_REQUIRED
 - predictive_failure: UNKNOWN
 - evidence_basis: missing_sources
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26290441055
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26300112039
 
 ## Operator Action
 - Inspect workflow logs and required daily reports; monitoring evidence is incomplete.
