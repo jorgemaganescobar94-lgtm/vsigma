@@ -1,7 +1,7 @@
 # vSIGMA Daily Competition Master Report - 2026-05-22
 
 ## Daily Status
-PRE_LOCK_PENDING
+PRE_LOCK_REVIEWED
 
 ## Official Baseline Top Picks
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
@@ -96,8 +96,8 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 ### Active Pre-Lock Decisions
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1544652 | Sudtirol | Bari | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 301.72 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| 1494177 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 241.71 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1544652 | Sudtirol | Bari | OVER_1_5 | IN_PRELOCK_WINDOW | 79.81 | PRELOCK_NOT_AVAILABLE | no reliable pre-lock data available; missing data is neutral |
+| 1494177 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | IN_PRELOCK_WINDOW | 19.81 | PRELOCK_CONFIRMED | lineups confirmed; availability coverage confirmed |
 
 ### Stale Pre-Lock Warning
 _No stale pre-lock rows excluded._
@@ -107,18 +107,19 @@ _No stale pre-lock rows excluded._
 | fixture_id | home_team | away_team | market_primary | experiment_id | pre_price | prelock_price | close_proxy_price | clv_delta | clv_direction | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1494177 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.53 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1494177 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | OFFICIAL_BASELINE | 1.53 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1494177 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | OFFICIAL_BASELINE | 1.53 | 1.53 | 1.53 | 0.0 | CLV_FLAT |  |  |
 | 1544652 | Sudtirol | Bari | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.44 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1544652 | Sudtirol | Bari | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.44 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1544652 | Sudtirol | Bari | OVER_1_5 | OFFICIAL_BASELINE | 1.44 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1544652 | Sudtirol | Bari | OVER_1_5 | OFFICIAL_BASELINE | 1.44 | 1.44 | 1.44 | 0.0 | CLV_FLAT |  |  |
 | 1545405 | Rot-Weiß Essen | SpVgg Greuther Fürth | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.61 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1545405 | Rot-Weiß Essen | SpVgg Greuther Fürth | OVER_2_5 | OFFICIAL_BASELINE | 1.61 |  |  |  | CLV_UNAVAILABLE |  |  |
 
 ### Candidate v7 Calibration Advice
 | market_family | failure_mode | drift_status | clv_direction | n | profit_units | roi_percent | recommendation | recommendation_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 6 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_UNAVAILABLE | 1 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_FLAT | 1 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 5 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_FLAT | 1 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 
 ## Post-Results Summary
 _No rows._
@@ -126,8 +127,8 @@ _No rows._
 ## Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1544652 | Sudtirol | Bari | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 301.72 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| 1494177 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 241.71 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1544652 | Sudtirol | Bari | OVER_1_5 | IN_PRELOCK_WINDOW | 79.81 | PRELOCK_NOT_AVAILABLE | no reliable pre-lock data available; missing data is neutral |
+| 1494177 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | IN_PRELOCK_WINDOW | 19.81 | PRELOCK_CONFIRMED | lineups confirmed; availability coverage confirmed |
 
 ## Drift Monitor Status
 | pattern | settled_rows | wins | losses | profit_units | drift_status |
@@ -173,21 +174,21 @@ _No rows._
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: post_results_status: WARNING - post has 2 pending row(s)
-- Recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-21 --timezone Atlantic/Canary --mode post`
-- Report path: /home/runner/work/vsigma/vsigma/data/processed/health/vsigma_healthcheck_report.md
+- Critical warnings: freshness_report: WARNING - validation report contains warning rows
+- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-22`
+- Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-22/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| OFFICIAL_BASELINE | 1494177.0 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| OFFICIAL_BASELINE | 1494177.0 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | PRELOCK_CONFIRMED | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V4_O25_FIREWALL | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V6_API_PREDICTIONS | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1544652.0 | Sudtirol | Bari | OVER_1_5 | WAITING_FOR_PRELOCK | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V6_API_PREDICTIONS | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
@@ -218,13 +219,14 @@ _No rows._
 ### Threshold Recommendations
 | market_family | failure_mode | experiment_id | settled_rows | roi_percent | clv_direction | threshold_recommendation |
 | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 6 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 5 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V4_O25_FIREWALL | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 1 | 52.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V2_SCHEDULE_ANOMALY | 0 |  |  | SAMPLE_TOO_SMALL |

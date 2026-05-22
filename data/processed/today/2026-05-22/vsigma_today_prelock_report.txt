@@ -6,8 +6,8 @@
 - Morning official picks reviewed: 2
 - Stale morning rows excluded: 0
 - Stale morning row dates: none
-- In-window pre-lock picks retained: 0
-- Generated at: 2026-05-22T13:25:19+00:00
+- In-window pre-lock picks retained: 2
+- Generated at: 2026-05-22T16:57:49+00:00
 
 ## Refresh Steps
                                    step status
@@ -17,7 +17,7 @@ scripts/enrich_injuries_availability.py   PASS
  scripts/enrich_odds_structure_depth.py   PASS
 
 ## Decisions
- PRELOCK_NOT_AVAILABLE
-                     2
+ PRELOCK_NOT_AVAILABLE  PRELOCK_CONFIRMED
+                     1                  1
 
 Missing pre-lock data is treated as uncertainty, not weakness. No official morning file is overwritten.
