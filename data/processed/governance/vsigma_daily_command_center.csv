@@ -1,2 +1,2 @@
 target_date,generated_at,mode,command_center_status,daily_classification,action_level,operational_verdict,predictive_failure,evidence_basis,next_action,run_url
-2026-05-22,2026-05-22T14:25:25+01:00,prelock,ACTION_REQUIRED,BROKEN,ACTION_REQUIRED,BROKEN,UNKNOWN,missing_sources,Inspect workflow logs and required daily reports; monitoring evidence is incomplete.,https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26290441055
+2026-05-21,2026-05-22T17:11:37+01:00,post-yesterday,REVIEW_HOLD,EXPIRED_PRELOCK,REVIEW_REQUIRED,NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA,NO,decision_quality_review,Review AUTO/PRELOCK timing; do not count the row as predictive hit-rate failure.,https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26298796985

@@ -1,23 +1,5 @@
 date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
 2026-05-21,OK,API-SPORTS_DIRECT,196.0,,,,,,
-2026-05-21T01:00:00+01:00,MATCHED,,,1535208.0,FT,Gremio,Palestino,2.0,0.0
-2026-05-21T01:00:00+01:00,MATCHED,,,1535209.0,FT,Independiente Petrolero,Botafogo,0.0,3.0
-2026-05-21T01:30:00+01:00,MATCHED,,,1535215.0,FT,River Plate,RB Bragantino,1.0,1.0
-2026-05-21T01:30:00+01:00,MATCHED,,,1535302.0,FT,Flamengo,Estudiantes L.P.,1.0,0.0
-2026-05-21T01:30:00+01:00,MATCHED,,,1535307.0,FT,LDU de Quito,Lanus,2.0,0.0
-2026-05-21T01:30:00+01:00,MATCHED,,,1535309.0,FT,Palmeiras,Cerro Porteno,0.0,1.0
-2026-05-21T03:00:00+01:00,MATCHED,,,1535301.0,FT,Cusco,Independiente Medellin,2.0,3.0
-2026-05-21T03:00:00+01:00,MATCHED,,,1535305.0,FT,Junior,Sporting Cristal,3.0,2.0
-2026-05-21T17:30:00+01:00,MATCHED,,,1545410.0,NS,Brondby,FC Copenhagen,,
-2026-05-21T17:45:00+01:00,MATCHED,,,1545411.0,NS,Ajax,Groningen,,
-2026-05-21T18:00:00+01:00,MATCHED,,,1494228.0,NS,IF Elfsborg,Mjallby AIF,,
-2026-05-21T19:15:00+01:00,MATCHED,,,1545231.0,NS,Grasshoppers,FC Aarau,,
-2026-05-21T19:30:00+01:00,MATCHED,,,1537002.0,NS,KV Mechelen,Club Brugge KV,,
-2026-05-21T19:30:00+01:00,MATCHED,,,1537003.0,NS,Gent,Union St. Gilloise,,
-2026-05-21T19:30:00+01:00,MATCHED,,,1537004.0,NS,Anderlecht,St. Truiden,,
-2026-05-21T19:30:00+01:00,MATCHED,,,1545417.0,NS,VfL Wolfsburg,SC Paderborn 07,,
-2026-05-21T20:00:00+01:00,MATCHED,,,1545234.0,NS,Partick,ST Mirren,,
-2026-05-21T20:00:00+01:00,MATCHED,,,1545412.0,NS,Utrecht,Heerenveen,,
-2026-05-21T23:00:00+01:00,MATCHED,,,1535204.0,NS,Atletico-MG,Cienciano,,
-2026-05-21T23:00:00+01:00,MATCHED,,,1535213.0,NS,Puerto Cabello,Juventud,,
-2026-05-21T23:00:00+01:00,MATCHED,,,1535306.0,NS,Deportivo La Guaira,Independ. Rivadavia,,
+2026-05-21T23:00:00+01:00,MATCHED,,,1535204.0,FT,Atletico-MG,Cienciano,2.0,0.0
+2026-05-21T23:00:00+01:00,MATCHED,,,1535213.0,FT,Puerto Cabello,Juventud,1.0,1.0
+2026-05-21T23:00:00+01:00,MATCHED,,,1535306.0,FT,Deportivo La Guaira,Independ. Rivadavia,2.0,4.0
