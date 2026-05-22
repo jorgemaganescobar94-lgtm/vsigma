@@ -1,14 +1,14 @@
 # vSIGMA Autonomous Monitoring Summary - 2026-05-22
 
 ## Executive Status
-- generated_at: 2026-05-22T17:59:59+01:00
+- generated_at: 2026-05-22T22:40:25+01:00
 - mode: auto
 - daily_classification: EXECUTION_OK
 - operational_verdict: EXECUTION_AVAILABLE
 - action_level: NO_ACTION_REQUIRED
 - predictive_failure: UNKNOWN
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26301056519
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26313301473
 
 ## Operator Action
 - Review official executable picks and post-result quality once scores are labeled.
@@ -22,7 +22,7 @@
 - healthcheck_report: present
 - cloud_decision_summary: present
 - prelock_decision_resolver: present
-- decision_outcome_ledger_rows: 2
+- decision_outcome_ledger_rows: 3
 
 ## Classification Contract
 - EXECUTION_OK: at least one executable decision exists.
