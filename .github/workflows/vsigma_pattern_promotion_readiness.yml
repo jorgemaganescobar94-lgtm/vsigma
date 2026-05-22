@@ -1,0 +1,90 @@
+name: vSIGMA Pattern Promotion Readiness
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Fecha YYYY-MM-DD. Vacío = hoy en Atlantic/Canary"
+        required: false
+        default: ""
+  schedule:
+    # 01:10 Atlantic/Canary - review repeated patterns after dispatch queue
+    - cron: "10 1 * * *"
+      timezone: "Atlantic/Canary"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: vsigma-pattern-promotion-readiness-main
+  cancel-in-progress: false
+
+jobs:
+  build-pattern-readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ github.token }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Decide readiness date
+        shell: bash
+        run: |
+          DATE_INPUT="${{ github.event.inputs.date }}"
+          TODAY="$(TZ=Atlantic/Canary date +%F)"
+
+          if [ -z "$DATE_INPUT" ]; then
+            DATE_INPUT="$TODAY"
+          fi
+
+          echo "VSIGMA_DATE=$DATE_INPUT" >> "$GITHUB_ENV"
+          echo "Pattern readiness date: $DATE_INPUT"
+
+      - name: Build pattern promotion readiness
+        shell: bash
+        run: |
+          python scripts/build_pattern_promotion_readiness.py \
+            --date "$VSIGMA_DATE" \
+            --timezone Atlantic/Canary
+
+      - name: Upload pattern readiness artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: vsigma-pattern-promotion-readiness-${{ env.VSIGMA_DATE }}-${{ github.run_id }}
+          if-no-files-found: warn
+          retention-days: 14
+          path: |
+            data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_pattern_promotion_readiness.*
+            data/processed/governance/vsigma_pattern_promotion_readiness.*
+
+      - name: Commit pattern readiness outputs
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git status --short
+
+          git add \
+            data/processed/today/${VSIGMA_DATE}/vsigma_pattern_promotion_readiness.* \
+            data/processed/governance/vsigma_pattern_promotion_readiness.* \
+            2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No pattern-readiness output changes to commit."
+            exit 0
+          fi
+
+          git commit -m "vSIGMA pattern promotion readiness ${VSIGMA_DATE} [skip ci]"
+          git push origin HEAD:main
