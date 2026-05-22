@@ -2,15 +2,15 @@
 
 ## Step State
 - PRE: DONE
-- Pre-lock: ['PENDING_OUTSIDE_WINDOW']
+- Pre-lock: ['PRELOCK_NOT_AVAILABLE']
 - POST: PENDING
 - Ledger: PRE_UPDATED
 - Governance: AVAILABLE
 - Stale warnings: NONE
 
 ## Next Operator Command
-- Action: WAIT_FOR_PRELOCK
-- Command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-22 --timezone Atlantic/Canary --mode prelock --window-minutes 90`
+- Action: RUN_POST_AFTER_FINISH
+- Command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-22 --timezone Atlantic/Canary --mode post`
 
 ## Official Baseline Picks
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank |
@@ -24,19 +24,19 @@
 | 1544652 | Serie B | Sudtirol | Bari | OVER_1_5 | 1 |
 
 ## Candidate v7 Decisions
-- Waiting: 1
+- Waiting: 0
 - Confirmed: 0
 - Rejected: 0
-- Unavailable: 0
+- Unavailable: 1
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank | candidate_v7_execution_status | price_discipline_decision |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1544652 | Serie B | Sudtirol | Bari | OVER_1_5 | 1 | V7_WAITING_FOR_PRELOCK | PRICE_NEEDS_PRELOCK_CONFIRMATION |
+| 1544652 | Serie B | Sudtirol | Bari | OVER_1_5 | 1 | V7_PRELOCK_UNAVAILABLE | PRICE_NEEDS_PRELOCK_CONFIRMATION |
 
 ## Pre-Lock Timing
 | fixture_id | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1544652 | Sudtirol | Bari | OVER_1_5 | 2026-05-22T18:00:37.200000+00:00 | 301.65 | 2026-05-22T16:30:37.200000+00:00 | PENDING_OUTSIDE_WINDOW | WAIT_FOR_PRELOCK |
-| 1494177 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | 2026-05-22T17:00:36.600000+00:00 | 241.64 | 2026-05-22T15:30:36.600000+00:00 | PENDING_OUTSIDE_WINDOW | WAIT_FOR_PRELOCK |
+| 1544652 | Sudtirol | Bari | OVER_1_5 | 2026-05-22T18:00:38.600000+00:00 | 79.75 | 2026-05-22T16:30:38.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1494177 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | 2026-05-22T17:00:38.600000+00:00 | 19.75 | 2026-05-22T15:30:38.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
 
 ## Ledger State
 | experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |

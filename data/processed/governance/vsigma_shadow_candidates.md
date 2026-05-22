@@ -1,14 +1,13 @@
-# vSIGMA Shadow Candidates - 2026-05-21
+# vSIGMA Shadow Candidates - 2026-05-22
 
 ## Executive Shadow Candidate Summary
-- generated_at: 2026-05-22T17:11:38+01:00
-- shadow_candidates: 2
-- shadow_decision_counts: SHADOW_DOWNGRADE_REVIEW=2
-- experiment_type_counts: LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=2
+- generated_at: 2026-05-22T17:40:56+01:00
+- shadow_candidates: 1
+- shadow_decision_counts: SHADOW_DOWNGRADE_REVIEW=1
+- experiment_type_counts: LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=1
 
 ## Shadow Candidate Decisions
-- SHADOW_DOWNGRADE_REVIEW | Deportivo La Guaira vs Independ. Rivadavia | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
-- SHADOW_DOWNGRADE_REVIEW | Puerto Cabello vs Juventud | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
+- SHADOW_DOWNGRADE_REVIEW | Sudtirol vs Bari | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
 
 ## Guardrails
 - official picks changed: NO

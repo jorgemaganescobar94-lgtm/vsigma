@@ -1,5 +1,5 @@
 summary_scope,rows_processed,home_full_or_partial,away_full_or_partial,avg_home_opponent_strength,avg_away_opponent_strength,standings_api_calls,standings_cache_hits,standings_errors,generated_at_utc,flag,rows
-overall,5.0,5.0,5.0,0.545,0.601,1.0,49.0,0.0,2026-05-22T12:58:29.977758+00:00,,
+overall,5.0,5.0,5.0,0.545,0.601,0.0,50.0,0.0,2026-05-22T16:40:24.986581+00:00,,
 home_quality_flag,,,,,,,,,,FULL,5.0
 away_quality_flag,,,,,,,,,,FULL,4.0
 away_quality_flag,,,,,,,,,,PARTIAL,1.0

@@ -18,15 +18,15 @@
 | Rank | Fixture | League | Market | Rec | Bucket | Score | Why | Risk |
 | --- | --- | --- | --- | --- | --- | ---: | --- | --- |
 | 1 | Sudtirol vs Bari | Serie B | OVER_1_5 | BET | PREMIUM_CORE | 121.196 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.161; market_fit=SAFE_OK |
-| 2 | Djurgardens IF vs IF Brommapojkarna | Allsvenskan | OVER_2_5 | BET | PREMIUM_CORE | 124.044 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.141; market_fit=SAFE_OK |
+| 2 | Djurgardens IF vs IF Brommapojkarna | Allsvenskan | OVER_2_5 | BET | PREMIUM_CORE | 123.451 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.134; market_fit=SAFE_OK |
 
 ## BALANCED Picks
 
 | Rank | Fixture | League | Market | Rec | Bucket | Score | Why | Risk |
 | --- | --- | --- | --- | --- | --- | ---: | --- | --- |
-| 1 | Djurgardens IF vs IF Brommapojkarna | Allsvenskan | OVER_2_5 | BET | PREMIUM_CORE | 124.044 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.141; market_fit=SAFE_OK |
+| 1 | Djurgardens IF vs IF Brommapojkarna | Allsvenskan | OVER_2_5 | BET | PREMIUM_CORE | 123.451 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.134; market_fit=SAFE_OK |
 | 2 | Sudtirol vs Bari | Serie B | OVER_1_5 | BET | PREMIUM_CORE | 121.196 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.161; market_fit=SAFE_OK |
-| 3 | Rot-Weiß Essen vs SpVgg Greuther Fürth | 2. Bundesliga | OVER_2_5 | BET | PREMIUM_CORE | 118.922 | CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE;COVERAGE_RICH_SUPPORT | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.172; market_fit=SAFE_OK |
+| 3 | Rot-Weiß Essen vs SpVgg Greuther Fürth | 2. Bundesliga | OVER_2_5 | BET | PREMIUM_CORE | 118.538 | CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE;COVERAGE_RICH_SUPPORT | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.168; market_fit=SAFE_OK |
 
 ## Execution Shortlist
 
@@ -35,12 +35,12 @@
 - Market: OVER_2_5
 - Bucket: PREMIUM_CORE
 - Recommendation: BET
-- Execution score: 124.044
+- Execution score: 123.451
 - Main why: STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE
-- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.141; market_fit=SAFE_OK
+- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.134; market_fit=SAFE_OK
 - Bucket rationale: PREMIUM_CORE: CORE_GATE_PASSED; APPROVED_PREMIUM; BET; SAFE_OK
-- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=1; phase=PREMIUM_CORE; execution_score=124.044; selection_score=90.980; primary_edge=0.141; primary_model_prob=0.786; shortlist_rank=1; caps=league2_market2_fixture1
-- Confirmation layers: STATS+ODDS+MARKET_TRANSLATION+FORM+ADVISORY_AVAILABILITY+LEAGUE_COVERAGE
+- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=1; phase=PREMIUM_CORE; execution_score=123.451; selection_score=91.100; primary_edge=0.134; primary_model_prob=0.787; shortlist_rank=1; caps=league2_market2_fixture1
+- Confirmation layers: STATS+ODDS+MARKET_TRANSLATION+FORM+LINEUP_ACTIVE+ADVISORY_AVAILABILITY+LEAGUE_COVERAGE
 
 ### #2 Sudtirol vs Bari
 - League: Serie B
@@ -59,11 +59,11 @@
 - Market: OVER_2_5
 - Bucket: PREMIUM_CORE
 - Recommendation: BET
-- Execution score: 118.922
+- Execution score: 118.538
 - Main why: CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE;COVERAGE_RICH_SUPPORT
-- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.172; market_fit=SAFE_OK
+- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.168; market_fit=SAFE_OK
 - Bucket rationale: PREMIUM_CORE: CORE_GATE_PASSED; APPROVED_PREMIUM; BET; SAFE_OK
-- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=3; phase=PREMIUM_CORE; execution_score=118.922; selection_score=82.740; primary_edge=0.172; primary_model_prob=0.789; shortlist_rank=4; caps=league2_market2_fixture1
+- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=3; phase=PREMIUM_CORE; execution_score=118.538; selection_score=82.740; primary_edge=0.168; primary_model_prob=0.789; shortlist_rank=4; caps=league2_market2_fixture1
 - Confirmation layers: ODDS+MARKET_TRANSLATION+FORM+LEAGUE_COVERAGE
 
 ## Match Script Forecasts

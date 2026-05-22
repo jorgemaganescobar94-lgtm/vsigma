@@ -11,7 +11,7 @@ Only candidate chose: 0
 
 Side-by-side picks
 comparison_status                             fixture  baseline_rank candidate_v2_rank baseline_market candidate_v2_market  baseline_calibrated_prob candidate_v2_calibrated_prob  baseline_confidence_score candidate_v2_confidence_score
-    BASELINE_ONLY Djurgardens IF vs IF Brommapojkarna              2              <NA>        OVER_2_5                 NaN                  0.802925                         <NA>                    134.444                          <NA>
+    BASELINE_ONLY Djurgardens IF vs IF Brommapojkarna              2              <NA>        OVER_2_5                 NaN                  0.804225                         <NA>                    134.088                          <NA>
              BOTH                    Sudtirol vs Bari              1                 1        OVER_1_5            OVER_1_5                  0.787660                      0.78646                    146.766                       146.556
 
 Reason differences
