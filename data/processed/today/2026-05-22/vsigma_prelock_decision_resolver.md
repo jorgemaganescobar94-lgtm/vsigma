@@ -12,8 +12,8 @@
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Sudtirol vs Bari | OVER_1_5 | 2026-05-22T19:00+01:00 | -220.39 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
-| Djurgardens IF vs IF Brommapojkarna | OVER_2_5 | 2026-05-22T18:00+01:00 | -280.39 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
+| Sudtirol vs Bari | OVER_1_5 | 2026-05-22T19:00+01:00 | -229.21 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
+| Djurgardens IF vs IF Brommapojkarna | OVER_2_5 | 2026-05-22T18:00+01:00 | -289.21 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
 
 ## Data Gaps
 - odds missing: 0
