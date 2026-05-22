@@ -1,36 +1,36 @@
 # vSIGMA Daily Command Center - 2026-05-22
 
 ## Executive Command
-- generated_at: 2026-05-22T17:40:56+01:00
-- mode: pre
-- command_center_status: ACTION_REQUIRED
-- daily_classification: BROKEN
-- action_level: ACTION_REQUIRED
-- operational_verdict: BROKEN
+- generated_at: 2026-05-22T17:57:54+01:00
+- mode: auto
+- command_center_status: EXECUTION_READY
+- daily_classification: EXECUTION_OK
+- action_level: NO_ACTION_REQUIRED
+- operational_verdict: EXECUTION_AVAILABLE
 - predictive_failure: UNKNOWN
-- evidence_basis: missing_sources
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26300112039
+- evidence_basis: decision_quality_review
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26300955411
 
 ## Next Operator Action
-- Inspect workflow logs and required daily reports; monitoring evidence is incomplete.
+- Review official executable picks and post-result quality once scores are labeled.
 
 ## Decision Snapshot
-- decision_outcome_rows: 0
-- official_action_counts: none
-- execution_family_status_counts: none
+- decision_outcome_rows: 2
+- official_action_counts: NO_BET=1; EXECUTABLE=1
+- execution_family_status_counts: DATA_GAP_BLOCKED=1; PRELOCK_CONFIRMED=1
 
 ## Quality Snapshot
-- decision_quality_rows: 0
-- decision_quality_labels: none
-- quality_buckets: none
+- decision_quality_rows: 2
+- decision_quality_labels: NO_BET_UNRESOLVED=1; ACTIONABLE_UNRESOLVED=1
+- quality_buckets: NEEDS_MORE_DATA=2
 
 ## Source Coverage
 - monitoring_summary: present — `data/processed/today/2026-05-22/vsigma_autonomous_monitoring_summary.md`
-- decision_quality_review: missing — `data/processed/today/2026-05-22/vsigma_decision_quality_review.md`
-- system_review: missing — `data/processed/today/2026-05-22/vsigma_system_review.md`
-- prelock_resolver: missing — `data/processed/today/2026-05-22/vsigma_prelock_decision_resolver.md`
-- cloud_decision_summary: missing — `data/processed/today/2026-05-22/vsigma_cloud_decision_summary.md`
-- decision_outcome_ledger: missing — `data/processed/today/2026-05-22/vsigma_decision_outcome_ledger.csv`
+- decision_quality_review: present — `data/processed/today/2026-05-22/vsigma_decision_quality_review.md`
+- system_review: present — `data/processed/today/2026-05-22/vsigma_system_review.md`
+- prelock_resolver: present — `data/processed/today/2026-05-22/vsigma_prelock_decision_resolver.md`
+- cloud_decision_summary: present — `data/processed/today/2026-05-22/vsigma_cloud_decision_summary.md`
+- decision_outcome_ledger: present — `data/processed/today/2026-05-22/vsigma_decision_outcome_ledger.csv`
 
 ## Operating Rules
 - ACTION_REQUIRED: inspect before trusting the day.
