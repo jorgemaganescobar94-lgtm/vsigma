@@ -1,7 +1,7 @@
 # vSIGMA Decision Quality Review - 2026-05-23
 
 ## Executive Summary
-- generated_at: 2026-05-23T17:11:48+01:00
+- generated_at: 2026-05-23T17:17:14+01:00
 - daily_classification: EXECUTION_OK
 - no_bet_classification: EXECUTION_ACTIONABLE_PRESENT
 - operational_verdict: EXECUTION_AVAILABLE
