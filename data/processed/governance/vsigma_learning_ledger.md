@@ -1,7 +1,7 @@
 # vSIGMA Learning Ledger - 2026-05-23
 
 ## Executive Learning Summary
-- generated_at: 2026-05-23T21:12:30+01:00
+- generated_at: 2026-05-23T21:13:37+01:00
 - rows reviewed: 4
 - actionable wins: 0
 - actionable losses: 0
