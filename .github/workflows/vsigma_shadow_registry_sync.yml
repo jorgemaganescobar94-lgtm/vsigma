@@ -1,0 +1,89 @@
+name: vSIGMA Shadow Registry Sync
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Fecha YYYY-MM-DD. Vacío = hoy en Atlantic/Canary"
+        required: false
+        default: ""
+  schedule:
+    - cron: "0 2 * * *"
+      timezone: "Atlantic/Canary"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: vsigma-shadow-registry-sync-main
+  cancel-in-progress: false
+
+jobs:
+  build-shadow-registry-sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ github.token }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Decide sync date
+        shell: bash
+        run: |
+          DATE_INPUT="${{ github.event.inputs.date }}"
+          TODAY="$(TZ=Atlantic/Canary date +%F)"
+
+          if [ -z "$DATE_INPUT" ]; then
+            DATE_INPUT="$TODAY"
+          fi
+
+          echo "VSIGMA_DATE=$DATE_INPUT" >> "$GITHUB_ENV"
+          echo "Shadow registry sync date: $DATE_INPUT"
+
+      - name: Build shadow registry sync
+        shell: bash
+        run: |
+          python scripts/build_shadow_registry_sync.py \
+            --date "$VSIGMA_DATE" \
+            --timezone Atlantic/Canary
+
+      - name: Upload shadow registry sync artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: vsigma-shadow-registry-sync-${{ env.VSIGMA_DATE }}-${{ github.run_id }}
+          if-no-files-found: warn
+          retention-days: 14
+          path: |
+            data/processed/today/${{ env.VSIGMA_DATE }}/vsigma_shadow_registry_sync.*
+            data/processed/governance/vsigma_shadow_registry_sync.*
+
+      - name: Commit shadow registry sync outputs
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git status --short
+
+          git add \
+            data/processed/today/${VSIGMA_DATE}/vsigma_shadow_registry_sync.* \
+            data/processed/governance/vsigma_shadow_registry_sync.* \
+            2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No shadow-registry-sync output changes to commit."
+            exit 0
+          fi
+
+          git commit -m "vSIGMA shadow registry sync ${VSIGMA_DATE} [skip ci]"
+          git push origin HEAD:main
