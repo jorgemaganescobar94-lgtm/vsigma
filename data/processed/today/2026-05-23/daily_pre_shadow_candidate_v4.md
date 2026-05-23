@@ -13,12 +13,10 @@
 
 | accuracy_mode_rank | home_team | away_team | market_primary | over25_low_conversion_firewall_decision | over25_low_conversion_confirmation_score |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Kashima | FC Tokyo | OVER_1_5 | NOT_APPLIED | 0.0 |
-| 2 | Kalmar FF | Degerfors IF | OVER_1_5 | NOT_APPLIED | 0.0 |
+| 1 | Kalmar FF | Degerfors IF | OVER_1_5 | NOT_APPLIED | 0.0 |
 
 ## Baseline vs Candidate v2 vs Candidate v4
 
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v4_rank | baseline_market | candidate_v2_market | candidate_v4_market | candidate_v4_original_market | candidate_v4_firewall_decision | candidate_v4_firewall_score | candidate_v4_firewall_action | baseline_primary_risk | candidate_v2_primary_risk | candidate_v4_primary_risk |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1494182 | Kalmar FF vs Degerfors IF | Allsvenskan | 2 | 2 | 2 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1504822 | Kashima vs FC Tokyo | J1 League | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1494182 | Kalmar FF vs Degerfors IF | Allsvenskan | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION |

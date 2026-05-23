@@ -4,17 +4,9 @@ Source: official competition top
 Role: explanation layer only; this file does not select, remove, or promote picks.
 Forecast style: deterministic bands and modal scripts, not exact-stat certainty.
 
-Forecast rows: 2
+Forecast rows: 1
 
-#1 Kashima vs FC Tokyo | J1 League | OVER_1_5
-Script: Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.6; stats=FULL.
-Scores: main 2-2 | alt 1-2
-xG: home 1.4-2.1 | away 1.4-2.1 | total 3.0-4.1
-Stats: shots 10-14 vs 12-16; SOT 2-4 vs 4-6; corners 7-11; possession home 51-59% / away 41-49%
-Path: Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path.
-Breaker: Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market.
-
-#2 Kalmar FF vs Degerfors IF | Allsvenskan | OVER_1_5
+#1 Kalmar FF vs Degerfors IF | Allsvenskan | OVER_1_5
 Script: Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.5; stats=FULL.
 Scores: main 2-2 | alt 1-2
 xG: home 1.2-1.9 | away 1.5-2.2 | total 2.9-4.0

@@ -1,21 +1,19 @@
 VSIGMA COMPETITION ACCURACY MODE
 
 Mode: COMPETITION_ACCURACY_MODE
-Normal execution shortlist rows: 4
-Competition shortlist rows: 2
-Competition top rows: 2
+Normal execution shortlist rows: 3
+Competition shortlist rows: 1
+Competition top rows: 1
 
 Principle: prefer no pick over weak pick; prioritize stable markets, premium core evidence, strong rolling stats, clean market-fit, and high model probability.
 
 Competition shortlist
  accuracy_mode_rank  fixture_id      league home_team    away_team market_primary execution_shortlist_source  competition_raw_prob  competition_calibrated_prob  accuracy_confidence_score     accuracy_mode_bucket                                                                                                              accuracy_mode_reason       accuracy_primary_risk competition_prob_calibration_reason
-                  1     1504822   J1 League   Kashima     FC Tokyo       OVER_1_5           PREMIUM_EXTENDED                0.8702                       0.7902                    113.377 ACCURACY_EXTENDED_STRONG ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION    CALIBRATED_MARKET_OVERCONFIDENCE
-                  2     1494182 Allsvenskan Kalmar FF Degerfors IF       OVER_1_5           PREMIUM_EXTENDED                0.8629                       0.7829                    110.393 ACCURACY_EXTENDED_STRONG ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION    CALIBRATED_MARKET_OVERCONFIDENCE
+                  1     1494182 Allsvenskan Kalmar FF Degerfors IF       OVER_1_5           PREMIUM_EXTENDED                0.8629                       0.7829                    109.668 ACCURACY_EXTENDED_STRONG ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION    CALIBRATED_MARKET_OVERCONFIDENCE
 
 Competition top
  accuracy_mode_rank  fixture_id      league home_team    away_team market_primary  competition_raw_prob  competition_calibrated_prob  primary_edge  accuracy_confidence_score                                                                                                              accuracy_mode_reason       accuracy_primary_risk competition_prob_calibration_reason
-                  1     1504822   J1 League   Kashima     FC Tokyo       OVER_1_5                0.8702                       0.7902      0.155914                    113.377 ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION    CALIBRATED_MARKET_OVERCONFIDENCE
-                  2     1494182 Allsvenskan Kalmar FF Degerfors IF       OVER_1_5                0.8629                       0.7829      0.148614                    110.393 ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION    CALIBRATED_MARKET_OVERCONFIDENCE
+                  1     1494182 Allsvenskan Kalmar FF Degerfors IF       OVER_1_5                0.8629                       0.7829      0.138262                    109.668 ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION    CALIBRATED_MARKET_OVERCONFIDENCE
 
 Most common rejection tags
 accuracy_mode_reason

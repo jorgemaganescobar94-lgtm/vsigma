@@ -1,15 +1,15 @@
 # vSIGMA Daily Command Center - 2026-05-23
 
 ## Executive Command
-- generated_at: 2026-05-23T08:56:20+01:00
-- mode: post
+- generated_at: 2026-05-23T12:50:27+01:00
+- mode: pre
 - command_center_status: REVIEW_HOLD
 - daily_classification: WAITING_FOR_PRELOCK
 - action_level: REVIEW_REQUIRED
 - operational_verdict: WAITING_FOR_PRELOCK
 - predictive_failure: NO
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26327476830
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26331832956
 
 ## Next Operator Action
 - Wait for next scheduled AUTO/PRELOCK run or rerun prelock manually if timing is critical.
