@@ -1,13 +1,14 @@
 summary_scope,metric,rows_total,final_execution_bucket,final_recommendation,league,market_primary
-eligibility,premium_core_rows,3,,,,
-eligibility,premium_extended_eligible_rows,0,,,,
+eligibility,premium_core_rows,2,,,,
+eligibility,premium_extended_eligible_rows,3,,,,
 eligibility,standard_eligible_rows,0,,,,
-final,final_shortlist_rows,3,,,,
-final,bets_only_rows,3,,,,
-by_final_execution_bucket,,3,APPROVED_PREMIUM,,,
-by_final_recommendation,,3,,BET,,
-by_league,,1,,,2. Bundesliga,
+final,final_shortlist_rows,4,,,,
+final,bets_only_rows,4,,,,
+by_final_execution_bucket,,4,APPROVED_PREMIUM,,,
+by_final_recommendation,,4,,BET,,
 by_league,,1,,,Allsvenskan,
-by_league,,1,,,Serie B,
-by_market_primary,,1,,,,OVER_1_5
-by_market_primary,,2,,,,OVER_2_5
+by_league,,1,,,J1 League,
+by_league,,2,,,Serie A,
+by_market_primary,,1,,,,AWAY_WIN
+by_market_primary,,1,,,,HOME_WIN
+by_market_primary,,2,,,,OVER_1_5
