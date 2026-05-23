@@ -122,7 +122,19 @@ def group_by(rows: list[dict[str, str]], key_name: str) -> dict[str, list[dict[s
     return dict(groups)
 
 
+def quarantine_clears_model_change(processed_dir: Path, target_date: str) -> bool:
+    rows, _ = read_rows(processed_dir, target_date, "vsigma_learning_residual_quarantine.csv")
+    if not rows:
+        return False
+    usable = any(upper(row.get("counts_for_learning")) == "YES" for row in rows)
+    blockers = any(upper(row.get("blocks_model_change")) == "YES" for row in rows)
+    return usable and not blockers
+
+
 def build_issues(processed_dir: Path, target_date: str, generated_at: str) -> list[dict[str, object]]:
+    if quarantine_clears_model_change(processed_dir, target_date):
+        return []
+
     governor, _ = read_rows(processed_dir, target_date, "vsigma_self_improvement_governor.csv")
     proposals, _ = read_rows(processed_dir, target_date, "vsigma_improvement_proposals.csv")
     ledger, _ = read_rows(processed_dir, target_date, "vsigma_learning_ledger.csv")
