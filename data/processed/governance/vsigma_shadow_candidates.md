@@ -1,13 +1,14 @@
-# vSIGMA Shadow Candidates - 2026-05-23
+# vSIGMA Shadow Candidates - 2026-05-22
 
 ## Executive Shadow Candidate Summary
-- generated_at: 2026-05-23T08:56:21+01:00
-- shadow_candidates: 1
-- shadow_decision_counts: SHADOW_DOWNGRADE_REVIEW=1
-- experiment_type_counts: LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=1
+- generated_at: 2026-05-23T12:42:40+01:00
+- shadow_candidates: 2
+- shadow_decision_counts: SHADOW_DOWNGRADE_REVIEW=2
+- experiment_type_counts: LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=1; LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW=1
 
 ## Shadow Candidate Decisions
-- SHADOW_DOWNGRADE_REVIEW | Kashima vs FC Tokyo | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
+- SHADOW_DOWNGRADE_REVIEW | Sudtirol vs Bari | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
+- SHADOW_DOWNGRADE_REVIEW | Djurgardens IF vs IF Brommapojkarna | market=OVER_2_5 | experiment=LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW | production_impact=NONE
 
 ## Guardrails
 - official picks changed: NO

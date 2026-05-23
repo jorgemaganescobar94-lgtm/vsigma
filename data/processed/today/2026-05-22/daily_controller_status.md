@@ -2,7 +2,7 @@
 
 ## Step State
 - PRE: DONE
-- Pre-lock: ['PRELOCK_NOT_AVAILABLE']
+- Pre-lock: ['PRELOCK_NOT_AVAILABLE', 'PRELOCK_CONFIRMED']
 - POST: PENDING
 - Ledger: PRE_UPDATED
 - Governance: AVAILABLE
@@ -35,20 +35,21 @@
 ## Pre-Lock Timing
 | fixture_id | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1544652 | Sudtirol | Bari | OVER_1_5 | 2026-05-22T18:00:38.600000+00:00 | 79.75 | 2026-05-22T16:30:38.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
-| 1494177 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | 2026-05-22T17:00:38.600000+00:00 | 19.75 | 2026-05-22T15:30:38.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1544652 | Sudtirol | Bari | OVER_1_5 | 2026-05-22T18:00:38.600000+00:00 | -1062.01 | 2026-05-22T16:30:38.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1494177 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | 2026-05-22T17:00:38.600000+00:00 | -1122.01 | 2026-05-22T15:30:38.600000+00:00 | PRELOCK_CONFIRMED | RUN_POST_AFTER_FINISH |
 
 ## Ledger State
 | experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| OFFICIAL_BASELINE | 1494177.0 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V4_O25_FIREWALL | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V5_PLAYER_IMPACT | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V6_API_PREDICTIONS | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1504822.0 | Kashima | FC Tokyo | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V4_O25_FIREWALL | 1504822.0 | Kashima | FC Tokyo | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V4_O25_FIREWALL | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V5_PLAYER_IMPACT | 1504822.0 | Kashima | FC Tokyo | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V5_PLAYER_IMPACT | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V6_API_PREDICTIONS | 1504822.0 | Kashima | FC Tokyo | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V6_API_PREDICTIONS | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
 
 ## Controller Outputs
 - Plan CSV: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-22/daily_run_plan.csv

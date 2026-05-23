@@ -1,7 +1,7 @@
 # vSIGMA Daily Competition Master Report - 2026-05-22
 
 ## Daily Status
-PRE_LOCK_REVIEWED
+POST_SETTLED
 
 ## Official Baseline Top Picks
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
@@ -107,12 +107,12 @@ _No stale pre-lock rows excluded._
 | fixture_id | home_team | away_team | market_primary | experiment_id | pre_price | prelock_price | close_proxy_price | clv_delta | clv_direction | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1494177 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.53 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1494177 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | OFFICIAL_BASELINE | 1.53 | 1.53 | 1.53 | 0.0 | CLV_FLAT |  |  |
+| 1494177 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | OFFICIAL_BASELINE | 1.53 | 1.53 | 1.53 | 0.0 | CLV_FLAT | WIN | 0.53 |
 | 1544652 | Sudtirol | Bari | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.44 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1544652 | Sudtirol | Bari | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.44 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1544652 | Sudtirol | Bari | OVER_1_5 | OFFICIAL_BASELINE | 1.44 | 1.44 | 1.44 | 0.0 | CLV_FLAT |  |  |
+| 1544652 | Sudtirol | Bari | OVER_1_5 | OFFICIAL_BASELINE | 1.44 | 1.44 | 1.44 | 0.0 | CLV_FLAT | LOSS | -1.0 |
 | 1545405 | Rot-Weiß Essen | SpVgg Greuther Fürth | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.61 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1545405 | Rot-Weiß Essen | SpVgg Greuther Fürth | OVER_2_5 | OFFICIAL_BASELINE | 1.61 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1545405 | Rot-Weiß Essen | SpVgg Greuther Fürth | OVER_2_5 | OFFICIAL_BASELINE | 1.61 |  | 1.61 | 0.0 | CLV_FLAT | LOSS | -1.0 |
 
 ### Candidate v7 Calibration Advice
 | market_family | failure_mode | drift_status | clv_direction | n | profit_units | roi_percent | recommendation | recommendation_reason |
@@ -122,7 +122,14 @@ _No stale pre-lock rows excluded._
 | OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_FLAT | 1 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 
 ## Post-Results Summary
-_No rows._
+| mode | pick_count | wins | losses | profit_units | roi_percent | pending_rows | candidate_version |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| OFFICIAL_EXECUTION_SHORTLIST | 3.0 | 1.0 | 2.0 | -1.47 | -49.0 | 0.0 | OFFICIAL_RESULTS |
+| SHADOW_CANDIDATE_V2 | 2.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V2_RESULTS |
+| SHADOW_CANDIDATE_V4_O25_LOW_CONVERSION_FIREWALL | 2.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V4_RESULTS |
+| SHADOW_CANDIDATE_V5_PLAYER_IMPACT | 2.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V5_RESULTS |
+| SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK | 2.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V6_RESULTS |
+| SHADOW_CANDIDATE_V7_PRICE_DISCIPLINE_CLV_DRIFT_GUARD | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V7_RESULTS |
 
 ## Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
@@ -154,8 +161,8 @@ _No rows._
 
 ## Immutable Ledger / Experiment Registry
 - Ledger update status: AVAILABLE
-- Official picks registered: 2
-- Shadow picks registered: 5
+- Official picks registered: 0
+- Shadow picks registered: 8
 - No-bet records: 1
 - Ledger report: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-22/vsigma_ledger_daily_report.md
 
@@ -175,31 +182,32 @@ _No rows._
 ## Healthcheck
 - Global health status: WARNING
 - Critical warnings: freshness_report: WARNING - validation report contains warning rows
-- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-22`
+- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-23`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-22/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| OFFICIAL_BASELINE | 1494177.0 | Djurgardens IF | IF Brommapojkarna | OVER_2_5 | PRELOCK_CONFIRMED | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V4_O25_FIREWALL | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V6_API_PREDICTIONS | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1544652.0 | Sudtirol | Bari | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1504822.0 | Kashima | FC Tokyo | OVER_1_5 |  | UNMATCHED |  | PENDING |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 |  | UNMATCHED |  | PENDING |
+| CANDIDATE_V4_O25_FIREWALL | 1504822.0 | Kashima | FC Tokyo | OVER_1_5 |  | UNMATCHED |  | PENDING |
+| CANDIDATE_V4_O25_FIREWALL | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 |  | UNMATCHED |  | PENDING |
+| CANDIDATE_V5_PLAYER_IMPACT | 1504822.0 | Kashima | FC Tokyo | OVER_1_5 |  | UNMATCHED |  | PENDING |
+| CANDIDATE_V5_PLAYER_IMPACT | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 |  | UNMATCHED |  | PENDING |
+| CANDIDATE_V6_API_PREDICTIONS | 1504822.0 | Kashima | FC Tokyo | OVER_1_5 |  | UNMATCHED |  | PENDING |
+| CANDIDATE_V6_API_PREDICTIONS | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 |  | UNMATCHED |  | PENDING |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | OFFICIAL_BASELINE | OFFICIAL | 14 | 5 | 3 | 2 | -0.53 | -10.6 | FROZEN_OFFICIAL_BASELINE |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 13 | 4 | 2 | 2 | -1.05 | -26.25 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 16 | 4 | 2 | 2 | -1.05 | -26.25 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
 | CANDIDATE_V3_ODDS_DEPTH | NOT_PROMOTED | 0 | 0 | 0 | 0 | 0.0 |  | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V4_O25_FIREWALL | SHADOW | 12 | 4 | 2 | 2 | -1.05 | -26.25 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V5_PLAYER_IMPACT | SHADOW | 13 | 4 | 2 | 2 | -1.05 | -26.25 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V6_API_PREDICTIONS | AUDIT_ONLY | 13 | 4 | 2 | 2 | -1.05 | -26.25 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | 8 | 0 | 0 | 0 | 0.0 |  | PRICE_DISCIPLINE_UNTESTED |
+| CANDIDATE_V4_O25_FIREWALL | SHADOW | 15 | 4 | 2 | 2 | -1.05 | -26.25 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V5_PLAYER_IMPACT | SHADOW | 16 | 4 | 2 | 2 | -1.05 | -26.25 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V6_API_PREDICTIONS | AUDIT_ONLY | 16 | 4 | 2 | 2 | -1.05 | -26.25 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | 9 | 0 | 0 | 0 | 0.0 |  | PRICE_DISCIPLINE_UNTESTED |
 
 ## Promotion & Threshold Governance
 - Official baseline status: KEEP_OFFICIAL_BASELINE
@@ -252,30 +260,36 @@ _No rows._
 ## Freshness Validation
 | file_name | candidate_version | status | detail | rows |
 | --- | --- | --- | --- | --- |
-| vsigma_today_competition_shortlist.csv | OFFICIAL_BASELINE | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_competition_top.csv | OFFICIAL_BASELINE | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v2_competition_shortlist.csv | CANDIDATE_V2 | PASS | output is fresh for requested target date | 1 |
-| vsigma_today_candidate_v2_competition_top.csv | CANDIDATE_V2 | PASS | output is fresh for requested target date | 1 |
-| vsigma_today_candidate_v4_competition_shortlist.csv | CANDIDATE_V4 | PASS | output is fresh for requested target date | 1 |
-| vsigma_today_candidate_v4_competition_top.csv | CANDIDATE_V4 | PASS | output is fresh for requested target date | 1 |
-| vsigma_today_candidate_v5_competition_shortlist.csv | CANDIDATE_V5 | PASS | output is fresh for requested target date | 1 |
-| vsigma_today_candidate_v5_competition_top.csv | CANDIDATE_V5 | PASS | output is fresh for requested target date | 1 |
-| vsigma_today_candidate_v6_competition_shortlist.csv | CANDIDATE_V6 | PASS | output is fresh for requested target date | 1 |
-| vsigma_today_candidate_v6_competition_top.csv | CANDIDATE_V6 | PASS | output is fresh for requested target date | 1 |
-| vsigma_today_candidate_v7_competition_shortlist.csv | CANDIDATE_V7 | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_competition_shortlist.csv | OFFICIAL_BASELINE | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_competition_top.csv | OFFICIAL_BASELINE | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_candidate_v2_competition_shortlist.csv | CANDIDATE_V2 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_candidate_v2_competition_top.csv | CANDIDATE_V2 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_candidate_v4_competition_shortlist.csv | CANDIDATE_V4 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_candidate_v4_competition_top.csv | CANDIDATE_V4 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_candidate_v5_competition_shortlist.csv | CANDIDATE_V5 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_candidate_v5_competition_top.csv | CANDIDATE_V5 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_candidate_v6_competition_shortlist.csv | CANDIDATE_V6 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_candidate_v6_competition_top.csv | CANDIDATE_V6 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_candidate_v7_competition_shortlist.csv | CANDIDATE_V7 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
 | vsigma_today_candidate_v7_competition_top.csv | CANDIDATE_V7 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_baseline_vs_candidate_v2.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v4.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v5.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v6.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v7.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_match_script_forecasts.csv | FORECAST | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v2_match_script_forecasts.csv | FORECAST_CANDIDATE_V2 | PASS | output is fresh for requested target date | 1 |
-| vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | PASS | output is fresh for requested target date | 1 |
-| vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | PASS | output is fresh for requested target date | 2 |
-| today_pipeline_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
-| today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet | 0 |
+| vsigma_today_baseline_vs_candidate_v2.csv | COMPARISON | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v4.csv | COMPARISON | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v5.csv | COMPARISON | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v6.csv | COMPARISON | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v7.csv | COMPARISON | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_match_script_forecasts.csv | FORECAST | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_candidate_v2_match_script_forecasts.csv | FORECAST_CANDIDATE_V2 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 1 |
+| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-22 | 2 |
+| vsigma_execution_shortlist_results_ledger.csv | OFFICIAL_RESULTS | PASS | output is fresh for requested target date | 3 |
+| vsigma_execution_shortlist_results_summary.csv | OFFICIAL_RESULTS | PASS | output is fresh for requested target date | 144 |
+| vsigma_today_candidate_v2_results_ledger.csv | CANDIDATE_V2_RESULTS | WARNING_STALE_GLOBAL_FILE | metadata source_file_date_check reports DATE_MISMATCH | 2 |
+| vsigma_today_candidate_v2_results_summary.csv | CANDIDATE_V2_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v4_results_ledger.csv | CANDIDATE_V4_RESULTS | WARNING_STALE_GLOBAL_FILE | metadata source_file_date_check reports DATE_MISMATCH | 2 |
+| vsigma_today_candidate_v4_results_summary.csv | CANDIDATE_V4_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v5_results_ledger.csv | CANDIDATE_V5_RESULTS | WARNING_STALE_GLOBAL_FILE | metadata source_file_date_check reports DATE_MISMATCH | 2 |
+| vsigma_today_candidate_v5_results_summary.csv | CANDIDATE_V5_RESULTS | PASS | output is fresh for requested target date | 1 |
 
 ## Candidate Isolation
 | check_name | file_name | status | detail |

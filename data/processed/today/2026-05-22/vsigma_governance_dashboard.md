@@ -63,9 +63,10 @@
 | 2026-05-20 | NO_BET_DAY | No model registered a pick. |
 | 2026-05-21 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
 | 2026-05-22 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
+| 2026-05-23 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
 
 ## CLV Data Sufficiency
-INSUFFICIENT_CLV_DATA: usable=2, available_direction_rows=2; do not change thresholds from CLV yet.
+INSUFFICIENT_CLV_DATA: usable=3, available_direction_rows=3; do not change thresholds from CLV yet.
 
 ## Evidence Status
 - All primary governance inputs available.
