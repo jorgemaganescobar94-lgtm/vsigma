@@ -1,2 +1,2 @@
 target_date,generated_at,mode,command_center_status,daily_classification,action_level,operational_verdict,predictive_failure,evidence_basis,next_action,run_url
-2026-05-23,2026-05-23T17:17:15+01:00,auto,EXECUTION_READY,EXECUTION_OK,NO_ACTION_REQUIRED,EXECUTION_AVAILABLE,UNKNOWN,decision_quality_review,Review official executable picks and post-result quality once scores are labeled.,https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26337560725
+2026-05-23,2026-05-23T21:12:30+01:00,auto,EXECUTION_READY,EXECUTION_OK,NO_ACTION_REQUIRED,EXECUTION_AVAILABLE,UNKNOWN,decision_quality_review,Review official executable picks and post-result quality once scores are labeled.,https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26342403573
