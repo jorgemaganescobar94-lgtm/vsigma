@@ -243,7 +243,7 @@ def build_learning_rows(target_date: str, decision_rows: list[dict[str, str]], q
     for decision in decision_rows:
         key = row_key(decision)
         quality = quality_by_key.get(key, {})
-        combined = {**decision, **quality}
+        combined = {**quality, **decision}
         family = classify_learning_family(combined)
         status, priority, note = classify_learning_status(combined, family)
         rows.append({
