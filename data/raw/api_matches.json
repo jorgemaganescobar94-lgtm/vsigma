@@ -4928,10 +4928,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
+          "long": "Match Finished",
+          "short": "FT",
           "elapsed": 90,
-          "extra": 1
+          "extra": 4
         }
       },
       "league": {
@@ -4968,8 +4968,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 4,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -5560,7 +5560,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 78,
+          "elapsed": 83,
           "extra": null
         }
       },
@@ -5630,7 +5630,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 46,
+          "elapsed": 51,
           "extra": null
         }
       },
@@ -5980,7 +5980,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 38,
+          "elapsed": 43,
           "extra": null
         }
       },
@@ -6120,7 +6120,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 38,
+          "elapsed": 43,
           "extra": null
         }
       },
@@ -6139,22 +6139,22 @@
           "id": 16773,
           "name": "Hills Brumbies",
           "logo": "https://media.api-sports.io/football/teams/16773.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 16771,
           "name": "Blacktown Spartans",
           "logo": "https://media.api-sports.io/football/teams/16771.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -6190,7 +6190,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 34,
+          "elapsed": 39,
           "extra": null
         }
       },
@@ -6260,7 +6260,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 35,
+          "elapsed": 40,
           "extra": null
         }
       },
@@ -6330,7 +6330,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 33,
+          "elapsed": 38,
           "extra": null
         }
       },
@@ -6400,8 +6400,8 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 41,
-          "extra": null
+          "elapsed": 45,
+          "extra": 1
         }
       },
       "league": {
@@ -6470,8 +6470,8 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 41,
-          "extra": null
+          "elapsed": 45,
+          "extra": 1
         }
       },
       "league": {
@@ -6540,7 +6540,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 39,
+          "elapsed": 44,
           "extra": null
         }
       },
@@ -6610,7 +6610,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 40,
+          "elapsed": 45,
           "extra": null
         }
       },
@@ -6680,7 +6680,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 33,
+          "elapsed": 38,
           "extra": null
         }
       },
@@ -6750,7 +6750,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 38,
+          "elapsed": 43,
           "extra": null
         }
       },
@@ -6769,23 +6769,23 @@
           "id": 3823,
           "name": "Sorrento",
           "logo": "https://media.api-sports.io/football/teams/3823.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 20890,
           "name": "Olympic Kingsway",
           "logo": "https://media.api-sports.io/football/teams/20890.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -6820,7 +6820,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 39,
+          "elapsed": 44,
           "extra": null
         }
       },
@@ -6850,12 +6850,12 @@
       },
       "goals": {
         "home": 2,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 2,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -6890,7 +6890,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 36,
+          "elapsed": 41,
           "extra": null
         }
       },
@@ -6960,7 +6960,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 37,
+          "elapsed": 42,
           "extra": null
         }
       },
@@ -7030,8 +7030,8 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 41,
-          "extra": null
+          "elapsed": 45,
+          "extra": 1
         }
       },
       "league": {
@@ -7100,8 +7100,8 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 41,
-          "extra": null
+          "elapsed": 45,
+          "extra": 1
         }
       },
       "league": {
@@ -7170,7 +7170,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 36,
+          "elapsed": 41,
           "extra": null
         }
       },
@@ -7310,7 +7310,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 38,
+          "elapsed": 43,
           "extra": null
         }
       },
@@ -7380,8 +7380,8 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 41,
-          "extra": null
+          "elapsed": 45,
+          "extra": 1
         }
       },
       "league": {
@@ -7450,7 +7450,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 39,
+          "elapsed": 44,
           "extra": null
         }
       },
@@ -7520,7 +7520,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 36,
+          "elapsed": 41,
           "extra": null
         }
       },
@@ -7590,7 +7590,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 40,
+          "elapsed": 45,
           "extra": null
         }
       },
@@ -7660,7 +7660,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 11,
+          "elapsed": 16,
           "extra": null
         }
       },
@@ -7730,7 +7730,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 11,
+          "elapsed": 16,
           "extra": null
         }
       },
@@ -7800,7 +7800,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 11,
+          "elapsed": 16,
           "extra": null
         }
       },
@@ -7870,7 +7870,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 11,
+          "elapsed": 16,
           "extra": null
         }
       },
@@ -7940,7 +7940,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 10,
+          "elapsed": 15,
           "extra": null
         }
       },
@@ -8010,7 +8010,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 10,
+          "elapsed": 15,
           "extra": null
         }
       },

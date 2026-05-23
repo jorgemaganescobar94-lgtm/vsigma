@@ -17,8 +17,8 @@ _No rows._
 ## Waiting / Blocked Picks
 | fixture_id | league | home_team | away_team | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | retry_allowed | next_retry_time | decision_state | exclusion_reason | next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1504822 | J1 League | Kashima | FC Tokyo | OVER_1_5 | 2026-05-23T09:30+01:00 | 45.03 | NO_BET | NO | ODDS_NOT_AVAILABLE;LINEUPS_NOT_AVAILABLE;AVAILABILITY_NOT_AVAILABLE | NO |  | PRELOCK_BLOCKED | PRELOCK_NOT_AVAILABLE | WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW |
-| 1494182 | Allsvenskan | Kalmar FF | Degerfors IF | OVER_1_5 | 2026-05-23T14:00+01:00 | 315.03 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | YES | 2026-05-23T13:00+01:00 | WAITING_FOR_PRELOCK_WINDOW | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-05-23T13:00+01:00 |
+| 1504822 | J1 League | Kashima | FC Tokyo | OVER_1_5 | 2026-05-23T09:30+01:00 | 39.89 | NO_BET | NO | ODDS_NOT_AVAILABLE;LINEUPS_NOT_AVAILABLE;AVAILABILITY_NOT_AVAILABLE | NO |  | PRELOCK_BLOCKED | PRELOCK_NOT_AVAILABLE | WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW |
+| 1494182 | Allsvenskan | Kalmar FF | Degerfors IF | OVER_1_5 | 2026-05-23T14:00+01:00 | 309.89 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | YES | 2026-05-23T13:00+01:00 | WAITING_FOR_PRELOCK_WINDOW | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-05-23T13:00+01:00 |
 
 ## Technical Warnings
 - healthcheck_status: WARNING
@@ -35,7 +35,7 @@ _No rows._
 - Timezone: Atlantic/Canary
 - Window minutes: 90
 - PRE refreshed by auto controller: YES
-- PRE refresh reasons: candidate_output:CANDIDATE_V2 | WARNING: only stale rows found for 2026-05-22; candidate_output:CANDIDATE_V4 | WARNING: only stale rows found for 2026-05-22; candidate_output:CANDIDATE_V5 | WARNING: only stale rows found for 2026-05-22; candidate_output:CANDIDATE_V6 | WARNING: only stale rows found for 2026-05-22; candidate_output:CANDIDATE_V7_SHORTLIST | WARNING: only stale rows found for 2026-05-22; global candidate top includes rows outside target date: vsigma_today_candidate_v2_competition_top.csv; global candidate top includes rows outside target date: vsigma_today_candidate_v4_competition_top.csv; global candidate top includes rows outside target date: vsigma_today_candidate_v5_competition_top.csv; global candidate top includes rows outside target date: vsigma_today_candidate_v6_competition_top.csv; global official top includes rows outside target date; health summary reports ledger has no rows for target date; health summary reports only stale rows found; missing snapshot official top: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-23/vsigma_today_competition_top.csv; official_baseline_output | WARNING: only stale rows found for 2026-05-22; text trigger: ledger has no rows for target date; text trigger: official_baseline_output | WARNING; text trigger: only stale rows found
+- PRE refresh reasons: text trigger: only stale rows found
 - PRELOCK retained no rows: NO
 - PRELOCK unavailable rows: 1
 - Candidate source used: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-23/vsigma_today_competition_top.csv
