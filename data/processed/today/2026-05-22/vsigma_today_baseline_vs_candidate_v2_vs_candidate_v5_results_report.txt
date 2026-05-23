@@ -1,0 +1,14 @@
+vSIGMA TODAY BASELINE VS CANDIDATE V2 VS CANDIDATE V5 RESULTS
+
+Mode summary
+                             mode  pick_count  settled_rows  pending_rows  unmatched_rows  wins  losses  pushes  voids  profit_units roi_percent
+                BASELINE_OFFICIAL           2             0             0               2     0       0       0      0           0.0        <NA>
+              SHADOW_CANDIDATE_V2           2             0             0               2     0       0       0      0           0.0        <NA>
+SHADOW_CANDIDATE_V5_PLAYER_IMPACT           2             0             0               2     0       0       0      0           0.0        <NA>
+
+Candidate v5 adjusted top picks: 0
+
+Pick result comparison
+                 comparison_status  fixture_id                   fixture      league  baseline_rank  candidate_v2_rank  candidate_v5_rank baseline_market candidate_v2_market candidate_v5_market candidate_v5_original_market candidate_v5_action baseline_result candidate_v2_result candidate_v5_result baseline_profit_units candidate_v2_profit_units candidate_v5_profit_units
+BASELINE+CANDIDATE_V2+CANDIDATE_V5     1494182 Kalmar FF vs Degerfors IF Allsvenskan              2                  2                  2        OVER_1_5            OVER_1_5            OVER_1_5                     OVER_1_5         NOT_APPLIED       UNMATCHED           UNMATCHED           UNMATCHED                  <NA>                      <NA>                      <NA>
+BASELINE+CANDIDATE_V2+CANDIDATE_V5     1504822       Kashima vs FC Tokyo   J1 League              1                  1                  1        OVER_1_5            OVER_1_5            OVER_1_5                     OVER_1_5         NOT_APPLIED       UNMATCHED           UNMATCHED           UNMATCHED                  <NA>                      <NA>                      <NA>

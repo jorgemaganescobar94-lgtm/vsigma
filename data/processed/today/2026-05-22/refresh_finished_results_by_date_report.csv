@@ -1,0 +1,7 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-05-22,OK,API-SPORTS_DIRECT,340.0,,,,,,
+2026-05-22T18:00:00+01:00,MATCHED,,,1494177.0,FT,Djurgardens IF,IF Brommapojkarna,1.0,2.0
+2026-05-22T18:30:00+01:00,MATCHED,,,1545664.0,FT,Ried,Rapid Vienna,2.0,1.0
+2026-05-22T19:00:00+01:00,MATCHED,,,1544652.0,FT,Sudtirol,Bari,0.0,0.0
+2026-05-22T19:30:00+01:00,MATCHED,,,1545405.0,FT,Rot-Weiß Essen,SpVgg Greuther Fürth,1.0,0.0
+2026-05-22T19:45:00+01:00,MATCHED,,,1378236.0,FT,Fiorentina,Atalanta,1.0,1.0
