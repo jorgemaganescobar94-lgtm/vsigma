@@ -42,45 +42,45 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 ## Match Script Forecasts
 | forecast_rank | fixture_id | league | home_team | away_team | market_primary | predicted_match_script | predicted_score_main | predicted_score_alt | predicted_home_xg_range | predicted_away_xg_range | predicted_home_shots_range | predicted_away_shots_range | predicted_home_sot_range | predicted_away_sot_range | predicted_total_corners_range | predicted_possession_split | predicted_pick_path | predicted_pick_breaker | predicted_total_goals_range | predicted_first_goal_side | predicted_state_gravity | forecast_confidence_band | forecast_inputs_used | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1504822 | J1 League | Kashima | FC Tokyo | OVER_1_5 | Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.6; stats=FULL. | 2-2 | 1-2 | 1.4-2.1 | 1.4-2.1 | 10-14 | 12-16 | 2-4 | 4-6 | 7-11 | home 51-59% / away 41-49% | Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 3.0-4.1 | Either side | open exchange | MEDIUM_HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-05-23 | 2026-05-23T07:44:47+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-05-23-20260523T074447Z |
-| 2 | 1494182 | Allsvenskan | Kalmar FF | Degerfors IF | OVER_1_5 | Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.5; stats=FULL. | 2-2 | 1-2 | 1.2-1.9 | 1.6-2.3 | 9-13 | 10-14 | 3-5 | 4-6 | 6-10 | home 43-51% / away 49-57% | Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 2.9-4.0 | Either side | open exchange | MEDIUM_HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-05-23 | 2026-05-23T07:44:47+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-05-23-20260523T074447Z |
+| 1 | 1504822 | J1 League | Kashima | FC Tokyo | OVER_1_5 | Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.6; stats=FULL. | 2-2 | 1-2 | 1.4-2.1 | 1.4-2.1 | 10-14 | 12-16 | 2-4 | 4-6 | 7-11 | home 51-59% / away 41-49% | Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 3.0-4.1 | Either side | open exchange | MEDIUM_HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-05-23 | 2026-05-23T07:49:56+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-05-23-20260523T074956Z |
+| 2 | 1494182 | Allsvenskan | Kalmar FF | Degerfors IF | OVER_1_5 | Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.5; stats=FULL. | 2-2 | 1-2 | 1.2-1.9 | 1.6-2.3 | 9-13 | 10-14 | 3-5 | 4-6 | 6-10 | home 43-51% / away 49-57% | Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 2.9-4.0 | Either side | open exchange | MEDIUM_HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-05-23 | 2026-05-23T07:49:56+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-05-23-20260523T074956Z |
 
 ## Baseline vs Candidate Comparison
 ### Candidate v2
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | baseline_market | candidate_v2_market | baseline_raw_prob | candidate_v2_raw_prob | baseline_calibrated_prob | candidate_v2_calibrated_prob | baseline_confidence_score | candidate_v2_confidence_score | baseline_bucket | candidate_v2_bucket | baseline_main_reason | candidate_v2_main_reason | baseline_primary_risk | candidate_v2_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BOTH | 1494182 | Kalmar FF vs Degerfors IF | Allsvenskan | 2 | 2 | OVER_1_5 | OVER_1_5 | 0.8629 | 0.8586 | 0.7829 | 0.7786 | 110.393 | 109.29 | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-23 | 2026-05-23T07:44:47+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074447Z |
-| BOTH | 1504822 | Kashima vs FC Tokyo | J1 League | 1 | 1 | OVER_1_5 | OVER_1_5 | 0.8702 | 0.8712 | 0.7902 | 0.7912 | 113.377 | 113.61 | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-23 | 2026-05-23T07:44:47+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074447Z |
+| BOTH | 1494182 | Kalmar FF vs Degerfors IF | Allsvenskan | 2 | 2 | OVER_1_5 | OVER_1_5 | 0.8629 | 0.8586 | 0.7829 | 0.7786 | 110.393 | 109.29 | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-23 | 2026-05-23T07:49:56+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074956Z |
+| BOTH | 1504822 | Kashima vs FC Tokyo | J1 League | 1 | 1 | OVER_1_5 | OVER_1_5 | 0.8702 | 0.8712 | 0.7902 | 0.7912 | 113.377 | 113.61 | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-23 | 2026-05-23T07:49:56+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074956Z |
 
 ### Candidate v4
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v4_rank | baseline_market | candidate_v2_market | candidate_v4_market | candidate_v4_original_market | candidate_v4_firewall_decision | candidate_v4_firewall_score | candidate_v4_firewall_action | baseline_primary_risk | candidate_v2_primary_risk | candidate_v4_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1494182 | Kalmar FF vs Degerfors IF | Allsvenskan | 2 | 2 | 2 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-23 | 2026-05-23T07:44:47+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074447Z |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1504822 | Kashima vs FC Tokyo | J1 League | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-23 | 2026-05-23T07:44:47+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074447Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1494182 | Kalmar FF vs Degerfors IF | Allsvenskan | 2 | 2 | 2 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-23 | 2026-05-23T07:49:56+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074956Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1504822 | Kashima vs FC Tokyo | J1 League | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-23 | 2026-05-23T07:49:56+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074956Z |
 
 ### Candidate v5
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v5_rank | baseline_market | candidate_v2_market | candidate_v5_market | candidate_v5_original_market | candidate_v5_action | candidate_v5_hint | baseline_primary_risk | candidate_v2_primary_risk | candidate_v5_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1494182 | Kalmar FF vs Degerfors IF | Allsvenskan | 2 | 2 | 2 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-23 | 2026-05-23T07:44:47+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074447Z |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1504822 | Kashima vs FC Tokyo | J1 League | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-23 | 2026-05-23T07:44:47+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074447Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1494182 | Kalmar FF vs Degerfors IF | Allsvenskan | 2 | 2 | 2 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-23 | 2026-05-23T07:49:56+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074956Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1504822 | Kashima vs FC Tokyo | J1 League | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-23 | 2026-05-23T07:49:56+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074956Z |
 
 ### Candidate v6
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v6_rank | baseline_market | candidate_v2_market | candidate_v6_market | candidate_v6_action | candidate_v6_alignment | candidate_v6_confidence_adjustment | baseline_primary_risk | candidate_v2_primary_risk | candidate_v6_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V6 | 1494182 | Kalmar FF vs Degerfors IF | Allsvenskan | 2 | 2 | 2 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | NEUTRAL | 0.0 | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-23 | 2026-05-23T07:44:47+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074447Z |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V6 | 1504822 | Kashima vs FC Tokyo | J1 League | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | NEUTRAL | 0.0 | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-23 | 2026-05-23T07:44:47+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074447Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V6 | 1494182 | Kalmar FF vs Degerfors IF | Allsvenskan | 2 | 2 | 2 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | NEUTRAL | 0.0 | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-23 | 2026-05-23T07:49:56+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074956Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V6 | 1504822 | Kashima vs FC Tokyo | J1 League | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | NEUTRAL | 0.0 | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-23 | 2026-05-23T07:49:56+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074956Z |
 
 ### Candidate v7
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v7_rank | baseline_market | candidate_v2_market | candidate_v7_market | candidate_v7_decision | candidate_v7_required_edge | candidate_v7_actual_edge | candidate_v7_drift_status | candidate_v7_clv_direction | candidate_v7_execution_status | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2 | 1494182 | Kalmar FF vs Degerfors IF | Allsvenskan | 2 | 2 |  | OVER_1_5 | OVER_1_5 |  |  |  |  |  |  |  | 2026-05-23 | 2026-05-23T07:44:47+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074447Z |
-| BASELINE+CANDIDATE_V2 | 1504822 | Kashima vs FC Tokyo | J1 League | 1 | 1 |  | OVER_1_5 | OVER_1_5 |  |  |  |  |  |  |  | 2026-05-23 | 2026-05-23T07:44:47+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074447Z |
+| BASELINE+CANDIDATE_V2 | 1494182 | Kalmar FF vs Degerfors IF | Allsvenskan | 2 | 2 |  | OVER_1_5 | OVER_1_5 |  |  |  |  |  |  |  | 2026-05-23 | 2026-05-23T07:49:56+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074956Z |
+| BASELINE+CANDIDATE_V2 | 1504822 | Kashima vs FC Tokyo | J1 League | 1 | 1 |  | OVER_1_5 | OVER_1_5 |  |  |  |  |  |  |  | 2026-05-23 | 2026-05-23T07:49:56+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-23-20260523T074956Z |
 
 ## Price Discipline / CLV / Drift Execution Guard
 | fixture_id | home_team | away_team | market_primary | price_discipline_decision | price_discipline_min_edge_required | price_discipline_actual_edge | price_discipline_edge_surplus | price_discipline_drift_status | candidate_v7_prelock_status | candidate_v7_execution_status | clv_direction | price_discipline_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1504822 | Kashima | FC Tokyo | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.156914 | 0.013914 | WATCH_PATTERN | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | CLV_UNAVAILABLE | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
-| 1494182 | Kalmar FF | Degerfors IF | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.144314 | 0.001314 | WATCH_PATTERN | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | CLV_UNAVAILABLE | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
+| 1504822 | Kashima | FC Tokyo | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.156914 | 0.013914 | WATCH_PATTERN | V7_PRELOCK_UNAVAILABLE | V7_PRELOCK_UNAVAILABLE | CLV_FLAT | Fresh pre-lock review is unavailable; v7 cannot confirm execution. |
+| 1494182 | Kalmar FF | Degerfors IF | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.144314 | 0.001314 | WATCH_PATTERN | V7_PRELOCK_UNAVAILABLE | V7_PRELOCK_UNAVAILABLE | CLV_FLAT | Fresh pre-lock review is unavailable; v7 cannot confirm execution. |
 
 ## Pre-Lock Execution Status
 - Pre-lock data fresh: YES
@@ -96,14 +96,14 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 ### Candidate v7 Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | price_discipline_decision | candidate_v7_prelock_status | candidate_v7_execution_status | candidate_v7_execution_allowed_flag | price_discipline_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1504822 | Kashima | FC Tokyo | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | 0 | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
-| 1494182 | Kalmar FF | Degerfors IF | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | 0 | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
+| 1504822 | Kashima | FC Tokyo | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | V7_PRELOCK_UNAVAILABLE | V7_PRELOCK_UNAVAILABLE | 0 | Fresh pre-lock review is unavailable; v7 cannot confirm execution. |
+| 1494182 | Kalmar FF | Degerfors IF | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | V7_PRELOCK_UNAVAILABLE | V7_PRELOCK_UNAVAILABLE | 0 | Fresh pre-lock review is unavailable; v7 cannot confirm execution. |
 
 ### Active Pre-Lock Decisions
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1504822 | Kashima | FC Tokyo | OVER_1_5 | IN_PRELOCK_WINDOW | 47.04 | PRELOCK_NOT_AVAILABLE | no reliable pre-lock data available; missing data is neutral |
-| 1494182 | Kalmar FF | Degerfors IF | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 317.06 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1504822 | Kashima | FC Tokyo | OVER_1_5 | IN_PRELOCK_WINDOW | 41.91 | PRELOCK_NOT_AVAILABLE | no reliable pre-lock data available; missing data is neutral |
+| 1494182 | Kalmar FF | Degerfors IF | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 311.92 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 
 ### Stale Pre-Lock Warning
 _No stale pre-lock rows excluded._
@@ -142,8 +142,8 @@ _No rows._
 ## Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1504822 | Kashima | FC Tokyo | OVER_1_5 | IN_PRELOCK_WINDOW | 47.04 | PRELOCK_NOT_AVAILABLE | no reliable pre-lock data available; missing data is neutral |
-| 1494182 | Kalmar FF | Degerfors IF | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 317.06 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1504822 | Kashima | FC Tokyo | OVER_1_5 | IN_PRELOCK_WINDOW | 41.91 | PRELOCK_NOT_AVAILABLE | no reliable pre-lock data available; missing data is neutral |
+| 1494182 | Kalmar FF | Degerfors IF | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 311.92 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 
 ## Drift Monitor Status
 | pattern | settled_rows | wins | losses | profit_units | drift_status |
@@ -175,22 +175,22 @@ _No rows._
 - Ledger report: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-23/vsigma_ledger_daily_report.md
 
 ## Daily Controller Status
-- Next recommended action: CHECK_STALE_OUTPUTS
-- Pre-lock due time: 2026-05-23T07:01:49.400000+00:00
+- Next recommended action: RUN_POST_AFTER_FINISH
+- Pre-lock due time: 2026-05-23T07:01:50.600000+00:00
 - Status path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-23/daily_controller_status.md
 
 ## Daily Supervisor
 - Supervisor latest status: SUPERVISOR_STATUS_NOT_AVAILABLE
 - Last run mode/time: NOT_AVAILABLE / NOT_AVAILABLE
-- Next recommended action: CHECK_STALE_OUTPUTS
+- Next recommended action: RUN_POST_AFTER_FINISH
 - Scheduled automation status: REGISTRATION_SCRIPT_AVAILABLE_STATUS_NOT_QUERIED
 - Logs path: C:\vsigma\automation_logs\supervisor
 - Report path: NOT_AVAILABLE
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: official_baseline_output: WARNING - only stale rows found for 2026-05-22
-- Recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-23 --timezone Atlantic/Canary --mode pre`
+- Critical warnings: freshness_report: WARNING - validation report contains warning rows
+- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-23`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-23/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
@@ -292,8 +292,8 @@ _No rows._
 | vsigma_today_match_script_forecasts.csv | FORECAST | PASS | output is fresh for requested target date | 2 |
 | vsigma_today_candidate_v2_match_script_forecasts.csv | FORECAST_CANDIDATE_V2 | PASS | output is fresh for requested target date | 2 |
 | vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-22'] does not match 2026-05-23 | 2 |
-| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-22'] does not match 2026-05-23 | 2 |
+| vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | PASS | output is fresh for requested target date | 2 |
 | today_pipeline_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
 | today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet | 0 |
 

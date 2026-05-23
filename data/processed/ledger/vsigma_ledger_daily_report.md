@@ -93,6 +93,4 @@
 | file_name | status | detail |
 | --- | --- | --- |
 | vsigma_today_candidate_v7_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| vsigma_today_prelock_competition_top.csv | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-22'] does not match 2026-05-23 |
-| vsigma_today_prelock_comparison.csv | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-22'] does not match 2026-05-23 |
 | today_post_results_report.csv | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet |

@@ -12,8 +12,8 @@
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Kashima vs FC Tokyo | OVER_1_5 | 2026-05-23T09:30+01:00 | 45.03 | NO_BET | NO | ODDS_NOT_AVAILABLE;LINEUPS_NOT_AVAILABLE;AVAILABILITY_NOT_AVAILABLE |  |
-| Kalmar FF vs Degerfors IF | OVER_1_5 | 2026-05-23T14:00+01:00 | 315.03 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | 2026-05-23T13:00+01:00 |
+| Kashima vs FC Tokyo | OVER_1_5 | 2026-05-23T09:30+01:00 | 39.88 | NO_BET | NO | ODDS_NOT_AVAILABLE;LINEUPS_NOT_AVAILABLE;AVAILABILITY_NOT_AVAILABLE |  |
+| Kalmar FF vs Degerfors IF | OVER_1_5 | 2026-05-23T14:00+01:00 | 309.88 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | 2026-05-23T13:00+01:00 |
 
 ## Data Gaps
 - odds missing: 1
