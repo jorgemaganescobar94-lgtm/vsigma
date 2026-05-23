@@ -11,7 +11,6 @@ Data-rich / good leagues:
      England          Championship    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
      Finland         Veikkausliiga    2026         COVERAGE_RICH                           0.95                                  1                         1                             0                            1                  OFFICIAL_API
        Italy               Serie A    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
-       Japan             J1 League    2026         COVERAGE_RICH                           0.95                                  1                         1                             0                            1                  OFFICIAL_API
  Netherlands        Eerste Divisie    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
 South-Africa Premier Soccer League    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
        Spain               La Liga    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
@@ -19,9 +18,8 @@ South-Africa Premier Soccer League    2025         COVERAGE_RICH                
          USA   Major League Soccer    2026         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
 
 Partial leagues:
-  country  league  season league_coverage_class  league_data_reliability_score  league_has_fixture_stats_coverage  league_has_odds_coverage  league_has_injuries_coverage  league_has_lineups_coverage league_coverage_source_status
-   Brazil Serie C    2026      COVERAGE_PARTIAL                            0.7                                  0                         1                             0                            1                  OFFICIAL_API
-Lithuania  A Lyga    2026      COVERAGE_PARTIAL                            0.7                                  0                         1                             0                            1                  OFFICIAL_API
+country  league  season league_coverage_class  league_data_reliability_score  league_has_fixture_stats_coverage  league_has_odds_coverage  league_has_injuries_coverage  league_has_lineups_coverage league_coverage_source_status
+ Brazil Serie C    2026      COVERAGE_PARTIAL                            0.7                                  0                         1                             0                            1                  OFFICIAL_API
 
 Thin / minimal leagues:
 None
