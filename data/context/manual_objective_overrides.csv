@@ -1,0 +1,3 @@
+target_date,fixture_id,home_team,away_team,competition,home_objective_status,away_objective_status,objective_edge,objective_note,source_note
+2026-05-23,1378234,Bologna,Inter,Serie A,NO_STRONG_OBJECTIVE,NO_STRONG_OBJECTIVE,NEUTRAL,"Inter already champion; Bologna not treated as objective-dominant for this fixture. Do not use table-rank proxy as motivation edge.",manual_verified_context
+2026-05-23,1378237,Lazio,Pisa,Serie A,NO_STRONG_OBJECTIVE,NO_STRONG_OBJECTIVE,NEUTRAL,"Pisa already relegated; Lazio-Pisa not treated as objective-dominant. Do not use bottom-rank urgency proxy as motivation edge.",manual_verified_context
