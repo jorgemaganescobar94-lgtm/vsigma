@@ -5,52 +5,49 @@ Missing or thin odds are treated as uncertainty, not as a negative football sign
 
 Summary
                 summary_scope                 metric  rows_total
-                      overall        target_fixtures          28
-  odds_structure_depth_status                     OK          28
-odds_structure_coherence_flag          RICH_COHERENT          23
-odds_structure_coherence_flag             RICH_MIXED           5
-      odds_total_ladder_shape            BROAD_GOALS          12
-      odds_total_ladder_shape             MILD_GOALS           9
-      odds_total_ladder_shape               BALANCED           5
+                      overall        target_fixtures          25
+  odds_structure_depth_status                     OK          25
+odds_structure_coherence_flag          RICH_COHERENT          21
+odds_structure_coherence_flag             RICH_MIXED           4
+      odds_total_ladder_shape            BROAD_GOALS          11
+      odds_total_ladder_shape               BALANCED           6
+      odds_total_ladder_shape             MILD_GOALS           6
       odds_total_ladder_shape              LOW_GOALS           1
       odds_total_ladder_shape             WIDE_GOALS           1
- odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL          13
- odds_market_translation_hint    PREFER_MILDER_TOTAL          10
- odds_market_translation_hint   CAUTION_FRAGILE_SIDE           3
+ odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL          12
+ odds_market_translation_hint    PREFER_MILDER_TOTAL           7
+ odds_market_translation_hint   CAUTION_FRAGILE_SIDE           4
  odds_market_translation_hint                NEUTRAL           1
  odds_market_translation_hint           CAUTION_BTTS           1
-    odds_line_aggression_flag     OVER_2_5_SUPPORTED          13
-    odds_line_aggression_flag        PREFER_OVER_1_5           9
-    odds_line_aggression_flag                NEUTRAL           5
+    odds_line_aggression_flag     OVER_2_5_SUPPORTED          12
+    odds_line_aggression_flag                NEUTRAL           6
+    odds_line_aggression_flag        PREFER_OVER_1_5           6
     odds_line_aggression_flag AVOID_AGGRESSIVE_OVERS           1
 
 Fixture preview
- fixture_id              league           home_team        away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
-    1545715        Championship           Hull City    Middlesbrough                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3245                            -0.015
-    1536965  Jupiler Pro League             Antwerp     KVC Westerlo                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3407                             0.030
-    1544683  Jupiler Pro League              Dender    Lommel United                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2814                             0.030
-    1536964  Jupiler Pro League           OH Leuven             Genk                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3419                             0.030
-    1536963  Jupiler Pro League      Standard Liege        Charleroi                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3064                            -0.015
-    1391189             La Liga              Alaves   Rayo Vallecano                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2605                            -0.015
-    1391191             La Liga          Celta Vigo          Sevilla                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3667                            -0.015
-    1391192             La Liga            Espanyol    Real Sociedad                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3157                             0.030
-    1391193             La Liga              Getafe          Osasuna                 RICH_COHERENT               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.3477                            -0.015
-    1391194             La Liga              Girona            Elche                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3223                             0.030
-    1391195             La Liga            Mallorca           Oviedo                 RICH_COHERENT                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.3306                            -0.010
-    1391190             La Liga          Real Betis          Levante                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3196                             0.030
-    1391196             La Liga         Real Madrid    Athletic Club                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3177                             0.030
-    1391197             La Liga            Valencia        Barcelona                 RICH_COHERENT              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3108                             0.030
-    1378234             Serie A             Bologna            Inter                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3682                             0.025
-    1378237             Serie A               Lazio             Pisa                 RICH_COHERENT                BALANCED                      NEUTRAL                   NEUTRAL                 0.3094                             0.000
-    1494180         Allsvenskan            Halmstad       Orgryte IS                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3287                            -0.015
-    1494182         Allsvenskan           Kalmar FF     Degerfors IF                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3603                            -0.015
-    1545425      Eerste Divisie         FC Volendam        Willem II                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3333                             0.030
-    1504822           J1 League             Kashima         FC Tokyo                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2970                            -0.015
-    1504823           J1 League      Kashiwa Reysol JEF United Chiba                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3762                             0.025
-    1504824           J1 League         Kyoto Sanga V-varen Nagasaki                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3633                            -0.015
-    1490317 Major League Soccer Minnesota United FC   Real Salt Lake                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3100                             0.030
-    1490310 Major League Soccer      St. Louis City           Austin                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3349                             0.030
-    1492274             Serie A              Gremio           Santos                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3267                            -0.015
-    1492275             Serie A            Mirassol       Fluminense                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2790                            -0.015
-    1492277             Serie A           Sao Paulo         Botafogo                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3482                            -0.015
-    1492279             Serie A             Vitoria    Internacional                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2684                            -0.015
+ fixture_id              league           home_team      away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
+    1545715        Championship           Hull City  Middlesbrough                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2765                            -0.015
+    1536965  Jupiler Pro League             Antwerp   KVC Westerlo                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3232                             0.030
+    1544683  Jupiler Pro League              Dender  Lommel United                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3026                             0.030
+    1536964  Jupiler Pro League           OH Leuven           Genk                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3627                             0.025
+    1536963  Jupiler Pro League      Standard Liege      Charleroi                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.2969                            -0.015
+    1391189             La Liga              Alaves Rayo Vallecano                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2891                            -0.015
+    1391191             La Liga          Celta Vigo        Sevilla                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3035                            -0.015
+    1391192             La Liga            Espanyol  Real Sociedad                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3189                             0.030
+    1391193             La Liga              Getafe        Osasuna                    RICH_MIXED               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.3604                            -0.015
+    1391194             La Liga              Girona          Elche                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3159                             0.030
+    1391195             La Liga            Mallorca         Oviedo                 RICH_COHERENT                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.3153                            -0.010
+    1391190             La Liga          Real Betis        Levante                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3151                             0.030
+    1391196             La Liga         Real Madrid  Athletic Club                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3157                             0.030
+    1391197             La Liga            Valencia      Barcelona                 RICH_COHERENT              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3298                             0.030
+    1378234             Serie A             Bologna          Inter                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4924                             0.025
+    1378237             Serie A               Lazio           Pisa                 RICH_COHERENT                BALANCED                      NEUTRAL                   NEUTRAL                 0.3273                             0.000
+    1494180         Allsvenskan            Halmstad     Orgryte IS                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3492                            -0.015
+    1494182         Allsvenskan           Kalmar FF   Degerfors IF                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3328                            -0.015
+    1545425      Eerste Divisie         FC Volendam      Willem II                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3461                             0.030
+    1490317 Major League Soccer Minnesota United FC Real Salt Lake                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3111                             0.030
+    1490310 Major League Soccer      St. Louis City         Austin                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3299                             0.030
+    1492274             Serie A              Gremio         Santos                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2785                            -0.015
+    1492275             Serie A            Mirassol     Fluminense                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3640                            -0.015
+    1492277             Serie A           Sao Paulo       Botafogo                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3189                            -0.015
+    1492279             Serie A             Vitoria  Internacional                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2963                            -0.015

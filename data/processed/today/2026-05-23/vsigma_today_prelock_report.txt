@@ -3,11 +3,11 @@
 - Target date: 2026-05-23
 - Timezone: Atlantic/Canary
 - Window minutes: 90
-- Morning official picks reviewed: 2
+- Morning official picks reviewed: 1
 - Stale morning rows excluded: 0
 - Stale morning row dates: none
 - In-window pre-lock picks retained: 1
-- Generated at: 2026-05-23T07:50:03+00:00
+- Generated at: 2026-05-23T12:05:26+00:00
 
 ## Refresh Steps
                                    step status
@@ -17,7 +17,7 @@ scripts/enrich_injuries_availability.py   PASS
  scripts/enrich_odds_structure_depth.py   PASS
 
 ## Decisions
- PRELOCK_NOT_AVAILABLE
-                     2
+ PRELOCK_NO_CHANGE
+                 1
 
 Missing pre-lock data is treated as uncertainty, not weakness. No official morning file is overwritten.

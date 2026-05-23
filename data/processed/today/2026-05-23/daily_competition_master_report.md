@@ -88,8 +88,7 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 ### Active Pre-Lock Decisions
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1504822 | Kashima | FC Tokyo | OVER_1_5 | IN_PRELOCK_WINDOW | 41.91 | PRELOCK_NOT_AVAILABLE | no reliable pre-lock data available; missing data is neutral |
-| 1494182 | Kalmar FF | Degerfors IF | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 311.92 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1494182 | Kalmar FF | Degerfors IF | OVER_1_5 | IN_PRELOCK_WINDOW | 71.2 | PRELOCK_NO_CHANGE | no explicit pre-lock contradiction detected |
 
 ### Stale Pre-Lock Warning
 _No stale pre-lock rows excluded._
@@ -111,7 +110,7 @@ _No stale pre-lock rows excluded._
 | 1492279 | Vitoria | Internacional | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.44 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1494182 | Kalmar FF | Degerfors IF | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.38 |  | 1.4 | 0.02 | CLV_NEGATIVE |  |  |
 | 1494182 | Kalmar FF | Degerfors IF | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.38 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1494182 | Kalmar FF | Degerfors IF | OVER_1_5 | OFFICIAL_BASELINE | 1.38 |  | 1.4 | 0.02 | CLV_NEGATIVE |  |  |
+| 1494182 | Kalmar FF | Degerfors IF | OVER_1_5 | OFFICIAL_BASELINE | 1.38 | 1.38 | 1.4 | 0.02 | CLV_NEGATIVE |  |  |
 | 1504822 | Kashima | FC Tokyo | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.4 |  | 1.4 | 0.0 | CLV_FLAT |  |  |
 | 1504822 | Kashima | FC Tokyo | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.4 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1504822 | Kashima | FC Tokyo | OVER_1_5 | OFFICIAL_BASELINE | 1.4 | 1.4 | 1.4 | 0.0 | CLV_FLAT |  |  |
@@ -130,8 +129,7 @@ _No rows._
 ## Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1504822 | Kashima | FC Tokyo | OVER_1_5 | IN_PRELOCK_WINDOW | 41.91 | PRELOCK_NOT_AVAILABLE | no reliable pre-lock data available; missing data is neutral |
-| 1494182 | Kalmar FF | Degerfors IF | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 311.92 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1494182 | Kalmar FF | Degerfors IF | OVER_1_5 | IN_PRELOCK_WINDOW | 71.2 | PRELOCK_NO_CHANGE | no explicit pre-lock contradiction detected |
 
 ## Drift Monitor Status
 | pattern | settled_rows | wins | losses | profit_units | drift_status |
@@ -177,26 +175,26 @@ _No rows._
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: freshness_report: WARNING - validation report contains warning rows
-- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-23`
+- Critical warnings: post_results_status: WARNING - post has 4 pending row(s)
+- Recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-23 --timezone Atlantic/Canary --mode post`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-23/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | OFFICIAL_BASELINE | 1504822.0 | Kashima | FC Tokyo | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
-| OFFICIAL_BASELINE | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 | PRELOCK_NO_CHANGE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1504822.0 | Kashima | FC Tokyo | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 | PRELOCK_NO_CHANGE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
 | CANDIDATE_V4_O25_FIREWALL | 1504822.0 | Kashima | FC Tokyo | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
-| CANDIDATE_V4_O25_FIREWALL | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 | PRELOCK_NO_CHANGE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V5_PLAYER_IMPACT | 1504822.0 | Kashima | FC Tokyo | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
-| CANDIDATE_V5_PLAYER_IMPACT | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 | PRELOCK_NO_CHANGE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V6_API_PREDICTIONS | 1504822.0 | Kashima | FC Tokyo | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PENDING |
-| CANDIDATE_V6_API_PREDICTIONS | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V6_API_PREDICTIONS | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 | PRELOCK_NO_CHANGE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1504822.0 | Kashima | FC Tokyo | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1494182.0 | Kalmar FF | Degerfors IF | OVER_1_5 | PRELOCK_NO_CHANGE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V7_PRICE_DISCIPLINE |  |  |  |  |  |  |  | NO_BET_RECORD |
 
 ### Experiment Performance Summary
