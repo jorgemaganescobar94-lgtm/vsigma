@@ -89,7 +89,7 @@ def rows_for_date(rows: list[dict[str, str]], target_date: str) -> list[dict[str
 
 
 def row_key(row: dict[str, str]) -> tuple[str, str]:
-    return (norm(row.get("fixture_id")), upper(row.get("market_primary")))
+    return (norm(row.get("fixture_id")).replace(".0", ""), upper(row.get("market_primary")))
 
 
 def pick_first(*values: object) -> str:
@@ -107,6 +107,79 @@ def index_by_key(rows: list[dict[str, str]]) -> dict[tuple[str, str], dict[str, 
         if key[0] and key[1] and key not in result:
             result[key] = row
     return result
+
+
+def clean_risk(value: object) -> str:
+    text = norm(value)
+    if not text:
+        return ""
+    return text.split(";", 1)[0].strip()
+
+
+def result_to_quality_label(result: str) -> str:
+    result = upper(result)
+    if result == "WIN":
+        return "ACTIONABLE_WIN"
+    if result == "LOSS":
+        return "ACTIONABLE_LOSS"
+    if result == "PUSH":
+        return "ACTIONABLE_PUSH"
+    if result == "VOID":
+        return "ACTIONABLE_VOID"
+    return "ACTIONABLE_UNRESOLVED"
+
+
+def result_to_signal(result: str) -> str:
+    result = upper(result)
+    if result == "LOSS":
+        return "REVIEW_PATTERN"
+    if result == "WIN":
+        return "CONFIRM_EDGE"
+    if result in {"PUSH", "VOID"}:
+        return "NEUTRAL_RESULT"
+    return "WAIT_FOR_POST_RESULTS"
+
+
+def execution_result_to_decision(row: dict[str, str], shortlist_by_key: dict[tuple[str, str], dict[str, str]]) -> dict[str, str]:
+    key = row_key(row)
+    shortlist = shortlist_by_key.get(key, {})
+    result = upper(pick_first(row.get("actionable_result"), row.get("primary_result")))
+    risk = clean_risk(pick_first(shortlist.get("pick_primary_risk"), shortlist.get("pick_failure_mode")))
+    return {
+        "target_date": norm(pick_first(row.get("target_date"), row.get("date")))[:10],
+        "fixture_id": norm(row.get("fixture_id")).replace(".0", ""),
+        "league": norm(row.get("league")),
+        "home_team": norm(row.get("home_team")),
+        "away_team": norm(row.get("away_team")),
+        "market_primary": upper(row.get("market_primary")),
+        "official_action": "EXECUTABLE" if upper(row.get("final_recommendation")) == "BET" else upper(row.get("final_recommendation")),
+        "executable_now": "YES" if upper(row.get("final_recommendation")) == "BET" else "NO",
+        "final_block_reason": "NONE",
+        "execution_family_status": upper(pick_first(row.get("ledger_result_status"), "RESULT_AVAILABLE")),
+        "is_actionable": "YES" if upper(row.get("final_recommendation")) == "BET" else "NO",
+        "is_non_actionable": "NO" if upper(row.get("final_recommendation")) == "BET" else "YES",
+        "is_expired": "NO",
+        "result_status": result or "UNRESOLVED",
+        "decision_quality_label": result_to_quality_label(result),
+        "quality_bucket": "RESOLVED_RESULT" if result in {"WIN", "LOSS", "PUSH", "VOID"} else "NEEDS_MORE_DATA",
+        "improvement_signal": result_to_signal(result),
+        "recommended_followup": "Accumulate result sample; only repeated patterns can feed shadow/review gates.",
+        "accuracy_primary_risk": risk or "UNKNOWN_RISK",
+        "competition_calibrated_prob": norm(pick_first(row.get("primary_model_prob"), shortlist.get("primary_model_prob"))),
+    }
+
+
+def dedupe_decision_rows(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    out: list[dict[str, str]] = []
+    seen: set[tuple[str, str]] = set()
+    for row in rows:
+        key = row_key(row)
+        if key[0] and key[1]:
+            if key in seen:
+                continue
+            seen.add(key)
+        out.append(row)
+    return out
 
 
 def classify_learning_family(row: dict[str, str]) -> str:
@@ -146,9 +219,9 @@ def classify_learning_status(row: dict[str, str], family: str) -> tuple[str, str
         return "REVIEW_PATTERN", "P2", "Potential learning signal; collect repeated samples before proposing any change."
     if signal in {"REVIEW_AUTO_TIMING", "REVIEW_PRELOCK_STRICTNESS", "REVIEW_NON_ACTIONABLE_BLOCK"}:
         return "REVIEW_PATTERN", "P2", "Operational pattern candidate; keep collecting evidence."
-    if family == "ACTIONABLE_RESULT" and result_status in {"WIN", "LOSS", "VOID"}:
+    if family == "ACTIONABLE_RESULT" and result_status in {"WIN", "LOSS", "VOID", "PUSH"}:
         return "COLLECT_MORE_SAMPLE", "P3", "Resolved actionable result logged for sample accumulation."
-    if family == "NO_BET_BLOCK" and result_status in {"WIN", "LOSS", "VOID"}:
+    if family == "NO_BET_BLOCK" and result_status in {"WIN", "LOSS", "VOID", "PUSH"}:
         return "COLLECT_MORE_SAMPLE", "P3", "Resolved block result logged for no-bet quality sample."
     if result_status == "UNRESOLVED":
         return "COLLECT_MORE_SAMPLE", "P3", "Outcome unresolved; wait for post-results labeling."
@@ -173,36 +246,34 @@ def build_learning_rows(target_date: str, decision_rows: list[dict[str, str]], q
         combined = {**decision, **quality}
         family = classify_learning_family(combined)
         status, priority, note = classify_learning_status(combined, family)
-        rows.append(
-            {
-                "target_date": target_date,
-                "generated_at": generated_at,
-                "fixture_id": norm(pick_first(combined.get("fixture_id"), decision.get("fixture_id"))),
-                "league": norm(pick_first(combined.get("league"), decision.get("league"))),
-                "home_team": norm(pick_first(combined.get("home_team"), decision.get("home_team"))),
-                "away_team": norm(pick_first(combined.get("away_team"), decision.get("away_team"))),
-                "market_primary": upper(pick_first(combined.get("market_primary"), decision.get("market_primary"))),
-                "official_action": upper(combined.get("official_action")),
-                "executable_now": upper(combined.get("executable_now")),
-                "final_block_reason": upper(combined.get("final_block_reason")),
-                "execution_family_status": upper(combined.get("execution_family_status")),
-                "is_actionable": upper(combined.get("is_actionable")),
-                "is_non_actionable": upper(combined.get("is_non_actionable")),
-                "is_expired": upper(combined.get("is_expired")),
-                "result_status": upper(combined.get("result_status")) or "UNRESOLVED",
-                "decision_quality_label": upper(combined.get("decision_quality_label")),
-                "quality_bucket": upper(combined.get("quality_bucket")),
-                "improvement_signal": upper(combined.get("improvement_signal")),
-                "recommended_followup": norm(combined.get("recommended_followup")),
-                "accuracy_primary_risk": norm(combined.get("accuracy_primary_risk")),
-                "competition_calibrated_prob": norm(combined.get("competition_calibrated_prob")),
-                "learning_family": family,
-                "learning_status": status,
-                "sample_key": sample_key(combined, family),
-                "learning_priority": priority,
-                "learning_note": note,
-            }
-        )
+        rows.append({
+            "target_date": target_date,
+            "generated_at": generated_at,
+            "fixture_id": norm(pick_first(combined.get("fixture_id"), decision.get("fixture_id"))).replace(".0", ""),
+            "league": norm(pick_first(combined.get("league"), decision.get("league"))),
+            "home_team": norm(pick_first(combined.get("home_team"), decision.get("home_team"))),
+            "away_team": norm(pick_first(combined.get("away_team"), decision.get("away_team"))),
+            "market_primary": upper(pick_first(combined.get("market_primary"), decision.get("market_primary"))),
+            "official_action": upper(combined.get("official_action")),
+            "executable_now": upper(combined.get("executable_now")),
+            "final_block_reason": upper(combined.get("final_block_reason")),
+            "execution_family_status": upper(combined.get("execution_family_status")),
+            "is_actionable": upper(combined.get("is_actionable")),
+            "is_non_actionable": upper(combined.get("is_non_actionable")),
+            "is_expired": upper(combined.get("is_expired")),
+            "result_status": upper(combined.get("result_status")) or "UNRESOLVED",
+            "decision_quality_label": upper(combined.get("decision_quality_label")),
+            "quality_bucket": upper(combined.get("quality_bucket")),
+            "improvement_signal": upper(combined.get("improvement_signal")),
+            "recommended_followup": norm(combined.get("recommended_followup")),
+            "accuracy_primary_risk": norm(combined.get("accuracy_primary_risk")),
+            "competition_calibrated_prob": norm(combined.get("competition_calibrated_prob")),
+            "learning_family": family,
+            "learning_status": status,
+            "sample_key": sample_key(combined, family),
+            "learning_priority": priority,
+            "learning_note": note,
+        })
         if key[0] and key[1]:
             seen.add(key)
 
@@ -213,35 +284,33 @@ def build_learning_rows(target_date: str, decision_rows: list[dict[str, str]], q
         family = classify_learning_family(quality)
         status, priority, note = classify_learning_status(quality, family)
         row = {column: "" for column in OUTPUT_COLUMNS}
-        row.update(
-            {
-                "target_date": target_date,
-                "generated_at": generated_at,
-                "fixture_id": norm(quality.get("fixture_id")),
-                "league": norm(quality.get("league")),
-                "home_team": norm(quality.get("home_team")),
-                "away_team": norm(quality.get("away_team")),
-                "market_primary": upper(quality.get("market_primary")),
-                "official_action": upper(quality.get("official_action")),
-                "final_block_reason": upper(quality.get("final_block_reason")),
-                "execution_family_status": upper(quality.get("execution_family_status")),
-                "is_actionable": upper(quality.get("is_actionable")),
-                "is_non_actionable": upper(quality.get("is_non_actionable")),
-                "is_expired": upper(quality.get("is_expired")),
-                "result_status": upper(quality.get("result_status")) or "UNRESOLVED",
-                "decision_quality_label": upper(quality.get("decision_quality_label")),
-                "quality_bucket": upper(quality.get("quality_bucket")),
-                "improvement_signal": upper(quality.get("improvement_signal")),
-                "recommended_followup": norm(quality.get("recommended_followup")),
-                "accuracy_primary_risk": norm(quality.get("accuracy_primary_risk")),
-                "competition_calibrated_prob": norm(quality.get("competition_calibrated_prob")),
-                "learning_family": family,
-                "learning_status": status,
-                "sample_key": sample_key(quality, family),
-                "learning_priority": priority,
-                "learning_note": note,
-            }
-        )
+        row.update({
+            "target_date": target_date,
+            "generated_at": generated_at,
+            "fixture_id": norm(quality.get("fixture_id")).replace(".0", ""),
+            "league": norm(quality.get("league")),
+            "home_team": norm(quality.get("home_team")),
+            "away_team": norm(quality.get("away_team")),
+            "market_primary": upper(quality.get("market_primary")),
+            "official_action": upper(quality.get("official_action")),
+            "final_block_reason": upper(quality.get("final_block_reason")),
+            "execution_family_status": upper(quality.get("execution_family_status")),
+            "is_actionable": upper(quality.get("is_actionable")),
+            "is_non_actionable": upper(quality.get("is_non_actionable")),
+            "is_expired": upper(quality.get("is_expired")),
+            "result_status": upper(quality.get("result_status")) or "UNRESOLVED",
+            "decision_quality_label": upper(quality.get("decision_quality_label")),
+            "quality_bucket": upper(quality.get("quality_bucket")),
+            "improvement_signal": upper(quality.get("improvement_signal")),
+            "recommended_followup": norm(quality.get("recommended_followup")),
+            "accuracy_primary_risk": norm(quality.get("accuracy_primary_risk")),
+            "competition_calibrated_prob": norm(quality.get("competition_calibrated_prob")),
+            "learning_family": family,
+            "learning_status": status,
+            "sample_key": sample_key(quality, family),
+            "learning_priority": priority,
+            "learning_note": note,
+        })
         rows.append(row)
     return rows
 
@@ -300,6 +369,18 @@ def build_markdown(target_date: str, generated_at: str, rows: list[dict[str, str
 
 def load_inputs(processed_dir: Path, target_date: str) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     today = processed_dir / "today" / target_date
+    shortlist_rows = read_csv_rows(today / "vsigma_today_execution_shortlist.csv") or read_csv_rows(processed_dir / "vsigma_today_execution_shortlist.csv")
+    shortlist_by_key = index_by_key(shortlist_rows)
+    result_sources = [
+        today / "vsigma_execution_shortlist_results_ledger.csv",
+        processed_dir / "vsigma_execution_shortlist_results_ledger.csv",
+    ]
+    execution_decisions: list[dict[str, str]] = []
+    for path in result_sources:
+        for row in rows_for_date(read_csv_rows(path), target_date):
+            if upper(row.get("ledger_result_status")) == "RESULT_AVAILABLE":
+                execution_decisions.append(execution_result_to_decision(row, shortlist_by_key))
+
     decision_sources = [
         today / "vsigma_decision_outcome_ledger.csv",
         processed_dir / "ledger" / "vsigma_decision_outcome_ledger.csv",
@@ -315,7 +396,7 @@ def load_inputs(processed_dir: Path, target_date: str) -> tuple[list[dict[str, s
         decision_rows.extend(rows_for_date(read_csv_rows(path), target_date))
     for path in quality_sources:
         quality_rows.extend(rows_for_date(read_csv_rows(path), target_date))
-    return decision_rows, quality_rows
+    return dedupe_decision_rows([*execution_decisions, *decision_rows]), quality_rows
 
 
 def build_learning_ledger(
