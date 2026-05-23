@@ -1,28 +1,27 @@
 # vSIGMA Cloud Decision Summary - 2026-05-23
 
 ## Status
-- Auto status: WAITING_OR_BLOCKED
-- PRE refreshed: YES
-- Candidates reviewed: 2
-- Executable picks: 0
-- Waiting picks: 1
-- Blocked picks: 1
+- Auto status: EXECUTABLE
+- PRE refreshed: NO
+- Candidates reviewed: 1
+- Executable picks: 1
+- Waiting picks: 0
+- Blocked picks: 0
 - Data problem picks: 0
-- Next automatic action: WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW
-- OFFICIAL_ACTION_SUMMARY: MIXED
+- Next automatic action: EXECUTE_GOVERNED_PICK
+- OFFICIAL_ACTION_SUMMARY: EXECUTABLE
 
 ## Executable Picks
-_No rows._
+| fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | official_action | executable_now | prelock_decision | next_action |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1494182 | Allsvenskan | Kalmar FF | Degerfors IF | OVER_1_5 | 0.7829 | EXECUTABLE | YES | PRELOCK_NO_CHANGE | EXECUTE_GOVERNED_PICK |
 
 ## Waiting / Blocked Picks
-| fixture_id | league | home_team | away_team | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | retry_allowed | next_retry_time | decision_state | exclusion_reason | next_action |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1504822 | J1 League | Kashima | FC Tokyo | OVER_1_5 | 2026-05-23T09:30+01:00 | 39.89 | NO_BET | NO | ODDS_NOT_AVAILABLE;LINEUPS_NOT_AVAILABLE;AVAILABILITY_NOT_AVAILABLE | NO |  | PRELOCK_BLOCKED | PRELOCK_NOT_AVAILABLE | WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW |
-| 1494182 | Allsvenskan | Kalmar FF | Degerfors IF | OVER_1_5 | 2026-05-23T14:00+01:00 | 309.89 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | YES | 2026-05-23T13:00+01:00 | WAITING_FOR_PRELOCK_WINDOW | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-05-23T13:00+01:00 |
+_No rows._
 
 ## Technical Warnings
 - healthcheck_status: WARNING
-- pre_refresh_attempted: YES
+- pre_refresh_attempted: NO
 - pre_refresh_failed: NO
 - pre_refresh_skipped_reason: none
 - pre_refresh_error: none
@@ -34,10 +33,10 @@ _No rows._
 ## Technical Notes
 - Timezone: Atlantic/Canary
 - Window minutes: 90
-- PRE refreshed by auto controller: YES
-- PRE refresh reasons: text trigger: only stale rows found
+- PRE refreshed by auto controller: NO
+- PRE refresh reasons: none
 - PRELOCK retained no rows: NO
-- PRELOCK unavailable rows: 1
+- PRELOCK unavailable rows: 0
 - Candidate source used: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-23/vsigma_today_competition_top.csv
 - Global candidate fallback: /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_competition_top.csv
 - PRELOCK source: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-23/vsigma_today_prelock_competition_top.csv
