@@ -43,7 +43,7 @@
 - injuries coverage: 13/17
 - lineups coverage: 17/17
 - predictions coverage: 17/17
-- odds structure depth: target_fixtures: 44; OK: 43; NO_ODDS_FOUND: 1; RICH_MIXED: 25; RICH_COHERENT: 18
+- odds structure depth: target_fixtures: 44; OK: 43; NO_ODDS_FOUND: 1; RICH_MIXED: 24; RICH_COHERENT: 19
 - API gaps detected: fixture_stats, injuries
 
 ## Model / Market Review
@@ -78,6 +78,6 @@
 | P3 | model_calibration | Defer recalibration until minimum closed-pick sample | Fewer than 30 closed picks are available. | Avoids fitting thresholds or probability adjustments to noise. | Low; no predictive change is applied. | Keep calibration reporting active and wait for at least 30 closed picks before suggestions. | NO | closed_picks=7; enough_sample=NO; recalibration_allowed=NO |
 
 ## Input Inventory
-- generated_at: 2026-05-24T13:10:23+01:00
+- generated_at: 2026-05-24T13:14:25+01:00
 - timezone: Atlantic/Canary
 - missing optional inputs: none

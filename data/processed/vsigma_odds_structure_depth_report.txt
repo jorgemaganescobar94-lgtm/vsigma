@@ -8,8 +8,8 @@ Summary
                       overall        target_fixtures          44
   odds_structure_depth_status                     OK          43
   odds_structure_depth_status          NO_ODDS_FOUND           1
-odds_structure_coherence_flag             RICH_MIXED          25
-odds_structure_coherence_flag          RICH_COHERENT          18
+odds_structure_coherence_flag             RICH_MIXED          24
+odds_structure_coherence_flag          RICH_COHERENT          19
 odds_structure_coherence_flag      NO_ODDS_UNCERTAIN           1
       odds_total_ladder_shape            BROAD_GOALS          22
       odds_total_ladder_shape               BALANCED           8
@@ -67,7 +67,7 @@ Fixture preview
     1494183         Allsvenskan           Malmo FF      Vasteras SK FK                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2805                             0.030
     1494184         Allsvenskan             Sirius                Gais                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3645                             0.025
     1494668         Eliteserien         Bodo/Glimt               Brann                    RICH_MIXED              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4457                             0.025
-    1494671         Eliteserien    Kristiansund BK              Viking                    RICH_MIXED              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3566                             0.025
+    1494671         Eliteserien    Kristiansund BK              Viking                 RICH_COHERENT              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3249                             0.030
     1545176          League One             Bolton    Stockport County                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3318                            -0.015
     1490322 Major League Soccer      Columbus Crew   Atlanta United FC             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                 0.0000                             0.000
     1492270             Serie A        Corinthians         Atletico-MG                    RICH_MIXED                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.3685                            -0.010
