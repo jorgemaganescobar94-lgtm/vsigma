@@ -1,0 +1,4 @@
+target_date,generated_at,rank,fixture_id,home_team,away_team,market_primary,base_result,base_profit_units,adjusted_status,stake_band,audit_label,audit_effect_units,audit_reason,auto_apply,production_change
+2026-05-23,2026-05-24T13:48:14+01:00,1,1378234,Bologna,Inter,AWAY_WIN,LOSS,-1.0,BET_DOWNGRADED_TO_REVIEW,NO_STAKE_OR_SYMBOLIC,AVOIDED_LOSS,1.0,adjusted portfolio would have avoided a base loss,NO,NO
+2026-05-23,2026-05-24T13:48:14+01:00,2,1378237,Lazio,Pisa,HOME_WIN,WIN,0.78,BET_DOWNGRADED_TO_REVIEW,NO_STAKE_OR_SYMBOLIC,MISSED_WIN,-0.78,adjusted portfolio would have missed a base win,NO,NO
+2026-05-23,2026-05-24T13:48:14+01:00,3,1494182,Kalmar FF,Degerfors IF,OVER_1_5,WIN,0.38,SHADOW_RISK_ONLY,LOW_OR_SYMBOLIC,KEPT_WIN,0.38,adjusted portfolio kept a winning candidate,NO,NO

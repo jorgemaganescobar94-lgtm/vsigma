@@ -1,0 +1,2 @@
+target_date,generated_at,base_bets,base_wins,base_losses,base_profit_units,adjusted_counted_bets,adjusted_wins,adjusted_losses,adjusted_profit_units,avoided_loss_units,missed_win_units,kept_win_units,net_adjustment_delta_units,audit_verdict,auto_apply,production_change
+2026-05-23,2026-05-24T13:48:14+01:00,3,2,1,0.16,1,1,0,0.38,1.0,0.78,0.38,0.22,CONTEXT_FILTER_IMPROVED_DAY,NO,NO
