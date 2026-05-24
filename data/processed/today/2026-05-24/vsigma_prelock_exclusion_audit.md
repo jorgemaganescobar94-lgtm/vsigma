@@ -1,6 +1,6 @@
 # vSIGMA PRELOCK Exclusion Audit - 2026-05-24
 
-- Generated at: 2026-05-24T13:00:02+01:00
+- Generated at: 2026-05-24T13:10:21+01:00
 - Timezone: Atlantic/Canary
 - Candidates reviewed: 3
 - In current 90-minute window: 0
@@ -10,6 +10,6 @@
 
 | fixture_id | fixture | market | kickoff | min_to_ko | in_window | retained | exclusion_reason | next_action |
 | --- | --- | --- | --- | ---: | --- | --- | --- | --- |
-| 1392207 | Sporting Gijon vs Almeria | OVER_2_5 | 2026-05-24T17:30+01:00 | 269.96 | NO | NO | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-05-24T16:00+01:00 |
-| 1545796 | Catanzaro vs Monza | OVER_1_5 | 2026-05-24T19:00+01:00 | 359.96 | NO | NO | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-05-24T18:00+01:00 |
-| 1492276 | Remo vs Atletico Paranaense | OVER_1_5 | 2026-05-24T20:00+01:00 | 419.96 | NO | NO | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-05-24T19:00+01:00 |
+| 1392207 | Sporting Gijon vs Almeria | OVER_2_5 | 2026-05-24T17:30+01:00 | 259.64 | NO | NO | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-05-24T16:00+01:00 |
+| 1545796 | Catanzaro vs Monza | OVER_1_5 | 2026-05-24T19:00+01:00 | 349.64 | NO | NO | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-05-24T18:00+01:00 |
+| 1492276 | Remo vs Atletico Paranaense | OVER_1_5 | 2026-05-24T20:00+01:00 | 409.64 | NO | NO | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-05-24T19:00+01:00 |
