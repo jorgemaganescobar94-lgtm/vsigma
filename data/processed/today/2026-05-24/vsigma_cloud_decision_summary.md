@@ -1,15 +1,15 @@
 # vSIGMA Cloud Decision Summary - 2026-05-24
 
 ## Status
-- Auto status: WAITING_OR_BLOCKED
+- Auto status: POST_PENDING
 - PRE refreshed: NO
 - Candidates reviewed: 3
 - Executable picks: 0
-- Waiting picks: 1
-- Blocked picks: 1
+- Waiting picks: 0
+- Blocked picks: 0
 - Data problem picks: 0
-- Next automatic action: WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW
-- OFFICIAL_ACTION_SUMMARY: MIXED
+- Next automatic action: RUN_POST_WHEN_RESULTS_AVAILABLE
+- OFFICIAL_ACTION_SUMMARY: NO_BET
 
 ## Executable Picks
 _No rows._
@@ -17,9 +17,9 @@ _No rows._
 ## Waiting / Blocked Picks
 | fixture_id | league | home_team | away_team | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | retry_allowed | next_retry_time | decision_state | exclusion_reason | next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1392207 | Segunda División | Sporting Gijon | Almeria | OVER_2_5 | 2026-05-24T17:30+01:00 | -10.69 | NO_BET | NO | KICKOFF_ALREADY_PASSED | NO |  | POST_PENDING | KICKOFF_ALREADY_PASSED | WAIT_FOR_POST_RESULTS |
-| 1545796 | Serie B | Catanzaro | Monza | OVER_1_5 | 2026-05-24T19:00+01:00 | 79.31 | NO_BET | NO | PRELOCK_GOVERNANCE_NOT_RETAINED | YES | 2026-05-24T18:00+01:00 | IN_WINDOW_BUT_BLOCKED | IN_WINDOW_BUT_NOT_RETAINED | CHECK_ODDS_LINEUPS_AVAILABILITY_OR_V7_GOVERNANCE |
-| 1492276 | Serie A | Remo | Atletico Paranaense | OVER_1_5 | 2026-05-24T20:00+01:00 | 139.31 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | YES | 2026-05-24T19:00+01:00 | WAITING_FOR_PRELOCK_WINDOW | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-05-24T19:00+01:00 |
+| 1392207 | Segunda División | Sporting Gijon | Almeria | OVER_2_5 | 2026-05-24T17:30+01:00 | -227.0 | NO_BET | NO | KICKOFF_ALREADY_PASSED | NO |  | POST_PENDING | KICKOFF_ALREADY_PASSED | WAIT_FOR_POST_RESULTS |
+| 1545796 | Serie B | Catanzaro | Monza | OVER_1_5 | 2026-05-24T19:00+01:00 | -137.0 | NO_BET | NO | KICKOFF_ALREADY_PASSED | NO |  | POST_PENDING | KICKOFF_ALREADY_PASSED | WAIT_FOR_POST_RESULTS |
+| 1492276 | Serie A | Remo | Atletico Paranaense | OVER_1_5 | 2026-05-24T20:00+01:00 | -77.0 | NO_BET | NO | KICKOFF_ALREADY_PASSED | NO |  | POST_PENDING | KICKOFF_ALREADY_PASSED | WAIT_FOR_POST_RESULTS |
 
 ## Technical Warnings
 - healthcheck_status: WARNING
