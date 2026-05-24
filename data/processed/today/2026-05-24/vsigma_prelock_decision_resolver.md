@@ -12,9 +12,9 @@
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Sporting Gijon vs Almeria | OVER_2_5 | 2026-05-24T17:30+01:00 | -227.0 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
-| Catanzaro vs Monza | OVER_1_5 | 2026-05-24T19:00+01:00 | -137.0 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
-| Remo vs Atletico Paranaense | OVER_1_5 | 2026-05-24T20:00+01:00 | -77.0 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
+| Sporting Gijon vs Almeria | OVER_2_5 | 2026-05-24T17:30+01:00 | -228.49 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
+| Catanzaro vs Monza | OVER_1_5 | 2026-05-24T19:00+01:00 | -138.49 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
+| Remo vs Atletico Paranaense | OVER_1_5 | 2026-05-24T20:00+01:00 | -78.49 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
 
 ## Data Gaps
 - odds missing: 0
