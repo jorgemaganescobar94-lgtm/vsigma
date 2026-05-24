@@ -6,7 +6,7 @@
 
 ## O2.5 Low Conversion Firewall
 
-- Checked: 0
+- Huesca vs Castellón: OVER_2_5 -> OVER_1_5 | DEGRADE_TO_OVER_1_5 | UNMATCHED | <NA>
 
 ## Candidate v4 Result Summary
 
@@ -18,5 +18,7 @@
 
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v4_rank | baseline_market | candidate_v2_market | candidate_v4_market | candidate_v4_original_market | candidate_v4_firewall_decision | baseline_result | candidate_v2_result | candidate_v4_result | baseline_profit_units | candidate_v2_profit_units | candidate_v4_profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1494182 | Kalmar FF vs Degerfors IF | Allsvenskan | 2 | 2 | 2 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PENDING | PENDING | PENDING |  |  |  |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1504822 | Kashima vs FC Tokyo | J1 League | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PENDING | PENDING | PENDING |  |  |  |
+| CANDIDATE_V2+CANDIDATE_V4 | 1392205 | Huesca vs Castellón | Segunda División |  | 1 | 1 |  | OVER_2_5 | OVER_1_5 | OVER_2_5 | DEGRADE_TO_OVER_1_5 |  | UNMATCHED | UNMATCHED |  |  |  |
+| BASELINE | 1392207 | Sporting Gijon vs Almeria | Segunda División | 1 |  |  | OVER_2_5 |  |  |  |  | UNMATCHED |  |  |  |  |  |
+| BASELINE+CANDIDATE_V2 | 1504827 | Tokyo Verdy vs Yokohama F. Marinos | J1 League | 3 | 3 |  | OVER_1_5 | OVER_1_5 |  |  |  | UNMATCHED | UNMATCHED |  |  |  |  |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1545796 | Catanzaro vs Monza | Serie B | 2 | 2 | 2 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | UNMATCHED | UNMATCHED | UNMATCHED |  |  |  |

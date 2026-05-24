@@ -1,14 +1,14 @@
 # vSIGMA Learning Autopilot Alerts - 2026-05-23
 
 ## Executive Alert Summary
-- generated_at: 2026-05-23T21:13:38+01:00
+- generated_at: 2026-05-24T12:51:55+01:00
 - alerts generated: 2
 - alert_type_counts: DATA_QUALITY_REVIEW_REQUIRED=1; OPERATIONAL_REVIEW_REQUIRED=1
 - severity_counts: P1=2
 - issues_opened_or_existing: 2
 
 ## Alerts
-- P1 | DATA_QUALITY_REVIEW_REQUIRED | sources=6 | issue=https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/61 | auto_apply=NO
+- P1 | DATA_QUALITY_REVIEW_REQUIRED | sources=7 | issue=https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/61 | auto_apply=NO
 - P1 | OPERATIONAL_REVIEW_REQUIRED | sources=1 | issue=https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/62 | auto_apply=NO
 
 ## Guardrails
