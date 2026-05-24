@@ -1,0 +1,2 @@
+target_date,generated_at,base_profit_units,adjusted_profit_units,net_adjustment_delta_units,avoided_loss_units,missed_win_units,calibration_verdict,recommended_policy,min_samples_before_rule_change,auto_apply,production_change,guardrail_status
+2026-05-23,2026-05-24T13:54:13+01:00,0.16,0.38,0.22,1.0,0.78,FILTER_IMPROVED_BUT_TOO_COARSE,"Keep context filter, but split hard downgrade vs reduced-stake review; do not auto-veto all context downgrades from one day.",20,NO,NO,CONTEXT_FILTER_CALIBRATION_ADVISOR_REPORT_ONLY
