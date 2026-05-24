@@ -10,11 +10,11 @@ Only baseline chose: 0
 Only candidate chose: 0
 
 Side-by-side picks
-comparison_status                   fixture  baseline_rank  candidate_v2_rank baseline_market candidate_v2_market  baseline_calibrated_prob  candidate_v2_calibrated_prob  baseline_confidence_score  candidate_v2_confidence_score
-             BOTH       Huesca vs Castellón              2                  1        OVER_2_5            OVER_2_5                  0.809725                      0.802125                    137.759                        139.809
-             BOTH Sporting Gijon vs Almeria              1                  2        OVER_2_5            OVER_2_5                  0.841525                      0.816925                    142.388                        136.313
-             BOTH     Flamengo vs Palmeiras              4                  4        OVER_1_5            OVER_1_5                  0.804500                      0.811600                    116.588                        118.080
-             BOTH        Catanzaro vs Monza              3                  3        OVER_1_5            OVER_1_5                  0.819000                      0.814900                    124.626                        123.878
+comparison_status                            fixture  baseline_rank  candidate_v2_rank baseline_market candidate_v2_market  baseline_calibrated_prob  candidate_v2_calibrated_prob  baseline_confidence_score  candidate_v2_confidence_score
+             BOTH                Huesca vs Castellón              2                  1        OVER_2_5            OVER_2_5                  0.809725                      0.802125                    137.759                        139.809
+             BOTH          Sporting Gijon vs Almeria              1                  2        OVER_2_5            OVER_2_5                  0.841525                      0.816925                    142.388                        136.313
+             BOTH Tokyo Verdy vs Yokohama F. Marinos              4                  4        OVER_1_5            OVER_1_5                  0.771900                      0.771900                    112.990                        113.275
+             BOTH                 Catanzaro vs Monza              3                  3        OVER_1_5            OVER_1_5                  0.819000                      0.814900                    124.626                        123.878
 
 Reason differences
 All compared picks overlap. Review probability/confidence deltas in the CSV.

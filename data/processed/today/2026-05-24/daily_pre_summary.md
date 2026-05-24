@@ -7,7 +7,7 @@
 
 | Bucket | Rows |
 | --- | ---: |
-| Approved premium | 22 |
+| Approved premium | 21 |
 | Approved standard | 0 |
 | Downgraded | 30 |
 | Blocked | 2 |
@@ -94,17 +94,17 @@
 - Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=5; phase=PREMIUM_EXTENDED; execution_score=119.342; selection_score=99.630; primary_edge=0.147; primary_model_prob=0.899; shortlist_rank=8; caps=league2_market2_fixture1
 - Confirmation layers: STATS+ODDS+MARKET_TRANSLATION+FORM+LEAGUE_COVERAGE
 
-### #6 Flamengo vs Palmeiras
-- League: Serie A
+### #6 Tokyo Verdy vs Yokohama F. Marinos
+- League: J1 League
 - Market: OVER_1_5
 - Bucket: PREMIUM_EXTENDED
 - Recommendation: BET
-- Execution score: 104.467
+- Execution score: 103.292
 - Main why: STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE
-- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.155; market_fit=SAFE_OK
+- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.176; market_fit=SAFE_OK
 - Bucket rationale: PREMIUM_EXTENDED: EXTENDED_GATE_PASSED; EXTENDED_QUALITY_OK; edge>=0.08; prob>=0.82
-- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=6; phase=PREMIUM_EXTENDED; execution_score=104.467; selection_score=84.010; primary_edge=0.155; primary_model_prob=0.884; shortlist_rank=45; caps=league2_market2_fixture1
-- Confirmation layers: STATS+ODDS+MARKET_TRANSLATION+FORM+LINEUP_ACTIVE+ADVISORY_AVAILABILITY+LEAGUE_COVERAGE
+- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=6; phase=PREMIUM_EXTENDED; execution_score=103.292; selection_score=80.670; primary_edge=0.176; primary_model_prob=0.852; shortlist_rank=52; caps=league2_market2_fixture1
+- Confirmation layers: STATS+ODDS+MARKET_TRANSLATION+FORM+LEAGUE_COVERAGE
 
 ## Match Script Forecasts
 
@@ -128,12 +128,12 @@
 - Pick path: Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path.
 - Pick breaker: Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market.
 
-### #3 Flamengo vs Palmeiras
+### #3 Tokyo Verdy vs Yokohama F. Marinos
 - Market: OVER_1_5
-- Script: Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.7; stats=FULL.
+- Script: Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.4; stats=FULL.
 - Scoreline: main 2-2; alt 1-2
-- xG: home 1.7-2.4; away 1.3-2.0; total 3.2-4.3
-- Shots: home 11-15; away 15-19; SOT 4-6 vs 4-6
-- Corners / possession: 9-13; home 43-51% / away 49-57%
+- xG: home 1.4-2.1; away 1.3-2.0; total 2.8-3.9
+- Shots: home 10-14; away 7-11; SOT 3-5 vs 2-4
+- Corners / possession: 6-10; home 39-47% / away 53-61%
 - Pick path: Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path.
 - Pick breaker: Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market.

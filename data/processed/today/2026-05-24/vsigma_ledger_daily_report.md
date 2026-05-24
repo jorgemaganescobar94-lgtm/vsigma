@@ -3,10 +3,10 @@
 ## Ledger Update Status
 - Ledger CSV: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv
 - JSONL event log: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.jsonl
-- Official picks registered: 3
-- Shadow picks registered: 11
+- Official picks registered: 4
+- Shadow picks registered: 14
 - No-bet records: 1
-- Pending records: 14
+- Pending records: 18
 - Settled records: 0
 - Daily winner: NO_SETTLED_RESULTS
 
@@ -24,13 +24,13 @@
 ## Daily Summary By Experiment
 | experiment_id | records | picks | no_bet_records | pending | settled | profit_units |
 | --- | --- | --- | --- | --- | --- | --- |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 3 | 3 | 0 | 3 | 0 | 0.0 |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 4 | 4 | 0 | 4 | 0 | 0.0 |
 | CANDIDATE_V3_ODDS_DEPTH | 1 | 0 | 1 | 0 | 0 | 0.0 |
 | CANDIDATE_V4_O25_FIREWALL | 2 | 2 | 0 | 2 | 0 | 0.0 |
-| CANDIDATE_V5_PLAYER_IMPACT | 3 | 3 | 0 | 3 | 0 | 0.0 |
-| CANDIDATE_V6_API_PREDICTIONS | 2 | 2 | 0 | 2 | 0 | 0.0 |
+| CANDIDATE_V5_PLAYER_IMPACT | 4 | 4 | 0 | 4 | 0 | 0.0 |
+| CANDIDATE_V6_API_PREDICTIONS | 3 | 3 | 0 | 3 | 0 | 0.0 |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1 | 0 | 1 | 0 | 0.0 |
-| OFFICIAL_BASELINE | 3 | 3 | 0 | 3 | 0 | 0.0 |
+| OFFICIAL_BASELINE | 4 | 4 | 0 | 4 | 0 | 0.0 |
 
 ## Official Picks
 | experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
@@ -38,6 +38,7 @@
 | OFFICIAL_BASELINE | 1 | 1392207 | Sporting Gijon | Almeria | OVER_2_5 | 0.841525 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.187; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 | OFFICIAL_BASELINE | 2 | 1545796 | Catanzaro | Monza | OVER_1_5 | 0.819 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.147; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 | OFFICIAL_BASELINE | 3 | 1492273 | Flamengo | Palmeiras | OVER_1_5 | 0.8045 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.155; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+| OFFICIAL_BASELINE | 3 | 1504827 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | 0.7719 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.176; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 
 ## Shadow Picks
 | experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
@@ -53,6 +54,9 @@
 | CANDIDATE_V6_API_PREDICTIONS | 1 | 1545796 | Catanzaro | Monza | OVER_1_5 | 0.8149 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.143; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 | CANDIDATE_V6_API_PREDICTIONS | 2 | 1492273 | Flamengo | Palmeiras | OVER_1_5 | 0.8116 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.162; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1392205 | Huesca | Castellón | OVER_2_5 | 0.802125 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.200; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 3 | 1504827 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | 0.7719 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.176; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 3 | 1504827 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | 0.7719 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.176; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+| CANDIDATE_V6_API_PREDICTIONS | 2 | 1504827 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | 0.7719 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.176; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 
 ## No-Bet Modes
 | experiment_id | record_status | reason_tags | source_file |
@@ -72,6 +76,10 @@
 | CANDIDATE_V5_PLAYER_IMPACT | 1492273 | Flamengo | Palmeiras | OVER_1_5 | IN_PRELOCK_WINDOW | PRELOCK_CONFIRMED | lineups confirmed |
 | CANDIDATE_V6_API_PREDICTIONS | 1545796 | Catanzaro | Monza | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 | CANDIDATE_V6_API_PREDICTIONS | 1492273 | Flamengo | Palmeiras | OVER_1_5 | IN_PRELOCK_WINDOW | PRELOCK_CONFIRMED | lineups confirmed |
+| OFFICIAL_BASELINE | 1504827 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1504827 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V5_PLAYER_IMPACT | 1504827 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| CANDIDATE_V6_API_PREDICTIONS | 1504827 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 
 ## Result State
 | experiment_id | fixture_id | market_primary | result_status | result | profit_units | record_status |
@@ -90,10 +98,12 @@
 | CANDIDATE_V6_API_PREDICTIONS | 1545796 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V6_API_PREDICTIONS | 1492273 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1392205 | OVER_2_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1504827 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1504827 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1504827 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V6_API_PREDICTIONS | 1504827 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
 
 ## Freshness Warnings
 | file_name | status | detail |
 | --- | --- | --- |
-| vsigma_today_prelock_competition_top.csv | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-24 |
-| vsigma_today_prelock_comparison.csv | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-23'] does not match 2026-05-24 |
 | today_post_results_report.csv | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet |

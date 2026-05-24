@@ -1,7 +1,7 @@
 # vSIGMA CLV Calibration Report
 
 - Target date: 2026-05-24
-- Rows: 32
+- Rows: 34
 - Date validation status: CLV_DATE_MISMATCH
 - Date-mismatched rows excluded: 504
 - Mismatched target dates observed: 2026-05-09, 2026-05-14, 2026-05-15, 2026-05-16, 2026-05-17, 2026-05-18, 2026-05-19, 2026-05-20, 2026-05-21, 2026-05-22, 2026-05-23
@@ -11,15 +11,15 @@
 ## Snapshot Provenance
 | metric | rows |
 | --- | --- |
-| true_pre_rows | 32 |
+| true_pre_rows | 34 |
 | backfilled_rows | 0 |
 | calibration_usable_rows | 1 |
-| audit_only_rows | 31 |
+| audit_only_rows | 33 |
 
 ## CLV Direction Mix
 | clv_direction | rows |
 | --- | --- |
-| CLV_UNAVAILABLE | 31 |
+| CLV_UNAVAILABLE | 33 |
 | CLV_FLAT | 1 |
 
 ## CLV Rows
@@ -39,7 +39,7 @@
 | 2026-05-24 | 1392214 | Segunda División | Eibar | Cordoba | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.87 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-24 | 1392215 | Segunda División | Albacete | Real Sociedad II | HOME_WIN | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.92 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-24 | 1490315 | Major League Soccer | Chicago Fire | Toronto FC | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.52 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
-| 2026-05-24 | 1490319 | Major League Soccer | Colorado Rapids | FC Dallas | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.62 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-24 | 1490319 | Major League Soccer | Colorado Rapids | FC Dallas | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.63 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-24 | 1490322 | Major League Soccer | Columbus Crew | Atlanta United FC | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.58 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-24 | 1492273 | Serie A | Flamengo | Palmeiras | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | CANDIDATE_V2 | 1.37 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-24 | 1492273 | Serie A | Flamengo | Palmeiras | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.37 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
@@ -49,7 +49,9 @@
 | 2026-05-24 | 1494184 | Allsvenskan | Sirius | Gais | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.73 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-24 | 1494668 | Eliteserien | Bodo/Glimt | Brann | BTTS_YES | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.53 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-24 | 1504826 | J1 League | Mito Hollyhock | Kawasaki Frontale | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.92 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-24 | 1504827 | J1 League | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | CANDIDATE_V2 | 1.48 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-24 | 1504827 | J1 League | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.48 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-24 | 1504827 | J1 League | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE | 1.48 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-24 | 1537006 | Jupiler Pro League | Union St. Gilloise | Anderlecht | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.82 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-24 | 1537007 | Jupiler Pro League | Club Brugge KV | Gent | HOME_WIN | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.73 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-24 | 1537007 | Jupiler Pro League | Club Brugge KV | Gent | HOME_WIN | OFFICIAL_BASELINE | EXECUTION_SHORTLIST | 1.73 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |

@@ -10,9 +10,9 @@
 | fixture_id | home_team | away_team | market_primary | price_discipline_decision | price_discipline_min_edge_required | price_discipline_actual_edge | price_discipline_drift_status | clv_direction | candidate_v7_prelock_status | candidate_v7_execution_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1392205 | Huesca | Castellón | OVER_2_5 | PRICE_OK | 0.155 | 0.200205 | NO_DRIFT | CLV_UNAVAILABLE |  | PRICE_OK |
-| 1392207 | Sporting Gijon | Almeria | OVER_2_5 | PRICE_OK | 0.155 | 0.162857 | NO_DRIFT | CLV_UNAVAILABLE |  | PRICE_OK |
-| 1545796 | Catanzaro | Monza | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.14302 | WATCH_PATTERN | CLV_UNAVAILABLE | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK |
-| 1492273 | Flamengo | Palmeiras | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.161673 | WATCH_PATTERN | CLV_UNAVAILABLE | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK |
+| 1392207 | Sporting Gijon | Almeria | OVER_2_5 | PRICE_OK | 0.155 | 0.162857 | NO_DRIFT | CLV_FLAT |  | PRICE_OK |
+| 1545796 | Catanzaro | Monza | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.14302 | WATCH_PATTERN | CLV_FLAT | V7_PRELOCK_UNAVAILABLE | V7_PRELOCK_UNAVAILABLE |
+| 1504827 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.176224 | WATCH_PATTERN | CLV_UNAVAILABLE | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK |
 
 ## Candidate v7 Shadow Top
 
