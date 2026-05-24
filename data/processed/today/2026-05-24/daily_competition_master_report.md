@@ -116,9 +116,9 @@ PRE_LOCK_PENDING
 ### Active Pre-Lock Decisions
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1392207 | Sporting Gijon | Almeria | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 971.36 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| 1545796 | Catanzaro | Monza | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 1061.3 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| 1504827 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 281.24 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1392207 | Sporting Gijon | Almeria | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 272.61 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1545796 | Catanzaro | Monza | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 362.55 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1492276 | Remo | Atletico Paranaense | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 422.48 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 
 ### Stale Pre-Lock Warning
 _No stale pre-lock rows excluded._
@@ -163,7 +163,7 @@ _No stale pre-lock rows excluded._
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_FLAT | 2 | 0.96 | 48.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 | OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_POSITIVE | 2 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 6 | 0.96 | 16.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 7 | 0.96 | 13.714286 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 | OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_FLAT | 2 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 | OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_POSITIVE | 1 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 | OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_UNAVAILABLE | 1 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
@@ -174,9 +174,9 @@ _No rows._
 ## Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1392207 | Sporting Gijon | Almeria | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 971.36 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| 1545796 | Catanzaro | Monza | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 1061.3 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| 1504827 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 281.24 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1392207 | Sporting Gijon | Almeria | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 272.61 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1545796 | Catanzaro | Monza | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 362.55 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1492276 | Remo | Atletico Paranaense | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 422.48 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 
 ## Drift Monitor Status
 | pattern | settled_rows | wins | losses | profit_units | drift_status |
@@ -222,29 +222,29 @@ _No rows._
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: freshness_report: WARNING - validation report contains warning rows
-- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-24`
+- Critical warnings: post_results_status: WARNING - post has 5 pending row(s)
+- Recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-24 --timezone Atlantic/Canary --mode post`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-24/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1392207.0 | Sporting Gijon | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| OFFICIAL_BASELINE | 1545796.0 | Catanzaro | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1392207.0 | Sporting Gijon | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| OFFICIAL_BASELINE | 1545796.0 | Catanzaro | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1392205.0 | Huesca | Castellón | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1545796.0 | Catanzaro | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1545796.0 | Catanzaro | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
 | CANDIDATE_V4_O25_FIREWALL | 1392205.0 | Huesca | Castellón | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V4_O25_FIREWALL | 1545796.0 | Catanzaro | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 1545796.0 | Catanzaro | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V5_PLAYER_IMPACT | 1392205.0 | Huesca | Castellón | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1545796.0 | Catanzaro | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V6_API_PREDICTIONS | 1545796.0 | Catanzaro | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1545796.0 | Catanzaro | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V6_API_PREDICTIONS | 1545796.0 | Catanzaro | Monza | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1392205.0 | Huesca | Castellón | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
 | OFFICIAL_BASELINE | 1504827.0 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | PRELOCK_NOT_AVAILABLE | WIN | 0.48 | SETTLED |
 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1504827.0 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | PRELOCK_NOT_AVAILABLE | WIN | 0.48 | SETTLED |
 | CANDIDATE_V5_PLAYER_IMPACT | 1504827.0 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | PRELOCK_NOT_AVAILABLE | WIN | 0.48 | SETTLED |
 | CANDIDATE_V6_API_PREDICTIONS | 1504827.0 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | PRELOCK_NOT_AVAILABLE | WIN | 0.48 | SETTLED |
-| OFFICIAL_BASELINE | 1492276.0 | Remo | Atletico Paranaense | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1492276.0 | Remo | Atletico Paranaense | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
@@ -275,7 +275,7 @@ _No rows._
 ### Threshold Recommendations
 | market_family | failure_mode | experiment_id | settled_rows | roi_percent | clv_direction | threshold_recommendation |
 | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 6 | 16.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 7 | 13.714286 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 5 | -11.4 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 5 | -11.4 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 5 | -11.4 |  | SAMPLE_TOO_SMALL |

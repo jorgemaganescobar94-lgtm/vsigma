@@ -7,7 +7,7 @@ This report recommends review actions only. It never edits threshold configurati
 ## Threshold Recommendations
 | market_family | failure_mode | experiment_id | drift_status | clv_direction | settled_rows | hit_rate | profit_units | roi_percent | threshold_recommendation | threshold_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | WATCH_PATTERN | CLV_UNAVAILABLE | 6 | 100.0 | 0.96 | 16.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | WATCH_PATTERN | CLV_UNAVAILABLE | 7 | 100.0 | 0.96 | 13.714286 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | WATCH_PATTERN |  | 5 | 60.0 | -0.57 | -11.4 | SAMPLE_TOO_SMALL | Only 5 settled rows; minimum threshold-review sample is 10. |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | WATCH_PATTERN |  | 5 | 60.0 | -0.57 | -11.4 | SAMPLE_TOO_SMALL | Only 5 settled rows; minimum threshold-review sample is 10. |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | WATCH_PATTERN |  | 5 | 60.0 | -0.57 | -11.4 | SAMPLE_TOO_SMALL | Only 5 settled rows; minimum threshold-review sample is 10. |
