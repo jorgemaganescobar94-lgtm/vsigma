@@ -1,0 +1,2 @@
+target_date,generated_at,portfolio_verdict,premium_count,review_count,shadow_risk_count,downgraded_count,wait_count,no_bet_count,recommended_stance,top_available_pick,top_available_market,top_available_status,stake_guidance,auto_apply,production_change,guardrail_status
+2026-05-23,2026-05-24T13:41:12+01:00,LOW_STAKE_OR_LIVE_ONLY,0,0,1,2,0,0,No premium; only low/symbolic stake or live confirmation.,Kalmar FF vs Degerfors IF,OVER_1_5,SHADOW_RISK_ONLY,LOW_OR_SYMBOLIC,NO,NO,FINAL_PORTFOLIO_VERDICT_REPORT_ONLY

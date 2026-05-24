@@ -1,0 +1,4 @@
+target_date,generated_at,rank,fixture_id,home_team,away_team,market_primary,adjusted_final_status,stake_band,portfolio_role,portfolio_reason
+2026-05-23,2026-05-24T13:41:12+01:00,1,1494182,Kalmar FF,Degerfors IF,OVER_1_5,SHADOW_RISK_ONLY,LOW_OR_SYMBOLIC,LOW_STAKE_OR_LIVE_ONLY,"shadow-risk row, do not place in serious slip"
+2026-05-23,2026-05-24T13:41:12+01:00,2,1378234,Bologna,Inter,AWAY_WIN,BET_DOWNGRADED_TO_REVIEW,NO_STAKE_OR_SYMBOLIC,DOWNGRADED_NO_PREMIUM,base BET downgraded by context or availability
+2026-05-23,2026-05-24T13:41:12+01:00,3,1378237,Lazio,Pisa,HOME_WIN,BET_DOWNGRADED_TO_REVIEW,NO_STAKE_OR_SYMBOLIC,DOWNGRADED_NO_PREMIUM,base BET downgraded by context or availability
