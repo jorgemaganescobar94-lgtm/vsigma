@@ -1,15 +1,15 @@
 # vSIGMA Daily Command Center - 2026-05-24
 
 ## Executive Command
-- generated_at: 2026-05-24T09:06:21+01:00
-- mode: post
+- generated_at: 2026-05-24T13:00:02+01:00
+- mode: pre
 - command_center_status: EXECUTION_READY
 - daily_classification: EXECUTION_OK
 - action_level: NO_ACTION_REQUIRED
 - operational_verdict: EXECUTION_AVAILABLE
 - predictive_failure: UNKNOWN
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26355906119
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26360528746
 
 ## Next Operator Action
 - Review official executable picks and post-result quality once scores are labeled.

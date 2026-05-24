@@ -3,17 +3,16 @@ vSIGMA SHADOW CANDIDATE V5
 Layer: candidate v2 + conservative player impact.
 Status: experimental shadow; official baseline and candidate v2 outputs are not replaced.
 
-Candidate v2 input rows: 4
-Candidate v5 competition shortlist rows: 4
-Candidate v5 competition top rows: 3
+Candidate v2 input rows: 3
+Candidate v5 competition shortlist rows: 3
+Candidate v5 competition top rows: 2
 Player-impact adjustments made: 0
 
 Player-impact action mix
 player_impact_adjustment_action
-NOT_APPLIED    4
+NOT_APPLIED    3
 
 Candidate v5 Top
- accuracy_mode_rank  fixture_id           league   home_team           away_team market_primary  competition_calibrated_prob  accuracy_confidence_score player_impact_adjustment_action      player_impact_market_translation_hint
-                  1     1392205 Segunda División      Huesca           Castellón       OVER_2_5                     0.802125                    139.809                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
-                  2     1545796          Serie B   Catanzaro               Monza       OVER_1_5                     0.814900                    123.878                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
-                  3     1504827        J1 League Tokyo Verdy Yokohama F. Marinos       OVER_1_5                     0.771900                    113.275                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
+ accuracy_mode_rank  fixture_id           league home_team away_team market_primary  competition_calibrated_prob  accuracy_confidence_score player_impact_adjustment_action      player_impact_market_translation_hint
+                  1     1392205 Segunda División    Huesca Castellón       OVER_2_5                     0.802125                    139.809                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
+                  2     1545796          Serie B Catanzaro     Monza       OVER_1_5                     0.814900                    125.039                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE

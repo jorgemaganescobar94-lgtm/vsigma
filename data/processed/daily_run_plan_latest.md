@@ -1,12 +1,15 @@
-# vSIGMA Daily Run Plan - 2026-05-23
+# vSIGMA Daily Run Plan - 2026-05-24
 
 - Timezone: Atlantic/Canary
-- Generated at: 2026-05-24T12:51:53.691745+01:00
+- Generated at: 2026-05-24T13:00:01.910982+01:00
 - Window minutes: 90
-- Next recommended action: RUN_POST_AFTER_FINISH
-- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-23 --timezone Atlantic/Canary --mode post`
+- Next recommended action: WAIT_FOR_PRELOCK
+- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-24 --timezone Atlantic/Canary --mode prelock --window-minutes 90`
 
 ## Fixtures
 | fixture_id | league | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action | recommended_command |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1494182 | Allsvenskan | Kalmar FF | Degerfors IF | OVER_1_5 | 2026-05-23T13:01:36+00:00 | -1370.29 | 2026-05-23T11:31:36+00:00 | PRELOCK_NO_CHANGE | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-23 --timezone Atlantic/Canary --mode post |
+| 1392207 | Segunda División | Sporting Gijon | Almeria | OVER_2_5 | 2026-05-24T16:32:34.600000+00:00 | 272.54 | 2026-05-24T15:02:34.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-24 --timezone Atlantic/Canary --mode post |
+| 1545796 | Serie B | Catanzaro | Monza | OVER_1_5 | 2026-05-24T18:02:31+00:00 | 362.48 | 2026-05-24T16:32:31+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-24 --timezone Atlantic/Canary --mode post |
+| 1492276 | Serie A | Remo | Atletico Paranaense | OVER_1_5 | 2026-05-24T19:02:26.800000+00:00 | 422.41 | 2026-05-24T17:32:26.800000+00:00 | PENDING_OUTSIDE_WINDOW | WAIT_FOR_PRELOCK | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-24 --timezone Atlantic/Canary --mode prelock --window-minutes 90 |
+| 1392205 | Segunda División | Huesca | Castellón | OVER_2_5 | 2026-05-24T16:32:35.800000+00:00 | 272.56 | 2026-05-24T15:02:35.800000+00:00 | PENDING_OUTSIDE_WINDOW | WAIT_FOR_PRELOCK | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-24 --timezone Atlantic/Canary --mode prelock --window-minutes 90 |

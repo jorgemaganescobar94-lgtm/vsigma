@@ -7,30 +7,30 @@
 
 | Bucket | Rows |
 | --- | ---: |
-| Approved premium | 21 |
+| Approved premium | 18 |
 | Approved standard | 0 |
-| Downgraded | 30 |
+| Downgraded | 23 |
 | Blocked | 2 |
-| Watch | 3 |
+| Watch | 1 |
 
 ## SAFE Picks
 
 | Rank | Fixture | League | Market | Rec | Bucket | Score | Why | Risk |
 | --- | --- | --- | --- | --- | --- | ---: | --- | --- |
-| 1 | Sporting Gijon vs Almeria | Segunda División | OVER_2_5 | BET | PREMIUM_CORE | 141.456 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.187; market_fit=SAFE_OK |
-| 2 | Club Brugge KV vs Gent | Jupiler Pro League | HOME_WIN | BET | PREMIUM_CORE | 136.457 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;BET_EXECUTABLE;COVERAGE_RICH_SUPPORT | FAILURE_MODE_DRAW_LIVE; market=HOME_WIN; edge=0.137; market_fit=SAFE_OK |
-| 3 | Manchester City vs Aston Villa | Premier League | BTTS_YES | BET | PREMIUM_CORE | 134.340 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_BTTS_BREAK; market=BTTS_YES; edge=0.129; market_fit=SAFE_OK |
-| 4 | Catanzaro vs Monza | Serie B | OVER_1_5 | BET | PREMIUM_EXTENDED | 119.342 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.147; market_fit=SAFE_OK |
+| 1 | Sporting Gijon vs Almeria | Segunda División | OVER_2_5 | BET | PREMIUM_CORE | 141.859 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.191; market_fit=SAFE_OK |
+| 2 | Club Brugge KV vs Gent | Jupiler Pro League | HOME_WIN | BET | PREMIUM_CORE | 134.380 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;BET_EXECUTABLE;COVERAGE_RICH_SUPPORT | FAILURE_MODE_DRAW_LIVE; market=HOME_WIN; edge=0.116; market_fit=SAFE_OK |
+| 3 | Manchester City vs Aston Villa | Premier League | BTTS_YES | BET | PREMIUM_CORE | 133.146 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_BTTS_BREAK; market=BTTS_YES; edge=0.117; market_fit=SAFE_OK |
+| 4 | Catanzaro vs Monza | Serie B | OVER_1_5 | BET | PREMIUM_EXTENDED | 121.001 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.164; market_fit=SAFE_OK |
 
 ## BALANCED Picks
 
 | Rank | Fixture | League | Market | Rec | Bucket | Score | Why | Risk |
 | --- | --- | --- | --- | --- | --- | ---: | --- | --- |
-| 1 | Huesca vs Castellón | Segunda División | OVER_2_5 | BET | PREMIUM_CORE | 142.730 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.208; market_fit=SAFE_OK |
-| 2 | Sporting Gijon vs Almeria | Segunda División | OVER_2_5 | BET | PREMIUM_CORE | 141.456 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.187; market_fit=SAFE_OK |
-| 3 | Club Brugge KV vs Gent | Jupiler Pro League | HOME_WIN | BET | PREMIUM_CORE | 136.457 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;BET_EXECUTABLE;COVERAGE_RICH_SUPPORT | FAILURE_MODE_DRAW_LIVE; market=HOME_WIN; edge=0.137; market_fit=SAFE_OK |
-| 4 | Manchester City vs Aston Villa | Premier League | BTTS_YES | BET | PREMIUM_CORE | 134.340 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_BTTS_BREAK; market=BTTS_YES; edge=0.129; market_fit=SAFE_OK |
-| 5 | Catanzaro vs Monza | Serie B | OVER_1_5 | BET | PREMIUM_EXTENDED | 119.342 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.147; market_fit=SAFE_OK |
+| 1 | Sporting Gijon vs Almeria | Segunda División | OVER_2_5 | BET | PREMIUM_CORE | 141.859 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.191; market_fit=SAFE_OK |
+| 2 | Huesca vs Castellón | Segunda División | OVER_2_5 | BET | PREMIUM_CORE | 142.730 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.208; market_fit=SAFE_OK |
+| 3 | Club Brugge KV vs Gent | Jupiler Pro League | HOME_WIN | BET | PREMIUM_CORE | 134.380 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;BET_EXECUTABLE;COVERAGE_RICH_SUPPORT | FAILURE_MODE_DRAW_LIVE; market=HOME_WIN; edge=0.116; market_fit=SAFE_OK |
+| 4 | Manchester City vs Aston Villa | Premier League | BTTS_YES | BET | PREMIUM_CORE | 133.146 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_BTTS_BREAK; market=BTTS_YES; edge=0.117; market_fit=SAFE_OK |
+| 5 | Catanzaro vs Monza | Serie B | OVER_1_5 | BET | PREMIUM_EXTENDED | 121.001 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.164; market_fit=SAFE_OK |
 
 ## Execution Shortlist
 
@@ -51,11 +51,11 @@
 - Market: OVER_2_5
 - Bucket: PREMIUM_CORE
 - Recommendation: BET
-- Execution score: 141.456
+- Execution score: 141.859
 - Main why: STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE
-- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.187; market_fit=SAFE_OK
+- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.191; market_fit=SAFE_OK
 - Bucket rationale: PREMIUM_CORE: CORE_GATE_PASSED; APPROVED_PREMIUM; BET; SAFE_OK
-- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=2; phase=PREMIUM_CORE; execution_score=141.456; selection_score=103.710; primary_edge=0.187; primary_model_prob=0.824; shortlist_rank=2; caps=league2_market2_fixture1
+- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=2; phase=PREMIUM_CORE; execution_score=141.859; selection_score=103.710; primary_edge=0.191; primary_model_prob=0.824; shortlist_rank=2; caps=league2_market2_fixture1
 - Confirmation layers: STATS+ODDS+MARKET_TRANSLATION+FORM+LEAGUE_COVERAGE
 
 ### #3 Club Brugge KV vs Gent
@@ -63,11 +63,11 @@
 - Market: HOME_WIN
 - Bucket: PREMIUM_CORE
 - Recommendation: BET
-- Execution score: 136.457
+- Execution score: 134.380
 - Main why: STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;BET_EXECUTABLE;COVERAGE_RICH_SUPPORT
-- Primary risk: FAILURE_MODE_DRAW_LIVE; market=HOME_WIN; edge=0.137; market_fit=SAFE_OK
+- Primary risk: FAILURE_MODE_DRAW_LIVE; market=HOME_WIN; edge=0.116; market_fit=SAFE_OK
 - Bucket rationale: PREMIUM_CORE: CORE_GATE_PASSED; APPROVED_PREMIUM; BET; SAFE_OK
-- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=3; phase=PREMIUM_CORE; execution_score=136.457; selection_score=103.740; primary_edge=0.137; primary_model_prob=0.715; shortlist_rank=1; caps=league2_market2_fixture1
+- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=3; phase=PREMIUM_CORE; execution_score=134.380; selection_score=103.740; primary_edge=0.116; primary_model_prob=0.715; shortlist_rank=1; caps=league2_market2_fixture1
 - Confirmation layers: STATS+ODDS+MARKET_TRANSLATION+FORM+LEAGUE_COVERAGE
 
 ### #4 Manchester City vs Aston Villa
@@ -75,11 +75,11 @@
 - Market: BTTS_YES
 - Bucket: PREMIUM_CORE
 - Recommendation: BET
-- Execution score: 134.340
+- Execution score: 133.146
 - Main why: STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE
-- Primary risk: FAILURE_MODE_BTTS_BREAK; market=BTTS_YES; edge=0.129; market_fit=SAFE_OK
+- Primary risk: FAILURE_MODE_BTTS_BREAK; market=BTTS_YES; edge=0.117; market_fit=SAFE_OK
 - Bucket rationale: PREMIUM_CORE: CORE_GATE_PASSED; APPROVED_PREMIUM; BET; SAFE_OK
-- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=4; phase=PREMIUM_CORE; execution_score=134.340; selection_score=102.450; primary_edge=0.129; primary_model_prob=0.754; shortlist_rank=4; caps=league2_market2_fixture1
+- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=4; phase=PREMIUM_CORE; execution_score=133.146; selection_score=102.450; primary_edge=0.117; primary_model_prob=0.754; shortlist_rank=4; caps=league2_market2_fixture1
 - Confirmation layers: STATS+ODDS+MARKET_TRANSLATION+FORM+ADVISORY_AVAILABILITY+LEAGUE_COVERAGE
 
 ### #5 Catanzaro vs Monza
@@ -87,24 +87,24 @@
 - Market: OVER_1_5
 - Bucket: PREMIUM_EXTENDED
 - Recommendation: BET
-- Execution score: 119.342
+- Execution score: 121.001
 - Main why: STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE
-- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.147; market_fit=SAFE_OK
+- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.164; market_fit=SAFE_OK
 - Bucket rationale: PREMIUM_EXTENDED: EXTENDED_GATE_PASSED; EXTENDED_QUALITY_OK; edge>=0.08; prob>=0.82
-- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=5; phase=PREMIUM_EXTENDED; execution_score=119.342; selection_score=99.630; primary_edge=0.147; primary_model_prob=0.899; shortlist_rank=8; caps=league2_market2_fixture1
+- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=5; phase=PREMIUM_EXTENDED; execution_score=121.001; selection_score=99.630; primary_edge=0.164; primary_model_prob=0.899; shortlist_rank=8; caps=league2_market2_fixture1
 - Confirmation layers: STATS+ODDS+MARKET_TRANSLATION+FORM+LEAGUE_COVERAGE
 
-### #6 Tokyo Verdy vs Yokohama F. Marinos
-- League: J1 League
+### #6 Remo vs Atletico Paranaense
+- League: Serie A
 - Market: OVER_1_5
 - Bucket: PREMIUM_EXTENDED
 - Recommendation: BET
-- Execution score: 103.292
+- Execution score: 100.126
 - Main why: STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE
-- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.176; market_fit=SAFE_OK
+- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.117; market_fit=SAFE_OK
 - Bucket rationale: PREMIUM_EXTENDED: EXTENDED_GATE_PASSED; EXTENDED_QUALITY_OK; edge>=0.08; prob>=0.82
-- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=6; phase=PREMIUM_EXTENDED; execution_score=103.292; selection_score=80.670; primary_edge=0.176; primary_model_prob=0.852; shortlist_rank=52; caps=league2_market2_fixture1
-- Confirmation layers: STATS+ODDS+MARKET_TRANSLATION+FORM+LEAGUE_COVERAGE
+- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=6; phase=PREMIUM_EXTENDED; execution_score=100.126; selection_score=83.470; primary_edge=0.117; primary_model_prob=0.841; shortlist_rank=39; caps=league2_market2_fixture1
+- Confirmation layers: STATS+ODDS+MARKET_TRANSLATION+FORM+ADVISORY_AVAILABILITY+LEAGUE_COVERAGE
 
 ## Match Script Forecasts
 
@@ -128,12 +128,12 @@
 - Pick path: Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path.
 - Pick breaker: Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market.
 
-### #3 Tokyo Verdy vs Yokohama F. Marinos
+### #3 Remo vs Atletico Paranaense
 - Market: OVER_1_5
-- Script: Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.4; stats=FULL.
-- Scoreline: main 2-2; alt 1-2
-- xG: home 1.4-2.1; away 1.3-2.0; total 2.8-3.9
-- Shots: home 10-14; away 7-11; SOT 3-5 vs 2-4
+- Script: Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.3; stats=PARTIAL.
+- Scoreline: main 1-2; alt 0-2
+- xG: home 0.9-1.6; away 1.7-2.4; total 2.8-3.8
+- Shots: home 8-12; away 11-15; SOT 2-4 vs 5-7
 - Corners / possession: 6-10; home 39-47% / away 53-61%
 - Pick path: Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path.
 - Pick breaker: Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market.
