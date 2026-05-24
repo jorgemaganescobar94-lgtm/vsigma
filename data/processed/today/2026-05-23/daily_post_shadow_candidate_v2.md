@@ -7,8 +7,8 @@
 ## Baseline vs Candidate Result Summary
 
 - Baseline pick count: 3
-- Candidate v2 pick count: 3
-- Overlap picks: 2
+- Candidate v2 pick count: 2
+- Overlap picks: 1
 - Baseline wins/losses: 0 / 0
 - Candidate wins/losses: 0 / 0
 - Baseline profit/ROI: 0.000 / NA%
@@ -20,7 +20,7 @@
 | --- | --- | --- | --- | ---: | ---: |
 | CANDIDATE_V2_ONLY | Huesca vs Castellón | NA | UNMATCHED | NA | NA |
 | BASELINE_ONLY | Sporting Gijon vs Almeria | UNMATCHED | NA | NA | NA |
-| BOTH | Tokyo Verdy vs Yokohama F. Marinos | UNMATCHED | UNMATCHED | NA | NA |
+| BASELINE_ONLY | Remo vs Atletico Paranaense | UNMATCHED | NA | NA | NA |
 | BOTH | Catanzaro vs Monza | UNMATCHED | UNMATCHED | NA | NA |
 
 ## Candidate v2 Ledger Picks
@@ -35,18 +35,8 @@
 - Original primary risk: NA
 - POST_VERDICT: UNMATCHED_RESULT
 
-### #5 Catanzaro vs Monza
+### #4 Catanzaro vs Monza
 - League: Serie B
-- Market: OVER_1_5
-- Result status: UNMATCHED
-- Result: UNMATCHED
-- Profit units: NA
-- Original main why: NA
-- Original primary risk: NA
-- POST_VERDICT: UNMATCHED_RESULT
-
-### #6 Tokyo Verdy vs Yokohama F. Marinos
-- League: J1 League
 - Market: OVER_1_5
 - Result status: UNMATCHED
 - Result: UNMATCHED

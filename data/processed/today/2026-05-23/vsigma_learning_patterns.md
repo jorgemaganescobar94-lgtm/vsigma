@@ -1,7 +1,7 @@
 # vSIGMA Learning Patterns - 2026-05-23
 
 ## Executive Pattern Summary
-- generated_at: 2026-05-24T12:51:54+01:00
+- generated_at: 2026-05-24T13:42:54+01:00
 - patterns detected: 12
 - pattern_type_counts: MARKET_RISK_CLUSTER=4, SAMPLE_KEY_CLUSTER=4, WAITING_PRELOCK_CLUSTER=1, DATA_BLOCKED_CLUSTER=1, ACTIONABLE_LOSS_CLUSTER=1, EXPIRED_PRELOCK_CLUSTER=1
 - severity_counts: P2=8, P1=2, P3=2
@@ -9,8 +9,8 @@
 ## Top Patterns
 - P1 | WAITING_PRELOCK_CLUSTER | WAITING_PRELOCK | n=4 | recommendation=Review execution timing and retry windows if waiting persists.
 - P1 | DATA_BLOCKED_CLUSTER | DATA_BLOCKED | n=1 | recommendation=Inspect provider coverage, odds, lineups, and data freshness before changing model logic.
-- P2 | MARKET_RISK_CLUSTER | OVER_1_5::UNKNOWN_RISK | n=10 | recommendation=Monitor market/risk concentration; do not adjust model until losses and sample size clear promotion gates.
-- P2 | SAMPLE_KEY_CLUSTER | UNRESOLVED::OVER_1_5::UNKNOWN_RISK::NO_SIGNAL | n=10 | recommendation=Keep collecting evidence; repeated sample key can feed improvement proposal only after sufficient closed results.
+- P2 | MARKET_RISK_CLUSTER | OVER_1_5::UNKNOWN_RISK | n=9 | recommendation=Monitor market/risk concentration; do not adjust model until losses and sample size clear promotion gates.
+- P2 | SAMPLE_KEY_CLUSTER | UNRESOLVED::OVER_1_5::UNKNOWN_RISK::NO_SIGNAL | n=9 | recommendation=Keep collecting evidence; repeated sample key can feed improvement proposal only after sufficient closed results.
 - P2 | MARKET_RISK_CLUSTER | UNKNOWN_MARKET::UNKNOWN_RISK | n=8 | recommendation=Monitor market/risk concentration; do not adjust model until losses and sample size clear promotion gates.
 - P2 | SAMPLE_KEY_CLUSTER | UNRESOLVED::UNKNOWN_MARKET::UNKNOWN_RISK::NO_SIGNAL | n=8 | recommendation=Keep collecting evidence; repeated sample key can feed improvement proposal only after sufficient closed results.
 - P2 | MARKET_RISK_CLUSTER | OVER_1_5::FAILURE_MODE_LOW_CONVERSION | n=7 | recommendation=Monitor market/risk concentration; do not adjust model until losses and sample size clear promotion gates.
