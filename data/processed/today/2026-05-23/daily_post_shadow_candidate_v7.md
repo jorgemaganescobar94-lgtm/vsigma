@@ -22,5 +22,5 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CANDIDATE_V2+CANDIDATE_V7 | 1392205 | Huesca vs Castellón | Segunda División |  | 1 | 1 |  | OVER_2_5 | OVER_2_5 | PRICE_OK |  | UNMATCHED | UNMATCHED |  |  |  |
 | BASELINE | 1392207 | Sporting Gijon vs Almeria | Segunda División | 1 |  |  | OVER_2_5 |  |  |  | UNMATCHED |  |  |  |  |  |
-| BASELINE+CANDIDATE_V2 | 1504827 | Tokyo Verdy vs Yokohama F. Marinos | J1 League | 3 | 3 |  | OVER_1_5 | OVER_1_5 |  |  | UNMATCHED | UNMATCHED |  |  |  |  |
+| BASELINE | 1492276 | Remo vs Atletico Paranaense | Serie A | 3 |  |  | OVER_1_5 |  |  |  | UNMATCHED |  |  |  |  |  |
 | BASELINE+CANDIDATE_V2 | 1545796 | Catanzaro vs Monza | Serie B | 2 | 2 |  | OVER_1_5 | OVER_1_5 |  |  | UNMATCHED | UNMATCHED |  |  |  |  |

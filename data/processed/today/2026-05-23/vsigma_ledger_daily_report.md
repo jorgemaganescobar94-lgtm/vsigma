@@ -4,9 +4,9 @@
 - Ledger CSV: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv
 - JSONL event log: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.jsonl
 - Official picks registered: 0
-- Shadow picks registered: 11
+- Shadow picks registered: 8
 - No-bet records: 1
-- Pending records: 11
+- Pending records: 8
 - Settled records: 0
 - Daily winner: NO_SETTLED_RESULTS
 
@@ -24,11 +24,11 @@
 ## Daily Summary By Experiment
 | experiment_id | records | picks | no_bet_records | pending | settled | profit_units |
 | --- | --- | --- | --- | --- | --- | --- |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 3 | 3 | 0 | 3 | 0 | 0.0 |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 2 | 2 | 0 | 2 | 0 | 0.0 |
 | CANDIDATE_V3_ODDS_DEPTH | 1 | 0 | 1 | 0 | 0 | 0.0 |
 | CANDIDATE_V4_O25_FIREWALL | 2 | 2 | 0 | 2 | 0 | 0.0 |
-| CANDIDATE_V5_PLAYER_IMPACT | 3 | 3 | 0 | 3 | 0 | 0.0 |
-| CANDIDATE_V6_API_PREDICTIONS | 2 | 2 | 0 | 2 | 0 | 0.0 |
+| CANDIDATE_V5_PLAYER_IMPACT | 2 | 2 | 0 | 2 | 0 | 0.0 |
+| CANDIDATE_V6_API_PREDICTIONS | 1 | 1 | 0 | 1 | 0 | 0.0 |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1 | 0 | 1 | 0 | 0.0 |
 
 ## Official Picks
@@ -39,14 +39,11 @@ _No rows._
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CANDIDATE_V2_SCHEDULE_ANOMALY |  | 1392205 | Huesca | Castellón | OVER_2_5 |  |  | PENDING |
 | CANDIDATE_V2_SCHEDULE_ANOMALY |  | 1545796 | Catanzaro | Monza | OVER_1_5 |  |  | PENDING |
-| CANDIDATE_V2_SCHEDULE_ANOMALY |  | 1504827 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 |  |  | PENDING |
 | CANDIDATE_V4_O25_FIREWALL |  | 1392205 | Huesca | Castellón | OVER_1_5 |  |  | PENDING |
 | CANDIDATE_V4_O25_FIREWALL |  | 1545796 | Catanzaro | Monza | OVER_1_5 |  |  | PENDING |
 | CANDIDATE_V5_PLAYER_IMPACT |  | 1392205 | Huesca | Castellón | OVER_2_5 |  |  | PENDING |
 | CANDIDATE_V5_PLAYER_IMPACT |  | 1545796 | Catanzaro | Monza | OVER_1_5 |  |  | PENDING |
-| CANDIDATE_V5_PLAYER_IMPACT |  | 1504827 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 |  |  | PENDING |
 | CANDIDATE_V6_API_PREDICTIONS |  | 1545796 | Catanzaro | Monza | OVER_1_5 |  |  | PENDING |
-| CANDIDATE_V6_API_PREDICTIONS |  | 1504827 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 |  |  | PENDING |
 | CANDIDATE_V7_PRICE_DISCIPLINE |  | 1392205 | Huesca | Castellón | OVER_2_5 |  |  | PENDING |
 
 ## No-Bet Modes
@@ -62,17 +59,14 @@ _No rows._
 | --- | --- | --- | --- | --- | --- | --- |
 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1392205 | OVER_2_5 | UNMATCHED | UNMATCHED |  | PENDING |
 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1545796 | OVER_1_5 | UNMATCHED | UNMATCHED |  | PENDING |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1504827 | OVER_1_5 | UNMATCHED | UNMATCHED |  | PENDING |
 | CANDIDATE_V4_O25_FIREWALL | 1392205 | OVER_1_5 | UNMATCHED | UNMATCHED |  | PENDING |
 | CANDIDATE_V4_O25_FIREWALL | 1545796 | OVER_1_5 | UNMATCHED | UNMATCHED |  | PENDING |
 | CANDIDATE_V5_PLAYER_IMPACT | 1392205 | OVER_2_5 | UNMATCHED | UNMATCHED |  | PENDING |
 | CANDIDATE_V5_PLAYER_IMPACT | 1545796 | OVER_1_5 | UNMATCHED | UNMATCHED |  | PENDING |
-| CANDIDATE_V5_PLAYER_IMPACT | 1504827 | OVER_1_5 | UNMATCHED | UNMATCHED |  | PENDING |
 | CANDIDATE_V6_API_PREDICTIONS | 1545796 | OVER_1_5 | UNMATCHED | UNMATCHED |  | PENDING |
-| CANDIDATE_V6_API_PREDICTIONS | 1504827 | OVER_1_5 | UNMATCHED | UNMATCHED |  | PENDING |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1392205 | OVER_2_5 | UNMATCHED | UNMATCHED |  | PENDING |
 
 ## Freshness Warnings
 | file_name | status | detail |
 | --- | --- | --- |
-| today_post_results_report.csv | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet |
+| vsigma_today_prelock_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |

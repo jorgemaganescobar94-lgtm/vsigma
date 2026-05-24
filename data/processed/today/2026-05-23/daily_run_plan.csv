@@ -1,2 +1,2 @@
 fixture_id,league,home_team,away_team,market_primary,kickoff_time,minutes_to_kickoff,prelock_window_start,prelock_status,recommended_next_action,recommended_command
-1494182,Allsvenskan,Kalmar FF,Degerfors IF,OVER_1_5,2026-05-23T13:01:36+00:00,-1370.29,2026-05-23T11:31:36+00:00,PRELOCK_NO_CHANGE,RUN_POST_AFTER_FINISH,.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-23 --timezone Atlantic/Canary --mode post
+1494182,Allsvenskan,Kalmar FF,Degerfors IF,OVER_1_5,2026-05-23T13:01:36+00:00,-1421.3,2026-05-23T11:31:36+00:00,PRELOCK_NO_CHANGE,RUN_POST_AFTER_FINISH,.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-23 --timezone Atlantic/Canary --mode post

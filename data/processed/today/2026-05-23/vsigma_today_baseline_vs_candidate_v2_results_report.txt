@@ -1,17 +1,17 @@
 vSIGMA TODAY BASELINE VS CANDIDATE V2 RESULTS
 
 Baseline pick count: 3
-Candidate pick count: 3
-Overlap picks: 2
+Candidate pick count: 2
+Overlap picks: 1
 
 Mode summary
                mode  pick_count  settled_rows  pending_rows  unmatched_rows  wins  losses  pushes  voids  profit_units roi_percent
   BASELINE_OFFICIAL           3             0             0               3     0       0       0      0           0.0        <NA>
-SHADOW_CANDIDATE_V2           3             0             0               3     0       0       0      0           0.0        <NA>
+SHADOW_CANDIDATE_V2           2             0             0               2     0       0       0      0           0.0        <NA>
 
 Pick result comparison
-comparison_status  fixture_id                            fixture           league baseline_rank candidate_v2_rank baseline_market candidate_v2_market baseline_result_status candidate_v2_result_status baseline_result candidate_v2_result baseline_profit_units candidate_v2_profit_units
-CANDIDATE_V2_ONLY     1392205                Huesca vs Castellón Segunda División          <NA>                 1             NaN            OVER_2_5                    NaN                  UNMATCHED             NaN           UNMATCHED                  <NA>                      <NA>
-    BASELINE_ONLY     1392207          Sporting Gijon vs Almeria Segunda División             1              <NA>        OVER_2_5                 NaN              UNMATCHED                        NaN       UNMATCHED                 NaN                  <NA>                      <NA>
-             BOTH     1504827 Tokyo Verdy vs Yokohama F. Marinos        J1 League             3                 3        OVER_1_5            OVER_1_5              UNMATCHED                  UNMATCHED       UNMATCHED           UNMATCHED                  <NA>                      <NA>
-             BOTH     1545796                 Catanzaro vs Monza          Serie B             2                 2        OVER_1_5            OVER_1_5              UNMATCHED                  UNMATCHED       UNMATCHED           UNMATCHED                  <NA>                      <NA>
+comparison_status  fixture_id                     fixture           league baseline_rank candidate_v2_rank baseline_market candidate_v2_market baseline_result_status candidate_v2_result_status baseline_result candidate_v2_result baseline_profit_units candidate_v2_profit_units
+CANDIDATE_V2_ONLY     1392205         Huesca vs Castellón Segunda División          <NA>                 1             NaN            OVER_2_5                    NaN                  UNMATCHED             NaN           UNMATCHED                  <NA>                      <NA>
+    BASELINE_ONLY     1392207   Sporting Gijon vs Almeria Segunda División             1              <NA>        OVER_2_5                 NaN              UNMATCHED                        NaN       UNMATCHED                 NaN                  <NA>                      <NA>
+    BASELINE_ONLY     1492276 Remo vs Atletico Paranaense          Serie A             3              <NA>        OVER_1_5                 NaN              UNMATCHED                        NaN       UNMATCHED                 NaN                  <NA>                      <NA>
+             BOTH     1545796          Catanzaro vs Monza          Serie B             2                 2        OVER_1_5            OVER_1_5              UNMATCHED                  UNMATCHED       UNMATCHED           UNMATCHED                  <NA>                      <NA>

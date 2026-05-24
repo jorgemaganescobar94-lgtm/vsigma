@@ -1,7 +1,7 @@
 # vSIGMA Improvement Proposals - 2026-05-23
 
 ## Executive Proposal Summary
-- generated_at: 2026-05-24T12:51:54+01:00
+- generated_at: 2026-05-24T13:42:55+01:00
 - proposals generated: 12
 - proposal_type_counts: DATA_QUALITY_PROPOSAL=7; MODEL_SHADOW_PROPOSAL=3; OPERATIONAL_PROPOSAL=2
 - proposal_status_counts: PROPOSAL_ONLY=8; SHADOW_CANDIDATE_REQUIRED=2; MONITOR_ONLY=2
@@ -12,8 +12,8 @@
 - P1 | SHADOW_CANDIDATE_REQUIRED | MODEL_SHADOW_PROPOSAL | SAMPLE_KEY_CLUSTER | n=3 | auto_apply=NO | action=Create a shadow-only candidate for pattern WAITING_PRELOCK::OVER_1_5::FAILURE_MODE_LOW_CONVERSION::WAIT_FOR_POST_RESULTS; do not change production until backtest/forward-test promotion gates pass.
 - P1 | PROPOSAL_ONLY | OPERATIONAL_PROPOSAL | WAITING_PRELOCK_CLUSTER | n=4 | auto_apply=NO | action=Review AUTO/PRELOCK schedule, retry windows, and whether candidates remain waiting too close to kickoff.
 - P1 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | DATA_BLOCKED_CLUSTER | n=1 | auto_apply=NO | action=Inspect provider coverage, odds, lineup, availability, and freshness gaps.
-- P2 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | MARKET_RISK_CLUSTER | n=10 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
-- P2 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | SAMPLE_KEY_CLUSTER | n=10 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
+- P2 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | MARKET_RISK_CLUSTER | n=9 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
+- P2 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | SAMPLE_KEY_CLUSTER | n=9 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
 - P2 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | MARKET_RISK_CLUSTER | n=8 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
 - P2 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | SAMPLE_KEY_CLUSTER | n=8 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
 - P2 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | MARKET_RISK_CLUSTER | n=3 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
