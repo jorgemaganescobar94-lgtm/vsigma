@@ -1,0 +1,16 @@
+vSIGMA TODAY BASELINE VS CANDIDATE V2 VS CANDIDATE V4 RESULTS
+
+Mode summary
+                                           mode  pick_count  settled_rows  pending_rows  unmatched_rows  wins  losses  pushes  voids  profit_units roi_percent
+                              BASELINE_OFFICIAL           3             1             2               0     1       0       0      0          0.48        48.0
+                            SHADOW_CANDIDATE_V2           3             1             2               0     1       0       0      0          0.48        48.0
+SHADOW_CANDIDATE_V4_O25_LOW_CONVERSION_FIREWALL           2             0             2               0     0       0       0      0          0.00        <NA>
+
+Candidate v4 adjusted/downgraded top picks: 1
+
+Pick result comparison
+                 comparison_status  fixture_id                            fixture           league baseline_rank candidate_v2_rank candidate_v4_rank baseline_market candidate_v2_market candidate_v4_market candidate_v4_original_market candidate_v4_firewall_decision baseline_result candidate_v2_result candidate_v4_result baseline_profit_units candidate_v2_profit_units candidate_v4_profit_units
+         CANDIDATE_V2+CANDIDATE_V4     1392205                Huesca vs Castellón Segunda División          <NA>                 1                 1             NaN            OVER_2_5            OVER_1_5                     OVER_2_5            DEGRADE_TO_OVER_1_5             NaN             PENDING             PENDING                  <NA>                      <NA>                      <NA>
+                          BASELINE     1392207          Sporting Gijon vs Almeria Segunda División             1              <NA>              <NA>        OVER_2_5                 NaN                 NaN                          NaN                            NaN         PENDING                 NaN                 NaN                  <NA>                      <NA>                      <NA>
+             BASELINE+CANDIDATE_V2     1504827 Tokyo Verdy vs Yokohama F. Marinos        J1 League             3                 3              <NA>        OVER_1_5            OVER_1_5                 NaN                          NaN                            NaN             WIN                 WIN                 NaN                  0.48                      0.48                      <NA>
+BASELINE+CANDIDATE_V2+CANDIDATE_V4     1545796                 Catanzaro vs Monza          Serie B             2                 2                 2        OVER_1_5            OVER_1_5            OVER_1_5                     OVER_1_5                    NOT_APPLIED         PENDING             PENDING             PENDING                  <NA>                      <NA>                      <NA>

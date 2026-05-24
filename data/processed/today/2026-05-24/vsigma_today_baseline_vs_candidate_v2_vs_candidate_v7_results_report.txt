@@ -1,0 +1,18 @@
+vSIGMA TODAY BASELINE VS CANDIDATE V2 VS CANDIDATE V7 RESULTS
+
+Mode summary
+                                                mode  pick_count  settled_rows  pending_rows  unmatched_rows  wins  losses  pushes  voids  profit_units roi_percent
+                                   BASELINE_OFFICIAL           3             1             2               0     1       0       0      0          0.48        48.0
+                                 SHADOW_CANDIDATE_V2           3             1             2               0     1       0       0      0          0.48        48.0
+SHADOW_CANDIDATE_V7_PRICE_DISCIPLINE_CLV_DRIFT_GUARD           1             0             1               0     0       0       0      0          0.00        <NA>
+
+Price discipline decision mix
+price_discipline_decision
+PRICE_OK    1
+
+Pick result comparison
+        comparison_status  fixture_id                            fixture           league baseline_rank candidate_v2_rank candidate_v7_rank baseline_market candidate_v2_market candidate_v7_market candidate_v7_decision baseline_result candidate_v2_result candidate_v7_result baseline_profit_units candidate_v2_profit_units candidate_v7_profit_units
+CANDIDATE_V2+CANDIDATE_V7     1392205                Huesca vs Castellón Segunda División          <NA>                 1                 1             NaN            OVER_2_5            OVER_2_5              PRICE_OK             NaN             PENDING             PENDING                  <NA>                      <NA>                      <NA>
+                 BASELINE     1392207          Sporting Gijon vs Almeria Segunda División             1              <NA>              <NA>        OVER_2_5                 NaN                 NaN                   NaN         PENDING                 NaN                 NaN                  <NA>                      <NA>                      <NA>
+    BASELINE+CANDIDATE_V2     1504827 Tokyo Verdy vs Yokohama F. Marinos        J1 League             3                 3              <NA>        OVER_1_5            OVER_1_5                 NaN                   NaN             WIN                 WIN                 NaN                  0.48                      0.48                      <NA>
+    BASELINE+CANDIDATE_V2     1545796                 Catanzaro vs Monza          Serie B             2                 2              <NA>        OVER_1_5            OVER_1_5                 NaN                   NaN         PENDING             PENDING                 NaN                  <NA>                      <NA>                      <NA>
