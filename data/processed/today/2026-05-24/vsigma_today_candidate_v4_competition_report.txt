@@ -3,8 +3,8 @@ vSIGMA SHADOW CANDIDATE V4
 Layer: candidate v2 signals + O2.5 Low Conversion Firewall.
 Status: experimental shadow; official baseline and candidate v2 outputs are not replaced.
 
-Candidate v2 input rows: 4
-Candidate v4 competition shortlist rows: 4
+Candidate v2 input rows: 3
+Candidate v4 competition shortlist rows: 3
 Candidate v4 competition top rows: 2
 
 ## O2.5 Low Conversion Firewall
@@ -17,4 +17,4 @@ Candidate v4 competition top rows: 2
 
  accuracy_mode_rank  fixture_id           league home_team away_team market_primary  competition_calibrated_prob  accuracy_confidence_score over25_low_conversion_firewall_decision  over25_low_conversion_confirmation_score
                   1     1392205 Segunda División    Huesca Castellón       OVER_1_5                      0.85236                    158.115                     DEGRADE_TO_OVER_1_5                                       8.5
-                  2     1545796          Serie B Catanzaro     Monza       OVER_1_5                      0.81490                    123.878                             NOT_APPLIED                                       0.0
+                  2     1545796          Serie B Catanzaro     Monza       OVER_1_5                      0.81490                    125.039                             NOT_APPLIED                                       0.0

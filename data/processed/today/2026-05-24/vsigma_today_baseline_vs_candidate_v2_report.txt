@@ -4,17 +4,18 @@ Baseline: official frozen Competition Accuracy Mode + Probability Calibration.
 Candidate v2: SHADOW experimental schedule-strength + anomaly-cleaning layer.
 
 Baseline official picks: 4
-Candidate v2 shadow picks: 4
-Overlap: 4
-Only baseline chose: 0
+Candidate v2 shadow picks: 3
+Overlap: 3
+Only baseline chose: 1
 Only candidate chose: 0
 
 Side-by-side picks
-comparison_status                            fixture  baseline_rank  candidate_v2_rank baseline_market candidate_v2_market  baseline_calibrated_prob  candidate_v2_calibrated_prob  baseline_confidence_score  candidate_v2_confidence_score
-             BOTH                Huesca vs Castellón              2                  1        OVER_2_5            OVER_2_5                  0.809725                      0.802125                    137.759                        139.809
-             BOTH          Sporting Gijon vs Almeria              1                  2        OVER_2_5            OVER_2_5                  0.841525                      0.816925                    142.388                        136.313
-             BOTH Tokyo Verdy vs Yokohama F. Marinos              4                  4        OVER_1_5            OVER_1_5                  0.771900                      0.771900                    112.990                        113.275
-             BOTH                 Catanzaro vs Monza              3                  3        OVER_1_5            OVER_1_5                  0.819000                      0.814900                    124.626                        123.878
+comparison_status                     fixture  baseline_rank candidate_v2_rank baseline_market candidate_v2_market  baseline_calibrated_prob candidate_v2_calibrated_prob  baseline_confidence_score candidate_v2_confidence_score
+             BOTH         Huesca vs Castellón              2                 1        OVER_2_5            OVER_2_5                  0.809725                     0.802125                    137.759                       139.809
+             BOTH   Sporting Gijon vs Almeria              1                 2        OVER_2_5            OVER_2_5                  0.841525                     0.816925                    142.569                       136.494
+    BASELINE_ONLY Remo vs Atletico Paranaense              4              <NA>        OVER_1_5                 NaN                  0.761200                         <NA>                    110.058                          <NA>
+             BOTH          Catanzaro vs Monza              3                 3        OVER_1_5            OVER_1_5                  0.819000                       0.8149                    125.787                       125.039
 
 Reason differences
-All compared picks overlap. Review probability/confidence deltas in the CSV.
+comparison_status                     fixture                                                                                                              baseline_main_reason candidate_v2_main_reason       baseline_primary_risk candidate_v2_primary_risk
+    BASELINE_ONLY Remo vs Atletico Paranaense ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE                      NaN FAILURE_MODE_LOW_CONVERSION                       NaN

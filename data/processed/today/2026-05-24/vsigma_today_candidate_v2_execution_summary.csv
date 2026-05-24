@@ -1,17 +1,14 @@
 summary_scope,metric,rows_total,final_execution_bucket,final_recommendation,league,market_primary
-eligibility,premium_core_rows,5,,,,
-eligibility,premium_extended_eligible_rows,4,,,,
+eligibility,premium_core_rows,4,,,,
+eligibility,premium_extended_eligible_rows,2,,,,
 eligibility,standard_eligible_rows,0,,,,
-final,final_shortlist_rows,6,,,,
-final,bets_only_rows,6,,,,
-by_final_execution_bucket,,6,APPROVED_PREMIUM,,,
-by_final_recommendation,,6,,BET,,
-by_league,,1,,,J1 League,
+final,final_shortlist_rows,4,,,,
+final,bets_only_rows,4,,,,
+by_final_execution_bucket,,4,APPROVED_PREMIUM,,,
+by_final_recommendation,,4,,BET,,
 by_league,,1,,,Jupiler Pro League,
-by_league,,1,,,Premier League,
 by_league,,2,,,Segunda División,
 by_league,,1,,,Serie B,
-by_market_primary,,1,,,,BTTS_YES
 by_market_primary,,1,,,,HOME_WIN
-by_market_primary,,2,,,,OVER_1_5
+by_market_primary,,1,,,,OVER_1_5
 by_market_primary,,2,,,,OVER_2_5

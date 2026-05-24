@@ -27,5 +27,5 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CANDIDATE_V2+CANDIDATE_V4 | 1392205 | Huesca vs Castellón | Segunda División |  | 1 | 1 |  | OVER_2_5 | OVER_1_5 | OVER_2_5 | DEGRADE_TO_OVER_1_5 | 8.5 | MARKET_DOWNGRADED_TO_OVER_1_5 |  | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION |
 | BASELINE | 1392207 | Sporting Gijon vs Almeria | Segunda División | 1 |  |  | OVER_2_5 |  |  |  |  |  |  | FAILURE_MODE_LOW_CONVERSION |  |  |
-| BASELINE+CANDIDATE_V2 | 1504827 | Tokyo Verdy vs Yokohama F. Marinos | J1 League | 3 | 3 |  | OVER_1_5 | OVER_1_5 |  |  |  |  |  | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION |  |
+| BASELINE | 1492276 | Remo vs Atletico Paranaense | Serie A | 3 |  |  | OVER_1_5 |  |  |  |  |  |  | FAILURE_MODE_LOW_CONVERSION |  |  |
 | BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1545796 | Catanzaro vs Monza | Serie B | 2 | 2 | 2 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION |
