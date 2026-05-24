@@ -1,0 +1,4 @@
+target_date,generated_at,rank,fixture_id,home_team,away_team,market_primary,context_level,context_score,matrix_policy,audit_memory_level,final_portfolio_status,stake_guidance,operator_note,auto_apply,production_change
+2026-05-23,2026-05-24T14:30:53+01:00,1,1494182,Kalmar FF,Degerfors IF,OVER_1_5,L6_REVIEW,36,review only,MEM_SHADOW_WIN,REVIEW_ONLY,LOW_IF_CONFIRMED,Review only; low stake only with price/prelock/live confirmation.,NO,NO
+2026-05-23,2026-05-24T14:30:53+01:00,3,1378237,Lazio,Pisa,HOME_WIN,L9_MAX_BLOCK,96,no action,MEM_MISSED_WIN,NO_ACTION_SOFTEN_WATCH,NO_STAKE,"No action now, but track as missed-win soften candidate.",NO,NO
+2026-05-23,2026-05-24T14:30:53+01:00,2,1378234,Bologna,Inter,AWAY_WIN,L9_MAX_BLOCK,109,no action,MEM_AVOIDED_LOSS,NO_ACTION_CONTEXT,NO_STAKE,Context matrix blocks this pick.,NO,NO
