@@ -1,7 +1,7 @@
 # vSIGMA Healthcheck Report - 2026-05-24
 
 - Global health status: WARNING
-- Generated at: 2026-05-24T13:13:24.058182+01:00
+- Generated at: 2026-05-24T17:13:15.460797+01:00
 - Mode: full
 - HEALTHY: 34
 - WARNING: 2
@@ -44,7 +44,7 @@
 | candidate_output:CANDIDATE_V5 | HEALTHY | present with 2 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-24/vsigma_today_candidate_v5_competition_top.csv |
 | candidate_output:CANDIDATE_V6 | HEALTHY | present with 1 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-24/vsigma_today_candidate_v6_competition_top.csv |
 | daily_master_report | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-24/daily_competition_master_report.md |
-| immutable_ledger_exists | HEALTHY | ledger present with 113 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
+| immutable_ledger_exists | HEALTHY | ledger present with 110 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | ledger_target_date_rows | HEALTHY | 16 row(s) for target date |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | ledger_duplicate_ids | HEALTHY | no duplicate ledger_id values for target date |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | freshness_report | HEALTHY | validation report present without ERROR |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-24/vsigma_daily_freshness_report.csv |

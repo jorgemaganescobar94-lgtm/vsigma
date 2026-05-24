@@ -6,70 +6,65 @@ Missing or thin odds are treated as uncertainty, not as a negative football sign
 Summary
                 summary_scope                 metric  rows_total
                       overall        target_fixtures          44
-  odds_structure_depth_status                     OK          43
-  odds_structure_depth_status          NO_ODDS_FOUND           1
-odds_structure_coherence_flag             RICH_MIXED          24
-odds_structure_coherence_flag          RICH_COHERENT          19
-odds_structure_coherence_flag      NO_ODDS_UNCERTAIN           1
-      odds_total_ladder_shape            BROAD_GOALS          22
-      odds_total_ladder_shape               BALANCED           8
+  odds_structure_depth_status                     OK          44
+odds_structure_coherence_flag             RICH_MIXED          28
+odds_structure_coherence_flag          RICH_COHERENT          16
+      odds_total_ladder_shape            BROAD_GOALS          21
+      odds_total_ladder_shape               BALANCED           9
       odds_total_ladder_shape             WIDE_GOALS           8
-      odds_total_ladder_shape             MILD_GOALS           5
-      odds_total_ladder_shape                UNKNOWN           1
- odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL          30
- odds_market_translation_hint    PREFER_MILDER_TOTAL           5
- odds_market_translation_hint   CAUTION_FRAGILE_SIDE           3
+      odds_total_ladder_shape             MILD_GOALS           6
+ odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL          29
+ odds_market_translation_hint    PREFER_MILDER_TOTAL           6
+ odds_market_translation_hint   CAUTION_FRAGILE_SIDE           4
  odds_market_translation_hint           CAUTION_BTTS           3
  odds_market_translation_hint                NEUTRAL           2
- odds_market_translation_hint   ODDS_DEPTH_UNCERTAIN           1
-    odds_line_aggression_flag     OVER_2_5_SUPPORTED          30
-    odds_line_aggression_flag                NEUTRAL           8
-    odds_line_aggression_flag        PREFER_OVER_1_5           5
-    odds_line_aggression_flag                UNKNOWN           1
+    odds_line_aggression_flag     OVER_2_5_SUPPORTED          29
+    odds_line_aggression_flag                NEUTRAL           9
+    odds_line_aggression_flag        PREFER_OVER_1_5           6
 
 Fixture preview
  fixture_id              league          home_team           away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
-    1537007  Jupiler Pro League     Club Brugge KV                Gent                 RICH_COHERENT              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3312                             0.030
-    1537005  Jupiler Pro League        St. Truiden         KV Mechelen                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3423                             0.030
-    1537006  Jupiler Pro League Union St. Gilloise          Anderlecht                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3445                             0.030
-    1391198             La Liga         Villarreal     Atletico Madrid                    RICH_MIXED              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4235                             0.025
-    1545225             Ligue 2              Laval               Rouen                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3793                            -0.015
-    1379339      Premier League           Brighton   Manchester United                 RICH_COHERENT              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3458                             0.030
-    1379340      Premier League            Burnley              Wolves                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3780                             0.025
-    1379341      Premier League     Crystal Palace             Arsenal                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3703                             0.025
-    1379342      Premier League             Fulham           Newcastle                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3512                             0.025
-    1379343      Premier League          Liverpool           Brentford                 RICH_COHERENT              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3193                             0.030
-    1379344      Premier League    Manchester City         Aston Villa                    RICH_MIXED              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3776                             0.025
-    1379345      Premier League  Nottingham Forest         Bournemouth                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3131                             0.030
-    1379346      Premier League         Sunderland             Chelsea                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2949                             0.030
-    1379347      Premier League          Tottenham             Everton                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3528                            -0.015
-    1379348      Premier League           West Ham               Leeds                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3581                             0.025
-    1392215    Segunda División           Albacete    Real Sociedad II                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3040                             0.030
-    1392208    Segunda División              Cadiz             Leganes                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3528                            -0.015
-    1392212    Segunda División   Cultural Leonesa              Burgos                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3016                            -0.015
-    1392214    Segunda División              Eibar             Cordoba                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3673                             0.025
-    1396989    Segunda División         FC Andorra         AD Ceuta FC                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.5134                             0.025
-    1392205    Segunda División             Huesca           Castellón                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3427                             0.030
-    1392206    Segunda División         Las Palmas            Zaragoza                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3935                             0.025
-    1392209    Segunda División             Malaga    Racing Santander                    RICH_MIXED              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3695                             0.025
-    1392210    Segunda División           Mirandes          Granada CF                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3446                             0.030
-    1392207    Segunda División     Sporting Gijon             Almeria                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3532                             0.025
-    1392211    Segunda División         Valladolid Deportivo La Coruna                 RICH_COHERENT                BALANCED                      NEUTRAL                   NEUTRAL                 0.3190                             0.000
-    1378239             Serie A           AC Milan            Cagliari                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4678                             0.025
-    1378235             Serie A          Cremonese                Como                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4516                             0.025
-    1378243             Serie A      Hellas Verona             AS Roma                    RICH_MIXED                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.4406                            -0.010
-    1378238             Serie A              Lecce               Genoa                 RICH_COHERENT                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.3036                            -0.010
-    1378240             Serie A             Napoli             Udinese                 RICH_COHERENT                BALANCED                      NEUTRAL                   NEUTRAL                 0.3085                             0.000
-    1378241             Serie A              Parma            Sassuolo                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.2689                            -0.015
-    1378242             Serie A             Torino            Juventus                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3758                             0.025
-    1545796             Serie B          Catanzaro               Monza                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3538                            -0.015
+    1537007  Jupiler Pro League     Club Brugge KV                Gent                 RICH_COHERENT              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3356                             0.030
+    1537005  Jupiler Pro League        St. Truiden         KV Mechelen                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3171                             0.030
+    1537006  Jupiler Pro League Union St. Gilloise          Anderlecht                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3350                             0.030
+    1391198             La Liga         Villarreal     Atletico Madrid                    RICH_MIXED              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4512                             0.025
+    1545225             Ligue 2              Laval               Rouen                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3714                            -0.015
+    1379339      Premier League           Brighton   Manchester United                 RICH_COHERENT              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3223                             0.030
+    1379340      Premier League            Burnley              Wolves                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3911                            -0.015
+    1379341      Premier League     Crystal Palace             Arsenal                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.4199                            -0.015
+    1379342      Premier League             Fulham           Newcastle                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3671                             0.025
+    1379343      Premier League          Liverpool           Brentford                    RICH_MIXED              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3519                             0.025
+    1379344      Premier League    Manchester City         Aston Villa                    RICH_MIXED              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.5030                             0.025
+    1379345      Premier League  Nottingham Forest         Bournemouth                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3588                             0.025
+    1379346      Premier League         Sunderland             Chelsea                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2932                             0.030
+    1379347      Premier League          Tottenham             Everton                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3954                            -0.015
+    1379348      Premier League           West Ham               Leeds                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4257                             0.025
+    1392215    Segunda División           Albacete    Real Sociedad II                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3869                             0.025
+    1392208    Segunda División              Cadiz             Leganes                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3890                            -0.015
+    1392212    Segunda División   Cultural Leonesa              Burgos                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3578                            -0.015
+    1392214    Segunda División              Eibar             Cordoba                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3642                             0.025
+    1396989    Segunda División         FC Andorra         AD Ceuta FC                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.5097                             0.025
+    1392205    Segunda División             Huesca           Castellón                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3240                             0.030
+    1392206    Segunda División         Las Palmas            Zaragoza                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3895                             0.025
+    1392209    Segunda División             Malaga    Racing Santander                    RICH_MIXED              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3931                             0.025
+    1392210    Segunda División           Mirandes          Granada CF                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3447                             0.030
+    1392207    Segunda División     Sporting Gijon             Almeria                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3603                             0.025
+    1392211    Segunda División         Valladolid Deportivo La Coruna                 RICH_COHERENT                BALANCED                      NEUTRAL                   NEUTRAL                 0.3288                             0.000
+    1378239             Serie A           AC Milan            Cagliari                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4434                             0.025
+    1378235             Serie A          Cremonese                Como                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4830                             0.025
+    1378243             Serie A      Hellas Verona             AS Roma                    RICH_MIXED                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.4475                            -0.010
+    1378238             Serie A              Lecce               Genoa                 RICH_COHERENT                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.3118                            -0.010
+    1378240             Serie A             Napoli             Udinese                    RICH_MIXED                BALANCED                      NEUTRAL                   NEUTRAL                 0.3543                             0.000
+    1378241             Serie A              Parma            Sassuolo                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3378                            -0.015
+    1378242             Serie A             Torino            Juventus                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3444                             0.030
+    1545796             Serie B          Catanzaro               Monza                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.4278                            -0.015
     1494181         Allsvenskan        Hammarby FF       AIK Stockholm                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3916                             0.025
     1494183         Allsvenskan           Malmo FF      Vasteras SK FK                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2805                             0.030
     1494184         Allsvenskan             Sirius                Gais                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3645                             0.025
-    1494668         Eliteserien         Bodo/Glimt               Brann                    RICH_MIXED              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4457                             0.025
-    1494671         Eliteserien    Kristiansund BK              Viking                 RICH_COHERENT              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3249                             0.030
+    1494668         Eliteserien         Bodo/Glimt               Brann                    RICH_MIXED              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4744                             0.025
+    1494671         Eliteserien    Kristiansund BK              Viking                 RICH_COHERENT              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3162                             0.030
     1545176          League One             Bolton    Stockport County                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3318                            -0.015
-    1490322 Major League Soccer      Columbus Crew   Atlanta United FC             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                 0.0000                             0.000
-    1492270             Serie A        Corinthians         Atletico-MG                    RICH_MIXED                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.3685                            -0.010
-    1492272             Serie A           Cruzeiro      Chapecoense-sc                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4480                             0.025
-    1492276             Serie A               Remo Atletico Paranaense                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3222                            -0.015
+    1490322 Major League Soccer      Columbus Crew   Atlanta United FC                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3054                             0.030
+    1492270             Serie A        Corinthians         Atletico-MG                    RICH_MIXED                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.3793                            -0.010
+    1492272             Serie A           Cruzeiro      Chapecoense-sc                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.6491                             0.025
+    1492276             Serie A               Remo Atletico Paranaense                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3305                            -0.015

@@ -1,20 +1,20 @@
 # vSIGMA Decision Quality Review - 2026-05-24
 
 ## Executive Summary
-- generated_at: 2026-05-24T13:14:25+01:00
+- generated_at: 2026-05-24T17:14:16+01:00
 - daily_classification: EXECUTION_OK
 - no_bet_classification: EXECUTION_ACTIONABLE_PRESENT
 - operational_verdict: EXECUTION_AVAILABLE
 - predictive_failure: UNKNOWN
-- rows reviewed: 5
+- rows reviewed: 6
 - actionable rows: 1
-- non-actionable rows: 4
+- non-actionable rows: 5
 - resolved rows: 1
-- unresolved rows: 4
+- unresolved rows: 5
 - good decisions: 0
 - bad decisions: 1
-- neutral/unresolved: 4
-- top improvement signal: WAIT_FOR_POST_RESULTS (3)
+- neutral/unresolved: 5
+- top improvement signal: WAIT_FOR_POST_RESULTS (4)
 - current recommendation: Do not recalibrate; collect more labeled outcomes.
 - operational note: At least one row was executable at decision time.
 
@@ -30,6 +30,7 @@
 | Flamengo vs Palmeiras | OVER_1_5 | EXECUTABLE | NONE | UNRESOLVED | ACTIONABLE_UNRESOLVED | NEEDS_MORE_DATA | IMPROVE_POST_RESULT_LABELING |
 | Tokyo Verdy vs Yokohama F. Marinos | OVER_1_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | WIN | WAIT_MISSED_WIN | BAD_DECISION | REVIEW_NON_ACTIONABLE_BLOCK |
 | Sporting Gijon vs Almeria | OVER_2_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
+| Sporting Gijon vs Almeria | OVER_2_5 | NO_BET | PRELOCK_GOVERNANCE_NOT_RETAINED | UNRESOLVED | NO_BET_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
 | Catanzaro vs Monza | OVER_1_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
 | Remo vs Atletico Paranaense | OVER_1_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
 
@@ -46,13 +47,13 @@
 | market_primary | rows | wins | losses | no_bet_missed_win | no_bet_correct_avoided_loss | unresolved | recommendation |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | OVER_1_5 | 4 | 1 | 0 | 0 | 0 | 3 | MONITOR |
-| OVER_2_5 | 1 | 0 | 0 | 0 | 0 | 1 | WAIT_FOR_POST_RESULTS |
+| OVER_2_5 | 2 | 0 | 0 | 0 | 0 | 2 | WAIT_FOR_POST_RESULTS |
 
 ## System Recommendations
 | priority | category | title | reason | apply_now |
 | --- | --- | --- | --- | --- |
 | P3 | sample | Do not recalibrate from quality sample yet | resolved_rows=1 is below minimum 30. | NO |
-| P3 | post_results | Wait for POST results or improve labeling | unresolved_rows=4; resolved_rows=1. | NO |
+| P3 | post_results | Wait for POST results or improve labeling | unresolved_rows=5; resolved_rows=1. | NO |
 
 ## Guardrails
 - automatic scoring changes applied: NO
