@@ -13,7 +13,7 @@ player_impact_adjustment_action
 NOT_APPLIED    4
 
 Candidate v5 Top
- accuracy_mode_rank  fixture_id           league home_team away_team market_primary  competition_calibrated_prob  accuracy_confidence_score player_impact_adjustment_action      player_impact_market_translation_hint
-                  1     1392205 Segunda División    Huesca Castellón       OVER_2_5                     0.802125                    139.809                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
-                  2     1545796          Serie B Catanzaro     Monza       OVER_1_5                     0.814900                    123.878                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
-                  3     1492273          Serie A  Flamengo Palmeiras       OVER_1_5                     0.811600                    118.080                     NOT_APPLIED                      PLAYER_IMPACT_NEUTRAL
+ accuracy_mode_rank  fixture_id           league   home_team           away_team market_primary  competition_calibrated_prob  accuracy_confidence_score player_impact_adjustment_action      player_impact_market_translation_hint
+                  1     1392205 Segunda División      Huesca           Castellón       OVER_2_5                     0.802125                    139.809                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
+                  2     1545796          Serie B   Catanzaro               Monza       OVER_1_5                     0.814900                    123.878                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
+                  3     1504827        J1 League Tokyo Verdy Yokohama F. Marinos       OVER_1_5                     0.771900                    113.275                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE

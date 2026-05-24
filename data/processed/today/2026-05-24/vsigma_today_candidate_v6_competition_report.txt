@@ -17,6 +17,6 @@ API_PREDICTION_DISAGREEMENT_SECONDARY    2
 NOT_APPLIED                              2
 
 Candidate v6 Top
- accuracy_mode_rank  fixture_id  league home_team away_team market_primary  competition_calibrated_prob  accuracy_confidence_score api_prediction_alignment_flag api_prediction_benchmark_action
-                  1     1545796 Serie B Catanzaro     Monza       OVER_1_5                       0.8149                    123.878                       NEUTRAL                     NOT_APPLIED
-                  2     1492273 Serie A  Flamengo Palmeiras       OVER_1_5                       0.8116                    118.080                       NEUTRAL                     NOT_APPLIED
+ accuracy_mode_rank  fixture_id    league   home_team           away_team market_primary  competition_calibrated_prob  accuracy_confidence_score api_prediction_alignment_flag api_prediction_benchmark_action
+                  1     1545796   Serie B   Catanzaro               Monza       OVER_1_5                       0.8149                    123.878                       NEUTRAL                     NOT_APPLIED
+                  2     1504827 J1 League Tokyo Verdy Yokohama F. Marinos       OVER_1_5                       0.7719                    113.275                       NEUTRAL                     NOT_APPLIED
