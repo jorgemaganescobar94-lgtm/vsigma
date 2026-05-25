@@ -21,14 +21,6 @@ def u(v: object) -> str:
     return n(v).upper()
 
 
-def f(v: object, d: float = 0.0) -> float:
-    try:
-        s = n(v)
-        return d if not s or s.lower() == "nan" else float(s)
-    except ValueError:
-        return d
-
-
 def rows(p: Path) -> list[dict[str, str]]:
     if not p.exists():
         return []
@@ -45,9 +37,14 @@ def write(p: Path, data: list[dict[str, object]]) -> None:
             w.writerow({k: r.get(k, "") for k in FIELDS})
 
 
-def src(base: Path, day: str, name: str) -> Path:
-    p = base / "today" / day / name
-    return p if p.exists() else base / "governance" / name
+def dated(base: Path, day: str, name: str) -> Path:
+    return base / "today" / day / name
+
+
+def read_dated(base: Path, day: str, name: str) -> list[dict[str, str]]:
+    path = dated(base, day, name)
+    data = rows(path)
+    return [r for r in data if n(r.get("target_date"))[:10] in {"", day}]
 
 
 def ix(data: list[dict[str, str]]) -> dict[str, dict[str, str]]:
@@ -167,10 +164,13 @@ def level(score: int) -> tuple[str, str]:
 
 def build(day: str, tz: str, base: Path) -> list[dict[str, object]]:
     gen = datetime.now(ZoneInfo(tz)).isoformat(timespec="seconds")
-    adjusted = rows(src(base, day, "vsigma_context_adjusted_final_picks.csv"))
-    real = ix(rows(src(base, day, "vsigma_real_objective_context_gate.csv")))
-    obj = ix(rows(src(base, day, "vsigma_objective_availability_gate.csv")))
-    aud = ix(rows(src(base, day, "vsigma_context_filter_calibration_advisor_details.csv")))
+    adjusted_path = dated(base, day, "vsigma_context_adjusted_final_picks.csv")
+    if not adjusted_path.exists():
+        return []
+    adjusted = read_dated(base, day, "vsigma_context_adjusted_final_picks.csv")
+    real = ix(read_dated(base, day, "vsigma_real_objective_context_gate.csv"))
+    obj = ix(read_dated(base, day, "vsigma_objective_availability_gate.csv"))
+    aud = ix(read_dated(base, day, "vsigma_context_filter_calibration_advisor_details.csv"))
     out: list[dict[str, object]] = []
     for i, r in enumerate(adjusted, start=1):
         fid = n(r.get("fixture_id")).replace(".0", "")
@@ -198,8 +198,11 @@ def counts(data: list[dict[str, object]], field: str) -> str:
 
 def md(day: str, data: list[dict[str, object]]) -> str:
     lines = [f"# vSIGMA Context Level Matrix - {day}", "", "## Summary", f"- rows_reviewed: {len(data)}", f"- context_level_counts: {counts(data, 'context_level')}", "- auto_apply: NO", "- production_change: NO", "", "## Matrix Rows"]
+    if not data:
+        lines.append("- none. Missing dated vsigma_context_adjusted_final_picks.csv; stale governance fallback refused.")
     for r in data:
         lines.append(f"- #{r['rank']} | {r['context_level']} | score={r['context_score']} | {r['home_team']} vs {r['away_team']} | market={r['market_primary']} | policy={r['policy']}")
+    lines += ["", "## Guardrails", "- This matrix refuses stale governance fallback.", "- Run context adjusted final picks for the same date before this matrix."]
     return "\n".join(lines) + "\n"
 
 
