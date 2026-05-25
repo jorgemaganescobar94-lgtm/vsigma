@@ -4,20 +4,12 @@ Source: official competition top
 Role: explanation layer only; this file does not select, remove, or promote picks.
 Forecast style: deterministic bands and modal scripts, not exact-stat certainty.
 
-Forecast rows: 2
+Forecast rows: 1
 
-#1 IFK Goteborg vs Mjallby AIF | Allsvenskan | OVER_1_5
-Script: Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.6; stats=FULL.
-Scores: main 1-2 | alt 0-2
-xG: home 0.8-1.5 | away 2.1-2.8 | total 3.1-4.2
-Stats: shots 14-18 vs 12-16; SOT 4-6 vs 5-7; corners 8-12; possession home 45-53% / away 47-55%
-Path: Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path.
-Breaker: Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market.
-
-#2 SC Paderborn 07 vs VfL Wolfsburg | Bundesliga | OVER_2_5
-Script: Open, active match with both penalty boxes reached often; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 4.3; stats=FULL.
-Scores: main 2-2 | alt 2-1
+#1 SC Paderborn 07 vs VfL Wolfsburg | Bundesliga | OVER_1_5
+Script: Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 4.3; stats=FULL.
+Scores: main 2-2 | alt 1-2
 xG: home 2.1-2.8 | away 1.5-2.2 | total 3.7-4.8
 Stats: shots 13-17 vs 9-13; SOT 4-6 vs 4-6; corners 8-12; possession home 48-56% / away 44-52%
-Path: Pick wins if the projected chance volume turns into three goals, usually via early tempo or both teams contributing.
+Path: Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path.
 Breaker: Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market.
