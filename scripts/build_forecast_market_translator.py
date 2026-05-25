@@ -191,11 +191,16 @@ def portfolio_gate(portfolio: dict[str, str] | None) -> tuple[str, str, int]:
     return status or level or "UNKNOWN", "LOW_OR_NONE", -6
 
 
-def permission(score: int, primary: str, warning: str, portfolio_status: str) -> tuple[str, str, str]:
+def permission(score: int, primary: str, warning: str, portfolio_status: str, confidence: str) -> tuple[str, str, str]:
     w = up(warning)
     p = up(portfolio_status)
+    c = up(confidence)
     if primary == "NO_CLEAR_STAT_MARKET":
         return "NO_BET", "NO_STAKE", "no stat market has enough support"
+    if c == "LOW":
+        return "NO_BET_OR_WATCH", "NO_STAKE_OR_SYMBOLIC", "low forecast confidence blocks execution; watch only"
+    if score < 0:
+        return "NO_BET_OR_WATCH", "NO_STAKE_OR_SYMBOLIC", "negative translation score after guards"
     if p in {"L8_HARD_DOWN", "L9_MAX_BLOCK", "NO_ACTION_CONTEXT"}:
         return "NO_BET", "NO_STAKE", "context matrix blocks execution"
     if "LINEUPS_INACTIVE" in w or p == "LIVE_ONLY_OR_SYMBOLIC":
@@ -210,14 +215,14 @@ def permission(score: int, primary: str, warning: str, portfolio_status: str) ->
 def build_row(f: dict[str, str], portfolio: dict[str, str] | None, target_date: str, generated_at: str, rank: int) -> dict[str, object]:
     primary, secondary, stat_profile, stat_score = market_candidates(f)
     port_status, default_stake, port_score = portfolio_gate(portfolio)
-    score = stat_score + level_score(f.get("forecast_confidence", "")) + warning_penalty(f.get("forecast_warning", "")) + port_score
-    exec_permission, stake, reason_tail = permission(score, primary, f.get("forecast_warning", ""), port_status)
+    confidence = f.get("forecast_confidence", "")
+    score = stat_score + level_score(confidence) + warning_penalty(f.get("forecast_warning", "")) + port_score
+    exec_permission, stake, reason_tail = permission(score, primary, f.get("forecast_warning", ""), port_status, confidence)
     kill = "NONE"
-    if up(f.get("forecast_confidence")) == "LOW":
+    if up(confidence) == "LOW":
         kill = "LOW_FORECAST_CONFIDENCE"
-        if exec_permission not in {"NO_BET", "LIVE_ONLY"}:
-            exec_permission = "NO_BET_OR_WATCH"
-            stake = "NO_STAKE_OR_SYMBOLIC"
+    if score < 0 and kill == "NONE":
+        kill = "NEGATIVE_TRANSLATION_SCORE"
     if "LOW_CONVERSION" in up(f.get("forecast_warning")) and primary == "OVER_2_5_REVIEW":
         kill = "LOW_CONVERSION_OVER25_FRAGILITY"
         primary = "OVER_1_5_SAFER_OR_LIVE"
@@ -277,6 +282,7 @@ def md(day: str, rows: list[dict[str, object]]) -> str:
         f"- rows_translated: {len(rows)}",
         f"- execution_permission_counts: {counts(rows, 'execution_permission')}",
         f"- primary_market_counts: {counts(rows, 'primary_stat_market')}",
+        "- calibration_note: v46.1 low confidence and negative score override live-only permission.",
         "- source_guard: DATED_INPUT_ONLY",
         "- auto_apply: NO",
         "- production_change: NO",
