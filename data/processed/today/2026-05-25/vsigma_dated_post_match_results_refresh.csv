@@ -1,0 +1,2 @@
+target_date,generated_at,fixture_id,home_team,away_team,status,goals,stats_status,updated_fields,source_guard
+2026-05-25,2026-05-25T21:48:07+01:00,NONE,SYSTEM,SYSTEM,REFRESH_SKIPPED_NO_API_CREDENTIALS,NA,Missing GitHub Actions secret API_FOOTBALL_KEY/APISPORTS_KEY or RAPIDAPI_KEY,none,DATED_INPUT_ONLY
