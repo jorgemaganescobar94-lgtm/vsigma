@@ -1,10 +1,10 @@
 # vSIGMA Decision Outcome Ledger - 2026-05-25
 
 ## Summary
-- Rows total: 32
-- Rows for target date: 3
-- Rows updated this run: 1
-- Actionable rows: 0
+- Rows total: 33
+- Rows for target date: 4
+- Rows updated this run: 2
+- Actionable rows: 1
 - Non-actionable rows: 3
 - Expired rows: 0
 - Waiting rows: 3
@@ -17,3 +17,4 @@
 | 1494179.0 | Allsvenskan | IFK Goteborg | Mjallby AIF | OVER_1_5 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | WAITING_FOR_WINDOW | NO | NO | YES | NO | NO |
 | 1545418.0 | Bundesliga | SC Paderborn 07 | VfL Wolfsburg | OVER_2_5 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | WAITING_FOR_WINDOW | NO | NO | YES | NO | NO |
 | 1545418 | Bundesliga | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | WAITING_FOR_WINDOW | NO | NO | YES | NO | NO |
+| 1494178 | Allsvenskan | IF Elfsborg | BK Hacken | OVER_2_5 | EXECUTABLE | YES | NONE | PRELOCK_CONFIRMED | YES | NO | NO | NO | NO |

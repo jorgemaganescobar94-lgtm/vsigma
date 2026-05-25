@@ -1,54 +1,55 @@
 # vSIGMA System Review - 2026-05-25
 
 ## Executive Status
-- Cloud AUTO status: WAITING_OR_BLOCKED
-- Candidates reviewed: 1
-- Executable picks: 0
+- Cloud AUTO status: EXECUTABLE
+- Candidates reviewed: 2
+- Executable picks: 1
 - Waiting picks: 1
 - Blocked picks: 0
-- Official action summary: WAIT
+- Official action summary: MIXED
 - Healthcheck status: WARNING
-- Ledger rows total: 126
-- Ledger rows for target date: 16
-- Decision outcome ledger rows total: 32
-- Decision outcome ledger actionable rows: 5
+- Ledger rows total: 111
+- Ledger rows for target date: 12
+- Decision outcome ledger rows total: 33
+- Decision outcome ledger actionable rows: 6
 - Decision outcome ledger non-actionable rows: 27
 - Decision outcome ledger no bet rows: 14
 - Decision outcome ledger expired rows: 12
 - Decision outcome ledger waiting rows: 13
 - Decision outcome ledger blocked rows: 2
 - Decision outcome ledger technical review rows: 0
-- Current operational verdict: WAIT_FOR_NEXT_PRELOCK_SLOT
+- Current operational verdict: EXECUTION_AVAILABLE_UNDER_GOVERNANCE
 
 ## Decision Quality Review
 - status: AVAILABLE
-- rows reviewed: 3
+- rows reviewed: 4
 - good decisions: 0
 - bad decisions: 0
-- unresolved: 3
-- top improvement signal: WAIT_FOR_POST_RESULTS (3)
+- unresolved: 4
+- top improvement signal: IMPROVE_POST_RESULT_LABELING (2)
 - recalibration_allowed_from_quality: NO
 
 ## Current Picks / Decisions
 | fixture_id | league | home_team | away_team | market_primary | official_action | executable_now | final_block_reason | retry_allowed | next_retry_time | data_gap_flags | execution_family_status | decision_state | exclusion_reason | next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1545418 | Bundesliga | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | YES | 2026-05-25T18:00+01:00 |  | WAITING_FOR_WINDOW |  | OUTSIDE_90_MIN_PRELOCK_WINDOW |  |
+| 1494178 | Allsvenskan | IF Elfsborg | BK Hacken | OVER_2_5 | EXECUTABLE | YES | NONE | NO |  | ODDS_MISSING | PRELOCK_CONFIRMED |  | PRELOCK_CONFIRMED |  |
 
 ## Data Coverage Review
-- coverage rich / partial / weak: COVERAGE_RICH: 7; COVERAGE_PARTIAL: 2
-- odds coverage: 9/9
-- fixture stats coverage: 7/9
-- injuries coverage: 6/9
-- lineups coverage: 9/9
-- predictions coverage: 9/9
-- odds structure depth: target_fixtures: 12; OK: 12; RICH_COHERENT: 9; RICH_MIXED: 3; BROAD_GOALS: 7
-- API gaps detected: fixture_stats, injuries
+- coverage rich / partial / weak: COVERAGE_RICH: 5
+- odds coverage: 5/5
+- fixture stats coverage: 5/5
+- injuries coverage: 4/5
+- lineups coverage: 5/5
+- predictions coverage: 5/5
+- odds structure depth: target_fixtures: 5; OK: 5; RICH_COHERENT: 3; RICH_MIXED: 2; MILD_GOALS: 3
+- API gaps detected: injuries
 
 ## Model / Market Review
-- markets appearing in current/historical inputs: OVER_1_5: 104; OVER_2_5: 23; BTTS_YES: 3; AWAY_WIN: 2; UNDER_3_5: 2
-- failure modes principales: FAILURE_MODE_LOW_CONVERSION: 184; LOW_CONVERSION: 92
-- OVER_1_5: appearances=104; calibration_sample=7; status=needs more sample
-- OVER_2_5: appearances=23; calibration_sample=2; status=needs more sample
+- markets appearing in current/historical inputs: OVER_1_5: 94; OVER_2_5: 19; BTTS_YES: 3; AWAY_WIN: 2; UNDER_3_5: 2
+- failure modes principales: FAILURE_MODE_LOW_CONVERSION: 146; LOW_CONVERSION: 73
+- OVER_1_5: appearances=94; calibration_sample=7; status=needs more sample
+- OVER_2_5: appearances=19; calibration_sample=2; status=needs more sample
 - sides / DNB / 1X / X2: appearances=2; calibration_sample=1; status=needs more sample
 - mercados con buena senal: none yet by sample rule
 - mercados que necesitan mas muestra: AWAY_WIN (1), OVER_1_5 (7), OVER_2_5 (2)
@@ -71,11 +72,12 @@
 ## System Improvement Queue
 | priority | category | title | reason | expected_impact | risk | recommended_action | apply_now | evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| P1 | execution | Keep actionable and non-actionable buckets separated | The current day has waiting or blocked decisions. | Keeps ledger/backtest interpretation aligned with execution reality. | Low; reporting-only validation. | Continue reporting all rows, actionable only, non-actionable, and graded bets separately. | YES | blocked=0; waiting=1; auto_status=WAITING_OR_BLOCKED |
+| P1 | execution | Keep actionable and non-actionable buckets separated | The current day has waiting or blocked decisions. | Keeps ledger/backtest interpretation aligned with execution reality. | Low; reporting-only validation. | Continue reporting all rows, actionable only, non-actionable, and graded bets separately. | YES | blocked=0; waiting=1; auto_status=EXECUTABLE |
+| P2 | api_data | Target API enrichment to candidate fixtures only | Coverage gaps are present, but broad calendar enrichment would add cost and repo churn. | Improves prelock evidence where it matters without expanding data volume unnecessarily. | Medium; API quotas and cache growth must be controlled. | Fetch lineups only for candidate picks in-window, injuries only for reliable leagues, and fixture statistics only for TOP candidates; keep cache bounds. | YES | data_gap_flags=ODDS_MISSING: 1; prelock_odds_state=ODDS_NOT_AVAILABLE: 1 |
 | P3 | decision_quality | Collect more closed decision quality outcomes | Decision Quality Review has fewer than 30 resolved rows. | Avoids premature recalibration or execution-rule changes from a thin sample. | Low; reporting only. | Keep building the quality review after POST labels are available. | NO | resolved_quality_rows=0 |
 | P3 | model_calibration | Defer recalibration until minimum closed-pick sample | Fewer than 30 closed picks are available. | Avoids fitting thresholds or probability adjustments to noise. | Low; no predictive change is applied. | Keep calibration reporting active and wait for at least 30 closed picks before suggestions. | NO | closed_picks=7; enough_sample=NO; recalibration_allowed=NO |
 
 ## Input Inventory
-- generated_at: 2026-05-25T12:41:43+01:00
+- generated_at: 2026-05-25T17:38:22+01:00
 - timezone: Atlantic/Canary
 - missing optional inputs: none

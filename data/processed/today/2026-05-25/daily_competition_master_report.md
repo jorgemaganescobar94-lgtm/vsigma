@@ -1,7 +1,7 @@
 # vSIGMA Daily Competition Master Report - 2026-05-25
 
 ## Daily Status
-PRE_LOCK_PENDING
+PRE_LOCK_REVIEWED
 
 ## Official Baseline Top Picks
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
@@ -101,7 +101,8 @@ PRE_LOCK_PENDING
 ### Active Pre-Lock Decisions
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 409.51 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 114.34 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1494178 | IF Elfsborg | BK Hacken | OVER_2_5 | IN_PRELOCK_WINDOW | 24.33 | PRELOCK_CONFIRMED | lineups confirmed |
 
 ### Stale Pre-Lock Warning
 _No stale pre-lock rows excluded._
@@ -113,7 +114,7 @@ _No stale pre-lock rows excluded._
 | 1494178 | IF Elfsborg | BK Hacken | OVER_2_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.8 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1494178 | IF Elfsborg | BK Hacken | OVER_2_5 | CANDIDATE_V7_PRICE_DISCIPLINE | 1.8 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1494178 | IF Elfsborg | BK Hacken | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.8 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1494178 | IF Elfsborg | BK Hacken | OVER_2_5 | OFFICIAL_BASELINE | 1.8 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1494178 | IF Elfsborg | BK Hacken | OVER_2_5 | OFFICIAL_BASELINE | 1.8 | 1.8 | 1.8 | 0.0 | CLV_FLAT |  |  |
 | 1494179 | IFK Goteborg | Mjallby AIF | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.33 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1494179 | IFK Goteborg | Mjallby AIF | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.33 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1494179 | IFK Goteborg | Mjallby AIF | OVER_1_5 | OFFICIAL_BASELINE | 1.33 |  |  |  | CLV_UNAVAILABLE |  |  |
@@ -130,7 +131,9 @@ _No stale pre-lock rows excluded._
 | market_family | failure_mode | drift_status | clv_direction | n | profit_units | roi_percent | recommendation | recommendation_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_POSITIVE | 2 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 4 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 6 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_FLAT | 1 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_UNAVAILABLE | 2 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 
 ## Post-Results Summary
 _No rows._
@@ -138,7 +141,8 @@ _No rows._
 ## Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 409.51 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 114.34 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1494178 | IF Elfsborg | BK Hacken | OVER_2_5 | IN_PRELOCK_WINDOW | 24.33 | PRELOCK_CONFIRMED | lineups confirmed |
 
 ## Drift Monitor Status
 | pattern | settled_rows | wins | losses | profit_units | drift_status |
@@ -184,25 +188,25 @@ _No rows._
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: freshness_report: WARNING - validation report contains warning rows
-- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-25`
+- Critical warnings: post_results_status: WARNING - post has 1 pending row(s)
+- Recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-25 --timezone Atlantic/Canary --mode post`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-25/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V4_O25_FIREWALL | 1545418.0 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| OFFICIAL_BASELINE | 1545418.0 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1545418.0 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1545418.0 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V6_API_PREDICTIONS | 1545418.0 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 1545418.0 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| OFFICIAL_BASELINE | 1545418.0 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1545418.0 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1545418.0 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V6_API_PREDICTIONS | 1545418.0 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1545418.0 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| OFFICIAL_BASELINE | 1494178.0 | IF Elfsborg | BK Hacken | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1494178.0 | IF Elfsborg | BK Hacken | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1494178.0 | IF Elfsborg | BK Hacken | OVER_2_5 | PRELOCK_CONFIRMED | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1494178.0 | IF Elfsborg | BK Hacken | OVER_2_5 | PRELOCK_CONFIRMED | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V4_O25_FIREWALL | 1494178.0 | IF Elfsborg | BK Hacken | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
 | CANDIDATE_V5_PLAYER_IMPACT | 1494178.0 | IF Elfsborg | BK Hacken | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1494178.0 | IF Elfsborg | BK Hacken | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1494178.0 | IF Elfsborg | BK Hacken | OVER_2_5 | PRELOCK_CONFIRMED | PENDING |  | PRELOCK_UPDATED |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
@@ -233,13 +237,15 @@ _No rows._
 ### Threshold Recommendations
 | market_family | failure_mode | experiment_id | settled_rows | roi_percent | clv_direction | threshold_recommendation |
 | --- | --- | --- | --- | --- | --- | --- |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 6 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V4_O25_FIREWALL | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 4 | -26.25 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 4 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 0.0 | CLV_POSITIVE | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 1 | 52.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V2_SCHEDULE_ANOMALY | 0 |  |  | SAMPLE_TOO_SMALL |
@@ -251,8 +257,6 @@ _No rows._
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | UNSPECIFIED | CANDIDATE_V2_SCHEDULE_ANOMALY | 0 |  |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | UNSPECIFIED | CANDIDATE_V5_PLAYER_IMPACT | 0 |  |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | UNSPECIFIED | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
 
 - CLV data sufficiency: INSUFFICIENT_CLV_DATA
 - Drift alerts: 0

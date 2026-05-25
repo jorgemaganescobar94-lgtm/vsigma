@@ -5,31 +5,21 @@ Missing or thin odds are treated as uncertainty, not as a negative football sign
 
 Summary
                 summary_scope                 metric  rows_total
-                      overall        target_fixtures          12
-  odds_structure_depth_status                     OK          12
-odds_structure_coherence_flag          RICH_COHERENT           9
-odds_structure_coherence_flag             RICH_MIXED           3
-      odds_total_ladder_shape            BROAD_GOALS           7
-      odds_total_ladder_shape             MILD_GOALS           4
-      odds_total_ladder_shape               BALANCED           1
- odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL           7
- odds_market_translation_hint    PREFER_MILDER_TOTAL           4
- odds_market_translation_hint   CAUTION_FRAGILE_SIDE           1
-    odds_line_aggression_flag     OVER_2_5_SUPPORTED           7
-    odds_line_aggression_flag        PREFER_OVER_1_5           4
-    odds_line_aggression_flag                NEUTRAL           1
+                      overall        target_fixtures           5
+  odds_structure_depth_status                     OK           5
+odds_structure_coherence_flag          RICH_COHERENT           3
+odds_structure_coherence_flag             RICH_MIXED           2
+      odds_total_ladder_shape             MILD_GOALS           3
+      odds_total_ladder_shape            BROAD_GOALS           2
+ odds_market_translation_hint    PREFER_MILDER_TOTAL           3
+ odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL           2
+    odds_line_aggression_flag        PREFER_OVER_1_5           3
+    odds_line_aggression_flag     OVER_2_5_SUPPORTED           2
 
 Fixture preview
  fixture_id      league       home_team     away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
-    1545418  Bundesliga SC Paderborn 07 VfL Wolfsburg                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3352                            -0.015
-    1494178 Allsvenskan     IF Elfsborg     BK Hacken                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2512                             0.030
-    1494179 Allsvenskan    IFK Goteborg   Mjallby AIF                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3314                            -0.015
-    1545665  Bundesliga    Rapid Vienna          Ried                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3036                            -0.015
-    1494669 Eliteserien         Ham-Kam    Lillestrom                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2577                             0.030
-    1494670 Eliteserien       KFUM Oslo     Rosenborg                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2447                             0.030
-    1494672 Eliteserien      Sandefjord   Fredrikstad                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3671                             0.025
-    1494673 Eliteserien Sarpsborg 08 FF         Molde                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2449                             0.030
-    1494674 Eliteserien           Start     Valerenga                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2638                             0.030
-    1494675 Eliteserien          Tromso      Aalesund                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2714                             0.030
-    1545251  League Two    Notts County  Salford City                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3523                            -0.015
-    1545235 Premiership       ST Mirren       Partick                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.4224                            -0.015
+    1545418  Bundesliga SC Paderborn 07 VfL Wolfsburg                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3179                            -0.015
+    1494178 Allsvenskan     IF Elfsborg     BK Hacken                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2241                             0.030
+    1494179 Allsvenskan    IFK Goteborg   Mjallby AIF                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3376                            -0.015
+    1494672 Eliteserien      Sandefjord   Fredrikstad                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3593                             0.025
+    1545235 Premiership       ST Mirren       Partick                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.4117                            -0.015

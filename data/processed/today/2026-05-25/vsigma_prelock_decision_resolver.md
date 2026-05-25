@@ -1,21 +1,22 @@
 # vSIGMA PRELOCK Decision Resolver - 2026-05-25
 
 ## Summary
-- Candidates reviewed: 1
-- Executable now: 0
+- Candidates reviewed: 2
+- Executable now: 1
 - Waiting: 1
 - No bet: 0
 - Technical review: 0
 - Next automatic retry: 2026-05-25T18:00+01:00
-- OFFICIAL_ACTION_SUMMARY: WAIT
+- OFFICIAL_ACTION_SUMMARY: MIXED
 
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| SC Paderborn 07 vs VfL Wolfsburg | OVER_1_5 | 2026-05-25T19:30+01:00 | 408.3 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | 2026-05-25T18:00+01:00 |
+| SC Paderborn 07 vs VfL Wolfsburg | OVER_1_5 | 2026-05-25T19:30+01:00 | 111.64 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | 2026-05-25T18:00+01:00 |
+| IF Elfsborg vs BK Hacken | OVER_2_5 | 2026-05-25T18:00+01:00 | 21.64 | EXECUTABLE | YES | NONE |  |
 
 ## Data Gaps
-- odds missing: 0
+- odds missing: 1
 - lineups missing: 0
 - availability missing: 0
 

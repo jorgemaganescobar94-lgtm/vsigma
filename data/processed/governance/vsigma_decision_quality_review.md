@@ -1,35 +1,36 @@
 # vSIGMA Decision Quality Review - 2026-05-25
 
 ## Executive Summary
-- generated_at: 2026-05-25T12:41:42+01:00
-- daily_classification: WAITING_FOR_PRELOCK
-- no_bet_classification: NO_BET_VALID
-- operational_verdict: WAITING_FOR_PRELOCK
-- predictive_failure: NO
-- rows reviewed: 3
-- actionable rows: 0
+- generated_at: 2026-05-25T17:38:22+01:00
+- daily_classification: EXECUTION_OK
+- no_bet_classification: EXECUTION_ACTIONABLE_PRESENT
+- operational_verdict: EXECUTION_AVAILABLE
+- predictive_failure: UNKNOWN
+- rows reviewed: 4
+- actionable rows: 1
 - non-actionable rows: 3
 - resolved rows: 0
-- unresolved rows: 3
+- unresolved rows: 4
 - good decisions: 0
 - bad decisions: 0
-- neutral/unresolved: 3
-- top improvement signal: WAIT_FOR_POST_RESULTS (3)
+- neutral/unresolved: 4
+- top improvement signal: IMPROVE_POST_RESULT_LABELING (2)
 - current recommendation: Do not recalibrate; collect more labeled outcomes.
-- operational note: At least one candidate is waiting for the configured PRELOCK window or retry slot.
+- operational note: At least one row was executable at decision time.
 
 ## Daily Operational Classification
-- classification: WAITING_FOR_PRELOCK
-- no_bet_validity: NO_BET_VALID
-- current_operational_verdict: WAITING_FOR_PRELOCK
-- explanation: At least one candidate is waiting for the configured PRELOCK window or retry slot.
+- classification: EXECUTION_OK
+- no_bet_validity: EXECUTION_ACTIONABLE_PRESENT
+- current_operational_verdict: EXECUTION_AVAILABLE
+- explanation: At least one row was executable at decision time.
 
 ## Decision Quality Table
 | fixture | market_primary | official_action | final_block_reason | result_status | decision_quality_label | quality_bucket | improvement_signal |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| IFK Goteborg vs Mjallby AIF | OVER_1_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
-| SC Paderborn 07 vs VfL Wolfsburg | OVER_2_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
+| IFK Goteborg vs Mjallby AIF | OVER_1_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | IMPROVE_POST_RESULT_LABELING |
+| SC Paderborn 07 vs VfL Wolfsburg | OVER_2_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | IMPROVE_POST_RESULT_LABELING |
 | SC Paderborn 07 vs VfL Wolfsburg | OVER_1_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
+| IF Elfsborg vs BK Hacken | OVER_2_5 | EXECUTABLE | NONE | UNRESOLVED | ACTIONABLE_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
 
 ## Block Quality Review
 - NO_BET_MISSED_WIN count: 0
@@ -44,13 +45,13 @@
 | market_primary | rows | wins | losses | no_bet_missed_win | no_bet_correct_avoided_loss | unresolved | recommendation |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | OVER_1_5 | 2 | 0 | 0 | 0 | 0 | 2 | WAIT_FOR_POST_RESULTS |
-| OVER_2_5 | 1 | 0 | 0 | 0 | 0 | 1 | WAIT_FOR_POST_RESULTS |
+| OVER_2_5 | 2 | 0 | 0 | 0 | 0 | 2 | WAIT_FOR_POST_RESULTS |
 
 ## System Recommendations
 | priority | category | title | reason | apply_now |
 | --- | --- | --- | --- | --- |
 | P3 | sample | Do not recalibrate from quality sample yet | resolved_rows=0 is below minimum 30. | NO |
-| P3 | post_results | Wait for POST results or improve labeling | unresolved_rows=3; resolved_rows=0. | NO |
+| P3 | post_results | Wait for POST results or improve labeling | unresolved_rows=4; resolved_rows=0. | NO |
 
 ## Guardrails
 - automatic scoring changes applied: NO
