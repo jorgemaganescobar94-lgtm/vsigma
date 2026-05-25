@@ -3,16 +3,15 @@ vSIGMA SHADOW CANDIDATE V5
 Layer: candidate v2 + conservative player impact.
 Status: experimental shadow; official baseline and candidate v2 outputs are not replaced.
 
-Candidate v2 input rows: 2
-Candidate v5 competition shortlist rows: 2
-Candidate v5 competition top rows: 2
+Candidate v2 input rows: 1
+Candidate v5 competition shortlist rows: 1
+Candidate v5 competition top rows: 1
 Player-impact adjustments made: 0
 
 Player-impact action mix
 player_impact_adjustment_action
-NOT_APPLIED    2
+NOT_APPLIED    1
 
 Candidate v5 Top
- accuracy_mode_rank  fixture_id      league       home_team     away_team market_primary  competition_calibrated_prob  accuracy_confidence_score player_impact_adjustment_action      player_impact_market_translation_hint
-                  1     1494179 Allsvenskan    IFK Goteborg   Mjallby AIF       OVER_1_5                     0.809060                    152.696                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
-                  2     1545418  Bundesliga SC Paderborn 07 VfL Wolfsburg       OVER_2_5                     0.813825                    134.423                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
+ accuracy_mode_rank  fixture_id     league       home_team     away_team market_primary  competition_calibrated_prob  accuracy_confidence_score player_impact_adjustment_action      player_impact_market_translation_hint
+                  1     1545418 Bundesliga SC Paderborn 07 VfL Wolfsburg       OVER_1_5                      0.85776                    151.675                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE

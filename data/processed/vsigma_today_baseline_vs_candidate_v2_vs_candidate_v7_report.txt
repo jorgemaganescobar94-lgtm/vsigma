@@ -4,11 +4,10 @@ Baseline: official frozen Competition Accuracy Mode + Probability Calibration.
 Candidate v2: shadow schedule-strength + anomaly-cleaning layer.
 Candidate v7: candidate v2 + Price Discipline / CLV / Drift Execution Guard.
 
-Baseline official picks: 2
-Candidate v2 shadow picks: 2
-Candidate v7 shadow picks: 1
+Baseline official picks: 1
+Candidate v2 shadow picks: 1
+Candidate v7 shadow picks: 0
 
 Side-by-side picks
-                 comparison_status  fixture_id                          fixture      league  baseline_rank  candidate_v2_rank candidate_v7_rank baseline_market candidate_v2_market candidate_v7_market candidate_v7_decision candidate_v7_required_edge candidate_v7_actual_edge candidate_v7_drift_status candidate_v7_clv_direction candidate_v7_execution_status
-             BASELINE+CANDIDATE_V2     1494179      IFK Goteborg vs Mjallby AIF Allsvenskan              1                  1              <NA>        OVER_1_5            OVER_1_5                 NaN                   NaN                       <NA>                     <NA>                       NaN                        NaN                           NaN
-BASELINE+CANDIDATE_V2+CANDIDATE_V7     1545418 SC Paderborn 07 vs VfL Wolfsburg  Bundesliga              2                  2                 1        OVER_2_5            OVER_2_5            OVER_2_5              PRICE_OK                      0.155                 0.270384                  NO_DRIFT            CLV_UNAVAILABLE                      PRICE_OK
+    comparison_status  fixture_id                          fixture     league  baseline_rank  candidate_v2_rank candidate_v7_rank baseline_market candidate_v2_market candidate_v7_market candidate_v7_decision candidate_v7_required_edge candidate_v7_actual_edge candidate_v7_drift_status candidate_v7_clv_direction candidate_v7_execution_status
+BASELINE+CANDIDATE_V2     1545418 SC Paderborn 07 vs VfL Wolfsburg Bundesliga              1                  1              <NA>        OVER_1_5            OVER_1_5                <NA>                  <NA>                       <NA>                     <NA>                      <NA>                       <NA>                          <NA>

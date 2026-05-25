@@ -2,28 +2,27 @@ country,league,league_tier,league_filter_reason,matches
 Germany,Oberliga - Westfalen,REJECT,hard_reject_noise_league,9
 Gambia,GFA League,REJECT,country_league_not_allowlisted,8
 Norway,1. Division,REJECT,country_league_not_allowlisted,8
-Germany,Oberliga - Mittelrhein,REJECT,hard_reject_noise_league,6
 Faroe-Islands,Meistaradeildin,REJECT,country_league_not_allowlisted,5
+Germany,Oberliga - Mittelrhein,REJECT,hard_reject_noise_league,5
 Germany,Oberliga - Relegation Round,REJECT,hard_reject_noise_league,5
-USA,USL League Two,REJECT,country_league_not_allowlisted,5
 Argentina,Torneo Federal A,REJECT,country_league_not_allowlisted,4
 Armenia,First League,REJECT,country_league_not_allowlisted,4
 Bulgaria,First League,REJECT,country_league_not_allowlisted,4
 Mali,Première Division,REJECT,country_league_not_allowlisted,4
 Norway,3. Division - Girone 1,REJECT,country_league_not_allowlisted,4
 Congo-DR,Ligue 1,REJECT,country_league_not_allowlisted,3
-Denmark,1. Division,REJECT,country_league_not_allowlisted,3
 Georgia,Erovnuli Liga,REJECT,country_league_not_allowlisted,3
 Mauritania,Premier League,REJECT,country_league_not_allowlisted,3
 Norway,2. Division - Group 1,REJECT,country_league_not_allowlisted,3
 Norway,2. Division - Group 2,REJECT,country_league_not_allowlisted,3
 Norway,3. Division - Girone 5,REJECT,country_league_not_allowlisted,3
 Norway,3. Division - Girone 6,REJECT,country_league_not_allowlisted,3
-USA,USL W League,REJECT,country_league_not_allowlisted,3
 Argentina,Primera C,REJECT,country_league_not_allowlisted,2
+Argentina,Torneo Promocional Amateur,REJECT,hard_reject_noise_league,2
 Bahrain,Premier League,REJECT,country_league_not_allowlisted,2
 Bosnia,Premijer Liga,REJECT,country_league_not_allowlisted,2
 Chile,Segunda División,REJECT,country_league_not_allowlisted,2
+Denmark,1. Division,REJECT,country_league_not_allowlisted,2
 Egypt,League Cup,REJECT,country_league_not_allowlisted,2
 Ireland,Premier Division,REJECT,country_league_not_allowlisted,2
 Kuwait,Premier League,REJECT,country_league_not_allowlisted,2
@@ -32,21 +31,16 @@ Macedonia,First League,REJECT,country_league_not_allowlisted,2
 Norway,3. Division - Girone 3,REJECT,country_league_not_allowlisted,2
 Norway,3. Division - Girone 4,REJECT,country_league_not_allowlisted,2
 Paraguay,Division Intermedia,REJECT,country_league_not_allowlisted,2
-South-Korea,K League 2,REJECT,country_league_not_allowlisted,2
 Tanzania,Ligi kuu Bara,REJECT,country_league_not_allowlisted,2
 Tunisia,Ligue 2,REJECT,country_league_not_allowlisted,2
-World,UEFA U17 Championship - Qualification,REJECT,hard_reject_noise_league,2
+USA,USL League Two,REJECT,country_league_not_allowlisted,2
 Algeria,Ligue 1,REJECT,country_league_not_allowlisted,1
-Argentina,Torneo Promocional Amateur,REJECT,hard_reject_noise_league,1
-Aruba,Division di Honor,REJECT,country_league_not_allowlisted,1
-Australia,Victoria NPL,REJECT,country_league_not_allowlisted,1
 Barbados,Premier League,REJECT,country_league_not_allowlisted,1
 Bhutan,Premier League,REJECT,country_league_not_allowlisted,1
 Bolivia,Primera División,REJECT,country_league_not_allowlisted,1
 Brazil,Brasileiro Women,REJECT,hard_reject_noise_league,1
 Brazil,Serie D,REJECT,country_league_not_allowlisted,1
 Cameroon,Elite One,REJECT,country_league_not_allowlisted,1
-Chile,Primera B,REJECT,country_league_not_allowlisted,1
 Denmark,3. Division,REJECT,country_league_not_allowlisted,1
 Ecuador,Liga Pro Serie B,REJECT,country_league_not_allowlisted,1
 Estonia,Esiliiga A,REJECT,country_league_not_allowlisted,1
@@ -57,9 +51,7 @@ Germany,Oberliga - Rheinland-Pfalz / Saar,REJECT,hard_reject_noise_league,1
 Ireland,First Division,REJECT,country_league_not_allowlisted,1
 Italy,Campionato Primavera - 1,REJECT,country_league_not_allowlisted,1
 Italy,Serie D - Girone C,REJECT,country_league_not_allowlisted,1
-Jamaica,Premier League,REJECT,country_league_not_allowlisted,1
 Kyrgyzstan,Premier League,REJECT,country_league_not_allowlisted,1
-Mexico,Liga MX,REJECT,country_league_not_allowlisted,1
 Norway,1. Division Women,REJECT,hard_reject_noise_league,1
 Norway,3. Division - Girone 2,REJECT,country_league_not_allowlisted,1
 Peru,Liga Women,REJECT,hard_reject_noise_league,1
@@ -67,11 +59,11 @@ Peru,Primera División,REJECT,country_league_not_allowlisted,1
 Peru,Segunda División,REJECT,country_league_not_allowlisted,1
 Romania,Liga I,REJECT,country_league_not_allowlisted,1
 Serbia,Srpska Liga - West,REJECT,country_league_not_allowlisted,1
-Suriname,Eerste Divisie,REJECT,country_league_not_allowlisted,1
 Sweden,Superettan,REJECT,country_league_not_allowlisted,1
 Switzerland,AXA Women’s Super League,REJECT,hard_reject_noise_league,1
-USA,MLS Next Pro,REJECT,hard_reject_noise_league,1
+USA,USL W League,REJECT,country_league_not_allowlisted,1
 Uruguay,Segunda División,REJECT,country_league_not_allowlisted,1
+World,UEFA U17 Championship - Qualification,REJECT,hard_reject_noise_league,1
 Zimbabwe,Premier Soccer League,REJECT,country_league_not_allowlisted,1
 Germany,Bundesliga,TIER_1,germany_bundesliga,1
 Norway,Eliteserien,TIER_2,norway_eliteserien,6
@@ -79,7 +71,6 @@ Sweden,Allsvenskan,TIER_2,sweden_allsvenskan,2
 Austria,Bundesliga,TIER_2,austria_bundesliga,1
 England,League Two,TIER_2,england_league_two,1
 Scotland,Premiership,TIER_2,scotland_premiership,1
-USA,Major League Soccer,TIER_2,usa_mls,1
 Israel,Liga Leumit,TIER_3,israel_liga_leumit_noisy,8
 Brazil,Serie B,TIER_3,brazil_serie_b_noisy,1
 Lithuania,A Lyga,TIER_3,lithuania_a_lyga_noisy,1

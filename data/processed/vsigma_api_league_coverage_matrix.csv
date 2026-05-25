@@ -1,11 +1,10 @@
 league_id,league,country,season,league_type,coverage_season_current,coverage_season_start,coverage_season_end,league_has_fixtures_coverage,league_has_standings_coverage,league_has_odds_coverage,league_has_events_coverage,league_has_lineups_coverage,league_has_fixture_stats_coverage,league_has_player_stats_coverage,league_has_players_coverage,league_has_injuries_coverage,league_has_predictions_coverage,league_has_top_scorers_coverage,league_has_top_assists_coverage,league_has_top_cards_coverage,league_coverage_class,league_coverage_rich_flag,league_data_reliability_score,league_coverage_source_status,league_coverage_note,coverage_matrix_generated_at_utc
-42,League Two,England,2025,League,1,2025-08-02,2026-05-25,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-24T23:45:24.804982+00:00
-72,Serie B,Brazil,2026,League,1,2026-03-21,2026-11-14,1,1,1,1,1,1,1,1,0,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-24T23:45:25.024658+00:00
-78,Bundesliga,Germany,2025,League,1,2025-08-22,2026-05-25,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-24T23:45:25.414557+00:00
-103,Eliteserien,Norway,2026,League,1,2026-03-14,2026-12-06,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-24T23:45:25.830488+00:00
-113,Allsvenskan,Sweden,2026,League,1,2026-04-04,2026-11-29,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-24T23:45:26.218165+00:00
-179,Premiership,Scotland,2025,League,1,2025-08-02,2026-05-25,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-24T23:45:26.617421+00:00
-218,Bundesliga,Austria,2025,League,1,2025-08-01,2026-05-25,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-24T23:45:27.028256+00:00
-253,Major League Soccer,USA,2026,League,1,2026-02-21,2026-11-08,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-24T23:45:27.422485+00:00
-362,A Lyga,Lithuania,2026,League,1,2026-02-21,2026-06-21,1,1,1,1,1,0,0,0,0,1,0,0,0,COVERAGE_PARTIAL,0,0.7,OFFICIAL_API,,2026-05-24T23:45:27.826767+00:00
-382,Liga Leumit,Israel,2025,League,1,2025-08-24,2026-05-25,1,1,1,1,1,0,0,1,0,1,1,1,1,COVERAGE_PARTIAL,0,0.7,OFFICIAL_API,,2026-05-24T23:45:28.227396+00:00
+42,League Two,England,2025,League,1,2025-08-02,2026-05-25,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-25T11:39:37.442608+00:00
+72,Serie B,Brazil,2026,League,1,2026-03-21,2026-11-14,1,1,1,1,1,1,1,1,0,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-25T11:39:37.839099+00:00
+78,Bundesliga,Germany,2025,League,1,2025-08-22,2026-05-25,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-25T11:39:38.249394+00:00
+103,Eliteserien,Norway,2026,League,1,2026-03-14,2026-12-06,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-25T11:39:38.645065+00:00
+113,Allsvenskan,Sweden,2026,League,1,2026-04-04,2026-11-29,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-25T11:39:39.040759+00:00
+179,Premiership,Scotland,2025,League,1,2025-08-02,2026-05-25,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-25T11:39:39.446070+00:00
+218,Bundesliga,Austria,2025,League,1,2025-08-01,2026-05-25,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-25T11:39:39.846540+00:00
+362,A Lyga,Lithuania,2026,League,1,2026-02-21,2026-06-21,1,1,1,1,1,0,0,0,0,1,0,0,0,COVERAGE_PARTIAL,0,0.7,OFFICIAL_API,,2026-05-25T11:39:40.246999+00:00
+382,Liga Leumit,Israel,2025,League,1,2025-08-24,2026-05-25,1,1,1,1,1,0,0,1,0,1,1,1,1,COVERAGE_PARTIAL,0,0.7,OFFICIAL_API,,2026-05-25T11:39:40.650607+00:00
