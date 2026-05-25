@@ -1,15 +1,13 @@
-# vSIGMA Daily Run Plan - 2026-05-24
+# vSIGMA Daily Run Plan - 2026-05-25
 
 - Timezone: Atlantic/Canary
-- Generated at: 2026-05-25T17:12:37.041223+01:00
+- Generated at: 2026-05-25T17:36:19.888370+01:00
 - Window minutes: 90
-- Next recommended action: RUN_POST_AFTER_FINISH
-- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-24 --timezone Atlantic/Canary --mode post`
+- Next recommended action: RUN_PRELOCK_NOW
+- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-25 --timezone Atlantic/Canary --mode prelock --window-minutes 90`
 
 ## Fixtures
 | fixture_id | league | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action | recommended_command |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1392207 | Segunda División | Sporting Gijon | Almeria | OVER_2_5 | 2026-05-24T16:32:34.600000+00:00 | -1420.04 | 2026-05-24T15:02:34.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-24 --timezone Atlantic/Canary --mode post |
-| 1545796 | Serie B | Catanzaro | Monza | OVER_1_5 | 2026-05-24T18:02:31+00:00 | -1330.1 | 2026-05-24T16:32:31+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-24 --timezone Atlantic/Canary --mode post |
-| 1492276 | Serie A | Remo | Atletico Paranaense | OVER_1_5 | 2026-05-24T19:02:26.800000+00:00 | -1270.17 | 2026-05-24T17:32:26.800000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-24 --timezone Atlantic/Canary --mode post |
-| 1392205 | Segunda División | Huesca | Castellón | OVER_2_5 | 2026-05-24T16:32:35.800000+00:00 | -1420.02 | 2026-05-24T15:02:35.800000+00:00 | KICKOFF_PASSED | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-24 --timezone Atlantic/Canary --mode post |
+| 1545418 | Bundesliga | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 2026-05-25T18:30:36.400000+00:00 | 114.28 | 2026-05-25T17:00:36.400000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-25 --timezone Atlantic/Canary --mode post |
+| 1494178 | Allsvenskan | IF Elfsborg | BK Hacken | OVER_2_5 | 2026-05-25T17:00:35.800000+00:00 | 24.27 | 2026-05-25T15:30:35.800000+00:00 | DUE_NOW | RUN_PRELOCK_NOW | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-25 --timezone Atlantic/Canary --mode prelock --window-minutes 90 |

@@ -1,14 +1,14 @@
 # vSIGMA Autonomous Monitoring Summary - 2026-05-25
 
 ## Executive Status
-- generated_at: 2026-05-25T13:08:31+01:00
-- mode: post
+- generated_at: 2026-05-25T17:36:20+01:00
+- mode: pre
 - daily_classification: WAITING_FOR_PRELOCK
 - operational_verdict: WAITING_FOR_PRELOCK
 - action_level: REVIEW_REQUIRED
 - predictive_failure: NO
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26399711714
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26410471614
 
 ## Operator Action
 - Wait for next scheduled AUTO/PRELOCK run or rerun prelock manually if timing is critical.

@@ -1,2 +1,2 @@
 target_date,generated_at,mode,daily_classification,operational_verdict,action_level,predictive_failure,evidence_basis,operator_action,run_url
-2026-05-24,2026-05-25T17:12:37+01:00,post-yesterday,EXECUTION_OK,EXECUTION_AVAILABLE,NO_ACTION_REQUIRED,UNKNOWN,decision_quality_review,Review official executable picks and post-result quality once scores are labeled.,https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26409646708
+2026-05-25,2026-05-25T17:36:20+01:00,pre,WAITING_FOR_PRELOCK,WAITING_FOR_PRELOCK,REVIEW_REQUIRED,NO,decision_quality_review,Wait for next scheduled AUTO/PRELOCK run or rerun prelock manually if timing is critical.,https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26410471614

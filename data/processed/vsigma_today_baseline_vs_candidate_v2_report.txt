@@ -3,15 +3,16 @@ vSIGMA TODAY BASELINE VS CANDIDATE V2
 Baseline: official frozen Competition Accuracy Mode + Probability Calibration.
 Candidate v2: SHADOW experimental schedule-strength + anomaly-cleaning layer.
 
-Baseline official picks: 1
-Candidate v2 shadow picks: 1
-Overlap: 1
+Baseline official picks: 2
+Candidate v2 shadow picks: 2
+Overlap: 2
 Only baseline chose: 0
 Only candidate chose: 0
 
 Side-by-side picks
 comparison_status                          fixture  baseline_rank  candidate_v2_rank baseline_market candidate_v2_market  baseline_calibrated_prob  candidate_v2_calibrated_prob  baseline_confidence_score  candidate_v2_confidence_score
-             BOTH SC Paderborn 07 vs VfL Wolfsburg              1                  1        OVER_1_5            OVER_1_5                   0.85476                       0.85776                    150.867                        151.675
+             BOTH         IF Elfsborg vs BK Hacken              2                  2        OVER_2_5            OVER_2_5                  0.821525                      0.807525                    131.523                        129.461
+             BOTH SC Paderborn 07 vs VfL Wolfsburg              1                  1        OVER_1_5            OVER_1_5                  0.854760                      0.857760                    155.046                        155.854
 
 Reason differences
 All compared picks overlap. Review probability/confidence deltas in the CSV.

@@ -4,18 +4,14 @@ Source: official API-Football /leagues coverage metadata. Historical runs use cu
 
 Data-rich / good leagues:
  country      league  season league_coverage_class  league_data_reliability_score  league_has_fixture_stats_coverage  league_has_odds_coverage  league_has_injuries_coverage  league_has_lineups_coverage league_coverage_source_status
- Austria  Bundesliga    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
   Brazil     Serie B    2026         COVERAGE_RICH                           0.95                                  1                         1                             0                            1                  OFFICIAL_API
- England  League Two    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
  Germany  Bundesliga    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
   Norway Eliteserien    2026         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
 Scotland Premiership    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
   Sweden Allsvenskan    2026         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
 
 Partial leagues:
-  country      league  season league_coverage_class  league_data_reliability_score  league_has_fixture_stats_coverage  league_has_odds_coverage  league_has_injuries_coverage  league_has_lineups_coverage league_coverage_source_status
-   Israel Liga Leumit    2025      COVERAGE_PARTIAL                            0.7                                  0                         1                             0                            1                  OFFICIAL_API
-Lithuania      A Lyga    2026      COVERAGE_PARTIAL                            0.7                                  0                         1                             0                            1                  OFFICIAL_API
+None
 
 Thin / minimal leagues:
 None

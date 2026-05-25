@@ -1,12 +1,13 @@
 # vSIGMA Daily Run Plan - 2026-05-25
 
 - Timezone: Atlantic/Canary
-- Generated at: 2026-05-25T13:08:31.203842+01:00
+- Generated at: 2026-05-25T17:36:19.888370+01:00
 - Window minutes: 90
-- Next recommended action: RUN_POST_AFTER_FINISH
-- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-25 --timezone Atlantic/Canary --mode post`
+- Next recommended action: RUN_PRELOCK_NOW
+- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-25 --timezone Atlantic/Canary --mode prelock --window-minutes 90`
 
 ## Fixtures
 | fixture_id | league | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action | recommended_command |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1545418 | Bundesliga | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 2026-05-25T18:31:02.600000+00:00 | 382.52 | 2026-05-25T17:01:02.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-25 --timezone Atlantic/Canary --mode post |
+| 1545418 | Bundesliga | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 2026-05-25T18:30:36.400000+00:00 | 114.28 | 2026-05-25T17:00:36.400000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-25 --timezone Atlantic/Canary --mode post |
+| 1494178 | Allsvenskan | IF Elfsborg | BK Hacken | OVER_2_5 | 2026-05-25T17:00:35.800000+00:00 | 24.27 | 2026-05-25T15:30:35.800000+00:00 | DUE_NOW | RUN_PRELOCK_NOW | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-25 --timezone Atlantic/Canary --mode prelock --window-minutes 90 |

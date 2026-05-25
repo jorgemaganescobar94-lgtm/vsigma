@@ -1,16 +1,18 @@
 VSIGMA COMPETITION ACCURACY MODE
 
 Mode: COMPETITION_ACCURACY_MODE
-Normal execution shortlist rows: 1
-Competition shortlist rows: 1
-Competition top rows: 1
+Normal execution shortlist rows: 2
+Competition shortlist rows: 2
+Competition top rows: 2
 
 Principle: prefer no pick over weak pick; prioritize stable markets, premium core evidence, strong rolling stats, clean market-fit, and high model probability.
 
 Competition shortlist
- accuracy_mode_rank  fixture_id     league       home_team     away_team market_primary execution_shortlist_source  competition_raw_prob  competition_calibrated_prob  accuracy_confidence_score accuracy_mode_bucket                                                                                                            accuracy_mode_reason       accuracy_primary_risk     competition_prob_calibration_reason
-                  1     1545418 Bundesliga SC Paderborn 07 VfL Wolfsburg       OVER_1_5               PREMIUM_CORE                0.9254                      0.85776                    151.675        ACCURACY_CORE ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_MARKET_BUCKET_OVERCONFIDENCE
+ accuracy_mode_rank  fixture_id      league       home_team     away_team market_primary execution_shortlist_source  competition_raw_prob  competition_calibrated_prob  accuracy_confidence_score accuracy_mode_bucket                                                                                                            accuracy_mode_reason       accuracy_primary_risk     competition_prob_calibration_reason
+                  1     1545418  Bundesliga SC Paderborn 07 VfL Wolfsburg       OVER_1_5               PREMIUM_CORE                0.9254                     0.857760                    155.854        ACCURACY_CORE ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_MARKET_BUCKET_OVERCONFIDENCE
+                  2     1494178 Allsvenskan     IF Elfsborg     BK Hacken       OVER_2_5               PREMIUM_CORE                0.7904                     0.807525                    129.461        ACCURACY_CORE                                                 ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION    CALIBRATED_BUCKET_RELIABILITY_UPLIFT
 
 Competition top
- accuracy_mode_rank  fixture_id     league       home_team     away_team market_primary  competition_raw_prob  competition_calibrated_prob  primary_edge  accuracy_confidence_score                                                                                                            accuracy_mode_reason       accuracy_primary_risk     competition_prob_calibration_reason
-                  1     1545418 Bundesliga SC Paderborn 07 VfL Wolfsburg       OVER_1_5                0.9254                      0.85776      0.167824                    151.675 ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_MARKET_BUCKET_OVERCONFIDENCE
+ accuracy_mode_rank  fixture_id      league       home_team     away_team market_primary  competition_raw_prob  competition_calibrated_prob  primary_edge  accuracy_confidence_score                                                                                                            accuracy_mode_reason       accuracy_primary_risk     competition_prob_calibration_reason
+                  1     1545418  Bundesliga SC Paderborn 07 VfL Wolfsburg       OVER_1_5                0.9254                     0.857760      0.184659                    155.854 ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_MARKET_BUCKET_OVERCONFIDENCE
+                  2     1494178 Allsvenskan     IF Elfsborg     BK Hacken       OVER_2_5                0.7904                     0.807525      0.234844                    129.461                                                 ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION    CALIBRATED_BUCKET_RELIABILITY_UPLIFT
