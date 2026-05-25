@@ -1,12 +1,12 @@
 # vSIGMA Daily Run Plan - 2026-05-25
 
 - Timezone: Atlantic/Canary
-- Generated at: 2026-05-25T12:41:35.379341+01:00
+- Generated at: 2026-05-25T13:08:31.203842+01:00
 - Window minutes: 90
-- Next recommended action: WAIT_FOR_PRELOCK
-- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-25 --timezone Atlantic/Canary --mode prelock --window-minutes 90`
+- Next recommended action: RUN_POST_AFTER_FINISH
+- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-25 --timezone Atlantic/Canary --mode post`
 
 ## Fixtures
 | fixture_id | league | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action | recommended_command |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1545418 | Bundesliga | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 2026-05-25T18:31:02.600000+00:00 | 409.45 | 2026-05-25T17:01:02.600000+00:00 | PENDING_OUTSIDE_WINDOW | WAIT_FOR_PRELOCK | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-25 --timezone Atlantic/Canary --mode prelock --window-minutes 90 |
+| 1545418 | Bundesliga | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 2026-05-25T18:31:02.600000+00:00 | 382.52 | 2026-05-25T17:01:02.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-25 --timezone Atlantic/Canary --mode post |
