@@ -36,9 +36,8 @@ def write(path: Path, data: list[dict[str, object]], fields: list[str]) -> None:
             w.writerow({k: r.get(k, "") for k in fields})
 
 
-def src(base: Path, day: str) -> Path:
-    p = base / "today" / day / "vsigma_context_level_matrix.csv"
-    return p if p.exists() else base / "governance" / "vsigma_context_level_matrix.csv"
+def dated_matrix_path(base: Path, day: str) -> Path:
+    return base / "today" / day / "vsigma_context_level_matrix.csv"
 
 
 def classify(row: dict[str, str]) -> tuple[str, str, str]:
@@ -69,9 +68,35 @@ def counts(rows: list[dict[str, object]], field: str) -> str:
     return "; ".join(f"{k}={v}" for k, v in c.most_common()) if c else "none"
 
 
+def empty_summary(day: str, gen: str, reason: str) -> dict[str, object]:
+    return {
+        "target_date": day,
+        "generated_at": gen,
+        "portfolio_verdict": "INPUT_MISSING_DATE_GUARD",
+        "rows_reviewed": 0,
+        "status_counts": "none",
+        "recommended_stance": reason,
+        "top_pick": "NONE",
+        "top_market": "NONE",
+        "top_status": "NONE",
+        "auto_apply": "NO",
+        "production_change": "NO",
+    }
+
+
 def build(day: str, tz: str, base: Path) -> tuple[dict[str, object], list[dict[str, object]]]:
     gen = datetime.now(ZoneInfo(tz)).isoformat(timespec="seconds")
-    matrix = read(src(base, day))
+    source = dated_matrix_path(base, day)
+    if not source.exists():
+        reason = f"No dated context matrix found at {source}; refusing stale governance fallback. Run vsigma_context_level_matrix for this date first."
+        return empty_summary(day, gen, reason), []
+
+    matrix = [r for r in read(source) if n(r.get("target_date"))[:10] in {"", day}]
+    stale = [r for r in read(source) if n(r.get("target_date"))[:10] not in {"", day}]
+    if stale:
+        reason = "Dated context matrix contains rows from another target_date; refusing mixed-date portfolio."
+        return empty_summary(day, gen, reason), []
+
     rows: list[dict[str, object]] = []
     for i, r in enumerate(matrix, start=1):
         status, stake, note = classify(r)
@@ -105,6 +130,9 @@ def build(day: str, tz: str, base: Path) -> tuple[dict[str, object], list[dict[s
     elif any(r["final_portfolio_status"] == "LIVE_ONLY_OR_SYMBOLIC" for r in active):
         verdict = "LIVE_OR_SYMBOLIC_ONLY"
         stance = "No prematch serious bet. Live or symbolic only."
+    elif not rows:
+        verdict = "NO_MATRIX_ROWS"
+        stance = "No context matrix rows found for the date."
     else:
         verdict = "NO_ACTION_PORTFOLIO"
         stance = "No serious action after context matrix."
@@ -115,8 +143,11 @@ def build(day: str, tz: str, base: Path) -> tuple[dict[str, object], list[dict[s
 
 def md(day: str, summary: dict[str, object], rows: list[dict[str, object]]) -> str:
     lines = [f"# vSIGMA Context Matrix Portfolio v2 - {day}","","## Executive Verdict",f"- portfolio_verdict: {summary['portfolio_verdict']}",f"- recommended_stance: {summary['recommended_stance']}",f"- top_pick: {summary['top_pick']} - {summary['top_market']} ({summary['top_status']})",f"- status_counts: {summary['status_counts']}","- auto_apply: NO","- production_change: NO","","## Portfolio Rows"]
+    if not rows:
+        lines.append("- none")
     for r in rows:
         lines.append(f"- #{r['rank']} | {r['final_portfolio_status']} | {r['home_team']} vs {r['away_team']} | market={r['market_primary']} | level={r['context_level']} | stake={r['stake_guidance']} | note={r['operator_note']}")
+    lines += ["", "## Guardrails", "- This report refuses stale governance fallback when a dated matrix is missing.", "- Run the dated context level matrix before this portfolio report."]
     return "\n".join(lines) + "\n"
 
 
