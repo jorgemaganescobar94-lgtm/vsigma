@@ -12,8 +12,8 @@
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| SC Paderborn 07 vs VfL Wolfsburg | OVER_1_5 | 2026-05-25T19:30+01:00 | -199.28 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
-| IF Elfsborg vs BK Hacken | OVER_2_5 | 2026-05-25T18:00+01:00 | -289.28 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
+| SC Paderborn 07 vs VfL Wolfsburg | OVER_1_5 | 2026-05-25T19:30+01:00 | -248.89 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
+| IF Elfsborg vs BK Hacken | OVER_2_5 | 2026-05-25T18:00+01:00 | -338.89 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
 
 ## Data Gaps
 - odds missing: 0
