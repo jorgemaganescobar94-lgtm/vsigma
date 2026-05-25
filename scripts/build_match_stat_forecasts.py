@@ -113,13 +113,28 @@ def f2(value: float) -> str:
     return f"{value:.2f}"
 
 
-def range_float(mid: float, pct: float = 0.26, add: float = 0.12, upper: float = 9.5) -> tuple[str, str, str]:
+def confidence_width(confidence: float) -> float:
+    # Wider ranges when confidence is low; tighter ranges only when data quality is genuinely strong.
+    if confidence >= 78:
+        return 0.86
+    if confidence >= 66:
+        return 1.00
+    if confidence >= 56:
+        return 1.12
+    return 1.25
+
+
+def range_float(mid: float, pct: float = 0.22, add: float = 0.10, upper: float = 9.5, width: float = 1.0) -> tuple[str, str, str]:
+    pct *= width
+    add *= width
     low = clamp(mid * (1 - pct) - add, 0, upper)
     high = clamp(mid * (1 + pct) + add, 0, upper)
     return f2(low), f2(clamp(mid, 0, upper)), f2(max(high, low))
 
 
-def range_int(mid: float, pct: float = 0.24, add: float = 0.7, upper: int = 80) -> tuple[int, int, int]:
+def range_int(mid: float, pct: float = 0.18, add: float = 0.55, upper: int = 80, width: float = 1.0) -> tuple[int, int, int]:
+    pct *= width
+    add *= width
     low = int(max(0, math.floor(mid * (1 - pct) - add)))
     high = int(min(upper, math.ceil(mid * (1 + pct) + add)))
     mid_i = int(max(0, round(mid)))
@@ -162,20 +177,20 @@ def league_profiles(rows: list[dict[str, str]]) -> dict[str, dict[str, float]]:
             num(r.get("home_recent_shots_for_pg"), 0) + num(r.get("away_recent_shots_for_pg"), 0),
             num(r.get("home_recent_shots_against_pg"), 0) + num(r.get("away_recent_shots_against_pg"), 0),
         ], 23.0))
-        buckets[league]["total_corners"].append(
-            num(r.get("home_recent_corners_for_pg"), 0) + num(r.get("away_recent_corners_for_pg"), 0)
-        )
-        buckets[league]["total_cards"].append(
-            num(r.get("home_recent_yellow_pg"), 0) + num(r.get("away_recent_yellow_pg"), 0)
-        )
+        corners_total = num(r.get("home_recent_corners_for_pg"), 0) + num(r.get("away_recent_corners_for_pg"), 0)
+        if corners_total > 0:
+            buckets[league]["total_corners"].append(corners_total)
+        cards_total = num(r.get("home_recent_yellow_pg"), 0) + num(r.get("away_recent_yellow_pg"), 0)
+        if cards_total > 0:
+            buckets[league]["total_cards"].append(cards_total)
     profiles: dict[str, dict[str, float]] = {}
     for league, vals in buckets.items():
         profiles[league] = {
             "home_goals": avg(vals["home_goals"], 1.25),
             "away_goals": avg(vals["away_goals"], 1.10),
             "total_shots": avg(vals["total_shots"], 23.0),
-            "total_corners": avg(vals["total_corners"], 9.5),
-            "total_cards": avg(vals["total_cards"], 4.0),
+            "total_corners": avg(vals["total_corners"], 9.2),
+            "total_cards": avg(vals["total_cards"], 3.8),
         }
     return profiles
 
@@ -188,6 +203,10 @@ def market_hint(row: dict[str, str]) -> str:
     return "UNKNOWN"
 
 
+def has_real_pair(row: dict[str, str], a: str, b: str) -> bool:
+    return num(row.get(a), 0) > 0 and num(row.get(b), 0) > 0
+
+
 def forecast_row(row: dict[str, str], target_date: str, generated_at: str, rank: int, source_name: str, profiles: dict[str, dict[str, float]]) -> dict[str, object]:
     league = norm(row.get("league")) or "UNKNOWN"
     prof = profiles.get(league, {})
@@ -196,23 +215,23 @@ def forecast_row(row: dict[str, str], target_date: str, generated_at: str, rank:
     form_away_goals = avg([num(row.get("away_goals_for_pg"), 0), num(row.get("home_goals_against_pg"), 0)], prof.get("away_goals", 1.10))
     proj_home = num(row.get("projected_home_goals"), 0)
     proj_away = num(row.get("projected_away_goals"), 0)
-    home_goals_mid = 0.62 * proj_home + 0.38 * form_home_goals if proj_home > 0 else form_home_goals
-    away_goals_mid = 0.62 * proj_away + 0.38 * form_away_goals if proj_away > 0 else form_away_goals
+    home_goals_mid = 0.58 * proj_home + 0.42 * form_home_goals if proj_home > 0 else form_home_goals
+    away_goals_mid = 0.58 * proj_away + 0.42 * form_away_goals if proj_away > 0 else form_away_goals
 
     over25 = num(row.get("odds_imp_over25"), 0)
     over15 = num(row.get("odds_imp_over15"), 0)
     under35 = num(row.get("odds_imp_under35"), 0)
     goal_nudge = 0.0
     if over25 >= 0.58:
-        goal_nudge += 0.16
+        goal_nudge += 0.12
     elif over25 >= 0.52:
-        goal_nudge += 0.07
+        goal_nudge += 0.05
     elif 0 < over25 <= 0.42:
         goal_nudge -= 0.10
-    if over15 >= 0.80:
-        goal_nudge += 0.05
+    if over15 >= 0.82:
+        goal_nudge += 0.03
     if under35 >= 0.72:
-        goal_nudge -= 0.05
+        goal_nudge -= 0.06
 
     total_before = max(home_goals_mid + away_goals_mid, 0.1)
     home_share = home_goals_mid / total_before
@@ -228,43 +247,43 @@ def forecast_row(row: dict[str, str], target_date: str, generated_at: str, rank:
         num(row.get("away_recent_shots_for_pg"), 0),
         num(row.get("home_recent_shots_against_pg"), 0),
     ], prof.get("total_shots", 23.0) * 0.48)
-    home_shots_mid *= clamp(0.88 + home_goals_mid / 9.0, 0.85, 1.18)
-    away_shots_mid *= clamp(0.88 + away_goals_mid / 9.0, 0.85, 1.18)
+    home_shots_mid *= clamp(0.90 + home_goals_mid / 11.0, 0.86, 1.14)
+    away_shots_mid *= clamp(0.90 + away_goals_mid / 11.0, 0.86, 1.14)
 
     home_sot_mid = avg([
         num(row.get("home_recent_sot_for_pg"), 0),
         num(row.get("away_recent_sot_against_pg"), 0),
-    ], home_shots_mid * 0.34)
+    ], home_shots_mid * 0.33)
     away_sot_mid = avg([
         num(row.get("away_recent_sot_for_pg"), 0),
         num(row.get("home_recent_sot_against_pg"), 0),
-    ], away_shots_mid * 0.34)
-    home_sot_mid = clamp(home_sot_mid, home_shots_mid * 0.18, home_shots_mid * 0.58)
-    away_sot_mid = clamp(away_sot_mid, away_shots_mid * 0.18, away_shots_mid * 0.58)
+    ], away_shots_mid * 0.33)
+    home_sot_mid = clamp(home_sot_mid, home_shots_mid * 0.18, home_shots_mid * 0.55)
+    away_sot_mid = clamp(away_sot_mid, away_shots_mid * 0.18, away_shots_mid * 0.55)
 
     home_corners_mid = avg([
         num(row.get("home_recent_corners_for_pg"), 0),
         num(row.get("away_recent_corners_against_pg"), 0),
-    ], prof.get("total_corners", 9.5) * 0.52)
+    ], prof.get("total_corners", 9.2) * 0.52)
     away_corners_mid = avg([
         num(row.get("away_recent_corners_for_pg"), 0),
         num(row.get("home_recent_corners_against_pg"), 0),
-    ], prof.get("total_corners", 9.5) * 0.48)
-    shot_corner_nudge = clamp(((home_shots_mid + away_shots_mid) - 23.0) / 30.0, -0.18, 0.22)
+    ], prof.get("total_corners", 9.2) * 0.48)
+    shot_corner_nudge = clamp(((home_shots_mid + away_shots_mid) - 23.0) / 42.0, -0.10, 0.14)
     home_corners_mid *= 1 + shot_corner_nudge
     away_corners_mid *= 1 + shot_corner_nudge
 
     home_fouls_mid = avg([num(row.get("home_recent_fouls_pg"), 0)], 12.0)
     away_fouls_mid = avg([num(row.get("away_recent_fouls_pg"), 0)], 12.0)
-    home_cards_mid = avg([num(row.get("home_recent_yellow_pg"), 0)], prof.get("total_cards", 4.0) * 0.50)
-    away_cards_mid = avg([num(row.get("away_recent_yellow_pg"), 0)], prof.get("total_cards", 4.0) * 0.50)
+    home_cards_mid = avg([num(row.get("home_recent_yellow_pg"), 0)], prof.get("total_cards", 3.8) * 0.50)
+    away_cards_mid = avg([num(row.get("away_recent_yellow_pg"), 0)], prof.get("total_cards", 3.8) * 0.50)
     urgency_total = num(row.get("home_urgency_score"), 0) + num(row.get("away_urgency_score"), 0)
     if urgency_total >= 4:
-        home_cards_mid += 0.12
-        away_cards_mid += 0.12
-    if home_fouls_mid + away_fouls_mid >= 28:
         home_cards_mid += 0.10
         away_cards_mid += 0.10
+    if home_fouls_mid + away_fouls_mid >= 28:
+        home_cards_mid += 0.08
+        away_cards_mid += 0.08
 
     total_shots_mid = home_shots_mid + away_shots_mid
     total_sot_mid = home_sot_mid + away_sot_mid
@@ -276,11 +295,11 @@ def forecast_row(row: dict[str, str], target_date: str, generated_at: str, rank:
     modal_away = goal_bucket(away_goals_mid)
     modal = f"{modal_home}-{modal_away} / {max(0, modal_home - 1)}-{modal_away} / {modal_home}-{modal_away + 1}"
 
-    tempo = level(total_shots_mid + total_corners_mid * 1.1 + total_goals_mid * 3.0, 34, 47, "LOW_TEMPO", "MEDIUM_TEMPO", "HIGH_TEMPO")
-    shot_level = level(total_shots_mid, 21, 28, "LOW_SHOT_VOLUME", "MEDIUM_SHOT_VOLUME", "HIGH_SHOT_VOLUME")
-    corner_level = level(total_corners_mid, 8.2, 10.8, "LOW_CORNER_VOLUME", "MEDIUM_CORNER_VOLUME", "HIGH_CORNER_VOLUME")
-    card_level = level(total_cards_mid, 3.2, 5.2, "LOW_CARD_RISK", "MEDIUM_CARD_RISK", "HIGH_CARD_RISK")
-    btts_threat = level(min(home_sot_mid, away_sot_mid), 2.8, 4.0, "ONE_SIDE_THREAT", "BALANCED_THREAT", "BOTH_TEAMS_THREAT")
+    tempo = level(total_shots_mid + total_corners_mid * 1.0 + total_goals_mid * 2.8, 34, 48, "LOW_TEMPO", "MEDIUM_TEMPO", "HIGH_TEMPO")
+    shot_level = level(total_shots_mid, 21, 29, "LOW_SHOT_VOLUME", "MEDIUM_SHOT_VOLUME", "HIGH_SHOT_VOLUME")
+    corner_level = level(total_corners_mid, 8.0, 11.0, "LOW_CORNER_VOLUME", "MEDIUM_CORNER_VOLUME", "HIGH_CORNER_VOLUME")
+    card_level = level(total_cards_mid, 3.0, 5.0, "LOW_CARD_RISK", "MEDIUM_CARD_RISK", "HIGH_CARD_RISK")
+    btts_threat = level(min(home_sot_mid, away_sot_mid), 2.7, 4.1, "ONE_SIDE_THREAT", "BALANCED_THREAT", "BOTH_TEAMS_THREAT")
 
     warnings: list[str] = []
     if "LOW_CONVERSION" in up(row.get("pick_failure_mode")):
@@ -293,35 +312,46 @@ def forecast_row(row: dict[str, str], target_date: str, generated_at: str, rank:
         warnings.append("LOW_LEAGUE_RELIABILITY")
     if up(row.get("recent_stats_quality_flag")) not in {"FULL", ""}:
         warnings.append("PARTIAL_RECENT_STATS")
+    if not has_real_pair(row, "home_recent_shots_for_pg", "away_recent_shots_for_pg"):
+        warnings.append("SHOT_SAMPLE_WEAK")
+    if not has_real_pair(row, "home_recent_corners_for_pg", "away_recent_corners_for_pg"):
+        warnings.append("CORNER_SAMPLE_WEAK")
+    if not has_real_pair(row, "home_recent_yellow_pg", "away_recent_yellow_pg"):
+        warnings.append("CARD_SAMPLE_WEAK")
 
-    confidence = 52.0
+    confidence = 49.0
     confidence += 18.0 * clamp(num(row.get("league_data_reliability_score"), 0.6), 0.0, 1.0)
     confidence += 5.0 if up(row.get("recent_stats_quality_flag")) == "FULL" else 0.0
-    confidence += 5.0 if num(row.get("odds_bookmaker_support_count"), 0) >= 4 else 0.0
-    confidence += 5.0 if up(row.get("lineup_quality_flag")) in {"FULL", "LINEUPS_CONFIRMED"} else 0.0
+    confidence += 4.0 if num(row.get("odds_bookmaker_support_count"), 0) >= 4 else 0.0
+    confidence += 4.0 if up(row.get("lineup_quality_flag")) in {"FULL", "LINEUPS_CONFIRMED"} else 0.0
+    confidence += 3.0 if has_real_pair(row, "home_recent_shots_for_pg", "away_recent_shots_for_pg") else -3.0
+    confidence += 2.0 if has_real_pair(row, "home_recent_corners_for_pg", "away_recent_corners_for_pg") else -2.0
+    confidence += 1.5 if has_real_pair(row, "home_recent_yellow_pg", "away_recent_yellow_pg") else -1.5
     confidence -= 6.0 if "LINEUPS_INACTIVE" in warnings else 0.0
     confidence -= 5.0 if "AVAILABILITY_RISK" in warnings else 0.0
+    confidence -= 4.0 if "PARTIAL_RECENT_STATS" in warnings else 0.0
     confidence = clamp(confidence, 30.0, 92.0)
-    confidence_label = "HIGH" if confidence >= 76 else "MEDIUM" if confidence >= 61 else "LOW"
+    confidence_label = "HIGH" if confidence >= 77 else "MEDIUM" if confidence >= 61 else "LOW"
+    width = confidence_width(confidence)
 
-    hg_l, hg_m, hg_h = range_float(home_goals_mid, pct=0.30, add=0.10, upper=5.0)
-    ag_l, ag_m, ag_h = range_float(away_goals_mid, pct=0.30, add=0.10, upper=5.0)
-    tg_l, tg_m, tg_h = range_float(total_goals_mid, pct=0.24, add=0.15, upper=8.0)
-    hs_l, hs_m, hs_h = range_int(home_shots_mid, upper=45)
-    a_sh_l, a_sh_m, a_sh_h = range_int(away_shots_mid, upper=45)
-    ts_l, ts_m, ts_h = range_int(total_shots_mid, pct=0.20, add=1.0, upper=80)
-    hso_l, hso_m, hso_h = range_int(home_sot_mid, pct=0.28, add=0.4, upper=20)
-    aso_l, aso_m, aso_h = range_int(away_sot_mid, pct=0.28, add=0.4, upper=20)
-    tso_l, tso_m, tso_h = range_int(total_sot_mid, pct=0.24, add=0.6, upper=35)
-    hc_l, hc_m, hc_h = range_int(home_corners_mid, pct=0.28, add=0.5, upper=20)
-    ac_l, ac_m, ac_h = range_int(away_corners_mid, pct=0.28, add=0.5, upper=20)
-    tc_l, tc_m, tc_h = range_int(total_corners_mid, pct=0.24, add=0.8, upper=35)
-    hca_l, hca_m, hca_h = range_int(home_cards_mid, pct=0.35, add=0.4, upper=10)
-    aca_l, aca_m, aca_h = range_int(away_cards_mid, pct=0.35, add=0.4, upper=10)
-    tca_l, tca_m, tca_h = range_int(total_cards_mid, pct=0.30, add=0.6, upper=16)
-    hf_l, hf_m, hf_h = range_int(home_fouls_mid, pct=0.20, add=1.0, upper=35)
-    af_l, af_m, af_h = range_int(away_fouls_mid, pct=0.20, add=1.0, upper=35)
-    tf_l, tf_m, tf_h = range_int(total_fouls_mid, pct=0.18, add=1.5, upper=70)
+    hg_l, hg_m, hg_h = range_float(home_goals_mid, pct=0.26, add=0.09, upper=5.0, width=width)
+    ag_l, ag_m, ag_h = range_float(away_goals_mid, pct=0.26, add=0.09, upper=5.0, width=width)
+    tg_l, tg_m, tg_h = range_float(total_goals_mid, pct=0.21, add=0.12, upper=8.0, width=width)
+    hs_l, hs_m, hs_h = range_int(home_shots_mid, pct=0.20, add=0.5, upper=45, width=width)
+    a_sh_l, a_sh_m, a_sh_h = range_int(away_shots_mid, pct=0.20, add=0.5, upper=45, width=width)
+    ts_l, ts_m, ts_h = range_int(total_shots_mid, pct=0.16, add=0.8, upper=80, width=width)
+    hso_l, hso_m, hso_h = range_int(home_sot_mid, pct=0.24, add=0.35, upper=20, width=width)
+    aso_l, aso_m, aso_h = range_int(away_sot_mid, pct=0.24, add=0.35, upper=20, width=width)
+    tso_l, tso_m, tso_h = range_int(total_sot_mid, pct=0.20, add=0.5, upper=35, width=width)
+    hc_l, hc_m, hc_h = range_int(home_corners_mid, pct=0.22, add=0.35, upper=20, width=width)
+    ac_l, ac_m, ac_h = range_int(away_corners_mid, pct=0.22, add=0.35, upper=20, width=width)
+    tc_l, tc_m, tc_h = range_int(total_corners_mid, pct=0.18, add=0.55, upper=32, width=width)
+    hca_l, hca_m, hca_h = range_int(home_cards_mid, pct=0.28, add=0.28, upper=10, width=width)
+    aca_l, aca_m, aca_h = range_int(away_cards_mid, pct=0.28, add=0.28, upper=10, width=width)
+    tca_l, tca_m, tca_h = range_int(total_cards_mid, pct=0.23, add=0.45, upper=14, width=width)
+    hf_l, hf_m, hf_h = range_int(home_fouls_mid, pct=0.17, add=0.8, upper=35, width=width)
+    af_l, af_m, af_h = range_int(away_fouls_mid, pct=0.17, add=0.8, upper=35, width=width)
+    tf_l, tf_m, tf_h = range_int(total_fouls_mid, pct=0.14, add=1.2, upper=70, width=width)
 
     scenarios = []
     if tempo == "HIGH_TEMPO":
@@ -409,6 +439,7 @@ def md(target_date: str, rows: list[dict[str, object]], source_name: str) -> str
         "- source_guard: DATED_INPUT_ONLY",
         f"- confidence_counts: {counts(rows, 'forecast_confidence')}",
         f"- tempo_counts: {counts(rows, 'tempo_projection')}",
+        "- calibration_note: v44.1 tightened range width and confidence penalties; no auto-execution.",
         "- auto_apply: NO",
         "- production_change: NO",
         "",
