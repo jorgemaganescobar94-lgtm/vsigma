@@ -177,7 +177,7 @@ def market_candidates(f: dict[str, str]) -> tuple[str, str, str, int]:
 
 def portfolio_gate(portfolio: dict[str, str] | None) -> tuple[str, str, int]:
     if not portfolio:
-        return "NO_PORTFOLIO_CONTEXT", "LOW_OR_NONE", -8
+        return "NO_PORTFOLIO_CONTEXT", "WATCH_ONLY", -8
     status = up(portfolio.get("final_portfolio_status"))
     level = up(portfolio.get("context_level"))
     if status in {"CONTEXT_SUPPORTED_CANDIDATE", "CONTEXT_OK_CANDIDATE"} and level in {"L1_LOCK", "L2_SUPPORT", "L3_OK", "L4_CAUTION"}:
@@ -203,6 +203,10 @@ def permission(score: int, primary: str, warning: str, portfolio_status: str, co
         return "NO_BET_OR_WATCH", "NO_STAKE_OR_SYMBOLIC", "negative translation score after guards"
     if p in {"L8_HARD_DOWN", "L9_MAX_BLOCK", "NO_ACTION_CONTEXT"}:
         return "NO_BET", "NO_STAKE", "context matrix blocks execution"
+    if p == "NO_PORTFOLIO_CONTEXT":
+        if score >= 28:
+            return "STAT_WATCH_ONLY", "NO_STAKE_OR_SYMBOLIC", "statistical watch only; no portfolio/context confirmation"
+        return "NO_BET_OR_WATCH", "NO_STAKE_OR_SYMBOLIC", "no portfolio/context confirmation and score not strong enough"
     if "LINEUPS_INACTIVE" in w or p == "LIVE_ONLY_OR_SYMBOLIC":
         return "LIVE_ONLY", "SYMBOLIC_ONLY", "lineups/context require live or prelock confirmation"
     if score >= 32:
@@ -223,6 +227,8 @@ def build_row(f: dict[str, str], portfolio: dict[str, str] | None, target_date: 
         kill = "LOW_FORECAST_CONFIDENCE"
     if score < 0 and kill == "NONE":
         kill = "NEGATIVE_TRANSLATION_SCORE"
+    if port_status == "NO_PORTFOLIO_CONTEXT" and kill == "NONE":
+        kill = "NO_PORTFOLIO_CONTEXT"
     if "LOW_CONVERSION" in up(f.get("forecast_warning")) and primary == "OVER_2_5_REVIEW":
         kill = "LOW_CONVERSION_OVER25_FRAGILITY"
         primary = "OVER_1_5_SAFER_OR_LIVE"
@@ -282,7 +288,7 @@ def md(day: str, rows: list[dict[str, object]]) -> str:
         f"- rows_translated: {len(rows)}",
         f"- execution_permission_counts: {counts(rows, 'execution_permission')}",
         f"- primary_market_counts: {counts(rows, 'primary_stat_market')}",
-        "- calibration_note: v46.1 low confidence and negative score override live-only permission.",
+        "- calibration_note: v46.2 separates statistical watchlist from live execution when portfolio context is missing.",
         "- source_guard: DATED_INPUT_ONLY",
         "- auto_apply: NO",
         "- production_change: NO",
@@ -301,7 +307,7 @@ def md(day: str, rows: list[dict[str, object]]) -> str:
         "",
         "## Guardrails",
         "- This translator does not execute bets.",
-        "- It downgrades for low confidence, lineups inactive, availability risk, low conversion and context matrix status.",
+        "- No portfolio/context confirmation means STAT_WATCH_ONLY at most, not live execution.",
         "- Final execution still requires price/prelock/live confirmation.",
     ]
     return "\n".join(lines) + "\n"
