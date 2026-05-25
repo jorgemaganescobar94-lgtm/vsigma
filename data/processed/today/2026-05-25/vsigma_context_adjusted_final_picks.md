@@ -1,16 +1,16 @@
 # vSIGMA Context Adjusted Final Picks - 2026-05-25
 
 ## Summary
-- input_verdict: INPUT_MISSING_DATED_UPSTREAM
-- missing_inputs: vsigma_objective_availability_gate.csv
+- input_verdict: DATED_UPSTREAM_OK
+- missing_inputs: none
 - stale_inputs: none
-- rows_reviewed: 0
-- adjusted_status_counts: none
+- rows_reviewed: 1
+- adjusted_status_counts: WAIT_PRELOCK=1
 - auto_apply: NO
 - production_change: NO
 
 ## Final Adjusted Picks
-- none. Missing or stale dated upstream input; refused governance/root fallback.
+- #1 | WAIT_PRELOCK | SC Paderborn 07 vs VfL Wolfsburg | market=OVER_1_5 | stake=NO_PREMATCH_STAKE | reason=objective/availability gate requires prelock or lineup confirmation
 
 ## Guardrails
 - This report refuses governance and root-level fallbacks.
