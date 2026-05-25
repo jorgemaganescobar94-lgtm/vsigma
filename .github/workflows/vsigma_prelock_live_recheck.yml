@@ -6,9 +6,21 @@ on:
       date:
         required: false
         default: ""
+  schedule:
+    # UTC checkpoints. Atlantic/Canary date is resolved inside workflow.
+    - cron: "0 10 * * *"
+    - cron: "0 12 * * *"
+    - cron: "0 14 * * *"
+    - cron: "0 16 * * *"
+    - cron: "0 18 * * *"
+    - cron: "0 20 * * *"
 
 permissions:
   contents: write
+
+concurrency:
+  group: vsigma-prelock-live-recheck-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   build:
