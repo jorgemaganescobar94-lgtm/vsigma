@@ -1,15 +1,15 @@
 # vSIGMA Context Matrix Portfolio v2 - 2026-05-25
 
 ## Executive Verdict
-- portfolio_verdict: INPUT_MISSING_ADJUSTED_PICKS
-- recommended_stance: No dated adjusted final picks found at data/processed/today/2026-05-25/vsigma_context_adjusted_final_picks.csv; refusing portfolio build because matrix may be stale. Run vsigma_context_adjusted_final_picks first.
-- top_pick: NONE - NONE (NONE)
-- status_counts: none
+- portfolio_verdict: REVIEW_ONLY_PORTFOLIO
+- recommended_stance: No premium; review/live/low stake only.
+- top_pick: SC Paderborn 07 vs VfL Wolfsburg - OVER_1_5 (REVIEW_ONLY)
+- status_counts: REVIEW_ONLY=1
 - auto_apply: NO
 - production_change: NO
 
 ## Portfolio Rows
-- none
+- #1 | REVIEW_ONLY | SC Paderborn 07 vs VfL Wolfsburg | market=OVER_1_5 | level=L6_REVIEW | stake=LOW_IF_CONFIRMED | note=Review only; low stake only with price/prelock/live confirmation.
 
 ## Guardrails
 - This report refuses stale governance fallback when dated inputs are missing.
