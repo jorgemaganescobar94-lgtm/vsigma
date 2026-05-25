@@ -2,8 +2,8 @@
 
 ## Summary
 - rows_checked: 6
-- forecast_grade_counts: NO_ACTUALS_YET=3; D_RANGE_WEAK=2; B_RANGE_GOOD=1
-- total_goals_hit_counts: MISS=3; ACTUAL_UNAVAILABLE=3
+- forecast_grade_counts: D_RANGE_WEAK=2; NO_ACTUALS_YET=2; B_RANGE_GOOD=1; C_RANGE_MIXED=1
+- total_goals_hit_counts: MISS=4; ACTUAL_UNAVAILABLE=2
 - total_sot_hit_counts: HIT=3; ACTUAL_UNAVAILABLE=3
 - calibration_note: v45.1 refuses to grade non-final fixtures.
 - source_guard: DATED_INPUT_ONLY
@@ -16,7 +16,7 @@
 - IFK Goteborg vs Mjallby AIF | status=FT | goals_actual=2 vs pred=2.40-3.98 (MISS) | SoT_actual=13 vs pred=8-14 (HIT) | grade=D_RANGE_WEAK | metrics=home_goals; away_goals; total_goals; total_sot; total_corners; total_cards; total_fouls
 - Sandefjord vs Fredrikstad | status=FT | goals_actual=2 vs pred=2.10-3.52 (MISS) | SoT_actual=9 vs pred=6-12 (HIT) | grade=B_RANGE_GOOD | metrics=home_goals; away_goals; total_goals; total_sot; total_corners; total_cards; total_fouls
 - Botafogo SP vs Athletic Club | status=NS | goals_actual=NA vs pred=1.58-3.12 (ACTUAL_UNAVAILABLE) | SoT_actual=NA vs pred=5-11 (ACTUAL_UNAVAILABLE) | grade=NO_ACTUALS_YET | metrics=none
-- ST Mirren vs Partick | status=2H | goals_actual=NA vs pred=1.56-3.07 (ACTUAL_UNAVAILABLE) | SoT_actual=NA vs pred=4-10 (ACTUAL_UNAVAILABLE) | grade=NO_ACTUALS_YET | metrics=none
+- ST Mirren vs Partick | status=FT | goals_actual=1 vs pred=1.56-3.07 (MISS) | SoT_actual=NA vs pred=4-10 (ACTUAL_UNAVAILABLE) | grade=C_RANGE_MIXED | metrics=home_goals; away_goals; total_goals; total_cards
 
 ## Guardrails
 - This report grades only final fixtures: FT/AET/PEN.

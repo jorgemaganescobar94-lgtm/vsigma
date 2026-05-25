@@ -9,10 +9,10 @@
 - production_change: NO
 
 ## Metric Memory
-- total_cards | days=1 | rows=3 | hit_rate=0.667 | bias=UNDER_ESTIMATE | decision=ACCUMULATE_MORE_SAMPLE | patch=NO | next=Keep collecting post-match calibration. Minimum gate: >=10 evaluated rows across >=2 days.
+- total_cards | days=1 | rows=4 | hit_rate=0.750 | bias=UNDER_ESTIMATE | decision=ACCUMULATE_MORE_SAMPLE | patch=NO | next=Keep collecting post-match calibration. Minimum gate: >=10 evaluated rows across >=2 days.
 - total_corners | days=1 | rows=3 | hit_rate=0.333 | bias=OVER_ESTIMATE | decision=ACCUMULATE_MORE_SAMPLE | patch=NO | next=Keep collecting post-match calibration. Minimum gate: >=10 evaluated rows across >=2 days.
 - total_fouls | days=1 | rows=3 | hit_rate=1.000 | bias=BALANCED_OR_ON_RANGE | decision=ACCUMULATE_MORE_SAMPLE | patch=NO | next=Keep collecting post-match calibration. Minimum gate: >=10 evaluated rows across >=2 days.
-- total_goals | days=1 | rows=3 | hit_rate=0.000 | bias=OVER_ESTIMATE | decision=ACCUMULATE_MORE_SAMPLE | patch=NO | next=Keep collecting post-match calibration. Minimum gate: >=10 evaluated rows across >=2 days.
+- total_goals | days=1 | rows=4 | hit_rate=0.000 | bias=OVER_ESTIMATE | decision=ACCUMULATE_MORE_SAMPLE | patch=NO | next=Keep collecting post-match calibration. Minimum gate: >=10 evaluated rows across >=2 days.
 - total_shots | days=1 | rows=3 | hit_rate=1.000 | bias=BALANCED_OR_ON_RANGE | decision=ACCUMULATE_MORE_SAMPLE | patch=NO | next=Keep collecting post-match calibration. Minimum gate: >=10 evaluated rows across >=2 days.
 - total_sot | days=1 | rows=3 | hit_rate=1.000 | bias=BALANCED_OR_ON_RANGE | decision=ACCUMULATE_MORE_SAMPLE | patch=NO | next=Keep collecting post-match calibration. Minimum gate: >=10 evaluated rows across >=2 days.
 
