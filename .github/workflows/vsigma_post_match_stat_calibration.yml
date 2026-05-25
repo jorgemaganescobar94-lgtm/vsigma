@@ -1,0 +1,51 @@
+name: vSIGMA Post Match Stat Calibration
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ github.token }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Decide date
+        shell: bash
+        run: |
+          D="${{ github.event.inputs.date }}"
+          if [ -z "$D" ]; then D="$(TZ=Atlantic/Canary date +%F)"; fi
+          echo "VSIGMA_DATE=$D" >> "$GITHUB_ENV"
+      - name: Normalize post-match actuals
+        shell: bash
+        run: python scripts/build_post_match_stat_actuals.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+      - name: Calibrate stat forecasts
+        shell: bash
+        run: python scripts/calibrate_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+      - name: Commit reports
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            data/processed/today/${VSIGMA_DATE}/vsigma_post_match_stat_actuals.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecast_calibration* \
+            data/processed/governance/vsigma_post_match_stat_actuals.* \
+            data/processed/governance/vsigma_match_stat_forecast_calibration* \
+            2>/dev/null || true
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "vSIGMA post-match stat calibration ${VSIGMA_DATE} [skip ci]"
+          git push origin HEAD:main
