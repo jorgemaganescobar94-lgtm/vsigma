@@ -1,0 +1,99 @@
+name: vSIGMA Full Post-Match Learning Chain
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+      APISPORTS_KEY: ${{ secrets.APISPORTS_KEY }}
+      RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+      X_RAPIDAPI_KEY: ${{ secrets.X_RAPIDAPI_KEY }}
+      API_FOOTBALL_HOST: ${{ secrets.API_FOOTBALL_HOST }}
+      API_FOOTBALL_TIMEZONE: Atlantic/Canary
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ github.token }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        shell: bash
+        run: python -m pip install --upgrade pip requests
+
+      - name: Decide date
+        shell: bash
+        run: |
+          D="${{ github.event.inputs.date }}"
+          if [ -z "$D" ]; then D="$(TZ=Atlantic/Canary date +%F)"; fi
+          echo "VSIGMA_DATE=$D" >> "$GITHUB_ENV"
+          echo "Running full post-match learning chain for $D"
+
+      - name: Refresh dated post-match results
+        shell: bash
+        run: python scripts/refresh_dated_post_match_results.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Normalize post-match actuals
+        shell: bash
+        run: python scripts/build_post_match_stat_actuals.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Calibrate match stat forecasts
+        shell: bash
+        run: python scripts/calibrate_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Backtest match stat forecasts
+        shell: bash
+        run: python scripts/backtest_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Build stat calibration governor
+        shell: bash
+        run: python scripts/build_stat_calibration_governor.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Update calibration memory ledger
+        shell: bash
+        run: python scripts/build_calibration_memory_ledger.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Commit learning outputs
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            data/processed/today/${VSIGMA_DATE}/matches.csv \
+            data/processed/today/${VSIGMA_DATE}/vsigma_dated_post_match_results_refresh.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_post_match_stat_actuals.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecast_calibration* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecast_backtest.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_stat_calibration_governor.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_calibration_memory_ledger.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_calibration_memory_summary.csv \
+            data/processed/governance/vsigma_dated_post_match_results_refresh.* \
+            data/processed/governance/vsigma_post_match_stat_actuals.* \
+            data/processed/governance/vsigma_match_stat_forecast_calibration* \
+            data/processed/governance/vsigma_match_stat_forecast_backtest.* \
+            data/processed/governance/vsigma_stat_calibration_governor.* \
+            data/processed/governance/vsigma_calibration_memory_ledger.* \
+            data/processed/governance/vsigma_calibration_memory_summary.csv \
+            data/processed/ledger/vsigma_stat_calibration_memory.csv \
+            2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No vSIGMA full post-match learning changes to commit."
+            exit 0
+          fi
+          git commit -m "vSIGMA full post-match learning chain ${VSIGMA_DATE} [skip ci]"
+          git push origin HEAD:main
