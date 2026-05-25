@@ -40,6 +40,10 @@ def dated_matrix_path(base: Path, day: str) -> Path:
     return base / "today" / day / "vsigma_context_level_matrix.csv"
 
 
+def dated_adjusted_path(base: Path, day: str) -> Path:
+    return base / "today" / day / "vsigma_context_adjusted_final_picks.csv"
+
+
 def classify(row: dict[str, str]) -> tuple[str, str, str]:
     lvl = u(row.get("context_level"))
     mem = u(row.get("memory_level"))
@@ -68,11 +72,11 @@ def counts(rows: list[dict[str, object]], field: str) -> str:
     return "; ".join(f"{k}={v}" for k, v in c.most_common()) if c else "none"
 
 
-def empty_summary(day: str, gen: str, reason: str) -> dict[str, object]:
+def empty_summary(day: str, gen: str, verdict: str, reason: str) -> dict[str, object]:
     return {
         "target_date": day,
         "generated_at": gen,
-        "portfolio_verdict": "INPUT_MISSING_DATE_GUARD",
+        "portfolio_verdict": verdict,
         "rows_reviewed": 0,
         "status_counts": "none",
         "recommended_stance": reason,
@@ -86,16 +90,22 @@ def empty_summary(day: str, gen: str, reason: str) -> dict[str, object]:
 
 def build(day: str, tz: str, base: Path) -> tuple[dict[str, object], list[dict[str, object]]]:
     gen = datetime.now(ZoneInfo(tz)).isoformat(timespec="seconds")
-    source = dated_matrix_path(base, day)
-    if not source.exists():
-        reason = f"No dated context matrix found at {source}; refusing stale governance fallback. Run vsigma_context_level_matrix for this date first."
-        return empty_summary(day, gen, reason), []
+    adjusted_source = dated_adjusted_path(base, day)
+    if not adjusted_source.exists():
+        reason = f"No dated adjusted final picks found at {adjusted_source}; refusing portfolio build because matrix may be stale. Run vsigma_context_adjusted_final_picks first."
+        return empty_summary(day, gen, "INPUT_MISSING_ADJUSTED_PICKS", reason), []
 
-    matrix = [r for r in read(source) if n(r.get("target_date"))[:10] in {"", day}]
-    stale = [r for r in read(source) if n(r.get("target_date"))[:10] not in {"", day}]
+    matrix_source = dated_matrix_path(base, day)
+    if not matrix_source.exists():
+        reason = f"No dated context matrix found at {matrix_source}; refusing stale governance fallback. Run vsigma_context_level_matrix for this date first."
+        return empty_summary(day, gen, "INPUT_MISSING_DATE_GUARD", reason), []
+
+    matrix_all = read(matrix_source)
+    matrix = [r for r in matrix_all if n(r.get("target_date"))[:10] in {"", day}]
+    stale = [r for r in matrix_all if n(r.get("target_date"))[:10] not in {"", day}]
     if stale:
         reason = "Dated context matrix contains rows from another target_date; refusing mixed-date portfolio."
-        return empty_summary(day, gen, reason), []
+        return empty_summary(day, gen, "MIXED_DATE_MATRIX_BLOCKED", reason), []
 
     rows: list[dict[str, object]] = []
     for i, r in enumerate(matrix, start=1):
@@ -147,7 +157,7 @@ def md(day: str, summary: dict[str, object], rows: list[dict[str, object]]) -> s
         lines.append("- none")
     for r in rows:
         lines.append(f"- #{r['rank']} | {r['final_portfolio_status']} | {r['home_team']} vs {r['away_team']} | market={r['market_primary']} | level={r['context_level']} | stake={r['stake_guidance']} | note={r['operator_note']}")
-    lines += ["", "## Guardrails", "- This report refuses stale governance fallback when a dated matrix is missing.", "- Run the dated context level matrix before this portfolio report."]
+    lines += ["", "## Guardrails", "- This report refuses stale governance fallback when dated inputs are missing.", "- Run dated context adjusted final picks and dated context level matrix before this portfolio report."]
     return "\n".join(lines) + "\n"
 
 
