@@ -7,15 +7,16 @@
 ## Recommendation Mix
 | recommendation | rows |
 | --- | --- |
-| SAMPLE_TOO_SMALL | 3 |
-| INSUFFICIENT_CLV_DATA | 1 |
+| SAMPLE_TOO_SMALL | 6 |
 
 ## Advice
 | market_family | failure_mode | drift_status | clv_direction | league | n | wins | losses | profit_units | roi_percent | avg_clv_delta | recommendation | recommendation_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | ALL | 11 | 0 | 0 | 0.0 | 0.0 |  | INSUFFICIENT_CLV_DATA | CLV_TRACKING_INSUFFICIENT_TRUE_PRE_MISSING; do not change thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_FLAT | ALL | 2 | 0 | 0 | 0.0 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | ALL | 9 | 0 | 0 | 0.0 | 0.0 |  | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 | OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_UNAVAILABLE | ALL | 4 | 0 | 0 | 0.0 | 0.0 |  | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | Bundesliga | 6 | 0 | 0 | 0.0 | 0.0 |  | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_FLAT | Bundesliga | 2 | 0 | 0 | 0.0 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | Bundesliga | 4 | 0 | 0 | 0.0 | 0.0 |  | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 | OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_UNAVAILABLE | Bundesliga | 4 | 0 | 0 | 0.0 | 0.0 |  | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 
 ## Date Validation

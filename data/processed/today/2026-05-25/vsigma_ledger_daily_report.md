@@ -3,10 +3,10 @@
 ## Ledger Update Status
 - Ledger CSV: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv
 - JSONL event log: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.jsonl
-- Official picks registered: 3
-- Shadow picks registered: 12
+- Official picks registered: 1
+- Shadow picks registered: 5
 - No-bet records: 1
-- Pending records: 15
+- Pending records: 6
 - Settled records: 0
 - Daily winner: NO_SETTLED_RESULTS
 
@@ -24,35 +24,26 @@
 ## Daily Summary By Experiment
 | experiment_id | records | picks | no_bet_records | pending | settled | profit_units |
 | --- | --- | --- | --- | --- | --- | --- |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 3 | 3 | 0 | 3 | 0 | 0.0 |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1 | 0 | 1 | 0 | 0.0 |
 | CANDIDATE_V3_ODDS_DEPTH | 1 | 0 | 1 | 0 | 0 | 0.0 |
-| CANDIDATE_V4_O25_FIREWALL | 2 | 2 | 0 | 2 | 0 | 0.0 |
-| CANDIDATE_V5_PLAYER_IMPACT | 3 | 3 | 0 | 3 | 0 | 0.0 |
-| CANDIDATE_V6_API_PREDICTIONS | 2 | 2 | 0 | 2 | 0 | 0.0 |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 2 | 0 | 2 | 0 | 0.0 |
-| OFFICIAL_BASELINE | 3 | 3 | 0 | 3 | 0 | 0.0 |
+| CANDIDATE_V4_O25_FIREWALL | 1 | 1 | 0 | 1 | 0 | 0.0 |
+| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1 | 0 | 1 | 0 | 0.0 |
+| CANDIDATE_V6_API_PREDICTIONS | 1 | 1 | 0 | 1 | 0 | 0.0 |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1 | 0 | 1 | 0 | 0.0 |
+| OFFICIAL_BASELINE | 1 | 1 | 0 | 1 | 0 | 0.0 |
 
 ## Official Picks
 | experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1 | 1494179 | IFK Goteborg | Mjallby AIF | OVER_1_5 | 0.81736 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.133; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
-| OFFICIAL_BASELINE | 2 | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_2_5 | 0.807425 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.264; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
-| OFFICIAL_BASELINE | 1 | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 0.85476 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.165; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+| OFFICIAL_BASELINE | 1 | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 0.85476 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.165; market_fit=SAFE_OK; LOW_CONVERSION | PENDING |
 
 ## Shadow Picks
 | experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1494179 | IFK Goteborg | Mjallby AIF | OVER_1_5 | 0.80906 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.125; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 2 | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_2_5 | 0.813825 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.270; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
-| CANDIDATE_V4_O25_FIREWALL | 1 | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 0.85776 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.168; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
-| CANDIDATE_V4_O25_FIREWALL | 2 | 1494179 | IFK Goteborg | Mjallby AIF | OVER_1_5 | 0.80906 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.125; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1494179 | IFK Goteborg | Mjallby AIF | OVER_1_5 | 0.80906 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.125; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
-| CANDIDATE_V5_PLAYER_IMPACT | 2 | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_2_5 | 0.813825 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.270; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
-| CANDIDATE_V6_API_PREDICTIONS | 1 | 1494179 | IFK Goteborg | Mjallby AIF | OVER_1_5 | 0.80906 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.125; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_2_5 | 0.813825 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.270; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 0.85776 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.168; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 0.85776 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.168; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
-| CANDIDATE_V6_API_PREDICTIONS | 1 | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 0.85776 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.168; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+| CANDIDATE_V4_O25_FIREWALL | 1 | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 0.85776 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.168; market_fit=SAFE_OK; LOW_CONVERSION | PENDING |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 0.85776 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.168; market_fit=SAFE_OK; LOW_CONVERSION | PENDING |
+| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 0.85776 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.168; market_fit=SAFE_OK; LOW_CONVERSION | PENDING |
+| CANDIDATE_V6_API_PREDICTIONS | 1 | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 0.85776 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.168; market_fit=SAFE_OK; LOW_CONVERSION | PENDING |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 0.85776 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.168; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 
 ## No-Bet Modes
@@ -63,16 +54,7 @@
 ## Pre-Lock Changes
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1494179 | IFK Goteborg | Mjallby AIF | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| OFFICIAL_BASELINE | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1494179 | IFK Goteborg | Mjallby AIF | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 | CANDIDATE_V4_O25_FIREWALL | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| CANDIDATE_V4_O25_FIREWALL | 1494179 | IFK Goteborg | Mjallby AIF | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| CANDIDATE_V5_PLAYER_IMPACT | 1494179 | IFK Goteborg | Mjallby AIF | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| CANDIDATE_V5_PLAYER_IMPACT | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| CANDIDATE_V6_API_PREDICTIONS | 1494179 | IFK Goteborg | Mjallby AIF | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 | OFFICIAL_BASELINE | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 | CANDIDATE_V5_PLAYER_IMPACT | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
@@ -82,20 +64,11 @@
 ## Result State
 | experiment_id | fixture_id | market_primary | result_status | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1494179 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| OFFICIAL_BASELINE | 1545418 | OVER_2_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1494179 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1545418 | OVER_2_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V4_O25_FIREWALL | 1545418 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V4_O25_FIREWALL | 1494179 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1494179 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1545418 | OVER_2_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V6_API_PREDICTIONS | 1494179 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1545418 | OVER_2_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| OFFICIAL_BASELINE | 1545418 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1545418 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1545418 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V6_API_PREDICTIONS | 1545418 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V4_O25_FIREWALL | 1545418 | OVER_1_5 | PENDING | PENDING |  | PENDING |
+| OFFICIAL_BASELINE | 1545418 | OVER_1_5 | PENDING | PENDING |  | PENDING |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1545418 | OVER_1_5 | PENDING | PENDING |  | PENDING |
+| CANDIDATE_V5_PLAYER_IMPACT | 1545418 | OVER_1_5 | PENDING | PENDING |  | PENDING |
+| CANDIDATE_V6_API_PREDICTIONS | 1545418 | OVER_1_5 | PENDING | PENDING |  | PENDING |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1545418 | OVER_1_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
 
 ## Freshness Warnings
