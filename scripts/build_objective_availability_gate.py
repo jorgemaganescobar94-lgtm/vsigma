@@ -56,14 +56,24 @@ def write_rows(path: Path, rows: list[dict[str, object]]) -> None:
             w.writerow({k: r.get(k, "") for k in FIELDS})
 
 
-def source(processed: Path, target_date: str) -> Path:
-    p = processed / "today" / target_date / "vsigma_today_execution_bets_only.csv"
-    if p.exists():
-        return p
-    p = processed / "today" / target_date / "vsigma_today_execution_shortlist.csv"
-    if p.exists():
-        return p
-    return processed / "vsigma_today_execution_bets_only.csv"
+def source(processed: Path, target_date: str) -> Path | None:
+    for filename in ("vsigma_today_execution_bets_only.csv", "vsigma_today_execution_shortlist.csv"):
+        p = processed / "today" / target_date / filename
+        if p.exists():
+            return p
+    return None
+
+
+def row_day(row: dict[str, str]) -> str:
+    for field in ("target_date", "date"):
+        value = norm(row.get(field))[:10]
+        if value:
+            return value
+    return ""
+
+
+def same_day_rows(data: list[dict[str, str]], target_date: str) -> list[dict[str, str]]:
+    return [r for r in data if row_day(r) in {"", target_date}]
 
 
 def chosen_side(market: str) -> str:
@@ -158,7 +168,13 @@ def gate(row: dict[str, str]) -> tuple[str, str, str, str, str, str]:
 
 def build(target_date: str, timezone: str, processed: Path) -> list[dict[str, object]]:
     generated_at = datetime.now(ZoneInfo(timezone)).isoformat(timespec="seconds")
-    rows = [r for r in read_rows(source(processed, target_date)) if up(r.get("final_recommendation")) == "BET"]
+    src = source(processed, target_date)
+    if src is None:
+        return []
+    rows = [
+        r for r in same_day_rows(read_rows(src), target_date)
+        if up(r.get("final_recommendation")) == "BET"
+    ]
     out: list[dict[str, object]] = []
     for r in rows:
         obj, av, lin, decision, reason, action = gate(r)
@@ -191,7 +207,7 @@ def build(target_date: str, timezone: str, processed: Path) -> list[dict[str, ob
             "pick_failure_mode": up(r.get("pick_failure_mode")),
             "auto_apply": "NO",
             "production_change": "NO",
-            "guardrail_status": "OBJECTIVE_AVAILABILITY_GATE_REPORT_ONLY",
+            "guardrail_status": "DATED_SOURCE_ONLY_OBJECTIVE_AVAILABILITY_GATE",
         })
     return out
 
@@ -209,15 +225,16 @@ def md(target_date: str, rows: list[dict[str, object]]) -> str:
         f"- gate_decision_counts: {counts(rows, 'gate_decision')}",
         f"- objective_status_counts: {counts(rows, 'objective_status')}",
         f"- availability_status_counts: {counts(rows, 'availability_status')}",
+        "- source_guard: DATED_INPUT_ONLY",
         "- auto_apply: NO",
         "- production_change: NO", "",
         "## Gate Rows",
     ]
     if not rows:
-        lines.append("- none")
+        lines.append("- none. Missing dated execution source or no same-date BET rows; root fallback refused.")
     for r in rows:
         lines.append(f"- #{r['gate_rank']} | {r['gate_decision']} | {r['home_team']} vs {r['away_team']} | market={r['market_primary']} | objective={r['objective_status']} | availability={r['availability_status']} | lineup={r['lineup_status']} | action={r['recommended_action']}")
-    lines += ["", "## Guardrails", "- This gate does not change production picks automatically.", "- Objective and availability conflicts require prelock/manual review before premium execution."]
+    lines += ["", "## Guardrails", "- This gate refuses root-level execution fallback.", "- This gate does not change production picks automatically.", "- Objective and availability conflicts require prelock/manual review before premium execution."]
     return "\n".join(lines) + "\n"
 
 
