@@ -16,6 +16,10 @@ FIELDS = [
     "pick_failure_mode", "adjusted_final_status", "adjusted_reason", "recommended_action",
     "stake_band", "auto_apply", "production_change", "guardrail_status"
 ]
+REQUIRED_DATED_INPUTS = [
+    "vsigma_real_objective_context_gate.csv",
+    "vsigma_objective_availability_gate.csv",
+]
 
 
 def norm(v: object) -> str:
@@ -52,21 +56,58 @@ def write_rows(path: Path, rows: list[dict[str, object]]) -> None:
             writer.writerow({field: r.get(field, "") for field in FIELDS})
 
 
-def file_for(processed: Path, target_date: str, filename: str) -> Path:
-    p = processed / "today" / target_date / filename
-    if p.exists():
-        return p
-    return processed / "governance" / filename
+def dated_path(processed: Path, target_date: str, filename: str) -> Path:
+    return processed / "today" / target_date / filename
 
 
-def bets_path(processed: Path, target_date: str) -> Path:
-    p = processed / "today" / target_date / "vsigma_today_execution_bets_only.csv"
-    if p.exists():
-        return p
-    p = processed / "today" / target_date / "vsigma_today_execution_shortlist.csv"
-    if p.exists():
-        return p
-    return processed / "vsigma_today_execution_bets_only.csv"
+def dated_bets_path(processed: Path, target_date: str) -> Path | None:
+    for filename in ("vsigma_today_execution_bets_only.csv", "vsigma_today_execution_shortlist.csv"):
+        p = dated_path(processed, target_date, filename)
+        if p.exists():
+            return p
+    return None
+
+
+def row_day(row: dict[str, str]) -> str:
+    for field in ("target_date", "date"):
+        v = norm(row.get(field))[:10]
+        if v:
+            return v
+    return ""
+
+
+def keep_same_day(rows: list[dict[str, str]], target_date: str) -> list[dict[str, str]]:
+    return [r for r in rows if row_day(r) in {"", target_date}]
+
+
+def stale_count(rows: list[dict[str, str]], target_date: str) -> int:
+    return sum(1 for r in rows if row_day(r) not in {"", target_date})
+
+
+def input_guard(processed: Path, target_date: str) -> tuple[bool, list[str], list[str]]:
+    missing: list[str] = []
+    stale: list[str] = []
+
+    bets = dated_bets_path(processed, target_date)
+    if bets is None:
+        missing.append("vsigma_today_execution_bets_only.csv or vsigma_today_execution_shortlist.csv")
+    else:
+        bet_rows = read_rows(bets)
+        bad = stale_count(bet_rows, target_date)
+        if bad:
+            stale.append(f"{bets.name} stale_rows={bad}")
+
+    for filename in REQUIRED_DATED_INPUTS:
+        path = dated_path(processed, target_date, filename)
+        if not path.exists():
+            missing.append(filename)
+            continue
+        data = read_rows(path)
+        bad = stale_count(data, target_date)
+        if bad:
+            stale.append(f"{filename} stale_rows={bad}")
+
+    return not missing and not stale, missing, stale
 
 
 def index_by_fixture(rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
@@ -79,8 +120,24 @@ def index_by_fixture(rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
 
 
 def decide(base: dict[str, str], real: dict[str, str] | None, obj: dict[str, str] | None) -> tuple[str, str, str, str]:
-    real_decision = up((real or {}).get("context_gate_decision"))
-    obj_decision = up((obj or {}).get("gate_decision"))
+    if real is None:
+        return (
+            "INPUT_ROW_MISSING_REVIEW",
+            "dated real objective context gate has no matching fixture row",
+            "Do not execute; rebuild real objective context gate for this date",
+            "NO_STAKE",
+        )
+
+    if obj is None:
+        return (
+            "INPUT_ROW_MISSING_REVIEW",
+            "dated objective availability gate has no matching fixture row",
+            "Do not execute; rebuild objective availability gate for this date",
+            "NO_STAKE",
+        )
+
+    real_decision = up(real.get("context_gate_decision"))
+    obj_decision = up(obj.get("gate_decision"))
     failure = up(base.get("pick_failure_mode"))
     edge = num(base.get("primary_edge"), 0)
     score = num(base.get("execution_score"), 0)
@@ -118,11 +175,27 @@ def decide(base: dict[str, str], real: dict[str, str] | None, obj: dict[str, str
     return "NO_BET_CONTEXT", "; ".join(reasons), "No action", "NO_STAKE"
 
 
-def build(target_date: str, timezone: str, processed: Path) -> list[dict[str, object]]:
+def build(target_date: str, timezone: str, processed: Path) -> tuple[list[dict[str, object]], dict[str, object]]:
     generated_at = datetime.now(ZoneInfo(timezone)).isoformat(timespec="seconds")
-    base_rows = [r for r in read_rows(bets_path(processed, target_date)) if up(r.get("final_recommendation")) == "BET"]
-    real_rows = index_by_fixture(read_rows(file_for(processed, target_date, "vsigma_real_objective_context_gate.csv")))
-    obj_rows = index_by_fixture(read_rows(file_for(processed, target_date, "vsigma_objective_availability_gate.csv")))
+    ok, missing, stale = input_guard(processed, target_date)
+    guard: dict[str, object] = {
+        "target_date": target_date,
+        "generated_at": generated_at,
+        "input_verdict": "DATED_UPSTREAM_OK" if ok else "INPUT_MISSING_DATED_UPSTREAM",
+        "missing_inputs": "; ".join(missing) if missing else "none",
+        "stale_inputs": "; ".join(stale) if stale else "none",
+    }
+    if not ok:
+        return [], guard
+
+    bets = dated_bets_path(processed, target_date)
+    assert bets is not None
+    base_rows = [
+        r for r in keep_same_day(read_rows(bets), target_date)
+        if up(r.get("final_recommendation")) == "BET"
+    ]
+    real_rows = index_by_fixture(keep_same_day(read_rows(dated_path(processed, target_date, "vsigma_real_objective_context_gate.csv")), target_date))
+    obj_rows = index_by_fixture(keep_same_day(read_rows(dated_path(processed, target_date, "vsigma_objective_availability_gate.csv")), target_date))
     out: list[dict[str, object]] = []
 
     for base in base_rows:
@@ -157,7 +230,7 @@ def build(target_date: str, timezone: str, processed: Path) -> list[dict[str, ob
             "stake_band": stake,
             "auto_apply": "NO",
             "production_change": "NO",
-            "guardrail_status": "CONTEXT_ADJUSTED_FINAL_PICKS_REPORT_ONLY",
+            "guardrail_status": "DATED_UPSTREAM_ONLY_CONTEXT_ADJUSTED_REPORT",
         })
 
     priority = {
@@ -166,13 +239,14 @@ def build(target_date: str, timezone: str, processed: Path) -> list[dict[str, ob
         "SHADOW_RISK_ONLY": 2,
         "WAIT_PRELOCK": 3,
         "BET_DOWNGRADED_TO_REVIEW": 4,
-        "NO_BET_CONTEXT": 5,
-        "NO_BET_BASE": 6,
+        "INPUT_ROW_MISSING_REVIEW": 5,
+        "NO_BET_CONTEXT": 6,
+        "NO_BET_BASE": 7,
     }
     out.sort(key=lambda r: (priority.get(str(r["adjusted_final_status"]), 99), -num(r["base_primary_edge"]), -num(r["base_execution_score"])))
     for i, r in enumerate(out, start=1):
         r["final_rank"] = i
-    return out
+    return out, guard
 
 
 def counts(rows: list[dict[str, object]], field: str) -> str:
@@ -180,11 +254,14 @@ def counts(rows: list[dict[str, object]], field: str) -> str:
     return "; ".join(f"{k}={v}" for k, v in c.most_common()) if c else "none"
 
 
-def md(target_date: str, rows: list[dict[str, object]]) -> str:
+def md(target_date: str, rows: list[dict[str, object]], guard: dict[str, object]) -> str:
     lines = [
         f"# vSIGMA Context Adjusted Final Picks - {target_date}",
         "",
         "## Summary",
+        f"- input_verdict: {guard['input_verdict']}",
+        f"- missing_inputs: {guard['missing_inputs']}",
+        f"- stale_inputs: {guard['stale_inputs']}",
         f"- rows_reviewed: {len(rows)}",
         f"- adjusted_status_counts: {counts(rows, 'adjusted_final_status')}",
         "- auto_apply: NO",
@@ -193,20 +270,32 @@ def md(target_date: str, rows: list[dict[str, object]]) -> str:
         "## Final Adjusted Picks",
     ]
     if not rows:
-        lines.append("- none")
+        if guard["input_verdict"] == "INPUT_MISSING_DATED_UPSTREAM":
+            lines.append("- none. Missing or stale dated upstream input; refused governance/root fallback.")
+        else:
+            lines.append("- none")
     for r in rows:
         lines.append(f"- #{r['final_rank']} | {r['adjusted_final_status']} | {r['home_team']} vs {r['away_team']} | market={r['market_primary']} | stake={r['stake_band']} | reason={r['adjusted_reason']}")
-    lines += ["", "## Guardrails", "- This report does not alter production picks automatically.", "- Real objective context and availability gates override base ranking when present."]
+    lines += [
+        "",
+        "## Guardrails",
+        "- This report refuses governance and root-level fallbacks.",
+        "- Required upstream files must exist under data/processed/today/<date>/.",
+        "- Real objective context and objective availability gates override base ranking when present.",
+    ]
     return "\n".join(lines) + "\n"
 
 
 def run(target_date: str, timezone: str, processed: Path) -> None:
     target_date = date.fromisoformat(target_date).isoformat()
-    rows = build(target_date, timezone, processed)
+    rows, guard = build(target_date, timezone, processed)
     for base in [processed / "today" / target_date, processed / "governance"]:
         write_rows(base / "vsigma_context_adjusted_final_picks.csv", rows)
-        (base / "vsigma_context_adjusted_final_picks.md").write_text(md(target_date, rows), encoding="utf-8")
+        (base / "vsigma_context_adjusted_final_picks.md").write_text(md(target_date, rows, guard), encoding="utf-8")
     print("=== VSIGMA CONTEXT ADJUSTED FINAL PICKS ===")
+    print(f"input_verdict={guard['input_verdict']}")
+    print(f"missing_inputs={guard['missing_inputs']}")
+    print(f"stale_inputs={guard['stale_inputs']}")
     print(f"rows_reviewed={len(rows)}")
     print(f"adjusted_status_counts={counts(rows, 'adjusted_final_status')}")
 
