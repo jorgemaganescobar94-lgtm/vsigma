@@ -33,21 +33,27 @@ def u(v: object) -> str:
 
 
 def to_num(v: object) -> float | None:
-    if v is None: return None
+    if v is None:
+        return None
     s = str(v).strip().replace("%", "")
-    if not s or s.lower() == "nan": return None
-    try: return float(s)
-    except ValueError: return None
+    if not s or s.lower() == "nan":
+        return None
+    try:
+        return float(s)
+    except ValueError:
+        return None
 
 
 def fmt(v: object) -> str:
     x = to_num(v)
-    if x is None: return ""
+    if x is None:
+        return ""
     return str(int(x)) if abs(x - round(x)) < 1e-9 else f"{x:.2f}"
 
 
 def read(path: Path) -> tuple[list[str], list[dict[str, str]]]:
-    if not path.exists(): return [], []
+    if not path.exists():
+        return [], []
     with path.open("r", encoding="utf-8-sig", newline="") as f:
         rdr = csv.DictReader(f)
         return list(rdr.fieldnames or []), [dict(r) for r in rdr]
@@ -58,7 +64,8 @@ def write(path: Path, fields: list[str], rows: list[dict[str, object]]) -> None:
     with path.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
-        for r in rows: w.writerow({k: r.get(k, "") for k in fields})
+        for r in rows:
+            w.writerow({k: r.get(k, "") for k in fields})
 
 
 def dated(day: str, name: str) -> Path:
@@ -74,20 +81,58 @@ def env() -> dict[str, str]:
     }
 
 
+def md(day: str, report: list[dict[str, object]]) -> str:
+    c = Counter(str(r.get("status") or "UNKNOWN") for r in report)
+    lines = [
+        f"# vSIGMA Dated Post-Match Results Refresh - {day}", "", "## Summary",
+        f"- rows_reported: {len(report)}",
+        f"- status_counts: {'; '.join(f'{k}={v}' for k,v in c.items()) if c else 'none'}",
+        "- source_guard: DATED_INPUT_ONLY", "- auto_apply: NO", "- production_change: NO", "", "## Rows",
+    ]
+    if not report:
+        lines.append("- none")
+    for r in report:
+        lines.append(f"- {r['home_team']} vs {r['away_team']} | status={r['status']} | goals={r['goals']} | stats={r['stats_status']} | fields={r['updated_fields']}")
+    lines += ["", "## Guardrails", "- If API credentials are missing, this step writes a diagnostic report and exits successfully.", "- This refresh only writes dated outputs and does not infer missing stats."]
+    return "\n".join(lines) + "\n"
+
+
+def write_report(day: str, report: list[dict[str, object]]) -> None:
+    for out in [PROCESSED / "today" / day, PROCESSED / "governance"]:
+        write(out / "vsigma_dated_post_match_results_refresh.csv", REPORT_FIELDS, report)
+        (out / "vsigma_dated_post_match_results_refresh.md").write_text(md(day, report), encoding="utf-8")
+
+
+def diagnostic(day: str, tz: str, status: str, note: str) -> list[dict[str, object]]:
+    return [{
+        "target_date": day,
+        "generated_at": datetime.now(ZoneInfo(tz)).isoformat(timespec="seconds"),
+        "fixture_id": "NONE",
+        "home_team": "SYSTEM",
+        "away_team": "SYSTEM",
+        "status": status,
+        "goals": "NA",
+        "stats_status": note,
+        "updated_fields": "none",
+        "source_guard": "DATED_INPUT_ONLY",
+    }]
+
+
 def api_get(path: str, params: dict[str, object], cfg: dict[str, str]) -> tuple[dict, str]:
     if cfg["direct_key"]:
         r = requests.get(f"{DIRECT_BASE}{path}", headers={"x-apisports-key": cfg["direct_key"]}, params=params, timeout=30)
-        if r.status_code == 200:
-            data = r.json()
-            if not data.get("errors"):
-                return data, "API_SPORTS_DIRECT"
+        r.raise_for_status()
+        data = r.json()
+        if not data.get("errors"):
+            return data, "API_SPORTS_DIRECT"
+        raise RuntimeError(str(data.get("errors")))
     if cfg["rapid_key"]:
         r = requests.get(f"{RAPID_BASE}{path}", headers={"x-rapidapi-key": cfg["rapid_key"], "x-rapidapi-host": cfg["rapid_host"]}, params=params, timeout=30)
         r.raise_for_status()
         data = r.json()
-        if data.get("errors"):
-            raise RuntimeError(str(data.get("errors")))
-        return data, "RAPIDAPI"
+        if not data.get("errors"):
+            return data, "RAPIDAPI"
+        raise RuntimeError(str(data.get("errors")))
     raise RuntimeError("Missing API_FOOTBALL_KEY/APISPORTS_KEY or RAPIDAPI_KEY")
 
 
@@ -97,20 +142,23 @@ def fixture_ids(day: str, matches: list[dict[str, str]]) -> set[str]:
         _, rows = read(dated(day, name))
         for r in rows:
             fid = n(r.get("fixture_id")).replace(".0", "")
-            if fid: out.add(fid)
+            if fid:
+                out.add(fid)
     if not out:
         for r in matches:
             fid = n(r.get("fixture_id")).replace(".0", "")
-            if fid: out.add(fid)
+            if fid:
+                out.add(fid)
     return out
 
 
 def fixture_map(day: str, cfg: dict[str, str]) -> tuple[dict[str, dict], str]:
     data, provider = api_get("/fixtures", {"date": day, "timezone": cfg["timezone"]}, cfg)
-    mp = {}
+    mp: dict[str, dict] = {}
     for item in data.get("response", []) or []:
         fid = str(((item.get("fixture") or {}).get("id")))
-        if fid and fid != "None": mp[fid] = item
+        if fid and fid != "None":
+            mp[fid] = item
     return mp, provider
 
 
@@ -126,8 +174,9 @@ def stat_map(fid: str, cfg: dict[str, str]) -> dict[str, dict[str, float]]:
                 out[side][key] = val
     for side in ("home", "away"):
         y = out[side].get("yellow") or 0
-        r = out[side].get("red") or 0
-        if y or r: out[side]["cards"] = y + r
+        red = out[side].get("red") or 0
+        if y or red:
+            out[side]["cards"] = y + red
     return out
 
 
@@ -136,75 +185,108 @@ def add_cols(fields: list[str]) -> list[str]:
     for metric in ["sot","shots","corners","cards","fouls","xg"]:
         needed += [f"actual_home_{metric}", f"actual_away_{metric}", f"actual_total_{metric}"]
     for col in needed:
-        if col not in fields: fields.append(col)
+        if col not in fields:
+            fields.append(col)
     return fields
 
 
 def update_match(row: dict[str, str], item: dict, stats: dict[str, dict[str, float]] | None, now: str) -> tuple[dict[str, str], list[str]]:
-    changed = []
+    changed: list[str] = []
     fx, goals, score = item.get("fixture", {}) or {}, item.get("goals", {}) or {}, item.get("score", {}) or {}
-    st = fx.get("status", {}) or {}; ft = score.get("fulltime", {}) or {}
+    st = fx.get("status", {}) or {}
+    ft = score.get("fulltime", {}) or {}
     vals = {
         "fixture_status_short": st.get("short"), "fixture_status_long": st.get("long"), "fixture_status_elapsed": st.get("elapsed"),
         "goals_home": goals.get("home"), "goals_away": goals.get("away"),
         "score_fulltime_home": ft.get("home"), "score_fulltime_away": ft.get("away"),
         "results_last_refresh_at": now,
     }
-    for k, v in vals.items():
-        if v is not None:
-            row[k] = fmt(v) if k not in {"fixture_status_short","fixture_status_long","results_last_refresh_at"} else str(v)
+    for k, val in vals.items():
+        if val is not None:
+            row[k] = fmt(val) if k not in {"fixture_status_short","fixture_status_long","results_last_refresh_at"} else str(val)
             changed.append(k)
     if stats:
         for metric in ["sot","shots","corners","cards","fouls","xg"]:
             hv, av = stats.get("home", {}).get(metric), stats.get("away", {}).get(metric)
             if hv is not None and av is not None:
-                row[f"actual_home_{metric}"] = fmt(hv); row[f"actual_away_{metric}"] = fmt(av); row[f"actual_total_{metric}"] = fmt(hv + av)
+                row[f"actual_home_{metric}"] = fmt(hv)
+                row[f"actual_away_{metric}"] = fmt(av)
+                row[f"actual_total_{metric}"] = fmt(hv + av)
                 changed += [f"actual_home_{metric}", f"actual_away_{metric}", f"actual_total_{metric}"]
     return row, changed
-
-
-def md(day: str, report: list[dict[str, object]]) -> str:
-    c = Counter(str(r.get("status") or "UNKNOWN") for r in report)
-    lines = [f"# vSIGMA Dated Post-Match Results Refresh - {day}", "", "## Summary", f"- rows_reported: {len(report)}", f"- status_counts: {'; '.join(f'{k}={v}' for k,v in c.items()) if c else 'none'}", "- source_guard: DATED_INPUT_ONLY", "- auto_apply: NO", "- production_change: NO", "", "## Rows"]
-    if not report: lines.append("- none")
-    for r in report:
-        lines.append(f"- {r['home_team']} vs {r['away_team']} | status={r['status']} | goals={r['goals']} | stats={r['stats_status']} | fields={r['updated_fields']}")
-    return "\n".join(lines) + "\n"
 
 
 def run(day: str, tz: str) -> None:
     day = date.fromisoformat(day).isoformat()
     fields, rows = read(dated(day, "matches.csv"))
-    if not rows: raise FileNotFoundError(f"Missing dated matches.csv for {day}")
+    if not rows:
+        report = diagnostic(day, tz, "REFRESH_SKIPPED_MISSING_MATCHES", f"Missing dated matches.csv for {day}")
+        write_report(day, report)
+        print("rows_reported=1")
+        return
     fields = add_cols(fields)
-    cfg = env(); fmap, provider = fixture_map(day, cfg)
-    targets = fixture_ids(day, rows); now = datetime.now(timezone.utc).isoformat()
-    report = []
+    cfg = env()
+    if not cfg["direct_key"] and not cfg["rapid_key"]:
+        report = diagnostic(day, tz, "REFRESH_SKIPPED_NO_API_CREDENTIALS", "Missing GitHub Actions secret API_FOOTBALL_KEY/APISPORTS_KEY or RAPIDAPI_KEY")
+        write_report(day, report)
+        print("rows_reported=1")
+        print("refresh_status=REFRESH_SKIPPED_NO_API_CREDENTIALS")
+        return
+    try:
+        fmap, provider = fixture_map(day, cfg)
+    except Exception as exc:
+        report = diagnostic(day, tz, "REFRESH_FAILED_API_ERROR", str(exc)[:160])
+        write_report(day, report)
+        print("rows_reported=1")
+        print("refresh_status=REFRESH_FAILED_API_ERROR")
+        return
+    targets = fixture_ids(day, rows)
+    now = datetime.now(timezone.utc).isoformat()
+    report: list[dict[str, object]] = []
     for row in rows:
         fid = n(row.get("fixture_id")).replace(".0", "")
-        if fid not in targets or fid not in fmap: continue
-        item = fmap[fid]; st = u(((item.get("fixture") or {}).get("status") or {}).get("short"))
-        stats = None; stats_status = "NOT_FINAL"
+        if fid not in targets or fid not in fmap:
+            continue
+        item = fmap[fid]
+        st = u(((item.get("fixture") or {}).get("status") or {}).get("short"))
+        stats = None
+        stats_status = "NOT_FINAL"
         if st in FINAL:
             try:
-                stats = stat_map(fid, cfg); stats_status = "STATS_FETCHED"
+                stats = stat_map(fid, cfg)
+                stats_status = "STATS_FETCHED"
                 time.sleep(0.25)
-            except Exception as e:
-                stats_status = f"STATS_ERROR:{str(e)[:80]}"
+            except Exception as exc:
+                stats_status = f"STATS_ERROR:{str(exc)[:80]}"
         row, changed = update_match(row, item, stats, now)
-        teams = item.get("teams", {}) or {}; goals = item.get("goals", {}) or {}
-        report.append({"target_date": day,"generated_at": datetime.now(ZoneInfo(tz)).isoformat(timespec="seconds"),"fixture_id": fid,"home_team": n(row.get("home_team") or ((teams.get("home") or {}).get("name"))),"away_team": n(row.get("away_team") or ((teams.get("away") or {}).get("name"))),"status": st,"goals": f"{goals.get('home')}-{goals.get('away')}","stats_status": stats_status,"updated_fields": ";".join(changed),"source_guard":"DATED_INPUT_ONLY"})
+        teams = item.get("teams", {}) or {}
+        goals = item.get("goals", {}) or {}
+        report.append({
+            "target_date": day,
+            "generated_at": datetime.now(ZoneInfo(tz)).isoformat(timespec="seconds"),
+            "fixture_id": fid,
+            "home_team": n(row.get("home_team") or ((teams.get("home") or {}).get("name"))),
+            "away_team": n(row.get("away_team") or ((teams.get("away") or {}).get("name"))),
+            "status": st,
+            "goals": f"{goals.get('home')}-{goals.get('away')}",
+            "stats_status": stats_status,
+            "updated_fields": ";".join(changed),
+            "source_guard": "DATED_INPUT_ONLY",
+        })
     write(dated(day, "matches.csv"), fields, rows)
-    for out in [PROCESSED / "today" / day, PROCESSED / "governance"]:
-        write(out / "vsigma_dated_post_match_results_refresh.csv", REPORT_FIELDS, report)
-        (out / "vsigma_dated_post_match_results_refresh.md").write_text(md(day, report), encoding="utf-8")
+    write_report(day, report)
     print("=== VSIGMA DATED POST-MATCH RESULTS REFRESH ===")
     print(f"provider={provider}")
     print(f"rows_reported={len(report)}")
 
 
 def main() -> None:
-    p = argparse.ArgumentParser(); p.add_argument("--date", required=True); p.add_argument("--timezone", default="Atlantic/Canary")
-    a = p.parse_args(); run(a.date, a.timezone)
+    p = argparse.ArgumentParser()
+    p.add_argument("--date", required=True)
+    p.add_argument("--timezone", default="Atlantic/Canary")
+    a = p.parse_args()
+    run(a.date, a.timezone)
 
-if __name__ == "__main__": main()
+
+if __name__ == "__main__":
+    main()
