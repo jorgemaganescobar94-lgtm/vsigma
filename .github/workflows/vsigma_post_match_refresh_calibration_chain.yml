@@ -1,0 +1,72 @@
+name: vSIGMA Post Match Refresh Calibration Chain
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+      APISPORTS_KEY: ${{ secrets.APISPORTS_KEY }}
+      RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+      X_RAPIDAPI_KEY: ${{ secrets.X_RAPIDAPI_KEY }}
+      API_FOOTBALL_HOST: ${{ secrets.API_FOOTBALL_HOST }}
+      API_FOOTBALL_TIMEZONE: Atlantic/Canary
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ github.token }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        shell: bash
+        run: python -m pip install --upgrade pip requests
+      - name: Decide date
+        shell: bash
+        run: |
+          D="${{ github.event.inputs.date }}"
+          if [ -z "$D" ]; then D="$(TZ=Atlantic/Canary date +%F)"; fi
+          echo "VSIGMA_DATE=$D" >> "$GITHUB_ENV"
+      - name: Refresh dated post-match results
+        shell: bash
+        run: python scripts/refresh_dated_post_match_results.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+      - name: Normalize post-match actuals
+        shell: bash
+        run: python scripts/build_post_match_stat_actuals.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+      - name: Calibrate stat forecasts
+        shell: bash
+        run: python scripts/calibrate_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+      - name: Backtest match stat forecasts
+        shell: bash
+        run: python scripts/backtest_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+      - name: Commit reports
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            data/processed/today/${VSIGMA_DATE}/matches.csv \
+            data/processed/today/${VSIGMA_DATE}/vsigma_dated_post_match_results_refresh.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_post_match_stat_actuals.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecast_calibration* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecast_backtest.* \
+            data/processed/governance/vsigma_dated_post_match_results_refresh.* \
+            data/processed/governance/vsigma_post_match_stat_actuals.* \
+            data/processed/governance/vsigma_match_stat_forecast_calibration* \
+            data/processed/governance/vsigma_match_stat_forecast_backtest.* \
+            2>/dev/null || true
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "vSIGMA post-match refresh calibration chain ${VSIGMA_DATE} [skip ci]"
+          git push origin HEAD:main
