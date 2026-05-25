@@ -1,20 +1,20 @@
-# vSIGMA Autonomous Monitoring Summary - 2026-05-25
+# vSIGMA Autonomous Monitoring Summary - 2026-05-24
 
 ## Executive Status
-- generated_at: 2026-05-25T13:08:31+01:00
-- mode: post
-- daily_classification: WAITING_FOR_PRELOCK
-- operational_verdict: WAITING_FOR_PRELOCK
-- action_level: REVIEW_REQUIRED
-- predictive_failure: NO
+- generated_at: 2026-05-25T17:12:37+01:00
+- mode: post-yesterday
+- daily_classification: EXECUTION_OK
+- operational_verdict: EXECUTION_AVAILABLE
+- action_level: NO_ACTION_REQUIRED
+- predictive_failure: UNKNOWN
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26399711714
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26409646708
 
 ## Operator Action
-- Wait for next scheduled AUTO/PRELOCK run or rerun prelock manually if timing is critical.
+- Review official executable picks and post-result quality once scores are labeled.
 
 ## Explanation
-- At least one candidate is waiting for the configured PRELOCK window or retry slot.
+- At least one row was executable at decision time.
 
 ## Source Coverage
 - decision_quality_review: present
@@ -22,7 +22,7 @@
 - healthcheck_report: present
 - cloud_decision_summary: present
 - prelock_decision_resolver: present
-- decision_outcome_ledger_rows: 3
+- decision_outcome_ledger_rows: 8
 
 ## Classification Contract
 - EXECUTION_OK: at least one executable decision exists.

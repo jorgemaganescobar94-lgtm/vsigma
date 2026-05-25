@@ -1,2 +1,2 @@
 date,timezone,baseline_pick_count,candidate_v2_pick_count,candidate_v4_pick_count,overlap_three_way_picks,candidate_v4_firewall_kept_rows,candidate_v4_firewall_downgraded_rows,candidate_v4_firewall_secondary_rows,candidate_v4_firewall_removed_rows,baseline_wins,baseline_losses,baseline_profit_units,baseline_roi_percent,candidate_v2_wins,candidate_v2_losses,candidate_v2_profit_units,candidate_v2_roi_percent,candidate_v4_wins,candidate_v4_losses,candidate_v4_profit_units,candidate_v4_roi_percent,run_finished_at
-2026-05-24,Atlantic/Canary,3,3,2,1,0,1,0,0,1,0,0.48,48.0,1,0,0.48,48.0,0,0,0.0,,2026-05-24T08:06:13.609294+00:00
+2026-05-24,Atlantic/Canary,1,1,1,1,0,0,0,0,0,0,0.0,,0,0,0.0,,0,0,0.0,,2026-05-25T16:12:30.273129+00:00

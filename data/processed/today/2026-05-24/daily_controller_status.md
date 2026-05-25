@@ -2,15 +2,15 @@
 
 ## Step State
 - PRE: DONE
-- Pre-lock: ['PRELOCK_NOT_AVAILABLE', 'PENDING_OUTSIDE_WINDOW']
+- Pre-lock: ['PRELOCK_NOT_AVAILABLE', 'KICKOFF_PASSED']
 - POST: PENDING
-- Ledger: POST_UPDATED
+- Ledger: PRE_UPDATED
 - Governance: AVAILABLE
 - Stale warnings: NONE
 
 ## Next Operator Command
-- Action: WAIT_FOR_PRELOCK
-- Command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-24 --timezone Atlantic/Canary --mode prelock --window-minutes 90`
+- Action: RUN_POST_AFTER_FINISH
+- Command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-24 --timezone Atlantic/Canary --mode post`
 
 ## Official Baseline Picks
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank |
@@ -39,30 +39,19 @@
 ## Pre-Lock Timing
 | fixture_id | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1392207 | Sporting Gijon | Almeria | OVER_2_5 | 2026-05-24T16:32:34.600000+00:00 | 272.54 | 2026-05-24T15:02:34.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
-| 1545796 | Catanzaro | Monza | OVER_1_5 | 2026-05-24T18:02:31+00:00 | 362.48 | 2026-05-24T16:32:31+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
-| 1492276 | Remo | Atletico Paranaense | OVER_1_5 | 2026-05-24T19:02:26.800000+00:00 | 422.41 | 2026-05-24T17:32:26.800000+00:00 | PENDING_OUTSIDE_WINDOW | WAIT_FOR_PRELOCK |
-| 1392205 | Huesca | Castellón | OVER_2_5 | 2026-05-24T16:32:35.800000+00:00 | 272.56 | 2026-05-24T15:02:35.800000+00:00 | PENDING_OUTSIDE_WINDOW | WAIT_FOR_PRELOCK |
+| 1392207 | Sporting Gijon | Almeria | OVER_2_5 | 2026-05-24T16:32:34.600000+00:00 | -1420.04 | 2026-05-24T15:02:34.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1545796 | Catanzaro | Monza | OVER_1_5 | 2026-05-24T18:02:31+00:00 | -1330.1 | 2026-05-24T16:32:31+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1492276 | Remo | Atletico Paranaense | OVER_1_5 | 2026-05-24T19:02:26.800000+00:00 | -1270.17 | 2026-05-24T17:32:26.800000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1392205 | Huesca | Castellón | OVER_2_5 | 2026-05-24T16:32:35.800000+00:00 | -1420.02 | 2026-05-24T15:02:35.800000+00:00 | KICKOFF_PASSED | RUN_POST_AFTER_FINISH |
 
 ## Ledger State
 | experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1392207.0 | Sporting Gijon | Almeria | OVER_2_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| OFFICIAL_BASELINE | 1545796.0 | Catanzaro | Monza | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1392205.0 | Huesca | Castellón | OVER_2_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1545796.0 | Catanzaro | Monza | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V4_O25_FIREWALL | 1392205.0 | Huesca | Castellón | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V4_O25_FIREWALL | 1545796.0 | Catanzaro | Monza | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V5_PLAYER_IMPACT | 1392205.0 | Huesca | Castellón | OVER_2_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V5_PLAYER_IMPACT | 1545796.0 | Catanzaro | Monza | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V6_API_PREDICTIONS | 1545796.0 | Catanzaro | Monza | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1392205.0 | Huesca | Castellón | OVER_2_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| OFFICIAL_BASELINE | 1504827.0 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | POST | SETTLED | RESULT_AVAILABLE | WIN | 0.48 |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1504827.0 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | POST | SETTLED | RESULT_AVAILABLE | WIN | 0.48 |
-| CANDIDATE_V5_PLAYER_IMPACT | 1504827.0 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | POST | SETTLED | RESULT_AVAILABLE | WIN | 0.48 |
-| CANDIDATE_V6_API_PREDICTIONS | 1504827.0 | Tokyo Verdy | Yokohama F. Marinos | OVER_1_5 | POST | SETTLED | RESULT_AVAILABLE | WIN | 0.48 |
-| OFFICIAL_BASELINE | 1492276.0 | Remo | Atletico Paranaense | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1545418.0 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V4_O25_FIREWALL | 1545418.0 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V5_PLAYER_IMPACT | 1545418.0 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V6_API_PREDICTIONS | 1545418.0 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
 
 ## Controller Outputs
 - Plan CSV: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-24/daily_run_plan.csv

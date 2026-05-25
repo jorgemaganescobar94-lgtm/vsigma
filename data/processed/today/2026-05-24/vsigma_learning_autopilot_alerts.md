@@ -1,7 +1,7 @@
 # vSIGMA Learning Autopilot Alerts - 2026-05-24
 
 ## Executive Alert Summary
-- generated_at: 2026-05-24T21:18:31+01:00
+- generated_at: 2026-05-25T17:12:38+01:00
 - alerts generated: 2
 - alert_type_counts: OPERATIONAL_REVIEW_REQUIRED=1; DATA_QUALITY_REVIEW_REQUIRED=1
 - severity_counts: P1=1; P2=1
@@ -9,7 +9,7 @@
 
 ## Alerts
 - P1 | OPERATIONAL_REVIEW_REQUIRED | sources=1 | issue=https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/72 | auto_apply=NO
-- P2 | DATA_QUALITY_REVIEW_REQUIRED | sources=7 | issue=https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/73 | auto_apply=NO
+- P2 | DATA_QUALITY_REVIEW_REQUIRED | sources=4 | issue=https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/73 | auto_apply=NO
 
 ## Guardrails
 - auto_apply: NO for every alert
