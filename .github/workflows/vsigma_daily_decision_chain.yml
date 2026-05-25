@@ -1,0 +1,113 @@
+name: vSIGMA Daily Decision Chain
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        required: false
+        default: ""
+      include_backtest:
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ github.token }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Decide date
+        shell: bash
+        run: |
+          D="${{ github.event.inputs.date }}"
+          if [ -z "$D" ]; then D="$(TZ=Atlantic/Canary date +%F)"; fi
+          echo "VSIGMA_DATE=$D" >> "$GITHUB_ENV"
+          echo "INCLUDE_BACKTEST=${{ github.event.inputs.include_backtest }}" >> "$GITHUB_ENV"
+          echo "Running vSIGMA Daily Decision Chain for $D"
+
+      - name: Real objective context gate
+        shell: bash
+        run: python scripts/build_real_objective_context_gate.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Objective availability gate
+        shell: bash
+        run: python scripts/build_objective_availability_gate.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Context adjusted final picks
+        shell: bash
+        run: python scripts/build_context_adjusted_final_picks.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Context level matrix
+        shell: bash
+        run: python scripts/build_context_matrix.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Matrix portfolio v2
+        shell: bash
+        run: python scripts/build_context_matrix_portfolio.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Match statistical forecasts
+        shell: bash
+        run: python scripts/build_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Forecast-to-market translator
+        shell: bash
+        run: python scripts/build_forecast_market_translator.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Daily execution board
+        shell: bash
+        run: python scripts/build_daily_execution_board.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Optional match stat forecast backtest
+        if: ${{ github.event.inputs.include_backtest == 'true' }}
+        shell: bash
+        run: python scripts/backtest_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Commit chain outputs
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add \
+            data/processed/today/${VSIGMA_DATE}/vsigma_real_objective_context_gate.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_objective_availability_gate.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_context_adjusted_final_picks.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_context_level_matrix.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_context_matrix_portfolio_v2* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecasts.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_forecast_market_translator.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecast_backtest.* \
+            data/processed/governance/vsigma_real_objective_context_gate.* \
+            data/processed/governance/vsigma_objective_availability_gate.* \
+            data/processed/governance/vsigma_context_adjusted_final_picks.* \
+            data/processed/governance/vsigma_context_level_matrix.* \
+            data/processed/governance/vsigma_context_matrix_portfolio_v2* \
+            data/processed/governance/vsigma_match_stat_forecasts.* \
+            data/processed/governance/vsigma_forecast_market_translator.* \
+            data/processed/governance/vsigma_daily_execution_board.* \
+            data/processed/governance/vsigma_match_stat_forecast_backtest.* \
+            2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No vSIGMA Daily Decision Chain changes to commit."
+            exit 0
+          fi
+          git commit -m "vSIGMA daily decision chain ${VSIGMA_DATE} [skip ci]"
+          git push origin HEAD:main
