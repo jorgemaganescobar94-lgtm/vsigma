@@ -13,9 +13,17 @@ on:
         options:
           - "false"
           - "true"
+  schedule:
+    # UTC. Uses Atlantic/Canary inside the workflow to decide the dated folder.
+    - cron: "30 7 * * *"   # morning build
+    - cron: "30 13 * * *"  # midday refresh/prelock build
 
 permissions:
   contents: write
+
+concurrency:
+  group: vsigma-daily-decision-chain-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -37,8 +45,10 @@ jobs:
         run: |
           D="${{ github.event.inputs.date }}"
           if [ -z "$D" ]; then D="$(TZ=Atlantic/Canary date +%F)"; fi
+          INCLUDE_BACKTEST="${{ github.event.inputs.include_backtest }}"
+          if [ -z "$INCLUDE_BACKTEST" ]; then INCLUDE_BACKTEST="false"; fi
           echo "VSIGMA_DATE=$D" >> "$GITHUB_ENV"
-          echo "INCLUDE_BACKTEST=${{ github.event.inputs.include_backtest }}" >> "$GITHUB_ENV"
+          echo "INCLUDE_BACKTEST=$INCLUDE_BACKTEST" >> "$GITHUB_ENV"
           echo "Running vSIGMA Daily Decision Chain for $D"
 
       - name: Real objective context gate
@@ -74,7 +84,7 @@ jobs:
         run: python scripts/build_daily_execution_board.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
       - name: Optional match stat forecast backtest
-        if: ${{ github.event.inputs.include_backtest == 'true' }}
+        if: ${{ env.INCLUDE_BACKTEST == 'true' }}
         shell: bash
         run: python scripts/backtest_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
