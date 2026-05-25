@@ -1,19 +1,19 @@
 # vSIGMA Decision Quality Review - 2026-05-25
 
 ## Executive Summary
-- generated_at: 2026-05-25T17:38:22+01:00
+- generated_at: 2026-05-25T22:49:17+01:00
 - daily_classification: EXECUTION_OK
 - no_bet_classification: EXECUTION_ACTIONABLE_PRESENT
 - operational_verdict: EXECUTION_AVAILABLE
 - predictive_failure: UNKNOWN
-- rows reviewed: 4
+- rows reviewed: 6
 - actionable rows: 1
-- non-actionable rows: 3
+- non-actionable rows: 5
 - resolved rows: 0
-- unresolved rows: 4
+- unresolved rows: 6
 - good decisions: 0
 - bad decisions: 0
-- neutral/unresolved: 4
+- neutral/unresolved: 6
 - top improvement signal: IMPROVE_POST_RESULT_LABELING (2)
 - current recommendation: Do not recalibrate; collect more labeled outcomes.
 - operational note: At least one row was executable at decision time.
@@ -31,27 +31,29 @@
 | SC Paderborn 07 vs VfL Wolfsburg | OVER_2_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | IMPROVE_POST_RESULT_LABELING |
 | SC Paderborn 07 vs VfL Wolfsburg | OVER_1_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
 | IF Elfsborg vs BK Hacken | OVER_2_5 | EXECUTABLE | NONE | UNRESOLVED | ACTIONABLE_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
+| SC Paderborn 07 vs VfL Wolfsburg | OVER_1_5 | NO_BET | KICKOFF_ALREADY_PASSED | UNRESOLVED | EXPIRED_PRELOCK_UNRESOLVED | NEEDS_MORE_DATA | REVIEW_AUTO_TIMING |
+| IF Elfsborg vs BK Hacken | OVER_2_5 | NO_BET | KICKOFF_ALREADY_PASSED | UNRESOLVED | EXPIRED_PRELOCK_UNRESOLVED | NEEDS_MORE_DATA | REVIEW_AUTO_TIMING |
 
 ## Block Quality Review
 - NO_BET_MISSED_WIN count: 0
 - NO_BET_CORRECT_AVOIDED_LOSS count: 0
 - WAIT_MISSED_WIN count: 0
 - WAIT_CORRECT_AVOIDED_LOSS count: 0
-- EXPIRED_PRELOCK rows: 0
+- EXPIRED_PRELOCK rows: 2
 - PRELOCK_NOT_AVAILABLE rows: 0
-- KICKOFF_ALREADY_PASSED rows: 0
+- KICKOFF_ALREADY_PASSED rows: 2
 
 ## Market Quality Review
 | market_primary | rows | wins | losses | no_bet_missed_win | no_bet_correct_avoided_loss | unresolved | recommendation |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | 2 | 0 | 0 | 0 | 0 | 2 | WAIT_FOR_POST_RESULTS |
-| OVER_2_5 | 2 | 0 | 0 | 0 | 0 | 2 | WAIT_FOR_POST_RESULTS |
+| OVER_1_5 | 3 | 0 | 0 | 0 | 0 | 3 | WAIT_FOR_POST_RESULTS |
+| OVER_2_5 | 3 | 0 | 0 | 0 | 0 | 3 | WAIT_FOR_POST_RESULTS |
 
 ## System Recommendations
 | priority | category | title | reason | apply_now |
 | --- | --- | --- | --- | --- |
 | P3 | sample | Do not recalibrate from quality sample yet | resolved_rows=0 is below minimum 30. | NO |
-| P3 | post_results | Wait for POST results or improve labeling | unresolved_rows=4; resolved_rows=0. | NO |
+| P3 | post_results | Wait for POST results or improve labeling | unresolved_rows=6; resolved_rows=0. | NO |
 
 ## Guardrails
 - automatic scoring changes applied: NO

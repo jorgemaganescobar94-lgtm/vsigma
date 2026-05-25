@@ -5,21 +5,21 @@
 - PRE refreshed: NO
 - Candidates reviewed: 2
 - Executable picks: 1
-- Waiting picks: 1
+- Waiting picks: 0
 - Blocked picks: 0
 - Data problem picks: 0
 - Next automatic action: EXECUTE_GOVERNED_PICK
-- OFFICIAL_ACTION_SUMMARY: MIXED
+- OFFICIAL_ACTION_SUMMARY: NO_BET
 
 ## Executable Picks
 | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | official_action | executable_now | prelock_decision | next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1494178 | Allsvenskan | IF Elfsborg | BK Hacken | OVER_2_5 | 0.821525 | EXECUTABLE | YES | PRELOCK_CONFIRMED | EXECUTE_GOVERNED_PICK |
+| 1494178 | Allsvenskan | IF Elfsborg | BK Hacken | OVER_2_5 | 0.821525 | NO_BET | NO | PRELOCK_CONFIRMED | EXECUTE_GOVERNED_PICK |
 
 ## Waiting / Blocked Picks
 | fixture_id | league | home_team | away_team | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | retry_allowed | next_retry_time | decision_state | exclusion_reason | next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1545418 | Bundesliga | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 2026-05-25T19:30+01:00 | 111.65 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | YES | 2026-05-25T18:00+01:00 | WAITING_FOR_PRELOCK_WINDOW | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-05-25T18:00+01:00 |
+| 1545418 | Bundesliga | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | 2026-05-25T19:30+01:00 | -199.28 | NO_BET | NO | KICKOFF_ALREADY_PASSED | NO |  | POST_PENDING | KICKOFF_ALREADY_PASSED | WAIT_FOR_POST_RESULTS |
 
 ## Technical Warnings
 - healthcheck_status: WARNING
