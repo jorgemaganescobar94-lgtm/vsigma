@@ -22,7 +22,7 @@ FIELDS = [
     "available_actual_metrics", "range_hits", "range_misses", "forecast_grade", "calibration_note",
     "source_guard", "auto_apply", "production_change",
 ]
-FINISHED_STATUS = {"FT", "AET", "PEN", "LIVE", "1H", "2H", "HT"}
+FINAL_STATUS = {"FT", "AET", "PEN"}
 
 
 def norm(v: object) -> str:
@@ -120,6 +120,22 @@ def val(actual: float | None) -> str:
     return f"{actual:.2f}"
 
 
+def actual_status(match: dict[str, str]) -> str:
+    short = up(match.get("fixture_status_short") or match.get("status"))
+    long = up(match.get("fixture_status_long"))
+    if short:
+        return short
+    if "MATCH FINISHED" in long:
+        return "FT"
+    return "UNKNOWN"
+
+
+def is_final(match: dict[str, str]) -> bool:
+    short = actual_status(match)
+    long = up(match.get("fixture_status_long"))
+    return short in FINAL_STATUS or "MATCH FINISHED" in long
+
+
 def actual_goals(match: dict[str, str]) -> tuple[float | None, float | None]:
     home = first_num(match, ["goals_home", "score_fulltime_home", "home_goals", "actual_home_goals"])
     away = first_num(match, ["goals_away", "score_fulltime_away", "away_goals", "actual_away_goals"])
@@ -128,16 +144,6 @@ def actual_goals(match: dict[str, str]) -> tuple[float | None, float | None]:
 
 def actual_pair(match: dict[str, str], home_names: list[str], away_names: list[str]) -> tuple[float | None, float | None]:
     return first_num(match, home_names), first_num(match, away_names)
-
-
-def actual_status(match: dict[str, str]) -> str:
-    short = up(match.get("fixture_status_short") or match.get("status"))
-    long = up(match.get("fixture_status_long"))
-    if short in FINISHED_STATUS or "MATCH FINISHED" in long:
-        return short or "FINISHED"
-    if short:
-        return short
-    return "UNKNOWN"
 
 
 def combine(a: float | None, b: float | None) -> float | None:
@@ -158,7 +164,72 @@ def forecast_grade(hits: int, misses: int, available: int) -> str:
     return "D_RANGE_WEAK"
 
 
+def unavailable_row(forecast: dict[str, str], match: dict[str, str], target_date: str, generated_at: str) -> dict[str, object]:
+    return {
+        "target_date": target_date,
+        "generated_at": generated_at,
+        "fixture_id": norm(forecast.get("fixture_id")),
+        "home_team": norm(forecast.get("home_team")),
+        "away_team": norm(forecast.get("away_team")),
+        "forecast_confidence": norm(forecast.get("forecast_confidence")),
+        "forecast_warning": norm(forecast.get("forecast_warning")),
+        "actual_status": actual_status(match),
+        "actual_home_goals": "",
+        "actual_away_goals": "",
+        "actual_total_goals": "",
+        "pred_home_goals_low": forecast.get("home_goals_low", ""),
+        "pred_home_goals_mid": forecast.get("home_goals_mid", ""),
+        "pred_home_goals_high": forecast.get("home_goals_high", ""),
+        "home_goals_hit": "ACTUAL_UNAVAILABLE",
+        "home_goals_abs_error_mid": "",
+        "pred_away_goals_low": forecast.get("away_goals_low", ""),
+        "pred_away_goals_mid": forecast.get("away_goals_mid", ""),
+        "pred_away_goals_high": forecast.get("away_goals_high", ""),
+        "away_goals_hit": "ACTUAL_UNAVAILABLE",
+        "away_goals_abs_error_mid": "",
+        "pred_total_goals_low": forecast.get("total_goals_low", ""),
+        "pred_total_goals_mid": forecast.get("total_goals_mid", ""),
+        "pred_total_goals_high": forecast.get("total_goals_high", ""),
+        "total_goals_hit": "ACTUAL_UNAVAILABLE",
+        "total_goals_abs_error_mid": "",
+        "actual_home_sot": "",
+        "actual_away_sot": "",
+        "actual_total_sot": "",
+        "pred_total_sot_low": forecast.get("total_sot_low", ""),
+        "pred_total_sot_mid": forecast.get("total_sot_mid", ""),
+        "pred_total_sot_high": forecast.get("total_sot_high", ""),
+        "total_sot_hit": "ACTUAL_UNAVAILABLE",
+        "total_sot_abs_error_mid": "",
+        "actual_home_corners": "",
+        "actual_away_corners": "",
+        "actual_total_corners": "",
+        "total_corners_hit": "ACTUAL_UNAVAILABLE",
+        "total_corners_abs_error_mid": "",
+        "actual_home_cards": "",
+        "actual_away_cards": "",
+        "actual_total_cards": "",
+        "total_cards_hit": "ACTUAL_UNAVAILABLE",
+        "total_cards_abs_error_mid": "",
+        "actual_home_fouls": "",
+        "actual_away_fouls": "",
+        "actual_total_fouls": "",
+        "total_fouls_hit": "ACTUAL_UNAVAILABLE",
+        "total_fouls_abs_error_mid": "",
+        "available_actual_metrics": "none",
+        "range_hits": 0,
+        "range_misses": 0,
+        "forecast_grade": "NO_ACTUALS_YET",
+        "calibration_note": "v45.1 refuses to grade non-final fixtures; wait for FT/AET/PEN and post-match stat enrichment.",
+        "source_guard": "DATED_INPUT_ONLY",
+        "auto_apply": "NO",
+        "production_change": "NO",
+    }
+
+
 def build_row(forecast: dict[str, str], match: dict[str, str], target_date: str, generated_at: str) -> dict[str, object]:
+    if not is_final(match):
+        return unavailable_row(forecast, match, target_date, generated_at)
+
     hg, ag = actual_goals(match)
     tg = combine(hg, ag)
 
@@ -167,11 +238,15 @@ def build_row(forecast: dict[str, str], match: dict[str, str], target_date: str,
     h_cards, a_cards = actual_pair(match, ["actual_home_cards", "home_cards", "home_yellow_cards"], ["actual_away_cards", "away_cards", "away_yellow_cards"])
     h_fouls, a_fouls = actual_pair(match, ["actual_home_fouls", "home_fouls"], ["actual_away_fouls", "away_fouls"])
 
-    # Avoid treating recent averages as actuals. Only specific actual-like column names are used above.
     t_sot = combine(h_sot, a_sot)
     t_cor = combine(h_cor, a_cor)
     t_cards = combine(h_cards, a_cards)
     t_fouls = combine(h_fouls, a_fouls)
+
+    # API-Football snapshots can contain placeholder 0.0 statistic fields before real post-match stats are loaded.
+    # For final matches with goals but 0-0 SoT, treat SoT as unavailable rather than as a certain zero sample.
+    if t_sot == 0 and (tg or 0) > 0:
+        h_sot, a_sot, t_sot = None, None, None
 
     checks = {
         "home_goals": hit(hg, forecast.get("home_goals_low"), forecast.get("home_goals_high")),
@@ -240,7 +315,7 @@ def build_row(forecast: dict[str, str], match: dict[str, str], target_date: str,
         "range_hits": hits,
         "range_misses": misses,
         "forecast_grade": forecast_grade(hits, misses, len(available)),
-        "calibration_note": "v45 grades only metrics with actual data available; corners/cards/fouls require post-match stat enrichment.",
+        "calibration_note": "v45.1 grades only final fixtures and only metrics with actual data available; corners/cards/fouls require post-match stat enrichment.",
         "source_guard": "DATED_INPUT_ONLY",
         "auto_apply": "NO",
         "production_change": "NO",
@@ -273,10 +348,11 @@ def md(target_date: str, rows: list[dict[str, object]]) -> str:
         f"# vSIGMA Match Statistical Forecast Backtest - {target_date}",
         "",
         "## Summary",
-        f"- rows_graded: {len(rows)}",
+        f"- rows_checked: {len(rows)}",
         f"- forecast_grade_counts: {counts(rows, 'forecast_grade')}",
         f"- total_goals_hit_counts: {counts(rows, 'total_goals_hit')}",
         f"- total_sot_hit_counts: {counts(rows, 'total_sot_hit')}",
+        "- calibration_note: v45.1 refuses to grade non-final fixtures.",
         "- source_guard: DATED_INPUT_ONLY",
         "- auto_apply: NO",
         "- production_change: NO",
@@ -288,15 +364,15 @@ def md(target_date: str, rows: list[dict[str, object]]) -> str:
     for r in rows:
         lines.append(
             f"- {r['home_team']} vs {r['away_team']} | status={r['actual_status']} | "
-            f"goals_actual={r['actual_total_goals']} vs pred={r['pred_total_goals_low']}-{r['pred_total_goals_high']} ({r['total_goals_hit']}) | "
+            f"goals_actual={r['actual_total_goals'] or 'NA'} vs pred={r['pred_total_goals_low']}-{r['pred_total_goals_high']} ({r['total_goals_hit']}) | "
             f"SoT_actual={r['actual_total_sot'] or 'NA'} vs pred={r['pred_total_sot_low']}-{r['pred_total_sot_high']} ({r['total_sot_hit']}) | "
             f"grade={r['forecast_grade']} | metrics={r['available_actual_metrics']}"
         )
     lines += [
         "",
         "## Guardrails",
-        "- This report grades only actual metrics present in dated post-match files.",
-        "- It does not infer missing corners/cards/fouls from recent averages.",
+        "- This report grades only final fixtures: FT/AET/PEN.",
+        "- It does not infer missing corners/cards/fouls from recent averages or placeholder zeros.",
         "- Use this to calibrate v44 forecasts before connecting them to market execution.",
     ]
     return "\n".join(lines) + "\n"
@@ -309,7 +385,7 @@ def run(target_date: str, timezone: str, processed: Path) -> None:
         write_rows(base / "vsigma_match_stat_forecast_backtest.csv", rows)
         (base / "vsigma_match_stat_forecast_backtest.md").write_text(md(target_date, rows), encoding="utf-8")
     print("=== VSIGMA MATCH STAT FORECAST BACKTEST ===")
-    print(f"rows_graded={len(rows)}")
+    print(f"rows_checked={len(rows)}")
     print(f"forecast_grade_counts={counts(rows, 'forecast_grade')}")
 
 
