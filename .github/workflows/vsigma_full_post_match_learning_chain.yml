@@ -6,9 +6,17 @@ on:
       date:
         required: false
         default: ""
+  schedule:
+    # UTC. Runs late evening and next morning to catch late final results.
+    - cron: "30 22 * * *"
+    - cron: "30 6 * * *"
 
 permissions:
   contents: write
+
+concurrency:
+  group: vsigma-full-post-match-learning-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   build:
