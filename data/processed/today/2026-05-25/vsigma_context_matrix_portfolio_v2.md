@@ -12,3 +12,7 @@
 - #1 | REVIEW_ONLY | Kalmar FF vs Degerfors IF | market=OVER_1_5 | level=L6_REVIEW | stake=LOW_IF_CONFIRMED | note=Review only; low stake only with price/prelock/live confirmation.
 - #3 | LIVE_ONLY_OR_SYMBOLIC | Lazio vs Pisa | market=HOME_WIN | level=L7_SOFT_DOWN | stake=SYMBOLIC_ONLY | note=Soft downgrade; only live confirmation or symbolic stake.
 - #2 | NO_ACTION_CONTEXT | Bologna vs Inter | market=AWAY_WIN | level=L9_MAX_BLOCK | stake=NO_STAKE | note=Context matrix blocks this pick.
+
+## Guardrails
+- This report refuses stale governance fallback when a dated matrix is missing.
+- Run the dated context level matrix before this portfolio report.
