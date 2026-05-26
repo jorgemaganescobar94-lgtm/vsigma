@@ -1,0 +1,2 @@
+date,timezone,api_fixtures,local_date_fixtures,upcoming_fixtures,filtered_rows,scored_rows,shortlist_rows,deep_rows,approved_premium_rows,approved_standard_rows,approved_rows,competition_shortlist_rows,competition_top_rows,downgraded_rows,blocked_rows,watch_rows,snapshot_dir,run_finished_at
+2026-05-26,Atlantic/Canary,122,122,33,8,8,7,7,1,0,1,0,0,5,0,1,/home/runner/work/vsigma/vsigma/data/processed/today/2026-05-26,2026-05-26T18:11:31.434289+00:00

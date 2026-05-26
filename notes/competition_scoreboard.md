@@ -374,3 +374,25 @@ vSIGMA Competition Accuracy Mode + Probability Calibration
 | CANDIDATE_V5 | PICKS_AVAILABLE | 2 | 2 | 0 | 0.6 | 30.0 | 0 | vsigma_today_candidate_v5_competition_top.csv |
 | CANDIDATE_V6 | PICKS_AVAILABLE | 1 | 1 | 0 | 0.35 | 35.0 | 0 | vsigma_today_candidate_v6_competition_top.csv |
 <!-- VSIGMA_SCOREBOARD_END 2026-05-25 -->
+
+<!-- VSIGMA_SCOREBOARD_START 2026-05-26 -->
+## 2026-05-26
+
+- Winner: NO_BET_DAY
+- Governance daily winner: NO_BET_DAY
+- Promotion status: SAMPLE_TOO_SMALL:4; AUDIT_ONLY:2; KEEP_OFFICIAL_BASELINE:1
+- Threshold alerts: SAMPLE_TOO_SMALL:18
+- Major drift/threshold alerts: none
+- NO BET modes: BASELINE, CANDIDATE_V2, CANDIDATE_V4, CANDIDATE_V5, CANDIDATE_V6
+- Pre-lock: STALE_PRELOCK_EXCLUDED
+- Drift: NO_DRIFT:5; SAMPLE_TOO_SMALL:3; WATCH_PATTERN:1
+- Failure modes: see daily master report for pick-level risks.
+
+| mode | status | picks | wins | losses | profit | roi | pending | top_file |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| BASELINE | NO_BET | 0 | 0 | 0 | 0.0 |  | 0 | vsigma_today_competition_top.csv |
+| CANDIDATE_V2 | NO_BET | 0 | 0 | 0 | 0.0 |  | 0 | vsigma_today_candidate_v2_competition_top.csv |
+| CANDIDATE_V4 | NO_BET | 0 | 0 | 0 | 0.0 |  | 0 | vsigma_today_candidate_v4_competition_top.csv |
+| CANDIDATE_V5 | NO_BET | 0 | 0 | 0 | 0.0 |  | 0 | vsigma_today_candidate_v5_competition_top.csv |
+| CANDIDATE_V6 | NO_BET | 0 | 0 | 0 | 0.0 |  | 0 | vsigma_today_candidate_v6_competition_top.csv |
+<!-- VSIGMA_SCOREBOARD_END 2026-05-26 -->

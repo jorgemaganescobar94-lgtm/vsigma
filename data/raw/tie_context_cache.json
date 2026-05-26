@@ -10567,5 +10567,647 @@
       }
     }
   ],
-  "66-160": []
+  "66-160": [],
+  "1158-3700": [
+    {
+      "fixture": {
+        "id": 1535234,
+        "referee": "C. Ortega",
+        "timezone": "UTC",
+        "date": "2026-04-08T00:00:00+00:00",
+        "timestamp": 1775606400,
+        "periods": {
+          "first": 1775606400,
+          "second": 1775610000
+        },
+        "venue": {
+          "id": null,
+          "name": "Estadio Municipal de El Alto",
+          "city": "El Alto"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 8
+        }
+      },
+      "league": {
+        "id": 13,
+        "name": "CONMEBOL Libertadores",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/13.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Group Stage - 1",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 3700,
+          "name": "Always Ready",
+          "logo": "https://media.api-sports.io/football/teams/3700.png",
+          "winner": false
+        },
+        "away": {
+          "id": 1158,
+          "name": "LDU de Quito",
+          "logo": "https://media.api-sports.io/football/teams/1158.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1523582,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-02-08T00:30:00+00:00",
+        "timestamp": 1770510600,
+        "periods": {
+          "first": 1770510600,
+          "second": 1770514200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1158,
+          "name": "LDU de Quito",
+          "logo": "https://media.api-sports.io/football/teams/1158.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3700,
+          "name": "Always Ready",
+          "logo": "https://media.api-sports.io/football/teams/3700.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 3,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1205353,
+        "referee": "Flavio Rodrigues De Souza",
+        "timezone": "UTC",
+        "date": "2024-07-26T00:30:00+00:00",
+        "timestamp": 1721953800,
+        "periods": {
+          "first": 1721953800,
+          "second": 1721957400
+        },
+        "venue": {
+          "id": 2487,
+          "name": "Estadio Municipal El Alto",
+          "city": "El Alto"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 11,
+        "name": "CONMEBOL Sudamericana",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/11.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Round of 32",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 3700,
+          "name": "Always Ready",
+          "logo": "https://media.api-sports.io/football/teams/3700.png",
+          "winner": true
+        },
+        "away": {
+          "id": 1158,
+          "name": "LDU de Quito",
+          "logo": "https://media.api-sports.io/football/teams/1158.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1205352,
+        "referee": "K. Ortega",
+        "timezone": "UTC",
+        "date": "2024-07-19T00:30:00+00:00",
+        "timestamp": 1721349000,
+        "periods": {
+          "first": 1721349000,
+          "second": 1721352600
+        },
+        "venue": {
+          "id": 471,
+          "name": "Estadio Rodrigo Paz Delgado",
+          "city": "Quito"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 11,
+        "name": "CONMEBOL Sudamericana",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/11.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Round of 32",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1158,
+          "name": "LDU de Quito",
+          "logo": "https://media.api-sports.io/football/teams/1158.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3700,
+          "name": "Always Ready",
+          "logo": "https://media.api-sports.io/football/teams/3700.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "446-7848": [
+    {
+      "fixture": {
+        "id": 1535243,
+        "referee": "Jhon Alexander Ospina Londono, Colombia",
+        "timezone": "UTC",
+        "date": "2026-04-08T22:00:00+00:00",
+        "timestamp": 1775685600,
+        "periods": {
+          "first": 1775685600,
+          "second": 1775689200
+        },
+        "venue": {
+          "id": null,
+          "name": "Estádio José Maria de Campos Maia",
+          "city": "Mirassol"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 8
+        }
+      },
+      "league": {
+        "id": 13,
+        "name": "CONMEBOL Libertadores",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/13.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Group Stage - 1",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 7848,
+          "name": "Mirassol",
+          "logo": "https://media.api-sports.io/football/teams/7848.png",
+          "winner": true
+        },
+        "away": {
+          "id": 446,
+          "name": "Lanus",
+          "logo": "https://media.api-sports.io/football/teams/446.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "130-2365": [
+    {
+      "fixture": {
+        "id": 1535150,
+        "referee": "A. Aragon",
+        "timezone": "UTC",
+        "date": "2026-04-09T00:30:00+00:00",
+        "timestamp": 1775694600,
+        "periods": {
+          "first": 1775694600,
+          "second": 1775698200
+        },
+        "venue": {
+          "id": null,
+          "name": "Estadio Centenario",
+          "city": "Montevideo"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
+        }
+      },
+      "league": {
+        "id": 11,
+        "name": "CONMEBOL Sudamericana",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/11.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Group Stage - 1",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 2365,
+          "name": "Atletico Torque",
+          "logo": "https://media.api-sports.io/football/teams/2365.png",
+          "winner": true
+        },
+        "away": {
+          "id": 130,
+          "name": "Gremio",
+          "logo": "https://media.api-sports.io/football/teams/130.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "1125-2320": [
+    {
+      "fixture": {
+        "id": 1535151,
+        "referee": "R. B. Perez",
+        "timezone": "UTC",
+        "date": "2026-04-08T00:00:00+00:00",
+        "timestamp": 1775606400,
+        "periods": {
+          "first": 1775606400,
+          "second": 1775610000
+        },
+        "venue": {
+          "id": null,
+          "name": "Estadio El Teniente",
+          "city": "Rancagua"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 11,
+        "name": "CONMEBOL Sudamericana",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/11.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Group Stage - 1",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 2320,
+          "name": "O'Higgins",
+          "logo": "https://media.api-sports.io/football/teams/2320.png",
+          "winner": true
+        },
+        "away": {
+          "id": 1125,
+          "name": "Millonarios",
+          "logo": "https://media.api-sports.io/football/teams/1125.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "476-2318": [
+    {
+      "fixture": {
+        "id": 1535146,
+        "referee": "G. Guerrero",
+        "timezone": "UTC",
+        "date": "2026-04-08T22:00:00+00:00",
+        "timestamp": 1775685600,
+        "periods": {
+          "first": 1775685600,
+          "second": 1775689200
+        },
+        "venue": {
+          "id": null,
+          "name": "Estadio Pedro Bidegain",
+          "city": "Buenos Aires"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 11,
+        "name": "CONMEBOL Sudamericana",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/11.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Group Stage - 1",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 476,
+          "name": "Deportivo Riestra",
+          "logo": "https://media.api-sports.io/football/teams/476.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2318,
+          "name": "Palestino",
+          "logo": "https://media.api-sports.io/football/teams/2318.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "126-2361": [
+    {
+      "fixture": {
+        "id": 1535142,
+        "referee": "L. Rey Hilfer",
+        "timezone": "UTC",
+        "date": "2026-04-08T00:30:00+00:00",
+        "timestamp": 1775608200,
+        "periods": {
+          "first": 1775608200,
+          "second": 1775611800
+        },
+        "venue": {
+          "id": null,
+          "name": "Estadio Centenario",
+          "city": "Montevideo"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 11,
+        "name": "CONMEBOL Sudamericana",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/11.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Group Stage - 1",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 2361,
+          "name": "Boston River",
+          "logo": "https://media.api-sports.io/football/teams/2361.png",
+          "winner": false
+        },
+        "away": {
+          "id": 126,
+          "name": "Sao Paulo",
+          "logo": "https://media.api-sports.io/football/teams/126.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ]
 }
