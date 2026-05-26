@@ -1,6 +1,6 @@
 name: vSIGMA Daily Decision Chain
 
-on:
+"on":
   workflow_dispatch:
     inputs:
       date:
