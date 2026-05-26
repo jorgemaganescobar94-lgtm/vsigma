@@ -83,6 +83,39 @@ jobs:
         shell: bash
         run: python scripts/build_daily_execution_board.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Ensure daily execution board exists
+        shell: bash
+        run: |
+          mkdir -p "data/processed/today/${VSIGMA_DATE}" "data/processed/governance"
+          BOARD_MD="data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board.md"
+          BOARD_CSV="data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board.csv"
+          if [ ! -f "$BOARD_MD" ]; then
+            echo "Daily board missing after build; creating diagnostic board."
+            cat > "$BOARD_MD" <<EOF
+          # vSIGMA Daily Execution Board - ${VSIGMA_DATE}
+
+          ## Summary
+          - rows_on_board: 0
+          - final_decision_counts: none
+          - board_bucket_counts: none
+          - source_guard: DATED_INPUT_ONLY
+          - auto_apply: NO
+          - production_change: NO
+
+          ## Board Rows
+          - none. Diagnostic board created because build_daily_execution_board did not produce the expected artifact.
+
+          ## Guardrails
+          - This diagnostic output guarantees the daily board artifact exists.
+          - Check upstream translator/forecast files for missing rows.
+          EOF
+            echo "target_date,generated_at,board_rank,fixture_id,home_team,away_team,final_decision,board_bucket,primary_market,secondary_market,stake_band,execution_permission,portfolio_status,context_level,forecast_confidence,forecast_warning,translation_score,kill_switch,stat_profile,key_stat_forecast,prelock_trigger,live_trigger,cancel_trigger,operator_note,source_guard,auto_apply,production_change" > "$BOARD_CSV"
+          fi
+          cp "$BOARD_MD" data/processed/governance/vsigma_daily_execution_board.md
+          cp "$BOARD_CSV" data/processed/governance/vsigma_daily_execution_board.csv
+          echo "Board status:"
+          ls -l "data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board."* || true
+
       - name: Optional match stat forecast backtest
         if: ${{ env.INCLUDE_BACKTEST == 'true' }}
         shell: bash
@@ -114,6 +147,9 @@ jobs:
             data/processed/governance/vsigma_daily_execution_board.* \
             data/processed/governance/vsigma_match_stat_forecast_backtest.* \
             2>/dev/null || true
+
+          echo "Staged changes:"
+          git diff --cached --name-only || true
 
           if git diff --cached --quiet; then
             echo "No vSIGMA Daily Decision Chain changes to commit."
