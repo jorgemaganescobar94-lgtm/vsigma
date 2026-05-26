@@ -4790,7 +4790,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 81,
+          "elapsed": 84,
           "extra": null
         }
       },
@@ -4860,7 +4860,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 79,
+          "elapsed": 82,
           "extra": null
         }
       },
@@ -4920,7 +4920,7 @@
         "timestamp": 1779814800,
         "periods": {
           "first": 1779814800,
-          "second": null
+          "second": 1779818400
         },
         "venue": {
           "id": 202,
@@ -4928,10 +4928,10 @@
           "city": "Mostar"
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
-          "extra": 6
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 46,
+          "extra": null
         }
       },
       "league": {
@@ -5000,7 +5000,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 51,
+          "elapsed": 54,
           "extra": null
         }
       },
@@ -5070,7 +5070,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 49,
+          "elapsed": 52,
           "extra": null
         }
       },
@@ -5140,7 +5140,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 49,
+          "elapsed": 52,
           "extra": null
         }
       },
@@ -5210,7 +5210,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 49,
+          "elapsed": 52,
           "extra": null
         }
       },
@@ -5280,7 +5280,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 49,
+          "elapsed": 52,
           "extra": null
         }
       },
@@ -5350,7 +5350,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 53,
+          "elapsed": 56,
           "extra": null
         }
       },
@@ -5420,7 +5420,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 52,
+          "elapsed": 55,
           "extra": null
         }
       },
@@ -5490,7 +5490,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 50,
+          "elapsed": 52,
           "extra": null
         }
       },
@@ -5560,7 +5560,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 56,
+          "elapsed": 59,
           "extra": null
         }
       },
@@ -5630,7 +5630,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 48,
+          "elapsed": 51,
           "extra": null
         }
       },
@@ -5700,7 +5700,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 41,
+          "elapsed": 44,
           "extra": null
         }
       },
@@ -5770,7 +5770,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 34,
+          "elapsed": 37,
           "extra": null
         }
       },
@@ -5840,7 +5840,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 12,
+          "elapsed": 15,
           "extra": null
         }
       },
@@ -5910,7 +5910,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 11,
+          "elapsed": 14,
           "extra": null
         }
       },
@@ -5980,7 +5980,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 13,
+          "elapsed": 15,
           "extra": null
         }
       },
@@ -6050,7 +6050,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 11,
+          "elapsed": 14,
           "extra": null
         }
       },
@@ -6120,7 +6120,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 11,
+          "elapsed": 14,
           "extra": null
         }
       },
@@ -6190,7 +6190,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 9,
+          "elapsed": 12,
           "extra": null
         }
       },
@@ -6260,7 +6260,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 7,
+          "elapsed": 10,
           "extra": null
         }
       },

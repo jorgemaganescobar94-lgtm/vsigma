@@ -384,7 +384,7 @@ vSIGMA Competition Accuracy Mode + Probability Calibration
 - Threshold alerts: SAMPLE_TOO_SMALL:18
 - Major drift/threshold alerts: none
 - NO BET modes: BASELINE, CANDIDATE_V2, CANDIDATE_V4, CANDIDATE_V5, CANDIDATE_V6
-- Pre-lock: STALE_PRELOCK_EXCLUDED
+- Pre-lock: PRE_LOCK_PENDING
 - Drift: NO_DRIFT:5; SAMPLE_TOO_SMALL:3; WATCH_PATTERN:1
 - Failure modes: see daily master report for pick-level risks.
 

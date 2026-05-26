@@ -58,7 +58,7 @@ _No rows._
 
 ## Pre-Lock Execution Status
 - Pre-lock data fresh: NO_CURRENT_PRELOCK_ROWS
-- Stale pre-lock excluded: YES
+- Stale pre-lock excluded: NO
 - Execution allowed by v7: 0
 
 ### Official Baseline Picks
@@ -71,12 +71,7 @@ _No rows._
 _No rows._
 
 ### Stale Pre-Lock Warning
-STALE_PRELOCK_EXCLUDED: previous target_date=2026-05-25
-
-| target_date | date | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_decision |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-05-25 | 2026-05-25 | 1545418 | SC Paderborn 07 | VfL Wolfsburg | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE |
-| 2026-05-25 | 2026-05-25 | 1494178 | IF Elfsborg | BK Hacken | OVER_2_5 | IN_PRELOCK_WINDOW | PRELOCK_CONFIRMED |
+_No stale pre-lock rows excluded._
 
 ## Odds Snapshot / CLV Calibration
 ### CLV Summary
@@ -138,9 +133,9 @@ _No rows._
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: post_results_status: WARNING - post has 1 pending row(s)
-- Recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-25 --timezone Atlantic/Canary --mode post`
-- Report path: /home/runner/work/vsigma/vsigma/data/processed/health/vsigma_healthcheck_report.md
+- Critical warnings: freshness_report: WARNING - validation report contains warning rows
+- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-26`
+- Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-26/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
