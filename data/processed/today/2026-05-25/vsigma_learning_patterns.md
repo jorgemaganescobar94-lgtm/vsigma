@@ -1,23 +1,24 @@
 # vSIGMA Learning Patterns - 2026-05-25
 
 ## Executive Pattern Summary
-- generated_at: 2026-05-25T23:38:55+01:00
-- patterns detected: 12
-- pattern_type_counts: MARKET_RISK_CLUSTER=5, SAMPLE_KEY_CLUSTER=4, WAITING_PRELOCK_CLUSTER=1, UNRESOLVED_DOMINANCE=1, EXPIRED_PRELOCK_CLUSTER=1
-- severity_counts: P2=8, P3=3, P1=1
+- generated_at: 2026-05-26T19:07:49+01:00
+- patterns detected: 13
+- pattern_type_counts: MARKET_RISK_CLUSTER=5, SAMPLE_KEY_CLUSTER=4, WAITING_PRELOCK_CLUSTER=1, UNRESOLVED_DOMINANCE=1, ACTIONABLE_LOSS_CLUSTER=1, EXPIRED_PRELOCK_CLUSTER=1
+- severity_counts: P2=8, P3=4, P1=1
 
 ## Top Patterns
-- P1 | WAITING_PRELOCK_CLUSTER | WAITING_PRELOCK | n=7 | recommendation=Review execution timing and retry windows if waiting persists.
-- P2 | UNRESOLVED_DOMINANCE | UNRESOLVED_RESULTS | n=17 | recommendation=Improve post-results labeling and wait for closed samples before proposing model changes.
+- P1 | WAITING_PRELOCK_CLUSTER | WAITING_PRELOCK | n=6 | recommendation=Review execution timing and retry windows if waiting persists.
+- P2 | UNRESOLVED_DOMINANCE | UNRESOLVED_RESULTS | n=15 | recommendation=Improve post-results labeling and wait for closed samples before proposing model changes.
 - P2 | MARKET_RISK_CLUSTER | OVER_1_5::UNKNOWN_RISK | n=8 | recommendation=Monitor market/risk concentration; do not adjust model until losses and sample size clear promotion gates.
 - P2 | MARKET_RISK_CLUSTER | UNKNOWN_MARKET::UNKNOWN_RISK | n=8 | recommendation=Monitor market/risk concentration; do not adjust model until losses and sample size clear promotion gates.
 - P2 | SAMPLE_KEY_CLUSTER | UNRESOLVED::OVER_1_5::UNKNOWN_RISK::NO_SIGNAL | n=8 | recommendation=Keep collecting evidence; repeated sample key can feed improvement proposal only after sufficient closed results.
 - P2 | SAMPLE_KEY_CLUSTER | UNRESOLVED::UNKNOWN_MARKET::UNKNOWN_RISK::NO_SIGNAL | n=8 | recommendation=Keep collecting evidence; repeated sample key can feed improvement proposal only after sufficient closed results.
 - P2 | MARKET_RISK_CLUSTER | OVER_1_5::FAILURE_MODE_LOW_CONVERSION | n=7 | recommendation=Monitor market/risk concentration; do not adjust model until losses and sample size clear promotion gates.
-- P2 | SAMPLE_KEY_CLUSTER | WAITING_PRELOCK::OVER_1_5::FAILURE_MODE_LOW_CONVERSION::WAIT_FOR_POST_RESULTS | n=4 | recommendation=Keep collecting evidence; repeated sample key can feed improvement proposal only after sufficient closed results.
 - P2 | MARKET_RISK_CLUSTER | OVER_2_5::FAILURE_MODE_LOW_CONVERSION | n=3 | recommendation=Monitor market/risk concentration; do not adjust model until losses and sample size clear promotion gates.
+- P2 | SAMPLE_KEY_CLUSTER | WAITING_PRELOCK::OVER_1_5::FAILURE_MODE_LOW_CONVERSION::WAIT_FOR_POST_RESULTS | n=3 | recommendation=Keep collecting evidence; repeated sample key can feed improvement proposal only after sufficient closed results.
 - P3 | MARKET_RISK_CLUSTER | OVER_2_5::UNKNOWN_RISK | n=2 | recommendation=Monitor market/risk concentration; do not adjust model until losses and sample size clear promotion gates.
 - P3 | SAMPLE_KEY_CLUSTER | UNRESOLVED::OVER_2_5::UNKNOWN_RISK::NO_SIGNAL | n=2 | recommendation=Keep collecting evidence; repeated sample key can feed improvement proposal only after sufficient closed results.
+- P3 | ACTIONABLE_LOSS_CLUSTER | OVER_2_5 | n=1 | recommendation=Potential model-risk pattern; keep in proposal-only state until shadow/backtest evidence exists.
 - P3 | EXPIRED_PRELOCK_CLUSTER | EXPIRED_PRELOCK | n=1 | recommendation=Review AUTO/PRELOCK timing; exclude expired rows from predictive accuracy metrics.
 
 ## Learning Use

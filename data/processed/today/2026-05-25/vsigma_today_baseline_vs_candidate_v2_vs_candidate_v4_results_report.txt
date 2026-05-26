@@ -1,0 +1,14 @@
+vSIGMA TODAY BASELINE VS CANDIDATE V2 VS CANDIDATE V4 RESULTS
+
+Mode summary
+                                           mode  pick_count  settled_rows  pending_rows  unmatched_rows  wins  losses  pushes  voids  profit_units  roi_percent
+                              BASELINE_OFFICIAL           2             2             0               0     1       1       0      0         -0.65        -32.5
+                            SHADOW_CANDIDATE_V2           2             2             0               0     1       1       0      0         -0.65        -32.5
+SHADOW_CANDIDATE_V4_O25_LOW_CONVERSION_FIREWALL           2             2             0               0     2       0       0      0          0.60         30.0
+
+Candidate v4 adjusted/downgraded top picks: 1
+
+Pick result comparison
+                 comparison_status  fixture_id                          fixture      league  baseline_rank  candidate_v2_rank  candidate_v4_rank baseline_market candidate_v2_market candidate_v4_market candidate_v4_original_market candidate_v4_firewall_decision baseline_result candidate_v2_result candidate_v4_result  baseline_profit_units  candidate_v2_profit_units  candidate_v4_profit_units
+BASELINE+CANDIDATE_V2+CANDIDATE_V4     1494178         IF Elfsborg vs BK Hacken Allsvenskan              2                  2                  2        OVER_2_5            OVER_2_5            OVER_1_5                     OVER_2_5            DEGRADE_TO_OVER_1_5            LOSS                LOSS                 WIN                  -1.00                      -1.00                       0.25
+BASELINE+CANDIDATE_V2+CANDIDATE_V4     1545418 SC Paderborn 07 vs VfL Wolfsburg  Bundesliga              1                  1                  1        OVER_1_5            OVER_1_5            OVER_1_5                     OVER_1_5                    NOT_APPLIED             WIN                 WIN                 WIN                   0.35                       0.35                       0.35
