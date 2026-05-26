@@ -1,38 +1,38 @@
 # vSIGMA System Review - 2026-05-26
 
 ## Executive Status
-- Cloud AUTO status: WAITING_OR_BLOCKED
+- Cloud AUTO status: POST_PENDING
 - Candidates reviewed: 1
 - Executable picks: 0
-- Waiting picks: 1
-- Blocked picks: 0
-- Official action summary: WAIT
+- Waiting picks: 0
+- Blocked picks: 1
+- Official action summary: NO_BET
 - Healthcheck status: WARNING
 - Ledger rows total: 117
 - Ledger rows for target date: 7
-- Decision outcome ledger rows total: 37
+- Decision outcome ledger rows total: 38
 - Decision outcome ledger actionable rows: 6
-- Decision outcome ledger non-actionable rows: 31
-- Decision outcome ledger no bet rows: 17
-- Decision outcome ledger expired rows: 14
+- Decision outcome ledger non-actionable rows: 32
+- Decision outcome ledger no bet rows: 18
+- Decision outcome ledger expired rows: 15
 - Decision outcome ledger waiting rows: 14
 - Decision outcome ledger blocked rows: 3
 - Decision outcome ledger technical review rows: 0
-- Current operational verdict: WAIT_FOR_NEXT_PRELOCK_SLOT
+- Current operational verdict: NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA
 
 ## Decision Quality Review
 - status: AVAILABLE
-- rows reviewed: 1
+- rows reviewed: 2
 - good decisions: 0
 - bad decisions: 0
-- unresolved: 1
+- unresolved: 2
 - top improvement signal: WAIT_FOR_POST_RESULTS (1)
 - recalibration_allowed_from_quality: NO
 
 ## Current Picks / Decisions
 | fixture_id | league | home_team | away_team | market_primary | official_action | executable_now | final_block_reason | retry_allowed | next_retry_time | data_gap_flags | execution_family_status | decision_state | exclusion_reason | next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1535324 | CONMEBOL Libertadores | LDU de Quito | Always Ready | UNDER_3_5 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | YES | 2026-05-26T22:00+01:00 |  | WAITING_FOR_WINDOW |  | OUTSIDE_90_MIN_PRELOCK_WINDOW |  |
+| 1535324 | CONMEBOL Libertadores | LDU de Quito | Always Ready | UNDER_3_5 | NO_BET | NO | KICKOFF_ALREADY_PASSED | NO |  |  | EXPIRED |  | KICKOFF_ALREADY_PASSED |  |
 
 ## Data Coverage Review
 - coverage rich / partial / weak: COVERAGE_RICH: 2
@@ -41,7 +41,7 @@
 - injuries coverage: 0/2
 - lineups coverage: 2/2
 - predictions coverage: 2/2
-- odds structure depth: target_fixtures: 6; OK: 6; RICH_MIXED: 6; MILD_GOALS: 3; BROAD_GOALS: 2
+- odds structure depth: target_fixtures: 6; OK: 6; RICH_MIXED: 5; RICH_NOISY: 1; MILD_GOALS: 3
 - API gaps detected: injuries
 
 ## Model / Market Review
@@ -71,11 +71,12 @@
 ## System Improvement Queue
 | priority | category | title | reason | expected_impact | risk | recommended_action | apply_now | evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| P1 | execution | Keep actionable and non-actionable buckets separated | The current day has waiting or blocked decisions. | Keeps ledger/backtest interpretation aligned with execution reality. | Low; reporting-only validation. | Continue reporting all rows, actionable only, non-actionable, and graded bets separately. | YES | blocked=0; waiting=1; auto_status=WAITING_OR_BLOCKED |
+| P1 | execution | Improve prelock timing schedule | Decision outcome ledger includes expired or prelock unavailable decisions. | Reduces non-actionable PRELOCK outcomes caused by late or missing execution windows. | Low if limited to scheduling and reporting diagnostics. | Review AUTO/PRELOCK timing so resolver runs before kickoff and captures a useful in-window slot. | YES | prelock_not_available=0; expired=1 |
+| P1 | execution | Keep actionable and non-actionable buckets separated | The current day has waiting or blocked decisions. | Keeps ledger/backtest interpretation aligned with execution reality. | Low; reporting-only validation. | Continue reporting all rows, actionable only, non-actionable, and graded bets separately. | YES | blocked=1; waiting=0; auto_status=POST_PENDING |
 | P3 | decision_quality | Collect more closed decision quality outcomes | Decision Quality Review has fewer than 30 resolved rows. | Avoids premature recalibration or execution-rule changes from a thin sample. | Low; reporting only. | Keep building the quality review after POST labels are available. | NO | resolved_quality_rows=0 |
 | P3 | model_calibration | Defer recalibration until minimum closed-pick sample | Fewer than 30 closed picks are available. | Avoids fitting thresholds or probability adjustments to noise. | Low; no predictive change is applied. | Keep calibration reporting active and wait for at least 30 closed picks before suggestions. | NO | closed_picks=7; enough_sample=NO; recalibration_allowed=NO |
 
 ## Input Inventory
-- generated_at: 2026-05-26T20:32:59+01:00
+- generated_at: 2026-05-26T23:58:20+01:00
 - timezone: Atlantic/Canary
 - missing optional inputs: none
