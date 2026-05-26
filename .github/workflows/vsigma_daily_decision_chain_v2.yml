@@ -48,9 +48,8 @@ jobs:
           if [ -z "$INCLUDE_BACKTEST" ]; then INCLUDE_BACKTEST="false"; fi
           echo "VSIGMA_DATE=$D" >> "$GITHUB_ENV"
           echo "INCLUDE_BACKTEST=$INCLUDE_BACKTEST" >> "$GITHUB_ENV"
-          echo "Running vSIGMA Daily Decision Chain v2 for $D"
 
-      - name: Build full daily chain
+      - name: Build daily reports
         shell: bash
         run: |
           python scripts/build_real_objective_context_gate.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
@@ -62,47 +61,55 @@ jobs:
           python scripts/build_forecast_market_translator.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
           python scripts/build_daily_execution_board.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
-      - name: Ensure daily execution board exists
-        shell: bash
+      - name: Guarantee board artifact
+        shell: python
         run: |
-          mkdir -p "data/processed/today/${VSIGMA_DATE}" "data/processed/governance"
-          BOARD_MD="data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board.md"
-          BOARD_CSV="data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board.csv"
+          import csv, os
+          from pathlib import Path
 
-          if [ ! -f "$BOARD_MD" ]; then
-            echo "Daily board missing after build; creating diagnostic board."
-            cat > "$BOARD_MD" <<EOF
-# vSIGMA Daily Execution Board - ${VSIGMA_DATE}
+          d = os.environ["VSIGMA_DATE"]
+          base = Path("data/processed/today") / d
+          gov = Path("data/processed/governance")
+          base.mkdir(parents=True, exist_ok=True)
+          gov.mkdir(parents=True, exist_ok=True)
 
-## Summary
-- rows_on_board: 0
-- final_decision_counts: none
-- board_bucket_counts: none
-- source_guard: DATED_INPUT_ONLY
-- auto_apply: NO
-- production_change: NO
+          md = base / "vsigma_daily_execution_board.md"
+          csv_path = base / "vsigma_daily_execution_board.csv"
 
-## Board Rows
-- none. Diagnostic board created because build_daily_execution_board did not produce the expected artifact.
+          if not md.exists():
+              md.write_text(
+                  f"# vSIGMA Daily Execution Board - {d}\n\n"
+                  "## Summary\n"
+                  "- rows_on_board: 0\n"
+                  "- final_decision_counts: none\n"
+                  "- board_bucket_counts: none\n"
+                  "- source_guard: DATED_INPUT_ONLY\n"
+                  "- auto_apply: NO\n"
+                  "- production_change: NO\n\n"
+                  "## Board Rows\n"
+                  "- none. Diagnostic board created because build_daily_execution_board did not produce the expected artifact.\n\n"
+                  "## Guardrails\n"
+                  "- This diagnostic output guarantees the daily board artifact exists.\n"
+                  "- Check upstream translator/forecast files for missing rows.\n",
+                  encoding="utf-8",
+              )
 
-## Guardrails
-- This diagnostic output guarantees the daily board artifact exists.
-- Check upstream translator/forecast files for missing rows.
-EOF
-            echo "target_date,generated_at,board_rank,fixture_id,home_team,away_team,final_decision,board_bucket,primary_market,secondary_market,stake_band,execution_permission,portfolio_status,context_level,forecast_confidence,forecast_warning,translation_score,kill_switch,stat_profile,key_stat_forecast,prelock_trigger,live_trigger,cancel_trigger,operator_note,source_guard,auto_apply,production_change" > "$BOARD_CSV"
-          fi
+          if not csv_path.exists():
+              fields = [
+                  "target_date","generated_at","board_rank","fixture_id","home_team","away_team",
+                  "final_decision","board_bucket","primary_market","secondary_market","stake_band",
+                  "execution_permission","portfolio_status","context_level","forecast_confidence",
+                  "forecast_warning","translation_score","kill_switch","stat_profile","key_stat_forecast",
+                  "prelock_trigger","live_trigger","cancel_trigger","operator_note","source_guard",
+                  "auto_apply","production_change"
+              ]
+              with csv_path.open("w", encoding="utf-8", newline="") as f:
+                  csv.DictWriter(f, fieldnames=fields).writeheader()
 
-          if [ ! -f "$BOARD_MD" ] || [ ! -f "$BOARD_CSV" ]; then
-            echo "ERROR: daily execution board artifacts are still missing."
-            exit 1
-          fi
+          (gov / "vsigma_daily_execution_board.md").write_text(md.read_text(encoding="utf-8"), encoding="utf-8")
+          (gov / "vsigma_daily_execution_board.csv").write_text(csv_path.read_text(encoding="utf-8"), encoding="utf-8")
 
-          cp "$BOARD_MD" data/processed/governance/vsigma_daily_execution_board.md
-          cp "$BOARD_CSV" data/processed/governance/vsigma_daily_execution_board.csv
-
-          ls -l "data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board."*
-
-      - name: Optional match stat forecast backtest
+      - name: Optional backtest
         if: ${{ env.INCLUDE_BACKTEST == 'true' }}
         shell: bash
         run: python scripts/backtest_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
@@ -124,13 +131,8 @@ EOF
           echo "Staged changes:"
           git diff --cached --name-only || true
 
-          if [ ! -f "data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board.md" ]; then
-            echo "ERROR: board artifact missing before commit."
-            exit 1
-          fi
-
           if ! git diff --cached --name-only | grep -q "vsigma_daily_execution_board"; then
-            echo "ERROR: board artifact exists but is not staged."
+            echo "ERROR: board not staged"
             exit 1
           fi
 
