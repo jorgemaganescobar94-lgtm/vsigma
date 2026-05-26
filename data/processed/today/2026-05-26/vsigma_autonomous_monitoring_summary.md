@@ -1,20 +1,20 @@
 # vSIGMA Autonomous Monitoring Summary - 2026-05-26
 
 ## Executive Status
-- generated_at: 2026-05-26T19:14:42+01:00
+- generated_at: 2026-05-26T20:32:59+01:00
 - mode: auto
-- daily_classification: NO_BET_VALID
-- operational_verdict: NO_EXECUTION_NO_BET_VALID
-- action_level: NO_ACTION_REQUIRED
+- daily_classification: WAITING_FOR_PRELOCK
+- operational_verdict: WAITING_FOR_PRELOCK
+- action_level: REVIEW_REQUIRED
 - predictive_failure: NO
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26466490602
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26470440055
 
 ## Operator Action
-- No manual execution needed; keep collecting no-bet evidence.
+- Wait for next scheduled AUTO/PRELOCK run or rerun prelock manually if timing is critical.
 
 ## Explanation
-- The day resolved to no-bet with no executable row and no expired candidate.
+- At least one candidate is waiting for the configured PRELOCK window or retry slot.
 
 ## Source Coverage
 - decision_quality_review: present
@@ -22,7 +22,7 @@
 - healthcheck_report: present
 - cloud_decision_summary: present
 - prelock_decision_resolver: present
-- decision_outcome_ledger_rows: 1
+- decision_outcome_ledger_rows: 2
 
 ## Classification Contract
 - EXECUTION_OK: at least one executable decision exists.

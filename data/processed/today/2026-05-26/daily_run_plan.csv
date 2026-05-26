@@ -1,2 +1,2 @@
 fixture_id,league,home_team,away_team,market_primary,kickoff_time,minutes_to_kickoff,prelock_window_start,prelock_status,recommended_next_action,recommended_command
-,,,,,,,,NO_CURRENT_PICKS,NO_BET_DAY,.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-26 --timezone Atlantic/Canary --mode status
+1535324,CONMEBOL Libertadores,LDU de Quito,Always Ready,UNDER_3_5,2026-05-26T22:00:24.600000+00:00,147.55,2026-05-26T20:30:24.600000+00:00,PENDING_OUTSIDE_WINDOW,WAIT_FOR_PRELOCK,.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-26 --timezone Atlantic/Canary --mode prelock --window-minutes 90

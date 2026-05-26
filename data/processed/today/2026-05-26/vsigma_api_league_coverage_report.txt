@@ -4,8 +4,6 @@ Source: official API-Football /leagues coverage metadata. Historical runs use cu
 
 Data-rich / good leagues:
 country                league  season league_coverage_class  league_data_reliability_score  league_has_fixture_stats_coverage  league_has_odds_coverage  league_has_injuries_coverage  league_has_lineups_coverage league_coverage_source_status
- France               Ligue 1    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
-Germany         2. Bundesliga    2025         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
   World CONMEBOL Libertadores    2026         COVERAGE_RICH                           0.95                                  1                         1                             0                            1                  OFFICIAL_API
   World CONMEBOL Sudamericana    2026         COVERAGE_RICH                           0.95                                  1                         1                             0                            1                  OFFICIAL_API
 

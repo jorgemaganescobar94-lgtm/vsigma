@@ -6,7 +6,7 @@
 ## Official Baseline
 | experiment_id | display_name | status | selection_role | allowed_to_select_officially | total_days_observed | pick_days | no_bet_days | picks_total | settled_picks | wins | losses | pushes | voids | hit_rate | profit_units | roi_percent | average_calibrated_probability | brier_score | max_drawdown | market_mix | failure_mode_mix | current_verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | vSIGMA Competition Accuracy Mode + Probability Calibration | OFFICIAL | official_selector | True | 8 | 7 | 1 | 14 | 7 | 4 | 3 | 0 | 0 | 57.142857 | -1.18 | -16.857143 | 0.809113 | 0.311373 | -0.65 | OVER_1_5:11; OVER_2_5:3 | FAILURE_MODE_LOW_CONVERSION:28; market_fit=SAFE_OK:14; LOW_CONVERSION:14; market=OVER_1_5:11; market=OVER_2_5:3; edge=0.202:2; edge=0.136:1; edge=0.141:1; edge=0.240:1; edge=0.123:1; edge=0.188:1; edge=0.167:1; edge=0.126:1; edge=0.259:1; edge=0.160:1; edge=0.170:1; edge=0.182:1; edge=0.249:1 | FROZEN_OFFICIAL_BASELINE |
+| OFFICIAL_BASELINE | vSIGMA Competition Accuracy Mode + Probability Calibration | OFFICIAL | official_selector | True | 8 | 8 | 0 | 15 | 7 | 4 | 3 | 0 | 0 | 57.142857 | -1.18 | -16.857143 | 0.80654 | 0.311373 | -0.65 | OVER_1_5:11; OVER_2_5:3; UNDER_3_5:1 | FAILURE_MODE_LOW_CONVERSION:28; market_fit=SAFE_OK:15; LOW_CONVERSION:14; market=OVER_1_5:11; market=OVER_2_5:3; edge=0.202:2; FAILURE_MODE_AVALANCHE_RISK:2; edge=0.136:1; edge=0.141:1; edge=0.240:1; edge=0.123:1; edge=0.188:1; edge=0.167:1; edge=0.126:1; edge=0.259:1; edge=0.160:1; edge=0.170:1; edge=0.182:1; edge=0.249:1; market=UNDER_3_5:1; edge=0.116:1; AVALANCHE_RISK:1 | FROZEN_OFFICIAL_BASELINE |
 
 ## Shadow / Audit Experiments
 | experiment_id | display_name | status | selection_role | allowed_to_select_officially | total_days_observed | pick_days | no_bet_days | picks_total | settled_picks | wins | losses | pushes | voids | hit_rate | profit_units | roi_percent | average_calibrated_probability | brier_score | max_drawdown | market_mix | failure_mode_mix | current_verdict |
@@ -21,7 +21,7 @@
 ## Official vs Shadow Comparison
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | OFFICIAL | 14 | 7 | 4 | 3 | -1.18 | -16.857143 | FROZEN_OFFICIAL_BASELINE |
+| OFFICIAL_BASELINE | OFFICIAL | 15 | 7 | 4 | 3 | -1.18 | -16.857143 | FROZEN_OFFICIAL_BASELINE |
 | CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 19 | 6 | 3 | 3 | -1.7 | -28.333333 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
 | CANDIDATE_V3_ODDS_DEPTH | NOT_PROMOTED | 0 | 0 | 0 | 0 | 0.0 |  | PARTIAL_NOT_PROMOTED |
 | CANDIDATE_V4_O25_FIREWALL | SHADOW | 18 | 6 | 4 | 2 | -0.45 | -7.5 | PARTIAL_NOT_PROMOTED |

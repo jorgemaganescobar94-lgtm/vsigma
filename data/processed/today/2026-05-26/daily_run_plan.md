@@ -1,12 +1,12 @@
 # vSIGMA Daily Run Plan - 2026-05-26
 
 - Timezone: Atlantic/Canary
-- Generated at: 2026-05-26T19:14:34.141671+01:00
+- Generated at: 2026-05-26T20:32:51.704821+01:00
 - Window minutes: 90
-- Next recommended action: NO_BET_DAY
-- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-26 --timezone Atlantic/Canary --mode status`
+- Next recommended action: WAIT_FOR_PRELOCK
+- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-26 --timezone Atlantic/Canary --mode prelock --window-minutes 90`
 
 ## Fixtures
 | fixture_id | league | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action | recommended_command |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  |  | NO_CURRENT_PICKS | NO_BET_DAY | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-26 --timezone Atlantic/Canary --mode status |
+| 1535324 | CONMEBOL Libertadores | LDU de Quito | Always Ready | UNDER_3_5 | 2026-05-26T22:00:24.600000+00:00 | 147.55 | 2026-05-26T20:30:24.600000+00:00 | PENDING_OUTSIDE_WINDOW | WAIT_FOR_PRELOCK | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-26 --timezone Atlantic/Canary --mode prelock --window-minutes 90 |

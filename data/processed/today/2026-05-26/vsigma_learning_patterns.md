@@ -1,14 +1,14 @@
 # vSIGMA Learning Patterns - 2026-05-26
 
 ## Executive Pattern Summary
-- generated_at: 2026-05-26T19:14:42+01:00
+- generated_at: 2026-05-26T20:32:59+01:00
 - patterns detected: 11
 - pattern_type_counts: MARKET_RISK_CLUSTER=4, SAMPLE_KEY_CLUSTER=4, WAITING_PRELOCK_CLUSTER=1, UNRESOLVED_DOMINANCE=1, EXPIRED_PRELOCK_CLUSTER=1
 - severity_counts: P2=7, P3=3, P1=1
 
 ## Top Patterns
-- P1 | WAITING_PRELOCK_CLUSTER | WAITING_PRELOCK | n=4 | recommendation=Review execution timing and retry windows if waiting persists.
-- P2 | UNRESOLVED_DOMINANCE | UNRESOLVED_RESULTS | n=14 | recommendation=Improve post-results labeling and wait for closed samples before proposing model changes.
+- P1 | WAITING_PRELOCK_CLUSTER | WAITING_PRELOCK | n=5 | recommendation=Review execution timing and retry windows if waiting persists.
+- P2 | UNRESOLVED_DOMINANCE | UNRESOLVED_RESULTS | n=15 | recommendation=Improve post-results labeling and wait for closed samples before proposing model changes.
 - P2 | MARKET_RISK_CLUSTER | UNKNOWN_MARKET::UNKNOWN_RISK | n=9 | recommendation=Monitor market/risk concentration; do not adjust model until losses and sample size clear promotion gates.
 - P2 | SAMPLE_KEY_CLUSTER | UNRESOLVED::UNKNOWN_MARKET::UNKNOWN_RISK::NO_SIGNAL | n=8 | recommendation=Keep collecting evidence; repeated sample key can feed improvement proposal only after sufficient closed results.
 - P2 | MARKET_RISK_CLUSTER | OVER_1_5::UNKNOWN_RISK | n=7 | recommendation=Monitor market/risk concentration; do not adjust model until losses and sample size clear promotion gates.

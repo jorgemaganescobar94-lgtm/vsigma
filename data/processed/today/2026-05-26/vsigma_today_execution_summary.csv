@@ -6,5 +6,5 @@ final,final_shortlist_rows,1,,,,
 final,bets_only_rows,1,,,,
 by_final_execution_bucket,,1,APPROVED_PREMIUM,,,
 by_final_recommendation,,1,,BET,,
-by_league,,1,,,2. Bundesliga,
-by_market_primary,,1,,,,OVER_2_5
+by_league,,1,,,CONMEBOL Libertadores,
+by_market_primary,,1,,,,UNDER_3_5

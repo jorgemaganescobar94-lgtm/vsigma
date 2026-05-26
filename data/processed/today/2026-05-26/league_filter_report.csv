@@ -1,16 +1,10 @@
 country,league,league_tier,league_filter_reason,matches
-Argentina,Primera B Metropolitana,REJECT,country_league_not_allowlisted,8
+Argentina,Primera B Metropolitana,REJECT,country_league_not_allowlisted,4
 Kenya,FKF Premier League,REJECT,country_league_not_allowlisted,3
-World,Friendlies,REJECT,hard_reject_noise_league,3
 Colombia,Copa Colombia,REJECT,country_league_not_allowlisted,2
-Iceland,Úrvalsdeild,REJECT,country_league_not_allowlisted,2
 USA,USL W League,REJECT,country_league_not_allowlisted,2
-Argentina,Torneo Promocional Amateur,REJECT,hard_reject_noise_league,1
+World,Friendlies,REJECT,hard_reject_noise_league,2
 Brazil,Copa do Brasil U17,REJECT,hard_reject_noise_league,1
-Brazil,Serie D,REJECT,country_league_not_allowlisted,1
-Spain,Primera División Femenina,REJECT,hard_reject_noise_league,1
 USA,USL League Two,REJECT,country_league_not_allowlisted,1
 World,CONMEBOL Libertadores,TIER_1,conmebol_libertadores,2
-France,Ligue 1,TIER_1,france_ligue_1,1
-Germany,2. Bundesliga,TIER_1,germany_2_bundesliga,1
 World,CONMEBOL Sudamericana,TIER_2,conmebol_sudamericana,4

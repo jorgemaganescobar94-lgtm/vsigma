@@ -1,8 +1,6 @@
 fixture_id,home_team,away_team,tie_state_label,market_family_hint,vsigma_pre_score,vsigma_priority,tie_adjustment_note
 1535323,Lanus,Mirassol,HOME_TRAILING,OVER_OR_BTTS_CHECK,82.32,A_ANALIZAR_PRIMERO,home_trailing_flip_away_to_over
-1545406,SpVgg Greuther Fürth,Rot-Weiß Essen,,OVER_OR_BTTS_CHECK,77.26,A_ANALIZAR_PRIMERO,
 1535224,Millonarios,O'Higgins,HOME_TRAILING,OVER_OR_BTTS_CHECK,79.67,A_ANALIZAR_PRIMERO,home_trailing_flip_away_to_over
-1545408,Saint Etienne,Nice,,AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK,75.56,A_ANALIZAR_PRIMERO,
 1535231,Sao Paulo,Boston River,AWAY_TRAILING,HOME_SIDE_OR_HOME_TEAM_TOTAL_CHECK,76.19,A_ANALIZAR_PRIMERO,away_trailing_keep_away_live
 1535324,LDU de Quito,Always Ready,AWAY_TRAILING,OVER_OR_BTTS_CHECK,75.43,A_ANALIZAR_PRIMERO,away_trailing_keep_away_live
 1535223,Gremio,Atletico Torque,HOME_TRAILING,OVER_OR_BTTS_CHECK,71.42,A_ANALIZAR_PRIMERO,home_trailing_boost

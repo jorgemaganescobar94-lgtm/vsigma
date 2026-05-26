@@ -7,10 +7,10 @@
 
 ## Shadow Counts
 
-- Baseline official competition rows: 0
+- Baseline official competition rows: 1
 - Candidate v2 competition rows: 0
 - Overlap rows: 0
-- Baseline-only rows: 0
+- Baseline-only rows: 1
 - Candidate-only rows: 0
 
 ## Candidate v2 Shadow Top
@@ -23,4 +23,6 @@ _No match-script forecasts available._
 
 ## Baseline vs Candidate v2
 
-_No comparison rows._
+| Status | Fixture | Base Rank | Cand Rank | Base Market | Cand Market | Base Prob | Cand Prob | Base Score | Cand Score |
+| --- | --- | ---: | ---: | --- | --- | ---: | ---: | ---: | ---: |
+| BASELINE_ONLY | LDU de Quito vs Always Ready | 1 | NA | UNDER_3_5 | NA | 0.771 | NA | 127.772 | NA |

@@ -1,10 +1,10 @@
 # vSIGMA Healthcheck Report - 2026-05-26
 
 - Global health status: WARNING
-- Generated at: 2026-05-26T19:13:21.748867+01:00
+- Generated at: 2026-05-26T20:31:57.316727+01:00
 - Mode: full
-- HEALTHY: 32
-- WARNING: 3
+- HEALTHY: 33
+- WARNING: 2
 - NEEDS_ATTENTION: 0
 - BROKEN: 0
 - NOT_RUN_YET: 2
@@ -14,7 +14,6 @@
 | check_name | status | detail | recovery_command |
 | --- | --- | --- | --- |
 | freshness_report | WARNING | validation report contains warning rows | .\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-26 |
-| prelock_freshness | WARNING | stale prelock rows found for 2026-05-25 | .\.venv\Scripts\python.exe scripts\run_today_prelock_orchestrator.py --date 2026-05-26 --timezone Atlantic/Canary --window-minutes 90 |
 | recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-26 --timezone Atlantic/Canary --mode status |
 
 ## All Checks
@@ -50,7 +49,7 @@
 | ledger_duplicate_ids | HEALTHY | no duplicate ledger_id values for target date |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | freshness_report | WARNING | validation report contains warning rows | .\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-26 | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-26/vsigma_daily_freshness_report.csv |
 | candidate_isolation_report | HEALTHY | validation report present without ERROR |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-26/vsigma_candidate_isolation_report.csv |
-| prelock_freshness | WARNING | stale prelock rows found for 2026-05-25 | .\.venv\Scripts\python.exe scripts\run_today_prelock_orchestrator.py --date 2026-05-26 --timezone Atlantic/Canary --window-minutes 90 | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_prelock_comparison.csv |
+| prelock_freshness | HEALTHY | prelock output present and empty for NO_BET/unavailable state |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-26/vsigma_today_prelock_comparison.csv |
 | post_results_status | NOT_RUN_YET | post not required yet or NO_BET official output |  | /home/runner/work/vsigma/vsigma/data/processed/today_post_results_report.csv |
 | supervisor_latest_report | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/data/processed/daily_supervisor_latest.md |
 | windows_task_registration | NOT_RUN_YET | task registration check unavailable outside Windows | powershell.exe -NoProfile -ExecutionPolicy Bypass -File /home/runner/work/vsigma/vsigma/scripts/register_vsigma_windows_tasks.ps1 |  |
