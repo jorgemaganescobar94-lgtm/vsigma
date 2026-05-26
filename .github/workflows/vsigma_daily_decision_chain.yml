@@ -1,4 +1,4 @@
-name: vSIGMA Daily Decision Chain
+﻿name: vSIGMA Daily Decision Chain
 
 on:
   workflow_dispatch:
@@ -157,3 +157,4 @@ jobs:
           fi
           git commit -m "vSIGMA daily decision chain ${VSIGMA_DATE} [skip ci]"
           git push origin HEAD:main
+
