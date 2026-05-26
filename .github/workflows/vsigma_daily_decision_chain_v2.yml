@@ -1,0 +1,138 @@
+name: vSIGMA Daily Decision Chain v2
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        required: false
+        default: ""
+      include_backtest:
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+  schedule:
+    - cron: "30 7 * * *"
+    - cron: "30 13 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vsigma-daily-decision-chain-v2-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ github.token }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Decide date
+        shell: bash
+        run: |
+          D="${{ github.event.inputs.date }}"
+          if [ -z "$D" ]; then D="$(TZ=Atlantic/Canary date +%F)"; fi
+          INCLUDE_BACKTEST="${{ github.event.inputs.include_backtest }}"
+          if [ -z "$INCLUDE_BACKTEST" ]; then INCLUDE_BACKTEST="false"; fi
+          echo "VSIGMA_DATE=$D" >> "$GITHUB_ENV"
+          echo "INCLUDE_BACKTEST=$INCLUDE_BACKTEST" >> "$GITHUB_ENV"
+          echo "Running vSIGMA Daily Decision Chain v2 for $D"
+
+      - name: Build full daily chain
+        shell: bash
+        run: |
+          python scripts/build_real_objective_context_gate.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          python scripts/build_objective_availability_gate.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          python scripts/build_context_adjusted_final_picks.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          python scripts/build_context_matrix.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          python scripts/build_context_matrix_portfolio.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          python scripts/build_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          python scripts/build_forecast_market_translator.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          python scripts/build_daily_execution_board.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Ensure daily execution board exists
+        shell: bash
+        run: |
+          mkdir -p "data/processed/today/${VSIGMA_DATE}" "data/processed/governance"
+          BOARD_MD="data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board.md"
+          BOARD_CSV="data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board.csv"
+
+          if [ ! -f "$BOARD_MD" ]; then
+            echo "Daily board missing after build; creating diagnostic board."
+            cat > "$BOARD_MD" <<EOF
+# vSIGMA Daily Execution Board - ${VSIGMA_DATE}
+
+## Summary
+- rows_on_board: 0
+- final_decision_counts: none
+- board_bucket_counts: none
+- source_guard: DATED_INPUT_ONLY
+- auto_apply: NO
+- production_change: NO
+
+## Board Rows
+- none. Diagnostic board created because build_daily_execution_board did not produce the expected artifact.
+
+## Guardrails
+- This diagnostic output guarantees the daily board artifact exists.
+- Check upstream translator/forecast files for missing rows.
+EOF
+            echo "target_date,generated_at,board_rank,fixture_id,home_team,away_team,final_decision,board_bucket,primary_market,secondary_market,stake_band,execution_permission,portfolio_status,context_level,forecast_confidence,forecast_warning,translation_score,kill_switch,stat_profile,key_stat_forecast,prelock_trigger,live_trigger,cancel_trigger,operator_note,source_guard,auto_apply,production_change" > "$BOARD_CSV"
+          fi
+
+          if [ ! -f "$BOARD_MD" ] || [ ! -f "$BOARD_CSV" ]; then
+            echo "ERROR: daily execution board artifacts are still missing."
+            exit 1
+          fi
+
+          cp "$BOARD_MD" data/processed/governance/vsigma_daily_execution_board.md
+          cp "$BOARD_CSV" data/processed/governance/vsigma_daily_execution_board.csv
+
+          ls -l "data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board."*
+
+      - name: Optional match stat forecast backtest
+        if: ${{ env.INCLUDE_BACKTEST == 'true' }}
+        shell: bash
+        run: python scripts/backtest_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Commit outputs
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/processed/today/${VSIGMA_DATE}/vsigma_* data/processed/governance/vsigma_* 2>/dev/null || true
+
+          git add -f \
+            data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board.md \
+            data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board.csv \
+            data/processed/governance/vsigma_daily_execution_board.md \
+            data/processed/governance/vsigma_daily_execution_board.csv
+
+          echo "Staged changes:"
+          git diff --cached --name-only || true
+
+          if [ ! -f "data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board.md" ]; then
+            echo "ERROR: board artifact missing before commit."
+            exit 1
+          fi
+
+          if ! git diff --cached --name-only | grep -q "vsigma_daily_execution_board"; then
+            echo "ERROR: board artifact exists but is not staged."
+            exit 1
+          fi
+
+          git commit -m "vSIGMA daily decision chain v2 ${VSIGMA_DATE} [skip ci]"
+          git push origin HEAD:main
