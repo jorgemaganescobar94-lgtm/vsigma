@@ -5,25 +5,45 @@ Missing or thin odds are treated as uncertainty, not as a negative football sign
 
 Summary
                 summary_scope                 metric  rows_total
-                      overall        target_fixtures           6
-  odds_structure_depth_status                     OK           6
-odds_structure_coherence_flag             RICH_MIXED           5
+                      overall        target_fixtures          15
+  odds_structure_depth_status                     OK          14
+  odds_structure_depth_status          NO_ODDS_FOUND           1
+odds_structure_coherence_flag             RICH_MIXED           9
+odds_structure_coherence_flag          RICH_COHERENT           4
 odds_structure_coherence_flag             RICH_NOISY           1
-      odds_total_ladder_shape             MILD_GOALS           3
+odds_structure_coherence_flag      NO_ODDS_UNCERTAIN           1
+      odds_total_ladder_shape               BALANCED           6
+      odds_total_ladder_shape             MILD_GOALS           4
       odds_total_ladder_shape            BROAD_GOALS           2
-      odds_total_ladder_shape               BALANCED           1
- odds_market_translation_hint    PREFER_MILDER_TOTAL           3
- odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL           2
- odds_market_translation_hint           CAUTION_BTTS           1
-    odds_line_aggression_flag        PREFER_OVER_1_5           3
-    odds_line_aggression_flag     OVER_2_5_SUPPORTED           2
-    odds_line_aggression_flag                NEUTRAL           1
+      odds_total_ladder_shape             WIDE_GOALS           1
+      odds_total_ladder_shape              LOW_GOALS           1
+      odds_total_ladder_shape                UNKNOWN           1
+ odds_market_translation_hint    PREFER_MILDER_TOTAL           5
+ odds_market_translation_hint           CAUTION_BTTS           3
+ odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL           3
+ odds_market_translation_hint                NEUTRAL           2
+ odds_market_translation_hint   CAUTION_FRAGILE_SIDE           1
+ odds_market_translation_hint   ODDS_DEPTH_UNCERTAIN           1
+    odds_line_aggression_flag                NEUTRAL           6
+    odds_line_aggression_flag        PREFER_OVER_1_5           4
+    odds_line_aggression_flag     OVER_2_5_SUPPORTED           3
+    odds_line_aggression_flag AVOID_AGGRESSIVE_OVERS           1
+    odds_line_aggression_flag                UNKNOWN           1
 
 Fixture preview
- fixture_id                league    home_team         away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
-    1535324 CONMEBOL Libertadores LDU de Quito      Always Ready                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4809                             0.025
-    1535323 CONMEBOL Libertadores        Lanus          Mirassol                    RICH_MIXED                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.4511                            -0.010
-    1535223 CONMEBOL Sudamericana       Gremio   Atletico Torque                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.4920                            -0.015
-    1535224 CONMEBOL Sudamericana  Millonarios         O'Higgins                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3737                            -0.015
-    1535226 CONMEBOL Sudamericana    Palestino Deportivo Riestra                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3906                            -0.015
-    1535231 CONMEBOL Sudamericana    Sao Paulo      Boston River                    RICH_NOISY             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.8455                             0.015
+ fixture_id                        league               home_team               away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
+    1535326         CONMEBOL Libertadores           Club Nacional          Coquimbo Unido                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.6369                            -0.015
+    1535319         CONMEBOL Libertadores        Estudiantes L.P.  Independiente Medellin                 RICH_COHERENT                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.3321                            -0.010
+    1535320         CONMEBOL Libertadores                Flamengo                   Cusco                    RICH_NOISY              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.7764                             0.015
+    1535322         CONMEBOL Libertadores Independiente del Valle         Rosario Central                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3550                            -0.015
+    1535325         CONMEBOL Libertadores       Libertad Asuncion                     UCV                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3965                             0.025
+    1535329         CONMEBOL Libertadores           Universitario         Deportes Tolima                    RICH_MIXED               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.6415                            -0.015
+    1544608 UEFA Europa Conference League          Crystal Palace          Rayo Vallecano                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3444                            -0.015
+    1535219         CONMEBOL Sudamericana             Atletico-MG          Puerto Cabello                    RICH_MIXED                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.6202                            -0.010
+    1535221         CONMEBOL Sudamericana              Caracas FC                Botafogo                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3051                            -0.015
+    1535222         CONMEBOL Sudamericana               Cienciano                Juventud                 RICH_COHERENT                BALANCED                      NEUTRAL                   NEUTRAL                 0.3447                             0.000
+    1535225         CONMEBOL Sudamericana                 Olimpia             A. Italiano                    RICH_MIXED                BALANCED                      NEUTRAL                   NEUTRAL                 0.3747                             0.000
+    1535227         CONMEBOL Sudamericana             Racing Club Independiente Petrolero             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                 0.0000                             0.000
+    1535229         CONMEBOL Sudamericana             San Lorenzo      Deportivo Recoleta                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.4933                            -0.015
+    1535230         CONMEBOL Sudamericana                  Santos        Deportivo Cuenca                    RICH_MIXED                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.4842                            -0.010
+    1535233         CONMEBOL Sudamericana           Vasco DA Gama        Barracas Central                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4680                             0.025

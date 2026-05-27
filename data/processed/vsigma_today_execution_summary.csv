@@ -1,10 +1,14 @@
 summary_scope,metric,rows_total,final_execution_bucket,final_recommendation,league,market_primary
-eligibility,premium_core_rows,1,,,,
-eligibility,premium_extended_eligible_rows,0,,,,
+eligibility,premium_core_rows,5,,,,
+eligibility,premium_extended_eligible_rows,4,,,,
 eligibility,standard_eligible_rows,0,,,,
-final,final_shortlist_rows,1,,,,
-final,bets_only_rows,1,,,,
-by_final_execution_bucket,,1,APPROVED_PREMIUM,,,
-by_final_recommendation,,1,,BET,,
-by_league,,1,,,CONMEBOL Libertadores,
-by_market_primary,,1,,,,UNDER_3_5
+final,final_shortlist_rows,4,,,,
+final,bets_only_rows,4,,,,
+by_final_execution_bucket,,4,APPROVED_PREMIUM,,,
+by_final_recommendation,,4,,BET,,
+by_league,,2,,,CONMEBOL Libertadores,
+by_league,,1,,,CONMEBOL Sudamericana,
+by_league,,1,,,UEFA Europa Conference League,
+by_market_primary,,1,,,,BTTS_YES
+by_market_primary,,2,,,,OVER_1_5
+by_market_primary,,1,,,,OVER_2_5
