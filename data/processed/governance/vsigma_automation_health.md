@@ -10,7 +10,7 @@
 
 ## Component Rows
 - daily_execution_board | status=OK | severity=WARN | action=REVIEW_BOARD | detail=rows=16; decisions=STAT_WATCH_ONLY=4; NO_BET_OR_WATCH=4; NO_BET=4; PRELOCK_REVIEW_LOW_STAKE=2; LIVE_ONLY=2
-- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=none
+- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=STAT_WATCH_ONLY=4; NO_BET_OR_WATCH=4; CANCELLED_NO_BET=4; READY_LOW_STAKE_REVIEW=2; LIVE_ONLY_WAIT_TRIGGER=2
 - postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=FT=2; NS=2
 - postmatch_stat_actuals | status=OK | severity=OK | action=NO | detail=rows_final=2
 - forecast_calibration | status=OK | severity=OK | action=NO | detail=detail_rows=0; statuses=none
