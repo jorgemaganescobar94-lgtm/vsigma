@@ -1,23 +1,19 @@
 VSIGMA COMPETITION ACCURACY MODE
 
 Mode: COMPETITION_ACCURACY_MODE
-Normal execution shortlist rows: 4
-Competition shortlist rows: 2
-Competition top rows: 2
+Normal execution shortlist rows: 2
+Competition shortlist rows: 0
+Competition top rows: 0
 
 Principle: prefer no pick over weak pick; prioritize stable markets, premium core evidence, strong rolling stats, clean market-fit, and high model probability.
 
 Competition shortlist
- accuracy_mode_rank  fixture_id                        league               home_team       away_team market_primary execution_shortlist_source  competition_raw_prob  competition_calibrated_prob  accuracy_confidence_score accuracy_mode_bucket                                                                                                            accuracy_mode_reason       accuracy_primary_risk     competition_prob_calibration_reason
-                  1     1544608 UEFA Europa Conference League          Crystal Palace  Rayo Vallecano       OVER_1_5               PREMIUM_CORE                0.8761                      0.80846                    156.432        ACCURACY_CORE ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_MARKET_BUCKET_OVERCONFIDENCE
-                  2     1535322         CONMEBOL Libertadores Independiente del Valle Rosario Central       OVER_1_5               PREMIUM_CORE                0.8998                      0.83216                    154.531        ACCURACY_CORE ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_MARKET_BUCKET_OVERCONFIDENCE
+ACCURACY_NO_BET_PREFERRED
 
 Competition top
- accuracy_mode_rank  fixture_id                        league               home_team       away_team market_primary  competition_raw_prob  competition_calibrated_prob  primary_edge  accuracy_confidence_score                                                                                                            accuracy_mode_reason       accuracy_primary_risk     competition_prob_calibration_reason
-                  1     1544608 UEFA Europa Conference League          Crystal Palace  Rayo Vallecano       OVER_1_5                0.8761                      0.80846      0.191168                    156.432 ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_MARKET_BUCKET_OVERCONFIDENCE
-                  2     1535322         CONMEBOL Libertadores Independiente del Valle Rosario Central       OVER_1_5                0.8998                      0.83216      0.219528                    154.531 ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_MARKET_BUCKET_OVERCONFIDENCE
+No top picks survived the stricter accuracy gate.
 
 Most common rejection tags
 accuracy_mode_reason
-ACCURACY_CORE_PRIORITY;ACCURACY_BTTS_SUPPORT_INSUFFICIENT                                                             1
 ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_FAILURE_MODE_ACCEPTABLE;ACCURACY_OVER_SUPPORT_INSUFFICIENT    1
+ACCURACY_CORE_PRIORITY;ACCURACY_BTTS_SUPPORT_INSUFFICIENT                                                             1
