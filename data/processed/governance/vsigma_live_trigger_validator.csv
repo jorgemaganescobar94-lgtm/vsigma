@@ -1,0 +1,5 @@
+target_date,generated_at,rank,fixture_id,home_team,away_team,recheck_decision,market,match_status,elapsed,score,total_shots,total_sot,total_corners,home_possession,away_possession,signal_score,live_trigger_decision,reason,source_guard,auto_apply,production_change
+2026-05-27,2026-05-27T16:20:06+01:00,1,1535320,Flamengo,Cusco,READY_LOW_STAKE_REVIEW,OVER_1_5_SUPPORTED,FT,90.0,3-0,0,0,0,0,0,0,MATCH_FINISHED,match already final,DATED_INPUT_ONLY,NO,NO
+2026-05-27,2026-05-27T16:20:06+01:00,2,1535326,Club Nacional,Coquimbo Unido,READY_LOW_STAKE_REVIEW,OVER_1_5_SUPPORTED,FT,90.0,1-0,0,0,0,0,0,0,MATCH_FINISHED,match already final,DATED_INPUT_ONLY,NO,NO
+2026-05-27,2026-05-27T16:20:06+01:00,3,1544608,Crystal Palace,Rayo Vallecano,LIVE_ONLY_WAIT_TRIGGER,OVER_1_5_SUPPORTED,NS,0,0-0,0,0,0,0,0,0,MATCH_NOT_LIVE,not live yet,DATED_INPUT_ONLY,NO,NO
+2026-05-27,2026-05-27T16:20:06+01:00,4,1535225,Olimpia,A. Italiano,LIVE_ONLY_WAIT_TRIGGER,OVER_1_5_SUPPORTED,NS,0,0-0,0,0,0,0,0,0,MATCH_NOT_LIVE,not live yet,DATED_INPUT_ONLY,NO,NO
