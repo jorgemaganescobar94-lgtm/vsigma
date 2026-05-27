@@ -48,7 +48,6 @@ def add(rows: list[dict[str, str]], day: str, generated_at: str, component: str,
 def build(day: str, tz: str) -> list[dict[str, str]]:
     generated_at = datetime.now(ZoneInfo(tz)).isoformat(timespec="seconds")
     folder = PROCESSED / "today" / day
-    gov = PROCESSED / "governance"
     rows: list[dict[str, str]] = []
 
     board_md = folder / "vsigma_daily_execution_board.md"
@@ -75,6 +74,25 @@ def build(day: str, tz: str) -> list[dict[str, str]]:
         add(rows, day, generated_at, "prelock_live_recheck", "OK", severity, f"decisions={counts}", action)
     else:
         add(rows, day, generated_at, "prelock_live_recheck", "MISSING", "WARN", "prelock/live report missing", "RUN_PRELOCK_RECHECK")
+
+    live_md = folder / "vsigma_live_trigger_validator.md"
+    live_csv = folder / "vsigma_live_trigger_validator.csv"
+    live_text = read_text(live_md)
+    if exists_all(live_md, live_csv):
+        window_counts = extract_count(live_text, "window_counts")
+        trigger_counts = extract_count(live_text, "live_trigger_counts")
+        if "LIVE_TRIGGER_CONFIRMED" in live_text:
+            add(rows, day, generated_at, "live_trigger_validator", "OK", "WARN", f"windows={window_counts}; triggers={trigger_counts}", "REVIEW_LIVE_TRIGGER_CONFIRMED")
+        elif "LIVE_TRIGGER_REJECTED" in live_text:
+            add(rows, day, generated_at, "live_trigger_validator", "OK", "OK", f"windows={window_counts}; triggers={trigger_counts}", "NO")
+        elif "TOO_LATE" in live_text or "MATCH_FINISHED" in live_text:
+            add(rows, day, generated_at, "live_trigger_validator", "OK", "WARN", f"windows={window_counts}; triggers={trigger_counts}", "REVIEW_LIVE_WINDOW_MISSED_OR_FINISHED")
+        elif "TOO_EARLY" in live_text:
+            add(rows, day, generated_at, "live_trigger_validator", "OK", "INFO", f"windows={window_counts}; triggers={trigger_counts}", "WAIT_FOR_LIVE_WINDOW")
+        else:
+            add(rows, day, generated_at, "live_trigger_validator", "OK", "OK", f"windows={window_counts}; triggers={trigger_counts}", "NO")
+    else:
+        add(rows, day, generated_at, "live_trigger_validator", "WAITING_OR_NOT_RUN", "INFO", "live trigger report not present yet", "NO_IF_NO_LIVE_CANDIDATES")
 
     refresh_md = folder / "vsigma_dated_post_match_results_refresh.md"
     refresh_text = read_text(refresh_md)
@@ -112,6 +130,7 @@ def build(day: str, tz: str) -> list[dict[str, str]]:
     workflows = {
         "daily_workflow_v2": "vsigma_daily_decision_chain_v2.yml active externally",
         "prelock_workflow": "vsigma_prelock_live_recheck.yml expected active",
+        "live_trigger_workflow": "vsigma_live_trigger_validator.yml expected active",
         "postmatch_workflow": "vsigma_full_post_match_learning_chain.yml expected active",
     }
     for name, detail in workflows.items():
