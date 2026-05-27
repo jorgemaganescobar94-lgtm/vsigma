@@ -2,7 +2,7 @@
 
 System status: **ATTENTION**
 Alert required: **YES**
-Notify required: **YES**
+Notify required: **NO**
 Alert hash: `38cd30468346cd1e173f33e50846d1e5af35673ea897aeeb9456daba41cb1696`
 
 ## Signals
