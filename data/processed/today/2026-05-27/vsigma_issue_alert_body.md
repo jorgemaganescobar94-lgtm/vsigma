@@ -2,23 +2,23 @@
 
 System status: **ATTENTION**
 Alert required: **YES**
-Notify required: **NO**
-Alert hash: `38cd30468346cd1e173f33e50846d1e5af35673ea897aeeb9456daba41cb1696`
+Notify required: **YES**
+Alert hash: `f4138de186de5396f4b3dd8362d0c37e5de7d32e81d5af2ab12e5e595b91fd90`
 
 ## Signals
-- - #1 | READY_LOW_STAKE_REVIEW | Flamengo vs Cusco | market=OVER_1_5_SUPPORTED | stake=LOW_IF_CONFIRMED | lineup=LINEUPS_CONFIRMED | min=10.52 | availability=AVAILABILITY_UNKNOWN_OR_CLEAN | next=price/prelock/live confirmation | note=low-stake review allowed, not automatic
+- - #1 | LIVE_ONLY_WAIT_TRIGGER | Crystal Palace vs Rayo Vallecano | market=OVER_1_5_SUPPORTED | stake=SYMBOLIC_ONLY | lineup=LINEUPS_NOT_CONFIRMED | min=46.25 | availability=AVAILABILITY_UNKNOWN_OR_CLEAN | next=wait for live trigger | note=prematch serious stake blocked
 - - #1 | window=MATCH_FINISHED | decision=MATCH_FINISHED | Flamengo vs Cusco | market=OVER_1_5_SUPPORTED | status=FT | min=90.0 | mtko=10.52 | score=3-0 | shots=0 | SoT=0 | corners=0 | signal=0 | reason=match already final
-- - #2 | READY_LOW_STAKE_REVIEW | Club Nacional vs Coquimbo Unido | market=OVER_1_5_SUPPORTED | stake=LOW_IF_CONFIRMED | lineup=LINEUPS_CONFIRMED | min=10.53 | availability=AVAILABILITY_UNKNOWN_OR_CLEAN | next=price/prelock/live confirmation | note=low-stake review allowed, not automatic
+- - #2 | LIVE_ONLY_WAIT_TRIGGER | Libertad Asuncion vs UCV | market=OVER_1_5_SUPPORTED | stake=SYMBOLIC_ONLY | lineup=WAIT_PRELOCK | min=226.25 | availability=AVAILABILITY_UNKNOWN_OR_CLEAN | next=wait for live trigger | note=prematch serious stake blocked
 - - #2 | window=MATCH_FINISHED | decision=MATCH_FINISHED | Club Nacional vs Coquimbo Unido | market=OVER_1_5_SUPPORTED | status=FT | min=90.0 | mtko=10.53 | score=1-0 | shots=0 | SoT=0 | corners=0 | signal=0 | reason=match already final
-- - #3 | LIVE_ONLY_WAIT_TRIGGER | Crystal Palace vs Rayo Vallecano | market=OVER_1_5_SUPPORTED | stake=SYMBOLIC_ONLY | lineup=WAIT_PRELOCK | min=1120.49 | availability=AVAILABILITY_UNKNOWN_OR_CLEAN | next=wait for live trigger | note=prematch serious stake blocked
-- - #4 | LIVE_ONLY_WAIT_TRIGGER | Olimpia vs A. Italiano | market=OVER_1_5_SUPPORTED | stake=SYMBOLIC_ONLY | lineup=WAIT_PRELOCK | min=1300.47 | availability=AVAILABILITY_UNKNOWN_OR_CLEAN | next=wait for live trigger | note=prematch serious stake blocked
+- - #3 | LIVE_ONLY_WAIT_TRIGGER | Olimpia vs A. Italiano | market=OVER_1_5_SUPPORTED | stake=SYMBOLIC_ONLY | lineup=WAIT_PRELOCK | min=226.22 | availability=AVAILABILITY_UNKNOWN_OR_CLEAN | next=wait for live trigger | note=prematch serious stake blocked
+- - #4 | LIVE_ONLY_WAIT_TRIGGER | Independiente del Valle vs Rosario Central | market=OVER_1_5_SUPPORTED | stake=SYMBOLIC_ONLY | lineup=WAIT_PRELOCK | min=226.26 | availability=AVAILABILITY_UNKNOWN_OR_CLEAN | next=wait for live trigger | note=prematch serious stake blocked
 - - READY_LOW_STAKE_REVIEW still requires manual price and live/prelock confirmation.
 - - WARN means review; BROKEN means a workflow/input needs fixing.
 - - live_trigger_counts: MATCH_FINISHED=2; TOO_EARLY=2
 - - live_trigger_validator | status=OK | severity=WARN | action=REVIEW_LIVE_WINDOW_MISSED_OR_FINISHED | detail=windows=MATCH_FINISHED=2; TOO_EARLY=2; triggers=MATCH_FINISHED=2; TOO_EARLY=2
 - - memory_decision_counts: ACCUMULATE_MORE_SAMPLE=5; PATCH_CANDIDATE_REVIEW=1
 - - prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=STAT_WATCH_ONLY=4; NO_BET_OR_WATCH=4; CANCELLED_NO_BET=4; READY_LOW_STAKE_REVIEW=2; LIVE_ONLY_WAIT_TRIGGER=2
-- - recheck_decision_counts: STAT_WATCH_ONLY=4; NO_BET_OR_WATCH=4; CANCELLED_NO_BET=4; READY_LOW_STAKE_REVIEW=2; LIVE_ONLY_WAIT_TRIGGER=2
+- - recheck_decision_counts: LIVE_ONLY_WAIT_TRIGGER=4; STAT_WATCH_ONLY=2; NO_BET_OR_WATCH=2; CANCELLED_NO_BET=2
 - - total_goals | days=2 | rows=10 | hit_rate=0.100 | bias=OVER_ESTIMATE | decision=PATCH_CANDIDATE_REVIEW | patch=YES_REVIEW_ONLY | next=Review lowering total_goals projection/range for matching profiles; do not auto-apply.
 - - window_counts: MATCH_FINISHED=2; TOO_EARLY=2
 
