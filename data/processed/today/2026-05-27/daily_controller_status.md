@@ -37,8 +37,8 @@
 ## Pre-Lock Timing
 | fixture_id | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1544608 | Crystal Palace | Rayo Vallecano | OVER_1_5 | 2026-05-27T19:00:32.400000+00:00 | 48.02 | 2026-05-27T17:30:32.400000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
-| 1535322 | Independiente del Valle | Rosario Central | OVER_1_5 | 2026-05-27T22:00:33+00:00 | 228.03 | 2026-05-27T20:30:33+00:00 | PENDING_OUTSIDE_WINDOW | WAIT_FOR_PRELOCK |
+| 1544608 | Crystal Palace | Rayo Vallecano | OVER_1_5 | 2026-05-27T19:00:35+00:00 | 46.18 | 2026-05-27T17:30:35+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1535322 | Independiente del Valle | Rosario Central | OVER_1_5 | 2026-05-27T22:00:35.600000+00:00 | 226.19 | 2026-05-27T20:30:35.600000+00:00 | PENDING_OUTSIDE_WINDOW | WAIT_FOR_PRELOCK |
 
 ## Ledger State
 | experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |

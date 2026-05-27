@@ -13,13 +13,14 @@
 | --- | --- |
 | true_pre_rows | 20 |
 | backfilled_rows | 0 |
-| calibration_usable_rows | 0 |
-| audit_only_rows | 20 |
+| calibration_usable_rows | 1 |
+| audit_only_rows | 19 |
 
 ## CLV Direction Mix
 | clv_direction | rows |
 | --- | --- |
-| CLV_UNAVAILABLE | 20 |
+| CLV_UNAVAILABLE | 19 |
+| CLV_FLAT | 1 |
 
 ## CLV Rows
 | target_date | fixture_id | league | home_team | away_team | market_primary | experiment_id | source_candidate_version | pre_price | prelock_price | close_proxy_price | clv_delta | clv_percent | clv_direction | clv_interpretation | result | profit_units | snapshot_rebuild_mode | true_pre_snapshot_available_flag | clv_usable_for_threshold_calibration_flag | source_snapshot_stage | source_snapshot_note |
@@ -43,6 +44,6 @@
 | 2026-05-27 | 1535329 | CONMEBOL Libertadores | Universitario | Deportes Tolima | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.54 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-27 | 1544608 | UEFA Europa Conference League | Crystal Palace | Rayo Vallecano | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | CANDIDATE_V2 | 1.46 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-27 | 1544608 | UEFA Europa Conference League | Crystal Palace | Rayo Vallecano | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.46 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
-| 2026-05-27 | 1544608 | UEFA Europa Conference League | Crystal Palace | Rayo Vallecano | OVER_1_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE | 1.46 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-27 | 1544608 | UEFA Europa Conference League | Crystal Palace | Rayo Vallecano | OVER_1_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE;OFFICIAL_BASELINE_PRELOCK | 1.46 | 1.46 | 1.46 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. |  |  | CANONICAL_CAPTURED | 1 | 1 | PRE;PRELOCK | Captured by odds snapshot pipeline. |
 
 Interpretation note: close_proxy_price may come from CLOSE_PROXY, POST, or PRELOCK snapshots. It is not treated as true closing odds unless that data exists.
