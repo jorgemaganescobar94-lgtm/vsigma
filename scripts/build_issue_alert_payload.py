@@ -28,6 +28,10 @@ def signal_lines(text: str) -> list[str]:
         "BROKEN",
         "READY_LOW_STAKE_REVIEW",
         "LIVE_ONLY_WAIT_TRIGGER",
+        "LIVE_TRIGGER_CONFIRMED",
+        "LIVE_TRIGGER_REJECTED",
+        "TOO_LATE",
+        "MATCH_FINISHED",
         "PATCH_CANDIDATE_REVIEW",
         "API_CREDENTIALS_MISSING",
         "REFRESH_SKIPPED_NO_API_CREDENTIALS",
@@ -41,10 +45,11 @@ def build(day: str, tz: str) -> dict[str, str]:
     health = read(folder / "vsigma_automation_health.md")
     board = read(folder / "vsigma_daily_execution_board.md")
     prelock = read(folder / "vsigma_prelock_live_recheck.md")
+    live = read(folder / "vsigma_live_trigger_validator.md")
     memory = read(folder / "vsigma_calibration_memory_ledger.md")
 
     status = meta(health, "system_status")
-    combined = "\n".join([health, board, prelock, memory])
+    combined = "\n".join([health, board, prelock, live, memory])
     signals = signal_lines(combined)
 
     required = status == "BROKEN" or bool(signals)
@@ -62,7 +67,7 @@ def build(day: str, tz: str) -> dict[str, str]:
     ]
 
     if signals:
-        body.extend(f"- {line}" for line in signals[:30])
+        body.extend(f"- {line}" for line in signals[:40])
     else:
         body.append("- none")
 
@@ -71,6 +76,11 @@ def build(day: str, tz: str) -> dict[str, str]:
         "## Health Snapshot",
         "```",
         health[:6000] if health else "missing health report",
+        "```",
+        "",
+        "## Live Trigger Snapshot",
+        "```",
+        live[:4000] if live else "missing live trigger report",
         "```",
         "",
         "## Guardrails",
