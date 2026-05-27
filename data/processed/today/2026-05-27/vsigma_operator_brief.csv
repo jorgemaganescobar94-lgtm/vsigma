@@ -1,0 +1,7 @@
+target_date,generated_at,section,status,detail,next_action
+2026-05-27,2026-05-27T20:17:19+01:00,operator_status,PRELOCK_REVIEW,health=ATTENTION,Review low-stake candidates only if price/prelock/live still supports thesis.
+2026-05-27,2026-05-27T20:17:19+01:00,daily_board,STAT_WATCH_ONLY=4; NO_BET_OR_WATCH=4; NO_BET=4; PRELOCK_REVIEW_LOW_STAKE=2; LIVE_ONLY=2,rows=16,Review only candidates marked PRELOCK_REVIEW_LOW_STAKE or LIVE_ONLY.
+2026-05-27,2026-05-27T20:17:19+01:00,prelock_live,STAT_WATCH_ONLY=4; NO_BET_OR_WATCH=4; CANCELLED_NO_BET=4; READY_LOW_STAKE_REVIEW=2; LIVE_ONLY_WAIT_TRIGGER=2,rows=16,Use recheck state before any manual review.
+2026-05-27,2026-05-27T20:17:19+01:00,live_trigger,MATCH_FINISHED=2; TOO_EARLY=2,windows=MATCH_FINISHED=2; TOO_EARLY=2,Only LIVE_TRIGGER_CONFIRMED can justify manual live review.
+2026-05-27,2026-05-27T20:17:19+01:00,issue_alert,ATTENTION,required=true; notify=false,Issue alert is informational; no auto action.
+2026-05-27,2026-05-27T20:17:19+01:00,postmatch_learning,MODEL_OVER_ESTIMATING=3; MODEL_UNDER_ESTIMATING=2; CALIBRATION_OK=1,actual_rows=6; detail_rows=34,Use learning only after sufficient sample.
