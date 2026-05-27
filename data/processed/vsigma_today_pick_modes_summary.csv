@@ -1,14 +1,16 @@
 summary_scope,pick_mode,metric,rows_total,final_execution_bucket,final_recommendation,league,market_primary
 input,ALL,input_shortlist_rows,4,,,,
 input,ALL,bets_only_rows,4,,,,
-mode,SAFE_TOP5,safe_top5_rows,2,,,,
+mode,SAFE_TOP5,safe_top5_rows,3,,,,
 mode,BALANCED_TOP5,balanced_top5_rows,4,,,,
 mode,AGGRESSIVE_TOP5,aggressive_top5_rows,4,,,,
-SAFE_TOP5,SAFE_TOP5,rows_total,2,,,,
-by_final_execution_bucket,SAFE_TOP5,final_execution_bucket,2,APPROVED_PREMIUM,,,
-by_final_recommendation,SAFE_TOP5,final_recommendation,2,,BET,,
+SAFE_TOP5,SAFE_TOP5,rows_total,3,,,,
+by_final_execution_bucket,SAFE_TOP5,final_execution_bucket,3,APPROVED_PREMIUM,,,
+by_final_recommendation,SAFE_TOP5,final_recommendation,3,,BET,,
 by_league,SAFE_TOP5,league,1,,,CONMEBOL Libertadores,
 by_league,SAFE_TOP5,league,1,,,CONMEBOL Sudamericana,
+by_league,SAFE_TOP5,league,1,,,UEFA Europa Conference League,
+by_market_primary,SAFE_TOP5,market_primary,1,,,,BTTS_YES
 by_market_primary,SAFE_TOP5,market_primary,1,,,,OVER_1_5
 by_market_primary,SAFE_TOP5,market_primary,1,,,,OVER_2_5
 BALANCED_TOP5,BALANCED_TOP5,rows_total,4,,,,

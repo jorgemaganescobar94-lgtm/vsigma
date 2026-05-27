@@ -1,17 +1,11 @@
 fixture_id,home_team,away_team,tie_state_label,market_family_hint,vsigma_pre_score,vsigma_priority,tie_adjustment_note
-1535320,Flamengo,Cusco,AWAY_TRAILING,HOME_SIDE_OR_HOME_TEAM_TOTAL_CHECK,98.12,A_ANALIZAR_PRIMERO,away_trailing_keep_away_live
-1535326,Club Nacional,Coquimbo Unido,LEVEL_TIE,OVER_OR_BTTS_CHECK,86.91,A_ANALIZAR_PRIMERO,level_tie_flip_away_to_over
 1544608,Crystal Palace,Rayo Vallecano,,AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK,84.05,A_ANALIZAR_PRIMERO,
-1535319,Estudiantes L.P.,Independiente Medellin,LEVEL_TIE,OVER_OR_BTTS_CHECK,80.55,A_ANALIZAR_PRIMERO,level_tie_soft_opening
 1535322,Independiente del Valle,Rosario Central,LEVEL_TIE,OVER_OR_BTTS_CHECK,80.54,A_ANALIZAR_PRIMERO,level_tie_soft_opening
 1535225,Olimpia,A. Italiano,AWAY_TRAILING,HOME_SIDE_OR_HOME_TEAM_TOTAL_CHECK,82.47,A_ANALIZAR_PRIMERO,away_trailing_keep_away_live
-1535329,Universitario,Deportes Tolima,LEVEL_TIE,OVER_OR_BTTS_CHECK,79.07,A_ANALIZAR_PRIMERO,level_tie_soft_opening
 1535221,Caracas FC,Botafogo,LEVEL_TIE,OVER_OR_BTTS_CHECK,78.68,A_ANALIZAR_PRIMERO,level_tie_flip_away_to_over
 1535325,Libertad Asuncion,UCV,HOME_TRAILING,OVER_OR_BTTS_CHECK,82.23,A_ANALIZAR_PRIMERO,home_trailing_boost
 1535233,Vasco DA Gama,Barracas Central,LEVEL_TIE,HOME_SIDE_OR_HOME_TEAM_TOTAL_CHECK,77.9,A_ANALIZAR_PRIMERO,level_tie_soft_opening
 1535227,Racing Club,Independiente Petrolero,AWAY_TRAILING,OVER_OR_BTTS_CHECK,75.38,A_ANALIZAR_PRIMERO,away_trailing_keep_away_live
-1535230,Santos,Deportivo Cuenca,HOME_TRAILING,HOME_SIDE_OR_HOME_TEAM_TOTAL_CHECK,77.06,A_ANALIZAR_PRIMERO,home_trailing_boost
 1535222,Cienciano,Juventud,LEVEL_TIE,OVER_OR_BTTS_CHECK,72.66,A_ANALIZAR_PRIMERO,level_tie_soft_opening
 1535219,Atletico-MG,Puerto Cabello,HOME_TRAILING,OVER_OR_BTTS_CHECK,75.42,A_ANALIZAR_PRIMERO,home_trailing_boost
-1535229,San Lorenzo,Deportivo Recoleta,LEVEL_TIE,OVER_OR_BTTS_CHECK,70.21,A_ANALIZAR_PRIMERO,level_tie_soft_opening
 1542933,Cuniburo,Orense SC,,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,0.0,NO_DATA_BLOCKED,

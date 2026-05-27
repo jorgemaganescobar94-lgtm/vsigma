@@ -1,6 +1,6 @@
 summary_scope,metric,rows_total,final_execution_bucket,final_recommendation,league,market_primary
-eligibility,premium_core_rows,5,,,,
-eligibility,premium_extended_eligible_rows,4,,,,
+eligibility,premium_core_rows,4,,,,
+eligibility,premium_extended_eligible_rows,1,,,,
 eligibility,standard_eligible_rows,0,,,,
 final,final_shortlist_rows,4,,,,
 final,bets_only_rows,4,,,,

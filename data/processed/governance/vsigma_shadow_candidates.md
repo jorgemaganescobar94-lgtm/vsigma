@@ -1,14 +1,14 @@
 # vSIGMA Shadow Candidates - 2026-05-27
 
 ## Executive Shadow Candidate Summary
-- generated_at: 2026-05-27T01:20:28+01:00
+- generated_at: 2026-05-27T19:12:32+01:00
 - shadow_candidates: 2
 - shadow_decision_counts: SHADOW_DOWNGRADE_REVIEW=2
 - experiment_type_counts: LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=2
 
 ## Shadow Candidate Decisions
-- SHADOW_DOWNGRADE_REVIEW | Club Nacional vs Coquimbo Unido | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
 - SHADOW_DOWNGRADE_REVIEW | Crystal Palace vs Rayo Vallecano | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
+- SHADOW_DOWNGRADE_REVIEW | Independiente del Valle vs Rosario Central | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
 
 ## Guardrails
 - official picks changed: NO

@@ -3,15 +3,16 @@ vSIGMA TODAY BASELINE VS CANDIDATE V2
 Baseline: official frozen Competition Accuracy Mode + Probability Calibration.
 Candidate v2: SHADOW experimental schedule-strength + anomaly-cleaning layer.
 
-Baseline official picks: 1
-Candidate v2 shadow picks: 1
-Overlap: 1
+Baseline official picks: 2
+Candidate v2 shadow picks: 2
+Overlap: 2
 Only baseline chose: 0
 Only candidate chose: 0
 
 Side-by-side picks
-comparison_status                          fixture  baseline_rank  candidate_v2_rank baseline_market candidate_v2_market  baseline_calibrated_prob  candidate_v2_calibrated_prob  baseline_confidence_score  candidate_v2_confidence_score
-             BOTH Crystal Palace vs Rayo Vallecano              1                  1        OVER_1_5            OVER_1_5                   0.80846                       0.81316                    151.018                        152.068
+comparison_status                                    fixture  baseline_rank  candidate_v2_rank baseline_market candidate_v2_market  baseline_calibrated_prob  candidate_v2_calibrated_prob  baseline_confidence_score  candidate_v2_confidence_score
+             BOTH Independiente del Valle vs Rosario Central              2                  2        OVER_1_5            OVER_1_5                   0.83216                       0.83136                    154.531                        154.283
+             BOTH           Crystal Palace vs Rayo Vallecano              1                  1        OVER_1_5            OVER_1_5                   0.80846                       0.81316                    156.432                        157.482
 
 Reason differences
 All compared picks overlap. Review probability/confidence deltas in the CSV.
