@@ -16,7 +16,12 @@ RAPID = "https://api-football-v1.p.rapidapi.com/v3"
 LIVE = {"1H", "2H", "HT", "ET", "BT", "P", "LIVE"}
 FINAL = {"FT", "AET", "PEN"}
 CANDIDATE = {"READY_LOW_STAKE_REVIEW", "LIVE_ONLY_WAIT_TRIGGER", "LIVE_RECHECK_ONLY"}
-FIELDS = ["target_date","generated_at","rank","fixture_id","home_team","away_team","recheck_decision","market","match_status","elapsed","score","total_shots","total_sot","total_corners","home_possession","away_possession","signal_score","live_trigger_decision","reason","source_guard","auto_apply","production_change"]
+FIELDS = [
+    "target_date","generated_at","rank","fixture_id","home_team","away_team","recheck_decision","market",
+    "minutes_to_kickoff","window_status","match_status","elapsed","score","total_shots","total_sot",
+    "total_corners","home_possession","away_possession","signal_score","live_trigger_decision","reason",
+    "source_guard","auto_apply","production_change",
+]
 
 
 def n(v: object) -> str:
@@ -45,7 +50,11 @@ def write_csv(path: Path, rows: list[dict[str, object]]) -> None:
 
 
 def cfg() -> dict[str, str]:
-    return {"direct": os.getenv("API_FOOTBALL_KEY") or os.getenv("APISPORTS_KEY") or "", "rapid": os.getenv("RAPIDAPI_KEY") or os.getenv("X_RAPIDAPI_KEY") or "", "host": os.getenv("API_FOOTBALL_HOST") or "api-football-v1.p.rapidapi.com"}
+    return {
+        "direct": os.getenv("API_FOOTBALL_KEY") or os.getenv("APISPORTS_KEY") or "",
+        "rapid": os.getenv("RAPIDAPI_KEY") or os.getenv("X_RAPIDAPI_KEY") or "",
+        "host": os.getenv("API_FOOTBALL_HOST") or "api-football-v1.p.rapidapi.com",
+    }
 
 
 def api(path: str, params: dict[str, object], c: dict[str, str]) -> dict:
@@ -84,15 +93,27 @@ def fixture_state(fid: str, c: dict[str, str]) -> tuple[str, float, str, float, 
 def fixture_stats(fid: str, c: dict[str, str]) -> dict[str, float]:
     data = api("/fixtures/statistics", {"fixture": fid}, c)
     resp = data.get("response") or []
-    hs, as_, ts = stat(resp, "Total Shots")
-    hot, aot, tot = stat(resp, "Shots on Goal")
-    hc, ac, tc = stat(resp, "Corner Kicks")
+    _, _, shots = stat(resp, "Total Shots")
+    _, _, sot = stat(resp, "Shots on Goal")
+    _, _, corners = stat(resp, "Corner Kicks")
     hp, ap, _ = stat(resp, "Ball Possession")
-    return {"shots": ts, "sot": tot, "corners": tc, "hp": hp, "ap": ap}
+    return {"shots": shots, "sot": sot, "corners": corners, "hp": hp, "ap": ap}
 
 
-def decide(status: str, elapsed: float, goals: float, shots: float, sot: float, corners: float, market: str) -> tuple[int, str, str]:
-    if status in FINAL: return 0, "MATCH_FINISHED", "match already final"
+def window_status(status: str, elapsed: float, minutes_to_kickoff: float | None) -> str:
+    if status in FINAL: return "MATCH_FINISHED"
+    if status in LIVE:
+        return "IN_LIVE_WINDOW" if elapsed <= 25 else "TOO_LATE"
+    if minutes_to_kickoff is None: return "MATCH_NOT_LIVE"
+    if minutes_to_kickoff > 15: return "TOO_EARLY"
+    if minutes_to_kickoff < -25: return "TOO_LATE"
+    return "IN_LIVE_WINDOW"
+
+
+def trigger_decision(status: str, window: str, elapsed: float, goals: float, shots: float, sot: float, corners: float, market: str) -> tuple[int, str, str]:
+    if window == "MATCH_FINISHED": return 0, "MATCH_FINISHED", "match already final"
+    if window == "TOO_EARLY": return 0, "TOO_EARLY", "outside useful live window"
+    if window == "TOO_LATE": return 0, "TOO_LATE", "live window passed"
     if status not in LIVE: return 0, "MATCH_NOT_LIVE", "not live yet"
     score = 0
     if elapsed >= 8: score += 1
@@ -108,37 +129,46 @@ def decide(status: str, elapsed: float, goals: float, shots: float, sot: float, 
     return score, "LIVE_TRIGGER_REJECTED", "insufficient live signal"
 
 
+def mtko(row: dict[str, str]) -> float | None:
+    raw = n(row.get("minutes_to_kickoff") or row.get("min"))
+    if not raw or raw.upper() == "NA": return None
+    return num(raw, 0)
+
+
 def build(day: str, tz: str) -> list[dict[str, object]]:
     generated = datetime.now(ZoneInfo(tz)).isoformat(timespec="seconds")
     folder = ROOT / "today" / day
-    rows = [r for r in read_csv(folder / "vsigma_prelock_live_recheck.csv") if n(r.get("recheck_decision")) in CANDIDATE]
+    candidates = [r for r in read_csv(folder / "vsigma_prelock_live_recheck.csv") if n(r.get("recheck_decision")) in CANDIDATE]
     out: list[dict[str, object]] = []
     c = cfg()
-    for i, r in enumerate(rows, 1):
+    for i, r in enumerate(candidates, 1):
         fid = n(r.get("fixture_id")).replace(".0", "")
-        base = {"target_date": day, "generated_at": generated, "rank": i, "fixture_id": fid, "home_team": n(r.get("home_team")), "away_team": n(r.get("away_team")), "recheck_decision": n(r.get("recheck_decision")), "market": n(r.get("primary_market") or r.get("market")), "source_guard": "DATED_INPUT_ONLY", "auto_apply": "NO", "production_change": "NO"}
+        market = n(r.get("primary_market") or r.get("market"))
+        minutes = mtko(r)
+        base = {"target_date": day, "generated_at": generated, "rank": i, "fixture_id": fid, "home_team": n(r.get("home_team")), "away_team": n(r.get("away_team")), "recheck_decision": n(r.get("recheck_decision")), "market": market, "minutes_to_kickoff": "" if minutes is None else minutes, "source_guard": "DATED_INPUT_ONLY", "auto_apply": "NO", "production_change": "NO"}
         if not fid:
-            out.append({**base, "live_trigger_decision": "NO_FIXTURE_ID", "reason": "fixture_id missing"}); continue
+            out.append({**base, "window_status": "UNKNOWN", "live_trigger_decision": "NO_FIXTURE_ID", "reason": "fixture_id missing"}); continue
         try:
             st, elapsed, scoreline, hg, ag = fixture_state(fid, c)
-            stats = fixture_stats(fid, c) if st in LIVE else {"shots": 0, "sot": 0, "corners": 0, "hp": 0, "ap": 0}
-            sig, decision, reason = decide(st, elapsed, hg + ag, stats["shots"], stats["sot"], stats["corners"], base["market"])
-            out.append({**base, "match_status": st, "elapsed": elapsed, "score": scoreline, "total_shots": stats["shots"], "total_sot": stats["sot"], "total_corners": stats["corners"], "home_possession": stats["hp"], "away_possession": stats["ap"], "signal_score": sig, "live_trigger_decision": decision, "reason": reason})
+            win = window_status(st, elapsed, minutes)
+            stats = fixture_stats(fid, c) if st in LIVE and win == "IN_LIVE_WINDOW" else {"shots": 0, "sot": 0, "corners": 0, "hp": 0, "ap": 0}
+            sig, decision, reason = trigger_decision(st, win, elapsed, hg + ag, stats["shots"], stats["sot"], stats["corners"], market)
+            out.append({**base, "window_status": win, "match_status": st, "elapsed": elapsed, "score": scoreline, "total_shots": stats["shots"], "total_sot": stats["sot"], "total_corners": stats["corners"], "home_possession": stats["hp"], "away_possession": stats["ap"], "signal_score": sig, "live_trigger_decision": decision, "reason": reason})
         except Exception as e:
-            out.append({**base, "live_trigger_decision": "LIVE_NO_DATA", "reason": str(e)[:160]})
+            out.append({**base, "window_status": "UNKNOWN", "live_trigger_decision": "LIVE_NO_DATA", "reason": str(e)[:160]})
     return out
 
 
-def counts(rows: list[dict[str, object]]) -> str:
-    c = Counter(n(r.get("live_trigger_decision")) or "NONE" for r in rows)
+def count(rows: list[dict[str, object]], key: str) -> str:
+    c = Counter(n(r.get(key)) or "NONE" for r in rows)
     return "; ".join(f"{k}={v}" for k, v in c.items()) if c else "none"
 
 
 def md(day: str, rows: list[dict[str, object]]) -> str:
-    lines = [f"# vSIGMA Live Trigger Validator - {day}", "", "## Summary", f"- rows_validated: {len(rows)}", f"- live_trigger_counts: {counts(rows)}", "- auto_apply: NO", "- production_change: NO", "", "## Rows"]
+    lines = [f"# vSIGMA Live Trigger Validator - {day}", "", "## Summary", f"- rows_validated: {len(rows)}", f"- window_counts: {count(rows, 'window_status')}", f"- live_trigger_counts: {count(rows, 'live_trigger_decision')}", "- auto_apply: NO", "- production_change: NO", "", "## Rows"]
     if not rows: lines.append("- none. No live/prelock candidates found.")
     for r in rows:
-        lines.append(f"- #{r.get('rank')} | {r.get('live_trigger_decision')} | {r.get('home_team')} vs {r.get('away_team')} | market={r.get('market')} | status={r.get('match_status','')} | min={r.get('elapsed','')} | score={r.get('score','')} | shots={r.get('total_shots','')} | SoT={r.get('total_sot','')} | corners={r.get('total_corners','')} | signal={r.get('signal_score','')} | reason={r.get('reason','')}")
+        lines.append(f"- #{r.get('rank')} | window={r.get('window_status')} | decision={r.get('live_trigger_decision')} | {r.get('home_team')} vs {r.get('away_team')} | market={r.get('market')} | status={r.get('match_status','')} | min={r.get('elapsed','')} | mtko={r.get('minutes_to_kickoff','')} | score={r.get('score','')} | shots={r.get('total_shots','')} | SoT={r.get('total_sot','')} | corners={r.get('total_corners','')} | signal={r.get('signal_score','')} | reason={r.get('reason','')}")
     lines += ["", "## Guardrails", "- Diagnostic only; no execution.", "- Manual review required for any action."]
     return "\n".join(lines) + "\n"
 
@@ -149,7 +179,8 @@ def run(day: str, tz: str) -> None:
         write_csv(base / "vsigma_live_trigger_validator.csv", rows)
         (base / "vsigma_live_trigger_validator.md").write_text(md(day, rows), encoding="utf-8")
     print(f"rows_validated={len(rows)}")
-    print(f"live_trigger_counts={counts(rows)}")
+    print(f"window_counts={count(rows, 'window_status')}")
+    print(f"live_trigger_counts={count(rows, 'live_trigger_decision')}")
 
 
 def main() -> None:
