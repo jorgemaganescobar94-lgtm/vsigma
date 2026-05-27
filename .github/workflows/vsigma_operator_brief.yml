@@ -1,0 +1,55 @@
+name: vSIGMA Daily Operator Brief
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        required: false
+        default: ""
+  schedule:
+    - cron: "10 8 * * *"
+    - cron: "10 15 * * *"
+    - cron: "10 21 * * *"
+    - cron: "10 23 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vsigma-operator-brief-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ github.token }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Decide date
+        shell: bash
+        run: |
+          D="${{ github.event.inputs.date }}"
+          if [ -z "$D" ]; then D="$(TZ=Atlantic/Canary date +%F)"; fi
+          echo "VSIGMA_DATE=$D" >> "$GITHUB_ENV"
+      - name: Build operator brief
+        shell: bash
+        run: python scripts/build_operator_brief.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+      - name: Commit operator brief
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/processed/today/${VSIGMA_DATE}/vsigma_operator_brief.* data/processed/governance/vsigma_operator_brief.* 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No operator brief changes to commit."
+            exit 0
+          fi
+          git commit -m "vSIGMA operator brief ${VSIGMA_DATE} [skip ci]"
+          git push origin HEAD:main
