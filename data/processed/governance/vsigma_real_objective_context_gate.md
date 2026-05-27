@@ -8,10 +8,10 @@
 - production_change: NO
 
 ## Rows
-- #1 | TABLE_PROXY_TEMPO | Flamengo vs Cusco | market=BTTS_YES | override=PROXY_ONLY | edge=TEMPO | action=No real objective override available
-- #2 | TABLE_PROXY_TEMPO | Club Nacional vs Coquimbo Unido | market=OVER_1_5 | override=PROXY_ONLY | edge=TEMPO | action=No real objective override available
-- #3 | TABLE_PROXY_TEMPO | Olimpia vs A. Italiano | market=OVER_2_5 | override=PROXY_ONLY | edge=TEMPO | action=No real objective override available
-- #4 | TABLE_PROXY_TEMPO | Crystal Palace vs Rayo Vallecano | market=OVER_1_5 | override=PROXY_ONLY | edge=TEMPO | action=No real objective override available
+- #1 | TABLE_PROXY_TEMPO | Crystal Palace vs Rayo Vallecano | market=OVER_1_5 | override=PROXY_ONLY | edge=TEMPO | action=No real objective override available
+- #2 | TABLE_PROXY_TEMPO | Libertad Asuncion vs UCV | market=BTTS_YES | override=PROXY_ONLY | edge=TEMPO | action=No real objective override available
+- #3 | TABLE_PROXY_TEMPO | Independiente del Valle vs Rosario Central | market=OVER_1_5 | override=PROXY_ONLY | edge=TEMPO | action=No real objective override available
+- #4 | TABLE_PROXY_TEMPO | Olimpia vs A. Italiano | market=OVER_2_5 | override=PROXY_ONLY | edge=TEMPO | action=No real objective override available
 
 ## Guardrails
 - Real context overrides ranking urgency proxy.
