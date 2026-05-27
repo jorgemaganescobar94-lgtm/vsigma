@@ -1,6 +1,6 @@
 country,league,league_tier,league_filter_reason,matches
-USA,USL League Two,REJECT,country_league_not_allowlisted,19
-USA,USL W League,REJECT,country_league_not_allowlisted,17
+USA,USL League Two,REJECT,country_league_not_allowlisted,16
+USA,USL W League,REJECT,country_league_not_allowlisted,12
 Georgia,Liga 3,REJECT,country_league_not_allowlisted,8
 Argentina,Reserve League,REJECT,hard_reject_noise_league,6
 Kazakhstan,Premier League,REJECT,country_league_not_allowlisted,6
@@ -12,7 +12,6 @@ Estonia,Esiliiga A,REJECT,country_league_not_allowlisted,3
 Estonia,Esiliiga B,REJECT,country_league_not_allowlisted,3
 Ethiopia,Premier League,REJECT,country_league_not_allowlisted,3
 Mali,Première Division,REJECT,country_league_not_allowlisted,3
-USA,USL League One,REJECT,country_league_not_allowlisted,3
 Brazil,Copa do Nordeste,REJECT,country_league_not_allowlisted,2
 Colombia,Liga Femenina,REJECT,hard_reject_noise_league,2
 Finland,Ykkönen,REJECT,country_league_not_allowlisted,2
@@ -27,7 +26,6 @@ Azerbaijan,Premyer Liqa,REJECT,country_league_not_allowlisted,1
 Barbados,Premier League,REJECT,country_league_not_allowlisted,1
 Bhutan,Premier League,REJECT,country_league_not_allowlisted,1
 Brazil,Brasileiro U20 A,REJECT,hard_reject_noise_league,1
-Brazil,Copa Centro-Oeste,REJECT,country_league_not_allowlisted,1
 Brazil,Copa Espírito Santo,REJECT,country_league_not_allowlisted,1
 Bulgaria,First League,REJECT,country_league_not_allowlisted,1
 Czech-Republic,3. liga - CFL B,REJECT,country_league_not_allowlisted,1
@@ -39,7 +37,7 @@ Kuwait,Premier League,REJECT,country_league_not_allowlisted,1
 Kyrgyzstan,Premier League,REJECT,country_league_not_allowlisted,1
 Montenegro,Cup,REJECT,country_league_not_allowlisted,1
 Sweden,Svenska Cupen,REJECT,country_league_not_allowlisted,1
-USA,USL Championship,REJECT,country_league_not_allowlisted,1
+USA,USL League One,REJECT,country_league_not_allowlisted,1
 USA,USL League One Cup,REJECT,country_league_not_allowlisted,1
 World,CONMEBOL Libertadores,TIER_1,conmebol_libertadores,6
 Portugal,Primeira Liga,TIER_1,portugal_primeira_liga,1

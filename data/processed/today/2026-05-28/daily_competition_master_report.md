@@ -138,8 +138,8 @@ _No rows._
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: official_baseline_output: WARNING - only stale rows found for 2026-05-27
-- Recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-28 --timezone Atlantic/Canary --mode pre`
+- Critical warnings: freshness_report: WARNING - validation report contains warning rows
+- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-28`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-28/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
@@ -231,8 +231,8 @@ _No rows._
 | vsigma_today_match_script_forecasts.csv | FORECAST | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | vsigma_today_candidate_v2_match_script_forecasts.csv | FORECAST_CANDIDATE_V2 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-27'] does not match 2026-05-28 | 1 |
-| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-27'] does not match 2026-05-28 | 2 |
+| vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
+| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | today_pipeline_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
 | today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet | 0 |
 
