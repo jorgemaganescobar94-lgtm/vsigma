@@ -1,5 +1,5 @@
 target_date,generated_at,rank,fixture_id,home_team,away_team,market_primary,context_level,context_score,matrix_policy,audit_memory_level,final_portfolio_status,stake_guidance,operator_note,auto_apply,production_change
-2026-05-27,2026-05-27T15:25:19+01:00,1,1535320,Flamengo,Cusco,BTTS_YES,L5_EDGE_ONLY,20,no context edge,MEM_NONE,EDGE_ONLY_REVIEW,LOW,No context edge; allow only if price/stat edge remains strong.,NO,NO
-2026-05-27,2026-05-27T15:25:19+01:00,2,1535326,Club Nacional,Coquimbo Unido,OVER_1_5,L5_EDGE_ONLY,24,no context edge,MEM_NONE,EDGE_ONLY_REVIEW,LOW,No context edge; allow only if price/stat edge remains strong.,NO,NO
-2026-05-27,2026-05-27T15:25:19+01:00,3,1535225,Olimpia,A. Italiano,OVER_2_5,L7_SOFT_DOWN,54,reduced stake or live,MEM_NONE,LIVE_ONLY_OR_SYMBOLIC,SYMBOLIC_ONLY,Soft downgrade; only live confirmation or symbolic stake.,NO,NO
-2026-05-27,2026-05-27T15:25:19+01:00,4,1544608,Crystal Palace,Rayo Vallecano,OVER_1_5,L7_SOFT_DOWN,46,reduced stake or live,MEM_NONE,LIVE_ONLY_OR_SYMBOLIC,SYMBOLIC_ONLY,Soft downgrade; only live confirmation or symbolic stake.,NO,NO
+2026-05-27,2026-05-27T19:08:58+01:00,1,1535320,Flamengo,Cusco,BTTS_YES,L5_EDGE_ONLY,20,no context edge,MEM_NONE,EDGE_ONLY_REVIEW,LOW,No context edge; allow only if price/stat edge remains strong.,NO,NO
+2026-05-27,2026-05-27T19:08:58+01:00,2,1535326,Club Nacional,Coquimbo Unido,OVER_1_5,L5_EDGE_ONLY,24,no context edge,MEM_NONE,EDGE_ONLY_REVIEW,LOW,No context edge; allow only if price/stat edge remains strong.,NO,NO
+2026-05-27,2026-05-27T19:08:58+01:00,3,1535225,Olimpia,A. Italiano,OVER_2_5,L7_SOFT_DOWN,54,reduced stake or live,MEM_NONE,LIVE_ONLY_OR_SYMBOLIC,SYMBOLIC_ONLY,Soft downgrade; only live confirmation or symbolic stake.,NO,NO
+2026-05-27,2026-05-27T19:08:58+01:00,4,1544608,Crystal Palace,Rayo Vallecano,OVER_1_5,L7_SOFT_DOWN,46,reduced stake or live,MEM_NONE,LIVE_ONLY_OR_SYMBOLIC,SYMBOLIC_ONLY,Soft downgrade; only live confirmation or symbolic stake.,NO,NO
