@@ -1,2 +1,2 @@
 target_date,generated_at,rank,fixture_id,home_team,away_team,recheck_decision,market,minutes_to_kickoff,window_status,match_status,elapsed,score,total_shots,total_sot,total_corners,home_possession,away_possession,signal_score,live_trigger_decision,reason,source_guard,auto_apply,production_change
-2026-05-28,2026-05-28T22:33:59+01:00,1,1535327,Palmeiras,Junior,LIVE_ONLY_WAIT_TRIGGER,CORNERS_OVER_8_5_REVIEW,196.53,TOO_EARLY,NS,0,0-0,0,0,0,0,0,0,TOO_EARLY,outside useful live window,DATED_INPUT_ONLY,NO,NO
+2026-05-28,2026-05-28T23:14:03+01:00,1,1535327,Palmeiras,Junior,LIVE_ONLY_WAIT_TRIGGER,CORNERS_OVER_8_5_REVIEW,196.53,IN_LIVE_WINDOW,1H,14.0,1-0,5.0,2.0,0,41.0,59.0,3,WAIT_MORE_MINUTES,partial signal only,DATED_INPUT_ONLY,NO,NO
