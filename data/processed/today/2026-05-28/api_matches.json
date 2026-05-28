@@ -7800,7 +7800,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 68,
+          "elapsed": 83,
           "extra": null
         }
       },
@@ -7830,7 +7830,7 @@
       },
       "goals": {
         "home": 1,
-        "away": 3
+        "away": 4
       },
       "score": {
         "halftime": {
@@ -7870,7 +7870,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 66,
+          "elapsed": 86,
           "extra": null
         }
       },
@@ -7940,7 +7940,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 66,
+          "elapsed": 81,
           "extra": null
         }
       },
@@ -8000,7 +8000,7 @@
         "timestamp": 1779989400,
         "periods": {
           "first": 1779989400,
-          "second": null
+          "second": 1779993000
         },
         "venue": {
           "id": null,
@@ -8008,9 +8008,9 @@
           "city": null
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 57,
           "extra": null
         }
       },
@@ -8070,7 +8070,7 @@
         "timestamp": 1779989400,
         "periods": {
           "first": 1779989400,
-          "second": null
+          "second": 1779993000
         },
         "venue": {
           "id": null,
@@ -8078,10 +8078,10 @@
           "city": null
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
-          "extra": 4
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 53,
+          "extra": null
         }
       },
       "league": {
@@ -8140,7 +8140,7 @@
         "timestamp": 1779989400,
         "periods": {
           "first": 1779989400,
-          "second": null
+          "second": 1779993000
         },
         "venue": {
           "id": null,
@@ -8148,10 +8148,10 @@
           "city": null
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
-          "extra": 3
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 49,
+          "extra": null
         }
       },
       "league": {
@@ -8220,7 +8220,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 27,
+          "elapsed": 42,
           "extra": null
         }
       },
@@ -8290,7 +8290,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 29,
+          "elapsed": 44,
           "extra": null
         }
       },
@@ -8360,7 +8360,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 30,
+          "elapsed": 45,
           "extra": null
         }
       },
@@ -8379,23 +8379,23 @@
           "id": 18690,
           "name": "Lanús Res.",
           "logo": "https://media.api-sports.io/football/teams/18690.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 18693,
           "name": "Platense Res.",
           "logo": "https://media.api-sports.io/football/teams/18693.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -8430,7 +8430,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 28,
+          "elapsed": 43,
           "extra": null
         }
       },
@@ -8500,7 +8500,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 30,
+          "elapsed": 45,
           "extra": null
         }
       },
@@ -8570,7 +8570,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 29,
+          "elapsed": 43,
           "extra": null
         }
       },
@@ -8600,12 +8600,12 @@
       },
       "goals": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 1
+          "away": 2
         },
         "fulltime": {
           "home": null,
@@ -8624,7 +8624,7 @@
     {
       "fixture": {
         "id": 1543816,
-        "referee": null,
+        "referee": "L Benbraham, Algeria",
         "timezone": "Atlantic/Canary",
         "date": "2026-05-28T19:00:00+01:00",
         "timestamp": 1779991200,
@@ -8640,7 +8640,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 26,
+          "elapsed": 41,
           "extra": null
         }
       },
@@ -8699,7 +8699,7 @@
         "date": "2026-05-28T19:30:00+01:00",
         "timestamp": 1779993000,
         "periods": {
-          "first": null,
+          "first": 1779993000,
           "second": null
         },
         "venue": {
@@ -8708,9 +8708,9 @@
           "city": "Tuzi"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 13,
           "extra": null
         }
       },
@@ -8739,13 +8739,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -8769,7 +8769,7 @@
         "date": "2026-05-28T19:30:00+01:00",
         "timestamp": 1779993000,
         "periods": {
-          "first": null,
+          "first": 1779993000,
           "second": null
         },
         "venue": {
@@ -8778,9 +8778,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 13,
           "extra": null
         }
       },
@@ -8809,13 +8809,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -8839,7 +8839,7 @@
         "date": "2026-05-28T19:30:00+01:00",
         "timestamp": 1779993000,
         "periods": {
-          "first": null,
+          "first": 1779993000,
           "second": null
         },
         "venue": {
@@ -8848,9 +8848,9 @@
           "city": "Bagno a Ripoli"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 13,
           "extra": null
         }
       },
@@ -8879,13 +8879,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,

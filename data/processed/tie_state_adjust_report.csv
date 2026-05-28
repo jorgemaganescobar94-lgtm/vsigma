@@ -1,4 +1,4 @@
 fixture_id,home_team,away_team,tie_state_label,market_family_hint,vsigma_pre_score,vsigma_priority,tie_adjustment_note
 1535327,Palmeiras,Junior,LEVEL_TIE,HOME_SIDE_OR_HOME_TEAM_TOTAL_CHECK,84.31,A_ANALIZAR_PRIMERO,level_tie_soft_opening
 1535316,Cerro Porteno,Sporting Cristal,HOME_TRAILING,HOME_SIDE_OR_HOME_TEAM_TOTAL_CHECK,84.66,A_ANALIZAR_PRIMERO,home_trailing_boost
-1545404,Casa Pia,Torreense,,AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK,77.58,A_ANALIZAR_PRIMERO,
+1545404,Casa Pia,Torreense,,AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK,77.8,A_ANALIZAR_PRIMERO,
