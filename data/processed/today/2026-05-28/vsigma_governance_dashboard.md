@@ -72,7 +72,7 @@
 | 2026-05-28 | NO_BET_DAY | No model registered a pick. |
 
 ## CLV Data Sufficiency
-INSUFFICIENT_CLV_DATA: usable=0, available_direction_rows=0; do not change thresholds from CLV yet.
+INSUFFICIENT_CLV_DATA: usable=2, available_direction_rows=2; do not change thresholds from CLV yet.
 
 ## Evidence Status
 - All primary governance inputs available.
