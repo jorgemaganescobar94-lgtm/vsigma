@@ -32,7 +32,7 @@ _No rows._
 - Timezone: Atlantic/Canary
 - Window minutes: 90
 - PRE refreshed by auto controller: YES
-- PRE refresh reasons: snapshot official top has no rows for 2026-05-28; text trigger: Morning official picks reviewed: 0; text trigger: only stale rows found
+- PRE refresh reasons: snapshot official top has no rows for 2026-05-28; text trigger: Morning official picks reviewed: 0
 - PRELOCK retained no rows: YES
 - PRELOCK unavailable rows: 0
 - Candidate source used: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-28/vsigma_today_competition_top.csv

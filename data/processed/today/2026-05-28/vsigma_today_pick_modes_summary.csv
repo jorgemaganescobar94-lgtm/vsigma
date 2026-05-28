@@ -1,23 +1,21 @@
 summary_scope,pick_mode,metric,rows_total,final_execution_bucket,final_recommendation,league,market_primary
-input,ALL,input_shortlist_rows,2,,,,
-input,ALL,bets_only_rows,2,,,,
+input,ALL,input_shortlist_rows,1,,,,
+input,ALL,bets_only_rows,1,,,,
 mode,SAFE_TOP5,safe_top5_rows,1,,,,
-mode,BALANCED_TOP5,balanced_top5_rows,2,,,,
-mode,AGGRESSIVE_TOP5,aggressive_top5_rows,2,,,,
+mode,BALANCED_TOP5,balanced_top5_rows,1,,,,
+mode,AGGRESSIVE_TOP5,aggressive_top5_rows,1,,,,
 SAFE_TOP5,SAFE_TOP5,rows_total,1,,,,
 by_final_execution_bucket,SAFE_TOP5,final_execution_bucket,1,APPROVED_PREMIUM,,,
 by_final_recommendation,SAFE_TOP5,final_recommendation,1,,BET,,
 by_league,SAFE_TOP5,league,1,,,CONMEBOL Libertadores,
-by_market_primary,SAFE_TOP5,market_primary,1,,,,OVER_2_5
-BALANCED_TOP5,BALANCED_TOP5,rows_total,2,,,,
-by_final_execution_bucket,BALANCED_TOP5,final_execution_bucket,2,APPROVED_PREMIUM,,,
-by_final_recommendation,BALANCED_TOP5,final_recommendation,2,,BET,,
-by_league,BALANCED_TOP5,league,2,,,CONMEBOL Libertadores,
+by_market_primary,SAFE_TOP5,market_primary,1,,,,BTTS_YES
+BALANCED_TOP5,BALANCED_TOP5,rows_total,1,,,,
+by_final_execution_bucket,BALANCED_TOP5,final_execution_bucket,1,APPROVED_PREMIUM,,,
+by_final_recommendation,BALANCED_TOP5,final_recommendation,1,,BET,,
+by_league,BALANCED_TOP5,league,1,,,CONMEBOL Libertadores,
 by_market_primary,BALANCED_TOP5,market_primary,1,,,,BTTS_YES
-by_market_primary,BALANCED_TOP5,market_primary,1,,,,OVER_2_5
-AGGRESSIVE_TOP5,AGGRESSIVE_TOP5,rows_total,2,,,,
-by_final_execution_bucket,AGGRESSIVE_TOP5,final_execution_bucket,2,APPROVED_PREMIUM,,,
-by_final_recommendation,AGGRESSIVE_TOP5,final_recommendation,2,,BET,,
-by_league,AGGRESSIVE_TOP5,league,2,,,CONMEBOL Libertadores,
+AGGRESSIVE_TOP5,AGGRESSIVE_TOP5,rows_total,1,,,,
+by_final_execution_bucket,AGGRESSIVE_TOP5,final_execution_bucket,1,APPROVED_PREMIUM,,,
+by_final_recommendation,AGGRESSIVE_TOP5,final_recommendation,1,,BET,,
+by_league,AGGRESSIVE_TOP5,league,1,,,CONMEBOL Libertadores,
 by_market_primary,AGGRESSIVE_TOP5,market_primary,1,,,,BTTS_YES
-by_market_primary,AGGRESSIVE_TOP5,market_primary,1,,,,OVER_2_5

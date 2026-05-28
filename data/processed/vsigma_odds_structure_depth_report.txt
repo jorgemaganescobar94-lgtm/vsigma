@@ -5,32 +5,20 @@ Missing or thin odds are treated as uncertainty, not as a negative football sign
 
 Summary
                 summary_scope                 metric  rows_total
-                      overall        target_fixtures           9
-  odds_structure_depth_status                     OK           9
-odds_structure_coherence_flag             RICH_MIXED           8
-odds_structure_coherence_flag             RICH_NOISY           1
-      odds_total_ladder_shape               BALANCED           4
-      odds_total_ladder_shape            BROAD_GOALS           2
-      odds_total_ladder_shape             WIDE_GOALS           1
+                      overall        target_fixtures           3
+  odds_structure_depth_status                     OK           3
+odds_structure_coherence_flag             RICH_MIXED           3
       odds_total_ladder_shape              LOW_GOALS           1
       odds_total_ladder_shape             MILD_GOALS           1
- odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL           3
- odds_market_translation_hint           CAUTION_BTTS           2
- odds_market_translation_hint   CAUTION_FRAGILE_SIDE           2
+      odds_total_ladder_shape            BROAD_GOALS           1
  odds_market_translation_hint    PREFER_MILDER_TOTAL           2
-    odds_line_aggression_flag                NEUTRAL           4
-    odds_line_aggression_flag     OVER_2_5_SUPPORTED           3
+ odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL           1
     odds_line_aggression_flag AVOID_AGGRESSIVE_OVERS           1
     odds_line_aggression_flag        PREFER_OVER_1_5           1
+    odds_line_aggression_flag     OVER_2_5_SUPPORTED           1
 
 Fixture preview
- fixture_id                league     home_team           away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
-    1535315 CONMEBOL Libertadores       Bolívar Independ. Rivadavia                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3581                            -0.015
-    1535316 CONMEBOL Libertadores Cerro Porteno    Sporting Cristal                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.4101                            -0.015
-    1535317 CONMEBOL Libertadores   Corinthians            Platense                    RICH_MIXED               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.3826                            -0.015
-    1535321 CONMEBOL Libertadores    Fluminense Deportivo La Guaira                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.6177                             0.025
-    1535327 CONMEBOL Libertadores     Palmeiras              Junior                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.5018                             0.025
-    1535328 CONMEBOL Libertadores       Penarol            Santa Fe                    RICH_MIXED                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.4572                            -0.010
-    1545404         Primeira Liga      Casa Pia           Torreense                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3824                            -0.015
-    1535220 CONMEBOL Sudamericana RB Bragantino         Carabobo FC                    RICH_MIXED                BALANCED                 CAUTION_BTTS                   NEUTRAL                 0.4594                            -0.010
-    1535228 CONMEBOL Sudamericana   River Plate            Blooming                    RICH_NOISY              WIDE_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.9155                             0.015
+ fixture_id                league     home_team        away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
+    1535316 CONMEBOL Libertadores Cerro Porteno Sporting Cristal                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.4193                            -0.015
+    1535327 CONMEBOL Libertadores     Palmeiras           Junior                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.6217                             0.025
+    1545404         Primeira Liga      Casa Pia        Torreense                    RICH_MIXED               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.4499                            -0.015

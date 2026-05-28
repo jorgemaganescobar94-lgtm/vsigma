@@ -1,13 +1,4 @@
 fixture_id,home_team,away_team,tie_state_label,market_family_hint,vsigma_pre_score,vsigma_priority,tie_adjustment_note
-1535328,Penarol,Santa Fe,LEVEL_TIE,OVER_OR_BTTS_CHECK,85.69,A_ANALIZAR_PRIMERO,level_tie_flip_away_to_over
-1535317,Corinthians,Platense,AWAY_TRAILING,HOME_SIDE_OR_HOME_TEAM_TOTAL_CHECK,86.46,A_ANALIZAR_PRIMERO,away_trailing_keep_away_live
 1535327,Palmeiras,Junior,LEVEL_TIE,HOME_SIDE_OR_HOME_TEAM_TOTAL_CHECK,84.31,A_ANALIZAR_PRIMERO,level_tie_soft_opening
-1535315,Bolívar,Independ. Rivadavia,HOME_TRAILING,OVER_OR_BTTS_CHECK,87.73,A_ANALIZAR_PRIMERO,home_trailing_flip_away_to_over
-1535228,River Plate,Blooming,LEVEL_TIE,HOME_SIDE_OR_HOME_TEAM_TOTAL_CHECK,83.66,A_ANALIZAR_PRIMERO,level_tie_soft_opening
 1535316,Cerro Porteno,Sporting Cristal,HOME_TRAILING,HOME_SIDE_OR_HOME_TEAM_TOTAL_CHECK,84.66,A_ANALIZAR_PRIMERO,home_trailing_boost
-1535321,Fluminense,Deportivo La Guaira,LEVEL_TIE,OVER_OR_BTTS_CHECK,78.23,A_ANALIZAR_PRIMERO,level_tie_flip_away_to_over
 1545404,Casa Pia,Torreense,,AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK,77.58,A_ANALIZAR_PRIMERO,
-1535220,RB Bragantino,Carabobo FC,HOME_TRAILING,OVER_OR_BTTS_CHECK,76.57,A_ANALIZAR_PRIMERO,home_trailing_boost
-1533657,El Geish,Wadi Degla,,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,21.0,NO_DATA_BLOCKED,
-1533661,Ismaily SC,Pharco,,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,21.0,NO_DATA_BLOCKED,
-1533663,Petrojet,El Gouna FC,,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,21.0,NO_DATA_BLOCKED,

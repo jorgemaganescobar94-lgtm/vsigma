@@ -1,45 +1,12 @@
 country,league,league_tier,league_filter_reason,matches
-USA,USL League Two,REJECT,country_league_not_allowlisted,16
-USA,USL W League,REJECT,country_league_not_allowlisted,12
-Georgia,Liga 3,REJECT,country_league_not_allowlisted,8
-Argentina,Reserve League,REJECT,hard_reject_noise_league,6
-Kazakhstan,Premier League,REJECT,country_league_not_allowlisted,6
-Iraq,Iraqi League,REJECT,country_league_not_allowlisted,5
-World,Friendlies,REJECT,hard_reject_noise_league,5
-Kenya,Super League,REJECT,country_league_not_allowlisted,4
-Belarus,Coppa,REJECT,country_league_not_allowlisted,3
-Estonia,Esiliiga A,REJECT,country_league_not_allowlisted,3
-Estonia,Esiliiga B,REJECT,country_league_not_allowlisted,3
-Ethiopia,Premier League,REJECT,country_league_not_allowlisted,3
-Mali,Première Division,REJECT,country_league_not_allowlisted,3
-Brazil,Copa do Nordeste,REJECT,country_league_not_allowlisted,2
+USA,USL W League,REJECT,country_league_not_allowlisted,3
 Colombia,Liga Femenina,REJECT,hard_reject_noise_league,2
-Finland,Ykkönen,REJECT,country_league_not_allowlisted,2
-Poland,I Liga,REJECT,country_league_not_allowlisted,2
-Sudan,Sudani Premier League,REJECT,country_league_not_allowlisted,2
-World,CAF Cup of Nations - U17,REJECT,hard_reject_noise_league,2
-World,UEFA U17 Championship,REJECT,hard_reject_noise_league,2
-Albania,1st Division,REJECT,country_league_not_allowlisted,1
-Aruba,Division di Honor,REJECT,country_league_not_allowlisted,1
-Austria,Regionalliga - Ost,REJECT,hard_reject_noise_league,1
-Azerbaijan,Premyer Liqa,REJECT,country_league_not_allowlisted,1
-Barbados,Premier League,REJECT,country_league_not_allowlisted,1
-Bhutan,Premier League,REJECT,country_league_not_allowlisted,1
-Brazil,Brasileiro U20 A,REJECT,hard_reject_noise_league,1
+World,Friendlies,REJECT,hard_reject_noise_league,2
+Argentina,Reserve League,REJECT,hard_reject_noise_league,1
 Brazil,Copa Espírito Santo,REJECT,country_league_not_allowlisted,1
-Bulgaria,First League,REJECT,country_league_not_allowlisted,1
-Czech-Republic,3. liga - CFL B,REJECT,country_league_not_allowlisted,1
-Denmark,Kvindeliga,REJECT,hard_reject_noise_league,1
-Georgia,Erovnuli Liga,REJECT,country_league_not_allowlisted,1
-Germany,Regionalliga - Promotion Play-offs,REJECT,hard_reject_noise_league,1
 Italy,Campionato Primavera - 1,REJECT,country_league_not_allowlisted,1
-Kuwait,Premier League,REJECT,country_league_not_allowlisted,1
-Kyrgyzstan,Premier League,REJECT,country_league_not_allowlisted,1
 Montenegro,Cup,REJECT,country_league_not_allowlisted,1
-Sweden,Svenska Cupen,REJECT,country_league_not_allowlisted,1
-USA,USL League One,REJECT,country_league_not_allowlisted,1
-USA,USL League One Cup,REJECT,country_league_not_allowlisted,1
-World,CONMEBOL Libertadores,TIER_1,conmebol_libertadores,6
+Poland,I Liga,REJECT,country_league_not_allowlisted,1
+World,CAF Cup of Nations - U17,REJECT,hard_reject_noise_league,1
+World,CONMEBOL Libertadores,TIER_1,conmebol_libertadores,2
 Portugal,Primeira Liga,TIER_1,portugal_primeira_liga,1
-World,CONMEBOL Sudamericana,TIER_2,conmebol_sudamericana,2
-Egypt,Premier League,TIER_3,egypt_premier_league_noisy,3
