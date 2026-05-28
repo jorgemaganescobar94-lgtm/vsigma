@@ -1,3 +1,2 @@
 target_date,generated_at,rank,fixture_id,home_team,away_team,market_primary,context_level,context_score,matrix_policy,audit_memory_level,final_portfolio_status,stake_guidance,operator_note,auto_apply,production_change
-2026-05-28,2026-05-28T19:24:17+01:00,2,1535327,Palmeiras,Junior,BTTS_YES,L6_REVIEW,42,review only,MEM_NONE,REVIEW_ONLY,LOW_IF_CONFIRMED,Review only; low stake only with price/prelock/live confirmation.,NO,NO
-2026-05-28,2026-05-28T19:24:17+01:00,1,1535315,Bolívar,Independ. Rivadavia,OVER_2_5,L7_SOFT_DOWN,48,reduced stake or live,MEM_NONE,LIVE_ONLY_OR_SYMBOLIC,SYMBOLIC_ONLY,Soft downgrade; only live confirmation or symbolic stake.,NO,NO
+2026-05-28,2026-05-28T22:21:57+01:00,1,1535327,Palmeiras,Junior,BTTS_YES,L6_REVIEW,42,review only,MEM_NONE,REVIEW_ONLY,LOW_IF_CONFIRMED,Review only; low stake only with price/prelock/live confirmation.,NO,NO
