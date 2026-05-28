@@ -2,9 +2,9 @@
 
 ## Summary
 - rows_checked: 12
-- forecast_grade_counts: NO_ACTUALS_YET=6; D_RANGE_WEAK=3; B_RANGE_GOOD=3
-- total_goals_hit_counts: ACTUAL_UNAVAILABLE=6; MISS=4; HIT=2
-- total_sot_hit_counts: HIT=6; ACTUAL_UNAVAILABLE=6
+- forecast_grade_counts: B_RANGE_GOOD=5; D_RANGE_WEAK=4; NO_ACTUALS_YET=3
+- total_goals_hit_counts: HIT=5; MISS=4; ACTUAL_UNAVAILABLE=3
+- total_sot_hit_counts: HIT=8; ACTUAL_UNAVAILABLE=4
 - calibration_note: v45.1 refuses to grade non-final fixtures.
 - source_guard: DATED_INPUT_ONLY
 - auto_apply: NO
@@ -19,9 +19,9 @@
 - Penarol vs Santa Fe | status=FT | goals_actual=1 vs pred=1.83-3.30 (MISS) | SoT_actual=7 vs pred=6-12 (HIT) | grade=D_RANGE_WEAK | metrics=home_goals; away_goals; total_goals; total_sot; total_corners; total_cards; total_fouls
 - Fluminense vs Deportivo La Guaira | status=FT | goals_actual=4 vs pred=1.63-2.99 (MISS) | SoT_actual=6 vs pred=6-12 (HIT) | grade=D_RANGE_WEAK | metrics=home_goals; away_goals; total_goals; total_sot; total_corners; total_fouls
 - Palmeiras vs Junior | status=NS | goals_actual=NA vs pred=1.49-2.76 (ACTUAL_UNAVAILABLE) | SoT_actual=NA vs pred=5-10 (ACTUAL_UNAVAILABLE) | grade=NO_ACTUALS_YET | metrics=none
-- El Geish vs Wadi Degla | status=NS | goals_actual=NA vs pred=1.58-3.12 (ACTUAL_UNAVAILABLE) | SoT_actual=NA vs pred=5-11 (ACTUAL_UNAVAILABLE) | grade=NO_ACTUALS_YET | metrics=none
-- Ismaily SC vs Pharco | status=NS | goals_actual=NA vs pred=1.58-3.12 (ACTUAL_UNAVAILABLE) | SoT_actual=NA vs pred=5-11 (ACTUAL_UNAVAILABLE) | grade=NO_ACTUALS_YET | metrics=none
-- Petrojet vs El Gouna FC | status=NS | goals_actual=NA vs pred=1.58-3.12 (ACTUAL_UNAVAILABLE) | SoT_actual=NA vs pred=5-11 (ACTUAL_UNAVAILABLE) | grade=NO_ACTUALS_YET | metrics=none
+- El Geish vs Wadi Degla | status=FT | goals_actual=2 vs pred=1.58-3.12 (HIT) | SoT_actual=NA vs pred=5-11 (ACTUAL_UNAVAILABLE) | grade=D_RANGE_WEAK | metrics=home_goals; away_goals; total_goals; total_fouls
+- Ismaily SC vs Pharco | status=FT | goals_actual=3 vs pred=1.58-3.12 (HIT) | SoT_actual=10 vs pred=5-11 (HIT) | grade=B_RANGE_GOOD | metrics=home_goals; away_goals; total_goals; total_sot; total_corners; total_cards; total_fouls
+- Petrojet vs El Gouna FC | status=FT | goals_actual=3 vs pred=1.58-3.12 (HIT) | SoT_actual=9 vs pred=5-11 (HIT) | grade=B_RANGE_GOOD | metrics=home_goals; away_goals; total_goals; total_sot; total_corners; total_fouls
 - Casa Pia vs Torreense | status=NS | goals_actual=NA vs pred=1.42-2.83 (ACTUAL_UNAVAILABLE) | SoT_actual=NA vs pred=4-9 (ACTUAL_UNAVAILABLE) | grade=NO_ACTUALS_YET | metrics=none
 
 ## Guardrails

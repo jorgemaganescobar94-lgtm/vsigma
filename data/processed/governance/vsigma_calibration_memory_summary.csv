@@ -1,7 +1,7 @@
 generated_at,metric,days_observed,total_rows_evaluated,weighted_hit_rate,weighted_avg_abs_error_mid,dominant_bias,dominant_bias_days,latest_status,latest_severity,memory_decision,patch_candidate,recommended_next_action,auto_apply_allowed,source_guard,production_change
-2026-05-28T12:58:02+01:00,total_cards,3,13,0.769,2.08,UNDER_ESTIMATE,2,CALIBRATION_OK,LOW,CALIBRATION_STABLE,NO,Keep current model calibration and continue monitoring.,NO,DATED_INPUT_ONLY,NO
-2026-05-28T12:58:02+01:00,total_corners,3,15,0.600,2.87,OVER_ESTIMATE,2,MODEL_UNDER_ESTIMATING,LOW,CALIBRATION_STABLE,NO,Keep current model calibration and continue monitoring.,NO,DATED_INPUT_ONLY,NO
-2026-05-28T12:58:02+01:00,total_fouls,3,15,0.734,4.80,UNDER_ESTIMATE,2,MODEL_UNDER_ESTIMATING,HIGH,CALIBRATION_STABLE,NO,Keep current model calibration and continue monitoring.,NO,DATED_INPUT_ONLY,NO
-2026-05-28T12:58:02+01:00,total_goals,3,16,0.188,1.16,OVER_ESTIMATE,3,MODEL_OVER_ESTIMATING,HIGH,PATCH_CANDIDATE_REVIEW,YES_REVIEW_ONLY,Review lowering total_goals projection/range for matching profiles; do not auto-apply.,NO,DATED_INPUT_ONLY,NO
-2026-05-28T12:58:02+01:00,total_shots,3,15,0.733,4.53,OVER_ESTIMATE,2,CALIBRATION_OK,LOW,CALIBRATION_STABLE,NO,Keep current model calibration and continue monitoring.,NO,DATED_INPUT_ONLY,NO
-2026-05-28T12:58:02+01:00,total_sot,3,15,0.733,2.20,UNDER_ESTIMATE,1,CALIBRATION_OK,LOW,CALIBRATION_STABLE,NO,Keep current model calibration and continue monitoring.,NO,DATED_INPUT_ONLY,NO
+2026-05-28T19:20:25+01:00,total_cards,3,14,0.786,2.00,UNDER_ESTIMATE,2,CALIBRATION_OK,LOW,CALIBRATION_STABLE,NO,Keep current model calibration and continue monitoring.,NO,DATED_INPUT_ONLY,NO
+2026-05-28T19:20:25+01:00,total_corners,3,17,0.588,2.88,OVER_ESTIMATE,3,MODEL_OVER_ESTIMATING,LOW,MIXED_CALIBRATION_REVIEW,NO,Signal is mixed. Wait for more sample or segment by league/profile.,NO,DATED_INPUT_ONLY,NO
+2026-05-28T19:20:25+01:00,total_fouls,3,18,0.723,5.78,UNDER_ESTIMATE,1,MODEL_OVER_ESTIMATING,HIGH,CALIBRATION_STABLE,NO,Keep current model calibration and continue monitoring.,NO,DATED_INPUT_ONLY,NO
+2026-05-28T19:20:25+01:00,total_goals,3,19,0.316,1.06,OVER_ESTIMATE,3,MODEL_OVER_ESTIMATING,MEDIUM,PATCH_CANDIDATE_REVIEW,YES_REVIEW_ONLY,Review lowering total_goals projection/range for matching profiles; do not auto-apply.,NO,DATED_INPUT_ONLY,NO
+2026-05-28T19:20:25+01:00,total_shots,3,18,0.722,5.17,OVER_ESTIMATE,2,CALIBRATION_OK,LOW,CALIBRATION_STABLE,NO,Keep current model calibration and continue monitoring.,NO,DATED_INPUT_ONLY,NO
+2026-05-28T19:20:25+01:00,total_sot,3,17,0.765,2.12,UNDER_ESTIMATE,1,CALIBRATION_OK,LOW,CALIBRATION_STABLE,NO,Keep current model calibration and continue monitoring.,NO,DATED_INPUT_ONLY,NO
