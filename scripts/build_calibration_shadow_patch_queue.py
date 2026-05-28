@@ -8,6 +8,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 PROCESSED = Path("data/processed")
+LEDGER_PATH = PROCESSED / "ledger" / "vsigma_stat_calibration_memory.csv"
 
 FIELDS = [
     "target_date",
@@ -137,7 +138,26 @@ def patch_text(metric: str, bias: str) -> str:
     return "Hold formula; monitor until the signal is directional and sample-safe."
 
 
-def evaluate_row(row: dict[str, str]) -> dict[str, str]:
+def source_rows(day: str) -> tuple[list[dict[str, str]], str, str]:
+    """Prefer same-day summary, then same-day ledger fallback.
+
+    GitHub post-match refresh can occasionally return an empty same-day summary after a
+    prior non-empty calibration. The ledger preserves the last valid dated rows, so use it
+    as a same-date fallback instead of writing an empty shadow queue.
+    """
+    summary_path = dated(day, "vsigma_match_stat_forecast_calibration_summary.csv")
+    summary_rows = read_csv(summary_path)
+    if summary_rows:
+        return summary_rows, "DATED_SUMMARY", str(summary_path)
+
+    ledger_rows = [row for row in read_csv(LEDGER_PATH) if n(row.get("target_date")) == day]
+    if ledger_rows:
+        return ledger_rows, "LEDGER_DATED_FALLBACK", str(LEDGER_PATH)
+
+    return [], "EMPTY_SOURCE", str(summary_path)
+
+
+def evaluate_row(row: dict[str, str], source_guard: str) -> dict[str, str]:
     metric = n(row.get("metric"))
     rows_eval = i(row.get("rows_evaluated"))
     hit_rate = f(row.get("hit_rate"))
@@ -215,22 +235,22 @@ def evaluate_row(row: dict[str, str]) -> dict[str, str]:
         "model_area": metric_area(metric),
         "operator_note": note,
         "auto_apply_allowed": "NO",
-        "source_guard": "DATED_INPUT_ONLY",
+        "source_guard": source_guard,
         "auto_apply": "NO",
         "production_change": "NO",
     }
 
 
-def build(day: str, tz: str) -> list[dict[str, object]]:
+def build(day: str, tz: str) -> tuple[list[dict[str, object]], str, str]:
     generated_at = datetime.now(ZoneInfo(tz)).isoformat(timespec="seconds")
-    summary_rows = read_csv(dated(day, "vsigma_match_stat_forecast_calibration_summary.csv"))
+    input_rows, source_guard, source_path = source_rows(day)
     out: list[dict[str, object]] = []
-    for source_row in summary_rows:
-        row = evaluate_row(source_row)
+    for source_row in input_rows:
+        row = evaluate_row(source_row, source_guard)
         row["target_date"] = day
         row["generated_at"] = generated_at
         out.append(row)
-    return out
+    return out, source_guard, source_path
 
 
 def counts(rows: list[dict[str, object]], field: str) -> str:
@@ -238,7 +258,7 @@ def counts(rows: list[dict[str, object]], field: str) -> str:
     return "; ".join(f"{key}={value}" for key, value in counter.most_common()) if counter else "none"
 
 
-def md(day: str, rows: list[dict[str, object]]) -> str:
+def md(day: str, rows: list[dict[str, object]], source_guard: str, source_path: str) -> str:
     lines = [
         f"# vSIGMA Calibration Shadow Patch Queue - {day}",
         "",
@@ -247,25 +267,28 @@ def md(day: str, rows: list[dict[str, object]]) -> str:
         f"- queue_decisions: {counts(rows, 'queue_decision')}",
         f"- shadow_priorities: {counts(rows, 'shadow_priority')}",
         f"- threshold_gates: {counts(rows, 'threshold_gate')}",
+        f"- input_source_guard: {source_guard}",
+        f"- input_source_path: {source_path}",
         "- auto_apply_allowed: NO",
         "- production_change: NO",
         "",
         "## Queue",
     ]
     if not rows:
-        lines.append("- none. Need vsigma_match_stat_forecast_calibration_summary.csv first.")
+        lines.append("- none. Need calibration summary or same-date calibration memory ledger rows first.")
     for row in rows:
         lines.append(
             "- "
             f"{row['metric']} | decision={row['queue_decision']} | priority={row['shadow_priority']} | "
             f"sample={row['rows_evaluated']} | hit_rate={row['hit_rate']} | err={row['avg_abs_error_mid']} | "
-            f"bias={row['bias_direction']} | threshold={row['threshold_gate']} | patch={row['patch_candidate']}"
+            f"bias={row['bias_direction']} | threshold={row['threshold_gate']} | source={row['source_guard']} | patch={row['patch_candidate']}"
         )
     lines += [
         "",
         "## Guardrails",
         "- Shadow patch queue is advisory only; it does not edit forecast formulas.",
         "- No production change is allowed from this script.",
+        "- Ledger fallback is same-date only and exists only to avoid empty-refresh downgrades.",
         "- Promotion requires larger sample, consecutive non-regression, and manual review.",
     ]
     return "\n".join(lines) + "\n"
@@ -273,14 +296,16 @@ def md(day: str, rows: list[dict[str, object]]) -> str:
 
 def run(day: str, tz: str) -> None:
     day = date.fromisoformat(day).isoformat()
-    rows = build(day, tz)
+    rows, source_guard, source_path = build(day, tz)
     for base in [PROCESSED / "today" / day, PROCESSED / "governance"]:
         write_csv(base / "vsigma_calibration_shadow_patch_queue.csv", rows)
-        (base / "vsigma_calibration_shadow_patch_queue.md").write_text(md(day, rows), encoding="utf-8")
+        (base / "vsigma_calibration_shadow_patch_queue.md").write_text(md(day, rows, source_guard, source_path), encoding="utf-8")
     print("=== VSIGMA CALIBRATION SHADOW PATCH QUEUE ===")
     print(f"rows_reviewed={len(rows)}")
     print(f"queue_decisions={counts(rows, 'queue_decision')}")
     print(f"shadow_priorities={counts(rows, 'shadow_priority')}")
+    print(f"input_source_guard={source_guard}")
+    print(f"input_source_path={source_path}")
     print("auto_apply_allowed=NO")
     print("production_change=NO")
 
