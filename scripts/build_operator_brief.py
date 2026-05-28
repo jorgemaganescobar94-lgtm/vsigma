@@ -476,6 +476,8 @@ def historical_drift_check(previous: dict[str, str], current: dict[str, str]) ->
     tracked = ["action_level", "final_decision", "risk_label", "active_count", "active_signature"]
     changed: list[str] = []
     for field in tracked:
+        if field == "active_signature" and previous.get("active_count") == current.get("active_count") == "0":
+            continue
         if previous.get(field, "UNKNOWN") != current.get(field, "UNKNOWN"):
             changed.append(field)
 
