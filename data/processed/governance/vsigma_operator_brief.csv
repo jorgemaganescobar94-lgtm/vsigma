@@ -1,7 +1,7 @@
 target_date,generated_at,section,status,detail,next_action
-2026-05-28,2026-05-28T09:28:23+01:00,operator_status,OK,health=UNKNOWN; active=0; waiting=0; closed=0,No operator action required.
-2026-05-28,2026-05-28T09:28:23+01:00,daily_board,NO_BET_OR_WATCH=7; NO_BET=4; LIVE_ONLY=1,rows=12,Review only candidates still active after live-window override.
-2026-05-28,2026-05-28T09:28:23+01:00,prelock_live,none,rows=0,Use recheck state with live validator freshness override.
-2026-05-28,2026-05-28T09:28:23+01:00,live_trigger,none,windows=none,Only LIVE_TRIGGER_CONFIRMED can justify manual live review.
-2026-05-28,2026-05-28T09:28:23+01:00,issue_alert,UNKNOWN,required=UNKNOWN; notify=UNKNOWN,Issue alert is informational; no auto action.
-2026-05-28,2026-05-28T09:28:23+01:00,postmatch_learning,UNKNOWN,actual_rows=UNKNOWN; detail_rows=UNKNOWN,Use learning only after sufficient sample.
+2026-05-28,2026-05-28T12:06:38+01:00,operator_status,OK,health=UNKNOWN; active=0; waiting=0; closed=0,No operator action required.
+2026-05-28,2026-05-28T12:06:38+01:00,daily_board,NO_BET_OR_WATCH=7; NO_BET=4; LIVE_ONLY=1,rows=12,Review only candidates still active after live-window override.
+2026-05-28,2026-05-28T12:06:38+01:00,prelock_live,none,rows=0,Use recheck state with live validator freshness override.
+2026-05-28,2026-05-28T12:06:38+01:00,live_trigger,none,windows=none,Only LIVE_TRIGGER_CONFIRMED can justify manual live review.
+2026-05-28,2026-05-28T12:06:38+01:00,issue_alert,UNKNOWN,required=UNKNOWN; notify=UNKNOWN,Issue alert is informational; no auto action.
+2026-05-28,2026-05-28T12:06:38+01:00,postmatch_learning,UNKNOWN,actual_rows=UNKNOWN; detail_rows=UNKNOWN,Use learning only after sufficient sample.
