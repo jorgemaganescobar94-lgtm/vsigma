@@ -217,28 +217,43 @@ def classify(
 
 
 def health_requires_operator_review(health_text: str, issue_text: str) -> bool:
-    """Keep noisy board/watch warnings out of operator_status when no action exists.
+    """Return True only for actionable system faults, not routine WARN/ATTENTION text.
 
-    ATTENTION becomes REVIEW only for broken/missing/failed inputs. Routine issue-alert
-    notifications remain visible in the summary but do not create an operator action by
-    themselves.
+    The health markdown contains explanatory guardrails such as "BROKEN means...".
+    Scanning the whole document with substring tokens makes those guardrails look
+    actionable. This function therefore inspects only structured component rows.
     """
     issue_severity = meta(issue_text, "severity").upper()
     if issue_severity in {"BROKEN", "CRITICAL", "ERROR"}:
         return True
 
-    actionable_tokens = [
-        "BROKEN",
-        "ERROR",
-        "MISSING",
-        "FAILED",
-        "EXCEPTION",
-        "STALE_CRITICAL",
-    ]
+    fault_statuses = {"BROKEN", "FAILED", "ERROR", "MISSING"}
+    fault_severities = {"CRITICAL", "ERROR"}
+    fault_actions = {"FIX", "REPAIR", "RERUN_REQUIRED"}
+
     for line in health_text.splitlines():
-        s = clean_line(line).upper()
-        if any(token in s for token in actionable_tokens):
+        s = clean_line(line)
+        if "severity=" not in s or "status=" not in s or "|" not in s:
+            continue
+
+        fields: dict[str, str] = {}
+        for part in s.split("|"):
+            if "=" not in part:
+                continue
+            key, value = part.strip().split("=", 1)
+            fields[key.strip().lower()] = value.strip().upper()
+
+        status = fields.get("status", "")
+        severity = fields.get("severity", "")
+        action = fields.get("action", "")
+
+        if status in fault_statuses:
             return True
+        if severity in fault_severities:
+            return True
+        if any(token in action for token in fault_actions):
+            return True
+
     return False
 
 
