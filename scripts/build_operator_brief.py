@@ -366,6 +366,8 @@ def compact_top_summary_rows(
     risk_label: str,
     final_decision: str,
     reason: str,
+    alert_route: str,
+    alert_materiality: str,
     active: list[str],
     waiting: list[str],
     closed: list[str],
@@ -376,6 +378,7 @@ def compact_top_summary_rows(
     return [
         ("Action", action_level, "First-read operator priority"),
         ("Risk", risk_label, "Operational risk after sanity + health gate"),
+        ("Alert", f"{alert_route} / {alert_materiality}", "Routing decision for operator notifications"),
         ("Counts", counts, "Candidate distribution"),
         ("Reason", reason, "Why this action level was selected"),
         ("Final", final_decision, f"sanity={sanity_status}; {sanity_detail}"),
@@ -510,6 +513,49 @@ def drift_summary_rows(previous: dict[str, str], current: dict[str, str], drift_
     ]
 
 
+def operator_alert_routing(
+    action_level: str,
+    sanity_status: str,
+    drift_status: str,
+    drift_notify_required: str,
+    risk_label: str,
+    operator_status: str,
+) -> tuple[str, str, str]:
+    """Translate operator state into a routing lane without sending anything."""
+    material_drift = drift_status == "MATERIAL_CHANGE" or drift_notify_required.lower() == "true"
+
+    if sanity_status == "FAIL" or action_level == "BROKEN" or operator_status == "BROKEN":
+        return "CRITICAL_STOP", "CRITICAL", "sanity failure or broken system state blocks operator usage"
+    if action_level == "REVIEW_NOW":
+        return "GITHUB_ISSUE_COMMENT", "HIGH", "manual review required now; no automatic execution"
+    if action_level == "LIVE":
+        if material_drift:
+            return "GITHUB_ISSUE_COMMENT", "MEDIUM", "live-window state changed materially"
+        return "LOCAL_ONLY", "LOW", "live-window watch exists but no material drift"
+    if action_level == "WATCH":
+        if material_drift:
+            return "LOCAL_ONLY", "LOW", "watch-only state changed materially; no stake permission"
+        return "NO_ALERT", "NONE", "watch-only state unchanged; no official action"
+    if action_level == "NONE":
+        if material_drift:
+            return "LOCAL_ONLY", "LOW", "non-action state changed but no operator action is required"
+        return "NO_ALERT", "NONE", "no action and no material drift"
+
+    if risk_label in {"HIGH", "CRITICAL"}:
+        return "GITHUB_ISSUE_COMMENT", "HIGH", "unknown high-risk operator state"
+    return "LOCAL_ONLY", "LOW", "unknown low-risk operator state"
+
+
+def alert_summary_rows(alert_route: str, alert_materiality: str, alert_reason: str, drift_status: str, drift_notify_required: str) -> list[tuple[str, str, str]]:
+    return [
+        ("Route", alert_route, "NO_ALERT / LOCAL_ONLY / GITHUB_ISSUE_COMMENT / CRITICAL_STOP"),
+        ("Materiality", alert_materiality, "NONE / LOW / MEDIUM / HIGH / CRITICAL"),
+        ("Reason", alert_reason, "Why this route was selected"),
+        ("Drift", drift_status, "Historical drift status"),
+        ("DriftNotify", drift_notify_required, "Raw material drift notification flag"),
+    ]
+
+
 def split_board_rows(board_rows: list[dict[str, str]], used_ids: set[str]) -> tuple[list[str], list[str]]:
     watch: list[str] = []
     no_bet: list[str] = []
@@ -557,7 +603,16 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
     active_signature = normalize_signature(active)
     current = current_snapshot(day, generated, op_status, action_level, final_decision, risk_label, active, waiting, closed, watch_only, no_bet)
     drift_status, drift_notify_required, drift_changed_fields, drift_detail = historical_drift_check(previous_snapshot, current)
+    alert_route, alert_materiality, alert_reason = operator_alert_routing(
+        action_level,
+        sanity_status,
+        drift_status,
+        drift_notify_required,
+        risk_label,
+        op_status,
+    )
     drift_rows = drift_summary_rows(previous_snapshot, current, drift_status, drift_notify_required, drift_changed_fields, drift_detail)
+    alert_rows = alert_summary_rows(alert_route, alert_materiality, alert_reason, drift_status, drift_notify_required)
     compact_rows = compact_top_summary_rows(
         action_level,
         sanity_status,
@@ -565,6 +620,8 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
         risk_label,
         final_decision,
         reason,
+        alert_route,
+        alert_materiality,
         active,
         waiting,
         closed,
@@ -578,6 +635,7 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
     add(rows, day, generated, "operator_sanity_check", sanity_status, sanity_detail, "If FAIL, inspect CSV/MD mismatch before using the brief.")
     add(rows, day, generated, "operator_compact_summary", final_decision, f"action_level={action_level}; risk={risk_label}; active_signature={active_signature}; reason={reason}", "Read this row first for the final operator decision.")
     add(rows, day, generated, "operator_drift_check", drift_status, f"notify={drift_notify_required}; changed={drift_changed_fields}; {drift_detail}", "Notify only if MATERIAL_CHANGE.")
+    add(rows, day, generated, "operator_alert_route", alert_route, f"materiality={alert_materiality}; reason={alert_reason}; drift_status={drift_status}; drift_notify={drift_notify_required}", "Route only; this script does not send alerts.")
     add(rows, day, generated, "daily_board", meta(board, "final_decision_counts"), f"rows={meta(board, 'rows_on_board')}", "Review only candidates still active after live-window override.")
     add(rows, day, generated, "prelock_live", meta(prelock, "recheck_decision_counts"), f"rows={meta(prelock, 'rows_rechecked')}", "Use recheck state with live validator freshness override.")
     add(rows, day, generated, "live_trigger", meta(live, "live_trigger_counts"), f"windows={meta(live, 'window_counts')}", "Only LIVE_TRIGGER_CONFIRMED can justify manual live review.")
@@ -596,6 +654,13 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
     md += [f"| {md_cell(field)} | {md_cell(value)} | {md_cell(meaning)} |" for field, value, meaning in compact_rows]
     md += [
         "",
+        "## Alert Routing",
+        "| Field | Value | Meaning |",
+        "|---|---|---|",
+    ]
+    md += [f"| {md_cell(field)} | {md_cell(value)} | {md_cell(meaning)} |" for field, value, meaning in alert_rows]
+    md += [
+        "",
         "## Historical Drift Check",
         "| Field | Value | Meaning |",
         "|---|---|---|",
@@ -607,6 +672,9 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
         f"- action_level: {action_level}",
         f"- compact_final_decision: {final_decision}",
         f"- risk_label: {risk_label}",
+        f"- alert_route: {alert_route}",
+        f"- alert_materiality: {alert_materiality}",
+        f"- alert_reason: {alert_reason}",
         f"- drift_status: {drift_status}",
         f"- drift_notify_required: {drift_notify_required}",
         f"- drift_changed_fields: {drift_changed_fields}",
@@ -628,6 +696,9 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
         f"- ACTION_LEVEL={action_level}",
         f"- RISK_LABEL={risk_label}",
         f"- FINAL_DECISION={final_decision}",
+        f"- ALERT_ROUTE={alert_route}",
+        f"- ALERT_MATERIALITY={alert_materiality}",
+        f"- ALERT_REASON={alert_reason}",
         f"- DRIFT_STATUS={drift_status}",
         f"- DRIFT_NOTIFY_REQUIRED={drift_notify_required}",
         f"- SANITY_CHECK={sanity_status}",
@@ -663,6 +734,7 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
         "- Manual review remains mandatory for every market.",
         "- Use PowerShell -Encoding UTF8 when reading local Markdown files on Windows.",
         "- Historical drift notifies only on material operator changes: action level, final decision, risk, or active candidates.",
+        "- Alert routing is diagnostic only; this script writes the route but does not send comments or external notifications.",
     ]
     return rows, "\n".join(md) + "\n"
 
@@ -687,7 +759,8 @@ def run(day: str, tz: str) -> None:
     sanity = next((r["status"] for r in rows if r.get("section") == "operator_sanity_check"), "UNKNOWN")
     final_decision = next((r["status"] for r in rows if r.get("section") == "operator_compact_summary"), "UNKNOWN")
     drift = next((r["status"] for r in rows if r.get("section") == "operator_drift_check"), "UNKNOWN")
-    print(f"operator_status={status}; action_level={action_level}; sanity_check={sanity}; final_decision={final_decision}; drift_status={drift}")
+    alert_route = next((r["status"] for r in rows if r.get("section") == "operator_alert_route"), "UNKNOWN")
+    print(f"operator_status={status}; action_level={action_level}; sanity_check={sanity}; final_decision={final_decision}; drift_status={drift}; alert_route={alert_route}")
 
 
 def main() -> None:
