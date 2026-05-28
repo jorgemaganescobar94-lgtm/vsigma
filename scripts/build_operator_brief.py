@@ -257,6 +257,66 @@ def health_requires_operator_review(health_text: str, issue_text: str) -> bool:
     return False
 
 
+def operator_action_level(op_status: str, active: list[str], waiting: list[str], watch_only: list[str]) -> str:
+    """First-read operator priority, independent from diagnostic health noise."""
+    if op_status == "BROKEN":
+        return "BROKEN"
+    if op_status in {"ACTION_REVIEW_NOW", "PRELOCK_REVIEW", "REVIEW"} or active:
+        return "REVIEW_NOW"
+    if op_status == "WAIT_LIVE_WINDOW" or waiting:
+        return "LIVE"
+    if watch_only:
+        return "WATCH"
+    return "NONE"
+
+
+def operator_sanity_check(
+    op_status: str,
+    action_level: str,
+    active: list[str],
+    waiting: list[str],
+    closed: list[str],
+    watch_only: list[str],
+    no_bet: list[str],
+) -> tuple[str, str]:
+    """Detect impossible status/count combinations before the brief is trusted."""
+    errors: list[str] = []
+
+    if op_status == "OK" and (active or waiting or closed):
+        errors.append("OK cannot have active/waiting/closed candidates")
+    if op_status == "WAIT_LIVE_WINDOW" and not waiting:
+        errors.append("WAIT_LIVE_WINDOW requires waiting candidates")
+    if op_status == "PRELOCK_REVIEW" and not active:
+        errors.append("PRELOCK_REVIEW requires active candidates")
+    if op_status == "ACTION_REVIEW_NOW" and not active:
+        errors.append("ACTION_REVIEW_NOW requires active candidates")
+    if op_status == "CLOSED_OR_WINDOW_MISSED" and not closed:
+        errors.append("CLOSED_OR_WINDOW_MISSED requires closed candidates")
+    if action_level == "BROKEN" and op_status != "BROKEN":
+        errors.append("BROKEN action level requires BROKEN operator status")
+    if action_level == "REVIEW_NOW" and not (active or op_status in {"ACTION_REVIEW_NOW", "PRELOCK_REVIEW", "REVIEW"}):
+        errors.append("REVIEW_NOW requires active/review status")
+    if action_level == "LIVE" and not (waiting or op_status == "WAIT_LIVE_WINDOW"):
+        errors.append("LIVE action level requires waiting live window")
+    if action_level == "WATCH" and (active or waiting):
+        errors.append("WATCH cannot coexist with active/waiting candidates")
+    if action_level == "NONE" and (active or waiting or watch_only):
+        errors.append("NONE cannot coexist with active/waiting/watch candidates")
+
+    if errors:
+        return "FAIL", "; ".join(errors)
+
+    if action_level == "WATCH":
+        return "PASS", f"watch_only={len(watch_only)}; no official action; no active/live review"
+    if action_level == "NONE":
+        return "PASS", f"no active/live/watch action; no_bet={len(no_bet)}; closed={len(closed)}"
+    if action_level == "LIVE":
+        return "PASS", f"waiting_live_window={len(waiting)}; manual live validator rerun required"
+    if action_level == "REVIEW_NOW":
+        return "PASS", f"active_review={len(active)}; manual review required; no auto execution"
+    return "PASS", "broken-state routing is explicit"
+
+
 def split_board_rows(board_rows: list[dict[str, str]], used_ids: set[str]) -> tuple[list[str], list[str]]:
     watch: list[str] = []
     no_bet: list[str] = []
@@ -294,9 +354,13 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
     requires_review = health_requires_operator_review(health, issue)
     op_status, op_action, active, waiting, closed, used_ids = classify(prelock_rows, live_rows, hs, requires_review)
     watch_only, no_bet = split_board_rows(board_rows, used_ids)
+    action_level = operator_action_level(op_status, active, waiting, watch_only)
+    sanity_status, sanity_detail = operator_sanity_check(op_status, action_level, active, waiting, closed, watch_only, no_bet)
 
     rows: list[dict[str, str]] = []
     add(rows, day, generated, "operator_status", op_status, f"health={hs}; active={len(active)}; waiting={len(waiting)}; closed={len(closed)}; watch={len(watch_only)}; no_bet={len(no_bet)}", op_action)
+    add(rows, day, generated, "operator_action_level", action_level, f"sanity={sanity_status}; {sanity_detail}", "Use action_level as the first-read operator priority.")
+    add(rows, day, generated, "operator_sanity_check", sanity_status, sanity_detail, "If FAIL, inspect CSV/MD mismatch before using the brief.")
     add(rows, day, generated, "daily_board", meta(board, "final_decision_counts"), f"rows={meta(board, 'rows_on_board')}", "Review only candidates still active after live-window override.")
     add(rows, day, generated, "prelock_live", meta(prelock, "recheck_decision_counts"), f"rows={meta(prelock, 'rows_rechecked')}", "Use recheck state with live validator freshness override.")
     add(rows, day, generated, "live_trigger", meta(live, "live_trigger_counts"), f"windows={meta(live, 'window_counts')}", "Only LIVE_TRIGGER_CONFIRMED can justify manual live review.")
@@ -309,6 +373,8 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
     md = [
         f"# vSIGMA Daily Operator Brief - {day}", "",
         "## Executive Summary",
+        f"- action_level: {action_level}",
+        f"- sanity_check: {sanity_status} | {sanity_detail}",
         f"- operator_status: {op_status}",
         f"- primary_next_action: {op_action}",
         f"- health_status: {hs}",
@@ -322,6 +388,12 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
         f"- live_triggers: {meta(live, 'live_trigger_counts')}",
         f"- alert_notify_required: {meta(issue, 'notify_required')}",
         "- auto_apply: NO", "- production_change: NO", "",
+        "## Operator Priority",
+        f"- ACTION_LEVEL={action_level}",
+        f"- SANITY_CHECK={sanity_status}",
+        f"- SANITY_DETAIL={sanity_detail}",
+        f"- WINDOWS_READ=UTF8 | Get-Content {folder / 'vsigma_operator_brief.md'} -Encoding UTF8",
+        "",
         "## Active Review",
     ]
     md += [f"- {x}" for x in active] if active else ["- none"]
@@ -349,6 +421,7 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
         "## Guardrails",
         "- Brief is diagnostic only; it does not execute bets.",
         "- Manual review remains mandatory for every market.",
+        "- Use PowerShell -Encoding UTF8 when reading local Markdown files on Windows.",
     ]
     return rows, "\n".join(md) + "\n"
 
@@ -367,7 +440,11 @@ def run(day: str, tz: str) -> None:
     for base in [ROOT / "today" / day, ROOT / "governance"]:
         write_csv(base / "vsigma_operator_brief.csv", rows)
         write(base / "vsigma_operator_brief.md", brief)
-    print(f"operator_status={rows[0]['status'] if rows else 'UNKNOWN'}")
+
+    status = rows[0]["status"] if rows else "UNKNOWN"
+    action_level = next((r["status"] for r in rows if r.get("section") == "operator_action_level"), "UNKNOWN")
+    sanity = next((r["status"] for r in rows if r.get("section") == "operator_sanity_check"), "UNKNOWN")
+    print(f"operator_status={status}; action_level={action_level}; sanity_check={sanity}")
 
 
 def main() -> None:
