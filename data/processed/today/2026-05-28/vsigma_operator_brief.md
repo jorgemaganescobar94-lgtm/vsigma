@@ -1,16 +1,16 @@
 # vSIGMA Daily Operator Brief - 2026-05-28
 
 ## Executive Summary
-- operator_status: OK
-- primary_next_action: No operator action required.
-- health_status: UNKNOWN
+- operator_status: REVIEW
+- primary_next_action: Open health/board/recheck summaries; no automatic action.
+- health_status: ATTENTION
 - active_candidates: 0
 - waiting_live_window: 0
 - closed_or_missed: 0
 - board_decisions: NO_BET_OR_WATCH=7; NO_BET=4; LIVE_ONLY=1
 - recheck_decisions: none
 - live_triggers: none
-- alert_notify_required: UNKNOWN
+- alert_notify_required: true
 - auto_apply: NO
 - production_change: NO
 
@@ -41,7 +41,13 @@
 - #12 | NO_BET | Petrojet vs El Gouna FC | market=NO_CLEAR_STAT_MARKET | alt=NONE | stake=NO_STAKE | score=-42 | conf=LOW | bucket=BLOCKED | stats=goals 1.58-3.12 | shots 17-29 | SoT 5-11 | corners 6-13 | cards 2-6 | prelock=none | live=none | cancel=default no bet; low forecast confidence
 
 ## Learning / Calibration
-- no calibration signal
+- calibration_status_counts: CALIBRATION_OK=3; MODEL_UNDER_ESTIMATING=2; MODEL_OVER_ESTIMATING=1
+- total_cards | rows=5 | hit_rate=0.800 | avg_error=1.60 | bias=OVER_ESTIMATE | status=CALIBRATION_OK
+- total_corners | rows=6 | hit_rate=0.667 | avg_error=2.50 | bias=UNDER_ESTIMATE | status=MODEL_UNDER_ESTIMATING
+- total_fouls | rows=6 | hit_rate=0.667 | avg_error=6.33 | bias=UNDER_ESTIMATE | status=MODEL_UNDER_ESTIMATING
+- total_goals | rows=6 | hit_rate=0.333 | avg_error=1.01 | bias=OVER_ESTIMATE | status=MODEL_OVER_ESTIMATING
+- total_shots | rows=6 | hit_rate=0.833 | avg_error=2.67 | bias=OVER_ESTIMATE | status=CALIBRATION_OK
+- total_sot | rows=6 | hit_rate=1.000 | avg_error=1.50 | bias=BALANCED_OR_ON_RANGE | status=CALIBRATION_OK
 
 ## Key Files
 - data/processed/today/2026-05-28/vsigma_daily_execution_board.md
