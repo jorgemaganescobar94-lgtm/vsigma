@@ -1,14 +1,14 @@
 # vSIGMA Autonomous Monitoring Summary - 2026-05-29
 
 ## Executive Status
-- generated_at: 2026-05-29T00:06:01+01:00
+- generated_at: 2026-05-29T00:52:29+01:00
 - mode: auto
 - daily_classification: DATA_BLOCKED
 - operational_verdict: NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA
 - action_level: ACTION_REQUIRED
 - predictive_failure: NO
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26607428973
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26609214591
 
 ## Operator Action
 - Check provider/API coverage, odds availability, lineups, and data-gap flags before executing.

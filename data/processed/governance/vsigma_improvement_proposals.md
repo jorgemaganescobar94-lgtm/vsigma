@@ -1,7 +1,7 @@
 # vSIGMA Improvement Proposals - 2026-05-29
 
 ## Executive Proposal Summary
-- generated_at: 2026-05-29T00:06:03+01:00
+- generated_at: 2026-05-29T00:52:31+01:00
 - proposals generated: 13
 - proposal_type_counts: DATA_QUALITY_PROPOSAL=8; MODEL_SHADOW_PROPOSAL=3; OPERATIONAL_PROPOSAL=2
 - proposal_status_counts: PROPOSAL_ONLY=9; SHADOW_CANDIDATE_REQUIRED=2; MONITOR_ONLY=2

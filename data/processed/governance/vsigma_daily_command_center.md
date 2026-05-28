@@ -1,7 +1,7 @@
 # vSIGMA Daily Command Center - 2026-05-29
 
 ## Executive Command
-- generated_at: 2026-05-29T00:06:03+01:00
+- generated_at: 2026-05-29T00:52:31+01:00
 - mode: auto
 - command_center_status: ACTION_REQUIRED
 - daily_classification: DATA_BLOCKED
@@ -9,7 +9,7 @@
 - operational_verdict: NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA
 - predictive_failure: NO
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26607428973
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26609214591
 
 ## Next Operator Action
 - Check provider/API coverage, odds availability, lineups, and data-gap flags before executing.

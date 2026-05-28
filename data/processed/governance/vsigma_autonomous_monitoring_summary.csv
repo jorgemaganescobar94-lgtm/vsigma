@@ -1,2 +1,2 @@
 target_date,generated_at,mode,daily_classification,operational_verdict,action_level,predictive_failure,evidence_basis,operator_action,run_url
-2026-05-29,2026-05-29T00:06:01+01:00,auto,DATA_BLOCKED,NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA,ACTION_REQUIRED,NO,decision_quality_review,"Check provider/API coverage, odds availability, lineups, and data-gap flags before executing.",https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26607428973
+2026-05-29,2026-05-29T00:52:29+01:00,auto,DATA_BLOCKED,NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA,ACTION_REQUIRED,NO,decision_quality_review,"Check provider/API coverage, odds availability, lineups, and data-gap flags before executing.",https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26609214591
