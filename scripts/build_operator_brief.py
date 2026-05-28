@@ -77,6 +77,10 @@ def grep(text: str, keys: list[str], limit: int = 12) -> list[str]:
     return out
 
 
+def md_cell(value: object) -> str:
+    return clean_value(str(value or ""), limit=220).replace("|", "\\|")
+
+
 def fid(row: dict[str, str]) -> str:
     return str(row.get("fixture_id", "")).replace(".0", "").strip()
 
@@ -378,6 +382,132 @@ def compact_top_summary_rows(
     ]
 
 
+def parse_count(detail: str, name: str) -> str:
+    m = re.search(rf"\b{re.escape(name)}=(\d+)", detail or "")
+    return m.group(1) if m else "UNKNOWN"
+
+
+def parse_detail_value(detail: str, name: str) -> str:
+    m = re.search(rf"(?:^|;\s*){re.escape(name)}=([^;]+)", detail or "")
+    return clean_value(m.group(1), limit=120) if m else "UNKNOWN"
+
+
+def normalize_signature(lines: list[str]) -> str:
+    return " || ".join(sorted(clean_value(line, limit=260) for line in lines if clean_value(line, limit=260)))
+
+
+def snapshot_from_operator_rows(rows: list[dict[str, str]], source: str) -> dict[str, str]:
+    if not rows:
+        return {"source": source, "exists": "false"}
+
+    by_section = {r.get("section", ""): r for r in rows if r.get("section")}
+    status_row = by_section.get("operator_status", {})
+    action_row = by_section.get("operator_action_level", {})
+    compact_row = by_section.get("operator_compact_summary", {})
+
+    status_detail = status_row.get("detail", "")
+    compact_detail = compact_row.get("detail", "")
+
+    return {
+        "source": source,
+        "exists": "true",
+        "target_date": nz(status_row.get("target_date"), rows[0].get("target_date"), default="UNKNOWN"),
+        "generated_at": nz(status_row.get("generated_at"), rows[0].get("generated_at"), default="UNKNOWN"),
+        "operator_status": nz(status_row.get("status"), default="UNKNOWN"),
+        "action_level": nz(action_row.get("status"), default="UNKNOWN"),
+        "final_decision": nz(compact_row.get("status"), default="UNKNOWN"),
+        "risk_label": parse_detail_value(compact_detail, "risk"),
+        "active_count": parse_count(status_detail, "active"),
+        "waiting_count": parse_count(status_detail, "waiting"),
+        "closed_count": parse_count(status_detail, "closed"),
+        "watch_count": parse_count(status_detail, "watch"),
+        "no_bet_count": parse_count(status_detail, "no_bet"),
+        "active_signature": parse_detail_value(compact_detail, "active_signature"),
+    }
+
+
+def current_snapshot(
+    day: str,
+    generated: str,
+    op_status: str,
+    action_level: str,
+    final_decision: str,
+    risk_label: str,
+    active: list[str],
+    waiting: list[str],
+    closed: list[str],
+    watch_only: list[str],
+    no_bet: list[str],
+) -> dict[str, str]:
+    return {
+        "source": "current_build",
+        "exists": "true",
+        "target_date": day,
+        "generated_at": generated,
+        "operator_status": op_status,
+        "action_level": action_level,
+        "final_decision": final_decision,
+        "risk_label": risk_label,
+        "active_count": str(len(active)),
+        "waiting_count": str(len(waiting)),
+        "closed_count": str(len(closed)),
+        "watch_count": str(len(watch_only)),
+        "no_bet_count": str(len(no_bet)),
+        "active_signature": normalize_signature(active),
+    }
+
+
+def load_previous_snapshot(folder: Path) -> dict[str, str]:
+    today_path = folder / "vsigma_operator_brief.csv"
+    governance_path = ROOT / "governance" / "vsigma_operator_brief.csv"
+
+    if today_path.exists():
+        return snapshot_from_operator_rows(read_csv(today_path), str(today_path))
+    if governance_path.exists():
+        return snapshot_from_operator_rows(read_csv(governance_path), str(governance_path))
+    return {"source": "none", "exists": "false"}
+
+
+def historical_drift_check(previous: dict[str, str], current: dict[str, str]) -> tuple[str, str, str, str]:
+    """Return drift_status, notify_required, changed_fields, detail."""
+    if previous.get("exists") != "true":
+        return "NO_PREVIOUS", "false", "none", "no previous operator brief snapshot available"
+
+    tracked = ["action_level", "final_decision", "risk_label", "active_count", "active_signature"]
+    changed: list[str] = []
+    for field in tracked:
+        if previous.get(field, "UNKNOWN") != current.get(field, "UNKNOWN"):
+            changed.append(field)
+
+    if not changed:
+        return "NO_MATERIAL_CHANGE", "false", "none", "tracked operator fields unchanged"
+
+    detail_parts = [f"{field}: {previous.get(field, 'UNKNOWN')} -> {current.get(field, 'UNKNOWN')}" for field in changed]
+    return "MATERIAL_CHANGE", "true", ",".join(changed), "; ".join(detail_parts)
+
+
+def drift_summary_rows(previous: dict[str, str], current: dict[str, str], drift_status: str, notify_required: str, changed_fields: str, detail: str) -> list[tuple[str, str, str]]:
+    previous_core = "none"
+    if previous.get("exists") == "true":
+        previous_core = (
+            f"date={previous.get('target_date', 'UNKNOWN')}; action={previous.get('action_level', 'UNKNOWN')}; "
+            f"risk={previous.get('risk_label', 'UNKNOWN')}; final={previous.get('final_decision', 'UNKNOWN')}; "
+            f"active={previous.get('active_count', 'UNKNOWN')}"
+        )
+    current_core = (
+        f"date={current.get('target_date', 'UNKNOWN')}; action={current.get('action_level', 'UNKNOWN')}; "
+        f"risk={current.get('risk_label', 'UNKNOWN')}; final={current.get('final_decision', 'UNKNOWN')}; "
+        f"active={current.get('active_count', 'UNKNOWN')}"
+    )
+    return [
+        ("Previous", previous_core, previous.get("source", "none")),
+        ("Current", current_core, current.get("source", "current_build")),
+        ("Drift", drift_status, detail),
+        ("Changed", changed_fields, "Tracked fields: action/final/risk/active"),
+        ("Notify", notify_required, "true only on material operator drift"),
+    ]
+
+
 def split_board_rows(board_rows: list[dict[str, str]], used_ids: set[str]) -> tuple[list[str], list[str]]:
     watch: list[str] = []
     no_bet: list[str] = []
@@ -407,6 +537,7 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
     issue = read(folder / "vsigma_issue_alert_status.md")
     cal = read(folder / "vsigma_match_stat_forecast_calibration.md")
     post = read(folder / "vsigma_post_match_stat_actuals.md")
+    previous_snapshot = load_previous_snapshot(folder)
     board_rows = read_csv(folder / "vsigma_daily_execution_board.csv")
     prelock_rows = read_csv(folder / "vsigma_prelock_live_recheck.csv")
     live_rows = read_csv(folder / "vsigma_live_trigger_validator.csv")
@@ -421,6 +552,10 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
     risk_label = compact_risk_label(action_level, sanity_status, hs, alert_notify_required)
     final_decision = compact_final_decision(action_level, sanity_status)
     reason = compact_reason(action_level, active, waiting, watch_only, no_bet)
+    active_signature = normalize_signature(active)
+    current = current_snapshot(day, generated, op_status, action_level, final_decision, risk_label, active, waiting, closed, watch_only, no_bet)
+    drift_status, drift_notify_required, drift_changed_fields, drift_detail = historical_drift_check(previous_snapshot, current)
+    drift_rows = drift_summary_rows(previous_snapshot, current, drift_status, drift_notify_required, drift_changed_fields, drift_detail)
     compact_rows = compact_top_summary_rows(
         action_level,
         sanity_status,
@@ -439,7 +574,8 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
     add(rows, day, generated, "operator_status", op_status, f"health={hs}; active={len(active)}; waiting={len(waiting)}; closed={len(closed)}; watch={len(watch_only)}; no_bet={len(no_bet)}", op_action)
     add(rows, day, generated, "operator_action_level", action_level, f"sanity={sanity_status}; {sanity_detail}", "Use action_level as the first-read operator priority.")
     add(rows, day, generated, "operator_sanity_check", sanity_status, sanity_detail, "If FAIL, inspect CSV/MD mismatch before using the brief.")
-    add(rows, day, generated, "operator_compact_summary", final_decision, f"action_level={action_level}; risk={risk_label}; reason={reason}", "Read this row first for the final operator decision.")
+    add(rows, day, generated, "operator_compact_summary", final_decision, f"action_level={action_level}; risk={risk_label}; active_signature={active_signature}; reason={reason}", "Read this row first for the final operator decision.")
+    add(rows, day, generated, "operator_drift_check", drift_status, f"notify={drift_notify_required}; changed={drift_changed_fields}; {drift_detail}", "Notify only if MATERIAL_CHANGE.")
     add(rows, day, generated, "daily_board", meta(board, "final_decision_counts"), f"rows={meta(board, 'rows_on_board')}", "Review only candidates still active after live-window override.")
     add(rows, day, generated, "prelock_live", meta(prelock, "recheck_decision_counts"), f"rows={meta(prelock, 'rows_rechecked')}", "Use recheck state with live validator freshness override.")
     add(rows, day, generated, "live_trigger", meta(live, "live_trigger_counts"), f"windows={meta(live, 'window_counts')}", "Only LIVE_TRIGGER_CONFIRMED can justify manual live review.")
@@ -455,13 +591,23 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
         "| Field | Value | Meaning |",
         "|---|---|---|",
     ]
-    md += [f"| {field} | {value} | {meaning} |" for field, value, meaning in compact_rows]
+    md += [f"| {md_cell(field)} | {md_cell(value)} | {md_cell(meaning)} |" for field, value, meaning in compact_rows]
+    md += [
+        "",
+        "## Historical Drift Check",
+        "| Field | Value | Meaning |",
+        "|---|---|---|",
+    ]
+    md += [f"| {md_cell(field)} | {md_cell(value)} | {md_cell(meaning)} |" for field, value, meaning in drift_rows]
     md += [
         "",
         "## Executive Summary",
         f"- action_level: {action_level}",
         f"- compact_final_decision: {final_decision}",
         f"- risk_label: {risk_label}",
+        f"- drift_status: {drift_status}",
+        f"- drift_notify_required: {drift_notify_required}",
+        f"- drift_changed_fields: {drift_changed_fields}",
         f"- sanity_check: {sanity_status} | {sanity_detail}",
         f"- operator_status: {op_status}",
         f"- primary_next_action: {op_action}",
@@ -480,6 +626,8 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
         f"- ACTION_LEVEL={action_level}",
         f"- RISK_LABEL={risk_label}",
         f"- FINAL_DECISION={final_decision}",
+        f"- DRIFT_STATUS={drift_status}",
+        f"- DRIFT_NOTIFY_REQUIRED={drift_notify_required}",
         f"- SANITY_CHECK={sanity_status}",
         f"- SANITY_DETAIL={sanity_detail}",
         f"- WINDOWS_READ=UTF8 | Get-Content {folder / 'vsigma_operator_brief.md'} -Encoding UTF8",
@@ -512,6 +660,7 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
         "- Brief is diagnostic only; it does not execute bets.",
         "- Manual review remains mandatory for every market.",
         "- Use PowerShell -Encoding UTF8 when reading local Markdown files on Windows.",
+        "- Historical drift notifies only on material operator changes: action level, final decision, risk, or active candidates.",
     ]
     return rows, "\n".join(md) + "\n"
 
@@ -535,7 +684,8 @@ def run(day: str, tz: str) -> None:
     action_level = next((r["status"] for r in rows if r.get("section") == "operator_action_level"), "UNKNOWN")
     sanity = next((r["status"] for r in rows if r.get("section") == "operator_sanity_check"), "UNKNOWN")
     final_decision = next((r["status"] for r in rows if r.get("section") == "operator_compact_summary"), "UNKNOWN")
-    print(f"operator_status={status}; action_level={action_level}; sanity_check={sanity}; final_decision={final_decision}")
+    drift = next((r["status"] for r in rows if r.get("section") == "operator_drift_check"), "UNKNOWN")
+    print(f"operator_status={status}; action_level={action_level}; sanity_check={sanity}; final_decision={final_decision}; drift_status={drift}")
 
 
 def main() -> None:
