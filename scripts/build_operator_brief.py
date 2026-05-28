@@ -317,6 +317,67 @@ def operator_sanity_check(
     return "PASS", "broken-state routing is explicit"
 
 
+def compact_risk_label(action_level: str, sanity_status: str, health_status: str, alert_notify_required: str) -> str:
+    if sanity_status == "FAIL" or action_level == "BROKEN" or health_status == "BROKEN":
+        return "HIGH"
+    if action_level == "REVIEW_NOW":
+        return "HIGH"
+    if action_level == "LIVE":
+        return "MEDIUM"
+    if action_level == "WATCH" and alert_notify_required.lower() == "true":
+        return "LOW_ALERT"
+    if action_level == "WATCH":
+        return "LOW"
+    return "NONE"
+
+
+def compact_final_decision(action_level: str, sanity_status: str) -> str:
+    if sanity_status == "FAIL":
+        return "STOP_SANITY_FAIL"
+    return {
+        "BROKEN": "SYSTEM_FIX_REQUIRED",
+        "REVIEW_NOW": "MANUAL_REVIEW_REQUIRED",
+        "LIVE": "WAIT_LIVE_WINDOW",
+        "WATCH": "WATCH_ONLY_NO_STAKE",
+        "NONE": "NO_OPERATOR_ACTION",
+    }.get(action_level, "UNKNOWN")
+
+
+def compact_reason(action_level: str, active: list[str], waiting: list[str], watch_only: list[str], no_bet: list[str]) -> str:
+    if action_level == "BROKEN":
+        return "system fault blocks market usage"
+    if action_level == "REVIEW_NOW":
+        return f"{len(active)} active manual-review candidate(s); no automatic execution"
+    if action_level == "LIVE":
+        return f"{len(waiting)} candidate(s) waiting for live validation window"
+    if action_level == "WATCH":
+        return f"{len(watch_only)} watch-only item(s); official stake remains blocked"
+    return f"no active/live/watch action; no_bet={len(no_bet)}"
+
+
+def compact_top_summary_rows(
+    action_level: str,
+    sanity_status: str,
+    sanity_detail: str,
+    risk_label: str,
+    final_decision: str,
+    reason: str,
+    active: list[str],
+    waiting: list[str],
+    closed: list[str],
+    watch_only: list[str],
+    no_bet: list[str],
+) -> list[tuple[str, str, str]]:
+    counts = f"active={len(active)}; live={len(waiting)}; closed={len(closed)}; watch={len(watch_only)}; no_bet={len(no_bet)}"
+    return [
+        ("Action", action_level, "First-read operator priority"),
+        ("Risk", risk_label, "Operational risk after sanity + health gate"),
+        ("Counts", counts, "Candidate distribution"),
+        ("Reason", reason, "Why this action level was selected"),
+        ("Final", final_decision, f"sanity={sanity_status}; {sanity_detail}"),
+    ]
+
+
 def split_board_rows(board_rows: list[dict[str, str]], used_ids: set[str]) -> tuple[list[str], list[str]]:
     watch: list[str] = []
     no_bet: list[str] = []
@@ -351,20 +412,38 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
     live_rows = read_csv(folder / "vsigma_live_trigger_validator.csv")
 
     hs = meta(health, "system_status")
+    alert_notify_required = meta(issue, "notify_required")
     requires_review = health_requires_operator_review(health, issue)
     op_status, op_action, active, waiting, closed, used_ids = classify(prelock_rows, live_rows, hs, requires_review)
     watch_only, no_bet = split_board_rows(board_rows, used_ids)
     action_level = operator_action_level(op_status, active, waiting, watch_only)
     sanity_status, sanity_detail = operator_sanity_check(op_status, action_level, active, waiting, closed, watch_only, no_bet)
+    risk_label = compact_risk_label(action_level, sanity_status, hs, alert_notify_required)
+    final_decision = compact_final_decision(action_level, sanity_status)
+    reason = compact_reason(action_level, active, waiting, watch_only, no_bet)
+    compact_rows = compact_top_summary_rows(
+        action_level,
+        sanity_status,
+        sanity_detail,
+        risk_label,
+        final_decision,
+        reason,
+        active,
+        waiting,
+        closed,
+        watch_only,
+        no_bet,
+    )
 
     rows: list[dict[str, str]] = []
     add(rows, day, generated, "operator_status", op_status, f"health={hs}; active={len(active)}; waiting={len(waiting)}; closed={len(closed)}; watch={len(watch_only)}; no_bet={len(no_bet)}", op_action)
     add(rows, day, generated, "operator_action_level", action_level, f"sanity={sanity_status}; {sanity_detail}", "Use action_level as the first-read operator priority.")
     add(rows, day, generated, "operator_sanity_check", sanity_status, sanity_detail, "If FAIL, inspect CSV/MD mismatch before using the brief.")
+    add(rows, day, generated, "operator_compact_summary", final_decision, f"action_level={action_level}; risk={risk_label}; reason={reason}", "Read this row first for the final operator decision.")
     add(rows, day, generated, "daily_board", meta(board, "final_decision_counts"), f"rows={meta(board, 'rows_on_board')}", "Review only candidates still active after live-window override.")
     add(rows, day, generated, "prelock_live", meta(prelock, "recheck_decision_counts"), f"rows={meta(prelock, 'rows_rechecked')}", "Use recheck state with live validator freshness override.")
     add(rows, day, generated, "live_trigger", meta(live, "live_trigger_counts"), f"windows={meta(live, 'window_counts')}", "Only LIVE_TRIGGER_CONFIRMED can justify manual live review.")
-    add(rows, day, generated, "issue_alert", meta(issue, "severity"), f"required={meta(issue, 'required')}; notify={meta(issue, 'notify_required')}", "Issue alert is informational; no auto action.")
+    add(rows, day, generated, "issue_alert", meta(issue, "severity"), f"required={meta(issue, 'required')}; notify={alert_notify_required}", "Issue alert is informational; no auto action.")
     add(rows, day, generated, "postmatch_learning", meta(cal, "calibration_status_counts"), f"actual_rows={meta(post, 'rows_final')}; detail_rows={meta(cal, 'detail_rows')}", "Use learning only after sufficient sample.")
 
     live_lines = grep(live, ["window=", "LIVE_TRIGGER", "TOO_EARLY", "TOO_LATE", "MATCH_FINISHED"], 16)
@@ -372,8 +451,17 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
 
     md = [
         f"# vSIGMA Daily Operator Brief - {day}", "",
+        "## Compact Top Summary",
+        "| Field | Value | Meaning |",
+        "|---|---|---|",
+    ]
+    md += [f"| {field} | {value} | {meaning} |" for field, value, meaning in compact_rows]
+    md += [
+        "",
         "## Executive Summary",
         f"- action_level: {action_level}",
+        f"- compact_final_decision: {final_decision}",
+        f"- risk_label: {risk_label}",
         f"- sanity_check: {sanity_status} | {sanity_detail}",
         f"- operator_status: {op_status}",
         f"- primary_next_action: {op_action}",
@@ -386,10 +474,12 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], str]:
         f"- board_decisions: {meta(board, 'final_decision_counts')}",
         f"- recheck_decisions: {meta(prelock, 'recheck_decision_counts')}",
         f"- live_triggers: {meta(live, 'live_trigger_counts')}",
-        f"- alert_notify_required: {meta(issue, 'notify_required')}",
+        f"- alert_notify_required: {alert_notify_required}",
         "- auto_apply: NO", "- production_change: NO", "",
         "## Operator Priority",
         f"- ACTION_LEVEL={action_level}",
+        f"- RISK_LABEL={risk_label}",
+        f"- FINAL_DECISION={final_decision}",
         f"- SANITY_CHECK={sanity_status}",
         f"- SANITY_DETAIL={sanity_detail}",
         f"- WINDOWS_READ=UTF8 | Get-Content {folder / 'vsigma_operator_brief.md'} -Encoding UTF8",
@@ -444,7 +534,8 @@ def run(day: str, tz: str) -> None:
     status = rows[0]["status"] if rows else "UNKNOWN"
     action_level = next((r["status"] for r in rows if r.get("section") == "operator_action_level"), "UNKNOWN")
     sanity = next((r["status"] for r in rows if r.get("section") == "operator_sanity_check"), "UNKNOWN")
-    print(f"operator_status={status}; action_level={action_level}; sanity_check={sanity}")
+    final_decision = next((r["status"] for r in rows if r.get("section") == "operator_compact_summary"), "UNKNOWN")
+    print(f"operator_status={status}; action_level={action_level}; sanity_check={sanity}; final_decision={final_decision}")
 
 
 def main() -> None:
