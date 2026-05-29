@@ -1,0 +1,8 @@
+source_name,source_type,coverage_scope,league_filter,country_filter,priority_weight,reliability_score,enabled,status,method,notes
+sportsmole,global,multi_league,ALL,ALL,0.85,0.72,YES,ACTIVE,manual_import,Broad team-news and possible-lineup coverage; use as supporting source only.
+whoscored,global,multi_league,ALL,ALL,0.90,0.78,YES,ACTIVE,manual_import,Useful match preview/probable XI support where available.
+rotowire,global,multi_league,ALL,ALL,0.80,0.70,YES,ACTIVE,manual_import,Expected soccer lineups in covered competitions; use as support.
+guardian_predicted,local,selected_leagues,Premier League,England,0.92,0.82,YES,ACTIVE,manual_import,Stronger for Premier League predicted lineups/team news.
+sports_gambler,global,multi_league,ALL,ALL,0.78,0.68,YES,ACTIVE,manual_import,Useful expected lineup support; not official.
+local_media_generic,local,league_specific,CONFIGURABLE,CONFIGURABLE,0.88,0.75,YES,REVIEW_ONLY,manual_import,Manual bucket for trusted local media; must be configured per league/team before activation.
+club_official_hint,official,team_specific,CONFIGURABLE,CONFIGURABLE,0.95,0.85,YES,REVIEW_ONLY,manual_import,Club media/training/team-news hint; not official lineup unless marked as official lineup separately.
