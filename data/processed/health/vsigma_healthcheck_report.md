@@ -1,7 +1,7 @@
 # vSIGMA Healthcheck Report - 2026-05-29
 
 - Global health status: WARNING
-- Generated at: 2026-05-29T19:23:05.105145+01:00
+- Generated at: 2026-05-29T19:41:04.030960+01:00
 - Mode: full
 - HEALTHY: 33
 - WARNING: 3
@@ -50,10 +50,10 @@
 | ledger_duplicate_ids | HEALTHY | no duplicate ledger_id values for target date |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | freshness_report | WARNING | validation report contains warning rows | .\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-29 | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-29/vsigma_daily_freshness_report.csv |
 | candidate_isolation_report | HEALTHY | validation report present without ERROR |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-29/vsigma_candidate_isolation_report.csv |
-| prelock_freshness | HEALTHY | fresh prelock rows present: 2 |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-29/vsigma_today_prelock_comparison.csv |
+| prelock_freshness | HEALTHY | fresh prelock rows present: 1 |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-29/vsigma_today_prelock_comparison.csv |
 | post_results_status | WARNING | post-results report missing while official picks exist | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-29 --timezone Atlantic/Canary --mode post | /home/runner/work/vsigma/vsigma/data/processed/today_post_results_report.csv |
 | supervisor_latest_report | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/data/processed/daily_supervisor_latest.md |
 | windows_task_registration | NOT_RUN_YET | task registration check unavailable outside Windows | powershell.exe -NoProfile -ExecutionPolicy Bypass -File /home/runner/work/vsigma/vsigma/scripts/register_vsigma_windows_tasks.ps1 |  |
 | recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-29 --timezone Atlantic/Canary --mode status | /home/runner/work/vsigma/vsigma/automation_logs/supervisor |
-| disk_space | HEALTHY | free disk space acceptable: 16.01 GB |  |  |
+| disk_space | HEALTHY | free disk space acceptable: 16.02 GB |  |  |
 | healthcheck_mode | HEALTHY | full mode completed all quick checks plus environment diagnostics |  |  |

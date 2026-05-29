@@ -12,7 +12,7 @@
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Nice vs Saint Etienne | OVER_1_5 | 2026-05-29T19:45+01:00 | 21.79 | EXECUTABLE | YES | NONE |  |
+| Nice vs Saint Etienne | OVER_1_5 | 2026-05-29T19:45+01:00 | 3.82 | EXECUTABLE | YES | NONE |  |
 
 ## Data Gaps
 - odds missing: 1
