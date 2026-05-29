@@ -72,13 +72,21 @@ def search_web(query):
     serp=os.environ.get("SERPAPI_KEY")
     bing=os.environ.get("BING_SEARCH_API_KEY") or os.environ.get("AZURE_BING_SEARCH_KEY")
     if serp:
-        url="https://serpapi.com/search.json?"+urllib.parse.urlencode({"engine":"google","q":query,"api_key":serp,"num":"5"})
-        data=http_json(url)
-        return "SERPAPI", [(x.get("title",""),x.get("link",""),x.get("snippet","")) for x in data.get("organic_results",[])[:5]]
+        try:
+            url="https://serpapi.com/search.json?"+urllib.parse.urlencode({"engine":"google","q":query,"api_key":serp,"num":"5"})
+            data=http_json(url)
+            if data.get("error"):
+                return "SERPAPI_ERROR", []
+            return "SERPAPI", [(x.get("title",""),x.get("link",""),x.get("snippet","")) for x in data.get("organic_results",[])[:5]]
+        except Exception:
+            return "SERPAPI_SEARCH_FAILED", []
     if bing:
-        url="https://api.bing.microsoft.com/v7.0/search?"+urllib.parse.urlencode({"q":query,"count":"5"})
-        data=http_json(url,{"Ocp-Apim-Subscription-Key":bing,"User-Agent":"vSIGMA/1.0"})
-        return "BING", [(x.get("name",""),x.get("url",""),x.get("snippet","")) for x in data.get("webPages",{}).get("value",[])[:5]]
+        try:
+            url="https://api.bing.microsoft.com/v7.0/search?"+urllib.parse.urlencode({"q":query,"count":"5"})
+            data=http_json(url,{"Ocp-Apim-Subscription-Key":bing,"User-Agent":"vSIGMA/1.0"})
+            return "BING", [(x.get("name",""),x.get("url",""),x.get("snippet","")) for x in data.get("webPages",{}).get("value",[])[:5]]
+        except Exception:
+            return "BING_SEARCH_FAILED", []
     return "NO_SEARCH_KEY", []
 
 def clean_text(page):
@@ -91,13 +99,16 @@ def clean_text(page):
 def extract_xi(text, team):
     team_re=re.escape(team)
     patterns=[
-        rf"{team_re}[^.{{0,250}}possible starting lineup:?\s*([^\.]+)",
+        rf"{team_re}.{{0,250}}possible starting lineup:?\s*([^\.]+)",
         rf"possible {team_re} starting lineup:?\s*([^\.]+)",
-        rf"{team_re} predicted lineup:?\s*([^\.]+)",
-        rf"{team_re} possible xi:?\s*([^\.]+)",
+        rf"{team_re}.{{0,250}}predicted lineup:?\s*([^\.]+)",
+        rf"{team_re}.{{0,250}}possible xi:?\s*([^\.]+)",
     ]
     for pat in patterns:
-        m=re.search(pat,text,flags=re.I)
+        try:
+            m=re.search(pat,text,flags=re.I)
+        except re.error:
+            continue
         if not m: continue
         raw=m.group(1)
         raw=re.split(r"(?:substitutes|bench|manager|coach|injured|doubtful|unavailable)",raw,flags=re.I)[0]
@@ -120,9 +131,14 @@ def build(day,tz):
     provider="NO_SEARCH_KEY"
     for fx in fixtures(day):
         fid=s(fx.get("fixture_id")); home=s(fx.get("home_team")); away=s(fx.get("away_team"))
-        provider, urls=candidate_urls(fx); urls_seen += len(urls)
+        try:
+            provider, urls=candidate_urls(fx)
+        except Exception as e:
+            provider, urls = "SEARCH_EXCEPTION", []
+            out.append({"target_date":day,"generated_at":ts,"fixture_id":fid,"league":s(fx.get("league")),"country":s(fx.get("country")),"home_team":home,"away_team":away,"team_side":"","source_name":"","source_url":"","probable_xi":"","discovery_status":"SEARCH_EXCEPTION","extract_status":"NO_DATA","notes":str(e)[:160],"auto_apply":"NO","production_change":"NO"})
+        urls_seen += len(urls)
         if not urls:
-            out.append({"target_date":day,"generated_at":ts,"fixture_id":fid,"league":s(fx.get("league")),"country":s(fx.get("country")),"home_team":home,"away_team":away,"team_side":"","source_name":"","source_url":"","probable_xi":"","discovery_status":provider if provider=="NO_SEARCH_KEY" else "NO_APPROVED_URLS_FOUND","extract_status":"NO_DATA","notes":"No approved source URL discovered.","auto_apply":"NO","production_change":"NO"})
+            out.append({"target_date":day,"generated_at":ts,"fixture_id":fid,"league":s(fx.get("league")),"country":s(fx.get("country")),"home_team":home,"away_team":away,"team_side":"","source_name":"","source_url":"","probable_xi":"","discovery_status":provider if provider in {"NO_SEARCH_KEY","SERPAPI_ERROR","SERPAPI_SEARCH_FAILED","BING_SEARCH_FAILED","SEARCH_EXCEPTION"} else "NO_APPROVED_URLS_FOUND","extract_status":"NO_DATA","notes":"No approved source URL discovered or search failed.","auto_apply":"NO","production_change":"NO"})
             continue
         for prov,src,url,title,snippet in urls[:3]:
             if src not in allowed:
@@ -139,7 +155,7 @@ def build(day,tz):
 
 def md(day, rows, provider, urls_seen):
     sc=Counter(r["source_name"] for r in rows if r.get("source_name")); st=Counter(r["extract_status"] for r in rows)
-    lines=[f"# vSIGMA Autonomous Probable Lineup Collector - {day}","","## Summary",f"- search_provider: {provider}",f"- rows_seen: {len(rows)}",f"- urls_discovered: {urls_seen}",f"- rows_extracted: {sum(1 for r in rows if r.get('extract_status')=='EXTRACTED')}","- status_counts: "+("; ".join(f"{k}={v}" for k,v in st.items()) if st else "none"),"- source_counts: "+("; ".join(f"{k}={v}" for k,v in sc.items()) if sc else "none"),"- auto_apply: NO","- production_change: NO","","## Guardrails","- Uses only search API keys if configured; no search-page scraping.","- Fetches public source URLs only; does not bypass paywalls, logins, or blocks.","- Conservative extraction: blank if pattern confidence is insufficient.","- Output still passes through registry-weighted consensus."]
+    lines=[f"# vSIGMA Autonomous Probable Lineup Collector - {day}","","## Summary",f"- search_provider: {provider}",f"- rows_seen: {len(rows)}",f"- urls_discovered: {urls_seen}",f"- rows_extracted: {sum(1 for r in rows if r.get('extract_status')=='EXTRACTED')}","- status_counts: "+("; ".join(f"{k}={v}" for k,v in st.items()) if st else "none"),"- source_counts: "+("; ".join(f"{k}={v}" for k,v in sc.items()) if sc else "none"),"- auto_apply: NO","- production_change: NO","","## Guardrails","- Uses only search API keys if configured; no search-page scraping.","- Search/API/fetch failures degrade to report rows instead of failing workflow.","- Fetches public source URLs only; does not bypass paywalls, logins, or blocks.","- Conservative extraction: blank if pattern confidence is insufficient.","- Output still passes through registry-weighted consensus."]
     return "\n".join(lines)+"\n"
 def run(day,tz):
     day=date.fromisoformat(day).isoformat(); rows,provider,urls_seen=build(day,tz)
