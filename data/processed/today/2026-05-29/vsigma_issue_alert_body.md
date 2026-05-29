@@ -1,17 +1,14 @@
 # vSIGMA Alert - 2026-05-29
 
-System status: **BROKEN**
+System status: **ATTENTION**
 Alert required: **YES**
 Notify required: **YES**
-Alert hash: `6ae7ca2ba7d67cdcb09d7b6090be8224e685164885584ca884660351bafe4d44`
+Alert hash: `690a47f488ab05df5b8409775903f6853d1d1edb7395bf2ff114d1fc0cc083ad`
 
 ## Signals
 - - READY_LOW_STAKE_REVIEW still requires manual price and live/prelock confirmation.
 - - WARN means review; BROKEN means a workflow/input needs fixing.
-- - daily_execution_board | status=MISSING | severity=BROKEN | action=RUN_DAILY_DECISION_CHAIN_V2 | detail=vsigma_daily_execution_board.md/csv missing
 - - memory_decision_counts: CALIBRATION_STABLE=4; MIXED_CALIBRATION_REVIEW=1; PATCH_CANDIDATE_REVIEW=1
-- - severity_counts: BROKEN=1; WARN=1; OK=5; INFO=4
-- - system_status: BROKEN
 - - total_goals | days=4 | rows=26 | hit_rate=0.347 | bias=OVER_ESTIMATE | decision=PATCH_CANDIDATE_REVIEW | patch=YES_REVIEW_ONLY | next=Review lowering total_goals projection/range for matching profiles; do not auto-apply.
 
 ## Health Snapshot
@@ -19,20 +16,20 @@ Alert hash: `6ae7ca2ba7d67cdcb09d7b6090be8224e685164885584ca884660351bafe4d44`
 # vSIGMA Automation Health Monitor - 2026-05-29
 
 ## Summary
-- system_status: BROKEN
+- system_status: ATTENTION
 - components_checked: 11
-- severity_counts: BROKEN=1; WARN=1; OK=5; INFO=4
-- status_counts: MISSING=1; OK=6; CONFIG_EXPECTED=4
+- severity_counts: OK=6; WARN=1; INFO=4
+- status_counts: OK=7; CONFIG_EXPECTED=4
 - auto_apply: NO
 - production_change: NO
 
 ## Component Rows
-- daily_execution_board | status=MISSING | severity=BROKEN | action=RUN_DAILY_DECISION_CHAIN_V2 | detail=vsigma_daily_execution_board.md/csv missing
-- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=none
+- daily_execution_board | status=OK | severity=OK | action=NO | detail=rows=2; decisions=NO_BET_OR_WATCH=1; NO_BET=1
+- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=NO_BET_OR_WATCH=1; CANCELLED_NO_BET=1
 - live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
-- postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=FT=2; NS=1
-- postmatch_stat_actuals | status=OK | severity=OK | action=NO | detail=rows_final=2
-- forecast_calibration | status=OK | severity=OK | action=NO | detail=detail_rows=0; statuses=none
+- postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=FT=7; 2H=10; 1H=1; NS=2
+- postmatch_stat_actuals | status=OK | severity=OK | action=NO | detail=rows_final=7
+- forecast_calibration | status=OK | severity=OK | action=NO | detail=detail_rows=36; statuses=CALIBRATION_OK=2; MODEL_UNDER_ESTIMATING=2; MODEL_OVER_ESTIMATING=2
 - calibration_memory_ledger | status=OK | severity=OK | action=NO | detail=global ledger exists
 - daily_workflow_v2 | status=CONFIG_EXPECTED | severity=INFO | action=CHECK_GH_WORKFLOW_LIST_IF_NEEDED | detail=vsigma_daily_decision_chain_v2.yml active externally
 - prelock_workflow | status=CONFIG_EXPECTED | severity=INFO | action=CHECK_GH_WORKFLOW_LIST_IF_NEEDED | detail=vsigma_prelock_live_recheck.yml expected active
