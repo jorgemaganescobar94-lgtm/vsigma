@@ -1,4 +1,4 @@
-# vSIGMA API Coverage Gate Applied to Board - 2026-05-29
+# vSIGMA API Coverage Gate Applied to Board v2 - 2026-05-29
 
 ## Summary
 - rows_reviewed: 20
@@ -29,8 +29,7 @@
 - Cde Juventud Italiana vs Tecnico Universitario | api_gate=LOW_COVERAGE_NO_BET | action=NO_BET_CONFIRMED | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=league_coverage=PARTIAL; recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
 
 ## Guardrails
-- Gate blocks or downgrades execution when API coverage is incomplete.
-- Early missing lineups can allow PRELOCK_REQUIRED planning, but never lock.
-- It does not create new picks.
-- It does not execute bets.
-- It does not fabricate unavailable API data.
+- Probable XI can support early planning, never final lock by itself.
+- Official lineup remains primary truth.
+- It does not create new picks or execute bets.
+- It does not fabricate unavailable data.
