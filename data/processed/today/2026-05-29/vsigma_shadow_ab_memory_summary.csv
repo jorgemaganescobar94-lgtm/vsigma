@@ -1,0 +1,5 @@
+target_date,generated_at,metric,history_days,latest_quality_gate,usable_days,bad_days,blocked_days,low_sample_days,no_data_days,avg_error_delta_mean,net_improved_rows,net_worsened_rows,memory_verdict,memory_reason,auto_apply,production_change
+2026-05-29,2026-05-29T19:16:47+01:00,total_corners,1,PROMOTION_BLOCKED,0,0,1,0,0,0.333,4,2,MEMORY_PROMOTION_BLOCKED_SAMPLE,Improvement exists but recent history remains sample-blocked.,NO,NO
+2026-05-29,2026-05-29T19:16:47+01:00,total_fouls,1,PROMOTION_BLOCKED,0,0,1,0,0,0.433,3,3,MEMORY_PROMOTION_BLOCKED_SAMPLE,Improvement exists but recent history remains sample-blocked.,NO,NO
+2026-05-29,2026-05-29T19:16:47+01:00,total_goals,1,NO_CLEAR_AB_EDGE,0,0,0,0,0,0.006,4,3,MEMORY_NO_CLEAR_SIGNAL,Recent history does not show a decisive A/B direction.,NO,NO
+2026-05-29,2026-05-29T19:16:47+01:00,total_sot,1,NO_CLEAR_AB_EDGE,0,0,0,0,0,0.000,3,3,MEMORY_NO_CLEAR_SIGNAL,Recent history does not show a decisive A/B direction.,NO,NO

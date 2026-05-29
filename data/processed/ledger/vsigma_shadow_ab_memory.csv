@@ -1,0 +1,5 @@
+target_date,generated_at,metric,quality_gate,quality_priority,rows_evaluated,shadow_verdict,avg_error_delta,improved_rows,worsened_rows,manual_review_required,promotion_allowed,source_guard,auto_apply,production_change
+2026-05-29,2026-05-29T19:16:47+01:00,total_corners,PROMOTION_BLOCKED,MEDIUM,6,SHADOW_BETTER_ON_SAMPLE,0.333,4,2,NO,NO,data/processed/today/2026-05-29/vsigma_shadow_ab_quality_gate.csv,NO,NO
+2026-05-29,2026-05-29T19:16:47+01:00,total_fouls,PROMOTION_BLOCKED,MEDIUM,6,SHADOW_BETTER_ON_SAMPLE,0.433,3,3,NO,NO,data/processed/today/2026-05-29/vsigma_shadow_ab_quality_gate.csv,NO,NO
+2026-05-29,2026-05-29T19:16:47+01:00,total_goals,NO_CLEAR_AB_EDGE,LOW,7,SHADOW_BETTER_ON_SAMPLE,0.006,4,3,NO,NO,data/processed/today/2026-05-29/vsigma_shadow_ab_quality_gate.csv,NO,NO
+2026-05-29,2026-05-29T19:16:47+01:00,total_sot,NO_CLEAR_AB_EDGE,LOW,6,NO_CLEAR_AB_EDGE,0.000,3,3,NO,NO,data/processed/today/2026-05-29/vsigma_shadow_ab_quality_gate.csv,NO,NO

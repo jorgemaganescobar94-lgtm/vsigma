@@ -1,0 +1,5 @@
+target_date,generated_at,metric,rows_evaluated,baseline_avg_error,shadow_avg_error,avg_error_delta,improved_rows,worsened_rows,unchanged_rows,shadow_verdict,shadow_rule,source_guard,auto_apply,production_change
+2026-05-29,2026-05-29T19:16:47+01:00,total_goals,7,1.216,1.210,0.006,4,3,0,SHADOW_BETTER_ON_SAMPLE,GOAL_5PCT,CALIBRATION_DETAILS,NO,NO
+2026-05-29,2026-05-29T19:16:47+01:00,total_sot,6,2.667,2.667,0.000,3,3,0,NO_CLEAR_AB_EDGE,MID_SHIFT_0_5,CALIBRATION_DETAILS,NO,NO
+2026-05-29,2026-05-29T19:16:47+01:00,total_corners,6,2.833,2.500,0.333,4,2,0,SHADOW_BETTER_ON_SAMPLE,CORNERS_SHIFT_1,CALIBRATION_DETAILS,NO,NO
+2026-05-29,2026-05-29T19:16:47+01:00,total_fouls,6,5.333,4.900,0.433,3,3,0,SHADOW_BETTER_ON_SAMPLE,FOULS_10PCT,CALIBRATION_DETAILS,NO,NO
