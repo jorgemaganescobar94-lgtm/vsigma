@@ -28,7 +28,6 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-          token: ${{ github.token }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -44,6 +43,9 @@ jobs:
       - name: Append calibration addendum
         shell: bash
         run: python scripts/append_operator_brief_calibration_addendum.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+      - name: Write run summary
+        shell: bash
+        run: python scripts/build_github_actions_run_summary.py --date "$VSIGMA_DATE" --mode operator_brief --output "$GITHUB_STEP_SUMMARY"
       - name: Commit operator brief
         shell: bash
         run: |
