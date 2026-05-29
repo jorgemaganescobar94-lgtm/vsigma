@@ -31,6 +31,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 35
+    env:
+      SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+      BING_SEARCH_API_KEY: ${{ secrets.BING_SEARCH_API_KEY }}
+      AZURE_BING_SEARCH_KEY: ${{ secrets.AZURE_BING_SEARCH_KEY }}
     steps:
       - uses: actions/checkout@v4
         with:
