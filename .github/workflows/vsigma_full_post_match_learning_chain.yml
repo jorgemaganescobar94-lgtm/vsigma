@@ -86,6 +86,10 @@ jobs:
         shell: bash
         run: python scripts/build_shadow_ab_quality_gate.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Update shadow AB memory ledger
+        shell: bash
+        run: python scripts/build_shadow_ab_memory_ledger.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Update calibration memory ledger
         shell: bash
         run: python scripts/build_calibration_memory_ledger.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
@@ -129,6 +133,7 @@ jobs:
             data/processed/today/${VSIGMA_DATE}/vsigma_shadow_patch_promotion_readiness.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_shadow_forecast_ab_* \
             data/processed/today/${VSIGMA_DATE}/vsigma_shadow_ab_quality_gate.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_shadow_ab_memory_summary.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_learning_chain_output_sanity.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_learning_chain_empty_output_guard.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_calibration_memory_ledger.* \
@@ -142,11 +147,13 @@ jobs:
             data/processed/governance/vsigma_shadow_patch_promotion_readiness.* \
             data/processed/governance/vsigma_shadow_forecast_ab_* \
             data/processed/governance/vsigma_shadow_ab_quality_gate.* \
+            data/processed/governance/vsigma_shadow_ab_memory_summary.* \
             data/processed/governance/vsigma_learning_chain_output_sanity.* \
             data/processed/governance/vsigma_learning_chain_empty_output_guard.* \
             data/processed/governance/vsigma_calibration_memory_ledger.* \
             data/processed/governance/vsigma_calibration_memory_summary.csv \
             data/processed/ledger/vsigma_stat_calibration_memory.csv \
+            data/processed/ledger/vsigma_shadow_ab_memory.csv \
             2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No vSIGMA full post-match learning changes to commit."
