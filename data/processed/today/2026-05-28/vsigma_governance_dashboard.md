@@ -55,7 +55,6 @@
 ## Daily Winners
 | target_date | daily_winner | winner_reason |
 | --- | --- | --- |
-| 2026-05-14 | TIE | Top experiments tied on profit and hit rate. |
 | 2026-05-15 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
 | 2026-05-16 | OFFICIAL_BASELINE | OFFICIAL_BASELINE led on profit=0.07, hit_rate=66.666667, settled=3. |
 | 2026-05-17 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
@@ -69,7 +68,8 @@
 | 2026-05-25 | TIE | Top experiments tied on profit and hit rate. |
 | 2026-05-26 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
 | 2026-05-27 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
-| 2026-05-28 | NO_BET_DAY | No model registered a pick. |
+| 2026-05-28 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
+| 2026-05-29 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
 
 ## CLV Data Sufficiency
 INSUFFICIENT_CLV_DATA: usable=2, available_direction_rows=2; do not change thresholds from CLV yet.

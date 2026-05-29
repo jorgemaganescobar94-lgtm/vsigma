@@ -82,14 +82,21 @@ _No stale pre-lock rows excluded._
 | 1535315 | Bolívar | Independ. Rivadavia | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.85 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1535315 | Bolívar | Independ. Rivadavia | OVER_2_5 | OFFICIAL_BASELINE | 1.85 |  | 1.85 | 0.0 | CLV_FLAT |  |  |
 | 1535327 | Palmeiras | Junior | BTTS_YES | DEEP_ANALYSIS_CANDIDATES | 2.3 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1535327 | Palmeiras | Junior | BTTS_YES | OFFICIAL_BASELINE | 2.3 |  | 2.35 | 0.05 | CLV_NEGATIVE |  |  |
+| 1535327 | Palmeiras | Junior | BTTS_YES | OFFICIAL_BASELINE | 2.3 |  | 2.3 | 0.0 | CLV_FLAT | WIN | 1.3 |
 | 1535328 | Penarol | Santa Fe | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.44 |  |  |  | CLV_UNAVAILABLE |  |  |
 
 ### Candidate v7 Calibration Advice
 _No rows._
 
 ## Post-Results Summary
-_No rows._
+| mode | pick_count | wins | losses | profit_units | roi_percent | pending_rows | candidate_version |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| OFFICIAL_EXECUTION_SHORTLIST | 1.0 | 1.0 | 0.0 | 1.3 | 130.0 | 0.0 | OFFICIAL_RESULTS |
+| SHADOW_CANDIDATE_V2 | 2.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V2_RESULTS |
+| SHADOW_CANDIDATE_V4_O25_LOW_CONVERSION_FIREWALL | 2.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V4_RESULTS |
+| SHADOW_CANDIDATE_V5_PLAYER_IMPACT | 2.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V5_RESULTS |
+| SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK | 2.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V6_RESULTS |
+| SHADOW_CANDIDATE_V7_PRICE_DISCIPLINE_CLV_DRIFT_GUARD | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V7_RESULTS |
 
 ## Pre-Lock Status
 _No rows._
@@ -119,8 +126,8 @@ _No rows._
 ## Immutable Ledger / Experiment Registry
 - Ledger update status: AVAILABLE
 - Official picks registered: 0
-- Shadow picks registered: 0
-- No-bet records: 7
+- Shadow picks registered: 8
+- No-bet records: 1
 - Ledger report: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-28/vsigma_ledger_daily_report.md
 
 ## Daily Controller Status
@@ -138,31 +145,33 @@ _No rows._
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: post_results_status: WARNING - post has 1 pending row(s)
-- Recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-28 --timezone Atlantic/Canary --mode post`
+- Critical warnings: freshness_report: WARNING - validation report contains warning rows
+- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-29`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-28/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V2_SCHEDULE_ANOMALY |  |  |  |  |  |  |  | NO_BET_RECORD |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V4_O25_FIREWALL |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V5_PLAYER_IMPACT |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V6_API_PREDICTIONS |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V7_PRICE_DISCIPLINE |  |  |  |  |  |  |  | NO_BET_RECORD |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1535314.0 | Boca Juniors | U. Catolica | OVER_1_5 |  | UNMATCHED |  | PENDING |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1535218.0 | America de Cali | Macara | OVER_1_5 |  | UNMATCHED |  | PENDING |
+| CANDIDATE_V4_O25_FIREWALL | 1535314.0 | Boca Juniors | U. Catolica | OVER_1_5 |  | UNMATCHED |  | PENDING |
+| CANDIDATE_V4_O25_FIREWALL | 1535218.0 | America de Cali | Macara | OVER_1_5 |  | UNMATCHED |  | PENDING |
+| CANDIDATE_V5_PLAYER_IMPACT | 1535314.0 | Boca Juniors | U. Catolica | OVER_1_5 |  | UNMATCHED |  | PENDING |
+| CANDIDATE_V5_PLAYER_IMPACT | 1535218.0 | America de Cali | Macara | OVER_1_5 |  | UNMATCHED |  | PENDING |
+| CANDIDATE_V6_API_PREDICTIONS | 1535314.0 | Boca Juniors | U. Catolica | OVER_1_5 |  | UNMATCHED |  | PENDING |
+| CANDIDATE_V6_API_PREDICTIONS | 1535218.0 | America de Cali | Macara | OVER_1_5 |  | UNMATCHED |  | PENDING |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | OFFICIAL | 17 | 7 | 4 | 3 | -1.18 | -16.857143 | FROZEN_OFFICIAL_BASELINE |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 21 | 6 | 3 | 3 | -1.7 | -28.333333 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
+| OFFICIAL_BASELINE | OFFICIAL | 19 | 7 | 4 | 3 | -1.18 | -16.857143 | FROZEN_OFFICIAL_BASELINE |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 25 | 6 | 3 | 3 | -1.7 | -28.333333 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
 | CANDIDATE_V3_ODDS_DEPTH | NOT_PROMOTED | 0 | 0 | 0 | 0 | 0.0 |  | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V4_O25_FIREWALL | SHADOW | 20 | 6 | 4 | 2 | -0.45 | -7.5 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V5_PLAYER_IMPACT | SHADOW | 21 | 6 | 4 | 2 | -0.45 | -7.5 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V6_API_PREDICTIONS | AUDIT_ONLY | 19 | 5 | 3 | 2 | -0.7 | -14.0 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | 11 | 1 | 0 | 1 | -1.0 | -100.0 | PRICE_DISCIPLINE_UNTESTED |
+| CANDIDATE_V4_O25_FIREWALL | SHADOW | 24 | 6 | 4 | 2 | -0.45 | -7.5 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V5_PLAYER_IMPACT | SHADOW | 25 | 6 | 4 | 2 | -0.45 | -7.5 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V6_API_PREDICTIONS | AUDIT_ONLY | 23 | 5 | 3 | 2 | -0.7 | -14.0 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | 13 | 1 | 0 | 1 | -1.0 | -100.0 | PRICE_DISCIPLINE_UNTESTED |
 
 ## Promotion & Threshold Governance
 - Official baseline status: KEEP_OFFICIAL_BASELINE
@@ -211,30 +220,36 @@ _No rows._
 ## Freshness Validation
 | file_name | candidate_version | status | detail | rows |
 | --- | --- | --- | --- | --- |
-| vsigma_today_competition_shortlist.csv | OFFICIAL_BASELINE | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_competition_top.csv | OFFICIAL_BASELINE | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_candidate_v2_competition_shortlist.csv | CANDIDATE_V2 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_candidate_v2_competition_top.csv | CANDIDATE_V2 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_candidate_v4_competition_shortlist.csv | CANDIDATE_V4 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_candidate_v4_competition_top.csv | CANDIDATE_V4 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_candidate_v5_competition_shortlist.csv | CANDIDATE_V5 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_candidate_v5_competition_top.csv | CANDIDATE_V5 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_candidate_v6_competition_shortlist.csv | CANDIDATE_V6 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_candidate_v6_competition_top.csv | CANDIDATE_V6 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_candidate_v7_competition_shortlist.csv | CANDIDATE_V7 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
+| vsigma_today_competition_shortlist.csv | OFFICIAL_BASELINE | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_competition_top.csv | OFFICIAL_BASELINE | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_candidate_v2_competition_shortlist.csv | CANDIDATE_V2 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_candidate_v2_competition_top.csv | CANDIDATE_V2 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_candidate_v4_competition_shortlist.csv | CANDIDATE_V4 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_candidate_v4_competition_top.csv | CANDIDATE_V4 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_candidate_v5_competition_shortlist.csv | CANDIDATE_V5 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_candidate_v5_competition_top.csv | CANDIDATE_V5 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_candidate_v6_competition_shortlist.csv | CANDIDATE_V6 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_candidate_v6_competition_top.csv | CANDIDATE_V6 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_candidate_v7_competition_shortlist.csv | CANDIDATE_V7 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
 | vsigma_today_candidate_v7_competition_top.csv | CANDIDATE_V7 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_baseline_vs_candidate_v2.csv | COMPARISON | EMPTY_UNEXPECTED | empty output was not expected for this report | 0 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v4.csv | COMPARISON | EMPTY_UNEXPECTED | empty output was not expected for this report | 0 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v5.csv | COMPARISON | EMPTY_UNEXPECTED | empty output was not expected for this report | 0 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v6.csv | COMPARISON | EMPTY_UNEXPECTED | empty output was not expected for this report | 0 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v7.csv | COMPARISON | EMPTY_UNEXPECTED | empty output was not expected for this report | 0 |
-| vsigma_today_match_script_forecasts.csv | FORECAST | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_candidate_v2_match_script_forecasts.csv | FORECAST_CANDIDATE_V2 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| today_pipeline_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
-| today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
+| vsigma_today_baseline_vs_candidate_v2.csv | COMPARISON | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v4.csv | COMPARISON | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v5.csv | COMPARISON | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v6.csv | COMPARISON | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v7.csv | COMPARISON | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_match_script_forecasts.csv | FORECAST | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_candidate_v2_match_script_forecasts.csv | FORECAST_CANDIDATE_V2 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-29'] does not match 2026-05-28 | 2 |
+| vsigma_execution_shortlist_results_ledger.csv | OFFICIAL_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_execution_shortlist_results_summary.csv | OFFICIAL_RESULTS | PASS | output is fresh for requested target date | 96 |
+| vsigma_today_candidate_v2_results_ledger.csv | CANDIDATE_V2_RESULTS | WARNING_STALE_GLOBAL_FILE | metadata source_file_date_check reports DATE_MISMATCH | 2 |
+| vsigma_today_candidate_v2_results_summary.csv | CANDIDATE_V2_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v4_results_ledger.csv | CANDIDATE_V4_RESULTS | WARNING_STALE_GLOBAL_FILE | metadata source_file_date_check reports DATE_MISMATCH | 2 |
+| vsigma_today_candidate_v4_results_summary.csv | CANDIDATE_V4_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v5_results_ledger.csv | CANDIDATE_V5_RESULTS | WARNING_STALE_GLOBAL_FILE | metadata source_file_date_check reports DATE_MISMATCH | 2 |
+| vsigma_today_candidate_v5_results_summary.csv | CANDIDATE_V5_RESULTS | PASS | output is fresh for requested target date | 1 |
 
 ## Candidate Isolation
 | check_name | file_name | status | detail |

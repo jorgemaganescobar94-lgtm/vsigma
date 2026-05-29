@@ -1,0 +1,2 @@
+mode,pick_count,settled_rows,pending_rows,unmatched_rows,wins,losses,pushes,voids,profit_units,roi_percent,target_date,generated_at,pipeline_mode,candidate_version,source_file_date_check,run_id
+SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK,2,0,0,2,0,0,0,0,0.0,,2026-05-28,2026-05-29T18:18:22+00:00,POST,CANDIDATE_V6_RESULTS,NO_DATE_COLUMN,2026-05-28-20260529T181822Z

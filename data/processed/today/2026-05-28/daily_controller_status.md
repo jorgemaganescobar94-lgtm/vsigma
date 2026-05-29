@@ -33,13 +33,15 @@ _No rows._
 ## Ledger State
 | experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V2_SCHEDULE_ANOMALY |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V4_O25_FIREWALL |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V5_PLAYER_IMPACT |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V6_API_PREDICTIONS |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V7_PRICE_DISCIPLINE |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1535314.0 | Boca Juniors | U. Catolica | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1535218.0 | America de Cali | Macara | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V4_O25_FIREWALL | 1535314.0 | Boca Juniors | U. Catolica | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V4_O25_FIREWALL | 1535218.0 | America de Cali | Macara | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V5_PLAYER_IMPACT | 1535314.0 | Boca Juniors | U. Catolica | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V5_PLAYER_IMPACT | 1535218.0 | America de Cali | Macara | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V6_API_PREDICTIONS | 1535314.0 | Boca Juniors | U. Catolica | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V6_API_PREDICTIONS | 1535218.0 | America de Cali | Macara | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
 
 ## Controller Outputs
 - Plan CSV: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-28/daily_run_plan.csv

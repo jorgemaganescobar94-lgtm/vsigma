@@ -1,11 +1,5 @@
 date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
-2026-05-28,OK,API-SPORTS_DIRECT,138.0,,,,,,
-2026-05-28T01:30:00+01:00,MATCHED,,,1535220.0,FT,RB Bragantino,Carabobo FC,2.0,0.0
-2026-05-28T01:30:00+01:00,MATCHED,,,1535228.0,FT,River Plate,Blooming,3.0,0.0
-2026-05-28T01:30:00+01:00,MATCHED,,,1535315.0,FT,Bolívar,Independ. Rivadavia,1.0,3.0
-2026-05-28T01:30:00+01:00,MATCHED,,,1535317.0,FT,Corinthians,Platense,0.0,2.0
-2026-05-28T01:30:00+01:00,MATCHED,,,1535321.0,FT,Fluminense,Deportivo La Guaira,3.0,1.0
-2026-05-28T01:30:00+01:00,MATCHED,,,1535328.0,FT,Penarol,Santa Fe,0.0,1.0
-2026-05-28T20:00:00+01:00,MATCHED,,,1545404.0,NS,Casa Pia,Torreense,,
-2026-05-28T23:00:00+01:00,MATCHED,,,1535316.0,NS,Cerro Porteno,Sporting Cristal,,
-2026-05-28T23:00:00+01:00,MATCHED,,,1535327.0,NS,Palmeiras,Junior,,
+2026-05-28,OK,API-SPORTS_DIRECT,139.0,,,,,,
+2026-05-28T20:00:00+01:00,MATCHED,,,1545404.0,FT,Casa Pia,Torreense,2.0,0.0
+2026-05-28T23:00:00+01:00,MATCHED,,,1535316.0,FT,Cerro Porteno,Sporting Cristal,2.0,0.0
+2026-05-28T23:00:00+01:00,MATCHED,,,1535327.0,FT,Palmeiras,Junior,4.0,1.0

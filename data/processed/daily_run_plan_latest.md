@@ -1,13 +1,12 @@
-# vSIGMA Daily Run Plan - 2026-05-29
+# vSIGMA Daily Run Plan - 2026-05-28
 
 - Timezone: Atlantic/Canary
-- Generated at: 2026-05-29T00:05:51.732090+01:00
+- Generated at: 2026-05-29T19:18:25.622378+01:00
 - Window minutes: 90
-- Next recommended action: RUN_PRELOCK_NOW
-- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-29 --timezone Atlantic/Canary --mode prelock --window-minutes 90`
+- Next recommended action: NO_BET_DAY
+- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-28 --timezone Atlantic/Canary --mode status`
 
 ## Fixtures
 | fixture_id | league | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action | recommended_command |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1535314 | CONMEBOL Libertadores | Boca Juniors | U. Catolica | OVER_1_5 | 2026-05-29T00:31:01.200000+00:00 | 85.16 | 2026-05-28T23:01:01.200000+00:00 | DUE_NOW | RUN_PRELOCK_NOW | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-29 --timezone Atlantic/Canary --mode prelock --window-minutes 90 |
-| 1535218 | CONMEBOL Sudamericana | America de Cali | Macara | OVER_1_5 | 2026-05-29T00:30:58.800000+00:00 | 85.12 | 2026-05-28T23:00:58.800000+00:00 | DUE_NOW | RUN_PRELOCK_NOW | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-29 --timezone Atlantic/Canary --mode prelock --window-minutes 90 |
+|  |  |  |  |  |  |  |  | NO_CURRENT_PICKS | NO_BET_DAY | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-28 --timezone Atlantic/Canary --mode status |

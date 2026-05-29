@@ -1,2 +1,2 @@
 target_date,generated_at,mode,command_center_status,daily_classification,action_level,operational_verdict,predictive_failure,evidence_basis,next_action,run_url
-2026-05-29,2026-05-29T00:52:31+01:00,auto,ACTION_REQUIRED,DATA_BLOCKED,ACTION_REQUIRED,NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA,NO,decision_quality_review,"Check provider/API coverage, odds availability, lineups, and data-gap flags before executing.",https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26609214591
+2026-05-28,2026-05-29T19:18:26+01:00,post-yesterday,NO_ACTION_REQUIRED,NO_BET_VALID,NO_ACTION_REQUIRED,NO_EXECUTION_NO_BET_VALID,NO,decision_quality_review,No manual execution needed; keep collecting no-bet evidence.,https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26654412053
