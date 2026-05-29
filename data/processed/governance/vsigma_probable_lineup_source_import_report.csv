@@ -1,0 +1,2 @@
+target_date,generated_at,rows_seen,rows_imported,rows_rejected,input_files,import_status_counts,sources_seen,template_rows,auto_apply,production_change
+2026-05-29,2026-05-29T18:38:22+01:00,0,0,0,none,none,none,200,NO,NO
