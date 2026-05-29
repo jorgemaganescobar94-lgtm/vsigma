@@ -30,6 +30,14 @@ DOMAINS = {
     "sports-gambler.com":"sports_gambler",
     "theguardian.com":"guardian_predicted",
 }
+SOURCE_QUERY_PLANS = [
+    ("generic", "{home} vs {away} probable lineups predicted XI team news"),
+    ("sportsmole", "site:sportsmole.co.uk {home} vs {away} team news possible starting lineup"),
+    ("whoscored", "site:whoscored.com {home} {away} preview probable lineups"),
+    ("sports_gambler", "site:sportsgambler.com {home} {away} predicted lineups"),
+    ("rotowire", "site:rotowire.com soccer {home} {away} expected lineups"),
+    ("guardian_predicted", "site:theguardian.com football {home} {away} team news predicted lineup"),
+]
 
 
 def s(x): return "" if x is None else str(x).strip()
@@ -57,6 +65,10 @@ def source_for_url(url):
     for domain, name in DOMAINS.items():
         if host.endswith(domain): return name
     return ""
+
+def norm_url(url):
+    parsed=urllib.parse.urlparse(url)
+    return urllib.parse.urlunparse((parsed.scheme, parsed.netloc.lower(), parsed.path.rstrip("/"), "", parsed.query, ""))
 
 def http_json(url, headers=None):
     req=urllib.request.Request(url,headers=headers or {"User-Agent":"vSIGMA/1.0"})
@@ -99,10 +111,11 @@ def clean_text(page):
 def extract_xi(text, team):
     team_re=re.escape(team)
     patterns=[
-        rf"{team_re}.{{0,250}}possible starting lineup:?\s*([^\.]+)",
+        rf"{team_re}.{{0,300}}possible starting lineup:?\s*([^\.]+)",
         rf"possible {team_re} starting lineup:?\s*([^\.]+)",
-        rf"{team_re}.{{0,250}}predicted lineup:?\s*([^\.]+)",
-        rf"{team_re}.{{0,250}}possible xi:?\s*([^\.]+)",
+        rf"{team_re}.{{0,300}}predicted lineup:?\s*([^\.]+)",
+        rf"{team_re}.{{0,300}}possible xi:?\s*([^\.]+)",
+        rf"predicted {team_re} xi:?\s*([^\.]+)",
     ]
     for pat in patterns:
         try:
@@ -111,20 +124,42 @@ def extract_xi(text, team):
             continue
         if not m: continue
         raw=m.group(1)
-        raw=re.split(r"(?:substitutes|bench|manager|coach|injured|doubtful|unavailable)",raw,flags=re.I)[0]
+        raw=re.split(r"(?:substitutes|bench|manager|coach|injured|doubtful|unavailable|sports mole)",raw,flags=re.I)[0]
         parts=[p.strip(" -–—:;,.()[]") for p in re.split(r"[,;]",raw)]
         parts=[p for p in parts if len(p)>2 and len(p)<45]
         if len(parts)>=8: return "; ".join(parts[:11])
     return ""
 
-def candidate_urls(fx):
-    q=f"{s(fx.get('home_team'))} vs {s(fx.get('away_team'))} probable lineups predicted XI team news"
-    provider, results=search_web(q)
-    urls=[]
-    for title,url,snippet in results:
-        src=source_for_url(url)
-        if src: urls.append((provider,src,url,title,snippet))
-    return provider, urls
+def build_queries(fx, allowed):
+    home=s(fx.get("home_team")); away=s(fx.get("away_team"))
+    max_q=int(os.environ.get("VSIGMA_MAX_PROBABLE_LINEUP_SEARCH_QUERIES", "5"))
+    plans=[]
+    for expected, template in SOURCE_QUERY_PLANS:
+        if expected != "generic" and expected not in allowed:
+            continue
+        plans.append((expected, template.format(home=home, away=away)))
+    return plans[:max_q]
+
+def candidate_urls(fx, allowed):
+    discovered=[]; seen=set(); providers=[]
+    for expected, query in build_queries(fx, allowed):
+        provider, results=search_web(query)
+        providers.append(provider)
+        if provider in {"NO_SEARCH_KEY","SERPAPI_ERROR","SERPAPI_SEARCH_FAILED","BING_SEARCH_FAILED"}:
+            continue
+        for title,url,snippet in results:
+            src=source_for_url(url)
+            if not src or src not in allowed:
+                continue
+            if expected != "generic" and src != expected:
+                continue
+            key=norm_url(url)
+            if key in seen:
+                continue
+            seen.add(key)
+            discovered.append((provider,src,url,title,snippet,expected))
+    provider_summary=";".join(dict.fromkeys(providers)) if providers else "NO_SEARCH_KEY"
+    return provider_summary, discovered
 
 def build(day,tz):
     ts=datetime.now(ZoneInfo(tz)).isoformat(timespec="seconds"); allowed=allowed_sources(day); out=[]; urls_seen=0
@@ -132,17 +167,15 @@ def build(day,tz):
     for fx in fixtures(day):
         fid=s(fx.get("fixture_id")); home=s(fx.get("home_team")); away=s(fx.get("away_team"))
         try:
-            provider, urls=candidate_urls(fx)
+            provider, urls=candidate_urls(fx, allowed)
         except Exception as e:
             provider, urls = "SEARCH_EXCEPTION", []
             out.append({"target_date":day,"generated_at":ts,"fixture_id":fid,"league":s(fx.get("league")),"country":s(fx.get("country")),"home_team":home,"away_team":away,"team_side":"","source_name":"","source_url":"","probable_xi":"","discovery_status":"SEARCH_EXCEPTION","extract_status":"NO_DATA","notes":str(e)[:160],"auto_apply":"NO","production_change":"NO"})
         urls_seen += len(urls)
         if not urls:
-            out.append({"target_date":day,"generated_at":ts,"fixture_id":fid,"league":s(fx.get("league")),"country":s(fx.get("country")),"home_team":home,"away_team":away,"team_side":"","source_name":"","source_url":"","probable_xi":"","discovery_status":provider if provider in {"NO_SEARCH_KEY","SERPAPI_ERROR","SERPAPI_SEARCH_FAILED","BING_SEARCH_FAILED","SEARCH_EXCEPTION"} else "NO_APPROVED_URLS_FOUND","extract_status":"NO_DATA","notes":"No approved source URL discovered or search failed.","auto_apply":"NO","production_change":"NO"})
+            out.append({"target_date":day,"generated_at":ts,"fixture_id":fid,"league":s(fx.get("league")),"country":s(fx.get("country")),"home_team":home,"away_team":away,"team_side":"","source_name":"","source_url":"","probable_xi":"","discovery_status":provider if any(x in provider for x in ["NO_SEARCH_KEY","ERROR","FAILED","EXCEPTION"]) else "NO_APPROVED_URLS_FOUND","extract_status":"NO_DATA","notes":"No approved source URL discovered or search failed.","auto_apply":"NO","production_change":"NO"})
             continue
-        for prov,src,url,title,snippet in urls[:3]:
-            if src not in allowed:
-                continue
+        for prov,src,url,title,snippet,expected in urls[:8]:
             try:
                 page=clean_text(http_text(url))
             except Exception as e:
@@ -150,12 +183,12 @@ def build(day,tz):
                 continue
             for side,team in [("home",home),("away",away)]:
                 xi=extract_xi(page,team)
-                out.append({"target_date":day,"generated_at":ts,"fixture_id":fid,"league":s(fx.get("league")),"country":s(fx.get("country")),"home_team":home,"away_team":away,"team_side":side,"source_name":src,"source_url":url,"probable_xi":xi,"discovery_status":"URL_DISCOVERED","extract_status":"EXTRACTED" if xi else "NO_XI_PATTERN","notes":title[:180],"auto_apply":"NO","production_change":"NO"})
+                out.append({"target_date":day,"generated_at":ts,"fixture_id":fid,"league":s(fx.get("league")),"country":s(fx.get("country")),"home_team":home,"away_team":away,"team_side":side,"source_name":src,"source_url":url,"probable_xi":xi,"discovery_status":f"URL_DISCOVERED:{expected}","extract_status":"EXTRACTED" if xi else "NO_XI_PATTERN","notes":title[:180],"auto_apply":"NO","production_change":"NO"})
     return out, provider, urls_seen
 
 def md(day, rows, provider, urls_seen):
     sc=Counter(r["source_name"] for r in rows if r.get("source_name")); st=Counter(r["extract_status"] for r in rows)
-    lines=[f"# vSIGMA Autonomous Probable Lineup Collector - {day}","","## Summary",f"- search_provider: {provider}",f"- rows_seen: {len(rows)}",f"- urls_discovered: {urls_seen}",f"- rows_extracted: {sum(1 for r in rows if r.get('extract_status')=='EXTRACTED')}","- status_counts: "+("; ".join(f"{k}={v}" for k,v in st.items()) if st else "none"),"- source_counts: "+("; ".join(f"{k}={v}" for k,v in sc.items()) if sc else "none"),"- auto_apply: NO","- production_change: NO","","## Guardrails","- Uses only search API keys if configured; no search-page scraping.","- Search/API/fetch failures degrade to report rows instead of failing workflow.","- Fetches public source URLs only; does not bypass paywalls, logins, or blocks.","- Conservative extraction: blank if pattern confidence is insufficient.","- Output still passes through registry-weighted consensus."]
+    lines=[f"# vSIGMA Autonomous Probable Lineup Collector - {day}","","## Summary",f"- search_provider: {provider}",f"- rows_seen: {len(rows)}",f"- urls_discovered: {urls_seen}",f"- rows_extracted: {sum(1 for r in rows if r.get('extract_status')=='EXTRACTED')}","- status_counts: "+("; ".join(f"{k}={v}" for k,v in st.items()) if st else "none"),"- source_counts: "+("; ".join(f"{k}={v}" for k,v in sc.items()) if sc else "none"),"- max_search_queries_per_fixture: "+os.environ.get("VSIGMA_MAX_PROBABLE_LINEUP_SEARCH_QUERIES", "5"),"- auto_apply: NO","- production_change: NO","","## Guardrails","- Uses only search API keys if configured; no search-page scraping.","- Searches approved probable-XI domains separately and deduplicates URLs.","- Search/API/fetch failures degrade to report rows instead of failing workflow.","- Fetches public source URLs only; does not bypass paywalls, logins, or blocks.","- Conservative extraction: blank if pattern confidence is insufficient.","- Output still passes through registry-weighted consensus."]
     return "\n".join(lines)+"\n"
 def run(day,tz):
     day=date.fromisoformat(day).isoformat(); rows,provider,urls_seen=build(day,tz)
