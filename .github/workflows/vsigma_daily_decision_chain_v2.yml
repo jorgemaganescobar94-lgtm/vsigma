@@ -60,6 +60,8 @@ jobs:
           python scripts/build_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
           python scripts/build_forecast_market_translator.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
           python scripts/build_daily_execution_board.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          python scripts/build_fixture_api_coverage_matrix.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          python scripts/apply_fixture_api_coverage_gate_to_board.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
       - name: Guarantee board artifact
         shell: python
