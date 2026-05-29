@@ -40,14 +40,31 @@ def day_path(day: str, filename: str) -> Path:
     return PROCESSED / "today" / day / filename
 
 
+def guard_status(rows: list[dict[str, str]]) -> tuple[str, str, str]:
+    if not rows:
+        return "NO_GUARD", "UNKNOWN", "none"
+    status_counts = counts(rows, "guard_decision")
+    if any(row.get("commit_allowed") == "NO" for row in rows):
+        return "BLOCK_COMMIT", "NO", status_counts
+    if any(row.get("guard_decision") == "WARN_ONLY" for row in rows):
+        return "WARN", "YES", status_counts
+    return "PASS", "YES", status_counts
+
+
 def summary_status_for_full(day: str) -> tuple[str, list[str]]:
     notes: list[str] = []
     sanity = read_csv(day_path(day, "vsigma_learning_chain_output_sanity.csv"))
     readiness = read_csv(day_path(day, "vsigma_shadow_patch_promotion_readiness.csv"))
     shadow = read_csv(day_path(day, "vsigma_calibration_shadow_patch_queue.csv"))
+    guard = read_csv(day_path(day, "vsigma_learning_chain_empty_output_guard.csv"))
+    guard_state, commit_allowed, _ = guard_status(guard)
 
+    if guard_state == "BLOCK_COMMIT" or commit_allowed == "NO":
+        return "STOP", ["Hard guard blocked commit because a critical output was degraded."]
     if any(row.get("severity") in {"ERROR", "CRITICAL"} for row in sanity):
         return "STOP", ["Learning-chain sanity has ERROR/CRITICAL rows."]
+    if guard_state == "WARN":
+        notes.append("Hard guard found non-blocking warnings.")
     if any(row.get("sanity_status") in {"EMPTY_WITH_VALID_FALLBACK", "EMPTY_NO_FALLBACK"} for row in sanity):
         notes.append("Sanity warnings detected; inspect fallback/empty outputs.")
     if any(row.get("readiness_decision") == "PROMOTION_CANDIDATE_MANUAL_REVIEW" for row in readiness):
@@ -65,6 +82,8 @@ def full_post_match_summary(day: str) -> str:
     sanity = read_csv(day_path(day, "vsigma_learning_chain_output_sanity.csv"))
     shadow = read_csv(day_path(day, "vsigma_calibration_shadow_patch_queue.csv"))
     readiness = read_csv(day_path(day, "vsigma_shadow_patch_promotion_readiness.csv"))
+    guard = read_csv(day_path(day, "vsigma_learning_chain_empty_output_guard.csv"))
+    guard_state, commit_allowed, guard_counts = guard_status(guard)
     calibration_md = read_text(day_path(day, "vsigma_match_stat_forecast_calibration.md"))
 
     lines = [
@@ -73,6 +92,9 @@ def full_post_match_summary(day: str) -> str:
         f"**Run status:** `{status}`",
         "",
         "## Key signals",
+        f"- Empty-output hard guard: `{guard_state}`",
+        f"- Commit allowed: `{commit_allowed}`",
+        f"- Guard decisions: `{guard_counts}`",
         f"- Learning sanity: `{counts(sanity, 'sanity_status')}`",
         f"- Shadow queue: `{counts(shadow, 'queue_decision')}`",
         f"- Shadow priorities: `{counts(shadow, 'shadow_priority')}`",
