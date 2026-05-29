@@ -14,4 +14,4 @@ odds_structure_coherence_flag             RICH_MIXED           1
 
 Fixture preview
  fixture_id  league home_team     away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
-    1545409 Ligue 1      Nice Saint Etienne                    RICH_MIXED               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.3778                            -0.015
+    1545409 Ligue 1      Nice Saint Etienne                    RICH_MIXED               LOW_GOALS          PREFER_MILDER_TOTAL    AVOID_AGGRESSIVE_OVERS                 0.4025                            -0.015

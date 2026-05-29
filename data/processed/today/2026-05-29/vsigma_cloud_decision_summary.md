@@ -9,12 +9,12 @@
 - Blocked picks: 0
 - Data problem picks: 0
 - Next automatic action: EXECUTE_GOVERNED_PICK
-- OFFICIAL_ACTION_SUMMARY: EXECUTABLE
+- OFFICIAL_ACTION_SUMMARY: NO_BET
 
 ## Executable Picks
 | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | official_action | executable_now | prelock_decision | next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1545409 | Ligue 1 | Nice | Saint Etienne | OVER_1_5 | 0.72086 | EXECUTABLE | YES | PRELOCK_NO_CHANGE | EXECUTE_GOVERNED_PICK |
+| 1545409 | Ligue 1 | Nice | Saint Etienne | OVER_1_5 | 0.72086 | NO_BET | NO | PRELOCK_NO_CHANGE | EXECUTE_GOVERNED_PICK |
 
 ## Waiting / Blocked Picks
 _No rows._
