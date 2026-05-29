@@ -78,6 +78,10 @@ jobs:
         shell: bash
         run: python scripts/build_shadow_patch_promotion_readiness.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Build shadow forecast AB simulator
+        shell: bash
+        run: python scripts/build_shadow_forecast_ab_simulator.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Update calibration memory ledger
         shell: bash
         run: python scripts/build_calibration_memory_ledger.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
@@ -114,6 +118,7 @@ jobs:
             data/processed/today/${VSIGMA_DATE}/vsigma_stat_calibration_governor.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_calibration_shadow_patch_queue.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_shadow_patch_promotion_readiness.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_shadow_forecast_ab_* \
             data/processed/today/${VSIGMA_DATE}/vsigma_learning_chain_output_sanity.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_learning_chain_empty_output_guard.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_calibration_memory_ledger.* \
@@ -125,6 +130,7 @@ jobs:
             data/processed/governance/vsigma_stat_calibration_governor.* \
             data/processed/governance/vsigma_calibration_shadow_patch_queue.* \
             data/processed/governance/vsigma_shadow_patch_promotion_readiness.* \
+            data/processed/governance/vsigma_shadow_forecast_ab_* \
             data/processed/governance/vsigma_learning_chain_output_sanity.* \
             data/processed/governance/vsigma_learning_chain_empty_output_guard.* \
             data/processed/governance/vsigma_calibration_memory_ledger.* \
