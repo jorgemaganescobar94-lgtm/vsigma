@@ -1,2 +1,2 @@
 target_date,generated_at,rows_seen,rows_imported,rows_rejected,input_files,import_status_counts,sources_seen,template_rows,auto_apply,production_change
-2026-05-29,2026-05-29T21:29:49+01:00,0,0,0,none,none,none,20,NO,NO
+2026-05-29,2026-05-29T21:37:09+01:00,2,2,0,data/processed/today/2026-05-29/probable_lineup_sources_autonomous.csv;data/processed/governance/probable_lineup_sources_autonomous.csv,IMPORTED=2,sportsmole=2,20,NO,NO

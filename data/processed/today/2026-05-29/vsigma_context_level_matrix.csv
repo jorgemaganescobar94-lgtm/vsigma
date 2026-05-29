@@ -1,2 +1,2 @@
 target_date,generated_at,rank,fixture_id,home_team,away_team,market_primary,adjusted_status,objective_level,dependency_level,opponent_level,draw_level,lineup_level,availability_level,market_level,memory_level,context_level,context_score,policy,auto_apply,production_change
-2026-05-29,2026-05-29T21:29:48+01:00,1,1545409,Nice,Saint Etienne,OVER_1_5,SHADOW_RISK_ONLY,PROXY_TEMPO,DEPENDENCY_UNKNOWN,STAKE_UNKNOWN,DRAW_NOT_KEY,LINEUPS_NOT_CONFIRMED,AVAIL_ELEVATED,O15_LOW_CONV,MEM_NONE,L7_SOFT_DOWN,49,reduced stake or live,NO,NO
+2026-05-29,2026-05-29T21:37:08+01:00,1,1545409,Nice,Saint Etienne,OVER_1_5,SHADOW_RISK_ONLY,PROXY_TEMPO,DEPENDENCY_UNKNOWN,STAKE_UNKNOWN,DRAW_NOT_KEY,LINEUPS_NOT_CONFIRMED,AVAIL_ELEVATED,O15_LOW_CONV,MEM_NONE,L7_SOFT_DOWN,49,reduced stake or live,NO,NO
