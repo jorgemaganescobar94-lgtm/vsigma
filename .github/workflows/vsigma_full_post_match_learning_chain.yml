@@ -7,7 +7,6 @@ on:
         required: false
         default: ""
   schedule:
-    # UTC. Runs late evening and next morning to catch late final results.
     - cron: "30 22 * * *"
     - cron: "30 6 * * *"
 
@@ -34,7 +33,6 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-          token: ${{ github.token }}
 
       - uses: actions/setup-python@v5
         with:
@@ -84,6 +82,10 @@ jobs:
         shell: bash
         run: python scripts/build_calibration_memory_ledger.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Build learning chain output sanity
+        shell: bash
+        run: python scripts/build_learning_chain_output_sanity.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Commit learning outputs
         shell: bash
         run: |
@@ -98,6 +100,7 @@ jobs:
             data/processed/today/${VSIGMA_DATE}/vsigma_stat_calibration_governor.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_calibration_shadow_patch_queue.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_shadow_patch_promotion_readiness.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_learning_chain_output_sanity.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_calibration_memory_ledger.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_calibration_memory_summary.csv \
             data/processed/governance/vsigma_dated_post_match_results_refresh.* \
@@ -107,6 +110,7 @@ jobs:
             data/processed/governance/vsigma_stat_calibration_governor.* \
             data/processed/governance/vsigma_calibration_shadow_patch_queue.* \
             data/processed/governance/vsigma_shadow_patch_promotion_readiness.* \
+            data/processed/governance/vsigma_learning_chain_output_sanity.* \
             data/processed/governance/vsigma_calibration_memory_ledger.* \
             data/processed/governance/vsigma_calibration_memory_summary.csv \
             data/processed/ledger/vsigma_stat_calibration_memory.csv \
