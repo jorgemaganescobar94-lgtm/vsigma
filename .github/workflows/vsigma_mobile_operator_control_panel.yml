@@ -40,6 +40,9 @@ jobs:
       - name: Build mobile operator control panel
         shell: bash
         run: python scripts/build_mobile_operator_control_panel.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+      - name: Append shadow AB addendum
+        shell: bash
+        run: python scripts/append_mobile_panel_shadow_ab_addendum.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
       - name: Write run summary
         shell: bash
         run: |
