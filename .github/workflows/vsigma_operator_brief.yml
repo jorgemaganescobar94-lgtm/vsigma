@@ -46,6 +46,9 @@ jobs:
       - name: Write run summary
         shell: bash
         run: python scripts/build_github_actions_run_summary.py --date "$VSIGMA_DATE" --mode operator_brief --output "$GITHUB_STEP_SUMMARY"
+      - name: Add rerun advice
+        shell: bash
+        run: python scripts/build_github_actions_rerun_advice.py --date "$VSIGMA_DATE" --mode operator_brief --output "$GITHUB_STEP_SUMMARY"
       - name: Commit operator brief
         shell: bash
         run: |
