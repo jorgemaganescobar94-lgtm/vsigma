@@ -108,6 +108,11 @@ jobs:
         if: always()
         run: python scripts/build_github_actions_rerun_advice.py --date "$VSIGMA_DATE" --mode full_post_match --output "$GITHUB_STEP_SUMMARY"
 
+      - name: Add AB quality summary
+        shell: bash
+        if: always()
+        run: python scripts/append_actions_ab_quality_summary.py --date "$VSIGMA_DATE" --output "$GITHUB_STEP_SUMMARY"
+
       - name: Commit learning outputs
         shell: bash
         run: |
