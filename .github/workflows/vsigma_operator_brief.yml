@@ -41,6 +41,9 @@ jobs:
       - name: Build operator brief
         shell: bash
         run: python scripts/build_operator_brief.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+      - name: Append calibration addendum
+        shell: bash
+        run: python scripts/append_operator_brief_calibration_addendum.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
       - name: Commit operator brief
         shell: bash
         run: |
