@@ -1,20 +1,20 @@
-# vSIGMA Autonomous Monitoring Summary - 2026-05-28
+# vSIGMA Autonomous Monitoring Summary - 2026-05-29
 
 ## Executive Status
-- generated_at: 2026-05-29T19:18:26+01:00
-- mode: post-yesterday
-- daily_classification: NO_BET_VALID
-- operational_verdict: NO_EXECUTION_NO_BET_VALID
-- action_level: NO_ACTION_REQUIRED
+- generated_at: 2026-05-29T19:21:26+01:00
+- mode: pre
+- daily_classification: DATA_BLOCKED
+- operational_verdict: NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA
+- action_level: ACTION_REQUIRED
 - predictive_failure: NO
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26654412053
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26654532456
 
 ## Operator Action
-- No manual execution needed; keep collecting no-bet evidence.
+- Check provider/API coverage, odds availability, lineups, and data-gap flags before executing.
 
 ## Explanation
-- The day resolved to no-bet with no executable row and no expired candidate.
+- Execution was blocked by data or prelock availability, not by a scored market losing.
 
 ## Source Coverage
 - decision_quality_review: present
@@ -22,7 +22,7 @@
 - healthcheck_report: present
 - cloud_decision_summary: present
 - prelock_decision_resolver: present
-- decision_outcome_ledger_rows: 1
+- decision_outcome_ledger_rows: 2
 
 ## Classification Contract
 - EXECUTION_OK: at least one executable decision exists.

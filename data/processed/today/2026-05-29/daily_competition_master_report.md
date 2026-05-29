@@ -6,33 +6,28 @@ PRE_LOCK_REVIEWED
 ## Official Baseline Top Picks
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1535314 | CONMEBOL Libertadores | Boca Juniors | U. Catolica | OVER_1_5 | 0.81316 | 151.9 | FAILURE_MODE_LOW_CONVERSION |
-| 2 | 1535218 | CONMEBOL Sudamericana | America de Cali | Macara | OVER_1_5 | 0.799 | 113.812 | FAILURE_MODE_LOW_CONVERSION |
+| 1 | 1545409 | Ligue 1 | Nice | Saint Etienne | OVER_1_5 | 0.72086 | 138.817 | FAILURE_MODE_LOW_CONVERSION |
 
 ## Candidate v2 Top Picks
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1535314 | CONMEBOL Libertadores | Boca Juniors | U. Catolica | OVER_1_5 | 0.80936 | 151.235 | FAILURE_MODE_LOW_CONVERSION |
-| 2 | 1535218 | CONMEBOL Sudamericana | America de Cali | Macara | OVER_1_5 | 0.7961 | 113.017 | FAILURE_MODE_LOW_CONVERSION |
+| 1 | 1545409 | Ligue 1 | Nice | Saint Etienne | OVER_1_5 | 0.72396 | 139.635 | FAILURE_MODE_LOW_CONVERSION |
 
 ## Candidate v4/v5/v6 Top Picks
 ### Candidate v4
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1535314 | CONMEBOL Libertadores | Boca Juniors | U. Catolica | OVER_1_5 | 0.80936 | 151.235 | FAILURE_MODE_LOW_CONVERSION |
-| 2 | 1535218 | CONMEBOL Sudamericana | America de Cali | Macara | OVER_1_5 | 0.7961 | 113.017 | FAILURE_MODE_LOW_CONVERSION |
+| 1 | 1545409 | Ligue 1 | Nice | Saint Etienne | OVER_1_5 | 0.72396 | 139.635 | FAILURE_MODE_LOW_CONVERSION |
 
 ### Candidate v5
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1535314 | CONMEBOL Libertadores | Boca Juniors | U. Catolica | OVER_1_5 | 0.80936 | 151.235 | FAILURE_MODE_LOW_CONVERSION |
-| 2 | 1535218 | CONMEBOL Sudamericana | America de Cali | Macara | OVER_1_5 | 0.7961 | 113.017 | FAILURE_MODE_LOW_CONVERSION |
+| 1 | 1545409 | Ligue 1 | Nice | Saint Etienne | OVER_1_5 | 0.72396 | 139.635 | FAILURE_MODE_LOW_CONVERSION |
 
 ### Candidate v6
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1535314 | CONMEBOL Libertadores | Boca Juniors | U. Catolica | OVER_1_5 | 0.80936 | 151.235 | FAILURE_MODE_LOW_CONVERSION |
-| 2 | 1535218 | CONMEBOL Sudamericana | America de Cali | Macara | OVER_1_5 | 0.7961 | 113.017 | FAILURE_MODE_LOW_CONVERSION |
+| 1 | 1545409 | Ligue 1 | Nice | Saint Etienne | OVER_1_5 | 0.72396 | 139.635 | FAILURE_MODE_LOW_CONVERSION |
 
 ### Candidate v7
 
@@ -42,45 +37,38 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 ## Match Script Forecasts
 | forecast_rank | fixture_id | league | home_team | away_team | market_primary | predicted_match_script | predicted_score_main | predicted_score_alt | predicted_home_xg_range | predicted_away_xg_range | predicted_home_shots_range | predicted_away_shots_range | predicted_home_sot_range | predicted_away_sot_range | predicted_total_corners_range | predicted_possession_split | predicted_pick_path | predicted_pick_breaker | predicted_total_goals_range | predicted_first_goal_side | predicted_state_gravity | forecast_confidence_band | forecast_inputs_used | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1535314 | CONMEBOL Libertadores | Boca Juniors | U. Catolica | OVER_1_5 | Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.7; stats=PARTIAL. | 2-2 | 1-2 | 1.7-2.4 | 1.3-2.0 | 8-12 | 9-13 | 3-5 | 3-5 | 5-9 | home 45-53% / away 47-55% | Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 3.1-4.2 | Home slight lean | open exchange | MEDIUM_HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-05-29 | 2026-05-28T23:05:48+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-05-29-20260528T230548Z |
-| 2 | 1535218 | CONMEBOL Sudamericana | America de Cali | Macara | OVER_1_5 | Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 3.7; stats=FULL. | 2-2 | 1-2 | 1.5-2.2 | 1.5-2.2 | 9-13 | 12-16 | 3-5 | 2-4 | 7-11 | home 45-53% / away 47-55% | Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 3.1-4.2 | Either side | open exchange | MEDIUM_HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-05-29 | 2026-05-28T23:05:48+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-05-29-20260528T230548Z |
+| 1 | 1545409 | Ligue 1 | Nice | Saint Etienne | OVER_1_5 | Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 2.9; stats=FULL. | 1-2 | 0-2 | 1.0-1.7 | 1.2-1.9 | 7-11 | 12-16 | 2-4 | 3-5 | 7-11 | home 35-42% / away 58-65% | Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 2.4-3.5 | Either side | balanced pressure | MEDIUM_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-05-29 | 2026-05-29T18:21:22+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-05-29-20260529T182122Z |
 
 ## Baseline vs Candidate Comparison
 ### Candidate v2
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | baseline_market | candidate_v2_market | baseline_raw_prob | candidate_v2_raw_prob | baseline_calibrated_prob | candidate_v2_calibrated_prob | baseline_confidence_score | candidate_v2_confidence_score | baseline_bucket | candidate_v2_bucket | baseline_main_reason | candidate_v2_main_reason | baseline_primary_risk | candidate_v2_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BOTH | 1535218 | America de Cali vs Macara | CONMEBOL Sudamericana | 2 | 2 | OVER_1_5 | OVER_1_5 | 0.879 | 0.8761 | 0.799 | 0.7961 | 113.812 | 113.017 | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_STRONG | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_EXTENDED_REVIEW;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-29 | 2026-05-28T23:05:48+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-29-20260528T230548Z |
-| BOTH | 1535314 | Boca Juniors vs U. Catolica | CONMEBOL Libertadores | 1 | 1 | OVER_1_5 | OVER_1_5 | 0.8808 | 0.877 | 0.81316 | 0.80936 | 151.9 | 151.235 | ACCURACY_CORE | ACCURACY_CORE | ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-29 | 2026-05-28T23:05:48+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-29-20260528T230548Z |
+| BOTH | 1545409 | Nice vs Saint Etienne | Ligue 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | 0.7885 | 0.7916 | 0.72086 | 0.72396 | 138.817 | 139.635 | ACCURACY_CORE | ACCURACY_CORE | ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-29 | 2026-05-29T18:21:22+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-29-20260529T182122Z |
 
 ### Candidate v4
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v4_rank | baseline_market | candidate_v2_market | candidate_v4_market | candidate_v4_original_market | candidate_v4_firewall_decision | candidate_v4_firewall_score | candidate_v4_firewall_action | baseline_primary_risk | candidate_v2_primary_risk | candidate_v4_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1535218 | America de Cali vs Macara | CONMEBOL Sudamericana | 2 | 2 | 2 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-29 | 2026-05-28T23:05:48+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-29-20260528T230548Z |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1535314 | Boca Juniors vs U. Catolica | CONMEBOL Libertadores | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-29 | 2026-05-28T23:05:48+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-29-20260528T230548Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1545409 | Nice vs Saint Etienne | Ligue 1 | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-29 | 2026-05-29T18:21:22+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-29-20260529T182122Z |
 
 ### Candidate v5
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v5_rank | baseline_market | candidate_v2_market | candidate_v5_market | candidate_v5_original_market | candidate_v5_action | candidate_v5_hint | baseline_primary_risk | candidate_v2_primary_risk | candidate_v5_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1535218 | America de Cali vs Macara | CONMEBOL Sudamericana | 2 | 2 | 2 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-29 | 2026-05-28T23:05:48+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-29-20260528T230548Z |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1535314 | Boca Juniors vs U. Catolica | CONMEBOL Libertadores | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-29 | 2026-05-28T23:05:48+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-29-20260528T230548Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1545409 | Nice vs Saint Etienne | Ligue 1 | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-29 | 2026-05-29T18:21:22+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-29-20260529T182122Z |
 
 ### Candidate v6
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v6_rank | baseline_market | candidate_v2_market | candidate_v6_market | candidate_v6_action | candidate_v6_alignment | candidate_v6_confidence_adjustment | baseline_primary_risk | candidate_v2_primary_risk | candidate_v6_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V6 | 1535218 | America de Cali vs Macara | CONMEBOL Sudamericana | 2 | 2 | 2 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | NEUTRAL | 0.0 | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-29 | 2026-05-28T23:05:48+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-29-20260528T230548Z |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V6 | 1535314 | Boca Juniors vs U. Catolica | CONMEBOL Libertadores | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | NEUTRAL | 0.0 | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-29 | 2026-05-28T23:05:48+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-29-20260528T230548Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V6 | 1545409 | Nice vs Saint Etienne | Ligue 1 | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | NEUTRAL | 0.0 | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-05-29 | 2026-05-29T18:21:22+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-29-20260529T182122Z |
 
 ### Candidate v7
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v7_rank | baseline_market | candidate_v2_market | candidate_v7_market | candidate_v7_decision | candidate_v7_required_edge | candidate_v7_actual_edge | candidate_v7_drift_status | candidate_v7_clv_direction | candidate_v7_execution_status | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2 | 1535218 | America de Cali vs Macara | CONMEBOL Sudamericana | 2 | 2 |  | OVER_1_5 | OVER_1_5 |  |  |  |  |  |  |  | 2026-05-29 | 2026-05-28T23:05:48+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-29-20260528T230548Z |
-| BASELINE+CANDIDATE_V2 | 1535314 | Boca Juniors vs U. Catolica | CONMEBOL Libertadores | 1 | 1 |  | OVER_1_5 | OVER_1_5 |  |  |  |  |  |  |  | 2026-05-29 | 2026-05-28T23:05:48+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-29-20260528T230548Z |
+| BASELINE+CANDIDATE_V2 | 1545409 | Nice vs Saint Etienne | Ligue 1 | 1 | 1 |  | OVER_1_5 | OVER_1_5 |  |  |  |  |  |  |  | 2026-05-29 | 2026-05-29T18:21:22+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-05-29-20260529T182122Z |
 
 ## Price Discipline / CLV / Drift Execution Guard
 | fixture_id | home_team | away_team | market_primary | price_discipline_decision | price_discipline_min_edge_required | price_discipline_actual_edge | price_discipline_edge_surplus | price_discipline_drift_status | candidate_v7_prelock_status | candidate_v7_execution_status | clv_direction | price_discipline_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1535314 | Boca Juniors | U. Catolica | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.147073 | 0.004073 | WATCH_PATTERN | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | CLV_UNAVAILABLE | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
-| 1535218 | America de Cali | Macara | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.186445 | 0.043445 | WATCH_PATTERN | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | CLV_UNAVAILABLE | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
+| 1545409 | Nice | Saint Etienne | OVER_1_5 | PRICE_REJECTED | 0.143 | 0.133705 | -0.009295 | WATCH_PATTERN | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | CLV_UNAVAILABLE | Calibrated probability 0.724 below required 0.770. |
 
 ## Pre-Lock Execution Status
 - Pre-lock data fresh: YES
@@ -90,14 +78,12 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 ### Official Baseline Picks
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank | competition_calibrated_prob |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1535314 | CONMEBOL Libertadores | Boca Juniors | U. Catolica | OVER_1_5 | 1 | 0.81316 |
-| 1535218 | CONMEBOL Sudamericana | America de Cali | Macara | OVER_1_5 | 2 | 0.799 |
+| 1545409 | Ligue 1 | Nice | Saint Etienne | OVER_1_5 | 1 | 0.72086 |
 
 ### Candidate v7 Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | price_discipline_decision | candidate_v7_prelock_status | candidate_v7_execution_status | candidate_v7_execution_allowed_flag | price_discipline_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1535314 | Boca Juniors | U. Catolica | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | 0 | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
-| 1535218 | America de Cali | Macara | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | 0 | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
+| 1545409 | Nice | Saint Etienne | OVER_1_5 | PRICE_REJECTED | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | 0 | Calibrated probability 0.724 below required 0.770. |
 
 ### Active Pre-Lock Decisions
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
@@ -119,6 +105,9 @@ _No stale pre-lock rows excluded._
 | 1535314 | Boca Juniors | U. Catolica | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.37 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1535314 | Boca Juniors | U. Catolica | OVER_1_5 | OFFICIAL_BASELINE | 1.37 | 1.37 | 1.37 | 0.0 | CLV_FLAT |  |  |
 | 1535318 | Cruzeiro | Barcelona SC | BTTS_YES | DEEP_ANALYSIS_CANDIDATES | 2.55 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1545409 | Nice | Saint Etienne | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.52 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1545409 | Nice | Saint Etienne | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.52 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1545409 | Nice | Saint Etienne | OVER_1_5 | OFFICIAL_BASELINE | 1.52 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1545797 | Monza | Catanzaro | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.83 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1545797 | Monza | Catanzaro | OVER_2_5 | OFFICIAL_BASELINE | 1.83 |  |  |  | CLV_UNAVAILABLE |  |  |
 
@@ -161,14 +150,14 @@ _No rows._
 
 ## Immutable Ledger / Experiment Registry
 - Ledger update status: AVAILABLE
-- Official picks registered: 2
-- Shadow picks registered: 10
+- Official picks registered: 3
+- Shadow picks registered: 15
 - No-bet records: 1
 - Ledger report: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-29/vsigma_ledger_daily_report.md
 
 ## Daily Controller Status
 - Next recommended action: RUN_PRELOCK_NOW
-- Pre-lock due time: 2026-05-28T23:00:58.800000+00:00
+- Pre-lock due time: 2026-05-29T17:15:19.600000+00:00
 - Status path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-29/daily_controller_status.md
 
 ## Daily Supervisor
@@ -201,17 +190,23 @@ _No rows._
 | CANDIDATE_V6_API_PREDICTIONS | 1535218.0 | America de Cali | Macara | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1535314.0 | Boca Juniors | U. Catolica | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1535218.0 | America de Cali | Macara | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| OFFICIAL_BASELINE | 1545409.0 | Nice | Saint Etienne | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1545409.0 | Nice | Saint Etienne | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 1545409.0 | Nice | Saint Etienne | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1545409.0 | Nice | Saint Etienne | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V6_API_PREDICTIONS | 1545409.0 | Nice | Saint Etienne | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1545409.0 | Nice | Saint Etienne | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | OFFICIAL | 19 | 7 | 4 | 3 | -1.18 | -16.857143 | FROZEN_OFFICIAL_BASELINE |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 23 | 6 | 3 | 3 | -1.7 | -28.333333 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
+| OFFICIAL_BASELINE | OFFICIAL | 20 | 7 | 4 | 3 | -1.18 | -16.857143 | FROZEN_OFFICIAL_BASELINE |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 26 | 6 | 3 | 3 | -1.7 | -28.333333 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
 | CANDIDATE_V3_ODDS_DEPTH | NOT_PROMOTED | 0 | 0 | 0 | 0 | 0.0 |  | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V4_O25_FIREWALL | SHADOW | 22 | 6 | 4 | 2 | -0.45 | -7.5 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V5_PLAYER_IMPACT | SHADOW | 23 | 6 | 4 | 2 | -0.45 | -7.5 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V6_API_PREDICTIONS | AUDIT_ONLY | 21 | 5 | 3 | 2 | -0.7 | -14.0 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | 13 | 1 | 0 | 1 | -1.0 | -100.0 | PRICE_DISCIPLINE_UNTESTED |
+| CANDIDATE_V4_O25_FIREWALL | SHADOW | 25 | 6 | 4 | 2 | -0.45 | -7.5 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V5_PLAYER_IMPACT | SHADOW | 26 | 6 | 4 | 2 | -0.45 | -7.5 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V6_API_PREDICTIONS | AUDIT_ONLY | 24 | 5 | 3 | 2 | -0.7 | -14.0 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | 14 | 1 | 0 | 1 | -1.0 | -100.0 | PRICE_DISCIPLINE_UNTESTED |
 
 ## Promotion & Threshold Governance
 - Official baseline status: KEEP_OFFICIAL_BASELINE
@@ -258,37 +253,35 @@ _No rows._
 ## Failure Mode Summary
 | failure_mode | rows |
 | --- | --- |
-| FAILURE_MODE_LOW_CONVERSION | 10 |
-| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.147; market_fit=SAFE_OK | 4 |
-| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.186; market_fit=SAFE_OK | 4 |
-| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.151; market_fit=SAFE_OK | 1 |
-| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.189; market_fit=SAFE_OK | 1 |
+| FAILURE_MODE_LOW_CONVERSION | 5 |
+| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.134; market_fit=SAFE_OK | 4 |
+| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.131; market_fit=SAFE_OK | 1 |
 
 ## Freshness Validation
 | file_name | candidate_version | status | detail | rows |
 | --- | --- | --- | --- | --- |
-| vsigma_today_competition_shortlist.csv | OFFICIAL_BASELINE | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_competition_top.csv | OFFICIAL_BASELINE | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v2_competition_shortlist.csv | CANDIDATE_V2 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v2_competition_top.csv | CANDIDATE_V2 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v4_competition_shortlist.csv | CANDIDATE_V4 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v4_competition_top.csv | CANDIDATE_V4 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v5_competition_shortlist.csv | CANDIDATE_V5 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v5_competition_top.csv | CANDIDATE_V5 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v6_competition_shortlist.csv | CANDIDATE_V6 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v6_competition_top.csv | CANDIDATE_V6 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v7_competition_shortlist.csv | CANDIDATE_V7 | PASS | output is fresh for requested target date | 2 |
+| vsigma_today_competition_shortlist.csv | OFFICIAL_BASELINE | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_competition_top.csv | OFFICIAL_BASELINE | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v2_competition_shortlist.csv | CANDIDATE_V2 | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v2_competition_top.csv | CANDIDATE_V2 | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v4_competition_shortlist.csv | CANDIDATE_V4 | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v4_competition_top.csv | CANDIDATE_V4 | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v5_competition_shortlist.csv | CANDIDATE_V5 | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v5_competition_top.csv | CANDIDATE_V5 | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v6_competition_shortlist.csv | CANDIDATE_V6 | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v6_competition_top.csv | CANDIDATE_V6 | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v7_competition_shortlist.csv | CANDIDATE_V7 | PASS | output is fresh for requested target date | 1 |
 | vsigma_today_candidate_v7_competition_top.csv | CANDIDATE_V7 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_baseline_vs_candidate_v2.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v4.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v5.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v6.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v7.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_match_script_forecasts.csv | FORECAST | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v2_match_script_forecasts.csv | FORECAST_CANDIDATE_V2 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
+| vsigma_today_baseline_vs_candidate_v2.csv | COMPARISON | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v4.csv | COMPARISON | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v5.csv | COMPARISON | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v6.csv | COMPARISON | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v7.csv | COMPARISON | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_match_script_forecasts.csv | FORECAST | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v2_match_script_forecasts.csv | FORECAST_CANDIDATE_V2 | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | PASS | output is fresh for requested target date | 2 |
+| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | PASS | output is fresh for requested target date | 2 |
 | today_pipeline_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
 | today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet | 0 |
 

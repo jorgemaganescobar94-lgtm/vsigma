@@ -1,36 +1,36 @@
-# vSIGMA Daily Command Center - 2026-05-28
+# vSIGMA Daily Command Center - 2026-05-29
 
 ## Executive Command
-- generated_at: 2026-05-29T19:18:26+01:00
-- mode: post-yesterday
-- command_center_status: NO_ACTION_REQUIRED
-- daily_classification: NO_BET_VALID
-- action_level: NO_ACTION_REQUIRED
-- operational_verdict: NO_EXECUTION_NO_BET_VALID
+- generated_at: 2026-05-29T19:21:30+01:00
+- mode: pre
+- command_center_status: ACTION_REQUIRED
+- daily_classification: DATA_BLOCKED
+- action_level: ACTION_REQUIRED
+- operational_verdict: NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA
 - predictive_failure: NO
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26654412053
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26654532456
 
 ## Next Operator Action
-- No manual execution needed; keep collecting no-bet evidence.
+- Check provider/API coverage, odds availability, lineups, and data-gap flags before executing.
 
 ## Decision Snapshot
-- decision_outcome_rows: 1
-- official_action_counts: NO_BET=1
-- execution_family_status_counts: NO_CANDIDATES=1
+- decision_outcome_rows: 2
+- official_action_counts: NO_BET=2
+- execution_family_status_counts: DATA_GAP_BLOCKED=2
 
 ## Quality Snapshot
-- decision_quality_rows: 0
-- decision_quality_labels: none
-- quality_buckets: none
+- decision_quality_rows: 2
+- decision_quality_labels: NO_BET_UNRESOLVED=2
+- quality_buckets: NEEDS_MORE_DATA=2
 
 ## Source Coverage
-- monitoring_summary: present — `data/processed/today/2026-05-28/vsigma_autonomous_monitoring_summary.md`
-- decision_quality_review: present — `data/processed/today/2026-05-28/vsigma_decision_quality_review.md`
-- system_review: present — `data/processed/today/2026-05-28/vsigma_system_review.md`
-- prelock_resolver: present — `data/processed/today/2026-05-28/vsigma_prelock_decision_resolver.md`
-- cloud_decision_summary: present — `data/processed/today/2026-05-28/vsigma_cloud_decision_summary.md`
-- decision_outcome_ledger: present — `data/processed/today/2026-05-28/vsigma_decision_outcome_ledger.csv`
+- monitoring_summary: present — `data/processed/today/2026-05-29/vsigma_autonomous_monitoring_summary.md`
+- decision_quality_review: present — `data/processed/today/2026-05-29/vsigma_decision_quality_review.md`
+- system_review: present — `data/processed/today/2026-05-29/vsigma_system_review.md`
+- prelock_resolver: present — `data/processed/today/2026-05-29/vsigma_prelock_decision_resolver.md`
+- cloud_decision_summary: present — `data/processed/today/2026-05-29/vsigma_cloud_decision_summary.md`
+- decision_outcome_ledger: present — `data/processed/today/2026-05-29/vsigma_decision_outcome_ledger.csv`
 
 ## Operating Rules
 - ACTION_REQUIRED: inspect before trusting the day.

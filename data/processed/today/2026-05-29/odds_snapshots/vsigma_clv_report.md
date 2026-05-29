@@ -1,9 +1,9 @@
 # vSIGMA CLV Calibration Report
 
 - Target date: 2026-05-29
-- Rows: 9
+- Rows: 12
 - Date validation status: CLV_DATE_MISMATCH
-- Date-mismatched rows excluded: 742
+- Date-mismatched rows excluded: 743
 - Mismatched target dates observed: 2026-05-09, 2026-05-14, 2026-05-15, 2026-05-16, 2026-05-17, 2026-05-18, 2026-05-19, 2026-05-20, 2026-05-21, 2026-05-22, 2026-05-23, 2026-05-24, 2026-05-25, 2026-05-26, 2026-05-27, 2026-05-28
 - Missing PRE snapshot rows: 0
 - CLV tracking status: CLV_TRACKING_AVAILABLE_OR_NOT_REQUIRED
@@ -11,15 +11,15 @@
 ## Snapshot Provenance
 | metric | rows |
 | --- | --- |
-| true_pre_rows | 9 |
+| true_pre_rows | 12 |
 | backfilled_rows | 0 |
 | calibration_usable_rows | 2 |
-| audit_only_rows | 7 |
+| audit_only_rows | 10 |
 
 ## CLV Direction Mix
 | clv_direction | rows |
 | --- | --- |
-| CLV_UNAVAILABLE | 7 |
+| CLV_UNAVAILABLE | 10 |
 | CLV_FLAT | 2 |
 
 ## CLV Rows
@@ -32,6 +32,9 @@
 | 2026-05-29 | 1535314 | CONMEBOL Libertadores | Boca Juniors | U. Catolica | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.37 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-29 | 1535314 | CONMEBOL Libertadores | Boca Juniors | U. Catolica | OVER_1_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE;OFFICIAL_BASELINE_PRELOCK | 1.37 | 1.37 | 1.37 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. |  |  | CANONICAL_CAPTURED | 1 | 1 | PRE;PRELOCK | Captured by odds snapshot pipeline. |
 | 2026-05-29 | 1535318 | CONMEBOL Libertadores | Cruzeiro | Barcelona SC | BTTS_YES | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 2.55 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-29 | 1545409 | Ligue 1 | Nice | Saint Etienne | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | CANDIDATE_V2 | 1.52 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-29 | 1545409 | Ligue 1 | Nice | Saint Etienne | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.52 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-05-29 | 1545409 | Ligue 1 | Nice | Saint Etienne | OVER_1_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_BASELINE | 1.52 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-29 | 1545797 | Serie B | Monza | Catanzaro | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.83 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 | 2026-05-29 | 1545797 | Serie B | Monza | Catanzaro | OVER_2_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST | 1.83 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
 

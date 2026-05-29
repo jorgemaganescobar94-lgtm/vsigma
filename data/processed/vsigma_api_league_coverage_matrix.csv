@@ -1,10 +1,3 @@
 league_id,league,country,season,league_type,coverage_season_current,coverage_season_start,coverage_season_end,league_has_fixtures_coverage,league_has_standings_coverage,league_has_odds_coverage,league_has_events_coverage,league_has_lineups_coverage,league_has_fixture_stats_coverage,league_has_player_stats_coverage,league_has_players_coverage,league_has_injuries_coverage,league_has_predictions_coverage,league_has_top_scorers_coverage,league_has_top_assists_coverage,league_has_top_cards_coverage,league_coverage_class,league_coverage_rich_flag,league_data_reliability_score,league_coverage_source_status,league_coverage_note,coverage_matrix_generated_at_utc
-11,CONMEBOL Sudamericana,World,2026,Cup,1,2026-03-03,2026-05-29,1,1,1,1,1,1,1,1,0,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-28T23:03:54.628273+00:00
-13,CONMEBOL Libertadores,World,2026,Cup,1,2026-02-04,2026-05-29,1,1,1,1,1,1,1,1,0,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-28T23:03:55.023056+00:00
-61,Ligue 1,France,2025,League,1,2025-08-15,2026-05-29,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-28T23:03:55.423965+00:00
-103,Eliteserien,Norway,2026,League,1,2026-03-14,2026-12-06,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-28T23:03:55.822806+00:00
-113,Allsvenskan,Sweden,2026,League,1,2026-04-04,2026-11-29,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-28T23:03:56.232599+00:00
-136,Serie B,Italy,2025,League,1,2025-08-22,2026-05-29,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-28T23:03:56.625848+00:00
-233,Premier League,Egypt,2025,League,1,2025-08-08,2026-05-28,1,1,1,1,1,1,1,1,0,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-28T23:03:57.023114+00:00
-362,A Lyga,Lithuania,2026,League,1,2026-02-21,2026-07-12,1,1,1,1,1,0,0,0,0,1,0,0,0,COVERAGE_PARTIAL,0,0.7,OFFICIAL_API,,2026-05-28T23:03:57.428170+00:00
-917,Copa Ecuador,Ecuador,2025,Cup,1,2026-04-07,2026-07-09,1,0,1,1,1,0,0,1,0,1,1,1,1,COVERAGE_PARTIAL,0,0.7,OFFICIAL_API,,2026-05-28T23:03:57.830154+00:00
+61,Ligue 1,France,2025,League,1,2025-08-15,2026-05-29,1,1,1,1,1,1,1,1,1,1,1,1,1,COVERAGE_RICH,1,0.95,OFFICIAL_API,,2026-05-29T18:20:53.310929+00:00
+917,Copa Ecuador,Ecuador,2025,Cup,1,2026-04-07,2026-07-09,1,0,1,1,1,0,0,1,0,1,1,1,1,COVERAGE_PARTIAL,0,0.7,OFFICIAL_API,,2026-05-29T18:20:53.723952+00:00

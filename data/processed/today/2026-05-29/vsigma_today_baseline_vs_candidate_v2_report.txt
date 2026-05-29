@@ -3,16 +3,15 @@ vSIGMA TODAY BASELINE VS CANDIDATE V2
 Baseline: official frozen Competition Accuracy Mode + Probability Calibration.
 Candidate v2: SHADOW experimental schedule-strength + anomaly-cleaning layer.
 
-Baseline official picks: 2
-Candidate v2 shadow picks: 2
-Overlap: 2
+Baseline official picks: 1
+Candidate v2 shadow picks: 1
+Overlap: 1
 Only baseline chose: 0
 Only candidate chose: 0
 
 Side-by-side picks
-comparison_status                     fixture  baseline_rank  candidate_v2_rank baseline_market candidate_v2_market  baseline_calibrated_prob  candidate_v2_calibrated_prob  baseline_confidence_score  candidate_v2_confidence_score
-             BOTH   America de Cali vs Macara              2                  2        OVER_1_5            OVER_1_5                   0.79900                       0.79610                    113.812                        113.017
-             BOTH Boca Juniors vs U. Catolica              1                  1        OVER_1_5            OVER_1_5                   0.81316                       0.80936                    151.900                        151.235
+comparison_status               fixture  baseline_rank  candidate_v2_rank baseline_market candidate_v2_market  baseline_calibrated_prob  candidate_v2_calibrated_prob  baseline_confidence_score  candidate_v2_confidence_score
+             BOTH Nice vs Saint Etienne              1                  1        OVER_1_5            OVER_1_5                   0.72086                       0.72396                    138.817                        139.635
 
 Reason differences
 All compared picks overlap. Review probability/confidence deltas in the CSV.

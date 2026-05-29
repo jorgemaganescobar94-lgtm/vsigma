@@ -70,7 +70,7 @@
 | 2026-05-25 | TIE | Top experiments tied on profit and hit rate. |
 | 2026-05-26 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
 | 2026-05-27 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
-| 2026-05-28 | NO_BET_DAY | No model registered a pick. |
+| 2026-05-28 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
 | 2026-05-29 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
 
 ## CLV Data Sufficiency
