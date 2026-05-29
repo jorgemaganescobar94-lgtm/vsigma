@@ -86,6 +86,10 @@ jobs:
         shell: bash
         run: python scripts/build_learning_chain_output_sanity.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Write run summary
+        shell: bash
+        run: python scripts/build_github_actions_run_summary.py --date "$VSIGMA_DATE" --mode full_post_match --output "$GITHUB_STEP_SUMMARY"
+
       - name: Commit learning outputs
         shell: bash
         run: |
