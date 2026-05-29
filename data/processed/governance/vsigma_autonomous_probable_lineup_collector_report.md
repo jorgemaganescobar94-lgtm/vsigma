@@ -2,10 +2,10 @@
 
 ## Summary
 - search_provider: NO_SEARCH_KEY
-- rows_seen: 20
+- rows_seen: 2
 - urls_discovered: 0
 - rows_extracted: 0
-- status_counts: NO_DATA=20
+- status_counts: NO_DATA=2
 - source_counts: none
 - auto_apply: NO
 - production_change: NO

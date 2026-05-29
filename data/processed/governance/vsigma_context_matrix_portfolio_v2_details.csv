@@ -1,4 +1,2 @@
 target_date,generated_at,rank,fixture_id,home_team,away_team,market_primary,context_level,context_score,matrix_policy,audit_memory_level,final_portfolio_status,stake_guidance,operator_note,auto_apply,production_change
-2026-05-29,2026-05-29T19:19:26+01:00,1,1535218,America de Cali,Macara,OVER_1_5,L6_REVIEW,40,review only,MEM_NONE,REVIEW_ONLY,LOW_IF_CONFIRMED,Review only; low stake only with price/prelock/live confirmation.,NO,NO
-2026-05-29,2026-05-29T19:19:26+01:00,2,1535314,Boca Juniors,U. Catolica,OVER_1_5,L6_REVIEW,40,review only,MEM_NONE,REVIEW_ONLY,LOW_IF_CONFIRMED,Review only; low stake only with price/prelock/live confirmation.,NO,NO
-2026-05-29,2026-05-29T19:19:26+01:00,3,1545797,Monza,Catanzaro,OVER_2_5,L7_SOFT_DOWN,54,reduced stake or live,MEM_NONE,LIVE_ONLY_OR_SYMBOLIC,SYMBOLIC_ONLY,Soft downgrade; only live confirmation or symbolic stake.,NO,NO
+2026-05-29,2026-05-29T19:33:38+01:00,1,1545409,Nice,Saint Etienne,OVER_1_5,L7_SOFT_DOWN,49,reduced stake or live,MEM_NONE,LIVE_ONLY_OR_SYMBOLIC,SYMBOLIC_ONLY,Soft downgrade; only live confirmation or symbolic stake.,NO,NO
