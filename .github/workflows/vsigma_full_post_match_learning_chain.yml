@@ -117,6 +117,11 @@ jobs:
         if: always()
         run: python scripts/append_actions_ab_quality_summary.py --date "$VSIGMA_DATE" --output "$GITHUB_STEP_SUMMARY"
 
+      - name: Add formula patch governance summary
+        shell: bash
+        if: always()
+        run: python scripts/append_actions_formula_patch_governance_summary.py --date "$VSIGMA_DATE" --output "$GITHUB_STEP_SUMMARY"
+
       - name: Commit learning outputs
         shell: bash
         run: |
