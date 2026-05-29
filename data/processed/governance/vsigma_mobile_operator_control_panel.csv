@@ -1,0 +1,9 @@
+target_date,generated_at,card,status,detail,next_action
+2026-05-29,2026-05-29T22:29:17+01:00,MOBILE_STATUS,WATCH_SHADOW,betting_permission=NO; final_decision=WATCH_ONLY_NO_STAKE; action_level=WATCH; alert_route=LOCAL_ONLY,Shadow tests active; no stake or production change.
+2026-05-29,2026-05-29T22:29:17+01:00,OPERATOR,WATCH,final_decision=WATCH_ONLY_NO_STAKE; alert_route=LOCAL_ONLY; sanity=PASS,Read operator brief only if status is REVIEW_NOW/LIVE/STOP.
+2026-05-29,2026-05-29T22:29:17+01:00,LEARNING_GUARD,PASS,commit_allowed=YES; decisions=PASS=7,"If BLOCK_COMMIT, rerun/fix learning chain before trusting outputs."
+2026-05-29,2026-05-29T22:29:17+01:00,LEARNING_SANITY,PASS,sanity=PASS=7; severity=OK=7,Review warnings before calibration decisions.
+2026-05-29,2026-05-29T22:29:17+01:00,SHADOW_QUEUE,ACTIVE,"active=4; high=4; metrics=total_corners,total_fouls,total_goals,total_sot; decisions=PROMOTE_TO_SHADOW_TEST=4; NO_PATCH_STABLE=2",Shadow only; no production change.
+2026-05-29,2026-05-29T22:29:17+01:00,PROMOTION_READINESS,KEEP_SHADOW_TEST,promotion_candidates=0; decisions=KEEP_SHADOW_TEST=4; NO_PROMOTION_STABLE=2,Manual review only if promotion candidate appears.
+2026-05-29,2026-05-29T22:29:17+01:00,SHADOW_AB,SHADOW_EDGE,"metrics=total_goals,total_sot,total_corners,total_fouls; verdicts=SHADOW_BETTER_ON_SAMPLE=3; NO_CLEAR_AB_EDGE=1; At least one shadow rule improves sample error.",Continue shadow; require larger sample before promotion.
+2026-05-29,2026-05-29T22:29:17+01:00,SHADOW_AB_QUALITY,PROMOTION_BLOCKED,quality_gates=NO_CLEAR_AB_EDGE=2; PROMOTION_BLOCKED=2; usable=none; bad=none; A/B improved but sample is not promotion-ready.,Keep accumulating sample.
