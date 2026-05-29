@@ -1,20 +1,20 @@
 # vSIGMA Autonomous Monitoring Summary - 2026-05-29
 
 ## Executive Status
-- generated_at: 2026-05-29T19:21:26+01:00
-- mode: pre
-- daily_classification: DATA_BLOCKED
-- operational_verdict: NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA
-- action_level: ACTION_REQUIRED
-- predictive_failure: NO
+- generated_at: 2026-05-29T19:23:14+01:00
+- mode: auto
+- daily_classification: EXECUTION_OK
+- operational_verdict: EXECUTION_AVAILABLE
+- action_level: NO_ACTION_REQUIRED
+- predictive_failure: UNKNOWN
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26654532456
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26654641463
 
 ## Operator Action
-- Check provider/API coverage, odds availability, lineups, and data-gap flags before executing.
+- Review official executable picks and post-result quality once scores are labeled.
 
 ## Explanation
-- Execution was blocked by data or prelock availability, not by a scored market losing.
+- At least one row was executable at decision time.
 
 ## Source Coverage
 - decision_quality_review: present
@@ -22,7 +22,7 @@
 - healthcheck_report: present
 - cloud_decision_summary: present
 - prelock_decision_resolver: present
-- decision_outcome_ledger_rows: 2
+- decision_outcome_ledger_rows: 3
 
 ## Classification Contract
 - EXECUTION_OK: at least one executable decision exists.

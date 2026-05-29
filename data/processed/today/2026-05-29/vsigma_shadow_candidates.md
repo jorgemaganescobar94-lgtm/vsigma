@@ -1,14 +1,13 @@
 # vSIGMA Shadow Candidates - 2026-05-29
 
 ## Executive Shadow Candidate Summary
-- generated_at: 2026-05-29T19:21:30+01:00
-- shadow_candidates: 2
-- shadow_decision_counts: SHADOW_DOWNGRADE_REVIEW=2
-- experiment_type_counts: LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=2
+- generated_at: 2026-05-29T19:23:14+01:00
+- shadow_candidates: 1
+- shadow_decision_counts: SHADOW_DOWNGRADE_REVIEW=1
+- experiment_type_counts: LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=1
 
 ## Shadow Candidate Decisions
-- SHADOW_DOWNGRADE_REVIEW | Boca Juniors vs U. Catolica | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
-- SHADOW_DOWNGRADE_REVIEW | America de Cali vs Macara | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
+- SHADOW_DOWNGRADE_REVIEW | Nice vs Saint Etienne | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
 
 ## Guardrails
 - official picks changed: NO
