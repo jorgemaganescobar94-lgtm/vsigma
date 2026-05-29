@@ -43,6 +43,9 @@ jobs:
       - name: Append shadow AB addendum
         shell: bash
         run: python scripts/append_mobile_panel_shadow_ab_addendum.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+      - name: Append shadow AB quality gate
+        shell: bash
+        run: python scripts/append_mobile_panel_ab_quality_gate.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
       - name: Write run summary
         shell: bash
         run: |
