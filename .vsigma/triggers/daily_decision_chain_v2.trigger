@@ -1,6 +1,6 @@
 date=2026-05-29
 include_backtest=false
 requested_by=chatgpt
-reason=run_daily_decision_chain_v2_after_autonomous_import_fix_v65_8
-triggered_at=2026-05-29T21:35:00+01:00
-nonce=force-run-003
+reason=run_daily_decision_chain_v2_after_probable_consensus_dedup_v65_9
+triggered_at=2026-05-29T21:45:00+01:00
+nonce=force-run-004
