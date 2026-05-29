@@ -13,6 +13,9 @@ on:
         options:
           - "false"
           - "true"
+  push:
+    paths:
+      - ".vsigma/triggers/daily_decision_chain_v2.trigger"
   schedule:
     - cron: "30 7 * * *"
     - cron: "30 13 * * *"
@@ -43,8 +46,14 @@ jobs:
         shell: bash
         run: |
           D="${{ github.event.inputs.date }}"
+          if [ -z "$D" ] && [ -f ".vsigma/triggers/daily_decision_chain_v2.trigger" ]; then
+            D="$(grep -E '^date=' .vsigma/triggers/daily_decision_chain_v2.trigger | tail -1 | cut -d= -f2 | tr -d '[:space:]')"
+          fi
           if [ -z "$D" ]; then D="$(TZ=Atlantic/Canary date +%F)"; fi
           INCLUDE_BACKTEST="${{ github.event.inputs.include_backtest }}"
+          if [ -z "$INCLUDE_BACKTEST" ] && [ -f ".vsigma/triggers/daily_decision_chain_v2.trigger" ]; then
+            INCLUDE_BACKTEST="$(grep -E '^include_backtest=' .vsigma/triggers/daily_decision_chain_v2.trigger | tail -1 | cut -d= -f2 | tr -d '[:space:]')"
+          fi
           if [ -z "$INCLUDE_BACKTEST" ]; then INCLUDE_BACKTEST="false"; fi
           echo "VSIGMA_DATE=$D" >> "$GITHUB_ENV"
           echo "INCLUDE_BACKTEST=$INCLUDE_BACKTEST" >> "$GITHUB_ENV"
