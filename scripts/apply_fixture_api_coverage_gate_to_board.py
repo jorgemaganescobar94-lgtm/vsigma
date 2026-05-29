@@ -78,6 +78,7 @@ def apply_gate(row, cov):
             row["kill_switch"] = append_note(row.get("kill_switch"), "API_LOW_COVERAGE")
             action = "DOWNGRADED_TO_NO_BET"
         else:
+            row["execution_permission"] = "NO"
             action = "NO_BET_CONFIRMED"
         reason = "API coverage is too weak for reliable execution."
     elif gate == "WAIT_LINEUPS_OR_LIVE_ONLY":
@@ -92,7 +93,26 @@ def apply_gate(row, cov):
             action = "DOWNGRADED_TO_LIVE_ONLY"
         else:
             action = "PREMATCH_BLOCKED_KEEP_WATCH"
-        reason = "Lineups unavailable; prematch execution blocked."
+        reason = "Lineups unavailable inside required window; prematch execution blocked."
+    elif gate == "EARLY_CANDIDATE_PRELOCK_REQUIRED":
+        if original_decision == "NO_BET":
+            row["execution_permission"] = "NO"
+            action = "NO_BET_UNCHANGED_EARLY"
+        else:
+            row["execution_permission"] = "PRELOCK_REQUIRED"
+            row["stake_band"] = "NO_STAKE_PRELOCK"
+            row["portfolio_status"] = append_note(row.get("portfolio_status"), "EARLY_CANDIDATE_PRELOCK_REQUIRED")
+            row["forecast_warning"] = append_note(row.get("forecast_warning"), "LINEUPS_NOT_DUE_YET")
+            row["prelock_trigger"] = append_note(row.get("prelock_trigger"), "mandatory lineup/availability recheck before lock")
+            action = "EARLY_PRELOCK_REQUIRED"
+        reason = "Lineups are not due yet; early candidate may be planned but not locked."
+    elif gate == "EARLY_WATCH_MORE_DATA_REQUIRED":
+        row["execution_permission"] = "NO_PREMATCH"
+        row["stake_band"] = "NO_STAKE_OR_SYMBOLIC"
+        row["portfolio_status"] = append_note(row.get("portfolio_status"), "EARLY_WATCH_MORE_DATA_REQUIRED")
+        row["forecast_warning"] = append_note(row.get("forecast_warning"), "API_EARLY_LOW_SUPPORT")
+        action = "EARLY_WATCH_ONLY"
+        reason = "Early-day data is not strong enough beyond missing lineups."
     elif gate == "PARTIAL_DATA_REVIEW":
         if original_perm not in {"NO", "NO_PREMATCH", "STAT_WATCH_ONLY", "LIVE_ONLY"}:
             row["execution_permission"] = "MANUAL_REVIEW_ONLY"
@@ -127,7 +147,7 @@ def md(day, report):
     ]
     for r in report:
         lines.append(f"- {r['home_team']} vs {r['away_team']} | api_gate={r['api_readiness_gate']} | action={r['gate_action']} | decision={r['original_final_decision']}->{r['final_decision']} | permission={r['original_execution_permission']}->{r['execution_permission']} | missing={r['missing_blocks']}")
-    lines += ["", "## Guardrails", "- Gate blocks or downgrades execution when API coverage is incomplete.", "- It does not create new picks.", "- It does not execute bets.", "- It does not fabricate unavailable API data."]
+    lines += ["", "## Guardrails", "- Gate blocks or downgrades execution when API coverage is incomplete.", "- Early missing lineups can allow PRELOCK_REQUIRED planning, but never lock.", "- It does not create new picks.", "- It does not execute bets.", "- It does not fabricate unavailable API data."]
     return "\n".join(lines) + "\n"
 
 
