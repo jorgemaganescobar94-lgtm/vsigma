@@ -84,16 +84,20 @@ def players(row):
         p=re.sub(r"[^a-z0-9áéíóúüñçãõàèìòùâêîôû \-']","",p).strip()
         if p: clean.append(p)
     return clean[:11]
+
 def side(row):
     v=s(row.get("team_side") or row.get("side") or row.get("team")).lower()
     if v in {"home","h","local"}: return "home"
     if v in {"away","a","visitante"}: return "away"
     return ""
 
+def player_key(players_):
+    return tuple(sorted(set(players_)))
+
 def agreement(lineups):
     unique=[]; seen=set()
     for x in lineups:
-        key=tuple(sorted(set(x["players"])))
+        key=player_key(x["players"])
         if key not in seen: seen.add(key); unique.append(x["players"])
     if len(unique)<2: return 0.0
     vals=[]
@@ -112,14 +116,28 @@ def weighted_agreement(lineups):
     consensus_weight=sum(w for w in support.values() if w/total_weight>=0.5)
     return consensus_weight/max(1,total_weight*11)
 
+def best_per_source(lineups):
+    best={}; internal_conflicts=[]
+    for x in lineups:
+        src=x["source"]
+        if src not in best:
+            best[src]=x
+            continue
+        if player_key(best[src]["players"]) != player_key(x["players"]):
+            internal_conflicts.append(src)
+        if len(set(x["players"])) > len(set(best[src]["players"])):
+            best[src]=x
+    return list(best.values()), sorted(set(internal_conflicts))
+
 def aggregate(accepted):
     grouped=defaultdict(list); seen=set()
     for x in accepted:
-        key=(x["fixture_id"], x["side"], x["source"], tuple(sorted(set(x["players"]))))
+        key=(x["fixture_id"], x["side"], x["source"], player_key(x["players"]))
         if key in seen: continue
         seen.add(key); grouped[(x["fixture_id"],x["side"])].append(x)
     result={}
-    for key,lineups in grouped.items():
+    for key,raw_lineups in grouped.items():
+        lineups, internal_conflicts = best_per_source(raw_lineups)
         total_w=sum(x["weight"] for x in lineups)
         support=defaultdict(float)
         for x in lineups:
@@ -128,9 +146,12 @@ def aggregate(accepted):
         agree=agreement(lineups); wagree=weighted_agreement(lineups); nsrc=len({x["source"] for x in lineups})
         if nsrc>=3 and consensus>=9 and wagree>=0.70: conf="HIGH_WEIGHTED"
         elif nsrc>=2 and consensus>=8 and wagree>=0.58: conf="MEDIUM_WEIGHTED"
-        elif len(lineups)>=2 and agree<0.45: conf="CONFLICTING_SOURCES"
+        elif nsrc>=2 and agree<0.45: conf="CONFLICTING_SOURCES"
         else: conf="LOW_WEIGHTED"
-        result[key]={"sources":nsrc,"consensus":consensus,"agreement":agree,"weighted_agreement":wagree,"confidence":conf,"names":"|".join(sorted({x["source"] for x in lineups}))}
+        names="|".join(sorted({x["source"] for x in lineups}))
+        if internal_conflicts:
+            names += " (internal_conflict:" + ",".join(internal_conflicts) + ")"
+        result[key]={"sources":nsrc,"consensus":consensus,"agreement":agree,"weighted_agreement":wagree,"confidence":conf,"names":names}
     return result
 
 def combined(home,away):
@@ -163,7 +184,7 @@ def counts(rows,field):
 def md(day,rows):
     lines=[f"# vSIGMA Probable Lineup Consensus v2 - {day}","","## Summary",f"- fixtures_reviewed: {len(rows)}",f"- probable_lineup_gates: {counts(rows,'probable_lineup_gate')}",f"- home_confidence: {counts(rows,'home_probable_confidence')}",f"- away_confidence: {counts(rows,'away_probable_confidence')}","- auto_apply: NO","- production_change: NO","","## Fixture Consensus"]
     for r in rows: lines.append(f"- {r['home_team']} vs {r['away_team']} | gate={r['probable_lineup_gate']} | home={r['home_probable_confidence']}({r['home_sources']} src/{r['home_consensus_players']} consensus/w={r['home_weighted_agreement']}) | away={r['away_probable_confidence']}({r['away_sources']} src/{r['away_consensus_players']} consensus/w={r['away_weighted_agreement']}) | accepted={r['accepted_home_sources']} / {r['accepted_away_sources']} | rejected={r['rejected_home_sources']} / {r['rejected_away_sources']}")
-    lines += ["","## Guardrails","- Registry-approved probable XI is never treated as official lineup.","- Duplicate source/url/player rows are deduplicated before confidence scoring.","- Disabled, unregistered, out-of-scope, or review-only sources are rejected.","- Weighted consensus can support early shortlist/prelock planning only.","- Final stake still requires official lineup or explicit manual prelock approval."]
+    lines += ["","## Guardrails","- Registry-approved probable XI is never treated as official lineup.","- Multiple rows from the same source are reduced to one best extraction before consensus scoring.","- Duplicate source/url/player rows are deduplicated before confidence scoring.","- Disabled, unregistered, out-of-scope, or review-only sources are rejected.","- Weighted consensus can support early shortlist/prelock planning only.","- Final stake still requires official lineup or explicit manual prelock approval."]
     return "\n".join(lines)+"\n"
 def run(day,tz):
     day=date.fromisoformat(day).isoformat(); rows=build(day,tz)
