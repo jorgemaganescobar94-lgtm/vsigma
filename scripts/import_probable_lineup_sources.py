@@ -12,7 +12,9 @@ RAW = Path("data/raw")
 INPUT_NAMES = [
     "probable_lineup_sources.csv",
     "probable_lineup_sources_manual.csv",
+    "probable_lineup_sources_autonomous.csv",
     "vsigma_probable_lineup_sources_manual.csv",
+    "vsigma_probable_lineup_sources_autonomous.csv",
 ]
 OUT_FIELDS = [
     "target_date", "generated_at", "fixture_id", "league", "country", "home_team", "away_team",
