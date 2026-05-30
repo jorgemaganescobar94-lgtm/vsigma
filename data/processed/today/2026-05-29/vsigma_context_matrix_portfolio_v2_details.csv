@@ -1,2 +1,2 @@
 target_date,generated_at,rank,fixture_id,home_team,away_team,market_primary,context_level,context_score,matrix_policy,audit_memory_level,final_portfolio_status,stake_guidance,operator_note,auto_apply,production_change
-2026-05-29,2026-05-30T07:38:35+01:00,1,1545409,Nice,Saint Etienne,OVER_1_5,L7_SOFT_DOWN,49,reduced stake or live,MEM_NONE,LIVE_ONLY_OR_SYMBOLIC,SYMBOLIC_ONLY,Soft downgrade; only live confirmation or symbolic stake.,NO,NO
+2026-05-29,2026-05-30T07:53:15+01:00,1,1545409,Nice,Saint Etienne,OVER_1_5,L7_SOFT_DOWN,49,reduced stake or live,MEM_NONE,LIVE_ONLY_OR_SYMBOLIC,SYMBOLIC_ONLY,Soft downgrade; only live confirmation or symbolic stake.,NO,NO
