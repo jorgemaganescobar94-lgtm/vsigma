@@ -1,2 +1,2 @@
 target_date,generated_at,fixtures_reviewed,search_provider,urls_discovered,rows_extracted,status_counts,source_counts,auto_apply,production_change
-2026-05-29,2026-05-30T08:39:26+01:00,2,SERPAPI;SERPAPI_ERROR,34,5,EXTRACTED=5; NO_XI_PATTERN=7; FETCH_FAILED=5,sportsmole=12; whoscored=5,NO,NO
+2026-05-29,2026-05-30T14:06:36+01:00,2,SERPAPI;SERPAPI_ERROR,32,5,EXTRACTED=5; NO_XI_PATTERN=9; FETCH_FAILED=4,sportsmole=12; gffn=2; whoscored=4,NO,NO

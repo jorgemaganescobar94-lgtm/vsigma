@@ -2,11 +2,11 @@
 
 ## Summary
 - search_provider: SERPAPI;SERPAPI_ERROR
-- rows_seen: 17
-- urls_discovered: 34
+- rows_seen: 18
+- urls_discovered: 32
 - rows_extracted: 5
-- status_counts: EXTRACTED=5; NO_XI_PATTERN=7; FETCH_FAILED=5
-- source_counts: sportsmole=12; whoscored=5
+- status_counts: EXTRACTED=5; NO_XI_PATTERN=9; FETCH_FAILED=4
+- source_counts: sportsmole=12; gffn=2; whoscored=4
 - max_search_queries_per_fixture: 8
 - auto_apply: NO
 - production_change: NO
