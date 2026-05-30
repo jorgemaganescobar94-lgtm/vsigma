@@ -1,28 +1,28 @@
 # vSIGMA Autonomous Monitoring Summary - 2026-05-30
 
 ## Executive Status
-- generated_at: 2026-05-30T13:02:42+01:00
-- mode: pre
-- daily_classification: BROKEN
-- operational_verdict: BROKEN
-- action_level: ACTION_REQUIRED
+- generated_at: 2026-05-30T13:50:41+01:00
+- mode: auto
+- daily_classification: EXECUTION_OK
+- operational_verdict: EXECUTION_AVAILABLE
+- action_level: NO_ACTION_REQUIRED
 - predictive_failure: UNKNOWN
-- evidence_basis: missing_sources
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26683248787
+- evidence_basis: decision_quality_review
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26684244876
 
 ## Operator Action
-- Inspect workflow logs and required daily reports; monitoring evidence is incomplete.
+- Review official executable picks and post-result quality once scores are labeled.
 
 ## Explanation
-- Classification inferred from missing_sources; health_status=UNKNOWN; official_summary=UNKNOWN.
+- At least one row was executable at decision time.
 
 ## Source Coverage
-- decision_quality_review: missing
-- system_review: missing
-- healthcheck_report: missing
-- cloud_decision_summary: missing
-- prelock_decision_resolver: missing
-- decision_outcome_ledger_rows: 0
+- decision_quality_review: present
+- system_review: present
+- healthcheck_report: present
+- cloud_decision_summary: present
+- prelock_decision_resolver: present
+- decision_outcome_ledger_rows: 3
 
 ## Classification Contract
 - EXECUTION_OK: at least one executable decision exists.

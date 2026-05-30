@@ -471,10 +471,10 @@ vSIGMA Competition Accuracy Mode + Probability Calibration
 - Winner: NO_SETTLED_RESULTS
 - Governance daily winner: NO_SETTLED_RESULTS
 - Promotion status: SAMPLE_TOO_SMALL:4; AUDIT_ONLY:2; KEEP_OFFICIAL_BASELINE:1
-- Threshold alerts: SAMPLE_TOO_SMALL:19
+- Threshold alerts: SAMPLE_TOO_SMALL:22
 - Major drift/threshold alerts: none
 - NO BET modes: none
-- Pre-lock: STALE_PRELOCK_EXCLUDED
+- Pre-lock: PRELOCK_NOT_AVAILABLE:2; PRELOCK_NO_CHANGE:1
 - Drift: NO_DRIFT:5; SAMPLE_TOO_SMALL:3; WATCH_PATTERN:1
 - Failure modes: see daily master report for pick-level risks.
 

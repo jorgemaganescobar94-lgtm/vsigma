@@ -1,7 +1,7 @@
 # vSIGMA Daily Competition Master Report - 2026-05-30
 
 ## Daily Status
-PRE_LOCK_PENDING
+PRE_LOCK_REVIEWED
 
 ## Official Baseline Top Picks
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
@@ -93,8 +93,8 @@ PRE_LOCK_PENDING
 | 1544371 | Paris Saint Germain | Arsenal | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.162814 | 0.019814 | WATCH_PATTERN | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | CLV_UNAVAILABLE | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
 
 ## Pre-Lock Execution Status
-- Pre-lock data fresh: NO_CURRENT_PRELOCK_ROWS
-- Stale pre-lock excluded: YES
+- Pre-lock data fresh: YES
+- Stale pre-lock excluded: NO
 - Execution allowed by v7: 2
 
 ### Official Baseline Picks
@@ -112,14 +112,14 @@ PRE_LOCK_PENDING
 | 1544371 | Paris Saint Germain | Arsenal | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | 0 | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
 
 ### Active Pre-Lock Decisions
-_No rows._
+| fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1494185 | AIK Stockholm | Sirius | OVER_2_5 | IN_PRELOCK_WINDOW | 58.4 | PRELOCK_NO_CHANGE | no explicit pre-lock contradiction detected |
+| 1492281 | Bahia | Botafogo | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 508.36 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1544371 | Paris Saint Germain | Arsenal | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 238.41 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 
 ### Stale Pre-Lock Warning
-STALE_PRELOCK_EXCLUDED: previous target_date=2026-05-29
-
-| target_date | date | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_decision |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-05-29 | 2026-05-29 | 1545409 | Nice | Saint Etienne | OVER_1_5 | IN_PRELOCK_WINDOW | PRELOCK_NO_CHANGE |
+_No stale pre-lock rows excluded._
 
 ## Odds Snapshot / CLV Calibration
 ### CLV Summary
@@ -134,19 +134,27 @@ STALE_PRELOCK_EXCLUDED: previous target_date=2026-05-29
 | 1494185 | AIK Stockholm | Sirius | OVER_2_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.66 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1494185 | AIK Stockholm | Sirius | OVER_2_5 | CANDIDATE_V7_PRICE_DISCIPLINE | 1.66 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1494185 | AIK Stockholm | Sirius | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.66 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1494185 | AIK Stockholm | Sirius | OVER_2_5 | OFFICIAL_BASELINE | 1.66 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1494185 | AIK Stockholm | Sirius | OVER_2_5 | OFFICIAL_BASELINE | 1.66 | 1.66 | 1.66 | 0.0 | CLV_FLAT |  |  |
 | 1544371 | Paris Saint Germain | Arsenal | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.4 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1544371 | Paris Saint Germain | Arsenal | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.4 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1544371 | Paris Saint Germain | Arsenal | OVER_1_5 | OFFICIAL_BASELINE | 1.4 |  |  |  | CLV_UNAVAILABLE |  |  |
 
 ### Candidate v7 Calibration Advice
-_No rows._
+| market_family | failure_mode | drift_status | clv_direction | n | profit_units | roi_percent | recommendation | recommendation_reason |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 6 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_FLAT | 1 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_UNAVAILABLE | 7 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 
 ## Post-Results Summary
 _No rows._
 
 ## Pre-Lock Status
-_No rows._
+| fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1494185 | AIK Stockholm | Sirius | OVER_2_5 | IN_PRELOCK_WINDOW | 58.4 | PRELOCK_NO_CHANGE | no explicit pre-lock contradiction detected |
+| 1492281 | Bahia | Botafogo | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 508.36 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1544371 | Paris Saint Germain | Arsenal | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 238.41 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 
 ## Drift Monitor Status
 | pattern | settled_rows | wins | losses | profit_units | drift_status |
@@ -193,27 +201,27 @@ _No rows._
 ## Healthcheck
 - Global health status: WARNING
 - Critical warnings: freshness_report: WARNING - validation report contains warning rows
-- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-29`
-- Report path: /home/runner/work/vsigma/vsigma/data/processed/health/vsigma_healthcheck_report.md
+- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-30`
+- Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-30/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1494185.0 | AIK Stockholm | Sirius | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
-| OFFICIAL_BASELINE | 1492281.0 | Bahia | Botafogo | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
-| OFFICIAL_BASELINE | 1544371.0 | Paris Saint Germain | Arsenal | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1494185.0 | AIK Stockholm | Sirius | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1492281.0 | Bahia | Botafogo | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544371.0 | Paris Saint Germain | Arsenal | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1494185.0 | AIK Stockholm | Sirius | OVER_2_5 | PRELOCK_NO_CHANGE | PENDING |  | PRELOCK_UPDATED |
+| OFFICIAL_BASELINE | 1492281.0 | Bahia | Botafogo | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| OFFICIAL_BASELINE | 1544371.0 | Paris Saint Germain | Arsenal | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1494185.0 | AIK Stockholm | Sirius | OVER_2_5 | PRELOCK_NO_CHANGE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1492281.0 | Bahia | Botafogo | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1544371.0 | Paris Saint Germain | Arsenal | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
 | CANDIDATE_V4_O25_FIREWALL | 1494185.0 | AIK Stockholm | Sirius | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
 | CANDIDATE_V4_O25_FIREWALL | 1492281.0 | Bahia | Botafogo | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1494185.0 | AIK Stockholm | Sirius | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1492281.0 | Bahia | Botafogo | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1544371.0 | Paris Saint Germain | Arsenal | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V6_API_PREDICTIONS | 1544371.0 | Paris Saint Germain | Arsenal | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1494185.0 | AIK Stockholm | Sirius | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1492281.0 | Bahia | Botafogo | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1494185.0 | AIK Stockholm | Sirius | OVER_2_5 | PRELOCK_NO_CHANGE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1492281.0 | Bahia | Botafogo | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1544371.0 | Paris Saint Germain | Arsenal | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V6_API_PREDICTIONS | 1544371.0 | Paris Saint Germain | Arsenal | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1494185.0 | AIK Stockholm | Sirius | OVER_2_5 | PRELOCK_NO_CHANGE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1492281.0 | Bahia | Botafogo | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
@@ -244,14 +252,17 @@ _No rows._
 ### Threshold Recommendations
 | market_family | failure_mode | experiment_id | settled_rows | roi_percent | clv_direction | threshold_recommendation |
 | --- | --- | --- | --- | --- | --- | --- |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 7 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V4_O25_FIREWALL | 7 | 1.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 7 | 1.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 6 | -3.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 6 | -3.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 6 | -3.0 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 6 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 2 | -24.0 |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | -100.0 |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | -100.0 |  | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V2_SCHEDULE_ANOMALY | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V4_O25_FIREWALL | 0 |  |  | SAMPLE_TOO_SMALL |
@@ -261,8 +272,6 @@ _No rows._
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | UNSPECIFIED | CANDIDATE_V2_SCHEDULE_ANOMALY | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | UNSPECIFIED | CANDIDATE_V5_PLAYER_IMPACT | 0 |  |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | UNSPECIFIED | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
-| UNDER_3_5 | AVALANCHE_RISK | OFFICIAL_BASELINE | 0 |  |  | SAMPLE_TOO_SMALL |
 
 - CLV data sufficiency: INSUFFICIENT_CLV_DATA
 - Drift alerts: 0
