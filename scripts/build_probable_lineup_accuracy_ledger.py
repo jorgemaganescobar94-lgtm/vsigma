@@ -10,7 +10,7 @@ from zoneinfo import ZoneInfo
 
 P = Path("data/processed")
 RAW = Path("data/raw")
-PROBABLE_FILES = ["vsigma_probable_lineup_sources.csv", "probable_lineup_sources.csv", "probable_lineup_sources_autonomous.csv"]
+PROBABLE_FILES = ["vsigma_probable_lineup_sources.csv", "probable_lineup_sources.csv"]
 OFFICIAL_FILES = [
     "vsigma_official_lineup_sources.csv",
     "official_lineup_sources.csv",
@@ -118,7 +118,7 @@ def probable_rows(day: str) -> tuple[list[dict[str, str]], str]:
                 rr["_players"] = ";".join(players)
                 rr["_source_file"] = str(path)
                 out.append(rr)
-    return out, ";".join(used) if used else "NO_PROBABLE_SOURCE_FILE"
+    return out, ";".join(used) if used else "NO_ACCEPTED_PROBABLE_SOURCE_FILE"
 
 
 def official_rows_from_files(day: str) -> tuple[dict[tuple[str, str], list[str]], str]:
@@ -215,7 +215,7 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], list[dict[str, str]]
             "wrong_players": ";".join(wrong),
             "evaluation_status": status,
             "source_url": s(p.get("source_url") or p.get("url")),
-            "source_guard": f"probable={probable_guard}; official={official_guard}; match_official={official_match_guard}",
+            "source_guard": f"accepted_probable={probable_guard}; official={official_guard}; match_official={official_match_guard}",
             "auto_apply": "NO",
             "production_change": "NO",
         })
@@ -267,7 +267,7 @@ def md(day: str, rows: list[dict[str, str]], summary: list[dict[str, str]]) -> s
         ]
     lines += ["", "## Rows"]
     if not rows:
-        lines.append("- none. Need probable lineup rows first.")
+        lines.append("- none. No accepted probable lineup rows after quarantine.")
     for r in rows[:80]:
         lines.append(
             f"- {r['home_team']} vs {r['away_team']} | side={r['team_side']} | source={r['source_name']} "
@@ -278,6 +278,7 @@ def md(day: str, rows: list[dict[str, str]], summary: list[dict[str, str]]) -> s
         "",
         "## Guardrails",
         "- Accuracy ledger is learning-only and never applies production changes.",
+        "- Accuracy ledger reads only accepted probable rows after quarantine, never autonomous raw rows.",
         "- Probable XI is evaluated only when official lineup players are available.",
         "- NO_OFFICIAL_LINEUP is a pending state, not a source failure.",
         "- Source reliability changes must be handled by a later governor module.",
