@@ -1,7 +1,7 @@
 # vSIGMA Decision Quality Review - 2026-05-30
 
 ## Executive Summary
-- generated_at: 2026-05-30T21:18:07+01:00
+- generated_at: 2026-05-30T21:35:26+01:00
 - daily_classification: EXECUTION_OK
 - no_bet_classification: EXECUTION_ACTIONABLE_PRESENT
 - operational_verdict: EXECUTION_AVAILABLE
@@ -14,7 +14,7 @@
 - good decisions: 0
 - bad decisions: 0
 - neutral/unresolved: 6
-- top improvement signal: WAIT_FOR_POST_RESULTS (4)
+- top improvement signal: WAIT_FOR_POST_RESULTS (3)
 - current recommendation: Do not recalibrate; collect more labeled outcomes.
 - operational note: At least one row was executable at decision time.
 
@@ -31,7 +31,7 @@
 | Paris Saint Germain vs Arsenal | OVER_1_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
 | Bahia vs Botafogo | OVER_2_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
 | AIK Stockholm vs Sirius | OVER_2_5 | NO_BET | KICKOFF_ALREADY_PASSED | UNRESOLVED | EXPIRED_PRELOCK_UNRESOLVED | NEEDS_MORE_DATA | REVIEW_AUTO_TIMING |
-| Bahia vs Botafogo | OVER_2_5 | NO_BET | PRELOCK_GOVERNANCE_NOT_RETAINED | UNRESOLVED | NO_BET_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
+| Bahia vs Botafogo | OVER_2_5 | NO_BET | KICKOFF_ALREADY_PASSED | UNRESOLVED | EXPIRED_PRELOCK_UNRESOLVED | NEEDS_MORE_DATA | REVIEW_AUTO_TIMING |
 | Paris Saint Germain vs Arsenal | OVER_1_5 | NO_BET | KICKOFF_ALREADY_PASSED | UNRESOLVED | EXPIRED_PRELOCK_UNRESOLVED | NEEDS_MORE_DATA | REVIEW_AUTO_TIMING |
 
 ## Block Quality Review
@@ -39,9 +39,9 @@
 - NO_BET_CORRECT_AVOIDED_LOSS count: 0
 - WAIT_MISSED_WIN count: 0
 - WAIT_CORRECT_AVOIDED_LOSS count: 0
-- EXPIRED_PRELOCK rows: 2
+- EXPIRED_PRELOCK rows: 3
 - PRELOCK_NOT_AVAILABLE rows: 0
-- KICKOFF_ALREADY_PASSED rows: 2
+- KICKOFF_ALREADY_PASSED rows: 3
 
 ## Market Quality Review
 | market_primary | rows | wins | losses | no_bet_missed_win | no_bet_correct_avoided_loss | unresolved | recommendation |

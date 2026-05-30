@@ -6,9 +6,9 @@
 - Rows updated this run: 3
 - Actionable rows: 1
 - Non-actionable rows: 5
-- Expired rows: 2
+- Expired rows: 3
 - Waiting rows: 2
-- Blocked rows: 1
+- Blocked rows: 0
 - Technical review rows: 0
 
 ## Target Date Rows
@@ -18,5 +18,5 @@
 | 1544371.0 | UEFA Champions League | Paris Saint Germain | Arsenal | OVER_1_5 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | WAITING_FOR_WINDOW | NO | NO | YES | NO | NO |
 | 1492281.0 | Serie A | Bahia | Botafogo | OVER_2_5 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | WAITING_FOR_WINDOW | NO | NO | YES | NO | NO |
 | 1494185 | Allsvenskan | AIK Stockholm | Sirius | OVER_2_5 | NO_BET | NO | KICKOFF_ALREADY_PASSED | EXPIRED | NO | YES | NO | NO | NO |
-| 1492281 | Serie A | Bahia | Botafogo | OVER_2_5 | NO_BET | NO | PRELOCK_GOVERNANCE_NOT_RETAINED | PRELOCK_NOT_RETAINED | NO | NO | NO | YES | NO |
+| 1492281 | Serie A | Bahia | Botafogo | OVER_2_5 | NO_BET | NO | KICKOFF_ALREADY_PASSED | EXPIRED | NO | YES | NO | NO | NO |
 | 1544371 | UEFA Champions League | Paris Saint Germain | Arsenal | OVER_1_5 | NO_BET | NO | KICKOFF_ALREADY_PASSED | EXPIRED | NO | YES | NO | NO | NO |
