@@ -39,20 +39,20 @@ DOMAINS = {
     "standard.co.uk":"standard_sport",
 }
 SOURCE_QUERY_PLANS = [
-    ("generic", "{home} vs {away} probable lineups predicted XI team news"),
-    ("sportsmole", "site:sportsmole.co.uk {home} vs {away} team news possible starting lineup"),
-    ("whoscored", "site:whoscored.com {home} {away} preview probable lineups"),
-    ("sports_gambler", "site:sportsgambler.com {home} {away} predicted lineups"),
-    ("rotowire", "site:rotowire.com soccer {home} {away} expected lineups"),
-    ("guardian_predicted", "site:theguardian.com football {home} {away} team news predicted lineup"),
-    ("sportskeeda", "site:sportskeeda.com {home} vs {away} prediction team news lineups"),
-    ("ninetymin", "site:90min.com {home} {away} predicted lineup team news"),
-    ("footballtransfers", "site:footballtransfers.com {home} {away} predicted lineup"),
-    ("lequipe", "site:lequipe.fr {home} {away} composition probable"),
-    ("maxifoot", "site:maxifoot.fr {home} {away} composition probable"),
-    ("madeinfoot", "site:madeinfoot.com {home} {away} composition probable"),
-    ("gffn", "site:getfootballnewsfrance.com {home} {away} team news lineup"),
-    ("standard_sport", "site:standard.co.uk sport football {home} {away} predicted lineup team news"),
+    ("generic", "{home} vs {away} {year} probable lineups predicted XI team news"),
+    ("sportsmole", "site:sportsmole.co.uk {home} vs {away} {year} possible starting lineup"),
+    ("whoscored", "site:whoscored.com {home} {away} {year} preview probable lineups"),
+    ("sports_gambler", "site:sportsgambler.com {home} {away} {year} predicted lineups"),
+    ("rotowire", "site:rotowire.com soccer {home} {away} {year} expected lineups"),
+    ("guardian_predicted", "site:theguardian.com football {home} {away} {year} team news predicted lineup"),
+    ("sportskeeda", "site:sportskeeda.com {home} vs {away} {year} prediction team news lineups"),
+    ("ninetymin", "site:90min.com {home} {away} {year} predicted lineup team news"),
+    ("footballtransfers", "site:footballtransfers.com {home} {away} {year} predicted lineup"),
+    ("lequipe", "site:lequipe.fr {home} {away} {year} composition probable"),
+    ("maxifoot", "site:maxifoot.fr {home} {away} {year} composition probable"),
+    ("madeinfoot", "site:madeinfoot.com {home} {away} {year} composition probable"),
+    ("gffn", "site:getfootballnewsfrance.com {home} {away} {year} team news lineup"),
+    ("standard_sport", "site:standard.co.uk sport football {home} {away} {year} predicted lineup team news"),
 ]
 NARRATIVE_TOKENS = {
     "suggesting", "hosts", "host", "visitors", "win", "draw", "prediction", "preview", "betting",
@@ -96,6 +96,66 @@ def norm_url(url):
     parsed=urllib.parse.urlparse(url)
     return urllib.parse.urlunparse((parsed.scheme, parsed.netloc.lower(), parsed.path.rstrip("/"), "", parsed.query, ""))
 
+def fixture_dt(fx):
+    raw=s(fx.get("fixture_datetime_utc") or fx.get("date"))
+    if not raw:
+        return None
+    try:
+        return datetime.fromisoformat(raw.replace("Z", "+00:00"))
+    except Exception:
+        try:
+            return datetime.fromisoformat(raw[:10])
+        except Exception:
+            return None
+
+def fixture_year(fx):
+    dt=fixture_dt(fx)
+    if dt:
+        return str(dt.year)
+    raw=s(fx.get("date"))
+    return raw[:4] if len(raw)>=4 and raw[:4].isdigit() else ""
+
+def fixture_date_markers(fx):
+    dt=fixture_dt(fx)
+    if not dt:
+        return []
+    month=dt.strftime("%B")
+    short=dt.strftime("%b")
+    day=str(dt.day)
+    year=str(dt.year)
+    return [
+        f"{month} {day}, {year}",
+        f"{short} {day}, {year}",
+        f"{day} {month} {year}",
+        f"{day} {short} {year}",
+        f"{month} {day}",
+        f"{short} {day}",
+    ]
+
+def team_token_match(text, team):
+    t=team.lower().replace(".", "")
+    txt=text.lower().replace(".", "")
+    if t in txt:
+        return True
+    parts=[p for p in re.split(r"\s+|-", t) if len(p) >= 4]
+    return bool(parts and any(p in txt for p in parts))
+
+def page_relevance(fx, structured, source):
+    txt=structured.lower()
+    home=s(fx.get("home_team")); away=s(fx.get("away_team"))
+    if home and not team_token_match(txt, home):
+        return False, "HOME_TEAM_NOT_FOUND"
+    if away and not team_token_match(txt, away):
+        return False, "AWAY_TEAM_NOT_FOUND"
+    year=fixture_year(fx)
+    markers=[m.lower() for m in fixture_date_markers(fx)]
+    if source == "sportsmole" and markers:
+        if not any(m in txt for m in markers[:4]):
+            return False, "FIXTURE_DATE_NOT_FOUND"
+    elif year and year not in txt:
+        return False, "FIXTURE_YEAR_NOT_FOUND"
+    return True, "RELEVANT_FIXTURE_PAGE"
+
 def http_json(url, headers=None):
     req=urllib.request.Request(url,headers=headers or {"User-Agent":"vSIGMA/1.0"})
     with urllib.request.urlopen(req,timeout=12) as r:
@@ -138,7 +198,7 @@ def structured_text(page):
     page=re.sub(r"<script[\s\S]*?</script>"," ",page,flags=re.I)
     page=re.sub(r"<style[\s\S]*?</style>"," ",page,flags=re.I)
     page=re.sub(r"<br\s*/?>", "; ", page, flags=re.I)
-    page=re.sub(r"</(?:p|div|li|h1|h2|h3|h4|strong|b)>", "\n", page, flags=re.I)
+    page=re.sub(r"</(?:p|div|li|h1|h2|h3|h4|strong|b|section|article)>", "\n", page, flags=re.I)
     page=re.sub(r"<[^>]+>", " ", page)
     page=html.unescape(page)
     lines=[]
@@ -183,9 +243,7 @@ def candidate_after_marker(line, markers):
 def extract_section_xi(structured, team, source):
     team_l=team.lower()
     lines=structured.splitlines()
-    markers=[
-        "possible starting lineup", "predicted lineup", "possible xi", "predicted xi", "composition probable"
-    ]
+    markers=["possible starting lineup", "predicted lineup", "possible xi", "predicted xi", "composition probable"]
     for i,line in enumerate(lines):
         lower=line.lower()
         if team_l not in lower:
@@ -233,22 +291,20 @@ def extract_generic_xi(text, team):
 def extract_xi_by_source(raw_page, text, structured, team, source):
     if source == "sportsmole":
         xi, method = extract_section_xi(structured, team, "sportsmole")
-        if xi:
-            return xi, method
-        return "", method
+        return (xi, method) if xi else ("", method)
     xi, method = extract_section_xi(structured, team, source)
     if xi:
         return xi, method
     return extract_generic_xi(text, team)
 
 def build_queries(fx, allowed):
-    home=s(fx.get("home_team")); away=s(fx.get("away_team"))
+    home=s(fx.get("home_team")); away=s(fx.get("away_team")); year=fixture_year(fx)
     max_q=int(os.environ.get("VSIGMA_MAX_PROBABLE_LINEUP_SEARCH_QUERIES", "8"))
     plans=[]
     for expected, template in SOURCE_QUERY_PLANS:
         if expected != "generic" and expected not in allowed:
             continue
-        plans.append((expected, template.format(home=home, away=away)))
+        plans.append((expected, template.format(home=home, away=away, year=year)))
     return plans[:max_q]
 
 def candidate_urls(fx, allowed):
@@ -294,15 +350,19 @@ def build(day,tz):
             except Exception as e:
                 out.append({"target_date":day,"generated_at":ts,"fixture_id":fid,"league":s(fx.get("league")),"country":s(fx.get("country")),"home_team":home,"away_team":away,"team_side":"","source_name":src,"source_url":url,"probable_xi":"","discovery_status":"URL_DISCOVERED","extract_status":"FETCH_FAILED","notes":str(e)[:160],"auto_apply":"NO","production_change":"NO"})
                 continue
+            relevant, relevance_reason=page_relevance(fx, structured, src)
+            if not relevant:
+                out.append({"target_date":day,"generated_at":ts,"fixture_id":fid,"league":s(fx.get("league")),"country":s(fx.get("country")),"home_team":home,"away_team":away,"team_side":"","source_name":src,"source_url":url,"probable_xi":"","discovery_status":f"URL_DISCOVERED:{expected}","extract_status":"IRRELEVANT_FIXTURE_PAGE","notes":f"{title[:100]} | relevance={relevance_reason}","auto_apply":"NO","production_change":"NO"})
+                continue
             for side,team in [("home",home),("away",away)]:
                 xi, method=extract_xi_by_source(raw_page, text, structured, team, src)
-                note=(title[:120] + f" | method={method}").strip()
+                note=(title[:100] + f" | relevance={relevance_reason} | method={method}").strip()
                 out.append({"target_date":day,"generated_at":ts,"fixture_id":fid,"league":s(fx.get("league")),"country":s(fx.get("country")),"home_team":home,"away_team":away,"team_side":side,"source_name":src,"source_url":url,"probable_xi":xi,"discovery_status":f"URL_DISCOVERED:{expected}","extract_status":"EXTRACTED" if xi else "NO_XI_PATTERN","notes":note,"auto_apply":"NO","production_change":"NO"})
     return out, provider, urls_seen
 
 def md(day, rows, provider, urls_seen):
     sc=Counter(r["source_name"] for r in rows if r.get("source_name")); st=Counter(r["extract_status"] for r in rows)
-    lines=[f"# vSIGMA Autonomous Probable Lineup Collector - {day}","","## Summary",f"- search_provider: {provider}",f"- rows_seen: {len(rows)}",f"- urls_discovered: {urls_seen}",f"- rows_extracted: {sum(1 for r in rows if r.get('extract_status')=='EXTRACTED')}","- status_counts: "+("; ".join(f"{k}={v}" for k,v in st.items()) if st else "none"),"- source_counts: "+("; ".join(f"{k}={v}" for k,v in sc.items()) if sc else "none"),"- max_search_queries_per_fixture: "+os.environ.get("VSIGMA_MAX_PROBABLE_LINEUP_SEARCH_QUERIES", "8"),"- auto_apply: NO","- production_change: NO","","## Guardrails","- Uses only search API keys if configured; no search-page scraping.","- Searches approved probable-XI domains separately and deduplicates URLs.","- SportsMole uses section-aware parsing and does not fall back to narrative regex.","- Source expansion is weighted by registry; new sources are supporting only, never official.","- Search/API/fetch failures degrade to report rows instead of failing workflow.","- Fetches public source URLs only; does not bypass paywalls, logins, or blocks.","- Conservative extraction: blank if pattern confidence is insufficient.","- Output still passes through quarantine and registry-weighted consensus."]
+    lines=[f"# vSIGMA Autonomous Probable Lineup Collector - {day}","","## Summary",f"- search_provider: {provider}",f"- rows_seen: {len(rows)}",f"- urls_discovered: {urls_seen}",f"- rows_extracted: {sum(1 for r in rows if r.get('extract_status')=='EXTRACTED')}","- status_counts: "+("; ".join(f"{k}={v}" for k,v in st.items()) if st else "none"),"- source_counts: "+("; ".join(f"{k}={v}" for k,v in sc.items()) if sc else "none"),"- max_search_queries_per_fixture: "+os.environ.get("VSIGMA_MAX_PROBABLE_LINEUP_SEARCH_QUERIES", "8"),"- auto_apply: NO","- production_change: NO","","## Guardrails","- Uses only search API keys if configured; no search-page scraping.","- Searches approved probable-XI domains separately and deduplicates URLs.","- Fixture-date relevance filter blocks historical or related articles before extraction.","- SportsMole uses section-aware parsing and does not fall back to narrative regex.","- Source expansion is weighted by registry; new sources are supporting only, never official.","- Search/API/fetch failures degrade to report rows instead of failing workflow.","- Fetches public source URLs only; does not bypass paywalls, logins, or blocks.","- Conservative extraction: blank if pattern confidence is insufficient.","- Output still passes through quarantine and registry-weighted consensus."]
     return "\n".join(lines)+"\n"
 def run(day,tz):
     day=date.fromisoformat(day).isoformat(); rows,provider,urls_seen=build(day,tz)
