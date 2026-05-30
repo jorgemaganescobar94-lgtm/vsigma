@@ -54,6 +54,16 @@ SOURCE_QUERY_PLANS = [
     ("gffn", "site:getfootballnewsfrance.com {home} {away} team news lineup"),
     ("standard_sport", "site:standard.co.uk sport football {home} {away} predicted lineup team news"),
 ]
+NARRATIVE_TOKENS = {
+    "suggesting", "hosts", "host", "visitors", "win", "draw", "prediction", "preview", "betting",
+    "odds", "team news", "sports mole", "article", "subscribe", "will", "should", "could", "match",
+    "lineup", "line-up", "confirmed", "probable", "possible", "starting", "formation", "manager", "coach",
+}
+STOP_SECTION_RE = re.compile(
+    r"(?:substitutes|bench|manager|coach|injured|doubtful|unavailable|sports mole|prediction|betting|odds|"
+    r"team news|preview|match preview|how you voted|data analysis|latest|remplacants|absents|entraîneur)",
+    re.I,
+)
 
 
 def s(x): return "" if x is None else str(x).strip()
@@ -124,15 +134,88 @@ def clean_text(page):
     text=html.unescape(text)
     return re.sub(r"\s+"," ",text)
 
-def extract_xi(text, team):
+def structured_text(page):
+    page=re.sub(r"<script[\s\S]*?</script>"," ",page,flags=re.I)
+    page=re.sub(r"<style[\s\S]*?</style>"," ",page,flags=re.I)
+    page=re.sub(r"<br\s*/?>", "; ", page, flags=re.I)
+    page=re.sub(r"</(?:p|div|li|h1|h2|h3|h4|strong|b)>", "\n", page, flags=re.I)
+    page=re.sub(r"<[^>]+>", " ", page)
+    page=html.unescape(page)
+    lines=[]
+    for line in page.splitlines():
+        line=re.sub(r"\s+", " ", line).strip()
+        if line:
+            lines.append(line)
+    return "\n".join(lines)
+
+def clean_candidate_name(name):
+    name=re.sub(r"\([^)]*\)", " ", s(name))
+    name=re.sub(r"\s+", " ", name).strip(" -–—:;,.()[]")
+    return name
+
+def split_candidate_players(raw):
+    raw=s(raw)
+    raw=STOP_SECTION_RE.split(raw)[0]
+    if raw.count(";") + raw.count(",") < 7:
+        return []
+    parts=[clean_candidate_name(p) for p in re.split(r"[;,|]", raw)]
+    out=[]
+    for p in parts:
+        lp=p.lower()
+        if not p or len(p) < 3 or len(p) > 45:
+            continue
+        if len(p.split()) >= 6:
+            return []
+        if any(tok in lp for tok in NARRATIVE_TOKENS):
+            return []
+        if p not in out:
+            out.append(p)
+    return out[:11] if len(out) >= 8 else []
+
+def candidate_after_marker(line, markers):
+    lower=line.lower()
+    for marker in markers:
+        idx=lower.find(marker)
+        if idx >= 0:
+            return line[idx + len(marker):].strip(" :-–—")
+    return ""
+
+def extract_section_xi(structured, team, source):
+    team_l=team.lower()
+    lines=structured.splitlines()
+    markers=[
+        "possible starting lineup", "predicted lineup", "possible xi", "predicted xi", "composition probable"
+    ]
+    for i,line in enumerate(lines):
+        lower=line.lower()
+        if team_l not in lower:
+            continue
+        if not any(marker in lower for marker in markers):
+            continue
+        chunk=candidate_after_marker(line, markers)
+        for nxt in lines[i+1:i+4]:
+            if any(marker in nxt.lower() for marker in markers) and team_l not in nxt.lower():
+                break
+            if STOP_SECTION_RE.search(nxt):
+                break
+            chunk += "; " + nxt
+            players=split_candidate_players(chunk)
+            if players:
+                return "; ".join(players), f"{source}_structured_section"
+        players=split_candidate_players(chunk)
+        if players:
+            return "; ".join(players), f"{source}_heading_line"
+    return "", "NO_SECTION_XI"
+
+def extract_generic_xi(text, team):
     team_re=re.escape(team)
     patterns=[
-        rf"{team_re}.{{0,350}}possible starting lineup:?\s*([^\.]+)",
+        rf"{team_re}.{{0,250}}possible starting lineup:?\s*([^\.]+)",
         rf"possible {team_re} starting lineup:?\s*([^\.]+)",
-        rf"{team_re}.{{0,350}}predicted lineup:?\s*([^\.]+)",
-        rf"{team_re}.{{0,350}}possible xi:?\s*([^\.]+)",
+        rf"{team_re}.{{0,250}}predicted lineup:?\s*([^\.]+)",
+        rf"{team_re}.{{0,250}}possible xi:?\s*([^\.]+)",
         rf"predicted {team_re} xi:?\s*([^\.]+)",
-        rf"{team_re}.{{0,350}}composition probable:?\s*([^\.]+)",
+        rf"{team_re}.{{0,250}}composition probable:?\s*([^\.]+)",
         rf"composition probable {team_re}:?\s*([^\.]+)",
     ]
     for pat in patterns:
@@ -140,13 +223,23 @@ def extract_xi(text, team):
             m=re.search(pat,text,flags=re.I)
         except re.error:
             continue
-        if not m: continue
-        raw=m.group(1)
-        raw=re.split(r"(?:substitutes|bench|manager|coach|injured|doubtful|unavailable|sports mole|remplacants|absents|entraîneur)",raw,flags=re.I)[0]
-        parts=[p.strip(" -–—:;,.()[]") for p in re.split(r"[,;]",raw)]
-        parts=[p for p in parts if len(p)>2 and len(p)<45]
-        if len(parts)>=8: return "; ".join(parts[:11])
-    return ""
+        if not m:
+            continue
+        players=split_candidate_players(m.group(1))
+        if players:
+            return "; ".join(players), "generic_regex"
+    return "", "NO_REGEX_XI"
+
+def extract_xi_by_source(raw_page, text, structured, team, source):
+    if source == "sportsmole":
+        xi, method = extract_section_xi(structured, team, "sportsmole")
+        if xi:
+            return xi, method
+        return "", method
+    xi, method = extract_section_xi(structured, team, source)
+    if xi:
+        return xi, method
+    return extract_generic_xi(text, team)
 
 def build_queries(fx, allowed):
     home=s(fx.get("home_team")); away=s(fx.get("away_team"))
@@ -195,18 +288,21 @@ def build(day,tz):
             continue
         for prov,src,url,title,snippet,expected in urls[:10]:
             try:
-                page=clean_text(http_text(url))
+                raw_page=http_text(url)
+                text=clean_text(raw_page)
+                structured=structured_text(raw_page)
             except Exception as e:
                 out.append({"target_date":day,"generated_at":ts,"fixture_id":fid,"league":s(fx.get("league")),"country":s(fx.get("country")),"home_team":home,"away_team":away,"team_side":"","source_name":src,"source_url":url,"probable_xi":"","discovery_status":"URL_DISCOVERED","extract_status":"FETCH_FAILED","notes":str(e)[:160],"auto_apply":"NO","production_change":"NO"})
                 continue
             for side,team in [("home",home),("away",away)]:
-                xi=extract_xi(page,team)
-                out.append({"target_date":day,"generated_at":ts,"fixture_id":fid,"league":s(fx.get("league")),"country":s(fx.get("country")),"home_team":home,"away_team":away,"team_side":side,"source_name":src,"source_url":url,"probable_xi":xi,"discovery_status":f"URL_DISCOVERED:{expected}","extract_status":"EXTRACTED" if xi else "NO_XI_PATTERN","notes":title[:180],"auto_apply":"NO","production_change":"NO"})
+                xi, method=extract_xi_by_source(raw_page, text, structured, team, src)
+                note=(title[:120] + f" | method={method}").strip()
+                out.append({"target_date":day,"generated_at":ts,"fixture_id":fid,"league":s(fx.get("league")),"country":s(fx.get("country")),"home_team":home,"away_team":away,"team_side":side,"source_name":src,"source_url":url,"probable_xi":xi,"discovery_status":f"URL_DISCOVERED:{expected}","extract_status":"EXTRACTED" if xi else "NO_XI_PATTERN","notes":note,"auto_apply":"NO","production_change":"NO"})
     return out, provider, urls_seen
 
 def md(day, rows, provider, urls_seen):
     sc=Counter(r["source_name"] for r in rows if r.get("source_name")); st=Counter(r["extract_status"] for r in rows)
-    lines=[f"# vSIGMA Autonomous Probable Lineup Collector - {day}","","## Summary",f"- search_provider: {provider}",f"- rows_seen: {len(rows)}",f"- urls_discovered: {urls_seen}",f"- rows_extracted: {sum(1 for r in rows if r.get('extract_status')=='EXTRACTED')}","- status_counts: "+("; ".join(f"{k}={v}" for k,v in st.items()) if st else "none"),"- source_counts: "+("; ".join(f"{k}={v}" for k,v in sc.items()) if sc else "none"),"- max_search_queries_per_fixture: "+os.environ.get("VSIGMA_MAX_PROBABLE_LINEUP_SEARCH_QUERIES", "8"),"- auto_apply: NO","- production_change: NO","","## Guardrails","- Uses only search API keys if configured; no search-page scraping.","- Searches approved probable-XI domains separately and deduplicates URLs.","- Source expansion is weighted by registry; new sources are supporting only, never official.","- Search/API/fetch failures degrade to report rows instead of failing workflow.","- Fetches public source URLs only; does not bypass paywalls, logins, or blocks.","- Conservative extraction: blank if pattern confidence is insufficient.","- Output still passes through registry-weighted consensus."]
+    lines=[f"# vSIGMA Autonomous Probable Lineup Collector - {day}","","## Summary",f"- search_provider: {provider}",f"- rows_seen: {len(rows)}",f"- urls_discovered: {urls_seen}",f"- rows_extracted: {sum(1 for r in rows if r.get('extract_status')=='EXTRACTED')}","- status_counts: "+("; ".join(f"{k}={v}" for k,v in st.items()) if st else "none"),"- source_counts: "+("; ".join(f"{k}={v}" for k,v in sc.items()) if sc else "none"),"- max_search_queries_per_fixture: "+os.environ.get("VSIGMA_MAX_PROBABLE_LINEUP_SEARCH_QUERIES", "8"),"- auto_apply: NO","- production_change: NO","","## Guardrails","- Uses only search API keys if configured; no search-page scraping.","- Searches approved probable-XI domains separately and deduplicates URLs.","- SportsMole uses section-aware parsing and does not fall back to narrative regex.","- Source expansion is weighted by registry; new sources are supporting only, never official.","- Search/API/fetch failures degrade to report rows instead of failing workflow.","- Fetches public source URLs only; does not bypass paywalls, logins, or blocks.","- Conservative extraction: blank if pattern confidence is insufficient.","- Output still passes through quarantine and registry-weighted consensus."]
     return "\n".join(lines)+"\n"
 def run(day,tz):
     day=date.fromisoformat(day).isoformat(); rows,provider,urls_seen=build(day,tz)
