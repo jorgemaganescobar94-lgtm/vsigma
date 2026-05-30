@@ -1,2 +1,2 @@
 target_date,generated_at,priority,source_name,issue_type,evidence_count,recommended_patch,promotion_rule,auto_apply,production_change
-2026-05-29,2026-05-30T14:22:35+01:00,HIGH,sportsmole,PARSER_EXTRACTION_FAILURE,5,Keep rows quarantined; improve page section targeting and do not downgrade source reliability from these rows.,Promote parser patch only after extracted XI reaches >=8/11 official overlap on at least 3 fixtures.,NO,NO
+2026-05-29,2026-05-30T14:37:25+01:00,HIGH,sportsmole,PARSER_EXTRACTION_FAILURE,5,Keep rows quarantined; improve page section targeting and do not downgrade source reliability from these rows.,Promote parser patch only after extracted XI reaches >=8/11 official overlap on at least 3 fixtures.,NO,NO
