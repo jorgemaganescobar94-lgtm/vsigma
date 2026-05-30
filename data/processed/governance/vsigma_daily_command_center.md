@@ -1,7 +1,7 @@
 # vSIGMA Daily Command Center - 2026-05-30
 
 ## Executive Command
-- generated_at: 2026-05-30T13:50:41+01:00
+- generated_at: 2026-05-30T17:16:54+01:00
 - mode: auto
 - command_center_status: EXECUTION_READY
 - daily_classification: EXECUTION_OK
@@ -9,20 +9,20 @@
 - operational_verdict: EXECUTION_AVAILABLE
 - predictive_failure: UNKNOWN
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26684244876
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/26688702555
 
 ## Next Operator Action
 - Review official executable picks and post-result quality once scores are labeled.
 
 ## Decision Snapshot
-- decision_outcome_rows: 3
-- official_action_counts: WAIT=2; EXECUTABLE=1
-- execution_family_status_counts: WAITING_FOR_WINDOW=2; PRELOCK_CONFIRMED=1
+- decision_outcome_rows: 5
+- official_action_counts: WAIT=2; NO_BET=2; EXECUTABLE=1
+- execution_family_status_counts: WAITING_FOR_WINDOW=2; EXPIRED=2; PRELOCK_CONFIRMED=1
 
 ## Quality Snapshot
-- decision_quality_rows: 3
-- decision_quality_labels: WAIT_UNRESOLVED=2; ACTIONABLE_UNRESOLVED=1
-- quality_buckets: NEEDS_MORE_DATA=3
+- decision_quality_rows: 5
+- decision_quality_labels: WAIT_UNRESOLVED=2; EXPIRED_PRELOCK_UNRESOLVED=2; ACTIONABLE_UNRESOLVED=1
+- quality_buckets: NEEDS_MORE_DATA=5
 
 ## Source Coverage
 - monitoring_summary: present — `data/processed/today/2026-05-30/vsigma_autonomous_monitoring_summary.md`
