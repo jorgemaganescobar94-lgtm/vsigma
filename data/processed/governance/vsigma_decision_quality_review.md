@@ -1,20 +1,20 @@
 # vSIGMA Decision Quality Review - 2026-05-30
 
 ## Executive Summary
-- generated_at: 2026-05-30T17:37:25+01:00
+- generated_at: 2026-05-30T21:18:07+01:00
 - daily_classification: EXECUTION_OK
 - no_bet_classification: EXECUTION_ACTIONABLE_PRESENT
 - operational_verdict: EXECUTION_AVAILABLE
 - predictive_failure: UNKNOWN
-- rows reviewed: 5
+- rows reviewed: 6
 - actionable rows: 1
-- non-actionable rows: 4
+- non-actionable rows: 5
 - resolved rows: 0
-- unresolved rows: 5
+- unresolved rows: 6
 - good decisions: 0
 - bad decisions: 0
-- neutral/unresolved: 5
-- top improvement signal: WAIT_FOR_POST_RESULTS (3)
+- neutral/unresolved: 6
+- top improvement signal: WAIT_FOR_POST_RESULTS (4)
 - current recommendation: Do not recalibrate; collect more labeled outcomes.
 - operational note: At least one row was executable at decision time.
 
@@ -29,8 +29,9 @@
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | AIK Stockholm vs Sirius | OVER_2_5 | EXECUTABLE | NONE | UNRESOLVED | ACTIONABLE_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
 | Paris Saint Germain vs Arsenal | OVER_1_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
-| AIK Stockholm vs Sirius | OVER_2_5 | NO_BET | KICKOFF_ALREADY_PASSED | UNRESOLVED | EXPIRED_PRELOCK_UNRESOLVED | NEEDS_MORE_DATA | REVIEW_AUTO_TIMING |
 | Bahia vs Botafogo | OVER_2_5 | WAIT | OUTSIDE_PRELOCK_WINDOW | UNRESOLVED | WAIT_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
+| AIK Stockholm vs Sirius | OVER_2_5 | NO_BET | KICKOFF_ALREADY_PASSED | UNRESOLVED | EXPIRED_PRELOCK_UNRESOLVED | NEEDS_MORE_DATA | REVIEW_AUTO_TIMING |
+| Bahia vs Botafogo | OVER_2_5 | NO_BET | PRELOCK_GOVERNANCE_NOT_RETAINED | UNRESOLVED | NO_BET_UNRESOLVED | NEEDS_MORE_DATA | WAIT_FOR_POST_RESULTS |
 | Paris Saint Germain vs Arsenal | OVER_1_5 | NO_BET | KICKOFF_ALREADY_PASSED | UNRESOLVED | EXPIRED_PRELOCK_UNRESOLVED | NEEDS_MORE_DATA | REVIEW_AUTO_TIMING |
 
 ## Block Quality Review
@@ -46,13 +47,13 @@
 | market_primary | rows | wins | losses | no_bet_missed_win | no_bet_correct_avoided_loss | unresolved | recommendation |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | OVER_1_5 | 2 | 0 | 0 | 0 | 0 | 2 | WAIT_FOR_POST_RESULTS |
-| OVER_2_5 | 3 | 0 | 0 | 0 | 0 | 3 | WAIT_FOR_POST_RESULTS |
+| OVER_2_5 | 4 | 0 | 0 | 0 | 0 | 4 | WAIT_FOR_POST_RESULTS |
 
 ## System Recommendations
 | priority | category | title | reason | apply_now |
 | --- | --- | --- | --- | --- |
 | P3 | sample | Do not recalibrate from quality sample yet | resolved_rows=0 is below minimum 30. | NO |
-| P3 | post_results | Wait for POST results or improve labeling | unresolved_rows=5; resolved_rows=0. | NO |
+| P3 | post_results | Wait for POST results or improve labeling | unresolved_rows=6; resolved_rows=0. | NO |
 
 ## Guardrails
 - automatic scoring changes applied: NO
