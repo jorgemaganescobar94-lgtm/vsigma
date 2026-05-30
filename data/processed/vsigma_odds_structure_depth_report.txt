@@ -5,31 +5,41 @@ Missing or thin odds are treated as uncertainty, not as a negative football sign
 
 Summary
                 summary_scope                 metric  rows_total
-                      overall        target_fixtures          12
-  odds_structure_depth_status                     OK          12
-odds_structure_coherence_flag          RICH_COHERENT          11
-odds_structure_coherence_flag             RICH_MIXED           1
+                      overall        target_fixtures          17
+  odds_structure_depth_status                     OK          14
+  odds_structure_depth_status          NO_ODDS_FOUND           3
+odds_structure_coherence_flag          RICH_COHERENT           8
+odds_structure_coherence_flag             RICH_MIXED           6
+odds_structure_coherence_flag      NO_ODDS_UNCERTAIN           3
       odds_total_ladder_shape            BROAD_GOALS           7
-      odds_total_ladder_shape               BALANCED           4
-      odds_total_ladder_shape             MILD_GOALS           1
+      odds_total_ladder_shape             MILD_GOALS           5
+      odds_total_ladder_shape                UNKNOWN           3
+      odds_total_ladder_shape               BALANCED           2
  odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL           7
- odds_market_translation_hint   CAUTION_FRAGILE_SIDE           4
- odds_market_translation_hint    PREFER_MILDER_TOTAL           1
+ odds_market_translation_hint    PREFER_MILDER_TOTAL           5
+ odds_market_translation_hint   ODDS_DEPTH_UNCERTAIN           3
+ odds_market_translation_hint   CAUTION_FRAGILE_SIDE           2
     odds_line_aggression_flag     OVER_2_5_SUPPORTED           7
-    odds_line_aggression_flag                NEUTRAL           4
-    odds_line_aggression_flag        PREFER_OVER_1_5           1
+    odds_line_aggression_flag        PREFER_OVER_1_5           5
+    odds_line_aggression_flag                UNKNOWN           3
+    odds_line_aggression_flag                NEUTRAL           2
 
 Fixture preview
- fixture_id                league           home_team        away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
-    1392223      Segunda División         AD Ceuta FC         Albacete                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4534                             0.025
-    1392222      Segunda División          Granada CF   Sporting Gijon                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3162                            -0.015
-    1392225      Segunda División    Real Sociedad II Cultural Leonesa                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3498                             0.030
-    1544371 UEFA Champions League Paris Saint Germain          Arsenal                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3184                            -0.015
-    1494185           Allsvenskan       AIK Stockholm           Sirius                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3458                             0.030
-    1494187           Allsvenskan                Gais        Kalmar FF                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.2467                            -0.015
-    1494189           Allsvenskan            Malmo FF         Halmstad                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2878                             0.030
-    1494681           Eliteserien               Molde       Sandefjord                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2410                             0.030
-    1492280               Serie A Atletico Paranaense         Mirassol                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3066                            -0.015
-    1492281               Serie A               Bahia         Botafogo                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3157                             0.030
-    1492284               Serie A            Flamengo         Coritiba                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3362                             0.030
-    1492285               Serie A              Gremio      Corinthians                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.2430                            -0.015
+ fixture_id             league           home_team           away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
+    1546340 Jupiler Pro League                Gent                Genk                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2849                             0.030
+    1392220   Segunda División             Almeria          Valladolid                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4730                             0.025
+    1396990   Segunda División              Burgos          FC Andorra             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                 0.0000                             0.000
+    1392221   Segunda División           Castellón               Eibar                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3870                             0.025
+    1392217   Segunda División             Cordoba              Huesca                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3860                             0.025
+    1392224   Segunda División Deportivo La Coruna          Las Palmas                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2953                            -0.015
+    1392226   Segunda División             Leganes            Mirandes                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3159                            -0.015
+    1392219   Segunda División    Racing Santander               Cadiz                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4095                             0.025
+    1392216   Segunda División            Zaragoza              Malaga                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3741                            -0.015
+    1494188        Allsvenskan           BK Hacken         Hammarby FF                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2612                             0.030
+    1494186        Allsvenskan        Degerfors IF   IF Brommapojkarna                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2789                            -0.015
+    1494192        Allsvenskan      Vasteras SK FK        IFK Goteborg                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.2702                            -0.015
+    1546398          J1 League     Fagiano Okayama               Urawa             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                 0.0000                             0.000
+    1546399          J1 League     Shimizu S-pulse Yokohama F. Marinos             NO_ODDS_UNCERTAIN                 UNKNOWN         ODDS_DEPTH_UNCERTAIN                   UNKNOWN                 0.0000                             0.000
+    1492286            Serie A           Palmeiras      Chapecoense-sc                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4214                             0.025
+    1492282            Serie A       RB Bragantino       Internacional                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3184                            -0.015
+    1492289            Serie A       Vasco DA Gama         Atletico-MG                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3351                            -0.015
