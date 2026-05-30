@@ -2,14 +2,14 @@
 
 ## Summary
 - fixtures_reviewed: 2
-- probable_lineup_gates: PROBABLE_XI_CONSENSUS_LOW=1; NO_PROBABLE_LINEUP_SOURCES=1
-- home_confidence: LOW_WEIGHTED=1; NO_APPROVED_SOURCES=1
+- probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=2
+- home_confidence: NO_APPROVED_SOURCES=2
 - away_confidence: NO_APPROVED_SOURCES=2
 - auto_apply: NO
 - production_change: NO
 
 ## Fixture Consensus
-- Nice vs Saint Etienne | gate=PROBABLE_XI_CONSENSUS_LOW | home=LOW_WEIGHTED(1 src/11 consensus/w=1.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted=sportsmole (internal_conflict:sportsmole) /  | rejected= / 
+- Nice vs Saint Etienne | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
 - Cde Juventud Italiana vs Tecnico Universitario | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
 
 ## Guardrails

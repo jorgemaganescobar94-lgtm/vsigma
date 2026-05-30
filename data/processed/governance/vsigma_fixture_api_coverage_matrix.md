@@ -2,9 +2,9 @@
 
 ## Summary
 - fixtures_reviewed: 2
-- api_readiness_gates: EARLY_WATCH_MORE_DATA_REQUIRED=1; LOW_COVERAGE_NO_BET=1
-- lineup_coverage: PROBABLE_LOW=1; NONE=1
-- probable_lineup_gates: PROBABLE_XI_CONSENSUS_LOW=1; NO_PROBABLE_LINEUP_SOURCES=1
+- api_readiness_gates: WAIT_LINEUPS_OR_LIVE_ONLY=1; LOW_COVERAGE_NO_BET=1
+- lineup_coverage: NONE=2
+- probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=2
 - recent_stats_coverage: FULL=1; NONE=1
 - injuries_coverage: FULL=1; NONE=1
 - standings_coverage: PARTIAL=1; NONE=1
@@ -13,7 +13,7 @@
 - production_change: NO
 
 ## Fixture Coverage
-- Nice vs Saint Etienne | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=80.5 | lineups=PROBABLE_LOW | probable=PROBABLE_XI_CONSENSUS_LOW | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=PROBABLE_LOW; standings_coverage=PARTIAL
+- Nice vs Saint Etienne | gate=WAIT_LINEUPS_OR_LIVE_ONLY | score=72.5 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=NONE; standings_coverage=PARTIAL
 - Cde Juventud Italiana vs Tecnico Universitario | gate=LOW_COVERAGE_NO_BET | score=15.0 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=NONE | injuries=NONE | odds=NONE | missing=league_coverage=PARTIAL; recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
 
 ## Guardrails
