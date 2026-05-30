@@ -4,15 +4,14 @@
 - sources_reviewed: 1
 - quarantine_rows: 5
 - accepted_rows: 0
-- queue_items: 2
-- priority_counts: HIGH=2
-- failure_class_counts: TEXT_BOUNDARY_FAILURE=1; PARSER_EXTRACTION_FAILURE=1
+- queue_items: 1
+- priority_counts: HIGH=1
+- failure_class_counts: PARSER_EXTRACTION_FAILURE=1
 - auto_apply: NO
 - production_change: NO
 
 ## Source / Reason Rows
-- sportsmole | reason=name_fragment_too_long | class=TEXT_BOUNDARY_FAILURE | priority=HIGH | rows=1 | accepted=0 | quarantined=1 | q=0.750
-- sportsmole | reason=official_overlap_too_low | class=PARSER_EXTRACTION_FAILURE | priority=HIGH | rows=4 | accepted=0 | quarantined=4 | q=0.359
+- sportsmole | reason=official_overlap_too_low | class=PARSER_EXTRACTION_FAILURE | priority=HIGH | rows=5 | accepted=0 | quarantined=5 | q=0.450
 
 ## Guardrails
 - This ledger is diagnostic only.

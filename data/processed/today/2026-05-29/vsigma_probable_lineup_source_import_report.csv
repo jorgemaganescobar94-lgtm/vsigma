@@ -1,2 +1,2 @@
 target_date,generated_at,rows_seen,rows_imported,rows_rejected,rows_quarantined,input_files,import_status_counts,quarantine_reason_counts,sources_seen,template_rows,auto_apply,production_change
-2026-05-29,2026-05-30T14:09:27+01:00,10,0,0,10,data/processed/today/2026-05-29/probable_lineup_sources_autonomous.csv;data/processed/governance/probable_lineup_sources_autonomous.csv,QUARANTINED=10,official_overlap_too_low=8; name_fragment_too_long=2,sportsmole=10,20,NO,NO
+2026-05-29,2026-05-30T14:22:35+01:00,10,0,0,10,data/processed/today/2026-05-29/probable_lineup_sources_autonomous.csv;data/processed/governance/probable_lineup_sources_autonomous.csv,QUARANTINED=10,official_overlap_too_low=10,sportsmole=10,20,NO,NO

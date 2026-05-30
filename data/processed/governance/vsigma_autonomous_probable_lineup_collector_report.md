@@ -14,8 +14,9 @@
 ## Guardrails
 - Uses only search API keys if configured; no search-page scraping.
 - Searches approved probable-XI domains separately and deduplicates URLs.
+- SportsMole uses section-aware parsing and does not fall back to narrative regex.
 - Source expansion is weighted by registry; new sources are supporting only, never official.
 - Search/API/fetch failures degrade to report rows instead of failing workflow.
 - Fetches public source URLs only; does not bypass paywalls, logins, or blocks.
 - Conservative extraction: blank if pattern confidence is insufficient.
-- Output still passes through registry-weighted consensus.
+- Output still passes through quarantine and registry-weighted consensus.
