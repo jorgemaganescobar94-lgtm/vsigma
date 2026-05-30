@@ -4,8 +4,8 @@
 - search_provider: SERPAPI;SERPAPI_ERROR
 - rows_seen: 15
 - urls_discovered: 21
-- rows_extracted: 4
-- status_counts: EXTRACTED=4; NO_XI_PATTERN=8; FETCH_FAILED=3
+- rows_extracted: 5
+- status_counts: EXTRACTED=5; NO_XI_PATTERN=7; FETCH_FAILED=3
 - source_counts: sportsmole=12; whoscored=3
 - max_search_queries_per_fixture: 5
 - auto_apply: NO
