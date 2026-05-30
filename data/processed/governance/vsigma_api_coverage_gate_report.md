@@ -7,8 +7,8 @@
 - production_change: NO
 
 ## Gate Rows
-- Nice vs Saint Etienne | api_gate=WAIT_LINEUPS_OR_LIVE_ONLY | action=PREMATCH_BLOCKED_KEEP_WATCH | decision=NO_BET_OR_WATCH->NO_BET_OR_WATCH | permission=NO_BET_OR_WATCH->NO_PREMATCH | missing=lineup_coverage=NONE; standings_coverage=PARTIAL
-- Cde Juventud Italiana vs Tecnico Universitario | api_gate=LOW_COVERAGE_NO_BET | action=NO_BET_CONFIRMED | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=league_coverage=PARTIAL; recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
+- Nice vs Saint Etienne | api_gate=WAIT_LINEUPS_OR_LIVE_ONLY | action=PREMATCH_BLOCKED_KEEP_WATCH | decision=NO_BET_OR_WATCH->NO_BET_OR_WATCH | permission=NO_PREMATCH->NO_PREMATCH | missing=lineup_coverage=NONE; standings_coverage=PARTIAL
+- Cde Juventud Italiana vs Tecnico Universitario | api_gate=LOW_COVERAGE_NO_BET | action=NO_BET_CONFIRMED | decision=NO_BET->NO_BET | permission=NO->NO | missing=league_coverage=PARTIAL; recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
 
 ## Guardrails
 - Probable XI can support early planning, never final lock by itself.
