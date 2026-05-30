@@ -35,6 +35,13 @@ jobs:
       SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
       BING_SEARCH_API_KEY: ${{ secrets.BING_SEARCH_API_KEY }}
       AZURE_BING_SEARCH_KEY: ${{ secrets.AZURE_BING_SEARCH_KEY }}
+      APISPORTS_KEY: ${{ secrets.APISPORTS_KEY }}
+      API_SPORTS_KEY: ${{ secrets.API_SPORTS_KEY }}
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+      APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+      API_FOOTBALL_API_KEY: ${{ secrets.API_FOOTBALL_API_KEY }}
+      RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+      X_RAPIDAPI_KEY: ${{ secrets.X_RAPIDAPI_KEY }}
     steps:
       - uses: actions/checkout@v4
         with:
