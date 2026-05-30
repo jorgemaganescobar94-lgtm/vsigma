@@ -7,6 +7,7 @@ from build_probable_lineup_source_registry import run as run_source_registry
 from build_autonomous_probable_lineup_collector import run as run_autonomous_collector
 from import_official_lineup_snapshots import run as run_official_lineup_snapshot
 from import_probable_lineup_sources import run as run_probable_source_import
+from build_probable_lineup_raw_debug_snapshot import run as run_raw_debug_snapshot
 from build_probable_lineup_extraction_quality_ledger import run as run_extraction_quality_ledger
 from build_probable_lineup_consensus_v2 import run as run_probable_consensus_v2
 from build_probable_lineup_accuracy_ledger import run as run_probable_accuracy_ledger
@@ -18,6 +19,7 @@ def run(day: str, tz: str) -> None:
     run_autonomous_collector(day, tz)
     run_official_lineup_snapshot(day, tz)
     run_probable_source_import(day, tz)
+    run_raw_debug_snapshot(day, tz)
     run_extraction_quality_ledger(day, tz)
     run_probable_consensus_v2(day, tz)
     run_probable_accuracy_ledger(day, tz)
@@ -26,6 +28,7 @@ def run(day: str, tz: str) -> None:
     print("autonomous_collector=BUILT")
     print("official_lineup_snapshot=BUILT")
     print("source_import=BUILT_WITH_QUARANTINE")
+    print("raw_debug_snapshot=BUILT")
     print("extraction_quality_ledger=BUILT")
     print("consensus_engine=V2_WEIGHTED_REGISTRY")
     print("accuracy_ledger=BUILT")
