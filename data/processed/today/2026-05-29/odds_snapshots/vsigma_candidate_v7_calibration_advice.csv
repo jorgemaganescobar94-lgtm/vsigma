@@ -1,3 +1,3 @@
 market_family,failure_mode,drift_status,clv_direction,league,n,wins,losses,profit_units,roi_percent,avg_clv_delta,recommendation,recommendation_reason
-OVER_1_5,LOW_CONVERSION,WATCH_PATTERN,CLV_FLAT,ALL,3,0,0,0.0,0.0,0.0,SAMPLE_TOO_SMALL,Fewer than 10 settled rows; collect more snapshots before changing thresholds.
-OVER_1_5,LOW_CONVERSION,WATCH_PATTERN,CLV_UNAVAILABLE,ALL,15,0,0,0.0,0.0,,INSUFFICIENT_CLV_DATA,CLV_TRACKING_INSUFFICIENT_TRUE_PRE_MISSING; do not change thresholds.
+OVER_1_5,LOW_CONVERSION,WATCH_PATTERN,CLV_FLAT,ALL,4,0,0,0.0,0.0,0.0,SAMPLE_TOO_SMALL,Fewer than 10 settled rows; collect more snapshots before changing thresholds.
+OVER_1_5,LOW_CONVERSION,WATCH_PATTERN,CLV_UNAVAILABLE,ALL,14,0,0,0.0,0.0,,INSUFFICIENT_CLV_DATA,CLV_TRACKING_INSUFFICIENT_TRUE_PRE_MISSING; do not change thresholds.
