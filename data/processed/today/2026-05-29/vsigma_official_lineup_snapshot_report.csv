@@ -1,2 +1,2 @@
 target_date,generated_at,rows_processed,eligible_fixtures,api_calls_made,cache_hits,lineup_rows_written,full_lineup_rows,no_lineup_rows,api_errors,key_status,api_status_counts,auto_apply,production_change
-2026-05-29,2026-05-30T08:20:31+01:00,2,2,1,1,2,2,2,0,API_SPORTS,NO_LINEUPS_RETURNED=1,NO,NO
+2026-05-29,2026-05-30T08:27:21+01:00,2,2,1,1,2,2,2,0,API_SPORTS,NO_LINEUPS_RETURNED=1,NO,NO
