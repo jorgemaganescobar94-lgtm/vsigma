@@ -2,19 +2,19 @@
 
 ## Summary
 - rows_reviewed: 5
-- evaluated_rows: 0
-- pending_rows: 5
-- grade_counts: NO_OFFICIAL_LINEUP=5
-- source_grade_summary: none
+- evaluated_rows: 5
+- pending_rows: 0
+- grade_counts: D=5
+- source_grade_summary: sportsmole:n=5,avg=0.036
 - auto_apply: NO
 - production_change: NO
 
 ## Rows
-- Nice vs Saint Etienne | side=home | source=sportsmole | status=NO_OFFICIAL_LINEUP | grade=NO_OFFICIAL_LINEUP | match=0/0 | probable=10
-- Nice vs Saint Etienne | side=home | source=sportsmole | status=NO_OFFICIAL_LINEUP | grade=NO_OFFICIAL_LINEUP | match=0/0 | probable=10
-- Nice vs Saint Etienne | side=home | source=sportsmole | status=NO_OFFICIAL_LINEUP | grade=NO_OFFICIAL_LINEUP | match=0/0 | probable=10
-- Nice vs Saint Etienne | side=home | source=sportsmole | status=NO_OFFICIAL_LINEUP | grade=NO_OFFICIAL_LINEUP | match=0/0 | probable=11
-- Nice vs Saint Etienne | side=home | source=sportsmole | status=NO_OFFICIAL_LINEUP | grade=NO_OFFICIAL_LINEUP | match=0/0 | probable=10
+- Nice vs Saint Etienne | side=home | source=sportsmole | status=EVALUATED | grade=D | match=0/11 | probable=10
+- Nice vs Saint Etienne | side=home | source=sportsmole | status=EVALUATED | grade=D | match=1/11 | probable=10
+- Nice vs Saint Etienne | side=home | source=sportsmole | status=EVALUATED | grade=D | match=1/11 | probable=10
+- Nice vs Saint Etienne | side=home | source=sportsmole | status=EVALUATED | grade=D | match=0/11 | probable=11
+- Nice vs Saint Etienne | side=home | source=sportsmole | status=EVALUATED | grade=D | match=0/11 | probable=10
 
 ## Guardrails
 - Accuracy ledger is learning-only and never applies production changes.

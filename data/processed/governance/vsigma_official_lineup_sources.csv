@@ -1,0 +1,3 @@
+target_date,generated_at,fixture_id,league,country,home_team,away_team,team_side,source_name,official_xi,players_count,formation,coach_name,api_status,source_guard,auto_apply,production_change
+2026-05-29,2026-05-30T08:09:03+01:00,1545409,Ligue 1,France,Nice,Saint Etienne,home,api_football_official_lineups,y diouf;a mendy;dante;k peprah;j clauss;d coulibaly;m sanson;m bard;m cho;t louchet;e wahi,11,3-4-2-1,Claude Puel,OK,official_api_snapshot,NO,NO
+2026-05-29,2026-05-30T08:09:03+01:00,1545409,Ligue 1,France,Nice,Saint Etienne,away,api_football_official_lineups,g larsonneur;d appiah;j le cardinal;m bernauer;k pedro;a boakye;a kante;l gadegbeku;i cardona;l stassin;z davitashvili,11,4-3-3,Philippe Montanier,OK,official_api_snapshot,NO,NO
