@@ -1,0 +1,107 @@
+name: vSIGMA Prelock Official Lineup Recheck
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        required: false
+        default: ""
+      include_operator_brief:
+        required: false
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+  push:
+    paths:
+      - ".vsigma/triggers/prelock_official_lineup_recheck.trigger"
+  schedule:
+    # Canary/Spain summer time is UTC+1. These approximate 16:30, 18:30, 20:30, 22:30 Canary.
+    - cron: "30 15 * * *"
+    - cron: "30 17 * * *"
+    - cron: "30 19 * * *"
+    - cron: "30 21 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vsigma-prelock-official-lineup-recheck-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  prelock-recheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+      BING_SEARCH_API_KEY: ${{ secrets.BING_SEARCH_API_KEY }}
+      AZURE_BING_SEARCH_KEY: ${{ secrets.AZURE_BING_SEARCH_KEY }}
+      APISPORTS_KEY: ${{ secrets.APISPORTS_KEY }}
+      API_SPORTS_KEY: ${{ secrets.API_SPORTS_KEY }}
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+      APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+      API_FOOTBALL_API_KEY: ${{ secrets.API_FOOTBALL_API_KEY }}
+      RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+      X_RAPIDAPI_KEY: ${{ secrets.X_RAPIDAPI_KEY }}
+      VSIGMA_OFFICIAL_LINEUP_FETCH_WINDOW_MINUTES: "210"
+      VSIGMA_MAX_OFFICIAL_LINEUP_API_CALLS: "30"
+      VSIGMA_MAX_PROBABLE_LINEUP_SEARCH_QUERIES: "8"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ github.token }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Decide date
+        shell: bash
+        run: |
+          D="${{ github.event.inputs.date }}"
+          if [ -z "$D" ] && [ -f ".vsigma/triggers/prelock_official_lineup_recheck.trigger" ]; then
+            D="$(grep -E '^date=' .vsigma/triggers/prelock_official_lineup_recheck.trigger | tail -1 | cut -d= -f2 | tr -d '[:space:]')"
+          fi
+          if [ -z "$D" ]; then D="$(TZ=Atlantic/Canary date +%F)"; fi
+          INCLUDE_OPERATOR_BRIEF="${{ github.event.inputs.include_operator_brief }}"
+          if [ -z "$INCLUDE_OPERATOR_BRIEF" ] && [ -f ".vsigma/triggers/prelock_official_lineup_recheck.trigger" ]; then
+            INCLUDE_OPERATOR_BRIEF="$(grep -E '^include_operator_brief=' .vsigma/triggers/prelock_official_lineup_recheck.trigger | tail -1 | cut -d= -f2 | tr -d '[:space:]')"
+          fi
+          if [ -z "$INCLUDE_OPERATOR_BRIEF" ]; then INCLUDE_OPERATOR_BRIEF="true"; fi
+          echo "VSIGMA_DATE=$D" >> "$GITHUB_ENV"
+          echo "INCLUDE_OPERATOR_BRIEF=$INCLUDE_OPERATOR_BRIEF" >> "$GITHUB_ENV"
+
+      - name: Run prelock official recheck
+        shell: bash
+        run: |
+          python scripts/build_probable_lineup_consensus.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          python scripts/build_fixture_api_coverage_matrix_v3.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          python scripts/apply_fixture_api_coverage_gate_to_board_v2.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          if [ "$INCLUDE_OPERATOR_BRIEF" = "true" ]; then
+            python scripts/build_operator_brief.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          fi
+
+      - name: Commit prelock outputs
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/processed/today/${VSIGMA_DATE}/vsigma_* data/processed/governance/vsigma_* 2>/dev/null || true
+          git add data/processed/today/${VSIGMA_DATE}/official_lineup_sources.csv data/processed/today/${VSIGMA_DATE}/probable_lineup_sources_autonomous.csv 2>/dev/null || true
+          git add data/processed/governance/official_lineup_sources.csv data/processed/governance/probable_lineup_sources_autonomous.csv 2>/dev/null || true
+
+          echo "Staged changes:"
+          git diff --cached --name-only || true
+
+          if git diff --cached --quiet; then
+            echo "No prelock output changes to commit."
+            exit 0
+          fi
+
+          git commit -m "vSIGMA prelock official lineup recheck ${VSIGMA_DATE} [skip ci]"
+          git push origin HEAD:main
