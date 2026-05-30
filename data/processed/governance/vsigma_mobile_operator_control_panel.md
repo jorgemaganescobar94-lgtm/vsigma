@@ -1,16 +1,16 @@
 # vSIGMA Mobile Operator Control Panel - 2026-05-30
 
 ## Top Verdict
-- mobile_status: WATCH_SHADOW
+- mobile_status: STOP
 - betting_permission: NO
-- next_action: Shadow tests active; no stake or production change.
+- next_action: Fix blocking guard/operator issue before trusting outputs.
 - auto_apply: NO
 - production_change: NO
 
 ## At a Glance
-- action_level: NONE
-- final_decision: NO_OPERATOR_ACTION
-- alert_route: LOCAL_ONLY
+- action_level: BROKEN
+- final_decision: SYSTEM_FIX_REQUIRED
+- alert_route: CRITICAL_STOP
 - operator_sanity: PASS
 - hard_guard: PASS | commit_allowed=YES
 - learning_sanity: PASS
@@ -18,8 +18,8 @@
 - promotion_candidates: 0 | decisions=KEEP_SHADOW_TEST=4; NO_PROMOTION_STABLE=2
 
 ## Cards
-- MOBILE_STATUS | status=WATCH_SHADOW | betting_permission=NO; final_decision=NO_OPERATOR_ACTION; action_level=NONE; alert_route=LOCAL_ONLY | next=Shadow tests active; no stake or production change.
-- OPERATOR | status=NONE | final_decision=NO_OPERATOR_ACTION; alert_route=LOCAL_ONLY; sanity=PASS | next=Read operator brief only if status is REVIEW_NOW/LIVE/STOP.
+- MOBILE_STATUS | status=STOP | betting_permission=NO; final_decision=SYSTEM_FIX_REQUIRED; action_level=BROKEN; alert_route=CRITICAL_STOP | next=Fix blocking guard/operator issue before trusting outputs.
+- OPERATOR | status=BROKEN | final_decision=SYSTEM_FIX_REQUIRED; alert_route=CRITICAL_STOP; sanity=PASS | next=Read operator brief only if status is REVIEW_NOW/LIVE/STOP.
 - LEARNING_GUARD | status=PASS | commit_allowed=YES; decisions=PASS=7 | next=If BLOCK_COMMIT, rerun/fix learning chain before trusting outputs.
 - LEARNING_SANITY | status=PASS | sanity=PASS=7; severity=OK=7 | next=Review warnings before calibration decisions.
 - SHADOW_QUEUE | status=ACTIVE | active=4; high=4; metrics=total_corners,total_fouls,total_goals,total_sot; decisions=PROMOTE_TO_SHADOW_TEST=4; NO_PATCH_STABLE=2 | next=Shadow only; no production change.
