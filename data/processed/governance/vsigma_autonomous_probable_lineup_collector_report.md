@@ -3,7 +3,7 @@
 ## Summary
 - search_provider: SERPAPI;SERPAPI_ERROR
 - rows_seen: 18
-- urls_discovered: 32
+- urls_discovered: 35
 - rows_extracted: 5
 - status_counts: EXTRACTED=5; NO_XI_PATTERN=9; FETCH_FAILED=4
 - source_counts: sportsmole=12; gffn=2; whoscored=4
