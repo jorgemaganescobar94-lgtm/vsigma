@@ -7,8 +7,8 @@ Summary
                 summary_scope                 metric  rows_total
                       overall        target_fixtures          12
   odds_structure_depth_status                     OK          12
-odds_structure_coherence_flag          RICH_COHERENT          10
-odds_structure_coherence_flag             RICH_MIXED           2
+odds_structure_coherence_flag          RICH_COHERENT          11
+odds_structure_coherence_flag             RICH_MIXED           1
       odds_total_ladder_shape            BROAD_GOALS           7
       odds_total_ladder_shape               BALANCED           4
       odds_total_ladder_shape             MILD_GOALS           1
@@ -22,7 +22,7 @@ odds_structure_coherence_flag             RICH_MIXED           2
 Fixture preview
  fixture_id                league           home_team        away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
     1392223      Segunda División         AD Ceuta FC         Albacete                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4534                             0.025
-    1392222      Segunda División          Granada CF   Sporting Gijon                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3635                            -0.015
+    1392222      Segunda División          Granada CF   Sporting Gijon                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3037                            -0.015
     1392225      Segunda División    Real Sociedad II Cultural Leonesa                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3498                             0.030
     1544371 UEFA Champions League Paris Saint Germain          Arsenal                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3184                            -0.015
     1494185           Allsvenskan       AIK Stockholm           Sirius                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3458                             0.030

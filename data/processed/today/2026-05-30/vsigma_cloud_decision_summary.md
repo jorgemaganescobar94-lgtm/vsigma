@@ -19,8 +19,8 @@
 ## Waiting / Blocked Picks
 | fixture_id | league | home_team | away_team | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | retry_allowed | next_retry_time | decision_state | exclusion_reason | next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1492281 | Serie A | Bahia | Botafogo | OVER_2_5 | 2026-05-30T21:30+01:00 | 253.13 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | YES | 2026-05-30T20:00+01:00 | WAITING_FOR_PRELOCK_WINDOW | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-05-30T20:00+01:00 |
-| 1544371 | UEFA Champions League | Paris Saint Germain | Arsenal | OVER_1_5 | 2026-05-30T17:00+01:00 | -16.87 | NO_BET | NO | KICKOFF_ALREADY_PASSED | NO |  | POST_PENDING | KICKOFF_ALREADY_PASSED | WAIT_FOR_POST_RESULTS |
+| 1492281 | Serie A | Bahia | Botafogo | OVER_2_5 | 2026-05-30T21:30+01:00 | 232.6 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | YES | 2026-05-30T20:00+01:00 | WAITING_FOR_PRELOCK_WINDOW | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-05-30T20:00+01:00 |
+| 1544371 | UEFA Champions League | Paris Saint Germain | Arsenal | OVER_1_5 | 2026-05-30T17:00+01:00 | -37.4 | NO_BET | NO | KICKOFF_ALREADY_PASSED | NO |  | POST_PENDING | KICKOFF_ALREADY_PASSED | WAIT_FOR_POST_RESULTS |
 
 ## Technical Warnings
 - healthcheck_status: WARNING

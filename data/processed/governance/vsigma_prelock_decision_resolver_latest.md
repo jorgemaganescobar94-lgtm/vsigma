@@ -12,9 +12,9 @@
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| AIK Stockholm vs Sirius | OVER_2_5 | 2026-05-30T14:00+01:00 | -196.87 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
-| Bahia vs Botafogo | OVER_2_5 | 2026-05-30T21:30+01:00 | 253.13 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | 2026-05-30T20:00+01:00 |
-| Paris Saint Germain vs Arsenal | OVER_1_5 | 2026-05-30T17:00+01:00 | -16.87 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
+| AIK Stockholm vs Sirius | OVER_2_5 | 2026-05-30T14:00+01:00 | -217.41 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
+| Bahia vs Botafogo | OVER_2_5 | 2026-05-30T21:30+01:00 | 232.59 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | 2026-05-30T20:00+01:00 |
+| Paris Saint Germain vs Arsenal | OVER_1_5 | 2026-05-30T17:00+01:00 | -37.41 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
 
 ## Data Gaps
 - odds missing: 0
