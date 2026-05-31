@@ -35,21 +35,21 @@
 ## Official Picks
 | experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1 | 1492282 | RB Bragantino | Internacional | OVER_1_5 | 0.8054 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.161; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+| OFFICIAL_BASELINE | 1 | 1492282 | RB Bragantino | Internacional | OVER_1_5 | 0.8054 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.150; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 
 ## Shadow Picks
 | experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1392226 | Leganes | Mirandes | OVER_1_5 | 0.8222 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.139; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 2 | 1492282 | RB Bragantino | Internacional | OVER_1_5 | 0.8072 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.163; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 2 | 1492282 | RB Bragantino | Internacional | OVER_1_5 | 0.8072 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.152; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 | CANDIDATE_V4_O25_FIREWALL | 1 | 1392226 | Leganes | Mirandes | OVER_1_5 | 0.8222 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.139; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
-| CANDIDATE_V4_O25_FIREWALL | 2 | 1492282 | RB Bragantino | Internacional | OVER_1_5 | 0.8072 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.163; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+| CANDIDATE_V4_O25_FIREWALL | 2 | 1492282 | RB Bragantino | Internacional | OVER_1_5 | 0.8072 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.152; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 | CANDIDATE_V5_PLAYER_IMPACT | 1 | 1392226 | Leganes | Mirandes | OVER_1_5 | 0.8222 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.139; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 2 | 1492282 | RB Bragantino | Internacional | OVER_1_5 | 0.8072 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.163; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 2 | 1492282 | RB Bragantino | Internacional | OVER_1_5 | 0.8072 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.152; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 | CANDIDATE_V6_API_PREDICTIONS | 1 | 1392226 | Leganes | Mirandes | OVER_1_5 | 0.8222 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.139; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
-| CANDIDATE_V6_API_PREDICTIONS | 2 | 1492282 | RB Bragantino | Internacional | OVER_1_5 | 0.8072 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.163; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+| CANDIDATE_V6_API_PREDICTIONS | 2 | 1492282 | RB Bragantino | Internacional | OVER_1_5 | 0.8072 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.152; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1392226 | Leganes | Mirandes | OVER_1_5 | 0.8222 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.139; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 1492282 | RB Bragantino | Internacional | OVER_1_5 | 0.8072 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.163; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 1492282 | RB Bragantino | Internacional | OVER_1_5 | 0.8072 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.152; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 
 ## No-Bet Modes
 | experiment_id | record_status | reason_tags | source_file |
@@ -85,6 +85,5 @@
 | file_name | status | detail |
 | --- | --- | --- |
 | vsigma_today_candidate_v7_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| vsigma_today_prelock_competition_top.csv | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-30'] does not match 2026-05-31 |
-| vsigma_today_prelock_comparison.csv | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-05-30'] does not match 2026-05-31 |
+| vsigma_today_prelock_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
 | today_post_results_report.csv | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet |

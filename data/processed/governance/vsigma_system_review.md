@@ -35,13 +35,13 @@
 | 1492282 | Serie A | RB Bragantino | Internacional | OVER_1_5 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | YES | 2026-05-31T14:00+01:00 |  | WAITING_FOR_WINDOW |  | OUTSIDE_90_MIN_PRELOCK_WINDOW |  |
 
 ## Data Coverage Review
-- coverage rich / partial / weak: COVERAGE_RICH: 7; COVERAGE_PARTIAL: 2
-- odds coverage: 9/9
-- fixture stats coverage: 7/9
-- injuries coverage: 4/9
-- lineups coverage: 9/9
-- predictions coverage: 9/9
-- odds structure depth: target_fixtures: 17; OK: 14; NO_ODDS_FOUND: 3; RICH_COHERENT: 8; RICH_MIXED: 6
+- coverage rich / partial / weak: COVERAGE_RICH: 6; COVERAGE_PARTIAL: 2
+- odds coverage: 8/8
+- fixture stats coverage: 6/8
+- injuries coverage: 4/8
+- lineups coverage: 8/8
+- predictions coverage: 8/8
+- odds structure depth: target_fixtures: 15; OK: 14; NO_ODDS_FOUND: 1; RICH_COHERENT: 7; RICH_MIXED: 7
 - API gaps detected: fixture_stats, injuries
 
 ## Model / Market Review
@@ -76,6 +76,6 @@
 | P3 | model_calibration | Defer recalibration until minimum closed-pick sample | Fewer than 30 closed picks are available. | Avoids fitting thresholds or probability adjustments to noise. | Low; no predictive change is applied. | Keep calibration reporting active and wait for at least 30 closed picks before suggestions. | NO | closed_picks=8; enough_sample=NO; recalibration_allowed=NO |
 
 ## Input Inventory
-- generated_at: 2026-05-31T00:48:44+01:00
+- generated_at: 2026-05-31T09:27:49+01:00
 - timezone: Atlantic/Canary
 - missing optional inputs: none

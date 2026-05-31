@@ -1,2 +1,2 @@
 rows_processed,full_rows,partial_rows,sparse_rows,none_rows,api_calls_made,cache_hits,api_errors,plan_limit_errors,avg_injuries_count_known,unknown_coverage_rows,generated_at_utc
-17,7,0,0,10,0,15,0,0,9.643,10,2026-05-30T23:48:38.129049+00:00
+15,7,0,0,8,0,15,0,0,9.643,8,2026-05-31T08:27:43.217446+00:00

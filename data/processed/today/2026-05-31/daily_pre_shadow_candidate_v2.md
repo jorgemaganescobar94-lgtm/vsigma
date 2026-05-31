@@ -18,7 +18,7 @@
 | Rank | Fixture | League | Market | Rec | Bucket | Score | Why | Risk |
 | --- | --- | --- | --- | --- | --- | ---: | --- | --- |
 | 1 | Leganes vs Mirandes | Segunda División | OVER_1_5 | BET | PREMIUM_EXTENDED | 107.544 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.139; market_fit=SAFE_OK |
-| 2 | RB Bragantino vs Internacional | Serie A | OVER_1_5 | BET | PREMIUM_EXTENDED | 104.786 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.163; market_fit=SAFE_OK |
+| 2 | RB Bragantino vs Internacional | Serie A | OVER_1_5 | BET | PREMIUM_EXTENDED | 103.721 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.152; market_fit=SAFE_OK |
 
 ## Candidate v2 Match Script Forecasts
 
@@ -47,5 +47,5 @@
 | Status | Fixture | Base Rank | Cand Rank | Base Market | Cand Market | Base Prob | Cand Prob | Base Score | Cand Score |
 | --- | --- | ---: | ---: | --- | --- | ---: | ---: | ---: | ---: |
 | CANDIDATE_V2_ONLY | Leganes vs Mirandes | NA | 1.0 | NA | OVER_1_5 | NA | 0.822 | NA | 120.390 |
-| BOTH | RB Bragantino vs Internacional | 1.0 | 2.0 | OVER_1_5 | OVER_1_5 | 0.805 | 0.807 | 116.500 | 117.003 |
-| BASELINE_ONLY | Vasco DA Gama vs Atletico-MG | 2.0 | NA | OVER_1_5 | NA | 0.776 | NA | 109.988 | NA |
+| BOTH | RB Bragantino vs Internacional | 1.0 | 2.0 | OVER_1_5 | OVER_1_5 | 0.805 | 0.807 | 115.754 | 116.257 |
+| BASELINE_ONLY | Vasco DA Gama vs Atletico-MG | 2.0 | NA | OVER_1_5 | NA | 0.776 | NA | 110.347 | NA |

@@ -12,8 +12,8 @@ Only candidate chose: 1
 Side-by-side picks
 comparison_status                        fixture baseline_rank candidate_v2_rank baseline_market candidate_v2_market baseline_calibrated_prob candidate_v2_calibrated_prob baseline_confidence_score candidate_v2_confidence_score
 CANDIDATE_V2_ONLY            Leganes vs Mirandes          <NA>                 1             NaN            OVER_1_5                     <NA>                       0.8222                      <NA>                        120.39
-             BOTH RB Bragantino vs Internacional             1                 2        OVER_1_5            OVER_1_5                   0.8054                       0.8072                     116.5                       117.003
-    BASELINE_ONLY   Vasco DA Gama vs Atletico-MG             2              <NA>        OVER_1_5                 NaN                   0.7763                         <NA>                   109.988                          <NA>
+             BOTH RB Bragantino vs Internacional             1                 2        OVER_1_5            OVER_1_5                   0.8054                       0.8072                   115.754                       116.257
+    BASELINE_ONLY   Vasco DA Gama vs Atletico-MG             2              <NA>        OVER_1_5                 NaN                   0.7764                         <NA>                   110.347                          <NA>
 
 Reason differences
 comparison_status                      fixture                                                                                                              baseline_main_reason                                                                                                          candidate_v2_main_reason       baseline_primary_risk   candidate_v2_primary_risk

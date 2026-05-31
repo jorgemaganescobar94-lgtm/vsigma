@@ -18,4 +18,4 @@ NOT_APPLIED    2
 Candidate v6 Top
  accuracy_mode_rank  fixture_id           league     home_team     away_team market_primary  competition_calibrated_prob  accuracy_confidence_score api_prediction_alignment_flag api_prediction_benchmark_action
                   1     1392226 Segunda División       Leganes      Mirandes       OVER_1_5                       0.8222                    120.390                       NEUTRAL                     NOT_APPLIED
-                  2     1492282          Serie A RB Bragantino Internacional       OVER_1_5                       0.8072                    117.003                       NEUTRAL                     NOT_APPLIED
+                  2     1492282          Serie A RB Bragantino Internacional       OVER_1_5                       0.8072                    116.257                       NEUTRAL                     NOT_APPLIED

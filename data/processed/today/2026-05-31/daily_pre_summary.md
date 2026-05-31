@@ -7,27 +7,27 @@
 
 | Bucket | Rows |
 | --- | ---: |
-| Approved premium | 11 |
+| Approved premium | 9 |
 | Approved standard | 0 |
-| Downgraded | 2 |
+| Downgraded | 4 |
 | Blocked | 1 |
-| Watch | 3 |
+| Watch | 1 |
 
 ## SAFE Picks
 
 | Rank | Fixture | League | Market | Rec | Bucket | Score | Why | Risk |
 | --- | --- | --- | --- | --- | --- | ---: | --- | --- |
-| 1 | Cordoba vs Huesca | Segunda División | OVER_2_5 | BET | PREMIUM_CORE | 141.374 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.214; market_fit=SAFE_OK |
-| 2 | RB Bragantino vs Internacional | Serie A | OVER_1_5 | BET | PREMIUM_EXTENDED | 104.296 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.161; market_fit=SAFE_OK |
+| 1 | Cordoba vs Huesca | Segunda División | OVER_2_5 | BET | PREMIUM_CORE | 140.750 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.208; market_fit=SAFE_OK |
+| 2 | RB Bragantino vs Internacional | Serie A | OVER_1_5 | BET | PREMIUM_EXTENDED | 103.231 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.150; market_fit=SAFE_OK |
 
 ## BALANCED Picks
 
 | Rank | Fixture | League | Market | Rec | Bucket | Score | Why | Risk |
 | --- | --- | --- | --- | --- | --- | ---: | --- | --- |
-| 1 | Cordoba vs Huesca | Segunda División | OVER_2_5 | BET | PREMIUM_CORE | 141.374 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.214; market_fit=SAFE_OK |
-| 2 | Almeria vs Valladolid | Segunda División | OVER_2_5 | BET | PREMIUM_CORE | 132.006 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.118; market_fit=SAFE_OK |
-| 3 | RB Bragantino vs Internacional | Serie A | OVER_1_5 | BET | PREMIUM_EXTENDED | 104.296 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.161; market_fit=SAFE_OK |
-| 4 | Vasco DA Gama vs Atletico-MG | Serie A | OVER_1_5 | BET | PREMIUM_EXTENDED | 98.487 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.126; market_fit=SAFE_OK |
+| 1 | Cordoba vs Huesca | Segunda División | OVER_2_5 | BET | PREMIUM_CORE | 140.750 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.208; market_fit=SAFE_OK |
+| 2 | Almeria vs Valladolid | Segunda División | OVER_2_5 | BET | PREMIUM_CORE | 133.200 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.130; market_fit=SAFE_OK |
+| 3 | RB Bragantino vs Internacional | Serie A | OVER_1_5 | BET | PREMIUM_EXTENDED | 103.231 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.150; market_fit=SAFE_OK |
+| 4 | Vasco DA Gama vs Atletico-MG | Serie A | OVER_1_5 | BET | PREMIUM_EXTENDED | 98.921 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.121; market_fit=SAFE_OK |
 
 ## Execution Shortlist
 
@@ -36,11 +36,11 @@
 - Market: OVER_2_5
 - Bucket: PREMIUM_CORE
 - Recommendation: BET
-- Execution score: 141.374
+- Execution score: 140.750
 - Main why: STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE
-- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.214; market_fit=SAFE_OK
+- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.208; market_fit=SAFE_OK
 - Bucket rationale: PREMIUM_CORE: CORE_GATE_PASSED; APPROVED_PREMIUM; BET; SAFE_OK
-- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=1; phase=PREMIUM_CORE; execution_score=141.374; selection_score=100.990; primary_edge=0.214; primary_model_prob=0.769; shortlist_rank=4; caps=league2_market2_fixture1
+- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=1; phase=PREMIUM_CORE; execution_score=140.750; selection_score=100.990; primary_edge=0.208; primary_model_prob=0.769; shortlist_rank=4; caps=league2_market2_fixture1
 - Confirmation layers: STATS+ODDS+MARKET_TRANSLATION+FORM+LEAGUE_COVERAGE
 
 ### #2 Almeria vs Valladolid
@@ -48,11 +48,11 @@
 - Market: OVER_2_5
 - Bucket: PREMIUM_CORE
 - Recommendation: BET
-- Execution score: 132.006
+- Execution score: 133.200
 - Main why: STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE
-- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.118; market_fit=SAFE_OK
+- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.130; market_fit=SAFE_OK
 - Bucket rationale: PREMIUM_CORE: CORE_GATE_PASSED; APPROVED_PREMIUM; BET; SAFE_OK
-- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=2; phase=PREMIUM_CORE; execution_score=132.006; selection_score=101.180; primary_edge=0.118; primary_model_prob=0.755; shortlist_rank=2; caps=league2_market2_fixture1
+- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=2; phase=PREMIUM_CORE; execution_score=133.200; selection_score=101.180; primary_edge=0.130; primary_model_prob=0.755; shortlist_rank=2; caps=league2_market2_fixture1
 - Confirmation layers: STATS+ODDS+MARKET_TRANSLATION+FORM+LEAGUE_COVERAGE
 
 ### #3 RB Bragantino vs Internacional
@@ -60,11 +60,11 @@
 - Market: OVER_1_5
 - Bucket: PREMIUM_EXTENDED
 - Recommendation: BET
-- Execution score: 104.296
+- Execution score: 103.231
 - Main why: STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE
-- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.161; market_fit=SAFE_OK
+- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.150; market_fit=SAFE_OK
 - Bucket rationale: PREMIUM_EXTENDED: EXTENDED_GATE_PASSED; EXTENDED_QUALITY_OK; edge>=0.08; prob>=0.82
-- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=3; phase=PREMIUM_EXTENDED; execution_score=104.296; selection_score=83.220; primary_edge=0.161; primary_model_prob=0.885; shortlist_rank=13; caps=league2_market2_fixture1
+- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=3; phase=PREMIUM_EXTENDED; execution_score=103.231; selection_score=83.220; primary_edge=0.150; primary_model_prob=0.885; shortlist_rank=13; caps=league2_market2_fixture1
 - Confirmation layers: STATS+ODDS+MARKET_TRANSLATION+FORM+ADVISORY_AVAILABILITY+LEAGUE_COVERAGE
 
 ### #4 Vasco DA Gama vs Atletico-MG
@@ -72,11 +72,11 @@
 - Market: OVER_1_5
 - Bucket: PREMIUM_EXTENDED
 - Recommendation: BET
-- Execution score: 98.487
+- Execution score: 98.921
 - Main why: STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;EXTENDED_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE
-- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.126; market_fit=SAFE_OK
+- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.121; market_fit=SAFE_OK
 - Bucket rationale: PREMIUM_EXTENDED: EXTENDED_GATE_PASSED; EXTENDED_QUALITY_OK; edge>=0.08; prob>=0.82
-- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=4; phase=PREMIUM_EXTENDED; execution_score=98.487; selection_score=80.850; primary_edge=0.126; primary_model_prob=0.856; shortlist_rank=14; caps=league2_market2_fixture1
+- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=4; phase=PREMIUM_EXTENDED; execution_score=98.921; selection_score=81.810; primary_edge=0.121; primary_model_prob=0.856; shortlist_rank=14; caps=league2_market2_fixture1
 - Confirmation layers: STATS+ODDS+MARKET_TRANSLATION+FORM+ADVISORY_AVAILABILITY+LEAGUE_COVERAGE
 
 ## Match Script Forecasts

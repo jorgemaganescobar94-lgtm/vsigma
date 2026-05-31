@@ -2,15 +2,15 @@
 
 ## Step State
 - PRE: DONE
-- Pre-lock: ['PENDING_OUTSIDE_WINDOW']
+- Pre-lock: ['PRELOCK_NOT_AVAILABLE', 'PENDING_OUTSIDE_WINDOW']
 - POST: PENDING
 - Ledger: PRE_UPDATED
 - Governance: AVAILABLE
-- Stale warnings: STALE_PRELOCK_EXCLUDED: 2026-05-30
+- Stale warnings: NONE
 
 ## Next Operator Command
-- Action: CHECK_STALE_OUTPUTS
-- Command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-31 --timezone Atlantic/Canary --mode status`
+- Action: WAIT_FOR_PRELOCK
+- Command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-31 --timezone Atlantic/Canary --mode prelock --window-minutes 90`
 
 ## Official Baseline Picks
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank |
@@ -24,20 +24,20 @@
 | 1492282 | Serie A | RB Bragantino | Internacional | OVER_1_5 | 2 |
 
 ## Candidate v7 Decisions
-- Waiting: 2
+- Waiting: 1
 - Confirmed: 0
 - Rejected: 0
-- Unavailable: 0
+- Unavailable: 1
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank | candidate_v7_execution_status | price_discipline_decision |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1392226 | Segunda División | Leganes | Mirandes | OVER_1_5 | 1 | V7_WAITING_FOR_PRELOCK | PRICE_THIN_SECONDARY_ONLY |
-| 1492282 | Serie A | RB Bragantino | Internacional | OVER_1_5 | 2 | V7_WAITING_FOR_PRELOCK | PRICE_NEEDS_PRELOCK_CONFIRMATION |
+| 1492282 | Serie A | RB Bragantino | Internacional | OVER_1_5 | 2 | V7_PRELOCK_UNAVAILABLE | PRICE_NEEDS_PRELOCK_CONFIRMATION |
 
 ## Pre-Lock Timing
 | fixture_id | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1492282 | RB Bragantino | Internacional | OVER_1_5 | 2026-05-31T14:01:13.200000+00:00 | 852.61 | 2026-05-31T12:31:13.200000+00:00 | PENDING_OUTSIDE_WINDOW | CHECK_STALE_OUTPUTS |
-| 1392226 | Leganes | Mirandes | OVER_1_5 | 2026-05-31T19:01:16.800000+00:00 | 1152.67 | 2026-05-31T17:31:16.800000+00:00 | PENDING_OUTSIDE_WINDOW | CHECK_STALE_OUTPUTS |
+| 1492282 | RB Bragantino | Internacional | OVER_1_5 | 2026-05-31T14:01:03.800000+00:00 | 333.36 | 2026-05-31T12:31:03.800000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1392226 | Leganes | Mirandes | OVER_1_5 | 2026-05-31T19:01:06.200000+00:00 | 633.4 | 2026-05-31T17:31:06.200000+00:00 | PENDING_OUTSIDE_WINDOW | WAIT_FOR_PRELOCK |
 
 ## Ledger State
 | experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |

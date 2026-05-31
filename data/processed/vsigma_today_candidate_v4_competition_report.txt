@@ -15,4 +15,4 @@ No OVER_2_5 + LOW_CONVERSION rows were checked.
 
  accuracy_mode_rank  fixture_id           league     home_team     away_team market_primary  competition_calibrated_prob  accuracy_confidence_score over25_low_conversion_firewall_decision  over25_low_conversion_confirmation_score
                   1     1392226 Segunda División       Leganes      Mirandes       OVER_1_5                       0.8222                    120.390                             NOT_APPLIED                                       0.0
-                  2     1492282          Serie A RB Bragantino Internacional       OVER_1_5                       0.8072                    117.003                             NOT_APPLIED                                       0.0
+                  2     1492282          Serie A RB Bragantino Internacional       OVER_1_5                       0.8072                    116.257                             NOT_APPLIED                                       0.0
