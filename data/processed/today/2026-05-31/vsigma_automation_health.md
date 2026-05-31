@@ -1,17 +1,17 @@
 # vSIGMA Automation Health Monitor - 2026-05-31
 
 ## Summary
-- system_status: BROKEN
+- system_status: ATTENTION
 - components_checked: 11
-- severity_counts: BROKEN=1; WARN=1; OK=5; INFO=4
-- status_counts: MISSING=1; OK=6; CONFIG_EXPECTED=4
+- severity_counts: WARN=3; OK=4; INFO=4
+- status_counts: OK=7; CONFIG_EXPECTED=4
 - auto_apply: NO
 - production_change: NO
 
 ## Component Rows
-- daily_execution_board | status=MISSING | severity=BROKEN | action=RUN_DAILY_DECISION_CHAIN_V2 | detail=vsigma_daily_execution_board.md/csv missing
-- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=none
-- live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
+- daily_execution_board | status=OK | severity=WARN | action=REVIEW_BOARD | detail=rows=24; decisions=NO_BET=10; STAT_WATCH_ONLY=5; NO_BET_OR_WATCH=5; LIVE_ONLY=4
+- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=CANCELLED_NO_BET=11; STAT_WATCH_ONLY=5; LIVE_ONLY_WAIT_TRIGGER=4; NO_BET_OR_WATCH=4
+- live_trigger_validator | status=OK | severity=WARN | action=REVIEW_LIVE_WINDOW_MISSED_OR_FINISHED | detail=windows=TOO_EARLY=2; MATCH_FINISHED=1; TOO_LATE=1; triggers=TOO_EARLY=2; MATCH_FINISHED=1; TOO_LATE=1
 - postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=NS=4
 - postmatch_stat_actuals | status=OK | severity=OK | action=NO | detail=rows_final=0
 - forecast_calibration | status=OK | severity=OK | action=NO | detail=detail_rows=0; statuses=none
