@@ -2,16 +2,16 @@
 
 ## Summary
 - sources_reviewed: 1
-- quarantine_rows: 1
-- accepted_rows: 0
-- queue_items: 1
-- priority_counts: HIGH=1
-- failure_class_counts: PARSER_EXTRACTION_FAILURE=1
+- quarantine_rows: 0
+- accepted_rows: 1
+- queue_items: 0
+- priority_counts: none
+- failure_class_counts: none
 - auto_apply: NO
 - production_change: NO
 
 ## Source / Reason Rows
-- sportsmole | reason=official_overlap_too_low | class=PARSER_EXTRACTION_FAILURE | priority=HIGH | rows=1 | accepted=0 | quarantined=1 | q=0.450
+- sportsmole | reason=OK | class=ACCEPTED_SIGNAL | priority=NONE | rows=1 | accepted=1 | quarantined=0 | q=1.000
 
 ## Guardrails
 - This ledger is diagnostic only.

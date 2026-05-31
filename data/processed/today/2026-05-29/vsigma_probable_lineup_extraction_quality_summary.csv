@@ -1,2 +1,2 @@
 target_date,generated_at,sources_reviewed,quarantine_rows,accepted_rows,queue_items,priority_counts,failure_class_counts,auto_apply,production_change
-2026-05-29,2026-05-31T13:06:45+01:00,1,1,0,1,HIGH=1,PARSER_EXTRACTION_FAILURE=1,NO,NO
+2026-05-29,2026-05-31T14:48:08+01:00,1,0,1,0,none,none,NO,NO
