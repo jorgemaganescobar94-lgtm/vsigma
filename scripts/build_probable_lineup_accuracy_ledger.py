@@ -8,6 +8,8 @@ from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from vsigma_player_name_matcher import match_players
+
 P = Path("data/processed")
 RAW = Path("data/raw")
 PROBABLE_FILES = ["vsigma_probable_lineup_sources.csv", "probable_lineup_sources.csv"]
@@ -164,12 +166,9 @@ def grade(matched: int, official_count: int) -> str:
 
 
 def evaluate(probable: list[str], official: list[str]) -> tuple[int, list[str], list[str], list[str]]:
-    ps = set(probable)
-    os = set(official)
-    matched = sorted(ps & os)
-    missing = sorted(os - ps)
-    wrong = sorted(ps - os)
-    return len(matched), matched, missing, wrong
+    matches, missing, wrong = match_players(probable, official)
+    matched = [f"{m['probable']}~{m['official']}:{m['score']}" for m in matches]
+    return len(matches), matched, missing, wrong
 
 
 def build(day: str, tz: str) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
@@ -215,7 +214,7 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], list[dict[str, str]]
             "wrong_players": ";".join(wrong),
             "evaluation_status": status,
             "source_url": s(p.get("source_url") or p.get("url")),
-            "source_guard": f"accepted_probable={probable_guard}; official={official_guard}; match_official={official_match_guard}",
+            "source_guard": f"accepted_probable={probable_guard}; official={official_guard}; match_official={official_match_guard}; matcher=fuzzy_v67_2",
             "auto_apply": "NO",
             "production_change": "NO",
         })
@@ -279,6 +278,7 @@ def md(day: str, rows: list[dict[str, str]], summary: list[dict[str, str]]) -> s
         "## Guardrails",
         "- Accuracy ledger is learning-only and never applies production changes.",
         "- Accuracy ledger reads only accepted probable rows after quarantine, never autonomous raw rows.",
+        "- Fuzzy player matching is used for evaluation only and does not fabricate players.",
         "- Probable XI is evaluated only when official lineup players are available.",
         "- NO_OFFICIAL_LINEUP is a pending state, not a source failure.",
         "- Source reliability changes must be handled by a later governor module.",
