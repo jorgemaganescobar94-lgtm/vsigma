@@ -35,7 +35,7 @@ TEMPLATE_FIELDS = [
     "team_side", "source_name", "source_url", "probable_xi", "notes",
 ]
 REPORT_FIELDS = [
-    "target_date", "generated_at", "rows_seen", "rows_imported", "rows_rejected", "rows_quarantined",
+    "target_date", "generated_at", "rows_seen", "rows_imported", "rows_learning_only", "rows_rejected", "rows_quarantined",
     "input_files", "import_status_counts", "quarantine_reason_counts", "sources_seen", "template_rows",
     "auto_apply", "production_change",
 ]
@@ -44,6 +44,8 @@ BAD_TOKEN_PATTERNS = [
     "sports mole", "odds", "betting", "injured", "doubtful", "unavailable", "substitutes",
     "formation", "manager", "coach", "vs ", "latest", "match", "confirmed", "probable",
 ]
+PROMOTION_MATCH_THRESHOLD = 8
+QUARANTINE_MATCH_THRESHOLD = 2
 
 
 def s(x):
@@ -178,11 +180,15 @@ def quality_gate(players, official_players):
         overlap = len(matches)
         match_preview = ",".join(f"{m['probable']}~{m['official']}:{m['score']}" for m in matches[:5])
         notes.append(f"fuzzy_official_overlap={overlap}/{len(official_players)}")
+        notes.append(f"promotion_gate={PROMOTION_MATCH_THRESHOLD}/11")
         if match_preview:
             notes.append(f"matches={match_preview}")
-        if overlap <= 2:
-            score = max(0.0, score - 0.55)
+        if overlap <= QUARANTINE_MATCH_THRESHOLD:
+            score = max(0.0, overlap / 11.0)
             return "QUARANTINED", "official_overlap_too_low", score, ";".join(notes)
+        if overlap < PROMOTION_MATCH_THRESHOLD:
+            score = max(0.0, overlap / 11.0)
+            return "LEARNING_ONLY", "below_promotion_accuracy_gate", score, ";".join(notes)
     return "IMPORTED", "OK", score, ";".join(notes) if notes else "quality_ok"
 
 
@@ -252,7 +258,7 @@ def build_template(day, fixtures, sources):
     return rows
 
 
-def md(day, report, imported_rows, quarantine_rows, rejected_rows):
+def md(day, report, imported_rows, learning_rows, quarantine_rows, rejected_rows):
     lines = [
         f"# vSIGMA Probable Lineup Source Import - {day}",
         "",
@@ -263,6 +269,7 @@ def md(day, report, imported_rows, quarantine_rows, rejected_rows):
         lines += [
             f"- rows_seen: {r['rows_seen']}",
             f"- rows_imported: {r['rows_imported']}",
+            f"- rows_learning_only: {r['rows_learning_only']}",
             f"- rows_rejected: {r['rows_rejected']}",
             f"- rows_quarantined: {r['rows_quarantined']}",
             f"- input_files: {r['input_files']}",
@@ -275,9 +282,14 @@ def md(day, report, imported_rows, quarantine_rows, rejected_rows):
         ]
     lines += ["", "## Imported Rows"]
     if not imported_rows:
-        lines.append("- none. No probable XI rows passed quality gate.")
+        lines.append("- none. No probable XI rows passed promotion gate for consensus.")
     for r in imported_rows[:50]:
         lines.append(f"- {r['home_team']} vs {r['away_team']} | side={r['team_side']} | source={r['source_name']} | status={r['import_status']} | reason={r['import_reason']} | q={r.get('quality_score','')} | notes={r.get('quality_notes','')}")
+    lines += ["", "## Learning Only Rows"]
+    if not learning_rows:
+        lines.append("- none.")
+    for r in learning_rows[:50]:
+        lines.append(f"- {r['home_team']} vs {r['away_team']} | side={r['team_side']} | source={r['source_name']} | reason={r['import_reason']} | q={r.get('quality_score','')} | notes={r.get('quality_notes','')}")
     lines += ["", "## Quarantined Rows"]
     if not quarantine_rows:
         lines.append("- none.")
@@ -291,10 +303,10 @@ def md(day, report, imported_rows, quarantine_rows, rejected_rows):
     lines += [
         "",
         "## Guardrails",
-        "- Importer never scrapes and never fabricates probable XIs.",
+        "- IMPORTED rows may feed consensus/prelock.",
+        "- LEARNING_ONLY rows may feed accuracy ledger but must not feed consensus.",
         "- Bad extraction quarantine blocks low-quality rows before consensus and accuracy ledger.",
         "- Fuzzy player matching is used only for official-overlap validation, not to create players.",
-        "- Official-overlap quarantine prevents bad parsed text from damaging source reliability.",
         "- Probable XI never equals official lineup.",
     ]
     return "\n".join(lines) + "\n"
@@ -310,6 +322,7 @@ def run(day, tz):
     raw_rows, input_files = input_rows(day)
     normalized = [import_row(r, fx_by, officials, day, generated) for r in raw_rows]
     imported = [r for r in normalized if r["import_status"] == "IMPORTED"]
+    learning_only = [r for r in normalized if r["import_status"] == "LEARNING_ONLY"]
     rejected = [r for r in normalized if r["import_status"] == "REJECTED"]
     quarantined = [r for r in normalized if r["import_status"] == "QUARANTINED"]
     template = build_template(day, fixtures, sources)
@@ -321,6 +334,7 @@ def run(day, tz):
         "generated_at": generated,
         "rows_seen": len(normalized),
         "rows_imported": len(imported),
+        "rows_learning_only": len(learning_only),
         "rows_rejected": len(rejected),
         "rows_quarantined": len(quarantined),
         "input_files": ";".join(input_files) if input_files else "none",
@@ -333,14 +347,18 @@ def run(day, tz):
     }]
     for base in [P / "today" / day, P / "governance"]:
         write(base / "vsigma_probable_lineup_sources.csv", imported, OUT_FIELDS)
+        write(base / "probable_lineup_sources.csv", imported, OUT_FIELDS)
+        write(base / "vsigma_probable_lineup_sources_learning_only.csv", learning_only, OUT_FIELDS)
+        write(base / "probable_lineup_sources_learning_only.csv", learning_only, OUT_FIELDS)
         write(base / "vsigma_probable_lineup_sources_quarantine.csv", quarantined, OUT_FIELDS)
         write(base / "vsigma_probable_lineup_source_import_report.csv", report, REPORT_FIELDS)
         write(base / "vsigma_probable_lineup_source_import_template.csv", template, TEMPLATE_FIELDS)
-        (base / "vsigma_probable_lineup_source_import_report.md").write_text(md(day, report, imported, quarantined, rejected), encoding="utf-8")
+        (base / "vsigma_probable_lineup_source_import_report.md").write_text(md(day, report, imported, learning_only, quarantined, rejected), encoding="utf-8")
     print("=== VSIGMA PROBABLE LINEUP SOURCE IMPORT ===")
     print(f"fixture_source={fixture_source}")
     print(f"rows_seen={len(normalized)}")
     print(f"rows_imported={len(imported)}")
+    print(f"rows_learning_only={len(learning_only)}")
     print(f"rows_quarantined={len(quarantined)}")
     print(f"rows_rejected={len(rejected)}")
     print("auto_apply=NO")
