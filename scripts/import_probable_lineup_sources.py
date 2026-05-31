@@ -8,6 +8,8 @@ from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from vsigma_player_name_matcher import match_players
+
 P = Path("data/processed")
 RAW = Path("data/raw")
 INPUT_NAMES = [
@@ -172,8 +174,12 @@ def quality_gate(players, official_players):
         score = max(0.0, score - 0.25)
         return "QUARANTINED", "name_fragment_too_long", score, "|".join(long_fragments[:5])
     if len(official_players) >= 10:
-        overlap = len(set(unique_players) & set(official_players))
-        notes.append(f"official_overlap={overlap}/{len(official_players)}")
+        matches, _, _ = match_players(unique_players, official_players)
+        overlap = len(matches)
+        match_preview = ",".join(f"{m['probable']}~{m['official']}:{m['score']}" for m in matches[:5])
+        notes.append(f"fuzzy_official_overlap={overlap}/{len(official_players)}")
+        if match_preview:
+            notes.append(f"matches={match_preview}")
         if overlap <= 2:
             score = max(0.0, score - 0.55)
             return "QUARANTINED", "official_overlap_too_low", score, ";".join(notes)
@@ -271,7 +277,7 @@ def md(day, report, imported_rows, quarantine_rows, rejected_rows):
     if not imported_rows:
         lines.append("- none. No probable XI rows passed quality gate.")
     for r in imported_rows[:50]:
-        lines.append(f"- {r['home_team']} vs {r['away_team']} | side={r['team_side']} | source={r['source_name']} | status={r['import_status']} | reason={r['import_reason']} | q={r.get('quality_score','')}")
+        lines.append(f"- {r['home_team']} vs {r['away_team']} | side={r['team_side']} | source={r['source_name']} | status={r['import_status']} | reason={r['import_reason']} | q={r.get('quality_score','')} | notes={r.get('quality_notes','')}")
     lines += ["", "## Quarantined Rows"]
     if not quarantine_rows:
         lines.append("- none.")
@@ -287,6 +293,7 @@ def md(day, report, imported_rows, quarantine_rows, rejected_rows):
         "## Guardrails",
         "- Importer never scrapes and never fabricates probable XIs.",
         "- Bad extraction quarantine blocks low-quality rows before consensus and accuracy ledger.",
+        "- Fuzzy player matching is used only for official-overlap validation, not to create players.",
         "- Official-overlap quarantine prevents bad parsed text from damaging source reliability.",
         "- Probable XI never equals official lineup.",
     ]
