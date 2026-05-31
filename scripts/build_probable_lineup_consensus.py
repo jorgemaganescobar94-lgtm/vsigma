@@ -11,6 +11,7 @@ from build_probable_lineup_raw_debug_snapshot import run as run_raw_debug_snapsh
 from build_probable_lineup_extraction_quality_ledger import run as run_extraction_quality_ledger
 from build_probable_lineup_consensus_v2 import run as run_probable_consensus_v2
 from build_probable_lineup_accuracy_ledger import run as run_probable_accuracy_ledger
+from build_probable_lineup_source_reliability_governor import run as run_source_reliability_governor
 
 
 def run(day: str, tz: str) -> None:
@@ -23,6 +24,7 @@ def run(day: str, tz: str) -> None:
     run_extraction_quality_ledger(day, tz)
     run_probable_consensus_v2(day, tz)
     run_probable_accuracy_ledger(day, tz)
+    run_source_reliability_governor(day, tz)
     print("=== VSIGMA PROBABLE LINEUP CONSENSUS WRAPPER ===")
     print("source_registry=BUILT")
     print("autonomous_collector=BUILT")
@@ -32,6 +34,7 @@ def run(day: str, tz: str) -> None:
     print("extraction_quality_ledger=BUILT")
     print("consensus_engine=V2_WEIGHTED_REGISTRY")
     print("accuracy_ledger=BUILT")
+    print("source_reliability_governor=BUILT_ADVISORY_ONLY")
     print("auto_apply=NO")
     print("production_change=NO")
 
