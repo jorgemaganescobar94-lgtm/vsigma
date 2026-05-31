@@ -1,32 +1,21 @@
 # vSIGMA Probable Lineup Source Import - 2026-05-31
 
 ## Summary
-- rows_seen: 12
-- rows_imported: 12
+- rows_seen: 0
+- rows_imported: 0
 - rows_learning_only: 0
 - rows_rejected: 0
 - rows_quarantined: 0
-- input_files: data/processed/today/2026-05-31/probable_lineup_sources_autonomous.csv;data/processed/governance/probable_lineup_sources_autonomous.csv
-- import_status_counts: IMPORTED=12
+- input_files: none
+- import_status_counts: none
 - quarantine_reason_counts: none
-- sources_seen: sports_gambler=10; sportsmole=2
+- sources_seen: none
 - template_rows: 240
 - auto_apply: NO
 - production_change: NO
 
 ## Imported Rows
-- Almeria vs Valladolid | side=away | source=sports_gambler | status=IMPORTED | reason=OK | q=1.000 | notes=quality_ok
-- Zaragoza vs Malaga | side=home | source=sports_gambler | status=IMPORTED | reason=OK | q=1.000 | notes=quality_ok
-- Cordoba vs Huesca | side=away | source=sports_gambler | status=IMPORTED | reason=OK | q=1.000 | notes=quality_ok
-- Palmeiras vs Chapecoense-sc | side=home | source=sportsmole | status=IMPORTED | reason=OK | q=1.000 | notes=quality_ok
-- Palmeiras vs Chapecoense-sc | side=home | source=sports_gambler | status=IMPORTED | reason=OK | q=1.000 | notes=quality_ok
-- Deportivo La Coruna vs Las Palmas | side=away | source=sports_gambler | status=IMPORTED | reason=OK | q=1.000 | notes=quality_ok
-- Almeria vs Valladolid | side=away | source=sports_gambler | status=IMPORTED | reason=OK | q=1.000 | notes=quality_ok
-- Zaragoza vs Malaga | side=home | source=sports_gambler | status=IMPORTED | reason=OK | q=1.000 | notes=quality_ok
-- Cordoba vs Huesca | side=away | source=sports_gambler | status=IMPORTED | reason=OK | q=1.000 | notes=quality_ok
-- Palmeiras vs Chapecoense-sc | side=home | source=sportsmole | status=IMPORTED | reason=OK | q=1.000 | notes=quality_ok
-- Palmeiras vs Chapecoense-sc | side=home | source=sports_gambler | status=IMPORTED | reason=OK | q=1.000 | notes=quality_ok
-- Deportivo La Coruna vs Las Palmas | side=away | source=sports_gambler | status=IMPORTED | reason=OK | q=1.000 | notes=quality_ok
+- none. No probable XI rows passed promotion gate for consensus.
 
 ## Learning Only Rows
 - none.

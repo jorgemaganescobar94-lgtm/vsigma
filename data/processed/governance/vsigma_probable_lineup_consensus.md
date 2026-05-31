@@ -2,19 +2,19 @@
 
 ## Summary
 - fixtures_reviewed: 24
-- probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=19; PROBABLE_XI_CONSENSUS_LOW=5
-- home_confidence: NO_APPROVED_SOURCES=22; LOW_WEIGHTED=1; MEDIUM_WEIGHTED=1
-- away_confidence: NO_APPROVED_SOURCES=21; LOW_WEIGHTED=3
+- probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=24
+- home_confidence: NO_APPROVED_SOURCES=24
+- away_confidence: NO_APPROVED_SOURCES=24
 - auto_apply: NO
 - production_change: NO
 
 ## Fixture Consensus
 - Racing Santander vs Cadiz | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
-- Almeria vs Valladolid | gate=PROBABLE_XI_CONSENSUS_LOW | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=LOW_WEIGHTED(1 src/11 consensus/w=1.000) | accepted= / sports_gambler | rejected= / 
-- Zaragoza vs Malaga | gate=PROBABLE_XI_CONSENSUS_LOW | home=LOW_WEIGHTED(1 src/11 consensus/w=1.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted=sports_gambler /  | rejected= / 
-- Cordoba vs Huesca | gate=PROBABLE_XI_CONSENSUS_LOW | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=LOW_WEIGHTED(1 src/11 consensus/w=1.000) | accepted= / sports_gambler | rejected= / 
-- Palmeiras vs Chapecoense-sc | gate=PROBABLE_XI_CONSENSUS_LOW | home=MEDIUM_WEIGHTED(2 src/11 consensus/w=0.620) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted=sports_gambler|sportsmole /  | rejected= / 
-- Deportivo La Coruna vs Las Palmas | gate=PROBABLE_XI_CONSENSUS_LOW | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=LOW_WEIGHTED(1 src/11 consensus/w=1.000) | accepted= / sports_gambler | rejected= / 
+- Almeria vs Valladolid | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Zaragoza vs Malaga | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Cordoba vs Huesca | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Palmeiras vs Chapecoense-sc | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Deportivo La Coruna vs Las Palmas | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
 - Leganes vs Mirandes | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
 - Castellón vs Eibar | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
 - Vasteras SK FK vs IFK Goteborg | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 

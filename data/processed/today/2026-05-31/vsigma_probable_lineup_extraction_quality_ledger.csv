@@ -1,3 +1,1 @@
 target_date,generated_at,source_name,import_reason,rows,fixture_count,accepted_rows,quarantined_rows,avg_quality_score,parser_failure_class,priority,recommended_action,example_notes,auto_apply,production_change
-2026-05-31,2026-05-31T15:41:32+01:00,sports_gambler,OK,5,5,5,0,1.000,ACCEPTED_SIGNAL,NONE,No parser action required.,quality_ok,NO,NO
-2026-05-31,2026-05-31T15:41:32+01:00,sportsmole,OK,1,1,1,0,1.000,ACCEPTED_SIGNAL,NONE,No parser action required.,quality_ok,NO,NO

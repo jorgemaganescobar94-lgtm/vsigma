@@ -2,11 +2,11 @@
 
 ## Summary
 - search_provider: SERPAPI_SEARCH_FAILED
-- rows_seen: 109
-- urls_discovered: 128
-- rows_extracted: 6
-- status_counts: NO_XI_PATTERN=30; IRRELEVANT_FIXTURE_PAGE=44; EXTRACTED=6; FETCH_FAILED=13; NO_DATA=16
-- source_counts: sportskeeda=10; sportsmole=42; sports_gambler=28; whoscored=13
+- rows_seen: 24
+- urls_discovered: 0
+- rows_extracted: 0
+- status_counts: NO_DATA=24
+- source_counts: none
 - max_search_queries_per_fixture: 8
 - auto_apply: NO
 - production_change: NO

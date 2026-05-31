@@ -1,23 +1,18 @@
 # vSIGMA Probable XI Accuracy Ledger - 2026-05-31
 
 ## Summary
-- rows_reviewed: 6
+- rows_reviewed: 0
 - evaluated_rows: 0
-- pending_rows: 6
+- pending_rows: 0
 - learning_only_rows: 0
-- promoted_rows: 6
-- grade_counts: NO_OFFICIAL_LINEUP=6
+- promoted_rows: 0
+- grade_counts: none
 - source_grade_summary: none
 - auto_apply: NO
 - production_change: NO
 
 ## Rows
-- Almeria vs Valladolid | side=away | source=sports_gambler | probable_status=IMPORTED | status=NO_OFFICIAL_LINEUP | grade=NO_OFFICIAL_LINEUP | match=0/0 | probable=11
-- Zaragoza vs Malaga | side=home | source=sports_gambler | probable_status=IMPORTED | status=NO_OFFICIAL_LINEUP | grade=NO_OFFICIAL_LINEUP | match=0/0 | probable=11
-- Cordoba vs Huesca | side=away | source=sports_gambler | probable_status=IMPORTED | status=NO_OFFICIAL_LINEUP | grade=NO_OFFICIAL_LINEUP | match=0/0 | probable=11
-- Palmeiras vs Chapecoense-sc | side=home | source=sportsmole | probable_status=IMPORTED | status=NO_OFFICIAL_LINEUP | grade=NO_OFFICIAL_LINEUP | match=0/0 | probable=11
-- Palmeiras vs Chapecoense-sc | side=home | source=sports_gambler | probable_status=IMPORTED | status=NO_OFFICIAL_LINEUP | grade=NO_OFFICIAL_LINEUP | match=0/0 | probable=11
-- Deportivo La Coruna vs Las Palmas | side=away | source=sports_gambler | probable_status=IMPORTED | status=NO_OFFICIAL_LINEUP | grade=NO_OFFICIAL_LINEUP | match=0/0 | probable=11
+- none. No accepted or learning-only probable lineup rows after quarantine.
 
 ## Guardrails
 - Accuracy ledger is learning-only and never applies production changes.

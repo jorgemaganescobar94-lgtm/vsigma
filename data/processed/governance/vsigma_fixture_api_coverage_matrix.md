@@ -2,9 +2,9 @@
 
 ## Summary
 - fixtures_reviewed: 24
-- api_readiness_gates: LOW_COVERAGE_NO_BET=10; EARLY_WATCH_MORE_DATA_REQUIRED=9; EARLY_CANDIDATE_PRELOCK_REQUIRED=5
-- lineup_coverage: NOT_DUE_YET=10; NONE=9; PROBABLE_LOW=5
-- probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=19; PROBABLE_XI_CONSENSUS_LOW=5
+- api_readiness_gates: LOW_COVERAGE_NO_BET=10; EARLY_WATCH_MORE_DATA_REQUIRED=7; EARLY_CANDIDATE_PRELOCK_REQUIRED=7
+- lineup_coverage: NOT_DUE_YET=15; NONE=9
+- probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=24
 - recent_stats_coverage: FULL=15; NONE=9
 - injuries_coverage: NONE=17; FULL=7
 - standings_coverage: FULL=15; NONE=9
@@ -14,11 +14,11 @@
 
 ## Fixture Coverage
 - Racing Santander vs Cadiz | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=80.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=NOT_DUE_YET; injuries_coverage=NONE
-- Almeria vs Valladolid | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=73.0 | lineups=PROBABLE_LOW | probable=PROBABLE_XI_CONSENSUS_LOW | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=PROBABLE_LOW; injuries_coverage=NONE
-- Zaragoza vs Malaga | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=88.0 | lineups=PROBABLE_LOW | probable=PROBABLE_XI_CONSENSUS_LOW | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=PROBABLE_LOW
-- Cordoba vs Huesca | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=73.0 | lineups=PROBABLE_LOW | probable=PROBABLE_XI_CONSENSUS_LOW | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=PROBABLE_LOW; injuries_coverage=NONE
-- Palmeiras vs Chapecoense-sc | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=88.0 | lineups=PROBABLE_LOW | probable=PROBABLE_XI_CONSENSUS_LOW | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=PROBABLE_LOW
-- Deportivo La Coruna vs Las Palmas | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=73.0 | lineups=PROBABLE_LOW | probable=PROBABLE_XI_CONSENSUS_LOW | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=PROBABLE_LOW; injuries_coverage=NONE
+- Almeria vs Valladolid | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=80.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=NOT_DUE_YET; injuries_coverage=NONE
+- Zaragoza vs Malaga | gate=EARLY_CANDIDATE_PRELOCK_REQUIRED | score=95.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=NOT_DUE_YET
+- Cordoba vs Huesca | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=80.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=NOT_DUE_YET; injuries_coverage=NONE
+- Palmeiras vs Chapecoense-sc | gate=EARLY_CANDIDATE_PRELOCK_REQUIRED | score=95.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=NOT_DUE_YET
+- Deportivo La Coruna vs Las Palmas | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=80.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=NOT_DUE_YET; injuries_coverage=NONE
 - Leganes vs Mirandes | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=80.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=NOT_DUE_YET; injuries_coverage=NONE
 - Castellón vs Eibar | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=80.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=NOT_DUE_YET; injuries_coverage=NONE
 - Vasteras SK FK vs IFK Goteborg | gate=EARLY_CANDIDATE_PRELOCK_REQUIRED | score=95.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=NOT_DUE_YET

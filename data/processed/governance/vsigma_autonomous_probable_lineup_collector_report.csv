@@ -1,2 +1,2 @@
 target_date,generated_at,fixtures_reviewed,search_provider,urls_discovered,rows_extracted,status_counts,source_counts,auto_apply,production_change
-2026-05-31,2026-05-31T15:41:30+01:00,24,SERPAPI_SEARCH_FAILED,128,6,NO_XI_PATTERN=30; IRRELEVANT_FIXTURE_PAGE=44; EXTRACTED=6; FETCH_FAILED=13; NO_DATA=16,sportskeeda=10; sportsmole=42; sports_gambler=28; whoscored=13,NO,NO
+2026-05-31,2026-05-31T17:51:23+01:00,24,SERPAPI_SEARCH_FAILED,0,0,NO_DATA=24,,NO,NO
