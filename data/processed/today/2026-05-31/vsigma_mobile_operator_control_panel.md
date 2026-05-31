@@ -1,16 +1,16 @@
 # vSIGMA Mobile Operator Control Panel - 2026-05-31
 
 ## Top Verdict
-- mobile_status: STOP
-- betting_permission: NO
-- next_action: Fix blocking guard/operator issue before trusting outputs.
+- mobile_status: LIVE_WAIT
+- betting_permission: MANUAL_ONLY
+- next_action: Wait/use live validator before any manual live decision.
 - auto_apply: NO
 - production_change: NO
 
 ## At a Glance
-- action_level: BROKEN
-- final_decision: SYSTEM_FIX_REQUIRED
-- alert_route: CRITICAL_STOP
+- action_level: LIVE
+- final_decision: WAIT_LIVE_WINDOW
+- alert_route: GITHUB_ISSUE_COMMENT
 - operator_sanity: PASS
 - hard_guard: WARN | commit_allowed=YES
 - learning_sanity: WARN
@@ -18,8 +18,8 @@
 - promotion_candidates: 0 | decisions=none
 
 ## Cards
-- MOBILE_STATUS | status=STOP | betting_permission=NO; final_decision=SYSTEM_FIX_REQUIRED; action_level=BROKEN; alert_route=CRITICAL_STOP | next=Fix blocking guard/operator issue before trusting outputs.
-- OPERATOR | status=BROKEN | final_decision=SYSTEM_FIX_REQUIRED; alert_route=CRITICAL_STOP; sanity=PASS | next=Read operator brief only if status is REVIEW_NOW/LIVE/STOP.
+- MOBILE_STATUS | status=LIVE_WAIT | betting_permission=MANUAL_ONLY; final_decision=WAIT_LIVE_WINDOW; action_level=LIVE; alert_route=GITHUB_ISSUE_COMMENT | next=Wait/use live validator before any manual live decision.
+- OPERATOR | status=LIVE | final_decision=WAIT_LIVE_WINDOW; alert_route=GITHUB_ISSUE_COMMENT; sanity=PASS | next=Read operator brief only if status is REVIEW_NOW/LIVE/STOP.
 - LEARNING_GUARD | status=WARN | commit_allowed=YES; decisions=WARN_ONLY=7 | next=If BLOCK_COMMIT, rerun/fix learning chain before trusting outputs.
 - LEARNING_SANITY | status=WARN | sanity=EMPTY_NO_FALLBACK=7; severity=WARN=7 | next=Review warnings before calibration decisions.
 - SHADOW_QUEUE | status=INACTIVE_OR_STABLE | active=0; high=0; metrics=none; decisions=none | next=Shadow only; no production change.
