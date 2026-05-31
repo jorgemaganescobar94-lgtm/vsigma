@@ -1,12 +1,15 @@
 target_date,generated_at,section,status,detail,next_action
-2026-05-29,2026-05-31T15:31:51+01:00,operator_status,OK,health=ATTENTION; active=0; waiting=0; closed=0; watch=1; no_bet=1,No operator action required.
-2026-05-29,2026-05-31T15:31:51+01:00,operator_action_level,WATCH,sanity=PASS; watch_only=1; no official action; no active/live review,Use action_level as the first-read operator priority.
-2026-05-29,2026-05-31T15:31:51+01:00,operator_sanity_check,PASS,watch_only=1; no official action; no active/live review,"If FAIL, inspect CSV/MD mismatch before using the brief."
-2026-05-29,2026-05-31T15:31:51+01:00,operator_compact_summary,WATCH_ONLY_NO_STAKE,action_level=WATCH; risk=LOW_ALERT; active_signature=; reason=1 watch-only item(s); official stake remains blocked,Read this row first for the final operator decision.
-2026-05-29,2026-05-31T15:31:51+01:00,operator_drift_check,NO_MATERIAL_CHANGE,notify=false; changed=none; tracked operator fields unchanged,Notify only if MATERIAL_CHANGE.
-2026-05-29,2026-05-31T15:31:51+01:00,operator_alert_route,NO_ALERT,materiality=NONE; reason=watch-only state unchanged; no official action; drift_status=NO_MATERIAL_CHANGE; drift_notify=false,Route only; this script does not send alerts.
-2026-05-29,2026-05-31T15:31:51+01:00,daily_board,NO_BET_OR_WATCH=1; NO_BET=1,rows=2,Review only candidates still active after live-window override.
-2026-05-29,2026-05-31T15:31:51+01:00,prelock_live,NO_BET_OR_WATCH=1; CANCELLED_NO_BET=1,rows=2,Use recheck state with live validator freshness override.
-2026-05-29,2026-05-31T15:31:51+01:00,live_trigger,none,windows=none,Only LIVE_TRIGGER_CONFIRMED can justify manual live review.
-2026-05-29,2026-05-31T15:31:51+01:00,issue_alert,ATTENTION,required=true; notify=true,Issue alert is informational; no auto action.
-2026-05-29,2026-05-31T15:31:51+01:00,postmatch_learning,CALIBRATION_OK=2; MODEL_UNDER_ESTIMATING=2; MODEL_OVER_ESTIMATING=2,actual_rows=7; detail_rows=36,Use learning only after sufficient sample.
+2026-05-31,2026-05-31T20:50:58+01:00,operator_status,WAIT_LIVE_WINDOW,health=ATTENTION; active=0; waiting=2; closed=2; watch=9; no_bet=11,Wait for useful live window and rerun live trigger validator.
+2026-05-31,2026-05-31T20:50:58+01:00,operator_action_level,LIVE,sanity=PASS; waiting_live_window=2; manual live validator rerun required,Use action_level as the first-read operator priority.
+2026-05-31,2026-05-31T20:50:58+01:00,operator_sanity_check,PASS,waiting_live_window=2; manual live validator rerun required,"If FAIL, inspect CSV/MD mismatch before using the brief."
+2026-05-31,2026-05-31T20:50:58+01:00,operator_compact_summary,WAIT_LIVE_WINDOW,action_level=LIVE; risk=MEDIUM; active_signature=; reason=2 candidate(s) waiting for live validation window,Read this row first for the final operator decision.
+2026-05-31,2026-05-31T20:50:58+01:00,operator_drift_check,MATERIAL_CHANGE,"notify=true; changed=action_level,final_decision,risk_label; action_level: BROKEN -> LIVE; final_decision: SYSTEM_FIX_REQUIRED -> WAIT_LIVE_WINDOW; risk_label: HIGH -> MEDIUM",Notify only if MATERIAL_CHANGE.
+2026-05-31,2026-05-31T20:50:58+01:00,operator_alert_route,GITHUB_ISSUE_COMMENT,materiality=MEDIUM; reason=live-window state changed materially; drift_status=MATERIAL_CHANGE; drift_notify=true,Route only; this script does not send alerts.
+2026-05-31,2026-05-31T20:50:58+01:00,daily_board,NO_BET=10; STAT_WATCH_ONLY=5; NO_BET_OR_WATCH=5; LIVE_ONLY=4,rows=24,Review only candidates still active after live-window override.
+2026-05-31,2026-05-31T20:50:58+01:00,prelock_live,CANCELLED_NO_BET=11; STAT_WATCH_ONLY=5; LIVE_ONLY_WAIT_TRIGGER=4; NO_BET_OR_WATCH=4,rows=24,Use recheck state with live validator freshness override.
+2026-05-31,2026-05-31T20:50:58+01:00,live_trigger,TOO_EARLY=2; MATCH_FINISHED=2,windows=TOO_EARLY=2; MATCH_FINISHED=2,Only LIVE_TRIGGER_CONFIRMED can justify manual live review.
+2026-05-31,2026-05-31T20:50:58+01:00,issue_alert,ATTENTION,required=true; notify=true,Issue alert is informational; no auto action.
+2026-05-31,2026-05-31T20:50:58+01:00,postmatch_learning,none,actual_rows=0; detail_rows=0,Use learning only after sufficient sample.
+2026-05-31,2026-05-31T20:50:58+01:00,calibration_shadow_summary,UNAVAILABLE,active=0; high=0; metrics=none; decisions=none,Read shadow queue; no auto-apply.
+2026-05-31,2026-05-31T20:50:58+01:00,shadow_promotion_readiness,UNAVAILABLE,promotion_candidates=0; decisions=none,Manual review only if promotion candidate appears.
+2026-05-31,2026-05-31T20:50:58+01:00,learning_chain_output_sanity,WARN,status_counts=EMPTY_NO_FALLBACK=7; severity=WARN=7,Review sanity warnings before trusting learning outputs.
