@@ -1,2 +1,1 @@
 target_date,generated_at,source_name,import_reason,rows,fixture_count,accepted_rows,quarantined_rows,avg_quality_score,parser_failure_class,priority,recommended_action,example_notes,auto_apply,production_change
-2026-05-29,2026-05-31T14:48:08+01:00,sportsmole,OK,1,1,1,0,1.000,ACCEPTED_SIGNAL,NONE,No parser action required.,"fuzzy_official_overlap=5/11;matches=diouf~y diouf:0.96,mendy~a mendy:0.96,clauss~j clauss:0.96,sanson~m sanson:0.96,cho~",NO,NO
