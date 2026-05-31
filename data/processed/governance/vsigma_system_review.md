@@ -77,6 +77,6 @@
 | P3 | model_calibration | Defer recalibration until minimum closed-pick sample | Fewer than 30 closed picks are available. | Avoids fitting thresholds or probability adjustments to noise. | Low; no predictive change is applied. | Keep calibration reporting active and wait for at least 30 closed picks before suggestions. | NO | closed_picks=8; enough_sample=NO; recalibration_allowed=NO |
 
 ## Input Inventory
-- generated_at: 2026-05-31T22:42:52+01:00
+- generated_at: 2026-05-31T23:37:41+01:00
 - timezone: Atlantic/Canary
 - missing optional inputs: none

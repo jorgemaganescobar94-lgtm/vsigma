@@ -1,7 +1,7 @@
 # vSIGMA Learning Patterns - 2026-05-31
 
 ## Executive Pattern Summary
-- generated_at: 2026-05-31T22:42:53+01:00
+- generated_at: 2026-05-31T23:37:42+01:00
 - patterns detected: 11
 - pattern_type_counts: MARKET_RISK_CLUSTER=4, SAMPLE_KEY_CLUSTER=4, WAITING_PRELOCK_CLUSTER=1, UNRESOLVED_DOMINANCE=1, EXPIRED_PRELOCK_CLUSTER=1
 - severity_counts: P2=7, P3=3, P1=1
