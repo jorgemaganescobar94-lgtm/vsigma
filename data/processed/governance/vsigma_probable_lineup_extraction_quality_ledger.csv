@@ -1,2 +1,2 @@
 target_date,generated_at,source_name,import_reason,rows,fixture_count,accepted_rows,quarantined_rows,avg_quality_score,parser_failure_class,priority,recommended_action,example_notes,auto_apply,production_change
-2026-05-29,2026-05-31T09:30:05+01:00,sportsmole,official_overlap_too_low,1,1,0,1,0.450,PARSER_EXTRACTION_FAILURE,HIGH,Keep rows quarantined; improve page section targeting and do not downgrade source reliability from these rows.,official_overlap=0/11,NO,NO
+2026-05-29,2026-05-31T13:06:45+01:00,sportsmole,official_overlap_too_low,1,1,0,1,0.450,PARSER_EXTRACTION_FAILURE,HIGH,Keep rows quarantined; improve page section targeting and do not downgrade source reliability from these rows.,official_overlap=0/11,NO,NO
