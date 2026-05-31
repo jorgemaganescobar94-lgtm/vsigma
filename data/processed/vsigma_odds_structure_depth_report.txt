@@ -22,9 +22,9 @@ odds_structure_coherence_flag             RICH_MIXED           3
 
 Fixture preview
  fixture_id             league           home_team         away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
-    1546340 Jupiler Pro League                Gent              Genk                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2703                             0.030
+    1546340 Jupiler Pro League                Gent              Genk                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.2589                             0.030
     1392220   Segunda División             Almeria        Valladolid                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4342                             0.025
-    1396990   Segunda División              Burgos        FC Andorra                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3415                            -0.015
+    1396990   Segunda División              Burgos        FC Andorra                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3369                            -0.015
     1392221   Segunda División           Castellón             Eibar                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.4249                             0.025
     1392217   Segunda División             Cordoba            Huesca                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3239                             0.030
     1392224   Segunda División Deportivo La Coruna        Las Palmas                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3033                            -0.015

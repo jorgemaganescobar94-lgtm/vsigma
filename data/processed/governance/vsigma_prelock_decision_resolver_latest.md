@@ -12,7 +12,7 @@
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| RB Bragantino vs Internacional | OVER_1_5 | 2026-05-31T15:00+01:00 | -58.58 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
+| RB Bragantino vs Internacional | OVER_1_5 | 2026-05-31T15:00+01:00 | -219.32 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
 
 ## Data Gaps
 - odds missing: 0
