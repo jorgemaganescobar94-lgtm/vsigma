@@ -1,1 +1,5 @@
 target_date,generated_at,rank,fixture_id,home_team,away_team,recheck_decision,market,minutes_to_kickoff,window_status,match_status,elapsed,score,total_shots,total_sot,total_corners,home_possession,away_possession,signal_score,live_trigger_decision,reason,source_guard,auto_apply,production_change
+2026-05-31,2026-05-31T18:45:38+01:00,1,1392217,Cordoba,Huesca,LIVE_ONLY_WAIT_TRIGGER,OVER_1_5_SUPPORTED,633.49,TOO_EARLY,NS,0,0-0,0,0,0,0,0,0,TOO_EARLY,outside useful live window,DATED_INPUT_ONLY,NO,NO
+2026-05-31,2026-05-31T18:45:38+01:00,2,1492282,RB Bragantino,Internacional,LIVE_ONLY_WAIT_TRIGGER,OVER_1_5_SUPPORTED,333.43,MATCH_FINISHED,FT,90.0,3-1,0,0,0,0,0,0,MATCH_FINISHED,match already final,DATED_INPUT_ONLY,NO,NO
+2026-05-31,2026-05-31T18:45:38+01:00,3,1392220,Almeria,Valladolid,LIVE_ONLY_WAIT_TRIGGER,OVER_1_5_SUPPORTED,483.51,TOO_LATE,2H,56.0,0-0,0,0,0,0,0,0,TOO_LATE,live window passed,DATED_INPUT_ONLY,NO,NO
+2026-05-31,2026-05-31T18:45:38+01:00,4,1492289,Vasco DA Gama,Atletico-MG,LIVE_ONLY_WAIT_TRIGGER,BTTS_YES_REVIEW,633.42,TOO_EARLY,NS,0,0-0,0,0,0,0,0,0,TOO_EARLY,outside useful live window,DATED_INPUT_ONLY,NO,NO
