@@ -1,2 +1,2 @@
 target_date,generated_at,rows_reviewed,evaluated_rows,pending_rows,learning_only_rows,promoted_rows,grade_counts,source_grade_summary,auto_apply,production_change
-2026-05-29,2026-05-31T15:31:51+01:00,1,1,0,1,0,D=1,"sportsmole:n=1,avg=0.455",NO,NO
+2026-05-29,2026-05-31T20:52:23+01:00,0,0,0,0,0,none,none,NO,NO

@@ -1,42 +1,20 @@
-# vSIGMA Fixture API Coverage Matrix v3 - 2026-05-31
+# vSIGMA Fixture API Coverage Matrix v3 - 2026-05-29
 
 ## Summary
-- fixtures_reviewed: 24
-- api_readiness_gates: LOW_COVERAGE_NO_BET=10; EARLY_WATCH_MORE_DATA_REQUIRED=7; EARLY_CANDIDATE_PRELOCK_REQUIRED=7
-- lineup_coverage: NOT_DUE_YET=15; NONE=9
-- probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=24
-- recent_stats_coverage: FULL=15; NONE=9
-- injuries_coverage: NONE=17; FULL=7
-- standings_coverage: FULL=15; NONE=9
-- odds_coverage: FULL=14; NONE=10
+- fixtures_reviewed: 2
+- api_readiness_gates: WAIT_LINEUPS_OR_LIVE_ONLY=1; LOW_COVERAGE_NO_BET=1
+- lineup_coverage: NONE=2
+- probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=2
+- recent_stats_coverage: FULL=1; NONE=1
+- injuries_coverage: FULL=1; NONE=1
+- standings_coverage: PARTIAL=1; NONE=1
+- odds_coverage: FULL=1; NONE=1
 - auto_apply: NO
 - production_change: NO
 
 ## Fixture Coverage
-- Racing Santander vs Cadiz | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=80.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=NOT_DUE_YET; injuries_coverage=NONE
-- Almeria vs Valladolid | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=80.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=NOT_DUE_YET; injuries_coverage=NONE
-- Zaragoza vs Malaga | gate=EARLY_CANDIDATE_PRELOCK_REQUIRED | score=95.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=NOT_DUE_YET
-- Cordoba vs Huesca | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=80.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=NOT_DUE_YET; injuries_coverage=NONE
-- Palmeiras vs Chapecoense-sc | gate=EARLY_CANDIDATE_PRELOCK_REQUIRED | score=95.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=NOT_DUE_YET
-- Deportivo La Coruna vs Las Palmas | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=80.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=NOT_DUE_YET; injuries_coverage=NONE
-- Leganes vs Mirandes | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=80.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=NOT_DUE_YET; injuries_coverage=NONE
-- Castellón vs Eibar | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=80.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=NOT_DUE_YET; injuries_coverage=NONE
-- Vasteras SK FK vs IFK Goteborg | gate=EARLY_CANDIDATE_PRELOCK_REQUIRED | score=95.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=NOT_DUE_YET
-- Gent vs Genk | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=80.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=NOT_DUE_YET; injuries_coverage=NONE
-- BK Hacken vs Hammarby FF | gate=EARLY_CANDIDATE_PRELOCK_REQUIRED | score=95.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=NOT_DUE_YET
-- Burgos vs FC Andorra | gate=LOW_COVERAGE_NO_BET | score=70.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=NONE | missing=lineup_coverage=NOT_DUE_YET; injuries_coverage=NONE; odds_coverage=NONE
-- RB Bragantino vs Internacional | gate=EARLY_CANDIDATE_PRELOCK_REQUIRED | score=95.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=NOT_DUE_YET
-- Vasco DA Gama vs Atletico-MG | gate=EARLY_CANDIDATE_PRELOCK_REQUIRED | score=95.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=NOT_DUE_YET
-- Degerfors IF vs IF Brommapojkarna | gate=EARLY_CANDIDATE_PRELOCK_REQUIRED | score=95.0 | lineups=NOT_DUE_YET | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=NOT_DUE_YET
-- Kauno Žalgiris vs FK Zalgiris Vilnius | gate=LOW_COVERAGE_NO_BET | score=15.0 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=NONE | injuries=NONE | odds=NONE | missing=league_coverage=PARTIAL; recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
-- Ceara vs Operario-PR | gate=LOW_COVERAGE_NO_BET | score=20.0 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=NONE | injuries=NONE | odds=NONE | missing=recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
-- Londrina vs Vila Nova | gate=LOW_COVERAGE_NO_BET | score=20.0 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=NONE | injuries=NONE | odds=NONE | missing=recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
-- São Bernardo vs Novorizontino | gate=LOW_COVERAGE_NO_BET | score=20.0 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=NONE | injuries=NONE | odds=NONE | missing=recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
-- Anápolis vs Maranhão | gate=LOW_COVERAGE_NO_BET | score=15.0 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=NONE | injuries=NONE | odds=NONE | missing=league_coverage=PARTIAL; recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
-- Guarani Campinas vs Amazonas | gate=LOW_COVERAGE_NO_BET | score=15.0 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=NONE | injuries=NONE | odds=NONE | missing=league_coverage=PARTIAL; recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
-- Inter De Limeira vs Ypiranga-RS | gate=LOW_COVERAGE_NO_BET | score=15.0 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=NONE | injuries=NONE | odds=NONE | missing=league_coverage=PARTIAL; recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
-- Santa Cruz vs Ferroviária | gate=LOW_COVERAGE_NO_BET | score=15.0 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=NONE | injuries=NONE | odds=NONE | missing=league_coverage=PARTIAL; recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
-- AC Oulu vs FF Jaro | gate=LOW_COVERAGE_NO_BET | score=20.0 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=NONE | injuries=NONE | odds=NONE | missing=recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
+- Nice vs Saint Etienne | gate=WAIT_LINEUPS_OR_LIVE_ONLY | score=72.5 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=NONE; standings_coverage=PARTIAL
+- Cde Juventud Italiana vs Tecnico Universitario | gate=LOW_COVERAGE_NO_BET | score=15.0 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=NONE | injuries=NONE | odds=NONE | missing=league_coverage=PARTIAL; recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
 
 ## Guardrails
 - Official lineup remains primary truth.

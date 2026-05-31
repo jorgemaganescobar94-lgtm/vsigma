@@ -1,4 +1,4 @@
-# vSIGMA Probable Lineup Source Reliability Governor - 2026-05-31
+# vSIGMA Probable Lineup Source Reliability Governor - 2026-05-29
 
 ## Summary
 - sources_reviewed: 15

@@ -1,4 +1,4 @@
-# vSIGMA Probable Lineup Source Import - 2026-05-31
+# vSIGMA Probable Lineup Source Import - 2026-05-29
 
 ## Summary
 - rows_seen: 0
@@ -10,7 +10,7 @@
 - import_status_counts: none
 - quarantine_reason_counts: none
 - sources_seen: none
-- template_rows: 240
+- template_rows: 20
 - auto_apply: NO
 - production_change: NO
 

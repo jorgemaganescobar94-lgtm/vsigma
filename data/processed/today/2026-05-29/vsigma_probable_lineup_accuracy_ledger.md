@@ -1,18 +1,18 @@
 # vSIGMA Probable XI Accuracy Ledger - 2026-05-29
 
 ## Summary
-- rows_reviewed: 1
-- evaluated_rows: 1
+- rows_reviewed: 0
+- evaluated_rows: 0
 - pending_rows: 0
-- learning_only_rows: 1
+- learning_only_rows: 0
 - promoted_rows: 0
-- grade_counts: D=1
-- source_grade_summary: sportsmole:n=1,avg=0.455
+- grade_counts: none
+- source_grade_summary: none
 - auto_apply: NO
 - production_change: NO
 
 ## Rows
-- Nice vs Saint Etienne | side=home | source=sportsmole | probable_status=LEARNING_ONLY | status=EVALUATED | grade=D | match=5/11 | probable=11
+- none. No accepted or learning-only probable lineup rows after quarantine.
 
 ## Guardrails
 - Accuracy ledger is learning-only and never applies production changes.

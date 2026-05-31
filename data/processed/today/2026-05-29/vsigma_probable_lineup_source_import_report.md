@@ -1,15 +1,15 @@
 # vSIGMA Probable Lineup Source Import - 2026-05-29
 
 ## Summary
-- rows_seen: 2
+- rows_seen: 0
 - rows_imported: 0
-- rows_learning_only: 2
+- rows_learning_only: 0
 - rows_rejected: 0
 - rows_quarantined: 0
-- input_files: data/processed/today/2026-05-29/probable_lineup_sources_autonomous.csv;data/processed/governance/probable_lineup_sources_autonomous.csv
-- import_status_counts: LEARNING_ONLY=2
+- input_files: none
+- import_status_counts: none
 - quarantine_reason_counts: none
-- sources_seen: sportsmole=2
+- sources_seen: none
 - template_rows: 20
 - auto_apply: NO
 - production_change: NO
@@ -18,8 +18,7 @@
 - none. No probable XI rows passed promotion gate for consensus.
 
 ## Learning Only Rows
-- Nice vs Saint Etienne | side=home | source=sportsmole | reason=below_promotion_accuracy_gate | q=0.455 | notes=fuzzy_official_overlap=5/11;promotion_gate=8/11;matches=diouf~y diouf:0.96,mendy~a mendy:0.96,clauss~j clauss:0.96,sanson~m sanson:0.96,cho~m cho:0.96
-- Nice vs Saint Etienne | side=home | source=sportsmole | reason=below_promotion_accuracy_gate | q=0.455 | notes=fuzzy_official_overlap=5/11;promotion_gate=8/11;matches=diouf~y diouf:0.96,mendy~a mendy:0.96,clauss~j clauss:0.96,sanson~m sanson:0.96,cho~m cho:0.96
+- none.
 
 ## Quarantined Rows
 - none.

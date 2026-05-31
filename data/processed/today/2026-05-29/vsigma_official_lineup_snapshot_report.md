@@ -5,9 +5,9 @@
 - eligible_fixtures: 2
 - api_calls_made: 1
 - cache_hits: 1
-- lineup_rows_written: 2
-- full_lineup_rows: 2
-- no_lineup_rows: 2
+- lineup_rows_written: 30
+- full_lineup_rows: 30
+- no_lineup_rows: 0
 - api_errors: 0
 - key_status: API_SPORTS
 - api_status_counts: NO_LINEUPS_RETURNED=1
@@ -17,6 +17,34 @@
 ## Imported Official Rows
 - Nice vs Saint Etienne | side=home | players=11 | formation=3-4-2-1 | status=OK
 - Nice vs Saint Etienne | side=away | players=11 | formation=4-3-3 | status=OK
+- Vasteras SK FK vs IFK Goteborg | side=home | players=11 | formation=3-4-3 | status=OK
+- Vasteras SK FK vs IFK Goteborg | side=away | players=11 | formation=4-2-3-1 | status=OK
+- BK Hacken vs Hammarby FF | side=home | players=11 | formation=4-2-3-1 | status=OK
+- BK Hacken vs Hammarby FF | side=away | players=11 | formation=4-2-3-1 | status=OK
+- RB Bragantino vs Internacional | side=home | players=11 | formation=4-2-3-1 | status=OK
+- RB Bragantino vs Internacional | side=away | players=11 | formation=3-4-2-1 | status=OK
+- Degerfors IF vs IF Brommapojkarna | side=home | players=11 | formation=4-2-3-1 | status=OK
+- Degerfors IF vs IF Brommapojkarna | side=away | players=11 | formation=4-4-2 | status=OK
+- Londrina vs Vila Nova | side=home | players=11 | formation=4-2-3-1 | status=OK
+- Londrina vs Vila Nova | side=away | players=11 | formation=4-2-3-1 | status=OK
+- São Bernardo vs Novorizontino | side=home | players=11 | formation=4-2-3-1 | status=OK
+- São Bernardo vs Novorizontino | side=away | players=11 | formation=4-2-3-1 | status=OK
+- AC Oulu vs FF Jaro | side=home | players=11 | formation=4-2-3-1 | status=OK
+- AC Oulu vs FF Jaro | side=away | players=11 | formation=3-4-2-1 | status=OK
+- Racing Santander vs Cadiz | side=home | players=11 | formation=4-2-3-1 | status=OK
+- Racing Santander vs Cadiz | side=away | players=11 | formation=4-3-3 | status=OK
+- Almeria vs Valladolid | side=home | players=11 | formation=4-2-3-1 | status=OK
+- Almeria vs Valladolid | side=away | players=11 | formation=4-4-2 | status=OK
+- Zaragoza vs Malaga | side=home | players=11 | formation=4-4-2 | status=OK
+- Zaragoza vs Malaga | side=away | players=11 | formation=4-4-2 | status=OK
+- Deportivo La Coruna vs Las Palmas | side=home | players=11 | formation=4-4-2 | status=OK
+- Deportivo La Coruna vs Las Palmas | side=away | players=11 | formation=4-2-3-1 | status=OK
+- Castellón vs Eibar | side=home | players=11 | formation=4-4-2 | status=OK
+- Castellón vs Eibar | side=away | players=11 | formation=5-4-1 | status=OK
+- Gent vs Genk | side=home | players=11 | formation=4-4-2 | status=OK
+- Gent vs Genk | side=away | players=11 | formation=4-2-3-1 | status=OK
+- Burgos vs FC Andorra | side=home | players=11 | formation=4-4-2 | status=OK
+- Burgos vs FC Andorra | side=away | players=11 | formation=3-4-3 | status=OK
 
 ## Guardrails
 - Official lineup importer only reads API/player snapshots; it never fabricates players.
