@@ -12,7 +12,12 @@ from vsigma_player_name_matcher import match_players
 
 P = Path("data/processed")
 RAW = Path("data/raw")
-PROBABLE_FILES = ["vsigma_probable_lineup_sources.csv", "probable_lineup_sources.csv"]
+PROBABLE_FILES = [
+    "vsigma_probable_lineup_sources.csv",
+    "probable_lineup_sources.csv",
+    "vsigma_probable_lineup_sources_learning_only.csv",
+    "probable_lineup_sources_learning_only.csv",
+]
 OFFICIAL_FILES = [
     "vsigma_official_lineup_sources.csv",
     "official_lineup_sources.csv",
@@ -21,13 +26,13 @@ OFFICIAL_FILES = [
 ]
 FIELDS = [
     "target_date", "generated_at", "fixture_id", "home_team", "away_team", "team_side", "source_name",
-    "probable_players_count", "official_players_count", "matched_players_count", "accuracy_11",
+    "probable_status", "probable_players_count", "official_players_count", "matched_players_count", "accuracy_11",
     "lineup_accuracy_grade", "matched_players", "missing_players", "wrong_players", "evaluation_status",
     "source_url", "source_guard", "auto_apply", "production_change",
 ]
 SUMMARY_FIELDS = [
-    "target_date", "generated_at", "rows_reviewed", "evaluated_rows", "pending_rows", "grade_counts",
-    "source_grade_summary", "auto_apply", "production_change",
+    "target_date", "generated_at", "rows_reviewed", "evaluated_rows", "pending_rows", "learning_only_rows",
+    "promoted_rows", "grade_counts", "source_grade_summary", "auto_apply", "production_change",
 ]
 
 
@@ -72,7 +77,7 @@ def player_list_from_row(row: dict[str, str], *names: str) -> list[str]:
         parts = re.split(r"[;|,]", raw)
     else:
         parts = [s(row.get(f"player_{i}")) for i in range(1, 12)]
-    out = []
+    out: list[str] = []
     for p in parts:
         np = norm_player(p)
         if np and np not in out:
@@ -107,20 +112,23 @@ def probable_rows(day: str) -> tuple[list[dict[str, str]], str]:
             if not rows:
                 continue
             used.append(str(path))
+            inferred_status = "LEARNING_ONLY" if "learning_only" in name else "IMPORTED"
             for r in rows:
                 fid = s(r.get("fixture_id"))
                 side = team_side(r)
                 src = s(r.get("source_name") or r.get("source") or r.get("provider")).lower().replace(" ", "_")
                 players = player_list_from_row(r, "probable_xi", "players", "xi")
-                key = (fid, side, src, tuple(players), s(r.get("source_url") or r.get("url")))
+                status = s(r.get("import_status")) or inferred_status
+                key = (fid, side, src, status, tuple(players), s(r.get("source_url") or r.get("url")))
                 if not fid or not side or not src or not players or key in seen:
                     continue
                 seen.add(key)
                 rr = dict(r)
                 rr["_players"] = ";".join(players)
                 rr["_source_file"] = str(path)
+                rr["_probable_status"] = status
                 out.append(rr)
-    return out, ";".join(used) if used else "NO_ACCEPTED_PROBABLE_SOURCE_FILE"
+    return out, ";".join(used) if used else "NO_ACCEPTED_OR_LEARNING_PROBABLE_SOURCE_FILE"
 
 
 def official_rows_from_files(day: str) -> tuple[dict[tuple[str, str], list[str]], str]:
@@ -184,6 +192,7 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], list[dict[str, str]]
         side = team_side(p)
         fixture = fixtures.get(fid, {})
         source = s(p.get("source_name") or p.get("source") or p.get("provider")).lower().replace(" ", "_")
+        probable_status = s(p.get("_probable_status")) or "UNKNOWN"
         probable_players = [x for x in s(p.get("_players")).split(";") if x]
         official_players = official.get((fid, side), [])
         if official_players:
@@ -204,6 +213,7 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], list[dict[str, str]]
             "away_team": s(fixture.get("away_team")) or s(p.get("away_team")),
             "team_side": side,
             "source_name": source,
+            "probable_status": probable_status,
             "probable_players_count": str(len(probable_players)),
             "official_players_count": str(len(official_players)),
             "matched_players_count": str(matched_n),
@@ -214,7 +224,7 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], list[dict[str, str]]
             "wrong_players": ";".join(wrong),
             "evaluation_status": status,
             "source_url": s(p.get("source_url") or p.get("url")),
-            "source_guard": f"accepted_probable={probable_guard}; official={official_guard}; match_official={official_match_guard}; matcher=fuzzy_v67_2",
+            "source_guard": f"probable={probable_guard}; official={official_guard}; match_official={official_match_guard}; matcher=fuzzy_v67_2; promotion_gate=v67_3",
             "auto_apply": "NO",
             "production_change": "NO",
         })
@@ -234,6 +244,8 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], list[dict[str, str]]
         "rows_reviewed": str(len(rows)),
         "evaluated_rows": str(len(evaluated)),
         "pending_rows": str(len(rows) - len(evaluated)),
+        "learning_only_rows": str(sum(1 for r in rows if r["probable_status"] == "LEARNING_ONLY")),
+        "promoted_rows": str(sum(1 for r in rows if r["probable_status"] == "IMPORTED")),
         "grade_counts": "; ".join(f"{k}={v}" for k, v in grade_counts.items()) if grade_counts else "none",
         "source_grade_summary": "; ".join(source_summary) if source_summary else "none",
         "auto_apply": "NO",
@@ -243,9 +255,9 @@ def build(day: str, tz: str) -> tuple[list[dict[str, str]], list[dict[str, str]]
 
 
 def merge_governance(existing: list[dict[str, str]], new_rows: list[dict[str, str]]) -> list[dict[str, str]]:
-    merged: dict[tuple[str, str, str, str], dict[str, str]] = {}
+    merged: dict[tuple[str, str, str, str, str], dict[str, str]] = {}
     for r in existing + new_rows:
-        key = (s(r.get("target_date")), s(r.get("fixture_id")), s(r.get("team_side")), s(r.get("source_name")))
+        key = (s(r.get("target_date")), s(r.get("fixture_id")), s(r.get("team_side")), s(r.get("source_name")), s(r.get("probable_status")))
         if key[0] and key[1] and key[2] and key[3]:
             merged[key] = r
     return list(merged.values())
@@ -254,33 +266,34 @@ def merge_governance(existing: list[dict[str, str]], new_rows: list[dict[str, st
 def md(day: str, rows: list[dict[str, str]], summary: list[dict[str, str]]) -> str:
     lines = [f"# vSIGMA Probable XI Accuracy Ledger - {day}", "", "## Summary"]
     if summary:
-        srow = summary[0]
+        r = summary[0]
         lines += [
-            f"- rows_reviewed: {srow['rows_reviewed']}",
-            f"- evaluated_rows: {srow['evaluated_rows']}",
-            f"- pending_rows: {srow['pending_rows']}",
-            f"- grade_counts: {srow['grade_counts']}",
-            f"- source_grade_summary: {srow['source_grade_summary']}",
+            f"- rows_reviewed: {r['rows_reviewed']}",
+            f"- evaluated_rows: {r['evaluated_rows']}",
+            f"- pending_rows: {r['pending_rows']}",
+            f"- learning_only_rows: {r['learning_only_rows']}",
+            f"- promoted_rows: {r['promoted_rows']}",
+            f"- grade_counts: {r['grade_counts']}",
+            f"- source_grade_summary: {r['source_grade_summary']}",
             "- auto_apply: NO",
             "- production_change: NO",
         ]
     lines += ["", "## Rows"]
     if not rows:
-        lines.append("- none. No accepted probable lineup rows after quarantine.")
-    for r in rows[:80]:
+        lines.append("- none. No accepted or learning-only probable lineup rows after quarantine.")
+    for row in rows[:80]:
         lines.append(
-            f"- {r['home_team']} vs {r['away_team']} | side={r['team_side']} | source={r['source_name']} "
-            f"| status={r['evaluation_status']} | grade={r['lineup_accuracy_grade']} "
-            f"| match={r['matched_players_count']}/{r['official_players_count']} | probable={r['probable_players_count']}"
+            f"- {row['home_team']} vs {row['away_team']} | side={row['team_side']} | source={row['source_name']} "
+            f"| probable_status={row['probable_status']} | status={row['evaluation_status']} | grade={row['lineup_accuracy_grade']} "
+            f"| match={row['matched_players_count']}/{row['official_players_count']} | probable={row['probable_players_count']}"
         )
     lines += [
         "",
         "## Guardrails",
         "- Accuracy ledger is learning-only and never applies production changes.",
-        "- Accuracy ledger reads only accepted probable rows after quarantine, never autonomous raw rows.",
+        "- IMPORTED rows may feed consensus; LEARNING_ONLY rows are evaluated but must not feed consensus/prelock.",
+        "- Accuracy ledger never reads autonomous raw rows directly.",
         "- Fuzzy player matching is used for evaluation only and does not fabricate players.",
-        "- Probable XI is evaluated only when official lineup players are available.",
-        "- NO_OFFICIAL_LINEUP is a pending state, not a source failure.",
         "- Source reliability changes must be handled by a later governor module.",
     ]
     return "\n".join(lines) + "\n"
@@ -303,17 +316,17 @@ def run(day: str, tz: str) -> None:
     print("=== VSIGMA PROBABLE XI ACCURACY LEDGER ===")
     print(f"rows_reviewed={summary[0]['rows_reviewed'] if summary else 0}")
     print(f"evaluated_rows={summary[0]['evaluated_rows'] if summary else 0}")
-    print(f"pending_rows={summary[0]['pending_rows'] if summary else 0}")
+    print(f"learning_only_rows={summary[0]['learning_only_rows'] if summary else 0}")
     print("auto_apply=NO")
     print("production_change=NO")
 
 
 def main() -> None:
-    p = argparse.ArgumentParser()
-    p.add_argument("--date", required=True)
-    p.add_argument("--timezone", default="Atlantic/Canary")
-    a = p.parse_args()
-    run(a.date, a.timezone)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--date", required=True)
+    parser.add_argument("--timezone", default="Atlantic/Canary")
+    args = parser.parse_args()
+    run(args.date, args.timezone)
 
 
 if __name__ == "__main__":
