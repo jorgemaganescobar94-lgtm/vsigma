@@ -6,9 +6,9 @@
 | Action | NONE | First-read operator priority |
 | Risk | NONE | Operational risk after sanity + health gate |
 | Alert | LOCAL_ONLY / LOW | Routing decision for operator notifications |
-| Counts | active=0; live=0; closed=0; watch=0; no_bet=0 | Candidate distribution |
-| Reason | no active/live/watch action; no_bet=0 | Why this action level was selected |
-| Final | NO_OPERATOR_ACTION | sanity=PASS; no active/live/watch action; no_bet=0; closed=0 |
+| Counts | active=0; live=0; closed=0; watch=0; no_bet=4 | Candidate distribution |
+| Reason | no active/live/watch action; no_bet=4 | Why this action level was selected |
+| Final | NO_OPERATOR_ACTION | sanity=PASS; no active/live/watch action; no_bet=4; closed=0 |
 
 ## Alert Routing
 | Field | Value | Meaning |
@@ -38,7 +38,7 @@
 - drift_status: MATERIAL_CHANGE
 - drift_notify_required: true
 - drift_changed_fields: action_level
-- sanity_check: PASS | no active/live/watch action; no_bet=0; closed=0
+- sanity_check: PASS | no active/live/watch action; no_bet=4; closed=0
 - operator_status: OK
 - primary_next_action: No operator action required.
 - health_status: UNKNOWN
@@ -46,8 +46,8 @@
 - waiting_live_window: 0
 - closed_or_missed: 0
 - watch_only: 0
-- no_bet: 0
-- board_decisions: UNKNOWN
+- no_bet: 4
+- board_decisions: NO_BET=4
 - recheck_decisions: none
 - live_triggers: none
 - alert_notify_required: UNKNOWN
@@ -64,7 +64,7 @@
 - DRIFT_STATUS=MATERIAL_CHANGE
 - DRIFT_NOTIFY_REQUIRED=true
 - SANITY_CHECK=PASS
-- SANITY_DETAIL=no active/live/watch action; no_bet=0; closed=0
+- SANITY_DETAIL=no active/live/watch action; no_bet=4; closed=0
 - WINDOWS_READ=UTF8 | Get-Content data/processed/today/2026-06-01/vsigma_operator_brief.md -Encoding UTF8
 
 ## Active Review
@@ -80,7 +80,10 @@
 - none
 
 ## No Bet
-- none
+- #1 | NO_BET | Cordoba vs Huesca | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-34 | cancel=default no bet; low forecast confidence; bad or incomplete lineups
+- #2 | NO_BET | Almeria vs Valladolid | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-34 | cancel=default no bet; low forecast confidence; bad or incomplete lineups
+- #3 | NO_BET | RB Bragantino vs Internacional | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-34 | cancel=default no bet; bad or incomplete lineups
+- #4 | NO_BET | Vasco DA Gama vs Atletico-MG | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-34 | cancel=default no bet; bad or incomplete lineups
 
 ## Live Trigger Status
 - no live trigger report or no live candidates

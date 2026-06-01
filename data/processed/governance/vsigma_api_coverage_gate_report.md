@@ -7,10 +7,10 @@
 - production_change: NO
 
 ## Gate Rows
-- Cordoba vs Huesca | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=unknown
-- Almeria vs Valladolid | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=unknown
-- RB Bragantino vs Internacional | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=unknown
-- Vasco DA Gama vs Atletico-MG | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=unknown
+- Cordoba vs Huesca | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO->NO | missing=unknown
+- Almeria vs Valladolid | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO->NO | missing=unknown
+- RB Bragantino vs Internacional | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO->NO | missing=unknown
+- Vasco DA Gama vs Atletico-MG | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO->NO | missing=unknown
 
 ## Guardrails
 - Probable XI can support early planning, never final lock by itself.
