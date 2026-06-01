@@ -84,7 +84,8 @@ jobs:
           if [ "$INCLUDE_OPERATOR_BRIEF" = "true" ]; then
             python scripts/build_operator_brief.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
           fi
-          python scripts/build_consolidated_daily_operator_panel_v2.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          python scripts/build_consolidated_daily_operator_panel_v3.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          python scripts/route_daily_chain_missing_self_heal.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
       - name: Commit prelock outputs
         shell: bash
@@ -95,6 +96,7 @@ jobs:
           git add data/processed/today/${VSIGMA_DATE}/vsigma_* data/processed/governance/vsigma_* 2>/dev/null || true
           git add data/processed/today/${VSIGMA_DATE}/official_lineup_sources.csv data/processed/today/${VSIGMA_DATE}/probable_lineup_sources_autonomous.csv 2>/dev/null || true
           git add data/processed/governance/official_lineup_sources.csv data/processed/governance/probable_lineup_sources_autonomous.csv 2>/dev/null || true
+          git add .vsigma/triggers/daily_decision_chain_v2.trigger 2>/dev/null || true
 
           echo "Staged changes:"
           git diff --cached --name-only || true
@@ -104,5 +106,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "vSIGMA prelock official lineup recheck ${VSIGMA_DATE} [skip ci]"
+          git commit -m "vSIGMA prelock official lineup recheck ${VSIGMA_DATE}"
           git push origin HEAD:main
