@@ -84,6 +84,7 @@ jobs:
         shell: bash
         run: |
           python scripts/build_real_objective_context_gate.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          python scripts/build_objective_context_execution_bridge.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
           python scripts/build_objective_availability_gate.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
           python scripts/build_context_adjusted_final_picks.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
           python scripts/build_context_matrix.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
