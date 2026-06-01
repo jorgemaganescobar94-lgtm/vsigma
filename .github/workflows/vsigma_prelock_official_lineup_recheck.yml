@@ -84,7 +84,7 @@ jobs:
           if [ "$INCLUDE_OPERATOR_BRIEF" = "true" ]; then
             python scripts/build_operator_brief.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
           fi
-          python scripts/build_consolidated_daily_operator_panel.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+          python scripts/build_consolidated_daily_operator_panel_v2.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
       - name: Commit prelock outputs
         shell: bash
