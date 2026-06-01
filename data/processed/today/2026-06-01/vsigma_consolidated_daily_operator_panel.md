@@ -1,8 +1,8 @@
 # vSIGMA Consolidated Daily Operator Panel - 2026-06-01
 
 ## First Read
-- panel_status: NONE
-- operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=UNKNOWN
+- panel_status: PARTIAL_OUTPUTS
+- operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=UNKNOWN; board_rows=0
 - executable_prematch: NO_BOARD
 - live_only: NONE
 - watchlist: NONE
@@ -16,8 +16,9 @@
 - compact_final_decision: NO_OPERATOR_ACTION
 - risk_label: NONE
 - health_status: UNKNOWN
-- panel_status: NONE
-- next_action: Follow operator brief and panel categories; no automatic execution.
+- board_rows: 0
+- panel_status: PARTIAL_OUTPUTS
+- next_action: Daily execution board is missing; do not use operator/prelock/live outputs as pick permission. Run daily chain first.
 
 ## Executable Prematch
 - none
@@ -58,7 +59,7 @@
 
 ## Next Triggers / Rechecks
 - .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-05-31; reason=run_daily_decision_chain_v2_2026_05_31_board_missing; triggered_at=2026-05-31T15:45:00+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-01; reason=run_prelock_recheck_v67_5_consolidated_operator_panel; triggered_at=2026-06-01T08:58:03+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-01; reason=run_prelock_recheck_v67_5_1_safe_consolidated_operator_panel; triggered_at=2026-06-01T09:05:00+01:00
 
 ## Key Files
 - data/processed/today/2026-06-01/vsigma_consolidated_daily_operator_panel.md

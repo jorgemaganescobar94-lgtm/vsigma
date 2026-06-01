@@ -1,11 +1,11 @@
 target_date,generated_at,section,status,detail,next_action,auto_apply,production_change
-2026-06-01,2026-06-01T08:58:41+01:00,operator_gate,NONE,action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=UNKNOWN,Use this as the first read; never override BROKEN/NO_BET gates.,NO,NO
-2026-06-01,2026-06-01T08:58:41+01:00,executable_prematch,NO_BOARD,daily execution board missing,"Only rows here can be discussed as prematch executable, still manual-only.",NO,NO
-2026-06-01,2026-06-01T08:58:41+01:00,live_only,NONE,no live-only rows,Wait for live trigger confirmation; no chase outside window.,NO,NO
-2026-06-01,2026-06-01T08:58:41+01:00,watchlist,NONE,no watchlist rows,Observation only unless promoted by later gates.,NO,NO
-2026-06-01,2026-06-01T08:58:41+01:00,no_bet,NONE,no no-bet rows,Do not fill ranking from blocked rows.,NO,NO
-2026-06-01,2026-06-01T08:58:41+01:00,api_coverage,MISSING_BOARD,NO_BOARD_ROWS,Coverage gaps block promotion; do not infer missing data.,NO,NO
-2026-06-01,2026-06-01T08:58:41+01:00,official_probable_lineups,OK,files=3; rows=68; statuses=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6,Probables do not become official; quarantine/learning-only stays non-execution.,NO,NO
-2026-06-01,2026-06-01T08:58:41+01:00,source_reliability_governor,ADVISORY_ONLY,sources=15; verdicts=HOLD_SAMPLE=15; sample_gates=INSUFFICIENT_SAMPLE=15; actions=KEEP_ACTIVE_COLLECT_MORE_DATA=15,Advisory only; no automatic source weight changes.,NO,NO
-2026-06-01,2026-06-01T08:58:41+01:00,automation_health,MISSING,automation health report unavailable,"If BROKEN, fix workflow/input before talking picks.",NO,NO
-2026-06-01,2026-06-01T08:58:41+01:00,next_triggers_rechecks,DIAGNOSTIC,triggers=2,Use scheduled workflows or trigger bridge; no betting execution.,NO,NO
+2026-06-01,2026-06-01T09:08:49+01:00,operator_gate,PARTIAL_OUTPUTS,action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=UNKNOWN; board_rows=0,Use this as the first read; never override BROKEN/NO_BET gates.,NO,NO
+2026-06-01,2026-06-01T09:08:49+01:00,executable_prematch,NO_BOARD,daily execution board missing,"Only rows here can be discussed as prematch executable, still manual-only.",NO,NO
+2026-06-01,2026-06-01T09:08:49+01:00,live_only,NONE,no live-only rows,Wait for live trigger confirmation; no chase outside window.,NO,NO
+2026-06-01,2026-06-01T09:08:49+01:00,watchlist,NONE,no watchlist rows,Observation only unless promoted by later gates.,NO,NO
+2026-06-01,2026-06-01T09:08:49+01:00,no_bet,NONE,no no-bet rows,Do not fill ranking from blocked rows.,NO,NO
+2026-06-01,2026-06-01T09:08:49+01:00,api_coverage,MISSING_BOARD,NO_BOARD_ROWS,Coverage gaps block promotion; do not infer missing data.,NO,NO
+2026-06-01,2026-06-01T09:08:49+01:00,official_probable_lineups,OK,files=3; rows=68; statuses=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6,Probables do not become official; quarantine/learning-only stays non-execution.,NO,NO
+2026-06-01,2026-06-01T09:08:49+01:00,source_reliability_governor,ADVISORY_ONLY,sources=15; verdicts=HOLD_SAMPLE=15; sample_gates=INSUFFICIENT_SAMPLE=15; actions=KEEP_ACTIVE_COLLECT_MORE_DATA=15,Advisory only; no automatic source weight changes.,NO,NO
+2026-06-01,2026-06-01T09:08:49+01:00,automation_health,MISSING,automation health report unavailable,"If BROKEN, fix workflow/input before talking picks.",NO,NO
+2026-06-01,2026-06-01T09:08:49+01:00,next_triggers_rechecks,DIAGNOSTIC,triggers=2,Use scheduled workflows or trigger bridge; no betting execution.,NO,NO
