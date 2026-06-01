@@ -1,12 +1,13 @@
-# vSIGMA Daily Run Plan - 2026-06-01
+# vSIGMA Daily Run Plan - 2026-05-31
 
 - Timezone: Atlantic/Canary
-- Generated at: 2026-06-01T20:23:51.616091+01:00
+- Generated at: 2026-06-01T22:09:19.229850+01:00
 - Window minutes: 90
-- Next recommended action: RUN_PRE
-- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-01 --timezone Atlantic/Canary --mode pre`
+- Next recommended action: ALL_SETTLED
+- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-31 --timezone Atlantic/Canary --mode status`
 
 ## Fixtures
 | fixture_id | league | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action | recommended_command |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  |  | NO_CURRENT_PICKS | RUN_PRE | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-01 --timezone Atlantic/Canary --mode pre |
+| 1492282 | Serie A | RB Bragantino | Internacional | OVER_1_5 | 2026-05-31T14:01:03.800000+00:00 | -1868.26 | 2026-05-31T12:31:03.800000+00:00 | PRELOCK_NOT_AVAILABLE | ALL_SETTLED | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-31 --timezone Atlantic/Canary --mode status |
+| 1392226 | Segunda División | Leganes | Mirandes | OVER_1_5 | 2026-05-31T19:01:06.200000+00:00 | -1568.22 | 2026-05-31T17:31:06.200000+00:00 | KICKOFF_PASSED | ALL_SETTLED | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-05-31 --timezone Atlantic/Canary --mode status |

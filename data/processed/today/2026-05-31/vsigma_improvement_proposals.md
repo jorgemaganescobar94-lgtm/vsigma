@@ -1,23 +1,27 @@
 # vSIGMA Improvement Proposals - 2026-05-31
 
 ## Executive Proposal Summary
-- generated_at: 2026-05-31T23:37:42+01:00
-- proposals generated: 11
-- proposal_type_counts: DATA_QUALITY_PROPOSAL=7; MODEL_SHADOW_PROPOSAL=2; OPERATIONAL_PROPOSAL=2
-- proposal_status_counts: PROPOSAL_ONLY=8; SHADOW_CANDIDATE_REQUIRED=2; MONITOR_ONLY=1
-- priority_counts: P2=5; P1=3; P3=3
+- generated_at: 2026-06-01T22:09:20+01:00
+- proposals generated: 15
+- proposal_type_counts: DATA_QUALITY_PROPOSAL=7; MODEL_SHADOW_PROPOSAL=6; OPERATIONAL_PROPOSAL=2
+- proposal_status_counts: PROPOSAL_ONLY=8; MONITOR_ONLY=4; SHADOW_CANDIDATE_REQUIRED=3
+- priority_counts: P3=6; P2=5; P1=4
 
 ## Top Proposals
-- P1 | SHADOW_CANDIDATE_REQUIRED | MODEL_SHADOW_PROPOSAL | MARKET_RISK_CLUSTER | n=6 | auto_apply=NO | action=Create a shadow-only candidate for pattern OVER_1_5::FAILURE_MODE_LOW_CONVERSION; do not change production until backtest/forward-test promotion gates pass.
-- P1 | SHADOW_CANDIDATE_REQUIRED | MODEL_SHADOW_PROPOSAL | SAMPLE_KEY_CLUSTER | n=4 | auto_apply=NO | action=Create a shadow-only candidate for pattern WAITING_PRELOCK::OVER_1_5::FAILURE_MODE_LOW_CONVERSION::WAIT_FOR_POST_RESULTS; do not change production until backtest/forward-test promotion gates pass.
-- P1 | PROPOSAL_ONLY | OPERATIONAL_PROPOSAL | WAITING_PRELOCK_CLUSTER | n=5 | auto_apply=NO | action=Review AUTO/PRELOCK schedule, retry windows, and whether candidates remain waiting too close to kickoff.
-- P2 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | UNRESOLVED_DOMINANCE | n=14 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
-- P2 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | MARKET_RISK_CLUSTER | n=8 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
+- P1 | SHADOW_CANDIDATE_REQUIRED | MODEL_SHADOW_PROPOSAL | MARKET_RISK_CLUSTER | n=7 | auto_apply=NO | action=Create a shadow-only candidate for pattern OVER_1_5::FAILURE_MODE_LOW_CONVERSION; do not change production until backtest/forward-test promotion gates pass.
+- P1 | SHADOW_CANDIDATE_REQUIRED | MODEL_SHADOW_PROPOSAL | MARKET_RISK_CLUSTER | n=3 | auto_apply=NO | action=Create a shadow-only candidate for pattern OVER_2_5::FAILURE_MODE_LOW_CONVERSION; do not change production until backtest/forward-test promotion gates pass.
+- P1 | SHADOW_CANDIDATE_REQUIRED | MODEL_SHADOW_PROPOSAL | SAMPLE_KEY_CLUSTER | n=3 | auto_apply=NO | action=Create a shadow-only candidate for pattern WAITING_PRELOCK::OVER_1_5::FAILURE_MODE_LOW_CONVERSION::WAIT_FOR_POST_RESULTS; do not change production until backtest/forward-test promotion gates pass.
+- P1 | PROPOSAL_ONLY | OPERATIONAL_PROPOSAL | WAITING_PRELOCK_CLUSTER | n=4 | auto_apply=NO | action=Review AUTO/PRELOCK schedule, retry windows, and whether candidates remain waiting too close to kickoff.
+- P2 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | UNRESOLVED_DOMINANCE | n=13 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
 - P2 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | MARKET_RISK_CLUSTER | n=8 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
 - P2 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | SAMPLE_KEY_CLUSTER | n=8 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
-- P2 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | SAMPLE_KEY_CLUSTER | n=8 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
+- P2 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | MARKET_RISK_CLUSTER | n=7 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
+- P2 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | SAMPLE_KEY_CLUSTER | n=7 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
 - P3 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | MARKET_RISK_CLUSTER | n=2 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
 - P3 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | SAMPLE_KEY_CLUSTER | n=2 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
+- P3 | MONITOR_ONLY | MODEL_SHADOW_PROPOSAL | ACTIONABLE_LOSS_CLUSTER | n=2 | auto_apply=NO | action=Create a shadow-only candidate for pattern OVER_2_5; do not change production until backtest/forward-test promotion gates pass.
+- P3 | MONITOR_ONLY | MODEL_SHADOW_PROPOSAL | SAMPLE_KEY_CLUSTER | n=2 | auto_apply=NO | action=Create a shadow-only candidate for pattern ACTIONABLE_RESULT::OVER_2_5::FAILURE_MODE_LOW_CONVERSION::REVIEW_PATTERN; do not change production until backtest/forward-test promotion gates pass.
+- P3 | MONITOR_ONLY | MODEL_SHADOW_PROPOSAL | ACTIONABLE_LOSS_CLUSTER | n=1 | auto_apply=NO | action=Create a shadow-only candidate for pattern OVER_1_5; do not change production until backtest/forward-test promotion gates pass.
 - P3 | MONITOR_ONLY | OPERATIONAL_PROPOSAL | EXPIRED_PRELOCK_CLUSTER | n=1 | auto_apply=NO | action=Review execution timing and exclude expired rows from predictive hit-rate metrics.
 
 ## Guardrails

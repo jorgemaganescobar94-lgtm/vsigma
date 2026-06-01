@@ -1,25 +1,25 @@
 # vSIGMA Candidate Isolation Report
 
 - Target date: 2026-05-31
-- PASS: 24
-- Warnings: 0
-- Errors: 0
+- PASS: 16
+- Warnings: 5
+- Errors: 3
 
 | target_date | check_name | file_name | status | detail |
 | --- | --- | --- | --- | --- |
-| 2026-05-31 | official_baseline_exists | vsigma_today_competition_report.txt | PASS | baseline file present |
-| 2026-05-31 | official_baseline_exists | vsigma_today_competition_shortlist.csv | PASS | baseline file present |
-| 2026-05-31 | official_baseline_exists | vsigma_today_competition_top.csv | PASS | baseline file present |
+| 2026-05-31 | official_baseline_exists | vsigma_today_competition_report.txt | ERROR_MISSING_REQUIRED_FILE | official baseline file missing |
+| 2026-05-31 | official_baseline_exists | vsigma_today_competition_shortlist.csv | ERROR_MISSING_REQUIRED_FILE | official baseline file missing |
+| 2026-05-31 | official_baseline_exists | vsigma_today_competition_top.csv | ERROR_MISSING_REQUIRED_FILE | official baseline file missing |
 | 2026-05-31 | candidate_specific_name | vsigma_today_candidate_v2_competition_top.csv | PASS | candidate output uses candidate-specific name |
-| 2026-05-31 | candidate_file_present_or_optional | vsigma_today_candidate_v2_competition_top.csv | PASS | candidate file present |
+| 2026-05-31 | candidate_file_present_or_optional | vsigma_today_candidate_v2_competition_top.csv | WARNING_OPTIONAL_CANDIDATE_MISSING | optional shadow candidate file missing |
 | 2026-05-31 | candidate_specific_name | vsigma_today_candidate_v4_competition_top.csv | PASS | candidate output uses candidate-specific name |
-| 2026-05-31 | candidate_file_present_or_optional | vsigma_today_candidate_v4_competition_top.csv | PASS | candidate file present |
+| 2026-05-31 | candidate_file_present_or_optional | vsigma_today_candidate_v4_competition_top.csv | WARNING_OPTIONAL_CANDIDATE_MISSING | optional shadow candidate file missing |
 | 2026-05-31 | candidate_specific_name | vsigma_today_candidate_v5_competition_top.csv | PASS | candidate output uses candidate-specific name |
-| 2026-05-31 | candidate_file_present_or_optional | vsigma_today_candidate_v5_competition_top.csv | PASS | candidate file present |
+| 2026-05-31 | candidate_file_present_or_optional | vsigma_today_candidate_v5_competition_top.csv | WARNING_OPTIONAL_CANDIDATE_MISSING | optional shadow candidate file missing |
 | 2026-05-31 | candidate_specific_name | vsigma_today_candidate_v6_competition_top.csv | PASS | candidate output uses candidate-specific name |
-| 2026-05-31 | candidate_file_present_or_optional | vsigma_today_candidate_v6_competition_top.csv | PASS | candidate file present |
+| 2026-05-31 | candidate_file_present_or_optional | vsigma_today_candidate_v6_competition_top.csv | WARNING_OPTIONAL_CANDIDATE_MISSING | optional shadow candidate file missing |
 | 2026-05-31 | candidate_specific_name | vsigma_today_candidate_v7_competition_top.csv | PASS | candidate output uses candidate-specific name |
-| 2026-05-31 | candidate_file_present_or_optional | vsigma_today_candidate_v7_competition_top.csv | PASS | candidate file present |
+| 2026-05-31 | candidate_file_present_or_optional | vsigma_today_candidate_v7_competition_top.csv | WARNING_OPTIONAL_CANDIDATE_MISSING | optional shadow candidate file missing |
 | 2026-05-31 | candidate_does_not_overwrite_baseline_path | vsigma_today_candidate_v2_competition_top.csv | PASS | candidate path is isolated from official baseline paths |
 | 2026-05-31 | candidate_does_not_overwrite_baseline_path | vsigma_today_candidate_v4_competition_top.csv | PASS | candidate path is isolated from official baseline paths |
 | 2026-05-31 | candidate_does_not_overwrite_baseline_path | vsigma_today_candidate_v5_competition_top.csv | PASS | candidate path is isolated from official baseline paths |

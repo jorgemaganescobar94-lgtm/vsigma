@@ -1,7 +1,7 @@
 # vSIGMA Daily Competition Master Report - 2026-05-31
 
 ## Daily Status
-PRE_LOCK_PENDING
+POST_SETTLED
 
 ## Official Baseline Top Picks
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
@@ -111,18 +111,18 @@ _No stale pre-lock rows excluded._
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1392216 | Zaragoza | Malaga | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.34 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1392217 | Cordoba | Huesca | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.78 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1392217 | Cordoba | Huesca | OVER_2_5 | OFFICIAL_BASELINE | 1.78 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1392217 | Cordoba | Huesca | OVER_2_5 | OFFICIAL_BASELINE | 1.78 |  | 1.78 | 0.0 | CLV_FLAT | LOSS | -1.0 |
 | 1392220 | Almeria | Valladolid | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.6 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1392220 | Almeria | Valladolid | OVER_2_5 | OFFICIAL_BASELINE | 1.6 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1392220 | Almeria | Valladolid | OVER_2_5 | OFFICIAL_BASELINE | 1.6 |  | 1.6 | 0.0 | CLV_FLAT | LOSS | -1.0 |
 | 1392221 | Castellón | Eibar | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.6 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1392224 | Deportivo La Coruna | Las Palmas | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.34 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1392226 | Leganes | Mirandes | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.31 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1392226 | Leganes | Mirandes | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.31 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1492282 | RB Bragantino | Internacional | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.36 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1492282 | RB Bragantino | Internacional | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.36 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1492282 | RB Bragantino | Internacional | OVER_1_5 | OFFICIAL_BASELINE | 1.36 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1492282 | RB Bragantino | Internacional | OVER_1_5 | OFFICIAL_BASELINE | 1.36 |  | 1.36 | 0.0 | CLV_FLAT | WIN | 0.36 |
 | 1492289 | Vasco DA Gama | Atletico-MG | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.36 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1492289 | Vasco DA Gama | Atletico-MG | OVER_1_5 | OFFICIAL_BASELINE | 1.36 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1492289 | Vasco DA Gama | Atletico-MG | OVER_1_5 | OFFICIAL_BASELINE | 1.36 |  | 1.36 | 0.0 | CLV_FLAT | LOSS | -1.0 |
 | 1494186 | Degerfors IF | IF Brommapojkarna | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.33 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1494188 | BK Hacken | Hammarby FF | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.58 |  |  |  | CLV_UNAVAILABLE |  |  |
 | 1494192 | Vasteras SK FK | IFK Goteborg | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.9 |  |  |  | CLV_UNAVAILABLE |  |  |
@@ -130,10 +130,17 @@ _No stale pre-lock rows excluded._
 ### Candidate v7 Calibration Advice
 | market_family | failure_mode | drift_status | clv_direction | n | profit_units | roi_percent | recommendation | recommendation_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 11 | 0.0 | 0.0 | INSUFFICIENT_CLV_DATA | CLV_TRACKING_INSUFFICIENT_TRUE_PRE_MISSING; do not change thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_FLAT | 1 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 10 | 0.0 | 0.0 | INSUFFICIENT_CLV_DATA | CLV_TRACKING_INSUFFICIENT_TRUE_PRE_MISSING; do not change thresholds. |
 
 ## Post-Results Summary
-_No rows._
+| mode | pick_count | wins | losses | profit_units | roi_percent | pending_rows | candidate_version |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| OFFICIAL_EXECUTION_SHORTLIST | 4.0 | 1.0 | 3.0 | -2.64 | -66.0 | 0.0 | OFFICIAL_RESULTS |
+| SHADOW_CANDIDATE_V4_O25_LOW_CONVERSION_FIREWALL | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V4_RESULTS |
+| SHADOW_CANDIDATE_V5_PLAYER_IMPACT | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V5_RESULTS |
+| SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V6_RESULTS |
+| SHADOW_CANDIDATE_V7_PRICE_DISCIPLINE_CLV_DRIFT_GUARD | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V7_RESULTS |
 
 ## Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
@@ -164,56 +171,45 @@ _No rows._
 
 ## Immutable Ledger / Experiment Registry
 - Ledger update status: AVAILABLE
-- Official picks registered: 1
-- Shadow picks registered: 10
+- Official picks registered: 0
+- Shadow picks registered: 0
 - No-bet records: 1
 - Ledger report: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-31/vsigma_ledger_daily_report.md
 
 ## Daily Controller Status
-- Next recommended action: WAIT_FOR_PRELOCK
+- Next recommended action: ALL_SETTLED
 - Pre-lock due time: 2026-05-31T12:31:03.800000+00:00
 - Status path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-31/daily_controller_status.md
 
 ## Daily Supervisor
 - Supervisor latest status: SUPERVISOR_STATUS_NOT_AVAILABLE
 - Last run mode/time: NOT_AVAILABLE / NOT_AVAILABLE
-- Next recommended action: WAIT_FOR_PRELOCK
+- Next recommended action: ALL_SETTLED
 - Scheduled automation status: REGISTRATION_SCRIPT_AVAILABLE_STATUS_NOT_QUERIED
 - Logs path: C:\vsigma\automation_logs\supervisor
 - Report path: NOT_AVAILABLE
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: freshness_report: WARNING - validation report contains warning rows
-- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-05-31`
+- Critical warnings: official_baseline_output: WARNING - only stale rows found for 2026-05-31
+- Recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-01 --timezone Atlantic/Canary --mode pre`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-05-31/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1492282.0 | RB Bragantino | Internacional | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1392226.0 | Leganes | Mirandes | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1492282.0 | RB Bragantino | Internacional | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V4_O25_FIREWALL | 1392226.0 | Leganes | Mirandes | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V4_O25_FIREWALL | 1492282.0 | RB Bragantino | Internacional | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1392226.0 | Leganes | Mirandes | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1492282.0 | RB Bragantino | Internacional | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V6_API_PREDICTIONS | 1392226.0 | Leganes | Mirandes | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V6_API_PREDICTIONS | 1492282.0 | RB Bragantino | Internacional | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1392226.0 | Leganes | Mirandes | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1492282.0 | RB Bragantino | Internacional | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | OFFICIAL | 22 | 8 | 5 | 3 | -0.66 | -8.25 | FROZEN_OFFICIAL_BASELINE |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 29 | 7 | 4 | 3 | -1.18 | -16.857143 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
+| OFFICIAL_BASELINE | OFFICIAL | 21 | 8 | 5 | 3 | -0.66 | -8.25 | FROZEN_OFFICIAL_BASELINE |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 27 | 7 | 4 | 3 | -1.18 | -16.857143 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
 | CANDIDATE_V3_ODDS_DEPTH | NOT_PROMOTED | 0 | 0 | 0 | 0 | 0.0 |  | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V4_O25_FIREWALL | SHADOW | 27 | 7 | 5 | 2 | 0.07 | 1.0 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V5_PLAYER_IMPACT | SHADOW | 29 | 7 | 5 | 2 | 0.07 | 1.0 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V6_API_PREDICTIONS | AUDIT_ONLY | 25 | 6 | 4 | 2 | -0.18 | -3.0 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | 16 | 1 | 0 | 1 | -1.0 | -100.0 | PRICE_DISCIPLINE_UNTESTED |
+| CANDIDATE_V4_O25_FIREWALL | SHADOW | 25 | 7 | 5 | 2 | 0.07 | 1.0 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V5_PLAYER_IMPACT | SHADOW | 27 | 7 | 5 | 2 | 0.07 | 1.0 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V6_API_PREDICTIONS | AUDIT_ONLY | 23 | 6 | 4 | 2 | -0.18 | -3.0 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | 14 | 1 | 0 | 1 | -1.0 | -100.0 | PRICE_DISCIPLINE_UNTESTED |
 
 ## Promotion & Threshold Governance
 - Official baseline status: KEEP_OFFICIAL_BASELINE
@@ -233,7 +229,7 @@ _No rows._
 ### Threshold Recommendations
 | market_family | failure_mode | experiment_id | settled_rows | roi_percent | clv_direction | threshold_recommendation |
 | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 11 | 0.0 | CLV_UNAVAILABLE | INSUFFICIENT_CLV_DATA |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 10 | 0.0 | CLV_UNAVAILABLE | INSUFFICIENT_CLV_DATA |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V4_O25_FIREWALL | 7 | 1.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 7 | 1.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 6 | -3.0 |  | SAMPLE_TOO_SMALL |
@@ -242,6 +238,7 @@ _No rows._
 | OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 2 | -24.0 |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | -100.0 |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | -100.0 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V2_SCHEDULE_ANOMALY | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V4_O25_FIREWALL | 0 |  |  | SAMPLE_TOO_SMALL |
@@ -252,7 +249,6 @@ _No rows._
 | OVER_2_5 | UNSPECIFIED | CANDIDATE_V2_SCHEDULE_ANOMALY | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | UNSPECIFIED | CANDIDATE_V5_PLAYER_IMPACT | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | UNSPECIFIED | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
-| UNDER_3_5 | AVALANCHE_RISK | OFFICIAL_BASELINE | 0 |  |  | SAMPLE_TOO_SMALL |
 
 - CLV data sufficiency: INSUFFICIENT_CLV_DATA
 - Drift alerts: 0
@@ -268,47 +264,46 @@ _No rows._
 ## Freshness Validation
 | file_name | candidate_version | status | detail | rows |
 | --- | --- | --- | --- | --- |
-| vsigma_today_competition_shortlist.csv | OFFICIAL_BASELINE | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_competition_top.csv | OFFICIAL_BASELINE | PASS | output is fresh for requested target date | 1 |
-| vsigma_today_candidate_v2_competition_shortlist.csv | CANDIDATE_V2 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v2_competition_top.csv | CANDIDATE_V2 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v4_competition_shortlist.csv | CANDIDATE_V4 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v4_competition_top.csv | CANDIDATE_V4 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v5_competition_shortlist.csv | CANDIDATE_V5 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v5_competition_top.csv | CANDIDATE_V5 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v6_competition_shortlist.csv | CANDIDATE_V6 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v6_competition_top.csv | CANDIDATE_V6 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v7_competition_shortlist.csv | CANDIDATE_V7 | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_candidate_v7_competition_top.csv | CANDIDATE_V7 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_baseline_vs_candidate_v2.csv | COMPARISON | PASS | output is fresh for requested target date | 3 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v4.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v5.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v6.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v7.csv | COMPARISON | PASS | output is fresh for requested target date | 2 |
-| vsigma_today_match_script_forecasts.csv | FORECAST | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_competition_shortlist.csv | OFFICIAL_BASELINE | ERROR_MISSING_REQUIRED_FILE | required output file is missing | 0 |
+| vsigma_today_competition_top.csv | OFFICIAL_BASELINE | ERROR_MISSING_REQUIRED_FILE | required output file is missing | 0 |
+| vsigma_today_candidate_v2_competition_top.csv | CANDIDATE_V2 | ERROR_MISSING_REQUIRED_FILE | required output file is missing | 0 |
 | vsigma_today_candidate_v2_match_script_forecasts.csv | FORECAST_CANDIDATE_V2 | PASS | output is fresh for requested target date | 2 |
 | vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | PASS | output is fresh for requested target date | 2 |
 | vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
+| vsigma_execution_shortlist_results_ledger.csv | OFFICIAL_RESULTS | PASS | output is fresh for requested target date | 4 |
+| vsigma_execution_shortlist_results_summary.csv | OFFICIAL_RESULTS | PASS | output is fresh for requested target date | 144 |
+| vsigma_today_candidate_v4_results_ledger.csv | CANDIDATE_V4_RESULTS | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
+| vsigma_today_candidate_v4_results_summary.csv | CANDIDATE_V4_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v5_results_ledger.csv | CANDIDATE_V5_RESULTS | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
+| vsigma_today_candidate_v5_results_summary.csv | CANDIDATE_V5_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v6_results_ledger.csv | CANDIDATE_V6_RESULTS | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
+| vsigma_today_candidate_v6_results_summary.csv | CANDIDATE_V6_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v7_results_ledger.csv | CANDIDATE_V7_RESULTS | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
+| vsigma_today_candidate_v7_results_summary.csv | CANDIDATE_V7_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v4_results.csv | RESULT_COMPARISON | EMPTY_UNEXPECTED | empty output was not expected for this report | 0 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v5_results.csv | RESULT_COMPARISON | EMPTY_UNEXPECTED | empty output was not expected for this report | 0 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v6_results.csv | RESULT_COMPARISON | EMPTY_UNEXPECTED | empty output was not expected for this report | 0 |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v7_results.csv | RESULT_COMPARISON | EMPTY_UNEXPECTED | empty output was not expected for this report | 0 |
 | today_pipeline_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
-| today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet | 0 |
+| today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
 
 ## Candidate Isolation
 | check_name | file_name | status | detail |
 | --- | --- | --- | --- |
-| official_baseline_exists | vsigma_today_competition_report.txt | PASS | baseline file present |
-| official_baseline_exists | vsigma_today_competition_shortlist.csv | PASS | baseline file present |
-| official_baseline_exists | vsigma_today_competition_top.csv | PASS | baseline file present |
+| official_baseline_exists | vsigma_today_competition_report.txt | ERROR_MISSING_REQUIRED_FILE | official baseline file missing |
+| official_baseline_exists | vsigma_today_competition_shortlist.csv | ERROR_MISSING_REQUIRED_FILE | official baseline file missing |
+| official_baseline_exists | vsigma_today_competition_top.csv | ERROR_MISSING_REQUIRED_FILE | official baseline file missing |
 | candidate_specific_name | vsigma_today_candidate_v2_competition_top.csv | PASS | candidate output uses candidate-specific name |
-| candidate_file_present_or_optional | vsigma_today_candidate_v2_competition_top.csv | PASS | candidate file present |
+| candidate_file_present_or_optional | vsigma_today_candidate_v2_competition_top.csv | WARNING_OPTIONAL_CANDIDATE_MISSING | optional shadow candidate file missing |
 | candidate_specific_name | vsigma_today_candidate_v4_competition_top.csv | PASS | candidate output uses candidate-specific name |
-| candidate_file_present_or_optional | vsigma_today_candidate_v4_competition_top.csv | PASS | candidate file present |
+| candidate_file_present_or_optional | vsigma_today_candidate_v4_competition_top.csv | WARNING_OPTIONAL_CANDIDATE_MISSING | optional shadow candidate file missing |
 | candidate_specific_name | vsigma_today_candidate_v5_competition_top.csv | PASS | candidate output uses candidate-specific name |
-| candidate_file_present_or_optional | vsigma_today_candidate_v5_competition_top.csv | PASS | candidate file present |
+| candidate_file_present_or_optional | vsigma_today_candidate_v5_competition_top.csv | WARNING_OPTIONAL_CANDIDATE_MISSING | optional shadow candidate file missing |
 | candidate_specific_name | vsigma_today_candidate_v6_competition_top.csv | PASS | candidate output uses candidate-specific name |
-| candidate_file_present_or_optional | vsigma_today_candidate_v6_competition_top.csv | PASS | candidate file present |
+| candidate_file_present_or_optional | vsigma_today_candidate_v6_competition_top.csv | WARNING_OPTIONAL_CANDIDATE_MISSING | optional shadow candidate file missing |
 | candidate_specific_name | vsigma_today_candidate_v7_competition_top.csv | PASS | candidate output uses candidate-specific name |
-| candidate_file_present_or_optional | vsigma_today_candidate_v7_competition_top.csv | PASS | candidate file present |
+| candidate_file_present_or_optional | vsigma_today_candidate_v7_competition_top.csv | WARNING_OPTIONAL_CANDIDATE_MISSING | optional shadow candidate file missing |
 | candidate_does_not_overwrite_baseline_path | vsigma_today_candidate_v2_competition_top.csv | PASS | candidate path is isolated from official baseline paths |
 | candidate_does_not_overwrite_baseline_path | vsigma_today_candidate_v4_competition_top.csv | PASS | candidate path is isolated from official baseline paths |
 | candidate_does_not_overwrite_baseline_path | vsigma_today_candidate_v5_competition_top.csv | PASS | candidate path is isolated from official baseline paths |
