@@ -5,8 +5,8 @@
 - operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=UNKNOWN; board_rows=4
 - executable_prematch: NONE
 - live_only: NONE
-- watchlist: ROWS=2
-- no_bet: ROWS=2
+- watchlist: NONE
+- no_bet: ROWS=4
 - health_status: MISSING
 - auto_apply: NO
 - production_change: NO
@@ -27,12 +27,13 @@
 - none
 
 ## Watchlist
-- #1 | NO_BET_OR_WATCH | RB Bragantino vs Internacional | market=UNDER_3_5_REVIEW | alt=NO_GOALS_AGGRESSION | stake=NO_STAKE | permission=NO | conf=LOW | score=-22
-- #2 | NO_BET_OR_WATCH | Vasco DA Gama vs Atletico-MG | market=UNDER_3_5_REVIEW | alt=NO_GOALS_AGGRESSION | stake=NO_STAKE | permission=NO | conf=LOW | score=-22
+- none
 
 ## No Bet
-- #3 | NO_BET | Cordoba vs Huesca | market=NO_CLEAR_STAT_MARKET | stake=NO_STAKE | permission=NO | conf=LOW | score=-34
-- #4 | NO_BET | Almeria vs Valladolid | market=NO_CLEAR_STAT_MARKET | stake=NO_STAKE | permission=NO | conf=LOW | score=-34
+- #1 | NO_BET | Cordoba vs Huesca | market=NO_CLEAR_STAT_MARKET | stake=NO_STAKE | permission=NO | conf=LOW | score=-34
+- #2 | NO_BET | Almeria vs Valladolid | market=NO_CLEAR_STAT_MARKET | stake=NO_STAKE | permission=NO | conf=LOW | score=-34
+- #3 | NO_BET | RB Bragantino vs Internacional | market=NO_CLEAR_STAT_MARKET | stake=NO_STAKE | permission=NO | conf=LOW | score=-34
+- #4 | NO_BET | Vasco DA Gama vs Atletico-MG | market=NO_CLEAR_STAT_MARKET | stake=NO_STAKE | permission=NO | conf=LOW | score=-34
 
 ## API Coverage
 - board_rows=4
@@ -68,7 +69,7 @@
 
 ## Next Triggers / Rechecks
 - .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-01; reason=run_daily_chain_self_heal_v68_0_objective_context_bridge; triggered_at=2026-06-01T10:12:00+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-01; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-01T09:22:00+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-01; reason=run_daily_decision_chain_v2_v68_1_proxy_bridge_calibration_guard; triggered_at=2026-06-01T10:32:00+01:00
 - .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-01; reason=run_prelock_recheck_v67_5_1_safe_consolidated_operator_panel; triggered_at=2026-06-01T09:05:00+01:00
 
 ## Key Files

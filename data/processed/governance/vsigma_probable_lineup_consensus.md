@@ -9,10 +9,10 @@
 - production_change: NO
 
 ## Fixture Consensus
-- RB Bragantino vs Internacional | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
-- Vasco DA Gama vs Atletico-MG | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
 - Cordoba vs Huesca | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
 - Almeria vs Valladolid | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- RB Bragantino vs Internacional | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Vasco DA Gama vs Atletico-MG | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
 
 ## Guardrails
 - Registry-approved probable XI is never treated as official lineup.
