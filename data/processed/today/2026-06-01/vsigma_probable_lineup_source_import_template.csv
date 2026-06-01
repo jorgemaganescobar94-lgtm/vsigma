@@ -1,1 +1,41 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
+2026-06-01,1492282,,,RB Bragantino,Internacional,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492282,,,RB Bragantino,Internacional,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492282,,,RB Bragantino,Internacional,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492282,,,RB Bragantino,Internacional,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492282,,,RB Bragantino,Internacional,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492282,,,RB Bragantino,Internacional,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492282,,,RB Bragantino,Internacional,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492282,,,RB Bragantino,Internacional,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492282,,,RB Bragantino,Internacional,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492282,,,RB Bragantino,Internacional,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492289,,,Vasco DA Gama,Atletico-MG,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492289,,,Vasco DA Gama,Atletico-MG,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492289,,,Vasco DA Gama,Atletico-MG,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492289,,,Vasco DA Gama,Atletico-MG,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492289,,,Vasco DA Gama,Atletico-MG,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492289,,,Vasco DA Gama,Atletico-MG,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492289,,,Vasco DA Gama,Atletico-MG,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492289,,,Vasco DA Gama,Atletico-MG,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492289,,,Vasco DA Gama,Atletico-MG,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1492289,,,Vasco DA Gama,Atletico-MG,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392217,,,Cordoba,Huesca,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392217,,,Cordoba,Huesca,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392217,,,Cordoba,Huesca,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392217,,,Cordoba,Huesca,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392217,,,Cordoba,Huesca,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392217,,,Cordoba,Huesca,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392217,,,Cordoba,Huesca,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392217,,,Cordoba,Huesca,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392217,,,Cordoba,Huesca,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392217,,,Cordoba,Huesca,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392220,,,Almeria,Valladolid,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392220,,,Almeria,Valladolid,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392220,,,Almeria,Valladolid,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392220,,,Almeria,Valladolid,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392220,,,Almeria,Valladolid,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392220,,,Almeria,Valladolid,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392220,,,Almeria,Valladolid,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392220,,,Almeria,Valladolid,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392220,,,Almeria,Valladolid,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1392220,,,Almeria,Valladolid,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.

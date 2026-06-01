@@ -1,13 +1,16 @@
 # vSIGMA Context Level Matrix - 2026-06-01
 
 ## Summary
-- rows_reviewed: 0
-- context_level_counts: none
+- rows_reviewed: 4
+- context_level_counts: L6_REVIEW=4
 - auto_apply: NO
 - production_change: NO
 
 ## Matrix Rows
-- none. Missing dated vsigma_context_adjusted_final_picks.csv; stale governance fallback refused.
+- #1 | L6_REVIEW | score=42 | Cordoba vs Huesca | market=OVER_2_5 | policy=review only
+- #2 | L6_REVIEW | score=42 | Almeria vs Valladolid | market=OVER_2_5 | policy=review only
+- #3 | L6_REVIEW | score=42 | RB Bragantino vs Internacional | market=OVER_1_5 | policy=review only
+- #4 | L6_REVIEW | score=42 | Vasco DA Gama vs Atletico-MG | market=OVER_1_5 | policy=review only
 
 ## Guardrails
 - This matrix refuses stale governance fallback.
