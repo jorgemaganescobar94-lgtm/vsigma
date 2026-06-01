@@ -50,7 +50,7 @@
 - board_decisions: NO_BET=4
 - recheck_decisions: none
 - live_triggers: none
-- alert_notify_required: UNKNOWN
+- alert_notify_required: true
 - auto_apply: NO
 - production_change: NO
 
