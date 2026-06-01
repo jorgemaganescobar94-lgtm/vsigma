@@ -10,7 +10,7 @@
 - import_status_counts: none
 - quarantine_reason_counts: none
 - sources_seen: none
-- template_rows: 40
+- template_rows: 0
 - auto_apply: NO
 - production_change: NO
 

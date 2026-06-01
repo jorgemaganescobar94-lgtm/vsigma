@@ -4,16 +4,13 @@
 - input_verdict: DATED_UPSTREAM_OK
 - missing_inputs: none
 - stale_inputs: none
-- rows_reviewed: 4
-- adjusted_status_counts: WAIT_PRELOCK=4
+- rows_reviewed: 0
+- adjusted_status_counts: none
 - auto_apply: NO
 - production_change: NO
 
 ## Final Adjusted Picks
-- #1 | WAIT_PRELOCK | Cordoba vs Huesca | market=OVER_2_5 | stake=NO_PREMATCH_STAKE | reason=objective/availability gate requires prelock or lineup confirmation
-- #2 | WAIT_PRELOCK | Almeria vs Valladolid | market=OVER_2_5 | stake=NO_PREMATCH_STAKE | reason=objective/availability gate requires prelock or lineup confirmation
-- #3 | WAIT_PRELOCK | RB Bragantino vs Internacional | market=OVER_1_5 | stake=NO_PREMATCH_STAKE | reason=objective/availability gate requires prelock or lineup confirmation
-- #4 | WAIT_PRELOCK | Vasco DA Gama vs Atletico-MG | market=OVER_1_5 | stake=NO_PREMATCH_STAKE | reason=objective/availability gate requires prelock or lineup confirmation
+- none
 
 ## Guardrails
 - This report refuses governance and root-level fallbacks.
