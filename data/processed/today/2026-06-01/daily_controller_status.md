@@ -6,7 +6,7 @@
 - POST: PENDING
 - Ledger: MISSING_FOR_DATE
 - Governance: AVAILABLE
-- Stale warnings: STALE_PRELOCK_EXCLUDED: 2026-05-31
+- Stale warnings: NONE
 
 ## Next Operator Command
 - Action: RUN_PRE

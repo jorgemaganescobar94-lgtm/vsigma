@@ -1,11 +1,7 @@
 country,league,league_tier,league_filter_reason,matches
 Mali,Première Division,REJECT,country_league_not_allowlisted,2
 Brazil,Brasileiro U17,REJECT,hard_reject_noise_league,1
-Brazil,Maranhense - 2,REJECT,country_league_not_allowlisted,1
 Ecuador,Liga Pro,REJECT,country_league_not_allowlisted,1
-Iraq,Iraqi League,REJECT,country_league_not_allowlisted,1
-Morocco,Botola Pro,REJECT,country_league_not_allowlisted,1
-Peru,Segunda División,REJECT,country_league_not_allowlisted,1
 Portugal,Taça Revelação U23,REJECT,hard_reject_noise_league,1
 USA,USL W League,REJECT,country_league_not_allowlisted,1
 Brazil,Serie B,TIER_3,brazil_serie_b_noisy,1

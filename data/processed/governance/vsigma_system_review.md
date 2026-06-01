@@ -8,7 +8,7 @@
 - Blocked picks: 0
 - Official action summary: NO_BET
 - Healthcheck status: WARNING
-- Ledger rows total: 173
+- Ledger rows total: 162
 - Ledger rows for target date: 0
 - Decision outcome ledger rows total: 55
 - Decision outcome ledger actionable rows: 8
@@ -44,9 +44,9 @@
 - API gaps detected: injuries
 
 ## Model / Market Review
-- markets appearing in current/historical inputs: OVER_1_5: 135; OVER_2_5: 26; BTTS_YES: 3; UNDER_3_5: 3; AWAY_WIN: 2
-- failure modes principales: FAILURE_MODE_LOW_CONVERSION: 230; LOW_CONVERSION: 115; FAILURE_MODE_AVALANCHE_RISK: 2
-- OVER_1_5: appearances=135; calibration_sample=0; status=needs more sample
+- markets appearing in current/historical inputs: OVER_1_5: 124; OVER_2_5: 26; BTTS_YES: 3; UNDER_3_5: 3; AWAY_WIN: 2
+- failure modes principales: FAILURE_MODE_LOW_CONVERSION: 208; LOW_CONVERSION: 104; FAILURE_MODE_AVALANCHE_RISK: 2
+- OVER_1_5: appearances=124; calibration_sample=0; status=needs more sample
 - OVER_2_5: appearances=26; calibration_sample=0; status=needs more sample
 - sides / DNB / 1X / X2: appearances=2; calibration_sample=0; status=needs more sample
 - mercados con buena senal: none yet by sample rule
@@ -73,6 +73,6 @@
 | P3 | model_calibration | Defer recalibration until minimum closed-pick sample | Fewer than 30 closed picks are available. | Avoids fitting thresholds or probability adjustments to noise. | Low; no predictive change is applied. | Keep calibration reporting active and wait for at least 30 closed picks before suggestions. | NO | closed_picks=8; enough_sample=NO; recalibration_allowed=NO |
 
 ## Input Inventory
-- generated_at: 2026-06-01T20:23:59+01:00
+- generated_at: 2026-06-01T22:51:29+01:00
 - timezone: Atlantic/Canary
 - missing optional inputs: vsigma_today_competition_top.csv, vsigma_probability_calibration_report.txt, vsigma_probability_calibration_table.csv
