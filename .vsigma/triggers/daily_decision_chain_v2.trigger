@@ -1,6 +1,6 @@
-date=2026-05-31
+date=2026-06-01
 include_backtest=false
 requested_by=chatgpt
-reason=run_daily_decision_chain_v2_2026_05_31_board_missing
-triggered_at=2026-05-31T15:45:00+01:00
-nonce=run-017
+reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal
+triggered_at=2026-06-01T09:22:00+01:00
+nonce=run-018-v67-6
