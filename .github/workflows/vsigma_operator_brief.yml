@@ -46,6 +46,9 @@ jobs:
       - name: Append calibration addendum
         shell: bash
         run: python scripts/append_operator_brief_calibration_addendum.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+      - name: Build consolidated daily operator panel
+        shell: bash
+        run: python scripts/build_consolidated_daily_operator_panel.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
       - name: Write run summary
         shell: bash
         run: python scripts/build_github_actions_run_summary.py --date "$VSIGMA_DATE" --mode operator_brief --output "$GITHUB_STEP_SUMMARY"
@@ -58,6 +61,7 @@ jobs:
           git config user.name "vSIGMA GitHub Actions Bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/processed/today/${VSIGMA_DATE}/vsigma_operator_brief.* data/processed/governance/vsigma_operator_brief.* 2>/dev/null || true
+          git add data/processed/today/${VSIGMA_DATE}/vsigma_consolidated_daily_operator_panel.* data/processed/governance/vsigma_consolidated_daily_operator_panel.* 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No operator brief changes to commit."
             exit 0
