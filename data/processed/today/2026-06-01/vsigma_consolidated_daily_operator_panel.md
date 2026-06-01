@@ -2,12 +2,12 @@
 
 ## First Read
 - panel_status: PARTIAL_OUTPUTS
-- operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=UNKNOWN; board_rows=0
+- operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=ATTENTION; board_rows=0
 - executable_prematch: NO_BOARD
 - live_only: NONE
 - watchlist: NONE
 - no_bet: NONE
-- health_status: MISSING
+- health_status: ATTENTION
 - auto_apply: NO
 - production_change: NO
 
@@ -15,7 +15,7 @@
 - action_level: NONE
 - compact_final_decision: NO_OPERATOR_ACTION
 - risk_label: NONE
-- health_status: UNKNOWN
+- health_status: ATTENTION
 - board_rows: 0
 - panel_status: PARTIAL_OUTPUTS
 - next_action: Daily execution board is missing; do not use operator/prelock/live outputs as pick permission. Run daily chain first.
@@ -52,14 +52,14 @@
 - recommended_action_counts: KEEP_ACTIVE_COLLECT_MORE_DATA=15
 
 ## Automation Health
-- system_status: MISSING
-- components_checked: UNKNOWN
-- severity_counts: UNKNOWN
-- status_counts: UNKNOWN
+- system_status: ATTENTION
+- components_checked: 11
+- severity_counts: OK=3; WARN=1; INFO=7
+- status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
 - .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-01; reason=run_daily_chain_self_heal_v68_0_objective_context_bridge; triggered_at=2026-06-01T10:12:00+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-01; reason=run_daily_decision_chain_v2_v68_2_candidate_provenance_ledger_ceiling; triggered_at=2026-06-01T10:55:00+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-01; reason=run_daily_decision_chain_v2_v68_2_candidate_provenance_regenerate; triggered_at=2026-06-01T11:05:00+01:00
 - .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-01; reason=run_prelock_recheck_v67_5_1_safe_consolidated_operator_panel; triggered_at=2026-06-01T09:05:00+01:00
 
 ## Key Files
@@ -79,12 +79,12 @@
 - If the daily board is missing, prelock/live files cannot be used as pick permission.
 
 ## Date Coherence Guard
-- overall_status: PARTIAL_OUTPUTS
+- overall_status: DATE_UNKNOWN_REVIEW
 - board_status: daily_board_md=OK; daily_board_csv=DATE_UNKNOWN
 - mismatch_count: 0
-- missing_core_count: 1
+- missing_core_count: 0
 - trigger_date_counts: 2026-06-01=2
-- next_action: Build missing core reports before market discussion.
+- next_action: Review artifacts with unparseable dates before trusting outputs.
 
 ## Upstream Board Input Diagnostic
 - overall_status: UPSTREAM_MISSING
@@ -96,3 +96,12 @@
 - translator_rows: 0
 - board_rows: 0
 - next_action: Build missing required upstream component first: real_objective_context_gate.
+
+## Real Shortlist Recovery Diagnostic
+- overall_status: FILTERS_TOO_STRICT_OR_SELECTOR_NOT_RUN
+- root_cause: scoring has same-day rows but real shortlist/bets outputs are absent or empty
+- root_scored_same_day_rows: 1
+- real_shortlist_rows: 0
+- real_bet_rows: 0
+- proxy_rows: 4
+- next_action: Run/repair real selection step from scored matches into shortlist/bets-only outputs.
