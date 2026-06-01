@@ -8,6 +8,7 @@ from pathlib import Path
 import build_consolidated_daily_operator_panel_v2 as panel_v2
 import build_date_coherence_guard as date_guard
 import build_upstream_board_input_diagnostic as upstream_diag
+import build_real_shortlist_recovery_diagnostic as real_shortlist_diag
 
 ROOT = Path("data/processed")
 TODAY = ROOT / "today"
@@ -111,23 +112,55 @@ def append_upstream_diag_to_panel(day: str, summary: dict[str, str]) -> None:
     )
 
 
+def append_real_shortlist_diag_to_panel(day: str, summary: dict[str, str]) -> None:
+    append_panel_section(
+        day,
+        "Real Shortlist Recovery Diagnostic",
+        "real_shortlist_recovery_diagnostic",
+        summary,
+        [
+            f"- overall_status: {summary.get('overall_status', 'UNKNOWN')}",
+            f"- root_cause: {summary.get('root_cause', 'UNKNOWN')}",
+            f"- root_scored_same_day_rows: {summary.get('root_scored_same_day_rows', 'UNKNOWN')}",
+            f"- real_shortlist_rows: {summary.get('real_shortlist_rows', 'UNKNOWN')}",
+            f"- real_bet_rows: {summary.get('real_bet_rows', 'UNKNOWN')}",
+            f"- proxy_rows: {summary.get('proxy_rows', 'UNKNOWN')}",
+            f"- next_action: {summary.get('next_action', 'UNKNOWN')}",
+        ],
+        "overall_status",
+        lambda s: (
+            f"root_cause={s.get('root_cause', 'UNKNOWN')}; "
+            f"root_scored_same_day_rows={s.get('root_scored_same_day_rows', 'UNKNOWN')}; "
+            f"real_shortlist_rows={s.get('real_shortlist_rows', 'UNKNOWN')}; "
+            f"real_bet_rows={s.get('real_bet_rows', 'UNKNOWN')}; "
+            f"proxy_rows={s.get('proxy_rows', 'UNKNOWN')}"
+        ),
+    )
+
+
 def run(day: str, tz: str) -> None:
     day = date.fromisoformat(day).isoformat()
     date_guard.run(day, tz)
     upstream_diag.run(day, tz)
+    real_shortlist_diag.run(day, tz, ROOT)
     panel_v2.run(day, tz)
 
     date_rows = read_csv(TODAY / day / "vsigma_date_coherence_guard_summary.csv") or read_csv(GOVERNANCE / "vsigma_date_coherence_guard_summary.csv")
     upstream_rows = read_csv(TODAY / day / "vsigma_upstream_board_input_diagnostic_summary.csv") or read_csv(GOVERNANCE / "vsigma_upstream_board_input_diagnostic_summary.csv")
+    real_shortlist_rows = read_csv(TODAY / day / "vsigma_real_shortlist_recovery_diagnostic_summary.csv") or read_csv(GOVERNANCE / "vsigma_real_shortlist_recovery_diagnostic_summary.csv")
     if date_rows:
         append_date_guard_to_panel(day, date_rows[0])
     if upstream_rows:
         append_upstream_diag_to_panel(day, upstream_rows[0])
+    if real_shortlist_rows:
+        append_real_shortlist_diag_to_panel(day, real_shortlist_rows[0])
     print("=== VSIGMA CONSOLIDATED DAILY OPERATOR PANEL V3 ===")
     if date_rows:
         print(f"date_guard={date_rows[0].get('overall_status', 'UNKNOWN')}")
     if upstream_rows:
         print(f"upstream_diag={upstream_rows[0].get('overall_status', 'UNKNOWN')}")
+    if real_shortlist_rows:
+        print(f"real_shortlist_diag={real_shortlist_rows[0].get('overall_status', 'UNKNOWN')}")
     print("auto_apply=NO")
     print("production_change=NO")
 
