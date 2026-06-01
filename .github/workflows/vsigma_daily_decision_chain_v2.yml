@@ -16,6 +16,7 @@ on:
   push:
     paths:
       - ".vsigma/triggers/daily_decision_chain_v2.trigger"
+      - ".vsigma/triggers/daily_chain_self_heal.trigger"
   schedule:
     - cron: "30 7 * * *"
     - cron: "30 13 * * *"
@@ -57,17 +58,27 @@ jobs:
         shell: bash
         run: |
           D="${{ github.event.inputs.date }}"
+          if [ -z "$D" ] && [ -f ".vsigma/triggers/daily_chain_self_heal.trigger" ]; then
+            D="$(grep -E '^date=' .vsigma/triggers/daily_chain_self_heal.trigger | tail -1 | cut -d= -f2 | tr -d '[:space:]')"
+          fi
           if [ -z "$D" ] && [ -f ".vsigma/triggers/daily_decision_chain_v2.trigger" ]; then
             D="$(grep -E '^date=' .vsigma/triggers/daily_decision_chain_v2.trigger | tail -1 | cut -d= -f2 | tr -d '[:space:]')"
           fi
           if [ -z "$D" ]; then D="$(TZ=Atlantic/Canary date +%F)"; fi
           INCLUDE_BACKTEST="${{ github.event.inputs.include_backtest }}"
+          if [ -z "$INCLUDE_BACKTEST" ] && [ -f ".vsigma/triggers/daily_chain_self_heal.trigger" ]; then
+            INCLUDE_BACKTEST="$(grep -E '^include_backtest=' .vsigma/triggers/daily_chain_self_heal.trigger | tail -1 | cut -d= -f2 | tr -d '[:space:]')"
+          fi
           if [ -z "$INCLUDE_BACKTEST" ] && [ -f ".vsigma/triggers/daily_decision_chain_v2.trigger" ]; then
             INCLUDE_BACKTEST="$(grep -E '^include_backtest=' .vsigma/triggers/daily_decision_chain_v2.trigger | tail -1 | cut -d= -f2 | tr -d '[:space:]')"
           fi
           if [ -z "$INCLUDE_BACKTEST" ]; then INCLUDE_BACKTEST="false"; fi
           echo "VSIGMA_DATE=$D" >> "$GITHUB_ENV"
           echo "INCLUDE_BACKTEST=$INCLUDE_BACKTEST" >> "$GITHUB_ENV"
+
+      - name: Preflight self-heal router
+        shell: bash
+        run: python scripts/route_daily_chain_missing_self_heal.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
       - name: Build daily reports
         shell: bash
@@ -106,13 +117,14 @@ jobs:
                   "- rows_on_board: 0\n"
                   "- final_decision_counts: none\n"
                   "- board_bucket_counts: none\n"
-                  "- source_guard: DATED_INPUT_ONLY\n"
+                  "- source_guard: SELF_HEAL_DIAGNOSTIC_EMPTY_BOARD\n"
                   "- auto_apply: NO\n"
                   "- production_change: NO\n\n"
                   "## Board Rows\n"
                   "- none. Diagnostic board created because build_daily_execution_board did not produce the expected artifact.\n\n"
                   "## Guardrails\n"
                   "- This diagnostic output guarantees the daily board artifact exists.\n"
+                  "- Empty board is not pick permission.\n"
                   "- Check upstream translator/forecast files for missing rows.\n",
                   encoding="utf-8",
               )
@@ -136,6 +148,10 @@ jobs:
         shell: bash
         run: python scripts/build_consolidated_daily_operator_panel_v3.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Postflight self-heal router
+        shell: bash
+        run: python scripts/route_daily_chain_missing_self_heal.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Optional backtest
         if: ${{ env.INCLUDE_BACKTEST == 'true' }}
         shell: bash
@@ -148,6 +164,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add data/processed/today/${VSIGMA_DATE}/vsigma_* data/processed/governance/vsigma_* 2>/dev/null || true
+          git add .vsigma/triggers/daily_decision_chain_v2.trigger 2>/dev/null || true
 
           git add -f \
             data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board.md \
