@@ -7,6 +7,9 @@ from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+import build_candidate_provenance_ledger
+import apply_candidate_provenance_ceiling
+
 PROCESSED = Path("data/processed")
 FIELDS = [
     "target_date", "generated_at", "rank", "fixture_id", "home_team", "away_team",
@@ -357,7 +360,7 @@ def md(day: str, rows: list[dict[str, object]]) -> str:
         f"- rows_translated: {len(rows)}",
         f"- execution_permission_counts: {counts(rows, 'execution_permission')}",
         f"- primary_market_counts: {counts(rows, 'primary_stat_market')}",
-        "- calibration_note: v68.1 blocks proxy-bridge inversion from tempo/over source into under/no-goals market.",
+        "- calibration_note: v68.1 blocks proxy-bridge inversion from tempo/over source into under/no-goals market; v68.2 emits provenance ledger and enforces ceilings.",
         "- source_guard: DATED_INPUT_ONLY",
         "- auto_apply: NO",
         "- production_change: NO",
@@ -377,6 +380,7 @@ def md(day: str, rows: list[dict[str, object]]) -> str:
         "## Guardrails",
         "- This translator does not execute bets.",
         "- Proxy bridge rows can support diagnostics only; they cannot invert tempo/over thesis into under/no-goals markets.",
+        "- Candidate provenance ceiling can only downgrade or preserve permissions.",
         "- Final execution still requires price/prelock/live confirmation.",
     ]
     return "\n".join(lines) + "\n"
@@ -419,10 +423,14 @@ def run(day: str, tz: str, base: Path) -> None:
         (out_base / "vsigma_forecast_market_translator.md").write_text(md(day, rows), encoding="utf-8")
         write_rows(out_base / "vsigma_proxy_bridge_calibration_guard.csv", guard_rows, GUARD_FIELDS)
         (out_base / "vsigma_proxy_bridge_calibration_guard.md").write_text(guard_md(day, guard_rows), encoding="utf-8")
+    build_candidate_provenance_ledger.run(day, tz, base)
+    apply_candidate_provenance_ceiling.run(day, tz, base)
     print("=== VSIGMA FORECAST MARKET TRANSLATOR ===")
     print(f"rows_translated={len(rows)}")
     print(f"execution_permission_counts={counts(rows, 'execution_permission')}")
     print(f"proxy_bridge_guard_counts={counts(guard_rows, 'guard_action')}")
+    print("provenance_ledger=BUILT")
+    print("provenance_ceiling=APPLIED")
 
 
 def main() -> None:
