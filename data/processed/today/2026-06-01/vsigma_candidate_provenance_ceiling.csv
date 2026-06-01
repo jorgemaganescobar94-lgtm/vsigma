@@ -1,1 +1,5 @@
 target_date,generated_at,fixture_id,home_team,away_team,candidate_origin,max_execution_permission,before_permission,after_permission,before_stake,after_stake,ceiling_action,reason,auto_apply,production_change
+2026-06-01,2026-06-01T11:12:00+01:00,1392217,Cordoba,Huesca,OBJECTIVE_PROXY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling,NO,NO
+2026-06-01,2026-06-01T11:12:00+01:00,1392220,Almeria,Valladolid,OBJECTIVE_PROXY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling,NO,NO
+2026-06-01,2026-06-01T11:12:00+01:00,1492282,RB Bragantino,Internacional,OBJECTIVE_PROXY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling after proxy inversion guard,NO,NO
+2026-06-01,2026-06-01T11:12:00+01:00,1492289,Vasco DA Gama,Atletico-MG,OBJECTIVE_PROXY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling after proxy inversion guard,NO,NO
