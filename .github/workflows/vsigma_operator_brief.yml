@@ -48,7 +48,7 @@ jobs:
         run: python scripts/append_operator_brief_calibration_addendum.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
       - name: Build consolidated daily operator panel
         shell: bash
-        run: python scripts/build_consolidated_daily_operator_panel.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+        run: python scripts/build_consolidated_daily_operator_panel_v2.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
       - name: Write run summary
         shell: bash
         run: python scripts/build_github_actions_run_summary.py --date "$VSIGMA_DATE" --mode operator_brief --output "$GITHUB_STEP_SUMMARY"
