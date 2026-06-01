@@ -1,2 +1,2 @@
 target_date,generated_at,overall_status,board_status,mismatch_count,missing_core_count,trigger_date_counts,next_action,auto_apply,production_change
-2026-06-01,2026-06-01T22:06:19+01:00,PARTIAL_OUTPUTS,daily_board_md=OK; daily_board_csv=DATE_UNKNOWN,0,1,2026-06-01=2,Build missing core reports before market discussion.,NO,NO
+2026-06-01,2026-06-02T00:07:34+01:00,DATE_UNKNOWN_REVIEW,daily_board_md=OK; daily_board_csv=DATE_UNKNOWN,0,0,2026-06-01=2,Review artifacts with unparseable dates before trusting outputs.,NO,NO

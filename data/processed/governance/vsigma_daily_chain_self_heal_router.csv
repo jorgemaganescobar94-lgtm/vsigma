@@ -1,2 +1,2 @@
 target_date,generated_at,self_heal_status,daily_board_exists,daily_board_rows,current_trigger_date,trigger_action,reason,next_action,auto_apply,production_change
-2026-06-01,2026-06-01T23:53:52+01:00,WAIT_DAILY_CHAIN_ALREADY_TRIGGERED,true,0,2026-06-01,NO_TRIGGER_CHANGE,"daily board missing/empty, but trigger already targets this date",Wait for daily chain output or inspect workflow if it does not produce board.,NO,NO
+2026-06-01,2026-06-02T00:07:34+01:00,WAIT_DAILY_CHAIN_ALREADY_TRIGGERED,true,0,2026-06-01,NO_TRIGGER_CHANGE,"daily board missing/empty, but trigger already targets this date",Wait for daily chain output or inspect workflow if it does not produce board.,NO,NO
