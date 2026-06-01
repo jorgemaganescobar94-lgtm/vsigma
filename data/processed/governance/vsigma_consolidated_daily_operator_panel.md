@@ -58,7 +58,8 @@
 - status_counts: UNKNOWN
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-05-31; reason=run_daily_decision_chain_v2_2026_05_31_board_missing; triggered_at=2026-05-31T15:45:00+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-01; reason=run_daily_chain_self_heal_v67_8_missing_board; triggered_at=2026-06-01T09:35:00+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-01; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-01T09:22:00+01:00
 - .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-01; reason=run_prelock_recheck_v67_5_1_safe_consolidated_operator_panel; triggered_at=2026-06-01T09:05:00+01:00
 
 ## Key Files
@@ -76,3 +77,11 @@
 - No Bet, Watch, Live Only, Learning Only and Quarantine are valid successful outcomes.
 - Source Reliability Governor remains advisory-only and cannot change weights by itself.
 - If the daily board is missing, prelock/live files cannot be used as pick permission.
+
+## Date Coherence Guard
+- overall_status: PARTIAL_OUTPUTS
+- board_status: daily_board_md=OK; daily_board_csv=DATE_UNKNOWN
+- mismatch_count: 0
+- missing_core_count: 1
+- trigger_date_counts: 2026-06-01=2
+- next_action: Build missing core reports before market discussion.
