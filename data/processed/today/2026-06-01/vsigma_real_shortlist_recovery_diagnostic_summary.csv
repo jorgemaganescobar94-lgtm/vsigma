@@ -1,0 +1,2 @@
+target_date,generated_at,overall_status,root_cause,root_scored_same_day_rows,real_shortlist_rows,real_bet_rows,proxy_rows,next_action,auto_apply,production_change
+2026-06-01,2026-06-01T11:28:00+01:00,FILTERS_TOO_STRICT_OR_SELECTOR_NOT_RUN,"scoring has same-day rows but real shortlist/bets outputs are absent or proxy-only",1,0,0,4,"Run or repair the real selection step from scored matches into real shortlist/bets-only outputs. Keep proxy bridge capped at NO_BET until real rows exist.",NO,NO
