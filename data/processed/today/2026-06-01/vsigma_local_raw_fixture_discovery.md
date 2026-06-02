@@ -1,0 +1,107 @@
+# vSIGMA Local Raw Fixture Discovery - 2026-06-01
+
+## Summary
+- overall_status: LOCAL_RAW_CANDIDATES_FOUND
+- files_scanned: 1340
+- accepted_rows: 7
+- rejected_rows: 3
+- source_status_counts: NO_SAME_DAY_ROWS=991; EMPTY_OR_UNREADABLE=342; NO_ACCEPTED_ROWS=5; HAS_ACCEPTED_ROWS=2
+- next_action: Review accepted rows, then feed normal scoring gates.
+- auto_apply: NO
+- production_change: NO
+
+## Accepted Rows
+- Ponte Preta vs Botafogo SP | fixture_id=1520707 | league=Serie B | source=data\processed\matches_league_filtered.csv
+- Leones del Norte vs Macara | fixture_id=1519380 | league=Liga Pro | source=data\processed\matches_league_rejected.csv
+- ASKO vs Derby Academie | fixture_id=1545728 | league=Première Division | source=data\processed\matches_league_rejected.csv
+- Binga vs US Bougouba | fixture_id=1545727 | league=Première Division | source=data\processed\matches_league_rejected.csv
+- Carolina Ascent II W vs North Carolina Fusion W | fixture_id=1532077 | league=USL W League | source=data\processed\matches_league_rejected.csv
+- Corinthians U17 vs Sao Paulo U17 | fixture_id=1543885 | league=Brasileiro U17 | source=data\processed\matches_league_rejected.csv
+- Santa Clara U23 vs Gil Vicente U23 | fixture_id=1546330 | league=Taça Revelação U23 | source=data\processed\matches_league_rejected.csv
+
+## Source Diagnostics
+- data\processed\candidate_v4_historical\vsigma_candidate_v4_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\candidate_v4_historical\vsigma_candidate_v4_historical_firewall_decisions.csv | status=NO_SAME_DAY_ROWS | rows=6 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\candidate_v5_historical\vsigma_candidate_v5_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\candidate_v5_historical\vsigma_candidate_v5_historical_player_impact_adjustments.csv | status=NO_SAME_DAY_ROWS | rows=3 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\candidate_v6_historical\vsigma_candidate_v6_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\candidate_v6_historical\vsigma_candidate_v6_historical_predictions_benchmark_rows.csv | status=NO_SAME_DAY_ROWS | rows=22 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\candidate_v7_historical\vsigma_candidate_v7_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\candidate_v7_historical\vsigma_candidate_v7_historical_price_guard_rows.csv | status=NO_SAME_DAY_ROWS | rows=22 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\governance\vsigma_candidate_provenance_ceiling.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\governance\vsigma_dated_post_match_results_refresh.csv | status=NO_SAME_DAY_ROWS | rows=4 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\governance\vsigma_match_stat_forecast_backtest.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\governance\vsigma_match_stat_forecast_calibration_details.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\governance\vsigma_match_stat_forecasts.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\governance\vsigma_post_match_stat_actuals.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\governance\vsigma_shadow_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-23\matches.csv | status=NO_SAME_DAY_ROWS | rows=182 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-23\matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-23\matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-23\vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=28 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-23\vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-23\vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-23\vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-23\vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-23\vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-23\vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=28 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-24\matches.csv | status=NO_SAME_DAY_ROWS | rows=426 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-24\matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=52 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-24\matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=52 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-24\vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=32 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-24\vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-24\vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-24\vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-24\vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-24\vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-24\vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=32 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-25\matches.csv | status=NO_SAME_DAY_ROWS | rows=1680 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-25\matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=144 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-25\matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=144 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-25\vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=109 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-25\vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-25\vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-25\vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-25\vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-25\vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-25\vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=109 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-26\matches.csv | status=NO_SAME_DAY_ROWS | rows=1307 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-26\matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=108 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-26\matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=108 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-26\vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=79 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-26\vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-26\vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-26\vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-26\vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-26\vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-26\vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=79 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-27\matches.csv | status=NO_SAME_DAY_ROWS | rows=185 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-27\matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=30 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-27\matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=30 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-27\vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=21 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-27\vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-27\vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-27\vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-27\vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-27\vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-27\vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=21 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-28\matches.csv | status=NO_SAME_DAY_ROWS | rows=148 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-28\matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-28\matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-28\vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=10 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-28\vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-28\vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-28\vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-28\vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-28\vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data\processed\historical\2026-04-28\vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=10 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-29\matches.csv | status=NO_SAME_DAY_ROWS | rows=308 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-29\matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=34 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-29\matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=34 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-29\vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=27 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data\processed\historical\2026-04-29\vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+
+## Guardrails
+- Local discovery does not call APIs, touch secrets, increase spend, create picks or bypass No Bet.
+- Blocked rows and NO_DATA_BLOCKED rows are refused.
+- Accepted rows are only raw candidates for normal scoring/safety gates.
