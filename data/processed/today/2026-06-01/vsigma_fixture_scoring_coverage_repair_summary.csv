@@ -1,0 +1,2 @@
+target_date,generated_at,overall_status,root_cause,root_scored_rows,dated_scored_rows,dated_candidate_sources_found,coverage_matrix_rows,recommended_fix,auto_apply,production_change
+2026-06-01,2026-06-02T10:22:00+01:00,MISSING_DATED_SCORING_SNAPSHOT,"coverage/scoring stage has no dated source for fixture matrix",1,0,0,0,"Create dated snapshot data/processed/today/2026-06-01/matches_vsigma_scored_v3.csv from scored root or repair fetch/scoring producer. Then rerun fixture coverage matrix and selector chain.",NO,NO
