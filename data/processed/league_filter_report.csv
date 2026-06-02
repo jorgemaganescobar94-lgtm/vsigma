@@ -1,7 +1,30 @@
 country,league,league_tier,league_filter_reason,matches
+Iran,Azadegan League,REJECT,country_league_not_allowlisted,9
+Argentina,Reserve League,REJECT,hard_reject_noise_league,6
+Iraq,Iraqi League,REJECT,country_league_not_allowlisted,5
+World,Friendlies,REJECT,hard_reject_noise_league,4
+Gabon,Championnat D1,REJECT,country_league_not_allowlisted,3
+Sweden,Svenska Cupen,REJECT,country_league_not_allowlisted,3
+Finland,Ykkönen,REJECT,country_league_not_allowlisted,2
 Mali,Première Division,REJECT,country_league_not_allowlisted,2
+Sudan,Sudani Premier League,REJECT,country_league_not_allowlisted,2
+USA,USL League Two,REJECT,country_league_not_allowlisted,2
+USA,USL W League,REJECT,country_league_not_allowlisted,2
+World,Tournoi Maurice Revello,REJECT,country_league_not_allowlisted,2
+Algeria,Ligue 1,REJECT,country_league_not_allowlisted,1
+Argentina,Primera B Metropolitana,REJECT,country_league_not_allowlisted,1
+Austria,Landesliga - Niederosterreich,REJECT,hard_reject_noise_league,1
+Austria,Landesliga - Vorarlbergliga,REJECT,hard_reject_noise_league,1
 Brazil,Brasileiro U17,REJECT,hard_reject_noise_league,1
-Ecuador,Liga Pro,REJECT,country_league_not_allowlisted,1
-Portugal,Taça Revelação U23,REJECT,hard_reject_noise_league,1
-USA,USL W League,REJECT,country_league_not_allowlisted,1
-Brazil,Serie B,TIER_3,brazil_serie_b_noisy,1
+Brazil,Catarinense U20,REJECT,hard_reject_noise_league,1
+Colombia,Copa Colombia,REJECT,country_league_not_allowlisted,1
+Czech-Republic,4. liga - Divizie B,REJECT,hard_reject_noise_league,1
+Czech-Republic,4. liga - Divizie E,REJECT,hard_reject_noise_league,1
+Germany,Regionalliga - Bayern,REJECT,hard_reject_noise_league,1
+Italy,Serie C - Promotion - Play-offs,REJECT,country_league_not_allowlisted,1
+Poland,II Liga - East,REJECT,country_league_not_allowlisted,1
+Sweden,Ettan - Norra,REJECT,country_league_not_allowlisted,1
+Sweden,Ettan - Södra,REJECT,country_league_not_allowlisted,1
+World,ASEAN Championship U19,REJECT,hard_reject_noise_league,1
+World,CAF Cup of Nations - U17,REJECT,hard_reject_noise_league,1
+Ecuador,Copa Ecuador,TIER_4,ecuador_cup_context_only,1
