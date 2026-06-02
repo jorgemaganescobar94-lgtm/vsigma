@@ -1,0 +1,2 @@
+target_date,generated_at,overall_status,root_cause,root_scored_same_day_rows,dated_scored_same_day_rows,coverage_matrix_rows,raw_candidate_sources_found,recommended_fix,auto_apply,production_change
+2026-06-01,2026-06-02T10:45:00+01:00,RAW_FIXTURE_SOURCE_MISSING,"no dated raw candidate/filter source exists before scoring",1,1,1,0,"Repair fixture fetch/filter producer to create matches_league_filtered.csv or vsigma_top_candidates_v3.csv for the date.",NO,NO
