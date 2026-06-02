@@ -1,4 +1,4 @@
-name: vSIGMA Daily Decision Chain v2
+﻿name: vSIGMA Daily Decision Chain v2
 
 on:
   workflow_dispatch:
@@ -83,6 +83,7 @@ jobs:
       - name: Build daily reports
         shell: bash
         run: |
+          python scripts/build_scored_to_real_shortlist.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
           python scripts/build_real_objective_context_gate.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
           python scripts/build_objective_context_execution_bridge.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
           python scripts/build_objective_availability_gate.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
@@ -183,3 +184,4 @@ jobs:
 
           git commit -m "vSIGMA daily decision chain v2 ${VSIGMA_DATE} [skip ci]"
           git push origin HEAD:main
+
