@@ -1,0 +1,2 @@
+target_date,generated_at,rows_planned,dry_run_decision_counts,risk_label_counts,priority_counts,total_estimated_call_units,api_calls_planned,api_calls_executed,next_action,auto_apply,production_change
+2026-06-02,2026-06-02T22:54:26+01:00,44,DRY_RUN_ONLY_NO_API_CALLS=44,MEDIUM=29; HIGH_LOW_COVERAGE=11; HIGH_CONTEXT_VOLATILITY=4,P1_TRUSTED_MISSING_SCORING=33; P2_LOW_COVERAGE_SCORING=11,217,NO,NO,Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.,NO,NO

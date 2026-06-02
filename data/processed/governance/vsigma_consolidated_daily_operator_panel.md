@@ -150,6 +150,16 @@
 - source_gap_status: MISSING_SCORED_ROW
 - next_action: Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.
 
+## Queue-to-Enrichment Dry Run Planner
+- rows_planned: 44
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=44
+- risk_label_counts: MEDIUM=29; HIGH_LOW_COVERAGE=11; HIGH_CONTEXT_VOLATILITY=4
+- priority_counts: P1_TRUSTED_MISSING_SCORING=33; P2_LOW_COVERAGE_SCORING=11
+- total_estimated_call_units: 217
+- api_calls_planned: NO
+- api_calls_executed: NO
+- next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
+
 ## Daily Board Self-Heal
 - self_heal_status: NO_ACTION
 - promotion_rows_reviewed: 0
