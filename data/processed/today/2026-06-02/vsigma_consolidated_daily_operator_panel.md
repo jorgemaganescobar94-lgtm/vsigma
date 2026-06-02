@@ -36,11 +36,11 @@
 - no daily board rows available
 
 ## Official / Probable Lineups
-- data/processed/governance/official_lineup_sources.csv: rows=30
+- data/processed/governance/official_lineup_sources.csv: rows=32
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Quarantine / Learning-Only / Import Status
-- data/processed/governance/official_lineup_sources.csv: rows=30
+- data/processed/governance/official_lineup_sources.csv: rows=32
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Source Reliability Governor
@@ -57,7 +57,7 @@
 
 ## Next Triggers / Rechecks
 - .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-01; reason=run_daily_chain_self_heal_v68_0_objective_context_bridge; triggered_at=2026-06-01T10:12:00+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=UNKNOWN; reason=run_daily_decision_chain_v2_v68_8_dated_scored_snapshot; triggered_at=2026-06-02T10:30:00+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-01; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-02T13:27:20+01:00
 - .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-01; reason=run_prelock_recheck_v67_5_1_safe_consolidated_operator_panel; triggered_at=2026-06-01T09:05:00+01:00
 
 ## Key Files
@@ -79,9 +79,9 @@
 ## Date Coherence Guard
 - overall_status: DATE_MISMATCH_BLOCK
 - board_status: daily_board_md=MISSING_CORE; daily_board_csv=MISSING_CORE
-- mismatch_count: 1
+- mismatch_count: 2
 - missing_core_count: 3
-- trigger_date_counts: UNKNOWN=1; 2026-06-01=1
+- trigger_date_counts: 2026-06-01=2
 - next_action: Fix trigger/artifact date mismatch before using market signals.
 
 ## Upstream Board Input Diagnostic
@@ -96,10 +96,10 @@
 - next_action: Build missing required upstream component first: real_objective_context_gate.
 
 ## Real Shortlist Recovery Diagnostic
-- overall_status: SCORING_SOURCE_EMPTY_FOR_DATE
-- root_cause: scored source exists but has no rows for target date
-- root_scored_same_day_rows: 0
+- overall_status: FILTERS_TOO_STRICT_OR_SELECTOR_NOT_RUN
+- root_cause: scoring has same-day rows but real shortlist/bets outputs are absent or empty
+- root_scored_same_day_rows: 1
 - real_shortlist_rows: 0
 - real_bet_rows: 0
 - proxy_rows: 0
-- next_action: Refresh/fix scoring source date coverage.
+- next_action: Run/repair real selection step from scored matches into shortlist/bets-only outputs.

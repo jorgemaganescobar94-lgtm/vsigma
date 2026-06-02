@@ -3,9 +3,9 @@
 ## Summary
 - overall_status: DATE_MISMATCH_BLOCK
 - board_status: daily_board_md=MISSING_CORE; daily_board_csv=MISSING_CORE
-- mismatch_count: 1
+- mismatch_count: 2
 - missing_core_count: 3
-- trigger_date_counts: UNKNOWN=1; 2026-06-01=1
+- trigger_date_counts: 2026-06-01=2
 - next_action: Fix trigger/artifact date mismatch before using market signals.
 - auto_apply: NO
 - production_change: NO
@@ -17,9 +17,9 @@
 - automation_health_md | status=MISSING_CORE | observed=MISSING | path=data/processed/today/2026-06-02/vsigma_automation_health.md | detail=required daily artifact is missing
 - prelock_live_recheck_md | status=OK | observed=2026-06-02 | path=data/processed/today/2026-06-02/vsigma_prelock_live_recheck.md | detail=date coherent
 - live_trigger_validator_md | status=OK | observed=2026-06-02 | path=data/processed/today/2026-06-02/vsigma_live_trigger_validator.md | detail=date coherent
-- consolidated_panel_md | status=MISSING_OPTIONAL | observed=MISSING | path=data/processed/today/2026-06-02/vsigma_consolidated_daily_operator_panel.md | detail=optional artifact not found
+- consolidated_panel_md | status=OK | observed=2026-06-02 | path=data/processed/today/2026-06-02/vsigma_consolidated_daily_operator_panel.md | detail=date coherent
 - source_reliability_governor_md | status=MISSING_OPTIONAL | observed=MISSING | path=data/processed/today/2026-06-02/vsigma_probable_lineup_source_reliability_governor.md | detail=optional artifact not found
-- daily_chain_trigger | status=DATE_UNKNOWN | observed=UNKNOWN | path=.vsigma/triggers/daily_decision_chain_v2.trigger | detail=artifact exists but date could not be parsed
+- daily_chain_trigger | status=DATE_MISMATCH | observed=2026-06-01 | path=.vsigma/triggers/daily_decision_chain_v2.trigger | detail=observed 2026-06-01 != target 2026-06-02
 - prelock_recheck_trigger | status=DATE_MISMATCH | observed=2026-06-01 | path=.vsigma/triggers/prelock_official_lineup_recheck.trigger | detail=observed 2026-06-01 != target 2026-06-02
 
 ## Guardrails

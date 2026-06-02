@@ -1,10 +1,10 @@
-# vSIGMA Daily Chain Missing Self-Heal Router - 2026-06-01
+# vSIGMA Daily Chain Missing Self-Heal Router - 2026-06-02
 
 ## Summary
 - self_heal_status: DAILY_CHAIN_TRIGGER_WRITTEN
-- daily_board_exists: true
+- daily_board_exists: false
 - daily_board_rows: 0
-- current_trigger_date: 2026-06-02
+- current_trigger_date: 2026-06-01
 - trigger_action: UPDATED_DAILY_CHAIN_TRIGGER
 - reason: daily board missing/empty and trigger did not target current date
 - next_action: Daily chain should run through trigger bridge and regenerate board/panel.
