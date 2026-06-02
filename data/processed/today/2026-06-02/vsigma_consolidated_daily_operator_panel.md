@@ -36,12 +36,14 @@
 - no daily board rows available
 
 ## Official / Probable Lineups
-- data\processed\governance\official_lineup_sources.csv: rows=32
-- data\processed\governance\vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
+- data/processed/today/2026-06-02/official_lineup_sources.csv: rows=32
+- data/processed/governance/official_lineup_sources.csv: rows=32
+- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Quarantine / Learning-Only / Import Status
-- data\processed\governance\official_lineup_sources.csv: rows=32
-- data\processed\governance\vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
+- data/processed/today/2026-06-02/official_lineup_sources.csv: rows=32
+- data/processed/governance/official_lineup_sources.csv: rows=32
+- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Source Reliability Governor
 - sources_reviewed: 15
@@ -56,18 +58,18 @@
 - status_counts: UNKNOWN
 
 ## Next Triggers / Rechecks
-- .vsigma\triggers\daily_chain_self_heal.trigger: date=2026-06-02; reason=align_daily_chain_self_heal_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
-- .vsigma\triggers\daily_decision_chain_v2.trigger: date=2026-06-02; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-02T13:54:41+01:00
-- .vsigma\triggers\prelock_official_lineup_recheck.trigger: date=2026-06-02; reason=align_prelock_recheck_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-02; reason=align_daily_chain_self_heal_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-02; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-02T13:54:41+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-02; reason=align_prelock_recheck_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
 
 ## Key Files
-- data\processed\today\2026-06-02\vsigma_consolidated_daily_operator_panel.md
-- data\processed\today\2026-06-02\vsigma_operator_brief.md
-- data\processed\today\2026-06-02\vsigma_daily_execution_board.md
-- data\processed\today\2026-06-02\vsigma_prelock_live_recheck.md
-- data\processed\today\2026-06-02\vsigma_live_trigger_validator.md
-- data\processed\today\2026-06-02\vsigma_automation_health.md
-- data\processed\today\2026-06-02\vsigma_probable_lineup_source_reliability_governor.md
+- data/processed/today/2026-06-02/vsigma_consolidated_daily_operator_panel.md
+- data/processed/today/2026-06-02/vsigma_operator_brief.md
+- data/processed/today/2026-06-02/vsigma_daily_execution_board.md
+- data/processed/today/2026-06-02/vsigma_prelock_live_recheck.md
+- data/processed/today/2026-06-02/vsigma_live_trigger_validator.md
+- data/processed/today/2026-06-02/vsigma_automation_health.md
+- data/processed/today/2026-06-02/vsigma_probable_lineup_source_reliability_governor.md
 
 ## Guardrails
 - Panel is diagnostic only; it does not execute bets.
@@ -78,17 +80,17 @@
 
 ## Date Coherence Guard
 - overall_status: MISSING_DAILY_BOARD
-- board_status: daily_board_md=MISSING_CORE; daily_board_csv=MISSING_CORE
+- board_status: daily_board_md=MISSING_CORE; daily_board_csv=DATE_UNKNOWN
 - mismatch_count: 0
-- missing_core_count: 3
+- missing_core_count: 2
 - trigger_date_counts: 2026-06-02=2
 - next_action: Run daily decision chain for target date before using prelock/live/operator outputs.
 
 ## Upstream Board Input Diagnostic
 - overall_status: UPSTREAM_MISSING
 - first_empty_required_component: real_objective_context_gate
-- missing_required_count: 8
-- empty_required_count: 0
+- missing_required_count: 7
+- empty_required_count: 1
 - date_issue_count: 0
 - forecast_rows: 0
 - translator_rows: 0
@@ -106,9 +108,9 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1353
+- files_scanned: 1354
 - accepted_rows: 59
-- rejected_rows: 122
+- rejected_rows: 123
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
