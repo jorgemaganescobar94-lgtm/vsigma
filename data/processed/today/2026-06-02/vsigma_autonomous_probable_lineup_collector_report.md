@@ -1,11 +1,11 @@
 # vSIGMA Autonomous Probable Lineup Collector - 2026-06-02
 
 ## Summary
-- search_provider: NO_SEARCH_KEY
-- rows_seen: 0
+- search_provider: SERPAPI_SEARCH_FAILED
+- rows_seen: 1
 - urls_discovered: 0
 - rows_extracted: 0
-- status_counts: none
+- status_counts: NO_DATA=1
 - source_counts: none
 - max_search_queries_per_fixture: 8
 - auto_apply: NO
