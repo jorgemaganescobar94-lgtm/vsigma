@@ -160,6 +160,17 @@
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
 
+## Enrichment Cost & Approval Gate
+- approval_gate_status: WAIT_FOR_MANUAL_APPROVAL
+- rows_planned: 44
+- estimated_call_units: 217
+- approval_required: YES
+- max_allowed_without_manual_approval: 0
+- api_calls_allowed: NO
+- api_calls_planned: NO
+- api_calls_executed: NO
+- recommended_action: WAIT_FOR_MANUAL_APPROVAL
+
 ## Daily Board Self-Heal
 - self_heal_status: NO_ACTION
 - promotion_rows_reviewed: 0
