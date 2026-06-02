@@ -1,0 +1,2 @@
+target_date,generated_at,overall_status,root_cause,max_same_day_fixture_count,root_scored_same_day_rows,dated_scored_same_day_rows,real_shortlist_rows,real_bets_rows,official_lineup_same_day_rows,official_lineup_unique_same_day_fixtures,next_action,auto_apply,production_change
+2026-06-01,2026-06-02T10:05:00+01:00,SOURCE_FEED_TOO_NARROW,"scored source has only one same-day fixture and no dated scored snapshot",1,1,0,0,0,0,0,"Expand or repair fixture fetch/scoring coverage for the target date. Keep No Bet until real scored candidates exist.",NO,NO
