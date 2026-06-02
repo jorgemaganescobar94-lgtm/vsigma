@@ -9,6 +9,9 @@ import build_consolidated_daily_operator_panel_v2 as panel_v2
 import build_date_coherence_guard as date_guard
 import build_upstream_board_input_diagnostic as upstream_diag
 import build_real_shortlist_recovery_diagnostic as real_shortlist_diag
+import build_local_raw_fixture_discovery as local_raw_discovery
+import apply_raw_candidate_trust_gate as raw_trust_gate
+import apply_trusted_raw_candidate_promotion_gate as raw_promotion_gate
 
 ROOT = Path("data/processed")
 TODAY = ROOT / "today"
@@ -138,22 +141,104 @@ def append_real_shortlist_diag_to_panel(day: str, summary: dict[str, str]) -> No
     )
 
 
+def append_local_raw_discovery_to_panel(day: str, summary: dict[str, str]) -> None:
+    append_panel_section(
+        day,
+        "Local Raw Fixture Discovery",
+        "local_raw_fixture_discovery",
+        summary,
+        [
+            f"- overall_status: {summary.get('overall_status', 'UNKNOWN')}",
+            f"- files_scanned: {summary.get('files_scanned', 'UNKNOWN')}",
+            f"- accepted_rows: {summary.get('accepted_rows', 'UNKNOWN')}",
+            f"- rejected_rows: {summary.get('rejected_rows', 'UNKNOWN')}",
+            f"- next_action: {summary.get('next_action', 'UNKNOWN')}",
+        ],
+        "overall_status",
+        lambda s: (
+            f"files_scanned={s.get('files_scanned', 'UNKNOWN')}; "
+            f"accepted_rows={s.get('accepted_rows', 'UNKNOWN')}; "
+            f"rejected_rows={s.get('rejected_rows', 'UNKNOWN')}"
+        ),
+    )
+
+
+def append_raw_trust_gate_to_panel(day: str, summary: dict[str, str]) -> None:
+    append_panel_section(
+        day,
+        "Raw Candidate Trust Gate",
+        "raw_candidate_trust_gate",
+        summary,
+        [
+            f"- rows_reviewed: {summary.get('rows_reviewed', 'UNKNOWN')}",
+            f"- trusted_rows: {summary.get('trusted_rows', 'UNKNOWN')}",
+            f"- quarantine_rows: {summary.get('quarantine_rows', 'UNKNOWN')}",
+            f"- blocked_rows: {summary.get('blocked_rows', 'UNKNOWN')}",
+            f"- trust_status_counts: {summary.get('trust_status_counts', 'UNKNOWN')}",
+            f"- next_action: {summary.get('next_action', 'UNKNOWN')}",
+        ],
+        "trust_status_counts",
+        lambda s: (
+            f"rows_reviewed={s.get('rows_reviewed', 'UNKNOWN')}; "
+            f"trusted_rows={s.get('trusted_rows', 'UNKNOWN')}; "
+            f"blocked_rows={s.get('blocked_rows', 'UNKNOWN')}; "
+            f"quarantine_rows={s.get('quarantine_rows', 'UNKNOWN')}"
+        ),
+    )
+
+
+def append_raw_promotion_gate_to_panel(day: str, summary: dict[str, str]) -> None:
+    append_panel_section(
+        day,
+        "Trusted Raw Candidate Promotion Gate",
+        "trusted_raw_candidate_promotion_gate",
+        summary,
+        [
+            f"- rows_reviewed: {summary.get('rows_reviewed', 'UNKNOWN')}",
+            f"- promoted_rows: {summary.get('promoted_rows', 'UNKNOWN')}",
+            f"- blocked_rows: {summary.get('blocked_rows', 'UNKNOWN')}",
+            f"- quarantine_rows: {summary.get('quarantine_rows', 'UNKNOWN')}",
+            f"- promotion_status_counts: {summary.get('promotion_status_counts', 'UNKNOWN')}",
+            f"- next_action: {summary.get('next_action', 'UNKNOWN')}",
+        ],
+        "promotion_status_counts",
+        lambda s: (
+            f"rows_reviewed={s.get('rows_reviewed', 'UNKNOWN')}; "
+            f"promoted_rows={s.get('promoted_rows', 'UNKNOWN')}; "
+            f"blocked_rows={s.get('blocked_rows', 'UNKNOWN')}; "
+            f"quarantine_rows={s.get('quarantine_rows', 'UNKNOWN')}"
+        ),
+    )
+
+
 def run(day: str, tz: str) -> None:
     day = date.fromisoformat(day).isoformat()
     date_guard.run(day, tz)
     upstream_diag.run(day, tz)
     real_shortlist_diag.run(day, tz, ROOT)
+    local_raw_discovery.run(day, tz, Path('.'), ROOT)
+    raw_trust_gate.run(day, tz, ROOT)
+    raw_promotion_gate.run(day, tz, ROOT)
     panel_v2.run(day, tz)
 
     date_rows = read_csv(TODAY / day / "vsigma_date_coherence_guard_summary.csv") or read_csv(GOVERNANCE / "vsigma_date_coherence_guard_summary.csv")
     upstream_rows = read_csv(TODAY / day / "vsigma_upstream_board_input_diagnostic_summary.csv") or read_csv(GOVERNANCE / "vsigma_upstream_board_input_diagnostic_summary.csv")
     real_shortlist_rows = read_csv(TODAY / day / "vsigma_real_shortlist_recovery_diagnostic_summary.csv") or read_csv(GOVERNANCE / "vsigma_real_shortlist_recovery_diagnostic_summary.csv")
+    local_raw_rows = read_csv(TODAY / day / "vsigma_local_raw_fixture_discovery_summary.csv") or read_csv(GOVERNANCE / "vsigma_local_raw_fixture_discovery_summary.csv")
+    trust_rows = read_csv(TODAY / day / "vsigma_raw_candidate_trust_gate_summary.csv") or read_csv(GOVERNANCE / "vsigma_raw_candidate_trust_gate_summary.csv")
+    promotion_rows = read_csv(TODAY / day / "vsigma_trusted_raw_candidate_promotion_summary.csv") or read_csv(GOVERNANCE / "vsigma_trusted_raw_candidate_promotion_summary.csv")
     if date_rows:
         append_date_guard_to_panel(day, date_rows[0])
     if upstream_rows:
         append_upstream_diag_to_panel(day, upstream_rows[0])
     if real_shortlist_rows:
         append_real_shortlist_diag_to_panel(day, real_shortlist_rows[0])
+    if local_raw_rows:
+        append_local_raw_discovery_to_panel(day, local_raw_rows[0])
+    if trust_rows:
+        append_raw_trust_gate_to_panel(day, trust_rows[0])
+    if promotion_rows:
+        append_raw_promotion_gate_to_panel(day, promotion_rows[0])
     print("=== VSIGMA CONSOLIDATED DAILY OPERATOR PANEL V3 ===")
     if date_rows:
         print(f"date_guard={date_rows[0].get('overall_status', 'UNKNOWN')}")
@@ -161,6 +246,12 @@ def run(day: str, tz: str) -> None:
         print(f"upstream_diag={upstream_rows[0].get('overall_status', 'UNKNOWN')}")
     if real_shortlist_rows:
         print(f"real_shortlist_diag={real_shortlist_rows[0].get('overall_status', 'UNKNOWN')}")
+    if local_raw_rows:
+        print(f"local_raw={local_raw_rows[0].get('overall_status', 'UNKNOWN')}")
+    if trust_rows:
+        print(f"raw_trust={trust_rows[0].get('trust_status_counts', 'UNKNOWN')}")
+    if promotion_rows:
+        print(f"raw_promotion={promotion_rows[0].get('promotion_status_counts', 'UNKNOWN')}")
     print("auto_apply=NO")
     print("production_change=NO")
 
