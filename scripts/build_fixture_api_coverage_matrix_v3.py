@@ -7,6 +7,8 @@ from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+import build_dated_scored_snapshot
+
 P = Path("data/processed")
 FIELDS = [
     "target_date", "generated_at", "fixture_id", "league", "home_team", "away_team",
@@ -38,6 +40,9 @@ def source_rows(day):
     for name in ["matches_vsigma_scored_v3.csv","vsigma_top_candidates_v3.csv","matches_league_filtered.csv"]:
         rows=read(d(day,name))
         if rows: return rows,name
+    root_rows=read(P/"matches_vsigma_scored_v3.csv")
+    same=[r for r in root_rows if s(r.get("target_date") or r.get("date") or r.get("fixture_datetime_utc"))[:10] == day]
+    if same: return same,"ROOT_FALLBACK_matches_vsigma_scored_v3.csv"
     return [],"NONE"
 
 def probable_map(day):
@@ -94,11 +99,13 @@ def gate(sc, st):
     return "LOW_COVERAGE_NO_BET","Coverage is too weak for reliable execution."
 
 def build(day,tz):
+    day=date.fromisoformat(day).isoformat()
+    build_dated_scored_snapshot.run(day,tz,P)
     ts=datetime.now(ZoneInfo(tz)).isoformat(timespec="seconds"); rows,src=source_rows(day); pm=probable_map(day); out=[]
     for r in rows:
         fid=s(r.get("fixture_id")); prob=pm.get(fid,{})
         st=classify(r,prob); sc,miss=score(st); g,pol=gate(sc,st)
-        out.append({"target_date":day,"generated_at":ts,"fixture_id":fid,"league":s(r.get("league")),"home_team":s(r.get("home_team")),"away_team":s(r.get("away_team")),"minutes_to_kickoff":num(r.get("lineup_minutes_to_kickoff"),-1),**st,"probable_lineup_gate":s(prob.get("probable_lineup_gate")) or "NO_PROBABLE_LINEUP_SOURCES","coverage_score":sc,"missing_blocks":"; ".join(miss) if miss else "none","api_readiness_gate":g,"execution_policy":pol,"operator_note":f"source={src}; official lineup dominates; probable XI can support early planning only.","auto_apply":"NO","production_change":"NO"})
+        out.append({"target_date":day,"generated_at":ts,"fixture_id":fid,"league":s(r.get("league")),"home_team":s(r.get("home_team")),"away_team":s(r.get("away_team")),"minutes_to_kickoff":num(r.get("lineup_minutes_to_kickoff"),-1),**st,"probable_lineup_gate":s(prob.get("probable_lineup_gate")) or "NO_PROBABLE_LINEUP_SOURCES","coverage_score":sc,"missing_blocks":"; ".join(miss) if miss else "none","api_readiness_gate":g,"execution_policy":pol,"operator_note":f"source={src}; official lineup dominates; probable XI can support early planning only; dated scored snapshot attempted before source lookup.","auto_apply":"NO","production_change":"NO"})
     return out
 
 def counts(rows,field):
@@ -107,7 +114,7 @@ def counts(rows,field):
 def md(day,rows):
     lines=[f"# vSIGMA Fixture API Coverage Matrix v3 - {day}","","## Summary",f"- fixtures_reviewed: {len(rows)}",f"- api_readiness_gates: {counts(rows,'api_readiness_gate')}",f"- lineup_coverage: {counts(rows,'lineup_coverage')}",f"- probable_lineup_gates: {counts(rows,'probable_lineup_gate')}",f"- recent_stats_coverage: {counts(rows,'recent_stats_coverage')}",f"- injuries_coverage: {counts(rows,'injuries_coverage')}",f"- standings_coverage: {counts(rows,'standings_coverage')}",f"- odds_coverage: {counts(rows,'odds_coverage')}","- auto_apply: NO","- production_change: NO","","## Fixture Coverage"]
     for r in rows: lines.append(f"- {r['home_team']} vs {r['away_team']} | gate={r['api_readiness_gate']} | score={r['coverage_score']} | lineups={r['lineup_coverage']} | probable={r['probable_lineup_gate']} | stats={r['recent_stats_coverage']} | injuries={r['injuries_coverage']} | odds={r['odds_coverage']} | missing={r['missing_blocks']}")
-    lines += ["","## Guardrails","- Official lineup remains primary truth.","- Probable XI consensus supports early shortlist only.","- Final stake still requires official lineup, prelock confirmation, or explicit manual override.","- It does not fabricate unavailable lineup data."]
+    lines += ["","## Guardrails","- Official lineup remains primary truth.","- Probable XI consensus supports early shortlist only.","- Final stake still requires official lineup, prelock confirmation, or explicit manual override.","- It does not fabricate unavailable lineup data.","- Dated scored snapshot can expose existing scored rows to coverage matrix but cannot create pick permission."]
     return "\n".join(lines)+"\n"
 
 def run(day,tz):
