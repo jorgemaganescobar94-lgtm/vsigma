@@ -1,1 +1,11 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
+2026-06-01,1520707,Serie B,Brazil,Ponte Preta,Botafogo SP,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1520707,Serie B,Brazil,Ponte Preta,Botafogo SP,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1520707,Serie B,Brazil,Ponte Preta,Botafogo SP,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1520707,Serie B,Brazil,Ponte Preta,Botafogo SP,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1520707,Serie B,Brazil,Ponte Preta,Botafogo SP,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1520707,Serie B,Brazil,Ponte Preta,Botafogo SP,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1520707,Serie B,Brazil,Ponte Preta,Botafogo SP,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1520707,Serie B,Brazil,Ponte Preta,Botafogo SP,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1520707,Serie B,Brazil,Ponte Preta,Botafogo SP,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-01,1520707,Serie B,Brazil,Ponte Preta,Botafogo SP,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.

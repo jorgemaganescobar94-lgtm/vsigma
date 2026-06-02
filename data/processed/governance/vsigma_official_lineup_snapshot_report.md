@@ -1,16 +1,16 @@
 # vSIGMA Official Lineup Snapshot Import - 2026-06-01
 
 ## Summary
-- rows_processed: 0
-- eligible_fixtures: 0
-- api_calls_made: 0
+- rows_processed: 1
+- eligible_fixtures: 1
+- api_calls_made: 1
 - cache_hits: 0
-- lineup_rows_written: 30
-- full_lineup_rows: 30
+- lineup_rows_written: 32
+- full_lineup_rows: 32
 - no_lineup_rows: 0
 - api_errors: 0
 - key_status: API_SPORTS
-- api_status_counts: none
+- api_status_counts: OK=1
 - auto_apply: NO
 - production_change: NO
 
@@ -45,6 +45,8 @@
 - Gent vs Genk | side=away | players=11 | formation=4-2-3-1 | status=OK
 - Burgos vs FC Andorra | side=home | players=11 | formation=4-4-2 | status=OK
 - Burgos vs FC Andorra | side=away | players=11 | formation=3-4-3 | status=OK
+- Ponte Preta vs Botafogo SP | side=home | players=11 | formation= | status=OK
+- Ponte Preta vs Botafogo SP | side=away | players=11 | formation= | status=OK
 
 ## Guardrails
 - Official lineup importer only reads API/player snapshots; it never fabricates players.

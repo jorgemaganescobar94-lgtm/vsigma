@@ -7,8 +7,8 @@
 - rows_written: 1
 - no_data_blocked_rows: 1
 - non_blocked_rows: 0
-- source_path: data\processed\matches_vsigma_scored_v3.csv
-- output_path: data\processed\today\2026-06-01\matches_vsigma_scored_v3.csv
+- source_path: data/processed/matches_vsigma_scored_v3.csv
+- output_path: data/processed/today/2026-06-01/matches_vsigma_scored_v3.csv
 - next_action: Snapshot written for coverage diagnostics only; do not create picks. Repair enrichment/coverage.
 - auto_apply: NO
 - production_change: NO
