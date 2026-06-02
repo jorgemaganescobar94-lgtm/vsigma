@@ -1,0 +1,7 @@
+target_date,generated_at,check_name,path,exists,rows,same_day_rows,unique_same_day_fixtures,status,detail,recommended_fix,auto_apply,production_change
+2026-06-01,2026-06-02T12:52:03+01:00,root_scored_matches,data\processed\matches_vsigma_scored_v3.csv,true,1,1,1,ONLY_NO_DATA_BLOCKED,Root scored rows exist but all same-day rows are NO_DATA_BLOCKED.,"Repair scoring enrichment/coverage, not market selection.",NO,NO
+2026-06-01,2026-06-02T12:52:03+01:00,dated_scored_matches,data\processed\today\2026-06-01\matches_vsigma_scored_v3.csv,true,1,1,1,OK,Same-day rows available.,No repair needed for this file.,NO,NO
+2026-06-01,2026-06-02T12:52:03+01:00,dated_top_candidates,data\processed\today\2026-06-01\vsigma_top_candidates_v3.csv,false,0,0,0,MISSING_DATED_SOURCE,Dated input source is missing.,Create/copy dated scored or candidate snapshot before coverage matrix.,NO,NO
+2026-06-01,2026-06-02T12:52:03+01:00,dated_league_filtered,data\processed\today\2026-06-01\matches_league_filtered.csv,false,0,0,0,MISSING_DATED_SOURCE,Dated input source is missing.,Create/copy dated scored or candidate snapshot before coverage matrix.,NO,NO
+2026-06-01,2026-06-02T12:52:03+01:00,fixture_api_coverage_matrix,data\processed\today\2026-06-01\vsigma_fixture_api_coverage_matrix.csv,true,1,1,1,OK,Same-day rows available.,No repair needed for this file.,NO,NO
+2026-06-01,2026-06-02T12:52:03+01:00,real_source_expander,data\processed\today\2026-06-01\vsigma_real_source_coverage_expander_summary.csv,true,1,1,0,OK,Same-day rows available.,No repair needed for this file.,NO,NO

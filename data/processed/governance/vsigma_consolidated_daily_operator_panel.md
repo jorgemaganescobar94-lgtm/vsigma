@@ -36,14 +36,14 @@
 - no daily board rows available
 
 ## Official / Probable Lineups
-- data/processed/today/2026-06-01/official_lineup_sources.csv: rows=30
-- data/processed/governance/official_lineup_sources.csv: rows=30
-- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
+- data\processed\today\2026-06-01\official_lineup_sources.csv: rows=30
+- data\processed\governance\official_lineup_sources.csv: rows=30
+- data\processed\governance\vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Quarantine / Learning-Only / Import Status
-- data/processed/today/2026-06-01/official_lineup_sources.csv: rows=30
-- data/processed/governance/official_lineup_sources.csv: rows=30
-- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
+- data\processed\today\2026-06-01\official_lineup_sources.csv: rows=30
+- data\processed\governance\official_lineup_sources.csv: rows=30
+- data\processed\governance\vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Source Reliability Governor
 - sources_reviewed: 15
@@ -58,18 +58,18 @@
 - status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-01; reason=run_daily_chain_self_heal_v68_0_objective_context_bridge; triggered_at=2026-06-01T10:12:00+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-01; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-02T09:33:49+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-01; reason=run_prelock_recheck_v67_5_1_safe_consolidated_operator_panel; triggered_at=2026-06-01T09:05:00+01:00
+- .vsigma\triggers\daily_chain_self_heal.trigger: date=2026-06-01; reason=run_daily_chain_self_heal_v68_0_objective_context_bridge; triggered_at=2026-06-01T10:12:00+01:00
+- .vsigma\triggers\daily_decision_chain_v2.trigger: date=UNKNOWN; reason=run_daily_decision_chain_v2_v68_8_dated_scored_snapshot; triggered_at=2026-06-02T10:30:00+01:00
+- .vsigma\triggers\prelock_official_lineup_recheck.trigger: date=2026-06-01; reason=run_prelock_recheck_v67_5_1_safe_consolidated_operator_panel; triggered_at=2026-06-01T09:05:00+01:00
 
 ## Key Files
-- data/processed/today/2026-06-01/vsigma_consolidated_daily_operator_panel.md
-- data/processed/today/2026-06-01/vsigma_operator_brief.md
-- data/processed/today/2026-06-01/vsigma_daily_execution_board.md
-- data/processed/today/2026-06-01/vsigma_prelock_live_recheck.md
-- data/processed/today/2026-06-01/vsigma_live_trigger_validator.md
-- data/processed/today/2026-06-01/vsigma_automation_health.md
-- data/processed/today/2026-06-01/vsigma_probable_lineup_source_reliability_governor.md
+- data\processed\today\2026-06-01\vsigma_consolidated_daily_operator_panel.md
+- data\processed\today\2026-06-01\vsigma_operator_brief.md
+- data\processed\today\2026-06-01\vsigma_daily_execution_board.md
+- data\processed\today\2026-06-01\vsigma_prelock_live_recheck.md
+- data\processed\today\2026-06-01\vsigma_live_trigger_validator.md
+- data\processed\today\2026-06-01\vsigma_automation_health.md
+- data\processed\today\2026-06-01\vsigma_probable_lineup_source_reliability_governor.md
 
 ## Guardrails
 - Panel is diagnostic only; it does not execute bets.
@@ -83,7 +83,7 @@
 - board_status: daily_board_md=OK; daily_board_csv=DATE_UNKNOWN
 - mismatch_count: 0
 - missing_core_count: 0
-- trigger_date_counts: 2026-06-01=2
+- trigger_date_counts: UNKNOWN=1; 2026-06-01=1
 - next_action: Review artifacts with unparseable dates before trusting outputs.
 
 ## Upstream Board Input Diagnostic
