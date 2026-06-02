@@ -15,6 +15,7 @@ import apply_trusted_raw_candidate_promotion_gate as raw_promotion_gate
 import build_scoring_gap_explainer as scoring_gap
 import build_trusted_raw_scoring_queue as scoring_queue
 import build_queue_to_enrichment_dry_run_planner as enrichment_dry_run
+import build_enrichment_cost_approval_gate as enrichment_approval_gate
 import build_daily_board_self_heal_from_promotion_gate as board_self_heal
 
 ROOT = Path("data/processed")
@@ -168,6 +169,20 @@ def append_enrichment_dry_run_to_panel(day: str, summary: dict[str, str]) -> Non
     ], "dry_run_decision_counts", lambda s: f"rows_planned={s.get('rows_planned', 'UNKNOWN')}; risk_label_counts={s.get('risk_label_counts', 'UNKNOWN')}; estimated_units={s.get('total_estimated_call_units', 'UNKNOWN')}; api_calls_executed={s.get('api_calls_executed', 'UNKNOWN')}")
 
 
+def append_enrichment_approval_gate_to_panel(day: str, summary: dict[str, str]) -> None:
+    append_panel_section(day, "Enrichment Cost & Approval Gate", "enrichment_cost_approval_gate", summary, [
+        f"- approval_gate_status: {summary.get('approval_gate_status', 'UNKNOWN')}",
+        f"- rows_planned: {summary.get('rows_planned', 'UNKNOWN')}",
+        f"- estimated_call_units: {summary.get('estimated_call_units', 'UNKNOWN')}",
+        f"- approval_required: {summary.get('approval_required', 'UNKNOWN')}",
+        f"- max_allowed_without_manual_approval: {summary.get('max_allowed_without_manual_approval', 'UNKNOWN')}",
+        f"- api_calls_allowed: {summary.get('api_calls_allowed', 'UNKNOWN')}",
+        f"- api_calls_planned: {summary.get('api_calls_planned', 'UNKNOWN')}",
+        f"- api_calls_executed: {summary.get('api_calls_executed', 'UNKNOWN')}",
+        f"- recommended_action: {summary.get('recommended_action', 'UNKNOWN')}",
+    ], "approval_gate_status", lambda s: f"estimated_call_units={s.get('estimated_call_units', 'UNKNOWN')}; approval_required={s.get('approval_required', 'UNKNOWN')}; api_calls_allowed={s.get('api_calls_allowed', 'UNKNOWN')}; api_calls_executed={s.get('api_calls_executed', 'UNKNOWN')}")
+
+
 def append_board_self_heal_to_panel(day: str, summary: dict[str, str]) -> None:
     append_panel_section(day, "Daily Board Self-Heal", "daily_board_self_heal", summary, [
         f"- self_heal_status: {summary.get('self_heal_status', 'UNKNOWN')}",
@@ -191,6 +206,7 @@ def run(day: str, tz: str) -> None:
     scoring_gap.run(day, tz, ROOT)
     scoring_queue.run(day, tz, ROOT)
     enrichment_dry_run.run(day, tz, ROOT)
+    enrichment_approval_gate.run(day, tz, ROOT)
     board_self_heal.run(day, tz, ROOT)
     panel_v2.run(day, tz)
 
@@ -203,6 +219,7 @@ def run(day: str, tz: str) -> None:
     scoring_gap_rows = read_csv(TODAY / day / "vsigma_scoring_gap_explainer_summary.csv") or read_csv(GOVERNANCE / "vsigma_scoring_gap_explainer_summary.csv")
     scoring_queue_rows = read_csv(TODAY / day / "vsigma_trusted_raw_scoring_queue_summary.csv") or read_csv(GOVERNANCE / "vsigma_trusted_raw_scoring_queue_summary.csv")
     enrichment_rows = read_csv(TODAY / day / "vsigma_queue_to_enrichment_dry_run_summary.csv") or read_csv(GOVERNANCE / "vsigma_queue_to_enrichment_dry_run_summary.csv")
+    approval_rows = read_csv(TODAY / day / "vsigma_enrichment_cost_approval_gate_summary.csv") or read_csv(GOVERNANCE / "vsigma_enrichment_cost_approval_gate_summary.csv")
     self_heal_rows = read_csv(TODAY / day / "vsigma_daily_board_self_heal_summary.csv") or read_csv(GOVERNANCE / "vsigma_daily_board_self_heal_summary.csv")
     if date_rows:
         append_date_guard_to_panel(day, date_rows[0])
@@ -222,6 +239,8 @@ def run(day: str, tz: str) -> None:
         append_scoring_queue_to_panel(day, scoring_queue_rows[0])
     if enrichment_rows:
         append_enrichment_dry_run_to_panel(day, enrichment_rows[0])
+    if approval_rows:
+        append_enrichment_approval_gate_to_panel(day, approval_rows[0])
     if self_heal_rows:
         append_board_self_heal_to_panel(day, self_heal_rows[0])
     print("=== VSIGMA CONSOLIDATED DAILY OPERATOR PANEL V3 ===")
@@ -243,6 +262,8 @@ def run(day: str, tz: str) -> None:
         print(f"scoring_queue={scoring_queue_rows[0].get('priority_counts', 'UNKNOWN')}")
     if enrichment_rows:
         print(f"enrichment_dry_run={enrichment_rows[0].get('risk_label_counts', 'UNKNOWN')}")
+    if approval_rows:
+        print(f"approval_gate={approval_rows[0].get('approval_gate_status', 'UNKNOWN')}")
     if self_heal_rows:
         print(f"board_self_heal={self_heal_rows[0].get('self_heal_status', 'UNKNOWN')}")
     print("auto_apply=NO")
