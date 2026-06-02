@@ -1,0 +1,2 @@
+target_date,generated_at,self_heal_status,promotion_rows_reviewed,promoted_rows,blocked_rows,quarantine_rows,board_rows_written,reason,auto_apply,production_change
+2026-06-02,2026-06-02T18:12:40+01:00,EMPTY_BY_PROMOTION_GATE,59,0,1,44,1_DIAGNOSTIC_ROW,0 promoted raw candidates; no scoring-safe rows available,NO,NO
