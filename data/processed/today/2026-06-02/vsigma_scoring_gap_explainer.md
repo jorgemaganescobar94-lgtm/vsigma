@@ -2,17 +2,17 @@
 
 ## Summary
 - rows_reviewed: 59
-- missing_scored_rows: 44
-- no_data_blocked_rows: 1
+- missing_scored_rows: 45
+- no_data_blocked_rows: 0
 - not_trusted_rows: 14
 - promoted_rows: 0
-- gap_status_counts: MISSING_SCORED_ROW=44; NOT_TRUSTED_SKIPPED=14; SCORED_ROW_NO_DATA_BLOCKED=1
+- gap_status_counts: MISSING_SCORED_ROW=45; NOT_TRUSTED_SKIPPED=14
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 - auto_apply: NO
 - production_change: NO
 
 ## Gap Rows
-- La Unión vs Deportivo Cuenca | promotion=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | gap=SCORED_ROW_NO_DATA_BLOCKED | stage=SCORING_ENRICHMENT_BLOCKED | scored=NO_DATA_BLOCKED | fix=Repair enrichment inputs for stats/odds/standings/coverage; do not promote until non-blocked.
+- La Unión vs Deportivo Cuenca | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
 - Ario Eslamshahr vs Shahrdari Noshahr | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
 - Fard Alborz vs Mes Kerman | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
 - Havadar vs Navad Urmia | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.

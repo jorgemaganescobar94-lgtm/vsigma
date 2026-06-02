@@ -1,20 +1,20 @@
 # vSIGMA Dated Scored Snapshot - 2026-06-02
 
 ## Summary
-- snapshot_status: SNAPSHOT_DIAGNOSTIC_ONLY_ALL_NO_DATA_BLOCKED
-- source_rows: 1
-- same_day_rows: 1
-- rows_written: 1
-- no_data_blocked_rows: 1
+- snapshot_status: NO_SAME_DAY_ROWS
+- source_rows: 0
+- same_day_rows: 0
+- rows_written: 0
+- no_data_blocked_rows: 0
 - non_blocked_rows: 0
 - source_path: data/processed/matches_vsigma_scored_v3.csv
 - output_path: data/processed/today/2026-06-02/matches_vsigma_scored_v3.csv
-- next_action: Snapshot written for coverage diagnostics only; do not create picks. Repair enrichment/coverage.
+- next_action: Repair scoring date coverage; no dated snapshot rows can be written.
 - auto_apply: NO
 - production_change: NO
 
 ## Snapshot Rows
-- La Unión vs Deportivo Cuenca | fixture_id=1542923 | league=Copa Ecuador | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | data_warning=OK_FULL
+- none. No same-day scored rows available.
 
 ## Guardrails
 - Snapshot creation does not create picks, stake permission, or live permission.
