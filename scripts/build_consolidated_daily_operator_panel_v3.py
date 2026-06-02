@@ -12,6 +12,7 @@ import build_real_shortlist_recovery_diagnostic as real_shortlist_diag
 import build_local_raw_fixture_discovery as local_raw_discovery
 import apply_raw_candidate_trust_gate as raw_trust_gate
 import apply_trusted_raw_candidate_promotion_gate as raw_promotion_gate
+import build_daily_board_self_heal_from_promotion_gate as board_self_heal
 
 ROOT = Path("data/processed")
 TODAY = ROOT / "today"
@@ -65,150 +66,84 @@ def append_panel_section(day: str, section_title: str, section_key: str, summary
 
 
 def append_date_guard_to_panel(day: str, guard_summary: dict[str, str]) -> None:
-    append_panel_section(
-        day,
-        "Date Coherence Guard",
-        "date_coherence_guard",
-        guard_summary,
-        [
-            f"- overall_status: {guard_summary.get('overall_status', 'UNKNOWN')}",
-            f"- board_status: {guard_summary.get('board_status', 'UNKNOWN')}",
-            f"- mismatch_count: {guard_summary.get('mismatch_count', 'UNKNOWN')}",
-            f"- missing_core_count: {guard_summary.get('missing_core_count', 'UNKNOWN')}",
-            f"- trigger_date_counts: {guard_summary.get('trigger_date_counts', 'UNKNOWN')}",
-            f"- next_action: {guard_summary.get('next_action', 'UNKNOWN')}",
-        ],
-        "overall_status",
-        lambda s: (
-            f"board_status={s.get('board_status', 'UNKNOWN')}; "
-            f"mismatch_count={s.get('mismatch_count', 'UNKNOWN')}; "
-            f"missing_core_count={s.get('missing_core_count', 'UNKNOWN')}; "
-            f"trigger_date_counts={s.get('trigger_date_counts', 'UNKNOWN')}"
-        ),
-    )
+    append_panel_section(day, "Date Coherence Guard", "date_coherence_guard", guard_summary, [
+        f"- overall_status: {guard_summary.get('overall_status', 'UNKNOWN')}",
+        f"- board_status: {guard_summary.get('board_status', 'UNKNOWN')}",
+        f"- mismatch_count: {guard_summary.get('mismatch_count', 'UNKNOWN')}",
+        f"- missing_core_count: {guard_summary.get('missing_core_count', 'UNKNOWN')}",
+        f"- trigger_date_counts: {guard_summary.get('trigger_date_counts', 'UNKNOWN')}",
+        f"- next_action: {guard_summary.get('next_action', 'UNKNOWN')}",
+    ], "overall_status", lambda s: f"board_status={s.get('board_status', 'UNKNOWN')}; mismatch_count={s.get('mismatch_count', 'UNKNOWN')}; missing_core_count={s.get('missing_core_count', 'UNKNOWN')}; trigger_date_counts={s.get('trigger_date_counts', 'UNKNOWN')}")
 
 
 def append_upstream_diag_to_panel(day: str, summary: dict[str, str]) -> None:
-    append_panel_section(
-        day,
-        "Upstream Board Input Diagnostic",
-        "upstream_board_input_diagnostic",
-        summary,
-        [
-            f"- overall_status: {summary.get('overall_status', 'UNKNOWN')}",
-            f"- first_empty_required_component: {summary.get('first_empty_required_component', 'UNKNOWN')}",
-            f"- missing_required_count: {summary.get('missing_required_count', 'UNKNOWN')}",
-            f"- empty_required_count: {summary.get('empty_required_count', 'UNKNOWN')}",
-            f"- date_issue_count: {summary.get('date_issue_count', 'UNKNOWN')}",
-            f"- forecast_rows: {summary.get('forecast_rows', 'UNKNOWN')}",
-            f"- translator_rows: {summary.get('translator_rows', 'UNKNOWN')}",
-            f"- board_rows: {summary.get('board_rows', 'UNKNOWN')}",
-            f"- next_action: {summary.get('next_action', 'UNKNOWN')}",
-        ],
-        "overall_status",
-        lambda s: (
-            f"first_empty_required_component={s.get('first_empty_required_component', 'UNKNOWN')}; "
-            f"forecast_rows={s.get('forecast_rows', 'UNKNOWN')}; "
-            f"translator_rows={s.get('translator_rows', 'UNKNOWN')}; "
-            f"board_rows={s.get('board_rows', 'UNKNOWN')}"
-        ),
-    )
+    append_panel_section(day, "Upstream Board Input Diagnostic", "upstream_board_input_diagnostic", summary, [
+        f"- overall_status: {summary.get('overall_status', 'UNKNOWN')}",
+        f"- first_empty_required_component: {summary.get('first_empty_required_component', 'UNKNOWN')}",
+        f"- missing_required_count: {summary.get('missing_required_count', 'UNKNOWN')}",
+        f"- empty_required_count: {summary.get('empty_required_count', 'UNKNOWN')}",
+        f"- date_issue_count: {summary.get('date_issue_count', 'UNKNOWN')}",
+        f"- forecast_rows: {summary.get('forecast_rows', 'UNKNOWN')}",
+        f"- translator_rows: {summary.get('translator_rows', 'UNKNOWN')}",
+        f"- board_rows: {summary.get('board_rows', 'UNKNOWN')}",
+        f"- next_action: {summary.get('next_action', 'UNKNOWN')}",
+    ], "overall_status", lambda s: f"first_empty_required_component={s.get('first_empty_required_component', 'UNKNOWN')}; forecast_rows={s.get('forecast_rows', 'UNKNOWN')}; translator_rows={s.get('translator_rows', 'UNKNOWN')}; board_rows={s.get('board_rows', 'UNKNOWN')}")
 
 
 def append_real_shortlist_diag_to_panel(day: str, summary: dict[str, str]) -> None:
-    append_panel_section(
-        day,
-        "Real Shortlist Recovery Diagnostic",
-        "real_shortlist_recovery_diagnostic",
-        summary,
-        [
-            f"- overall_status: {summary.get('overall_status', 'UNKNOWN')}",
-            f"- root_cause: {summary.get('root_cause', 'UNKNOWN')}",
-            f"- root_scored_same_day_rows: {summary.get('root_scored_same_day_rows', 'UNKNOWN')}",
-            f"- real_shortlist_rows: {summary.get('real_shortlist_rows', 'UNKNOWN')}",
-            f"- real_bet_rows: {summary.get('real_bet_rows', 'UNKNOWN')}",
-            f"- proxy_rows: {summary.get('proxy_rows', 'UNKNOWN')}",
-            f"- next_action: {summary.get('next_action', 'UNKNOWN')}",
-        ],
-        "overall_status",
-        lambda s: (
-            f"root_cause={s.get('root_cause', 'UNKNOWN')}; "
-            f"root_scored_same_day_rows={s.get('root_scored_same_day_rows', 'UNKNOWN')}; "
-            f"real_shortlist_rows={s.get('real_shortlist_rows', 'UNKNOWN')}; "
-            f"real_bet_rows={s.get('real_bet_rows', 'UNKNOWN')}; "
-            f"proxy_rows={s.get('proxy_rows', 'UNKNOWN')}"
-        ),
-    )
+    append_panel_section(day, "Real Shortlist Recovery Diagnostic", "real_shortlist_recovery_diagnostic", summary, [
+        f"- overall_status: {summary.get('overall_status', 'UNKNOWN')}",
+        f"- root_cause: {summary.get('root_cause', 'UNKNOWN')}",
+        f"- root_scored_same_day_rows: {summary.get('root_scored_same_day_rows', 'UNKNOWN')}",
+        f"- real_shortlist_rows: {summary.get('real_shortlist_rows', 'UNKNOWN')}",
+        f"- real_bet_rows: {summary.get('real_bet_rows', 'UNKNOWN')}",
+        f"- proxy_rows: {summary.get('proxy_rows', 'UNKNOWN')}",
+        f"- next_action: {summary.get('next_action', 'UNKNOWN')}",
+    ], "overall_status", lambda s: f"root_cause={s.get('root_cause', 'UNKNOWN')}; root_scored_same_day_rows={s.get('root_scored_same_day_rows', 'UNKNOWN')}; real_shortlist_rows={s.get('real_shortlist_rows', 'UNKNOWN')}; real_bet_rows={s.get('real_bet_rows', 'UNKNOWN')}; proxy_rows={s.get('proxy_rows', 'UNKNOWN')}")
 
 
 def append_local_raw_discovery_to_panel(day: str, summary: dict[str, str]) -> None:
-    append_panel_section(
-        day,
-        "Local Raw Fixture Discovery",
-        "local_raw_fixture_discovery",
-        summary,
-        [
-            f"- overall_status: {summary.get('overall_status', 'UNKNOWN')}",
-            f"- files_scanned: {summary.get('files_scanned', 'UNKNOWN')}",
-            f"- accepted_rows: {summary.get('accepted_rows', 'UNKNOWN')}",
-            f"- rejected_rows: {summary.get('rejected_rows', 'UNKNOWN')}",
-            f"- next_action: {summary.get('next_action', 'UNKNOWN')}",
-        ],
-        "overall_status",
-        lambda s: (
-            f"files_scanned={s.get('files_scanned', 'UNKNOWN')}; "
-            f"accepted_rows={s.get('accepted_rows', 'UNKNOWN')}; "
-            f"rejected_rows={s.get('rejected_rows', 'UNKNOWN')}"
-        ),
-    )
+    append_panel_section(day, "Local Raw Fixture Discovery", "local_raw_fixture_discovery", summary, [
+        f"- overall_status: {summary.get('overall_status', 'UNKNOWN')}",
+        f"- files_scanned: {summary.get('files_scanned', 'UNKNOWN')}",
+        f"- accepted_rows: {summary.get('accepted_rows', 'UNKNOWN')}",
+        f"- rejected_rows: {summary.get('rejected_rows', 'UNKNOWN')}",
+        f"- next_action: {summary.get('next_action', 'UNKNOWN')}",
+    ], "overall_status", lambda s: f"files_scanned={s.get('files_scanned', 'UNKNOWN')}; accepted_rows={s.get('accepted_rows', 'UNKNOWN')}; rejected_rows={s.get('rejected_rows', 'UNKNOWN')}")
 
 
 def append_raw_trust_gate_to_panel(day: str, summary: dict[str, str]) -> None:
-    append_panel_section(
-        day,
-        "Raw Candidate Trust Gate",
-        "raw_candidate_trust_gate",
-        summary,
-        [
-            f"- rows_reviewed: {summary.get('rows_reviewed', 'UNKNOWN')}",
-            f"- trusted_rows: {summary.get('trusted_rows', 'UNKNOWN')}",
-            f"- quarantine_rows: {summary.get('quarantine_rows', 'UNKNOWN')}",
-            f"- blocked_rows: {summary.get('blocked_rows', 'UNKNOWN')}",
-            f"- trust_status_counts: {summary.get('trust_status_counts', 'UNKNOWN')}",
-            f"- next_action: {summary.get('next_action', 'UNKNOWN')}",
-        ],
-        "trust_status_counts",
-        lambda s: (
-            f"rows_reviewed={s.get('rows_reviewed', 'UNKNOWN')}; "
-            f"trusted_rows={s.get('trusted_rows', 'UNKNOWN')}; "
-            f"blocked_rows={s.get('blocked_rows', 'UNKNOWN')}; "
-            f"quarantine_rows={s.get('quarantine_rows', 'UNKNOWN')}"
-        ),
-    )
+    append_panel_section(day, "Raw Candidate Trust Gate", "raw_candidate_trust_gate", summary, [
+        f"- rows_reviewed: {summary.get('rows_reviewed', 'UNKNOWN')}",
+        f"- trusted_rows: {summary.get('trusted_rows', 'UNKNOWN')}",
+        f"- quarantine_rows: {summary.get('quarantine_rows', 'UNKNOWN')}",
+        f"- blocked_rows: {summary.get('blocked_rows', 'UNKNOWN')}",
+        f"- trust_status_counts: {summary.get('trust_status_counts', 'UNKNOWN')}",
+        f"- next_action: {summary.get('next_action', 'UNKNOWN')}",
+    ], "trust_status_counts", lambda s: f"rows_reviewed={s.get('rows_reviewed', 'UNKNOWN')}; trusted_rows={s.get('trusted_rows', 'UNKNOWN')}; blocked_rows={s.get('blocked_rows', 'UNKNOWN')}; quarantine_rows={s.get('quarantine_rows', 'UNKNOWN')}")
 
 
 def append_raw_promotion_gate_to_panel(day: str, summary: dict[str, str]) -> None:
-    append_panel_section(
-        day,
-        "Trusted Raw Candidate Promotion Gate",
-        "trusted_raw_candidate_promotion_gate",
-        summary,
-        [
-            f"- rows_reviewed: {summary.get('rows_reviewed', 'UNKNOWN')}",
-            f"- promoted_rows: {summary.get('promoted_rows', 'UNKNOWN')}",
-            f"- blocked_rows: {summary.get('blocked_rows', 'UNKNOWN')}",
-            f"- quarantine_rows: {summary.get('quarantine_rows', 'UNKNOWN')}",
-            f"- promotion_status_counts: {summary.get('promotion_status_counts', 'UNKNOWN')}",
-            f"- next_action: {summary.get('next_action', 'UNKNOWN')}",
-        ],
-        "promotion_status_counts",
-        lambda s: (
-            f"rows_reviewed={s.get('rows_reviewed', 'UNKNOWN')}; "
-            f"promoted_rows={s.get('promoted_rows', 'UNKNOWN')}; "
-            f"blocked_rows={s.get('blocked_rows', 'UNKNOWN')}; "
-            f"quarantine_rows={s.get('quarantine_rows', 'UNKNOWN')}"
-        ),
-    )
+    append_panel_section(day, "Trusted Raw Candidate Promotion Gate", "trusted_raw_candidate_promotion_gate", summary, [
+        f"- rows_reviewed: {summary.get('rows_reviewed', 'UNKNOWN')}",
+        f"- promoted_rows: {summary.get('promoted_rows', 'UNKNOWN')}",
+        f"- blocked_rows: {summary.get('blocked_rows', 'UNKNOWN')}",
+        f"- quarantine_rows: {summary.get('quarantine_rows', 'UNKNOWN')}",
+        f"- promotion_status_counts: {summary.get('promotion_status_counts', 'UNKNOWN')}",
+        f"- next_action: {summary.get('next_action', 'UNKNOWN')}",
+    ], "promotion_status_counts", lambda s: f"rows_reviewed={s.get('rows_reviewed', 'UNKNOWN')}; promoted_rows={s.get('promoted_rows', 'UNKNOWN')}; blocked_rows={s.get('blocked_rows', 'UNKNOWN')}; quarantine_rows={s.get('quarantine_rows', 'UNKNOWN')}")
+
+
+def append_board_self_heal_to_panel(day: str, summary: dict[str, str]) -> None:
+    append_panel_section(day, "Daily Board Self-Heal", "daily_board_self_heal", summary, [
+        f"- self_heal_status: {summary.get('self_heal_status', 'UNKNOWN')}",
+        f"- promotion_rows_reviewed: {summary.get('promotion_rows_reviewed', 'UNKNOWN')}",
+        f"- promoted_rows: {summary.get('promoted_rows', 'UNKNOWN')}",
+        f"- blocked_rows: {summary.get('blocked_rows', 'UNKNOWN')}",
+        f"- quarantine_rows: {summary.get('quarantine_rows', 'UNKNOWN')}",
+        f"- board_rows_written: {summary.get('board_rows_written', 'UNKNOWN')}",
+        f"- reason: {summary.get('reason', 'UNKNOWN')}",
+    ], "self_heal_status", lambda s: f"promoted_rows={s.get('promoted_rows', 'UNKNOWN')}; board_rows_written={s.get('board_rows_written', 'UNKNOWN')}; reason={s.get('reason', 'UNKNOWN')}")
 
 
 def run(day: str, tz: str) -> None:
@@ -219,6 +154,7 @@ def run(day: str, tz: str) -> None:
     local_raw_discovery.run(day, tz, Path('.'), ROOT)
     raw_trust_gate.run(day, tz, ROOT)
     raw_promotion_gate.run(day, tz, ROOT)
+    board_self_heal.run(day, tz, ROOT)
     panel_v2.run(day, tz)
 
     date_rows = read_csv(TODAY / day / "vsigma_date_coherence_guard_summary.csv") or read_csv(GOVERNANCE / "vsigma_date_coherence_guard_summary.csv")
@@ -227,6 +163,7 @@ def run(day: str, tz: str) -> None:
     local_raw_rows = read_csv(TODAY / day / "vsigma_local_raw_fixture_discovery_summary.csv") or read_csv(GOVERNANCE / "vsigma_local_raw_fixture_discovery_summary.csv")
     trust_rows = read_csv(TODAY / day / "vsigma_raw_candidate_trust_gate_summary.csv") or read_csv(GOVERNANCE / "vsigma_raw_candidate_trust_gate_summary.csv")
     promotion_rows = read_csv(TODAY / day / "vsigma_trusted_raw_candidate_promotion_summary.csv") or read_csv(GOVERNANCE / "vsigma_trusted_raw_candidate_promotion_summary.csv")
+    self_heal_rows = read_csv(TODAY / day / "vsigma_daily_board_self_heal_summary.csv") or read_csv(GOVERNANCE / "vsigma_daily_board_self_heal_summary.csv")
     if date_rows:
         append_date_guard_to_panel(day, date_rows[0])
     if upstream_rows:
@@ -239,6 +176,8 @@ def run(day: str, tz: str) -> None:
         append_raw_trust_gate_to_panel(day, trust_rows[0])
     if promotion_rows:
         append_raw_promotion_gate_to_panel(day, promotion_rows[0])
+    if self_heal_rows:
+        append_board_self_heal_to_panel(day, self_heal_rows[0])
     print("=== VSIGMA CONSOLIDATED DAILY OPERATOR PANEL V3 ===")
     if date_rows:
         print(f"date_guard={date_rows[0].get('overall_status', 'UNKNOWN')}")
@@ -252,6 +191,8 @@ def run(day: str, tz: str) -> None:
         print(f"raw_trust={trust_rows[0].get('trust_status_counts', 'UNKNOWN')}")
     if promotion_rows:
         print(f"raw_promotion={promotion_rows[0].get('promotion_status_counts', 'UNKNOWN')}")
+    if self_heal_rows:
+        print(f"board_self_heal={self_heal_rows[0].get('self_heal_status', 'UNKNOWN')}")
     print("auto_apply=NO")
     print("production_change=NO")
 
