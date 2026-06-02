@@ -36,12 +36,12 @@
 - no daily board rows available
 
 ## Official / Probable Lineups
-- data/processed/governance/official_lineup_sources.csv: rows=32
-- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
+- data\processed\governance\official_lineup_sources.csv: rows=32
+- data\processed\governance\vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Quarantine / Learning-Only / Import Status
-- data/processed/governance/official_lineup_sources.csv: rows=32
-- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
+- data\processed\governance\official_lineup_sources.csv: rows=32
+- data\processed\governance\vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Source Reliability Governor
 - sources_reviewed: 15
@@ -56,18 +56,18 @@
 - status_counts: UNKNOWN
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-01; reason=run_daily_chain_self_heal_v68_0_objective_context_bridge; triggered_at=2026-06-01T10:12:00+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-01; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-02T13:27:20+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-01; reason=run_prelock_recheck_v67_5_1_safe_consolidated_operator_panel; triggered_at=2026-06-01T09:05:00+01:00
+- .vsigma\triggers\daily_chain_self_heal.trigger: date=2026-06-02; reason=align_daily_chain_self_heal_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
+- .vsigma\triggers\daily_decision_chain_v2.trigger: date=2026-06-02; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-02T13:54:41+01:00
+- .vsigma\triggers\prelock_official_lineup_recheck.trigger: date=2026-06-02; reason=align_prelock_recheck_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
 
 ## Key Files
-- data/processed/today/2026-06-02/vsigma_consolidated_daily_operator_panel.md
-- data/processed/today/2026-06-02/vsigma_operator_brief.md
-- data/processed/today/2026-06-02/vsigma_daily_execution_board.md
-- data/processed/today/2026-06-02/vsigma_prelock_live_recheck.md
-- data/processed/today/2026-06-02/vsigma_live_trigger_validator.md
-- data/processed/today/2026-06-02/vsigma_automation_health.md
-- data/processed/today/2026-06-02/vsigma_probable_lineup_source_reliability_governor.md
+- data\processed\today\2026-06-02\vsigma_consolidated_daily_operator_panel.md
+- data\processed\today\2026-06-02\vsigma_operator_brief.md
+- data\processed\today\2026-06-02\vsigma_daily_execution_board.md
+- data\processed\today\2026-06-02\vsigma_prelock_live_recheck.md
+- data\processed\today\2026-06-02\vsigma_live_trigger_validator.md
+- data\processed\today\2026-06-02\vsigma_automation_health.md
+- data\processed\today\2026-06-02\vsigma_probable_lineup_source_reliability_governor.md
 
 ## Guardrails
 - Panel is diagnostic only; it does not execute bets.
@@ -77,12 +77,12 @@
 - If the daily board is missing, prelock/live files cannot be used as pick permission.
 
 ## Date Coherence Guard
-- overall_status: DATE_MISMATCH_BLOCK
+- overall_status: MISSING_DAILY_BOARD
 - board_status: daily_board_md=MISSING_CORE; daily_board_csv=MISSING_CORE
-- mismatch_count: 2
+- mismatch_count: 0
 - missing_core_count: 3
-- trigger_date_counts: 2026-06-01=2
-- next_action: Fix trigger/artifact date mismatch before using market signals.
+- trigger_date_counts: 2026-06-02=2
+- next_action: Run daily decision chain for target date before using prelock/live/operator outputs.
 
 ## Upstream Board Input Diagnostic
 - overall_status: UPSTREAM_MISSING
@@ -103,3 +103,26 @@
 - real_bet_rows: 0
 - proxy_rows: 0
 - next_action: Run/repair real selection step from scored matches into shortlist/bets-only outputs.
+
+## Local Raw Fixture Discovery
+- overall_status: LOCAL_RAW_CANDIDATES_FOUND
+- files_scanned: 1353
+- accepted_rows: 59
+- rejected_rows: 122
+- next_action: Review accepted rows, then feed normal scoring gates.
+
+## Raw Candidate Trust Gate
+- rows_reviewed: 59
+- trusted_rows: 45
+- quarantine_rows: 14
+- blocked_rows: 0
+- trust_status_counts: TRUSTED_RAW_SOURCE=45; QUARANTINE_REVIEW=14
+- next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
+
+## Trusted Raw Candidate Promotion Gate
+- rows_reviewed: 59
+- promoted_rows: 0
+- blocked_rows: 1
+- quarantine_rows: 44
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=44; NOT_TRUSTED_NO_PROMOTION=14; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=1
+- next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
