@@ -84,22 +84,22 @@
 - If the daily board is missing, prelock/live files cannot be used as pick permission.
 
 ## Date Coherence Guard
-- overall_status: MISSING_DAILY_BOARD
-- board_status: daily_board_md=MISSING_CORE; daily_board_csv=DATE_UNKNOWN
+- overall_status: PARTIAL_OUTPUTS
+- board_status: daily_board_md=OK; daily_board_csv=OK
 - mismatch_count: 0
-- missing_core_count: 2
+- missing_core_count: 1
 - trigger_date_counts: 2026-06-02=2
-- next_action: Run daily decision chain for target date before using prelock/live/operator outputs.
+- next_action: Build missing core reports before market discussion.
 
 ## Upstream Board Input Diagnostic
 - overall_status: UPSTREAM_MISSING
 - first_empty_required_component: real_objective_context_gate
 - missing_required_count: 7
-- empty_required_count: 1
+- empty_required_count: 0
 - date_issue_count: 0
 - forecast_rows: 0
 - translator_rows: 0
-- board_rows: 0
+- board_rows: 1
 - next_action: Build missing required upstream component first: real_objective_context_gate.
 
 ## Real Shortlist Recovery Diagnostic
@@ -134,11 +134,20 @@
 - promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=44; NOT_TRUSTED_NO_PROMOTION=14; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=1
 - next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 
-## Daily Board Self-Heal
-- self_heal_status: EMPTY_BY_PROMOTION_GATE
-- promotion_rows_reviewed: 59
+## Scoring Gap Explainer
+- rows_reviewed: 59
+- missing_scored_rows: 44
+- no_data_blocked_rows: 1
+- not_trusted_rows: 14
 - promoted_rows: 0
-- blocked_rows: 1
-- quarantine_rows: 44
-- board_rows_written: 1_DIAGNOSTIC_ROW
-- reason: 0 promoted raw candidates; no scoring-safe rows available
+- gap_status_counts: MISSING_SCORED_ROW=44; NOT_TRUSTED_SKIPPED=14; SCORED_ROW_NO_DATA_BLOCKED=1
+- next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
+
+## Daily Board Self-Heal
+- self_heal_status: NO_ACTION
+- promotion_rows_reviewed: 0
+- promoted_rows: 0
+- blocked_rows: 0
+- quarantine_rows: 0
+- board_rows_written: 0
+- reason: daily board already has rows
