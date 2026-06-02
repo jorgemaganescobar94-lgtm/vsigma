@@ -59,7 +59,7 @@
 
 ## Next Triggers / Rechecks
 - .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-01; reason=run_daily_chain_self_heal_v68_0_objective_context_bridge; triggered_at=2026-06-01T10:12:00+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-01; reason=run_daily_decision_chain_v2_v68_2_candidate_provenance_regenerate; triggered_at=2026-06-01T11:05:00+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-01; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-02T09:33:49+01:00
 - .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-01; reason=run_prelock_recheck_v67_5_1_safe_consolidated_operator_panel; triggered_at=2026-06-01T09:05:00+01:00
 
 ## Key Files
@@ -103,5 +103,5 @@
 - root_scored_same_day_rows: 1
 - real_shortlist_rows: 0
 - real_bet_rows: 0
-- proxy_rows: 4
+- proxy_rows: 0
 - next_action: Run/repair real selection step from scored matches into shortlist/bets-only outputs.
