@@ -13,6 +13,7 @@ import build_local_raw_fixture_discovery as local_raw_discovery
 import apply_raw_candidate_trust_gate as raw_trust_gate
 import apply_trusted_raw_candidate_promotion_gate as raw_promotion_gate
 import build_scoring_gap_explainer as scoring_gap
+import build_trusted_raw_scoring_queue as scoring_queue
 import build_daily_board_self_heal_from_promotion_gate as board_self_heal
 
 ROOT = Path("data/processed")
@@ -143,6 +144,16 @@ def append_scoring_gap_to_panel(day: str, summary: dict[str, str]) -> None:
     ], "gap_status_counts", lambda s: f"missing_scored_rows={s.get('missing_scored_rows', 'UNKNOWN')}; no_data_blocked_rows={s.get('no_data_blocked_rows', 'UNKNOWN')}; not_trusted_rows={s.get('not_trusted_rows', 'UNKNOWN')}; promoted_rows={s.get('promoted_rows', 'UNKNOWN')}")
 
 
+def append_scoring_queue_to_panel(day: str, summary: dict[str, str]) -> None:
+    append_panel_section(day, "Trusted Raw Scoring Queue", "trusted_raw_scoring_queue", summary, [
+        f"- queue_rows: {summary.get('queue_rows', 'UNKNOWN')}",
+        f"- priority_counts: {summary.get('priority_counts', 'UNKNOWN')}",
+        f"- scoring_needed_counts: {summary.get('scoring_needed_counts', 'UNKNOWN')}",
+        f"- source_gap_status: {summary.get('source_gap_status', 'UNKNOWN')}",
+        f"- next_action: {summary.get('next_action', 'UNKNOWN')}",
+    ], "priority_counts", lambda s: f"queue_rows={s.get('queue_rows', 'UNKNOWN')}; priority_counts={s.get('priority_counts', 'UNKNOWN')}; scoring_needed_counts={s.get('scoring_needed_counts', 'UNKNOWN')}")
+
+
 def append_board_self_heal_to_panel(day: str, summary: dict[str, str]) -> None:
     append_panel_section(day, "Daily Board Self-Heal", "daily_board_self_heal", summary, [
         f"- self_heal_status: {summary.get('self_heal_status', 'UNKNOWN')}",
@@ -164,6 +175,7 @@ def run(day: str, tz: str) -> None:
     raw_trust_gate.run(day, tz, ROOT)
     raw_promotion_gate.run(day, tz, ROOT)
     scoring_gap.run(day, tz, ROOT)
+    scoring_queue.run(day, tz, ROOT)
     board_self_heal.run(day, tz, ROOT)
     panel_v2.run(day, tz)
 
@@ -174,6 +186,7 @@ def run(day: str, tz: str) -> None:
     trust_rows = read_csv(TODAY / day / "vsigma_raw_candidate_trust_gate_summary.csv") or read_csv(GOVERNANCE / "vsigma_raw_candidate_trust_gate_summary.csv")
     promotion_rows = read_csv(TODAY / day / "vsigma_trusted_raw_candidate_promotion_summary.csv") or read_csv(GOVERNANCE / "vsigma_trusted_raw_candidate_promotion_summary.csv")
     scoring_gap_rows = read_csv(TODAY / day / "vsigma_scoring_gap_explainer_summary.csv") or read_csv(GOVERNANCE / "vsigma_scoring_gap_explainer_summary.csv")
+    scoring_queue_rows = read_csv(TODAY / day / "vsigma_trusted_raw_scoring_queue_summary.csv") or read_csv(GOVERNANCE / "vsigma_trusted_raw_scoring_queue_summary.csv")
     self_heal_rows = read_csv(TODAY / day / "vsigma_daily_board_self_heal_summary.csv") or read_csv(GOVERNANCE / "vsigma_daily_board_self_heal_summary.csv")
     if date_rows:
         append_date_guard_to_panel(day, date_rows[0])
@@ -189,6 +202,8 @@ def run(day: str, tz: str) -> None:
         append_raw_promotion_gate_to_panel(day, promotion_rows[0])
     if scoring_gap_rows:
         append_scoring_gap_to_panel(day, scoring_gap_rows[0])
+    if scoring_queue_rows:
+        append_scoring_queue_to_panel(day, scoring_queue_rows[0])
     if self_heal_rows:
         append_board_self_heal_to_panel(day, self_heal_rows[0])
     print("=== VSIGMA CONSOLIDATED DAILY OPERATOR PANEL V3 ===")
@@ -206,6 +221,8 @@ def run(day: str, tz: str) -> None:
         print(f"raw_promotion={promotion_rows[0].get('promotion_status_counts', 'UNKNOWN')}")
     if scoring_gap_rows:
         print(f"scoring_gap={scoring_gap_rows[0].get('gap_status_counts', 'UNKNOWN')}")
+    if scoring_queue_rows:
+        print(f"scoring_queue={scoring_queue_rows[0].get('priority_counts', 'UNKNOWN')}")
     if self_heal_rows:
         print(f"board_self_heal={self_heal_rows[0].get('self_heal_status', 'UNKNOWN')}")
     print("auto_apply=NO")
