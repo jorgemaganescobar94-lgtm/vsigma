@@ -12,6 +12,7 @@ import build_real_shortlist_recovery_diagnostic as real_shortlist_diag
 import build_local_raw_fixture_discovery as local_raw_discovery
 import apply_raw_candidate_trust_gate as raw_trust_gate
 import apply_trusted_raw_candidate_promotion_gate as raw_promotion_gate
+import build_scoring_gap_explainer as scoring_gap
 import build_daily_board_self_heal_from_promotion_gate as board_self_heal
 
 ROOT = Path("data/processed")
@@ -38,30 +39,26 @@ def append_panel_section(day: str, section_title: str, section_key: str, summary
     for base in [TODAY / day, GOVERNANCE]:
         md_path = base / "vsigma_consolidated_daily_operator_panel.md"
         csv_path = base / "vsigma_consolidated_daily_operator_panel.csv"
-
         if md_path.exists():
             text = md_path.read_text(encoding="utf-8", errors="replace")
             block = "\n".join(["", f"## {section_title}", *lines]) + "\n"
             if f"## {section_title}" not in text:
                 md_path.write_text(text + block, encoding="utf-8")
-
         rows = read_csv(csv_path)
         if rows:
             fields = list(rows[0].keys())
             existing = {row.get("section") for row in rows}
             if section_key not in existing:
-                rows.append(
-                    {
-                        "target_date": day,
-                        "generated_at": summary.get("generated_at", ""),
-                        "section": section_key,
-                        "status": summary.get(status_field, "UNKNOWN"),
-                        "detail": detail_builder(summary),
-                        "next_action": summary.get("next_action", "UNKNOWN"),
-                        "auto_apply": "NO",
-                        "production_change": "NO",
-                    }
-                )
+                rows.append({
+                    "target_date": day,
+                    "generated_at": summary.get("generated_at", ""),
+                    "section": section_key,
+                    "status": summary.get(status_field, "UNKNOWN"),
+                    "detail": detail_builder(summary),
+                    "next_action": summary.get("next_action", "UNKNOWN"),
+                    "auto_apply": "NO",
+                    "production_change": "NO",
+                })
                 write_csv(csv_path, rows, fields)
 
 
@@ -134,6 +131,18 @@ def append_raw_promotion_gate_to_panel(day: str, summary: dict[str, str]) -> Non
     ], "promotion_status_counts", lambda s: f"rows_reviewed={s.get('rows_reviewed', 'UNKNOWN')}; promoted_rows={s.get('promoted_rows', 'UNKNOWN')}; blocked_rows={s.get('blocked_rows', 'UNKNOWN')}; quarantine_rows={s.get('quarantine_rows', 'UNKNOWN')}")
 
 
+def append_scoring_gap_to_panel(day: str, summary: dict[str, str]) -> None:
+    append_panel_section(day, "Scoring Gap Explainer", "scoring_gap_explainer", summary, [
+        f"- rows_reviewed: {summary.get('rows_reviewed', 'UNKNOWN')}",
+        f"- missing_scored_rows: {summary.get('missing_scored_rows', 'UNKNOWN')}",
+        f"- no_data_blocked_rows: {summary.get('no_data_blocked_rows', 'UNKNOWN')}",
+        f"- not_trusted_rows: {summary.get('not_trusted_rows', 'UNKNOWN')}",
+        f"- promoted_rows: {summary.get('promoted_rows', 'UNKNOWN')}",
+        f"- gap_status_counts: {summary.get('gap_status_counts', 'UNKNOWN')}",
+        f"- next_action: {summary.get('next_action', 'UNKNOWN')}",
+    ], "gap_status_counts", lambda s: f"missing_scored_rows={s.get('missing_scored_rows', 'UNKNOWN')}; no_data_blocked_rows={s.get('no_data_blocked_rows', 'UNKNOWN')}; not_trusted_rows={s.get('not_trusted_rows', 'UNKNOWN')}; promoted_rows={s.get('promoted_rows', 'UNKNOWN')}")
+
+
 def append_board_self_heal_to_panel(day: str, summary: dict[str, str]) -> None:
     append_panel_section(day, "Daily Board Self-Heal", "daily_board_self_heal", summary, [
         f"- self_heal_status: {summary.get('self_heal_status', 'UNKNOWN')}",
@@ -154,6 +163,7 @@ def run(day: str, tz: str) -> None:
     local_raw_discovery.run(day, tz, Path('.'), ROOT)
     raw_trust_gate.run(day, tz, ROOT)
     raw_promotion_gate.run(day, tz, ROOT)
+    scoring_gap.run(day, tz, ROOT)
     board_self_heal.run(day, tz, ROOT)
     panel_v2.run(day, tz)
 
@@ -163,6 +173,7 @@ def run(day: str, tz: str) -> None:
     local_raw_rows = read_csv(TODAY / day / "vsigma_local_raw_fixture_discovery_summary.csv") or read_csv(GOVERNANCE / "vsigma_local_raw_fixture_discovery_summary.csv")
     trust_rows = read_csv(TODAY / day / "vsigma_raw_candidate_trust_gate_summary.csv") or read_csv(GOVERNANCE / "vsigma_raw_candidate_trust_gate_summary.csv")
     promotion_rows = read_csv(TODAY / day / "vsigma_trusted_raw_candidate_promotion_summary.csv") or read_csv(GOVERNANCE / "vsigma_trusted_raw_candidate_promotion_summary.csv")
+    scoring_gap_rows = read_csv(TODAY / day / "vsigma_scoring_gap_explainer_summary.csv") or read_csv(GOVERNANCE / "vsigma_scoring_gap_explainer_summary.csv")
     self_heal_rows = read_csv(TODAY / day / "vsigma_daily_board_self_heal_summary.csv") or read_csv(GOVERNANCE / "vsigma_daily_board_self_heal_summary.csv")
     if date_rows:
         append_date_guard_to_panel(day, date_rows[0])
@@ -176,6 +187,8 @@ def run(day: str, tz: str) -> None:
         append_raw_trust_gate_to_panel(day, trust_rows[0])
     if promotion_rows:
         append_raw_promotion_gate_to_panel(day, promotion_rows[0])
+    if scoring_gap_rows:
+        append_scoring_gap_to_panel(day, scoring_gap_rows[0])
     if self_heal_rows:
         append_board_self_heal_to_panel(day, self_heal_rows[0])
     print("=== VSIGMA CONSOLIDATED DAILY OPERATOR PANEL V3 ===")
@@ -191,6 +204,8 @@ def run(day: str, tz: str) -> None:
         print(f"raw_trust={trust_rows[0].get('trust_status_counts', 'UNKNOWN')}")
     if promotion_rows:
         print(f"raw_promotion={promotion_rows[0].get('promotion_status_counts', 'UNKNOWN')}")
+    if scoring_gap_rows:
+        print(f"scoring_gap={scoring_gap_rows[0].get('gap_status_counts', 'UNKNOWN')}")
     if self_heal_rows:
         print(f"board_self_heal={self_heal_rows[0].get('self_heal_status', 'UNKNOWN')}")
     print("auto_apply=NO")
