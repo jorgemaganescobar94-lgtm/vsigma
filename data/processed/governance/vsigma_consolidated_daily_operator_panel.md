@@ -84,22 +84,22 @@
 - If the daily board is missing, prelock/live files cannot be used as pick permission.
 
 ## Date Coherence Guard
-- overall_status: DATE_UNKNOWN_REVIEW
-- board_status: daily_board_md=OK; daily_board_csv=DATE_UNKNOWN
+- overall_status: OK
+- board_status: daily_board_md=OK; daily_board_csv=OK
 - mismatch_count: 0
 - missing_core_count: 0
 - trigger_date_counts: 2026-06-02=2
-- next_action: Review artifacts with unparseable dates before trusting outputs.
+- next_action: All dated artifacts/triggers reviewed by guard are coherent.
 
 ## Upstream Board Input Diagnostic
 - overall_status: UPSTREAM_MISSING
 - first_empty_required_component: real_objective_context_gate
 - missing_required_count: 2
-- empty_required_count: 6
+- empty_required_count: 5
 - date_issue_count: 0
 - forecast_rows: 0
 - translator_rows: 0
-- board_rows: 0
+- board_rows: 1
 - next_action: Build missing required upstream component first: real_objective_context_gate.
 
 ## Real Shortlist Recovery Diagnostic
@@ -113,9 +113,9 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1356
+- files_scanned: 1355
 - accepted_rows: 59
-- rejected_rows: 120
+- rejected_rows: 118
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
@@ -172,10 +172,10 @@
 - recommended_action: WAIT_FOR_MANUAL_APPROVAL
 
 ## Daily Board Self-Heal
-- self_heal_status: EMPTY_BY_PROMOTION_GATE
-- promotion_rows_reviewed: 59
+- self_heal_status: NO_ACTION
+- promotion_rows_reviewed: 0
 - promoted_rows: 0
 - blocked_rows: 0
-- quarantine_rows: 45
-- board_rows_written: 1_DIAGNOSTIC_ROW
-- reason: 0 promoted raw candidates; no scoring-safe rows available
+- quarantine_rows: 0
+- board_rows_written: 0
+- reason: daily board already has rows

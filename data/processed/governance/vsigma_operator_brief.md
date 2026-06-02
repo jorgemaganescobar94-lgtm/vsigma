@@ -48,7 +48,7 @@
 - watch_only: 0
 - no_bet: 1
 - board_decisions: NO_BET=0
-- recheck_decisions: none
+- recheck_decisions: CANCELLED_NO_BET=1
 - live_triggers: none
 - alert_notify_required: true
 - auto_apply: NO
