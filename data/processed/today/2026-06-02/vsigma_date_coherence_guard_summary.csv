@@ -1,2 +1,2 @@
 target_date,generated_at,overall_status,board_status,mismatch_count,missing_core_count,trigger_date_counts,next_action,auto_apply,production_change
-2026-06-02,2026-06-02T18:38:11+01:00,PARTIAL_OUTPUTS,daily_board_md=OK; daily_board_csv=OK,0,1,2026-06-02=2,Build missing core reports before market discussion.,NO,NO
+2026-06-02,2026-06-02T22:40:12+01:00,OK,daily_board_md=OK; daily_board_csv=OK,0,0,2026-06-02=2,All dated artifacts/triggers reviewed by guard are coherent.,NO,NO

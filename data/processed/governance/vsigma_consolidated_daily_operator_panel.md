@@ -41,14 +41,14 @@
 - missing_data_counts: none
 
 ## Official / Probable Lineups
-- data/processed/today/2026-06-02/official_lineup_sources.csv: rows=32
-- data/processed/governance/official_lineup_sources.csv: rows=32
-- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
+- data\processed\today\2026-06-02\official_lineup_sources.csv: rows=32
+- data\processed\governance\official_lineup_sources.csv: rows=32
+- data\processed\governance\vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Quarantine / Learning-Only / Import Status
-- data/processed/today/2026-06-02/official_lineup_sources.csv: rows=32
-- data/processed/governance/official_lineup_sources.csv: rows=32
-- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
+- data\processed\today\2026-06-02\official_lineup_sources.csv: rows=32
+- data\processed\governance\official_lineup_sources.csv: rows=32
+- data\processed\governance\vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Source Reliability Governor
 - sources_reviewed: 15
@@ -63,18 +63,18 @@
 - status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-02; reason=align_daily_chain_self_heal_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-02; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-02T13:54:41+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-02; reason=align_prelock_recheck_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
+- .vsigma\triggers\daily_chain_self_heal.trigger: date=2026-06-02; reason=align_daily_chain_self_heal_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
+- .vsigma\triggers\daily_decision_chain_v2.trigger: date=2026-06-02; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-02T13:54:41+01:00
+- .vsigma\triggers\prelock_official_lineup_recheck.trigger: date=2026-06-02; reason=align_prelock_recheck_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
 
 ## Key Files
-- data/processed/today/2026-06-02/vsigma_consolidated_daily_operator_panel.md
-- data/processed/today/2026-06-02/vsigma_operator_brief.md
-- data/processed/today/2026-06-02/vsigma_daily_execution_board.md
-- data/processed/today/2026-06-02/vsigma_prelock_live_recheck.md
-- data/processed/today/2026-06-02/vsigma_live_trigger_validator.md
-- data/processed/today/2026-06-02/vsigma_automation_health.md
-- data/processed/today/2026-06-02/vsigma_probable_lineup_source_reliability_governor.md
+- data\processed\today\2026-06-02\vsigma_consolidated_daily_operator_panel.md
+- data\processed\today\2026-06-02\vsigma_operator_brief.md
+- data\processed\today\2026-06-02\vsigma_daily_execution_board.md
+- data\processed\today\2026-06-02\vsigma_prelock_live_recheck.md
+- data\processed\today\2026-06-02\vsigma_live_trigger_validator.md
+- data\processed\today\2026-06-02\vsigma_automation_health.md
+- data\processed\today\2026-06-02\vsigma_probable_lineup_source_reliability_governor.md
 
 ## Guardrails
 - Panel is diagnostic only; it does not execute bets.
@@ -142,6 +142,13 @@
 - promoted_rows: 0
 - gap_status_counts: MISSING_SCORED_ROW=44; NOT_TRUSTED_SKIPPED=14; SCORED_ROW_NO_DATA_BLOCKED=1
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
+
+## Trusted Raw Scoring Queue
+- queue_rows: 44
+- priority_counts: P1_TRUSTED_MISSING_SCORING=33; P2_LOW_COVERAGE_SCORING=11
+- scoring_needed_counts: YES=44
+- source_gap_status: MISSING_SCORED_ROW
+- next_action: Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.
 
 ## Daily Board Self-Heal
 - self_heal_status: NO_ACTION
