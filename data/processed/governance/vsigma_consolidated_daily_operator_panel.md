@@ -1,7 +1,7 @@
 # vSIGMA Consolidated Daily Operator Panel - 2026-06-03
 
 ## First Read
-- panel_status: OK_EMPTY_BY_PROMOTION_GATE
+- panel_status: NONE
 - operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=UNKNOWN; board_rows=1
 - executable_prematch: NONE
 - live_only: NONE
@@ -17,7 +17,7 @@
 - risk_label: NONE
 - health_status: UNKNOWN
 - board_rows: 1
-- panel_status: OK_EMPTY_BY_PROMOTION_GATE
+- panel_status: NONE
 - next_action: Follow operator brief and panel categories; no automatic execution.
 
 ## Executable Prematch
@@ -82,6 +82,7 @@
 - No Bet, Watch, Live Only, Learning Only and Quarantine are valid successful outcomes.
 - Source Reliability Governor remains advisory-only and cannot change weights by itself.
 - If the daily board is missing, prelock/live files cannot be used as pick permission.
+
 ## Date Coherence Guard
 - overall_status: PARTIAL_OUTPUTS
 - board_status: daily_board_md=OK; daily_board_csv=OK
@@ -94,11 +95,11 @@
 - overall_status: UPSTREAM_MISSING
 - first_empty_required_component: real_objective_context_gate
 - missing_required_count: 7
-- empty_required_count: 1
+- empty_required_count: 0
 - date_issue_count: 0
 - forecast_rows: 0
 - translator_rows: 0
-- board_rows: 0
+- board_rows: 1
 - next_action: Build missing required upstream component first: real_objective_context_gate.
 
 ## Real Shortlist Recovery Diagnostic
@@ -112,86 +113,69 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1358
+- files_scanned: 1362
 - accepted_rows: 143
-- rejected_rows: 3
+- rejected_rows: 290
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
 - rows_reviewed: 143
-- trusted_rows: 1
-- quarantine_rows: 0
-- blocked_rows: 142
-- trust_status_counts: REJECTED_SOURCE_BLOCK=142; TRUSTED_RAW_SOURCE=1
+- trusted_rows: 106
+- quarantine_rows: 37
+- blocked_rows: 0
+- trust_status_counts: TRUSTED_RAW_SOURCE=106; QUARANTINE_REVIEW=37
 - next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
 
 ## Trusted Raw Candidate Promotion Gate
 - rows_reviewed: 143
 - promoted_rows: 0
 - blocked_rows: 1
-- quarantine_rows: 0
-- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=142; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=1
+- quarantine_rows: 105
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=105; NOT_TRUSTED_NO_PROMOTION=37; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=1
 - next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 
 ## Scoring Gap Explainer
 - rows_reviewed: 143
-- missing_scored_rows: 0
+- missing_scored_rows: 105
 - no_data_blocked_rows: 1
-- not_trusted_rows: 142
+- not_trusted_rows: 37
 - promoted_rows: 0
-- gap_status_counts: NOT_TRUSTED_SKIPPED=142; SCORED_ROW_NO_DATA_BLOCKED=1
+- gap_status_counts: MISSING_SCORED_ROW=105; NOT_TRUSTED_SKIPPED=37; SCORED_ROW_NO_DATA_BLOCKED=1
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 
 ## Trusted Raw Scoring Queue
-- queue_rows: 0
-- priority_counts: none
-- scoring_needed_counts: none
+- queue_rows: 105
+- priority_counts: P1_TRUSTED_MISSING_SCORING=67; P2_LOW_COVERAGE_SCORING=38
+- scoring_needed_counts: YES=105
 - source_gap_status: MISSING_SCORED_ROW
 - next_action: Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.
 
 ## Queue-to-Enrichment Dry Run Planner
-- rows_planned: 0
-- dry_run_decision_counts: none
-- risk_label_counts: none
-- priority_counts: none
-- total_estimated_call_units: 0
+- rows_planned: 105
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=105
+- risk_label_counts: MEDIUM=56; HIGH_LOW_COVERAGE=38; HIGH_CONTEXT_VOLATILITY=11
+- priority_counts: P1_TRUSTED_MISSING_SCORING=67; P2_LOW_COVERAGE_SCORING=38
+- total_estimated_call_units: 505
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
 
 ## Enrichment Cost & Approval Gate
-- approval_gate_status: NO_ENRICHMENT_NEEDED
-- rows_planned: 0
-- estimated_call_units: 0
-- approval_required: NO
+- approval_gate_status: WAIT_FOR_MANUAL_APPROVAL
+- rows_planned: 105
+- estimated_call_units: 505
+- approval_required: YES
 - max_allowed_without_manual_approval: 0
 - api_calls_allowed: NO
 - api_calls_planned: NO
 - api_calls_executed: NO
-- recommended_action: NO_ACTION
+- recommended_action: WAIT_FOR_MANUAL_APPROVAL
 
 ## Daily Board Self-Heal
-- self_heal_status: EMPTY_BY_PROMOTION_GATE
-- promotion_rows_reviewed: 143
+- self_heal_status: NO_ACTION
+- promotion_rows_reviewed: 0
 - promoted_rows: 0
-- blocked_rows: 1
+- blocked_rows: 0
 - quarantine_rows: 0
-- board_rows_written: 1_DIAGNOSTIC_ROW
-- reason: 0 promoted raw candidates; no scoring-safe rows available
-## Empty Diagnostic Board State Normalizer
-- normalized_status: OK_EMPTY_BY_PROMOTION_GATE
-- operator_state: HEALTHY_EMPTY_NO_ACTION
-- board_status: daily_board_md=OK; daily_board_csv=OK
-- mismatch_count: 0
-- promoted_rows: 0
-- queue_rows: 0
-- diagnostic_no_bet_rows: 1
-- next_action: No picks. System is coherent and empty because zero candidates were promoted. Wait for future data or improved trusted source coverage.
-## Rejected Source Block Audit
-- rows_reviewed: 142
-- correct_reject_rows: 88
-- manual_review_rows: 54
-- whitelist_candidate_rows: 31
-- audit_bucket_counts: CORRECT_REJECT_YOUTH_RESERVE=55; MANUAL_REVIEW_POSSIBLE_WHITELIST=31; CORRECT_REJECT_LOW_TIER_LOW_COVERAGE=27; REVIEW_REJECTED_SOURCE_UNKNOWN_COMPETITION=23; CORRECT_REJECT_FRIENDLY_CONTEXT_VOLATILITY=6
-- review_priority_counts: P3_CORRECT_REJECT=88; P1_REVIEW_CANDIDATE=31; P2_REVIEW_LOW_CONFIDENCE=23
-- next_action: Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.
+- board_rows_written: 0
+- reason: daily board already has rows
