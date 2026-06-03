@@ -189,3 +189,29 @@
 - audit_bucket_counts: none
 - review_priority_counts: none
 - next_action: Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.
+## API Quota-Aware Enrichment Gate
+- quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
+- api_plan_name: API-Football Ultra
+- plan_requests_per_day: 75000
+- rows_reviewed: 105
+- p1_rows: 67
+- p2_rows: 38
+- p1_estimated_units: 346
+- p2_estimated_units: 159
+- auto_units_reserved: 318
+- max_auto_units_per_day: 5000
+- max_auto_units_per_run: 1500
+- quota_decision_counts: AUTO_ENRICHMENT_ALLOWED_P1=56; COVERAGE_PROBE_ALLOWED_P2=38; MANUAL_REVIEW_REQUIRED=11
+- api_calls_allowed: YES_LIMITED
+- api_calls_executed: NO
+- recommended_action: Run a separate enrichment executor only for allowlisted rows; do not create picks from enrichment alone.
+## API Enrichment Allowlist Dry Run
+- allowlist_status: ALLOWLIST_DRY_RUN_READY
+- rows_reviewed: 105
+- allowlisted_rows: 94
+- full_enrichment_dry_rows: 56
+- coverage_probe_dry_rows: 38
+- blocked_rows: 11
+- quota_units_reserved: 318
+- external_calls_executed: NO
+- next_action: Review allowlist. A separate approved enrichment step is required before external calls.
