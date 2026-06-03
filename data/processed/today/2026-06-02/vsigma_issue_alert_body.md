@@ -3,7 +3,7 @@
 System status: **ATTENTION**
 Alert required: **YES**
 Notify required: **YES**
-Alert hash: `b0a6545ecdf43b7d37b41add3986dee79971883a0a777682a3063f601f37be27`
+Alert hash: `8484c28de3a0a3e83ad11c46890f20ed518b7c68b4d6f8d0ebd1340c50431f59`
 
 ## Signals
 - - READY_LOW_STAKE_REVIEW still requires manual price and live/prelock confirmation.
@@ -23,7 +23,7 @@ Alert hash: `b0a6545ecdf43b7d37b41add3986dee79971883a0a777682a3063f601f37be27`
 
 ## Component Rows
 - daily_execution_board | status=OK | severity=OK | action=NO | detail=rows=0; decisions=NO_BET=0
-- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=none
+- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=CANCELLED_NO_BET=1
 - live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
 - postmatch_results_refresh | status=WAITING_OR_NOT_RUN | severity=INFO | action=NO_IF_MATCHES_NOT_FINISHED | detail=postmatch refresh not present yet
 - postmatch_stat_actuals | status=WAITING_OR_NOT_RUN | severity=INFO | action=NO_IF_MATCHES_NOT_FINISHED | detail=actuals report not present yet

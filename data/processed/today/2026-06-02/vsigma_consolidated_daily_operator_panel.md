@@ -30,25 +30,27 @@
 - none
 
 ## No Bet
-- #0 | NO_BET | NO_PROMOTED_RAW_CANDIDATES vs NO_SCORING_SAFE_ROWS | market=NO_MARKET | stake=NO_STAKE | permission=NO_BET | score=0
+- #0 | NO_BET | NO_PROMOTED_RAW_CANDIDATES vs NO_SCORING_SAFE_ROWS | market=NO_MARKET | stake=NO_STAKE | permission=NO | score=0
 
 ## API Coverage
 - board_rows=1
-- source_guard_counts: PROMOTION_GATE_DIAGNOSTIC_ONLY=1
-- execution_permission_counts: NO_BET=1
+- source_guard_counts: PROMOTION_GATE_DIAGNOSTIC_ONLY; API_COVERAGE_GATE_V2=1
+- execution_permission_counts: NO=1
 - avg_coverage_score: UNKNOWN
-- forecast_warning_counts: no promoted raw candidates=1
-- missing_data_counts: none
+- forecast_warning_counts: no promoted raw candidates=1; API_COVERAGE_UNKNOWN=1
+- missing_data_counts: unknown=1
 
 ## Official / Probable Lineups
-- data\processed\today\2026-06-02\official_lineup_sources.csv: rows=32
-- data\processed\governance\official_lineup_sources.csv: rows=32
-- data\processed\governance\vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
+- data/processed/today/2026-06-02/official_lineup_sources.csv: rows=32
+- data/processed/today/2026-06-02/vsigma_probable_lineup_consensus.csv: rows=1
+- data/processed/governance/official_lineup_sources.csv: rows=32
+- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Quarantine / Learning-Only / Import Status
-- data\processed\today\2026-06-02\official_lineup_sources.csv: rows=32
-- data\processed\governance\official_lineup_sources.csv: rows=32
-- data\processed\governance\vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
+- data/processed/today/2026-06-02/official_lineup_sources.csv: rows=32
+- data/processed/today/2026-06-02/vsigma_probable_lineup_consensus.csv: rows=1
+- data/processed/governance/official_lineup_sources.csv: rows=32
+- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Source Reliability Governor
 - sources_reviewed: 15
@@ -63,18 +65,18 @@
 - status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma\triggers\daily_chain_self_heal.trigger: date=2026-06-02; reason=align_daily_chain_self_heal_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
-- .vsigma\triggers\daily_decision_chain_v2.trigger: date=2026-06-02; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-02T13:54:41+01:00
-- .vsigma\triggers\prelock_official_lineup_recheck.trigger: date=2026-06-02; reason=align_prelock_recheck_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-02; reason=align_daily_chain_self_heal_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-02; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-02T13:54:41+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-02; reason=align_prelock_recheck_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
 
 ## Key Files
-- data\processed\today\2026-06-02\vsigma_consolidated_daily_operator_panel.md
-- data\processed\today\2026-06-02\vsigma_operator_brief.md
-- data\processed\today\2026-06-02\vsigma_daily_execution_board.md
-- data\processed\today\2026-06-02\vsigma_prelock_live_recheck.md
-- data\processed\today\2026-06-02\vsigma_live_trigger_validator.md
-- data\processed\today\2026-06-02\vsigma_automation_health.md
-- data\processed\today\2026-06-02\vsigma_probable_lineup_source_reliability_governor.md
+- data/processed/today/2026-06-02/vsigma_consolidated_daily_operator_panel.md
+- data/processed/today/2026-06-02/vsigma_operator_brief.md
+- data/processed/today/2026-06-02/vsigma_daily_execution_board.md
+- data/processed/today/2026-06-02/vsigma_prelock_live_recheck.md
+- data/processed/today/2026-06-02/vsigma_live_trigger_validator.md
+- data/processed/today/2026-06-02/vsigma_automation_health.md
+- data/processed/today/2026-06-02/vsigma_probable_lineup_source_reliability_governor.md
 
 ## Guardrails
 - Panel is diagnostic only; it does not execute bets.
@@ -94,8 +96,8 @@
 ## Upstream Board Input Diagnostic
 - overall_status: UPSTREAM_MISSING
 - first_empty_required_component: real_objective_context_gate
-- missing_required_count: 7
-- empty_required_count: 0
+- missing_required_count: 2
+- empty_required_count: 5
 - date_issue_count: 0
 - forecast_rows: 0
 - translator_rows: 0
@@ -103,19 +105,19 @@
 - next_action: Build missing required upstream component first: real_objective_context_gate.
 
 ## Real Shortlist Recovery Diagnostic
-- overall_status: FILTERS_TOO_STRICT_OR_SELECTOR_NOT_RUN
-- root_cause: scoring has same-day rows but real shortlist/bets outputs are absent or empty
-- root_scored_same_day_rows: 1
+- overall_status: SCORING_SOURCE_EMPTY_FOR_DATE
+- root_cause: scored source exists but has no rows for target date
+- root_scored_same_day_rows: 0
 - real_shortlist_rows: 0
 - real_bet_rows: 0
 - proxy_rows: 0
-- next_action: Run/repair real selection step from scored matches into shortlist/bets-only outputs.
+- next_action: Refresh/fix scoring source date coverage.
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1353
+- files_scanned: 1356
 - accepted_rows: 59
-- rejected_rows: 122
+- rejected_rows: 118
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
@@ -129,41 +131,41 @@
 ## Trusted Raw Candidate Promotion Gate
 - rows_reviewed: 59
 - promoted_rows: 0
-- blocked_rows: 1
-- quarantine_rows: 44
-- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=44; NOT_TRUSTED_NO_PROMOTION=14; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=1
+- blocked_rows: 0
+- quarantine_rows: 45
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=45; NOT_TRUSTED_NO_PROMOTION=14
 - next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 
 ## Scoring Gap Explainer
 - rows_reviewed: 59
-- missing_scored_rows: 44
-- no_data_blocked_rows: 1
+- missing_scored_rows: 45
+- no_data_blocked_rows: 0
 - not_trusted_rows: 14
 - promoted_rows: 0
-- gap_status_counts: MISSING_SCORED_ROW=44; NOT_TRUSTED_SKIPPED=14; SCORED_ROW_NO_DATA_BLOCKED=1
+- gap_status_counts: MISSING_SCORED_ROW=45; NOT_TRUSTED_SKIPPED=14
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 
 ## Trusted Raw Scoring Queue
-- queue_rows: 44
-- priority_counts: P1_TRUSTED_MISSING_SCORING=33; P2_LOW_COVERAGE_SCORING=11
-- scoring_needed_counts: YES=44
+- queue_rows: 45
+- priority_counts: P1_TRUSTED_MISSING_SCORING=34; P2_LOW_COVERAGE_SCORING=11
+- scoring_needed_counts: YES=45
 - source_gap_status: MISSING_SCORED_ROW
 - next_action: Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.
 
 ## Queue-to-Enrichment Dry Run Planner
-- rows_planned: 44
-- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=44
-- risk_label_counts: MEDIUM=29; HIGH_LOW_COVERAGE=11; HIGH_CONTEXT_VOLATILITY=4
-- priority_counts: P1_TRUSTED_MISSING_SCORING=33; P2_LOW_COVERAGE_SCORING=11
-- total_estimated_call_units: 217
+- rows_planned: 45
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=45
+- risk_label_counts: MEDIUM=30; HIGH_LOW_COVERAGE=11; HIGH_CONTEXT_VOLATILITY=4
+- priority_counts: P1_TRUSTED_MISSING_SCORING=34; P2_LOW_COVERAGE_SCORING=11
+- total_estimated_call_units: 222
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
 
 ## Enrichment Cost & Approval Gate
 - approval_gate_status: WAIT_FOR_MANUAL_APPROVAL
-- rows_planned: 44
-- estimated_call_units: 217
+- rows_planned: 45
+- estimated_call_units: 222
 - approval_required: YES
 - max_allowed_without_manual_approval: 0
 - api_calls_allowed: NO

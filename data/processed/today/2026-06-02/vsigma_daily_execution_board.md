@@ -7,8 +7,8 @@
 - board_bucket_counts: EMPTY_BY_PROMOTION_GATE=1 diagnostic row
 - promotion_rows_reviewed: 59
 - promoted_rows: 0
-- blocked_rows: 1
-- quarantine_rows: 44
+- blocked_rows: 0
+- quarantine_rows: 45
 - source_guard: PROMOTION_GATE_DIAGNOSTIC_ONLY
 - auto_apply: NO
 - production_change: NO

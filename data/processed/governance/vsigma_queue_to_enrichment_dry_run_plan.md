@@ -1,11 +1,11 @@
 # vSIGMA Queue-to-Enrichment Dry Run Planner - 2026-06-02
 
 ## Summary
-- rows_planned: 44
-- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=44
-- risk_label_counts: MEDIUM=29; HIGH_LOW_COVERAGE=11; HIGH_CONTEXT_VOLATILITY=4
-- priority_counts: P1_TRUSTED_MISSING_SCORING=33; P2_LOW_COVERAGE_SCORING=11
-- total_estimated_call_units: 217
+- rows_planned: 45
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=45
+- risk_label_counts: MEDIUM=30; HIGH_LOW_COVERAGE=11; HIGH_CONTEXT_VOLATILITY=4
+- priority_counts: P1_TRUSTED_MISSING_SCORING=34; P2_LOW_COVERAGE_SCORING=11
+- total_estimated_call_units: 222
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
@@ -13,6 +13,7 @@
 - production_change: NO
 
 ## Dry Run Rows
+- La Unión vs Deportivo Cuenca | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Ario Eslamshahr vs Shahrdari Noshahr | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Fard Alborz vs Mes Kerman | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Havadar vs Navad Urmia | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
