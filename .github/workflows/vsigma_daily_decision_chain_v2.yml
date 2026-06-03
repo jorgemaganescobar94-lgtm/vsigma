@@ -1,4 +1,4 @@
-﻿name: vSIGMA Daily Decision Chain v2
+name: vSIGMA Daily Decision Chain v2
 
 on:
   workflow_dispatch:
@@ -150,6 +150,10 @@ jobs:
         shell: bash
         run: python scripts/build_consolidated_daily_operator_panel_v3.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Integrate API quota gate into panel
+        shell: bash
+        run: python scripts/build_api_quota_gate_panel_integration.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Postflight self-heal router
         shell: bash
         run: python scripts/route_daily_chain_missing_self_heal.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
@@ -184,4 +188,3 @@ jobs:
 
           git commit -m "vSIGMA daily decision chain v2 ${VSIGMA_DATE} [skip ci]"
           git push origin HEAD:main
-
