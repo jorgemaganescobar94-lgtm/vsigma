@@ -1,0 +1,75 @@
+# vSIGMA API Quota-Aware Enrichment Gate - 2026-06-02
+
+## Summary
+- quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
+- api_plan_name: API-Football Ultra
+- plan_requests_per_day: 75000
+- rows_reviewed: 45
+- p1_rows: 34
+- p2_rows: 11
+- p1_estimated_units: 174
+- p2_estimated_units: 48
+- p2_probe_units: 11
+- total_estimated_units: 222
+- auto_units_reserved: 161
+- max_auto_units_per_day: 5000
+- max_auto_units_per_run: 1500
+- quota_decision_counts: AUTO_ENRICHMENT_ALLOWED_P1=30; COVERAGE_PROBE_ALLOWED_P2=11; MANUAL_REVIEW_REQUIRED=4
+- api_calls_allowed: YES_LIMITED
+- api_calls_executed: NO
+- recommended_action: Run a separate enrichment executor only for allowlisted rows; do not create picks from enrichment alone.
+- auto_apply: NO
+- production_change: NO
+
+## Allowlist / Policy Rows
+- La Unión vs Deportivo Cuenca | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Ario Eslamshahr vs Shahrdari Noshahr | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Fard Alborz vs Mes Kerman | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Havadar vs Navad Urmia | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Mes Shahr-e Babak vs Sanat Naft | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Mes Soongoun vs Niroye Zamini | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Naft Gachsaran vs Be'sat Kermanshah | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Nassaji Mazandaran vs Damash Gilanian | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Pars Jonoubi JAM vs Naft Bandar Abbas | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Shenavarsazi Qeshm vs Saipa | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Mangasport vs Bitam | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- US Oyem vs Lozo | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Vautour Club vs Ogooue FC | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Independiente Medellin vs Cucuta | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Assyriska FF vs Enköping | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Rosengård vs Angelholms FF | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Olimpia Grudziądz vs Sandecja Nowy Sącz | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Al Kahrabaa vs Al-Karma | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Al Quwa Al Jawiya vs Zakho | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Al Shorta vs Al Minaa Basra | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Erbil vs Baghdad | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Gharraf vs Naft Maysan | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- USM Alger vs CR Belouizdad | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Afrique Football Élite vs Diarra | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Djoliba vs Binga | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Deportivo Merlo vs Deportivo Laferrere | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Union Brescia vs Ascoli | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | decision=MANUAL_REVIEW_REQUIRED | mode=NO_AUTO_ENRICHMENT | reserved=0 | api_allowed=NO | executed=NO
+- Al-Hilal Omdurman II vs Al Ahli Wad Medani | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Hilal El-Fasher vs Al Fallah | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Hudiksvall vs Friska Viljor | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | decision=MANUAL_REVIEW_REQUIRED | mode=NO_AUTO_ENRICHMENT | reserved=0 | api_allowed=NO | executed=NO
+- Sävedalen vs Böljan | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | decision=MANUAL_REVIEW_REQUIRED | mode=NO_AUTO_ENRICHMENT | reserved=0 | api_allowed=NO | executed=NO
+- Vastkurd vs Trollhättan | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | decision=MANUAL_REVIEW_REQUIRED | mode=NO_AUTO_ENRICHMENT | reserved=0 | api_allowed=NO | executed=NO
+- New Jersey Copa vs Cedar Stars Rush | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Vermont Green vs Boston Bolts | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- JJK vs VJS | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Rops vs OLS | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Mariánské Lázně vs Karlovy Vary | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Nové Sady vs Sokol Lanžhot | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Croatia vs Belgium | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Georgia vs Romania | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Morocco vs Madagascar | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Wales vs Ghana | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Korneuburg vs Ybbs | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Blau-Weiß Feldkirch vs FC Egg | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Greuther Fürth II vs Cham | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+
+## Guardrails
+- This gate is policy/allowlist only; it does not call APIs.
+- API calls executed remains NO until a separate enrichment executor is explicitly run.
+- P1 may be auto-allowlisted within quota; P2 is coverage-probe-only; volatile/manual rows stay blocked.
+- Enrichment alone never creates pick or stake permission.
