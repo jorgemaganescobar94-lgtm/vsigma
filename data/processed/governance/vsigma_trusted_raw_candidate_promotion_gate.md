@@ -3,15 +3,15 @@
 ## Summary
 - rows_reviewed: 143
 - promoted_rows: 0
-- blocked_rows: 1
-- quarantine_rows: 105
-- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=105; NOT_TRUSTED_NO_PROMOTION=37; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=1
+- blocked_rows: 0
+- quarantine_rows: 106
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=106; NOT_TRUSTED_NO_PROMOTION=37
 - next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 - auto_apply: NO
 - production_change: NO
 
 ## Rows
-- Gualaceo SC vs Mushuc Runa SC | status=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | allowed=NO_PROMOTION_NO_BET | reason=matching scored row is NO_DATA_BLOCKED | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Gualaceo SC vs Mushuc Runa SC | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Amical Saint-Prex vs Grasshopper II | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Courtételle vs YF Juventus | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Langenthal vs Tuggen | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv

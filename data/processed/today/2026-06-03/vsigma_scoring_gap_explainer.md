@@ -2,17 +2,17 @@
 
 ## Summary
 - rows_reviewed: 143
-- missing_scored_rows: 105
-- no_data_blocked_rows: 1
+- missing_scored_rows: 106
+- no_data_blocked_rows: 0
 - not_trusted_rows: 37
 - promoted_rows: 0
-- gap_status_counts: MISSING_SCORED_ROW=105; NOT_TRUSTED_SKIPPED=37; SCORED_ROW_NO_DATA_BLOCKED=1
+- gap_status_counts: MISSING_SCORED_ROW=106; NOT_TRUSTED_SKIPPED=37
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 - auto_apply: NO
 - production_change: NO
 
 ## Gap Rows
-- Gualaceo SC vs Mushuc Runa SC | promotion=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | gap=SCORED_ROW_NO_DATA_BLOCKED | stage=SCORING_ENRICHMENT_BLOCKED | scored=NO_DATA_BLOCKED | fix=Repair enrichment inputs for stats/odds/standings/coverage; do not promote until non-blocked.
+- Gualaceo SC vs Mushuc Runa SC | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
 - Amical Saint-Prex vs Grasshopper II | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
 - Courtételle vs YF Juventus | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
 - Langenthal vs Tuggen | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.

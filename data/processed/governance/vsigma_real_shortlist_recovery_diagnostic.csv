@@ -1,9 +1,9 @@
 target_date,generated_at,component,component_type,path,exists,total_rows,same_day_rows,real_rows,proxy_rows,bet_like_rows,blocked_rows,status_counts,diagnostic_status,detail,auto_apply,production_change
-2026-06-03,2026-06-03T16:22:03+01:00,root_scored_matches,SCORING,data/processed/matches_vsigma_scored_v3.csv,true,1,1,1,0,0,1,none,HAS_REAL_ROWS,file has same-day rows,NO,NO
-2026-06-03,2026-06-03T16:22:03+01:00,dated_scored_matches,SCORING,data/processed/today/2026-06-03/matches_vsigma_scored_v3.csv,true,1,1,0,0,0,1,none,HAS_ROWS,file has same-day rows,NO,NO
-2026-06-03,2026-06-03T16:22:03+01:00,today_execution_shortlist,SHORTLIST,data/processed/today/2026-06-03/vsigma_today_execution_shortlist.csv,false,0,0,0,0,0,0,none,MISSING,file is not present,NO,NO
-2026-06-03,2026-06-03T16:22:03+01:00,today_execution_bets_only,BETS,data/processed/today/2026-06-03/vsigma_today_execution_bets_only.csv,false,0,0,0,0,0,0,none,MISSING,file is not present,NO,NO
-2026-06-03,2026-06-03T16:22:03+01:00,context_adjusted_final_picks,ADJUSTED,data/processed/today/2026-06-03/vsigma_context_adjusted_final_picks.csv,false,0,0,0,0,0,0,none,MISSING,file is not present,NO,NO
-2026-06-03,2026-06-03T16:22:03+01:00,real_objective_context_gate,OBJECTIVE_PROXY,data/processed/today/2026-06-03/vsigma_real_objective_context_gate.csv,false,0,0,0,0,0,0,none,MISSING,file is not present,NO,NO
-2026-06-03,2026-06-03T16:22:03+01:00,objective_context_execution_bridge,OBJECTIVE_PROXY,data/processed/today/2026-06-03/vsigma_objective_context_execution_bridge.csv,false,0,0,0,0,0,0,none,MISSING,file is not present,NO,NO
-2026-06-03,2026-06-03T16:22:03+01:00,candidate_provenance_ledger,PROVENANCE,data/processed/today/2026-06-03/vsigma_candidate_provenance_ledger.csv,false,0,0,0,0,0,0,none,MISSING,file is not present,NO,NO
+2026-06-03,2026-06-04T00:11:19+01:00,root_scored_matches,SCORING,data/processed/matches_vsigma_scored_v3.csv,true,0,0,0,0,0,0,none,EMPTY,file exists but has no data rows,NO,NO
+2026-06-03,2026-06-04T00:11:19+01:00,dated_scored_matches,SCORING,data/processed/today/2026-06-03/matches_vsigma_scored_v3.csv,true,0,0,0,0,0,0,none,EMPTY,file exists but has no data rows,NO,NO
+2026-06-03,2026-06-04T00:11:19+01:00,today_execution_shortlist,SHORTLIST,data/processed/today/2026-06-03/vsigma_today_execution_shortlist.csv,false,0,0,0,0,0,0,none,MISSING,file is not present,NO,NO
+2026-06-03,2026-06-04T00:11:19+01:00,today_execution_bets_only,BETS,data/processed/today/2026-06-03/vsigma_today_execution_bets_only.csv,false,0,0,0,0,0,0,none,MISSING,file is not present,NO,NO
+2026-06-03,2026-06-04T00:11:19+01:00,context_adjusted_final_picks,ADJUSTED,data/processed/today/2026-06-03/vsigma_context_adjusted_final_picks.csv,false,0,0,0,0,0,0,none,MISSING,file is not present,NO,NO
+2026-06-03,2026-06-04T00:11:19+01:00,real_objective_context_gate,OBJECTIVE_PROXY,data/processed/today/2026-06-03/vsigma_real_objective_context_gate.csv,false,0,0,0,0,0,0,none,MISSING,file is not present,NO,NO
+2026-06-03,2026-06-04T00:11:19+01:00,objective_context_execution_bridge,OBJECTIVE_PROXY,data/processed/today/2026-06-03/vsigma_objective_context_execution_bridge.csv,false,0,0,0,0,0,0,none,MISSING,file is not present,NO,NO
+2026-06-03,2026-06-04T00:11:19+01:00,candidate_provenance_ledger,PROVENANCE,data/processed/today/2026-06-03/vsigma_candidate_provenance_ledger.csv,false,0,0,0,0,0,0,none,MISSING,file is not present,NO,NO

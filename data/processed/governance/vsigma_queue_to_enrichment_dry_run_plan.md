@@ -1,11 +1,11 @@
 # vSIGMA Queue-to-Enrichment Dry Run Planner - 2026-06-03
 
 ## Summary
-- rows_planned: 105
-- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=105
-- risk_label_counts: MEDIUM=56; HIGH_LOW_COVERAGE=38; HIGH_CONTEXT_VOLATILITY=11
-- priority_counts: P1_TRUSTED_MISSING_SCORING=67; P2_LOW_COVERAGE_SCORING=38
-- total_estimated_call_units: 505
+- rows_planned: 106
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=106
+- risk_label_counts: MEDIUM=57; HIGH_LOW_COVERAGE=38; HIGH_CONTEXT_VOLATILITY=11
+- priority_counts: P1_TRUSTED_MISSING_SCORING=68; P2_LOW_COVERAGE_SCORING=38
+- total_estimated_call_units: 510
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
@@ -13,6 +13,7 @@
 - production_change: NO
 
 ## Dry Run Rows
+- Gualaceo SC vs Mushuc Runa SC | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Amical Saint-Prex vs Grasshopper II | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Courtételle vs YF Juventus | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Langenthal vs Tuggen | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS

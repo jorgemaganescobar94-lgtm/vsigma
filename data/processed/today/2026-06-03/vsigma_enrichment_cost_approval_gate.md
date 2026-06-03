@@ -2,15 +2,15 @@
 
 ## Summary
 - approval_gate_status: WAIT_FOR_MANUAL_APPROVAL
-- rows_planned: 105
-- estimated_call_units: 505
+- rows_planned: 106
+- estimated_call_units: 510
 - approval_required: YES
 - max_allowed_without_manual_approval: 0
 - api_calls_allowed: NO
 - api_calls_planned: NO
 - api_calls_executed: NO
 - recommended_action: WAIT_FOR_MANUAL_APPROVAL
-- approval_reason: Estimated enrichment workload is 505 call units across 105 planned rows; manual approval is required before any API/enrichment stage.
+- approval_reason: Estimated enrichment workload is 510 call units across 106 planned rows; manual approval is required before any API/enrichment stage.
 - auto_apply: NO
 - production_change: NO
 
