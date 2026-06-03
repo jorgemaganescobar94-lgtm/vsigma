@@ -154,6 +154,10 @@ jobs:
         shell: bash
         run: python scripts/build_api_quota_gate_panel_integration.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Refresh date guard after self-heal
+        shell: bash
+        run: python scripts/build_post_self_heal_date_guard_refresh.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Postflight self-heal router
         shell: bash
         run: python scripts/route_daily_chain_missing_self_heal.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
