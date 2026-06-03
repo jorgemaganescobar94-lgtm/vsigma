@@ -187,3 +187,11 @@
 - queue_rows: 0
 - diagnostic_no_bet_rows: 1
 - next_action: No picks. System is coherent and empty because zero candidates were promoted. Wait for future data or improved trusted source coverage.
+## Rejected Source Block Audit
+- rows_reviewed: 142
+- correct_reject_rows: 88
+- manual_review_rows: 54
+- whitelist_candidate_rows: 31
+- audit_bucket_counts: CORRECT_REJECT_YOUTH_RESERVE=55; MANUAL_REVIEW_POSSIBLE_WHITELIST=31; CORRECT_REJECT_LOW_TIER_LOW_COVERAGE=27; REVIEW_REJECTED_SOURCE_UNKNOWN_COMPETITION=23; CORRECT_REJECT_FRIENDLY_CONTEXT_VOLATILITY=6
+- review_priority_counts: P3_CORRECT_REJECT=88; P1_REVIEW_CANDIDATE=31; P2_REVIEW_LOW_CONFIDENCE=23
+- next_action: Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.
