@@ -82,14 +82,13 @@
 - No Bet, Watch, Live Only, Learning Only and Quarantine are valid successful outcomes.
 - Source Reliability Governor remains advisory-only and cannot change weights by itself.
 - If the daily board is missing, prelock/live files cannot be used as pick permission.
-
 ## Date Coherence Guard
-- overall_status: MISSING_DAILY_BOARD
-- board_status: daily_board_md=MISSING_CORE; daily_board_csv=DATE_UNKNOWN
+- overall_status: PARTIAL_OUTPUTS
+- board_status: daily_board_md=OK; daily_board_csv=OK
 - mismatch_count: 0
-- missing_core_count: 2
+- missing_core_count: 1
 - trigger_date_counts: 2026-06-03=2
-- next_action: Run daily decision chain for target date before using prelock/live/operator outputs.
+- next_action: Build missing core reports before market discussion.
 
 ## Upstream Board Input Diagnostic
 - overall_status: UPSTREAM_MISSING
