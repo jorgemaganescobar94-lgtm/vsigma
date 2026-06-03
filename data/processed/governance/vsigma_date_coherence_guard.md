@@ -1,25 +1,25 @@
 # vSIGMA Date Coherence Guard - 2026-06-02
 
 ## Summary
-- overall_status: DATE_UNKNOWN_REVIEW
-- board_status: daily_board_md=OK; daily_board_csv=OK
-- mismatch_count: 0
+- overall_status: DATE_MISMATCH_BLOCK
+- board_status: daily_board_md=OK; daily_board_csv=DATE_UNKNOWN
+- mismatch_count: 1
 - missing_core_count: 0
-- trigger_date_counts: UNKNOWN=1; 2026-06-02=1
-- next_action: Review artifacts with unparseable dates before trusting outputs.
+- trigger_date_counts: 2026-06-03=1; 2026-06-02=1
+- next_action: Fix trigger/artifact date mismatch before using market signals.
 - auto_apply: NO
 - production_change: NO
 
 ## Component Rows
 - daily_board_md | status=OK | observed=2026-06-02 | path=data/processed/today/2026-06-02/vsigma_daily_execution_board.md | detail=date coherent
-- daily_board_csv | status=OK | observed=2026-06-02 | path=data/processed/today/2026-06-02/vsigma_daily_execution_board.csv | detail=date coherent
+- daily_board_csv | status=DATE_UNKNOWN | observed=UNKNOWN | path=data/processed/today/2026-06-02/vsigma_daily_execution_board.csv | detail=artifact exists but date could not be parsed
 - operator_brief_md | status=OK | observed=2026-06-02 | path=data/processed/today/2026-06-02/vsigma_operator_brief.md | detail=date coherent
 - automation_health_md | status=OK | observed=2026-06-02 | path=data/processed/today/2026-06-02/vsigma_automation_health.md | detail=date coherent
 - prelock_live_recheck_md | status=OK | observed=2026-06-02 | path=data/processed/today/2026-06-02/vsigma_prelock_live_recheck.md | detail=date coherent
 - live_trigger_validator_md | status=OK | observed=2026-06-02 | path=data/processed/today/2026-06-02/vsigma_live_trigger_validator.md | detail=date coherent
 - consolidated_panel_md | status=OK | observed=2026-06-02 | path=data/processed/today/2026-06-02/vsigma_consolidated_daily_operator_panel.md | detail=date coherent
 - source_reliability_governor_md | status=OK | observed=2026-06-02 | path=data/processed/today/2026-06-02/vsigma_probable_lineup_source_reliability_governor.md | detail=date coherent
-- daily_chain_trigger | status=DATE_UNKNOWN | observed=UNKNOWN | path=.vsigma/triggers/daily_decision_chain_v2.trigger | detail=artifact exists but date could not be parsed
+- daily_chain_trigger | status=DATE_MISMATCH | observed=2026-06-03 | path=.vsigma/triggers/daily_decision_chain_v2.trigger | detail=observed 2026-06-03 != target 2026-06-02
 - prelock_recheck_trigger | status=OK | observed=2026-06-02 | path=.vsigma/triggers/prelock_official_lineup_recheck.trigger | detail=date coherent
 
 ## Guardrails

@@ -30,25 +30,23 @@
 - none
 
 ## No Bet
-- #0 | NO_BET | NO_PROMOTED_RAW_CANDIDATES vs NO_SCORING_SAFE_ROWS | market=NO_MARKET | stake=NO_STAKE | permission=NO | score=0
+- #0 | NO_BET | NO_PROMOTED_RAW_CANDIDATES vs NO_SCORING_SAFE_ROWS | market=NO_MARKET | stake=NO_STAKE | permission=NO_BET | score=0
 
 ## API Coverage
 - board_rows=1
-- source_guard_counts: PROMOTION_GATE_DIAGNOSTIC_ONLY; API_COVERAGE_GATE_V2=1
-- execution_permission_counts: NO=1
+- source_guard_counts: PROMOTION_GATE_DIAGNOSTIC_ONLY=1
+- execution_permission_counts: NO_BET=1
 - avg_coverage_score: UNKNOWN
-- forecast_warning_counts: no promoted raw candidates=1; API_COVERAGE_UNKNOWN=1
-- missing_data_counts: unknown=1
+- forecast_warning_counts: no promoted raw candidates=1
+- missing_data_counts: none
 
 ## Official / Probable Lineups
 - data/processed/today/2026-06-02/official_lineup_sources.csv: rows=32
-- data/processed/today/2026-06-02/vsigma_probable_lineup_consensus.csv: rows=1
 - data/processed/governance/official_lineup_sources.csv: rows=32
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Quarantine / Learning-Only / Import Status
 - data/processed/today/2026-06-02/official_lineup_sources.csv: rows=32
-- data/processed/today/2026-06-02/vsigma_probable_lineup_consensus.csv: rows=1
 - data/processed/governance/official_lineup_sources.csv: rows=32
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
@@ -66,7 +64,7 @@
 
 ## Next Triggers / Rechecks
 - .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-02; reason=align_daily_chain_self_heal_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=UNKNOWN; reason=run_daily_decision_chain_today; triggered_at=2026-06-03T08:27:46+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-03; reason=run_daily_decision_chain_today_v70_5A; triggered_at=2026-06-03T09:00:00+01:00
 - .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-02; reason=align_prelock_recheck_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
 
 ## Key Files
@@ -86,22 +84,22 @@
 - If the daily board is missing, prelock/live files cannot be used as pick permission.
 
 ## Date Coherence Guard
-- overall_status: DATE_UNKNOWN_REVIEW
-- board_status: daily_board_md=OK; daily_board_csv=OK
-- mismatch_count: 0
+- overall_status: DATE_MISMATCH_BLOCK
+- board_status: daily_board_md=OK; daily_board_csv=DATE_UNKNOWN
+- mismatch_count: 1
 - missing_core_count: 0
-- trigger_date_counts: UNKNOWN=1; 2026-06-02=1
-- next_action: Review artifacts with unparseable dates before trusting outputs.
+- trigger_date_counts: 2026-06-03=1; 2026-06-02=1
+- next_action: Fix trigger/artifact date mismatch before using market signals.
 
 ## Upstream Board Input Diagnostic
 - overall_status: UPSTREAM_MISSING
 - first_empty_required_component: real_objective_context_gate
 - missing_required_count: 2
-- empty_required_count: 5
+- empty_required_count: 6
 - date_issue_count: 0
 - forecast_rows: 0
 - translator_rows: 0
-- board_rows: 1
+- board_rows: 0
 - next_action: Build missing required upstream component first: real_objective_context_gate.
 
 ## Real Shortlist Recovery Diagnostic
@@ -115,7 +113,7 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1356
+- files_scanned: 1358
 - accepted_rows: 59
 - rejected_rows: 118
 - next_action: Review accepted rows, then feed normal scoring gates.
@@ -174,20 +172,26 @@
 - recommended_action: WAIT_FOR_MANUAL_APPROVAL
 
 ## Daily Board Self-Heal
-- self_heal_status: NO_ACTION
-- promotion_rows_reviewed: 0
+- self_heal_status: EMPTY_BY_PROMOTION_GATE
+- promotion_rows_reviewed: 59
 - promoted_rows: 0
 - blocked_rows: 0
-- quarantine_rows: 0
-- board_rows_written: 0
-- reason: daily board already has rows
-## API Enrichment Allowlist Dry Run
-- allowlist_status: ALLOWLIST_DRY_RUN_READY
+- quarantine_rows: 45
+- board_rows_written: 1_DIAGNOSTIC_ROW
+- reason: 0 promoted raw candidates; no scoring-safe rows available
+## API Quota-Aware Enrichment Gate
+- quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
+- api_plan_name: API-Football Ultra
+- plan_requests_per_day: 75000
 - rows_reviewed: 45
-- allowlisted_rows: 41
-- full_enrichment_dry_rows: 30
-- coverage_probe_dry_rows: 11
-- blocked_rows: 4
-- quota_units_reserved: 161
-- external_calls_executed: NO
-- next_action: Review allowlist. A separate approved enrichment step is required before external calls.
+- p1_rows: 34
+- p2_rows: 11
+- p1_estimated_units: 174
+- p2_estimated_units: 48
+- auto_units_reserved: 161
+- max_auto_units_per_day: 5000
+- max_auto_units_per_run: 1500
+- quota_decision_counts: AUTO_ENRICHMENT_ALLOWED_P1=30; COVERAGE_PROBE_ALLOWED_P2=11; MANUAL_REVIEW_REQUIRED=4
+- api_calls_allowed: YES_LIMITED
+- api_calls_executed: NO
+- recommended_action: Run a separate enrichment executor only for allowlisted rows; do not create picks from enrichment alone.

@@ -1,15 +1,14 @@
 # vSIGMA Probable Lineup Consensus v2 - 2026-06-02
 
 ## Summary
-- fixtures_reviewed: 1
-- probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=1
-- home_confidence: NO_APPROVED_SOURCES=1
-- away_confidence: NO_APPROVED_SOURCES=1
+- fixtures_reviewed: 0
+- probable_lineup_gates: none
+- home_confidence: none
+- away_confidence: none
 - auto_apply: NO
 - production_change: NO
 
 ## Fixture Consensus
-- NO_PROMOTED_RAW_CANDIDATES vs NO_SCORING_SAFE_ROWS | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
 
 ## Guardrails
 - Registry-approved probable XI is never treated as official lineup.

@@ -1,7 +1,7 @@
 # vSIGMA Scored-to-Real Shortlist Builder - 2026-06-02
 
 ## Summary
-- source_rows: 0
+- source_rows: 1
 - same_day_rows: 0
 - real_shortlist_rows: 0
 - real_bets_rows: 0

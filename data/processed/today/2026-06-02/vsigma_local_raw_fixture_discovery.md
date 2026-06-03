@@ -2,10 +2,10 @@
 
 ## Summary
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1356
+- files_scanned: 1358
 - accepted_rows: 59
 - rejected_rows: 118
-- source_status_counts: NO_SAME_DAY_ROWS=993; EMPTY_OR_UNREADABLE=352; NO_ACCEPTED_ROWS=10; HAS_ACCEPTED_ROWS=1
+- source_status_counts: NO_SAME_DAY_ROWS=999; EMPTY_OR_UNREADABLE=351; NO_ACCEPTED_ROWS=7; HAS_ACCEPTED_ROWS=1
 - next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO
