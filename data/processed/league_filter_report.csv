@@ -1,13 +1,8 @@
 country,league,league_tier,league_filter_reason,matches
-Brazil,Baiano U20,REJECT,hard_reject_noise_league,9
 Cameroon,Elite One,REJECT,country_league_not_allowlisted,8
-USA,USL League Two,REJECT,country_league_not_allowlisted,8
 USA,USL W League,REJECT,country_league_not_allowlisted,5
-Austria,Landesliga - Salzburg,REJECT,hard_reject_noise_league,4
-Austria,Landesliga - Vorarlbergliga,REJECT,hard_reject_noise_league,3
 Bosnia,1st League - RS,REJECT,country_league_not_allowlisted,2
-Brazil,Brasileiro U17,REJECT,hard_reject_noise_league,2
-Switzerland,1. Liga Classic - Play-offs,REJECT,country_league_not_allowlisted,2
-Argentina,Reserve League,REJECT,hard_reject_noise_league,1
+USA,USL League Two,REJECT,country_league_not_allowlisted,2
+Austria,Landesliga - Salzburg,REJECT,hard_reject_noise_league,1
 Bolivia,Primera División,REJECT,country_league_not_allowlisted,1
 Czech-Republic,3. liga - MSFL,REJECT,country_league_not_allowlisted,1
