@@ -1,1 +1,1 @@
-vsigma-safe-auto-pr-2026-06-03-workflow-order
+vsigma-safe-auto-pr-2026-06-03-none

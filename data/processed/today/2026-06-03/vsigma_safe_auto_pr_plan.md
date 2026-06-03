@@ -1,8 +1,8 @@
-# [vSIGMA SAFE PR] 2026-06-03 - MEDIUM reporting/ops improvements
+# [vSIGMA SAFE PR] 2026-06-03 - INFO reporting/ops improvements
 
 ## Summary
 - target_date: 2026-06-03
-- safe_candidates: 1
+- safe_candidates: 0
 - auto_merge: NO
 - production_change: NO
 
@@ -19,7 +19,7 @@
 - Calibration auto-apply
 
 ## Candidate Improvements
-- MEDIUM | workflow_order | OPERATOR_BEFORE_HEALTH | evidence=operator brief health_status=UNKNOWN | recommendation=Schedule health monitor before operator brief.
+- none
 
 ## Review Instructions
 - This PR is review-only.
