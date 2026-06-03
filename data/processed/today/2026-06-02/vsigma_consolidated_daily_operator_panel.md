@@ -181,3 +181,13 @@
 - quarantine_rows: 0
 - board_rows_written: 0
 - reason: daily board already has rows
+## API Enrichment Allowlist Dry Run
+- allowlist_status: ALLOWLIST_DRY_RUN_READY
+- rows_reviewed: 45
+- allowlisted_rows: 41
+- full_enrichment_dry_rows: 30
+- coverage_probe_dry_rows: 11
+- blocked_rows: 4
+- quota_units_reserved: 161
+- external_calls_executed: NO
+- next_action: Review allowlist. A separate approved enrichment step is required before external calls.

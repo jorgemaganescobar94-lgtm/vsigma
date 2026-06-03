@@ -1,0 +1,2 @@
+target_date,generated_at,allowlist_status,rows_reviewed,allowlisted_rows,full_enrichment_dry_rows,coverage_probe_dry_rows,blocked_rows,quota_units_reserved,allowlist_status_counts,external_calls_executed,next_action,auto_apply,production_change
+2026-06-02,2026-06-03T15:19:51+01:00,ALLOWLIST_DRY_RUN_READY,45,41,30,11,4,161,P1_FULL_ENRICHMENT_PLAN=30; P2_COVERAGE_PROBE_PLAN=11; NO_ACTION=4,NO,Review allowlist. A separate approved enrichment step is required before external calls.,NO,NO
