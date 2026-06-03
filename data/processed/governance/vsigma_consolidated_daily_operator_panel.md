@@ -1,7 +1,7 @@
 # vSIGMA Consolidated Daily Operator Panel - 2026-06-03
 
 ## First Read
-- panel_status: NONE
+- panel_status: OK_EMPTY_BY_PROMOTION_GATE
 - operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=UNKNOWN; board_rows=1
 - executable_prematch: NONE
 - live_only: NONE
@@ -17,7 +17,7 @@
 - risk_label: NONE
 - health_status: UNKNOWN
 - board_rows: 1
-- panel_status: NONE
+- panel_status: OK_EMPTY_BY_PROMOTION_GATE
 - next_action: Follow operator brief and panel categories; no automatic execution.
 
 ## Executable Prematch
@@ -178,3 +178,12 @@
 - quarantine_rows: 0
 - board_rows_written: 1_DIAGNOSTIC_ROW
 - reason: 0 promoted raw candidates; no scoring-safe rows available
+## Empty Diagnostic Board State Normalizer
+- normalized_status: OK_EMPTY_BY_PROMOTION_GATE
+- operator_state: HEALTHY_EMPTY_NO_ACTION
+- board_status: daily_board_md=OK; daily_board_csv=OK
+- mismatch_count: 0
+- promoted_rows: 0
+- queue_rows: 0
+- diagnostic_no_bet_rows: 1
+- next_action: No picks. System is coherent and empty because zero candidates were promoted. Wait for future data or improved trusted source coverage.
