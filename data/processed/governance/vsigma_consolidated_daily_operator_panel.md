@@ -2,12 +2,12 @@
 
 ## First Read
 - panel_status: NONE
-- operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=UNKNOWN; board_rows=1
+- operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=ATTENTION; board_rows=1
 - executable_prematch: NONE
 - live_only: NONE
 - watchlist: NONE
 - no_bet: ROWS=1
-- health_status: MISSING
+- health_status: ATTENTION
 - auto_apply: NO
 - production_change: NO
 
@@ -15,7 +15,7 @@
 - action_level: NONE
 - compact_final_decision: NO_OPERATOR_ACTION
 - risk_label: NONE
-- health_status: UNKNOWN
+- health_status: ATTENTION
 - board_rows: 1
 - panel_status: NONE
 - next_action: Follow operator brief and panel categories; no automatic execution.
@@ -59,10 +59,10 @@
 - recommended_action_counts: KEEP_ACTIVE_COLLECT_MORE_DATA=15
 
 ## Automation Health
-- system_status: MISSING
-- components_checked: UNKNOWN
-- severity_counts: UNKNOWN
-- status_counts: UNKNOWN
+- system_status: ATTENTION
+- components_checked: 11
+- severity_counts: OK=3; WARN=1; INFO=7
+- status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
 - .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-03; reason=align_daily_chain_self_heal_today_v70_5A; triggered_at=2026-06-03T09:30:00+01:00
@@ -86,12 +86,12 @@
 - If the daily board is missing, prelock/live files cannot be used as pick permission.
 
 ## Date Coherence Guard
-- overall_status: PARTIAL_OUTPUTS
+- overall_status: OK
 - board_status: daily_board_md=OK; daily_board_csv=OK
 - mismatch_count: 0
-- missing_core_count: 1
+- missing_core_count: 0
 - trigger_date_counts: 2026-06-03=2
-- next_action: Build missing core reports before market discussion.
+- next_action: All dated artifacts/triggers reviewed by guard are coherent.
 
 ## Upstream Board Input Diagnostic
 - overall_status: UPSTREAM_MISSING
@@ -115,9 +115,9 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1363
+- files_scanned: 1362
 - accepted_rows: 143
-- rejected_rows: 291
+- rejected_rows: 290
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
@@ -181,52 +181,3 @@
 - quarantine_rows: 0
 - board_rows_written: 0
 - reason: daily board already has rows
-## Rejected Source Block Audit
-- rows_reviewed: 0
-- correct_reject_rows: 0
-- manual_review_rows: 0
-- whitelist_candidate_rows: 0
-- audit_bucket_counts: none
-- review_priority_counts: none
-- next_action: Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.
-## API Quota-Aware Enrichment Gate
-- quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
-- api_plan_name: API-Football Ultra
-- plan_requests_per_day: 75000
-- rows_reviewed: 105
-- p1_rows: 67
-- p2_rows: 38
-- p1_estimated_units: 346
-- p2_estimated_units: 159
-- auto_units_reserved: 318
-- max_auto_units_per_day: 5000
-- max_auto_units_per_run: 1500
-- quota_decision_counts: AUTO_ENRICHMENT_ALLOWED_P1=56; COVERAGE_PROBE_ALLOWED_P2=38; MANUAL_REVIEW_REQUIRED=11
-- api_calls_allowed: YES_LIMITED
-- api_calls_executed: NO
-- recommended_action: Run a separate enrichment executor only for allowlisted rows; do not create picks from enrichment alone.
-## API Enrichment Allowlist Dry Run
-- allowlist_status: ALLOWLIST_DRY_RUN_READY
-- rows_reviewed: 105
-- allowlisted_rows: 94
-- full_enrichment_dry_rows: 56
-- coverage_probe_dry_rows: 38
-- blocked_rows: 11
-- quota_units_reserved: 318
-- external_calls_executed: NO
-- next_action: Review allowlist. A separate approved enrichment step is required before external calls.
-## Max-Coverage API Enrichment Policy
-- policy_status: MAX_COVERAGE_POLICY_READY
-- api_plan_name: API-Football Ultra
-- plan_requests_per_day: 75000
-- rows_reviewed: 105
-- rows_allowed: 105
-- full_scoring_enrichment_rows: 44
-- coverage_probe_rows: 36
-- diagnostic_only_rows: 25
-- blocked_rows: 0
-- estimated_call_units: 505
-- downstream_use_counts: SCORING_ALLOWED_WITH_NORMAL_GATES=44; COVERAGE_GATE_ONLY=36; DIAGNOSTIC_ONLY_NO_SCORING=25
-- external_calls_allowed: YES_MAX_COVERAGE_POLICY
-- external_calls_executed: NO
-- next_action: Use max-coverage policy for a separate logged API executor. Enrichment can be broad; scoring remains restricted by downstream_use and normal gates.
