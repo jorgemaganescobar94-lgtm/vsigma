@@ -162,6 +162,10 @@ jobs:
         shell: bash
         run: python scripts/build_empty_diagnostic_board_state_normalizer.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Audit rejected source blocks
+        shell: bash
+        run: python scripts/build_rejected_source_block_audit.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Postflight self-heal router
         shell: bash
         run: python scripts/route_daily_chain_missing_self_heal.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
