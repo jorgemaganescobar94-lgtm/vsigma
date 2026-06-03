@@ -117,7 +117,7 @@
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
 - files_scanned: 1363
 - accepted_rows: 143
-- rejected_rows: 288
+- rejected_rows: 286
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
