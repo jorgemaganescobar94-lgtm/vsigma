@@ -30,23 +30,25 @@
 - none
 
 ## No Bet
-- #0 | NO_BET | NO_PROMOTED_RAW_CANDIDATES vs NO_SCORING_SAFE_ROWS | market=NO_MARKET | stake=NO_STAKE | permission=NO_BET | score=0
+- #0 | NO_BET | NO_PROMOTED_RAW_CANDIDATES vs NO_SCORING_SAFE_ROWS | market=NO_MARKET | stake=NO_STAKE | permission=NO | score=0
 
 ## API Coverage
 - board_rows=1
-- source_guard_counts: PROMOTION_GATE_DIAGNOSTIC_ONLY=1
-- execution_permission_counts: NO_BET=1
+- source_guard_counts: PROMOTION_GATE_DIAGNOSTIC_ONLY; API_COVERAGE_GATE_V2=1
+- execution_permission_counts: NO=1
 - avg_coverage_score: UNKNOWN
-- forecast_warning_counts: no promoted raw candidates=1
-- missing_data_counts: none
+- forecast_warning_counts: no promoted raw candidates=1; API_COVERAGE_UNKNOWN=1
+- missing_data_counts: unknown=1
 
 ## Official / Probable Lineups
 - data/processed/today/2026-06-03/official_lineup_sources.csv: rows=32
+- data/processed/today/2026-06-03/vsigma_probable_lineup_consensus.csv: rows=1
 - data/processed/governance/official_lineup_sources.csv: rows=32
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Quarantine / Learning-Only / Import Status
 - data/processed/today/2026-06-03/official_lineup_sources.csv: rows=32
+- data/processed/today/2026-06-03/vsigma_probable_lineup_consensus.csv: rows=1
 - data/processed/governance/official_lineup_sources.csv: rows=32
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
@@ -113,9 +115,9 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1362
+- files_scanned: 1363
 - accepted_rows: 143
-- rejected_rows: 290
+- rejected_rows: 291
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
