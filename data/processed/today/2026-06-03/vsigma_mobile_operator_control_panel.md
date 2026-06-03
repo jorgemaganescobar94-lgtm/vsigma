@@ -26,7 +26,7 @@
 - PROMOTION_READINESS | status=NO_PROMOTION | promotion_candidates=0; decisions=none | next=Manual review only if promotion candidate appears.
 
 ## Mobile Sources
-- operator: data/processed/governance/vsigma_operator_brief.csv
+- operator: data/processed/today/2026-06-03/vsigma_operator_brief.csv
 - shadow_queue: data/processed/governance/vsigma_calibration_shadow_patch_queue.csv
 - promotion_readiness: data/processed/governance/vsigma_shadow_patch_promotion_readiness.csv
 - learning_sanity: data/processed/governance/vsigma_learning_chain_output_sanity.csv
