@@ -181,3 +181,11 @@
 - quarantine_rows: 0
 - board_rows_written: 0
 - reason: daily board already has rows
+## Rejected Source Block Audit
+- rows_reviewed: 0
+- correct_reject_rows: 0
+- manual_review_rows: 0
+- whitelist_candidate_rows: 0
+- audit_bucket_counts: none
+- review_priority_counts: none
+- next_action: Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.
