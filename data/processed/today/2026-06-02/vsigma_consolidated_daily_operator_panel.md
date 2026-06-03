@@ -66,7 +66,7 @@
 
 ## Next Triggers / Rechecks
 - .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-02; reason=align_daily_chain_self_heal_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-02; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-02T13:54:41+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=UNKNOWN; reason=run_daily_decision_chain_today; triggered_at=2026-06-03T08:27:46+01:00
 - .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-02; reason=align_prelock_recheck_v69_5_panel; triggered_at=2026-06-02T14:30:00+01:00
 
 ## Key Files
@@ -86,12 +86,12 @@
 - If the daily board is missing, prelock/live files cannot be used as pick permission.
 
 ## Date Coherence Guard
-- overall_status: OK
+- overall_status: DATE_UNKNOWN_REVIEW
 - board_status: daily_board_md=OK; daily_board_csv=OK
 - mismatch_count: 0
 - missing_core_count: 0
-- trigger_date_counts: 2026-06-02=2
-- next_action: All dated artifacts/triggers reviewed by guard are coherent.
+- trigger_date_counts: UNKNOWN=1; 2026-06-02=1
+- next_action: Review artifacts with unparseable dates before trusting outputs.
 
 ## Upstream Board Input Diagnostic
 - overall_status: UPSTREAM_MISSING
