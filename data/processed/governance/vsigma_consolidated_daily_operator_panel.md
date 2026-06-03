@@ -215,3 +215,18 @@
 - quota_units_reserved: 318
 - external_calls_executed: NO
 - next_action: Review allowlist. A separate approved enrichment step is required before external calls.
+## Max-Coverage API Enrichment Policy
+- policy_status: MAX_COVERAGE_POLICY_READY
+- api_plan_name: API-Football Ultra
+- plan_requests_per_day: 75000
+- rows_reviewed: 105
+- rows_allowed: 105
+- full_scoring_enrichment_rows: 44
+- coverage_probe_rows: 36
+- diagnostic_only_rows: 25
+- blocked_rows: 0
+- estimated_call_units: 505
+- downstream_use_counts: SCORING_ALLOWED_WITH_NORMAL_GATES=44; COVERAGE_GATE_ONLY=36; DIAGNOSTIC_ONLY_NO_SCORING=25
+- external_calls_allowed: YES_MAX_COVERAGE_POLICY
+- external_calls_executed: NO
+- next_action: Use max-coverage policy for a separate logged API executor. Enrichment can be broad; scoring remains restricted by downstream_use and normal gates.

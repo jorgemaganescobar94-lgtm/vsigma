@@ -1,0 +1,132 @@
+# vSIGMA Max-Coverage API Enrichment Policy - 2026-06-03
+
+## Summary
+- policy_status: MAX_COVERAGE_POLICY_READY
+- api_plan_name: API-Football Ultra
+- plan_requests_per_day: 75000
+- rows_reviewed: 105
+- rows_allowed: 105
+- full_scoring_enrichment_rows: 44
+- coverage_probe_rows: 36
+- diagnostic_only_rows: 25
+- blocked_rows: 0
+- estimated_call_units: 505
+- decision_counts: FULL_ENRICHMENT_ALLOWED_FOR_SCORING=44; COVERAGE_PROBE_ALLOWED_LOW_COVERAGE=36; DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST=18; DIAGNOSTIC_COVERAGE_ALLOWED_CONTEXT_VOLATILITY=7
+- downstream_use_counts: SCORING_ALLOWED_WITH_NORMAL_GATES=44; COVERAGE_GATE_ONLY=36; DIAGNOSTIC_ONLY_NO_SCORING=25
+- external_calls_allowed: YES_MAX_COVERAGE_POLICY
+- external_calls_executed: NO
+- auto_apply: NO
+- production_change: NO
+
+## Policy Rows
+- Amical Saint-Prex vs Grasshopper II | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Courtételle vs YF Juventus | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Langenthal vs Tuggen | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Taverne vs Servette II | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- FK Vlasenica vs Zvijezda 09 | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Famos Vojkovići vs FK Romanija Pale | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Omarska vs Sutjeska Foča | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- NTNUI vs Kvik Trondheim | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Teplice II vs Arsenal Česká Lípa | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Polanka nad Odrou vs Hodonín | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Uničov vs Start Brno | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- CR Khemis Zemamra vs Yacoub El Mansour | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Ittihad Tanger vs Wydad AC | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Raja Casablanca vs Renaissance Berkane | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- América RJ vs São Gonçalo EC RJ | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Jaraguá vs Guarani de Palhoça | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Nação vs Blumenau | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Dikaki vs Oyem AC | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- FC 105 vs Cercle Mbéri | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Stade Mandji vs Bouenguidi | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Stade Migoveen vs Pélican | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Audax São Mateus vs Rio Branco ES | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Vilavelhense vs Vitória ES | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Farroupilha vs Guarany de Bagé | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Dongen vs Heerjansdam | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- HBC vs Hollandia | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- NEO vs TEC | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- SteDoCo vs EVV | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- IFK Umeå vs Täfteå | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Storfors vs Skellefteå | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Umeå FC Akademi vs IFK Luleå | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Aigle Royal vs Cotonsport | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Colombe vs Aigle Royal | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Cotonsport vs Unisport Bafang | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Dynamo de Douala vs Gazelle | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Fortuna Mfou vs Aigle Royal de Moungo | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Gazelle vs Canon | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Jeunes Fauves vs Fortuna Mfou | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- PWD Bamenda vs Dynamo de Douala | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Panthère vs Aigle Royal de Moungo | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Stade Renard vs Victoria United | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Vasalund vs Järfälla | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Olympic vs Lund | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Grbalj vs Bokelj | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Iskra vs Jezero | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- KSZO 1929 vs Luzino | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Łomża vs Górnik Polkowice | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Atletico FC vs 9 de Octubre | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- JSK vs Saint Eloi Lupopo | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- TP Mazembe vs Simba | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Sacachispas vs Berazategui | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Gualberto Villarroel SJ vs Real Tomayapo | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Aral vs Pakhtakor II | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Gazalkent vs Jayxun | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Rudar vs Brskovo | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Zeta vs Igalo | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Forssa vs Franke | decision=DIAGNOSTIC_COVERAGE_ALLOWED_CONTEXT_VOLATILITY | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Hovshaga vs Växjö Norra | decision=DIAGNOSTIC_COVERAGE_ALLOWED_CONTEXT_VOLATILITY | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Högaborg vs IFK Trelleborg | decision=DIAGNOSTIC_COVERAGE_ALLOWED_CONTEXT_VOLATILITY | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- IFK Östersund vs Kubikenborg | decision=DIAGNOSTIC_COVERAGE_ALLOWED_CONTEXT_VOLATILITY | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Ostra Ersboda vs Piteå | decision=DIAGNOSTIC_COVERAGE_ALLOWED_CONTEXT_VOLATILITY | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Viggbyholms IK vs Sollentuna | decision=DIAGNOSTIC_COVERAGE_ALLOWED_CONTEXT_VOLATILITY | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Viken vs Utsikten | decision=DIAGNOSTIC_COVERAGE_ALLOWED_CONTEXT_VOLATILITY | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- ADO '20 vs Ijsselmeervogels | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Rijnvogels vs Excelsior Maassluis | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Chicago Dutch Lions vs Rochester | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Inter Gainesville vs Shark Coast | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Miami vs Weston | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Nona vs The Villages | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Northern Indiana vs Louisville City II | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Pittsburgh Riverhounds 2 vs Buffalo | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Staten Island Athletic vs Manhattan | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Union Macomb vs Midwest United | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Kozlovice vs Šternberk | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Albania vs Israel | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Congo DR vs Denmark | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Gibraltar vs British Virgin Islands | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Luxembourg vs Italy | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Netherlands vs Algeria | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Poland vs Nigeria | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Falkenbergs FF vs Tvååker | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Anthering vs Bürmoos | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Bramberg vs Thalgau | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Eugendorf vs UFC Hallein | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Grödig vs Neumarkt | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Hallwang vs Siezenheim | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Puch vs SV Schwarzach | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Salzburger AK vs Straßwalchen | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Union Henndorf vs Anif | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Bizau vs Göfis | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Hard vs Röthis | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Lochau vs Austria Lustenau II | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Nenzing vs Admira Dornbirn | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Blumenthaler SV vs Germania Egestorf | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Eimsbütteler TV vs Todesfelde | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Kalsdorf vs Wallern / Marienkirchen | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Oedt vs Deutschlandsberger SC | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Velden vs Gleisdorf 09 | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Donau vs Parndorf | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Leobendorf vs Traiskirchen | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Mannsdorf-Großenzersdorf vs Fach-Donaufeld | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Neusiedl vs Wiener Viktoria | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Bischofshofen vs Schwaz | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Pinzgau Saalfelden vs Seekirchen | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+- Wacker Innsbruck vs Kufstein | decision=COVERAGE_PROBE_ALLOWED_LOW_COVERAGE | downstream=COVERAGE_GATE_ONLY | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
+
+## Guardrails
+- This policy allows broad API coverage because the API plan is large.
+- It does not execute external calls by itself.
+- Low-trust fixtures may be queried for diagnostics, but cannot feed picks or scoring unless a separate reviewed model supports them.
+- Enrichment never creates stake permission by itself.
