@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import re
 from collections import Counter
 from datetime import date, datetime
 from pathlib import Path
@@ -20,12 +21,29 @@ SUMMARY_FIELDS = [
     "next_action", "auto_apply", "production_change",
 ]
 
-LOW_TRUST_LEAGUE_TOKENS = [
-    "U17", "U18", "U19", "U20", "U21", "U23", "WOMEN", "FEMEN", "RESERVE", "RESERVES",
-    "YOUTH", "ACADEMY", "JUNIOR", "B", "II", "III", "IV", "FRIENDLIES", "FRIENDLY",
-    "LANDESLIGA", "REGIONALLIGA", "OBERLIGA", "4. LIGA", "USL LEAGUE TWO", "1. LIGA CLASSIC",
+YOUTH_LEAGUE_TOKENS = [
+    "U17", "U18", "U19", "U20", "U21", "U23", "YOUTH", "JUNIOR", "ACADEMY", "AKADEMI",
 ]
-LOW_TRUST_TEAM_TOKENS = [" U17", " U18", " U19", " U20", " U21", " U23", " II", " III", " B", " RESERVE", "WOMEN"]
+WOMEN_LEAGUE_TOKENS = [
+    "WOMEN", "FEMEN", " WOMEN", " W LEAGUE", "USL W LEAGUE", " W-LEAGUE", "FEMALE",
+]
+RESERVE_LEAGUE_TOKENS = [
+    "RESERVE", "RESERVES", "RESERVE LEAGUE", "RESERVA", "RES.", "ACADEMY", "AKADEMI",
+]
+LOW_TIER_LEAGUE_TOKENS = [
+    "LANDESLIGA", "REGIONALLIGA", "OBERLIGA", "4. LIGA", "USL LEAGUE TWO", "1. LIGA CLASSIC",
+    "3. DIVISION", "3. LIGA", "DIVISION 2", "DERDE DIVISIE", "CARIOCA A2", "CATARINENSE - 2",
+]
+FRIENDLY_TOKENS = ["FRIENDLIES", "FRIENDLY"]
+
+# These patterns require a separate token, suffix, or punctuation boundary. They avoid treating ordinary
+# team names such as Bitam or Bosnia as a B-team just because a word starts with B.
+LOW_TRUST_TEAM_PATTERNS = [
+    r"\bU17\b", r"\bU18\b", r"\bU19\b", r"\bU20\b", r"\bU21\b", r"\bU23\b",
+    r"\bII\b", r"\bIII\b", r"\bIV\b", r"\bB\b", r"\bW\b",
+    r"\bRES\.?\b", r"\bRESERVE\b", r"\bRESERVES\b", r"\bACADEMY\b", r"\bAKADEMI\b",
+]
+
 POTENTIAL_SENIOR_TOKENS = [
     "PREMIER", "PRIMERA", "LIGUE 1", "SERIE A", "SERIE B", "COPA", "CUP", "PLAY-OFFS",
     "PLAYOFF", "DIVISION", "LEAGUE", "LIGA", "CHAMPIONSHIP", "ELITESERIEN", "ALLSVENSKAN",
@@ -38,6 +56,10 @@ def norm(value: object) -> str:
 
 def up(value: object) -> str:
     return norm(value).upper()
+
+
+def compact_spaces(value: str) -> str:
+    return re.sub(r"\s+", " ", value).strip()
 
 
 def read_rows(path: Path) -> list[dict[str, str]]:
@@ -66,9 +88,13 @@ def has_token(text: str, tokens: list[str]) -> bool:
     return any(token in text for token in tokens)
 
 
+def has_team_pattern(text: str) -> bool:
+    return any(re.search(pattern, text) for pattern in LOW_TRUST_TEAM_PATTERNS)
+
+
 def classify(row: dict[str, str]) -> tuple[str, str, str, str, str]:
-    league = up(row.get("league"))
-    teams = f" {up(row.get('home_team'))} {up(row.get('away_team'))} "
+    league = compact_spaces(up(row.get("league")))
+    teams = compact_spaces(f"{up(row.get('home_team'))} {up(row.get('away_team'))}")
     source = up(row.get("source_path"))
     fixture_id = norm(row.get("fixture_id"))
     status = up(row.get("raw_trust_status"))
@@ -89,23 +115,31 @@ def classify(row: dict[str, str]) -> tuple[str, str, str, str, str]:
             "fixture identity is missing",
             "Keep rejected; identity is insufficient for scoring.",
         )
-    if has_token(league, ["U17", "U18", "U19", "U20", "U21", "U23", "YOUTH", "JUNIOR", "ACADEMY"]) or has_token(teams, LOW_TRUST_TEAM_TOKENS):
+    if has_token(league, YOUTH_LEAGUE_TOKENS) or has_team_pattern(teams):
         return (
-            "CORRECT_REJECT_YOUTH_RESERVE",
+            "CORRECT_REJECT_YOUTH_RESERVE_TEAM_TOKEN",
             "P3_CORRECT_REJECT",
             "NO",
-            "youth/reserve/team suffix detected",
-            "Keep rejected unless a specific competition is manually whitelisted later.",
+            "youth/reserve/B/II/W/team suffix or academy token detected",
+            "Keep rejected unless a specific competition is manually whitelisted later with separate validation.",
         )
-    if has_token(league, ["WOMEN", "FEMEN"]):
+    if has_token(league, WOMEN_LEAGUE_TOKENS):
         return (
             "CORRECT_REJECT_WOMEN_LOW_MODEL_COVERAGE",
             "P3_CORRECT_REJECT",
             "NO",
-            "women competition detected outside current whitelist",
-            "Keep rejected until a separate women-football model exists.",
+            "women/W-league competition detected outside current whitelist",
+            "Keep rejected until a separate women-football model and source coverage ledger exists.",
         )
-    if has_token(league, ["FRIENDLIES", "FRIENDLY"]):
+    if has_token(league, RESERVE_LEAGUE_TOKENS):
+        return (
+            "CORRECT_REJECT_RESERVE_LOW_MODEL_COVERAGE",
+            "P3_CORRECT_REJECT",
+            "NO",
+            "reserve/academy competition detected outside current whitelist",
+            "Keep rejected until a separate reserve-football model and source coverage ledger exists.",
+        )
+    if has_token(league, FRIENDLY_TOKENS):
         return (
             "CORRECT_REJECT_FRIENDLY_CONTEXT_VOLATILITY",
             "P3_CORRECT_REJECT",
@@ -113,7 +147,7 @@ def classify(row: dict[str, str]) -> tuple[str, str, str, str, str]:
             "friendly context is volatile and low-accountability",
             "Keep rejected or route to manual-only context review, not scoring.",
         )
-    if has_token(league, ["LANDESLIGA", "REGIONALLIGA", "OBERLIGA", "4. LIGA", "USL LEAGUE TWO", "1. LIGA CLASSIC"]):
+    if has_token(league, LOW_TIER_LEAGUE_TOKENS):
         return (
             "CORRECT_REJECT_LOW_TIER_LOW_COVERAGE",
             "P3_CORRECT_REJECT",
@@ -126,7 +160,7 @@ def classify(row: dict[str, str]) -> tuple[str, str, str, str, str]:
             "MANUAL_REVIEW_POSSIBLE_WHITELIST",
             "P1_REVIEW_CANDIDATE",
             "YES_REVIEW_ONLY",
-            "source was rejected but league name looks like senior/structured competition",
+            "source was rejected but league name looks like senior/structured competition after low-trust hardening",
             "Review league, country, fixture identity and API coverage before any future whitelist; do not auto-promote.",
         )
     if "MATCHES_LEAGUE_REJECTED" in source:
