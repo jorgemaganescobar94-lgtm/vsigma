@@ -2,205 +2,205 @@
 
 ## Summary
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1371
+- files_scanned: 1375
 - accepted_rows: 108
-- rejected_rows: 216
-- source_status_counts: NO_SAME_DAY_ROWS=1001; EMPTY_OR_UNREADABLE=359; NO_ACCEPTED_ROWS=10; HAS_ACCEPTED_ROWS=1
+- rejected_rows: 219
+- source_status_counts: NO_SAME_DAY_ROWS=1001; EMPTY_OR_UNREADABLE=360; NO_ACCEPTED_ROWS=13; HAS_ACCEPTED_ROWS=1
 - next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO
 
 ## Accepted Rows
-- Sundby vs Holbæk B&I | fixture_id=1540561 | league=3. Division | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Hlučín vs Vsetín | fixture_id=1487455 | league=3. liga - MSFL | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Lebanon vs Yemen | fixture_id=1321353 | league=Asian Cup - Qualification | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- FAR Rabat vs Difaa EL Jadida | fixture_id=1545543 | league=Botola Pro | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Hassania Agadir vs FUS Rabat | fixture_id=1545542 | league=Botola Pro | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- San Lorenzo vs Deportivo Riestra | fixture_id=1540061 | league=Copa Argentina | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Bagé vs Brasil DE Pelotas | fixture_id=1544583 | league=Copa Gaúcha | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Stenungsund vs Vänersborgs IF | fixture_id=1510595 | league=Division 2 - Norra Götaland | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Sölvesborg vs Torns | fixture_id=1510949 | league=Division 2 - Södra Götaland | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Deportivo Santani vs Resistencia | fixture_id=1546540 | league=Division Intermedia | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Paraguari AC vs Atlético Tembetary | fixture_id=1546539 | league=Division Intermedia | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Colombe vs Unisport Bafang | fixture_id=1512925 | league=Elite One | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Fortuna Mfou vs Aigle Royal de Moungo | fixture_id=1512927 | league=Elite One | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- PWD Bamenda vs Canon | fixture_id=1512924 | league=Elite One | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Panthère vs Stade Renard | fixture_id=1512928 | league=Elite One | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Victoria United vs Jeunes Fauves | fixture_id=1512929 | league=Elite One | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- AFC Eskilstuna vs Karlberg | fixture_id=1505171 | league=Ettan - Norra | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Laholm vs Hässleholms IF | fixture_id=1504456 | league=Ettan - Södra | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Fortune vs BST Galaxy | fixture_id=1531367 | league=GFA League | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- GPA vs Dutch Lions | fixture_id=1531368 | league=GFA League | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Real de Banjul vs Falcons | fixture_id=1531369 | league=GFA League | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- TMT vs Bombada | fixture_id=1531370 | league=GFA League | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- PEPO vs Reipas | fixture_id=1541615 | league=Kakkonen - Lohko A | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- ÅIFK vs P-Iirot | fixture_id=1541502 | league=Kakkonen - Lohko B | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Cuniburo vs Cumbayá | fixture_id=1526552 | league=Liga Pro Serie B | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- AS Camberene vs Jaraaf | fixture_id=1546561 | league=Ligue 1 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Ben Aknoun vs USM Alger | fixture_id=1513466 | league=Ligue 1 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Casa Sport vs DSC | fixture_id=1546563 | league=Ligue 1 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Gorée vs Stade de Mbour | fixture_id=1546568 | league=Ligue 1 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Guédiawaye vs Teungueth | fixture_id=1546565 | league=Ligue 1 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Génération Foot vs AJEL | fixture_id=1546564 | league=Ligue 1 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- HLM vs Pikine | fixture_id=1546562 | league=Ligue 1 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- La Linguère vs Wally Daan | fixture_id=1546566 | league=Ligue 1 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Ouakam vs Sonacos | fixture_id=1546567 | league=Ligue 1 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Sao Luis vs Tupan | fixture_id=1544779 | league=Maranhense - 2 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Welayta Dicha vs Negelle Arsi | fixture_id=1541081 | league=Premier League | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- ASKO vs Derby Academie | fixture_id=1545728 | league=Première Division | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Bakaridjan vs Stade Malien Bamako | fixture_id=1545729 | league=Première Division | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Mali Coura vs Bougouni | fixture_id=1545732 | league=Première Division | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- USFAS Bamako vs Onze Créateurs | fixture_id=1545731 | league=Première Division | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Real Potosí vs ABB | fixture_id=1538379 | league=Primera División | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Kattaqurgon vs FarDu | fixture_id=1530970 | league=Pro League A | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Respublika FA vs Qiziriq | fixture_id=1531057 | league=Pro League A | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Shortan vs Metalourg | fixture_id=1530972 | league=Pro League A | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Stocksund vs Stockholm Internazionale | fixture_id=1545630 | league=Svenska Cupen | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Albion Colorado vs Utah United | fixture_id=1524750 | league=USL League Two | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Houston FC vs Hill Country Lobos | fixture_id=1524730 | league=USL League Two | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Erie Sports Center W vs Steel City W | fixture_id=1532112 | league=USL W League | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Virginia Development Academy W vs Virginia Beach United W | fixture_id=1532430 | league=USL W League | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Timor-Leste U19 vs Indonesia U19 | fixture_id=1547212 | league=ASEAN Championship U19 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- SSA U20 vs Galícia U20 | fixture_id=1530850 | league=Baiano U20 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Athletico PR U17 vs America MG U17 | fixture_id=1543881 | league=Brasileiro U17 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Palmeiras U17 vs Vitoria U17 | fixture_id=1543889 | league=Brasileiro U17 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Avaí U20 vs Nação U20 | fixture_id=1539815 | league=Catarinense U20 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Afghanistan vs Bangladesh U23 | fixture_id=1548427 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Andorra vs Liechtenstein | fixture_id=1542892 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Bulgaria U19 vs Albania U19 | fixture_id=1548425 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Burundi vs Equatorial Guinea | fixture_id=1545268 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Cambodia vs Bhutan | fixture_id=1544358 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Croatia U18 vs Turkey U18 | fixture_id=1548419 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- France vs Ivory Coast | fixture_id=1536931 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Iran vs Mali | fixture_id=1548428 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Iraq U20 vs Panama U20 | fixture_id=1548422 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Latvia U19 vs Lithuania U19 | fixture_id=1548424 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Lesotho vs Kenya | fixture_id=1548423 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Maldives vs Pakistan | fixture_id=1548420 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Moldova U21 vs Malta U21 | fixture_id=1545269 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Northern Ireland vs Guinea | fixture_id=1543823 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Slovenia vs Cyprus | fixture_id=1540352 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Spain vs Iraq | fixture_id=1544359 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Sweden vs Greece | fixture_id=1542552 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Sweden U21 vs Finland U21 | fixture_id=1548426 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Ukraine U18 vs Finland U18 | fixture_id=1548421 | league=Friendlies | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Bermuda W vs Belize W | fixture_id=1546555 | league=Friendlies Women | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Burkina Faso W vs Mali W | fixture_id=1548466 | league=Friendlies Women | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Germany U23 W vs Denmark U23 W | fixture_id=1533349 | league=Friendlies Women | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Portugal U18 W vs Finland U18 W | fixture_id=1548467 | league=Friendlies Women | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- San Diego Wave W vs Philippines W | fixture_id=1548469 | league=Friendlies Women | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Saudi Arabia W vs Sri Lanka W | fixture_id=1548465 | league=Friendlies Women | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Sweden U18 W vs Norway U18 W | fixture_id=1548468 | league=Friendlies Women | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Innsbrucker AC vs Oberperfuss | fixture_id=1465317 | league=Landesliga - Tirol | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Kematen vs Ebbs | fixture_id=1465315 | league=Landesliga - Tirol | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Kundl vs Telfs | fixture_id=1465318 | league=Landesliga - Tirol | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Silz / Mötz vs Völs | fixture_id=1465312 | league=Landesliga - Tirol | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- St. Johann in Tirol vs Fügen | fixture_id=1465314 | league=Landesliga - Tirol | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Swarovski Tirol II vs Wörgl | fixture_id=1465316 | league=Landesliga - Tirol | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Wolfurt vs Ludesch | fixture_id=1465495 | league=Landesliga - Vorarlbergliga | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Millonarios W vs Independiente Medellín W | fixture_id=1525737 | league=Liga Femenina | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Hornau vs Kassel | fixture_id=1548287 | league=Oberliga - Hessen | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- SG Bornheim vs Bad Soden | fixture_id=1548286 | league=Oberliga - Hessen | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- VfR Mannheim vs Eddersheim | fixture_id=1548283 | league=Oberliga - Promotion Round | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Araucaria U20 vs Cascavel U20 | fixture_id=1548296 | league=Paranaense U20 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- América-SP U20 vs Juventus U20 | fixture_id=1546879 | league=Paulista - U20 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Gremio Prudente U20 vs Palmeiras U20 | fixture_id=1546880 | league=Paulista - U20 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Oeste U20 vs Velo Clube U20 | fixture_id=1546881 | league=Paulista - U20 | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Dornbirn vs SVG Reichenau | fixture_id=1398944 | league=Regionalliga - West | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Kitzbühel vs TSV St. Johann | fixture_id=1398946 | league=Regionalliga - West | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Lauterach vs Kuchl | fixture_id=1398947 | league=Regionalliga - West | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Wals-Grünau vs Rheindorf Altach II | fixture_id=1398949 | league=Regionalliga - West | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Atl. Rafaela 2 vs Lanús Res. | fixture_id=1512435 | league=Reserve League | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Barracas Central Res. vs Aldosivi Res. | fixture_id=1512437 | league=Reserve League | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Central Córdoba SdE Res. vs San Martín San Juan Res. | fixture_id=1512439 | league=Reserve League | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Godoy Cruz Res. vs Unión Santa Fe Res. | fixture_id=1512444 | league=Reserve League | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Platense Res. vs Belgrano Córdoba Res. | fixture_id=1512447 | league=Reserve League | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- San Lorenzo Res. vs Vélez Sársfield Res. | fixture_id=1512450 | league=Reserve League | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Talleres Córdoba Res. vs Argentinos Juniors Res. | fixture_id=1512451 | league=Reserve League | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Belgium U17 vs France U17 | fixture_id=1548193 | league=UEFA U17 Championship | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
-- Italy U17 vs Spain U17 | fixture_id=1548194 | league=UEFA U17 Championship | source=data\processed\governance\vsigma_raw_candidate_trust_gate.csv
+- Sundby vs Holbæk B&I | fixture_id=1540561 | league=3. Division | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Hlučín vs Vsetín | fixture_id=1487455 | league=3. liga - MSFL | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Lebanon vs Yemen | fixture_id=1321353 | league=Asian Cup - Qualification | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- FAR Rabat vs Difaa EL Jadida | fixture_id=1545543 | league=Botola Pro | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Hassania Agadir vs FUS Rabat | fixture_id=1545542 | league=Botola Pro | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- San Lorenzo vs Deportivo Riestra | fixture_id=1540061 | league=Copa Argentina | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Bagé vs Brasil DE Pelotas | fixture_id=1544583 | league=Copa Gaúcha | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Stenungsund vs Vänersborgs IF | fixture_id=1510595 | league=Division 2 - Norra Götaland | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sölvesborg vs Torns | fixture_id=1510949 | league=Division 2 - Södra Götaland | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Deportivo Santani vs Resistencia | fixture_id=1546540 | league=Division Intermedia | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Paraguari AC vs Atlético Tembetary | fixture_id=1546539 | league=Division Intermedia | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Colombe vs Unisport Bafang | fixture_id=1512925 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Fortuna Mfou vs Aigle Royal de Moungo | fixture_id=1512927 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- PWD Bamenda vs Canon | fixture_id=1512924 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Panthère vs Stade Renard | fixture_id=1512928 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Victoria United vs Jeunes Fauves | fixture_id=1512929 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- AFC Eskilstuna vs Karlberg | fixture_id=1505171 | league=Ettan - Norra | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Laholm vs Hässleholms IF | fixture_id=1504456 | league=Ettan - Södra | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Fortune vs BST Galaxy | fixture_id=1531367 | league=GFA League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- GPA vs Dutch Lions | fixture_id=1531368 | league=GFA League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Real de Banjul vs Falcons | fixture_id=1531369 | league=GFA League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- TMT vs Bombada | fixture_id=1531370 | league=GFA League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- PEPO vs Reipas | fixture_id=1541615 | league=Kakkonen - Lohko A | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- ÅIFK vs P-Iirot | fixture_id=1541502 | league=Kakkonen - Lohko B | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Cuniburo vs Cumbayá | fixture_id=1526552 | league=Liga Pro Serie B | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- AS Camberene vs Jaraaf | fixture_id=1546561 | league=Ligue 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ben Aknoun vs USM Alger | fixture_id=1513466 | league=Ligue 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Casa Sport vs DSC | fixture_id=1546563 | league=Ligue 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Gorée vs Stade de Mbour | fixture_id=1546568 | league=Ligue 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Guédiawaye vs Teungueth | fixture_id=1546565 | league=Ligue 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Génération Foot vs AJEL | fixture_id=1546564 | league=Ligue 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- HLM vs Pikine | fixture_id=1546562 | league=Ligue 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- La Linguère vs Wally Daan | fixture_id=1546566 | league=Ligue 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ouakam vs Sonacos | fixture_id=1546567 | league=Ligue 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sao Luis vs Tupan | fixture_id=1544779 | league=Maranhense - 2 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Welayta Dicha vs Negelle Arsi | fixture_id=1541081 | league=Premier League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- ASKO vs Derby Academie | fixture_id=1545728 | league=Première Division | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Bakaridjan vs Stade Malien Bamako | fixture_id=1545729 | league=Première Division | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Mali Coura vs Bougouni | fixture_id=1545732 | league=Première Division | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- USFAS Bamako vs Onze Créateurs | fixture_id=1545731 | league=Première Division | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Real Potosí vs ABB | fixture_id=1538379 | league=Primera División | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Kattaqurgon vs FarDu | fixture_id=1530970 | league=Pro League A | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Respublika FA vs Qiziriq | fixture_id=1531057 | league=Pro League A | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Shortan vs Metalourg | fixture_id=1530972 | league=Pro League A | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Stocksund vs Stockholm Internazionale | fixture_id=1545630 | league=Svenska Cupen | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Albion Colorado vs Utah United | fixture_id=1524750 | league=USL League Two | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Houston FC vs Hill Country Lobos | fixture_id=1524730 | league=USL League Two | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Erie Sports Center W vs Steel City W | fixture_id=1532112 | league=USL W League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Virginia Development Academy W vs Virginia Beach United W | fixture_id=1532430 | league=USL W League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Timor-Leste U19 vs Indonesia U19 | fixture_id=1547212 | league=ASEAN Championship U19 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- SSA U20 vs Galícia U20 | fixture_id=1530850 | league=Baiano U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Athletico PR U17 vs America MG U17 | fixture_id=1543881 | league=Brasileiro U17 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Palmeiras U17 vs Vitoria U17 | fixture_id=1543889 | league=Brasileiro U17 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Avaí U20 vs Nação U20 | fixture_id=1539815 | league=Catarinense U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Afghanistan vs Bangladesh U23 | fixture_id=1548427 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Andorra vs Liechtenstein | fixture_id=1542892 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Bulgaria U19 vs Albania U19 | fixture_id=1548425 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Burundi vs Equatorial Guinea | fixture_id=1545268 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Cambodia vs Bhutan | fixture_id=1544358 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Croatia U18 vs Turkey U18 | fixture_id=1548419 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- France vs Ivory Coast | fixture_id=1536931 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Iran vs Mali | fixture_id=1548428 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Iraq U20 vs Panama U20 | fixture_id=1548422 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Latvia U19 vs Lithuania U19 | fixture_id=1548424 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Lesotho vs Kenya | fixture_id=1548423 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Maldives vs Pakistan | fixture_id=1548420 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Moldova U21 vs Malta U21 | fixture_id=1545269 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Northern Ireland vs Guinea | fixture_id=1543823 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Slovenia vs Cyprus | fixture_id=1540352 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Spain vs Iraq | fixture_id=1544359 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sweden vs Greece | fixture_id=1542552 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sweden U21 vs Finland U21 | fixture_id=1548426 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ukraine U18 vs Finland U18 | fixture_id=1548421 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Bermuda W vs Belize W | fixture_id=1546555 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Burkina Faso W vs Mali W | fixture_id=1548466 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Germany U23 W vs Denmark U23 W | fixture_id=1533349 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Portugal U18 W vs Finland U18 W | fixture_id=1548467 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- San Diego Wave W vs Philippines W | fixture_id=1548469 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Saudi Arabia W vs Sri Lanka W | fixture_id=1548465 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sweden U18 W vs Norway U18 W | fixture_id=1548468 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Innsbrucker AC vs Oberperfuss | fixture_id=1465317 | league=Landesliga - Tirol | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Kematen vs Ebbs | fixture_id=1465315 | league=Landesliga - Tirol | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Kundl vs Telfs | fixture_id=1465318 | league=Landesliga - Tirol | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Silz / Mötz vs Völs | fixture_id=1465312 | league=Landesliga - Tirol | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- St. Johann in Tirol vs Fügen | fixture_id=1465314 | league=Landesliga - Tirol | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Swarovski Tirol II vs Wörgl | fixture_id=1465316 | league=Landesliga - Tirol | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Wolfurt vs Ludesch | fixture_id=1465495 | league=Landesliga - Vorarlbergliga | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Millonarios W vs Independiente Medellín W | fixture_id=1525737 | league=Liga Femenina | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Hornau vs Kassel | fixture_id=1548287 | league=Oberliga - Hessen | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- SG Bornheim vs Bad Soden | fixture_id=1548286 | league=Oberliga - Hessen | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- VfR Mannheim vs Eddersheim | fixture_id=1548283 | league=Oberliga - Promotion Round | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Araucaria U20 vs Cascavel U20 | fixture_id=1548296 | league=Paranaense U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- América-SP U20 vs Juventus U20 | fixture_id=1546879 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Gremio Prudente U20 vs Palmeiras U20 | fixture_id=1546880 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Oeste U20 vs Velo Clube U20 | fixture_id=1546881 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Dornbirn vs SVG Reichenau | fixture_id=1398944 | league=Regionalliga - West | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Kitzbühel vs TSV St. Johann | fixture_id=1398946 | league=Regionalliga - West | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Lauterach vs Kuchl | fixture_id=1398947 | league=Regionalliga - West | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Wals-Grünau vs Rheindorf Altach II | fixture_id=1398949 | league=Regionalliga - West | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Atl. Rafaela 2 vs Lanús Res. | fixture_id=1512435 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Barracas Central Res. vs Aldosivi Res. | fixture_id=1512437 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Central Córdoba SdE Res. vs San Martín San Juan Res. | fixture_id=1512439 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Godoy Cruz Res. vs Unión Santa Fe Res. | fixture_id=1512444 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Platense Res. vs Belgrano Córdoba Res. | fixture_id=1512447 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- San Lorenzo Res. vs Vélez Sársfield Res. | fixture_id=1512450 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Talleres Córdoba Res. vs Argentinos Juniors Res. | fixture_id=1512451 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Belgium U17 vs France U17 | fixture_id=1548193 | league=UEFA U17 Championship | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Italy U17 vs Spain U17 | fixture_id=1548194 | league=UEFA U17 Championship | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 
 ## Source Diagnostics
-- data\processed\candidate_v4_historical\vsigma_candidate_v4_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\candidate_v4_historical\vsigma_candidate_v4_historical_firewall_decisions.csv | status=NO_SAME_DAY_ROWS | rows=6 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\candidate_v5_historical\vsigma_candidate_v5_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\candidate_v5_historical\vsigma_candidate_v5_historical_player_impact_adjustments.csv | status=NO_SAME_DAY_ROWS | rows=3 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\candidate_v6_historical\vsigma_candidate_v6_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\candidate_v6_historical\vsigma_candidate_v6_historical_predictions_benchmark_rows.csv | status=NO_SAME_DAY_ROWS | rows=22 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\candidate_v7_historical\vsigma_candidate_v7_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\candidate_v7_historical\vsigma_candidate_v7_historical_price_guard_rows.csv | status=NO_SAME_DAY_ROWS | rows=22 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\governance\vsigma_candidate_provenance_ceiling.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\governance\vsigma_dated_post_match_results_refresh.csv | status=NO_SAME_DAY_ROWS | rows=4 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\governance\vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_ACCEPTED_ROWS | rows=108 | same_day=108 | accepted=0 | rejected=108 | detail=target-date rows exist but are blocked or missing identity
-- data\processed\governance\vsigma_match_stat_forecast_backtest.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\governance\vsigma_match_stat_forecast_calibration_details.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\governance\vsigma_match_stat_forecasts.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\governance\vsigma_post_match_stat_actuals.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\governance\vsigma_promoted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\governance\vsigma_raw_candidate_trust_gate.csv | status=HAS_ACCEPTED_ROWS | rows=108 | same_day=108 | accepted=108 | rejected=0 | detail=local source contains accepted raw fixture rows
-- data\processed\governance\vsigma_shadow_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\governance\vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_ACCEPTED_ROWS | rows=108 | same_day=108 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
-- data\processed\governance\vsigma_trusted_raw_fixture_candidates.csv | status=NO_ACCEPTED_ROWS | rows=72 | same_day=72 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
-- data\processed\historical\2026-04-23\matches.csv | status=NO_SAME_DAY_ROWS | rows=182 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-23\matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-23\matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-23\vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=28 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-23\vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-23\vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-23\vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-23\vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-23\vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-23\vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=28 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-24\matches.csv | status=NO_SAME_DAY_ROWS | rows=426 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-24\matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=52 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-24\matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=52 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-24\vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=32 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-24\vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-24\vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-24\vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-24\vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-24\vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-24\vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=32 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-25\matches.csv | status=NO_SAME_DAY_ROWS | rows=1680 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-25\matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=144 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-25\matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=144 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-25\vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=109 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-25\vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-25\vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-25\vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-25\vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-25\vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-25\vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=109 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-26\matches.csv | status=NO_SAME_DAY_ROWS | rows=1307 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-26\matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=108 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-26\matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=108 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-26\vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=79 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-26\vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-26\vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-26\vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-26\vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-26\vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-26\vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=79 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-27\matches.csv | status=NO_SAME_DAY_ROWS | rows=185 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-27\matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=30 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-27\matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=30 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-27\vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=21 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-27\vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-27\vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-27\vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-27\vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-27\vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-27\vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=21 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-28\matches.csv | status=NO_SAME_DAY_ROWS | rows=148 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-28\matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-28\matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-28\vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=10 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data\processed\historical\2026-04-28\vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-28\vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-28\vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-28\vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-28\vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data\processed\historical\2026-04-28\vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=10 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/candidate_v4_historical/vsigma_candidate_v4_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/candidate_v4_historical/vsigma_candidate_v4_historical_firewall_decisions.csv | status=NO_SAME_DAY_ROWS | rows=6 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/candidate_v5_historical/vsigma_candidate_v5_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/candidate_v5_historical/vsigma_candidate_v5_historical_player_impact_adjustments.csv | status=NO_SAME_DAY_ROWS | rows=3 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/candidate_v6_historical/vsigma_candidate_v6_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/candidate_v6_historical/vsigma_candidate_v6_historical_predictions_benchmark_rows.csv | status=NO_SAME_DAY_ROWS | rows=22 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/candidate_v7_historical/vsigma_candidate_v7_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/candidate_v7_historical/vsigma_candidate_v7_historical_price_guard_rows.csv | status=NO_SAME_DAY_ROWS | rows=22 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_candidate_provenance_ceiling.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_dated_post_match_results_refresh.csv | status=NO_SAME_DAY_ROWS | rows=4 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_ACCEPTED_ROWS | rows=108 | same_day=108 | accepted=0 | rejected=108 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_match_stat_forecast_backtest.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_match_stat_forecast_calibration_details.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_match_stat_forecasts.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_post_match_stat_actuals.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_postmatch_pick_audit.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_postmatch_pick_audit_daily.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=HAS_ACCEPTED_ROWS | rows=108 | same_day=108 | accepted=108 | rejected=0 | detail=local source contains accepted raw fixture rows
+- data/processed/governance/vsigma_shadow_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_ACCEPTED_ROWS | rows=108 | same_day=108 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_ACCEPTED_ROWS | rows=72 | same_day=72 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/historical/2026-04-23/matches.csv | status=NO_SAME_DAY_ROWS | rows=182 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-23/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-23/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-23/vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=28 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-23/vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-23/vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-23/vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-23/vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-23/vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-23/vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=28 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-24/matches.csv | status=NO_SAME_DAY_ROWS | rows=426 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-24/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=52 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-24/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=52 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-24/vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=32 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-24/vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-24/vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-24/vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-24/vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-24/vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-24/vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=32 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-25/matches.csv | status=NO_SAME_DAY_ROWS | rows=1680 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-25/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=144 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-25/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=144 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-25/vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=109 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-25/vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-25/vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-25/vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-25/vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-25/vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-25/vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=109 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-26/matches.csv | status=NO_SAME_DAY_ROWS | rows=1307 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-26/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=108 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-26/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=108 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-26/vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=79 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-26/vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-26/vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-26/vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-26/vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-26/vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-26/vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=79 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-27/matches.csv | status=NO_SAME_DAY_ROWS | rows=185 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-27/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=30 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-27/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=30 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-27/vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=21 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-27/vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-27/vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-27/vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-27/vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-27/vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-27/vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=21 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-28/matches.csv | status=NO_SAME_DAY_ROWS | rows=148 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-28/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-28/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-28/vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=10 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/historical/2026-04-28/vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-28/vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-28/vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/historical/2026-04-28/vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 
 ## Guardrails
 - Local discovery does not call APIs, touch secrets, increase spend, create picks or bypass No Bet.
