@@ -52,7 +52,9 @@ def build(day: str, tz: str, processed: Path) -> tuple[list[dict[str, object]], 
     quota_rows = load_summary(processed, day, "vsigma_api_quota_aware_enrichment_gate_summary.csv")
     allow_rows = load_summary(processed, day, "vsigma_api_enrichment_allowlist_dry_run_summary.csv")
 
-    active = "MAX_COVERAGE" if max_rows.get("policy_status") == "MAX_COVERAGE_POLICY_READY" else "NO_ACTIVE_MAX_COVERAGE_POLICY"
+    # MAX_COVERAGE is the standing API policy. Row availability only determines
+    # whether there is work to cover in this run; it must not deactivate the policy.
+    active = "MAX_COVERAGE"
     summary = {
         "target_date": day,
         "generated_at": generated,
