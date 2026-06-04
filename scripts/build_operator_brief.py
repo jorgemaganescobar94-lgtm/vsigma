@@ -262,17 +262,20 @@ def health_requires_operator_review(health_text: str, issue_text: str) -> bool:
 
 
 def operator_action_level(op_status: str, active: list[str], waiting: list[str], watch_only: list[str]) -> str:
-    """First-read operator priority, independent from diagnostic health noise."""
+    """First-read operator priority, independent from diagnostic health noise.
+
+    REVIEW without active/live/watch candidates is a health/alert review state,
+    not market permission and not REVIEW_NOW.
+    """
     if op_status == "BROKEN":
         return "BROKEN"
-    if op_status in {"ACTION_REVIEW_NOW", "PRELOCK_REVIEW", "REVIEW"} or active:
+    if active or op_status in {"ACTION_REVIEW_NOW", "PRELOCK_REVIEW"}:
         return "REVIEW_NOW"
     if op_status == "WAIT_LIVE_WINDOW" or waiting:
         return "LIVE"
     if watch_only:
         return "WATCH"
     return "NONE"
-
 
 def operator_sanity_check(
     op_status: str,

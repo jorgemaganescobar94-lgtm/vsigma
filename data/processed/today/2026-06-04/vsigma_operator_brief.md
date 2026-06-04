@@ -3,42 +3,42 @@
 ## Compact Top Summary
 | Field | Value | Meaning |
 |---|---|---|
-| Action | REVIEW_NOW | First-read operator priority |
-| Risk | HIGH | Operational risk after sanity + health gate |
-| Alert | GITHUB_ISSUE_COMMENT / HIGH | Routing decision for operator notifications |
+| Action | NONE | First-read operator priority |
+| Risk | NONE | Operational risk after sanity + health gate |
+| Alert | LOCAL_ONLY / LOW | Routing decision for operator notifications |
 | Counts | active=0; live=0; closed=0; watch=0; no_bet=1 | Candidate distribution |
-| Reason | 0 active manual-review candidate(s); no automatic execution | Why this action level was selected |
-| Final | MANUAL_REVIEW_REQUIRED | sanity=PASS; active_review=0; manual review required; no auto execution |
+| Reason | no active/live/watch action; no_bet=1 | Why this action level was selected |
+| Final | NO_OPERATOR_ACTION | sanity=PASS; no active/live/watch action; no_bet=1; closed=0 |
 
 ## Alert Routing
 | Field | Value | Meaning |
 |---|---|---|
-| Route | GITHUB_ISSUE_COMMENT | NO_ALERT / LOCAL_ONLY / GITHUB_ISSUE_COMMENT / CRITICAL_STOP |
-| Materiality | HIGH | NONE / LOW / MEDIUM / HIGH / CRITICAL |
-| Reason | manual review required now; no automatic execution | Why this route was selected |
+| Route | LOCAL_ONLY | NO_ALERT / LOCAL_ONLY / GITHUB_ISSUE_COMMENT / CRITICAL_STOP |
+| Materiality | LOW | NONE / LOW / MEDIUM / HIGH / CRITICAL |
+| Reason | non-action state changed but no operator action is required | Why this route was selected |
 | Drift | MATERIAL_CHANGE | Historical drift status |
 | DriftNotify | true | Raw material drift notification flag |
 
 ## Historical Drift Check
 | Field | Value | Meaning |
 |---|---|---|
-| Previous | date=2026-06-04; action=BROKEN; risk=HIGH; final=SYSTEM_FIX_REQUIRED; active=0 | data\processed\today\2026-06-04\vsigma_operator_brief.csv |
-| Current | date=2026-06-04; action=REVIEW_NOW; risk=HIGH; final=MANUAL_REVIEW_REQUIRED; active=0 | current_build |
-| Drift | MATERIAL_CHANGE | action_level: BROKEN -> REVIEW_NOW; final_decision: SYSTEM_FIX_REQUIRED -> MANUAL_REVIEW_REQUIRED |
-| Changed | action_level,final_decision | Tracked fields: action/final/risk/active |
+| Previous | date=2026-06-04; action=REVIEW_NOW; risk=HIGH; final=MANUAL_REVIEW_REQUIRED; active=0 | data\processed\today\2026-06-04\vsigma_operator_brief.csv |
+| Current | date=2026-06-04; action=NONE; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | current_build |
+| Drift | MATERIAL_CHANGE | action_level: REVIEW_NOW -> NONE; final_decision: MANUAL_REVIEW_REQUIRED -> NO_OPERATOR_ACTION; risk_label: HIGH -> NONE |
+| Changed | action_level,final_decision,risk_label | Tracked fields: action/final/risk/active |
 | Notify | true | true only on material operator drift |
 
 ## Executive Summary
-- action_level: REVIEW_NOW
-- compact_final_decision: MANUAL_REVIEW_REQUIRED
-- risk_label: HIGH
-- alert_route: GITHUB_ISSUE_COMMENT
-- alert_materiality: HIGH
-- alert_reason: manual review required now; no automatic execution
+- action_level: NONE
+- compact_final_decision: NO_OPERATOR_ACTION
+- risk_label: NONE
+- alert_route: LOCAL_ONLY
+- alert_materiality: LOW
+- alert_reason: non-action state changed but no operator action is required
 - drift_status: MATERIAL_CHANGE
 - drift_notify_required: true
-- drift_changed_fields: action_level,final_decision
-- sanity_check: PASS | active_review=0; manual review required; no auto execution
+- drift_changed_fields: action_level,final_decision,risk_label
+- sanity_check: PASS | no active/live/watch action; no_bet=1; closed=0
 - operator_status: REVIEW
 - primary_next_action: Open health/board/recheck summaries; no automatic action.
 - health_status: ATTENTION
@@ -55,16 +55,16 @@
 - production_change: NO
 
 ## Operator Priority
-- ACTION_LEVEL=REVIEW_NOW
-- RISK_LABEL=HIGH
-- FINAL_DECISION=MANUAL_REVIEW_REQUIRED
-- ALERT_ROUTE=GITHUB_ISSUE_COMMENT
-- ALERT_MATERIALITY=HIGH
-- ALERT_REASON=manual review required now; no automatic execution
+- ACTION_LEVEL=NONE
+- RISK_LABEL=NONE
+- FINAL_DECISION=NO_OPERATOR_ACTION
+- ALERT_ROUTE=LOCAL_ONLY
+- ALERT_MATERIALITY=LOW
+- ALERT_REASON=non-action state changed but no operator action is required
 - DRIFT_STATUS=MATERIAL_CHANGE
 - DRIFT_NOTIFY_REQUIRED=true
 - SANITY_CHECK=PASS
-- SANITY_DETAIL=active_review=0; manual review required; no auto execution
+- SANITY_DETAIL=no active/live/watch action; no_bet=1; closed=0
 - WINDOWS_READ=UTF8 | Get-Content data\processed\today\2026-06-04\vsigma_operator_brief.md -Encoding UTF8
 
 ## Active Review

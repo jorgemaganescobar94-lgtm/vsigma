@@ -1,8 +1,8 @@
 # vSIGMA Consolidated Daily Operator Panel - 2026-06-04
 
 ## First Read
-- panel_status: REVIEW_NOW
-- operator_detail: action=REVIEW_NOW; final=MANUAL_REVIEW_REQUIRED; risk=HIGH; health=ATTENTION; board_rows=1
+- panel_status: OK_EMPTY_BY_PROMOTION_GATE
+- operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=ATTENTION; board_rows=1
 - executable_prematch: NONE
 - live_only: NONE
 - watchlist: NONE
@@ -12,12 +12,12 @@
 - production_change: NO
 
 ## Operator Gate
-- action_level: REVIEW_NOW
-- compact_final_decision: MANUAL_REVIEW_REQUIRED
-- risk_label: HIGH
+- action_level: NONE
+- compact_final_decision: NO_OPERATOR_ACTION
+- risk_label: NONE
 - health_status: ATTENTION
 - board_rows: 1
-- panel_status: REVIEW_NOW
+- panel_status: OK_EMPTY_BY_PROMOTION_GATE
 - next_action: Follow operator brief and panel categories; no automatic execution.
 
 ## Executable Prematch
