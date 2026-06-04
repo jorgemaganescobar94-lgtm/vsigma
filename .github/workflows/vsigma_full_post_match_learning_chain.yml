@@ -62,6 +62,10 @@ jobs:
         shell: bash
         run: python scripts/build_postmatch_pick_audit.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Classify pick quality and error taxonomy
+        shell: bash
+        run: python scripts/build_pick_quality_classification.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Calibrate match stat forecasts
         shell: bash
         run: python scripts/calibrate_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
@@ -137,6 +141,8 @@ jobs:
             data/processed/today/${VSIGMA_DATE}/vsigma_post_match_stat_actuals.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_postmatch_pick_audit.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_postmatch_pick_audit_daily.csv \
+            data/processed/today/${VSIGMA_DATE}/vsigma_pick_quality_classification.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_pick_quality_classification_daily.csv \
             data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecast_calibration* \
             data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecast_backtest.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_stat_calibration_governor.* \
@@ -153,6 +159,8 @@ jobs:
             data/processed/governance/vsigma_post_match_stat_actuals.* \
             data/processed/governance/vsigma_postmatch_pick_audit.* \
             data/processed/governance/vsigma_postmatch_pick_audit_daily.csv \
+            data/processed/governance/vsigma_pick_quality_classification.* \
+            data/processed/governance/vsigma_pick_quality_classification_daily.csv \
             data/processed/governance/vsigma_match_stat_forecast_calibration* \
             data/processed/governance/vsigma_match_stat_forecast_backtest.* \
             data/processed/governance/vsigma_stat_calibration_governor.* \
