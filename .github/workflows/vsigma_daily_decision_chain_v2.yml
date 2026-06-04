@@ -150,6 +150,10 @@ jobs:
         shell: bash
         run: python scripts/build_automation_health_monitor.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Refresh operator brief after automation health
+        shell: bash
+        run: python scripts/build_operator_brief.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Build date guard and consolidated panel
         shell: bash
         run: python scripts/build_consolidated_daily_operator_panel_v3.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
