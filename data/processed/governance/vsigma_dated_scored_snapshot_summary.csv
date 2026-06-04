@@ -1,2 +1,2 @@
 target_date,generated_at,source_path,output_path,source_rows,same_day_rows,rows_written,no_data_blocked_rows,non_blocked_rows,snapshot_status,next_action,auto_apply,production_change
-2026-06-04,2026-06-04T22:18:42+01:00,data/processed/matches_vsigma_scored_v3.csv,data/processed/today/2026-06-04/matches_vsigma_scored_v3.csv,0,0,0,0,0,NO_SAME_DAY_ROWS,Repair scoring date coverage; no dated snapshot rows can be written.,NO,NO
+2026-06-04,2026-06-04T23:49:43+01:00,data/processed/matches_vsigma_scored_v3.csv,data/processed/today/2026-06-04/matches_vsigma_scored_v3.csv,0,0,0,0,0,NO_SAME_DAY_ROWS,Repair scoring date coverage; no dated snapshot rows can be written.,NO,NO
