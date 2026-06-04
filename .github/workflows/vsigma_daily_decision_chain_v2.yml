@@ -178,6 +178,10 @@ jobs:
         shell: bash
         run: python scripts/build_active_max_coverage_api_policy.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Build official pick ledger
+        shell: bash
+        run: python scripts/build_official_pick_ledger.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Postflight self-heal router
         shell: bash
         run: python scripts/route_daily_chain_missing_self_heal.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
