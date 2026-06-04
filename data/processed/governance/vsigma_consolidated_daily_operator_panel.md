@@ -41,10 +41,12 @@
 - missing_data_counts: none
 
 ## Official / Probable Lineups
+- data/processed/today/2026-06-04/official_lineup_sources.csv: rows=32
 - data/processed/governance/official_lineup_sources.csv: rows=32
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Quarantine / Learning-Only / Import Status
+- data/processed/today/2026-06-04/official_lineup_sources.csv: rows=32
 - data/processed/governance/official_lineup_sources.csv: rows=32
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
@@ -61,9 +63,9 @@
 - status_counts: MISSING=1; OK=3; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-03; reason=align_daily_chain_self_heal_today_v70_5A; triggered_at=2026-06-03T09:30:00+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-03; reason=run_daily_decision_chain_today_v70_5A_date_fix; triggered_at=2026-06-03T09:30:00+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-03; reason=align_prelock_today_v70_5A; triggered_at=2026-06-03T09:30:00+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-04; reason=align_daily_chain_self_heal_today_v71_1; triggered_at=2026-06-04T17:05:43+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-04; reason=run_daily_decision_chain_today_v71_1_date_fix; triggered_at=2026-06-04T17:05:43+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-04; reason=align_prelock_today_v71_1; triggered_at=2026-06-04T17:05:43+01:00
 
 ## Key Files
 - data/processed/today/2026-06-04/vsigma_consolidated_daily_operator_panel.md
@@ -80,20 +82,19 @@
 - No Bet, Watch, Live Only, Learning Only and Quarantine are valid successful outcomes.
 - Source Reliability Governor remains advisory-only and cannot change weights by itself.
 - If the daily board is missing, prelock/live files cannot be used as pick permission.
-
 ## Date Coherence Guard
-- overall_status: DATE_MISMATCH_BLOCK
-- board_status: daily_board_md=MISSING_CORE; daily_board_csv=MISSING_CORE
-- mismatch_count: 2
-- missing_core_count: 2
-- trigger_date_counts: 2026-06-03=2
-- next_action: Fix trigger/artifact date mismatch before using market signals.
+- overall_status: OK
+- board_status: daily_board_md=OK; daily_board_csv=OK
+- mismatch_count: 0
+- missing_core_count: 0
+- trigger_date_counts: 2026-06-04=2
+- next_action: All dated artifacts/triggers reviewed by guard are coherent.
 
 ## Upstream Board Input Diagnostic
 - overall_status: UPSTREAM_MISSING
 - first_empty_required_component: real_objective_context_gate
-- missing_required_count: 8
-- empty_required_count: 0
+- missing_required_count: 2
+- empty_required_count: 6
 - date_issue_count: 0
 - forecast_rows: 0
 - translator_rows: 0
@@ -111,7 +112,7 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1364
+- files_scanned: 1367
 - accepted_rows: 108
 - rejected_rows: 0
 - next_action: Review accepted rows, then feed normal scoring gates.
@@ -177,3 +178,64 @@
 - quarantine_rows: 0
 - board_rows_written: 1_DIAGNOSTIC_ROW
 - reason: 0 promoted raw candidates; no scoring-safe rows available
+## API Quota-Aware Enrichment Gate
+- quota_gate_status: NO_AUTO_ENRICHMENT_ALLOWED
+- api_plan_name: API-Football Ultra
+- plan_requests_per_day: 75000
+- rows_reviewed: 0
+- p1_rows: 0
+- p2_rows: 0
+- p1_estimated_units: 0
+- p2_estimated_units: 0
+- auto_units_reserved: 0
+- max_auto_units_per_day: 5000
+- max_auto_units_per_run: 1500
+- quota_decision_counts: none
+- api_calls_allowed: NO
+- api_calls_executed: NO
+- recommended_action: Run a separate enrichment executor only for allowlisted rows; do not create picks from enrichment alone.
+## Empty Diagnostic Board State Normalizer
+- normalized_status: OK_EMPTY_BY_PROMOTION_GATE
+- operator_state: HEALTHY_EMPTY_NO_ACTION
+- board_status: daily_board_md=OK; daily_board_csv=OK
+- mismatch_count: 0
+- promoted_rows: 0
+- queue_rows: 0
+- diagnostic_no_bet_rows: 1
+- next_action: No picks. System is coherent and empty because zero candidates were promoted. Wait for future data or improved trusted source coverage.
+## Rejected Source Block Audit
+- rows_reviewed: 108
+- correct_reject_rows: 67
+- manual_review_rows: 41
+- whitelist_candidate_rows: 29
+- audit_bucket_counts: CORRECT_REJECT_YOUTH_RESERVE_TEAM_TOKEN=39; MANUAL_REVIEW_POSSIBLE_WHITELIST=29; CORRECT_REJECT_LOW_TIER_LOW_COVERAGE=17; REVIEW_REJECTED_SOURCE_UNKNOWN_COMPETITION=12; CORRECT_REJECT_FRIENDLY_CONTEXT_VOLATILITY=11
+- review_priority_counts: P3_CORRECT_REJECT=67; P1_REVIEW_CANDIDATE=29; P2_REVIEW_LOW_CONFIDENCE=12
+- next_action: Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.
+## Max-Coverage API Enrichment Policy
+- policy_status: NO_ROWS_TO_COVER
+- api_plan_name: API-Football Ultra
+- plan_requests_per_day: 75000
+- rows_reviewed: 0
+- rows_allowed: 0
+- full_scoring_enrichment_rows: 0
+- coverage_probe_rows: 0
+- diagnostic_only_rows: 0
+- blocked_rows: 0
+- estimated_call_units: 0
+- downstream_use_counts: none
+- external_calls_allowed: NO
+- external_calls_executed: NO
+- next_action: Use max-coverage policy for a separate logged API executor. Enrichment can be broad; scoring remains restricted by downstream_use and normal gates.
+## Active API Policy
+- active_api_policy: NO_ACTIVE_MAX_COVERAGE_POLICY
+- policy_source: vsigma_max_coverage_api_enrichment_policy
+- external_calls_allowed: NO
+- external_calls_executed: NO
+- scoring_allowed_rows: 0
+- coverage_probe_rows: 0
+- diagnostic_only_rows: 0
+- blocked_rows: 0
+- legacy_cost_gate_status: LEGACY_INFORMATIONAL_ONLY:NO_ENRICHMENT_NEEDED
+- legacy_quota_gate_status: LEGACY_SECONDARY_ONLY:NO_AUTO_ENRICHMENT_ALLOWED
+- legacy_allowlist_status: LEGACY_SECONDARY_ONLY:ALLOWLIST_DRY_RUN_READY
+- operator_note: MAX_COVERAGE is the active API policy. Legacy cost/quota/allowlist gates are informational and cannot override the active policy. No external calls are executed by this integration.
