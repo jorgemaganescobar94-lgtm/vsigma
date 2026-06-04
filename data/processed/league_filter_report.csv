@@ -1,43 +1,18 @@
 country,league,league_tier,league_filter_reason,matches
-World,Friendlies,REJECT,hard_reject_noise_league,19
-Senegal,Ligue 1,REJECT,country_league_not_allowlisted,8
-Argentina,Reserve League,REJECT,hard_reject_noise_league,7
-World,Friendlies Women,REJECT,hard_reject_noise_league,7
-Austria,Landesliga - Tirol,REJECT,hard_reject_noise_league,6
-Cameroon,Elite One,REJECT,country_league_not_allowlisted,5
-Austria,Regionalliga - West,REJECT,hard_reject_noise_league,4
-Gambia,GFA League,REJECT,country_league_not_allowlisted,4
-Mali,Première Division,REJECT,country_league_not_allowlisted,4
-Brazil,Paulista - U20,REJECT,hard_reject_noise_league,3
-Uzbekistan,Pro League A,REJECT,country_league_not_allowlisted,3
+World,Friendlies Women,REJECT,hard_reject_noise_league,4
+Argentina,Reserve League,REJECT,hard_reject_noise_league,3
 Brazil,Brasileiro U17,REJECT,hard_reject_noise_league,2
-Germany,Oberliga - Hessen,REJECT,hard_reject_noise_league,2
-Morocco,Botola Pro,REJECT,country_league_not_allowlisted,2
 Paraguay,Division Intermedia,REJECT,country_league_not_allowlisted,2
-USA,USL League Two,REJECT,country_league_not_allowlisted,2
-USA,USL W League,REJECT,country_league_not_allowlisted,2
-World,UEFA U17 Championship,REJECT,hard_reject_noise_league,2
-Algeria,Ligue 1,REJECT,country_league_not_allowlisted,1
+Senegal,Ligue 1,REJECT,country_league_not_allowlisted,2
+World,Friendlies,REJECT,hard_reject_noise_league,2
 Argentina,Copa Argentina,REJECT,country_league_not_allowlisted,1
-Austria,Landesliga - Vorarlbergliga,REJECT,hard_reject_noise_league,1
 Bolivia,Primera División,REJECT,country_league_not_allowlisted,1
-Brazil,Baiano U20,REJECT,hard_reject_noise_league,1
-Brazil,Catarinense U20,REJECT,hard_reject_noise_league,1
-Brazil,Copa Gaúcha,REJECT,country_league_not_allowlisted,1
 Brazil,Maranhense - 2,REJECT,country_league_not_allowlisted,1
-Brazil,Paranaense U20,REJECT,hard_reject_noise_league,1
+Brazil,Paulista - U20,REJECT,hard_reject_noise_league,1
 Colombia,Liga Femenina,REJECT,hard_reject_noise_league,1
-Czech-Republic,3. liga - MSFL,REJECT,country_league_not_allowlisted,1
-Denmark,3. Division,REJECT,country_league_not_allowlisted,1
 Ecuador,Liga Pro Serie B,REJECT,country_league_not_allowlisted,1
-Ethiopia,Premier League,REJECT,country_league_not_allowlisted,1
-Finland,Kakkonen - Lohko A,REJECT,country_league_not_allowlisted,1
-Finland,Kakkonen - Lohko B,REJECT,country_league_not_allowlisted,1
-Germany,Oberliga - Promotion Round,REJECT,hard_reject_noise_league,1
-Sweden,Division 2 - Norra Götaland,REJECT,country_league_not_allowlisted,1
-Sweden,Division 2 - Södra Götaland,REJECT,country_league_not_allowlisted,1
-Sweden,Ettan - Norra,REJECT,country_league_not_allowlisted,1
-Sweden,Ettan - Södra,REJECT,country_league_not_allowlisted,1
-Sweden,Svenska Cupen,REJECT,country_league_not_allowlisted,1
-World,ASEAN Championship U19,REJECT,hard_reject_noise_league,1
-World,Asian Cup - Qualification,REJECT,country_league_not_allowlisted,1
+Gambia,GFA League,REJECT,country_league_not_allowlisted,1
+Germany,Oberliga - Hessen,REJECT,hard_reject_noise_league,1
+Morocco,Botola Pro,REJECT,country_league_not_allowlisted,1
+USA,USL League Two,REJECT,country_league_not_allowlisted,1
+USA,USL W League,REJECT,country_league_not_allowlisted,1
