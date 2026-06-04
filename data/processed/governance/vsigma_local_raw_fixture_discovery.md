@@ -5,7 +5,7 @@
 - files_scanned: 1372
 - accepted_rows: 108
 - rejected_rows: 216
-- source_status_counts: NO_SAME_DAY_ROWS=1001; EMPTY_OR_UNREADABLE=362; NO_ACCEPTED_ROWS=8; HAS_ACCEPTED_ROWS=1
+- source_status_counts: NO_SAME_DAY_ROWS=1001; EMPTY_OR_UNREADABLE=360; NO_ACCEPTED_ROWS=10; HAS_ACCEPTED_ROWS=1
 - next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO
@@ -140,7 +140,7 @@
 - data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=HAS_ACCEPTED_ROWS | rows=108 | same_day=108 | accepted=108 | rejected=0 | detail=local source contains accepted raw fixture rows
 - data/processed/governance/vsigma_shadow_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_ACCEPTED_ROWS | rows=108 | same_day=108 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_ACCEPTED_ROWS | rows=72 | same_day=72 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/historical/2026-04-23/matches.csv | status=NO_SAME_DAY_ROWS | rows=182 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows

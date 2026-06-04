@@ -2,12 +2,12 @@
 
 ## First Read
 - panel_status: BROKEN
-- operator_detail: action=BROKEN; final=SYSTEM_FIX_REQUIRED; risk=HIGH; health=BROKEN; board_rows=1
+- operator_detail: action=BROKEN; final=SYSTEM_FIX_REQUIRED; risk=HIGH; health=ATTENTION; board_rows=1
 - executable_prematch: NONE
 - live_only: NONE
 - watchlist: NONE
 - no_bet: ROWS=1
-- health_status: BROKEN
+- health_status: ATTENTION
 - auto_apply: NO
 - production_change: NO
 
@@ -15,7 +15,7 @@
 - action_level: BROKEN
 - compact_final_decision: SYSTEM_FIX_REQUIRED
 - risk_label: HIGH
-- health_status: BROKEN
+- health_status: ATTENTION
 - board_rows: 1
 - panel_status: BROKEN
 - next_action: Fix workflow/input before market discussion.
@@ -57,14 +57,14 @@
 - recommended_action_counts: KEEP_ACTIVE_COLLECT_MORE_DATA=15
 
 ## Automation Health
-- system_status: BROKEN
+- system_status: ATTENTION
 - components_checked: 11
-- severity_counts: BROKEN=1; WARN=1; OK=2; INFO=7
-- status_counts: MISSING=1; OK=3; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
+- severity_counts: OK=3; WARN=1; INFO=7
+- status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
 - .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-04; reason=align_daily_chain_self_heal_today_v71_1; triggered_at=2026-06-04T17:05:43+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-04; reason=rerun_daily_decision_chain_v71_1_active_max_coverage_policy_fix; triggered_at=2026-06-04T17:11:18+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-04; reason=rerun_daily_decision_chain_v71_1_health_refresh_after_board_fix; triggered_at=2026-06-04T17:16:02+01:00
 - .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-04; reason=align_prelock_today_v71_1; triggered_at=2026-06-04T17:05:43+01:00
 
 ## Key Files
