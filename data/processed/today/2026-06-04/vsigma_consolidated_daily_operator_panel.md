@@ -1,7 +1,7 @@
 # vSIGMA Consolidated Daily Operator Panel - 2026-06-04
 
 ## First Read
-- panel_status: OK_EMPTY_BY_PROMOTION_GATE
+- panel_status: NONE
 - operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=ATTENTION; board_rows=1
 - executable_prematch: NONE
 - live_only: NONE
@@ -17,7 +17,7 @@
 - risk_label: NONE
 - health_status: ATTENTION
 - board_rows: 1
-- panel_status: OK_EMPTY_BY_PROMOTION_GATE
+- panel_status: NONE
 - next_action: Follow operator brief and panel categories; no automatic execution.
 
 ## Executable Prematch
@@ -41,12 +41,12 @@
 - missing_data_counts: none
 
 ## Official / Probable Lineups
-- data\processed\governance\official_lineup_sources.csv: rows=32
-- data\processed\governance\vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
+- data/processed/governance/official_lineup_sources.csv: rows=32
+- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Quarantine / Learning-Only / Import Status
-- data\processed\governance\official_lineup_sources.csv: rows=32
-- data\processed\governance\vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
+- data/processed/governance/official_lineup_sources.csv: rows=32
+- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Source Reliability Governor
 - sources_reviewed: 15
@@ -61,18 +61,18 @@
 - status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma\triggers\daily_chain_self_heal.trigger: date=2026-06-04; reason=force_rerun_daily_chain_v71_1_operator_brief_after_health_fix; triggered_at=2026-06-04T17:32:10+01:00
-- .vsigma\triggers\daily_decision_chain_v2.trigger: date=2026-06-04; reason=force_rerun_daily_chain_v71_1_operator_brief_after_health_fix; triggered_at=2026-06-04T17:32:10+01:00
-- .vsigma\triggers\prelock_official_lineup_recheck.trigger: date=2026-06-04; reason=align_prelock_today_v71_1; triggered_at=2026-06-04T17:05:43+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-04; reason=force_rerun_daily_chain_v71_1_operator_brief_after_health_fix; triggered_at=2026-06-04T17:32:10+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-04; reason=rerun_daily_chain_after_official_pick_ledger_v1; triggered_at=2026-06-04T17:45:30+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-04; reason=align_prelock_today_v71_1; triggered_at=2026-06-04T17:05:43+01:00
 
 ## Key Files
-- data\processed\today\2026-06-04\vsigma_consolidated_daily_operator_panel.md
-- data\processed\today\2026-06-04\vsigma_operator_brief.md
-- data\processed\today\2026-06-04\vsigma_daily_execution_board.md
-- data\processed\today\2026-06-04\vsigma_prelock_live_recheck.md
-- data\processed\today\2026-06-04\vsigma_live_trigger_validator.md
-- data\processed\today\2026-06-04\vsigma_automation_health.md
-- data\processed\today\2026-06-04\vsigma_probable_lineup_source_reliability_governor.md
+- data/processed/today/2026-06-04/vsigma_consolidated_daily_operator_panel.md
+- data/processed/today/2026-06-04/vsigma_operator_brief.md
+- data/processed/today/2026-06-04/vsigma_daily_execution_board.md
+- data/processed/today/2026-06-04/vsigma_prelock_live_recheck.md
+- data/processed/today/2026-06-04/vsigma_live_trigger_validator.md
+- data/processed/today/2026-06-04/vsigma_automation_health.md
+- data/processed/today/2026-06-04/vsigma_probable_lineup_source_reliability_governor.md
 
 ## Guardrails
 - Panel is diagnostic only; it does not execute bets.
@@ -80,6 +80,7 @@
 - No Bet, Watch, Live Only, Learning Only and Quarantine are valid successful outcomes.
 - Source Reliability Governor remains advisory-only and cannot change weights by itself.
 - If the daily board is missing, prelock/live files cannot be used as pick permission.
+
 ## Date Coherence Guard
 - overall_status: OK
 - board_status: daily_board_md=OK; daily_board_csv=OK
@@ -176,64 +177,3 @@
 - quarantine_rows: 0
 - board_rows_written: 0
 - reason: daily board already has rows
-## API Quota-Aware Enrichment Gate
-- quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
-- api_plan_name: API-Football Ultra
-- plan_requests_per_day: 75000
-- rows_reviewed: 72
-- p1_rows: 47
-- p2_rows: 25
-- p1_estimated_units: 237
-- p2_estimated_units: 113
-- auto_units_reserved: 250
-- max_auto_units_per_day: 5000
-- max_auto_units_per_run: 1500
-- quota_decision_counts: AUTO_ENRICHMENT_ALLOWED_P1=45; COVERAGE_PROBE_ALLOWED_P2=25; MANUAL_REVIEW_REQUIRED=2
-- api_calls_allowed: YES_LIMITED
-- api_calls_executed: NO
-- recommended_action: Run a separate enrichment executor only for allowlisted rows; do not create picks from enrichment alone.
-## Empty Diagnostic Board State Normalizer
-- normalized_status: OK_EMPTY_BY_PROMOTION_GATE
-- operator_state: HEALTHY_EMPTY_NO_ACTION
-- board_status: daily_board_md=OK; daily_board_csv=OK
-- mismatch_count: 0
-- promoted_rows: 0
-- queue_rows: 72
-- diagnostic_no_bet_rows: 1
-- next_action: No picks. System is coherent and empty because zero candidates were promoted. Wait for future data or improved trusted source coverage.
-## Rejected Source Block Audit
-- rows_reviewed: 0
-- correct_reject_rows: 0
-- manual_review_rows: 0
-- whitelist_candidate_rows: 0
-- audit_bucket_counts: none
-- review_priority_counts: none
-- next_action: Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.
-## Max-Coverage API Enrichment Policy
-- policy_status: MAX_COVERAGE_POLICY_READY
-- api_plan_name: API-Football Ultra
-- plan_requests_per_day: 75000
-- rows_reviewed: 72
-- rows_allowed: 72
-- full_scoring_enrichment_rows: 41
-- coverage_probe_rows: 22
-- diagnostic_only_rows: 9
-- blocked_rows: 0
-- estimated_call_units: 350
-- downstream_use_counts: SCORING_ALLOWED_WITH_NORMAL_GATES=41; COVERAGE_GATE_ONLY=22; DIAGNOSTIC_ONLY_NO_SCORING=9
-- external_calls_allowed: YES_MAX_COVERAGE_POLICY
-- external_calls_executed: NO
-- next_action: Use max-coverage policy for a separate logged API executor. Enrichment can be broad; scoring remains restricted by downstream_use and normal gates.
-## Active API Policy
-- active_api_policy: MAX_COVERAGE
-- policy_source: vsigma_max_coverage_api_enrichment_policy
-- external_calls_allowed: YES_MAX_COVERAGE_POLICY
-- external_calls_executed: NO
-- scoring_allowed_rows: 41
-- coverage_probe_rows: 22
-- diagnostic_only_rows: 9
-- blocked_rows: 0
-- legacy_cost_gate_status: LEGACY_INFORMATIONAL_ONLY:WAIT_FOR_MANUAL_APPROVAL
-- legacy_quota_gate_status: LEGACY_SECONDARY_ONLY:AUTO_ENRICHMENT_ALLOWED_LIMITED
-- legacy_allowlist_status: LEGACY_SECONDARY_ONLY:ALLOWLIST_DRY_RUN_READY
-- operator_note: MAX_COVERAGE is the active API policy. Legacy cost/quota/allowlist gates are informational and cannot override the active policy. No external calls are executed by this integration.
