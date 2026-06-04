@@ -1,6 +1,6 @@
 date=2026-06-04
 include_backtest=false
 requested_by=jorge-local
-reason=force_rerun_daily_chain_v71_1_operator_brief_after_health_fix
-triggered_at=2026-06-04T17:32:10+01:00
-nonce=run-daily-v71-1-operator-brief-after-health-fix-force-2026-06-04
+reason=rerun_daily_chain_after_official_pick_ledger_v1
+triggered_at=2026-06-04T17:45:30+01:00
+nonce=run-daily-official-pick-ledger-v1-2026-06-04
