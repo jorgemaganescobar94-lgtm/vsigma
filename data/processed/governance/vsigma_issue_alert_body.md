@@ -1,31 +1,28 @@
 # vSIGMA Alert - 2026-06-04
 
-System status: **BROKEN**
+System status: **ATTENTION**
 Alert required: **YES**
 Notify required: **YES**
-Alert hash: `eb6f8d0f609d9d7204e8b482ea2c766de818d7d21e1292bd3d2f631df9dd49be`
+Alert hash: `4926854689f31aded484b1a2648984ce6edc5eb45ea207b8ad05d6d7256ab6fc`
 
 ## Signals
 - - READY_LOW_STAKE_REVIEW still requires manual price and live/prelock confirmation.
 - - WARN means review; BROKEN means a workflow/input needs fixing.
-- - daily_execution_board | status=MISSING | severity=BROKEN | action=RUN_DAILY_DECISION_CHAIN_V2 | detail=vsigma_daily_execution_board.md/csv missing
-- - severity_counts: BROKEN=1; WARN=1; OK=2; INFO=7
-- - system_status: BROKEN
 
 ## Health Snapshot
 ```
 # vSIGMA Automation Health Monitor - 2026-06-04
 
 ## Summary
-- system_status: BROKEN
+- system_status: ATTENTION
 - components_checked: 11
-- severity_counts: BROKEN=1; WARN=1; OK=2; INFO=7
-- status_counts: MISSING=1; OK=3; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
+- severity_counts: OK=3; WARN=1; INFO=7
+- status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 - auto_apply: NO
 - production_change: NO
 
 ## Component Rows
-- daily_execution_board | status=MISSING | severity=BROKEN | action=RUN_DAILY_DECISION_CHAIN_V2 | detail=vsigma_daily_execution_board.md/csv missing
+- daily_execution_board | status=OK | severity=OK | action=NO | detail=rows=0; decisions=NO_BET=0
 - prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=none
 - live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
 - postmatch_results_refresh | status=WAITING_OR_NOT_RUN | severity=INFO | action=NO_IF_MATCHES_NOT_FINISHED | detail=postmatch refresh not present yet
