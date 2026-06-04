@@ -146,6 +146,10 @@ jobs:
           (gov / "vsigma_daily_execution_board.md").write_text(md.read_text(encoding="utf-8"), encoding="utf-8")
           (gov / "vsigma_daily_execution_board.csv").write_text(csv_path.read_text(encoding="utf-8"), encoding="utf-8")
 
+      - name: Refresh automation health after board guarantee
+        shell: bash
+        run: python scripts/build_automation_health_monitor.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Build date guard and consolidated panel
         shell: bash
         run: python scripts/build_consolidated_daily_operator_panel_v3.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
