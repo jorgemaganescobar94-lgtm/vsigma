@@ -1,28 +1,99 @@
 # vSIGMA API Quota-Aware Enrichment Gate - 2026-06-04
 
 ## Summary
-- quota_gate_status: NO_AUTO_ENRICHMENT_ALLOWED
+- quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
 - api_plan_name: API-Football Ultra
 - plan_requests_per_day: 75000
-- rows_reviewed: 0
-- p1_rows: 0
-- p2_rows: 0
-- p1_estimated_units: 0
-- p2_estimated_units: 0
-- p2_probe_units: 0
-- total_estimated_units: 0
-- auto_units_reserved: 0
+- rows_reviewed: 72
+- p1_rows: 47
+- p2_rows: 25
+- p1_estimated_units: 237
+- p2_estimated_units: 113
+- p2_probe_units: 25
+- total_estimated_units: 350
+- auto_units_reserved: 250
 - max_auto_units_per_day: 5000
 - max_auto_units_per_run: 1500
-- quota_decision_counts: none
-- api_calls_allowed: NO
+- quota_decision_counts: AUTO_ENRICHMENT_ALLOWED_P1=45; COVERAGE_PROBE_ALLOWED_P2=25; MANUAL_REVIEW_REQUIRED=2
+- api_calls_allowed: YES_LIMITED
 - api_calls_executed: NO
 - recommended_action: Run a separate enrichment executor only for allowlisted rows; do not create picks from enrichment alone.
 - auto_apply: NO
 - production_change: NO
 
 ## Allowlist / Policy Rows
-- none. Dry-run enrichment plan is missing or empty.
+- Sundby vs Holbæk B&I | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Hlučín vs Vsetín | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Lebanon vs Yemen | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | decision=MANUAL_REVIEW_REQUIRED | mode=NO_AUTO_ENRICHMENT | reserved=0 | api_allowed=NO | executed=NO
+- FAR Rabat vs Difaa EL Jadida | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Hassania Agadir vs FUS Rabat | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- San Lorenzo vs Deportivo Riestra | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Bagé vs Brasil DE Pelotas | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Stenungsund vs Vänersborgs IF | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Sölvesborg vs Torns | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Deportivo Santani vs Resistencia | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Paraguari AC vs Atlético Tembetary | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Colombe vs Unisport Bafang | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Fortuna Mfou vs Aigle Royal de Moungo | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- PWD Bamenda vs Canon | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Panthère vs Stade Renard | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Victoria United vs Jeunes Fauves | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- AFC Eskilstuna vs Karlberg | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Laholm vs Hässleholms IF | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Fortune vs BST Galaxy | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- GPA vs Dutch Lions | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Real de Banjul vs Falcons | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- TMT vs Bombada | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- PEPO vs Reipas | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- ÅIFK vs P-Iirot | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Cuniburo vs Cumbayá | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- AS Camberene vs Jaraaf | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Ben Aknoun vs USM Alger | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Casa Sport vs DSC | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Gorée vs Stade de Mbour | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Guédiawaye vs Teungueth | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Génération Foot vs AJEL | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- HLM vs Pikine | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- La Linguère vs Wally Daan | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Ouakam vs Sonacos | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Sao Luis vs Tupan | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Welayta Dicha vs Negelle Arsi | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Bakaridjan vs Stade Malien Bamako | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Mali Coura vs Bougouni | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- USFAS Bamako vs Onze Créateurs | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Real Potosí vs ABB | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Kattaqurgon vs FarDu | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Respublika FA vs Qiziriq | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Shortan vs Metalourg | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Stocksund vs Stockholm Internazionale | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | decision=MANUAL_REVIEW_REQUIRED | mode=NO_AUTO_ENRICHMENT | reserved=0 | api_allowed=NO | executed=NO
+- Albion Colorado vs Utah United | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Houston FC vs Hill Country Lobos | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Andorra vs Liechtenstein | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Burundi vs Equatorial Guinea | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Cambodia vs Bhutan | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Croatia U18 vs Turkey U18 | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- France vs Ivory Coast | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Iran vs Mali | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Lesotho vs Kenya | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Maldives vs Pakistan | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Northern Ireland vs Guinea | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Slovenia vs Cyprus | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Spain vs Iraq | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Sweden vs Greece | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Ukraine U18 vs Finland U18 | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Innsbrucker AC vs Oberperfuss | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Kematen vs Ebbs | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Kundl vs Telfs | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Silz / Mötz vs Völs | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- St. Johann in Tirol vs Fügen | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Wolfurt vs Ludesch | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Hornau vs Kassel | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- SG Bornheim vs Bad Soden | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- VfR Mannheim vs Eddersheim | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
+- Dornbirn vs SVG Reichenau | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Kitzbühel vs TSV St. Johann | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Lauterach vs Kuchl | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
+- Wals-Grünau vs Rheindorf Altach II | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | decision=COVERAGE_PROBE_ALLOWED_P2 | mode=COVERAGE_PROBE_ONLY | reserved=1 | api_allowed=YES_PROBE_ONLY | executed=NO
 
 ## Guardrails
 - This gate is policy/allowlist only; it does not call APIs.

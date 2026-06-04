@@ -1,11 +1,11 @@
 # vSIGMA Queue-to-Enrichment Dry Run Planner - 2026-06-04
 
 ## Summary
-- rows_planned: 0
-- dry_run_decision_counts: none
-- risk_label_counts: none
-- priority_counts: none
-- total_estimated_call_units: 0
+- rows_planned: 72
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=72
+- risk_label_counts: MEDIUM=45; HIGH_LOW_COVERAGE=25; HIGH_CONTEXT_VOLATILITY=2
+- priority_counts: P1_TRUSTED_MISSING_SCORING=47; P2_LOW_COVERAGE_SCORING=25
+- total_estimated_call_units: 350
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
@@ -13,7 +13,78 @@
 - production_change: NO
 
 ## Dry Run Rows
-- none. Trusted raw scoring queue is empty or missing.
+- Sundby vs Holbæk B&I | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Hlučín vs Vsetín | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Lebanon vs Yemen | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- FAR Rabat vs Difaa EL Jadida | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Hassania Agadir vs FUS Rabat | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- San Lorenzo vs Deportivo Riestra | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Bagé vs Brasil DE Pelotas | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Stenungsund vs Vänersborgs IF | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Sölvesborg vs Torns | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Deportivo Santani vs Resistencia | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Paraguari AC vs Atlético Tembetary | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Colombe vs Unisport Bafang | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Fortuna Mfou vs Aigle Royal de Moungo | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- PWD Bamenda vs Canon | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Panthère vs Stade Renard | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Victoria United vs Jeunes Fauves | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- AFC Eskilstuna vs Karlberg | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Laholm vs Hässleholms IF | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Fortune vs BST Galaxy | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- GPA vs Dutch Lions | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Real de Banjul vs Falcons | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- TMT vs Bombada | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- PEPO vs Reipas | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- ÅIFK vs P-Iirot | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Cuniburo vs Cumbayá | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- AS Camberene vs Jaraaf | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Ben Aknoun vs USM Alger | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Casa Sport vs DSC | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Gorée vs Stade de Mbour | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Guédiawaye vs Teungueth | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Génération Foot vs AJEL | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- HLM vs Pikine | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- La Linguère vs Wally Daan | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Ouakam vs Sonacos | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Sao Luis vs Tupan | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Welayta Dicha vs Negelle Arsi | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Bakaridjan vs Stade Malien Bamako | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Mali Coura vs Bougouni | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- USFAS Bamako vs Onze Créateurs | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Real Potosí vs ABB | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Kattaqurgon vs FarDu | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Respublika FA vs Qiziriq | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Shortan vs Metalourg | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Stocksund vs Stockholm Internazionale | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Albion Colorado vs Utah United | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=4 | blocks=recent_stats; standings; odds; coverage_probe | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Houston FC vs Hill Country Lobos | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=4 | blocks=recent_stats; standings; odds; coverage_probe | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Andorra vs Liechtenstein | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Burundi vs Equatorial Guinea | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Cambodia vs Bhutan | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Croatia U18 vs Turkey U18 | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- France vs Ivory Coast | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Iran vs Mali | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Lesotho vs Kenya | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Maldives vs Pakistan | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Northern Ireland vs Guinea | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Slovenia vs Cyprus | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Spain vs Iraq | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Sweden vs Greece | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Ukraine U18 vs Finland U18 | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Innsbrucker AC vs Oberperfuss | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=4 | blocks=recent_stats; standings; odds; coverage_probe | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Kematen vs Ebbs | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=4 | blocks=recent_stats; standings; odds; coverage_probe | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Kundl vs Telfs | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=4 | blocks=recent_stats; standings; odds; coverage_probe | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Silz / Mötz vs Völs | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=4 | blocks=recent_stats; standings; odds; coverage_probe | decision=DRY_RUN_ONLY_NO_API_CALLS
+- St. Johann in Tirol vs Fügen | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=4 | blocks=recent_stats; standings; odds; coverage_probe | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Wolfurt vs Ludesch | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=4 | blocks=recent_stats; standings; odds; coverage_probe | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Hornau vs Kassel | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- SG Bornheim vs Bad Soden | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- VfR Mannheim vs Eddersheim | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Dornbirn vs SVG Reichenau | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=4 | blocks=recent_stats; standings; odds; coverage_probe | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Kitzbühel vs TSV St. Johann | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=4 | blocks=recent_stats; standings; odds; coverage_probe | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Lauterach vs Kuchl | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=4 | blocks=recent_stats; standings; odds; coverage_probe | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Wals-Grünau vs Rheindorf Altach II | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=4 | blocks=recent_stats; standings; odds; coverage_probe | decision=DRY_RUN_ONLY_NO_API_CALLS
 
 ## Guardrails
 - This planner is dry-run only.

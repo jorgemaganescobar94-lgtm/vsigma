@@ -64,7 +64,7 @@
 
 ## Next Triggers / Rechecks
 - .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-04; reason=align_daily_chain_self_heal_today_v71_1; triggered_at=2026-06-04T17:05:43+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-04; reason=run_daily_decision_chain_today_v71_1_date_fix; triggered_at=2026-06-04T17:05:43+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-04; reason=rerun_daily_decision_chain_v71_1_active_max_coverage_policy_fix; triggered_at=2026-06-04T17:11:18+01:00
 - .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-04; reason=align_prelock_today_v71_1; triggered_at=2026-06-04T17:05:43+01:00
 
 ## Key Files
@@ -112,86 +112,86 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1367
+- files_scanned: 1372
 - accepted_rows: 108
-- rejected_rows: 0
+- rejected_rows: 216
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
 - rows_reviewed: 108
-- trusted_rows: 0
-- quarantine_rows: 0
-- blocked_rows: 108
-- trust_status_counts: REJECTED_SOURCE_BLOCK=108
+- trusted_rows: 72
+- quarantine_rows: 36
+- blocked_rows: 0
+- trust_status_counts: TRUSTED_RAW_SOURCE=72; QUARANTINE_REVIEW=36
 - next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
 
 ## Trusted Raw Candidate Promotion Gate
 - rows_reviewed: 108
 - promoted_rows: 0
 - blocked_rows: 0
-- quarantine_rows: 0
-- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=108
+- quarantine_rows: 72
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=72; NOT_TRUSTED_NO_PROMOTION=36
 - next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 
 ## Scoring Gap Explainer
 - rows_reviewed: 108
-- missing_scored_rows: 0
+- missing_scored_rows: 72
 - no_data_blocked_rows: 0
-- not_trusted_rows: 108
+- not_trusted_rows: 36
 - promoted_rows: 0
-- gap_status_counts: NOT_TRUSTED_SKIPPED=108
+- gap_status_counts: MISSING_SCORED_ROW=72; NOT_TRUSTED_SKIPPED=36
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 
 ## Trusted Raw Scoring Queue
-- queue_rows: 0
-- priority_counts: none
-- scoring_needed_counts: none
+- queue_rows: 72
+- priority_counts: P1_TRUSTED_MISSING_SCORING=47; P2_LOW_COVERAGE_SCORING=25
+- scoring_needed_counts: YES=72
 - source_gap_status: MISSING_SCORED_ROW
 - next_action: Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.
 
 ## Queue-to-Enrichment Dry Run Planner
-- rows_planned: 0
-- dry_run_decision_counts: none
-- risk_label_counts: none
-- priority_counts: none
-- total_estimated_call_units: 0
+- rows_planned: 72
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=72
+- risk_label_counts: MEDIUM=45; HIGH_LOW_COVERAGE=25; HIGH_CONTEXT_VOLATILITY=2
+- priority_counts: P1_TRUSTED_MISSING_SCORING=47; P2_LOW_COVERAGE_SCORING=25
+- total_estimated_call_units: 350
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
 
 ## Enrichment Cost & Approval Gate
-- approval_gate_status: NO_ENRICHMENT_NEEDED
-- rows_planned: 0
-- estimated_call_units: 0
-- approval_required: NO
+- approval_gate_status: WAIT_FOR_MANUAL_APPROVAL
+- rows_planned: 72
+- estimated_call_units: 350
+- approval_required: YES
 - max_allowed_without_manual_approval: 0
 - api_calls_allowed: NO
 - api_calls_planned: NO
 - api_calls_executed: NO
-- recommended_action: NO_ACTION
+- recommended_action: WAIT_FOR_MANUAL_APPROVAL
 
 ## Daily Board Self-Heal
 - self_heal_status: EMPTY_BY_PROMOTION_GATE
 - promotion_rows_reviewed: 108
 - promoted_rows: 0
 - blocked_rows: 0
-- quarantine_rows: 0
+- quarantine_rows: 72
 - board_rows_written: 1_DIAGNOSTIC_ROW
 - reason: 0 promoted raw candidates; no scoring-safe rows available
 ## API Quota-Aware Enrichment Gate
-- quota_gate_status: NO_AUTO_ENRICHMENT_ALLOWED
+- quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
 - api_plan_name: API-Football Ultra
 - plan_requests_per_day: 75000
-- rows_reviewed: 0
-- p1_rows: 0
-- p2_rows: 0
-- p1_estimated_units: 0
-- p2_estimated_units: 0
-- auto_units_reserved: 0
+- rows_reviewed: 72
+- p1_rows: 47
+- p2_rows: 25
+- p1_estimated_units: 237
+- p2_estimated_units: 113
+- auto_units_reserved: 250
 - max_auto_units_per_day: 5000
 - max_auto_units_per_run: 1500
-- quota_decision_counts: none
-- api_calls_allowed: NO
+- quota_decision_counts: AUTO_ENRICHMENT_ALLOWED_P1=45; COVERAGE_PROBE_ALLOWED_P2=25; MANUAL_REVIEW_REQUIRED=2
+- api_calls_allowed: YES_LIMITED
 - api_calls_executed: NO
 - recommended_action: Run a separate enrichment executor only for allowlisted rows; do not create picks from enrichment alone.
 ## Empty Diagnostic Board State Normalizer
@@ -200,42 +200,42 @@
 - board_status: daily_board_md=OK; daily_board_csv=OK
 - mismatch_count: 0
 - promoted_rows: 0
-- queue_rows: 0
+- queue_rows: 72
 - diagnostic_no_bet_rows: 1
 - next_action: No picks. System is coherent and empty because zero candidates were promoted. Wait for future data or improved trusted source coverage.
 ## Rejected Source Block Audit
-- rows_reviewed: 108
-- correct_reject_rows: 67
-- manual_review_rows: 41
-- whitelist_candidate_rows: 29
-- audit_bucket_counts: CORRECT_REJECT_YOUTH_RESERVE_TEAM_TOKEN=39; MANUAL_REVIEW_POSSIBLE_WHITELIST=29; CORRECT_REJECT_LOW_TIER_LOW_COVERAGE=17; REVIEW_REJECTED_SOURCE_UNKNOWN_COMPETITION=12; CORRECT_REJECT_FRIENDLY_CONTEXT_VOLATILITY=11
-- review_priority_counts: P3_CORRECT_REJECT=67; P1_REVIEW_CANDIDATE=29; P2_REVIEW_LOW_CONFIDENCE=12
+- rows_reviewed: 0
+- correct_reject_rows: 0
+- manual_review_rows: 0
+- whitelist_candidate_rows: 0
+- audit_bucket_counts: none
+- review_priority_counts: none
 - next_action: Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.
 ## Max-Coverage API Enrichment Policy
-- policy_status: NO_ROWS_TO_COVER
+- policy_status: MAX_COVERAGE_POLICY_READY
 - api_plan_name: API-Football Ultra
 - plan_requests_per_day: 75000
-- rows_reviewed: 0
-- rows_allowed: 0
-- full_scoring_enrichment_rows: 0
-- coverage_probe_rows: 0
-- diagnostic_only_rows: 0
+- rows_reviewed: 72
+- rows_allowed: 72
+- full_scoring_enrichment_rows: 41
+- coverage_probe_rows: 22
+- diagnostic_only_rows: 9
 - blocked_rows: 0
-- estimated_call_units: 0
-- downstream_use_counts: none
-- external_calls_allowed: NO
+- estimated_call_units: 350
+- downstream_use_counts: SCORING_ALLOWED_WITH_NORMAL_GATES=41; COVERAGE_GATE_ONLY=22; DIAGNOSTIC_ONLY_NO_SCORING=9
+- external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: NO
 - next_action: Use max-coverage policy for a separate logged API executor. Enrichment can be broad; scoring remains restricted by downstream_use and normal gates.
 ## Active API Policy
-- active_api_policy: NO_ACTIVE_MAX_COVERAGE_POLICY
+- active_api_policy: MAX_COVERAGE
 - policy_source: vsigma_max_coverage_api_enrichment_policy
-- external_calls_allowed: NO
+- external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: NO
-- scoring_allowed_rows: 0
-- coverage_probe_rows: 0
-- diagnostic_only_rows: 0
+- scoring_allowed_rows: 41
+- coverage_probe_rows: 22
+- diagnostic_only_rows: 9
 - blocked_rows: 0
-- legacy_cost_gate_status: LEGACY_INFORMATIONAL_ONLY:NO_ENRICHMENT_NEEDED
-- legacy_quota_gate_status: LEGACY_SECONDARY_ONLY:NO_AUTO_ENRICHMENT_ALLOWED
+- legacy_cost_gate_status: LEGACY_INFORMATIONAL_ONLY:WAIT_FOR_MANUAL_APPROVAL
+- legacy_quota_gate_status: LEGACY_SECONDARY_ONLY:AUTO_ENRICHMENT_ALLOWED_LIMITED
 - legacy_allowlist_status: LEGACY_SECONDARY_ONLY:ALLOWLIST_DRY_RUN_READY
 - operator_note: MAX_COVERAGE is the active API policy. Legacy cost/quota/allowlist gates are informational and cannot override the active policy. No external calls are executed by this integration.

@@ -6,7 +6,7 @@
 - board_status: daily_board_md=OK; daily_board_csv=OK
 - mismatch_count: 0
 - promoted_rows: 0
-- queue_rows: 0
+- queue_rows: 72
 - board_rows: 1
 - diagnostic_no_bet_rows: 1
 - next_action: No picks. System is coherent and empty because zero candidates were promoted. Wait for future data or improved trusted source coverage.

@@ -1,18 +1,18 @@
 # vSIGMA Active Max-Coverage API Policy - 2026-06-04
 
 ## Summary
-- active_api_policy: NO_ACTIVE_MAX_COVERAGE_POLICY
+- active_api_policy: MAX_COVERAGE
 - policy_source: vsigma_max_coverage_api_enrichment_policy
 - api_plan_name: API-Football Ultra
 - plan_requests_per_day: 75000
-- external_calls_allowed: NO
+- external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: NO
-- scoring_allowed_rows: 0
-- coverage_probe_rows: 0
-- diagnostic_only_rows: 0
+- scoring_allowed_rows: 41
+- coverage_probe_rows: 22
+- diagnostic_only_rows: 9
 - blocked_rows: 0
-- legacy_cost_gate_status: LEGACY_INFORMATIONAL_ONLY:NO_ENRICHMENT_NEEDED
-- legacy_quota_gate_status: LEGACY_SECONDARY_ONLY:NO_AUTO_ENRICHMENT_ALLOWED
+- legacy_cost_gate_status: LEGACY_INFORMATIONAL_ONLY:WAIT_FOR_MANUAL_APPROVAL
+- legacy_quota_gate_status: LEGACY_SECONDARY_ONLY:AUTO_ENRICHMENT_ALLOWED_LIMITED
 - legacy_allowlist_status: LEGACY_SECONDARY_ONLY:ALLOWLIST_DRY_RUN_READY
 - operator_note: MAX_COVERAGE is the active API policy. Legacy cost/quota/allowlist gates are informational and cannot override the active policy. No external calls are executed by this integration.
 - auto_apply: NO
