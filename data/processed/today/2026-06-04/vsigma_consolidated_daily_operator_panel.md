@@ -1,8 +1,8 @@
 # vSIGMA Consolidated Daily Operator Panel - 2026-06-04
 
 ## First Read
-- panel_status: BROKEN
-- operator_detail: action=BROKEN; final=SYSTEM_FIX_REQUIRED; risk=HIGH; health=ATTENTION; board_rows=1
+- panel_status: REVIEW_NOW
+- operator_detail: action=REVIEW_NOW; final=MANUAL_REVIEW_REQUIRED; risk=HIGH; health=ATTENTION; board_rows=1
 - executable_prematch: NONE
 - live_only: NONE
 - watchlist: NONE
@@ -12,13 +12,13 @@
 - production_change: NO
 
 ## Operator Gate
-- action_level: BROKEN
-- compact_final_decision: SYSTEM_FIX_REQUIRED
+- action_level: REVIEW_NOW
+- compact_final_decision: MANUAL_REVIEW_REQUIRED
 - risk_label: HIGH
 - health_status: ATTENTION
 - board_rows: 1
-- panel_status: BROKEN
-- next_action: Fix workflow/input before market discussion.
+- panel_status: REVIEW_NOW
+- next_action: Follow operator brief and panel categories; no automatic execution.
 
 ## Executable Prematch
 - none
@@ -41,14 +41,12 @@
 - missing_data_counts: none
 
 ## Official / Probable Lineups
-- data/processed/today/2026-06-04/official_lineup_sources.csv: rows=32
-- data/processed/governance/official_lineup_sources.csv: rows=32
-- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
+- data\processed\governance\official_lineup_sources.csv: rows=32
+- data\processed\governance\vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Quarantine / Learning-Only / Import Status
-- data/processed/today/2026-06-04/official_lineup_sources.csv: rows=32
-- data/processed/governance/official_lineup_sources.csv: rows=32
-- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
+- data\processed\governance\official_lineup_sources.csv: rows=32
+- data\processed\governance\vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Source Reliability Governor
 - sources_reviewed: 15
@@ -63,18 +61,18 @@
 - status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-04; reason=align_daily_chain_self_heal_today_v71_1; triggered_at=2026-06-04T17:05:43+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-04; reason=rerun_daily_decision_chain_v71_1_health_refresh_after_board_fix; triggered_at=2026-06-04T17:16:02+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-04; reason=align_prelock_today_v71_1; triggered_at=2026-06-04T17:05:43+01:00
+- .vsigma\triggers\daily_chain_self_heal.trigger: date=2026-06-04; reason=force_rerun_daily_chain_v71_1_operator_brief_after_health_fix; triggered_at=2026-06-04T17:32:10+01:00
+- .vsigma\triggers\daily_decision_chain_v2.trigger: date=2026-06-04; reason=force_rerun_daily_chain_v71_1_operator_brief_after_health_fix; triggered_at=2026-06-04T17:32:10+01:00
+- .vsigma\triggers\prelock_official_lineup_recheck.trigger: date=2026-06-04; reason=align_prelock_today_v71_1; triggered_at=2026-06-04T17:05:43+01:00
 
 ## Key Files
-- data/processed/today/2026-06-04/vsigma_consolidated_daily_operator_panel.md
-- data/processed/today/2026-06-04/vsigma_operator_brief.md
-- data/processed/today/2026-06-04/vsigma_daily_execution_board.md
-- data/processed/today/2026-06-04/vsigma_prelock_live_recheck.md
-- data/processed/today/2026-06-04/vsigma_live_trigger_validator.md
-- data/processed/today/2026-06-04/vsigma_automation_health.md
-- data/processed/today/2026-06-04/vsigma_probable_lineup_source_reliability_governor.md
+- data\processed\today\2026-06-04\vsigma_consolidated_daily_operator_panel.md
+- data\processed\today\2026-06-04\vsigma_operator_brief.md
+- data\processed\today\2026-06-04\vsigma_daily_execution_board.md
+- data\processed\today\2026-06-04\vsigma_prelock_live_recheck.md
+- data\processed\today\2026-06-04\vsigma_live_trigger_validator.md
+- data\processed\today\2026-06-04\vsigma_automation_health.md
+- data\processed\today\2026-06-04\vsigma_probable_lineup_source_reliability_governor.md
 
 ## Guardrails
 - Panel is diagnostic only; it does not execute bets.
@@ -94,11 +92,11 @@
 - overall_status: UPSTREAM_MISSING
 - first_empty_required_component: real_objective_context_gate
 - missing_required_count: 2
-- empty_required_count: 6
+- empty_required_count: 5
 - date_issue_count: 0
 - forecast_rows: 0
 - translator_rows: 0
-- board_rows: 0
+- board_rows: 1
 - next_action: Build missing required upstream component first: real_objective_context_gate.
 
 ## Real Shortlist Recovery Diagnostic
@@ -112,7 +110,7 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1372
+- files_scanned: 1371
 - accepted_rows: 108
 - rejected_rows: 216
 - next_action: Review accepted rows, then feed normal scoring gates.
@@ -171,13 +169,13 @@
 - recommended_action: WAIT_FOR_MANUAL_APPROVAL
 
 ## Daily Board Self-Heal
-- self_heal_status: EMPTY_BY_PROMOTION_GATE
-- promotion_rows_reviewed: 108
+- self_heal_status: NO_ACTION
+- promotion_rows_reviewed: 0
 - promoted_rows: 0
 - blocked_rows: 0
-- quarantine_rows: 72
-- board_rows_written: 1_DIAGNOSTIC_ROW
-- reason: 0 promoted raw candidates; no scoring-safe rows available
+- quarantine_rows: 0
+- board_rows_written: 0
+- reason: daily board already has rows
 ## API Quota-Aware Enrichment Gate
 - quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
 - api_plan_name: API-Football Ultra

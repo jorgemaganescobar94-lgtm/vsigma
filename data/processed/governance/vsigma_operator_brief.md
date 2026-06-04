@@ -3,51 +3,51 @@
 ## Compact Top Summary
 | Field | Value | Meaning |
 |---|---|---|
-| Action | BROKEN | First-read operator priority |
+| Action | REVIEW_NOW | First-read operator priority |
 | Risk | HIGH | Operational risk after sanity + health gate |
-| Alert | CRITICAL_STOP / CRITICAL | Routing decision for operator notifications |
-| Counts | active=0; live=0; closed=0; watch=0; no_bet=0 | Candidate distribution |
-| Reason | system fault blocks market usage | Why this action level was selected |
-| Final | SYSTEM_FIX_REQUIRED | sanity=PASS; broken-state routing is explicit |
+| Alert | GITHUB_ISSUE_COMMENT / HIGH | Routing decision for operator notifications |
+| Counts | active=0; live=0; closed=0; watch=0; no_bet=1 | Candidate distribution |
+| Reason | 0 active manual-review candidate(s); no automatic execution | Why this action level was selected |
+| Final | MANUAL_REVIEW_REQUIRED | sanity=PASS; active_review=0; manual review required; no auto execution |
 
 ## Alert Routing
 | Field | Value | Meaning |
 |---|---|---|
-| Route | CRITICAL_STOP | NO_ALERT / LOCAL_ONLY / GITHUB_ISSUE_COMMENT / CRITICAL_STOP |
-| Materiality | CRITICAL | NONE / LOW / MEDIUM / HIGH / CRITICAL |
-| Reason | sanity failure or broken system state blocks operator usage | Why this route was selected |
+| Route | GITHUB_ISSUE_COMMENT | NO_ALERT / LOCAL_ONLY / GITHUB_ISSUE_COMMENT / CRITICAL_STOP |
+| Materiality | HIGH | NONE / LOW / MEDIUM / HIGH / CRITICAL |
+| Reason | manual review required now; no automatic execution | Why this route was selected |
 | Drift | MATERIAL_CHANGE | Historical drift status |
 | DriftNotify | true | Raw material drift notification flag |
 
 ## Historical Drift Check
 | Field | Value | Meaning |
 |---|---|---|
-| Previous | date=2026-06-04; action=UNKNOWN; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | data/processed/today/2026-06-04/vsigma_operator_brief.csv |
-| Current | date=2026-06-04; action=BROKEN; risk=HIGH; final=SYSTEM_FIX_REQUIRED; active=0 | current_build |
-| Drift | MATERIAL_CHANGE | action_level: UNKNOWN -> BROKEN; final_decision: NO_OPERATOR_ACTION -> SYSTEM_FIX_REQUIRED; risk_label: NONE -> HIGH |
-| Changed | action_level,final_decision,risk_label | Tracked fields: action/final/risk/active |
+| Previous | date=2026-06-04; action=BROKEN; risk=HIGH; final=SYSTEM_FIX_REQUIRED; active=0 | data\processed\today\2026-06-04\vsigma_operator_brief.csv |
+| Current | date=2026-06-04; action=REVIEW_NOW; risk=HIGH; final=MANUAL_REVIEW_REQUIRED; active=0 | current_build |
+| Drift | MATERIAL_CHANGE | action_level: BROKEN -> REVIEW_NOW; final_decision: SYSTEM_FIX_REQUIRED -> MANUAL_REVIEW_REQUIRED |
+| Changed | action_level,final_decision | Tracked fields: action/final/risk/active |
 | Notify | true | true only on material operator drift |
 
 ## Executive Summary
-- action_level: BROKEN
-- compact_final_decision: SYSTEM_FIX_REQUIRED
+- action_level: REVIEW_NOW
+- compact_final_decision: MANUAL_REVIEW_REQUIRED
 - risk_label: HIGH
-- alert_route: CRITICAL_STOP
-- alert_materiality: CRITICAL
-- alert_reason: sanity failure or broken system state blocks operator usage
+- alert_route: GITHUB_ISSUE_COMMENT
+- alert_materiality: HIGH
+- alert_reason: manual review required now; no automatic execution
 - drift_status: MATERIAL_CHANGE
 - drift_notify_required: true
-- drift_changed_fields: action_level,final_decision,risk_label
-- sanity_check: PASS | broken-state routing is explicit
-- operator_status: BROKEN
-- primary_next_action: Fix missing/broken workflow input before using any market signal.
-- health_status: BROKEN
+- drift_changed_fields: action_level,final_decision
+- sanity_check: PASS | active_review=0; manual review required; no auto execution
+- operator_status: REVIEW
+- primary_next_action: Open health/board/recheck summaries; no automatic action.
+- health_status: ATTENTION
 - active_candidates: 0
 - waiting_live_window: 0
 - closed_or_missed: 0
 - watch_only: 0
-- no_bet: 0
-- board_decisions: UNKNOWN
+- no_bet: 1
+- board_decisions: NO_BET=0
 - recheck_decisions: none
 - live_triggers: none
 - alert_notify_required: true
@@ -55,17 +55,17 @@
 - production_change: NO
 
 ## Operator Priority
-- ACTION_LEVEL=BROKEN
+- ACTION_LEVEL=REVIEW_NOW
 - RISK_LABEL=HIGH
-- FINAL_DECISION=SYSTEM_FIX_REQUIRED
-- ALERT_ROUTE=CRITICAL_STOP
-- ALERT_MATERIALITY=CRITICAL
-- ALERT_REASON=sanity failure or broken system state blocks operator usage
+- FINAL_DECISION=MANUAL_REVIEW_REQUIRED
+- ALERT_ROUTE=GITHUB_ISSUE_COMMENT
+- ALERT_MATERIALITY=HIGH
+- ALERT_REASON=manual review required now; no automatic execution
 - DRIFT_STATUS=MATERIAL_CHANGE
 - DRIFT_NOTIFY_REQUIRED=true
 - SANITY_CHECK=PASS
-- SANITY_DETAIL=broken-state routing is explicit
-- WINDOWS_READ=UTF8 | Get-Content data/processed/today/2026-06-04/vsigma_operator_brief.md -Encoding UTF8
+- SANITY_DETAIL=active_review=0; manual review required; no auto execution
+- WINDOWS_READ=UTF8 | Get-Content data\processed\today\2026-06-04\vsigma_operator_brief.md -Encoding UTF8
 
 ## Active Review
 - none
@@ -80,7 +80,7 @@
 - none
 
 ## No Bet
-- none
+- #0 | NO_BET | NO_PROMOTED_RAW_CANDIDATES vs NO_SCORING_SAFE_ROWS | market=NO_MARKET | bucket=EMPTY_BY_PROMOTION_GATE | score=0 | cancel=default no bet; no promoted raw candidates
 
 ## Live Trigger Status
 - no live trigger report or no live candidates
@@ -89,11 +89,11 @@
 - no calibration signal
 
 ## Key Files
-- data/processed/today/2026-06-04/vsigma_daily_execution_board.md
-- data/processed/today/2026-06-04/vsigma_prelock_live_recheck.md
-- data/processed/today/2026-06-04/vsigma_live_trigger_validator.md
-- data/processed/today/2026-06-04/vsigma_automation_health.md
-- data/processed/today/2026-06-04/vsigma_issue_alert_status.md
+- data\processed\today\2026-06-04\vsigma_daily_execution_board.md
+- data\processed\today\2026-06-04\vsigma_prelock_live_recheck.md
+- data\processed\today\2026-06-04\vsigma_live_trigger_validator.md
+- data\processed\today\2026-06-04\vsigma_automation_health.md
+- data\processed\today\2026-06-04\vsigma_issue_alert_status.md
 
 ## Guardrails
 - Brief is diagnostic only; it does not execute bets.
@@ -101,23 +101,3 @@
 - Use PowerShell -Encoding UTF8 when reading local Markdown files on Windows.
 - Historical drift notifies only on material operator changes: action level, final decision, risk, or active candidates.
 - Alert routing is diagnostic only; this script writes the route but does not send comments or external notifications.
-
-## Calibration / Shadow Governance
-- calibration_shadow_status: UNAVAILABLE
-- shadow_active_candidates: 0
-- shadow_high_priority: 0
-- shadow_metrics: none
-- shadow_decisions: none
-- promotion_readiness: UNAVAILABLE
-- promotion_candidates: 0
-- promotion_decisions: none
-- learning_sanity_status: WARN
-- learning_sanity_counts: EMPTY_NO_FALLBACK=7
-- learning_sanity_severity: WARN=7
-- calibration_auto_apply: NO
-- production_change: NO
-
-### Calibration Sources
-- shadow_queue: data/processed/today/2026-06-04/vsigma_calibration_shadow_patch_queue.csv
-- promotion_readiness: data/processed/today/2026-06-04/vsigma_shadow_patch_promotion_readiness.csv
-- learning_sanity: data/processed/governance/vsigma_learning_chain_output_sanity.csv
