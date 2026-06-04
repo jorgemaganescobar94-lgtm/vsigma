@@ -4,5 +4,5 @@
 - notify_required: true
 - severity: ATTENTION
 - title: [vSIGMA ALERT] 2026-06-04 - ATTENTION
-- alert_hash: 4926854689f31aded484b1a2648984ce6edc5eb45ea207b8ad05d6d7256ab6fc
-- previous_hash: eb6f8d0f609d9d7204e8b482ea2c766de818d7d21e1292bd3d2f631df9dd49be
+- alert_hash: 925837d95f7fa1d23e26ca47a179594b1acf2d20809c64f0a5445a581fb6c29b
+- previous_hash: 4926854689f31aded484b1a2648984ce6edc5eb45ea207b8ad05d6d7256ab6fc
