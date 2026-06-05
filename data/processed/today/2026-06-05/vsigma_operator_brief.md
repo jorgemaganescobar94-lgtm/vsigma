@@ -16,17 +16,17 @@
 | Route | CRITICAL_STOP | NO_ALERT / LOCAL_ONLY / GITHUB_ISSUE_COMMENT / CRITICAL_STOP |
 | Materiality | CRITICAL | NONE / LOW / MEDIUM / HIGH / CRITICAL |
 | Reason | sanity failure or broken system state blocks operator usage | Why this route was selected |
-| Drift | MATERIAL_CHANGE | Historical drift status |
-| DriftNotify | true | Raw material drift notification flag |
+| Drift | NO_MATERIAL_CHANGE | Historical drift status |
+| DriftNotify | false | Raw material drift notification flag |
 
 ## Historical Drift Check
 | Field | Value | Meaning |
 |---|---|---|
-| Previous | date=2026-06-05; action=UNKNOWN; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | data/processed/today/2026-06-05/vsigma_operator_brief.csv |
+| Previous | date=2026-06-05; action=BROKEN; risk=HIGH; final=SYSTEM_FIX_REQUIRED; active=0 | data/processed/today/2026-06-05/vsigma_operator_brief.csv |
 | Current | date=2026-06-05; action=BROKEN; risk=HIGH; final=SYSTEM_FIX_REQUIRED; active=0 | current_build |
-| Drift | MATERIAL_CHANGE | action_level: UNKNOWN -> BROKEN; final_decision: NO_OPERATOR_ACTION -> SYSTEM_FIX_REQUIRED; risk_label: NONE -> HIGH |
-| Changed | action_level,final_decision,risk_label | Tracked fields: action/final/risk/active |
-| Notify | true | true only on material operator drift |
+| Drift | NO_MATERIAL_CHANGE | tracked operator fields unchanged |
+| Changed | none | Tracked fields: action/final/risk/active |
+| Notify | false | true only on material operator drift |
 
 ## Executive Summary
 - action_level: BROKEN
@@ -35,9 +35,9 @@
 - alert_route: CRITICAL_STOP
 - alert_materiality: CRITICAL
 - alert_reason: sanity failure or broken system state blocks operator usage
-- drift_status: MATERIAL_CHANGE
-- drift_notify_required: true
-- drift_changed_fields: action_level,final_decision,risk_label
+- drift_status: NO_MATERIAL_CHANGE
+- drift_notify_required: false
+- drift_changed_fields: none
 - sanity_check: PASS | broken-state routing is explicit
 - operator_status: BROKEN
 - primary_next_action: Fix missing/broken workflow input before using any market signal.
@@ -61,8 +61,8 @@
 - ALERT_ROUTE=CRITICAL_STOP
 - ALERT_MATERIALITY=CRITICAL
 - ALERT_REASON=sanity failure or broken system state blocks operator usage
-- DRIFT_STATUS=MATERIAL_CHANGE
-- DRIFT_NOTIFY_REQUIRED=true
+- DRIFT_STATUS=NO_MATERIAL_CHANGE
+- DRIFT_NOTIFY_REQUIRED=false
 - SANITY_CHECK=PASS
 - SANITY_DETAIL=broken-state routing is explicit
 - WINDOWS_READ=UTF8 | Get-Content data/processed/today/2026-06-05/vsigma_operator_brief.md -Encoding UTF8
@@ -101,23 +101,3 @@
 - Use PowerShell -Encoding UTF8 when reading local Markdown files on Windows.
 - Historical drift notifies only on material operator changes: action level, final decision, risk, or active candidates.
 - Alert routing is diagnostic only; this script writes the route but does not send comments or external notifications.
-
-## Calibration / Shadow Governance
-- calibration_shadow_status: UNAVAILABLE
-- shadow_active_candidates: 0
-- shadow_high_priority: 0
-- shadow_metrics: none
-- shadow_decisions: none
-- promotion_readiness: UNAVAILABLE
-- promotion_candidates: 0
-- promotion_decisions: none
-- learning_sanity_status: WARN
-- learning_sanity_counts: EMPTY_NO_FALLBACK=7
-- learning_sanity_severity: WARN=7
-- calibration_auto_apply: NO
-- production_change: NO
-
-### Calibration Sources
-- shadow_queue: data/processed/today/2026-06-05/vsigma_calibration_shadow_patch_queue.csv
-- promotion_readiness: data/processed/today/2026-06-05/vsigma_shadow_patch_promotion_readiness.csv
-- learning_sanity: data/processed/governance/vsigma_learning_chain_output_sanity.csv

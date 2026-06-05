@@ -41,10 +41,12 @@
 - missing_data_counts: none
 
 ## Official / Probable Lineups
+- data/processed/today/2026-06-05/official_lineup_sources.csv: rows=32
 - data/processed/governance/official_lineup_sources.csv: rows=32
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Quarantine / Learning-Only / Import Status
+- data/processed/today/2026-06-05/official_lineup_sources.csv: rows=32
 - data/processed/governance/official_lineup_sources.csv: rows=32
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
@@ -61,9 +63,9 @@
 - status_counts: MISSING=1; OK=3; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-04; reason=force_rerun_daily_chain_v71_1_operator_brief_after_health_fix; triggered_at=2026-06-04T17:32:10+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-04; reason=rerun_daily_chain_after_official_pick_ledger_v1; triggered_at=2026-06-04T17:45:30+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-04; reason=align_prelock_today_v71_1; triggered_at=2026-06-04T17:05:43+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-05; reason=align_daily_chain_self_heal_today_v71_1_after_learning_validation; triggered_at=2026-06-05T20:50:11+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-05; reason=rerun_daily_decision_chain_v71_1_date_fix_after_learning_validation; triggered_at=2026-06-05T20:50:11+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-05; reason=align_prelock_today_v71_1_after_learning_validation; triggered_at=2026-06-05T20:50:11+01:00
 
 ## Key Files
 - data/processed/today/2026-06-05/vsigma_consolidated_daily_operator_panel.md
@@ -82,18 +84,18 @@
 - If the daily board is missing, prelock/live files cannot be used as pick permission.
 
 ## Date Coherence Guard
-- overall_status: DATE_MISMATCH_BLOCK
-- board_status: daily_board_md=MISSING_CORE; daily_board_csv=MISSING_CORE
-- mismatch_count: 2
-- missing_core_count: 2
-- trigger_date_counts: 2026-06-04=2
-- next_action: Fix trigger/artifact date mismatch before using market signals.
+- overall_status: MISSING_DAILY_BOARD
+- board_status: daily_board_md=MISSING_CORE; daily_board_csv=DATE_UNKNOWN
+- mismatch_count: 0
+- missing_core_count: 1
+- trigger_date_counts: 2026-06-05=2
+- next_action: Run daily decision chain for target date before using prelock/live/operator outputs.
 
 ## Upstream Board Input Diagnostic
 - overall_status: UPSTREAM_MISSING
 - first_empty_required_component: real_objective_context_gate
-- missing_required_count: 8
-- empty_required_count: 0
+- missing_required_count: 7
+- empty_required_count: 1
 - date_issue_count: 0
 - forecast_rows: 0
 - translator_rows: 0
@@ -110,35 +112,35 @@
 - next_action: Refresh/fix scoring source date coverage.
 
 ## Local Raw Fixture Discovery
-- overall_status: NO_LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1374
-- accepted_rows: 0
+- overall_status: LOCAL_RAW_CANDIDATES_FOUND
+- files_scanned: 1377
+- accepted_rows: 66
 - rejected_rows: 0
-- next_action: No local source can build raw candidates; upstream fetch/filter producer is still required.
+- next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
-- rows_reviewed: 0
+- rows_reviewed: 66
 - trusted_rows: 0
 - quarantine_rows: 0
-- blocked_rows: 0
-- trust_status_counts: none
+- blocked_rows: 66
+- trust_status_counts: REJECTED_SOURCE_BLOCK=66
 - next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
 
 ## Trusted Raw Candidate Promotion Gate
-- rows_reviewed: 0
+- rows_reviewed: 66
 - promoted_rows: 0
 - blocked_rows: 0
 - quarantine_rows: 0
-- promotion_status_counts: none
+- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=66
 - next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 
 ## Scoring Gap Explainer
-- rows_reviewed: 0
+- rows_reviewed: 66
 - missing_scored_rows: 0
 - no_data_blocked_rows: 0
-- not_trusted_rows: 0
+- not_trusted_rows: 66
 - promoted_rows: 0
-- gap_status_counts: none
+- gap_status_counts: NOT_TRUSTED_SKIPPED=66
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 
 ## Trusted Raw Scoring Queue
@@ -171,7 +173,7 @@
 
 ## Daily Board Self-Heal
 - self_heal_status: EMPTY_BY_PROMOTION_GATE
-- promotion_rows_reviewed: 0
+- promotion_rows_reviewed: 66
 - promoted_rows: 0
 - blocked_rows: 0
 - quarantine_rows: 0
