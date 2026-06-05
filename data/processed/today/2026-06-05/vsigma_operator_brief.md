@@ -22,7 +22,7 @@
 ## Historical Drift Check
 | Field | Value | Meaning |
 |---|---|---|
-| Previous | date=2026-06-04; action=UNKNOWN; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | data/processed/governance/vsigma_operator_brief.csv |
+| Previous | date=2026-06-05; action=UNKNOWN; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | data/processed/today/2026-06-05/vsigma_operator_brief.csv |
 | Current | date=2026-06-05; action=NONE; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | current_build |
 | Drift | MATERIAL_CHANGE | action_level: UNKNOWN -> NONE |
 | Changed | action_level | Tracked fields: action/final/risk/active |
@@ -50,7 +50,7 @@
 - board_decisions: UNKNOWN
 - recheck_decisions: none
 - live_triggers: none
-- alert_notify_required: UNKNOWN
+- alert_notify_required: true
 - auto_apply: NO
 - production_change: NO
 

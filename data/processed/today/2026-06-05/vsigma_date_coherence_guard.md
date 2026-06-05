@@ -17,7 +17,7 @@
 - automation_health_md | status=MISSING_CORE | observed=MISSING | path=data/processed/today/2026-06-05/vsigma_automation_health.md | detail=required daily artifact is missing
 - prelock_live_recheck_md | status=OK | observed=2026-06-05 | path=data/processed/today/2026-06-05/vsigma_prelock_live_recheck.md | detail=date coherent
 - live_trigger_validator_md | status=OK | observed=2026-06-05 | path=data/processed/today/2026-06-05/vsigma_live_trigger_validator.md | detail=date coherent
-- consolidated_panel_md | status=MISSING_OPTIONAL | observed=MISSING | path=data/processed/today/2026-06-05/vsigma_consolidated_daily_operator_panel.md | detail=optional artifact not found
+- consolidated_panel_md | status=OK | observed=2026-06-05 | path=data/processed/today/2026-06-05/vsigma_consolidated_daily_operator_panel.md | detail=date coherent
 - source_reliability_governor_md | status=MISSING_OPTIONAL | observed=MISSING | path=data/processed/today/2026-06-05/vsigma_probable_lineup_source_reliability_governor.md | detail=optional artifact not found
 - daily_chain_trigger | status=DATE_MISMATCH | observed=2026-06-04 | path=.vsigma/triggers/daily_decision_chain_v2.trigger | detail=observed 2026-06-04 != target 2026-06-05
 - prelock_recheck_trigger | status=DATE_MISMATCH | observed=2026-06-04 | path=.vsigma/triggers/prelock_official_lineup_recheck.trigger | detail=observed 2026-06-04 != target 2026-06-05
