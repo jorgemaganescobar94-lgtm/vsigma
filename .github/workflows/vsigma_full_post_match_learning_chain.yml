@@ -78,6 +78,10 @@ jobs:
         shell: bash
         run: python scripts/build_market_family_calibration.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Calibrate confidence buckets
+        shell: bash
+        run: python scripts/build_confidence_calibration.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Calibrate match stat forecasts
         shell: bash
         run: python scripts/calibrate_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
