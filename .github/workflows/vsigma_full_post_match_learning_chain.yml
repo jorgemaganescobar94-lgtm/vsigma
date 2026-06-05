@@ -106,6 +106,10 @@ jobs:
         shell: bash
         run: python scripts/build_portfolio_correlation_learning.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Build final learning synthesis
+        shell: bash
+        run: python scripts/build_final_learning_synthesis.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Calibrate match stat forecasts
         shell: bash
         run: python scripts/calibrate_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
@@ -203,6 +207,8 @@ jobs:
             data/processed/today/${VSIGMA_DATE}/vsigma_scoreline_neighbor_stress_daily.csv \
             data/processed/today/${VSIGMA_DATE}/vsigma_portfolio_correlation_learning.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_portfolio_correlation_learning_daily.csv \
+            data/processed/today/${VSIGMA_DATE}/vsigma_final_learning_synthesis.* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_final_learning_synthesis_daily.csv \
             data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecast_calibration* \
             data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecast_backtest.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_stat_calibration_governor.* \
@@ -241,6 +247,8 @@ jobs:
             data/processed/governance/vsigma_scoreline_neighbor_stress_daily.csv \
             data/processed/governance/vsigma_portfolio_correlation_learning.* \
             data/processed/governance/vsigma_portfolio_correlation_learning_daily.csv \
+            data/processed/governance/vsigma_final_learning_synthesis.* \
+            data/processed/governance/vsigma_final_learning_synthesis_daily.csv \
             data/processed/governance/vsigma_match_stat_forecast_calibration* \
             data/processed/governance/vsigma_match_stat_forecast_backtest.* \
             data/processed/governance/vsigma_stat_calibration_governor.* \
