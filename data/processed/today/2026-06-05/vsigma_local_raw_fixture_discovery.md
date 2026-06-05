@@ -2,81 +2,81 @@
 
 ## Summary
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1377
+- files_scanned: 1382
 - accepted_rows: 66
-- rejected_rows: 0
-- source_status_counts: NO_SAME_DAY_ROWS=1012; EMPTY_OR_UNREADABLE=362; NO_ACCEPTED_ROWS=2; HAS_ACCEPTED_ROWS=1
+- rejected_rows: 132
+- source_status_counts: NO_SAME_DAY_ROWS=1008; EMPTY_OR_UNREADABLE=365; NO_ACCEPTED_ROWS=8; HAS_ACCEPTED_ROWS=1
 - next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO
 
 ## Accepted Rows
-- HK Kopavogur vs Afturelding | fixture_id=1514196 | league=1. Deild | source=data/processed/matches_league_rejected.csv
-- Njardvik vs IR Reykjavik | fixture_id=1514197 | league=1. Deild | source=data/processed/matches_league_rejected.csv
-- Ægir vs Leiknir R. | fixture_id=1514195 | league=1. Deild | source=data/processed/matches_league_rejected.csv
-- Hvíti riddarinn vs Haukar | fixture_id=1543386 | league=2. Deild | source=data/processed/matches_league_rejected.csv
-- Kormákur / Hvöt vs Magni | fixture_id=1543385 | league=2. Deild | source=data/processed/matches_league_rejected.csv
-- JS Kabylie vs CR Belouizdad | fixture_id=1513482 | league=Ligue 1 | source=data/processed/matches_league_rejected.csv
-- JS Saoura vs CS Constantine | fixture_id=1513489 | league=Ligue 1 | source=data/processed/matches_league_rejected.csv
-- MC Alger vs ASO Chlef | fixture_id=1513484 | league=Ligue 1 | source=data/processed/matches_league_rejected.csv
-- Guarulhos vs Paulínia FU | fixture_id=1541272 | league=Paulista Série B | source=data/processed/matches_league_rejected.csv
-- RTC vs Ugyen Academy | fixture_id=1543576 | league=Premier League | source=data/processed/matches_league_rejected.csv
-- Binga vs US Bougouba | fixture_id=1545727 | league=Première Division | source=data/processed/matches_league_rejected.csv
-- Ituzaingó vs Real Pilar | fixture_id=1499458 | league=Primera B Metropolitana | source=data/processed/matches_league_rejected.csv
-- Wanderers vs Danubio | fixture_id=1546805 | league=Primera División - Apertura | source=data/processed/matches_league_rejected.csv
-- Sabadell vs Real Madrid II | fixture_id=1547734 | league=Primera División RFEF - Play Offs | source=data/processed/matches_league_rejected.csv
-- Plaza Colonia vs Sportivo Huracan | fixture_id=1548196 | league=Segunda División | source=data/processed/matches_league_rejected.csv
-- Puerto Cabello II vs Zamora FC B | fixture_id=1548391 | league=Segunda División | source=data/processed/matches_league_rejected.csv
-- Preston Lions vs Melbourne City II | fixture_id=1522031 | league=Victoria NPL | source=data/processed/matches_league_rejected.csv
-- Tatran Všechovice vs Brumov | fixture_id=1487716 | league=4. liga - Divizie E | source=data/processed/matches_league_rejected.csv
-- Criciuma U20 vs Joinville U20 | fixture_id=1539813 | league=Catarinense U20 | source=data/processed/matches_league_rejected.csv
-- Horizonte U20 vs Atlético Cearense U20 | fixture_id=1540193 | league=Cearense U20 | source=data/processed/matches_league_rejected.csv
-- Grêmio U20 vs Novo Hamburgo U20 | fixture_id=1546349 | league=Estadual Junior U20 | source=data/processed/matches_league_rejected.csv
-- Angola vs Mauritania | fixture_id=1548435 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Azerbaijan vs Malta | fixture_id=1544810 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Benin vs Niger | fixture_id=1548433 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Central African Republic vs Togo | fixture_id=1546494 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Hungary vs Finland | fixture_id=1523007 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Paraguay vs Nicaragua | fixture_id=1543828 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Slovenia U21 vs Albania U21 | fixture_id=1548434 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Ukraine U21 vs USA U21 | fixture_id=1548432 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Ivory Coast W vs Cape Verde W | fixture_id=1546557 | league=Friendlies Women | source=data/processed/matches_league_rejected.csv
-- Anapolis U20 vs Cerrado EC U20 | fixture_id=1548058 | league=Goiano U20 | source=data/processed/matches_league_rejected.csv
-- Allerheiligen vs FSC Hochegger Dächer | fixture_id=1465150 | league=Landesliga - Steiermark | source=data/processed/matches_league_rejected.csv
-- Bruck an der Mur vs Union RB Weinland Gamlit | fixture_id=1465146 | league=Landesliga - Steiermark | source=data/processed/matches_league_rejected.csv
-- Ilz vs Köflach | fixture_id=1465148 | league=Landesliga - Steiermark | source=data/processed/matches_league_rejected.csv
-- Schladming vs Pachern | fixture_id=1465149 | league=Landesliga - Steiermark | source=data/processed/matches_league_rejected.csv
-- Coimbra U20 vs Minas Boca U20 | fixture_id=1536154 | league=Mineiro U20 | source=data/processed/matches_league_rejected.csv
-- Bandeirante U20 vs São Caetano U20 | fixture_id=1547241 | league=Paulista - U20 | source=data/processed/matches_league_rejected.csv
-- Botafogo SP U20 vs União São João U20 | fixture_id=1546888 | league=Paulista - U20 | source=data/processed/matches_league_rejected.csv
-- Capivariano U20 vs Sfera U20 | fixture_id=1546891 | league=Paulista - U20 | source=data/processed/matches_league_rejected.csv
-- Ibrachina U20 vs Aguai U20 | fixture_id=1547242 | league=Paulista - U20 | source=data/processed/matches_league_rejected.csv
-- Itapirense U20 vs Ferroviária U20 | fixture_id=1546884 | league=Paulista - U20 | source=data/processed/matches_league_rejected.csv
-- Ituano U20 vs Osasco Audax U20 | fixture_id=1546890 | league=Paulista - U20 | source=data/processed/matches_league_rejected.csv
-- Jabaquara U20 vs Portuguesa U20 | fixture_id=1547243 | league=Paulista - U20 | source=data/processed/matches_league_rejected.csv
-- Mirassol U20 vs Corinthians U20 | fixture_id=1546882 | league=Paulista - U20 | source=data/processed/matches_league_rejected.csv
-- Novorizontino U20 vs Desportivo Brasil U20 | fixture_id=1546887 | league=Paulista - U20 | source=data/processed/matches_league_rejected.csv
-- Portuguesa Santista U20 vs Ponte Preta U20 | fixture_id=1546883 | league=Paulista - U20 | source=data/processed/matches_league_rejected.csv
-- RB Bragantino U20 vs Flamengo SP U20 | fixture_id=1546889 | league=Paulista - U20 | source=data/processed/matches_league_rejected.csv
-- Referencia U20 vs Água Santa U20 | fixture_id=1547245 | league=Paulista - U20 | source=data/processed/matches_league_rejected.csv
-- SC Paulinense SP U20 vs XV de Piracicaba U20 | fixture_id=1547244 | league=Paulista - U20 | source=data/processed/matches_league_rejected.csv
-- Santo André U20 vs São Paulo U20 | fixture_id=1546886 | league=Paulista - U20 | source=data/processed/matches_league_rejected.csv
-- São Bento U20 vs União Suzano U20 | fixture_id=1546885 | league=Paulista - U20 | source=data/processed/matches_league_rejected.csv
-- XV de Jaú U20 vs Mauá U20 | fixture_id=1546892 | league=Paulista - U20 | source=data/processed/matches_league_rejected.csv
-- Gurten vs Weiz | fixture_id=1397966 | league=Regionalliga - Mitte | source=data/processed/matches_league_rejected.csv
-- Ried II vs SV Lafnitz | fixture_id=1397964 | league=Regionalliga - Mitte | source=data/processed/matches_league_rejected.csv
-- Voitsberg vs Wolfsberger AC II | fixture_id=1397967 | league=Regionalliga - Mitte | source=data/processed/matches_league_rejected.csv
-- Oberwart vs Krems / Rehberg | fixture_id=1418145 | league=Regionalliga - Ost | source=data/processed/matches_league_rejected.csv
-- TWL Elektra vs SV Horn | fixture_id=1418149 | league=Regionalliga - Ost | source=data/processed/matches_league_rejected.csv
-- Platense Res. vs Belgrano Córdoba Res. | fixture_id=1512447 | league=Reserve League | source=data/processed/matches_league_rejected.csv
-- Estrella de Berisso vs Atletico Pilar | fixture_id=1548686 | league=Torneo Promocional Amateur | source=data/processed/matches_league_rejected.csv
-- Andorra W vs North Macedonia W | fixture_id=1523932 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Belgium W vs Luxembourg W | fixture_id=1523925 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Germany W vs Norway W | fixture_id=1523913 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Portugal W vs Latvia W | fixture_id=1523923 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Republic of Ireland W vs Netherlands W | fixture_id=1523920 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Spain W vs England W | fixture_id=1523915 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Switzerland W vs Malta W | fixture_id=1523921 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
+- HK Kopavogur vs Afturelding | fixture_id=1514196 | league=1. Deild | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Njardvik vs IR Reykjavik | fixture_id=1514197 | league=1. Deild | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ægir vs Leiknir R. | fixture_id=1514195 | league=1. Deild | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Hvíti riddarinn vs Haukar | fixture_id=1543386 | league=2. Deild | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Kormákur / Hvöt vs Magni | fixture_id=1543385 | league=2. Deild | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- JS Kabylie vs CR Belouizdad | fixture_id=1513482 | league=Ligue 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- JS Saoura vs CS Constantine | fixture_id=1513489 | league=Ligue 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- MC Alger vs ASO Chlef | fixture_id=1513484 | league=Ligue 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Guarulhos vs Paulínia FU | fixture_id=1541272 | league=Paulista Série B | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- RTC vs Ugyen Academy | fixture_id=1543576 | league=Premier League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Binga vs US Bougouba | fixture_id=1545727 | league=Première Division | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ituzaingó vs Real Pilar | fixture_id=1499458 | league=Primera B Metropolitana | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Wanderers vs Danubio | fixture_id=1546805 | league=Primera División - Apertura | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sabadell vs Real Madrid II | fixture_id=1547734 | league=Primera División RFEF - Play Offs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Plaza Colonia vs Sportivo Huracan | fixture_id=1548196 | league=Segunda División | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Puerto Cabello II vs Zamora FC B | fixture_id=1548391 | league=Segunda División | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Preston Lions vs Melbourne City II | fixture_id=1522031 | league=Victoria NPL | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Tatran Všechovice vs Brumov | fixture_id=1487716 | league=4. liga - Divizie E | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Criciuma U20 vs Joinville U20 | fixture_id=1539813 | league=Catarinense U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Horizonte U20 vs Atlético Cearense U20 | fixture_id=1540193 | league=Cearense U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Grêmio U20 vs Novo Hamburgo U20 | fixture_id=1546349 | league=Estadual Junior U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Angola vs Mauritania | fixture_id=1548435 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Azerbaijan vs Malta | fixture_id=1544810 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Benin vs Niger | fixture_id=1548433 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Central African Republic vs Togo | fixture_id=1546494 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Hungary vs Finland | fixture_id=1523007 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Paraguay vs Nicaragua | fixture_id=1543828 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Slovenia U21 vs Albania U21 | fixture_id=1548434 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ukraine U21 vs USA U21 | fixture_id=1548432 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ivory Coast W vs Cape Verde W | fixture_id=1546557 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Anapolis U20 vs Cerrado EC U20 | fixture_id=1548058 | league=Goiano U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Allerheiligen vs FSC Hochegger Dächer | fixture_id=1465150 | league=Landesliga - Steiermark | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Bruck an der Mur vs Union RB Weinland Gamlit | fixture_id=1465146 | league=Landesliga - Steiermark | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ilz vs Köflach | fixture_id=1465148 | league=Landesliga - Steiermark | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Schladming vs Pachern | fixture_id=1465149 | league=Landesliga - Steiermark | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Coimbra U20 vs Minas Boca U20 | fixture_id=1536154 | league=Mineiro U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Bandeirante U20 vs São Caetano U20 | fixture_id=1547241 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Botafogo SP U20 vs União São João U20 | fixture_id=1546888 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Capivariano U20 vs Sfera U20 | fixture_id=1546891 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ibrachina U20 vs Aguai U20 | fixture_id=1547242 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Itapirense U20 vs Ferroviária U20 | fixture_id=1546884 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ituano U20 vs Osasco Audax U20 | fixture_id=1546890 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Jabaquara U20 vs Portuguesa U20 | fixture_id=1547243 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Mirassol U20 vs Corinthians U20 | fixture_id=1546882 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Novorizontino U20 vs Desportivo Brasil U20 | fixture_id=1546887 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Portuguesa Santista U20 vs Ponte Preta U20 | fixture_id=1546883 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- RB Bragantino U20 vs Flamengo SP U20 | fixture_id=1546889 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Referencia U20 vs Água Santa U20 | fixture_id=1547245 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- SC Paulinense SP U20 vs XV de Piracicaba U20 | fixture_id=1547244 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Santo André U20 vs São Paulo U20 | fixture_id=1546886 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- São Bento U20 vs União Suzano U20 | fixture_id=1546885 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- XV de Jaú U20 vs Mauá U20 | fixture_id=1546892 | league=Paulista - U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Gurten vs Weiz | fixture_id=1397966 | league=Regionalliga - Mitte | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ried II vs SV Lafnitz | fixture_id=1397964 | league=Regionalliga - Mitte | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Voitsberg vs Wolfsberger AC II | fixture_id=1397967 | league=Regionalliga - Mitte | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Oberwart vs Krems / Rehberg | fixture_id=1418145 | league=Regionalliga - Ost | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- TWL Elektra vs SV Horn | fixture_id=1418149 | league=Regionalliga - Ost | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Platense Res. vs Belgrano Córdoba Res. | fixture_id=1512447 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Estrella de Berisso vs Atletico Pilar | fixture_id=1548686 | league=Torneo Promocional Amateur | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Andorra W vs North Macedonia W | fixture_id=1523932 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Belgium W vs Luxembourg W | fixture_id=1523925 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Germany W vs Norway W | fixture_id=1523913 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Portugal W vs Latvia W | fixture_id=1523923 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Republic of Ireland W vs Netherlands W | fixture_id=1523920 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Spain W vs England W | fixture_id=1523915 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Switzerland W vs Malta W | fixture_id=1523921 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 
 ## Source Diagnostics
 - data/processed/candidate_v4_historical/vsigma_candidate_v4_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
@@ -89,7 +89,7 @@
 - data/processed/candidate_v7_historical/vsigma_candidate_v7_historical_price_guard_rows.csv | status=NO_SAME_DAY_ROWS | rows=22 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_candidate_provenance_ceiling.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_dated_post_match_results_refresh.csv | status=NO_SAME_DAY_ROWS | rows=4 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_SAME_DAY_ROWS | rows=108 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_ACCEPTED_ROWS | rows=66 | same_day=66 | accepted=0 | rejected=66 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_match_stat_forecast_backtest.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecast_calibration_details.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecasts.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
@@ -97,10 +97,10 @@
 - data/processed/governance/vsigma_postmatch_pick_audit.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_postmatch_pick_audit_daily.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=NO_SAME_DAY_ROWS | rows=108 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=HAS_ACCEPTED_ROWS | rows=66 | same_day=66 | accepted=66 | rejected=0 | detail=local source contains accepted raw fixture rows
 - data/processed/governance/vsigma_shadow_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_SAME_DAY_ROWS | rows=108 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_SAME_DAY_ROWS | rows=72 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_ACCEPTED_ROWS | rows=66 | same_day=66 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/historical/2026-04-23/matches.csv | status=NO_SAME_DAY_ROWS | rows=182 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
