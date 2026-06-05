@@ -1,16 +1,46 @@
 # vSIGMA Alert - 2026-06-05
 
-System status: **UNKNOWN**
+System status: **BROKEN**
 Alert required: **YES**
 Notify required: **YES**
-Alert hash: `5c8c7f013adbd60e81e14c45c031ff1ced4ce6e723d6c43ca50a6a862c6932db`
+Alert hash: `9e7de45b8fe30dedbc8fa672d7c91cff23c95c22f27bdc6070b4af4ee3c42ce9`
 
 ## Signals
 - - READY_LOW_STAKE_REVIEW still requires manual price and live/prelock confirmation.
+- - WARN means review; BROKEN means a workflow/input needs fixing.
+- - daily_execution_board | status=MISSING | severity=BROKEN | action=RUN_DAILY_DECISION_CHAIN_V2 | detail=vsigma_daily_execution_board.md/csv missing
+- - severity_counts: BROKEN=1; WARN=1; OK=2; INFO=7
+- - system_status: BROKEN
 
 ## Health Snapshot
 ```
-missing health report
+# vSIGMA Automation Health Monitor - 2026-06-05
+
+## Summary
+- system_status: BROKEN
+- components_checked: 11
+- severity_counts: BROKEN=1; WARN=1; OK=2; INFO=7
+- status_counts: MISSING=1; OK=3; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
+- auto_apply: NO
+- production_change: NO
+
+## Component Rows
+- daily_execution_board | status=MISSING | severity=BROKEN | action=RUN_DAILY_DECISION_CHAIN_V2 | detail=vsigma_daily_execution_board.md/csv missing
+- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=none
+- live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
+- postmatch_results_refresh | status=WAITING_OR_NOT_RUN | severity=INFO | action=NO_IF_MATCHES_NOT_FINISHED | detail=postmatch refresh not present yet
+- postmatch_stat_actuals | status=WAITING_OR_NOT_RUN | severity=INFO | action=NO_IF_MATCHES_NOT_FINISHED | detail=actuals report not present yet
+- forecast_calibration | status=WAITING_OR_NOT_RUN | severity=INFO | action=NO_IF_MATCHES_NOT_FINISHED | detail=calibration report not present yet
+- calibration_memory_ledger | status=OK | severity=OK | action=NO | detail=global ledger exists
+- daily_workflow_v2 | status=CONFIG_EXPECTED | severity=INFO | action=CHECK_GH_WORKFLOW_LIST_IF_NEEDED | detail=vsigma_daily_decision_chain_v2.yml active externally
+- prelock_workflow | status=CONFIG_EXPECTED | severity=INFO | action=CHECK_GH_WORKFLOW_LIST_IF_NEEDED | detail=vsigma_prelock_live_recheck.yml expected active
+- live_trigger_workflow | status=CONFIG_EXPECTED | severity=INFO | action=CHECK_GH_WORKFLOW_LIST_IF_NEEDED | detail=vsigma_live_trigger_validator.yml expected active
+- postmatch_workflow | status=CONFIG_EXPECTED | severity=INFO | action=CHECK_GH_WORKFLOW_LIST_IF_NEEDED | detail=vsigma_full_post_match_learning_chain.yml expected active
+
+## Guardrails
+- Health monitor does not execute bets or change production behavior.
+- WARN means review; BROKEN means a workflow/input needs fixing.
+
 ```
 
 ## Live Trigger Snapshot
