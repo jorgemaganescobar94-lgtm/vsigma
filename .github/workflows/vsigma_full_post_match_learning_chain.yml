@@ -166,7 +166,8 @@ jobs:
             data/processed/today/${VSIGMA_DATE}/vsigma_market_family_calibration.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_market_family_calibration_daily.csv \
             data/processed/today/${VSIGMA_DATE}/vsigma_confidence_calibration.* \
-            data/processed/today/${VSIGMA_DATE}/vsigma_confidence_calibration_daily.csv \            data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecast_calibration* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_confidence_calibration_daily.csv \
+            data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecast_calibration* \
             data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecast_backtest.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_stat_calibration_governor.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_calibration_shadow_patch_queue.* \
@@ -191,7 +192,8 @@ jobs:
             data/processed/governance/vsigma_market_family_calibration.* \
             data/processed/governance/vsigma_market_family_calibration_daily.csv \
             data/processed/governance/vsigma_confidence_calibration.* \
-            data/processed/governance/vsigma_confidence_calibration_daily.csv \            data/processed/governance/vsigma_match_stat_forecast_calibration* \
+            data/processed/governance/vsigma_confidence_calibration_daily.csv \
+            data/processed/governance/vsigma_match_stat_forecast_calibration* \
             data/processed/governance/vsigma_match_stat_forecast_backtest.* \
             data/processed/governance/vsigma_stat_calibration_governor.* \
             data/processed/governance/vsigma_calibration_shadow_patch_queue.* \
