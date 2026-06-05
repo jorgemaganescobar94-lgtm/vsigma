@@ -74,6 +74,10 @@ jobs:
         shell: bash
         run: python scripts/build_no_bet_audit.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Calibrate market families
+        shell: bash
+        run: python scripts/build_market_family_calibration.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Calibrate match stat forecasts
         shell: bash
         run: python scripts/calibrate_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
@@ -156,7 +160,8 @@ jobs:
             data/processed/today/${VSIGMA_DATE}/vsigma_no_bet_audit.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_no_bet_audit_daily.csv \
             data/processed/today/${VSIGMA_DATE}/vsigma_market_family_calibration.* \
-            data/processed/today/${VSIGMA_DATE}/vsigma_market_family_calibration_daily.csv \            data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecast_calibration* \
+            data/processed/today/${VSIGMA_DATE}/vsigma_market_family_calibration_daily.csv \
+            data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecast_calibration* \
             data/processed/today/${VSIGMA_DATE}/vsigma_match_stat_forecast_backtest.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_stat_calibration_governor.* \
             data/processed/today/${VSIGMA_DATE}/vsigma_calibration_shadow_patch_queue.* \
@@ -179,7 +184,8 @@ jobs:
             data/processed/governance/vsigma_no_bet_audit.* \
             data/processed/governance/vsigma_no_bet_audit_daily.csv \
             data/processed/governance/vsigma_market_family_calibration.* \
-            data/processed/governance/vsigma_market_family_calibration_daily.csv \            data/processed/governance/vsigma_match_stat_forecast_calibration* \
+            data/processed/governance/vsigma_market_family_calibration_daily.csv \
+            data/processed/governance/vsigma_match_stat_forecast_calibration* \
             data/processed/governance/vsigma_match_stat_forecast_backtest.* \
             data/processed/governance/vsigma_stat_calibration_governor.* \
             data/processed/governance/vsigma_calibration_shadow_patch_queue.* \
