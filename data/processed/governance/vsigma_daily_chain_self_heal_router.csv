@@ -1,2 +1,2 @@
 target_date,generated_at,self_heal_status,daily_board_exists,daily_board_rows,current_trigger_date,trigger_action,reason,next_action,auto_apply,production_change
-2026-06-05,2026-06-05T18:03:32+01:00,OK_BOARD_PRESENT,true,1,2026-06-04,NO_TRIGGER_CHANGE,daily board exists with rows,Use consolidated panel/operator brief normally.,NO,NO
+2026-06-04,2026-06-05T20:24:37+01:00,OK_BOARD_PRESENT,true,1,2026-06-04,NO_TRIGGER_CHANGE,daily board exists with rows,Use consolidated panel/operator brief normally.,NO,NO
