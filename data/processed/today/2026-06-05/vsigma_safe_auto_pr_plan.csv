@@ -1,3 +1,1 @@
 target_date,generated_at,priority,area,status,evidence,recommendation,safe_auto_pr,auto_merge,pr_action
-2026-06-05,2026-06-05T12:45:28+01:00,MEDIUM,workflow_order,OPERATOR_BEFORE_HEALTH,operator brief health_status=UNKNOWN,Schedule health monitor before operator brief.,YES,NO,CREATE_REVIEW_ONLY_PR_PLAN
-2026-06-05,2026-06-05T12:45:28+01:00,MEDIUM,health,MISSING,vsigma_automation_health.md missing,Run health monitor before issue/brief workflows.,YES,NO,CREATE_REVIEW_ONLY_PR_PLAN
