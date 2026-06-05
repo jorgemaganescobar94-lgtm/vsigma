@@ -1,7 +1,28 @@
 country,league,league_tier,league_filter_reason,matches
-World,Friendlies Women,REJECT,hard_reject_noise_league,3
-Argentina,Copa Argentina,REJECT,country_league_not_allowlisted,1
+Brazil,Paulista - U20,REJECT,hard_reject_noise_league,16
+World,Friendlies,REJECT,hard_reject_noise_league,8
+World,World Cup - Women - Qualification Europe,REJECT,hard_reject_noise_league,7
+Austria,Landesliga - Steiermark,REJECT,hard_reject_noise_league,4
+Algeria,Ligue 1,REJECT,country_league_not_allowlisted,3
+Austria,Regionalliga - Mitte,REJECT,hard_reject_noise_league,3
+Iceland,1. Deild,REJECT,country_league_not_allowlisted,3
+Austria,Regionalliga - Ost,REJECT,hard_reject_noise_league,2
+Iceland,2. Deild,REJECT,country_league_not_allowlisted,2
+Argentina,Primera B Metropolitana,REJECT,country_league_not_allowlisted,1
 Argentina,Reserve League,REJECT,hard_reject_noise_league,1
-Bolivia,Primera División,REJECT,country_league_not_allowlisted,1
-Gambia,GFA League,REJECT,country_league_not_allowlisted,1
-USA,USL W League,REJECT,country_league_not_allowlisted,1
+Argentina,Torneo Promocional Amateur,REJECT,hard_reject_noise_league,1
+Australia,Victoria NPL,REJECT,country_league_not_allowlisted,1
+Bhutan,Premier League,REJECT,country_league_not_allowlisted,1
+Brazil,Catarinense U20,REJECT,hard_reject_noise_league,1
+Brazil,Cearense U20,REJECT,hard_reject_noise_league,1
+Brazil,Estadual Junior U20,REJECT,hard_reject_noise_league,1
+Brazil,Goiano U20,REJECT,hard_reject_noise_league,1
+Brazil,Mineiro U20,REJECT,hard_reject_noise_league,1
+Brazil,Paulista Série B,REJECT,country_league_not_allowlisted,1
+Czech-Republic,4. liga - Divizie E,REJECT,hard_reject_noise_league,1
+Mali,Première Division,REJECT,country_league_not_allowlisted,1
+Spain,Primera División RFEF - Play Offs,REJECT,country_league_not_allowlisted,1
+Uruguay,Primera División - Apertura,REJECT,country_league_not_allowlisted,1
+Uruguay,Segunda División,REJECT,country_league_not_allowlisted,1
+Venezuela,Segunda División,REJECT,country_league_not_allowlisted,1
+World,Friendlies Women,REJECT,hard_reject_noise_league,1
