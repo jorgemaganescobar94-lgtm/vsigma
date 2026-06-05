@@ -110,6 +110,12 @@ jobs:
         shell: bash
         run: python scripts/build_final_learning_synthesis.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Assert final learning synthesis output
+        shell: bash
+        run: |
+          test -s "data/processed/today/${VSIGMA_DATE}/vsigma_final_learning_synthesis.md"
+          test -s "data/processed/today/${VSIGMA_DATE}/vsigma_final_learning_synthesis_daily.csv"
+
       - name: Calibrate match stat forecasts
         shell: bash
         run: python scripts/calibrate_match_stat_forecasts.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
