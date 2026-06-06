@@ -7,11 +7,11 @@ Summary
                 summary_scope                 metric  rows_total
                       overall        target_fixtures           1
   odds_structure_depth_status                     OK           1
-odds_structure_coherence_flag             RICH_MIXED           1
+odds_structure_coherence_flag          RICH_COHERENT           1
       odds_total_ladder_shape            BROAD_GOALS           1
  odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL           1
     odds_line_aggression_flag     OVER_2_5_SUPPORTED           1
 
 Fixture preview
  fixture_id           league home_team away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
-    1548052 Segunda División Castellón   Almeria                    RICH_MIXED             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3798                             0.025
+    1548052 Segunda División Castellón   Almeria                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3414                              0.03
