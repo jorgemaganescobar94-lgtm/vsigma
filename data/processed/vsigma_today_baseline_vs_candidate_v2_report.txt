@@ -1,0 +1,17 @@
+vSIGMA TODAY BASELINE VS CANDIDATE V2
+
+Baseline: official frozen Competition Accuracy Mode + Probability Calibration.
+Candidate v2: SHADOW experimental schedule-strength + anomaly-cleaning layer.
+
+Baseline official picks: 1
+Candidate v2 shadow picks: 1
+Overlap: 1
+Only baseline chose: 0
+Only candidate chose: 0
+
+Side-by-side picks
+comparison_status              fixture  baseline_rank  candidate_v2_rank baseline_market candidate_v2_market  baseline_calibrated_prob  candidate_v2_calibrated_prob  baseline_confidence_score  candidate_v2_confidence_score
+             BOTH Castellón vs Almeria              1                  1        OVER_2_5            OVER_2_5                  0.911425                      0.889725                    149.544                        147.808
+
+Reason differences
+All compared picks overlap. Review probability/confidence deltas in the CSV.

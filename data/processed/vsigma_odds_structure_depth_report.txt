@@ -4,8 +4,19 @@ Purpose: lab-only market translation governance from paid odds ladder depth.
 Missing or thin odds are treated as uncertainty, not as a negative football signal.
 
 Summary
-summary_scope          metric  rows_total
-      overall target_fixtures           0
+                summary_scope                 metric  rows_total
+                      overall        target_fixtures           3
+  odds_structure_depth_status                     OK           3
+odds_structure_coherence_flag          RICH_COHERENT           3
+      odds_total_ladder_shape            BROAD_GOALS           2
+      odds_total_ladder_shape               BALANCED           1
+ odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL           2
+ odds_market_translation_hint   CAUTION_FRAGILE_SIDE           1
+    odds_line_aggression_flag     OVER_2_5_SUPPORTED           2
+    odds_line_aggression_flag                NEUTRAL           1
 
 Fixture preview
-No fixture rows.
+ fixture_id           league         home_team           away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
+    1548052 Segunda División         Castellón             Almeria                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3139                             0.030
+    1546406        J1 League    Kashiwa Reysol         Kyoto Sanga                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3211                            -0.015
+    1546407        J1 League Kawasaki Frontale Sanfrecce Hiroshima                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3261                             0.030
