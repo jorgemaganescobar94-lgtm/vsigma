@@ -1,2 +1,2 @@
 target_date,generated_at,rank,fixture_id,home_team,away_team,market_primary,adjusted_status,objective_level,dependency_level,opponent_level,draw_level,lineup_level,availability_level,market_level,memory_level,context_level,context_score,policy,auto_apply,production_change
-2026-06-05,2026-06-06T13:02:25+01:00,1,1548052,Castellón,Almeria,OVER_2_5,WAIT_PRELOCK,PROXY_TEMPO,DEPENDENCY_UNKNOWN,STAKE_UNKNOWN,DRAW_NOT_KEY,WAIT_PRELOCK,AVAIL_UNKNOWN_CLEAN,GOALS_STANDARD,MEM_NONE,L6_REVIEW,42,review only,NO,NO
+2026-06-05,2026-06-06T18:45:03+01:00,1,1548052,Castellón,Almeria,OVER_2_5,WAIT_PRELOCK,PROXY_TEMPO,DEPENDENCY_UNKNOWN,STAKE_UNKNOWN,DRAW_NOT_KEY,WAIT_PRELOCK,AVAIL_UNKNOWN_CLEAN,GOALS_STANDARD,MEM_NONE,L6_REVIEW,42,review only,NO,NO
