@@ -52,12 +52,12 @@
 ## Automation Health
 - system_status: BROKEN
 - components_checked: 11
-- severity_counts: BROKEN=1; WARN=1; OK=2; INFO=7
-- status_counts: MISSING=1; OK=3; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
+- severity_counts: BROKEN=1; WARN=1; OK=5; INFO=4
+- status_counts: MISSING=1; OK=6; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
 - .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-05; reason=align_daily_chain_self_heal_today_v71_1_after_learning_validation; triggered_at=2026-06-05T20:50:11+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-05; reason=rerun_daily_decision_chain_v71_1_date_fix_after_learning_validation; triggered_at=2026-06-05T20:50:11+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-06; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-06T09:48:05+01:00
 - .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-05; reason=align_prelock_today_v71_1_after_learning_validation; triggered_at=2026-06-05T20:50:11+01:00
 
 ## Key Files
@@ -79,9 +79,9 @@
 ## Date Coherence Guard
 - overall_status: DATE_MISMATCH_BLOCK
 - board_status: daily_board_md=MISSING_CORE; daily_board_csv=MISSING_CORE
-- mismatch_count: 2
+- mismatch_count: 1
 - missing_core_count: 2
-- trigger_date_counts: 2026-06-05=2
+- trigger_date_counts: 2026-06-06=1; 2026-06-05=1
 - next_action: Fix trigger/artifact date mismatch before using market signals.
 
 ## Upstream Board Input Diagnostic
@@ -98,7 +98,7 @@
 ## Real Shortlist Recovery Diagnostic
 - overall_status: REAL_CANDIDATES_AVAILABLE
 - root_cause: real shortlist or bets rows exist
-- root_scored_same_day_rows: 5
+- root_scored_same_day_rows: 3
 - real_shortlist_rows: 1
 - real_bet_rows: 1
 - proxy_rows: 0
@@ -106,34 +106,34 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1442
-- accepted_rows: 440
-- rejected_rows: 26
+- files_scanned: 1447
+- accepted_rows: 362
+- rejected_rows: 25
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
-- rows_reviewed: 440
-- trusted_rows: 5
+- rows_reviewed: 362
+- trusted_rows: 3
 - quarantine_rows: 0
-- blocked_rows: 435
-- trust_status_counts: REJECTED_SOURCE_BLOCK=435; TRUSTED_RAW_SOURCE=5
+- blocked_rows: 359
+- trust_status_counts: REJECTED_SOURCE_BLOCK=359; TRUSTED_RAW_SOURCE=3
 - next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
 
 ## Trusted Raw Candidate Promotion Gate
-- rows_reviewed: 440
-- promoted_rows: 3
+- rows_reviewed: 362
+- promoted_rows: 1
 - blocked_rows: 2
 - quarantine_rows: 0
-- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=435; PROMOTED_TO_SCORING_INPUT=3; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=2
+- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=359; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=2; PROMOTED_TO_SCORING_INPUT=1
 - next_action: Promoted rows may feed normal scoring gates only.
 
 ## Scoring Gap Explainer
-- rows_reviewed: 440
+- rows_reviewed: 362
 - missing_scored_rows: 0
 - no_data_blocked_rows: 2
-- not_trusted_rows: 435
-- promoted_rows: 3
-- gap_status_counts: NOT_TRUSTED_SKIPPED=435; PROMOTED=3; SCORED_ROW_NO_DATA_BLOCKED=2
+- not_trusted_rows: 359
+- promoted_rows: 1
+- gap_status_counts: NOT_TRUSTED_SKIPPED=359; SCORED_ROW_NO_DATA_BLOCKED=2; PROMOTED=1
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 
 ## Trusted Raw Scoring Queue
@@ -166,8 +166,8 @@
 
 ## Daily Board Self-Heal
 - self_heal_status: NO_ACTION
-- promotion_rows_reviewed: 440
-- promoted_rows: 3
+- promotion_rows_reviewed: 362
+- promoted_rows: 1
 - blocked_rows: 2
 - quarantine_rows: 0
 - board_rows_written: 0
