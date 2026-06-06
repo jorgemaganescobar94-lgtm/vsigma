@@ -1,6 +1,4 @@
 fixture_id,home_team,away_team,tie_state_label,market_family_hint,vsigma_pre_score,vsigma_priority,tie_adjustment_note
 1548052,Castellón,Almeria,,AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK,87.87,A_ANALIZAR_PRIMERO,
-1546406,Kashiwa Reysol,Kyoto Sanga,,AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK,71.21,A_ANALIZAR_PRIMERO,
-1546407,Kawasaki Frontale,Sanfrecce Hiroshima,,OVER_OR_BTTS_CHECK,71.16,A_ANALIZAR_PRIMERO,
 1546280,Milford FC,Cape Town City,,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,21.0,NO_DATA_BLOCKED,
 1520713,Criciuma,Londrina,,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,21.0,NO_DATA_BLOCKED,

@@ -10,8 +10,8 @@
 | Approved premium | 1 |
 | Approved standard | 0 |
 | Downgraded | 0 |
-| Blocked | 1 |
-| Watch | 1 |
+| Blocked | 0 |
+| Watch | 0 |
 
 ## SAFE Picks
 

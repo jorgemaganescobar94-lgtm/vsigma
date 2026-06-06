@@ -37,38 +37,38 @@ Candidate v6: NO_BET. Empty output is valid when no pick clears the frozen compe
 ## Match Script Forecasts
 | forecast_rank | fixture_id | league | home_team | away_team | market_primary | predicted_match_script | predicted_score_main | predicted_score_alt | predicted_home_xg_range | predicted_away_xg_range | predicted_home_shots_range | predicted_away_shots_range | predicted_home_sot_range | predicted_away_sot_range | predicted_total_corners_range | predicted_possession_split | predicted_pick_path | predicted_pick_breaker | predicted_total_goals_range | predicted_first_goal_side | predicted_state_gravity | forecast_confidence_band | forecast_inputs_used | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1548052 | Segunda División | Castellón | Almeria | OVER_2_5 | Open, active match with both penalty boxes reached often; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 5.3; stats=FULL. | 2-3 | 1-2 | 2.1-2.8 | 2.5-3.2 | 13-17 | 11-15 | 5-7 | 5-7 | 7-11 | home 46-54% / away 46-54% | Pick wins if the projected chance volume turns into three goals, usually via early tempo or both teams contributing. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 4.7-5.8 | Away slight lean | open exchange | HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-06-06 | 2026-06-06T08:10:01+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-06-06-20260606T081001Z |
+| 1 | 1548052 | Segunda División | Castellón | Almeria | OVER_2_5 | Open, active match with both penalty boxes reached often; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 5.3; stats=FULL. | 2-3 | 1-2 | 2.1-2.8 | 2.5-3.2 | 13-17 | 11-15 | 5-7 | 5-7 | 7-11 | home 46-54% / away 46-54% | Pick wins if the projected chance volume turns into three goals, usually via early tempo or both teams contributing. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 4.7-5.8 | Away slight lean | open exchange | HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-06-06 | 2026-06-06T12:06:05+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-06-06-20260606T120605Z |
 
 ## Baseline vs Candidate Comparison
 ### Candidate v2
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | baseline_market | candidate_v2_market | baseline_raw_prob | candidate_v2_raw_prob | baseline_calibrated_prob | candidate_v2_calibrated_prob | baseline_confidence_score | candidate_v2_confidence_score | baseline_bucket | candidate_v2_bucket | baseline_main_reason | candidate_v2_main_reason | baseline_primary_risk | candidate_v2_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BOTH | 1548052 | Castellón vs Almeria | Segunda División | 1 | 1 | OVER_2_5 | OVER_2_5 | 0.8943 | 0.8726 | 0.911425 | 0.889725 | 149.544 | 147.808 | ACCURACY_CORE | ACCURACY_CORE | ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-06-06 | 2026-06-06T08:10:01+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-06-20260606T081001Z |
+| BOTH | 1548052 | Castellón vs Almeria | Segunda División | 1 | 1 | OVER_2_5 | OVER_2_5 | 0.8943 | 0.8726 | 0.911425 | 0.889725 | 149.544 | 147.808 | ACCURACY_CORE | ACCURACY_CORE | ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-06-06 | 2026-06-06T12:06:05+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-06-20260606T120605Z |
 
 ### Candidate v4
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v4_rank | baseline_market | candidate_v2_market | candidate_v4_market | candidate_v4_original_market | candidate_v4_firewall_decision | candidate_v4_firewall_score | candidate_v4_firewall_action | baseline_primary_risk | candidate_v2_primary_risk | candidate_v4_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2 | 1548052 | Castellón vs Almeria | Segunda División | 1 | 1 |  | OVER_2_5 | OVER_2_5 |  |  |  |  |  | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION |  | 2026-06-06 | 2026-06-06T08:10:01+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-06-20260606T081001Z |
+| BASELINE+CANDIDATE_V2 | 1548052 | Castellón vs Almeria | Segunda División | 1 | 1 |  | OVER_2_5 | OVER_2_5 |  |  |  |  |  | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION |  | 2026-06-06 | 2026-06-06T12:06:05+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-06-20260606T120605Z |
 
 ### Candidate v5
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v5_rank | baseline_market | candidate_v2_market | candidate_v5_market | candidate_v5_original_market | candidate_v5_action | candidate_v5_hint | baseline_primary_risk | candidate_v2_primary_risk | candidate_v5_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1548052 | Castellón vs Almeria | Segunda División | 1 | 1 | 1 | OVER_2_5 | OVER_2_5 | OVER_2_5 | OVER_2_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-06-06 | 2026-06-06T08:10:01+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-06-20260606T081001Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1548052 | Castellón vs Almeria | Segunda División | 1 | 1 | 1 | OVER_2_5 | OVER_2_5 | OVER_2_5 | OVER_2_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-06-06 | 2026-06-06T12:06:05+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-06-20260606T120605Z |
 
 ### Candidate v6
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v6_rank | baseline_market | candidate_v2_market | candidate_v6_market | candidate_v6_action | candidate_v6_alignment | candidate_v6_confidence_adjustment | baseline_primary_risk | candidate_v2_primary_risk | candidate_v6_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2 | 1548052 | Castellón vs Almeria | Segunda División | 1 | 1 |  | OVER_2_5 | OVER_2_5 |  |  |  |  | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION |  | 2026-06-06 | 2026-06-06T08:10:01+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-06-20260606T081001Z |
+| BASELINE+CANDIDATE_V2 | 1548052 | Castellón vs Almeria | Segunda División | 1 | 1 |  | OVER_2_5 | OVER_2_5 |  |  |  |  | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION |  | 2026-06-06 | 2026-06-06T12:06:05+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-06-20260606T120605Z |
 
 ### Candidate v7
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v7_rank | baseline_market | candidate_v2_market | candidate_v7_market | candidate_v7_decision | candidate_v7_required_edge | candidate_v7_actual_edge | candidate_v7_drift_status | candidate_v7_clv_direction | candidate_v7_execution_status | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V7 | 1548052 | Castellón vs Almeria | Segunda División | 1 | 1 | 1 | OVER_2_5 | OVER_2_5 | OVER_2_5 | PRICE_OK | 0.155 | 0.291205 | NO_DRIFT | CLV_UNAVAILABLE | PRICE_OK | 2026-06-06 | 2026-06-06T08:10:01+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-06-20260606T081001Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V7 | 1548052 | Castellón vs Almeria | Segunda División | 1 | 1 | 1 | OVER_2_5 | OVER_2_5 | OVER_2_5 | PRICE_OK | 0.155 | 0.291205 | NO_DRIFT | CLV_FLAT | PRICE_OK | 2026-06-06 | 2026-06-06T12:06:05+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-06-20260606T120605Z |
 
 ## Price Discipline / CLV / Drift Execution Guard
 | fixture_id | home_team | away_team | market_primary | price_discipline_decision | price_discipline_min_edge_required | price_discipline_actual_edge | price_discipline_edge_surplus | price_discipline_drift_status | candidate_v7_prelock_status | candidate_v7_execution_status | clv_direction | price_discipline_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1548052 | Castellón | Almeria | OVER_2_5 | PRICE_OK | 0.155 | 0.291205 | 0.136205 | NO_DRIFT |  | PRICE_OK | CLV_UNAVAILABLE | Price cleared configured minimum edge and probability requirements. |
+| 1548052 | Castellón | Almeria | OVER_2_5 | PRICE_OK | 0.155 | 0.291205 | 0.136205 | NO_DRIFT |  | PRICE_OK | CLV_FLAT | Price cleared configured minimum edge and probability requirements. |
 
 ## Pre-Lock Execution Status
 - Pre-lock data fresh: YES
@@ -145,14 +145,14 @@ _No rows._
 - Ledger report: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-06/vsigma_ledger_daily_report.md
 
 ## Daily Controller Status
-- Next recommended action: WAIT_FOR_PRELOCK
-- Pre-lock due time: 2026-06-06T17:30:26.800000+00:00
+- Next recommended action: RUN_POST_AFTER_FINISH
+- Pre-lock due time: 2026-06-06T17:30:20.600000+00:00
 - Status path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-06/daily_controller_status.md
 
 ## Daily Supervisor
 - Supervisor latest status: SUPERVISOR_STATUS_NOT_AVAILABLE
 - Last run mode/time: NOT_AVAILABLE / NOT_AVAILABLE
-- Next recommended action: WAIT_FOR_PRELOCK
+- Next recommended action: RUN_POST_AFTER_FINISH
 - Scheduled automation status: REGISTRATION_SCRIPT_AVAILABLE_STATUS_NOT_QUERIED
 - Logs path: C:\vsigma\automation_logs\supervisor
 - Report path: NOT_AVAILABLE
@@ -166,13 +166,13 @@ _No rows._
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1548052.0 | Castellón | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1548052.0 | Castellón | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| OFFICIAL_BASELINE | 1548052.0 | Castellón | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1548052.0 | Castellón | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
 | CANDIDATE_V4_O25_FIREWALL |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V5_PLAYER_IMPACT | 1548052.0 | Castellón | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1548052.0 | Castellón | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
 | CANDIDATE_V6_API_PREDICTIONS |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1548052.0 | Castellón | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1548052.0 | Castellón | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
@@ -258,7 +258,7 @@ _No rows._
 | vsigma_today_candidate_v2_match_script_forecasts.csv | FORECAST_CANDIDATE_V2 | PASS | output is fresh for requested target date | 1 |
 | vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
+| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | PASS | output is fresh for requested target date | 1 |
 | today_pipeline_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
 | today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet | 0 |
 
