@@ -1,9 +1,9 @@
 target_date,generated_at,card,status,detail,next_action
-2026-06-06,2026-06-06T13:15:18+01:00,MOBILE_STATUS,STOP,betting_permission=NO; final_decision=SYSTEM_FIX_REQUIRED; action_level=BROKEN; alert_route=CRITICAL_STOP,Fix blocking guard/operator issue before trusting outputs.
-2026-06-06,2026-06-06T13:15:18+01:00,OPERATOR,BROKEN,final_decision=SYSTEM_FIX_REQUIRED; alert_route=CRITICAL_STOP; sanity=PASS,Read operator brief only if status is REVIEW_NOW/LIVE/STOP.
-2026-06-06,2026-06-06T13:15:18+01:00,LEARNING_GUARD,WARN,commit_allowed=YES; decisions=WARN_ONLY=7,"If BLOCK_COMMIT, rerun/fix learning chain before trusting outputs."
-2026-06-06,2026-06-06T13:15:18+01:00,LEARNING_SANITY,WARN,sanity=EMPTY_NO_FALLBACK=7; severity=WARN=7,Review warnings before calibration decisions.
-2026-06-06,2026-06-06T13:15:18+01:00,SHADOW_QUEUE,INACTIVE_OR_STABLE,active=0; high=0; metrics=none; decisions=none,Shadow only; no production change.
-2026-06-06,2026-06-06T13:15:18+01:00,PROMOTION_READINESS,NO_PROMOTION,promotion_candidates=0; decisions=none,Manual review only if promotion candidate appears.
-2026-06-06,2026-06-06T13:15:18+01:00,SHADOW_AB,UNAVAILABLE,metrics=none; verdicts=none; No A/B summary rows yet.,Generate shadow forecast A/B simulator.
-2026-06-06,2026-06-06T13:15:18+01:00,SHADOW_AB_QUALITY,NO_DATA,quality_gates=NO_DATA=1; usable=none; bad=none; No usable A/B data.,Do not use A/B for calibration decisions.
+2026-06-06,2026-06-06T20:59:17+01:00,MOBILE_STATUS,STOP,betting_permission=NO; final_decision=SYSTEM_FIX_REQUIRED; action_level=BROKEN; alert_route=CRITICAL_STOP,Fix blocking guard/operator issue before trusting outputs.
+2026-06-06,2026-06-06T20:59:17+01:00,OPERATOR,BROKEN,final_decision=SYSTEM_FIX_REQUIRED; alert_route=CRITICAL_STOP; sanity=PASS,Read operator brief only if status is REVIEW_NOW/LIVE/STOP.
+2026-06-06,2026-06-06T20:59:17+01:00,LEARNING_GUARD,WARN,commit_allowed=YES; decisions=WARN_ONLY=7,"If BLOCK_COMMIT, rerun/fix learning chain before trusting outputs."
+2026-06-06,2026-06-06T20:59:17+01:00,LEARNING_SANITY,WARN,sanity=EMPTY_NO_FALLBACK=7; severity=WARN=7,Review warnings before calibration decisions.
+2026-06-06,2026-06-06T20:59:17+01:00,SHADOW_QUEUE,INACTIVE_OR_STABLE,active=0; high=0; metrics=none; decisions=none,Shadow only; no production change.
+2026-06-06,2026-06-06T20:59:17+01:00,PROMOTION_READINESS,NO_PROMOTION,promotion_candidates=0; decisions=none,Manual review only if promotion candidate appears.
+2026-06-06,2026-06-06T20:59:17+01:00,SHADOW_AB,UNAVAILABLE,metrics=none; verdicts=none; No A/B summary rows yet.,Generate shadow forecast A/B simulator.
+2026-06-06,2026-06-06T20:59:17+01:00,SHADOW_AB_QUALITY,NO_DATA,quality_gates=NO_DATA=1; usable=none; bad=none; No usable A/B data.,Do not use A/B for calibration decisions.
