@@ -29,8 +29,8 @@
 - operator: data/processed/today/2026-06-06/vsigma_operator_brief.csv
 - shadow_queue: data/processed/governance/vsigma_calibration_shadow_patch_queue.csv
 - promotion_readiness: data/processed/governance/vsigma_shadow_patch_promotion_readiness.csv
-- learning_sanity: data/processed/governance/vsigma_learning_chain_output_sanity.csv
-- hard_guard: data/processed/governance/vsigma_learning_chain_empty_output_guard.csv
+- learning_sanity: data/processed/today/2026-06-06/vsigma_learning_chain_output_sanity.csv
+- hard_guard: data/processed/today/2026-06-06/vsigma_learning_chain_empty_output_guard.csv
 
 ## Guardrails
 - This panel is read-only governance.
@@ -53,6 +53,6 @@
 - usable_metrics: none
 - bad_metrics: none
 - blocked_metrics: none
-- ab_quality_source: data/processed/governance/vsigma_shadow_ab_quality_gate.csv
+- ab_quality_source: data/processed/today/2026-06-06/vsigma_shadow_ab_quality_gate.csv
 - auto_apply: NO
 - production_change: NO
