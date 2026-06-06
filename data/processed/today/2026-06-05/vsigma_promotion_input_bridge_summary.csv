@@ -1,0 +1,2 @@
+target_date,generated_at,source_rows_reviewed,bridge_rows_written,promotion_ready_review_only_rows,blocked_rows,status_counts,signal_band_counts,promotion_permission_counts,pick_permission_counts,stake_permission_counts,auto_apply,production_change
+2026-06-05,2026-06-06T15:55:27+01:00,2,2,2,0,PROMOTION_INPUT_READY_REVIEW_ONLY=2,HIGH_SIGNAL_REVIEW=1; MEDIUM_SIGNAL_REVIEW=1,REVIEW_ONLY_PROMOTION_INPUT=2,NO_PICK_PERMISSION=2,NO_STAKE_PERMISSION=2,NO,NO
