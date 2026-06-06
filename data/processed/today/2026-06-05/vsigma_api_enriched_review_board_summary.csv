@@ -1,0 +1,2 @@
+target_date,generated_at,source_rows_reviewed,review_rows_written,ready_for_manual_review_rows,blocked_rows,review_priority_counts,review_board_status_counts,canonical_board_permission_counts,pick_permission_counts,stake_permission_counts,auto_apply,production_change
+2026-06-05,2026-06-06T16:07:25+01:00,2,2,2,0,P1_MANUAL_REVIEW=1; P2_MANUAL_REVIEW=1,API_ENRICHED_REVIEW_READY=2,NO_CANONICAL_BOARD_PERMISSION=2,NO_PICK_PERMISSION=2,NO_STAKE_PERMISSION=2,NO,NO
