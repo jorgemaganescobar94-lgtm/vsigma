@@ -209,8 +209,10 @@ jobs:
           echo "Staged changes:"
           git diff --cached --name-only || true
 
-          if ! git diff --cached --name-only | grep -q "vsigma_daily_execution_board"; then
+          STAGED_FILES="$(git diff --cached --name-only)"
+          if [[ "$STAGED_FILES" != *"vsigma_daily_execution_board"* ]]; then
             echo "ERROR: board not staged"
+            echo "$STAGED_FILES"
             exit 1
           fi
 
