@@ -1,7 +1,7 @@
 # vSIGMA Official Lineup Snapshot Import - 2026-06-05
 
 ## Summary
-- rows_processed: 1
+- rows_processed: 0
 - eligible_fixtures: 0
 - api_calls_made: 0
 - cache_hits: 0

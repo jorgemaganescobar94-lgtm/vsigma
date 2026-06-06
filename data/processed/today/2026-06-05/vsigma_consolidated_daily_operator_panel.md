@@ -1,7 +1,7 @@
 # vSIGMA Consolidated Daily Operator Panel - 2026-06-05
 
 ## First Read
-- panel_status: NONE
+- panel_status: OK_EMPTY_BY_PROMOTION_GATE
 - operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=ATTENTION; board_rows=1
 - executable_prematch: NONE
 - live_only: NONE
@@ -17,7 +17,7 @@
 - risk_label: NONE
 - health_status: ATTENTION
 - board_rows: 1
-- panel_status: NONE
+- panel_status: OK_EMPTY_BY_PROMOTION_GATE
 - next_action: Follow operator brief and panel categories; no automatic execution.
 
 ## Executable Prematch
@@ -30,25 +30,23 @@
 - none
 
 ## No Bet
-- #0 | NO_BET | NO_PROMOTED_RAW_CANDIDATES vs NO_SCORING_SAFE_ROWS | market=NO_MARKET | stake=NO_STAKE | permission=NO | score=0
+- #0 | NO_BET | NO_PROMOTED_RAW_CANDIDATES vs NO_SCORING_SAFE_ROWS | market=NO_MARKET | stake=NO_STAKE | permission=NO_BET | score=0
 
 ## API Coverage
 - board_rows=1
-- source_guard_counts: PROMOTION_GATE_DIAGNOSTIC_ONLY; API_COVERAGE_GATE_V2=1
-- execution_permission_counts: NO=1
+- source_guard_counts: PROMOTION_GATE_DIAGNOSTIC_ONLY=1
+- execution_permission_counts: NO_BET=1
 - avg_coverage_score: UNKNOWN
-- forecast_warning_counts: no promoted raw candidates=1; API_COVERAGE_UNKNOWN=1
-- missing_data_counts: unknown=1
+- forecast_warning_counts: no promoted raw candidates=1
+- missing_data_counts: none
 
 ## Official / Probable Lineups
 - data/processed/today/2026-06-05/official_lineup_sources.csv: rows=32
-- data/processed/today/2026-06-05/vsigma_probable_lineup_consensus.csv: rows=1
 - data/processed/governance/official_lineup_sources.csv: rows=32
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Quarantine / Learning-Only / Import Status
 - data/processed/today/2026-06-05/official_lineup_sources.csv: rows=32
-- data/processed/today/2026-06-05/vsigma_probable_lineup_consensus.csv: rows=1
 - data/processed/governance/official_lineup_sources.csv: rows=32
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
@@ -84,7 +82,6 @@
 - No Bet, Watch, Live Only, Learning Only and Quarantine are valid successful outcomes.
 - Source Reliability Governor remains advisory-only and cannot change weights by itself.
 - If the daily board is missing, prelock/live files cannot be used as pick permission.
-
 ## Date Coherence Guard
 - overall_status: OK
 - board_status: daily_board_md=OK; daily_board_csv=OK
@@ -96,12 +93,12 @@
 ## Upstream Board Input Diagnostic
 - overall_status: UPSTREAM_MISSING
 - first_empty_required_component: real_objective_context_gate
-- missing_required_count: 7
-- empty_required_count: 0
+- missing_required_count: 2
+- empty_required_count: 6
 - date_issue_count: 0
 - forecast_rows: 0
 - translator_rows: 0
-- board_rows: 1
+- board_rows: 0
 - next_action: Build missing required upstream component first: real_objective_context_gate.
 
 ## Real Shortlist Recovery Diagnostic
@@ -115,7 +112,7 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1382
+- files_scanned: 1384
 - accepted_rows: 66
 - rejected_rows: 132
 - next_action: Review accepted rows, then feed normal scoring gates.
@@ -174,10 +171,71 @@
 - recommended_action: WAIT_FOR_MANUAL_APPROVAL
 
 ## Daily Board Self-Heal
-- self_heal_status: NO_ACTION
-- promotion_rows_reviewed: 0
+- self_heal_status: EMPTY_BY_PROMOTION_GATE
+- promotion_rows_reviewed: 66
 - promoted_rows: 0
 - blocked_rows: 0
-- quarantine_rows: 0
-- board_rows_written: 0
-- reason: daily board already has rows
+- quarantine_rows: 33
+- board_rows_written: 1_DIAGNOSTIC_ROW
+- reason: 0 promoted raw candidates; no scoring-safe rows available
+## API Quota-Aware Enrichment Gate
+- quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
+- api_plan_name: API-Football Ultra
+- plan_requests_per_day: 75000
+- rows_reviewed: 33
+- p1_rows: 17
+- p2_rows: 16
+- p1_estimated_units: 85
+- p2_estimated_units: 70
+- auto_units_reserved: 101
+- max_auto_units_per_day: 5000
+- max_auto_units_per_run: 1500
+- quota_decision_counts: AUTO_ENRICHMENT_ALLOWED_P1=17; COVERAGE_PROBE_ALLOWED_P2=16
+- api_calls_allowed: YES_LIMITED
+- api_calls_executed: NO
+- recommended_action: Run a separate enrichment executor only for allowlisted rows; do not create picks from enrichment alone.
+## Empty Diagnostic Board State Normalizer
+- normalized_status: OK_EMPTY_BY_PROMOTION_GATE
+- operator_state: HEALTHY_EMPTY_NO_ACTION
+- board_status: daily_board_md=OK; daily_board_csv=OK
+- mismatch_count: 0
+- promoted_rows: 0
+- queue_rows: 33
+- diagnostic_no_bet_rows: 1
+- next_action: No picks. System is coherent and empty because zero candidates were promoted. Wait for future data or improved trusted source coverage.
+## Rejected Source Block Audit
+- rows_reviewed: 0
+- correct_reject_rows: 0
+- manual_review_rows: 0
+- whitelist_candidate_rows: 0
+- audit_bucket_counts: none
+- review_priority_counts: none
+- next_action: Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.
+## Max-Coverage API Enrichment Policy
+- policy_status: MAX_COVERAGE_POLICY_READY
+- api_plan_name: API-Football Ultra
+- plan_requests_per_day: 75000
+- rows_reviewed: 33
+- rows_allowed: 33
+- full_scoring_enrichment_rows: 14
+- coverage_probe_rows: 14
+- diagnostic_only_rows: 5
+- blocked_rows: 0
+- estimated_call_units: 155
+- downstream_use_counts: SCORING_ALLOWED_WITH_NORMAL_GATES=14; COVERAGE_GATE_ONLY=14; DIAGNOSTIC_ONLY_NO_SCORING=5
+- external_calls_allowed: YES_MAX_COVERAGE_POLICY
+- external_calls_executed: NO
+- next_action: Use max-coverage policy for a separate logged API executor. Enrichment can be broad; scoring remains restricted by downstream_use and normal gates.
+## Active API Policy
+- active_api_policy: MAX_COVERAGE
+- policy_source: vsigma_max_coverage_api_enrichment_policy
+- external_calls_allowed: YES_MAX_COVERAGE_POLICY
+- external_calls_executed: NO
+- scoring_allowed_rows: 14
+- coverage_probe_rows: 14
+- diagnostic_only_rows: 5
+- blocked_rows: 0
+- legacy_cost_gate_status: LEGACY_INFORMATIONAL_ONLY:WAIT_FOR_MANUAL_APPROVAL
+- legacy_quota_gate_status: LEGACY_SECONDARY_ONLY:AUTO_ENRICHMENT_ALLOWED_LIMITED
+- legacy_allowlist_status: LEGACY_SECONDARY_ONLY:ALLOWLIST_DRY_RUN_READY
+- operator_note: MAX_COVERAGE is the active API policy. Legacy cost/quota/allowlist gates are informational and cannot override the active policy. No external calls are executed by this integration.

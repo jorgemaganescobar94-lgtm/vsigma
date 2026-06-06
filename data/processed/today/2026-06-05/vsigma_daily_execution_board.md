@@ -8,7 +8,7 @@
 - promotion_rows_reviewed: 66
 - promoted_rows: 0
 - blocked_rows: 0
-- quarantine_rows: 0
+- quarantine_rows: 33
 - source_guard: PROMOTION_GATE_DIAGNOSTIC_ONLY
 - auto_apply: NO
 - production_change: NO
