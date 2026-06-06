@@ -1,2 +1,2 @@
 target_date,generated_at,overall_status,root_cause,root_scored_same_day_rows,real_shortlist_rows,real_bet_rows,proxy_rows,next_action,auto_apply,production_change
-2026-06-05,2026-06-06T08:28:48+01:00,SCORING_SOURCE_EMPTY_FOR_DATE,scored source exists but has no rows for target date,0,0,0,0,Refresh/fix scoring source date coverage.,NO,NO
+2026-06-05,2026-06-06T09:04:13+01:00,SCORING_SOURCE_EMPTY_FOR_DATE,scored source exists but has no rows for target date,0,0,0,0,Refresh/fix scoring source date coverage.,NO,NO
