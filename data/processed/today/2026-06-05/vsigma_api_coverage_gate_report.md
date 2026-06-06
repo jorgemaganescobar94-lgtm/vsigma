@@ -7,7 +7,7 @@
 - production_change: NO
 
 ## Gate Rows
-- Castellón vs Almeria | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=unknown
+- Castellón vs Almeria | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO->NO | missing=unknown
 
 ## Guardrails
 - Probable XI can support early planning, never final lock by itself.
