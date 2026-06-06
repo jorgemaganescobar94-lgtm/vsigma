@@ -1,17 +1,18 @@
 # vSIGMA Scoring Gap Explainer - 2026-06-05
 
 ## Summary
-- rows_reviewed: 66
-- missing_scored_rows: 33
+- rows_reviewed: 67
+- missing_scored_rows: 34
 - no_data_blocked_rows: 0
 - not_trusted_rows: 33
 - promoted_rows: 0
-- gap_status_counts: MISSING_SCORED_ROW=33; NOT_TRUSTED_SKIPPED=33
+- gap_status_counts: MISSING_SCORED_ROW=34; NOT_TRUSTED_SKIPPED=33
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 - auto_apply: NO
 - production_change: NO
 
 ## Gap Rows
+- Castellón vs Almeria | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
 - HK Kopavogur vs Afturelding | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
 - Njardvik vs IR Reykjavik | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
 - Ægir vs Leiknir R. | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.

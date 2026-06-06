@@ -4,17 +4,17 @@
 - quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
 - api_plan_name: API-Football Ultra
 - plan_requests_per_day: 75000
-- rows_reviewed: 33
-- p1_rows: 17
+- rows_reviewed: 34
+- p1_rows: 18
 - p2_rows: 16
-- p1_estimated_units: 85
+- p1_estimated_units: 90
 - p2_estimated_units: 70
 - p2_probe_units: 16
-- total_estimated_units: 155
-- auto_units_reserved: 101
+- total_estimated_units: 160
+- auto_units_reserved: 106
 - max_auto_units_per_day: 5000
 - max_auto_units_per_run: 1500
-- quota_decision_counts: AUTO_ENRICHMENT_ALLOWED_P1=17; COVERAGE_PROBE_ALLOWED_P2=16
+- quota_decision_counts: AUTO_ENRICHMENT_ALLOWED_P1=18; COVERAGE_PROBE_ALLOWED_P2=16
 - api_calls_allowed: YES_LIMITED
 - api_calls_executed: NO
 - recommended_action: Run a separate enrichment executor only for allowlisted rows; do not create picks from enrichment alone.
@@ -22,6 +22,7 @@
 - production_change: NO
 
 ## Allowlist / Policy Rows
+- Castellón vs Almeria | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
 - HK Kopavogur vs Afturelding | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
 - Njardvik vs IR Reykjavik | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
 - Ægir vs Leiknir R. | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO

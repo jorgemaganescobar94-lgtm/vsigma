@@ -4,21 +4,22 @@
 - policy_status: MAX_COVERAGE_POLICY_READY
 - api_plan_name: API-Football Ultra
 - plan_requests_per_day: 75000
-- rows_reviewed: 33
-- rows_allowed: 33
-- full_scoring_enrichment_rows: 14
+- rows_reviewed: 34
+- rows_allowed: 34
+- full_scoring_enrichment_rows: 15
 - coverage_probe_rows: 14
 - diagnostic_only_rows: 5
 - blocked_rows: 0
-- estimated_call_units: 155
-- decision_counts: FULL_ENRICHMENT_ALLOWED_FOR_SCORING=14; COVERAGE_PROBE_ALLOWED_LOW_COVERAGE=14; DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST=5
-- downstream_use_counts: SCORING_ALLOWED_WITH_NORMAL_GATES=14; COVERAGE_GATE_ONLY=14; DIAGNOSTIC_ONLY_NO_SCORING=5
+- estimated_call_units: 160
+- decision_counts: FULL_ENRICHMENT_ALLOWED_FOR_SCORING=15; COVERAGE_PROBE_ALLOWED_LOW_COVERAGE=14; DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST=5
+- downstream_use_counts: SCORING_ALLOWED_WITH_NORMAL_GATES=15; COVERAGE_GATE_ONLY=14; DIAGNOSTIC_ONLY_NO_SCORING=5
 - external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: NO
 - auto_apply: NO
 - production_change: NO
 
 ## Policy Rows
+- Castellón vs Almeria | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
 - HK Kopavogur vs Afturelding | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
 - Njardvik vs IR Reykjavik | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
 - Ægir vs Leiknir R. | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO

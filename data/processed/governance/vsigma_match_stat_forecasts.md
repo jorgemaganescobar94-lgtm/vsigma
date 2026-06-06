@@ -1,17 +1,17 @@
 # vSIGMA Match Statistical Forecasts - 2026-06-05
 
 ## Summary
-- rows_forecasted: 0
-- source_file: NONE
+- rows_forecasted: 1
+- source_file: vsigma_today_execution_shortlist.csv
 - source_guard: DATED_INPUT_ONLY
-- confidence_counts: none
-- tempo_counts: none
+- confidence_counts: LOW=1
+- tempo_counts: MEDIUM_TEMPO=1
 - calibration_note: v44.1 tightened range width and confidence penalties; no auto-execution.
 - auto_apply: NO
 - production_change: NO
 
 ## Forecast Rows
-- none. Missing dated scored/shortlist source; root fallback refused.
+- #1 | Castellón vs Almeria | score=2-1 / 1-1 / 2-2 | goals=1.95-3.51 | shots=17-28 | SoT=4-10 | corners=6-12 | cards=2-6 | tempo=MEDIUM_TEMPO | conf=LOW(56.7) | warning=LINEUPS_INACTIVE; LOW_LEAGUE_RELIABILITY; PARTIAL_RECENT_STATS
 
 ## Guardrails
 - Forecasts are ranges, not exact-stat promises.
