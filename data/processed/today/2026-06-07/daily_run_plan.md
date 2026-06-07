@@ -1,12 +1,12 @@
 # vSIGMA Daily Run Plan - 2026-06-07
 
 - Timezone: Atlantic/Canary
-- Generated at: 2026-06-07T09:40:37.846919+01:00
+- Generated at: 2026-06-07T16:13:04.522011+01:00
 - Window minutes: 90
-- Next recommended action: CHECK_STALE_OUTPUTS
-- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-07 --timezone Atlantic/Canary --mode status`
+- Next recommended action: RUN_POST_AFTER_FINISH
+- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-07 --timezone Atlantic/Canary --mode post`
 
 ## Fixtures
 | fixture_id | league | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action | recommended_command |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1548053 | Segunda División | Las Palmas | Malaga | OVER_1_5 | 2026-06-07T19:00:20.200000+00:00 | 619.71 | 2026-06-07T17:30:20.200000+00:00 | PENDING_OUTSIDE_WINDOW | CHECK_STALE_OUTPUTS | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-07 --timezone Atlantic/Canary --mode status |
+| 1548053 | Segunda División | Las Palmas | Malaga | OVER_1_5 | 2026-06-07T19:00:19+00:00 | 227.24 | 2026-06-07T17:30:19+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-07 --timezone Atlantic/Canary --mode post |

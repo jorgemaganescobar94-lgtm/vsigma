@@ -1,20 +1,20 @@
-# vSIGMA Autonomous Monitoring Summary - 2026-06-06
+# vSIGMA Autonomous Monitoring Summary - 2026-06-07
 
 ## Executive Status
-- generated_at: 2026-06-07T13:15:41+01:00
-- mode: post-yesterday
-- daily_classification: EXPIRED_PRELOCK
-- operational_verdict: NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA
+- generated_at: 2026-06-07T16:13:12+01:00
+- mode: auto
+- daily_classification: WAITING_FOR_PRELOCK
+- operational_verdict: WAITING_FOR_PRELOCK
 - action_level: REVIEW_REQUIRED
 - predictive_failure: NO
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/27092277587
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/27096379993
 
 ## Operator Action
-- Review AUTO/PRELOCK timing; do not count the row as predictive hit-rate failure.
+- Wait for next scheduled AUTO/PRELOCK run or rerun prelock manually if timing is critical.
 
 ## Explanation
-- The candidate expired before execution, so the operational issue is AUTO/PRELOCK timing. This is not a predictive failure and must not be counted in predictive hit-rate metrics.
+- At least one candidate is waiting for the configured PRELOCK window or retry slot.
 
 ## Source Coverage
 - decision_quality_review: present
@@ -22,7 +22,7 @@
 - healthcheck_report: present
 - cloud_decision_summary: present
 - prelock_decision_resolver: present
-- decision_outcome_ledger_rows: 2
+- decision_outcome_ledger_rows: 1
 
 ## Classification Contract
 - EXECUTION_OK: at least one executable decision exists.

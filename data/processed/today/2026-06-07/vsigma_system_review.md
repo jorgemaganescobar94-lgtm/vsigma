@@ -8,7 +8,7 @@
 - Blocked picks: 0
 - Official action summary: WAIT
 - Healthcheck status: WARNING
-- Ledger rows total: 176
+- Ledger rows total: 174
 - Ledger rows for target date: 7
 - Decision outcome ledger rows total: 62
 - Decision outcome ledger actionable rows: 8
@@ -41,14 +41,14 @@
 - injuries coverage: 1/2
 - lineups coverage: 2/2
 - predictions coverage: 2/2
-- odds structure depth: target_fixtures: 1; OK: 1; RICH_MIXED: 1; MILD_GOALS: 1; PREFER_MILDER_TOTAL: 1
+- odds structure depth: target_fixtures: 1; OK: 1; RICH_COHERENT: 1; MILD_GOALS: 1; PREFER_MILDER_TOTAL: 1
 - API gaps detected: injuries
 
 ## Model / Market Review
-- markets appearing in current/historical inputs: OVER_1_5: 131; OVER_2_5: 30; BTTS_YES: 3; UNDER_3_5: 3; AWAY_WIN: 2
-- failure modes principales: FAILURE_MODE_LOW_CONVERSION: 228; LOW_CONVERSION: 114; FAILURE_MODE_AVALANCHE_RISK: 2
-- OVER_1_5: appearances=131; calibration_sample=7; status=needs more sample
-- OVER_2_5: appearances=30; calibration_sample=2; status=needs more sample
+- markets appearing in current/historical inputs: OVER_1_5: 135; OVER_2_5: 26; BTTS_YES: 3; UNDER_3_5: 3; AWAY_WIN: 2
+- failure modes principales: FAILURE_MODE_LOW_CONVERSION: 220; LOW_CONVERSION: 110; FAILURE_MODE_AVALANCHE_RISK: 2
+- OVER_1_5: appearances=135; calibration_sample=7; status=needs more sample
+- OVER_2_5: appearances=26; calibration_sample=2; status=needs more sample
 - sides / DNB / 1X / X2: appearances=2; calibration_sample=1; status=needs more sample
 - mercados con buena senal: none yet by sample rule
 - mercados que necesitan mas muestra: AWAY_WIN (1), OVER_1_5 (7), OVER_2_5 (2)
@@ -76,6 +76,6 @@
 | P3 | model_calibration | Defer recalibration until minimum closed-pick sample | Fewer than 30 closed picks are available. | Avoids fitting thresholds or probability adjustments to noise. | Low; no predictive change is applied. | Keep calibration reporting active and wait for at least 30 closed picks before suggestions. | NO | closed_picks=8; enough_sample=NO; recalibration_allowed=NO |
 
 ## Input Inventory
-- generated_at: 2026-06-07T09:40:45+01:00
+- generated_at: 2026-06-07T16:13:11+01:00
 - timezone: Atlantic/Canary
 - missing optional inputs: none

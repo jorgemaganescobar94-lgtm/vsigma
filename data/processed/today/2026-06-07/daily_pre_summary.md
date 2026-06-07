@@ -17,13 +17,13 @@
 
 | Rank | Fixture | League | Market | Rec | Bucket | Score | Why | Risk |
 | --- | --- | --- | --- | --- | --- | ---: | --- | --- |
-| 1 | Las Palmas vs Malaga | Segunda División | OVER_1_5 | BET | PREMIUM_CORE | 127.557 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.208; market_fit=SAFE_OK |
+| 1 | Las Palmas vs Malaga | Segunda División | OVER_1_5 | BET | PREMIUM_CORE | 126.551 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.198; market_fit=SAFE_OK |
 
 ## BALANCED Picks
 
 | Rank | Fixture | League | Market | Rec | Bucket | Score | Why | Risk |
 | --- | --- | --- | --- | --- | --- | ---: | --- | --- |
-| 1 | Las Palmas vs Malaga | Segunda División | OVER_1_5 | BET | PREMIUM_CORE | 127.557 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.208; market_fit=SAFE_OK |
+| 1 | Las Palmas vs Malaga | Segunda División | OVER_1_5 | BET | PREMIUM_CORE | 126.551 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.198; market_fit=SAFE_OK |
 
 ## Execution Shortlist
 
@@ -32,11 +32,11 @@
 - Market: OVER_1_5
 - Bucket: PREMIUM_CORE
 - Recommendation: BET
-- Execution score: 127.557
+- Execution score: 126.551
 - Main why: STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE
-- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.208; market_fit=SAFE_OK
+- Primary risk: FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.198; market_fit=SAFE_OK
 - Bucket rationale: PREMIUM_CORE: CORE_GATE_PASSED; APPROVED_PREMIUM; BET; SAFE_OK
-- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=1; phase=PREMIUM_CORE; execution_score=127.557; selection_score=87.730; primary_edge=0.208; primary_model_prob=0.912; shortlist_rank=1; caps=league2_market2_fixture1
+- Rank rationale: EXECUTION_SHORTLIST_SORT: execution_rank=1; phase=PREMIUM_CORE; execution_score=126.551; selection_score=87.730; primary_edge=0.198; primary_model_prob=0.912; shortlist_rank=1; caps=league2_market2_fixture1
 - Confirmation layers: STATS+ODDS+MARKET_TRANSLATION+FORM+LEAGUE_COVERAGE
 
 ## Match Script Forecasts

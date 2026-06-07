@@ -14,4 +14,4 @@ NOT_APPLIED    1
 
 Candidate v5 Top
  accuracy_mode_rank  fixture_id           league  home_team away_team market_primary  competition_calibrated_prob  accuracy_confidence_score player_impact_adjustment_action      player_impact_market_translation_hint
-                  1     1548053 Segunda División Las Palmas    Malaga       OVER_1_5                      0.83986                    157.504                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
+                  1     1548053 Segunda División Las Palmas    Malaga       OVER_1_5                      0.83986                      156.8                     NOT_APPLIED PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE
