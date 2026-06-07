@@ -2,7 +2,7 @@
 
 System status: **BROKEN**
 Alert required: **YES**
-Notify required: **YES**
+Notify required: **NO**
 Alert hash: `666f987e886617de8e2e06fa09918d39c09d38e4f64f28548b23d9cd2fe656b5`
 
 ## Signals
