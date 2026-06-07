@@ -1,17 +1,18 @@
 # vSIGMA Raw Candidate Trust Gate - 2026-06-05
 
 ## Summary
-- rows_reviewed: 67
-- trusted_rows: 34
+- rows_reviewed: 68
+- trusted_rows: 35
 - quarantine_rows: 33
 - blocked_rows: 0
-- trust_status_counts: TRUSTED_RAW_SOURCE=34; QUARANTINE_REVIEW=33
+- trust_status_counts: TRUSTED_RAW_SOURCE=35; QUARANTINE_REVIEW=33
 - next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
 - auto_apply: NO
 - production_change: NO
 
 ## Rows
-- Castellón vs Almeria | league=Segunda División | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_match_stat_forecasts.csv
+- Las Palmas vs Malaga | league=Segunda División | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_match_stat_forecasts.csv
+- Castellón vs Almeria | league=Segunda División | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - HK Kopavogur vs Afturelding | league=1. Deild | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Njardvik vs IR Reykjavik | league=1. Deild | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Ægir vs Leiknir R. | league=1. Deild | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv

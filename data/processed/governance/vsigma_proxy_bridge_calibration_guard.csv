@@ -1,2 +1,2 @@
 target_date,generated_at,fixture_id,home_team,away_team,market_hint,before_primary,after_primary,before_permission,after_permission,guard_action,reason,auto_apply,production_change
-2026-06-05,2026-06-06T18:45:03+01:00,1548052,Castellón,Almeria,OVER_2_5,NO_CLEAR_STAT_MARKET,NO_CLEAR_STAT_MARKET,NO_BET,NO_BET,NO_CHANGE,not a proxy inversion,NO,NO
+2026-06-05,2026-06-07T13:24:40+01:00,1548053,Las Palmas,Malaga,OVER_1_5,UNDER_3_5_REVIEW,NO_CLEAR_STAT_MARKET,NO_BET_OR_WATCH,NO_BET,BLOCKED_INVERSION,proxy objective-context tempo/over source cannot be inverted into under/no-goals market,NO,NO

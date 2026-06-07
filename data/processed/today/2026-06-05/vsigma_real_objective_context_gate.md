@@ -8,7 +8,7 @@
 - production_change: NO
 
 ## Rows
-- #1 | TABLE_PROXY_TEMPO | Castellón vs Almeria | market=OVER_2_5 | override=PROXY_ONLY | edge=TEMPO | action=No real objective override available
+- #1 | TABLE_PROXY_TEMPO | Las Palmas vs Malaga | market=OVER_1_5 | override=PROXY_ONLY | edge=TEMPO | action=No real objective override available
 
 ## Guardrails
 - Real context overrides ranking urgency proxy.

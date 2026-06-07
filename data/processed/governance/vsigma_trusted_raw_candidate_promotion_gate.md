@@ -1,17 +1,18 @@
 # vSIGMA Trusted Raw Candidate Promotion Gate - 2026-06-05
 
 ## Summary
-- rows_reviewed: 67
+- rows_reviewed: 68
 - promoted_rows: 0
 - blocked_rows: 0
-- quarantine_rows: 34
-- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=34; NOT_TRUSTED_NO_PROMOTION=33
+- quarantine_rows: 35
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=35; NOT_TRUSTED_NO_PROMOTION=33
 - next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 - auto_apply: NO
 - production_change: NO
 
 ## Rows
-- Castellón vs Almeria | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_match_stat_forecasts.csv
+- Las Palmas vs Malaga | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_match_stat_forecasts.csv
+- Castellón vs Almeria | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - HK Kopavogur vs Afturelding | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Njardvik vs IR Reykjavik | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Ægir vs Leiknir R. | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv

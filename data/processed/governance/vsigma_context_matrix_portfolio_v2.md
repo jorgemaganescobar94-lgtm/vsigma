@@ -3,13 +3,13 @@
 ## Executive Verdict
 - portfolio_verdict: REVIEW_ONLY_PORTFOLIO
 - recommended_stance: No premium; review/live/low stake only.
-- top_pick: Castellón vs Almeria - OVER_2_5 (REVIEW_ONLY)
+- top_pick: Las Palmas vs Malaga - OVER_1_5 (REVIEW_ONLY)
 - status_counts: REVIEW_ONLY=1
 - auto_apply: NO
 - production_change: NO
 
 ## Portfolio Rows
-- #1 | REVIEW_ONLY | Castellón vs Almeria | market=OVER_2_5 | level=L6_REVIEW | stake=LOW_IF_CONFIRMED | note=Review only; low stake only with price/prelock/live confirmation.
+- #1 | REVIEW_ONLY | Las Palmas vs Malaga | market=OVER_1_5 | level=L6_REVIEW | stake=LOW_IF_CONFIRMED | note=Review only; low stake only with price/prelock/live confirmation.
 
 ## Guardrails
 - This report refuses stale governance fallback when dated inputs are missing.

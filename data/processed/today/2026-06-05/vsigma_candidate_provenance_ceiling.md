@@ -8,7 +8,7 @@
 - production_change: NO
 
 ## Ceiling Rows
-- Castellón vs Almeria | origin=OBJECTIVE_PROXY | max=NO_BET | permission=NO_BET -> NO_BET | stake=NO_STAKE -> NO_STAKE | action=NO_CHANGE | reason=permission already within provenance ceiling or ledger missing
+- Las Palmas vs Malaga | origin=OBJECTIVE_PROXY | max=NO_BET | permission=NO_BET -> NO_BET | stake=NO_STAKE -> NO_STAKE | action=NO_CHANGE | reason=permission already within provenance ceiling or ledger missing
 
 ## Guardrails
 - Ceiling enforcement is diagnostic/safety governance only.

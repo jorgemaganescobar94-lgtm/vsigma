@@ -9,7 +9,7 @@
 - production_change: NO
 
 ## Board Rows
-- #1 | NO_BET | Castellón vs Almeria | market=NO_CLEAR_STAT_MARKET | alt=NONE | stake=NO_STAKE | score=-34 | conf=LOW | bucket=BLOCKED | stats=goals 1.95-3.51 | shots 17-28 | SoT 4-10 | corners 6-12 | cards 2-6 | prelock=none | live=none | cancel=default no bet; low forecast confidence; bad or incomplete lineups
+- #1 | NO_BET | Las Palmas vs Malaga | market=NO_CLEAR_STAT_MARKET | alt=NONE | stake=NO_STAKE | score=-34 | conf=LOW | bucket=BLOCKED | stats=goals 1.62-2.98 | shots 17-28 | SoT 4-10 | corners 6-12 | cards 2-6 | prelock=none | live=none | cancel=default no bet; bad or incomplete lineups
 
 ## Guardrails
 - This board is a decision dashboard, not an auto-bet executor.

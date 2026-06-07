@@ -7,7 +7,7 @@
 - production_change: NO
 
 ## Matrix Rows
-- #1 | L6_REVIEW | score=42 | Castellón vs Almeria | market=OVER_2_5 | policy=review only
+- #1 | L6_REVIEW | score=42 | Las Palmas vs Malaga | market=OVER_1_5 | policy=review only
 
 ## Guardrails
 - This matrix refuses stale governance fallback.

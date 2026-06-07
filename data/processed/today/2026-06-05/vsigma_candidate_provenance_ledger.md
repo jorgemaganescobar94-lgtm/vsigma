@@ -9,7 +9,7 @@
 - production_change: NO
 
 ## Candidate Rows
-- Castellón vs Almeria | origin=OBJECTIVE_PROXY | market=NO_CLEAR_STAT_MARKET | direction=UNKNOWN | max_permission=NO_BET | strength=21 | allowed=DIAGNOSTIC_ONLY_NO_MARKET_PERMISSION | reason=objective context bridge created diagnostic shortlist row
+- Las Palmas vs Malaga | origin=OBJECTIVE_PROXY | market=NO_CLEAR_STAT_MARKET | direction=UNKNOWN | max_permission=NO_BET | strength=21 | allowed=DIAGNOSTIC_ONLY_NO_MARKET_PERMISSION | reason=objective context bridge created diagnostic shortlist row
 
 ## Guardrails
 - Provenance ledger is diagnostic and ceiling-only; it never upgrades candidates.

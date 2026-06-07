@@ -10,7 +10,7 @@
 - production_change: NO
 
 ## Ledger Rows
-- 1 | OFFICIAL_NO_BET | Castellón vs Almeria | market=NO_CLEAR_STAT_MARKET | decision=NO_BET | permission=NO_PICK_NO_STAKE | audit=YES
+- 1 | OFFICIAL_NO_BET | Las Palmas vs Malaga | market=NO_CLEAR_STAT_MARKET | decision=NO_BET | permission=NO_PICK_NO_STAKE | audit=YES
 
 ## Guardrails
 - This ledger records official daily decisions; it does not create picks.

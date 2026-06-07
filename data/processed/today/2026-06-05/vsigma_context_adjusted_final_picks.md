@@ -10,7 +10,7 @@
 - production_change: NO
 
 ## Final Adjusted Picks
-- #1 | WAIT_PRELOCK | Castellón vs Almeria | market=OVER_2_5 | stake=NO_PREMATCH_STAKE | reason=objective/availability gate requires prelock or lineup confirmation
+- #1 | WAIT_PRELOCK | Las Palmas vs Malaga | market=OVER_1_5 | stake=NO_PREMATCH_STAKE | reason=objective/availability gate requires prelock or lineup confirmation
 
 ## Guardrails
 - This report refuses governance and root-level fallbacks.

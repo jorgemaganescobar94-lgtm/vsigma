@@ -9,7 +9,7 @@
 - production_change: NO
 
 ## Bridge Rows
-- #1 | Castellón vs Almeria | market=OVER_2_5 | recommendation=BET | guard=BASE_PROXY_FROM_OBJECTIVE_GATE_TEMPO
+- #1 | Las Palmas vs Malaga | market=OVER_1_5 | recommendation=BET | guard=BASE_PROXY_FROM_OBJECTIVE_GATE_TEMPO
 
 ## Guardrails
 - This bridge creates diagnostic/proxy shortlist rows only; it does not create stake permission.

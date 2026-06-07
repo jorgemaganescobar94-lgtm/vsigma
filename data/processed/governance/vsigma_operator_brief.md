@@ -80,7 +80,7 @@
 - none
 
 ## No Bet
-- #1 | NO_BET | Castellón vs Almeria | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-34 | cancel=default no bet; low forecast confidence; bad or incomplete lineups
+- #1 | NO_BET | Las Palmas vs Malaga | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-34 | cancel=default no bet; bad or incomplete lineups
 
 ## Live Trigger Status
 - no live trigger report or no live candidates

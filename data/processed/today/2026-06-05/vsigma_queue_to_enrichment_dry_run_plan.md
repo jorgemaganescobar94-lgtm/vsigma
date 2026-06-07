@@ -1,11 +1,11 @@
 # vSIGMA Queue-to-Enrichment Dry Run Planner - 2026-06-05
 
 ## Summary
-- rows_planned: 34
-- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=34
-- risk_label_counts: MEDIUM=18; HIGH_LOW_COVERAGE=16
-- priority_counts: P1_TRUSTED_MISSING_SCORING=18; P2_LOW_COVERAGE_SCORING=16
-- total_estimated_call_units: 160
+- rows_planned: 35
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=35
+- risk_label_counts: MEDIUM=19; HIGH_LOW_COVERAGE=16
+- priority_counts: P1_TRUSTED_MISSING_SCORING=19; P2_LOW_COVERAGE_SCORING=16
+- total_estimated_call_units: 165
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
@@ -13,6 +13,7 @@
 - production_change: NO
 
 ## Dry Run Rows
+- Las Palmas vs Malaga | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Castellón vs Almeria | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - HK Kopavogur vs Afturelding | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Njardvik vs IR Reykjavik | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS

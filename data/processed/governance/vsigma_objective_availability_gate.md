@@ -10,7 +10,7 @@
 - production_change: NO
 
 ## Gate Rows
-- #1 | WAIT_PRELOCK | Castellón vs Almeria | market=OVER_2_5 | objective=OBJECTIVE_SUPPORTS_TEMPO | availability=AVAILABILITY_UNKNOWN_OR_CLEAN | lineup=WAIT_PRELOCK | action=Wait for lineups/prelock before execution
+- #1 | WAIT_PRELOCK | Las Palmas vs Malaga | market=OVER_1_5 | objective=OBJECTIVE_SUPPORTS_TEMPO | availability=AVAILABILITY_UNKNOWN_OR_CLEAN | lineup=WAIT_PRELOCK | action=Wait for lineups/prelock before execution
 
 ## Guardrails
 - This gate refuses root-level execution fallback.

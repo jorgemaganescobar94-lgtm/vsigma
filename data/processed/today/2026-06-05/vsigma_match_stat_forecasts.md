@@ -11,7 +11,7 @@
 - production_change: NO
 
 ## Forecast Rows
-- #1 | Castellón vs Almeria | score=2-1 / 1-1 / 2-2 | goals=1.95-3.51 | shots=17-28 | SoT=4-10 | corners=6-12 | cards=2-6 | tempo=MEDIUM_TEMPO | conf=LOW(56.7) | warning=LINEUPS_INACTIVE; LOW_LEAGUE_RELIABILITY; PARTIAL_RECENT_STATS
+- #1 | Las Palmas vs Malaga | score=1-1 / 0-1 / 1-2 | goals=1.62-2.98 | shots=17-28 | SoT=4-10 | corners=6-12 | cards=2-6 | tempo=MEDIUM_TEMPO | conf=LOW(56.7) | warning=LINEUPS_INACTIVE; LOW_LEAGUE_RELIABILITY; PARTIAL_RECENT_STATS
 
 ## Guardrails
 - Forecasts are ranges, not exact-stat promises.
