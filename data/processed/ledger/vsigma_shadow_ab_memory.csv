@@ -5,4 +5,4 @@ target_date,generated_at,metric,quality_gate,quality_priority,rows_evaluated,sha
 2026-05-29,2026-05-29T19:16:47+01:00,total_sot,NO_CLEAR_AB_EDGE,LOW,6,NO_CLEAR_AB_EDGE,0.000,3,3,NO,NO,data/processed/today/2026-05-29/vsigma_shadow_ab_quality_gate.csv,NO,NO
 2026-05-31,2026-05-31T12:58:28+01:00,ALL,NO_DATA,NONE,0,NO_AB_SUMMARY,0.000,0,0,NO,NO,data/processed/today/2026-05-31/vsigma_shadow_ab_quality_gate.csv,NO,NO
 2026-06-06,2026-06-06T12:50:23+01:00,ALL,NO_DATA,NONE,0,NO_AB_SUMMARY,0.000,0,0,NO,NO,data/processed/today/2026-06-06/vsigma_shadow_ab_quality_gate.csv,NO,NO
-2026-06-07,2026-06-07T11:09:13+01:00,ALL,NO_DATA,NONE,0,NO_AB_SUMMARY,0.000,0,0,NO,NO,data/processed/today/2026-06-07/vsigma_shadow_ab_quality_gate.csv,NO,NO
+2026-06-07,2026-06-07T13:11:13+01:00,ALL,NO_DATA,NONE,0,NO_AB_SUMMARY,0.000,0,0,NO,NO,data/processed/today/2026-06-07/vsigma_shadow_ab_quality_gate.csv,NO,NO
