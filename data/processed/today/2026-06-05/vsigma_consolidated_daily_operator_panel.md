@@ -66,7 +66,7 @@
 
 ## Next Triggers / Rechecks
 - .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-05; reason=align_daily_chain_self_heal_today_v71_1_after_learning_validation; triggered_at=2026-06-05T20:50:11+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-06; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-06T09:48:05+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-07; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-07T14:10:43+01:00
 - .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-05; reason=align_prelock_today_v71_1_after_learning_validation; triggered_at=2026-06-05T20:50:11+01:00
 
 ## Key Files
@@ -89,7 +89,7 @@
 - board_status: daily_board_md=OK; daily_board_csv=OK
 - mismatch_count: 1
 - missing_core_count: 0
-- trigger_date_counts: 2026-06-06=1; 2026-06-05=1
+- trigger_date_counts: 2026-06-07=1; 2026-06-05=1
 - next_action: Fix trigger/artifact date mismatch before using market signals.
 
 ## Upstream Board Input Diagnostic
@@ -116,7 +116,7 @@
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
 - files_scanned: 1498
 - accepted_rows: 68
-- rejected_rows: 144
+- rejected_rows: 146
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
