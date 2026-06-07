@@ -1,2 +1,2 @@
 target_date,generated_at,overall_status,board_status,mismatch_count,missing_core_count,trigger_date_counts,next_action,auto_apply,production_change
-2026-06-05,2026-06-07T18:51:08+01:00,DATE_MISMATCH_BLOCK,daily_board_md=OK; daily_board_csv=OK,1,0,2026-06-07=1; 2026-06-05=1,Fix trigger/artifact date mismatch before using market signals.,NO,NO
+2026-06-05,2026-06-07T22:48:04+01:00,DATE_MISMATCH_BLOCK,daily_board_md=OK; daily_board_csv=OK,1,0,2026-06-07=1; 2026-06-05=1,Fix trigger/artifact date mismatch before using market signals.,NO,NO

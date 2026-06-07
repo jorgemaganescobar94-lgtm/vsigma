@@ -1,24 +1,24 @@
-# vSIGMA Consolidated Daily Operator Panel - 2026-06-07
+# vSIGMA Consolidated Daily Operator Panel - 2026-06-05
 
 ## First Read
-- panel_status: PARTIAL_OUTPUTS
-- operator_detail: action=BROKEN; final=SYSTEM_FIX_REQUIRED; risk=HIGH; health=BROKEN; board_rows=0
-- executable_prematch: NO_BOARD
+- panel_status: NONE
+- operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=ATTENTION; board_rows=1
+- executable_prematch: NONE
 - live_only: NONE
 - watchlist: NONE
-- no_bet: NONE
-- health_status: BROKEN
+- no_bet: ROWS=1
+- health_status: ATTENTION
 - auto_apply: NO
 - production_change: NO
 
 ## Operator Gate
-- action_level: BROKEN
-- compact_final_decision: SYSTEM_FIX_REQUIRED
-- risk_label: HIGH
-- health_status: BROKEN
-- board_rows: 0
-- panel_status: PARTIAL_OUTPUTS
-- next_action: Daily execution board is missing; do not use operator/prelock/live outputs as pick permission. Run daily chain first.
+- action_level: NONE
+- compact_final_decision: NO_OPERATOR_ACTION
+- risk_label: NONE
+- health_status: ATTENTION
+- board_rows: 1
+- panel_status: NONE
+- next_action: Follow operator brief and panel categories; no automatic execution.
 
 ## Executable Prematch
 - none
@@ -30,16 +30,25 @@
 - none
 
 ## No Bet
-- none
+- #1 | NO_BET | Las Palmas vs Malaga | market=NO_CLEAR_STAT_MARKET | stake=NO_STAKE | permission=NO | conf=LOW | score=-34
 
 ## API Coverage
-- no daily board rows available
+- board_rows=1
+- source_guard_counts: DATED_INPUT_ONLY; API_COVERAGE_GATE_V2=1
+- execution_permission_counts: NO=1
+- avg_coverage_score: UNKNOWN
+- forecast_warning_counts: LINEUPS_INACTIVE=1; LOW_LEAGUE_RELIABILITY=1; PARTIAL_RECENT_STATS=1; API_COVERAGE_UNKNOWN=1
+- missing_data_counts: unknown=1
 
 ## Official / Probable Lineups
+- data/processed/today/2026-06-05/official_lineup_sources.csv: rows=32
+- data/processed/today/2026-06-05/vsigma_probable_lineup_consensus.csv: rows=1
 - data/processed/governance/official_lineup_sources.csv: rows=32
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Quarantine / Learning-Only / Import Status
+- data/processed/today/2026-06-05/official_lineup_sources.csv: rows=32
+- data/processed/today/2026-06-05/vsigma_probable_lineup_consensus.csv: rows=1
 - data/processed/governance/official_lineup_sources.csv: rows=32
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
@@ -50,10 +59,10 @@
 - recommended_action_counts: KEEP_ACTIVE_COLLECT_MORE_DATA=15
 
 ## Automation Health
-- system_status: BROKEN
+- system_status: ATTENTION
 - components_checked: 11
-- severity_counts: BROKEN=1; WARN=1; OK=5; INFO=4
-- status_counts: MISSING=1; OK=6; CONFIG_EXPECTED=4
+- severity_counts: OK=3; WARN=1; INFO=7
+- status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
 - .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-05; reason=align_daily_chain_self_heal_today_v71_1_after_learning_validation; triggered_at=2026-06-05T20:50:11+01:00
@@ -61,13 +70,13 @@
 - .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-05; reason=align_prelock_today_v71_1_after_learning_validation; triggered_at=2026-06-05T20:50:11+01:00
 
 ## Key Files
-- data/processed/today/2026-06-07/vsigma_consolidated_daily_operator_panel.md
-- data/processed/today/2026-06-07/vsigma_operator_brief.md
-- data/processed/today/2026-06-07/vsigma_daily_execution_board.md
-- data/processed/today/2026-06-07/vsigma_prelock_live_recheck.md
-- data/processed/today/2026-06-07/vsigma_live_trigger_validator.md
-- data/processed/today/2026-06-07/vsigma_automation_health.md
-- data/processed/today/2026-06-07/vsigma_probable_lineup_source_reliability_governor.md
+- data/processed/today/2026-06-05/vsigma_consolidated_daily_operator_panel.md
+- data/processed/today/2026-06-05/vsigma_operator_brief.md
+- data/processed/today/2026-06-05/vsigma_daily_execution_board.md
+- data/processed/today/2026-06-05/vsigma_prelock_live_recheck.md
+- data/processed/today/2026-06-05/vsigma_live_trigger_validator.md
+- data/processed/today/2026-06-05/vsigma_automation_health.md
+- data/processed/today/2026-06-05/vsigma_probable_lineup_source_reliability_governor.md
 
 ## Guardrails
 - Panel is diagnostic only; it does not execute bets.
@@ -78,97 +87,97 @@
 
 ## Date Coherence Guard
 - overall_status: DATE_MISMATCH_BLOCK
-- board_status: daily_board_md=MISSING_CORE; daily_board_csv=MISSING_CORE
+- board_status: daily_board_md=OK; daily_board_csv=OK
 - mismatch_count: 1
-- missing_core_count: 2
+- missing_core_count: 0
 - trigger_date_counts: 2026-06-07=1; 2026-06-05=1
 - next_action: Fix trigger/artifact date mismatch before using market signals.
 
 ## Upstream Board Input Diagnostic
 - overall_status: UPSTREAM_MISSING
-- first_empty_required_component: real_objective_context_gate
-- missing_required_count: 8
+- first_empty_required_component: context_matrix
+- missing_required_count: 2
 - empty_required_count: 0
 - date_issue_count: 0
-- forecast_rows: 0
-- translator_rows: 0
-- board_rows: 0
-- next_action: Build missing required upstream component first: real_objective_context_gate.
+- forecast_rows: 1
+- translator_rows: 1
+- board_rows: 1
+- next_action: Build missing required upstream component first: context_matrix.
 
 ## Real Shortlist Recovery Diagnostic
 - overall_status: REAL_CANDIDATES_AVAILABLE
 - root_cause: real shortlist or bets rows exist
-- root_scored_same_day_rows: 2
+- root_scored_same_day_rows: 0
 - real_shortlist_rows: 1
-- real_bet_rows: 1
-- proxy_rows: 0
+- real_bet_rows: 0
+- proxy_rows: 3
 - next_action: Use normal gates; do not rely on proxy bridge unless real rows fail downstream.
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1497
-- accepted_rows: 195
-- rejected_rows: 19
+- files_scanned: 1498
+- accepted_rows: 68
+- rejected_rows: 146
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
-- rows_reviewed: 195
-- trusted_rows: 2
-- quarantine_rows: 0
-- blocked_rows: 193
-- trust_status_counts: REJECTED_SOURCE_BLOCK=193; TRUSTED_RAW_SOURCE=2
+- rows_reviewed: 68
+- trusted_rows: 35
+- quarantine_rows: 33
+- blocked_rows: 0
+- trust_status_counts: TRUSTED_RAW_SOURCE=35; QUARANTINE_REVIEW=33
 - next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
 
 ## Trusted Raw Candidate Promotion Gate
-- rows_reviewed: 195
-- promoted_rows: 1
-- blocked_rows: 1
-- quarantine_rows: 0
-- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=193; PROMOTED_TO_SCORING_INPUT=1; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=1
-- next_action: Promoted rows may feed normal scoring gates only.
+- rows_reviewed: 68
+- promoted_rows: 0
+- blocked_rows: 0
+- quarantine_rows: 35
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=35; NOT_TRUSTED_NO_PROMOTION=33
+- next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 
 ## Scoring Gap Explainer
-- rows_reviewed: 195
-- missing_scored_rows: 0
-- no_data_blocked_rows: 1
-- not_trusted_rows: 193
-- promoted_rows: 1
-- gap_status_counts: NOT_TRUSTED_SKIPPED=193; PROMOTED=1; SCORED_ROW_NO_DATA_BLOCKED=1
+- rows_reviewed: 68
+- missing_scored_rows: 35
+- no_data_blocked_rows: 0
+- not_trusted_rows: 33
+- promoted_rows: 0
+- gap_status_counts: MISSING_SCORED_ROW=35; NOT_TRUSTED_SKIPPED=33
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 
 ## Trusted Raw Scoring Queue
-- queue_rows: 0
-- priority_counts: none
-- scoring_needed_counts: none
+- queue_rows: 35
+- priority_counts: P1_TRUSTED_MISSING_SCORING=19; P2_LOW_COVERAGE_SCORING=16
+- scoring_needed_counts: YES=35
 - source_gap_status: MISSING_SCORED_ROW
 - next_action: Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.
 
 ## Queue-to-Enrichment Dry Run Planner
-- rows_planned: 0
-- dry_run_decision_counts: none
-- risk_label_counts: none
-- priority_counts: none
-- total_estimated_call_units: 0
+- rows_planned: 35
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=35
+- risk_label_counts: MEDIUM=19; HIGH_LOW_COVERAGE=16
+- priority_counts: P1_TRUSTED_MISSING_SCORING=19; P2_LOW_COVERAGE_SCORING=16
+- total_estimated_call_units: 165
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
 
 ## Enrichment Cost & Approval Gate
-- approval_gate_status: NO_ENRICHMENT_NEEDED
-- rows_planned: 0
-- estimated_call_units: 0
-- approval_required: NO
+- approval_gate_status: WAIT_FOR_MANUAL_APPROVAL
+- rows_planned: 35
+- estimated_call_units: 165
+- approval_required: YES
 - max_allowed_without_manual_approval: 0
 - api_calls_allowed: NO
 - api_calls_planned: NO
 - api_calls_executed: NO
-- recommended_action: NO_ACTION
+- recommended_action: WAIT_FOR_MANUAL_APPROVAL
 
 ## Daily Board Self-Heal
 - self_heal_status: NO_ACTION
-- promotion_rows_reviewed: 195
-- promoted_rows: 1
-- blocked_rows: 1
+- promotion_rows_reviewed: 0
+- promoted_rows: 0
+- blocked_rows: 0
 - quarantine_rows: 0
 - board_rows_written: 0
-- reason: promoted rows exist; normal scoring/translator should build board
+- reason: daily board already has rows
