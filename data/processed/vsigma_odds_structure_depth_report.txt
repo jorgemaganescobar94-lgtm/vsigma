@@ -4,14 +4,14 @@ Purpose: lab-only market translation governance from paid odds ladder depth.
 Missing or thin odds are treated as uncertainty, not as a negative football signal.
 
 Summary
-                summary_scope                 metric  rows_total
-                      overall        target_fixtures           1
-  odds_structure_depth_status                     OK           1
-odds_structure_coherence_flag          RICH_COHERENT           1
-      odds_total_ladder_shape            BROAD_GOALS           1
- odds_market_translation_hint ALLOW_AGGRESSIVE_TOTAL           1
-    odds_line_aggression_flag     OVER_2_5_SUPPORTED           1
+                summary_scope              metric  rows_total
+                      overall     target_fixtures           1
+  odds_structure_depth_status                  OK           1
+odds_structure_coherence_flag          RICH_MIXED           1
+      odds_total_ladder_shape          MILD_GOALS           1
+ odds_market_translation_hint PREFER_MILDER_TOTAL           1
+    odds_line_aggression_flag     PREFER_OVER_1_5           1
 
 Fixture preview
- fixture_id           league home_team away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
-    1548052 Segunda División Castellón   Almeria                 RICH_COHERENT             BROAD_GOALS       ALLOW_AGGRESSIVE_TOTAL        OVER_2_5_SUPPORTED                 0.3414                              0.03
+ fixture_id           league  home_team away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
+    1548053 Segunda División Las Palmas    Malaga                    RICH_MIXED              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                  0.356                            -0.015
