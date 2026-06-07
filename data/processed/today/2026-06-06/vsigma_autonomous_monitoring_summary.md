@@ -1,14 +1,14 @@
 # vSIGMA Autonomous Monitoring Summary - 2026-06-06
 
 ## Executive Status
-- generated_at: 2026-06-06T22:18:57+01:00
-- mode: auto
+- generated_at: 2026-06-07T13:15:41+01:00
+- mode: post-yesterday
 - daily_classification: EXPIRED_PRELOCK
 - operational_verdict: NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA
 - action_level: REVIEW_REQUIRED
 - predictive_failure: NO
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/27074161463
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/27092277587
 
 ## Operator Action
 - Review AUTO/PRELOCK timing; do not count the row as predictive hit-rate failure.

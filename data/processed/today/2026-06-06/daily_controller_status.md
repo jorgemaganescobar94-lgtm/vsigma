@@ -34,18 +34,16 @@
 ## Pre-Lock Timing
 | fixture_id | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1548052 | Castellón | Almeria | OVER_2_5 | 2026-06-06T19:00:20.600000+00:00 | 414.19 | 2026-06-06T17:30:20.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1548052 | Castellón | Almeria | OVER_2_5 | 2026-06-06T19:00:20.600000+00:00 | -1035.33 | 2026-06-06T17:30:20.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
 
 ## Ledger State
 | experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1548052.0 | Castellón | Almeria | OVER_2_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1548052.0 | Castellón | Almeria | OVER_2_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V4_O25_FIREWALL |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V5_PLAYER_IMPACT | 1548052.0 | Castellón | Almeria | OVER_2_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V6_API_PREDICTIONS |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1548052.0 | Castellón | Almeria | OVER_2_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1548053.0 | Las Palmas | Malaga | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V4_O25_FIREWALL | 1548053.0 | Las Palmas | Malaga | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V5_PLAYER_IMPACT | 1548053.0 | Las Palmas | Malaga | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
+| CANDIDATE_V6_API_PREDICTIONS | 1548053.0 | Las Palmas | Malaga | OVER_1_5 | POST | PENDING | UNMATCHED | UNMATCHED |  |
 
 ## Controller Outputs
 - Plan CSV: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-06/daily_run_plan.csv

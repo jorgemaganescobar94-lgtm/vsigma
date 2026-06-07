@@ -24,10 +24,11 @@
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 6 | -3.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 6 | -3.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 6 | -3.0 |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 4 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 2 | -24.0 |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | -100.0 |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | -100.0 |  | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V2_SCHEDULE_ANOMALY | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V4_O25_FIREWALL | 0 |  |  | SAMPLE_TOO_SMALL |
@@ -56,7 +57,6 @@
 ## Daily Winners
 | target_date | daily_winner | winner_reason |
 | --- | --- | --- |
-| 2026-05-18 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
 | 2026-05-19 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
 | 2026-05-20 | NO_BET_DAY | No model registered a pick. |
 | 2026-05-21 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
@@ -71,9 +71,10 @@
 | 2026-05-30 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
 | 2026-05-31 | NO_BET_DAY | No model registered a pick. |
 | 2026-06-06 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
+| 2026-06-07 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
 
 ## CLV Data Sufficiency
-INSUFFICIENT_CLV_DATA: usable=0, available_direction_rows=0; do not change thresholds from CLV yet.
+INSUFFICIENT_CLV_DATA: usable=1, available_direction_rows=1; do not change thresholds from CLV yet.
 
 ## Evidence Status
 - All primary governance inputs available.

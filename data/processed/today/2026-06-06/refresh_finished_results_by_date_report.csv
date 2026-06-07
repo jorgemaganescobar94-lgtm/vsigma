@@ -1,0 +1,3 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-06-06,OK,API-SPORTS_DIRECT,543.0,,,,,,
+2026-06-06T20:00:00+01:00,MATCHED,,,1548052.0,FT,Castellón,Almeria,1.0,1.0
