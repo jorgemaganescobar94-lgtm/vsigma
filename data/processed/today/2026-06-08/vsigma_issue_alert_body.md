@@ -1,32 +1,29 @@
 # vSIGMA Alert - 2026-06-08
 
-System status: **BROKEN**
+System status: **ATTENTION**
 Alert required: **YES**
-Notify required: **NO**
-Alert hash: `c107ed63c88f54baa83b77e269ee1ef09f9eb491a5d91b5974dfa9b807c734ed`
+Notify required: **YES**
+Alert hash: `1fe31e8a614afd8724d004941a5aa7700d2559ae6a573cb6ef865db432f47f75`
 
 ## Signals
 - - READY_LOW_STAKE_REVIEW still requires manual price and live/prelock confirmation.
 - - WARN means review; BROKEN means a workflow/input needs fixing.
-- - daily_execution_board | status=MISSING | severity=BROKEN | action=RUN_DAILY_DECISION_CHAIN_V2 | detail=vsigma_daily_execution_board.md/csv missing
-- - severity_counts: BROKEN=1; WARN=1; OK=2; INFO=7
-- - system_status: BROKEN
 
 ## Health Snapshot
 ```
 # vSIGMA Automation Health Monitor - 2026-06-08
 
 ## Summary
-- system_status: BROKEN
+- system_status: ATTENTION
 - components_checked: 11
-- severity_counts: BROKEN=1; WARN=1; OK=2; INFO=7
-- status_counts: MISSING=1; OK=3; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
+- severity_counts: OK=3; WARN=1; INFO=7
+- status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 - auto_apply: NO
 - production_change: NO
 
 ## Component Rows
-- daily_execution_board | status=MISSING | severity=BROKEN | action=RUN_DAILY_DECISION_CHAIN_V2 | detail=vsigma_daily_execution_board.md/csv missing
-- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=none
+- daily_execution_board | status=OK | severity=OK | action=NO | detail=rows=0; decisions=NO_BET=0
+- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=CANCELLED_NO_BET=1
 - live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
 - postmatch_results_refresh | status=WAITING_OR_NOT_RUN | severity=INFO | action=NO_IF_MATCHES_NOT_FINISHED | detail=postmatch refresh not present yet
 - postmatch_stat_actuals | status=WAITING_OR_NOT_RUN | severity=INFO | action=NO_IF_MATCHES_NOT_FINISHED | detail=actuals report not present yet
