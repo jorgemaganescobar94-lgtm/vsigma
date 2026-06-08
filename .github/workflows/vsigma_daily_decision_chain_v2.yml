@@ -13,10 +13,6 @@ on:
         options:
           - "false"
           - "true"
-  push:
-    paths:
-      - ".vsigma/triggers/daily_decision_chain_v2.trigger"
-      - ".vsigma/triggers/daily_chain_self_heal.trigger"
   schedule:
     - cron: "30 7 * * *"
     - cron: "30 13 * * *"
@@ -131,6 +127,7 @@ jobs:
 
           for name, content in files.items():
               (triggers / name).write_text(content, encoding="utf-8")
+
       - name: Preflight self-heal router
         shell: bash
         run: python scripts/route_daily_chain_missing_self_heal.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
@@ -188,12 +185,12 @@ jobs:
 
           if not csv_path.exists():
               fields = [
-                  "target_date","generated_at","board_rank","fixture_id","home_team","away_team",
-                  "final_decision","board_bucket","primary_market","secondary_market","stake_band",
-                  "execution_permission","portfolio_status","context_level","forecast_confidence",
-                  "forecast_warning","translation_score","kill_switch","stat_profile","key_stat_forecast",
-                  "prelock_trigger","live_trigger","cancel_trigger","operator_note","source_guard",
-                  "auto_apply","production_change"
+                  "target_date", "generated_at", "board_rank", "fixture_id", "home_team", "away_team",
+                  "final_decision", "board_bucket", "primary_market", "secondary_market", "stake_band",
+                  "execution_permission", "portfolio_status", "context_level", "forecast_confidence",
+                  "forecast_warning", "translation_score", "kill_switch", "stat_profile", "key_stat_forecast",
+                  "prelock_trigger", "live_trigger", "cancel_trigger", "operator_note", "source_guard",
+                  "auto_apply", "production_change",
               ]
               with csv_path.open("w", encoding="utf-8", newline="") as f:
                   csv.DictWriter(f, fieldnames=fields).writeheader()
@@ -244,7 +241,8 @@ jobs:
       - name: Build API-enriched scored candidates
         shell: bash
         run: python scripts/build_api_enriched_scored_candidates.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
-- name: Build promotion input bridge
+
+      - name: Build promotion input bridge
         shell: bash
         run: python scripts/build_promotion_input_bridge.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
