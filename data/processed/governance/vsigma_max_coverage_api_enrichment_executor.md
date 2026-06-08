@@ -11,8 +11,8 @@
 - scoring_allowed_rows: 34
 - coverage_probe_rows: 4
 - diagnostic_only_rows: 5
-- endpoint_success_counts: fixture_detail=43; predictions=34; events=24; odds=22; lineups=4; statistics=3
-- endpoint_failure_counts: statistics=35; lineups=30; events=14; odds=12
+- endpoint_success_counts: fixture_detail=43; predictions=34; events=25; odds=22; lineups=4; statistics=3
+- endpoint_failure_counts: statistics=35; lineups=30; events=13; odds=12
 - external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: YES_LOGGED_EXECUTION
 - auto_apply: NO
@@ -21,7 +21,7 @@
 ## Executor Rows
 - Dainava vs Garliava | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
 - FUS Rabat vs Difaa EL Jadida | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;statistics;events;lineups;predictions;odds | failed=none | scoring_after=YES_PENDING_NORMAL_GATES
-- Olympique Dcheïra vs Hassania Agadir | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Olympique Dcheïra vs Hassania Agadir | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
 - Renaissance Berkane vs Ittihad Tanger | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;lineups;predictions;odds | failed=statistics | scoring_after=YES_PENDING_NORMAL_GATES
 - Wydad AC vs Olympique Safi | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;lineups;predictions;odds | failed=statistics | scoring_after=YES_PENDING_NORMAL_GATES
 - Búzios vs Cardoso Moreira | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES

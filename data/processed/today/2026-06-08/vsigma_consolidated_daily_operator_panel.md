@@ -93,9 +93,9 @@
 - status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-08; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-08T21:11:57+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-08; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-08T21:11:57+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-08; reason=normalize_prelock_recheck_date; triggered_at=2026-06-08T21:11:57+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-08; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-08T21:20:38+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-08; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-08T21:20:38+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-08; reason=normalize_prelock_recheck_date; triggered_at=2026-06-08T21:20:38+01:00
 
 ## Key Files
 - data/processed/today/2026-06-08/vsigma_consolidated_daily_operator_panel.md
@@ -284,8 +284,8 @@
 - operator_note: MAX_COVERAGE is the active API policy. Legacy cost/quota/allowlist gates are informational and cannot override the active policy. No external calls are executed by this integration.
 ## API-Enriched Manual Review Inspector
 - review_rows: 28
-- bucket_counts: BLOCKED_INSUFFICIENT_CONTEXT=28
-- risk_label_counts: HIGH=28
+- bucket_counts: P3_REVIEW_LOW_SIGNAL=14; P1_REVIEW_STRONG_SIGNAL=14
+- risk_label_counts: LOW=14; MEDIUM=14
 - canonical_board_permission_counts: NO_CANONICAL_BOARD_PERMISSION=28
 - pick_permission_counts: NO_PICK_PERMISSION=28
 - stake_permission_counts: NO_STAKE_PERMISSION=28
