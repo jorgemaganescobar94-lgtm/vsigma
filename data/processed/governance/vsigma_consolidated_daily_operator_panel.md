@@ -65,9 +65,9 @@
 - status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-05; reason=rerun_after_python_trigger_normalizer; triggered_at=2026-06-05T15:22:37+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-05; reason=rerun_after_python_trigger_normalizer; triggered_at=2026-06-05T15:22:37+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-05; reason=rerun_after_python_trigger_normalizer; triggered_at=2026-06-05T15:22:37+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-05; reason=rerun_after_final_api_panel_and_push_retry; triggered_at=2026-06-05T15:30:58+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-05; reason=rerun_after_final_api_panel_and_push_retry; triggered_at=2026-06-05T15:30:58+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-05; reason=rerun_after_final_api_panel_and_push_retry; triggered_at=2026-06-05T15:30:58+01:00
 
 ## Key Files
 - data/processed/today/2026-06-05/vsigma_consolidated_daily_operator_panel.md
