@@ -178,6 +178,32 @@ jobs:
         shell: bash
         run: python scripts/build_active_max_coverage_api_policy.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Run max-coverage API enrichment executor
+        shell: bash
+        run: python scripts/run_max_coverage_api_enrichment_executor.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --execute
+
+      - name: Build API-enriched scored candidates
+        shell: bash
+        run: python scripts/build_api_enriched_scored_candidates.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Build promotion input bridge
+        shell: bash
+        run: python scripts/build_promotion_input_bridge.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Build API-enriched promotion gate adapter
+        shell: bash
+        run: python scripts/build_api_enriched_promotion_gate_adapter.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Build API-enriched review board
+        shell: bash
+        run: python scripts/build_api_enriched_review_board.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Assert API-enriched review board output
+        shell: bash
+        run: |
+          test -s "data/processed/today/${VSIGMA_DATE}/vsigma_api_enriched_review_board.md"
+          test -s "data/processed/today/${VSIGMA_DATE}/vsigma_api_enriched_review_board.csv"
+
       - name: Build official pick ledger
         shell: bash
         run: python scripts/build_official_pick_ledger.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
