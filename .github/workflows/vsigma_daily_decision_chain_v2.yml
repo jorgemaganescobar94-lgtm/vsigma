@@ -229,6 +229,10 @@ jobs:
         shell: bash
         run: python scripts/build_rejected_source_block_audit.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Build manual whitelist review board
+        shell: bash
+        run: python scripts/build_manual_whitelist_review_board.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Declare active max-coverage API policy
         shell: bash
         run: python scripts/build_active_max_coverage_api_policy.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
