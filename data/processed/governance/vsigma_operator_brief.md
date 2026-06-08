@@ -22,10 +22,10 @@
 ## Historical Drift Check
 | Field | Value | Meaning |
 |---|---|---|
-| Previous | date=2026-06-08; action=BROKEN; risk=HIGH; final=SYSTEM_FIX_REQUIRED; active=0 | data/processed/today/2026-06-08/vsigma_operator_brief.csv |
+| Previous | date=2026-06-08; action=UNKNOWN; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | data/processed/today/2026-06-08/vsigma_operator_brief.csv |
 | Current | date=2026-06-08; action=NONE; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | current_build |
-| Drift | MATERIAL_CHANGE | action_level: BROKEN -> NONE; final_decision: SYSTEM_FIX_REQUIRED -> NO_OPERATOR_ACTION; risk_label: HIGH -> NONE |
-| Changed | action_level,final_decision,risk_label | Tracked fields: action/final/risk/active |
+| Drift | MATERIAL_CHANGE | action_level: UNKNOWN -> NONE |
+| Changed | action_level | Tracked fields: action/final/risk/active |
 | Notify | true | true only on material operator drift |
 
 ## Executive Summary
@@ -37,7 +37,7 @@
 - alert_reason: non-action state changed but no operator action is required
 - drift_status: MATERIAL_CHANGE
 - drift_notify_required: true
-- drift_changed_fields: action_level,final_decision,risk_label
+- drift_changed_fields: action_level
 - sanity_check: PASS | no active/live/watch action; no_bet=0; closed=0
 - operator_status: REVIEW
 - primary_next_action: Open health/board/recheck summaries; no automatic action.

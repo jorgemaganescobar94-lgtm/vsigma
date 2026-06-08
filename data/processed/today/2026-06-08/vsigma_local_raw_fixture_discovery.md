@@ -2,85 +2,85 @@
 
 ## Summary
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1483
+- files_scanned: 1490
 - accepted_rows: 70
-- rejected_rows: 0
-- source_status_counts: NO_SAME_DAY_ROWS=1090; EMPTY_OR_UNREADABLE=390; NO_ACCEPTED_ROWS=2; HAS_ACCEPTED_ROWS=1
+- rejected_rows: 140
+- source_status_counts: NO_SAME_DAY_ROWS=1084; EMPTY_OR_UNREADABLE=397; NO_ACCEPTED_ROWS=8; HAS_ACCEPTED_ROWS=1
 - next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO
 
 ## Accepted Rows
-- Dainava vs Garliava | fixture_id=1530592 | league=1 Lyga | source=data/processed/matches_league_rejected.csv
-- FUS Rabat vs Difaa EL Jadida | fixture_id=1548327 | league=Botola Pro | source=data/processed/matches_league_rejected.csv
-- Olympique Dcheïra vs Hassania Agadir | fixture_id=1548330 | league=Botola Pro | source=data/processed/matches_league_rejected.csv
-- Renaissance Berkane vs Ittihad Tanger | fixture_id=1548328 | league=Botola Pro | source=data/processed/matches_league_rejected.csv
-- Wydad AC vs Olympique Safi | fixture_id=1548329 | league=Botola Pro | source=data/processed/matches_league_rejected.csv
-- Búzios vs Cardoso Moreira | fixture_id=1550759 | league=Carioca C | source=data/processed/matches_league_rejected.csv
-- Ceres vs Tigres do Brasil | fixture_id=1550761 | league=Carioca C | source=data/processed/matches_league_rejected.csv
-- Uni Souza vs Barcelona RJ | fixture_id=1550760 | league=Carioca C | source=data/processed/matches_league_rejected.csv
-- Monsoon vs Santa Cruz RS | fixture_id=1544582 | league=Copa Gaúcha | source=data/processed/matches_league_rejected.csv
-- Täfteå vs Umeå FC Akademi | fixture_id=1515750 | league=Division 2 - Norrland | source=data/processed/matches_league_rejected.csv
-- 3 de Noviembre vs General Caballero | fixture_id=1546546 | league=Division Intermedia | source=data/processed/matches_league_rejected.csv
-- Encarnación vs SOL DE America | fixture_id=1546545 | league=Division Intermedia | source=data/processed/matches_league_rejected.csv
-- Aigle Royal vs Gazelle | fixture_id=1512930 | league=Elite One | source=data/processed/matches_league_rejected.csv
-- Dynamo de Douala vs Cotonsport | fixture_id=1512932 | league=Elite One | source=data/processed/matches_league_rejected.csv
-- Jeunes Fauves vs Aigle Royal de Moungo | fixture_id=1512933 | league=Elite One | source=data/processed/matches_league_rejected.csv
-- Panthère vs Victoria United | fixture_id=1512935 | league=Elite One | source=data/processed/matches_league_rejected.csv
-- Stade Renard vs Unisport Bafang | fixture_id=1512936 | league=Elite One | source=data/processed/matches_league_rejected.csv
-- Foncha ST vs Tonnerre | fixture_id=1547532 | league=Elite Two | source=data/processed/matches_league_rejected.csv
-- Sable vs Bafmeng United | fixture_id=1547533 | league=Elite Two | source=data/processed/matches_league_rejected.csv
-- Järfälla vs Stocksund | fixture_id=1505175 | league=Ettan - Norra | source=data/processed/matches_league_rejected.csv
-- Stockholm Internazionale vs Vasalund | fixture_id=1505178 | league=Ettan - Norra | source=data/processed/matches_league_rejected.csv
-- Angelholms FF vs Olympic | fixture_id=1504451 | league=Ettan - Södra | source=data/processed/matches_league_rejected.csv
-- Utsikten vs Rosengård | fixture_id=1504458 | league=Ettan - Södra | source=data/processed/matches_league_rejected.csv
-- Baghdad vs Karbala | fixture_id=1550045 | league=Iraqi League | source=data/processed/matches_league_rejected.csv
-- Kiffen vs PuiU Helsinki | fixture_id=1541619 | league=Kakkonen - Lohko A | source=data/processed/matches_league_rejected.csv
-- Enppi vs AL Masry | fixture_id=1548299 | league=League Cup | source=data/processed/matches_league_rejected.csv
-- Masr vs Wadi Degla | fixture_id=1548298 | league=League Cup | source=data/processed/matches_league_rejected.csv
-- Mamoré vs Uberaba | fixture_id=1547672 | league=Mineiro - 2 | source=data/processed/matches_league_rejected.csv
-- Atletico Nacional vs Junior | fixture_id=1546413 | league=Primera A | source=data/processed/matches_league_rejected.csv
-- UAI Urquiza vs Liniers | fixture_id=1499461 | league=Primera B Metropolitana | source=data/processed/matches_league_rejected.csv
-- Berazategui vs Juventud Unida | fixture_id=1499930 | league=Primera C | source=data/processed/matches_league_rejected.csv
-- Blooming vs Gualberto Villarroel SJ | fixture_id=1538384 | league=Primera División | source=data/processed/matches_league_rejected.csv
-- Liverpool Montevideo vs Cerro Largo | fixture_id=1546812 | league=Primera División - Apertura | source=data/processed/matches_league_rejected.csv
-- Jayxun vs Aral | fixture_id=1530973 | league=Pro League A | source=data/processed/matches_league_rejected.csv
-- Metalourg vs FarDu | fixture_id=1530975 | league=Pro League A | source=data/processed/matches_league_rejected.csv
-- Pakhtakor II vs Respublika FA | fixture_id=1531058 | league=Pro League A | source=data/processed/matches_league_rejected.csv
-- Provincial Ovalle vs Trasandino | fixture_id=1529109 | league=Segunda División | source=data/processed/matches_league_rejected.csv
-- Côte d'Ivoire U20 vs Canada U20 | fixture_id=1545467 | league=Tournoi Maurice Revello | source=data/processed/matches_league_rejected.csv
-- Venezuela U20 vs Portugal U20 | fixture_id=1545468 | league=Tournoi Maurice Revello | source=data/processed/matches_league_rejected.csv
-- Colorado Storm vs Flatirons Rush | fixture_id=1525691 | league=USL League Two | source=data/processed/matches_league_rejected.csv
-- Colorado Storm W vs Flatirons II W | fixture_id=1532145 | league=USL W League | source=data/processed/matches_league_rejected.csv
-- Kooteepee vs Haka | fixture_id=1504192 | league=Ykkösliiga | source=data/processed/matches_league_rejected.csv
-- Singapore U19 vs Brunei U19 | fixture_id=1547218 | league=ASEAN Championship U19 | source=data/processed/matches_league_rejected.csv
-- Thailand U19 vs Malaysia U19 | fixture_id=1547219 | league=ASEAN Championship U19 | source=data/processed/matches_league_rejected.csv
-- Ceará U20 vs Fortaleza U20 | fixture_id=1540190 | league=Cearense U20 | source=data/processed/matches_league_rejected.csv
-- Belarus U21 vs Kazakhstan U21 | fixture_id=1548451 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- France vs Northern Ireland | fixture_id=1542183 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Iraq U20 vs Jordan U20 | fixture_id=1548452 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Italy U21 vs Albania U21 | fixture_id=1546501 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Japan U21 vs Ukraine U21 | fixture_id=1548448 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Latvia U19 vs Estonia U19 | fixture_id=1548449 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Netherlands vs Uzbekistan | fixture_id=1544812 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Niger vs Mauritania | fixture_id=1546495 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Norway U21 vs Finland U21 | fixture_id=1548453 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Saudi Arabia U20 vs Panama U20 | fixture_id=1548450 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Tunisia U20 vs Algeria U20 | fixture_id=1550828 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- USA U18 vs Qatar U20 | fixture_id=1550827 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- USA U21 vs Uzbekistan U23 | fixture_id=1550826 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Equatorial Guinea W vs Haiti W | fixture_id=1545740 | league=Friendlies Women | source=data/processed/matches_league_rejected.csv
-- Germany U23 W vs Denmark U23 W | fixture_id=1533350 | league=Friendlies Women | source=data/processed/matches_league_rejected.csv
-- Ivory Coast W vs Cape Verde W | fixture_id=1546559 | league=Friendlies Women | source=data/processed/matches_league_rejected.csv
-- Nigeria W vs Senegal W | fixture_id=1548481 | league=Friendlies Women | source=data/processed/matches_league_rejected.csv
-- Sweden U18 W vs Iceland U19 W | fixture_id=1548482 | league=Friendlies Women | source=data/processed/matches_league_rejected.csv
-- Sweden U23 W vs Mexico U23 W | fixture_id=1548483 | league=Friendlies Women | source=data/processed/matches_league_rejected.csv
-- Columbus Crew II vs Connecticut FC | fixture_id=1513138 | league=MLS Next Pro | source=data/processed/matches_league_rejected.csv
-- Defensa y Justicia Res. vs Ferro 2 | fixture_id=1512457 | league=Reserve League | source=data/processed/matches_league_rejected.csv
-- Gimnasia La Plata Res. vs Godoy Cruz Res. | fixture_id=1512460 | league=Reserve League | source=data/processed/matches_league_rejected.csv
-- Independiente Riva. Res. vs Quilmes 2 | fixture_id=1512461 | league=Reserve League | source=data/processed/matches_league_rejected.csv
-- Racing Club Res. vs Banfield Res. | fixture_id=1512464 | league=Reserve League | source=data/processed/matches_league_rejected.csv
-- Unión Santa Fe Res. vs Atlético Tucumán Res. | fixture_id=1512469 | league=Reserve League | source=data/processed/matches_league_rejected.csv
+- Dainava vs Garliava | fixture_id=1530592 | league=1 Lyga | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- FUS Rabat vs Difaa EL Jadida | fixture_id=1548327 | league=Botola Pro | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Olympique Dcheïra vs Hassania Agadir | fixture_id=1548330 | league=Botola Pro | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Renaissance Berkane vs Ittihad Tanger | fixture_id=1548328 | league=Botola Pro | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Wydad AC vs Olympique Safi | fixture_id=1548329 | league=Botola Pro | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Búzios vs Cardoso Moreira | fixture_id=1550759 | league=Carioca C | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ceres vs Tigres do Brasil | fixture_id=1550761 | league=Carioca C | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Uni Souza vs Barcelona RJ | fixture_id=1550760 | league=Carioca C | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Monsoon vs Santa Cruz RS | fixture_id=1544582 | league=Copa Gaúcha | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Täfteå vs Umeå FC Akademi | fixture_id=1515750 | league=Division 2 - Norrland | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- 3 de Noviembre vs General Caballero | fixture_id=1546546 | league=Division Intermedia | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Encarnación vs SOL DE America | fixture_id=1546545 | league=Division Intermedia | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Aigle Royal vs Gazelle | fixture_id=1512930 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Dynamo de Douala vs Cotonsport | fixture_id=1512932 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Jeunes Fauves vs Aigle Royal de Moungo | fixture_id=1512933 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Panthère vs Victoria United | fixture_id=1512935 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Stade Renard vs Unisport Bafang | fixture_id=1512936 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Foncha ST vs Tonnerre | fixture_id=1547532 | league=Elite Two | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sable vs Bafmeng United | fixture_id=1547533 | league=Elite Two | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Järfälla vs Stocksund | fixture_id=1505175 | league=Ettan - Norra | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Stockholm Internazionale vs Vasalund | fixture_id=1505178 | league=Ettan - Norra | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Angelholms FF vs Olympic | fixture_id=1504451 | league=Ettan - Södra | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Utsikten vs Rosengård | fixture_id=1504458 | league=Ettan - Södra | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Baghdad vs Karbala | fixture_id=1550045 | league=Iraqi League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Kiffen vs PuiU Helsinki | fixture_id=1541619 | league=Kakkonen - Lohko A | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Enppi vs AL Masry | fixture_id=1548299 | league=League Cup | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Masr vs Wadi Degla | fixture_id=1548298 | league=League Cup | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Mamoré vs Uberaba | fixture_id=1547672 | league=Mineiro - 2 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Atletico Nacional vs Junior | fixture_id=1546413 | league=Primera A | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- UAI Urquiza vs Liniers | fixture_id=1499461 | league=Primera B Metropolitana | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Berazategui vs Juventud Unida | fixture_id=1499930 | league=Primera C | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Blooming vs Gualberto Villarroel SJ | fixture_id=1538384 | league=Primera División | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Liverpool Montevideo vs Cerro Largo | fixture_id=1546812 | league=Primera División - Apertura | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Jayxun vs Aral | fixture_id=1530973 | league=Pro League A | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Metalourg vs FarDu | fixture_id=1530975 | league=Pro League A | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Pakhtakor II vs Respublika FA | fixture_id=1531058 | league=Pro League A | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Provincial Ovalle vs Trasandino | fixture_id=1529109 | league=Segunda División | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Côte d'Ivoire U20 vs Canada U20 | fixture_id=1545467 | league=Tournoi Maurice Revello | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Venezuela U20 vs Portugal U20 | fixture_id=1545468 | league=Tournoi Maurice Revello | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Colorado Storm vs Flatirons Rush | fixture_id=1525691 | league=USL League Two | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Colorado Storm W vs Flatirons II W | fixture_id=1532145 | league=USL W League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Kooteepee vs Haka | fixture_id=1504192 | league=Ykkösliiga | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Singapore U19 vs Brunei U19 | fixture_id=1547218 | league=ASEAN Championship U19 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Thailand U19 vs Malaysia U19 | fixture_id=1547219 | league=ASEAN Championship U19 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ceará U20 vs Fortaleza U20 | fixture_id=1540190 | league=Cearense U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Belarus U21 vs Kazakhstan U21 | fixture_id=1548451 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- France vs Northern Ireland | fixture_id=1542183 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Iraq U20 vs Jordan U20 | fixture_id=1548452 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Italy U21 vs Albania U21 | fixture_id=1546501 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Japan U21 vs Ukraine U21 | fixture_id=1548448 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Latvia U19 vs Estonia U19 | fixture_id=1548449 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Netherlands vs Uzbekistan | fixture_id=1544812 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Niger vs Mauritania | fixture_id=1546495 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Norway U21 vs Finland U21 | fixture_id=1548453 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Saudi Arabia U20 vs Panama U20 | fixture_id=1548450 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Tunisia U20 vs Algeria U20 | fixture_id=1550828 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- USA U18 vs Qatar U20 | fixture_id=1550827 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- USA U21 vs Uzbekistan U23 | fixture_id=1550826 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Equatorial Guinea W vs Haiti W | fixture_id=1545740 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Germany U23 W vs Denmark U23 W | fixture_id=1533350 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ivory Coast W vs Cape Verde W | fixture_id=1546559 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Nigeria W vs Senegal W | fixture_id=1548481 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sweden U18 W vs Iceland U19 W | fixture_id=1548482 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sweden U23 W vs Mexico U23 W | fixture_id=1548483 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Columbus Crew II vs Connecticut FC | fixture_id=1513138 | league=MLS Next Pro | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Defensa y Justicia Res. vs Ferro 2 | fixture_id=1512457 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Gimnasia La Plata Res. vs Godoy Cruz Res. | fixture_id=1512460 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Independiente Riva. Res. vs Quilmes 2 | fixture_id=1512461 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Racing Club Res. vs Banfield Res. | fixture_id=1512464 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Unión Santa Fe Res. vs Atlético Tucumán Res. | fixture_id=1512469 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 
 ## Source Diagnostics
 - data/processed/candidate_v4_historical/vsigma_candidate_v4_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
@@ -91,22 +91,22 @@
 - data/processed/candidate_v6_historical/vsigma_candidate_v6_historical_predictions_benchmark_rows.csv | status=NO_SAME_DAY_ROWS | rows=22 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/candidate_v7_historical/vsigma_candidate_v7_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/candidate_v7_historical/vsigma_candidate_v7_historical_price_guard_rows.csv | status=NO_SAME_DAY_ROWS | rows=22 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=NO_SAME_DAY_ROWS | rows=35 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_candidate_provenance_ceiling.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_dated_post_match_results_refresh.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_SAME_DAY_ROWS | rows=68 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_ACCEPTED_ROWS | rows=70 | same_day=70 | accepted=0 | rejected=70 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_match_stat_forecast_backtest.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecast_calibration_details.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecasts.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_post_match_stat_actuals.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_postmatch_pick_audit.csv | status=NO_SAME_DAY_ROWS | rows=3 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_postmatch_pick_audit_daily.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=NO_SAME_DAY_ROWS | rows=68 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=HAS_ACCEPTED_ROWS | rows=70 | same_day=70 | accepted=70 | rejected=0 | detail=local source contains accepted raw fixture rows
 - data/processed/governance/vsigma_shadow_candidates.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_SAME_DAY_ROWS | rows=68 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_SAME_DAY_ROWS | rows=35 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_ACCEPTED_ROWS | rows=70 | same_day=70 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/historical/2026-04-23/matches.csv | status=NO_SAME_DAY_ROWS | rows=182 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
