@@ -1,32 +1,9 @@
 country,league,league_tier,league_filter_reason,matches
-World,Friendlies,REJECT,hard_reject_noise_league,13
-World,Friendlies Women,REJECT,hard_reject_noise_league,6
-Argentina,Reserve League,REJECT,hard_reject_noise_league,5
-Cameroon,Elite One,REJECT,country_league_not_allowlisted,5
-Morocco,Botola Pro,REJECT,country_league_not_allowlisted,4
-Brazil,Carioca C,REJECT,country_league_not_allowlisted,3
-Uzbekistan,Pro League A,REJECT,country_league_not_allowlisted,3
-Cameroon,Elite Two,REJECT,country_league_not_allowlisted,2
-Egypt,League Cup,REJECT,country_league_not_allowlisted,2
-Paraguay,Division Intermedia,REJECT,country_league_not_allowlisted,2
-Sweden,Ettan - Norra,REJECT,country_league_not_allowlisted,2
-Sweden,Ettan - Södra,REJECT,country_league_not_allowlisted,2
-World,ASEAN Championship U19,REJECT,hard_reject_noise_league,2
-World,Tournoi Maurice Revello,REJECT,country_league_not_allowlisted,2
-Argentina,Primera B Metropolitana,REJECT,country_league_not_allowlisted,1
-Argentina,Primera C,REJECT,country_league_not_allowlisted,1
 Bolivia,Primera División,REJECT,country_league_not_allowlisted,1
 Brazil,Cearense U20,REJECT,hard_reject_noise_league,1
-Brazil,Copa Gaúcha,REJECT,country_league_not_allowlisted,1
 Brazil,Mineiro - 2,REJECT,country_league_not_allowlisted,1
-Chile,Segunda División,REJECT,country_league_not_allowlisted,1
 Colombia,Primera A,REJECT,country_league_not_allowlisted,1
-Finland,Kakkonen - Lohko A,REJECT,country_league_not_allowlisted,1
-Finland,Ykkösliiga,REJECT,country_league_not_allowlisted,1
-Iraq,Iraqi League,REJECT,country_league_not_allowlisted,1
-Lithuania,1 Lyga,REJECT,country_league_not_allowlisted,1
-Sweden,Division 2 - Norrland,REJECT,country_league_not_allowlisted,1
-USA,MLS Next Pro,REJECT,hard_reject_noise_league,1
+Paraguay,Division Intermedia,REJECT,country_league_not_allowlisted,1
 USA,USL League Two,REJECT,country_league_not_allowlisted,1
-USA,USL W League,REJECT,country_league_not_allowlisted,1
 Uruguay,Primera División - Apertura,REJECT,country_league_not_allowlisted,1
+World,Friendlies Women,REJECT,hard_reject_noise_league,1

@@ -1,13 +1,13 @@
-# vSIGMA Shadow Candidates - 2026-06-07
+# vSIGMA Shadow Candidates - 2026-06-08
 
 ## Executive Shadow Candidate Summary
-- generated_at: 2026-06-08T19:09:32+01:00
-- shadow_candidates: 1
-- shadow_decision_counts: SHADOW_DOWNGRADE_REVIEW=1
-- experiment_type_counts: LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=1
+- generated_at: 2026-06-08T22:15:47+01:00
+- shadow_candidates: 0
+- shadow_decision_counts: none
+- experiment_type_counts: none
 
 ## Shadow Candidate Decisions
-- SHADOW_DOWNGRADE_REVIEW | Las Palmas vs Malaga | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
+- none
 
 ## Guardrails
 - official picks changed: NO

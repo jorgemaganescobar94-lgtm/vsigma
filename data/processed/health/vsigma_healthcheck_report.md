@@ -1,7 +1,7 @@
 # vSIGMA Healthcheck Report - 2026-06-08
 
 - Global health status: WARNING
-- Generated at: 2026-06-08T13:51:43.596400+01:00
+- Generated at: 2026-06-08T22:15:28.673712+01:00
 - Mode: full
 - HEALTHY: 24
 - WARNING: 4
@@ -46,7 +46,7 @@
 | candidate_output:CANDIDATE_V5 | NOT_RUN_YET | output not available yet | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v5_competition_top.csv |
 | candidate_output:CANDIDATE_V6 | NOT_RUN_YET | output not available yet | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v6_competition_top.csv |
 | daily_master_report | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-08/daily_competition_master_report.md |
-| immutable_ledger_exists | HEALTHY | ledger present with 174 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
+| immutable_ledger_exists | HEALTHY | ledger present with 168 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | ledger_target_date_rows | WARNING | ledger has no rows for target date | .\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-06-08 --stage PRE | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | ledger_duplicate_ids | HEALTHY | no duplicate ledger_id values for target date |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | freshness_report | WARNING | validation report missing | .\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-06-08 | /home/runner/work/vsigma/vsigma/data/processed/vsigma_daily_freshness_report.csv |

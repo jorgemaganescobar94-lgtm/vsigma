@@ -1,11 +1,11 @@
-# vSIGMA Immutable Ledger Daily Report - 2026-06-07
+# vSIGMA Immutable Ledger Daily Report - 2026-06-08
 
 ## Ledger Update Status
 - Ledger CSV: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv
 - JSONL event log: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.jsonl
 - Official picks registered: 0
 - Shadow picks registered: 0
-- No-bet records: 1
+- No-bet records: 0
 - Pending records: 0
 - Settled records: 0
 - Daily winner: NO_SETTLED_RESULTS
@@ -22,9 +22,7 @@
 | CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | shadow_selector | False | PRICE_DISCIPLINE_UNTESTED |
 
 ## Daily Summary By Experiment
-| experiment_id | records | picks | no_bet_records | pending | settled | profit_units |
-| --- | --- | --- | --- | --- | --- | --- |
-| CANDIDATE_V3_ODDS_DEPTH | 1 | 0 | 1 | 0 | 0 | 0.0 |
+_No rows._
 
 ## Official Picks
 _No rows._
@@ -33,9 +31,7 @@ _No rows._
 _No rows._
 
 ## No-Bet Modes
-| experiment_id | record_status | reason_tags | source_file |
-| --- | --- | --- | --- |
-| CANDIDATE_V3_ODDS_DEPTH | NO_BET_RECORD | NO_BET; SOURCE_FILE_MISSING_OR_NOT_AVAILABLE | vsigma_today_candidate_v3_competition_top.csv |
+_No rows._
 
 ## Pre-Lock Changes
 _No rows._
