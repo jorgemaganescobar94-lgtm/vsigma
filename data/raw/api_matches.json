@@ -5630,7 +5630,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 82,
+          "elapsed": 85,
           "extra": null
         }
       },
@@ -5700,7 +5700,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 57,
+          "elapsed": 60,
           "extra": null
         }
       },
@@ -5719,17 +5719,17 @@
           "id": 23155,
           "name": "Encarnación",
           "logo": "https://media.api-sports.io/football/teams/23155.png",
-          "winner": false
+          "winner": null
         },
         "away": {
           "id": 1177,
           "name": "SOL DE America",
           "logo": "https://media.api-sports.io/football/teams/1177.png",
-          "winner": true
+          "winner": null
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "score": {
@@ -5770,7 +5770,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 54,
+          "elapsed": 57,
           "extra": null
         }
       },
