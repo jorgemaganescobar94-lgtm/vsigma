@@ -2,8 +2,8 @@
 
 ## Summary
 - policy_status: MAX_COVERAGE_POLICY_READY
-- api_plan_name: API-Football Ultra
-- plan_requests_per_day: 75000
+- api_plan_name: API-Football Pro
+- plan_requests_per_day: 7500
 - rows_reviewed: 35
 - rows_allowed: 35
 - full_scoring_enrichment_rows: 16
@@ -56,7 +56,7 @@
 - Estrella de Berisso vs Atletico Pilar | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
 
 ## Guardrails
-- This policy allows broad API coverage because the API plan is large.
+- This policy follows the active API subscription guard; it does not assume an Ultra plan.
 - It does not execute external calls by itself.
 - Low-trust fixtures may be queried for diagnostics, but cannot feed picks or scoring unless a separate reviewed model supports them.
 - Enrichment never creates stake permission by itself.

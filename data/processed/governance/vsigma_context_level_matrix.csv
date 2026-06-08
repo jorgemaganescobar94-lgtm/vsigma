@@ -1,2 +1,2 @@
 target_date,generated_at,rank,fixture_id,home_team,away_team,market_primary,adjusted_status,objective_level,dependency_level,opponent_level,draw_level,lineup_level,availability_level,market_level,memory_level,context_level,context_score,policy,auto_apply,production_change
-2026-06-05,2026-06-08T19:51:03+01:00,1,1548053,Las Palmas,Malaga,OVER_1_5,INPUT_ROW_MISSING_REVIEW,OBJ_UNKNOWN,DEPENDENCY_UNKNOWN,STAKE_UNKNOWN,DRAW_NOT_KEY,WAIT_PRELOCK,AVAIL_UNKNOWN_CLEAN,GOALS_STANDARD,MEM_NONE,L6_REVIEW,42,review only,NO,NO
+2026-06-05,2026-06-08T20:08:00+01:00,1,1548053,Las Palmas,Malaga,OVER_1_5,INPUT_ROW_MISSING_REVIEW,OBJ_UNKNOWN,DEPENDENCY_UNKNOWN,STAKE_UNKNOWN,DRAW_NOT_KEY,WAIT_PRELOCK,AVAIL_UNKNOWN_CLEAN,GOALS_STANDARD,MEM_NONE,L6_REVIEW,42,review only,NO,NO

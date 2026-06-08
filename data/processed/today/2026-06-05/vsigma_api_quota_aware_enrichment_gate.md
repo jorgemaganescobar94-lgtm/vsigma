@@ -2,8 +2,8 @@
 
 ## Summary
 - quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
-- api_plan_name: API-Football Ultra
-- plan_requests_per_day: 75000
+- api_plan_name: API-Football Pro
+- plan_requests_per_day: 7500
 - rows_reviewed: 35
 - p1_rows: 19
 - p2_rows: 16
@@ -12,7 +12,7 @@
 - p2_probe_units: 16
 - total_estimated_units: 165
 - auto_units_reserved: 111
-- max_auto_units_per_day: 5000
+- max_auto_units_per_day: 1500
 - max_auto_units_per_run: 1500
 - quota_decision_counts: AUTO_ENRICHMENT_ALLOWED_P1=19; COVERAGE_PROBE_ALLOWED_P2=16
 - api_calls_allowed: YES_LIMITED
@@ -61,5 +61,5 @@
 ## Guardrails
 - This gate is policy/allowlist only; it does not call APIs.
 - API calls executed remains NO until a separate enrichment executor is explicitly run.
-- P1 may be auto-allowlisted within quota; P2 is coverage-probe-only; volatile/manual rows stay blocked.
+- P1 may be auto-allowlisted within the subscription guard limit; P2 is coverage-probe-only; volatile/manual rows stay blocked.
 - Enrichment alone never creates pick or stake permission.

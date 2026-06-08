@@ -1,2 +1,2 @@
 target_date,generated_at,fixture_id,home_team,away_team,api_readiness_gate,coverage_score,original_final_decision,final_decision,original_execution_permission,execution_permission,gate_action,gate_reason,missing_blocks,auto_apply,production_change
-2026-06-05,2026-06-08T19:51:04+01:00,1548053,Las Palmas,Malaga,UNKNOWN,,NO_BET,NO_BET,NO_BET,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
+2026-06-05,2026-06-08T20:08:01+01:00,1548053,Las Palmas,Malaga,UNKNOWN,,NO_BET,NO_BET,NO_BET,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO

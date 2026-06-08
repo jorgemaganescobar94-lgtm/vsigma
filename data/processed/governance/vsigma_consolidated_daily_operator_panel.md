@@ -95,9 +95,9 @@
 - status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-05; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-08T19:51:02+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-05; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-08T19:51:02+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-05; reason=normalize_prelock_recheck_date; triggered_at=2026-06-08T19:51:02+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-05; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-08T20:07:59+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-05; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-08T20:07:59+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-05; reason=normalize_prelock_recheck_date; triggered_at=2026-06-08T20:07:59+01:00
 
 ## Key Files
 - data/processed/today/2026-06-05/vsigma_consolidated_daily_operator_panel.md
@@ -146,7 +146,7 @@
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
 - files_scanned: 1481
 - accepted_rows: 68
-- rejected_rows: 212
+- rejected_rows: 240
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
@@ -212,15 +212,15 @@
 - reason: daily board already has rows
 ## API Quota-Aware Enrichment Gate
 - quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
-- api_plan_name: API-Football Ultra
-- plan_requests_per_day: 75000
+- api_plan_name: API-Football Pro
+- plan_requests_per_day: 7500
 - rows_reviewed: 35
 - p1_rows: 19
 - p2_rows: 16
 - p1_estimated_units: 95
 - p2_estimated_units: 70
 - auto_units_reserved: 111
-- max_auto_units_per_day: 5000
+- max_auto_units_per_day: 1500
 - max_auto_units_per_run: 1500
 - quota_decision_counts: AUTO_ENRICHMENT_ALLOWED_P1=19; COVERAGE_PROBE_ALLOWED_P2=16
 - api_calls_allowed: YES_LIMITED
@@ -245,8 +245,8 @@
 - next_action: Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.
 ## Max-Coverage API Enrichment Policy
 - policy_status: MAX_COVERAGE_POLICY_READY
-- api_plan_name: API-Football Ultra
-- plan_requests_per_day: 75000
+- api_plan_name: API-Football Pro
+- plan_requests_per_day: 7500
 - rows_reviewed: 35
 - rows_allowed: 35
 - full_scoring_enrichment_rows: 16
@@ -257,7 +257,7 @@
 - downstream_use_counts: SCORING_ALLOWED_WITH_NORMAL_GATES=16; COVERAGE_GATE_ONLY=14; DIAGNOSTIC_ONLY_NO_SCORING=5
 - external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: NO
-- next_action: Use max-coverage policy for a separate logged API executor. Enrichment can be broad; scoring remains restricted by downstream_use and normal gates.
+- next_action: Use max-coverage policy through the subscription guard and logged API executor only. Enrichment can be broad; scoring remains restricted by downstream_use and normal gates.
 ## Active API Policy
 - active_api_policy: MAX_COVERAGE
 - policy_source: vsigma_max_coverage_api_enrichment_policy
