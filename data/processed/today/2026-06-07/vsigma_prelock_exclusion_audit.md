@@ -1,6 +1,6 @@
 # vSIGMA PRELOCK Exclusion Audit - 2026-06-07
 
-- Generated at: 2026-06-07T21:45:10+01:00
+- Generated at: 2026-06-08T19:09:31+01:00
 - Timezone: Atlantic/Canary
 - Candidates reviewed: 1
 - In current 90-minute window: 0
@@ -10,4 +10,4 @@
 
 | fixture_id | fixture | market | kickoff | min_to_ko | in_window | retained | exclusion_reason | next_action |
 | --- | --- | --- | --- | ---: | --- | --- | --- | --- |
-| 1548053 | Las Palmas vs Malaga | OVER_1_5 | 2026-06-07T20:00+01:00 | -105.18 | NO | NO | KICKOFF_ALREADY_PASSED | WAIT_FOR_POST_RESULTS |
+| 1548053 | Las Palmas vs Malaga | OVER_1_5 | 2026-06-07T20:00+01:00 | -1389.53 | NO | NO | KICKOFF_ALREADY_PASSED | WAIT_FOR_POST_RESULTS |
