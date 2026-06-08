@@ -1,2 +1,2 @@
 target_date,generated_at,fixture_id,home_team,away_team,candidate_origin,max_execution_permission,before_permission,after_permission,before_stake,after_stake,ceiling_action,reason,auto_apply,production_change
-2026-06-05,2026-06-08T20:08:00+01:00,1548053,Las Palmas,Malaga,OBJECTIVE_PROXY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-05,2026-06-08T20:13:34+01:00,1548053,Las Palmas,Malaga,OBJECTIVE_PROXY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
