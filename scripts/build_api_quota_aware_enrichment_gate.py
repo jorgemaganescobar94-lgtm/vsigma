@@ -8,10 +8,10 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 PROCESSED = Path("data/processed")
-PLAN_NAME = "API-Football Ultra"
-PLAN_REQUESTS_PER_DAY = 75_000
-MAX_AUTO_UNITS_PER_DAY = 5_000
-MAX_AUTO_UNITS_PER_RUN = 1_500
+DEFAULT_PLAN_NAME = "API-Football Pro"
+DEFAULT_PLAN_REQUESTS_PER_DAY = 7_500
+DEFAULT_MAX_AUTO_UNITS_PER_DAY = 1_500
+DEFAULT_MAX_AUTO_UNITS_PER_RUN = 1_500
 P2_PROBE_UNITS_PER_ROW = 1
 
 ROW_FIELDS = [
@@ -67,13 +67,49 @@ def load_plan_rows(processed: Path, day: str) -> list[dict[str, str]]:
     return rows
 
 
-def classify(row: dict[str, str], running_reserved: int) -> tuple[str, str, int, str, str, str, str]:
+def load_subscription_guard(processed: Path, day: str) -> dict[str, str]:
+    rows = read_rows(processed / "today" / day / "vsigma_api_subscription_guard.csv")
+    if not rows:
+        rows = read_rows(processed / "governance" / "vsigma_api_subscription_guard.csv")
+    return rows[0] if rows else {}
+
+
+def subscription_policy(processed: Path, day: str) -> dict[str, object]:
+    guard = load_subscription_guard(processed, day)
+    plan = norm(guard.get("subscription_plan")) or "Pro"
+    display_plan = plan if plan.upper().startswith("API-FOOTBALL") else f"API-Football {plan}"
+    limit_day = as_int(guard.get("requests_limit_day")) or DEFAULT_PLAN_REQUESTS_PER_DAY
+    executor_mode = norm(guard.get("executor_mode")) or "PRO_CONTROLLED_EXECUTION"
+    recommended_limit = as_int(guard.get("recommended_executor_limit"))
+
+    if "PRO_CONTROLLED_EXECUTION" in executor_mode.upper() and recommended_limit > 0:
+        max_run = min(DEFAULT_MAX_AUTO_UNITS_PER_RUN, max(recommended_limit * 6, P2_PROBE_UNITS_PER_ROW))
+        max_day = min(DEFAULT_MAX_AUTO_UNITS_PER_DAY, max_run)
+    elif "FREE_SAFE_EXECUTION" in executor_mode.upper() and recommended_limit > 0:
+        max_run = min(DEFAULT_MAX_AUTO_UNITS_PER_RUN, max(recommended_limit * 6, P2_PROBE_UNITS_PER_ROW))
+        max_day = max_run
+    elif "MAX_COVERAGE_EXECUTION" in executor_mode.upper() or limit_day >= 50_000:
+        max_run = 1_500
+        max_day = min(5_000, limit_day)
+    else:
+        max_run = DEFAULT_MAX_AUTO_UNITS_PER_RUN
+        max_day = min(DEFAULT_MAX_AUTO_UNITS_PER_DAY, limit_day)
+
+    return {
+        "api_plan_name": display_plan,
+        "plan_requests_per_day": limit_day,
+        "max_auto_units_per_day": max_day,
+        "max_auto_units_per_run": max_run,
+    }
+
+
+def classify(row: dict[str, str], running_reserved: int, max_auto_units_per_run: int) -> tuple[str, str, int, str, str, str, str]:
     priority = up(row.get("queue_priority"))
     risk = up(row.get("risk_label"))
     estimated = as_int(row.get("estimated_call_units"))
 
     if "P1_TRUSTED_MISSING_SCORING" in priority and risk == "MEDIUM":
-        if running_reserved + estimated <= MAX_AUTO_UNITS_PER_RUN:
+        if running_reserved + estimated <= max_auto_units_per_run:
             return (
                 "AUTO_ENRICHMENT_ALLOWED_P1",
                 "FULL_ENRICHMENT_WITH_NORMAL_GATES",
@@ -95,7 +131,7 @@ def classify(row: dict[str, str], running_reserved: int) -> tuple[str, str, int,
 
     if "P2_LOW_COVERAGE_SCORING" in priority or "HIGH_LOW_COVERAGE" in risk:
         probe_units = P2_PROBE_UNITS_PER_ROW
-        if running_reserved + probe_units <= MAX_AUTO_UNITS_PER_RUN:
+        if running_reserved + probe_units <= max_auto_units_per_run:
             return (
                 "COVERAGE_PROBE_ALLOWED_P2",
                 "COVERAGE_PROBE_ONLY",
@@ -129,11 +165,13 @@ def classify(row: dict[str, str], running_reserved: int) -> tuple[str, str, int,
 def build(day: str, tz: str, processed: Path) -> tuple[list[dict[str, object]], list[dict[str, object]], str]:
     generated = datetime.now(ZoneInfo(tz)).isoformat(timespec="seconds")
     plan_rows = load_plan_rows(processed, day)
+    policy = subscription_policy(processed, day)
+    max_auto_units_per_run = int(policy["max_auto_units_per_run"])
     out: list[dict[str, object]] = []
     running_reserved = 0
 
     for row in plan_rows:
-        decision, mode, reserved, full_allowed, probe_allowed, api_allowed, reason = classify(row, running_reserved)
+        decision, mode, reserved, full_allowed, probe_allowed, api_allowed, reason = classify(row, running_reserved, max_auto_units_per_run)
         running_reserved += reserved
         out.append({
             "target_date": day,
@@ -169,8 +207,8 @@ def build(day: str, tz: str, processed: Path) -> tuple[list[dict[str, object]], 
         "target_date": day,
         "generated_at": generated,
         "quota_gate_status": status,
-        "api_plan_name": PLAN_NAME,
-        "plan_requests_per_day": PLAN_REQUESTS_PER_DAY,
+        "api_plan_name": policy["api_plan_name"],
+        "plan_requests_per_day": policy["plan_requests_per_day"],
         "rows_reviewed": len(out),
         "p1_rows": len(p1_rows),
         "p2_rows": len(p2_rows),
@@ -179,8 +217,8 @@ def build(day: str, tz: str, processed: Path) -> tuple[list[dict[str, object]], 
         "p2_probe_units": p2_probe_units,
         "total_estimated_units": total_units,
         "auto_units_reserved": running_reserved,
-        "max_auto_units_per_day": MAX_AUTO_UNITS_PER_DAY,
-        "max_auto_units_per_run": MAX_AUTO_UNITS_PER_RUN,
+        "max_auto_units_per_day": policy["max_auto_units_per_day"],
+        "max_auto_units_per_run": policy["max_auto_units_per_run"],
         "quota_decision_counts": counts(out, "quota_policy_decision"),
         "api_calls_allowed": "YES_LIMITED" if allowed_count else "NO",
         "api_calls_executed": "NO",
@@ -234,7 +272,7 @@ def md(day: str, rows: list[dict[str, object]], summary: dict[str, object]) -> s
         "## Guardrails",
         "- This gate is policy/allowlist only; it does not call APIs.",
         "- API calls executed remains NO until a separate enrichment executor is explicitly run.",
-        "- P1 may be auto-allowlisted within quota; P2 is coverage-probe-only; volatile/manual rows stay blocked.",
+        "- P1 may be auto-allowlisted within the subscription guard limit; P2 is coverage-probe-only; volatile/manual rows stay blocked.",
         "- Enrichment alone never creates pick or stake permission.",
     ]
     return "\n".join(lines) + "\n"
