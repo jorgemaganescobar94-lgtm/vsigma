@@ -1,2 +1,2 @@
 target_date,generated_at,normalized_status,board_status,mismatch_count,promoted_rows,queue_rows,board_rows,diagnostic_no_bet_rows,operator_state,next_action,auto_apply,production_change
-2026-06-08,2026-06-08T20:36:56+01:00,OK_EMPTY_BY_PROMOTION_GATE,daily_board_md=OK; daily_board_csv=OK,0,0,43,1,1,HEALTHY_EMPTY_NO_ACTION,No picks. System is coherent and empty because zero candidates were promoted. Wait for future data or improved trusted source coverage.,NO,NO
+2026-06-08,2026-06-08T21:12:01+01:00,OK_EMPTY_BY_PROMOTION_GATE,daily_board_md=OK; daily_board_csv=OK,0,0,43,1,1,HEALTHY_EMPTY_NO_ACTION,No picks. System is coherent and empty because zero candidates were promoted. Wait for future data or improved trusted source coverage.,NO,NO

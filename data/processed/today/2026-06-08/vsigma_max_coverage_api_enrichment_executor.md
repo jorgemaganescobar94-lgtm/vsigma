@@ -11,8 +11,8 @@
 - scoring_allowed_rows: 34
 - coverage_probe_rows: 4
 - diagnostic_only_rows: 5
-- endpoint_success_counts: fixture_detail=43; predictions=34; events=22; odds=22; lineups=4; statistics=3
-- endpoint_failure_counts: statistics=35; lineups=30; events=16; odds=12
+- endpoint_success_counts: fixture_detail=43; predictions=34; events=24; odds=22; lineups=4; statistics=3
+- endpoint_failure_counts: statistics=35; lineups=30; events=14; odds=12
 - external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: YES_LOGGED_EXECUTION
 - auto_apply: NO
@@ -55,10 +55,10 @@
 - Jayxun vs Aral | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
 - Metalourg vs FarDu | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions | failed=statistics;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
 - Pakhtakor II vs Respublika FA | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
-- Provincial Ovalle vs Trasandino | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Provincial Ovalle vs Trasandino | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
 - Colorado Storm vs Flatirons Rush | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=statistics;events | scoring_after=NO_COVERAGE_GATE_ONLY
 - Kooteepee vs Haka | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- France vs Northern Ireland | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;statistics | failed=events | scoring_after=NO_COVERAGE_GATE_ONLY
+- France vs Northern Ireland | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;statistics;events | failed=none | scoring_after=NO_COVERAGE_GATE_ONLY
 - Netherlands vs Uzbekistan | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;statistics;events | failed=none | scoring_after=NO_COVERAGE_GATE_ONLY
 - Niger vs Mauritania | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=statistics;events | scoring_after=NO_COVERAGE_GATE_ONLY
 - Columbus Crew II vs Connecticut FC | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
