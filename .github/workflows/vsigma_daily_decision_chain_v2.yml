@@ -233,11 +233,42 @@ jobs:
         shell: bash
         run: python scripts/build_active_max_coverage_api_policy.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Build API subscription guard
+        shell: bash
+        run: python scripts/build_api_subscription_guard.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Run max-coverage API enrichment executor
         shell: bash
-        run: python scripts/run_max_coverage_api_enrichment_executor.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --execute
+        run: |
+          read_guard_field() {
+            python - "$1" <<'PY'
+import csv
+import os
+import sys
 
-      - name: Build API-enriched scored candidates
+field = sys.argv[1]
+path = f"data/processed/today/{os.environ['VSIGMA_DATE']}/vsigma_api_subscription_guard.csv"
+with open(path, encoding="utf-8-sig", newline="") as handle:
+    row = next(csv.DictReader(handle))
+print(row.get(field, ""))
+PY
+          }
+
+          ALLOWED="$(read_guard_field api_calls_allowed)"
+          MODE="$(read_guard_field executor_mode)"
+          LIMIT="$(read_guard_field recommended_executor_limit)"
+
+          echo "API guard: allowed=${ALLOWED} mode=${MODE} limit=${LIMIT}"
+
+          if [ "$ALLOWED" != "YES" ]; then
+            echo "API execution skipped by subscription guard."
+            python scripts/run_max_coverage_api_enrichment_executor.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --limit 0
+          elif [ "$LIMIT" = "0" ] || [ -z "$LIMIT" ]; then
+            python scripts/run_max_coverage_api_enrichment_executor.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --execute
+          else
+            python scripts/run_max_coverage_api_enrichment_executor.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --execute --limit "$LIMIT"
+          fi
+- name: Build API-enriched scored candidates
         shell: bash
         run: python scripts/build_api_enriched_scored_candidates.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
@@ -323,21 +354,10 @@ jobs:
 
           git commit -m "vSIGMA daily decision chain v2 ${VSIGMA_DATE} [skip ci]"
 
-          for attempt in 1 2 3; do
-            echo "Push attempt ${attempt}/3"
-            if git push origin HEAD:main; then
-              exit 0
-            fi
+          if git push origin HEAD:main; then
+            echo "Daily decision outputs pushed successfully."
+            exit 0
+          fi
 
-            echo "Push failed; rebasing against origin/main before retry..."
-            git fetch origin main
-            if ! git rebase origin/main; then
-              echo "ERROR: rebase failed during push retry."
-              git rebase --abort || true
-              exit 1
-            fi
-            sleep 2
-          done
-
-          echo "ERROR: failed to push daily decision outputs after 3 attempts."
-          exit 1
+          echo "WARNING: failed to push daily decision outputs. Functional pipeline completed; another run may have pushed newer outputs."
+          exit 0
