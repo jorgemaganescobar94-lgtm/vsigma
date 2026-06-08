@@ -20,6 +20,9 @@ on:
 permissions:
   contents: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 concurrency:
   group: vsigma-daily-decision-chain-v2-${{ github.ref }}
   cancel-in-progress: false
