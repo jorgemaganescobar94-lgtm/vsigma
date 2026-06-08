@@ -40,27 +40,6 @@
 - forecast_warning_counts: LINEUPS_INACTIVE=1; LOW_LEAGUE_RELIABILITY=1; PARTIAL_RECENT_STATS=1; API_COVERAGE_UNKNOWN=1
 - missing_data_counts: unknown=1
 
-## API-Enriched Review Board
-- source: data/processed/today/2026-06-05/vsigma_api_enriched_review_board.csv
-- review_rows_written: 2
-- ready_for_manual_review_rows: 2
-- blocked_rows: 0
-- review_priority_counts: P2_MANUAL_REVIEW=1; P1_MANUAL_REVIEW=1
-- canonical_board_permission_counts: NO_CANONICAL_BOARD_PERMISSION=2
-- pick_permission_counts: NO_PICK_PERMISSION=2
-- stake_permission_counts: NO_STAKE_PERMISSION=2
-- panel_note: API review board is parallel-only and cannot create picks, stake, or canonical board permission.
-
-### API Review Rows
-- P2_MANUAL_REVIEW | Las Palmas vs Malaga | status=API_ENRICHED_REVIEW_READY | score=61 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Malaga | pred_total_home_away=47.7/52.3 | 1x2=2.22/3.05/3.40 | ou2.5=2.20/1.65
-- P1_MANUAL_REVIEW | Binga vs US Bougouba | status=API_ENRICHED_REVIEW_READY | score=82 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Binga | pred_total_home_away=59.2/41.0 | 1x2=1.70/2.88/5.00 | ou2.5=11.00/1.04
-
-### API Review Guardrails
-- This section is informational only.
-- It does not modify the canonical daily execution board.
-- Manual review remains mandatory.
-- auto_apply=NO and production_change=NO remain hardcoded.
-
 ## Official / Probable Lineups
 - data/processed/today/2026-06-05/official_lineup_sources.csv: rows=32
 - data/processed/today/2026-06-05/vsigma_probable_lineup_consensus.csv: rows=1
@@ -86,9 +65,9 @@
 - status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-05; reason=force_self_heal_after_trigger_normalizer; triggered_at=2026-06-05T15:05:46+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-05; reason=force_daily_chain_after_trigger_normalizer; triggered_at=2026-06-05T15:05:46+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-05; reason=force_prelock_after_trigger_normalizer; triggered_at=2026-06-05T15:05:46+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-05; reason=rerun_after_python_trigger_normalizer; triggered_at=2026-06-05T15:22:37+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-05; reason=rerun_after_python_trigger_normalizer; triggered_at=2026-06-05T15:22:37+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-05; reason=rerun_after_python_trigger_normalizer; triggered_at=2026-06-05T15:22:37+01:00
 
 ## Key Files
 - data/processed/today/2026-06-05/vsigma_consolidated_daily_operator_panel.md
