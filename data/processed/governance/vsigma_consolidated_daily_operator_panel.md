@@ -62,7 +62,7 @@
 
 ## Next Triggers / Rechecks
 - .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-05; reason=rerun_after_final_api_panel_and_push_retry; triggered_at=2026-06-05T15:30:58+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-05; reason=rerun_after_no_trigger_recommit_fix; triggered_at=2026-06-05T15:35:59+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-05; reason=rerun_after_resolving_rebase_indentation_conflict; triggered_at=2026-06-05T16:48:11+01:00
 - .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-05; reason=rerun_after_final_api_panel_and_push_retry; triggered_at=2026-06-05T15:30:58+01:00
 
 ## Key Files
@@ -111,7 +111,7 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1476
+- files_scanned: 1480
 - accepted_rows: 70
 - rejected_rows: 0
 - next_action: Review accepted rows, then feed normal scoring gates.
