@@ -87,38 +87,50 @@ jobs:
           echo "INCLUDE_BACKTEST=$INCLUDE_BACKTEST" >> "$GITHUB_ENV"
 
       - name: Normalize daily trigger dates
-        shell: bash
+        shell: python
         run: |
-          mkdir -p .vsigma/triggers
-          NOW="$(TZ=Atlantic/Canary date +'%Y-%m-%dT%H:%M:%S%:z')"
+          from pathlib import Path
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
 
-          cat > .vsigma/triggers/daily_decision_chain_v2.trigger <<EOF
-date=${VSIGMA_DATE}
-include_backtest=${INCLUDE_BACKTEST}
-requested_by=github-actions
-reason=normalize_daily_decision_chain_v2_date
-triggered_at=${NOW}
-nonce=daily-v2-${VSIGMA_DATE}-${GITHUB_RUN_ID}
-EOF
+          triggers = Path(".vsigma/triggers")
+          triggers.mkdir(parents=True, exist_ok=True)
 
-          cat > .vsigma/triggers/daily_chain_self_heal.trigger <<EOF
-date=${VSIGMA_DATE}
-include_backtest=${INCLUDE_BACKTEST}
-requested_by=github-actions
-reason=normalize_daily_chain_self_heal_date
-triggered_at=${NOW}
-nonce=self-heal-${VSIGMA_DATE}-${GITHUB_RUN_ID}
-EOF
+          day = os.environ["VSIGMA_DATE"]
+          include_backtest = os.environ.get("INCLUDE_BACKTEST", "false") or "false"
+          run_id = os.environ.get("GITHUB_RUN_ID", "local")
+          now = datetime.now(ZoneInfo("Atlantic/Canary")).isoformat(timespec="seconds")
 
-          cat > .vsigma/triggers/prelock_official_lineup_recheck.trigger <<EOF
-date=${VSIGMA_DATE}
-include_operator_brief=true
-requested_by=github-actions
-reason=normalize_prelock_recheck_date
-triggered_at=${NOW}
-nonce=prelock-${VSIGMA_DATE}-${GITHUB_RUN_ID}
-EOF
+          files = {
+              "daily_decision_chain_v2.trigger": (
+                  f"date={day}\n"
+                  f"include_backtest={include_backtest}\n"
+                  "requested_by=github-actions\n"
+                  "reason=normalize_daily_decision_chain_v2_date\n"
+                  f"triggered_at={now}\n"
+                  f"nonce=daily-v2-{day}-{run_id}\n"
+              ),
+              "daily_chain_self_heal.trigger": (
+                  f"date={day}\n"
+                  f"include_backtest={include_backtest}\n"
+                  "requested_by=github-actions\n"
+                  "reason=normalize_daily_chain_self_heal_date\n"
+                  f"triggered_at={now}\n"
+                  f"nonce=self-heal-{day}-{run_id}\n"
+              ),
+              "prelock_official_lineup_recheck.trigger": (
+                  f"date={day}\n"
+                  "include_operator_brief=true\n"
+                  "requested_by=github-actions\n"
+                  "reason=normalize_prelock_recheck_date\n"
+                  f"triggered_at={now}\n"
+                  f"nonce=prelock-{day}-{run_id}\n"
+              ),
+          }
 
+          for name, content in files.items():
+              (triggers / name).write_text(content, encoding="utf-8")
       - name: Preflight self-heal router
         shell: bash
         run: python scripts/route_daily_chain_missing_self_heal.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
