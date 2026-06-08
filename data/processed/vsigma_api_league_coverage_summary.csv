@@ -1,10 +1,2 @@
-summary_scope,metric,rows_total,league_coverage_class,league_has_standings_coverage,league_has_odds_coverage,league_has_fixture_stats_coverage,league_has_injuries_coverage,league_has_lineups_coverage,league_has_predictions_coverage
-overall,leagues_total,2,,,,,,,
-by_league_coverage_class,league_coverage_class,2,COVERAGE_RICH,,,,,,
-by_league_has_standings_coverage,league_has_standings_coverage,2,,1.0,,,,,
-by_league_has_odds_coverage,league_has_odds_coverage,2,,,1.0,,,,
-by_league_has_fixture_stats_coverage,league_has_fixture_stats_coverage,2,,,,1.0,,,
-by_league_has_injuries_coverage,league_has_injuries_coverage,1,,,,,0.0,,
-by_league_has_injuries_coverage,league_has_injuries_coverage,1,,,,,1.0,,
-by_league_has_lineups_coverage,league_has_lineups_coverage,2,,,,,,1.0,
-by_league_has_predictions_coverage,league_has_predictions_coverage,2,,,,,,,1.0
+summary_scope,metric,rows_total
+overall,leagues_total,0
