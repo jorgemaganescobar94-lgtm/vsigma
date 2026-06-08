@@ -9,9 +9,10 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 PROCESSED = Path("data/processed")
-PLAN_NAME = "API-Football Ultra"
-PLAN_REQUESTS_PER_DAY = 75_000
-MAX_POLICY_ROWS_PER_RUN = 5_000
+DEFAULT_PLAN_NAME = "API-Football Pro"
+DEFAULT_PLAN_REQUESTS_PER_DAY = 7_500
+DEFAULT_PRO_POLICY_ROWS_PER_RUN = 250
+MAX_HIGH_CAPACITY_POLICY_ROWS_PER_RUN = 5_000
 
 ROW_FIELDS = [
     "target_date", "generated_at", "fixture_id", "home_team", "away_team", "league", "country",
@@ -76,6 +77,39 @@ def load_plan_rows(processed: Path, day: str) -> list[dict[str, str]]:
     return rows
 
 
+def load_subscription_guard(processed: Path, day: str) -> dict[str, str]:
+    rows = read_rows(processed / "today" / day / "vsigma_api_subscription_guard.csv")
+    if not rows:
+        rows = read_rows(processed / "governance" / "vsigma_api_subscription_guard.csv")
+    return rows[0] if rows else {}
+
+
+def subscription_policy(processed: Path, day: str) -> dict[str, object]:
+    guard = load_subscription_guard(processed, day)
+    plan = norm(guard.get("subscription_plan")) or "Pro"
+    display_plan = plan if plan.upper().startswith("API-FOOTBALL") else f"API-Football {plan}"
+    limit_day = as_int(guard.get("requests_limit_day")) or DEFAULT_PLAN_REQUESTS_PER_DAY
+    executor_mode = up(guard.get("executor_mode")) or "PRO_CONTROLLED_EXECUTION"
+    recommended_limit = as_int(guard.get("recommended_executor_limit"))
+    guard_allowed = up(guard.get("api_calls_allowed")) or "YES"
+
+    if "MAX_COVERAGE_EXECUTION" in executor_mode or limit_day >= 50_000:
+        max_rows = MAX_HIGH_CAPACITY_POLICY_ROWS_PER_RUN
+    elif recommended_limit > 0:
+        max_rows = recommended_limit
+    else:
+        max_rows = DEFAULT_PRO_POLICY_ROWS_PER_RUN
+
+    external_allowed = "YES_MAX_COVERAGE_POLICY" if guard_allowed == "YES" else "NO_SUBSCRIPTION_GUARD"
+
+    return {
+        "api_plan_name": display_plan,
+        "plan_requests_per_day": limit_day,
+        "max_policy_rows_per_run": max_rows,
+        "external_calls_allowed": external_allowed,
+    }
+
+
 def hard_low_trust(row: dict[str, str]) -> bool:
     league = up(row.get("league"))
     teams = f"{up(row.get('home_team'))} {up(row.get('away_team'))}"
@@ -127,9 +161,12 @@ def classify(row: dict[str, str]) -> tuple[str, str, str, str]:
 
 def build(day: str, tz: str, processed: Path):
     generated = datetime.now(ZoneInfo(tz)).isoformat(timespec="seconds")
+    policy = subscription_policy(processed, day)
+    max_policy_rows_per_run = int(policy["max_policy_rows_per_run"])
+    external_allowed = str(policy["external_calls_allowed"])
     out: list[dict[str, object]] = []
     for idx, row in enumerate(load_plan_rows(processed, day), start=1):
-        if idx > MAX_POLICY_ROWS_PER_RUN:
+        if idx > max_policy_rows_per_run:
             break
         decision, mode, downstream, reason = classify(row)
         out.append({
@@ -146,7 +183,7 @@ def build(day: str, tz: str, processed: Path):
             "max_coverage_decision": decision,
             "enrichment_mode": mode,
             "downstream_use": downstream,
-            "external_calls_allowed": "YES_MAX_COVERAGE_POLICY",
+            "external_calls_allowed": external_allowed,
             "external_calls_executed": "NO",
             "policy_reason": reason,
             "auto_apply": "NO",
@@ -159,10 +196,10 @@ def build(day: str, tz: str, processed: Path):
         "target_date": day,
         "generated_at": generated,
         "policy_status": "MAX_COVERAGE_POLICY_READY" if out else "NO_ROWS_TO_COVER",
-        "api_plan_name": PLAN_NAME,
-        "plan_requests_per_day": PLAN_REQUESTS_PER_DAY,
+        "api_plan_name": policy["api_plan_name"],
+        "plan_requests_per_day": policy["plan_requests_per_day"],
         "rows_reviewed": len(out),
-        "rows_allowed": len(out),
+        "rows_allowed": len(out) if external_allowed.startswith("YES") else 0,
         "full_scoring_enrichment_rows": len(scoring),
         "coverage_probe_rows": len(coverage),
         "diagnostic_only_rows": len(diagnostic),
@@ -170,9 +207,9 @@ def build(day: str, tz: str, processed: Path):
         "estimated_call_units": sum(as_int(r.get("estimated_call_units")) for r in out),
         "decision_counts": counts(out, "max_coverage_decision"),
         "downstream_use_counts": counts(out, "downstream_use"),
-        "external_calls_allowed": "YES_MAX_COVERAGE_POLICY" if out else "NO",
+        "external_calls_allowed": external_allowed if out else "NO",
         "external_calls_executed": "NO",
-        "next_action": "Use max-coverage policy for a separate logged API executor. Enrichment can be broad; scoring remains restricted by downstream_use and normal gates.",
+        "next_action": "Use max-coverage policy through the subscription guard and logged API executor only. Enrichment can be broad; scoring remains restricted by downstream_use and normal gates.",
         "auto_apply": "NO",
         "production_change": "NO",
     }]
@@ -215,7 +252,7 @@ def markdown(day: str, rows: list[dict[str, object]], summary: dict[str, object]
     lines += [
         "",
         "## Guardrails",
-        "- This policy allows broad API coverage because the API plan is large.",
+        "- This policy follows the active API subscription guard; it does not assume an Ultra plan.",
         "- It does not execute external calls by itself.",
         "- Low-trust fixtures may be queried for diagnostics, but cannot feed picks or scoring unless a separate reviewed model supports them.",
         "- Enrichment never creates stake permission by itself.",
@@ -269,6 +306,8 @@ def run(day: str, tz: str, processed: Path) -> None:
     s = summary[0]
     print("=== VSIGMA MAX-COVERAGE API ENRICHMENT POLICY ===")
     print(f"policy_status={s['policy_status']}")
+    print(f"api_plan_name={s['api_plan_name']}")
+    print(f"plan_requests_per_day={s['plan_requests_per_day']}")
     print(f"rows_allowed={s['rows_allowed']}")
     print(f"full_scoring_enrichment_rows={s['full_scoring_enrichment_rows']}")
     print(f"coverage_probe_rows={s['coverage_probe_rows']}")
