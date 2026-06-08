@@ -1,6 +1,6 @@
 date=2026-06-05
 include_backtest=false
-requested_by=jorge-local
-reason=rerun_after_resolving_rebase_indentation_conflict
-triggered_at=2026-06-05T16:48:11+01:00
-nonce=resolve-rebase-indent-2026-06-05-164811
+requested_by=github-actions
+reason=normalize_daily_decision_chain_v2_date
+triggered_at=2026-06-08T19:51:02+01:00
+nonce=daily-v2-2026-06-05-27159675559

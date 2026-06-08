@@ -4,7 +4,7 @@
 - normalized_status: REVIEW_EMPTY_DIAGNOSTIC_BOARD
 - operator_state: EMPTY_REVIEW_REQUIRED
 - board_status: daily_board_md=OK; daily_board_csv=OK
-- mismatch_count: 1
+- mismatch_count: 0
 - promoted_rows: 0
 - queue_rows: 35
 - board_rows: 1

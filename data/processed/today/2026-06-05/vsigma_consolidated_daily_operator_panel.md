@@ -40,6 +40,36 @@
 - forecast_warning_counts: LINEUPS_INACTIVE=1; LOW_LEAGUE_RELIABILITY=1; PARTIAL_RECENT_STATS=1; API_COVERAGE_UNKNOWN=1
 - missing_data_counts: unknown=1
 
+
+## API-Enriched Review Board
+- source: data/processed/today/2026-06-05/vsigma_api_enriched_review_board.csv
+- review_rows_written: 16
+- ready_for_manual_review_rows: 16
+- blocked_rows: 0
+- review_priority_counts: P2_MANUAL_REVIEW=9; P1_MANUAL_REVIEW=7
+- canonical_board_permission_counts: NO_CANONICAL_BOARD_PERMISSION=16
+- pick_permission_counts: NO_PICK_PERMISSION=16
+- stake_permission_counts: NO_STAKE_PERMISSION=16
+- panel_note: API review board is parallel-only and cannot create picks, stake, or canonical board permission.
+
+### API Review Rows
+- P2_MANUAL_REVIEW | Las Palmas vs Malaga | status=API_ENRICHED_REVIEW_READY | score=61 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Malaga | pred_total_home_away=47.7/52.3 | 1x2=2.22/3.05/3.40 | ou2.5=2.20/1.65
+- P1_MANUAL_REVIEW | Castellón vs Almeria | status=API_ENRICHED_REVIEW_READY | score=75 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Castellón | pred_total_home_away=56.8/43.2 | 1x2=1.81/3.80/3.90 | ou2.5=1.62/2.25
+- P2_MANUAL_REVIEW | HK Kopavogur vs Afturelding | status=API_ENRICHED_REVIEW_READY | score=73 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Afturelding | pred_total_home_away=43.8/56.2 | 1x2=2.90/4.00/2.00 | ou2.5=2.40/1.50
+- P1_MANUAL_REVIEW | Njardvik vs IR Reykjavik | status=API_ENRICHED_REVIEW_READY | score=96 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Njardvik | pred_total_home_away=63.8/36.2 | 1x2=2.10/3.70/2.85 | ou2.5=1.50/2.50
+- P2_MANUAL_REVIEW | Ægir vs Leiknir R. | status=API_ENRICHED_REVIEW_READY | score=58 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Ægir | pred_total_home_away=51.2/48.8 | 1x2=2.80/3.70/2.10 | ou2.5=1.53/2.40
+- P2_MANUAL_REVIEW | Hvíti riddarinn vs Haukar | status=API_ENRICHED_REVIEW_READY | score=56 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Haukar | pred_total_home_away=39.5/60.5
+- P2_MANUAL_REVIEW | Kormákur / Hvöt vs Magni | status=API_ENRICHED_REVIEW_READY | score=70 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Kormákur / Hvöt | pred_total_home_away=65.8/34.2
+- P2_MANUAL_REVIEW | JS Kabylie vs CR Belouizdad | status=API_ENRICHED_REVIEW_READY | score=58 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=CR Belouizdad | pred_total_home_away=48.7/51.3 | 1x2=3.35/3.10/2.10 | ou2.5=2.10/1.67
+- P1_MANUAL_REVIEW | JS Saoura vs CS Constantine | status=API_ENRICHED_REVIEW_READY | score=77 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=JS Saoura | pred_total_home_away=57.5/42.5 | 1x2=1.36/3.90/9.00 | ou2.5=2.05/1.70
+- P1_MANUAL_REVIEW | MC Alger vs ASO Chlef | status=API_ENRICHED_REVIEW_READY | score=92 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=MC Alger | pred_total_home_away=62.5/37.5 | 1x2=1.48/3.55/7.00 | ou2.5=2.05/1.70
+
+### API Review Guardrails
+- This section is informational only.
+- It does not modify the canonical daily execution board.
+- Manual review remains mandatory.
+- auto_apply=NO and production_change=NO remain hardcoded.
+
 ## Official / Probable Lineups
 - data/processed/today/2026-06-05/official_lineup_sources.csv: rows=32
 - data/processed/today/2026-06-05/vsigma_probable_lineup_consensus.csv: rows=1
@@ -65,9 +95,9 @@
 - status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-05; reason=rerun_after_final_api_panel_and_push_retry; triggered_at=2026-06-05T15:30:58+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-05; reason=rerun_after_final_api_panel_and_push_retry; triggered_at=2026-06-05T15:30:58+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-05; reason=rerun_after_final_api_panel_and_push_retry; triggered_at=2026-06-05T15:30:58+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-05; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-08T19:51:02+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-05; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-08T19:51:02+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-05; reason=normalize_prelock_recheck_date; triggered_at=2026-06-08T19:51:02+01:00
 
 ## Key Files
 - data/processed/today/2026-06-05/vsigma_consolidated_daily_operator_panel.md
@@ -84,7 +114,6 @@
 - No Bet, Watch, Live Only, Learning Only and Quarantine are valid successful outcomes.
 - Source Reliability Governor remains advisory-only and cannot change weights by itself.
 - If the daily board is missing, prelock/live files cannot be used as pick permission.
-
 ## Date Coherence Guard
 - overall_status: OK
 - board_status: daily_board_md=OK; daily_board_csv=OK
@@ -115,7 +144,7 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1477
+- files_scanned: 1481
 - accepted_rows: 68
 - rejected_rows: 212
 - next_action: Review accepted rows, then feed normal scoring gates.
@@ -181,3 +210,64 @@
 - quarantine_rows: 0
 - board_rows_written: 0
 - reason: daily board already has rows
+## API Quota-Aware Enrichment Gate
+- quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
+- api_plan_name: API-Football Ultra
+- plan_requests_per_day: 75000
+- rows_reviewed: 35
+- p1_rows: 19
+- p2_rows: 16
+- p1_estimated_units: 95
+- p2_estimated_units: 70
+- auto_units_reserved: 111
+- max_auto_units_per_day: 5000
+- max_auto_units_per_run: 1500
+- quota_decision_counts: AUTO_ENRICHMENT_ALLOWED_P1=19; COVERAGE_PROBE_ALLOWED_P2=16
+- api_calls_allowed: YES_LIMITED
+- api_calls_executed: NO
+- recommended_action: Run a separate enrichment executor only for allowlisted rows; do not create picks from enrichment alone.
+## Empty Diagnostic Board State Normalizer
+- normalized_status: REVIEW_EMPTY_DIAGNOSTIC_BOARD
+- operator_state: EMPTY_REVIEW_REQUIRED
+- board_status: daily_board_md=OK; daily_board_csv=OK
+- mismatch_count: 0
+- promoted_rows: 0
+- queue_rows: 35
+- diagnostic_no_bet_rows: 0
+- next_action: Review date guard and board diagnostics before market discussion.
+## Rejected Source Block Audit
+- rows_reviewed: 0
+- correct_reject_rows: 0
+- manual_review_rows: 0
+- whitelist_candidate_rows: 0
+- audit_bucket_counts: none
+- review_priority_counts: none
+- next_action: Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.
+## Max-Coverage API Enrichment Policy
+- policy_status: MAX_COVERAGE_POLICY_READY
+- api_plan_name: API-Football Ultra
+- plan_requests_per_day: 75000
+- rows_reviewed: 35
+- rows_allowed: 35
+- full_scoring_enrichment_rows: 16
+- coverage_probe_rows: 14
+- diagnostic_only_rows: 5
+- blocked_rows: 0
+- estimated_call_units: 165
+- downstream_use_counts: SCORING_ALLOWED_WITH_NORMAL_GATES=16; COVERAGE_GATE_ONLY=14; DIAGNOSTIC_ONLY_NO_SCORING=5
+- external_calls_allowed: YES_MAX_COVERAGE_POLICY
+- external_calls_executed: NO
+- next_action: Use max-coverage policy for a separate logged API executor. Enrichment can be broad; scoring remains restricted by downstream_use and normal gates.
+## Active API Policy
+- active_api_policy: MAX_COVERAGE
+- policy_source: vsigma_max_coverage_api_enrichment_policy
+- external_calls_allowed: YES_MAX_COVERAGE_POLICY
+- external_calls_executed: NO
+- scoring_allowed_rows: 16
+- coverage_probe_rows: 14
+- diagnostic_only_rows: 5
+- blocked_rows: 0
+- legacy_cost_gate_status: LEGACY_INFORMATIONAL_ONLY:WAIT_FOR_MANUAL_APPROVAL
+- legacy_quota_gate_status: LEGACY_SECONDARY_ONLY:AUTO_ENRICHMENT_ALLOWED_LIMITED
+- legacy_allowlist_status: LEGACY_SECONDARY_ONLY:ALLOWLIST_DRY_RUN_READY
+- operator_note: MAX_COVERAGE is the active API policy. Legacy cost/quota/allowlist gates are informational and cannot override the active policy. No external calls are executed by this integration.
