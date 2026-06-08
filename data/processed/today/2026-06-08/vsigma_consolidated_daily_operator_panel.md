@@ -1,24 +1,24 @@
 # vSIGMA Consolidated Daily Operator Panel - 2026-06-08
 
 ## First Read
-- panel_status: BROKEN
-- operator_detail: action=BROKEN; final=SYSTEM_FIX_REQUIRED; risk=HIGH; health=BROKEN; board_rows=1
+- panel_status: OK_EMPTY_BY_PROMOTION_GATE
+- operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=ATTENTION; board_rows=1
 - executable_prematch: NONE
 - live_only: NONE
 - watchlist: NONE
 - no_bet: ROWS=1
-- health_status: BROKEN
+- health_status: ATTENTION
 - auto_apply: NO
 - production_change: NO
 
 ## Operator Gate
-- action_level: BROKEN
-- compact_final_decision: SYSTEM_FIX_REQUIRED
-- risk_label: HIGH
-- health_status: BROKEN
+- action_level: NONE
+- compact_final_decision: NO_OPERATOR_ACTION
+- risk_label: NONE
+- health_status: ATTENTION
 - board_rows: 1
-- panel_status: BROKEN
-- next_action: Fix workflow/input before market discussion.
+- panel_status: OK_EMPTY_BY_PROMOTION_GATE
+- next_action: Follow operator brief and panel categories; no automatic execution.
 
 ## Executable Prematch
 - none
@@ -40,11 +40,34 @@
 - forecast_warning_counts: no promoted raw candidates=1
 - missing_data_counts: none
 
+
+## API-Enriched Review Board
+- source: data/processed/today/2026-06-08/vsigma_api_enriched_review_board.csv
+- review_rows_written: 0
+- ready_for_manual_review_rows: 0
+- blocked_rows: 0
+- review_priority_counts: none
+- canonical_board_permission_counts: none
+- pick_permission_counts: none
+- stake_permission_counts: none
+- panel_note: API review board is parallel-only and cannot create picks, stake, or canonical board permission.
+
+### API Review Rows
+- none
+
+### API Review Guardrails
+- This section is informational only.
+- It does not modify the canonical daily execution board.
+- Manual review remains mandatory.
+- auto_apply=NO and production_change=NO remain hardcoded.
+
 ## Official / Probable Lineups
+- data/processed/today/2026-06-08/official_lineup_sources.csv: rows=32
 - data/processed/governance/official_lineup_sources.csv: rows=32
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Quarantine / Learning-Only / Import Status
+- data/processed/today/2026-06-08/official_lineup_sources.csv: rows=32
 - data/processed/governance/official_lineup_sources.csv: rows=32
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
@@ -55,15 +78,15 @@
 - recommended_action_counts: KEEP_ACTIVE_COLLECT_MORE_DATA=15
 
 ## Automation Health
-- system_status: BROKEN
+- system_status: ATTENTION
 - components_checked: 11
-- severity_counts: BROKEN=1; WARN=1; OK=2; INFO=7
-- status_counts: MISSING=1; OK=3; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
+- severity_counts: OK=3; WARN=1; INFO=7
+- status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-05; reason=rerun_after_final_api_panel_and_push_retry; triggered_at=2026-06-05T15:30:58+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-05; reason=rerun_after_resolving_rebase_indentation_conflict; triggered_at=2026-06-05T16:48:11+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-05; reason=rerun_after_final_api_panel_and_push_retry; triggered_at=2026-06-05T15:30:58+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-08; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-08T20:26:31+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-08; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-08T20:26:31+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-08; reason=normalize_prelock_recheck_date; triggered_at=2026-06-08T20:26:31+01:00
 
 ## Key Files
 - data/processed/today/2026-06-08/vsigma_consolidated_daily_operator_panel.md
@@ -80,20 +103,19 @@
 - No Bet, Watch, Live Only, Learning Only and Quarantine are valid successful outcomes.
 - Source Reliability Governor remains advisory-only and cannot change weights by itself.
 - If the daily board is missing, prelock/live files cannot be used as pick permission.
-
 ## Date Coherence Guard
-- overall_status: DATE_MISMATCH_BLOCK
-- board_status: daily_board_md=MISSING_CORE; daily_board_csv=MISSING_CORE
-- mismatch_count: 2
-- missing_core_count: 2
-- trigger_date_counts: 2026-06-05=2
-- next_action: Fix trigger/artifact date mismatch before using market signals.
+- overall_status: OK
+- board_status: daily_board_md=OK; daily_board_csv=OK
+- mismatch_count: 0
+- missing_core_count: 0
+- trigger_date_counts: 2026-06-08=2
+- next_action: All dated artifacts/triggers reviewed by guard are coherent.
 
 ## Upstream Board Input Diagnostic
 - overall_status: UPSTREAM_MISSING
 - first_empty_required_component: real_objective_context_gate
-- missing_required_count: 8
-- empty_required_count: 0
+- missing_required_count: 2
+- empty_required_count: 6
 - date_issue_count: 0
 - forecast_rows: 0
 - translator_rows: 0
@@ -111,7 +133,7 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1480
+- files_scanned: 1483
 - accepted_rows: 70
 - rejected_rows: 0
 - next_action: Review accepted rows, then feed normal scoring gates.
@@ -177,3 +199,64 @@
 - quarantine_rows: 0
 - board_rows_written: 1_DIAGNOSTIC_ROW
 - reason: 0 promoted raw candidates; no scoring-safe rows available
+## API Quota-Aware Enrichment Gate
+- quota_gate_status: NO_AUTO_ENRICHMENT_ALLOWED
+- api_plan_name: API-Football Pro
+- plan_requests_per_day: 7500
+- rows_reviewed: 0
+- p1_rows: 0
+- p2_rows: 0
+- p1_estimated_units: 0
+- p2_estimated_units: 0
+- auto_units_reserved: 0
+- max_auto_units_per_day: 1500
+- max_auto_units_per_run: 1500
+- quota_decision_counts: none
+- api_calls_allowed: NO
+- api_calls_executed: NO
+- recommended_action: Run a separate enrichment executor only for allowlisted rows; do not create picks from enrichment alone.
+## Empty Diagnostic Board State Normalizer
+- normalized_status: OK_EMPTY_BY_PROMOTION_GATE
+- operator_state: HEALTHY_EMPTY_NO_ACTION
+- board_status: daily_board_md=OK; daily_board_csv=OK
+- mismatch_count: 0
+- promoted_rows: 0
+- queue_rows: 0
+- diagnostic_no_bet_rows: 1
+- next_action: No picks. System is coherent and empty because zero candidates were promoted. Wait for future data or improved trusted source coverage.
+## Rejected Source Block Audit
+- rows_reviewed: 70
+- correct_reject_rows: 34
+- manual_review_rows: 36
+- whitelist_candidate_rows: 13
+- audit_bucket_counts: CORRECT_REJECT_YOUTH_RESERVE_TEAM_TOKEN=30; REVIEW_REJECTED_SOURCE_UNKNOWN_COMPETITION=23; MANUAL_REVIEW_POSSIBLE_WHITELIST=13; CORRECT_REJECT_FRIENDLY_CONTEXT_VOLATILITY=3; CORRECT_REJECT_LOW_TIER_LOW_COVERAGE=1
+- review_priority_counts: P3_CORRECT_REJECT=34; P2_REVIEW_LOW_CONFIDENCE=23; P1_REVIEW_CANDIDATE=13
+- next_action: Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.
+## Max-Coverage API Enrichment Policy
+- policy_status: NO_ROWS_TO_COVER
+- api_plan_name: API-Football Pro
+- plan_requests_per_day: 7500
+- rows_reviewed: 0
+- rows_allowed: 0
+- full_scoring_enrichment_rows: 0
+- coverage_probe_rows: 0
+- diagnostic_only_rows: 0
+- blocked_rows: 0
+- estimated_call_units: 0
+- downstream_use_counts: none
+- external_calls_allowed: NO
+- external_calls_executed: NO
+- next_action: Use max-coverage policy through the subscription guard and logged API executor only. Enrichment can be broad; scoring remains restricted by downstream_use and normal gates.
+## Active API Policy
+- active_api_policy: MAX_COVERAGE
+- policy_source: vsigma_max_coverage_api_enrichment_policy
+- external_calls_allowed: NO
+- external_calls_executed: NO
+- scoring_allowed_rows: 0
+- coverage_probe_rows: 0
+- diagnostic_only_rows: 0
+- blocked_rows: 0
+- legacy_cost_gate_status: LEGACY_INFORMATIONAL_ONLY:NO_ENRICHMENT_NEEDED
+- legacy_quota_gate_status: LEGACY_SECONDARY_ONLY:NO_AUTO_ENRICHMENT_ALLOWED
+- legacy_allowlist_status: LEGACY_SECONDARY_ONLY:ALLOWLIST_DRY_RUN_READY
+- operator_note: MAX_COVERAGE is the active API policy. Legacy cost/quota/allowlist gates are informational and cannot override the active policy. No external calls are executed by this integration.
