@@ -1,29 +1,21 @@
 # vSIGMA Healthcheck Report - 2026-06-08
 
 - Global health status: WARNING
-- Generated at: 2026-06-08T13:47:36.218322+01:00
+- Generated at: 2026-06-08T13:51:43.596400+01:00
 - Mode: full
 - HEALTHY: 24
-- WARNING: 12
+- WARNING: 4
 - NEEDS_ATTENTION: 0
 - BROKEN: 0
-- NOT_RUN_YET: 1
-- First recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre`
+- NOT_RUN_YET: 9
+- First recovery command: `.\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-06-08 --stage PRE`
 
 ## Critical Warnings
 | check_name | status | detail | recovery_command |
 | --- | --- | --- | --- |
-| official_baseline_output | WARNING | only stale rows found for 2026-06-07 | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre |
-| candidate_output:CANDIDATE_V2 | WARNING | only stale rows found for 2026-06-07 | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre |
-| candidate_output:CANDIDATE_V7_SHORTLIST | WARNING | only stale rows found for 2026-06-07 | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre |
-| candidate_output:CANDIDATE_V4 | WARNING | only stale rows found for 2026-06-07 | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre |
-| candidate_output:CANDIDATE_V5 | WARNING | only stale rows found for 2026-06-07 | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre |
-| candidate_output:CANDIDATE_V6 | WARNING | only stale rows found for 2026-06-07 | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre |
-| daily_master_report | WARNING | daily master report missing | .\.venv\Scripts\python.exe scripts\build_daily_competition_master_report.py --date 2026-06-08 |
 | ledger_target_date_rows | WARNING | ledger has no rows for target date | .\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-06-08 --stage PRE |
-| freshness_report | WARNING | validation report contains warning rows | .\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-06-08 |
-| prelock_freshness | WARNING | stale prelock rows found for 2026-06-07 | .\.venv\Scripts\python.exe scripts\run_today_prelock_orchestrator.py --date 2026-06-08 --timezone Atlantic/Canary --window-minutes 90 |
-| post_results_status | WARNING | post-results report missing while official picks exist | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode post |
+| freshness_report | WARNING | validation report missing | .\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-06-08 |
+| candidate_isolation_report | WARNING | validation report missing | .\.venv\Scripts\python.exe scripts\validate_candidate_isolation.py --date 2026-06-08 |
 | recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode status |
 
 ## All Checks
@@ -46,21 +38,21 @@
 | required_script:scripts/unregister_vsigma_windows_tasks.ps1 | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/scripts/unregister_vsigma_windows_tasks.ps1 |
 | api_config_available | HEALTHY | API configuration detected without exposing secrets | Set API_FOOTBALL_KEY, APISPORTS_KEY, RAPIDAPI_KEY, or X_RAPIDAPI_KEY in .env/environment. | /home/runner/work/vsigma/vsigma/.env |
 | today_snapshot_folder | HEALTHY | today snapshot folder present | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-08 |
-| official_baseline_output | WARNING | only stale rows found for 2026-06-07 | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_competition_top.csv |
-| candidate_output:CANDIDATE_V2 | WARNING | only stale rows found for 2026-06-07 | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v2_competition_top.csv |
-| candidate_output:CANDIDATE_V7 | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v7_competition_top.csv |
-| candidate_output:CANDIDATE_V7_SHORTLIST | WARNING | only stale rows found for 2026-06-07 | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v7_competition_shortlist.csv |
-| candidate_output:CANDIDATE_V4 | WARNING | only stale rows found for 2026-06-07 | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v4_competition_top.csv |
-| candidate_output:CANDIDATE_V5 | WARNING | only stale rows found for 2026-06-07 | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v5_competition_top.csv |
-| candidate_output:CANDIDATE_V6 | WARNING | only stale rows found for 2026-06-07 | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v6_competition_top.csv |
-| daily_master_report | WARNING | daily master report missing | .\.venv\Scripts\python.exe scripts\build_daily_competition_master_report.py --date 2026-06-08 | /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-08/daily_competition_master_report.md |
+| official_baseline_output | NOT_RUN_YET | output not available yet | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_competition_top.csv |
+| candidate_output:CANDIDATE_V2 | NOT_RUN_YET | output not available yet | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v2_competition_top.csv |
+| candidate_output:CANDIDATE_V7 | NOT_RUN_YET | output not available yet | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v7_competition_top.csv |
+| candidate_output:CANDIDATE_V7_SHORTLIST | NOT_RUN_YET | output not available yet | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v7_competition_shortlist.csv |
+| candidate_output:CANDIDATE_V4 | NOT_RUN_YET | output not available yet | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v4_competition_top.csv |
+| candidate_output:CANDIDATE_V5 | NOT_RUN_YET | output not available yet | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v5_competition_top.csv |
+| candidate_output:CANDIDATE_V6 | NOT_RUN_YET | output not available yet | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v6_competition_top.csv |
+| daily_master_report | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-08/daily_competition_master_report.md |
 | immutable_ledger_exists | HEALTHY | ledger present with 174 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | ledger_target_date_rows | WARNING | ledger has no rows for target date | .\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-06-08 --stage PRE | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | ledger_duplicate_ids | HEALTHY | no duplicate ledger_id values for target date |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
-| freshness_report | WARNING | validation report contains warning rows | .\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-06-08 | /home/runner/work/vsigma/vsigma/data/processed/vsigma_daily_freshness_report.csv |
-| candidate_isolation_report | HEALTHY | validation report present without ERROR |  | /home/runner/work/vsigma/vsigma/data/processed/vsigma_candidate_isolation_report.csv |
-| prelock_freshness | WARNING | stale prelock rows found for 2026-06-07 | .\.venv\Scripts\python.exe scripts\run_today_prelock_orchestrator.py --date 2026-06-08 --timezone Atlantic/Canary --window-minutes 90 | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_prelock_comparison.csv |
-| post_results_status | WARNING | post-results report missing while official picks exist | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode post | /home/runner/work/vsigma/vsigma/data/processed/today_post_results_report.csv |
+| freshness_report | WARNING | validation report missing | .\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-06-08 | /home/runner/work/vsigma/vsigma/data/processed/vsigma_daily_freshness_report.csv |
+| candidate_isolation_report | WARNING | validation report missing | .\.venv\Scripts\python.exe scripts\validate_candidate_isolation.py --date 2026-06-08 | /home/runner/work/vsigma/vsigma/data/processed/vsigma_candidate_isolation_report.csv |
+| prelock_freshness | HEALTHY | prelock output present and empty for NO_BET/unavailable state |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-08/vsigma_today_prelock_comparison.csv |
+| post_results_status | NOT_RUN_YET | post not required yet or NO_BET official output |  | /home/runner/work/vsigma/vsigma/data/processed/today_post_results_report.csv |
 | supervisor_latest_report | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/data/processed/daily_supervisor_latest.md |
 | windows_task_registration | NOT_RUN_YET | task registration check unavailable outside Windows | powershell.exe -NoProfile -ExecutionPolicy Bypass -File /home/runner/work/vsigma/vsigma/scripts/register_vsigma_windows_tasks.ps1 |  |
 | recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-08 --timezone Atlantic/Canary --mode status | /home/runner/work/vsigma/vsigma/automation_logs/supervisor |
