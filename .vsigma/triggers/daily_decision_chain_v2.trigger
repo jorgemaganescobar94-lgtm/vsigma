@@ -1,6 +1,6 @@
 date=2026-06-05
 include_backtest=false
 requested_by=jorge-local
-reason=rerun_after_python_trigger_normalizer
-triggered_at=2026-06-05T15:22:37+01:00
-nonce=python-normalizer-daily-2026-06-05-152237
+reason=rerun_after_final_api_panel_and_push_retry
+triggered_at=2026-06-05T15:30:58+01:00
+nonce=final-api-panel-push-retry-daily-2026-06-05-153058

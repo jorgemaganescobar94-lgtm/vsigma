@@ -259,18 +259,6 @@ jobs:
           test -s "data/processed/today/${VSIGMA_DATE}/vsigma_api_enriched_review_board.md"
           test -s "data/processed/today/${VSIGMA_DATE}/vsigma_api_enriched_review_board.csv"
 
-      - name: Normalize API-enriched text outputs
-        shell: bash
-        run: python scripts/normalize_api_enriched_text_outputs.py --date "$VSIGMA_DATE"
-
-      - name: Integrate API-enriched review board into panel
-        shell: bash
-        run: python scripts/integrate_api_enriched_review_board_into_panel.py --date "$VSIGMA_DATE"
-
-      - name: Assert API-enriched review board panel section
-        shell: bash
-        run: grep -q "## API-Enriched Review Board" "data/processed/today/${VSIGMA_DATE}/vsigma_consolidated_daily_operator_panel.md"
-
       - name: Build official pick ledger
         shell: bash
         run: python scripts/build_official_pick_ledger.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
@@ -278,6 +266,18 @@ jobs:
       - name: Postflight self-heal router
         shell: bash
         run: python scripts/route_daily_chain_missing_self_heal.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Final normalize API-enriched text outputs
+        shell: bash
+        run: python scripts/normalize_api_enriched_text_outputs.py --date "$VSIGMA_DATE"
+
+      - name: Final integrate API-enriched review board into panel
+        shell: bash
+        run: python scripts/integrate_api_enriched_review_board_into_panel.py --date "$VSIGMA_DATE"
+
+      - name: Assert final API-enriched review board panel section
+        shell: bash
+        run: grep -q "## API-Enriched Review Board" "data/processed/today/${VSIGMA_DATE}/vsigma_consolidated_daily_operator_panel.md"
 
       - name: Optional backtest
         if: ${{ env.INCLUDE_BACKTEST == 'true' }}
@@ -309,5 +309,28 @@ jobs:
             exit 1
           fi
 
+          if git diff --cached --quiet; then
+            echo "No vSIGMA daily decision chain changes to commit."
+            exit 0
+          fi
+
           git commit -m "vSIGMA daily decision chain v2 ${VSIGMA_DATE} [skip ci]"
-          git push origin HEAD:main
+
+          for attempt in 1 2 3; do
+            echo "Push attempt ${attempt}/3"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Push failed; rebasing against origin/main before retry..."
+            git fetch origin main
+            if ! git rebase origin/main; then
+              echo "ERROR: rebase failed during push retry."
+              git rebase --abort || true
+              exit 1
+            fi
+            sleep 2
+          done
+
+          echo "ERROR: failed to push daily decision outputs after 3 attempts."
+          exit 1
