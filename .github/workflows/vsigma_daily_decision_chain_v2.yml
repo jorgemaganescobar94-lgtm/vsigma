@@ -290,6 +290,13 @@ jobs:
           git config user.name "vSIGMA GitHub Actions Bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          python scripts/normalize_api_enriched_text_outputs.py --date "$VSIGMA_DATE" || true
+          python scripts/integrate_api_enriched_review_board_into_panel.py --date "$VSIGMA_DATE" || true
+          grep -q "## API-Enriched Review Board" "data/processed/today/${VSIGMA_DATE}/vsigma_consolidated_daily_operator_panel.md" || {
+            echo "ERROR: final API-Enriched Review Board section missing before commit"
+            exit 1
+          }
+
           git add data/processed/today/${VSIGMA_DATE}/vsigma_* data/processed/governance/vsigma_* 2>/dev/null || true
           git add .vsigma/triggers/daily_decision_chain_v2.trigger .vsigma/triggers/daily_chain_self_heal.trigger .vsigma/triggers/prelock_official_lineup_recheck.trigger 2>/dev/null || true
 
