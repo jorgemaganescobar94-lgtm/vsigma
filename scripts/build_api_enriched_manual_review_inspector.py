@@ -12,7 +12,8 @@ PROCESSED = Path("data/processed")
 ROW_FIELDS = [
     "target_date", "generated_at", "review_rank", "fixture_id", "league", "country",
     "home_team", "away_team", "fixture_datetime_utc", "review_status", "review_priority",
-    "score", "inspector_bucket", "risk_label", "inspector_reason", "suggested_next_action",
+    "candidate_signal_score", "candidate_signal_band", "allowed_downstream_use",
+    "inspector_bucket", "risk_label", "inspector_reason", "suggested_next_action",
     "canonical_board_permission", "pick_permission", "stake_permission",
     "auto_apply", "production_change",
 ]
@@ -74,10 +75,29 @@ def row_text_blob(row: dict[str, str]) -> str:
     ).upper()
 
 
+def candidate_score(row: dict[str, str]) -> int:
+    return as_int(
+        row.get("candidate_signal_score")
+        or row.get("score")
+        or row.get("review_score")
+        or row.get("composite_score")
+    )
+
+
+def candidate_band(row: dict[str, str]) -> str:
+    return norm(row.get("candidate_signal_band") or row.get("review_signal_band") or row.get("signal_band"))
+
+
+def downstream_use(row: dict[str, str]) -> str:
+    return norm(row.get("allowed_downstream_use") or row.get("downstream_use"))
+
+
 def classify(row: dict[str, str]) -> tuple[str, str, str]:
     text = row_text_blob(row)
     priority = up(row.get("review_priority"))
-    score = as_int(row.get("score") or row.get("review_score") or row.get("composite_score"))
+    score = candidate_score(row)
+    band = up(candidate_band(row))
+    downstream = up(downstream_use(row))
 
     if any(token in text for token in [
         "LOW_TRUST", "REJECTED_SOURCE_BLOCK", "UNKNOWN_COMPETITION",
@@ -90,8 +110,7 @@ def classify(row: dict[str, str]) -> tuple[str, str, str]:
         )
 
     if any(token in text for token in [
-        "INCOMPLETE", "MISSING", "BAD OR INCOMPLETE LINEUPS",
-        "INSUFFICIENT_CONTEXT", "NO_CLEAR_STAT_MARKET",
+        "BAD OR INCOMPLETE LINEUPS", "INSUFFICIENT_CONTEXT", "NO_CLEAR_STAT_MARKET",
     ]):
         return (
             "BLOCKED_INSUFFICIENT_CONTEXT",
@@ -99,11 +118,18 @@ def classify(row: dict[str, str]) -> tuple[str, str, str]:
             "Context/lineup/stat information is incomplete. Keep blocked.",
         )
 
-    if priority.startswith("P1") and score >= 85:
+    if "SCORING_REVIEW_ONLY" not in downstream:
+        return (
+            "BLOCKED_INSUFFICIENT_CONTEXT",
+            "HIGH",
+            "API row is not explicitly marked as scoring-review-only downstream use. Keep blocked.",
+        )
+
+    if priority.startswith("P1") and (score >= 85 or "HIGH_SIGNAL" in band):
         return (
             "P1_REVIEW_STRONG_SIGNAL",
             "MEDIUM",
-            "Strong API-enriched review signal. Human review may inspect first.",
+            "Strong API-enriched review signal. Human review may inspect first, but no promotion is allowed.",
         )
 
     if (priority.startswith("P1") and score >= 70) or (priority.startswith("P2") and score >= 80):
@@ -113,11 +139,11 @@ def classify(row: dict[str, str]) -> tuple[str, str, str]:
             "Decent API-enriched review signal, but not strong enough for any promotion.",
         )
 
-    if score >= 55:
+    if score >= 55 or "MEDIUM_SIGNAL" in band:
         return (
             "P3_REVIEW_LOW_SIGNAL",
             "LOW",
-            "Low review signal. Keep as low-priority manual inspection only.",
+            "Low/medium review signal. Keep as low-priority manual inspection only.",
         )
 
     return (
@@ -155,10 +181,12 @@ def build(day: str, tz: str, processed: Path):
             "country": norm(row.get("country")),
             "home_team": norm(row.get("home_team")),
             "away_team": norm(row.get("away_team")),
-            "fixture_datetime_utc": norm(row.get("fixture_datetime_utc")),
-            "review_status": norm(row.get("review_status") or row.get("status") or "API_ENRICHED_REVIEW_READY"),
+            "fixture_datetime_utc": norm(row.get("fixture_datetime_utc") or row.get("fixture_date_utc")),
+            "review_status": norm(row.get("review_status") or row.get("review_board_status") or row.get("status") or "API_ENRICHED_REVIEW_READY"),
             "review_priority": norm(row.get("review_priority") or row.get("review_bucket")),
-            "score": as_int(row.get("score") or row.get("review_score") or row.get("composite_score")),
+            "candidate_signal_score": candidate_score(row),
+            "candidate_signal_band": candidate_band(row),
+            "allowed_downstream_use": downstream_use(row),
             "inspector_bucket": bucket,
             "risk_label": risk,
             "inspector_reason": reason,
@@ -208,8 +236,8 @@ def markdown(day: str, rows: list[dict[str, object]], summary: dict[str, object]
     for row in rows[:120]:
         lines.append(
             f"- #{row['review_rank']} | {row['home_team']} vs {row['away_team']} | "
-            f"priority={row['review_priority']} | score={row['score']} | "
-            f"bucket={row['inspector_bucket']} | risk={row['risk_label']} | "
+            f"priority={row['review_priority']} | signal_score={row['candidate_signal_score']} | "
+            f"signal_band={row['candidate_signal_band']} | bucket={row['inspector_bucket']} | risk={row['risk_label']} | "
             f"pick={row['pick_permission']} | stake={row['stake_permission']} | "
             f"reason={row['inspector_reason']}"
         )
