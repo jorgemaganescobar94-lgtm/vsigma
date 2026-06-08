@@ -5,12 +5,12 @@
 - missing_inputs: none
 - stale_inputs: none
 - rows_reviewed: 1
-- adjusted_status_counts: WAIT_PRELOCK=1
+- adjusted_status_counts: INPUT_ROW_MISSING_REVIEW=1
 - auto_apply: NO
 - production_change: NO
 
 ## Final Adjusted Picks
-- #1 | WAIT_PRELOCK | Las Palmas vs Malaga | market=OVER_1_5 | stake=NO_PREMATCH_STAKE | reason=objective/availability gate requires prelock or lineup confirmation
+- #1 | INPUT_ROW_MISSING_REVIEW | Las Palmas vs Malaga | market=OVER_1_5 | stake=NO_STAKE | reason=dated real objective context gate has no matching fixture row
 
 ## Guardrails
 - This report refuses governance and root-level fallbacks.

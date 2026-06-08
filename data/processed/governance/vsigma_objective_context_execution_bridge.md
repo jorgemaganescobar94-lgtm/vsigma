@@ -1,7 +1,7 @@
 # vSIGMA Objective Context Execution Bridge - 2026-06-05
 
 ## Summary
-- rows_bridged: 1
+- rows_bridged: 0
 - source: vsigma_real_objective_context_gate.csv
 - output: vsigma_today_execution_shortlist.csv only if no real shortlist exists
 - bridge_mode: PROXY_BRIDGE_WRITTEN
@@ -9,7 +9,7 @@
 - production_change: NO
 
 ## Bridge Rows
-- #1 | Las Palmas vs Malaga | market=OVER_1_5 | recommendation=BET | guard=BASE_PROXY_FROM_OBJECTIVE_GATE_TEMPO
+- none. Either real shortlist is present or real objective context gate has no bridgeable rows.
 
 ## Guardrails
 - This bridge creates diagnostic/proxy shortlist rows only; it does not create stake permission.

@@ -5,7 +5,7 @@
 - review_rows_written: 2
 - ready_for_manual_review_rows: 2
 - blocked_rows: 0
-- review_priority_counts: P1_MANUAL_REVIEW=1; P2_MANUAL_REVIEW=1
+- review_priority_counts: P2_MANUAL_REVIEW=1; P1_MANUAL_REVIEW=1
 - review_board_status_counts: API_ENRICHED_REVIEW_READY=2
 - canonical_board_permission_counts: NO_CANONICAL_BOARD_PERMISSION=2
 - pick_permission_counts: NO_PICK_PERMISSION=2
@@ -14,8 +14,8 @@
 - production_change: NO
 
 ## Review Rows
-- P1_MANUAL_REVIEW | Castellón vs Almeria | status=API_ENRICHED_REVIEW_READY | score=75 | summary=prediction_winner=Castellón | pred_total_home_away=56.8/43.2 | 1x2=1.81/3.75/4.00 | ou2.5=1.62/2.25 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- P2_MANUAL_REVIEW | HK Kopavogur vs Afturelding | status=API_ENRICHED_REVIEW_READY | score=73 | summary=prediction_winner=Afturelding | pred_total_home_away=43.8/56.2 | 1x2=2.90/4.00/2.00 | ou2.5=2.40/1.50 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- P2_MANUAL_REVIEW | Las Palmas vs Malaga | status=API_ENRICHED_REVIEW_READY | score=61 | summary=prediction_winner=Malaga | pred_total_home_away=47.7/52.3 | 1x2=2.22/3.05/3.40 | ou2.5=2.20/1.65 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- P1_MANUAL_REVIEW | Binga vs US Bougouba | status=API_ENRICHED_REVIEW_READY | score=82 | summary=prediction_winner=Binga | pred_total_home_away=59.2/41.0 | 1x2=1.70/2.88/5.00 | ou2.5=11.00/1.04 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 
 ## Guardrails
 - This review board is separate from the canonical daily execution board.

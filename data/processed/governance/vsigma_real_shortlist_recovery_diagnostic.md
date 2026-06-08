@@ -6,7 +6,7 @@
 - root_scored_same_day_rows: 0
 - real_shortlist_rows: 1
 - real_bet_rows: 0
-- proxy_rows: 3
+- proxy_rows: 2
 - next_action: Use normal gates; do not rely on proxy bridge unless real rows fail downstream.
 - auto_apply: NO
 - production_change: NO
@@ -17,8 +17,8 @@
 - today_execution_shortlist | status=PROXY_ONLY | same_day=1 | real=0 | proxy=1 | bet_like=1 | path=data/processed/today/2026-06-05/vsigma_today_execution_shortlist.csv | detail=same-day rows exist but are proxy/diagnostic only
 - today_execution_bets_only | status=MISSING | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-05/vsigma_today_execution_bets_only.csv | detail=file is not present
 - context_adjusted_final_picks | status=HAS_REAL_ROWS | same_day=1 | real=1 | proxy=0 | bet_like=1 | path=data/processed/today/2026-06-05/vsigma_context_adjusted_final_picks.csv | detail=file has same-day rows
-- real_objective_context_gate | status=HAS_ROWS | same_day=1 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-05/vsigma_real_objective_context_gate.csv | detail=file has same-day rows
-- objective_context_execution_bridge | status=HAS_ROWS | same_day=1 | real=0 | proxy=1 | bet_like=1 | path=data/processed/today/2026-06-05/vsigma_objective_context_execution_bridge.csv | detail=file has same-day rows
+- real_objective_context_gate | status=EMPTY | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-05/vsigma_real_objective_context_gate.csv | detail=file exists but has no data rows
+- objective_context_execution_bridge | status=EMPTY | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-05/vsigma_objective_context_execution_bridge.csv | detail=file exists but has no data rows
 - candidate_provenance_ledger | status=HAS_ROWS | same_day=1 | real=0 | proxy=1 | bet_like=0 | path=data/processed/today/2026-06-05/vsigma_candidate_provenance_ledger.csv | detail=file has same-day rows
 
 ## Guardrails

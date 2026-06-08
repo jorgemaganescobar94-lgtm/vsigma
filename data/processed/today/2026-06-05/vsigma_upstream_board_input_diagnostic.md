@@ -2,19 +2,19 @@
 
 ## Summary
 - overall_status: UPSTREAM_MISSING
-- first_empty_required_component: context_matrix
+- first_empty_required_component: real_objective_context_gate
 - missing_required_count: 2
-- empty_required_count: 0
+- empty_required_count: 1
 - date_issue_count: 0
 - forecast_rows: 1
 - translator_rows: 1
 - board_rows: 1
-- next_action: Build missing required upstream component first: context_matrix.
+- next_action: Build missing required upstream component first: real_objective_context_gate.
 - auto_apply: NO
 - production_change: NO
 
 ## Component Rows
-- real_objective_context_gate | status=OK | rows=1 | date=OK | path=data/processed/today/2026-06-05/vsigma_real_objective_context_gate.csv | detail=file has rows and passed basic diagnostic checks
+- real_objective_context_gate | status=EMPTY_REQUIRED | rows=0 | date=NO_ROWS | path=data/processed/today/2026-06-05/vsigma_real_objective_context_gate.csv | detail=required upstream file exists but has zero rows
 - objective_availability_gate | status=OK | rows=1 | date=OK | path=data/processed/today/2026-06-05/vsigma_objective_availability_gate.csv | detail=file has rows and passed basic diagnostic checks
 - context_adjusted_final_picks | status=OK | rows=1 | date=OK | path=data/processed/today/2026-06-05/vsigma_context_adjusted_final_picks.csv | detail=file has rows and passed basic diagnostic checks
 - context_matrix | status=MISSING_REQUIRED | rows=0 | date=MISSING | path=data/processed/today/2026-06-05/vsigma_context_matrix.csv | detail=required upstream file is missing
