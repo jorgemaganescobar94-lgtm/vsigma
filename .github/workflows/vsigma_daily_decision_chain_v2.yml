@@ -247,6 +247,18 @@ EOF
           test -s "data/processed/today/${VSIGMA_DATE}/vsigma_api_enriched_review_board.md"
           test -s "data/processed/today/${VSIGMA_DATE}/vsigma_api_enriched_review_board.csv"
 
+      - name: Normalize API-enriched text outputs
+        shell: bash
+        run: python scripts/normalize_api_enriched_text_outputs.py --date "$VSIGMA_DATE"
+
+      - name: Integrate API-enriched review board into panel
+        shell: bash
+        run: python scripts/integrate_api_enriched_review_board_into_panel.py --date "$VSIGMA_DATE"
+
+      - name: Assert API-enriched review board panel section
+        shell: bash
+        run: grep -q "## API-Enriched Review Board" "data/processed/today/${VSIGMA_DATE}/vsigma_consolidated_daily_operator_panel.md"
+
       - name: Build official pick ledger
         shell: bash
         run: python scripts/build_official_pick_ledger.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
