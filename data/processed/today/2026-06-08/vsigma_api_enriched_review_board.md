@@ -14,7 +14,7 @@
 - production_change: NO
 
 ## Review Rows
-- P1_MANUAL_REVIEW | Almeria vs Castellón | status=API_ENRICHED_REVIEW_READY | score=79 | summary=prediction_winner=Castellón | pred_total_home_away=38.5/61.5 | 1x2=2.24/3.45/3.00 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- P1_MANUAL_REVIEW | Almeria vs Castellón | status=API_ENRICHED_REVIEW_READY | score=89 | summary=prediction_winner=Castellón | pred_total_home_away=38.5/61.5 | 1x2=2.30/3.55/2.84 | ou2.5=1.65/2.20 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - P2_MANUAL_REVIEW | Dainava vs Garliava | status=API_ENRICHED_REVIEW_READY | score=67 | summary=prediction_winner=Dainava | pred_total_home_away=54.0/46.0 | 1x2=2.05/3.45/2.95 | ou2.5=1.60/2.05 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - P1_MANUAL_REVIEW | FUS Rabat vs Difaa EL Jadida | status=API_ENRICHED_REVIEW_READY | score=100 | summary=prediction_winner=FUS Rabat | pred_total_home_away=65.7/34.3 | 1x2=1.77/3.25/4.40 | ou2.5=2.20/1.62 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - P2_MANUAL_REVIEW | Olympique Dcheïra vs Hassania Agadir | status=API_ENRICHED_REVIEW_READY | score=55 | summary=prediction_winner=Olympique Dcheïra | pred_total_home_away=49.8/50.2 | 1x2=3.20/2.85/2.33 | ou2.5=2.35/1.55 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION

@@ -11,15 +11,15 @@
 - scoring_allowed_rows: 35
 - coverage_probe_rows: 4
 - diagnostic_only_rows: 5
-- endpoint_success_counts: fixture_detail=44; predictions=35; events=31; odds=23; lineups=11; statistics=6
-- endpoint_failure_counts: statistics=33; lineups=24; odds=12; events=8
+- endpoint_success_counts: fixture_detail=44; predictions=35; events=32; odds=23; lineups=12; statistics=7
+- endpoint_failure_counts: statistics=32; lineups=23; odds=12; events=7
 - external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: YES_LOGGED_EXECUTION
 - auto_apply: NO
 - production_change: NO
 
 ## Executor Rows
-- Almeria vs Castellón | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Almeria vs Castellón | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;statistics;events;lineups;predictions;odds | failed=none | scoring_after=YES_PENDING_NORMAL_GATES
 - Dainava vs Garliava | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
 - FUS Rabat vs Difaa EL Jadida | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;statistics;events;lineups;predictions;odds | failed=none | scoring_after=YES_PENDING_NORMAL_GATES
 - Olympique Dcheïra vs Hassania Agadir | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;lineups;predictions;odds | failed=statistics | scoring_after=YES_PENDING_NORMAL_GATES

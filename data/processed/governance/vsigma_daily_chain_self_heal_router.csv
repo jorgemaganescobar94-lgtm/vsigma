@@ -1,2 +1,2 @@
 target_date,generated_at,self_heal_status,daily_board_exists,daily_board_rows,current_trigger_date,trigger_action,reason,next_action,auto_apply,production_change
-2026-06-09,2026-06-09T18:14:55+01:00,DAILY_CHAIN_TRIGGER_WRITTEN,false,0,2026-06-08,UPDATED_DAILY_CHAIN_TRIGGER,daily board missing/empty and trigger did not target current date,Daily chain should run through trigger bridge and regenerate board/panel.,NO,NO
+2026-06-08,2026-06-09T21:16:36+01:00,OK_BOARD_PRESENT,true,1,2026-06-08,NO_TRIGGER_CHANGE,daily board exists with rows,Use consolidated panel/operator brief normally.,NO,NO

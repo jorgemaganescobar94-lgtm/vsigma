@@ -12,7 +12,7 @@
 - production_change: NO
 
 ## Inspector Rows
-- #1 | Almeria vs Castellón | priority=P1_MANUAL_REVIEW | signal_score=79 | signal_band=HIGH_SIGNAL_REVIEW | bucket=P1_REVIEW_STRONG_SIGNAL | risk=MEDIUM | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | reason=Strong API-enriched review signal. Human review may inspect first, but no promotion is allowed.
+- #1 | Almeria vs Castellón | priority=P1_MANUAL_REVIEW | signal_score=89 | signal_band=HIGH_SIGNAL_REVIEW | bucket=P1_REVIEW_STRONG_SIGNAL | risk=MEDIUM | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | reason=Strong API-enriched review signal. Human review may inspect first, but no promotion is allowed.
 - #2 | Dainava vs Garliava | priority=P2_MANUAL_REVIEW | signal_score=67 | signal_band=MEDIUM_SIGNAL_REVIEW | bucket=P3_REVIEW_LOW_SIGNAL | risk=LOW | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | reason=Low/medium review signal. Keep as low-priority manual inspection only.
 - #3 | FUS Rabat vs Difaa EL Jadida | priority=P1_MANUAL_REVIEW | signal_score=100 | signal_band=HIGH_SIGNAL_REVIEW | bucket=P1_REVIEW_STRONG_SIGNAL | risk=MEDIUM | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | reason=Strong API-enriched review signal. Human review may inspect first, but no promotion is allowed.
 - #4 | Olympique Dcheïra vs Hassania Agadir | priority=P2_MANUAL_REVIEW | signal_score=55 | signal_band=MEDIUM_SIGNAL_REVIEW | bucket=P3_REVIEW_LOW_SIGNAL | risk=LOW | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | reason=Low/medium review signal. Keep as low-priority manual inspection only.
