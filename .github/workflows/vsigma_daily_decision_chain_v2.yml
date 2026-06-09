@@ -277,6 +277,10 @@ jobs:
         shell: bash
         run: python scripts/build_api_signal_calibration_summary.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Build API calibration rule candidates
+        shell: bash
+        run: python scripts/build_api_calibration_rule_candidates.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Assert API-enriched review board output
         shell: bash
         run: |
