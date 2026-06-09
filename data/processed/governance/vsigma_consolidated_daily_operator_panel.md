@@ -95,9 +95,9 @@
 - status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-08; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-09T21:42:48+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-08; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-09T21:42:48+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-08; reason=normalize_prelock_recheck_date; triggered_at=2026-06-09T21:42:48+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-08; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-09T21:50:47+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-08; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-09T21:50:47+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-08; reason=normalize_prelock_recheck_date; triggered_at=2026-06-09T21:50:47+01:00
 
 ## Key Files
 - data/processed/today/2026-06-08/vsigma_consolidated_daily_operator_panel.md
@@ -326,3 +326,15 @@
 - sample_warning_counts: INSUFFICIENT_SAMPLE_UNDER_20=70; LOW_SAMPLE_UNDER_50=7
 - calibration_status_counts: CALIBRATION_OBSERVE_ONLY=70; CALIBRATION_WEAK_OR_NEGATIVE=2; CALIBRATION_MEDIUM_OBSERVED_EDGE=2; CALIBRATION_NEUTRAL=1; CALIBRATION_STRONG_PROTECTED_MARKET=1; CALIBRATION_STRONG_OBSERVED_EDGE=1
 - next_action: Use this summary to design future promotion rules only after enough sample size exists. It cannot create picks or stake.
+## API Calibration Rule Candidates
+- rows_reviewed: 77
+- candidate_rows: 4
+- block_rows: 3
+- observe_rows: 70
+- rule_bucket_counts: RULE_OBSERVE_ONLY_INSUFFICIENT_SAMPLE=70; RULE_BLOCK_NEGATIVE_OR_WEAK_MARKET=3; RULE_CANDIDATE_PROTECTED_MARKET_EARLY_SAMPLE=2; RULE_CANDIDATE_TOTAL_MARKET_EARLY_SAMPLE=2
+- rule_decision_counts: COLLECT_MORE_SAMPLE=70; WATCH_ONLY_COLLECT_TO_50_SAMPLE=4; BLOCK_ML_PROMOTION=1; BLOCK_BTTS_YES_PROMOTION=1; BLOCK_OVER_2_5_PROMOTION=1
+- future_rule_candidate_counts: NO_SAMPLE_TOO_SMALL=70; YES_REVIEW_ONLY_AFTER_SAMPLE_GROWS=4; NO_BLOCKED_MARKET=3
+- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=77
+- pick_permission_counts: NO_PICK_PERMISSION=77
+- stake_permission_counts: NO_STAKE_PERMISSION=77
+- next_action: Review candidate rules only after sample grows. This board cannot activate rules, picks, or stake.
