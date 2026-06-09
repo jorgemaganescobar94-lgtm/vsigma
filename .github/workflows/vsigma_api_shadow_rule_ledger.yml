@@ -55,13 +55,23 @@ jobs:
           python -m py_compile scripts/build_api_shadow_rule_outcome_ledger.py
           python scripts/build_api_shadow_rule_outcome_ledger.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Build API shadow rule out-of-sample tracker
+        shell: bash
+        run: |
+          python -m py_compile scripts/build_api_shadow_rule_oos_tracker.py
+          python scripts/build_api_shadow_rule_oos_tracker.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Assert shadow outputs
         shell: bash
         run: |
           test -s "data/processed/today/${VSIGMA_DATE}/vsigma_api_shadow_rule_outcome_ledger.md"
           test -s "data/processed/today/${VSIGMA_DATE}/vsigma_api_shadow_rule_outcome_ledger.csv"
+          test -s "data/processed/today/${VSIGMA_DATE}/vsigma_api_shadow_rule_oos_tracker.md"
+          test -s "data/processed/today/${VSIGMA_DATE}/vsigma_api_shadow_rule_oos_tracker.csv"
           grep -q "NO_PICK_PERMISSION" "data/processed/today/${VSIGMA_DATE}/vsigma_api_shadow_rule_outcome_ledger.md"
           grep -q "NO_STAKE_PERMISSION" "data/processed/today/${VSIGMA_DATE}/vsigma_api_shadow_rule_outcome_ledger.md"
+          grep -q "NO_PICK_PERMISSION" "data/processed/today/${VSIGMA_DATE}/vsigma_api_shadow_rule_oos_tracker.md"
+          grep -q "NO_STAKE_PERMISSION" "data/processed/today/${VSIGMA_DATE}/vsigma_api_shadow_rule_oos_tracker.md"
 
       - name: Commit shadow outputs
         shell: bash
@@ -71,6 +81,10 @@ jobs:
 
           git add data/processed/today/${VSIGMA_DATE}/vsigma_api_shadow_rule_outcome_ledger* 2>/dev/null || true
           git add data/processed/governance/vsigma_api_shadow_rule_outcome_ledger* 2>/dev/null || true
+          git add data/processed/today/${VSIGMA_DATE}/vsigma_api_shadow_rule_oos_tracker* 2>/dev/null || true
+          git add data/processed/governance/vsigma_api_shadow_rule_oos_tracker* 2>/dev/null || true
+          git add data/processed/governance/vsigma_api_shadow_rule_oos_rule_registry.csv 2>/dev/null || true
+          git add data/processed/governance/vsigma_api_shadow_rule_oos_tracker_history.csv 2>/dev/null || true
           git add data/processed/today/${VSIGMA_DATE}/vsigma_consolidated_daily_operator_panel.md 2>/dev/null || true
           git add data/processed/governance/vsigma_consolidated_daily_operator_panel.md 2>/dev/null || true
 
