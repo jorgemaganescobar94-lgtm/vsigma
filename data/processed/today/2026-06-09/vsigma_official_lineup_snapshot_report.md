@@ -3,14 +3,14 @@
 ## Summary
 - rows_processed: 3
 - eligible_fixtures: 3
-- api_calls_made: 3
-- cache_hits: 0
-- lineup_rows_written: 34
-- full_lineup_rows: 34
+- api_calls_made: 2
+- cache_hits: 1
+- lineup_rows_written: 38
+- full_lineup_rows: 38
 - no_lineup_rows: 0
 - api_errors: 0
 - key_status: API_SPORTS
-- api_status_counts: OK=1; NO_LINEUPS_RETURNED=2
+- api_status_counts: OK=2
 - auto_apply: NO
 - production_change: NO
 
@@ -49,6 +49,10 @@
 - Ponte Preta vs Botafogo SP | side=away | players=11 | formation= | status=OK
 - Almeria vs Castellón | side=home | players=11 | formation=4-2-3-1 | status=OK
 - Almeria vs Castellón | side=away | players=11 | formation=4-4-2 | status=OK
+- Nautico Recife vs Fortaleza EC | side=home | players=11 | formation=4-2-3-1 | status=OK
+- Nautico Recife vs Fortaleza EC | side=away | players=11 | formation=5-4-1 | status=OK
+- Ponte Preta vs Cuiaba | side=home | players=11 | formation=4-2-3-1 | status=OK
+- Ponte Preta vs Cuiaba | side=away | players=11 | formation=4-1-4-1 | status=OK
 
 ## Guardrails
 - Official lineup importer only reads API/player snapshots; it never fabricates players.

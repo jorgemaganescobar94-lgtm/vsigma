@@ -2,10 +2,10 @@
 
 ## Summary
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1559
+- files_scanned: 1568
 - accepted_rows: 127
-- rejected_rows: 29
-- source_status_counts: NO_SAME_DAY_ROWS=1093; EMPTY_OR_UNREADABLE=406; NO_ACCEPTED_ROWS=57; HAS_ACCEPTED_ROWS=3
+- rejected_rows: 441
+- source_status_counts: NO_SAME_DAY_ROWS=1085; EMPTY_OR_UNREADABLE=411; NO_ACCEPTED_ROWS=69; HAS_ACCEPTED_ROWS=3
 - next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO
@@ -14,130 +14,130 @@
 - Almeria vs Castellón | fixture_id=1548054 | league= | source=data/processed/governance/vsigma_candidate_provenance_ceiling.csv
 - Nautico Recife vs Fortaleza EC | fixture_id=1520715 | league=Serie B | source=data/processed/governance/vsigma_match_stat_forecasts.csv
 - Ponte Preta vs Cuiaba | fixture_id=1520717 | league=Serie B | source=data/processed/governance/vsigma_match_stat_forecasts.csv
-- Be'sat Kermanshah vs Mes Soongoun | fixture_id=1542169 | league=Azadegan League | source=data/processed/matches_league_rejected.csv
-- Damash Gilanian vs Mes Shahr-e Babak | fixture_id=1542167 | league=Azadegan League | source=data/processed/matches_league_rejected.csv
-- Mes Kerman vs Naft Gachsaran | fixture_id=1542172 | league=Azadegan League | source=data/processed/matches_league_rejected.csv
-- Naft Bandar Abbas vs Shahrdari Noshahr | fixture_id=1542173 | league=Azadegan League | source=data/processed/matches_league_rejected.csv
-- Nassaji Mazandaran vs Shenavarsazi Qeshm | fixture_id=1542170 | league=Azadegan League | source=data/processed/matches_league_rejected.csv
-- Navad Urmia vs Fard Alborz | fixture_id=1542168 | league=Azadegan League | source=data/processed/matches_league_rejected.csv
-- Niroye Zamini vs Ario Eslamshahr | fixture_id=1542171 | league=Azadegan League | source=data/processed/matches_league_rejected.csv
-- Saipa vs Havadar | fixture_id=1542174 | league=Azadegan League | source=data/processed/matches_league_rejected.csv
-- Sanat Naft vs Pars Jonoubi JAM | fixture_id=1542175 | league=Azadegan League | source=data/processed/matches_league_rejected.csv
-- Latvia vs Faroe Islands | fixture_id=1550659 | league=Baltic Cup | source=data/processed/matches_league_rejected.csv
-- Lithuania vs Estonia | fixture_id=1550660 | league=Baltic Cup | source=data/processed/matches_league_rejected.csv
-- CR Khemis Zemamra vs UTS Rabat | fixture_id=1548333 | league=Botola Pro | source=data/processed/matches_league_rejected.csv
-- Kawkab Marrakech vs Raja Casablanca | fixture_id=1548332 | league=Botola Pro | source=data/processed/matches_league_rejected.csv
-- Maghreb Fès vs FAR Rabat | fixture_id=1548334 | league=Botola Pro | source=data/processed/matches_league_rejected.csv
-- Yacoub El Mansour vs CODM Meknès | fixture_id=1548331 | league=Botola Pro | source=data/processed/matches_league_rejected.csv
-- Stade Migoveen vs Ogooue FC | fixture_id=1550652 | league=Championnat D1 | source=data/processed/matches_league_rejected.csv
-- Atlantic vs Kumba | fixture_id=1547555 | league=Elite Two | source=data/processed/matches_league_rejected.csv
-- Avion Academy vs Union Abong-Mbang | fixture_id=1547556 | league=Elite Two | source=data/processed/matches_league_rejected.csv
-- Les Astres vs APEJES Academy | fixture_id=1547557 | league=Elite Two | source=data/processed/matches_league_rejected.csv
-- Resovia Rzeszów vs KSZO 1929 | fixture_id=1548681 | league=II Liga - East | source=data/processed/matches_league_rejected.csv
-- Sokół Kleczew vs Górnik Polkowice | fixture_id=1548680 | league=II Liga - East | source=data/processed/matches_league_rejected.csv
-- 22 de Julio vs Atletico FC | fixture_id=1526553 | league=Liga Pro Serie B | source=data/processed/matches_league_rejected.csv
-- 9 de Octubre vs Cuniburo | fixture_id=1526557 | league=Liga Pro Serie B | source=data/processed/matches_league_rejected.csv
-- Singleton Strikers vs Cessnock City Hornets | fixture_id=1532572 | league=NNSW League 1 | source=data/processed/matches_league_rejected.csv
-- Ahrobiznes Volochysk vs Kudrivka | fixture_id=1547739 | league=Premier League | source=data/processed/matches_league_rejected.csv
-- Livyi Bereh vs Oleksandria | fixture_id=1548188 | league=Premier League | source=data/processed/matches_league_rejected.csv
-- Bulawayo Chiefs vs TelOne | fixture_id=1495291 | league=Premier Soccer League | source=data/processed/matches_league_rejected.csv
-- Bougouni vs USFAS Bamako | fixture_id=1550661 | league=Première Division | source=data/processed/matches_league_rejected.csv
-- Djoliba vs Réal Bamako | fixture_id=1550662 | league=Première Division | source=data/processed/matches_league_rejected.csv
-- Stade Malien Bamako vs Binga | fixture_id=1550663 | league=Première Division | source=data/processed/matches_league_rejected.csv
-- US Bougouba vs Diarra | fixture_id=1550664 | league=Première Division | source=data/processed/matches_league_rejected.csv
-- Lochin vs Kattaqurgon | fixture_id=1530974 | league=Pro League A | source=data/processed/matches_league_rejected.csv
-- Logan Lightning vs Redlands United | fixture_id=1524142 | league=Queensland Premier League | source=data/processed/matches_league_rejected.csv
-- Al Hilal Port Sudan vs Al Ahli Wad Medani | fixture_id=1550648 | league=Sudani Premier League | source=data/processed/matches_league_rejected.csv
-- Hilal El-Fasher vs Hay Al Wadi | fixture_id=1550649 | league=Sudani Premier League | source=data/processed/matches_league_rejected.csv
-- Umm Mughad vs Al Fallah | fixture_id=1550650 | league=Sudani Premier League | source=data/processed/matches_league_rejected.csv
-- Honka vs HJK Helsinki | fixture_id=1548300 | league=Suomen Cup | source=data/processed/matches_league_rejected.csv
-- IK brage vs Ljungskile SK | fixture_id=1497593 | league=Superettan | source=data/processed/matches_league_rejected.csv
-- Oddevold vs IFK Norrkoping | fixture_id=1497596 | league=Superettan | source=data/processed/matches_league_rejected.csv
-- Osters IF vs IFK Varnamo | fixture_id=1497598 | league=Superettan | source=data/processed/matches_league_rejected.csv
-- Sandviken vs Falkenbergs FF | fixture_id=1497599 | league=Superettan | source=data/processed/matches_league_rejected.csv
-- United Nordic vs Ostersunds FK | fixture_id=1497595 | league=Superettan | source=data/processed/matches_league_rejected.csv
-- Konyaspor vs AFC Eskilstuna | fixture_id=1545631 | league=Svenska Cupen | source=data/processed/matches_league_rejected.csv
-- Räppe vs Hässleholms IF | fixture_id=1545632 | league=Svenska Cupen | source=data/processed/matches_league_rejected.csv
-- Sturehov W vs FBK Karlstad | fixture_id=1545663 | league=Svenska Cupen | source=data/processed/matches_league_rejected.csv
-- Vendelsö vs Haninge | fixture_id=1545633 | league=Svenska Cupen | source=data/processed/matches_league_rejected.csv
-- Cleveland Force vs Akron City | fixture_id=1524818 | league=USL League Two | source=data/processed/matches_league_rejected.csv
-- Chattanooga Red Wolves W vs Birmingham Legion W | fixture_id=1532152 | league=USL W League | source=data/processed/matches_league_rejected.csv
-- Steel City W vs Cleveland Force W | fixture_id=1532149 | league=USL W League | source=data/processed/matches_league_rejected.csv
-- SJK Akatemia vs JIPPO | fixture_id=1504241 | league=Ykkösliiga | source=data/processed/matches_league_rejected.csv
-- Australia U19 vs Cambodia U19 | fixture_id=1547220 | league=ASEAN Championship U19 | source=data/processed/matches_league_rejected.csv
-- Atletico GO U17 vs Bahia U17 | fixture_id=1543891 | league=Brasileiro U17 | source=data/processed/matches_league_rejected.csv
-- Atlético Mineiro U17 vs Cruzeiro U17 | fixture_id=1543892 | league=Brasileiro U17 | source=data/processed/matches_league_rejected.csv
-- Corinthians U17 vs Gremio U17 | fixture_id=1543893 | league=Brasileiro U17 | source=data/processed/matches_league_rejected.csv
-- Juventude U17 vs America MG U17 | fixture_id=1543896 | league=Brasileiro U17 | source=data/processed/matches_league_rejected.csv
-- Sao Paulo U17 vs Flamengo RJ U17 | fixture_id=1543898 | league=Brasileiro U17 | source=data/processed/matches_league_rejected.csv
-- Vasco U17 vs Athletico PR U17 | fixture_id=1543899 | league=Brasileiro U17 | source=data/processed/matches_league_rejected.csv
-- Vitoria U17 vs Botafogo U17 | fixture_id=1543900 | league=Brasileiro U17 | source=data/processed/matches_league_rejected.csv
-- Flamengo U20 vs Athletico PR U20 | fixture_id=1526166 | league=Brasileiro U20 A | source=data/processed/matches_league_rejected.csv
-- Algeria U23 vs Mauritania U23 | fixture_id=1550830 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Angola vs Central African Republic | fixture_id=1543831 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Armenia vs Moldova | fixture_id=1537651 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Azerbaijan vs San Marino | fixture_id=1544813 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Azerbaijan U21 vs Kyrgyz Republic U20 | fixture_id=1546841 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Belarus vs Burkina Faso | fixture_id=1544364 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Cambodia vs Hong Kong | fixture_id=1544363 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- China vs Thailand | fixture_id=1546502 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- China PR U23 vs Tajikistan U23 | fixture_id=1546840 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Congo DR vs Chile | fixture_id=1544367 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Egypt U19 vs Russia U19 | fixture_id=1550831 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Ethiopia vs Malawi | fixture_id=1545704 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Hungary vs Kazakhstan | fixture_id=1525493 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Indonesia vs Mozambique | fixture_id=1546507 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Kyrgyzstan vs Palestine | fixture_id=1546508 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Liberia vs Sierra Leone | fixture_id=1548457 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Moldova U21 vs Georgia U21 | fixture_id=1545274 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Philippines vs Myanmar | fixture_id=1545703 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Republic of Ireland U21 vs Qatar U23 | fixture_id=1548456 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Russia vs Trinidad and Tobago | fixture_id=1543832 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Russia U21 vs Iraq U23 | fixture_id=1550829 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Tajikistan vs India | fixture_id=1546842 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Thailand U23 vs UAE U23 | fixture_id=1546503 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Togo vs Benin | fixture_id=1546506 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- Albion San Diego W vs Philippines W | fixture_id=1548487 | league=Friendlies Women | source=data/processed/matches_league_rejected.csv
-- England U20 W vs Japan U20 W | fixture_id=1548484 | league=Friendlies Women | source=data/processed/matches_league_rejected.csv
-- Guatemala W vs El Salvador W | fixture_id=1545447 | league=Friendlies Women | source=data/processed/matches_league_rejected.csv
-- Jordan W vs Palestine W | fixture_id=1548486 | league=Friendlies Women | source=data/processed/matches_league_rejected.csv
-- New Zealand W vs Morocco W | fixture_id=1544819 | league=Friendlies Women | source=data/processed/matches_league_rejected.csv
-- Cascavel U20 vs Araucaria U20 | fixture_id=1548297 | league=Paranaense U20 | source=data/processed/matches_league_rejected.csv
-- Aldosivi Res. vs Gimnasia Mendoza 2 | fixture_id=1512453 | league=Reserve League | source=data/processed/matches_league_rejected.csv
-- Belgrano Córdoba Res. vs Atl. Rafaela 2 | fixture_id=1512455 | league=Reserve League | source=data/processed/matches_league_rejected.csv
-- Central Córdoba SdE Res. vs Colón Res. | fixture_id=1512456 | league=Reserve League | source=data/processed/matches_league_rejected.csv
-- Deportivo Riestra Res. vs Platense Res. | fixture_id=1512458 | league=Reserve League | source=data/processed/matches_league_rejected.csv
-- Lanús Res. vs Independiente Res. | fixture_id=1512462 | league=Reserve League | source=data/processed/matches_league_rejected.csv
-- River Plate Res. vs Rosario Central Res. | fixture_id=1512465 | league=Reserve League | source=data/processed/matches_league_rejected.csv
-- Albania U17 vs Ukraine U17 | fixture_id=1548186 | league=UEFA U17 Championship - Qualification | source=data/processed/matches_league_rejected.csv
-- Georgia U19 vs Iceland U19 | fixture_id=1538962 | league=UEFA U19 Championship - Qualification | source=data/processed/matches_league_rejected.csv
-- Kazakhstan U19 vs Greece U19 | fixture_id=1538925 | league=UEFA U19 Championship - Qualification | source=data/processed/matches_league_rejected.csv
-- Serbia U19 vs Portugal U19 | fixture_id=1538926 | league=UEFA U19 Championship - Qualification | source=data/processed/matches_league_rejected.csv
-- Albania W vs Montenegro W | fixture_id=1523936 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Belarus W vs Armenia W | fixture_id=1523959 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Croatia W vs Bulgaria W | fixture_id=1523954 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Cyprus W vs Moldova W | fixture_id=1523958 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- England W vs Ukraine W | fixture_id=1523941 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Estonia W vs Bosnia-Herzegovina W | fixture_id=1523952 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Finland W vs Portugal W | fixture_id=1523948 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- France W vs Republic of Ireland W | fixture_id=1523944 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Georgia W vs Greece W | fixture_id=1523937 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Gibraltar W vs Kosovo W | fixture_id=1523955 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Hungary W vs Andorra W | fixture_id=1523956 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Iceland W vs Spain W | fixture_id=1523940 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Israel W vs Scotland W | fixture_id=1523951 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Latvia W vs Slovakia W | fixture_id=1523949 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Lithuania W vs Liechtenstein W | fixture_id=1523953 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Luxembourg W vs Belgium W | fixture_id=1523950 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Malta W vs Turkey W | fixture_id=1523947 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Netherlands W vs Poland W | fixture_id=1523945 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- North Macedonia W vs Azerbaijan W | fixture_id=1523957 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Northern Ireland W vs Switzerland W | fixture_id=1523946 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Norway W vs Austria W | fixture_id=1523939 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Serbia W vs Denmark W | fixture_id=1523943 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Slovenia W vs Germany W | fixture_id=1523938 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Sweden W vs Italy W | fixture_id=1523942 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
-- Wales W vs Czech Republic W | fixture_id=1523935 | league=World Cup - Women - Qualification Europe | source=data/processed/matches_league_rejected.csv
+- Be'sat Kermanshah vs Mes Soongoun | fixture_id=1542169 | league=Azadegan League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Damash Gilanian vs Mes Shahr-e Babak | fixture_id=1542167 | league=Azadegan League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Mes Kerman vs Naft Gachsaran | fixture_id=1542172 | league=Azadegan League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Naft Bandar Abbas vs Shahrdari Noshahr | fixture_id=1542173 | league=Azadegan League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Nassaji Mazandaran vs Shenavarsazi Qeshm | fixture_id=1542170 | league=Azadegan League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Navad Urmia vs Fard Alborz | fixture_id=1542168 | league=Azadegan League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Niroye Zamini vs Ario Eslamshahr | fixture_id=1542171 | league=Azadegan League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Saipa vs Havadar | fixture_id=1542174 | league=Azadegan League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sanat Naft vs Pars Jonoubi JAM | fixture_id=1542175 | league=Azadegan League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Latvia vs Faroe Islands | fixture_id=1550659 | league=Baltic Cup | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Lithuania vs Estonia | fixture_id=1550660 | league=Baltic Cup | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- CR Khemis Zemamra vs UTS Rabat | fixture_id=1548333 | league=Botola Pro | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Kawkab Marrakech vs Raja Casablanca | fixture_id=1548332 | league=Botola Pro | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Maghreb Fès vs FAR Rabat | fixture_id=1548334 | league=Botola Pro | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Yacoub El Mansour vs CODM Meknès | fixture_id=1548331 | league=Botola Pro | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Stade Migoveen vs Ogooue FC | fixture_id=1550652 | league=Championnat D1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Atlantic vs Kumba | fixture_id=1547555 | league=Elite Two | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Avion Academy vs Union Abong-Mbang | fixture_id=1547556 | league=Elite Two | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Les Astres vs APEJES Academy | fixture_id=1547557 | league=Elite Two | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Resovia Rzeszów vs KSZO 1929 | fixture_id=1548681 | league=II Liga - East | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sokół Kleczew vs Górnik Polkowice | fixture_id=1548680 | league=II Liga - East | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- 22 de Julio vs Atletico FC | fixture_id=1526553 | league=Liga Pro Serie B | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- 9 de Octubre vs Cuniburo | fixture_id=1526557 | league=Liga Pro Serie B | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Singleton Strikers vs Cessnock City Hornets | fixture_id=1532572 | league=NNSW League 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ahrobiznes Volochysk vs Kudrivka | fixture_id=1547739 | league=Premier League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Livyi Bereh vs Oleksandria | fixture_id=1548188 | league=Premier League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Bulawayo Chiefs vs TelOne | fixture_id=1495291 | league=Premier Soccer League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Bougouni vs USFAS Bamako | fixture_id=1550661 | league=Première Division | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Djoliba vs Réal Bamako | fixture_id=1550662 | league=Première Division | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Stade Malien Bamako vs Binga | fixture_id=1550663 | league=Première Division | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- US Bougouba vs Diarra | fixture_id=1550664 | league=Première Division | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Lochin vs Kattaqurgon | fixture_id=1530974 | league=Pro League A | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Logan Lightning vs Redlands United | fixture_id=1524142 | league=Queensland Premier League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Al Hilal Port Sudan vs Al Ahli Wad Medani | fixture_id=1550648 | league=Sudani Premier League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Hilal El-Fasher vs Hay Al Wadi | fixture_id=1550649 | league=Sudani Premier League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Umm Mughad vs Al Fallah | fixture_id=1550650 | league=Sudani Premier League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Honka vs HJK Helsinki | fixture_id=1548300 | league=Suomen Cup | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- IK brage vs Ljungskile SK | fixture_id=1497593 | league=Superettan | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Oddevold vs IFK Norrkoping | fixture_id=1497596 | league=Superettan | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Osters IF vs IFK Varnamo | fixture_id=1497598 | league=Superettan | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sandviken vs Falkenbergs FF | fixture_id=1497599 | league=Superettan | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- United Nordic vs Ostersunds FK | fixture_id=1497595 | league=Superettan | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Konyaspor vs AFC Eskilstuna | fixture_id=1545631 | league=Svenska Cupen | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Räppe vs Hässleholms IF | fixture_id=1545632 | league=Svenska Cupen | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sturehov W vs FBK Karlstad | fixture_id=1545663 | league=Svenska Cupen | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Vendelsö vs Haninge | fixture_id=1545633 | league=Svenska Cupen | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Cleveland Force vs Akron City | fixture_id=1524818 | league=USL League Two | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Chattanooga Red Wolves W vs Birmingham Legion W | fixture_id=1532152 | league=USL W League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Steel City W vs Cleveland Force W | fixture_id=1532149 | league=USL W League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- SJK Akatemia vs JIPPO | fixture_id=1504241 | league=Ykkösliiga | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Australia U19 vs Cambodia U19 | fixture_id=1547220 | league=ASEAN Championship U19 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Atletico GO U17 vs Bahia U17 | fixture_id=1543891 | league=Brasileiro U17 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Atlético Mineiro U17 vs Cruzeiro U17 | fixture_id=1543892 | league=Brasileiro U17 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Corinthians U17 vs Gremio U17 | fixture_id=1543893 | league=Brasileiro U17 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Juventude U17 vs America MG U17 | fixture_id=1543896 | league=Brasileiro U17 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sao Paulo U17 vs Flamengo RJ U17 | fixture_id=1543898 | league=Brasileiro U17 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Vasco U17 vs Athletico PR U17 | fixture_id=1543899 | league=Brasileiro U17 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Vitoria U17 vs Botafogo U17 | fixture_id=1543900 | league=Brasileiro U17 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Flamengo U20 vs Athletico PR U20 | fixture_id=1526166 | league=Brasileiro U20 A | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Algeria U23 vs Mauritania U23 | fixture_id=1550830 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Angola vs Central African Republic | fixture_id=1543831 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Armenia vs Moldova | fixture_id=1537651 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Azerbaijan vs San Marino | fixture_id=1544813 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Azerbaijan U21 vs Kyrgyz Republic U20 | fixture_id=1546841 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Belarus vs Burkina Faso | fixture_id=1544364 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Cambodia vs Hong Kong | fixture_id=1544363 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- China vs Thailand | fixture_id=1546502 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- China PR U23 vs Tajikistan U23 | fixture_id=1546840 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Congo DR vs Chile | fixture_id=1544367 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Egypt U19 vs Russia U19 | fixture_id=1550831 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ethiopia vs Malawi | fixture_id=1545704 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Hungary vs Kazakhstan | fixture_id=1525493 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Indonesia vs Mozambique | fixture_id=1546507 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Kyrgyzstan vs Palestine | fixture_id=1546508 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Liberia vs Sierra Leone | fixture_id=1548457 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Moldova U21 vs Georgia U21 | fixture_id=1545274 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Philippines vs Myanmar | fixture_id=1545703 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Republic of Ireland U21 vs Qatar U23 | fixture_id=1548456 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Russia vs Trinidad and Tobago | fixture_id=1543832 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Russia U21 vs Iraq U23 | fixture_id=1550829 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Tajikistan vs India | fixture_id=1546842 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Thailand U23 vs UAE U23 | fixture_id=1546503 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Togo vs Benin | fixture_id=1546506 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Albion San Diego W vs Philippines W | fixture_id=1548487 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- England U20 W vs Japan U20 W | fixture_id=1548484 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Guatemala W vs El Salvador W | fixture_id=1545447 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Jordan W vs Palestine W | fixture_id=1548486 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- New Zealand W vs Morocco W | fixture_id=1544819 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Cascavel U20 vs Araucaria U20 | fixture_id=1548297 | league=Paranaense U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Aldosivi Res. vs Gimnasia Mendoza 2 | fixture_id=1512453 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Belgrano Córdoba Res. vs Atl. Rafaela 2 | fixture_id=1512455 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Central Córdoba SdE Res. vs Colón Res. | fixture_id=1512456 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Deportivo Riestra Res. vs Platense Res. | fixture_id=1512458 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Lanús Res. vs Independiente Res. | fixture_id=1512462 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- River Plate Res. vs Rosario Central Res. | fixture_id=1512465 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Albania U17 vs Ukraine U17 | fixture_id=1548186 | league=UEFA U17 Championship - Qualification | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Georgia U19 vs Iceland U19 | fixture_id=1538962 | league=UEFA U19 Championship - Qualification | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Kazakhstan U19 vs Greece U19 | fixture_id=1538925 | league=UEFA U19 Championship - Qualification | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Serbia U19 vs Portugal U19 | fixture_id=1538926 | league=UEFA U19 Championship - Qualification | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Albania W vs Montenegro W | fixture_id=1523936 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Belarus W vs Armenia W | fixture_id=1523959 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Croatia W vs Bulgaria W | fixture_id=1523954 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Cyprus W vs Moldova W | fixture_id=1523958 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- England W vs Ukraine W | fixture_id=1523941 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Estonia W vs Bosnia-Herzegovina W | fixture_id=1523952 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Finland W vs Portugal W | fixture_id=1523948 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- France W vs Republic of Ireland W | fixture_id=1523944 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Georgia W vs Greece W | fixture_id=1523937 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Gibraltar W vs Kosovo W | fixture_id=1523955 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Hungary W vs Andorra W | fixture_id=1523956 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Iceland W vs Spain W | fixture_id=1523940 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Israel W vs Scotland W | fixture_id=1523951 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Latvia W vs Slovakia W | fixture_id=1523949 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Lithuania W vs Liechtenstein W | fixture_id=1523953 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Luxembourg W vs Belgium W | fixture_id=1523950 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Malta W vs Turkey W | fixture_id=1523947 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Netherlands W vs Poland W | fixture_id=1523945 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- North Macedonia W vs Azerbaijan W | fixture_id=1523957 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Northern Ireland W vs Switzerland W | fixture_id=1523946 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Norway W vs Austria W | fixture_id=1523939 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Serbia W vs Denmark W | fixture_id=1523943 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Slovenia W vs Germany W | fixture_id=1523938 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sweden W vs Italy W | fixture_id=1523942 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Wales W vs Czech Republic W | fixture_id=1523935 | league=World Cup - Women - Qualification Europe | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 
 ## Source Diagnostics
 - data/processed/candidate_v4_historical/vsigma_candidate_v4_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
@@ -148,24 +148,24 @@
 - data/processed/candidate_v6_historical/vsigma_candidate_v6_historical_predictions_benchmark_rows.csv | status=NO_SAME_DAY_ROWS | rows=22 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/candidate_v7_historical/vsigma_candidate_v7_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/candidate_v7_historical/vsigma_candidate_v7_historical_price_guard_rows.csv | status=NO_SAME_DAY_ROWS | rows=22 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_api_calibration_rule_candidates.csv | status=NO_SAME_DAY_ROWS | rows=77 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv | status=NO_SAME_DAY_ROWS | rows=29 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=NO_SAME_DAY_ROWS | rows=44 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_api_calibration_rule_candidates.csv | status=NO_ACCEPTED_ROWS | rows=77 | same_day=77 | accepted=0 | rejected=77 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_candidate_provenance_ceiling.csv | status=HAS_ACCEPTED_ROWS | rows=3 | same_day=3 | accepted=1 | rejected=2 | detail=local source contains accepted raw fixture rows
 - data/processed/governance/vsigma_dated_post_match_results_refresh.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_SAME_DAY_ROWS | rows=71 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_ACCEPTED_ROWS | rows=127 | same_day=127 | accepted=0 | rejected=127 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_match_stat_forecast_backtest.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecast_calibration_details.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecasts.csv | status=HAS_ACCEPTED_ROWS | rows=3 | same_day=3 | accepted=2 | rejected=0 | detail=local source contains accepted raw fixture rows
 - data/processed/governance/vsigma_post_match_stat_actuals.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_postmatch_pick_audit.csv | status=NO_ACCEPTED_ROWS | rows=4 | same_day=1 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_postmatch_pick_audit_daily.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=NO_SAME_DAY_ROWS | rows=29 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=NO_SAME_DAY_ROWS | rows=71 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=HAS_ACCEPTED_ROWS | rows=127 | same_day=127 | accepted=124 | rejected=0 | detail=local source contains accepted raw fixture rows
 - data/processed/governance/vsigma_shadow_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_SAME_DAY_ROWS | rows=71 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_SAME_DAY_ROWS | rows=44 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_ACCEPTED_ROWS | rows=127 | same_day=127 | accepted=0 | rejected=2 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_ACCEPTED_ROWS | rows=3 | same_day=3 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/historical/2026-04-23/matches.csv | status=NO_SAME_DAY_ROWS | rows=182 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
