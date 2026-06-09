@@ -1,27 +1,27 @@
 # vSIGMA Daily Command Center - 2026-06-09
 
 ## Executive Command
-- generated_at: 2026-06-09T19:33:28+01:00
+- generated_at: 2026-06-09T20:33:07+01:00
 - mode: auto
 - command_center_status: REVIEW_HOLD
-- daily_classification: WAITING_FOR_PRELOCK
+- daily_classification: EXPIRED_PRELOCK
 - action_level: REVIEW_REQUIRED
-- operational_verdict: WAITING_FOR_PRELOCK
+- operational_verdict: NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA
 - predictive_failure: NO
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/27227422526
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/27230713724
 
 ## Next Operator Action
-- Wait for next scheduled AUTO/PRELOCK run or rerun prelock manually if timing is critical.
+- Review AUTO/PRELOCK timing; do not count the row as predictive hit-rate failure.
 
 ## Decision Snapshot
 - decision_outcome_rows: 2
 - official_action_counts: WAIT=1; NO_BET=1
-- execution_family_status_counts: WAITING_FOR_WINDOW=1; PRELOCK_NOT_RETAINED=1
+- execution_family_status_counts: WAITING_FOR_WINDOW=1; EXPIRED=1
 
 ## Quality Snapshot
 - decision_quality_rows: 2
-- decision_quality_labels: WAIT_UNRESOLVED=1; NO_BET_UNRESOLVED=1
+- decision_quality_labels: WAIT_UNRESOLVED=1; EXPIRED_PRELOCK_UNRESOLVED=1
 - quality_buckets: NEEDS_MORE_DATA=2
 
 ## Source Coverage

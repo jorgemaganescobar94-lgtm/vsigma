@@ -1,14 +1,14 @@
 # vSIGMA Cloud Decision Summary - 2026-06-09
 
 ## Status
-- Auto status: WAITING_OR_BLOCKED
+- Auto status: POST_PENDING
 - PRE refreshed: NO
 - Candidates reviewed: 1
 - Executable picks: 0
 - Waiting picks: 0
-- Blocked picks: 1
+- Blocked picks: 0
 - Data problem picks: 0
-- Next automatic action: WAIT_FOR_NEXT_AUTO_PRELOCK_OR_NO_BET_REVIEW
+- Next automatic action: RUN_POST_WHEN_RESULTS_AVAILABLE
 - OFFICIAL_ACTION_SUMMARY: NO_BET
 
 ## Executable Picks
@@ -17,7 +17,7 @@ _No rows._
 ## Waiting / Blocked Picks
 | fixture_id | league | home_team | away_team | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | retry_allowed | next_retry_time | decision_state | exclusion_reason | next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1548054 | Segunda División | Almeria | Castellón | OVER_2_5 | 2026-06-09T20:00+01:00 | 26.56 | NO_BET | NO | PRELOCK_GOVERNANCE_NOT_RETAINED | NO |  | IN_WINDOW_BUT_BLOCKED | IN_WINDOW_BUT_NOT_RETAINED | CHECK_ODDS_LINEUPS_AVAILABILITY_OR_V7_GOVERNANCE |
+| 1548054 | Segunda División | Almeria | Castellón | OVER_2_5 | 2026-06-09T20:00+01:00 | -33.09 | NO_BET | NO | KICKOFF_ALREADY_PASSED | NO |  | POST_PENDING | KICKOFF_ALREADY_PASSED | WAIT_FOR_POST_RESULTS |
 
 ## Technical Warnings
 - healthcheck_status: WARNING

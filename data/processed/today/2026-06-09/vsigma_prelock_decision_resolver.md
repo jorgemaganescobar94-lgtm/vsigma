@@ -12,7 +12,7 @@
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Almeria vs Castellón | OVER_2_5 | 2026-06-09T20:00+01:00 | 26.55 | NO_BET | NO | PRELOCK_GOVERNANCE_NOT_RETAINED |  |
+| Almeria vs Castellón | OVER_2_5 | 2026-06-09T20:00+01:00 | -33.09 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
 
 ## Data Gaps
 - odds missing: 0
