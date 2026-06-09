@@ -77,7 +77,19 @@ def load_api_rows(processed: Path, day: str) -> list[dict[str, str]]:
     return rows
 
 
-def load_result_rows(raw_matches: Path) -> dict[str, dict[str, str]]:
+def load_fixture_results_refresh(processed: Path, day: str) -> dict[str, dict[str, str]]:
+    rows = read_rows(processed / "today" / day / "vsigma_api_enriched_fixture_results_refresh.csv")
+    if not rows:
+        rows = read_rows(processed / "governance" / "vsigma_api_enriched_fixture_results_refresh.csv")
+    out: dict[str, dict[str, str]] = {}
+    for row in rows:
+        fixture_id = norm(row.get("fixture_id"))
+        if fixture_id:
+            out[fixture_id] = row
+    return out
+
+
+def load_raw_result_rows(raw_matches: Path) -> dict[str, dict[str, str]]:
     rows = read_rows(raw_matches)
     out: dict[str, dict[str, str]] = {}
     for row in rows:
@@ -85,6 +97,15 @@ def load_result_rows(raw_matches: Path) -> dict[str, dict[str, str]]:
         if fixture_id:
             out[fixture_id] = row
     return out
+
+
+def load_result_rows(processed: Path, day: str, raw_matches: Path) -> dict[str, dict[str, str]]:
+    # Prefer the dedicated API-enriched result refresh. Fall back to raw matches for legacy/local compatibility.
+    refreshed = load_fixture_results_refresh(processed, day)
+    raw = load_raw_result_rows(raw_matches)
+    merged = dict(raw)
+    merged.update(refreshed)
+    return merged
 
 
 def value_from(row: dict[str, str], *names: str) -> str:
@@ -211,7 +232,7 @@ def accuracy_bucket(result_status: str, api_1x2: str, dc: str, dnb: str, over15:
 def build(day: str, tz: str, processed: Path, raw_matches: Path):
     generated = datetime.now(ZoneInfo(tz)).isoformat(timespec="seconds")
     api_rows = load_api_rows(processed, day)
-    result_by_fixture = load_result_rows(raw_matches)
+    result_by_fixture = load_result_rows(processed, day, raw_matches)
     out: list[dict[str, object]] = []
 
     for row in api_rows:
