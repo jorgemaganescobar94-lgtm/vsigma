@@ -1,0 +1,152 @@
+# vSIGMA API Shadow Rule Out-of-Sample Tracker - 2026-06-08
+
+## Summary
+- registry_rules: 4
+- rows_reviewed: 116
+- in_sample_rows: 108
+- out_of_sample_rows: 0
+- pending_rows: 8
+- evaluated_rows: 108
+- oos_evaluated_rows: 0
+- oos_hit_rows: 0
+- oos_miss_rows: 0
+- oos_void_rows: 0
+- oos_hit_rate_pct: 
+- oos_hit_or_void_rate_pct: 
+- oos_class_counts: IN_SAMPLE_BOOTSTRAP=108; PENDING_RESULT=8
+- oos_outcome_counts: HIT=74; MISS=28; PENDING_RESULT=8; VOID=6
+- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=116
+- pick_permission_counts: NO_PICK_PERMISSION=116
+- stake_permission_counts: NO_STAKE_PERMISSION=116
+- next_action: Collect future OUT_OF_SAMPLE rows. No rule activation before sufficient out-of-sample sample size.
+- auto_apply: NO
+- production_change: NO
+
+## Market Out-of-Sample Summary
+- API_DNB | oos_evaluated=0 | status=NO_OUT_OF_SAMPLE_YET
+- API_DOUBLE_CHANCE | oos_evaluated=0 | status=NO_OUT_OF_SAMPLE_YET
+- OVER_1_5 | oos_evaluated=0 | status=NO_OUT_OF_SAMPLE_YET
+- UNDER_3_5 | oos_evaluated=0 | status=NO_OUT_OF_SAMPLE_YET
+
+## OOS Rows
+- API_OOS_00001 | PENDING_RESULT | first_seen=2026-06-08 | Almeria vs Castellón | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00002 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Dainava vs Garliava | score=1-0 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00003 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | FUS Rabat vs Difaa EL Jadida | score=0-0 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00004 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Olympique Dcheïra vs Hassania Agadir | score=0-1 | market=API_DNB | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00005 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Renaissance Berkane vs Ittihad Tanger | score=1-0 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00006 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Wydad AC vs Olympique Safi | score=1-0 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00007 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Uni Souza vs Barcelona RJ | score=2-0 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00008 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Monsoon vs Santa Cruz RS | score=1-1 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00009 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | 3 de Noviembre vs General Caballero | score=2-3 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00010 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Encarnación vs SOL DE America | score=2-3 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00011 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Jeunes Fauves vs Aigle Royal de Moungo | score=2-3 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00012 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Panthère vs Victoria United | score=1-2 | market=API_DNB | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00013 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Foncha ST vs Tonnerre | score=0-3 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00014 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Sable vs Bafmeng United | score=1-1 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00015 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Järfälla vs Stocksund | score=1-6 | market=API_DNB | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00016 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Stockholm Internazionale vs Vasalund | score=4-1 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00017 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Angelholms FF vs Olympic | score=1-1 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00018 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Utsikten vs Rosengård | score=0-1 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00019 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Baghdad vs Karbala | score=0-1 | market=API_DNB | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00020 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Kiffen vs PuiU Helsinki | score=2-0 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00021 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Atletico Nacional vs Junior | score=1-0 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00022 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | UAI Urquiza vs Liniers | score=2-1 | market=API_DNB | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00023 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Berazategui vs Juventud Unida | score=2-1 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00024 | PENDING_RESULT | first_seen=2026-06-08 | Blooming vs Gualberto Villarroel SJ | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00025 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Liverpool Montevideo vs Cerro Largo | score=0-0 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00026 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Jayxun vs Aral | score=1-4 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00027 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Metalourg vs FarDu | score=7-0 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00028 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Provincial Ovalle vs Trasandino | score=1-1 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00029 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Kooteepee vs Haka | score=0-2 | market=API_DNB | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00030 | PENDING_RESULT | first_seen=2026-06-08 | Almeria vs Castellón | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00031 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Dainava vs Garliava | score=1-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00032 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | FUS Rabat vs Difaa EL Jadida | score=0-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00033 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Olympique Dcheïra vs Hassania Agadir | score=0-1 | market=API_DOUBLE_CHANCE | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00034 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Renaissance Berkane vs Ittihad Tanger | score=1-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00035 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Wydad AC vs Olympique Safi | score=1-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00036 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Uni Souza vs Barcelona RJ | score=2-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00037 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Monsoon vs Santa Cruz RS | score=1-1 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00038 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | 3 de Noviembre vs General Caballero | score=2-3 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00039 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Encarnación vs SOL DE America | score=2-3 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00040 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Jeunes Fauves vs Aigle Royal de Moungo | score=2-3 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00041 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Panthère vs Victoria United | score=1-2 | market=API_DOUBLE_CHANCE | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00042 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Foncha ST vs Tonnerre | score=0-3 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00043 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Sable vs Bafmeng United | score=1-1 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00044 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Järfälla vs Stocksund | score=1-6 | market=API_DOUBLE_CHANCE | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00045 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Stockholm Internazionale vs Vasalund | score=4-1 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00046 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Angelholms FF vs Olympic | score=1-1 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00047 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Utsikten vs Rosengård | score=0-1 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00048 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Baghdad vs Karbala | score=0-1 | market=API_DOUBLE_CHANCE | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00049 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Kiffen vs PuiU Helsinki | score=2-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00050 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Atletico Nacional vs Junior | score=1-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00051 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | UAI Urquiza vs Liniers | score=2-1 | market=API_DOUBLE_CHANCE | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00052 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Berazategui vs Juventud Unida | score=2-1 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00053 | PENDING_RESULT | first_seen=2026-06-08 | Blooming vs Gualberto Villarroel SJ | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00054 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Liverpool Montevideo vs Cerro Largo | score=0-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00055 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Jayxun vs Aral | score=1-4 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00056 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Metalourg vs FarDu | score=7-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00057 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Provincial Ovalle vs Trasandino | score=1-1 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00058 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Kooteepee vs Haka | score=0-2 | market=API_DOUBLE_CHANCE | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00059 | PENDING_RESULT | first_seen=2026-06-08 | Almeria vs Castellón | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00060 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Dainava vs Garliava | score=1-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00061 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | FUS Rabat vs Difaa EL Jadida | score=0-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00062 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Olympique Dcheïra vs Hassania Agadir | score=0-1 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00063 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Renaissance Berkane vs Ittihad Tanger | score=1-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00064 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Wydad AC vs Olympique Safi | score=1-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00065 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Uni Souza vs Barcelona RJ | score=2-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00066 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Monsoon vs Santa Cruz RS | score=1-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00067 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | 3 de Noviembre vs General Caballero | score=2-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00068 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Encarnación vs SOL DE America | score=2-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00069 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Jeunes Fauves vs Aigle Royal de Moungo | score=2-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00070 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Panthère vs Victoria United | score=1-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00071 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Foncha ST vs Tonnerre | score=0-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00072 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Sable vs Bafmeng United | score=1-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00073 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Järfälla vs Stocksund | score=1-6 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00074 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Stockholm Internazionale vs Vasalund | score=4-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00075 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Angelholms FF vs Olympic | score=1-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00076 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Utsikten vs Rosengård | score=0-1 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00077 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Baghdad vs Karbala | score=0-1 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00078 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Kiffen vs PuiU Helsinki | score=2-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00079 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Atletico Nacional vs Junior | score=1-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00080 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | UAI Urquiza vs Liniers | score=2-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00081 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Berazategui vs Juventud Unida | score=2-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00082 | PENDING_RESULT | first_seen=2026-06-08 | Blooming vs Gualberto Villarroel SJ | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00083 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Liverpool Montevideo vs Cerro Largo | score=0-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00084 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Jayxun vs Aral | score=1-4 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00085 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Metalourg vs FarDu | score=7-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00086 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Provincial Ovalle vs Trasandino | score=1-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00087 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Kooteepee vs Haka | score=0-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00088 | PENDING_RESULT | first_seen=2026-06-08 | Almeria vs Castellón | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00089 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Dainava vs Garliava | score=1-0 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00090 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | FUS Rabat vs Difaa EL Jadida | score=0-0 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00091 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Olympique Dcheïra vs Hassania Agadir | score=0-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00092 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Renaissance Berkane vs Ittihad Tanger | score=1-0 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00093 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Wydad AC vs Olympique Safi | score=1-0 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00094 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Uni Souza vs Barcelona RJ | score=2-0 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00095 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Monsoon vs Santa Cruz RS | score=1-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00096 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | 3 de Noviembre vs General Caballero | score=2-3 | market=UNDER_3_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00097 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Encarnación vs SOL DE America | score=2-3 | market=UNDER_3_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00098 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Jeunes Fauves vs Aigle Royal de Moungo | score=2-3 | market=UNDER_3_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00099 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Panthère vs Victoria United | score=1-2 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00100 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Foncha ST vs Tonnerre | score=0-3 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00101 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Sable vs Bafmeng United | score=1-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00102 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Järfälla vs Stocksund | score=1-6 | market=UNDER_3_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00103 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Stockholm Internazionale vs Vasalund | score=4-1 | market=UNDER_3_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00104 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Angelholms FF vs Olympic | score=1-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00105 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Utsikten vs Rosengård | score=0-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00106 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Baghdad vs Karbala | score=0-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00107 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Kiffen vs PuiU Helsinki | score=2-0 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00108 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Atletico Nacional vs Junior | score=1-0 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00109 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | UAI Urquiza vs Liniers | score=2-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00110 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Berazategui vs Juventud Unida | score=2-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00111 | PENDING_RESULT | first_seen=2026-06-08 | Blooming vs Gualberto Villarroel SJ | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00112 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Liverpool Montevideo vs Cerro Largo | score=0-0 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00113 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Jayxun vs Aral | score=1-4 | market=UNDER_3_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00114 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Metalourg vs FarDu | score=7-0 | market=UNDER_3_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00115 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Provincial Ovalle vs Trasandino | score=1-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00116 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-08 | Kooteepee vs Haka | score=0-2 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+
+## Guardrails
+- This tracker separates bootstrap/in-sample rows from future out-of-sample rows.
+- It does not activate rules, picks, stake, canonical board permission, whitelist permission, or execution permission.
+- Future promotion requires separate implementation after sufficient OUT_OF_SAMPLE evidence.

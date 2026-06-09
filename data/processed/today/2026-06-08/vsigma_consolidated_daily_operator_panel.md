@@ -350,3 +350,15 @@
 - pick_permission_counts: NO_PICK_PERMISSION=116
 - stake_permission_counts: NO_STAKE_PERMISSION=116
 - next_action: Track shadow outcomes over future runs. This ledger cannot activate rules, picks, or stake.
+## API Shadow Rule Out-of-Sample Tracker
+- registry_rules: 4
+- rows_reviewed: 116
+- in_sample_rows: 108
+- out_of_sample_rows: 0
+- pending_rows: 8
+- oos_evaluated_rows: 0
+- oos_class_counts: IN_SAMPLE_BOOTSTRAP=108; PENDING_RESULT=8
+- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=116
+- pick_permission_counts: NO_PICK_PERMISSION=116
+- stake_permission_counts: NO_STAKE_PERMISSION=116
+- next_action: Collect future OUT_OF_SAMPLE rows. No rule activation before sufficient out-of-sample sample size.
