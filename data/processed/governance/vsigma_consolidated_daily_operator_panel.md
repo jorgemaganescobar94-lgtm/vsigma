@@ -95,9 +95,9 @@
 - status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-08; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-09T21:36:02+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-08; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-09T21:36:02+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-08; reason=normalize_prelock_recheck_date; triggered_at=2026-06-09T21:36:02+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-08; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-09T21:42:48+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-08; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-09T21:42:48+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-08; reason=normalize_prelock_recheck_date; triggered_at=2026-06-09T21:42:48+01:00
 
 ## Key Files
 - data/processed/today/2026-06-08/vsigma_consolidated_daily_operator_panel.md
@@ -316,3 +316,13 @@
 - pick_permission_counts: NO_PICK_PERMISSION=29
 - stake_permission_counts: NO_STAKE_PERMISSION=29
 - next_action: Use this ledger to calibrate signal buckets after results are final. Do not promote picks or stake from it.
+## API Signal Calibration Summary
+- source_rows: 29
+- finished_rows: 27
+- pending_rows: 2
+- summary_rows: 77
+- top_market_by_hit_rate: ALL=ALL | API_DOUBLE_CHANCE | hit_rate_pct=77.8 | evaluated=27
+- top_market_by_hit_or_void_rate: ALL=ALL | API_DNB | hit_or_void_rate_pct=77.8 | evaluated=27
+- sample_warning_counts: INSUFFICIENT_SAMPLE_UNDER_20=70; LOW_SAMPLE_UNDER_50=7
+- calibration_status_counts: CALIBRATION_OBSERVE_ONLY=70; CALIBRATION_WEAK_OR_NEGATIVE=2; CALIBRATION_MEDIUM_OBSERVED_EDGE=2; CALIBRATION_NEUTRAL=1; CALIBRATION_STRONG_PROTECTED_MARKET=1; CALIBRATION_STRONG_OBSERVED_EDGE=1
+- next_action: Use this summary to design future promotion rules only after enough sample size exists. It cannot create picks or stake.
