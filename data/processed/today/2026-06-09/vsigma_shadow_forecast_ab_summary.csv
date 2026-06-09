@@ -1,0 +1,1 @@
+target_date,generated_at,metric,rows_evaluated,baseline_avg_error,shadow_avg_error,avg_error_delta,improved_rows,worsened_rows,unchanged_rows,shadow_verdict,shadow_rule,source_guard,auto_apply,production_change
