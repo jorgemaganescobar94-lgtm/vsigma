@@ -1,2 +1,2 @@
 target_date,generated_at,rank,fixture_id,home_team,away_team,market_primary,context_level,context_score,matrix_policy,audit_memory_level,final_portfolio_status,stake_guidance,operator_note,auto_apply,production_change
-2026-06-08,2026-06-09T21:28:49+01:00,1,1548054,Almeria,Castellón,OVER_2_5,L6_REVIEW,42,review only,MEM_NONE,REVIEW_ONLY,LOW_IF_CONFIRMED,Review only; low stake only with price/prelock/live confirmation.,NO,NO
+2026-06-08,2026-06-09T21:36:02+01:00,1,1548054,Almeria,Castellón,OVER_2_5,L6_REVIEW,42,review only,MEM_NONE,REVIEW_ONLY,LOW_IF_CONFIRMED,Review only; low stake only with price/prelock/live confirmation.,NO,NO

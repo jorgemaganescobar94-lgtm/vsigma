@@ -95,9 +95,9 @@
 - status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-08; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-09T21:28:48+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-08; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-09T21:28:48+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-08; reason=normalize_prelock_recheck_date; triggered_at=2026-06-09T21:28:48+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-08; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-09T21:36:02+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-08; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-09T21:36:02+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-08; reason=normalize_prelock_recheck_date; triggered_at=2026-06-09T21:36:02+01:00
 
 ## Key Files
 - data/processed/today/2026-06-08/vsigma_consolidated_daily_operator_panel.md
@@ -144,7 +144,7 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1554
+- files_scanned: 1556
 - accepted_rows: 71
 - rejected_rows: 290
 - next_action: Review accepted rows, then feed normal scoring gates.

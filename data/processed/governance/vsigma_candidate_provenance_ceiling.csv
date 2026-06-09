@@ -1,2 +1,2 @@
 target_date,generated_at,fixture_id,home_team,away_team,candidate_origin,max_execution_permission,before_permission,after_permission,before_stake,after_stake,ceiling_action,reason,auto_apply,production_change
-2026-06-08,2026-06-09T21:28:49+01:00,1548054,Almeria,Castellón,OBJECTIVE_PROXY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-08,2026-06-09T21:36:02+01:00,1548054,Almeria,Castellón,OBJECTIVE_PROXY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
