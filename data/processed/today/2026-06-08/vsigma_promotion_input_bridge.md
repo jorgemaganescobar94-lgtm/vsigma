@@ -14,7 +14,7 @@
 - production_change: NO
 
 ## Bridge Rows
-- Almeria vs Castellón | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=89 band=HIGH_SIGNAL_REVIEW | summary=prediction_winner=Castellón | pred_total_home_away=38.5/61.5 | 1x2=2.30/3.55/2.84 | ou2.5=1.65/2.20 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Almeria vs Castellón | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=89 band=HIGH_SIGNAL_REVIEW | summary=prediction_winner=Castellón | pred_total_home_away=38.5/61.5 | 1x2=2.28/3.50/2.90 | ou2.5=1.70/2.10 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Dainava vs Garliava | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=67 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Dainava | pred_total_home_away=54.0/46.0 | 1x2=2.05/3.45/2.95 | ou2.5=1.60/2.05 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - FUS Rabat vs Difaa EL Jadida | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=100 band=HIGH_SIGNAL_REVIEW | summary=prediction_winner=FUS Rabat | pred_total_home_away=65.7/34.3 | 1x2=1.77/3.25/4.40 | ou2.5=2.20/1.62 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Olympique Dcheïra vs Hassania Agadir | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=55 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Olympique Dcheïra | pred_total_home_away=49.8/50.2 | 1x2=3.20/2.85/2.33 | ou2.5=2.35/1.55 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION

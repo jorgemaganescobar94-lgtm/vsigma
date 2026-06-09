@@ -53,7 +53,7 @@
 - panel_note: API review board is parallel-only and cannot create picks, stake, or canonical board permission.
 
 ### API Review Rows
-- P1_MANUAL_REVIEW | Almeria vs Castellón | status=API_ENRICHED_REVIEW_READY | score=89 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Castellón | pred_total_home_away=38.5/61.5 | 1x2=2.30/3.55/2.84 | ou2.5=1.65/2.20
+- P1_MANUAL_REVIEW | Almeria vs Castellón | status=API_ENRICHED_REVIEW_READY | score=89 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Castellón | pred_total_home_away=38.5/61.5 | 1x2=2.28/3.50/2.90 | ou2.5=1.70/2.10
 - P2_MANUAL_REVIEW | Dainava vs Garliava | status=API_ENRICHED_REVIEW_READY | score=67 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Dainava | pred_total_home_away=54.0/46.0 | 1x2=2.05/3.45/2.95 | ou2.5=1.60/2.05
 - P1_MANUAL_REVIEW | FUS Rabat vs Difaa EL Jadida | status=API_ENRICHED_REVIEW_READY | score=100 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=FUS Rabat | pred_total_home_away=65.7/34.3 | 1x2=1.77/3.25/4.40 | ou2.5=2.20/1.62
 - P2_MANUAL_REVIEW | Olympique Dcheïra vs Hassania Agadir | status=API_ENRICHED_REVIEW_READY | score=55 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Olympique Dcheïra | pred_total_home_away=49.8/50.2 | 1x2=3.20/2.85/2.33 | ou2.5=2.35/1.55
@@ -95,9 +95,9 @@
 - status_counts: OK=4; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-08; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-09T21:15:00+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-08; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-09T21:15:00+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-08; reason=normalize_prelock_recheck_date; triggered_at=2026-06-09T21:15:00+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-08; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-09T21:28:48+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-08; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-09T21:28:48+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-08; reason=normalize_prelock_recheck_date; triggered_at=2026-06-09T21:28:48+01:00
 
 ## Key Files
 - data/processed/today/2026-06-08/vsigma_consolidated_daily_operator_panel.md
@@ -292,18 +292,27 @@
 - pick_permission_counts: NO_PICK_PERMISSION=29
 - stake_permission_counts: NO_STAKE_PERMISSION=29
 - next_action: Use this inspector only for human triage. It cannot promote, create picks, or create stake permission.
+## API-Enriched Fixture Results Refresh
+- rows_reviewed: 29
+- api_calls_planned: 29
+- api_calls_executed: 29
+- finished_rows: 27
+- pending_rows: 2
+- refresh_status_counts: OK=29
+- provider_counts: API-SPORTS_DIRECT=29
+- next_action: Re-run the postmatch accuracy ledger after this refresh. This output does not create picks or stake.
 ## API-Enriched Postmatch Accuracy Ledger
 - rows_reviewed: 29
-- finished_rows: 0
-- pending_rows: 29
-- accuracy_bucket_counts: PENDING_RESULT=29
-- api_1x2_counts: PENDING_RESULT=29
-- api_double_chance_counts: PENDING_RESULT=29
-- api_dnb_counts: PENDING_RESULT=29
-- over_1_5_counts: PENDING_RESULT=29
-- over_2_5_counts: PENDING_RESULT=29
-- under_3_5_counts: PENDING_RESULT=29
-- btts_counts: PENDING_RESULT=29
+- finished_rows: 27
+- pending_rows: 2
+- accuracy_bucket_counts: PARTIAL_SIGNAL_VALIDATED=12; STRONG_SIGNAL_VALIDATED=10; SIGNAL_FAILED=5; PENDING_RESULT=2
+- api_1x2_counts: HIT=15; MISS=12; PENDING_RESULT=2
+- api_double_chance_counts: HIT=21; MISS=6; PENDING_RESULT=2
+- api_dnb_counts: HIT=15; VOID=6; MISS=6; PENDING_RESULT=2
+- over_1_5_counts: HIT=18; MISS=9; PENDING_RESULT=2
+- over_2_5_counts: MISS=16; HIT=11; PENDING_RESULT=2
+- under_3_5_counts: HIT=20; MISS=7; PENDING_RESULT=2
+- btts_counts: MISS=14; HIT=13; PENDING_RESULT=2
 - pick_permission_counts: NO_PICK_PERMISSION=29
 - stake_permission_counts: NO_STAKE_PERMISSION=29
 - next_action: Use this ledger to calibrate signal buckets after results are final. Do not promote picks or stake from it.

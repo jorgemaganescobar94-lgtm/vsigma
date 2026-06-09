@@ -1,2 +1,2 @@
 target_date,generated_at,fixture_id,home_team,away_team,market_hint,before_primary,after_primary,before_permission,after_permission,guard_action,reason,auto_apply,production_change
-2026-06-08,2026-06-09T21:15:00+01:00,1548054,Almeria,Castellón,OVER_2_5,NO_CLEAR_STAT_MARKET,NO_CLEAR_STAT_MARKET,NO_BET,NO_BET,NO_CHANGE,not a proxy inversion,NO,NO
+2026-06-08,2026-06-09T21:28:49+01:00,1548054,Almeria,Castellón,OVER_2_5,NO_CLEAR_STAT_MARKET,NO_CLEAR_STAT_MARKET,NO_BET,NO_BET,NO_CHANGE,not a proxy inversion,NO,NO
