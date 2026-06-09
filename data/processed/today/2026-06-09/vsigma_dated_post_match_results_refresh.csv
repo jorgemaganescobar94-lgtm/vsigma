@@ -1,2 +1,2 @@
 target_date,generated_at,fixture_id,home_team,away_team,status,goals,stats_status,updated_fields,source_guard
-2026-06-09,2026-06-09T11:47:14+01:00,1548054,Almeria,Castellón,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-09,2026-06-09T17:22:24+01:00,1548054,Almeria,Castellón,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
