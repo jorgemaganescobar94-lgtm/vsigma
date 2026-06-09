@@ -1,0 +1,19 @@
+vSIGMA SHADOW CANDIDATE V6
+
+Layer: candidate v2 + API Predictions Benchmark.
+Status: experimental shadow; API predictions never create picks.
+
+Candidate v2 input rows: 1
+Candidate v6 competition shortlist rows: 0
+Candidate v6 competition top rows: 0
+API prediction available rows: 1
+API prediction aligned rows: 0
+API prediction disagreement rows: 1
+API calls: 1 | cache hits: 0 | errors: 0
+
+API Predictions Benchmark action mix
+api_prediction_benchmark_action
+API_PREDICTION_DISAGREEMENT_SECONDARY    1
+
+Candidate v6 Top
+No v6 competition top picks survived.

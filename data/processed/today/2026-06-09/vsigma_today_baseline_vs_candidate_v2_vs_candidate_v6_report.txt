@@ -1,0 +1,14 @@
+vSIGMA TODAY BASELINE VS CANDIDATE V2 VS CANDIDATE V6
+
+Baseline: official frozen Competition Accuracy Mode + Probability Calibration.
+Candidate v2: shadow schedule-strength + anomaly-cleaning layer.
+Candidate v6: candidate v2 + API Predictions Benchmark.
+
+Baseline official picks: 1
+Candidate v2 shadow picks: 1
+Candidate v6 shadow picks: 0
+Candidate v6 adjusted top rows: 0
+
+Side-by-side picks
+    comparison_status  fixture_id              fixture           league  baseline_rank  candidate_v2_rank candidate_v6_rank baseline_market candidate_v2_market candidate_v6_market candidate_v6_action candidate_v6_alignment candidate_v6_confidence_adjustment       baseline_primary_risk   candidate_v2_primary_risk candidate_v6_primary_risk
+BASELINE+CANDIDATE_V2     1548054 Almeria vs Castellón Segunda División              1                  1              <NA>        OVER_2_5            OVER_2_5                <NA>                <NA>                   <NA>                               <NA> FAILURE_MODE_LOW_CONVERSION FAILURE_MODE_LOW_CONVERSION                      <NA>

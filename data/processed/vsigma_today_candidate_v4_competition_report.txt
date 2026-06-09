@@ -1,0 +1,17 @@
+vSIGMA SHADOW CANDIDATE V4
+
+Layer: candidate v2 signals + O2.5 Low Conversion Firewall.
+Status: experimental shadow; official baseline and candidate v2 outputs are not replaced.
+
+Candidate v2 input rows: 1
+Candidate v4 competition shortlist rows: 0
+Candidate v4 competition top rows: 0
+
+## O2.5 Low Conversion Firewall
+
+ fixture_id home_team away_team over25_low_conversion_original_market over25_low_conversion_recommended_market over25_low_conversion_firewall_decision  over25_low_conversion_confirmation_score over25_low_conversion_action                                                                                                                                                                                                                                                                      over25_low_conversion_firewall_reason
+    1548054   Almeria Castellón                              OVER_2_5                                 OVER_2_5                          SECONDARY_ONLY                                      12.0               SECONDARY_ONLY O2.5 confirmation was useful but not strong enough for competition top under LOW_CONVERSION. Evidence: FORECAST_TOTAL_XG_HIGH;MODAL_SCORE_3_PLUS;ALT_SCORE_3_PLUS;PICK_PATH_3_GOAL_EXPLICIT;CALIBRATED_PROB_HIGH;ACCURACY_CONFIDENCE_HIGH;CORE_PRIORITY;NO_ODDS_AGGRESSION_WARNING;CANDIDATE_V2_TOP_AGREES
+
+## Candidate v4 Top
+
+No v4 competition top picks survived.
