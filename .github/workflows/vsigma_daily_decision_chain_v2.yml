@@ -265,6 +265,10 @@ jobs:
         shell: bash
         run: python scripts/build_api_enriched_manual_review_inspector.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Build API-enriched postmatch accuracy ledger
+        shell: bash
+        run: python scripts/build_api_enriched_postmatch_accuracy_ledger.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Assert API-enriched review board output
         shell: bash
         run: |
