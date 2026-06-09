@@ -1,11 +1,11 @@
 # vSIGMA Queue-to-Enrichment Dry Run Planner - 2026-06-08
 
 ## Summary
-- rows_planned: 43
-- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=43
-- risk_label_counts: MEDIUM=37; HIGH_LOW_COVERAGE=4; HIGH_CONTEXT_VOLATILITY=2
-- priority_counts: P1_TRUSTED_MISSING_SCORING=39; P2_LOW_COVERAGE_SCORING=4
-- total_estimated_call_units: 216
+- rows_planned: 44
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=44
+- risk_label_counts: MEDIUM=38; HIGH_LOW_COVERAGE=4; HIGH_CONTEXT_VOLATILITY=2
+- priority_counts: P1_TRUSTED_MISSING_SCORING=40; P2_LOW_COVERAGE_SCORING=4
+- total_estimated_call_units: 221
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
@@ -13,6 +13,7 @@
 - production_change: NO
 
 ## Dry Run Rows
+- Almeria vs Castellón | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Dainava vs Garliava | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - FUS Rabat vs Difaa EL Jadida | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Olympique Dcheïra vs Hassania Agadir | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS

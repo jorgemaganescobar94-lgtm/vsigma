@@ -4,21 +4,22 @@
 - policy_status: MAX_COVERAGE_POLICY_READY
 - api_plan_name: API-Football Pro
 - plan_requests_per_day: 7500
-- rows_reviewed: 43
-- rows_allowed: 43
-- full_scoring_enrichment_rows: 34
+- rows_reviewed: 44
+- rows_allowed: 44
+- full_scoring_enrichment_rows: 35
 - coverage_probe_rows: 4
 - diagnostic_only_rows: 5
 - blocked_rows: 0
-- estimated_call_units: 216
-- decision_counts: FULL_ENRICHMENT_ALLOWED_FOR_SCORING=34; COVERAGE_PROBE_ALLOWED_LOW_COVERAGE=4; DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST=3; DIAGNOSTIC_COVERAGE_ALLOWED_CONTEXT_VOLATILITY=2
-- downstream_use_counts: SCORING_ALLOWED_WITH_NORMAL_GATES=34; DIAGNOSTIC_ONLY_NO_SCORING=5; COVERAGE_GATE_ONLY=4
+- estimated_call_units: 221
+- decision_counts: FULL_ENRICHMENT_ALLOWED_FOR_SCORING=35; COVERAGE_PROBE_ALLOWED_LOW_COVERAGE=4; DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST=3; DIAGNOSTIC_COVERAGE_ALLOWED_CONTEXT_VOLATILITY=2
+- downstream_use_counts: SCORING_ALLOWED_WITH_NORMAL_GATES=35; DIAGNOSTIC_ONLY_NO_SCORING=5; COVERAGE_GATE_ONLY=4
 - external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: NO
 - auto_apply: NO
 - production_change: NO
 
 ## Policy Rows
+- Almeria vs Castellón | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
 - Dainava vs Garliava | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
 - FUS Rabat vs Difaa EL Jadida | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
 - Olympique Dcheïra vs Hassania Agadir | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO

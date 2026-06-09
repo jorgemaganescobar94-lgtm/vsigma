@@ -4,17 +4,17 @@
 - quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
 - api_plan_name: API-Football Pro
 - plan_requests_per_day: 7500
-- rows_reviewed: 43
-- p1_rows: 39
+- rows_reviewed: 44
+- p1_rows: 40
 - p2_rows: 4
-- p1_estimated_units: 197
+- p1_estimated_units: 202
 - p2_estimated_units: 19
 - p2_probe_units: 4
-- total_estimated_units: 216
-- auto_units_reserved: 189
+- total_estimated_units: 221
+- auto_units_reserved: 194
 - max_auto_units_per_day: 1500
 - max_auto_units_per_run: 1500
-- quota_decision_counts: AUTO_ENRICHMENT_ALLOWED_P1=37; COVERAGE_PROBE_ALLOWED_P2=4; MANUAL_REVIEW_REQUIRED=2
+- quota_decision_counts: AUTO_ENRICHMENT_ALLOWED_P1=38; COVERAGE_PROBE_ALLOWED_P2=4; MANUAL_REVIEW_REQUIRED=2
 - api_calls_allowed: YES_LIMITED
 - api_calls_executed: NO
 - recommended_action: Run a separate enrichment executor only for allowlisted rows; do not create picks from enrichment alone.
@@ -22,6 +22,7 @@
 - production_change: NO
 
 ## Allowlist / Policy Rows
+- Almeria vs Castellón | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
 - Dainava vs Garliava | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
 - FUS Rabat vs Difaa EL Jadida | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO
 - Olympique Dcheïra vs Hassania Agadir | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | decision=AUTO_ENRICHMENT_ALLOWED_P1 | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | reserved=5 | api_allowed=YES_LIMITED | executed=NO

@@ -1,2 +1,2 @@
 target_date,generated_at,overall_status,root_cause,root_scored_same_day_rows,real_shortlist_rows,real_bet_rows,proxy_rows,next_action,auto_apply,production_change
-2026-06-08,2026-06-09T11:43:33+01:00,SCORING_SOURCE_EMPTY_FOR_DATE,scored source exists but has no rows for target date,0,0,0,0,Refresh/fix scoring source date coverage.,NO,NO
+2026-06-08,2026-06-09T18:11:34+01:00,REAL_CANDIDATES_AVAILABLE,real shortlist or bets rows exist,0,1,0,3,Use normal gates; do not rely on proxy bridge unless real rows fail downstream.,NO,NO

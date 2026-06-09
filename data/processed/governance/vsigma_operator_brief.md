@@ -47,7 +47,7 @@
 - closed_or_missed: 0
 - watch_only: 0
 - no_bet: 1
-- board_decisions: NO_BET=0
+- board_decisions: NO_BET=1
 - recheck_decisions: CANCELLED_NO_BET=1
 - live_triggers: none
 - alert_notify_required: true
@@ -80,7 +80,7 @@
 - none
 
 ## No Bet
-- #0 | NO_BET | NO_PROMOTED_RAW_CANDIDATES vs NO_SCORING_SAFE_ROWS | market=NO_MARKET | bucket=EMPTY_BY_PROMOTION_GATE | score=0 | cancel=default no bet; no promoted raw candidates
+- #1 | NO_BET | Almeria vs Castellón | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-34 | cancel=default no bet; low forecast confidence; bad or incomplete lineups
 
 ## Live Trigger Status
 - no live trigger report or no live candidates

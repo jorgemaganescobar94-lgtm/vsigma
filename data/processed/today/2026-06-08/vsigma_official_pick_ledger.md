@@ -2,15 +2,15 @@
 
 ## Summary
 - ledger_rows: 1
-- decision_bucket_counts: DIAGNOSTIC_ONLY=1
-- ledger_status_counts: DIAGNOSTIC_NO_PICK=1
+- decision_bucket_counts: NO_BET=1
+- ledger_status_counts: OFFICIAL_NO_BET=1
 - official_pick_permission_counts: NO_PICK_NO_STAKE=1
-- postmatch_audit_required_counts: NO=1
+- postmatch_audit_required_counts: YES=1
 - auto_apply: NO
 - production_change: NO
 
 ## Ledger Rows
-- 0 | DIAGNOSTIC_NO_PICK | NO_PROMOTED_RAW_CANDIDATES vs NO_SCORING_SAFE_ROWS | market=NO_MARKET | decision=NO_BET | permission=NO_PICK_NO_STAKE | audit=NO
+- 1 | OFFICIAL_NO_BET | Almeria vs Castellón | market=NO_CLEAR_STAT_MARKET | decision=NO_BET | permission=NO_PICK_NO_STAKE | audit=YES
 
 ## Guardrails
 - This ledger records official daily decisions; it does not create picks.

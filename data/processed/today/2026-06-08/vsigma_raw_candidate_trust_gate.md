@@ -1,16 +1,17 @@
 # vSIGMA Raw Candidate Trust Gate - 2026-06-08
 
 ## Summary
-- rows_reviewed: 70
-- trusted_rows: 43
+- rows_reviewed: 71
+- trusted_rows: 44
 - quarantine_rows: 27
 - blocked_rows: 0
-- trust_status_counts: TRUSTED_RAW_SOURCE=43; QUARANTINE_REVIEW=27
+- trust_status_counts: TRUSTED_RAW_SOURCE=44; QUARANTINE_REVIEW=27
 - next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
 - auto_apply: NO
 - production_change: NO
 
 ## Rows
+- Almeria vs Castellón | league=Segunda División | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_match_stat_forecasts.csv
 - Dainava vs Garliava | league=1 Lyga | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - FUS Rabat vs Difaa EL Jadida | league=Botola Pro | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Olympique Dcheïra vs Hassania Agadir | league=Botola Pro | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv

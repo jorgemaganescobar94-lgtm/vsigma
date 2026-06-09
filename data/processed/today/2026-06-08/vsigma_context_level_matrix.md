@@ -1,13 +1,13 @@
 # vSIGMA Context Level Matrix - 2026-06-08
 
 ## Summary
-- rows_reviewed: 0
-- context_level_counts: none
+- rows_reviewed: 1
+- context_level_counts: L6_REVIEW=1
 - auto_apply: NO
 - production_change: NO
 
 ## Matrix Rows
-- none. Missing dated vsigma_context_adjusted_final_picks.csv; stale governance fallback refused.
+- #1 | L6_REVIEW | score=42 | Almeria vs Castellón | market=OVER_2_5 | policy=review only
 
 ## Guardrails
 - This matrix refuses stale governance fallback.

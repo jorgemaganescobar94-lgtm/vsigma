@@ -2,15 +2,16 @@
 
 ## Summary
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1490
-- accepted_rows: 70
-- rejected_rows: 282
-- source_status_counts: NO_SAME_DAY_ROWS=1082; EMPTY_OR_UNREADABLE=393; NO_ACCEPTED_ROWS=14; HAS_ACCEPTED_ROWS=1
+- files_scanned: 1554
+- accepted_rows: 71
+- rejected_rows: 284
+- source_status_counts: NO_SAME_DAY_ROWS=1131; EMPTY_OR_UNREADABLE=407; NO_ACCEPTED_ROWS=14; HAS_ACCEPTED_ROWS=2
 - next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO
 
 ## Accepted Rows
+- Almeria vs Castellón | fixture_id=1548054 | league=Segunda División | source=data/processed/governance/vsigma_match_stat_forecasts.csv
 - Dainava vs Garliava | fixture_id=1530592 | league=1 Lyga | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - FUS Rabat vs Difaa EL Jadida | fixture_id=1548327 | league=Botola Pro | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Olympique Dcheïra vs Hassania Agadir | fixture_id=1548330 | league=Botola Pro | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
@@ -92,14 +93,14 @@
 - data/processed/candidate_v7_historical/vsigma_candidate_v7_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/candidate_v7_historical/vsigma_candidate_v7_historical_price_guard_rows.csv | status=NO_SAME_DAY_ROWS | rows=22 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=NO_ACCEPTED_ROWS | rows=43 | same_day=43 | accepted=0 | rejected=43 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_candidate_provenance_ceiling.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_candidate_provenance_ceiling.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_dated_post_match_results_refresh.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_ACCEPTED_ROWS | rows=70 | same_day=70 | accepted=0 | rejected=70 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_match_stat_forecast_backtest.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecast_calibration_details.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_match_stat_forecasts.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_match_stat_forecasts.csv | status=HAS_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=1 | rejected=0 | detail=local source contains accepted raw fixture rows
 - data/processed/governance/vsigma_post_match_stat_actuals.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_postmatch_pick_audit.csv | status=NO_SAME_DAY_ROWS | rows=3 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_postmatch_pick_audit.csv | status=NO_SAME_DAY_ROWS | rows=4 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_postmatch_pick_audit_daily.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=NO_ACCEPTED_ROWS | rows=28 | same_day=28 | accepted=0 | rejected=28 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows

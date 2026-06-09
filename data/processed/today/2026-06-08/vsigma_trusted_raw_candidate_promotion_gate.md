@@ -1,16 +1,17 @@
 # vSIGMA Trusted Raw Candidate Promotion Gate - 2026-06-08
 
 ## Summary
-- rows_reviewed: 70
+- rows_reviewed: 71
 - promoted_rows: 0
 - blocked_rows: 0
-- quarantine_rows: 43
-- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=43; NOT_TRUSTED_NO_PROMOTION=27
+- quarantine_rows: 44
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=44; NOT_TRUSTED_NO_PROMOTION=27
 - next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 - auto_apply: NO
 - production_change: NO
 
 ## Rows
+- Almeria vs Castellón | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_match_stat_forecasts.csv
 - Dainava vs Garliava | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - FUS Rabat vs Difaa EL Jadida | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Olympique Dcheïra vs Hassania Agadir | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv

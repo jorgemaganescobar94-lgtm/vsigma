@@ -1,11 +1,11 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
-2026-06-08,DIAGNOSTIC_EMPTY_BY_PROMOTION_GATE,,,NO_PROMOTED_RAW_CANDIDATES,NO_SCORING_SAFE_ROWS,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-08,DIAGNOSTIC_EMPTY_BY_PROMOTION_GATE,,,NO_PROMOTED_RAW_CANDIDATES,NO_SCORING_SAFE_ROWS,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-08,DIAGNOSTIC_EMPTY_BY_PROMOTION_GATE,,,NO_PROMOTED_RAW_CANDIDATES,NO_SCORING_SAFE_ROWS,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-08,DIAGNOSTIC_EMPTY_BY_PROMOTION_GATE,,,NO_PROMOTED_RAW_CANDIDATES,NO_SCORING_SAFE_ROWS,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-08,DIAGNOSTIC_EMPTY_BY_PROMOTION_GATE,,,NO_PROMOTED_RAW_CANDIDATES,NO_SCORING_SAFE_ROWS,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-08,DIAGNOSTIC_EMPTY_BY_PROMOTION_GATE,,,NO_PROMOTED_RAW_CANDIDATES,NO_SCORING_SAFE_ROWS,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-08,DIAGNOSTIC_EMPTY_BY_PROMOTION_GATE,,,NO_PROMOTED_RAW_CANDIDATES,NO_SCORING_SAFE_ROWS,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-08,DIAGNOSTIC_EMPTY_BY_PROMOTION_GATE,,,NO_PROMOTED_RAW_CANDIDATES,NO_SCORING_SAFE_ROWS,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-08,DIAGNOSTIC_EMPTY_BY_PROMOTION_GATE,,,NO_PROMOTED_RAW_CANDIDATES,NO_SCORING_SAFE_ROWS,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-08,DIAGNOSTIC_EMPTY_BY_PROMOTION_GATE,,,NO_PROMOTED_RAW_CANDIDATES,NO_SCORING_SAFE_ROWS,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-08,1548054,,,Almeria,Castellón,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-08,1548054,,,Almeria,Castellón,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-08,1548054,,,Almeria,Castellón,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-08,1548054,,,Almeria,Castellón,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-08,1548054,,,Almeria,Castellón,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-08,1548054,,,Almeria,Castellón,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-08,1548054,,,Almeria,Castellón,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-08,1548054,,,Almeria,Castellón,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-08,1548054,,,Almeria,Castellón,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-08,1548054,,,Almeria,Castellón,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.

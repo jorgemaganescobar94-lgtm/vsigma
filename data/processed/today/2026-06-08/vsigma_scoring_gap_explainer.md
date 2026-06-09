@@ -1,17 +1,18 @@
 # vSIGMA Scoring Gap Explainer - 2026-06-08
 
 ## Summary
-- rows_reviewed: 70
-- missing_scored_rows: 43
+- rows_reviewed: 71
+- missing_scored_rows: 44
 - no_data_blocked_rows: 0
 - not_trusted_rows: 27
 - promoted_rows: 0
-- gap_status_counts: MISSING_SCORED_ROW=43; NOT_TRUSTED_SKIPPED=27
+- gap_status_counts: MISSING_SCORED_ROW=44; NOT_TRUSTED_SKIPPED=27
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 - auto_apply: NO
 - production_change: NO
 
 ## Gap Rows
+- Almeria vs Castellón | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
 - Dainava vs Garliava | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
 - FUS Rabat vs Difaa EL Jadida | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
 - Olympique Dcheïra vs Hassania Agadir | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
