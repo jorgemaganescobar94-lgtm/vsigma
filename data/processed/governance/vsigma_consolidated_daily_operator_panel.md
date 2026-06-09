@@ -338,3 +338,15 @@
 - pick_permission_counts: NO_PICK_PERMISSION=77
 - stake_permission_counts: NO_STAKE_PERMISSION=77
 - next_action: Review candidate rules only after sample grows. This board cannot activate rules, picks, or stake.
+## API Shadow Rule Outcome Ledger
+- candidate_rules_applied: 4
+- shadow_rows: 116
+- finished_shadow_rows: 108
+- pending_shadow_rows: 8
+- shadow_outcome_counts: HIT=74; MISS=28; PENDING_RESULT=8; VOID=6
+- rule_market_counts: API_DNB=29; API_DOUBLE_CHANCE=29; OVER_1_5=29; UNDER_3_5=29
+- paper_trade_permission_counts: SHADOW_ONLY=116
+- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=116
+- pick_permission_counts: NO_PICK_PERMISSION=116
+- stake_permission_counts: NO_STAKE_PERMISSION=116
+- next_action: Track shadow outcomes over future runs. This ledger cannot activate rules, picks, or stake.
