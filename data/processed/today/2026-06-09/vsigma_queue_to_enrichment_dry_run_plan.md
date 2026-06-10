@@ -1,11 +1,11 @@
 # vSIGMA Queue-to-Enrichment Dry Run Planner - 2026-06-09
 
 ## Summary
-- rows_planned: 61
-- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=61
-- risk_label_counts: MEDIUM=37; HIGH_LOW_COVERAGE=17; HIGH_CONTEXT_VOLATILITY=7
-- priority_counts: P1_TRUSTED_MISSING_SCORING=44; P2_LOW_COVERAGE_SCORING=17
-- total_estimated_call_units: 311
+- rows_planned: 64
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=64
+- risk_label_counts: MEDIUM=40; HIGH_LOW_COVERAGE=17; HIGH_CONTEXT_VOLATILITY=7
+- priority_counts: P1_TRUSTED_MISSING_SCORING=47; P2_LOW_COVERAGE_SCORING=17
+- total_estimated_call_units: 326
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
@@ -13,6 +13,9 @@
 - production_change: NO
 
 ## Dry Run Rows
+- Almeria vs Castellón | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Nautico Recife vs Fortaleza EC | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Ponte Preta vs Cuiaba | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Be'sat Kermanshah vs Mes Soongoun | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Damash Gilanian vs Mes Shahr-e Babak | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Mes Kerman vs Naft Gachsaran | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS

@@ -2,19 +2,19 @@
 
 ## Summary
 - rows_reviewed: 127
-- missing_scored_rows: 61
-- no_data_blocked_rows: 2
+- missing_scored_rows: 64
+- no_data_blocked_rows: 0
 - not_trusted_rows: 63
-- promoted_rows: 1
-- gap_status_counts: NOT_TRUSTED_SKIPPED=63; MISSING_SCORED_ROW=61; SCORED_ROW_NO_DATA_BLOCKED=2; PROMOTED=1
+- promoted_rows: 0
+- gap_status_counts: MISSING_SCORED_ROW=64; NOT_TRUSTED_SKIPPED=63
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 - auto_apply: NO
 - production_change: NO
 
 ## Gap Rows
-- Almeria vs Castellón | promotion=PROMOTED_TO_SCORING_INPUT | gap=PROMOTED | stage=SCORING_ALLOWED | scored=SCORED_AVAILABLE | fix=Proceed through normal scoring, translator, board and prelock gates.
-- Nautico Recife vs Fortaleza EC | promotion=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | gap=SCORED_ROW_NO_DATA_BLOCKED | stage=SCORING_ENRICHMENT_BLOCKED | scored=NO_DATA_BLOCKED | fix=Repair enrichment inputs for stats/odds/standings/coverage; do not promote until non-blocked.
-- Ponte Preta vs Cuiaba | promotion=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | gap=SCORED_ROW_NO_DATA_BLOCKED | stage=SCORING_ENRICHMENT_BLOCKED | scored=NO_DATA_BLOCKED | fix=Repair enrichment inputs for stats/odds/standings/coverage; do not promote until non-blocked.
+- Almeria vs Castellón | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
+- Nautico Recife vs Fortaleza EC | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
+- Ponte Preta vs Cuiaba | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
 - Be'sat Kermanshah vs Mes Soongoun | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
 - Damash Gilanian vs Mes Shahr-e Babak | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
 - Mes Kerman vs Naft Gachsaran | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.

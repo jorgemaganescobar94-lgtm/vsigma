@@ -2,12 +2,12 @@
 
 ## Summary
 - rows_reviewed: 3
-- gate_actions: NO_BET_CONFIRMED=2; EARLY_WATCH_ONLY=1
+- gate_actions: NO_BET_CONFIRMED=2; DOWNGRADED_TO_NO_BET=1
 - auto_apply: NO
 - production_change: NO
 
 ## Gate Rows
-- Almeria vs Castellón | api_gate=EARLY_WATCH_MORE_DATA_REQUIRED | action=EARLY_WATCH_ONLY | decision=LIVE_ONLY->LIVE_ONLY | permission=NO_PREMATCH->NO_PREMATCH | missing=lineup_coverage=NOT_DUE_YET; injuries_coverage=NONE
+- Almeria vs Castellón | api_gate=LOW_COVERAGE_NO_BET | action=DOWNGRADED_TO_NO_BET | decision=LIVE_ONLY->NO_BET | permission=NO_PREMATCH->NO | missing=lineup_coverage=NOT_DUE_YET; injuries_coverage=NONE; standings_coverage=PARTIAL; odds_coverage=NONE
 - Nautico Recife vs Fortaleza EC | api_gate=LOW_COVERAGE_NO_BET | action=NO_BET_CONFIRMED | decision=NO_BET->NO_BET | permission=NO->NO | missing=recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
 - Ponte Preta vs Cuiaba | api_gate=LOW_COVERAGE_NO_BET | action=NO_BET_CONFIRMED | decision=NO_BET->NO_BET | permission=NO->NO | missing=recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
 

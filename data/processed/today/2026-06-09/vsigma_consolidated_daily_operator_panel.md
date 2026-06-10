@@ -6,7 +6,7 @@
 - executable_prematch: NONE
 - live_only: ROWS=1
 - watchlist: NONE
-- no_bet: ROWS=2
+- no_bet: ROWS=3
 - health_status: ATTENTION
 - auto_apply: NO
 - production_change: NO
@@ -24,22 +24,23 @@
 - none
 
 ## Live Only
-- #1 | LIVE_ONLY | Almeria vs Castellón | market=OVER_1_5_SUPPORTED | alt=OVER_2_5_REVIEW | stake=NO_STAKE_OR_SYMBOLIC | permission=NO_PREMATCH | conf=MEDIUM | score=28 | window=MATCH_FINISHED | live=MATCH_FINISHED | match=FT | min=90.0
+- #1 | NO_BET | Almeria vs Castellón | market=OVER_1_5_SUPPORTED | alt=OVER_2_5_REVIEW | stake=NO_STAKE_OR_SYMBOLIC | permission=NO | conf=MEDIUM | score=28 | window=MATCH_FINISHED | live=MATCH_FINISHED | match=FT | min=90.0
 
 ## Watchlist
 - none
 
 ## No Bet
+- #1 | NO_BET | Almeria vs Castellón | market=OVER_1_5_SUPPORTED | alt=OVER_2_5_REVIEW | stake=NO_STAKE | permission=NO | conf=MEDIUM | score=28
 - #2 | NO_BET | Nautico Recife vs Fortaleza EC | market=NO_CLEAR_STAT_MARKET | stake=NO_STAKE | permission=NO | conf=LOW | score=-42
 - #3 | NO_BET | Ponte Preta vs Cuiaba | market=NO_CLEAR_STAT_MARKET | stake=NO_STAKE | permission=NO | conf=LOW | score=-42
 
 ## API Coverage
 - board_rows=3
 - source_guard_counts: DATED_INPUT_ONLY; API_COVERAGE_GATE_V2=3
-- execution_permission_counts: NO_PREMATCH=1; NO=2
+- execution_permission_counts: NO=3
 - avg_coverage_score: 40.0
 - forecast_warning_counts: LINEUPS_INACTIVE=1; API_EARLY_LOW_SUPPORT=1; PARTIAL_RECENT_STATS=2; SHOT_SAMPLE_WEAK=2; CORNER_SAMPLE_WEAK=2; CARD_SAMPLE_WEAK=2
-- missing_data_counts: lineup_coverage=NOT_DUE_YET=1; injuries_coverage=NONE=3; recent_stats_coverage=NONE=2; lineup_coverage=NONE=2; standings_coverage=NONE=2; odds_coverage=NONE=2
+- missing_data_counts: lineup_coverage=NOT_DUE_YET=1; injuries_coverage=NONE=4; api_gate=LOW_COVERAGE_NO_BET=1; coverage_score=62.5=1; missing=lineup_coverage=NOT_DUE_YET=1; standings_coverage=PARTIAL=1; odds_coverage=NONE=3; recent_stats_coverage=NONE=2; lineup_coverage=NONE=2; standings_coverage=NONE=2
 
 ## Official / Probable Lineups
 - data/processed/today/2026-06-09/official_lineup_sources.csv: rows=38
@@ -108,7 +109,7 @@
 ## Real Shortlist Recovery Diagnostic
 - overall_status: REAL_CANDIDATES_AVAILABLE
 - root_cause: real shortlist or bets rows exist
-- root_scored_same_day_rows: 3
+- root_scored_same_day_rows: 0
 - real_shortlist_rows: 2
 - real_bet_rows: 1
 - proxy_rows: 0
@@ -116,9 +117,9 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1568
+- files_scanned: 1604
 - accepted_rows: 127
-- rejected_rows: 441
+- rejected_rows: 428
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
@@ -131,42 +132,42 @@
 
 ## Trusted Raw Candidate Promotion Gate
 - rows_reviewed: 127
-- promoted_rows: 1
-- blocked_rows: 2
-- quarantine_rows: 61
-- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=63; TRUSTED_SOURCE_BUT_NO_SCORED_ROW=61; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=2; PROMOTED_TO_SCORING_INPUT=1
-- next_action: Promoted rows may feed normal scoring gates only.
+- promoted_rows: 0
+- blocked_rows: 0
+- quarantine_rows: 64
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=64; NOT_TRUSTED_NO_PROMOTION=63
+- next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 
 ## Scoring Gap Explainer
 - rows_reviewed: 127
-- missing_scored_rows: 61
-- no_data_blocked_rows: 2
+- missing_scored_rows: 64
+- no_data_blocked_rows: 0
 - not_trusted_rows: 63
-- promoted_rows: 1
-- gap_status_counts: NOT_TRUSTED_SKIPPED=63; MISSING_SCORED_ROW=61; SCORED_ROW_NO_DATA_BLOCKED=2; PROMOTED=1
+- promoted_rows: 0
+- gap_status_counts: MISSING_SCORED_ROW=64; NOT_TRUSTED_SKIPPED=63
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 
 ## Trusted Raw Scoring Queue
-- queue_rows: 61
-- priority_counts: P1_TRUSTED_MISSING_SCORING=44; P2_LOW_COVERAGE_SCORING=17
-- scoring_needed_counts: YES=61
+- queue_rows: 64
+- priority_counts: P1_TRUSTED_MISSING_SCORING=47; P2_LOW_COVERAGE_SCORING=17
+- scoring_needed_counts: YES=64
 - source_gap_status: MISSING_SCORED_ROW
 - next_action: Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.
 
 ## Queue-to-Enrichment Dry Run Planner
-- rows_planned: 61
-- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=61
-- risk_label_counts: MEDIUM=37; HIGH_LOW_COVERAGE=17; HIGH_CONTEXT_VOLATILITY=7
-- priority_counts: P1_TRUSTED_MISSING_SCORING=44; P2_LOW_COVERAGE_SCORING=17
-- total_estimated_call_units: 311
+- rows_planned: 64
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=64
+- risk_label_counts: MEDIUM=40; HIGH_LOW_COVERAGE=17; HIGH_CONTEXT_VOLATILITY=7
+- priority_counts: P1_TRUSTED_MISSING_SCORING=47; P2_LOW_COVERAGE_SCORING=17
+- total_estimated_call_units: 326
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
 
 ## Enrichment Cost & Approval Gate
 - approval_gate_status: WAIT_FOR_MANUAL_APPROVAL
-- rows_planned: 61
-- estimated_call_units: 311
+- rows_planned: 64
+- estimated_call_units: 326
 - approval_required: YES
 - max_allowed_without_manual_approval: 0
 - api_calls_allowed: NO

@@ -2,18 +2,18 @@
 
 ## Summary
 - rows_reviewed: 127
-- promoted_rows: 1
-- blocked_rows: 2
-- quarantine_rows: 61
-- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=63; TRUSTED_SOURCE_BUT_NO_SCORED_ROW=61; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=2; PROMOTED_TO_SCORING_INPUT=1
-- next_action: Promoted rows may feed normal scoring gates only.
+- promoted_rows: 0
+- blocked_rows: 0
+- quarantine_rows: 64
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=64; NOT_TRUSTED_NO_PROMOTION=63
+- next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 - auto_apply: NO
 - production_change: NO
 
 ## Rows
-- Almeria vs Castellón | status=PROMOTED_TO_SCORING_INPUT | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=trusted source has matching scored row without blocking data warnings | source=data/processed/governance/vsigma_candidate_provenance_ceiling.csv
-- Nautico Recife vs Fortaleza EC | status=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | allowed=NO_PROMOTION_NO_BET | reason=matching scored row is NO_DATA_BLOCKED | source=data/processed/governance/vsigma_match_stat_forecasts.csv
-- Ponte Preta vs Cuiaba | status=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | allowed=NO_PROMOTION_NO_BET | reason=matching scored row is NO_DATA_BLOCKED | source=data/processed/governance/vsigma_match_stat_forecasts.csv
+- Almeria vs Castellón | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_candidate_provenance_ceiling.csv
+- Nautico Recife vs Fortaleza EC | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_match_stat_forecasts.csv
+- Ponte Preta vs Cuiaba | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_match_stat_forecasts.csv
 - Be'sat Kermanshah vs Mes Soongoun | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Damash Gilanian vs Mes Shahr-e Babak | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Mes Kerman vs Naft Gachsaran | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
