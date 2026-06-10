@@ -6,28 +6,28 @@ PRE_LOCK_PENDING
 ## Official Baseline Top Picks
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1548055 | Segunda División | Malaga | Las Palmas | OVER_1_5 | 0.84486 | 155.934 | FAILURE_MODE_LOW_CONVERSION |
+| 1 | 1548055 | Segunda División | Malaga | Las Palmas | OVER_1_5 | 0.84486 | 157.078 | FAILURE_MODE_LOW_CONVERSION |
 
 ## Candidate v2 Top Picks
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1548055 | Segunda División | Malaga | Las Palmas | OVER_1_5 | 0.83986 | 154.561 | FAILURE_MODE_LOW_CONVERSION |
+| 1 | 1548055 | Segunda División | Malaga | Las Palmas | OVER_1_5 | 0.83986 | 155.705 | FAILURE_MODE_LOW_CONVERSION |
 
 ## Candidate v4/v5/v6 Top Picks
 ### Candidate v4
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1548055 | Segunda División | Malaga | Las Palmas | OVER_1_5 | 0.83986 | 154.561 | FAILURE_MODE_LOW_CONVERSION |
+| 1 | 1548055 | Segunda División | Malaga | Las Palmas | OVER_1_5 | 0.83986 | 155.705 | FAILURE_MODE_LOW_CONVERSION |
 
 ### Candidate v5
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1548055 | Segunda División | Malaga | Las Palmas | OVER_1_5 | 0.83986 | 154.561 | FAILURE_MODE_LOW_CONVERSION |
+| 1 | 1548055 | Segunda División | Malaga | Las Palmas | OVER_1_5 | 0.83986 | 155.705 | FAILURE_MODE_LOW_CONVERSION |
 
 ### Candidate v6
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1548055 | Segunda División | Malaga | Las Palmas | OVER_1_5 | 0.83986 | 154.561 | FAILURE_MODE_LOW_CONVERSION |
+| 1 | 1548055 | Segunda División | Malaga | Las Palmas | OVER_1_5 | 0.83986 | 155.705 | FAILURE_MODE_LOW_CONVERSION |
 
 ### Candidate v7
 
@@ -37,38 +37,38 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 ## Match Script Forecasts
 | forecast_rank | fixture_id | league | home_team | away_team | market_primary | predicted_match_script | predicted_score_main | predicted_score_alt | predicted_home_xg_range | predicted_away_xg_range | predicted_home_shots_range | predicted_away_shots_range | predicted_home_sot_range | predicted_away_sot_range | predicted_total_corners_range | predicted_possession_split | predicted_pick_path | predicted_pick_breaker | predicted_total_goals_range | predicted_first_goal_side | predicted_state_gravity | forecast_confidence_band | forecast_inputs_used | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1548055 | Segunda División | Malaga | Las Palmas | OVER_1_5 | Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 4.1; stats=FULL. | 2-2 | 1-2 | 1.7-2.4 | 1.6-2.3 | 11-15 | 12-16 | 3-5 | 4-6 | 8-12 | home 45-53% / away 47-55% | Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 3.5-4.6 | Either side | open exchange | HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-06-10 | 2026-06-09T23:54:30+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-06-10-20260609T235429Z |
+| 1 | 1548055 | Segunda División | Malaga | Las Palmas | OVER_1_5 | Moderately open game where two goals can arrive through sustained chance volume; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 4.1; stats=FULL. | 2-2 | 1-2 | 1.7-2.4 | 1.6-2.3 | 11-15 | 12-16 | 3-5 | 4-6 | 8-12 | home 45-53% / away 47-55% | Pick wins if either favorite pressure creates a second goal or both sides trade enough chances for a 1-1/2-0 type path. | Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market. | 3.5-4.6 | Either side | open exchange | HIGH_FORECAST_CONFIDENCE | market+projected_goals+competition_probability+pick_risk+recent_stats+league_coverage | 2026-06-10 | 2026-06-10T11:06:08+00:00 | PRE | FORECAST | NO_DATE_COLUMN | 2026-06-10-20260610T110608Z |
 
 ## Baseline vs Candidate Comparison
 ### Candidate v2
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | baseline_market | candidate_v2_market | baseline_raw_prob | candidate_v2_raw_prob | baseline_calibrated_prob | candidate_v2_calibrated_prob | baseline_confidence_score | candidate_v2_confidence_score | baseline_bucket | candidate_v2_bucket | baseline_main_reason | candidate_v2_main_reason | baseline_primary_risk | candidate_v2_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BOTH | 1548055 | Malaga vs Las Palmas | Segunda División | 1 | 1 | OVER_1_5 | OVER_1_5 | 0.9125 | 0.9075 | 0.84486 | 0.83986 | 155.934 | 154.561 | ACCURACY_CORE | ACCURACY_CORE | ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-06-10 | 2026-06-09T23:54:30+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-10-20260609T235429Z |
+| BOTH | 1548055 | Malaga vs Las Palmas | Segunda División | 1 | 1 | OVER_1_5 | OVER_1_5 | 0.9125 | 0.9075 | 0.84486 | 0.83986 | 157.078 | 155.705 | ACCURACY_CORE | ACCURACY_CORE | ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | ACCURACY_CORE_PRIORITY;ACCURACY_MARKET_STABLE;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-06-10 | 2026-06-10T11:06:08+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-10-20260610T110608Z |
 
 ### Candidate v4
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v4_rank | baseline_market | candidate_v2_market | candidate_v4_market | candidate_v4_original_market | candidate_v4_firewall_decision | candidate_v4_firewall_score | candidate_v4_firewall_action | baseline_primary_risk | candidate_v2_primary_risk | candidate_v4_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1548055 | Malaga vs Las Palmas | Segunda División | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-06-10 | 2026-06-09T23:54:30+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-10-20260609T235429Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V4 | 1548055 | Malaga vs Las Palmas | Segunda División | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | 0.0 | NO_ACTION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-06-10 | 2026-06-10T11:06:08+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-10-20260610T110608Z |
 
 ### Candidate v5
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v5_rank | baseline_market | candidate_v2_market | candidate_v5_market | candidate_v5_original_market | candidate_v5_action | candidate_v5_hint | baseline_primary_risk | candidate_v2_primary_risk | candidate_v5_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1548055 | Malaga vs Las Palmas | Segunda División | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-06-10 | 2026-06-09T23:54:30+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-10-20260609T235429Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V5 | 1548055 | Malaga vs Las Palmas | Segunda División | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | PLAYER_IMPACT_NEUTRAL_NO_RELIABLE_COVERAGE | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-06-10 | 2026-06-10T11:06:08+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-10-20260610T110608Z |
 
 ### Candidate v6
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v6_rank | baseline_market | candidate_v2_market | candidate_v6_market | candidate_v6_action | candidate_v6_alignment | candidate_v6_confidence_adjustment | baseline_primary_risk | candidate_v2_primary_risk | candidate_v6_primary_risk | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2+CANDIDATE_V6 | 1548055 | Malaga vs Las Palmas | Segunda División | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | NEUTRAL | 0.0 | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-06-10 | 2026-06-09T23:54:30+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-10-20260609T235429Z |
+| BASELINE+CANDIDATE_V2+CANDIDATE_V6 | 1548055 | Malaga vs Las Palmas | Segunda División | 1 | 1 | 1 | OVER_1_5 | OVER_1_5 | OVER_1_5 | NOT_APPLIED | NEUTRAL | 0.0 | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | FAILURE_MODE_LOW_CONVERSION | 2026-06-10 | 2026-06-10T11:06:08+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-10-20260610T110608Z |
 
 ### Candidate v7
 | comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v7_rank | baseline_market | candidate_v2_market | candidate_v7_market | candidate_v7_decision | candidate_v7_required_edge | candidate_v7_actual_edge | candidate_v7_drift_status | candidate_v7_clv_direction | candidate_v7_execution_status | target_date | generated_at | pipeline_mode | candidate_version | source_file_date_check | run_id |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2 | 1548055 | Malaga vs Las Palmas | Segunda División | 1 | 1 |  | OVER_1_5 | OVER_1_5 |  |  |  |  |  |  |  | 2026-06-10 | 2026-06-09T23:54:30+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-10-20260609T235429Z |
+| BASELINE+CANDIDATE_V2 | 1548055 | Malaga vs Las Palmas | Segunda División | 1 | 1 |  | OVER_1_5 | OVER_1_5 |  |  |  |  |  |  |  | 2026-06-10 | 2026-06-10T11:06:08+00:00 | PRE | COMPARISON | NO_DATE_COLUMN | 2026-06-10-20260610T110608Z |
 
 ## Price Discipline / CLV / Drift Execution Guard
 | fixture_id | home_team | away_team | market_primary | price_discipline_decision | price_discipline_min_edge_required | price_discipline_actual_edge | price_discipline_edge_surplus | price_discipline_drift_status | candidate_v7_prelock_status | candidate_v7_execution_status | clv_direction | price_discipline_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1548055 | Malaga | Las Palmas | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.161231 | 0.018231 | WATCH_PATTERN | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | CLV_UNAVAILABLE | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
+| 1548055 | Malaga | Las Palmas | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | 0.143 | 0.177573 | 0.034573 | WATCH_PATTERN | V7_PRELOCK_UNAVAILABLE | V7_PRELOCK_UNAVAILABLE | CLV_POSITIVE | Fresh pre-lock review is unavailable; v7 cannot confirm execution. |
 
 ## Pre-Lock Execution Status
 - Pre-lock data fresh: YES
@@ -83,12 +83,12 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 ### Candidate v7 Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | price_discipline_decision | candidate_v7_prelock_status | candidate_v7_execution_status | candidate_v7_execution_allowed_flag | price_discipline_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1548055 | Malaga | Las Palmas | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | V7_WAITING_FOR_PRELOCK | V7_WAITING_FOR_PRELOCK | 0 | Watch-pattern drift requires explicit pre-lock confirmation before execution. |
+| 1548055 | Malaga | Las Palmas | OVER_1_5 | PRICE_NEEDS_PRELOCK_CONFIRMATION | V7_PRELOCK_UNAVAILABLE | V7_PRELOCK_UNAVAILABLE | 0 | Fresh pre-lock review is unavailable; v7 cannot confirm execution. |
 
 ### Active Pre-Lock Decisions
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1548055 | Malaga | Las Palmas | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 1145.84 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1548055 | Malaga | Las Palmas | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 474.21 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 
 ### Stale Pre-Lock Warning
 _No stale pre-lock rows excluded._
@@ -97,9 +97,9 @@ _No stale pre-lock rows excluded._
 ### CLV Summary
 | fixture_id | home_team | away_team | market_primary | experiment_id | pre_price | prelock_price | close_proxy_price | clv_delta | clv_direction | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1548055 | Malaga | Las Palmas | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.34 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1548055 | Malaga | Las Palmas | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.34 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1548055 | Malaga | Las Palmas | OVER_1_5 | OFFICIAL_BASELINE | 1.34 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1548055 | Malaga | Las Palmas | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.37 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1548055 | Malaga | Las Palmas | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.37 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1548055 | Malaga | Las Palmas | OVER_1_5 | OFFICIAL_BASELINE | 1.37 |  |  |  | CLV_UNAVAILABLE |  |  |
 
 ### Candidate v7 Calibration Advice
 | market_family | failure_mode | drift_status | clv_direction | n | profit_units | roi_percent | recommendation | recommendation_reason |
@@ -112,7 +112,7 @@ _No rows._
 ## Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1548055 | Malaga | Las Palmas | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 1145.84 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1548055 | Malaga | Las Palmas | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 474.21 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 
 ## Drift Monitor Status
 | pattern | settled_rows | wins | losses | profit_units | drift_status |
@@ -144,22 +144,22 @@ _No rows._
 - Ledger report: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-10/vsigma_ledger_daily_report.md
 
 ## Daily Controller Status
-- Next recommended action: CHECK_STALE_OUTPUTS
-- Pre-lock due time: 2026-06-10T17:30:19.400000+00:00
+- Next recommended action: RUN_POST_AFTER_FINISH
+- Pre-lock due time: 2026-06-10T17:30:20.600000+00:00
 - Status path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-10/daily_controller_status.md
 
 ## Daily Supervisor
 - Supervisor latest status: SUPERVISOR_STATUS_NOT_AVAILABLE
 - Last run mode/time: NOT_AVAILABLE / NOT_AVAILABLE
-- Next recommended action: CHECK_STALE_OUTPUTS
+- Next recommended action: RUN_POST_AFTER_FINISH
 - Scheduled automation status: REGISTRATION_SCRIPT_AVAILABLE_STATUS_NOT_QUERIED
 - Logs path: C:\vsigma\automation_logs\supervisor
 - Report path: NOT_AVAILABLE
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: official_baseline_output: WARNING - only stale rows found for 2026-06-09
-- Recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-10 --timezone Atlantic/Canary --mode pre`
+- Critical warnings: freshness_report: WARNING - validation report contains warning rows
+- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-06-10`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-10/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
@@ -230,8 +230,8 @@ _No rows._
 | failure_mode | rows |
 | --- | --- |
 | FAILURE_MODE_LOW_CONVERSION | 5 |
-| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.161; market_fit=SAFE_OK | 4 |
-| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.166; market_fit=SAFE_OK | 1 |
+| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.178; market_fit=SAFE_OK | 4 |
+| FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.183; market_fit=SAFE_OK | 1 |
 
 ## Freshness Validation
 | file_name | candidate_version | status | detail | rows |
@@ -257,7 +257,7 @@ _No rows._
 | vsigma_today_candidate_v2_match_script_forecasts.csv | FORECAST_CANDIDATE_V2 | PASS | output is fresh for requested target date | 1 |
 | vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | PASS | output is fresh for requested target date | 1 |
 | vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-06-09'] does not match 2026-06-10 | 1 |
+| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | PASS | output is fresh for requested target date | 1 |
 | today_pipeline_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
 | today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet | 0 |
 

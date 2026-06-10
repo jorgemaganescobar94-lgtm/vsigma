@@ -17,4 +17,4 @@ NOT_APPLIED    1
 
 Candidate v6 Top
  accuracy_mode_rank  fixture_id           league home_team  away_team market_primary  competition_calibrated_prob  accuracy_confidence_score api_prediction_alignment_flag api_prediction_benchmark_action
-                  1     1548055 Segunda División    Malaga Las Palmas       OVER_1_5                      0.83986                    154.561                       NEUTRAL                     NOT_APPLIED
+                  1     1548055 Segunda División    Malaga Las Palmas       OVER_1_5                      0.83986                    155.705                       NEUTRAL                     NOT_APPLIED

@@ -11,7 +11,7 @@ Only candidate chose: 0
 
 Side-by-side picks
 comparison_status              fixture  baseline_rank  candidate_v2_rank baseline_market candidate_v2_market  baseline_calibrated_prob  candidate_v2_calibrated_prob  baseline_confidence_score  candidate_v2_confidence_score
-             BOTH Malaga vs Las Palmas              1                  1        OVER_1_5            OVER_1_5                   0.84486                       0.83986                    155.934                        154.561
+             BOTH Malaga vs Las Palmas              1                  1        OVER_1_5            OVER_1_5                   0.84486                       0.83986                    157.078                        155.705
 
 Reason differences
 All compared picks overlap. Review probability/confidence deltas in the CSV.

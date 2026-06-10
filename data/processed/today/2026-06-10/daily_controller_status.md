@@ -2,15 +2,15 @@
 
 ## Step State
 - PRE: DONE
-- Pre-lock: ['PENDING_OUTSIDE_WINDOW']
+- Pre-lock: ['PRELOCK_NOT_AVAILABLE']
 - POST: PENDING
 - Ledger: PRE_UPDATED
 - Governance: AVAILABLE
-- Stale warnings: STALE_PRELOCK_EXCLUDED: 2026-06-09
+- Stale warnings: NONE
 
 ## Next Operator Command
-- Action: CHECK_STALE_OUTPUTS
-- Command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-10 --timezone Atlantic/Canary --mode status`
+- Action: RUN_POST_AFTER_FINISH
+- Command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-10 --timezone Atlantic/Canary --mode post`
 
 ## Official Baseline Picks
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank |
@@ -23,18 +23,18 @@
 | 1548055 | Segunda División | Malaga | Las Palmas | OVER_1_5 | 1 |
 
 ## Candidate v7 Decisions
-- Waiting: 1
+- Waiting: 0
 - Confirmed: 0
 - Rejected: 0
-- Unavailable: 0
+- Unavailable: 1
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank | candidate_v7_execution_status | price_discipline_decision |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1548055 | Segunda División | Malaga | Las Palmas | OVER_1_5 | 1 | V7_WAITING_FOR_PRELOCK | PRICE_NEEDS_PRELOCK_CONFIRMATION |
+| 1548055 | Segunda División | Malaga | Las Palmas | OVER_1_5 | 1 | V7_PRELOCK_UNAVAILABLE | PRICE_NEEDS_PRELOCK_CONFIRMATION |
 
 ## Pre-Lock Timing
 | fixture_id | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1548055 | Malaga | Las Palmas | OVER_1_5 | 2026-06-10T19:00:19.400000+00:00 | 1145.77 | 2026-06-10T17:30:19.400000+00:00 | PENDING_OUTSIDE_WINDOW | CHECK_STALE_OUTPUTS |
+| 1548055 | Malaga | Las Palmas | OVER_1_5 | 2026-06-10T19:00:20.600000+00:00 | 474.15 | 2026-06-10T17:30:20.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
 
 ## Ledger State
 | experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |

@@ -12,7 +12,7 @@
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Malaga vs Las Palmas | OVER_1_5 | 2026-06-10T20:00+01:00 | 1145.33 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | 2026-06-10T19:00+01:00 |
+| Malaga vs Las Palmas | OVER_1_5 | 2026-06-10T20:00+01:00 | 473.69 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | 2026-06-10T19:00+01:00 |
 
 ## Data Gaps
 - odds missing: 0

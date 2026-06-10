@@ -12,8 +12,8 @@ price_discipline_decision
 PRICE_NEEDS_PRELOCK_CONFIRMATION    1
 
 Price Discipline / CLV / Drift Execution Guard
- fixture_id home_team  away_team market_primary        price_discipline_decision  price_discipline_min_edge_required  price_discipline_actual_edge  price_discipline_edge_surplus price_discipline_drift_status candidate_v7_prelock_status candidate_v7_execution_status   clv_direction                                                       price_discipline_reason
-    1548055    Malaga Las Palmas       OVER_1_5 PRICE_NEEDS_PRELOCK_CONFIRMATION                               0.143                      0.161231                       0.018231                 WATCH_PATTERN      V7_WAITING_FOR_PRELOCK        V7_WAITING_FOR_PRELOCK CLV_UNAVAILABLE Watch-pattern drift requires explicit pre-lock confirmation before execution.
+ fixture_id home_team  away_team market_primary        price_discipline_decision  price_discipline_min_edge_required  price_discipline_actual_edge  price_discipline_edge_surplus price_discipline_drift_status candidate_v7_prelock_status candidate_v7_execution_status clv_direction                                            price_discipline_reason
+    1548055    Malaga Las Palmas       OVER_1_5 PRICE_NEEDS_PRELOCK_CONFIRMATION                               0.143                      0.177573                       0.034573                 WATCH_PATTERN      V7_PRELOCK_UNAVAILABLE        V7_PRELOCK_UNAVAILABLE  CLV_POSITIVE Fresh pre-lock review is unavailable; v7 cannot confirm execution.
 
 Candidate v7 Top
 No v7 competition top picks survived.

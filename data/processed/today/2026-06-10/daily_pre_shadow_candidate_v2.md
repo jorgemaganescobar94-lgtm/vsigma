@@ -17,7 +17,7 @@
 
 | Rank | Fixture | League | Market | Rec | Bucket | Score | Why | Risk |
 | --- | --- | --- | --- | --- | --- | ---: | --- | --- |
-| 1 | Malaga vs Las Palmas | Segunda División | OVER_1_5 | BET | PREMIUM_CORE | 122.023 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.161; market_fit=SAFE_OK |
+| 1 | Malaga vs Las Palmas | Segunda División | OVER_1_5 | BET | PREMIUM_CORE | 123.657 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_1_5; edge=0.178; market_fit=SAFE_OK |
 
 ## Candidate v2 Match Script Forecasts
 
@@ -35,4 +35,4 @@
 
 | Status | Fixture | Base Rank | Cand Rank | Base Market | Cand Market | Base Prob | Cand Prob | Base Score | Cand Score |
 | --- | --- | ---: | ---: | --- | --- | ---: | ---: | ---: | ---: |
-| BOTH | Malaga vs Las Palmas | 1 | 1 | OVER_1_5 | OVER_1_5 | 0.845 | 0.840 | 155.934 | 154.561 |
+| BOTH | Malaga vs Las Palmas | 1 | 1 | OVER_1_5 | OVER_1_5 | 0.845 | 0.840 | 157.078 | 155.705 |
