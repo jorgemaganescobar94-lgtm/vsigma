@@ -24,7 +24,7 @@
 - none
 
 ## Live Only
-- #1 | LIVE_ONLY | Malaga vs Las Palmas | market=OVER_1_5_SUPPORTED | alt=OVER_2_5_REVIEW | stake=NO_STAKE_OR_SYMBOLIC | permission=LIVE_ONLY | conf=MEDIUM | score=17 | window=MATCH_FINISHED | live=MATCH_FINISHED | match=FT | min=90.0
+- #1 | LIVE_ONLY | Malaga vs Las Palmas | market=OVER_1_5_SUPPORTED | alt=OVER_2_5_REVIEW | stake=SYMBOLIC_ONLY | permission=LIVE_ONLY | conf=MEDIUM | score=17 | window=MATCH_FINISHED | live=MATCH_FINISHED | match=FT | min=90.0
 
 ## Watchlist
 - none
@@ -117,7 +117,7 @@
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
 - files_scanned: 1629
 - accepted_rows: 122
-- rejected_rows: 840
+- rejected_rows: 838
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
