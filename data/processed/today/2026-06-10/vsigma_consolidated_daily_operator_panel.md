@@ -2,20 +2,20 @@
 
 ## First Read
 - panel_status: PARTIAL_OUTPUTS
-- operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=UNKNOWN; board_rows=0
+- operator_detail: action=BROKEN; final=SYSTEM_FIX_REQUIRED; risk=HIGH; health=BROKEN; board_rows=0
 - executable_prematch: NO_BOARD
 - live_only: NONE
 - watchlist: NONE
 - no_bet: NONE
-- health_status: MISSING
+- health_status: BROKEN
 - auto_apply: NO
 - production_change: NO
 
 ## Operator Gate
-- action_level: NONE
-- compact_final_decision: NO_OPERATOR_ACTION
-- risk_label: NONE
-- health_status: UNKNOWN
+- action_level: BROKEN
+- compact_final_decision: SYSTEM_FIX_REQUIRED
+- risk_label: HIGH
+- health_status: BROKEN
 - board_rows: 0
 - panel_status: PARTIAL_OUTPUTS
 - next_action: Daily execution board is missing; do not use operator/prelock/live outputs as pick permission. Run daily chain first.
@@ -50,14 +50,14 @@
 - recommended_action_counts: KEEP_ACTIVE_COLLECT_MORE_DATA=15
 
 ## Automation Health
-- system_status: MISSING
-- components_checked: UNKNOWN
-- severity_counts: UNKNOWN
-- status_counts: UNKNOWN
+- system_status: BROKEN
+- components_checked: 11
+- severity_counts: BROKEN=1; WARN=1; OK=5; INFO=4
+- status_counts: MISSING=1; OK=6; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
 - .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-09; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-09T22:10:51+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-09; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-09T22:10:51+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-10T12:10:29+01:00
 - .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-09; reason=normalize_prelock_recheck_date; triggered_at=2026-06-09T22:10:51+01:00
 
 ## Key Files
@@ -79,9 +79,9 @@
 ## Date Coherence Guard
 - overall_status: DATE_MISMATCH_BLOCK
 - board_status: daily_board_md=MISSING_CORE; daily_board_csv=MISSING_CORE
-- mismatch_count: 2
-- missing_core_count: 3
-- trigger_date_counts: 2026-06-09=2
+- mismatch_count: 1
+- missing_core_count: 2
+- trigger_date_counts: 2026-06-10=1; 2026-06-09=1
 - next_action: Fix trigger/artifact date mismatch before using market signals.
 
 ## Upstream Board Input Diagnostic
@@ -106,9 +106,9 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1604
+- files_scanned: 1614
 - accepted_rows: 122
-- rejected_rows: 16
+- rejected_rows: 30
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
