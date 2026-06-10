@@ -214,3 +214,14 @@
 - pick_permission: NO_PICK_PERMISSION
 - stake_permission: NO_STAKE_PERMISSION
 - next_action: Use direct board fixture_id API lineups as a prelock input only. No automatic pick or stake permission.
+## Forced API Lineup Bridge to Board
+- board_rows_reviewed: 2
+- lineup_confirmed_rows: 2
+- lineup_missing_rows: 0
+- board_rows_written: 2
+- bridge_status_counts: LINEUPS_CONFIRMED_BY_FORCED_API=2
+- bridge_action_counts: CLEAR_LINEUPS_INACTIVE_WARNING_KEEP_EXECUTION_LOCK=2
+- canonical_board_permission: NO_CANONICAL_BOARD_PERMISSION
+- pick_permission: NO_PICK_PERMISSION
+- stake_permission: NO_STAKE_PERMISSION
+- next_action: Use bridged copy for prelock review/repricing. Do not create picks or stake without separate governed promotion.
