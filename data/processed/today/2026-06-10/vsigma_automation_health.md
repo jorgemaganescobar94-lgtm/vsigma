@@ -12,9 +12,9 @@
 - daily_execution_board | status=OK | severity=WARN | action=REVIEW_BOARD | detail=rows=2; decisions=LIVE_ONLY=1; NO_BET=1
 - prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=none
 - live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
-- postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=NS=1
-- postmatch_stat_actuals | status=OK | severity=OK | action=NO | detail=rows_final=0
-- forecast_calibration | status=OK | severity=OK | action=NO | detail=detail_rows=0; statuses=none
+- postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=FT=1; NS=1
+- postmatch_stat_actuals | status=OK | severity=OK | action=NO | detail=rows_final=1
+- forecast_calibration | status=OK | severity=OK | action=NO | detail=detail_rows=1; statuses=LOW_SAMPLE_HOLD=1
 - calibration_memory_ledger | status=OK | severity=OK | action=NO | detail=global ledger exists
 - daily_workflow_v2 | status=CONFIG_EXPECTED | severity=INFO | action=CHECK_GH_WORKFLOW_LIST_IF_NEEDED | detail=vsigma_daily_decision_chain_v2.yml active externally
 - prelock_workflow | status=CONFIG_EXPECTED | severity=INFO | action=CHECK_GH_WORKFLOW_LIST_IF_NEEDED | detail=vsigma_prelock_live_recheck.yml expected active
