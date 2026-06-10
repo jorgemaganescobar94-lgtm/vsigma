@@ -101,3 +101,23 @@
 - Use PowerShell -Encoding UTF8 when reading local Markdown files on Windows.
 - Historical drift notifies only on material operator changes: action level, final decision, risk, or active candidates.
 - Alert routing is diagnostic only; this script writes the route but does not send comments or external notifications.
+
+## Calibration / Shadow Governance
+- calibration_shadow_status: STABLE_OR_NO_PATCH
+- shadow_active_candidates: 0
+- shadow_high_priority: 0
+- shadow_metrics: none
+- shadow_decisions: REJECT_LOW_SAMPLE=1
+- promotion_readiness: NO_PROMOTION
+- promotion_candidates: 0
+- promotion_decisions: WAIT_MORE_SAMPLE=1
+- learning_sanity_status: PASS
+- learning_sanity_counts: PASS=7
+- learning_sanity_severity: OK=7
+- calibration_auto_apply: NO
+- production_change: NO
+
+### Calibration Sources
+- shadow_queue: data/processed/today/2026-06-10/vsigma_calibration_shadow_patch_queue.csv
+- promotion_readiness: data/processed/today/2026-06-10/vsigma_shadow_patch_promotion_readiness.csv
+- learning_sanity: data/processed/today/2026-06-10/vsigma_learning_chain_output_sanity.csv
