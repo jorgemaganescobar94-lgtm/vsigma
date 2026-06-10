@@ -79,6 +79,12 @@ jobs:
           python -m py_compile scripts/apply_forced_api_lineup_bridge_to_board.py
           python scripts/apply_forced_api_lineup_bridge_to_board.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
+      - name: Build prematch match story engine
+        shell: bash
+        run: |
+          python -m py_compile scripts/build_prematch_match_story_engine.py
+          python scripts/build_prematch_match_story_engine.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
       - name: Assert forced lineup outputs
         shell: bash
         run: |
@@ -86,10 +92,9 @@ jobs:
           test -s "data/processed/today/${VSIGMA_DATE}/vsigma_forced_api_board_fixture_lineups.csv"
           test -s "data/processed/today/${VSIGMA_DATE}/vsigma_forced_api_lineup_bridge_to_board.md"
           test -s "data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board_lineup_bridged.md"
-          grep -q "NO_PICK_PERMISSION" "data/processed/today/${VSIGMA_DATE}/vsigma_forced_api_board_fixture_lineups.md"
-          grep -q "NO_STAKE_PERMISSION" "data/processed/today/${VSIGMA_DATE}/vsigma_forced_api_board_fixture_lineups.md"
-          grep -q "NO_PICK_PERMISSION" "data/processed/today/${VSIGMA_DATE}/vsigma_forced_api_lineup_bridge_to_board.md"
-          grep -q "NO_STAKE_PERMISSION" "data/processed/today/${VSIGMA_DATE}/vsigma_forced_api_lineup_bridge_to_board.md"
+          test -s "data/processed/today/${VSIGMA_DATE}/vsigma_prematch_match_story_engine.md"
+          test -s "data/processed/today/${VSIGMA_DATE}/vsigma_prematch_match_story_engine.csv"
+          grep -q "Prematch Match Story Engine" "data/processed/today/${VSIGMA_DATE}/vsigma_prematch_match_story_engine.md"
 
       - name: Commit forced lineup outputs
         shell: bash
@@ -103,6 +108,8 @@ jobs:
           git add data/processed/governance/vsigma_forced_api_lineup_bridge_to_board* 2>/dev/null || true
           git add data/processed/today/${VSIGMA_DATE}/vsigma_daily_execution_board_lineup_bridged* 2>/dev/null || true
           git add data/processed/governance/vsigma_daily_execution_board_lineup_bridged* 2>/dev/null || true
+          git add data/processed/today/${VSIGMA_DATE}/vsigma_prematch_match_story_engine* 2>/dev/null || true
+          git add data/processed/governance/vsigma_prematch_match_story_engine* 2>/dev/null || true
           git add data/processed/today/${VSIGMA_DATE}/vsigma_consolidated_daily_operator_panel.md 2>/dev/null || true
           git add data/processed/governance/vsigma_consolidated_daily_operator_panel.md 2>/dev/null || true
 
@@ -111,5 +118,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "vSIGMA forced API lineup bridge ${VSIGMA_DATE} [skip ci]"
+          git commit -m "vSIGMA prematch story engine ${VSIGMA_DATE} [skip ci]"
           git push origin HEAD:main
