@@ -179,3 +179,27 @@
 - quarantine_rows: 0
 - board_rows_written: 0
 - reason: daily board already has rows
+## API Shadow Rule Outcome Ledger
+- candidate_rules_applied: 10
+- shadow_rows: 242
+- finished_shadow_rows: 92
+- pending_shadow_rows: 150
+- shadow_outcome_counts: PENDING_RESULT=150; HIT=60; MISS=20; VOID=12
+- rule_market_counts: API_DNB=96; API_DOUBLE_CHANCE=96; OVER_1_5=32; UNDER_3_5=18
+- paper_trade_permission_counts: SHADOW_ONLY=242
+- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=242
+- pick_permission_counts: NO_PICK_PERMISSION=242
+- stake_permission_counts: NO_STAKE_PERMISSION=242
+- next_action: Track shadow outcomes over future runs. This ledger cannot activate rules, picks, or stake.
+## API Shadow Rule Out-of-Sample Tracker
+- registry_rules: 11
+- rows_reviewed: 242
+- in_sample_rows: 53
+- out_of_sample_rows: 39
+- pending_rows: 150
+- oos_evaluated_rows: 39
+- oos_class_counts: PENDING_RESULT=150; IN_SAMPLE_BOOTSTRAP=53; OUT_OF_SAMPLE=39
+- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=242
+- pick_permission_counts: NO_PICK_PERMISSION=242
+- stake_permission_counts: NO_STAKE_PERMISSION=242
+- next_action: Collect future OUT_OF_SAMPLE rows. No rule activation before sufficient out-of-sample sample size.
