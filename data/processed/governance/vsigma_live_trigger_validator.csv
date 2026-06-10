@@ -1,2 +1,2 @@
 target_date,generated_at,rank,fixture_id,home_team,away_team,recheck_decision,market,minutes_to_kickoff,window_status,match_status,elapsed,score,total_shots,total_sot,total_corners,home_possession,away_possession,signal_score,live_trigger_decision,reason,source_guard,auto_apply,production_change
-2026-06-10,2026-06-10T23:28:10+01:00,1,1548055,Malaga,Las Palmas,LIVE_ONLY_WAIT_TRIGGER,OVER_1_5_SUPPORTED,474.21,MATCH_FINISHED,FT,90.0,1-1,0,0,0,0,0,0,MATCH_FINISHED,match already final,DATED_INPUT_ONLY,NO,NO
+2026-06-10,2026-06-10T23:55:50+01:00,1,1548055,Malaga,Las Palmas,LIVE_ONLY_WAIT_TRIGGER,OVER_1_5_SUPPORTED,474.21,MATCH_FINISHED,FT,90.0,1-1,0,0,0,0,0,0,MATCH_FINISHED,match already final,DATED_INPUT_ONLY,NO,NO
