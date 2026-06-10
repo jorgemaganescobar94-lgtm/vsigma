@@ -3,15 +3,15 @@
 ## Summary
 - system_status: ATTENTION
 - components_checked: 11
-- severity_counts: WARN=2; OK=5; INFO=4
+- severity_counts: WARN=3; OK=4; INFO=4
 - status_counts: OK=7; CONFIG_EXPECTED=4
 - auto_apply: NO
 - production_change: NO
 
 ## Component Rows
 - daily_execution_board | status=OK | severity=WARN | action=REVIEW_BOARD | detail=rows=2; decisions=LIVE_ONLY=1; NO_BET=1
-- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=none
-- live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
+- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=LIVE_ONLY_WAIT_TRIGGER=1; CANCELLED_NO_BET=1
+- live_trigger_validator | status=OK | severity=WARN | action=REVIEW_LIVE_WINDOW_MISSED_OR_FINISHED | detail=windows=MATCH_FINISHED=1; triggers=MATCH_FINISHED=1
 - postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=FT=1; NS=1
 - postmatch_stat_actuals | status=OK | severity=OK | action=NO | detail=rows_final=1
 - forecast_calibration | status=OK | severity=OK | action=NO | detail=detail_rows=1; statuses=LOW_SAMPLE_HOLD=1
