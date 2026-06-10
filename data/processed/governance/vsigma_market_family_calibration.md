@@ -11,7 +11,7 @@
 ## Family Rows
 - NO_MARKET | real=0/3 | green=0 red=0 void=0 | gate=INSUFFICIENT_SAMPLE | status=HOLD_SAMPLE | signal=NO_WEIGHT_CHANGE | action=Collect more market-family samples before changing confidence.
 - TOTAL_GOALS | real=0/1 | green=0 red=0 void=0 | gate=INSUFFICIENT_SAMPLE | status=HOLD_SAMPLE | signal=NO_WEIGHT_CHANGE | action=Collect more market-family samples before changing confidence.
-- UNKNOWN_FAMILY | real=0/3 | green=0 red=0 void=0 | gate=INSUFFICIENT_SAMPLE | status=HOLD_SAMPLE | signal=NO_WEIGHT_CHANGE | action=Collect more market-family samples before changing confidence.
+- UNKNOWN_FAMILY | real=0/2 | green=0 red=0 void=0 | gate=INSUFFICIENT_SAMPLE | status=HOLD_SAMPLE | signal=NO_WEIGHT_CHANGE | action=Collect more market-family samples before changing confidence.
 
 ## Guardrails
 - This calibration is family-level and advisory only; it does not change model weights.

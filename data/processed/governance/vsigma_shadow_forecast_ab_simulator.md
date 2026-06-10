@@ -1,7 +1,7 @@
 # vSIGMA Shadow Forecast A/B Simulator - 2026-06-10
 
 ## Summary
-- source_guard: NO_DETAIL_DATA
+- source_guard: CALIBRATION_DETAILS
 - detail_rows: 0
 - summary_rows: 0
 - shadow_verdicts: none

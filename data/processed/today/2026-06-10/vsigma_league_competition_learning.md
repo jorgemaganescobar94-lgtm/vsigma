@@ -12,7 +12,7 @@
 
 ## Competition Rows
 - DIAGNOSTIC|DIAGNOSTIC_NO_COMPETITION | real=0/1 | green=0 red=0 void=0 | no_bet=1 | top_family=NO_MARKET | gate=INSUFFICIENT_SAMPLE | volatility=UNKNOWN_VOLATILITY | status=DIAGNOSTIC_ONLY_NO_REAL_SAMPLE | downstream=DIAGNOSTIC_ONLY_NO_SCORING
-- UNKNOWN_COUNTRY|UNKNOWN_LEAGUE | real=0/5 | green=0 red=0 void=0 | no_bet=5 | top_family=UNKNOWN_FAMILY | gate=INSUFFICIENT_SAMPLE | volatility=UNKNOWN_VOLATILITY | status=HOLD_NO_REAL_SAMPLE | downstream=COVERAGE_GATE_ONLY
+- UNKNOWN_COUNTRY|UNKNOWN_LEAGUE | real=0/7 | green=0 red=0 void=0 | no_bet=6 | top_family=UNKNOWN_FAMILY | gate=INSUFFICIENT_SAMPLE | volatility=UNKNOWN_VOLATILITY | status=HOLD_NO_REAL_SAMPLE | downstream=COVERAGE_GATE_ONLY
 
 ## Guardrails
 - This competition learning report is advisory only and never changes league scoring permissions.

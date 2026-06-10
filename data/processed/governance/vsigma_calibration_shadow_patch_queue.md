@@ -1,17 +1,17 @@
 # vSIGMA Calibration Shadow Patch Queue - 2026-06-10
 
 ## Summary
-- rows_reviewed: 0
-- queue_decisions: none
-- shadow_priorities: none
-- threshold_gates: none
-- input_source_guard: EMPTY_SOURCE
+- rows_reviewed: 1
+- queue_decisions: REJECT_LOW_SAMPLE=1
+- shadow_priorities: NONE=1
+- threshold_gates: MONITOR_SIGNAL=1
+- input_source_guard: DATED_SUMMARY
 - input_source_path: data/processed/today/2026-06-10/vsigma_match_stat_forecast_calibration_summary.csv
 - auto_apply_allowed: NO
 - production_change: NO
 
 ## Queue
-- none. Need calibration summary or same-date calibration memory ledger rows first.
+- total_goals | decision=REJECT_LOW_SAMPLE | priority=NONE | sample=1 | hit_rate=1.000 | err=0.35 | bias=BALANCED_OR_ON_RANGE | threshold=MONITOR_SIGNAL | source=DATED_SUMMARY | patch=NONE
 
 ## Guardrails
 - Shadow patch queue is advisory only; it does not edit forecast formulas.

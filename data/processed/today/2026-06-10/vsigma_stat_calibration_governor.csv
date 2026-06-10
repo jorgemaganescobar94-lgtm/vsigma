@@ -1,1 +1,2 @@
 target_date,generated_at,metric,rows_evaluated,hit_rate,avg_abs_error_mid,bias_direction,calibration_status,severity,recommended_adjustment,model_area,auto_apply_allowed,operator_note,source_guard,auto_apply,production_change
+2026-06-10,2026-06-10T18:46:40+01:00,total_goals,1,1.000,0.35,BALANCED_OR_ON_RANGE,LOW_SAMPLE_HOLD,LOW_SAMPLE,Hold. Need at least 3 evaluated rows before tuning.,sample_control,NO,No change; sample too small.,DATED_INPUT_ONLY,NO,NO

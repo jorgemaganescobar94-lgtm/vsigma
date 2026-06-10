@@ -1,26 +1,32 @@
 # vSIGMA Portfolio / Correlation Learning - 2026-06-10
 
 ## Summary
-- cluster_rows: 12
-- portfolio_correlation_status_counts: DIAGNOSTIC_ONLY_NO_PORTFOLIO_LEARNING=12
-- correlation_risk_label_counts: NONE=12
-- cluster_type_counts: CONFIDENCE_BUCKET=1; COUNTRY=1; DAILY_PORTFOLIO=1; DECISION_BUCKET=1; ERROR_FAMILY=1; GOAL_TIMING_PROFILE=1; LEAGUE=1; LINEUP_SHOCK_STATUS=1; MARKET_FAMILY=1; NO_BET_QUALITY=1; QUALITY_CLASS=1; SCORELINE_BUCKET=1
+- cluster_rows: 18
+- portfolio_correlation_status_counts: SINGLETON_NO_CORRELATION_SAMPLE=12; NO_BET_CONCENTRATION_REVIEW=6
+- correlation_risk_label_counts: LOW=12; MEDIUM=6
+- cluster_type_counts: DECISION_BUCKET=2; ERROR_FAMILY=2; MARKET_FAMILY=2; NO_BET_QUALITY=2; QUALITY_CLASS=2; SCORELINE_BUCKET=2; CONFIDENCE_BUCKET=1; COUNTRY=1; DAILY_PORTFOLIO=1; GOAL_TIMING_PROFILE=1; LEAGUE=1; LINEUP_SHOCK_STATUS=1
 - auto_apply: NO
 - production_change: NO
 
 ## Cluster Rows
-- CONFIDENCE_BUCKET:NO_CONFIDENCE | rows=1 real=0 | green=0 red=0 no_bet=0 | status=DIAGNOSTIC_ONLY_NO_PORTFOLIO_LEARNING | risk=NONE | action=Diagnostic-only cluster; do not learn portfolio correlation.
-- COUNTRY:DIAGNOSTIC | rows=1 real=0 | green=0 red=0 no_bet=0 | status=DIAGNOSTIC_ONLY_NO_PORTFOLIO_LEARNING | risk=NONE | action=Diagnostic-only cluster; do not learn portfolio correlation.
-- DAILY_PORTFOLIO:ALL | rows=1 real=0 | green=0 red=0 no_bet=0 | status=DIAGNOSTIC_ONLY_NO_PORTFOLIO_LEARNING | risk=NONE | action=Diagnostic-only cluster; do not learn portfolio correlation.
-- DECISION_BUCKET:DIAGNOSTIC_ONLY | rows=1 real=0 | green=0 red=0 no_bet=0 | status=DIAGNOSTIC_ONLY_NO_PORTFOLIO_LEARNING | risk=NONE | action=Diagnostic-only cluster; do not learn portfolio correlation.
-- ERROR_FAMILY:UNKNOWN_ERROR | rows=1 real=0 | green=0 red=0 no_bet=0 | status=DIAGNOSTIC_ONLY_NO_PORTFOLIO_LEARNING | risk=NONE | action=Diagnostic-only cluster; do not learn portfolio correlation.
-- GOAL_TIMING_PROFILE:NO_GOAL_TIMING_PROFILE | rows=1 real=0 | green=0 red=0 no_bet=0 | status=DIAGNOSTIC_ONLY_NO_PORTFOLIO_LEARNING | risk=NONE | action=Diagnostic-only cluster; do not learn portfolio correlation.
-- LEAGUE:DIAGNOSTIC|DIAGNOSTIC_NO_COMPETITION | rows=1 real=0 | green=0 red=0 no_bet=0 | status=DIAGNOSTIC_ONLY_NO_PORTFOLIO_LEARNING | risk=NONE | action=Diagnostic-only cluster; do not learn portfolio correlation.
-- LINEUP_SHOCK_STATUS:NO_LINEUP_STATUS | rows=1 real=0 | green=0 red=0 no_bet=0 | status=DIAGNOSTIC_ONLY_NO_PORTFOLIO_LEARNING | risk=NONE | action=Diagnostic-only cluster; do not learn portfolio correlation.
-- MARKET_FAMILY:UNKNOWN_FAMILY | rows=1 real=0 | green=0 red=0 no_bet=0 | status=DIAGNOSTIC_ONLY_NO_PORTFOLIO_LEARNING | risk=NONE | action=Diagnostic-only cluster; do not learn portfolio correlation.
-- NO_BET_QUALITY:NO_NO_BET_LABEL | rows=1 real=0 | green=0 red=0 no_bet=0 | status=DIAGNOSTIC_ONLY_NO_PORTFOLIO_LEARNING | risk=NONE | action=Diagnostic-only cluster; do not learn portfolio correlation.
-- QUALITY_CLASS:UNKNOWN_QUALITY | rows=1 real=0 | green=0 red=0 no_bet=0 | status=DIAGNOSTIC_ONLY_NO_PORTFOLIO_LEARNING | risk=NONE | action=Diagnostic-only cluster; do not learn portfolio correlation.
-- SCORELINE_BUCKET:NO_SCORELINE_BUCKET | rows=1 real=0 | green=0 red=0 no_bet=0 | status=DIAGNOSTIC_ONLY_NO_PORTFOLIO_LEARNING | risk=NONE | action=Diagnostic-only cluster; do not learn portfolio correlation.
+- CONFIDENCE_BUCKET:NO_CONFIDENCE | rows=2 real=0 | green=0 red=0 no_bet=2 | status=NO_BET_CONCENTRATION_REVIEW | risk=MEDIUM | action=Multiple No Bet rows share this cluster; review whether the system is overblocking.
+- COUNTRY:UNKNOWN_COUNTRY | rows=2 real=0 | green=0 red=0 no_bet=2 | status=NO_BET_CONCENTRATION_REVIEW | risk=MEDIUM | action=Multiple No Bet rows share this cluster; review whether the system is overblocking.
+- DAILY_PORTFOLIO:ALL | rows=2 real=0 | green=0 red=0 no_bet=2 | status=NO_BET_CONCENTRATION_REVIEW | risk=MEDIUM | action=Multiple No Bet rows share this cluster; review whether the system is overblocking.
+- DECISION_BUCKET:LIVE_ONLY | rows=1 real=0 | green=0 red=0 no_bet=1 | status=SINGLETON_NO_CORRELATION_SAMPLE | risk=LOW | action=Only one row in cluster; no portfolio correlation can be inferred.
+- DECISION_BUCKET:NO_BET | rows=1 real=0 | green=0 red=0 no_bet=1 | status=SINGLETON_NO_CORRELATION_SAMPLE | risk=LOW | action=Only one row in cluster; no portfolio correlation can be inferred.
+- ERROR_FAMILY:NO_BET_REVIEW | rows=1 real=0 | green=0 red=0 no_bet=1 | status=SINGLETON_NO_CORRELATION_SAMPLE | risk=LOW | action=Only one row in cluster; no portfolio correlation can be inferred.
+- ERROR_FAMILY:PENDING | rows=1 real=0 | green=0 red=0 no_bet=1 | status=SINGLETON_NO_CORRELATION_SAMPLE | risk=LOW | action=Only one row in cluster; no portfolio correlation can be inferred.
+- GOAL_TIMING_PROFILE:GOAL_TIMING_DATA_MISSING | rows=2 real=0 | green=0 red=0 no_bet=2 | status=NO_BET_CONCENTRATION_REVIEW | risk=MEDIUM | action=Multiple No Bet rows share this cluster; review whether the system is overblocking.
+- LEAGUE:UNKNOWN_COUNTRY|UNKNOWN_LEAGUE | rows=2 real=0 | green=0 red=0 no_bet=2 | status=NO_BET_CONCENTRATION_REVIEW | risk=MEDIUM | action=Multiple No Bet rows share this cluster; review whether the system is overblocking.
+- LINEUP_SHOCK_STATUS:LINEUP_DATA_MISSING | rows=2 real=0 | green=0 red=0 no_bet=2 | status=NO_BET_CONCENTRATION_REVIEW | risk=MEDIUM | action=Multiple No Bet rows share this cluster; review whether the system is overblocking.
+- MARKET_FAMILY:TOTAL_GOALS | rows=1 real=0 | green=0 red=0 no_bet=1 | status=SINGLETON_NO_CORRELATION_SAMPLE | risk=LOW | action=Only one row in cluster; no portfolio correlation can be inferred.
+- MARKET_FAMILY:UNKNOWN_FAMILY | rows=1 real=0 | green=0 red=0 no_bet=1 | status=SINGLETON_NO_CORRELATION_SAMPLE | risk=LOW | action=Only one row in cluster; no portfolio correlation can be inferred.
+- NO_BET_QUALITY:NOT_A_NO_BET_ROW | rows=1 real=0 | green=0 red=0 no_bet=1 | status=SINGLETON_NO_CORRELATION_SAMPLE | risk=LOW | action=Only one row in cluster; no portfolio correlation can be inferred.
+- NO_BET_QUALITY:NO_BET_TOO_CONSERVATIVE_CANDIDATE | rows=1 real=0 | green=0 red=0 no_bet=1 | status=SINGLETON_NO_CORRELATION_SAMPLE | risk=LOW | action=Only one row in cluster; no portfolio correlation can be inferred.
+- QUALITY_CLASS:NO_BET_CAUSAL_REVIEW_REQUIRED | rows=1 real=0 | green=0 red=0 no_bet=1 | status=SINGLETON_NO_CORRELATION_SAMPLE | risk=LOW | action=Only one row in cluster; no portfolio correlation can be inferred.
+- QUALITY_CLASS:PENDING_FINAL_ACTUALS | rows=1 real=0 | green=0 red=0 no_bet=1 | status=SINGLETON_NO_CORRELATION_SAMPLE | risk=LOW | action=Only one row in cluster; no portfolio correlation can be inferred.
+- SCORELINE_BUCKET:DRAW_1_1 | rows=1 real=0 | green=0 red=0 no_bet=1 | status=SINGLETON_NO_CORRELATION_SAMPLE | risk=LOW | action=Only one row in cluster; no portfolio correlation can be inferred.
+- SCORELINE_BUCKET:NO_SCORELINE | rows=1 real=0 | green=0 red=0 no_bet=1 | status=SINGLETON_NO_CORRELATION_SAMPLE | risk=LOW | action=Only one row in cluster; no portfolio correlation can be inferred.
 
 ## Guardrails
 - This portfolio correlation report is advisory only and never changes picks, stake, gates, or weights.
