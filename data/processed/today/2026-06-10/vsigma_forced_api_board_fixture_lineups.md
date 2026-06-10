@@ -22,17 +22,17 @@
 - Cape Town City vs Magesi | fixture_id=1546281 | status=OK | starters=22 | subs=18 | note=lineups fetched directly by fixture_id
 
 ## Starting XI Rows
-- home | Malaga | 4-4-2 | #1 Alfonso Herrero | pos=G | grid=1:1
-- home | Malaga | 4-4-2 | #3 Carlos Puga | pos=D | grid=2:4
-- home | Malaga | 4-4-2 | #16 Diego Murillo | pos=D | grid=2:3
-- home | Malaga | 4-4-2 | #20 Javi Montero | pos=D | grid=2:2
-- home | Malaga | 4-4-2 | #31 Rafa Garrido | pos=D | grid=2:1
-- home | Malaga | 4-4-2 | #10 David Larrubia | pos=M | grid=3:4
-- home | Malaga | 4-4-2 | #23 Izan Merino | pos=M | grid=3:3
-- home | Malaga | 4-4-2 | #22 Dani Lorenzo | pos=M | grid=3:2
-- home | Malaga | 4-4-2 | #11 Joaquín Muñoz | pos=M | grid=3:1
-- home | Malaga | 4-4-2 | #12 Carlos Dotor | pos=F | grid=4:2
-- home | Malaga | 4-4-2 | #9 Chupete | pos=F | grid=4:1
+- home | Malaga | 4-2-3-1 | #1 Alfonso Herrero | pos=G | grid=1:1
+- home | Malaga | 4-2-3-1 | #3 Carlos Puga | pos=D | grid=2:4
+- home | Malaga | 4-2-3-1 | #16 Diego Murillo | pos=D | grid=2:3
+- home | Malaga | 4-2-3-1 | #20 Javi Montero | pos=D | grid=2:2
+- home | Malaga | 4-2-3-1 | #31 Rafa Garrido | pos=D | grid=2:1
+- home | Malaga | 4-2-3-1 | #23 Izan Merino | pos=M | grid=3:2
+- home | Malaga | 4-2-3-1 | #22 Dani Lorenzo | pos=M | grid=3:1
+- home | Malaga | 4-2-3-1 | #10 David Larrubia | pos=M | grid=4:3
+- home | Malaga | 4-2-3-1 | #12 Carlos Dotor | pos=M | grid=4:2
+- home | Malaga | 4-2-3-1 | #11 Joaquín Muñoz | pos=M | grid=4:1
+- home | Malaga | 4-2-3-1 | #9 Chupete | pos=F | grid=5:1
 - away | Las Palmas | 4-4-2 | #1 Dinko Horkaš | pos=G | grid=1:1
 - away | Las Palmas | 4-4-2 | #2 Marvin Park | pos=D | grid=2:4
 - away | Las Palmas | 4-4-2 | #4 Alex Suárez | pos=D | grid=2:3
@@ -42,8 +42,8 @@
 - away | Las Palmas | 4-4-2 | #16 Lorenzo Amatucci | pos=M | grid=3:3
 - away | Las Palmas | 4-4-2 | #20 Kirian Rodríguez | pos=M | grid=3:2
 - away | Las Palmas | 4-4-2 | #39 Estanis Pedrola | pos=M | grid=3:1
-- away | Las Palmas | 4-4-2 | #10 Jesé Rodríguez | pos=F | grid=4:2
-- away | Las Palmas | 4-4-2 | #21 Jonathan Viera | pos=F | grid=4:1
+- away | Las Palmas | 4-4-2 | #21 Jonathan Viera | pos=F | grid=4:2
+- away | Las Palmas | 4-4-2 | #10 Jesé Rodríguez | pos=F | grid=4:1
 - home | Cape Town City | 4-4-2 | #47 Luca Diana-Oliaro | pos=G | grid=1:1
 - home | Cape Town City | 4-4-2 | #19 Alifeyo Sibusiso Ziba | pos=D | grid=2:4
 - home | Cape Town City | 4-4-2 | #48 Cayden Fortune | pos=D | grid=2:3

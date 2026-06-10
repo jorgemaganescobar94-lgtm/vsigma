@@ -225,3 +225,11 @@
 - pick_permission: NO_PICK_PERMISSION
 - stake_permission: NO_STAKE_PERMISSION
 - next_action: Use bridged copy for prelock review/repricing. Do not create picks or stake without separate governed promotion.
+## Prematch Story Accuracy Ledger
+- rows: 2
+- finished_rows: 1
+- pending_rows: 1
+- result_family_counts: PENDING=1; HIT=1
+- score_neighbor_counts: PENDING=1; EXACT=1
+- goal_profile_counts: PENDING=1; HIT=1
+- next_action: Track completed rows and calibrate prematch prediction families.

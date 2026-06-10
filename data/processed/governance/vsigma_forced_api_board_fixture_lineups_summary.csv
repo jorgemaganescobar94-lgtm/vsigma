@@ -1,2 +1,2 @@
 target_date,generated_at,fixtures_reviewed,api_calls_planned,api_calls_executed,lineup_fixtures_found,lineup_fixtures_missing,lineup_rows_written,starting_xi_rows,substitute_rows,api_status_counts,team_side_counts,provider_counts,next_action,auto_apply,production_change
-2026-06-10,2026-06-10T20:21:39+01:00,2,2,2,2,0,86,44,42,OK=86,home=43; away=43,API-SPORTS_DIRECT=86,Use direct board fixture_id API lineups as a prelock input only. No automatic pick or stake permission.,NO,NO
+2026-06-10,2026-06-10T21:01:07+01:00,2,2,2,2,0,86,44,42,OK=86,home=43; away=43,API-SPORTS_DIRECT=86,Use direct board fixture_id API lineups as a prelock input only. No automatic pick or stake permission.,NO,NO
