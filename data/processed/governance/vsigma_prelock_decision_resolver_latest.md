@@ -12,12 +12,12 @@
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Malaga vs Las Palmas | OVER_1_5 | 2026-06-10T20:00+01:00 | 20.07 | NO_BET | NO | ODDS_NOT_AVAILABLE;LINEUPS_NOT_AVAILABLE;AVAILABILITY_NOT_AVAILABLE |  |
+| Malaga vs Las Palmas | OVER_1_5 | 2026-06-10T20:00+01:00 | -58.51 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
 
 ## Data Gaps
-- odds missing: 1
-- lineups missing: 1
-- availability missing: 1
+- odds missing: 0
+- lineups missing: 0
+- availability missing: 0
 
 ## Notes
 This resolver does not change predictions, thresholds, calibration, probability formulas, or base selection. It only translates PRELOCK state into an operational execution decision.
