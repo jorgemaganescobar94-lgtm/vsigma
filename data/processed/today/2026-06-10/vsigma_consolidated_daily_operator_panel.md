@@ -1,8 +1,8 @@
 # vSIGMA Consolidated Daily Operator Panel - 2026-06-10
 
 ## First Read
-- panel_status: WATCH
-- operator_detail: action=WATCH; final=WATCH_ONLY_NO_STAKE; risk=LOW_ALERT; health=ATTENTION; board_rows=2
+- panel_status: NONE
+- operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=ATTENTION; board_rows=2
 - executable_prematch: NONE
 - live_only: ROWS=1
 - watchlist: NONE
@@ -12,19 +12,19 @@
 - production_change: NO
 
 ## Operator Gate
-- action_level: WATCH
-- compact_final_decision: WATCH_ONLY_NO_STAKE
-- risk_label: LOW_ALERT
+- action_level: NONE
+- compact_final_decision: NO_OPERATOR_ACTION
+- risk_label: NONE
 - health_status: ATTENTION
 - board_rows: 2
-- panel_status: WATCH
+- panel_status: NONE
 - next_action: Follow operator brief and panel categories; no automatic execution.
 
 ## Executable Prematch
 - none
 
 ## Live Only
-- #1 | LIVE_ONLY | Malaga vs Las Palmas | market=OVER_1_5_SUPPORTED | alt=OVER_2_5_REVIEW | stake=NO_STAKE_OR_SYMBOLIC | permission=NO_PREMATCH | conf=MEDIUM | score=17
+- #1 | LIVE_ONLY | Malaga vs Las Palmas | market=OVER_1_5_SUPPORTED | alt=OVER_2_5_REVIEW | stake=NO_STAKE_OR_SYMBOLIC | permission=NO_PREMATCH | conf=MEDIUM | score=17 | window=MATCH_FINISHED | live=MATCH_FINISHED | match=FT | min=90.0
 
 ## Watchlist
 - none
@@ -59,7 +59,7 @@
 ## Automation Health
 - system_status: ATTENTION
 - components_checked: 11
-- severity_counts: WARN=2; OK=5; INFO=4
+- severity_counts: WARN=3; OK=4; INFO=4
 - status_counts: OK=7; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
@@ -113,9 +113,9 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1625
+- files_scanned: 1629
 - accepted_rows: 122
-- rejected_rows: 668
+- rejected_rows: 840
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
@@ -179,58 +179,3 @@
 - quarantine_rows: 0
 - board_rows_written: 0
 - reason: daily board already has rows
-## API Shadow Rule Outcome Ledger
-- candidate_rules_applied: 10
-- shadow_rows: 242
-- finished_shadow_rows: 92
-- pending_shadow_rows: 150
-- shadow_outcome_counts: PENDING_RESULT=150; HIT=60; MISS=20; VOID=12
-- rule_market_counts: API_DNB=96; API_DOUBLE_CHANCE=96; OVER_1_5=32; UNDER_3_5=18
-- paper_trade_permission_counts: SHADOW_ONLY=242
-- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=242
-- pick_permission_counts: NO_PICK_PERMISSION=242
-- stake_permission_counts: NO_STAKE_PERMISSION=242
-- next_action: Track shadow outcomes over future runs. This ledger cannot activate rules, picks, or stake.
-## API Shadow Rule Out-of-Sample Tracker
-- registry_rules: 11
-- rows_reviewed: 242
-- in_sample_rows: 53
-- out_of_sample_rows: 39
-- pending_rows: 150
-- oos_evaluated_rows: 39
-- oos_class_counts: PENDING_RESULT=150; IN_SAMPLE_BOOTSTRAP=53; OUT_OF_SAMPLE=39
-- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=242
-- pick_permission_counts: NO_PICK_PERMISSION=242
-- stake_permission_counts: NO_STAKE_PERMISSION=242
-- next_action: Collect future OUT_OF_SAMPLE rows. No rule activation before sufficient out-of-sample sample size.
-
-## Forced API Board Fixture Lineups Refresh
-- fixtures_reviewed: 2
-- api_calls_executed: 2
-- lineup_fixtures_found: 2
-- lineup_fixtures_missing: 0
-- starting_xi_rows: 44
-- substitute_rows: 42
-- api_status_counts: OK=86
-- pick_permission: NO_PICK_PERMISSION
-- stake_permission: NO_STAKE_PERMISSION
-- next_action: Use direct board fixture_id API lineups as a prelock input only. No automatic pick or stake permission.
-## Forced API Lineup Bridge to Board
-- board_rows_reviewed: 2
-- lineup_confirmed_rows: 2
-- lineup_missing_rows: 0
-- board_rows_written: 2
-- bridge_status_counts: LINEUPS_CONFIRMED_BY_FORCED_API=2
-- bridge_action_counts: CLEAR_LINEUPS_INACTIVE_WARNING_KEEP_EXECUTION_LOCK=2
-- canonical_board_permission: NO_CANONICAL_BOARD_PERMISSION
-- pick_permission: NO_PICK_PERMISSION
-- stake_permission: NO_STAKE_PERMISSION
-- next_action: Use bridged copy for prelock review/repricing. Do not create picks or stake without separate governed promotion.
-## Prematch Story Accuracy Ledger
-- rows: 2
-- finished_rows: 1
-- pending_rows: 1
-- result_family_counts: PENDING=1; HIT=1
-- score_neighbor_counts: PENDING=1; EXACT=1
-- goal_profile_counts: PENDING=1; HIT=1
-- next_action: Track completed rows and calibrate prematch prediction families.
