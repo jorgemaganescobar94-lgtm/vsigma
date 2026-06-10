@@ -1,0 +1,14 @@
+vSIGMA TODAY BASELINE VS CANDIDATE V2 RESULTS
+
+Baseline pick count: 1
+Candidate pick count: 1
+Overlap picks: 1
+
+Mode summary
+               mode  pick_count  settled_rows  pending_rows  unmatched_rows  wins  losses  pushes  voids  profit_units roi_percent
+  BASELINE_OFFICIAL           1             0             1               0     0       0       0      0           0.0        <NA>
+SHADOW_CANDIDATE_V2           1             0             1               0     0       0       0      0           0.0        <NA>
+
+Pick result comparison
+comparison_status  fixture_id              fixture           league  baseline_rank  candidate_v2_rank baseline_market candidate_v2_market baseline_result_status candidate_v2_result_status baseline_result candidate_v2_result baseline_profit_units candidate_v2_profit_units
+             BOTH     1548055 Malaga vs Las Palmas Segunda División              1                  1        OVER_1_5            OVER_1_5                PENDING                    PENDING         PENDING             PENDING                  <NA>                      <NA>
