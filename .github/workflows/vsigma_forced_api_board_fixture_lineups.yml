@@ -1,0 +1,101 @@
+name: vSIGMA Forced API Board Fixture Lineups
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        required: false
+        default: ""
+  workflow_run:
+    workflows:
+      - vSIGMA Daily Decision Chain v2
+    types:
+      - completed
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vsigma-forced-api-board-fixture-lineups-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      APISPORTS_KEY: ${{ secrets.APISPORTS_KEY }}
+      API_SPORTS_KEY: ${{ secrets.API_SPORTS_KEY }}
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+      APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+      API_FOOTBALL_API_KEY: ${{ secrets.API_FOOTBALL_API_KEY }}
+      RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+      X_RAPIDAPI_KEY: ${{ secrets.X_RAPIDAPI_KEY }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ github.token }}
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            python -m pip install -r requirements.txt
+          else
+            python -m pip install requests
+          fi
+
+      - name: Decide date
+        shell: bash
+        run: |
+          D=""
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            D="${{ inputs.date }}"
+          fi
+          if [ -z "$D" ] && [ -f ".vsigma/triggers/daily_decision_chain_v2.trigger" ]; then
+            D="$(grep -E '^date=' .vsigma/triggers/daily_decision_chain_v2.trigger | tail -1 | cut -d= -f2 | tr -d '[:space:]')"
+          fi
+          if [ -z "$D" ]; then D="$(TZ=Atlantic/Canary date +%F)"; fi
+          echo "VSIGMA_DATE=$D" >> "$GITHUB_ENV"
+          echo "Resolved VSIGMA_DATE=$D"
+
+      - name: Force API board fixture lineups refresh
+        shell: bash
+        run: |
+          python -m py_compile scripts/force_api_board_fixture_lineups_refresh.py
+          python scripts/force_api_board_fixture_lineups_refresh.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --limit 20
+
+      - name: Assert forced lineup outputs
+        shell: bash
+        run: |
+          test -s "data/processed/today/${VSIGMA_DATE}/vsigma_forced_api_board_fixture_lineups.md"
+          test -s "data/processed/today/${VSIGMA_DATE}/vsigma_forced_api_board_fixture_lineups.csv"
+          grep -q "NO_PICK_PERMISSION" "data/processed/today/${VSIGMA_DATE}/vsigma_forced_api_board_fixture_lineups.md"
+          grep -q "NO_STAKE_PERMISSION" "data/processed/today/${VSIGMA_DATE}/vsigma_forced_api_board_fixture_lineups.md"
+
+      - name: Commit forced lineup outputs
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/processed/today/${VSIGMA_DATE}/vsigma_forced_api_board_fixture_lineups* 2>/dev/null || true
+          git add data/processed/governance/vsigma_forced_api_board_fixture_lineups* 2>/dev/null || true
+          git add data/processed/today/${VSIGMA_DATE}/vsigma_consolidated_daily_operator_panel.md 2>/dev/null || true
+          git add data/processed/governance/vsigma_consolidated_daily_operator_panel.md 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No forced API board fixture lineup changes to commit."
+            exit 0
+          fi
+
+          git commit -m "vSIGMA forced API board fixture lineups ${VSIGMA_DATE} [skip ci]"
+          git push origin HEAD:main
