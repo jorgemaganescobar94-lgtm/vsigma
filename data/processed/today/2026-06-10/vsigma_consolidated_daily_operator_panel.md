@@ -203,3 +203,14 @@
 - pick_permission_counts: NO_PICK_PERMISSION=242
 - stake_permission_counts: NO_STAKE_PERMISSION=242
 - next_action: Collect future OUT_OF_SAMPLE rows. No rule activation before sufficient out-of-sample sample size.
+## Forced API Board Fixture Lineups Refresh
+- fixtures_reviewed: 2
+- api_calls_executed: 2
+- lineup_fixtures_found: 2
+- lineup_fixtures_missing: 0
+- starting_xi_rows: 44
+- substitute_rows: 42
+- api_status_counts: OK=86
+- pick_permission: NO_PICK_PERMISSION
+- stake_permission: NO_STAKE_PERMISSION
+- next_action: Use direct board fixture_id API lineups as a prelock input only. No automatic pick or stake permission.
