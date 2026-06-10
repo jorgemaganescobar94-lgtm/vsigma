@@ -2,42 +2,63 @@
 
 ## Summary
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1630
+- files_scanned: 1629
 - accepted_rows: 122
-- rejected_rows: 429
-- source_status_counts: NO_SAME_DAY_ROWS=1125; EMPTY_OR_UNREADABLE=413; NO_ACCEPTED_ROWS=89; HAS_ACCEPTED_ROWS=3
+- rejected_rows: 840
+- source_status_counts: NO_SAME_DAY_ROWS=1127; EMPTY_OR_UNREADABLE=406; NO_ACCEPTED_ROWS=92; HAS_ACCEPTED_ROWS=4
 - next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO
 
 ## Accepted Rows
+- Neptūną Klaipėda vs Transinvest 2 | fixture_id=1530591 | league=1 Lyga | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Fjardabyggd / Leiknir vs Fjolnir | fixture_id=1543393 | league=2. Deild | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Haukar vs Kormákur / Hvöt | fixture_id=1543391 | league=2. Deild | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Thróttur Vogar vs Vikingur Olafsiik | fixture_id=1543396 | league=2. Deild | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Damash Gilanian vs Mes Shahr-e Babak | fixture_id=1542167 | league=Azadegan League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Naft Bandar Abbas vs Shahrdari Noshahr | fixture_id=1542173 | league=Azadegan League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Blumenau vs Jaraguá | fixture_id=1542025 | league=Catarinense - 2 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Dikaki vs Cercle Mbéri | fixture_id=1550653 | league=Championnat D1 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Mangasport vs Bouenguidi | fixture_id=1550655 | league=Championnat D1 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Stade Mandji vs Lozo | fixture_id=1550657 | league=Championnat D1 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Brasil DE Pelotas vs Farroupilha | fixture_id=1544586 | league=Copa Gaúcha | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Aigle Royal de Moungo vs PWD Bamenda | fixture_id=1512951 | league=Elite One | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Colombe vs Jeunes Fauves | fixture_id=1512955 | league=Elite One | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Fortuna Mfou vs Stade Renard | fixture_id=1512956 | league=Elite One | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Gazelle vs Cotonsport | fixture_id=1512957 | league=Elite One | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Gualaceo SC vs Cumbayá | fixture_id=1526555 | league=Liga Pro Serie B | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Ind. Juniors vs Deportivo Cuenca Juniors | fixture_id=1526556 | league=Liga Pro Serie B | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Tupan vs São José MA | fixture_id=1544783 | league=Maranhense - 2 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Amawele vs Madlenya | fixture_id=1550040 | league=Premier League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Viva Stumbo vs Magwanyana | fixture_id=1550041 | league=Premier League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Dynamos vs Hunters | fixture_id=1495293 | league=Premier Soccer League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Kariba vs Herentals | fixture_id=1495299 | league=Premier Soccer League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Platinum vs Hardrock | fixture_id=1495296 | league=Premier Soccer League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Simba Bhora vs Ngezi Platinum | fixture_id=1495298 | league=Premier Soccer League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Afrique Football Élite vs ASKO | fixture_id=1550666 | league=Première Division | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Onze Créateurs vs Bakaridjan | fixture_id=1550667 | league=Première Division | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Shortan vs Gazalkent | fixture_id=1531060 | league=Pro League A | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- WDSC Wolves vs Eastern Suburbs | fixture_id=1524029 | league=Queensland NPL | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Orebro SK vs GIF Sundsvall | fixture_id=1497597 | league=Superettan | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Varbergs BoIS FC vs Norrby IF | fixture_id=1497600 | league=Superettan | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Excelsior Maassluis vs Ijsselmeervogels | fixture_id=1550668 | league=Tweede Divisie | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Pirmasens vs VfR Mannheim | fixture_id=1550634 | league=Oberliga - Promotion Round | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
 - Malaga vs Las Palmas | fixture_id=1548055 | league= | source=data/processed/governance/vsigma_candidate_provenance_ceiling.csv
 - Cape Town City vs Magesi | fixture_id=1546281 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Neptūną Klaipėda vs Transinvest 2 | fixture_id=1530591 | league=1 Lyga | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Amical Saint-Prex vs Servette II | fixture_id=1550880 | league=1. Liga Classic - Play-offs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - YF Juventus vs Langenthal | fixture_id=1550879 | league=1. Liga Classic - Play-offs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Fjardabyggd / Leiknir vs Fjolnir | fixture_id=1543393 | league=2. Deild | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Haukar vs Kormákur / Hvöt | fixture_id=1543391 | league=2. Deild | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - KFG vs Hvíti riddarinn | fixture_id=1543394 | league=2. Deild | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Kári vs Selfoss | fixture_id=1543392 | league=2. Deild | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Magni vs Dalvík / Reynir | fixture_id=1543395 | league=2. Deild | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Thróttur Vogar vs Vikingur Olafsiik | fixture_id=1543396 | league=2. Deild | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Polanka nad Odrou vs Zlín II | fixture_id=1487467 | league=3. liga - MSFL | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Sigma Olomouc II vs Třinec | fixture_id=1487468 | league=3. liga - MSFL | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Kladno vs Ceska Lipa | fixture_id=1551268 | league=3. liga - Promotion Play-off | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Damash Gilanian vs Mes Shahr-e Babak | fixture_id=1542167 | league=Azadegan League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Naft Bandar Abbas vs Shahrdari Noshahr | fixture_id=1542173 | league=Azadegan League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Leça vs Vitória de Sernache | fixture_id=1550878 | league=Campeonato de Portugal Prio - Promotion Round | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - América RJ vs Cabofriense | fixture_id=1543273 | league=Carioca A2 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - CFRJ / Maricá vs Bonsucesso | fixture_id=1543272 | league=Carioca A2 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Blumenau vs Jaraguá | fixture_id=1542025 | league=Catarinense - 2 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Dikaki vs Cercle Mbéri | fixture_id=1550653 | league=Championnat D1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - FC 105 vs Pélican | fixture_id=1550654 | league=Championnat D1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Mangasport vs Bouenguidi | fixture_id=1550655 | league=Championnat D1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Oyem AC vs Bitam | fixture_id=1550656 | league=Championnat D1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Stade Mandji vs Lozo | fixture_id=1550657 | league=Championnat D1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Vautour Club vs US Oyem | fixture_id=1550658 | league=Championnat D1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Brasil DE Pelotas vs Farroupilha | fixture_id=1544586 | league=Copa Gaúcha | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Afturelding vs Stjarnan | fixture_id=1545809 | league=Cup | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Phoenix vs Elva III | fixture_id=1551255 | league=Cup | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Rakvere FC Freedom vs Kena | fixture_id=1551254 | league=Cup | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
@@ -47,45 +68,26 @@
 - Volta II / Arsenal vs Tallinna Kalev II | fixture_id=1551259 | league=Cup | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Fransta vs IFK Östersund | fixture_id=1515751 | league=Division 2 - Norrland | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Aigle Royal vs Panthère | fixture_id=1512952 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Aigle Royal de Moungo vs PWD Bamenda | fixture_id=1512951 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Canon vs Victoria United | fixture_id=1512954 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Colombe vs Jeunes Fauves | fixture_id=1512955 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Fortuna Mfou vs Stade Renard | fixture_id=1512956 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Gazelle vs Cotonsport | fixture_id=1512957 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Unisport Bafang vs Dynamo de Douala | fixture_id=1512953 | league=Elite One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Bombada vs Medina United | fixture_id=1531375 | league=GFA League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Hawks vs GPA | fixture_id=1531376 | league=GFA League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Team Rhino vs Real de Banjul | fixture_id=1531377 | league=GFA League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Gualaceo SC vs Cumbayá | fixture_id=1526555 | league=Liga Pro Serie B | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Ind. Juniors vs Deportivo Cuenca Juniors | fixture_id=1526556 | league=Liga Pro Serie B | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Céleste vs Simba | fixture_id=1546776 | league=Ligue 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Vita Club vs Maniema Union | fixture_id=1546775 | league=Ligue 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Araioses vs Americano Bacabal | fixture_id=1544782 | league=Maranhense - 2 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Tupan vs São José MA | fixture_id=1544783 | league=Maranhense - 2 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Lake Macquarie vs Toronto Awaba Stags | fixture_id=1532568 | league=NNSW League 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - South Cardiff vs Newcastle Croatia FC | fixture_id=1532574 | league=NNSW League 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Wallsend Red Devils vs New Lambton | fixture_id=1532576 | league=NNSW League 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Amawele vs Madlenya | fixture_id=1550040 | league=Premier League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Asiagoal vs Toktogul | fixture_id=1527609 | league=Premier League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Viva Stumbo vs Magwanyana | fixture_id=1550041 | league=Premier League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Chicken Inn vs CAPS United | fixture_id=1495292 | league=Premier Soccer League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Dynamos vs Hunters | fixture_id=1495293 | league=Premier Soccer League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Kariba vs Herentals | fixture_id=1495299 | league=Premier Soccer League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - MWOS vs Manica Diamonds | fixture_id=1495295 | league=Premier Soccer League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Platinum vs Hardrock | fixture_id=1495296 | league=Premier Soccer League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Simba Bhora vs Ngezi Platinum | fixture_id=1495298 | league=Premier Soccer League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Afrique Football Élite vs ASKO | fixture_id=1550666 | league=Première Division | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Derby Academie vs Mali Coura | fixture_id=1550665 | league=Première Division | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Onze Créateurs vs Bakaridjan | fixture_id=1550667 | league=Première Division | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - BuxDu vs Qiziriq | fixture_id=1531059 | league=Pro League A | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Shortan vs Gazalkent | fixture_id=1531060 | league=Pro League A | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- WDSC Wolves vs Eastern Suburbs | fixture_id=1524029 | league=Queensland NPL | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Al-Hilal Omdurman II vs Al-Merreikh II | fixture_id=1550651 | league=Sudani Premier League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Ilves vs Lahti | fixture_id=1548302 | league=Suomen Cup | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - KuPS vs VPS | fixture_id=1548301 | league=Suomen Cup | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - SJK vs Inter Turku | fixture_id=1548303 | league=Suomen Cup | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Orebro SK vs GIF Sundsvall | fixture_id=1497597 | league=Superettan | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Varbergs BoIS FC vs Norrby IF | fixture_id=1497600 | league=Superettan | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Balkan vs Eskilsminne | fixture_id=1545635 | league=Svenska Cupen | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Eker Örebro vs IF Karlstad | fixture_id=1545636 | league=Svenska Cupen | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Falu BS vs Gefle IF | fixture_id=1545634 | league=Svenska Cupen | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
@@ -95,7 +97,6 @@
 - Unik FK vs Karlberg | fixture_id=1545648 | league=Svenska Cupen | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Colombia U19 vs Tunisia U23 | fixture_id=1545470 | league=Tournoi Maurice Revello | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Congo DR U20 vs Saudi Arabia U21 | fixture_id=1545469 | league=Tournoi Maurice Revello | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Excelsior Maassluis vs Ijsselmeervogels | fixture_id=1550668 | league=Tweede Divisie | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Sparta Rotterdam II vs Groningen U21 | fixture_id=1550468 | league=Tweede Divisie | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Charlotte Eagles vs Asheville City | fixture_id=1524827 | league=USL League Two | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Charlotte Independence 2 vs Port City | fixture_id=1524835 | league=USL League Two | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
@@ -125,7 +126,6 @@
 - Trelleborg vs Osters IF | fixture_id=1548695 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Saudi Arabia W vs Laos W | fixture_id=1548488 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Kassel vs SG Bornheim | fixture_id=1550839 | league=Oberliga - Hessen | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Pirmasens vs VfR Mannheim | fixture_id=1550634 | league=Oberliga - Promotion Round | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Argentinos Juniors Res. vs Barracas Central Res. | fixture_id=1512454 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Estudiantes Rio Cuarto 2 vs Huracán Res. | fixture_id=1512459 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Newell's Old Boys Res. vs Boca Juniors Res. | fixture_id=1512463 | league=Reserve League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
@@ -144,10 +144,11 @@
 - data/processed/candidate_v7_historical/vsigma_candidate_v7_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/candidate_v7_historical/vsigma_candidate_v7_historical_price_guard_rows.csv | status=NO_SAME_DAY_ROWS | rows=22 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_calibration_rule_candidates.csv | status=NO_ACCEPTED_ROWS | rows=77 | same_day=77 | accepted=0 | rejected=77 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv | status=HAS_ACCEPTED_ROWS | rows=32 | same_day=32 | accepted=32 | rejected=0 | detail=local source contains accepted raw fixture rows
+- data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=NO_ACCEPTED_ROWS | rows=93 | same_day=93 | accepted=0 | rejected=93 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_candidate_provenance_ceiling.csv | status=HAS_ACCEPTED_ROWS | rows=2 | same_day=2 | accepted=1 | rejected=1 | detail=local source contains accepted raw fixture rows
 - data/processed/governance/vsigma_dated_post_match_results_refresh.csv | status=HAS_ACCEPTED_ROWS | rows=2 | same_day=2 | accepted=1 | rejected=0 | detail=local source contains accepted raw fixture rows
+- data/processed/governance/vsigma_forced_api_board_fixture_lineups.csv | status=NO_ACCEPTED_ROWS | rows=86 | same_day=86 | accepted=0 | rejected=86 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_ACCEPTED_ROWS | rows=122 | same_day=122 | accepted=0 | rejected=122 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_match_stat_forecast_backtest.csv | status=NO_ACCEPTED_ROWS | rows=2 | same_day=2 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_match_stat_forecast_calibration_details.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
@@ -155,12 +156,13 @@
 - data/processed/governance/vsigma_post_match_stat_actuals.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_postmatch_pick_audit.csv | status=NO_ACCEPTED_ROWS | rows=6 | same_day=2 | accepted=0 | rejected=2 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_postmatch_pick_audit_daily.csv | status=NO_ACCEPTED_ROWS | rows=2 | same_day=2 | accepted=0 | rejected=2 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_prematch_match_story_engine.csv | status=NO_SAME_DAY_ROWS | rows=2 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=NO_ACCEPTED_ROWS | rows=32 | same_day=32 | accepted=0 | rejected=32 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=HAS_ACCEPTED_ROWS | rows=122 | same_day=122 | accepted=120 | rejected=0 | detail=local source contains accepted raw fixture rows
-- data/processed/governance/vsigma_shadow_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=HAS_ACCEPTED_ROWS | rows=122 | same_day=122 | accepted=88 | rejected=0 | detail=local source contains accepted raw fixture rows
+- data/processed/governance/vsigma_shadow_candidates.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_ACCEPTED_ROWS | rows=122 | same_day=122 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_ACCEPTED_ROWS | rows=2 | same_day=2 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_ACCEPTED_ROWS | rows=95 | same_day=95 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/historical/2026-04-23/matches.csv | status=NO_SAME_DAY_ROWS | rows=182 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
@@ -213,8 +215,6 @@
 - data/processed/historical/2026-04-27/vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=21 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-28/matches.csv | status=NO_SAME_DAY_ROWS | rows=148 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-28/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/historical/2026-04-28/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/historical/2026-04-28/vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=10 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 
 ## Guardrails
 - Local discovery does not call APIs, touch secrets, increase spend, create picks or bypass No Bet.

@@ -24,7 +24,7 @@
 - none
 
 ## Live Only
-- #1 | LIVE_ONLY | Malaga vs Las Palmas | market=OVER_1_5_SUPPORTED | alt=OVER_2_5_REVIEW | stake=NO_STAKE_OR_SYMBOLIC | permission=NO_PREMATCH | conf=MEDIUM | score=17 | window=MATCH_FINISHED | live=MATCH_FINISHED | match=FT | min=90.0
+- #1 | LIVE_ONLY | Malaga vs Las Palmas | market=OVER_1_5_SUPPORTED | alt=OVER_2_5_REVIEW | stake=NO_STAKE_OR_SYMBOLIC | permission=LIVE_ONLY | conf=MEDIUM | score=17 | window=MATCH_FINISHED | live=MATCH_FINISHED | match=FT | min=90.0
 
 ## Watchlist
 - none
@@ -35,19 +35,21 @@
 ## API Coverage
 - board_rows=2
 - source_guard_counts: DATED_INPUT_ONLY; API_COVERAGE_GATE_V2=2
-- execution_permission_counts: NO_PREMATCH=1; NO=1
+- execution_permission_counts: LIVE_ONLY=1; NO=1
 - avg_coverage_score: 50.0
-- forecast_warning_counts: LINEUPS_INACTIVE=1; API_EARLY_LOW_SUPPORT=1; PARTIAL_RECENT_STATS=1; SHOT_SAMPLE_WEAK=1; CORNER_SAMPLE_WEAK=1; CARD_SAMPLE_WEAK=1
-- missing_data_counts: lineup_coverage=NOT_DUE_YET=1; injuries_coverage=NONE=2; recent_stats_coverage=NONE=1; lineup_coverage=NONE=1; standings_coverage=NONE=1; odds_coverage=NONE=1
+- forecast_warning_counts: LINEUPS_INACTIVE=1; API_EARLY_LOW_SUPPORT=1; API_LINEUPS_MISSING=1; PARTIAL_RECENT_STATS=1; SHOT_SAMPLE_WEAK=1; CORNER_SAMPLE_WEAK=1; CARD_SAMPLE_WEAK=1; API_COVERAGE_UNKNOWN=1
+- missing_data_counts: lineup_coverage=NOT_DUE_YET=1; injuries_coverage=NONE=3; api_gate=WAIT_LINEUPS_OR_LIVE_ONLY=1; coverage_score=65.0=1; missing=lineup_coverage=NONE=1; recent_stats_coverage=NONE=1; lineup_coverage=NONE=1; standings_coverage=NONE=1; odds_coverage=NONE=1; api_gate=UNKNOWN=1; coverage_score==1; missing=unknown=1
 
 ## Official / Probable Lineups
-- data/processed/today/2026-06-10/vsigma_probable_lineup_consensus.csv: rows=2
-- data/processed/governance/official_lineup_sources.csv: rows=38
+- data/processed/today/2026-06-10/official_lineup_sources.csv: rows=42
+- data/processed/today/2026-06-10/vsigma_probable_lineup_consensus.csv: rows=1
+- data/processed/governance/official_lineup_sources.csv: rows=42
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Quarantine / Learning-Only / Import Status
-- data/processed/today/2026-06-10/vsigma_probable_lineup_consensus.csv: rows=2
-- data/processed/governance/official_lineup_sources.csv: rows=38
+- data/processed/today/2026-06-10/official_lineup_sources.csv: rows=42
+- data/processed/today/2026-06-10/vsigma_probable_lineup_consensus.csv: rows=1
+- data/processed/governance/official_lineup_sources.csv: rows=42
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=8; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=6
 
 ## Source Reliability Governor

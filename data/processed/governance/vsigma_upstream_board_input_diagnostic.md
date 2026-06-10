@@ -23,7 +23,7 @@
 - forecast_market_translator | status=OK | rows=2 | date=OK | path=data/processed/today/2026-06-10/vsigma_forecast_market_translator.csv | detail=file has rows and passed basic diagnostic checks
 - daily_execution_board | status=OK | rows=2 | date=OK | path=data/processed/today/2026-06-10/vsigma_daily_execution_board.csv | detail=file has rows and passed basic diagnostic checks
 - fixture_api_coverage_matrix | status=MISSING_OPTIONAL | rows=0 | date=MISSING | path=data/processed/today/2026-06-10/vsigma_fixture_api_coverage_matrix_v3.csv | detail=optional upstream file is missing
-- probable_lineup_consensus | status=OK | rows=2 | date=OK | path=data/processed/today/2026-06-10/vsigma_probable_lineup_consensus.csv | detail=file has rows and passed basic diagnostic checks
+- probable_lineup_consensus | status=OK | rows=1 | date=OK | path=data/processed/today/2026-06-10/vsigma_probable_lineup_consensus.csv | detail=file has rows and passed basic diagnostic checks
 
 ## Guardrails
 - Diagnostic only; this does not execute bets or alter stake permission.

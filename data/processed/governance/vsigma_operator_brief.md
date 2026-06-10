@@ -22,10 +22,10 @@
 ## Historical Drift Check
 | Field | Value | Meaning |
 |---|---|---|
-| Previous | date=2026-06-10; action=WATCH; risk=LOW_ALERT; final=WATCH_ONLY_NO_STAKE; active=0 | data/processed/today/2026-06-10/vsigma_operator_brief.csv |
+| Previous | date=2026-06-10; action=UNKNOWN; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | data/processed/today/2026-06-10/vsigma_operator_brief.csv |
 | Current | date=2026-06-10; action=NONE; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | current_build |
-| Drift | MATERIAL_CHANGE | action_level: WATCH -> NONE; final_decision: WATCH_ONLY_NO_STAKE -> NO_OPERATOR_ACTION; risk_label: LOW_ALERT -> NONE |
-| Changed | action_level,final_decision,risk_label | Tracked fields: action/final/risk/active |
+| Drift | MATERIAL_CHANGE | action_level: UNKNOWN -> NONE |
+| Changed | action_level | Tracked fields: action/final/risk/active |
 | Notify | true | true only on material operator drift |
 
 ## Executive Summary
@@ -37,7 +37,7 @@
 - alert_reason: non-action state changed but no operator action is required
 - drift_status: MATERIAL_CHANGE
 - drift_notify_required: true
-- drift_changed_fields: action_level,final_decision,risk_label
+- drift_changed_fields: action_level
 - sanity_check: PASS | no active/live/watch action; no_bet=1; closed=1
 - operator_status: CLOSED_OR_WINDOW_MISSED
 - primary_next_action: No active candidate; previous signals are finished or outside useful window.
@@ -103,23 +103,3 @@
 - Use PowerShell -Encoding UTF8 when reading local Markdown files on Windows.
 - Historical drift notifies only on material operator changes: action level, final decision, risk, or active candidates.
 - Alert routing is diagnostic only; this script writes the route but does not send comments or external notifications.
-
-## Calibration / Shadow Governance
-- calibration_shadow_status: STABLE_OR_NO_PATCH
-- shadow_active_candidates: 0
-- shadow_high_priority: 0
-- shadow_metrics: none
-- shadow_decisions: REJECT_LOW_SAMPLE=1
-- promotion_readiness: NO_PROMOTION
-- promotion_candidates: 0
-- promotion_decisions: WAIT_MORE_SAMPLE=1
-- learning_sanity_status: PASS
-- learning_sanity_counts: PASS=7
-- learning_sanity_severity: OK=7
-- calibration_auto_apply: NO
-- production_change: NO
-
-### Calibration Sources
-- shadow_queue: data/processed/today/2026-06-10/vsigma_calibration_shadow_patch_queue.csv
-- promotion_readiness: data/processed/today/2026-06-10/vsigma_shadow_patch_promotion_readiness.csv
-- learning_sanity: data/processed/today/2026-06-10/vsigma_learning_chain_output_sanity.csv

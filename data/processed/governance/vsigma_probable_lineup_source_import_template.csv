@@ -9,13 +9,3 @@ target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,
 2026-06-10,1548055,Segunda División,Spain,Malaga,Las Palmas,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-10,1548055,Segunda División,Spain,Malaga,Las Palmas,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-10,1548055,Segunda División,Spain,Malaga,Las Palmas,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-10,1546281,Premier Soccer League,South-Africa,Cape Town City,Magesi,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-10,1546281,Premier Soccer League,South-Africa,Cape Town City,Magesi,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-10,1546281,Premier Soccer League,South-Africa,Cape Town City,Magesi,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-10,1546281,Premier Soccer League,South-Africa,Cape Town City,Magesi,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-10,1546281,Premier Soccer League,South-Africa,Cape Town City,Magesi,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-10,1546281,Premier Soccer League,South-Africa,Cape Town City,Magesi,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-10,1546281,Premier Soccer League,South-Africa,Cape Town City,Magesi,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-10,1546281,Premier Soccer League,South-Africa,Cape Town City,Magesi,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-10,1546281,Premier Soccer League,South-Africa,Cape Town City,Magesi,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-10,1546281,Premier Soccer League,South-Africa,Cape Town City,Magesi,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
