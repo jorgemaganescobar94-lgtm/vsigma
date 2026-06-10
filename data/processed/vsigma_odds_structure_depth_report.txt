@@ -14,4 +14,4 @@ odds_structure_coherence_flag       RICH_COHERENT           1
 
 Fixture preview
  fixture_id           league home_team  away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
-    1548055 Segunda División    Malaga Las Palmas                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.3144                            -0.015
+    1548055 Segunda División    Malaga Las Palmas                 RICH_COHERENT              MILD_GOALS          PREFER_MILDER_TOTAL           PREFER_OVER_1_5                 0.2991                            -0.015

@@ -1,7 +1,7 @@
 # vSIGMA Daily Competition Master Report - 2026-06-10
 
 ## Daily Status
-PRE_LOCK_PENDING
+PRE_LOCK_REVIEWED
 
 ## Official Baseline Top Picks
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
@@ -88,7 +88,7 @@ Candidate v7: NO_BET. Empty output is valid when no pick clears the frozen compe
 ### Active Pre-Lock Decisions
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1548055 | Malaga | Las Palmas | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 474.21 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1548055 | Malaga | Las Palmas | OVER_1_5 | IN_PRELOCK_WINDOW | 43.11 | PRELOCK_NOT_AVAILABLE | no reliable pre-lock data available; missing data is neutral |
 
 ### Stale Pre-Lock Warning
 _No stale pre-lock rows excluded._
@@ -99,7 +99,7 @@ _No stale pre-lock rows excluded._
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1548055 | Malaga | Las Palmas | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.37 |  | 1.37 | 0.0 | CLV_FLAT |  |  |
 | 1548055 | Malaga | Las Palmas | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.37 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1548055 | Malaga | Las Palmas | OVER_1_5 | OFFICIAL_BASELINE | 1.37 |  | 1.37 | 0.0 | CLV_FLAT |  |  |
+| 1548055 | Malaga | Las Palmas | OVER_1_5 | OFFICIAL_BASELINE | 1.37 | 1.37 | 1.37 | 0.0 | CLV_FLAT |  |  |
 
 ### Candidate v7 Calibration Advice
 | market_family | failure_mode | drift_status | clv_direction | n | profit_units | roi_percent | recommendation | recommendation_reason |
@@ -113,7 +113,7 @@ _No rows._
 ## Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1548055 | Malaga | Las Palmas | OVER_1_5 | OUTSIDE_PRELOCK_WINDOW | 474.21 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1548055 | Malaga | Las Palmas | OVER_1_5 | IN_PRELOCK_WINDOW | 43.11 | PRELOCK_NOT_AVAILABLE | no reliable pre-lock data available; missing data is neutral |
 
 ## Drift Monitor Status
 | pattern | settled_rows | wins | losses | profit_units | drift_status |
@@ -159,20 +159,20 @@ _No rows._
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: freshness_report: WARNING - validation report contains warning rows
-- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-06-10`
+- Critical warnings: post_results_status: WARNING - post has 1 pending row(s)
+- Recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-10 --timezone Atlantic/Canary --mode post`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-10/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V4_O25_FIREWALL | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V6_API_PREDICTIONS | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | WAITING_FOR_PRELOCK | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V6_API_PREDICTIONS | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |

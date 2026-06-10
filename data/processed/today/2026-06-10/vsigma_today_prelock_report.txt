@@ -6,8 +6,8 @@
 - Morning official picks reviewed: 1
 - Stale morning rows excluded: 0
 - Stale morning row dates: none
-- In-window pre-lock picks retained: 0
-- Generated at: 2026-06-10T11:06:14+00:00
+- In-window pre-lock picks retained: 1
+- Generated at: 2026-06-10T18:39:52+00:00
 
 ## Refresh Steps
                                    step status
