@@ -6,7 +6,7 @@
 - board_status: daily_board_md=OK; daily_board_csv=OK
 - mismatch_count: 0
 - promoted_rows: 1
-- queue_rows: 0
+- queue_rows: 93
 - board_rows: 2
 - diagnostic_no_bet_rows: 0
 - next_action: Continue normal panel interpretation.

@@ -1,2 +1,2 @@
 target_date,generated_at,source_path,output_path,source_rows,same_day_rows,rows_written,no_data_blocked_rows,non_blocked_rows,snapshot_status,next_action,auto_apply,production_change
-2026-06-10,2026-06-10T16:25:11+01:00,data/processed/matches_vsigma_scored_v3.csv,data/processed/today/2026-06-10/matches_vsigma_scored_v3.csv,2,2,2,1,1,SNAPSHOT_WRITTEN_WITH_REAL_ROWS,Rerun coverage matrix and selector chain; downstream gates still required.,NO,NO
+2026-06-10,2026-06-10T19:13:04+01:00,data/processed/matches_vsigma_scored_v3.csv,data/processed/today/2026-06-10/matches_vsigma_scored_v3.csv,2,2,2,1,1,SNAPSHOT_WRITTEN_WITH_REAL_ROWS,Rerun coverage matrix and selector chain; downstream gates still required.,NO,NO

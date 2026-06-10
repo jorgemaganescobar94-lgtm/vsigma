@@ -1,3 +1,3 @@
 target_date,generated_at,fixture_id,home_team,away_team,market_hint,before_primary,after_primary,before_permission,after_permission,guard_action,reason,auto_apply,production_change
-2026-06-10,2026-06-10T16:25:09+01:00,1548055,Malaga,Las Palmas,OVER_OR_BTTS_CHECK,OVER_1_5_SUPPORTED,OVER_1_5_SUPPORTED,LIVE_ONLY,LIVE_ONLY,NO_CHANGE,not a proxy inversion,NO,NO
-2026-06-10,2026-06-10T16:25:09+01:00,1546281,Cape Town City,Magesi,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,NO_CLEAR_STAT_MARKET,NO_CLEAR_STAT_MARKET,NO_BET,NO_BET,NO_CHANGE,not a proxy inversion,NO,NO
+2026-06-10,2026-06-10T19:13:02+01:00,1548055,Malaga,Las Palmas,OVER_OR_BTTS_CHECK,OVER_1_5_SUPPORTED,OVER_1_5_SUPPORTED,LIVE_ONLY,LIVE_ONLY,NO_CHANGE,not a proxy inversion,NO,NO
+2026-06-10,2026-06-10T19:13:02+01:00,1546281,Cape Town City,Magesi,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,NO_CLEAR_STAT_MARKET,NO_CLEAR_STAT_MARKET,NO_BET,NO_BET,NO_CHANGE,not a proxy inversion,NO,NO

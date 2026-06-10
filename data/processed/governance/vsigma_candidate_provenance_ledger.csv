@@ -1,3 +1,3 @@
 target_date,generated_at,fixture_id,home_team,away_team,market,candidate_origin,market_direction_source,max_execution_permission,real_data_strength,proxy_reason,allowed_downstream_use,source_files,auto_apply,production_change
-2026-06-10,2026-06-10T16:25:09+01:00,1546281,Cape Town City,Magesi,NO_CLEAR_STAT_MARKET,TRANSLATOR_ONLY,UNKNOWN,NO_BET,8,translator row exists without identifiable shortlist origin,NO_BET_ONLY,vsigma_forecast_market_translator.csv,NO,NO
-2026-06-10,2026-06-10T16:25:09+01:00,1548055,Malaga,Las Palmas,OVER_1_5_SUPPORTED,REAL_SHORTLIST,OVER_TEMPO,LIVE_ONLY,60,dated shortlist row marked BET,LIVE_CONFIRMATION_REQUIRED,vsigma_today_execution_shortlist.csv,NO,NO
+2026-06-10,2026-06-10T19:13:02+01:00,1546281,Cape Town City,Magesi,NO_CLEAR_STAT_MARKET,TRANSLATOR_ONLY,UNKNOWN,NO_BET,8,translator row exists without identifiable shortlist origin,NO_BET_ONLY,vsigma_forecast_market_translator.csv,NO,NO
+2026-06-10,2026-06-10T19:13:02+01:00,1548055,Malaga,Las Palmas,OVER_1_5_SUPPORTED,REAL_SHORTLIST,OVER_TEMPO,LIVE_ONLY,60,dated shortlist row marked BET,LIVE_CONFIRMATION_REQUIRED,vsigma_today_execution_shortlist.csv,NO,NO

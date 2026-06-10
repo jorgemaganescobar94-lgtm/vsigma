@@ -1,2 +1,2 @@
 target_date,generated_at,source_rows_reviewed,candidate_rows_written,scoring_ready_pending_gates_rows,missing_required_rows,coverage_only_rows,diagnostic_only_rows,status_counts,pick_permission_counts,stake_permission_counts,auto_apply,production_change
-2026-06-10,2026-06-10T16:25:15+01:00,0,0,0,0,0,0,none,none,none,NO,NO
+2026-06-10,2026-06-10T19:15:44+01:00,93,93,55,0,12,26,API_ENRICHED_SCORING_READY_PENDING_GATES=55; DIAGNOSTIC_ONLY_NO_SCORING=26; COVERAGE_ONLY_NO_SCORING=12,NO_PICK_PERMISSION=93,NO_STAKE_PERMISSION=93,NO,NO

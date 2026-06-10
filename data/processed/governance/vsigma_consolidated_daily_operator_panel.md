@@ -43,17 +43,26 @@
 
 ## API-Enriched Review Board
 - source: data/processed/today/2026-06-10/vsigma_api_enriched_review_board.csv
-- review_rows_written: 0
-- ready_for_manual_review_rows: 0
+- review_rows_written: 32
+- ready_for_manual_review_rows: 32
 - blocked_rows: 0
-- review_priority_counts: none
-- canonical_board_permission_counts: none
-- pick_permission_counts: none
-- stake_permission_counts: none
+- review_priority_counts: P2_MANUAL_REVIEW=23; P1_MANUAL_REVIEW=9
+- canonical_board_permission_counts: NO_CANONICAL_BOARD_PERMISSION=32
+- pick_permission_counts: NO_PICK_PERMISSION=32
+- stake_permission_counts: NO_STAKE_PERMISSION=32
 - panel_note: API review board is parallel-only and cannot create picks, stake, or canonical board permission.
 
 ### API Review Rows
-- none
+- P1_MANUAL_REVIEW | Neptūną Klaipėda vs Transinvest 2 | status=API_ENRICHED_REVIEW_READY | score=90 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Neptūną Klaipėda | pred_total_home_away=71.0/29.0 | 1x2=1.15/5.75/13.00
+- P2_MANUAL_REVIEW | Fjardabyggd / Leiknir vs Fjolnir | status=API_ENRICHED_REVIEW_READY | score=61 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Fjardabyggd / Leiknir | pred_total_home_away=55.5/44.5 | 1x2=2.25/3.95/2.38
+- P1_MANUAL_REVIEW | Haukar vs Kormákur / Hvöt | status=API_ENRICHED_REVIEW_READY | score=84 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Haukar | pred_total_home_away=63.2/36.8 | 1x2=1.44/4.33/5.40
+- P2_MANUAL_REVIEW | Thróttur Vogar vs Vikingur Olafsiik | status=API_ENRICHED_REVIEW_READY | score=71 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Thróttur Vogar | pred_total_home_away=58.8/41.2 | 1x2=1.73/3.90/3.55
+- P1_MANUAL_REVIEW | Damash Gilanian vs Mes Shahr-e Babak | status=API_ENRICHED_REVIEW_READY | score=100 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Mes Shahr-e Babak | pred_total_home_away=29.3/70.7 | 1x2=6.00/3.30/1.55 | ou2.5=2.50/1.50
+- P2_MANUAL_REVIEW | Naft Bandar Abbas vs Shahrdari Noshahr | status=API_ENRICHED_REVIEW_READY | score=61 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Naft Bandar Abbas | pred_total_home_away=48.0/52.2 | 1x2=2.32/2.75/3.40 | ou2.5=2.67/1.36
+- P2_MANUAL_REVIEW | Blumenau vs Jaraguá | status=API_ENRICHED_REVIEW_READY | score=70 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Blumenau | pred_total_home_away=89.7/10.3
+- P2_MANUAL_REVIEW | Dikaki vs Cercle Mbéri | status=API_ENRICHED_REVIEW_READY | score=70 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Cercle Mbéri | pred_total_home_away=27.4/72.6
+- P2_MANUAL_REVIEW | Mangasport vs Bouenguidi | status=API_ENRICHED_REVIEW_READY | score=70 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Mangasport | pred_total_home_away=75.3/24.7
+- P2_MANUAL_REVIEW | Stade Mandji vs Lozo | status=API_ENRICHED_REVIEW_READY | score=70 | canonical=NO_CANONICAL_BOARD_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | summary=prediction_winner=Stade Mandji | pred_total_home_away=66.4/34.0
 
 ### API Review Guardrails
 - This section is informational only.
@@ -86,9 +95,9 @@
 - status_counts: OK=7; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-10T16:25:08+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-10T16:25:08+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-10T16:25:08+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-10T19:13:01+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-10T19:13:01+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-10T19:13:01+01:00
 
 ## Key Files
 - data/processed/today/2026-06-10/vsigma_consolidated_daily_operator_panel.md
@@ -135,63 +144,63 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1616
+- files_scanned: 1630
 - accepted_rows: 122
-- rejected_rows: 32
+- rejected_rows: 429
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
 - rows_reviewed: 122
-- trusted_rows: 2
-- quarantine_rows: 0
-- blocked_rows: 120
-- trust_status_counts: REJECTED_SOURCE_BLOCK=120; TRUSTED_RAW_SOURCE=2
+- trusted_rows: 95
+- quarantine_rows: 27
+- blocked_rows: 0
+- trust_status_counts: TRUSTED_RAW_SOURCE=95; QUARANTINE_REVIEW=27
 - next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
 
 ## Trusted Raw Candidate Promotion Gate
 - rows_reviewed: 122
 - promoted_rows: 1
 - blocked_rows: 1
-- quarantine_rows: 0
-- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=120; PROMOTED_TO_SCORING_INPUT=1; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=1
+- quarantine_rows: 93
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=93; NOT_TRUSTED_NO_PROMOTION=27; PROMOTED_TO_SCORING_INPUT=1; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=1
 - next_action: Promoted rows may feed normal scoring gates only.
 
 ## Scoring Gap Explainer
 - rows_reviewed: 122
-- missing_scored_rows: 0
+- missing_scored_rows: 93
 - no_data_blocked_rows: 1
-- not_trusted_rows: 120
+- not_trusted_rows: 27
 - promoted_rows: 1
-- gap_status_counts: NOT_TRUSTED_SKIPPED=120; PROMOTED=1; SCORED_ROW_NO_DATA_BLOCKED=1
+- gap_status_counts: MISSING_SCORED_ROW=93; NOT_TRUSTED_SKIPPED=27; PROMOTED=1; SCORED_ROW_NO_DATA_BLOCKED=1
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 
 ## Trusted Raw Scoring Queue
-- queue_rows: 0
-- priority_counts: none
-- scoring_needed_counts: none
+- queue_rows: 93
+- priority_counts: P1_TRUSTED_MISSING_SCORING=79; P2_LOW_COVERAGE_SCORING=14
+- scoring_needed_counts: YES=93
 - source_gap_status: MISSING_SCORED_ROW
 - next_action: Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.
 
 ## Queue-to-Enrichment Dry Run Planner
-- rows_planned: 0
-- dry_run_decision_counts: none
-- risk_label_counts: none
-- priority_counts: none
-- total_estimated_call_units: 0
+- rows_planned: 93
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=93
+- risk_label_counts: MEDIUM=59; HIGH_CONTEXT_VOLATILITY=20; HIGH_LOW_COVERAGE=14
+- priority_counts: P1_TRUSTED_MISSING_SCORING=79; P2_LOW_COVERAGE_SCORING=14
+- total_estimated_call_units: 475
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
 
 ## Enrichment Cost & Approval Gate
-- approval_gate_status: NO_ENRICHMENT_NEEDED
-- rows_planned: 0
-- estimated_call_units: 0
-- approval_required: NO
+- approval_gate_status: WAIT_FOR_MANUAL_APPROVAL
+- rows_planned: 93
+- estimated_call_units: 475
+- approval_required: YES
 - max_allowed_without_manual_approval: 0
 - api_calls_allowed: NO
 - api_calls_planned: NO
 - api_calls_executed: NO
-- recommended_action: NO_ACTION
+- recommended_action: WAIT_FOR_MANUAL_APPROVAL
 
 ## Daily Board Self-Heal
 - self_heal_status: NO_ACTION
@@ -202,19 +211,19 @@
 - board_rows_written: 0
 - reason: daily board already has rows
 ## API Quota-Aware Enrichment Gate
-- quota_gate_status: NO_AUTO_ENRICHMENT_ALLOWED
+- quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
 - api_plan_name: API-Football Pro
 - plan_requests_per_day: 7500
-- rows_reviewed: 0
-- p1_rows: 0
-- p2_rows: 0
-- p1_estimated_units: 0
-- p2_estimated_units: 0
-- auto_units_reserved: 0
+- rows_reviewed: 93
+- p1_rows: 79
+- p2_rows: 14
+- p1_estimated_units: 415
+- p2_estimated_units: 60
+- auto_units_reserved: 309
 - max_auto_units_per_day: 1500
 - max_auto_units_per_run: 1500
-- quota_decision_counts: none
-- api_calls_allowed: NO
+- quota_decision_counts: AUTO_ENRICHMENT_ALLOWED_P1=59; MANUAL_REVIEW_REQUIRED=20; COVERAGE_PROBE_ALLOWED_P2=14
+- api_calls_allowed: YES_LIMITED
 - api_calls_executed: NO
 - recommended_action: Run a separate enrichment executor only for allowlisted rows; do not create picks from enrichment alone.
 ## Empty Diagnostic Board State Normalizer
@@ -223,108 +232,108 @@
 - board_status: daily_board_md=OK; daily_board_csv=OK
 - mismatch_count: 0
 - promoted_rows: 1
-- queue_rows: 0
+- queue_rows: 93
 - diagnostic_no_bet_rows: 0
 - next_action: Continue normal panel interpretation.
 ## Rejected Source Block Audit
-- rows_reviewed: 120
-- correct_reject_rows: 52
-- manual_review_rows: 68
-- whitelist_candidate_rows: 41
-- audit_bucket_counts: MANUAL_REVIEW_POSSIBLE_WHITELIST=41; CORRECT_REJECT_YOUTH_RESERVE_TEAM_TOKEN=32; REVIEW_REJECTED_SOURCE_UNKNOWN_COMPETITION=27; CORRECT_REJECT_LOW_TIER_LOW_COVERAGE=16; CORRECT_REJECT_FRIENDLY_CONTEXT_VOLATILITY=4
-- review_priority_counts: P3_CORRECT_REJECT=52; P1_REVIEW_CANDIDATE=41; P2_REVIEW_LOW_CONFIDENCE=27
+- rows_reviewed: 0
+- correct_reject_rows: 0
+- manual_review_rows: 0
+- whitelist_candidate_rows: 0
+- audit_bucket_counts: none
+- review_priority_counts: none
 - next_action: Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.
 ## Manual Whitelist Review Board
-- review_rows: 41
-- p1_review_rows: 41
+- review_rows: 0
+- p1_review_rows: 0
 - p2_review_rows: 0
-- manual_review_status_counts: PENDING_OPERATOR_REVIEW=41
-- risk_label_counts: MEDIUM_REVIEW_POSSIBLE_WHITELIST=41
-- whitelist_permission_counts: NO_WHITELIST_PERMISSION=41
-- canonical_board_permission_counts: NO_CANONICAL_BOARD_PERMISSION=41
-- scoring_permission_counts: NO_SCORING_PERMISSION=41
-- api_enrichment_permission_counts: NO_API_ENRICHMENT_PERMISSION=41
-- pick_permission_counts: NO_PICK_PERMISSION=41
-- stake_permission_counts: NO_STAKE_PERMISSION=41
+- manual_review_status_counts: none
+- risk_label_counts: none
+- whitelist_permission_counts: none
+- canonical_board_permission_counts: none
+- scoring_permission_counts: none
+- api_enrichment_permission_counts: none
+- pick_permission_counts: none
+- stake_permission_counts: none
 - next_action: Review rows manually. Any whitelist change must be a separate explicit code change after validation; this board cannot promote, score, enrich, pick, or stake.
 ## Max-Coverage API Enrichment Policy
-- policy_status: NO_ROWS_TO_COVER
+- policy_status: MAX_COVERAGE_POLICY_READY
 - api_plan_name: API-Football Pro
 - plan_requests_per_day: 7500
-- rows_reviewed: 0
-- rows_allowed: 0
-- full_scoring_enrichment_rows: 0
-- coverage_probe_rows: 0
-- diagnostic_only_rows: 0
+- rows_reviewed: 93
+- rows_allowed: 93
+- full_scoring_enrichment_rows: 55
+- coverage_probe_rows: 12
+- diagnostic_only_rows: 26
 - blocked_rows: 0
-- estimated_call_units: 0
-- downstream_use_counts: none
-- external_calls_allowed: NO
+- estimated_call_units: 475
+- downstream_use_counts: SCORING_ALLOWED_WITH_NORMAL_GATES=55; DIAGNOSTIC_ONLY_NO_SCORING=26; COVERAGE_GATE_ONLY=12
+- external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: NO
 - next_action: Use max-coverage policy through the subscription guard and logged API executor only. Enrichment can be broad; scoring remains restricted by downstream_use and normal gates.
 ## Active API Policy
 - active_api_policy: MAX_COVERAGE
 - policy_source: vsigma_max_coverage_api_enrichment_policy
-- external_calls_allowed: NO
+- external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: NO
-- scoring_allowed_rows: 0
-- coverage_probe_rows: 0
-- diagnostic_only_rows: 0
+- scoring_allowed_rows: 55
+- coverage_probe_rows: 12
+- diagnostic_only_rows: 26
 - blocked_rows: 0
-- legacy_cost_gate_status: LEGACY_INFORMATIONAL_ONLY:NO_ENRICHMENT_NEEDED
-- legacy_quota_gate_status: LEGACY_SECONDARY_ONLY:NO_AUTO_ENRICHMENT_ALLOWED
+- legacy_cost_gate_status: LEGACY_INFORMATIONAL_ONLY:WAIT_FOR_MANUAL_APPROVAL
+- legacy_quota_gate_status: LEGACY_SECONDARY_ONLY:AUTO_ENRICHMENT_ALLOWED_LIMITED
 - legacy_allowlist_status: LEGACY_SECONDARY_ONLY:ALLOWLIST_DRY_RUN_READY
 - operator_note: MAX_COVERAGE is the active API policy. Legacy cost/quota/allowlist gates are informational and cannot override the active policy. No external calls are executed by this integration.
 ## API-Enriched Manual Review Inspector
-- review_rows: 0
-- bucket_counts: none
-- risk_label_counts: none
-- canonical_board_permission_counts: none
-- pick_permission_counts: none
-- stake_permission_counts: none
+- review_rows: 32
+- bucket_counts: P3_REVIEW_LOW_SIGNAL=23; P1_REVIEW_STRONG_SIGNAL=9
+- risk_label_counts: LOW=23; MEDIUM=9
+- canonical_board_permission_counts: NO_CANONICAL_BOARD_PERMISSION=32
+- pick_permission_counts: NO_PICK_PERMISSION=32
+- stake_permission_counts: NO_STAKE_PERMISSION=32
 - next_action: Use this inspector only for human triage. It cannot promote, create picks, or create stake permission.
 ## API-Enriched Fixture Results Refresh
-- rows_reviewed: 0
-- api_calls_planned: 0
-- api_calls_executed: 0
-- finished_rows: 0
-- pending_rows: 0
-- refresh_status_counts: none
-- provider_counts: none
+- rows_reviewed: 32
+- api_calls_planned: 32
+- api_calls_executed: 32
+- finished_rows: 13
+- pending_rows: 19
+- refresh_status_counts: OK=32
+- provider_counts: API-SPORTS_DIRECT=32
 - next_action: Re-run the postmatch accuracy ledger after this refresh. This output does not create picks or stake.
 ## API-Enriched Postmatch Accuracy Ledger
-- rows_reviewed: 0
-- finished_rows: 0
-- pending_rows: 0
-- accuracy_bucket_counts: none
-- api_1x2_counts: none
-- api_double_chance_counts: none
-- api_dnb_counts: none
-- over_1_5_counts: none
-- over_2_5_counts: none
-- under_3_5_counts: none
-- btts_counts: none
-- pick_permission_counts: none
-- stake_permission_counts: none
+- rows_reviewed: 32
+- finished_rows: 13
+- pending_rows: 19
+- accuracy_bucket_counts: PENDING_RESULT=19; STRONG_SIGNAL_VALIDATED=5; SIGNAL_FAILED=5; PARTIAL_SIGNAL_VALIDATED=3
+- api_1x2_counts: PENDING_RESULT=19; MISS=7; HIT=6
+- api_double_chance_counts: PENDING_RESULT=19; HIT=10; MISS=3
+- api_dnb_counts: PENDING_RESULT=19; HIT=6; VOID=4; MISS=3
+- over_1_5_counts: PENDING_RESULT=19; HIT=8; MISS=5
+- over_2_5_counts: PENDING_RESULT=19; HIT=7; MISS=6
+- under_3_5_counts: PENDING_RESULT=19; HIT=7; MISS=6
+- btts_counts: PENDING_RESULT=19; MISS=8; HIT=5
+- pick_permission_counts: NO_PICK_PERMISSION=32
+- stake_permission_counts: NO_STAKE_PERMISSION=32
 - next_action: Use this ledger to calibrate signal buckets after results are final. Do not promote picks or stake from it.
 ## API Signal Calibration Summary
-- source_rows: 29
-- finished_rows: 27
-- pending_rows: 2
+- source_rows: 61
+- finished_rows: 40
+- pending_rows: 21
 - summary_rows: 77
-- top_market_by_hit_rate: ALL=ALL | API_DOUBLE_CHANCE | hit_rate_pct=77.8 | evaluated=27
-- top_market_by_hit_or_void_rate: ALL=ALL | API_DNB | hit_or_void_rate_pct=77.8 | evaluated=27
-- sample_warning_counts: INSUFFICIENT_SAMPLE_UNDER_20=70; LOW_SAMPLE_UNDER_50=7
-- calibration_status_counts: CALIBRATION_OBSERVE_ONLY=70; CALIBRATION_WEAK_OR_NEGATIVE=2; CALIBRATION_MEDIUM_OBSERVED_EDGE=2; CALIBRATION_NEUTRAL=1; CALIBRATION_STRONG_PROTECTED_MARKET=1; CALIBRATION_STRONG_OBSERVED_EDGE=1
+- top_market_by_hit_rate: ALL=ALL | API_DOUBLE_CHANCE | hit_rate_pct=77.5 | evaluated=40
+- top_market_by_hit_or_void_rate: ALL=ALL | API_DNB | hit_or_void_rate_pct=77.5 | evaluated=40
+- sample_warning_counts: INSUFFICIENT_SAMPLE_UNDER_20=49; LOW_SAMPLE_UNDER_50=28
+- calibration_status_counts: CALIBRATION_OBSERVE_ONLY=49; CALIBRATION_WEAK_OR_NEGATIVE=10; CALIBRATION_NEUTRAL=5; CALIBRATION_STRONG_OBSERVED_EDGE=5; CALIBRATION_STRONG_PROTECTED_MARKET=4; CALIBRATION_MEDIUM_OBSERVED_EDGE=4
 - next_action: Use this summary to design future promotion rules only after enough sample size exists. It cannot create picks or stake.
 ## API Calibration Rule Candidates
 - rows_reviewed: 77
-- candidate_rows: 4
-- block_rows: 3
-- observe_rows: 70
-- rule_bucket_counts: RULE_OBSERVE_ONLY_INSUFFICIENT_SAMPLE=70; RULE_BLOCK_NEGATIVE_OR_WEAK_MARKET=3; RULE_CANDIDATE_PROTECTED_MARKET_EARLY_SAMPLE=2; RULE_CANDIDATE_TOTAL_MARKET_EARLY_SAMPLE=2
-- rule_decision_counts: COLLECT_MORE_SAMPLE=70; WATCH_ONLY_COLLECT_TO_50_SAMPLE=4; BLOCK_ML_PROMOTION=1; BLOCK_BTTS_YES_PROMOTION=1; BLOCK_OVER_2_5_PROMOTION=1
-- future_rule_candidate_counts: NO_SAMPLE_TOO_SMALL=70; YES_REVIEW_ONLY_AFTER_SAMPLE_GROWS=4; NO_BLOCKED_MARKET=3
+- candidate_rows: 10
+- block_rows: 12
+- observe_rows: 55
+- rule_bucket_counts: RULE_OBSERVE_ONLY_INSUFFICIENT_SAMPLE=49; RULE_BLOCK_NEGATIVE_OR_WEAK_MARKET=12; RULE_CANDIDATE_PROTECTED_MARKET_EARLY_SAMPLE=8; RULE_OBSERVE_ONLY_SEGMENT=5; RULE_CANDIDATE_TOTAL_MARKET_EARLY_SAMPLE=2; RULE_NEUTRAL_OBSERVE_MORE=1
+- rule_decision_counts: COLLECT_MORE_SAMPLE=49; WATCH_ONLY_COLLECT_TO_50_SAMPLE=10; OBSERVE_MORE_SEGMENT=5; BLOCK_ML_PROMOTION=4; BLOCK_BTTS_YES_PROMOTION=4; BLOCK_OVER_2_5_PROMOTION=4; OBSERVE_MORE_GLOBAL_MARKET=1
+- future_rule_candidate_counts: NO_SAMPLE_TOO_SMALL=49; NO_BLOCKED_MARKET=12; YES_REVIEW_ONLY_AFTER_SAMPLE_GROWS=10; NO_SEGMENT_SAMPLE_TOO_SMALL=5; NO_OBSERVE_MORE=1
 - activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=77
 - pick_permission_counts: NO_PICK_PERMISSION=77
 - stake_permission_counts: NO_STAKE_PERMISSION=77
