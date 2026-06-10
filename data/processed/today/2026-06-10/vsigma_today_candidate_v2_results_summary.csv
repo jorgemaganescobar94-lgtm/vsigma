@@ -1,2 +1,0 @@
-mode,pick_count,settled_rows,pending_rows,unmatched_rows,wins,losses,pushes,voids,profit_units,roi_percent,target_date,generated_at,pipeline_mode,candidate_version,source_file_date_check,run_id
-SHADOW_CANDIDATE_V2,1,0,1,0,0,0,0,0,0.0,,2026-06-10,2026-06-10T11:55:07+00:00,POST,CANDIDATE_V2_RESULTS,NO_DATE_COLUMN,2026-06-10-20260610T115507Z

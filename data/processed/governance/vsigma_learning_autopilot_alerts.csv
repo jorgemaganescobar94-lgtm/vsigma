@@ -1,7 +1,7 @@
 target_date,generated_at,alert_id,alert_type,severity,source_file,source_key,title,body,should_open_issue,issue_url,auto_apply,production_change,guardrail_status
-2026-06-09,2026-06-10T19:12:11+01:00,OPERATIONAL_REVIEW_REQUIRED::2026-06-09,OPERATIONAL_REVIEW_REQUIRED,P1,vsigma_improvement_proposals.csv,WAITING_PRELOCK,vSIGMA OPERATIONAL_REVIEW_REQUIRED 2026-06-09,"# vSIGMA OPERATIONAL_REVIEW_REQUIRED 2026-06-09
+2026-06-10,2026-06-10T19:17:11+01:00,OPERATIONAL_REVIEW_REQUIRED::2026-06-10,OPERATIONAL_REVIEW_REQUIRED,P1,vsigma_improvement_proposals.csv,WAITING_PRELOCK,vSIGMA OPERATIONAL_REVIEW_REQUIRED 2026-06-10,"# vSIGMA OPERATIONAL_REVIEW_REQUIRED 2026-06-10
 
-Consolidated vSIGMA learning autopilot alert for 2026-06-09.
+Consolidated vSIGMA learning autopilot alert for 2026-06-10.
 
 ## Summary
 - alert_type: OPERATIONAL_REVIEW_REQUIRED
@@ -16,10 +16,10 @@ Consolidated vSIGMA learning autopilot alert for 2026-06-09.
 - auto_apply: NO
 - production_change: NO
 - official picks changed: NO
-- model changes applied: NO",YES,https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/180,NO,NO,ALERT_ONLY_NO_AUTO_CHANGE
-2026-06-09,2026-06-10T19:12:11+01:00,DATA_QUALITY_REVIEW_REQUIRED::2026-06-09,DATA_QUALITY_REVIEW_REQUIRED,P2,vsigma_improvement_proposals.csv,OVER_1_5::UNKNOWN_RISK;UNKNOWN_MARKET::UNKNOWN_RISK;UNRESOLVED::OVER_1_5::UNKNOWN_RISK::NO_SIGNAL;UNRESOLVED::UNKNOWN_MARKET::UNKNOWN_RISK::NO_SIGNAL;UNRESOLVED_RESULTS,vSIGMA DATA_QUALITY_REVIEW_REQUIRED 2026-06-09,"# vSIGMA DATA_QUALITY_REVIEW_REQUIRED 2026-06-09
+- model changes applied: NO",YES,https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/188,NO,NO,ALERT_ONLY_NO_AUTO_CHANGE
+2026-06-10,2026-06-10T19:17:11+01:00,DATA_QUALITY_REVIEW_REQUIRED::2026-06-10,DATA_QUALITY_REVIEW_REQUIRED,P2,vsigma_improvement_proposals.csv,OVER_1_5::UNKNOWN_RISK;UNKNOWN_MARKET::UNKNOWN_RISK;UNRESOLVED::OVER_1_5::UNKNOWN_RISK::NO_SIGNAL;UNRESOLVED::UNKNOWN_MARKET::UNKNOWN_RISK::NO_SIGNAL;UNRESOLVED_RESULTS,vSIGMA DATA_QUALITY_REVIEW_REQUIRED 2026-06-10,"# vSIGMA DATA_QUALITY_REVIEW_REQUIRED 2026-06-10
 
-Consolidated vSIGMA learning autopilot alert for 2026-06-09.
+Consolidated vSIGMA learning autopilot alert for 2026-06-10.
 
 ## Summary
 - alert_type: DATA_QUALITY_REVIEW_REQUIRED
@@ -38,4 +38,4 @@ Consolidated vSIGMA learning autopilot alert for 2026-06-09.
 - auto_apply: NO
 - production_change: NO
 - official picks changed: NO
-- model changes applied: NO",YES,https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/181,NO,NO,ALERT_ONLY_NO_AUTO_CHANGE
+- model changes applied: NO",YES,https://github.com/jorgemaganescobar94-lgtm/vsigma/issues/189,NO,NO,ALERT_ONLY_NO_AUTO_CHANGE

@@ -4,7 +4,7 @@
 - PRE: DONE
 - Pre-lock: ['PRELOCK_NOT_AVAILABLE']
 - POST: PENDING
-- Ledger: PRELOCK_UPDATED
+- Ledger: PRE_UPDATED
 - Governance: AVAILABLE
 - Stale warnings: NONE
 
@@ -34,18 +34,18 @@
 ## Pre-Lock Timing
 | fixture_id | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1548055 | Malaga | Las Palmas | OVER_1_5 | 2026-06-10T19:00:20.600000+00:00 | 425.16 | 2026-06-10T17:30:20.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1548055 | Malaga | Las Palmas | OVER_1_5 | 2026-06-10T19:00:14.600000+00:00 | 43.06 | 2026-06-10T17:30:14.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
 
 ## Ledger State
 | experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | POST | PENDING | PENDING | PENDING |  |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | POST | PENDING | PENDING | PENDING |  |
+| OFFICIAL_BASELINE | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V4_O25_FIREWALL | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | POST | PENDING | PENDING | PENDING |  |
-| CANDIDATE_V5_PLAYER_IMPACT | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | POST | PENDING | PENDING | PENDING |  |
-| CANDIDATE_V6_API_PREDICTIONS | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | POST | PENDING | PENDING | PENDING |  |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRELOCK | PRELOCK_UPDATED | PENDING | PENDING |  |
+| CANDIDATE_V4_O25_FIREWALL | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
+| CANDIDATE_V5_PLAYER_IMPACT | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
+| CANDIDATE_V6_API_PREDICTIONS | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
 
 ## Controller Outputs
 - Plan CSV: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-10/daily_run_plan.csv
