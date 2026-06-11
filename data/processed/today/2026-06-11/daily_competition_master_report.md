@@ -130,8 +130,8 @@ _No rows._
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: official_baseline_output: WARNING - only stale rows found for 2026-06-10
-- Recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-11 --timezone Atlantic/Canary --mode pre`
+- Critical warnings: ledger_target_date_rows: WARNING - ledger has no rows for target date
+- Recovery command: `.\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-06-11 --stage PRE`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-11/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
