@@ -1,2 +1,2 @@
-target_date,generated_at,query_home,query_away,rows,stat_confidence,impact_weighting_status,next_action,auto_apply,production_change
-2026-06-11,2026-06-11T21:27:44+01:00,Mexico,South Africa,1,MEDIUM_HIGH,PLAYER_IMPACT_WEIGHTED,Use as impact-weighted full match projection only; rerun after official XI or material news.,NO,NO
+target_date,generated_at,query_home,query_away,rows,stat_confidence,impact_weighting_status,unit_weighting_status,next_action,auto_apply,production_change
+2026-06-11,2026-06-11T21:40:32+01:00,Mexico,South Africa,1,MEDIUM_HIGH,PLAYER_IMPACT_WEIGHTED,UNIT_WEIGHTED_TEAM_INDEX,Use as unit-weighted full match projection only; rerun after official XI or material news.,NO,NO

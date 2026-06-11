@@ -15,9 +15,9 @@
 - shape: 4-1-4-1
 - sample: 6
 - avg_possession: 54.2%
-- avg_shots: 13.0 | avg_sot: 4.2 | avg_corners: 5.2
-- avg_fouls: 10.2 | avg_yellows: 1.3
-- goals_for/against: 1.7 / 0.3
+- avg_shots: 13.2 | avg_sot: 4.3 | avg_corners: 5.2
+- avg_fouls: 10.5 | avg_yellows: 1.3
+- goals_for/against: 1.8 / 0.3
 - tempo: MEDIUM
 - attack_style: VOLUME_ATTACK
 - defense_style: MID_BLOCK
@@ -29,7 +29,7 @@
 - avg_possession: 62.6%
 - avg_shots: 12.0 | avg_sot: 3.6 | avg_corners: 3.8
 - avg_fouls: 10.6 | avg_yellows: 2.5
-- goals_for/against: 0.7 / 1.2
+- goals_for/against: 0.7 / 1.3
 - tempo: MEDIUM
 - attack_style: CONTROL_ATTACK
 - defense_style: COMPACT_LOW_BLOCK
