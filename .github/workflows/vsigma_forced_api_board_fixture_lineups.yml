@@ -85,10 +85,21 @@ jobs:
           python -m py_compile scripts/build_prematch_match_story_engine.py
           python scripts/build_prematch_match_story_engine.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
-      - name: Build prematch story accuracy ledger
+      - name: Build prematch story accuracy ledger before finalizer
         shell: bash
         run: |
           python -m py_compile scripts/build_prematch_story_accuracy_ledger.py
+          python scripts/build_prematch_story_accuracy_ledger.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Finalize pending prematch predictions
+        shell: bash
+        run: |
+          python -m py_compile scripts/finalize_pending_prematch_predictions.py
+          python scripts/finalize_pending_prematch_predictions.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
+
+      - name: Rebuild prematch story accuracy ledger after finalizer
+        shell: bash
+        run: |
           python scripts/build_prematch_story_accuracy_ledger.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary
 
       - name: Build rolling prematch accuracy dashboard
@@ -108,10 +119,13 @@ jobs:
           test -s "data/processed/today/${VSIGMA_DATE}/vsigma_prematch_match_story_engine.csv"
           test -s "data/processed/today/${VSIGMA_DATE}/vsigma_prematch_story_accuracy_ledger.md"
           test -s "data/processed/today/${VSIGMA_DATE}/vsigma_prematch_story_accuracy_ledger.csv"
+          test -s "data/processed/today/${VSIGMA_DATE}/vsigma_pending_prematch_prediction_finalizer.md"
+          test -s "data/processed/today/${VSIGMA_DATE}/vsigma_pending_prematch_prediction_finalizer.csv"
           test -s "data/processed/today/${VSIGMA_DATE}/vsigma_rolling_prematch_accuracy_dashboard.md"
           test -s "data/processed/today/${VSIGMA_DATE}/vsigma_rolling_prematch_accuracy_dashboard.csv"
           grep -q "Prematch Match Story Engine" "data/processed/today/${VSIGMA_DATE}/vsigma_prematch_match_story_engine.md"
           grep -q "Prematch Story Accuracy Ledger" "data/processed/today/${VSIGMA_DATE}/vsigma_prematch_story_accuracy_ledger.md"
+          grep -q "Pending Prematch Prediction Finalizer" "data/processed/today/${VSIGMA_DATE}/vsigma_pending_prematch_prediction_finalizer.md"
           grep -q "Rolling Prematch Accuracy Dashboard" "data/processed/today/${VSIGMA_DATE}/vsigma_rolling_prematch_accuracy_dashboard.md"
 
       - name: Commit forced lineup outputs
@@ -130,6 +144,10 @@ jobs:
           git add data/processed/governance/vsigma_prematch_match_story_engine* 2>/dev/null || true
           git add data/processed/today/${VSIGMA_DATE}/vsigma_prematch_story_accuracy_ledger* 2>/dev/null || true
           git add data/processed/governance/vsigma_prematch_story_accuracy_ledger* 2>/dev/null || true
+          git add data/processed/today/${VSIGMA_DATE}/vsigma_pending_prematch_prediction_finalizer* 2>/dev/null || true
+          git add data/processed/governance/vsigma_pending_prematch_prediction_finalizer* 2>/dev/null || true
+          git add data/processed/today/${VSIGMA_DATE}/vsigma_dated_post_match_results_refresh.csv 2>/dev/null || true
+          git add data/processed/governance/vsigma_dated_post_match_results_refresh.csv 2>/dev/null || true
           git add data/processed/today/${VSIGMA_DATE}/vsigma_rolling_prematch_accuracy_dashboard* 2>/dev/null || true
           git add data/processed/governance/vsigma_rolling_prematch_accuracy_dashboard* 2>/dev/null || true
           git add data/processed/today/${VSIGMA_DATE}/vsigma_consolidated_daily_operator_panel.md 2>/dev/null || true
@@ -140,5 +158,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "vSIGMA rolling prematch accuracy ${VSIGMA_DATE} [skip ci]"
+          git commit -m "vSIGMA pending prematch finalizer ${VSIGMA_DATE} [skip ci]"
           git push origin HEAD:main
