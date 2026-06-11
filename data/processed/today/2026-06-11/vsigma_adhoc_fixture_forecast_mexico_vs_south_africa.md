@@ -10,11 +10,11 @@
 - fixture: Mexico vs South Africa
 - competition: World / World Cup
 - status: NS | date: 2026-06-11T19:00:00+00:00
-- XI: ESTIMATED_XI | source=API_SQUAD_HEURISTIC | shapes=4-3-3/4-3-3
-- probabilities: home=0.671 draw=0.218 away=0.111
+- XI: OFFICIAL_XI | source=API_OFFICIAL_LINEUPS | shapes=4-1-4-1/5-3-2
+- probabilities: home=0.672 draw=0.216 away=0.112
 - result_forecast: HOME_OR_DRAW
 - scorelines: 1-0 / 1-1 / 2-0
 - goal_profile: MODERATE_GOALS
 - scenario: FAVORITE_CONTROL_GAME
-- confidence: MEDIUM
-- note: Ad hoc fixture forecast from API fixture search, market-implied baseline, and lineup status. Not part of daily board. XI is estimated from squad pool; not official.
+- confidence: HIGH
+- note: Ad hoc fixture forecast from API fixture search, market-implied baseline, and lineup status. Not part of daily board.
