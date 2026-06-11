@@ -1,4 +1,4 @@
-# vSIGMA Governance Dashboard - 2026-06-11
+# vSIGMA Governance Dashboard - 2026-06-10
 
 ## Version Leader
 | official_version | current_best_official | main_challenger | best_roi_candidate | best_hit_rate_candidate | best_brier_candidate | most_stable_candidate | small_sample_candidates | audit_only_candidates |
@@ -24,7 +24,9 @@
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 6 | -3.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 6 | -3.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 6 | -3.0 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 4 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 2 | -24.0 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | -100.0 |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | -100.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
@@ -69,10 +71,10 @@
 | 2026-06-06 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
 | 2026-06-07 | NO_BET_DAY | No model registered a pick. |
 | 2026-06-09 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
-| 2026-06-10 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
+| 2026-06-10 | NO_BET_DAY | No model registered a pick. |
 
 ## CLV Data Sufficiency
-INSUFFICIENT_CLV_DATA: no CLV summary available.
+INSUFFICIENT_CLV_DATA: usable=2, available_direction_rows=2; do not change thresholds from CLV yet.
 
 ## Evidence Status
 - All primary governance inputs available.

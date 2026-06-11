@@ -71,7 +71,7 @@
 | 2026-06-06 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
 | 2026-06-07 | NO_BET_DAY | No model registered a pick. |
 | 2026-06-09 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
-| 2026-06-10 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
+| 2026-06-10 | NO_BET_DAY | No model registered a pick. |
 
 ## CLV Data Sufficiency
 INSUFFICIENT_CLV_DATA: usable=2, available_direction_rows=2; do not change thresholds from CLV yet.

@@ -3,14 +3,14 @@
 ## Step State
 - PRE: DONE
 - Pre-lock: ['PRELOCK_NOT_AVAILABLE']
-- POST: PENDING
+- POST: SETTLED
 - Ledger: PRE_UPDATED
 - Governance: AVAILABLE
 - Stale warnings: NONE
 
 ## Next Operator Command
-- Action: RUN_POST_AFTER_FINISH
-- Command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-10 --timezone Atlantic/Canary --mode post`
+- Action: ALL_SETTLED
+- Command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-10 --timezone Atlantic/Canary --mode status`
 
 ## Official Baseline Picks
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank |
@@ -34,18 +34,12 @@
 ## Pre-Lock Timing
 | fixture_id | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1548055 | Malaga | Las Palmas | OVER_1_5 | 2026-06-10T19:00:14.600000+00:00 | 43.06 | 2026-06-10T17:30:14.600000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
+| 1548055 | Malaga | Las Palmas | OVER_1_5 | 2026-06-10T19:00:14.600000+00:00 | -1416.58 | 2026-06-10T17:30:14.600000+00:00 | PRELOCK_NOT_AVAILABLE | ALL_SETTLED |
 
 ## Ledger State
 | experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V4_O25_FIREWALL | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V5_PLAYER_IMPACT | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V6_API_PREDICTIONS | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1548055.0 | Malaga | Las Palmas | OVER_1_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
 
 ## Controller Outputs
 - Plan CSV: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-10/daily_run_plan.csv

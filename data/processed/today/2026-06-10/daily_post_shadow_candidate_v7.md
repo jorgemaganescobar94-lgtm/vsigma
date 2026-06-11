@@ -16,6 +16,4 @@ _No v7 picks to grade._
 
 ## Result Comparison
 
-| comparison_status | fixture_id | fixture | league | baseline_rank | candidate_v2_rank | candidate_v7_rank | baseline_market | candidate_v2_market | candidate_v7_market | candidate_v7_decision | baseline_result | candidate_v2_result | candidate_v7_result | baseline_profit_units | candidate_v2_profit_units | candidate_v7_profit_units |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE+CANDIDATE_V2 | 1548055 | Malaga vs Las Palmas | Segunda División | 1 | 1 |  | OVER_1_5 | OVER_1_5 |  |  | PENDING | PENDING |  |  |  |  |
+_No comparison rows._
