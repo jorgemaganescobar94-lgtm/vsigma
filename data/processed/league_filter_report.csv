@@ -1,8 +1,6 @@
 country,league,league_tier,league_filter_reason,matches
 USA,USL W League,REJECT,country_league_not_allowlisted,3
-Brazil,Brasileiro U17,REJECT,hard_reject_noise_league,1
 Brazil,Brasileiro U20 A,REJECT,hard_reject_noise_league,1
 Brazil,Maranhense - 2,REJECT,country_league_not_allowlisted,1
 Brazil,Paulista - U20,REJECT,hard_reject_noise_league,1
-Peru,Copa De La Liga,REJECT,country_league_not_allowlisted,1
 USA,USL League Two,REJECT,country_league_not_allowlisted,1
