@@ -1,0 +1,2 @@
+target_date,generated_at,query_home,query_away,fixture_found,team_rows,player_rows,home_xi_strength,away_xi_strength,xi_edge,style_confidence,next_action,auto_apply,production_change
+2026-06-11,2026-06-11T20:58:55+01:00,Mexico,South Africa,YES,2,22,64.2,65.8,-1.6,MEDIUM,Use for style and player-impact weighting; not market value.,NO,NO
