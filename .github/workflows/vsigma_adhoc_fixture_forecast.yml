@@ -52,17 +52,17 @@ jobs:
           python -m py_compile scripts/build_adhoc_fixture_forecast.py
           python scripts/build_adhoc_fixture_forecast.py --date "${{ inputs.date }}" --home "${{ inputs.home }}" --away "${{ inputs.away }}" --timezone Atlantic/Canary
 
-      - name: Build ad hoc match stat forecast
-        shell: bash
-        run: |
-          python -m py_compile scripts/build_adhoc_match_stat_forecast.py
-          python scripts/build_adhoc_match_stat_forecast.py --date "${{ inputs.date }}" --home "${{ inputs.home }}" --away "${{ inputs.away }}" --timezone Atlantic/Canary
-
       - name: Build team style and player impact
         shell: bash
         run: |
           python -m py_compile scripts/build_adhoc_team_style_player_impact.py
           python scripts/build_adhoc_team_style_player_impact.py --date "${{ inputs.date }}" --home "${{ inputs.home }}" --away "${{ inputs.away }}" --timezone Atlantic/Canary
+
+      - name: Build ad hoc match stat forecast
+        shell: bash
+        run: |
+          python -m py_compile scripts/build_adhoc_match_stat_forecast.py
+          python scripts/build_adhoc_match_stat_forecast.py --date "${{ inputs.date }}" --home "${{ inputs.home }}" --away "${{ inputs.away }}" --timezone Atlantic/Canary
 
       - name: Assert outputs
         shell: bash
@@ -78,15 +78,16 @@ jobs:
           test -s "data/processed/today/${{ inputs.date }}/vsigma_adhoc_probable_xi_${SLUG}.csv"
           test -s "data/processed/today/${{ inputs.date }}/vsigma_adhoc_fixture_forecast_${SLUG}.md"
           test -s "data/processed/today/${{ inputs.date }}/vsigma_adhoc_fixture_forecast_${SLUG}.csv"
-          test -s "data/processed/today/${{ inputs.date }}/vsigma_adhoc_match_stat_forecast_${SLUG}.md"
-          test -s "data/processed/today/${{ inputs.date }}/vsigma_adhoc_match_stat_forecast_${SLUG}.csv"
           test -s "data/processed/today/${{ inputs.date }}/vsigma_adhoc_team_style_player_impact_${SLUG}.md"
           test -s "data/processed/today/${{ inputs.date }}/vsigma_adhoc_team_style_${SLUG}.csv"
           test -s "data/processed/today/${{ inputs.date }}/vsigma_adhoc_player_impact_${SLUG}.csv"
+          test -s "data/processed/today/${{ inputs.date }}/vsigma_adhoc_match_stat_forecast_${SLUG}.md"
+          test -s "data/processed/today/${{ inputs.date }}/vsigma_adhoc_match_stat_forecast_${SLUG}.csv"
           grep -q "vSIGMA Ad Hoc Probable XI Estimator" "data/processed/today/${{ inputs.date }}/vsigma_adhoc_probable_xi_${SLUG}.md"
           grep -q "vSIGMA Ad Hoc Fixture Forecast" "data/processed/today/${{ inputs.date }}/vsigma_adhoc_fixture_forecast_${SLUG}.md"
-          grep -Eq "vSIGMA Ad Hoc (Match Stat Forecast|Full Match Projection)" "data/processed/today/${{ inputs.date }}/vsigma_adhoc_match_stat_forecast_${SLUG}.md"
           grep -q "vSIGMA Ad Hoc Team Style + Player Impact" "data/processed/today/${{ inputs.date }}/vsigma_adhoc_team_style_player_impact_${SLUG}.md"
+          grep -Eq "vSIGMA Ad Hoc (Match Stat Forecast|Full Match Projection)" "data/processed/today/${{ inputs.date }}/vsigma_adhoc_match_stat_forecast_${SLUG}.md"
+          grep -q "impact_weighting_status" "data/processed/today/${{ inputs.date }}/vsigma_adhoc_match_stat_forecast_${SLUG}.md"
 
       - name: Commit outputs
         shell: bash
@@ -95,14 +96,14 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/processed/today/${{ inputs.date }}/vsigma_adhoc_fixture_forecast* 2>/dev/null || true
           git add data/processed/today/${{ inputs.date }}/vsigma_adhoc_probable_xi* 2>/dev/null || true
-          git add data/processed/today/${{ inputs.date }}/vsigma_adhoc_match_stat_forecast* 2>/dev/null || true
           git add data/processed/today/${{ inputs.date }}/vsigma_adhoc_team_style* 2>/dev/null || true
           git add data/processed/today/${{ inputs.date }}/vsigma_adhoc_player_impact* 2>/dev/null || true
+          git add data/processed/today/${{ inputs.date }}/vsigma_adhoc_match_stat_forecast* 2>/dev/null || true
           git add data/processed/governance/vsigma_adhoc_fixture_forecast* 2>/dev/null || true
           git add data/processed/governance/vsigma_adhoc_probable_xi* 2>/dev/null || true
-          git add data/processed/governance/vsigma_adhoc_match_stat_forecast* 2>/dev/null || true
           git add data/processed/governance/vsigma_adhoc_team_style* 2>/dev/null || true
           git add data/processed/governance/vsigma_adhoc_player_impact* 2>/dev/null || true
+          git add data/processed/governance/vsigma_adhoc_match_stat_forecast* 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No ad hoc fixture forecast changes to commit."
             exit 0
