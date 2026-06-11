@@ -1,0 +1,76 @@
+name: vSIGMA Ad Hoc Fixture Forecast
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        required: true
+      home:
+        required: true
+      away:
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vsigma-adhoc-fixture-forecast-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      APISPORTS_KEY: ${{ secrets.APISPORTS_KEY }}
+      API_SPORTS_KEY: ${{ secrets.API_SPORTS_KEY }}
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+      APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+      API_FOOTBALL_API_KEY: ${{ secrets.API_FOOTBALL_API_KEY }}
+      RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+      X_RAPIDAPI_KEY: ${{ secrets.X_RAPIDAPI_KEY }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ github.token }}
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Build ad hoc fixture forecast
+        shell: bash
+        run: |
+          python -m py_compile scripts/build_adhoc_fixture_forecast.py
+          python scripts/build_adhoc_fixture_forecast.py --date "${{ inputs.date }}" --home "${{ inputs.home }}" --away "${{ inputs.away }}" --timezone Atlantic/Canary
+
+      - name: Assert outputs
+        shell: bash
+        run: |
+          SLUG=$(python - <<'PY'
+          import re, unicodedata, os
+          text = "${{ inputs.home }}_vs_${{ inputs.away }}"
+          text = unicodedata.normalize('NFKD', text).encode('ascii','ignore').decode().lower()
+          print(re.sub(r'[^a-z0-9]+','_',text).strip('_'))
+          PY
+          )
+          test -s "data/processed/today/${{ inputs.date }}/vsigma_adhoc_fixture_forecast_${SLUG}.md"
+          test -s "data/processed/today/${{ inputs.date }}/vsigma_adhoc_fixture_forecast_${SLUG}.csv"
+          grep -q "vSIGMA Ad Hoc Fixture Forecast" "data/processed/today/${{ inputs.date }}/vsigma_adhoc_fixture_forecast_${SLUG}.md"
+
+      - name: Commit outputs
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/processed/today/${{ inputs.date }}/vsigma_adhoc_fixture_forecast* 2>/dev/null || true
+          git add data/processed/governance/vsigma_adhoc_fixture_forecast* 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No ad hoc fixture forecast changes to commit."
+            exit 0
+          fi
+          git commit -m "vSIGMA ad hoc fixture forecast ${{ inputs.date }} [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
