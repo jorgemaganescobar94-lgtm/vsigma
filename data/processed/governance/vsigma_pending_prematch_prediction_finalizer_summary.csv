@@ -1,2 +1,2 @@
 target_date,generated_at,pending_rows,api_calls,finalized_rows,still_pending_rows,missing_key,next_action,auto_apply,production_change
-2026-06-10,2026-06-11T07:48:11+01:00,1,1,1,0,NO,Run accuracy ledger and rolling dashboard after this finalizer.,NO,NO
+2026-06-10,2026-06-11T08:19:26+01:00,0,0,0,0,NO,Run accuracy ledger and rolling dashboard after this finalizer.,NO,NO

@@ -221,8 +221,14 @@
 - next_action: Use rolling accuracy to calibrate prematch prediction families.
 
 ## Pending Prematch Prediction Finalizer
-- pending_rows: 1
-- api_calls: 1
-- finalized_rows: 1
+- pending_rows: 0
+- api_calls: 0
+- finalized_rows: 0
 - still_pending_rows: 0
 - next_action: Run accuracy ledger and rolling dashboard after this finalizer.
+## Prematch Prediction Calibration Advisor
+- advice_rows: 12
+- watch_rows: 4
+- caution_rows: 2
+- hold_rows: 6
+- next_action: Review calibration advice only; keep auto_apply disabled until sample is large enough.

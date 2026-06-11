@@ -1,0 +1,13 @@
+target_date,generated_at,scope,group,sample,metric_focus,observed_rate,advice_level,recommendation,reason,auto_apply,production_change
+2026-06-10,2026-06-11T08:19:26+01:00,ALL,ALL,2,sample_size,2,HOLD,OBSERVE_MORE,Sample below 5; do not change weights yet.,NO,NO
+2026-06-10,2026-06-11T08:19:26+01:00,ALL,ALL,2,result_family,100.0,WATCH,KEEP_RESULT_FAMILY_SIGNAL,Result-family prediction is currently strong; keep monitoring.,NO,NO
+2026-06-10,2026-06-11T08:19:26+01:00,ALL,ALL,2,score_neighbor,100.0,WATCH,PRIORITIZE_SCORE_NEIGHBOR_OVER_EXACT,Neighbor score is more stable than exact score.,NO,NO
+2026-06-10,2026-06-11T08:19:26+01:00,ALL,ALL,2,goals_2plus,100.0,WATCH,KEEP_2PLUS_GOALS_SIGNAL,2+ goals signal is strong in current sample.,NO,NO
+2026-06-10,2026-06-11T08:19:26+01:00,ALL,ALL,2,goals_3plus,0.0,CAUTION,REQUIRE_STRONGER_EVIDENCE_FOR_3PLUS,3+ goals conversion is weak; avoid aggressive goal inflation.,NO,NO
+2026-06-10,2026-06-11T08:19:26+01:00,ALL,ALL,2,both_scored,100.0,WATCH,KEEP_BTTS_AS_SUPPORTING_SIGNAL,Both-scored signal is strong as a supporting prediction layer.,NO,NO
+2026-06-10,2026-06-11T08:19:26+01:00,RECENT,LAST_20,2,sample_size,2,HOLD,OBSERVE_MORE,Sample below 5; do not change weights yet.,NO,NO
+2026-06-10,2026-06-11T08:19:26+01:00,RECENT,LAST_50,2,sample_size,2,HOLD,OBSERVE_MORE,Sample below 5; do not change weights yet.,NO,NO
+2026-06-10,2026-06-11T08:19:26+01:00,PREDICTED_RESULT,AWAY_OR_DRAW,2,sample_size,2,HOLD,OBSERVE_MORE,Sample below 5; do not change weights yet.,NO,NO
+2026-06-10,2026-06-11T08:19:26+01:00,GOAL_PROFILE,HIGH_GOALS,1,sample_size,1,HOLD,OBSERVE_MORE,Sample below 5; do not change weights yet.,NO,NO
+2026-06-10,2026-06-11T08:19:26+01:00,GOAL_PROFILE,HIGH_GOALS,1,high_goals_aggression,0.0,CAUTION,DOWNGRADE_HIGH_GOALS_TO_OPEN_GOALS_REVIEW,High-goal profile is over-aggressive versus realized goal profile / 3+ goals.,NO,NO
+2026-06-10,2026-06-11T08:19:26+01:00,GOAL_PROFILE,MODERATE_GOALS,1,sample_size,1,HOLD,OBSERVE_MORE,Sample below 5; do not change weights yet.,NO,NO
