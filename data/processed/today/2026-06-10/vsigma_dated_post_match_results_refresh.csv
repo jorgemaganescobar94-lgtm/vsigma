@@ -1,3 +1,3 @@
 target_date,generated_at,fixture_id,home_team,away_team,status,goals,stats_status,updated_fields,source_guard
 2026-06-10,2026-06-10T18:46:39+01:00,1546281,Cape Town City,Magesi,FT,1-1,STATS_FETCHED,fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-10,2026-06-10T18:46:39+01:00,1548055,Malaga,Las Palmas,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-10,2026-06-11T07:48:11+01:00,1548055,Malaga,Las Palmas,FT,1-1,STATS_FETCHED,pending_prematch_finalizer,API_DIRECT_PENDING_FINALIZER

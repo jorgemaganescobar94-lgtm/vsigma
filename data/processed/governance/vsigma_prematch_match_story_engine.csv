@@ -1,3 +1,3 @@
 day,created_at,fixture_id,home,away,xi_ok,home_shape,away_shape,scores,main_result,goal_band,scenario,confidence,note
-2026-06-10,2026-06-11T07:40:17+01:00,1548055,Malaga,Las Palmas,YES,4-2-3-1,4-4-2,2-2 / 1-2 / 2-3,AWAY_OR_DRAW,HIGH_GOALS,BALANCED_OPEN_GAME,MEDIUM,base_mid=3.06; lineup_adj=0.20; adjusted_mid=3.26
-2026-06-10,2026-06-11T07:40:17+01:00,1546281,Cape Town City,Magesi,YES,4-4-2,4-2-3-1,1-1 / 0-1 / 1-2,AWAY_OR_DRAW,MODERATE_GOALS,CONTROLLED_GAME,LOW,base_mid=2.35; lineup_adj=0.10; adjusted_mid=2.45
+2026-06-10,2026-06-11T07:48:11+01:00,1548055,Malaga,Las Palmas,YES,4-2-3-1,4-4-2,2-2 / 1-2 / 2-3,AWAY_OR_DRAW,HIGH_GOALS,BALANCED_OPEN_GAME,MEDIUM,base_mid=3.06; lineup_adj=0.20; adjusted_mid=3.26
+2026-06-10,2026-06-11T07:48:11+01:00,1546281,Cape Town City,Magesi,YES,4-4-2,4-2-3-1,1-1 / 0-1 / 1-2,AWAY_OR_DRAW,MODERATE_GOALS,CONTROLLED_GAME,LOW,base_mid=2.35; lineup_adj=0.10; adjusted_mid=2.45

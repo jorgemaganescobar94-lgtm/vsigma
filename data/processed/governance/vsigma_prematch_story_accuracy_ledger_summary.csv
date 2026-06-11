@@ -1,2 +1,2 @@
 day,created_at,rows,finished_rows,pending_rows,result_family_counts,score_exact_counts,score_neighbor_counts,goal_profile_counts,goals_2plus_counts,goals_3plus_counts,both_scored_counts,next_action,auto_apply,production_change
-2026-06-10,2026-06-11T07:40:17+01:00,2,1,1,PENDING=1; HIT=1,PENDING=1; HIT=1,PENDING=1; EXACT=1,PENDING=1; HIT=1,PENDING=1; HIT=1,PENDING=1; MISS=1,PENDING=1; HIT=1,Track completed rows and calibrate prematch prediction families.,NO,NO
+2026-06-10,2026-06-11T07:48:11+01:00,2,2,0,HIT=2,MISS=1; HIT=1,NEIGHBOR=1; EXACT=1,MISS=1; HIT=1,HIT=2,MISS=2,HIT=2,Track completed rows and calibrate prematch prediction families.,NO,NO

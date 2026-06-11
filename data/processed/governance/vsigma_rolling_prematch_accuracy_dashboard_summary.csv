@@ -1,2 +1,2 @@
 day,created_at,finished_rows,pending_rows,overall_result_family_hit_pct,overall_exact_hit_pct,overall_neighbor_or_exact_pct,overall_goal_profile_hit_pct,next_action,auto_apply,production_change
-2026-06-10,2026-06-11T07:40:17+01:00,1,1,100.0,100.0,100.0,100.0,Use rolling accuracy to calibrate prematch prediction families.,NO,NO
+2026-06-10,2026-06-11T07:48:12+01:00,2,0,100.0,50.0,100.0,50.0,Use rolling accuracy to calibrate prematch prediction families.,NO,NO
