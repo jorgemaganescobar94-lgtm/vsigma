@@ -1,0 +1,76 @@
+name: vSIGMA Prematch Calibration Rule Gate
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        required: false
+        default: ""
+  workflow_run:
+    workflows:
+      - vSIGMA Forced API Board Fixture Lineups
+    types:
+      - completed
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vsigma-prematch-calibration-rule-gate-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ github.token }}
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Decide date
+        shell: bash
+        run: |
+          D=""
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            D="${{ inputs.date }}"
+          fi
+          if [ -z "$D" ]; then D="$(TZ=Atlantic/Canary date +%F)"; fi
+          echo "VSIGMA_DATE=$D" >> "$GITHUB_ENV"
+          echo "Resolved VSIGMA_DATE=$D"
+
+      - name: Build prematch calibration rule gate
+        shell: bash
+        run: |
+          python -m py_compile scripts/build_prematch_calibration_rule_gate.py
+          python scripts/build_prematch_calibration_rule_gate.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --min-sample 20 --min-repeat-days 3
+
+      - name: Assert outputs
+        shell: bash
+        run: |
+          test -s "data/processed/today/${VSIGMA_DATE}/vsigma_prematch_calibration_rule_gate.md"
+          test -s "data/processed/today/${VSIGMA_DATE}/vsigma_prematch_calibration_rule_gate.csv"
+          grep -q "Prematch Calibration Rule Gate" "data/processed/today/${VSIGMA_DATE}/vsigma_prematch_calibration_rule_gate.md"
+
+      - name: Commit outputs
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/processed/today/${VSIGMA_DATE}/vsigma_prematch_calibration_rule_gate* 2>/dev/null || true
+          git add data/processed/governance/vsigma_prematch_calibration_rule_gate* 2>/dev/null || true
+          git add data/processed/today/${VSIGMA_DATE}/vsigma_consolidated_daily_operator_panel.md 2>/dev/null || true
+          git add data/processed/governance/vsigma_consolidated_daily_operator_panel.md 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No prematch calibration rule gate changes to commit."
+            exit 0
+          fi
+          git commit -m "vSIGMA prematch calibration rule gate ${VSIGMA_DATE} [skip ci]"
+          git push origin HEAD:main
