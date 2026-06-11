@@ -53,6 +53,15 @@ def goal_band(mid):
     if mid>=2.65: return "OPEN_GOALS"
     if mid>=2.25: return "MODERATE_GOALS"
     return "LOW_GOALS"
+def valid_forecasts(base: Path, day: str):
+    # Never fall back to governance for forecasts; governance can be stale from a previous date.
+    today_rows = rows(base/"today"/day/"vsigma_match_stat_forecasts.csv")
+    valid=[]
+    for r in today_rows:
+        rd=s(r.get("target_date") or r.get("day"))
+        if rd == day:
+            valid.append(r)
+    return {s(r.get("fixture_id")):r for r in valid if s(r.get("fixture_id"))}
 def story(board, fc, ls, day, now):
     fid=s(board.get("fixture_id")); h=side(ls,fid,"home"); a=side(ls,fid,"away")
     xi=len(h)==11 and len(a)==11
@@ -70,14 +79,16 @@ def story(board, fc, ls, day, now):
     return {"day":day,"created_at":now,"fixture_id":fid,"home":s(board.get("home_team")),"away":s(board.get("away_team")),"xi_ok":"YES" if xi else "NO","home_shape":hs,"away_shape":av,"scores":scores,"main_result":result_from_scores(scores),"goal_band":goal_band(adj),"scenario":scen,"confidence":s(fc.get("forecast_confidence") or board.get("forecast_confidence")),"note":f"base_mid={mid:.2f}; lineup_adj={bump:.2f}; adjusted_mid={adj:.2f}"}
 def md(day, rs, sm):
     out=[f"# Prematch Match Story Engine - {day}","","## Summary",f"- rows: {sm['rows']}",f"- xi_ok_rows: {sm['xi_ok_rows']}",f"- scenario_counts: {sm['scenario_counts']}",f"- result_counts: {sm['result_counts']}","","## Matches"]
+    if not rs:
+        out.append("- none. No date-coherent forecast rows available for target date.")
     for r in rs: out.append(f"- {r['home']} vs {r['away']} | XI={r['xi_ok']} | shapes={r['home_shape']}/{r['away_shape']} | result={r['main_result']} | scores={r['scores']} | goals={r['goal_band']} | scenario={r['scenario']} | {r['note']}")
     return "\n".join(out)+"\n"
 def run(day,tz,base):
     day=date.fromisoformat(day).isoformat(); now=datetime.now(ZoneInfo(tz)).isoformat(timespec="seconds")
     b=load(base/"today"/day/"vsigma_daily_execution_board_lineup_bridged.csv", base/"governance"/"vsigma_daily_execution_board_lineup_bridged.csv") or load(base/"today"/day/"vsigma_daily_execution_board.csv", base/"governance"/"vsigma_daily_execution_board.csv")
     l=load(base/"today"/day/"vsigma_forced_api_board_fixture_lineups.csv", base/"governance"/"vsigma_forced_api_board_fixture_lineups.csv")
-    f={s(r.get("fixture_id")):r for r in load(base/"today"/day/"vsigma_match_stat_forecasts.csv", base/"governance"/"vsigma_match_stat_forecasts.csv")}
-    out=[story(r,f.get(s(r.get("fixture_id")),{}),l,day,now) for r in b]
+    f=valid_forecasts(base, day)
+    out=[story(r,f[s(r.get("fixture_id"))],l,day,now) for r in b if s(r.get("fixture_id")) in f]
     sm={"day":day,"created_at":now,"rows":len(out),"xi_ok_rows":sum(1 for r in out if r["xi_ok"]=="YES"),"scenario_counts":cnt(out,"scenario"),"result_counts":cnt(out,"main_result")}
     for p in [base/"today"/day, base/"governance"]:
         write(p/"vsigma_prematch_match_story_engine.csv", out, FIELDS); write(p/"vsigma_prematch_match_story_engine_summary.csv", [sm], SUM_FIELDS); (p/"vsigma_prematch_match_story_engine.md").write_text(md(day,out,sm), encoding="utf-8")
