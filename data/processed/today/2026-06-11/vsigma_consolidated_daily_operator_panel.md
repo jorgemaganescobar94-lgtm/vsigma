@@ -227,3 +227,10 @@
 - caution_rows: 2
 - hold_rows: 6
 - next_action: Review calibration advice only; keep auto_apply disabled until sample is large enough.
+## Prematch Calibration Rule Gate
+- rows: 12
+- candidate_rows: 0
+- blocked_sample_rows: 6
+- blocked_history_rows: 0
+- hold_rows: 6
+- next_action: No automatic rule changes; review candidates only after sample and history gates pass.

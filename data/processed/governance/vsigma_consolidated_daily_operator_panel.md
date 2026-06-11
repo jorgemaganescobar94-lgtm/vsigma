@@ -184,6 +184,7 @@
 - blocked_history_rows: 0
 - hold_rows: 6
 - next_action: No automatic rule changes; review candidates only after sample and history gates pass.
+
 ## Forced API Board Fixture Lineups Refresh
 - fixtures_reviewed: 2
 - api_calls_executed: 2
