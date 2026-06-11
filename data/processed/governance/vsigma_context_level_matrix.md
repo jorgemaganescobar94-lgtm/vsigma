@@ -2,12 +2,12 @@
 
 ## Summary
 - rows_reviewed: 1
-- context_level_counts: L7_SOFT_DOWN=1
+- context_level_counts: L6_REVIEW=1
 - auto_apply: NO
 - production_change: NO
 
 ## Matrix Rows
-- #1 | L7_SOFT_DOWN | score=46 | Malaga vs Las Palmas | market=OVER_1_5 | policy=reduced stake or live
+- #1 | L6_REVIEW | score=40 | Malaga vs Las Palmas | market=OVER_1_5 | policy=review only
 
 ## Guardrails
 - This matrix refuses stale governance fallback.

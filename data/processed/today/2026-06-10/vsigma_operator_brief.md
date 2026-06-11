@@ -6,9 +6,9 @@
 | Action | NONE | First-read operator priority |
 | Risk | NONE | Operational risk after sanity + health gate |
 | Alert | LOCAL_ONLY / LOW | Routing decision for operator notifications |
-| Counts | active=0; live=0; closed=1; watch=0; no_bet=1 | Candidate distribution |
-| Reason | no active/live/watch action; no_bet=1 | Why this action level was selected |
-| Final | NO_OPERATOR_ACTION | sanity=PASS; no active/live/watch action; no_bet=1; closed=1 |
+| Counts | active=0; live=0; closed=1; watch=0; no_bet=0 | Candidate distribution |
+| Reason | no active/live/watch action; no_bet=0 | Why this action level was selected |
+| Final | NO_OPERATOR_ACTION | sanity=PASS; no active/live/watch action; no_bet=0; closed=1 |
 
 ## Alert Routing
 | Field | Value | Meaning |
@@ -38,7 +38,7 @@
 - drift_status: MATERIAL_CHANGE
 - drift_notify_required: true
 - drift_changed_fields: action_level
-- sanity_check: PASS | no active/live/watch action; no_bet=1; closed=1
+- sanity_check: PASS | no active/live/watch action; no_bet=0; closed=1
 - operator_status: CLOSED_OR_WINDOW_MISSED
 - primary_next_action: No active candidate; previous signals are finished or outside useful window.
 - health_status: ATTENTION
@@ -46,8 +46,8 @@
 - waiting_live_window: 0
 - closed_or_missed: 1
 - watch_only: 0
-- no_bet: 1
-- board_decisions: LIVE_ONLY=1; NO_BET=1
+- no_bet: 0
+- board_decisions: LIVE_ONLY=1
 - recheck_decisions: LIVE_ONLY_WAIT_TRIGGER=1; CANCELLED_NO_BET=1
 - live_triggers: MATCH_FINISHED=1
 - alert_notify_required: true
@@ -64,7 +64,7 @@
 - DRIFT_STATUS=MATERIAL_CHANGE
 - DRIFT_NOTIFY_REQUIRED=true
 - SANITY_CHECK=PASS
-- SANITY_DETAIL=no active/live/watch action; no_bet=1; closed=1
+- SANITY_DETAIL=no active/live/watch action; no_bet=0; closed=1
 - WINDOWS_READ=UTF8 | Get-Content data/processed/today/2026-06-10/vsigma_operator_brief.md -Encoding UTF8
 
 ## Active Review
@@ -80,7 +80,7 @@
 - none
 
 ## No Bet
-- #2 | NO_BET | Cape Town City vs Magesi | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
+- none
 
 ## Live Trigger Status
 - window_counts: MATCH_FINISHED=1

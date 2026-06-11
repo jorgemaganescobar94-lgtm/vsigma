@@ -19,7 +19,7 @@
 - context_adjusted_final_picks | status=HAS_REAL_ROWS | same_day=1 | real=1 | proxy=0 | bet_like=1 | path=data/processed/today/2026-06-10/vsigma_context_adjusted_final_picks.csv | detail=file has same-day rows
 - real_objective_context_gate | status=HAS_ROWS | same_day=1 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-10/vsigma_real_objective_context_gate.csv | detail=file has same-day rows
 - objective_context_execution_bridge | status=EMPTY | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-10/vsigma_objective_context_execution_bridge.csv | detail=file exists but has no data rows
-- candidate_provenance_ledger | status=HAS_ROWS | same_day=2 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-10/vsigma_candidate_provenance_ledger.csv | detail=file has same-day rows
+- candidate_provenance_ledger | status=HAS_ROWS | same_day=1 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-10/vsigma_candidate_provenance_ledger.csv | detail=file has same-day rows
 
 ## Guardrails
 - This diagnostic never creates picks or stake permission.

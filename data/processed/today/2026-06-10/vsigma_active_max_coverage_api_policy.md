@@ -7,7 +7,7 @@
 - plan_requests_per_day: 7500
 - external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: NO
-- scoring_allowed_rows: 55
+- scoring_allowed_rows: 57
 - coverage_probe_rows: 12
 - diagnostic_only_rows: 26
 - blocked_rows: 0

@@ -1,15 +1,15 @@
 # vSIGMA Empty Diagnostic Board State Normalizer - 2026-06-10
 
 ## Summary
-- normalized_status: NOT_EMPTY_OR_NOT_APPLICABLE
-- operator_state: NORMAL_PIPELINE_REVIEW
+- normalized_status: REVIEW_EMPTY_DIAGNOSTIC_BOARD
+- operator_state: EMPTY_REVIEW_REQUIRED
 - board_status: daily_board_md=OK; daily_board_csv=OK
 - mismatch_count: 0
-- promoted_rows: 1
-- queue_rows: 93
-- board_rows: 2
+- promoted_rows: 0
+- queue_rows: 95
+- board_rows: 1
 - diagnostic_no_bet_rows: 0
-- next_action: Continue normal panel interpretation.
+- next_action: Review date guard and board diagnostics before market discussion.
 - auto_apply: NO
 - production_change: NO
 

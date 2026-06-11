@@ -5,12 +5,12 @@
 - missing_inputs: none
 - stale_inputs: none
 - rows_reviewed: 1
-- adjusted_status_counts: WAIT_PRELOCK=1
+- adjusted_status_counts: SHADOW_RISK_ONLY=1
 - auto_apply: NO
 - production_change: NO
 
 ## Final Adjusted Picks
-- #1 | WAIT_PRELOCK | Malaga vs Las Palmas | market=OVER_1_5 | stake=NO_PREMATCH_STAKE | reason=objective/availability gate requires prelock or lineup confirmation
+- #1 | SHADOW_RISK_ONLY | Malaga vs Las Palmas | market=OVER_1_5 | stake=LOW_OR_SYMBOLIC | reason=shadow risk: low-conversion pattern
 
 ## Guardrails
 - This report refuses governance and root-level fallbacks.

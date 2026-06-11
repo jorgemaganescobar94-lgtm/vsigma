@@ -1,14 +1,13 @@
 # vSIGMA Proxy Bridge Calibration Guard - 2026-06-10
 
 ## Summary
-- rows_reviewed: 2
-- guard_action_counts: NO_CHANGE=2
+- rows_reviewed: 1
+- guard_action_counts: NO_CHANGE=1
 - auto_apply: NO
 - production_change: NO
 
 ## Guard Rows
 - Malaga vs Las Palmas | action=NO_CHANGE | market_hint=OVER_OR_BTTS_CHECK | before=OVER_1_5_SUPPORTED -> after=OVER_1_5_SUPPORTED | permission=LIVE_ONLY -> LIVE_ONLY | reason=not a proxy inversion
-- Cape Town City vs Magesi | action=NO_CHANGE | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | before=NO_CLEAR_STAT_MARKET -> after=NO_CLEAR_STAT_MARKET | permission=NO_BET -> NO_BET | reason=not a proxy inversion
 
 ## Guardrails
 - Diagnostic/post-processing only; no stake permission is added.

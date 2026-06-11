@@ -1,44 +1,67 @@
 # vSIGMA API-Enriched Scored Candidates - 2026-06-10
 
 ## Summary
-- source_rows_reviewed: 93
-- candidate_rows_written: 93
-- scoring_ready_pending_gates_rows: 55
+- source_rows_reviewed: 95
+- candidate_rows_written: 95
+- scoring_ready_pending_gates_rows: 57
 - missing_required_rows: 0
 - coverage_only_rows: 12
 - diagnostic_only_rows: 26
-- status_counts: API_ENRICHED_SCORING_READY_PENDING_GATES=55; DIAGNOSTIC_ONLY_NO_SCORING=26; COVERAGE_ONLY_NO_SCORING=12
-- pick_permission_counts: NO_PICK_PERMISSION=93
-- stake_permission_counts: NO_STAKE_PERMISSION=93
+- status_counts: API_ENRICHED_SCORING_READY_PENDING_GATES=57; DIAGNOSTIC_ONLY_NO_SCORING=26; COVERAGE_ONLY_NO_SCORING=12
+- pick_permission_counts: NO_PICK_PERMISSION=95
+- stake_permission_counts: NO_STAKE_PERMISSION=95
 - auto_apply: NO
 - production_change: NO
 
 ## Candidate Rows
 - Neptūną Klaipėda vs Transinvest 2 | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Neptūną Klaipėda | pred_total_home_away=71.0/29.0 | 1x2=1.15/5.75/13.00 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Fjardabyggd / Leiknir vs Fjolnir | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Fjardabyggd / Leiknir | pred_total_home_away=55.5/44.5 | 1x2=2.25/4.00/2.38 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Haukar vs Kormákur / Hvöt | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Haukar | pred_total_home_away=63.3/36.7 | 1x2=1.45/4.50/4.80 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Thróttur Vogar vs Vikingur Olafsiik | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Thróttur Vogar | pred_total_home_away=59.0/41.0 | 1x2=1.73/4.00/3.50 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Damash Gilanian vs Mes Shahr-e Babak | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Mes Shahr-e Babak | pred_total_home_away=29.3/70.7 | 1x2=6.00/3.30/1.55 | ou2.5=2.50/1.50 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Naft Bandar Abbas vs Shahrdari Noshahr | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Naft Bandar Abbas | pred_total_home_away=48.0/52.2 | 1x2=2.32/2.75/3.40 | ou2.5=2.67/1.36 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Blumenau vs Jaraguá | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Blumenau | pred_total_home_away=89.7/10.3 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Dikaki vs Cercle Mbéri | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Cercle Mbéri | pred_total_home_away=27.4/72.6 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Mangasport vs Bouenguidi | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Mangasport | pred_total_home_away=75.3/24.7 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Stade Mandji vs Lozo | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Stade Mandji | pred_total_home_away=66.4/34.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Brasil DE Pelotas vs Farroupilha | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Brasil DE Pelotas | pred_total_home_away=74.3/25.7 | 1x2=1.25/4.75/11.00 | ou2.5=1.70/2.05 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Aigle Royal de Moungo vs PWD Bamenda | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=PWD Bamenda | pred_total_home_away=38.2/62.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Colombe vs Jeunes Fauves | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Colombe | pred_total_home_away=80.2/19.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Fortuna Mfou vs Stade Renard | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Stade Renard | pred_total_home_away=37.3/62.7 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Gazelle vs Cotonsport | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Cotonsport | pred_total_home_away=37.5/62.5 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Gualaceo SC vs Cumbayá | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Cumbayá | pred_total_home_away=45.3/54.7 | 1x2=2.15/2.90/3.20 | ou2.5=2.30/1.48 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Ind. Juniors vs Deportivo Cuenca Juniors | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Deportivo Cuenca Juniors | pred_total_home_away=47.0/53.0 | 1x2=1.85/3.10/3.95 | ou2.5=2.25/1.50 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Tupan vs São José MA | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Tupan | pred_total_home_away=35.0/65.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Amawele vs Madlenya | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Amawele | pred_total_home_away=80.0/20.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Viva Stumbo vs Magwanyana | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Viva Stumbo | pred_total_home_away=67.0/33.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Dynamos vs Hunters | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Dynamos | pred_total_home_away=63.5/36.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Kariba vs Herentals | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Herentals | pred_total_home_away=39.2/60.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Platinum vs Hardrock | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Hardrock | pred_total_home_away=38.5/61.5 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Simba Bhora vs Ngezi Platinum | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Ngezi Platinum | pred_total_home_away=37.2/62.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Afrique Football Élite vs ASKO | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=ASKO | pred_total_home_away=31.7/68.3 | 1x2=1.80/3.45/3.70 | ou2.5=1.85/1.73 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Onze Créateurs vs Bakaridjan | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Onze Créateurs | pred_total_home_away=60.2/39.8 | 1x2=2.75/2.33/3.10 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Shortan vs Gazalkent | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Shortan | pred_total_home_away=62.5/37.5 | 1x2=1.91/3.30/3.40 | ou2.5=1.75/1.85 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- WDSC Wolves vs Eastern Suburbs | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Eastern Suburbs | pred_total_home_away=33.8/66.2 | 1x2=2.90/3.80/2.05 | ou2.5=1.38/2.85 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Orebro SK vs GIF Sundsvall | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Orebro SK | pred_total_home_away=48.8/51.4 | 1x2=1.95/3.40/3.75 | ou2.5=1.95/1.85 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Varbergs BoIS FC vs Norrby IF | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Varbergs BoIS FC | pred_total_home_away=67.7/32.3 | 1x2=1.64/3.90/5.00 | ou2.5=1.70/2.15 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Excelsior Maassluis vs Ijsselmeervogels | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Ijsselmeervogels | pred_total_home_away=46.3/53.7 | 1x2=2.10/3.35/2.90 | ou2.5=1.60/2.05 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Pirmasens vs VfR Mannheim | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=VfR Mannheim | pred_total_home_away=20.0/80.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Malaga vs Las Palmas | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Malaga | pred_total_home_away=64.2/36.0 | 1x2=1.94/3.35/3.95 | ou2.5=2.05/1.75 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Cape Town City vs Magesi | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Magesi | pred_total_home_away=33.5/67.0 | 1x2=1.96/3.10/4.20 | ou2.5=2.62/1.48 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Amical Saint-Prex vs Servette II | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - YF Juventus vs Langenthal | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Fjardabyggd / Leiknir vs Fjolnir | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Fjardabyggd / Leiknir | pred_total_home_away=55.5/44.5 | 1x2=2.25/3.95/2.38 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Haukar vs Kormákur / Hvöt | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Haukar | pred_total_home_away=63.2/36.8 | 1x2=1.44/4.33/5.40 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - KFG vs Hvíti riddarinn | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Hvíti riddarinn | pred_total_home_away=43.0/57.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Kári vs Selfoss | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Selfoss | pred_total_home_away=49.4/50.6 | 1x2=2.40/4.00/2.20 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Magni vs Dalvík / Reynir | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Magni | pred_total_home_away=58.8/41.2 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Thróttur Vogar vs Vikingur Olafsiik | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Thróttur Vogar | pred_total_home_away=58.8/41.2 | 1x2=1.73/3.90/3.55 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Polanka nad Odrou vs Zlín II | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Sigma Olomouc II vs Třinec | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Kladno vs Ceska Lipa | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Damash Gilanian vs Mes Shahr-e Babak | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Mes Shahr-e Babak | pred_total_home_away=29.3/70.7 | 1x2=6.00/3.30/1.55 | ou2.5=2.50/1.50 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Naft Bandar Abbas vs Shahrdari Noshahr | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Naft Bandar Abbas | pred_total_home_away=48.0/52.2 | 1x2=2.32/2.75/3.40 | ou2.5=2.67/1.36 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Leça vs Vitória de Sernache | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Vitória de Sernache | pred_total_home_away=45.5/54.5 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - América RJ vs Cabofriense | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=América RJ | pred_total_home_away=54.2/45.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - CFRJ / Maricá vs Bonsucesso | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=CFRJ / Maricá | pred_total_home_away=52.7/47.3 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Blumenau vs Jaraguá | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Blumenau | pred_total_home_away=89.7/10.3 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Dikaki vs Cercle Mbéri | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Cercle Mbéri | pred_total_home_away=27.4/72.6 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - FC 105 vs Pélican | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=FC 105 | pred_total_home_away=55.3/44.7 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Mangasport vs Bouenguidi | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Mangasport | pred_total_home_away=75.3/24.7 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Oyem AC vs Bitam | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Oyem AC | pred_total_home_away=56.2/43.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Stade Mandji vs Lozo | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Stade Mandji | pred_total_home_away=66.4/34.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Vautour Club vs US Oyem | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Vautour Club | pred_total_home_away=57.7/42.3 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Brasil DE Pelotas vs Farroupilha | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Brasil DE Pelotas | pred_total_home_away=74.3/25.7 | 1x2=1.25/5.10/9.50 | ou2.5=1.70/2.05 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Afturelding vs Stjarnan | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Phoenix vs Elva III | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Rakvere FC Freedom vs Kena | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
@@ -48,41 +71,22 @@
 - Volta II / Arsenal vs Tallinna Kalev II | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Fransta vs IFK Östersund | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Aigle Royal vs Panthère | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Panthère | pred_total_home_away=44.4/55.6 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Aigle Royal de Moungo vs PWD Bamenda | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=PWD Bamenda | pred_total_home_away=38.2/62.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Canon vs Victoria United | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Victoria United | pred_total_home_away=40.8/59.2 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Colombe vs Jeunes Fauves | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Colombe | pred_total_home_away=80.2/19.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Fortuna Mfou vs Stade Renard | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Stade Renard | pred_total_home_away=37.3/62.7 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Gazelle vs Cotonsport | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Cotonsport | pred_total_home_away=37.5/62.5 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Unisport Bafang vs Dynamo de Douala | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Dynamo de Douala | pred_total_home_away=40.7/59.5 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Bombada vs Medina United | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=pred_total_home_away=48.5/51.5 | 1x2=2.25/2.85/3.10 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Hawks vs GPA | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=GPA | pred_total_home_away=45.3/54.7 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Team Rhino vs Real de Banjul | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Real de Banjul | pred_total_home_away=43.5/56.5 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Gualaceo SC vs Cumbayá | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Cumbayá | pred_total_home_away=45.3/54.7 | 1x2=2.15/2.90/3.20 | ou2.5=2.25/1.50 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Ind. Juniors vs Deportivo Cuenca Juniors | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Deportivo Cuenca Juniors | pred_total_home_away=47.0/53.0 | 1x2=1.90/3.10/3.70 | ou2.5=2.25/1.50 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Céleste vs Simba | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Céleste | pred_total_home_away=51.3/48.7 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Vita Club vs Maniema Union | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Vita Club | pred_total_home_away=53.2/46.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Araioses vs Americano Bacabal | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Araioses | pred_total_home_away=0/0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Tupan vs São José MA | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Tupan | pred_total_home_away=35.0/65.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Amawele vs Madlenya | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Amawele | pred_total_home_away=80.0/20.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Asiagoal vs Toktogul | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Asiagoal | pred_total_home_away=43.5/56.5 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Viva Stumbo vs Magwanyana | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Viva Stumbo | pred_total_home_away=67.0/33.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Asiagoal vs Toktogul | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Asiagoal | pred_total_home_away=56.3/43.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Chicken Inn vs CAPS United | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=CAPS United | pred_total_home_away=44.3/55.7 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Dynamos vs Hunters | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Dynamos | pred_total_home_away=63.5/36.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Kariba vs Herentals | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Herentals | pred_total_home_away=39.2/60.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - MWOS vs Manica Diamonds | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=MWOS | pred_total_home_away=53.2/46.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Platinum vs Hardrock | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Hardrock | pred_total_home_away=38.5/61.5 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Simba Bhora vs Ngezi Platinum | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Ngezi Platinum | pred_total_home_away=37.2/62.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Afrique Football Élite vs ASKO | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=ASKO | pred_total_home_away=31.7/68.3 | 1x2=1.95/2.85/4.00 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Onze Créateurs vs Bakaridjan | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Onze Créateurs | pred_total_home_away=60.2/39.8 | 1x2=2.75/2.33/3.10 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - BuxDu vs Qiziriq | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Qiziriq | pred_total_home_away=46.0/54.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Shortan vs Gazalkent | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Shortan | pred_total_home_away=62.8/37.3 | 1x2=1.91/3.30/3.40 | ou2.5=1.75/1.85 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- WDSC Wolves vs Eastern Suburbs | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Eastern Suburbs | pred_total_home_away=33.8/66.2 | 1x2=2.90/3.80/2.05 | ou2.5=1.38/2.85 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Al-Hilal Omdurman II vs Al-Merreikh II | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Ilves vs Lahti | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - KuPS vs VPS | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - SJK vs Inter Turku | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Orebro SK vs GIF Sundsvall | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Orebro SK | pred_total_home_away=48.8/51.4 | 1x2=1.95/3.40/3.75 | ou2.5=1.95/1.85 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Varbergs BoIS FC vs Norrby IF | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Varbergs BoIS FC | pred_total_home_away=67.7/32.3 | 1x2=1.64/3.90/5.00 | ou2.5=1.70/2.15 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Balkan vs Eskilsminne | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Eker Örebro vs IF Karlstad | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Falu BS vs Gefle IF | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
@@ -90,7 +94,6 @@
 - Lidköping vs Skövde AIK | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Malmslatts AIK vs Husqvarna | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Unik FK vs Karlberg | status=DIAGNOSTIC_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Excelsior Maassluis vs Ijsselmeervogels | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=YES | summary=prediction_winner=Ijsselmeervogels | pred_total_home_away=46.3/53.7 | 1x2=2.10/3.50/2.80 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Charlotte Eagles vs Asheville City | status=COVERAGE_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Charlotte Independence 2 vs Port City | status=COVERAGE_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Chicago Dutch Lions vs St. Croix | status=COVERAGE_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
@@ -106,7 +109,6 @@
 - Portugal vs Nigeria | status=COVERAGE_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Trelleborg vs Osters IF | status=COVERAGE_ONLY_NO_SCORING | fixture=YES pred=NO odds=NO | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Kassel vs SG Bornheim | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=Kassel | pred_total_home_away=50.8/49.3 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Pirmasens vs VfR Mannheim | status=API_ENRICHED_SCORING_READY_PENDING_GATES | fixture=YES pred=YES odds=NO | summary=prediction_winner=VfR Mannheim | pred_total_home_away=20.0/80.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 
 ## Guardrails
 - These are scored-candidate inputs only; they do not create picks or stake permission.

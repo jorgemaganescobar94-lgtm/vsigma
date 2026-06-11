@@ -1,12 +1,12 @@
 target_date,generated_at,component,status,severity,detail,action_required,source_guard,auto_apply,production_change
-2026-06-10,2026-06-10T23:22:41+01:00,daily_execution_board,OK,WARN,rows=2; decisions=LIVE_ONLY=1; NO_BET=1,REVIEW_BOARD,DATED_INPUT_ONLY,NO,NO
-2026-06-10,2026-06-10T23:22:41+01:00,prelock_live_recheck,OK,WARN,decisions=LIVE_ONLY_WAIT_TRIGGER=1; CANCELLED_NO_BET=1,REVIEW_PRELOCK_LIVE,DATED_INPUT_ONLY,NO,NO
-2026-06-10,2026-06-10T23:22:41+01:00,live_trigger_validator,OK,WARN,windows=MATCH_FINISHED=1; triggers=MATCH_FINISHED=1,REVIEW_LIVE_WINDOW_MISSED_OR_FINISHED,DATED_INPUT_ONLY,NO,NO
-2026-06-10,2026-06-10T23:22:41+01:00,postmatch_results_refresh,OK,OK,FT=1; NS=1,NO,DATED_INPUT_ONLY,NO,NO
-2026-06-10,2026-06-10T23:22:41+01:00,postmatch_stat_actuals,OK,OK,rows_final=1,NO,DATED_INPUT_ONLY,NO,NO
-2026-06-10,2026-06-10T23:22:41+01:00,forecast_calibration,OK,OK,detail_rows=1; statuses=LOW_SAMPLE_HOLD=1,NO,DATED_INPUT_ONLY,NO,NO
-2026-06-10,2026-06-10T23:22:41+01:00,calibration_memory_ledger,OK,OK,global ledger exists,NO,DATED_INPUT_ONLY,NO,NO
-2026-06-10,2026-06-10T23:22:41+01:00,daily_workflow_v2,CONFIG_EXPECTED,INFO,vsigma_daily_decision_chain_v2.yml active externally,CHECK_GH_WORKFLOW_LIST_IF_NEEDED,DATED_INPUT_ONLY,NO,NO
-2026-06-10,2026-06-10T23:22:41+01:00,prelock_workflow,CONFIG_EXPECTED,INFO,vsigma_prelock_live_recheck.yml expected active,CHECK_GH_WORKFLOW_LIST_IF_NEEDED,DATED_INPUT_ONLY,NO,NO
-2026-06-10,2026-06-10T23:22:41+01:00,live_trigger_workflow,CONFIG_EXPECTED,INFO,vsigma_live_trigger_validator.yml expected active,CHECK_GH_WORKFLOW_LIST_IF_NEEDED,DATED_INPUT_ONLY,NO,NO
-2026-06-10,2026-06-10T23:22:41+01:00,postmatch_workflow,CONFIG_EXPECTED,INFO,vsigma_full_post_match_learning_chain.yml expected active,CHECK_GH_WORKFLOW_LIST_IF_NEEDED,DATED_INPUT_ONLY,NO,NO
+2026-06-10,2026-06-11T19:37:49+01:00,daily_execution_board,OK,WARN,rows=1; decisions=LIVE_ONLY=1,REVIEW_BOARD,DATED_INPUT_ONLY,NO,NO
+2026-06-10,2026-06-11T19:37:49+01:00,prelock_live_recheck,OK,WARN,decisions=LIVE_ONLY_WAIT_TRIGGER=1; CANCELLED_NO_BET=1,REVIEW_PRELOCK_LIVE,DATED_INPUT_ONLY,NO,NO
+2026-06-10,2026-06-11T19:37:49+01:00,live_trigger_validator,OK,WARN,windows=MATCH_FINISHED=1; triggers=MATCH_FINISHED=1,REVIEW_LIVE_WINDOW_MISSED_OR_FINISHED,DATED_INPUT_ONLY,NO,NO
+2026-06-10,2026-06-11T19:37:49+01:00,postmatch_results_refresh,OK,OK,FT=1; NS=1,NO,DATED_INPUT_ONLY,NO,NO
+2026-06-10,2026-06-11T19:37:49+01:00,postmatch_stat_actuals,OK,OK,rows_final=1,NO,DATED_INPUT_ONLY,NO,NO
+2026-06-10,2026-06-11T19:37:49+01:00,forecast_calibration,OK,OK,detail_rows=1; statuses=LOW_SAMPLE_HOLD=1,NO,DATED_INPUT_ONLY,NO,NO
+2026-06-10,2026-06-11T19:37:49+01:00,calibration_memory_ledger,OK,OK,global ledger exists,NO,DATED_INPUT_ONLY,NO,NO
+2026-06-10,2026-06-11T19:37:49+01:00,daily_workflow_v2,CONFIG_EXPECTED,INFO,vsigma_daily_decision_chain_v2.yml active externally,CHECK_GH_WORKFLOW_LIST_IF_NEEDED,DATED_INPUT_ONLY,NO,NO
+2026-06-10,2026-06-11T19:37:49+01:00,prelock_workflow,CONFIG_EXPECTED,INFO,vsigma_prelock_live_recheck.yml expected active,CHECK_GH_WORKFLOW_LIST_IF_NEEDED,DATED_INPUT_ONLY,NO,NO
+2026-06-10,2026-06-11T19:37:49+01:00,live_trigger_workflow,CONFIG_EXPECTED,INFO,vsigma_live_trigger_validator.yml expected active,CHECK_GH_WORKFLOW_LIST_IF_NEEDED,DATED_INPUT_ONLY,NO,NO
+2026-06-10,2026-06-11T19:37:49+01:00,postmatch_workflow,CONFIG_EXPECTED,INFO,vsigma_full_post_match_learning_chain.yml expected active,CHECK_GH_WORKFLOW_LIST_IF_NEEDED,DATED_INPUT_ONLY,NO,NO
