@@ -61,9 +61,9 @@
 - status_counts: MISSING=1; OK=3; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-10T19:13:01+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-10T19:13:01+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-10T19:13:01+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-11T19:37:47+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-11T19:37:47+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-11T19:37:47+01:00
 
 ## Key Files
 - data/processed/today/2026-06-11/vsigma_consolidated_daily_operator_panel.md
@@ -111,126 +111,69 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1616
+- files_scanned: 1629
 - accepted_rows: 55
-- rejected_rows: 0
+- rejected_rows: 220
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
 - rows_reviewed: 55
-- trusted_rows: 0
+- trusted_rows: 1
 - quarantine_rows: 0
-- blocked_rows: 55
-- trust_status_counts: REJECTED_SOURCE_BLOCK=55
+- blocked_rows: 54
+- trust_status_counts: REJECTED_SOURCE_BLOCK=54; TRUSTED_RAW_SOURCE=1
 - next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
 
 ## Trusted Raw Candidate Promotion Gate
 - rows_reviewed: 55
 - promoted_rows: 0
 - blocked_rows: 0
-- quarantine_rows: 0
-- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=55
+- quarantine_rows: 1
+- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=54; TRUSTED_SOURCE_BUT_NO_SCORED_ROW=1
 - next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 
 ## Scoring Gap Explainer
 - rows_reviewed: 55
-- missing_scored_rows: 0
+- missing_scored_rows: 1
 - no_data_blocked_rows: 0
-- not_trusted_rows: 55
+- not_trusted_rows: 54
 - promoted_rows: 0
-- gap_status_counts: NOT_TRUSTED_SKIPPED=55
+- gap_status_counts: NOT_TRUSTED_SKIPPED=54; MISSING_SCORED_ROW=1
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 
 ## Trusted Raw Scoring Queue
-- queue_rows: 0
-- priority_counts: none
-- scoring_needed_counts: none
+- queue_rows: 1
+- priority_counts: P1_TRUSTED_MISSING_SCORING=1
+- scoring_needed_counts: YES=1
 - source_gap_status: MISSING_SCORED_ROW
 - next_action: Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.
 
 ## Queue-to-Enrichment Dry Run Planner
-- rows_planned: 0
-- dry_run_decision_counts: none
-- risk_label_counts: none
-- priority_counts: none
-- total_estimated_call_units: 0
+- rows_planned: 1
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=1
+- risk_label_counts: HIGH_CONTEXT_VOLATILITY=1
+- priority_counts: P1_TRUSTED_MISSING_SCORING=1
+- total_estimated_call_units: 6
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
 
 ## Enrichment Cost & Approval Gate
-- approval_gate_status: NO_ENRICHMENT_NEEDED
-- rows_planned: 0
-- estimated_call_units: 0
-- approval_required: NO
+- approval_gate_status: WAIT_FOR_MANUAL_APPROVAL
+- rows_planned: 1
+- estimated_call_units: 6
+- approval_required: YES
 - max_allowed_without_manual_approval: 0
 - api_calls_allowed: NO
 - api_calls_planned: NO
 - api_calls_executed: NO
-- recommended_action: NO_ACTION
+- recommended_action: WAIT_FOR_MANUAL_APPROVAL
 
 ## Daily Board Self-Heal
 - self_heal_status: EMPTY_BY_PROMOTION_GATE
 - promotion_rows_reviewed: 55
 - promoted_rows: 0
 - blocked_rows: 0
-- quarantine_rows: 0
+- quarantine_rows: 1
 - board_rows_written: 1_DIAGNOSTIC_ROW
 - reason: 0 promoted raw candidates; no scoring-safe rows available
-## Forced API Board Fixture Lineups Refresh
-- fixtures_reviewed: 2
-- api_calls_executed: 2
-- lineup_fixtures_found: 2
-- lineup_fixtures_missing: 0
-- starting_xi_rows: 44
-- substitute_rows: 42
-- api_status_counts: OK=86
-- pick_permission: NO_PICK_PERMISSION
-- stake_permission: NO_STAKE_PERMISSION
-- next_action: Use direct board fixture_id API lineups as a prelock input only. No automatic pick or stake permission.
-## Forced API Lineup Bridge to Board
-- board_rows_reviewed: 2
-- lineup_confirmed_rows: 2
-- lineup_missing_rows: 0
-- board_rows_written: 2
-- bridge_status_counts: LINEUPS_CONFIRMED_BY_FORCED_API=2
-- bridge_action_counts: CLEAR_LINEUPS_INACTIVE_WARNING_KEEP_EXECUTION_LOCK=2
-- canonical_board_permission: NO_CANONICAL_BOARD_PERMISSION
-- pick_permission: NO_PICK_PERMISSION
-- stake_permission: NO_STAKE_PERMISSION
-- next_action: Use bridged copy for prelock review/repricing. Do not create picks or stake without separate governed promotion.
-## Prematch Story Accuracy Ledger
-- rows: 0
-- finished_rows: 0
-- pending_rows: 0
-- result_family_counts: none
-- score_neighbor_counts: none
-- goal_profile_counts: none
-- next_action: Track completed rows and calibrate prematch prediction families.
-
-## Pending Prematch Prediction Finalizer
-- pending_rows: 0
-- api_calls: 0
-- finalized_rows: 0
-- still_pending_rows: 0
-- next_action: Run accuracy ledger and rolling dashboard after this finalizer.
-## Rolling Prematch Accuracy Dashboard
-- finished_rows: 2
-- pending_rows: 0
-- result_family_hit_pct: 100.0
-- neighbor_or_exact_pct: 100.0
-- goal_profile_hit_pct: 50.0
-- next_action: Use rolling accuracy to calibrate prematch prediction families.
-## Prematch Prediction Calibration Advisor
-- advice_rows: 12
-- watch_rows: 4
-- caution_rows: 2
-- hold_rows: 6
-- next_action: Review calibration advice only; keep auto_apply disabled until sample is large enough.
-## Prematch Calibration Rule Gate
-- rows: 12
-- candidate_rows: 0
-- blocked_sample_rows: 6
-- blocked_history_rows: 0
-- hold_rows: 6
-- next_action: No automatic rule changes; review candidates only after sample and history gates pass.

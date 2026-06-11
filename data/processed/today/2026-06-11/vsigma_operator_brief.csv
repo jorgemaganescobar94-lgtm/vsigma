@@ -1,15 +1,15 @@
 target_date,generated_at,section,status,detail,next_action
-2026-06-11,2026-06-11T13:59:10+01:00,operator_status,BROKEN,health=BROKEN; active=0; waiting=0; closed=0; watch=0; no_bet=0,Fix missing/broken workflow input before using any market signal.
-2026-06-11,2026-06-11T13:59:10+01:00,operator_action_level,BROKEN,sanity=PASS; broken-state routing is explicit,Use action_level as the first-read operator priority.
-2026-06-11,2026-06-11T13:59:10+01:00,operator_sanity_check,PASS,broken-state routing is explicit,"If FAIL, inspect CSV/MD mismatch before using the brief."
-2026-06-11,2026-06-11T13:59:10+01:00,operator_compact_summary,SYSTEM_FIX_REQUIRED,action_level=BROKEN; risk=HIGH; active_signature=; reason=system fault blocks market usage,Read this row first for the final operator decision.
-2026-06-11,2026-06-11T13:59:10+01:00,operator_drift_check,MATERIAL_CHANGE,"notify=true; changed=action_level,final_decision,risk_label; action_level: UNKNOWN -> BROKEN; final_decision: NO_OPERATOR_ACTION -> SYSTEM_FIX_REQUIRED; risk_label: NONE -> HIGH",Notify only if MATERIAL_CHANGE.
-2026-06-11,2026-06-11T13:59:10+01:00,operator_alert_route,CRITICAL_STOP,materiality=CRITICAL; reason=sanity failure or broken system state blocks operator usage; drift_status=MATERIAL_CHANGE; drift_notify=true,Route only; this script does not send alerts.
-2026-06-11,2026-06-11T13:59:10+01:00,daily_board,UNKNOWN,rows=UNKNOWN,Review only candidates still active after live-window override.
-2026-06-11,2026-06-11T13:59:10+01:00,prelock_live,none,rows=0,Use recheck state with live validator freshness override.
-2026-06-11,2026-06-11T13:59:10+01:00,live_trigger,none,windows=none,Only LIVE_TRIGGER_CONFIRMED can justify manual live review.
-2026-06-11,2026-06-11T13:59:10+01:00,issue_alert,BROKEN,required=true; notify=true,Issue alert is informational; no auto action.
-2026-06-11,2026-06-11T13:59:10+01:00,postmatch_learning,UNKNOWN,actual_rows=UNKNOWN; detail_rows=UNKNOWN,Use learning only after sufficient sample.
-2026-06-11,2026-06-11T13:59:10+01:00,calibration_shadow_summary,STABLE_OR_NO_PATCH,active=0; high=0; metrics=none; decisions=REJECT_LOW_SAMPLE=1,Read shadow queue; no auto-apply.
-2026-06-11,2026-06-11T13:59:10+01:00,shadow_promotion_readiness,NO_PROMOTION,promotion_candidates=0; decisions=WAIT_MORE_SAMPLE=1,Manual review only if promotion candidate appears.
-2026-06-11,2026-06-11T13:59:10+01:00,learning_chain_output_sanity,PASS,status_counts=PASS=7; severity=OK=7,Review sanity warnings before trusting learning outputs.
+2026-06-11,2026-06-11T19:52:15+01:00,operator_status,BROKEN,health=BROKEN; active=0; waiting=0; closed=0; watch=0; no_bet=0,Fix missing/broken workflow input before using any market signal.
+2026-06-11,2026-06-11T19:52:15+01:00,operator_action_level,BROKEN,sanity=PASS; broken-state routing is explicit,Use action_level as the first-read operator priority.
+2026-06-11,2026-06-11T19:52:15+01:00,operator_sanity_check,PASS,broken-state routing is explicit,"If FAIL, inspect CSV/MD mismatch before using the brief."
+2026-06-11,2026-06-11T19:52:15+01:00,operator_compact_summary,SYSTEM_FIX_REQUIRED,action_level=BROKEN; risk=HIGH; active_signature=; reason=system fault blocks market usage,Read this row first for the final operator decision.
+2026-06-11,2026-06-11T19:52:15+01:00,operator_drift_check,NO_MATERIAL_CHANGE,notify=false; changed=none; tracked operator fields unchanged,Notify only if MATERIAL_CHANGE.
+2026-06-11,2026-06-11T19:52:15+01:00,operator_alert_route,CRITICAL_STOP,materiality=CRITICAL; reason=sanity failure or broken system state blocks operator usage; drift_status=NO_MATERIAL_CHANGE; drift_notify=false,Route only; this script does not send alerts.
+2026-06-11,2026-06-11T19:52:15+01:00,daily_board,UNKNOWN,rows=UNKNOWN,Review only candidates still active after live-window override.
+2026-06-11,2026-06-11T19:52:15+01:00,prelock_live,none,rows=0,Use recheck state with live validator freshness override.
+2026-06-11,2026-06-11T19:52:15+01:00,live_trigger,none,windows=none,Only LIVE_TRIGGER_CONFIRMED can justify manual live review.
+2026-06-11,2026-06-11T19:52:15+01:00,issue_alert,BROKEN,required=true; notify=false,Issue alert is informational; no auto action.
+2026-06-11,2026-06-11T19:52:15+01:00,postmatch_learning,UNKNOWN,actual_rows=UNKNOWN; detail_rows=UNKNOWN,Use learning only after sufficient sample.
+2026-06-11,2026-06-11T19:52:16+01:00,calibration_shadow_summary,STABLE_OR_NO_PATCH,active=0; high=0; metrics=none; decisions=REJECT_LOW_SAMPLE=1,Read shadow queue; no auto-apply.
+2026-06-11,2026-06-11T19:52:16+01:00,shadow_promotion_readiness,NO_PROMOTION,promotion_candidates=0; decisions=WAIT_MORE_SAMPLE=1,Manual review only if promotion candidate appears.
+2026-06-11,2026-06-11T19:52:16+01:00,learning_chain_output_sanity,PASS,status_counts=PASS=7; severity=OK=7,Review sanity warnings before trusting learning outputs.
