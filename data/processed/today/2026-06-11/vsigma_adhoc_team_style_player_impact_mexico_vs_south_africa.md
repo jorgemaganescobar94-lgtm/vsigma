@@ -4,9 +4,9 @@
 - fixture_found: YES
 - team_rows: 2
 - player_rows: 22
-- home_xi_strength: 64.2
-- away_xi_strength: 65.8
-- xi_edge: -1.6
+- home_xi_strength: 66.0
+- away_xi_strength: 67.4
+- xi_edge: -1.4
 - auto_apply: NO
 - production_change: NO
 
@@ -37,31 +37,31 @@
 
 ## Player Impact Scores
 ### Mexico (home)
-- Raúl Rangel | pos=G | score=68.1 | atk=5 def=80 ctl=24 sp=5 | role=GOALKEEPER_STABILITY
-- Raúl Jiménez | pos=F | score=66.1 | atk=75 def=22 ctl=42 sp=40 | role=PRIMARY_ATTACK_THREAT
-- Álvaro Fidalgo | pos=F | score=64.7 | atk=70 def=22 ctl=47 sp=43 | role=BOX_THREAT
-- Erik Lira | pos=M | score=63.9 | atk=48 def=50 ctl=77 sp=45 | role=CONTROL_HUB
-- Roberto Alvarado | pos=M | score=63.9 | atk=48 def=50 ctl=77 sp=45 | role=CONTROL_HUB
-- Brian Gutiérrez | pos=M | score=63.9 | atk=48 def=50 ctl=77 sp=45 | role=CONTROL_HUB
-- Julián Quiñones | pos=F | score=63.9 | atk=70 def=22 ctl=42 sp=40 | role=BOX_THREAT
-- César Montes | pos=D | score=63.8 | atk=20 def=76 ctl=44 sp=44 | role=DEFENSIVE_ANCHOR
-- Johan Vásquez | pos=D | score=63.8 | atk=20 def=76 ctl=44 sp=44 | role=DEFENSIVE_ANCHOR
-- Israel Reyes | pos=D | score=62.0 | atk=20 def=72 ctl=44 sp=42 | role=DEFENSIVE_ANCHOR
-- Jesús Gallardo | pos=D | score=62.0 | atk=20 def=72 ctl=44 sp=42 | role=DEFENSIVE_ANCHOR
+- Raúl Rangel | pos=G | role=GOALKEEPER | api_pos=G | grid=1:1 | score=70.4 | atk=5 def=84 ctl=24 sp=5 | label=GOALKEEPER_STABILITY
+- Raúl Jiménez | pos=F | role=STRIKER | api_pos=F | grid=5:1 | score=70.0 | atk=88 def=19 ctl=42 sp=44 | label=PRIMARY_ATTACK_THREAT
+- Álvaro Fidalgo | pos=M | role=INTERIOR | api_pos=M | grid=4:2 | score=69.6 | atk=52 def=51 ctl=92 sp=50 | label=CONTROL_HUB
+- Brian Gutiérrez | pos=M | role=INTERIOR | api_pos=M | grid=4:3 | score=67.7 | atk=52 def=51 ctl=87 sp=47 | label=CONTROL_HUB
+- Erik Lira | pos=M | role=DEFENSIVE_MIDFIELD | api_pos=M | grid=3:1 | score=66.7 | atk=47 def=57 ctl=85 sp=47 | label=PIVOT_SCREEN
+- César Montes | pos=D | role=CENTER_BACK | api_pos=D | grid=2:3 | score=64.7 | atk=17 def=85 ctl=45 sp=49 | label=CENTER_BACK_ANCHOR
+- Johan Vásquez | pos=D | role=CENTER_BACK | api_pos=D | grid=2:2 | score=64.7 | atk=17 def=85 ctl=45 sp=49 | label=CENTER_BACK_ANCHOR
+- Roberto Alvarado | pos=M | role=WIDE_MIDFIELD | api_pos=M | grid=4:4 | score=64.6 | atk=56 def=50 ctl=76 sp=47 | label=WIDE_BALANCE
+- Julián Quiñones | pos=M | role=WIDE_MIDFIELD | api_pos=M | grid=4:1 | score=64.6 | atk=56 def=50 ctl=76 sp=47 | label=WIDE_BALANCE
+- Israel Reyes | pos=D | role=FULL_BACK | api_pos=D | grid=2:4 | score=61.5 | atk=25 def=76 ctl=47 sp=43 | label=FULL_BACK_WIDTH
+- Jesús Gallardo | pos=D | role=FULL_BACK | api_pos=D | grid=2:1 | score=61.5 | atk=25 def=76 ctl=47 sp=43 | label=FULL_BACK_WIDTH
 
 ### South Africa (away)
-- Ronwen Williams | pos=G | score=69.9 | atk=5 def=84 ctl=24 sp=5 | role=GOALKEEPER_STABILITY
-- Nkosinathi Sibisi | pos=D | score=67.6 | atk=20 def=85 ctl=44 sp=46 | role=DEFENSIVE_ANCHOR
-- Mbekezeli Mbokazi | pos=D | score=67.6 | atk=20 def=85 ctl=44 sp=46 | role=DEFENSIVE_ANCHOR
-- Iqraam Rayners | pos=F | score=66.1 | atk=75 def=26 ctl=42 sp=40 | role=PRIMARY_ATTACK_THREAT
-- Lyle Foster | pos=F | score=66.1 | atk=75 def=26 ctl=42 sp=40 | role=PRIMARY_ATTACK_THREAT
-- Khuliso Mudau | pos=D | score=65.8 | atk=20 def=81 ctl=44 sp=44 | role=DEFENSIVE_ANCHOR
-- Ime Okon | pos=D | score=65.8 | atk=20 def=81 ctl=44 sp=44 | role=DEFENSIVE_ANCHOR
-- Aubrey Modiba | pos=D | score=65.8 | atk=20 def=81 ctl=44 sp=44 | role=DEFENSIVE_ANCHOR
-- Teboho Mokoena | pos=M | score=64.5 | atk=48 def=54 ctl=77 sp=48 | role=CONTROL_HUB
-- Siphephelo Sithole | pos=M | score=62.5 | atk=48 def=54 ctl=72 sp=45 | role=CONTROL_HUB
-- Jayden Adams | pos=M | score=62.5 | atk=48 def=54 ctl=72 sp=45 | role=CONTROL_HUB
+- Ronwen Williams | pos=G | role=GOALKEEPER | api_pos=G | grid=1:1 | score=72.4 | atk=5 def=88 ctl=24 sp=5 | label=GOALKEEPER_STABILITY
+- Iqraam Rayners | pos=F | role=STRIKER_PAIR | api_pos=F | grid=4:2 | score=69.4 | atk=86 def=24 ctl=43 sp=44 | label=PRIMARY_ATTACK_THREAT
+- Lyle Foster | pos=F | role=STRIKER_PAIR | api_pos=F | grid=4:1 | score=69.4 | atk=86 def=24 ctl=43 sp=44 | label=PRIMARY_ATTACK_THREAT
+- Nkosinathi Sibisi | pos=D | role=CENTER_BACK | api_pos=D | grid=2:4 | score=68.0 | atk=17 def=93 ctl=45 sp=51 | label=CENTER_BACK_ANCHOR
+- Mbekezeli Mbokazi | pos=D | role=CENTER_BACK | api_pos=D | grid=2:2 | score=68.0 | atk=17 def=93 ctl=45 sp=51 | label=CENTER_BACK_ANCHOR
+- Teboho Mokoena | pos=M | role=CENTRAL_MIDFIELD | api_pos=M | grid=3:3 | score=67.3 | atk=50 def=56 ctl=85 sp=49 | label=CONTROL_HUB
+- Ime Okon | pos=D | role=CENTER_BACK | api_pos=D | grid=2:3 | score=66.2 | atk=17 def=89 ctl=45 sp=49 | label=CENTER_BACK_ANCHOR
+- Siphephelo Sithole | pos=M | role=CENTRAL_MIDFIELD | api_pos=M | grid=3:2 | score=65.4 | atk=50 def=56 ctl=80 sp=46 | label=CONTROL_HUB
+- Jayden Adams | pos=M | role=CENTRAL_MIDFIELD | api_pos=M | grid=3:1 | score=65.4 | atk=50 def=56 ctl=80 sp=46 | label=CONTROL_HUB
+- Khuliso Mudau | pos=D | role=WING_BACK | api_pos=D | grid=2:5 | score=65.1 | atk=28 def=84 ctl=47 sp=46 | label=WING_BACK_TWO_WAY
+- Aubrey Modiba | pos=D | role=WING_BACK | api_pos=D | grid=2:1 | score=65.1 | atk=28 def=84 ctl=47 sp=46 | label=WING_BACK_TWO_WAY
 
 ## Interpretation
 - Player scores are functional match-impact ratings, not market values.
-- Scores combine position, XI role, team style, shape and light role heuristics. They are designed to improve forecast weighting and post-match learning.
+- Role resolution uses API position + API grid + formation when available; otherwise it falls back to formation/order.
