@@ -76,7 +76,7 @@ jobs:
           test -s "data/processed/today/${{ inputs.date }}/vsigma_adhoc_match_stat_forecast_${SLUG}.csv"
           grep -q "vSIGMA Ad Hoc Probable XI Estimator" "data/processed/today/${{ inputs.date }}/vsigma_adhoc_probable_xi_${SLUG}.md"
           grep -q "vSIGMA Ad Hoc Fixture Forecast" "data/processed/today/${{ inputs.date }}/vsigma_adhoc_fixture_forecast_${SLUG}.md"
-          grep -q "vSIGMA Ad Hoc Match Stat Forecast" "data/processed/today/${{ inputs.date }}/vsigma_adhoc_match_stat_forecast_${SLUG}.md"
+          grep -Eq "vSIGMA Ad Hoc (Match Stat Forecast|Full Match Projection)" "data/processed/today/${{ inputs.date }}/vsigma_adhoc_match_stat_forecast_${SLUG}.md"
 
       - name: Commit outputs
         shell: bash
