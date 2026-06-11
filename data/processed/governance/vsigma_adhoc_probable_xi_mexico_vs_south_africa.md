@@ -21,5 +21,5 @@
 - xi_source: API_OFFICIAL_LINEUPS
 - formation: 5-3-2
 - confidence: HIGH
-- players: Ronwen Williams, Khuliso Mudau, Ime Okon, Nkosinathi Sibisi, Mbekezeli Mbokazi, Aubrey Modiba, Teboho Mokoena, Siphephelo Sithole, Jayden Adams, Lyle Foster, Iqraam Rayners
+- players: Ronwen Williams, Khuliso Mudau, Nkosinathi Sibisi, Ime Okon, Mbekezeli Mbokazi, Aubrey Modiba, Teboho Mokoena, Siphephelo Sithole, Jayden Adams, Iqraam Rayners, Lyle Foster
 - note: Official API lineup. Safe for final forecast update.
