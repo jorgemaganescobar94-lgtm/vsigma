@@ -1,19 +1,39 @@
 country,league,league_tier,league_filter_reason,matches
-Cameroon,Elite One,REJECT,country_league_not_allowlisted,7
-USA,USL League Two,REJECT,country_league_not_allowlisted,6
-Iceland,2. Deild,REJECT,country_league_not_allowlisted,5
-Estonia,Cup,REJECT,country_league_not_allowlisted,3
-USA,USL W League,REJECT,country_league_not_allowlisted,3
-Brazil,Brasileiro U17,REJECT,hard_reject_noise_league,2
-Brazil,Maranhense - 2,REJECT,country_league_not_allowlisted,2
-Ecuador,Liga Pro Serie B,REJECT,country_league_not_allowlisted,2
-Eswatini,Premier League,REJECT,country_league_not_allowlisted,2
+USA,USL League Two,REJECT,country_league_not_allowlisted,30
+USA,USL W League,REJECT,country_league_not_allowlisted,9
+Gambia,GFA League,REJECT,country_league_not_allowlisted,5
+Brazil,Brasileiro U20 A,REJECT,hard_reject_noise_league,4
+Cameroon,Elite Two,REJECT,country_league_not_allowlisted,4
+Nigeria,Federation Cup,REJECT,country_league_not_allowlisted,4
+USA,USL Championship,REJECT,country_league_not_allowlisted,4
+Brazil,Paulista - U20,REJECT,hard_reject_noise_league,3
+Kazakhstan,1. Division,REJECT,country_league_not_allowlisted,3
+Brazil,Copa Gaúcha,REJECT,country_league_not_allowlisted,2
+Congo-DR,Ligue 1,REJECT,country_league_not_allowlisted,2
+Czech-Republic,1. Liga U19,REJECT,hard_reject_noise_league,2
+Sweden,Division 2 - Norrland,REJECT,country_league_not_allowlisted,2
+Sweden,Division 2 - Västra Götaland,REJECT,country_league_not_allowlisted,2
+Sweden,Svenska Cupen,REJECT,country_league_not_allowlisted,2
+USA,USL League One,REJECT,country_league_not_allowlisted,2
+Vietnam,Cup,REJECT,country_league_not_allowlisted,2
+World,ASEAN Championship U19,REJECT,hard_reject_noise_league,2
 World,Friendlies,REJECT,hard_reject_noise_league,2
-Australia,Queensland NPL,REJECT,country_league_not_allowlisted,1
-Brazil,Carioca A2,REJECT,country_league_not_allowlisted,1
-Brazil,Copa Gaúcha,REJECT,country_league_not_allowlisted,1
-Gambia,GFA League,REJECT,country_league_not_allowlisted,1
-Iceland,Cup,REJECT,country_league_not_allowlisted,1
-Sweden,Division 2 - Norrland,REJECT,country_league_not_allowlisted,1
-Switzerland,1. Liga Classic - Play-offs,REJECT,country_league_not_allowlisted,1
-Spain,Segunda División,TIER_1,spain_segunda,1
+World,Tournoi Maurice Revello,REJECT,country_league_not_allowlisted,2
+Zimbabwe,Premier Soccer League,REJECT,country_league_not_allowlisted,2
+Aruba,Division di Honor,REJECT,country_league_not_allowlisted,1
+Brazil,Baiano - 2,REJECT,country_league_not_allowlisted,1
+Brazil,Brasileiro U17,REJECT,hard_reject_noise_league,1
+Brazil,Maranhense - 2,REJECT,country_league_not_allowlisted,1
+Czech-Republic,3. liga - MSFL,REJECT,country_league_not_allowlisted,1
+Estonia,Esiliiga A,REJECT,country_league_not_allowlisted,1
+Finland,Kakkonen - Lohko A,REJECT,country_league_not_allowlisted,1
+Finland,Ykkönen,REJECT,country_league_not_allowlisted,1
+Kuwait,Premier League,REJECT,country_league_not_allowlisted,1
+Kyrgyzstan,Premier League,REJECT,country_league_not_allowlisted,1
+Lebanon,Premier League,REJECT,country_league_not_allowlisted,1
+Norway,3. Division - Girone 5,REJECT,country_league_not_allowlisted,1
+Russia,Second League A - Division A Silver,REJECT,country_league_not_allowlisted,1
+Sweden,Division 2 - Norra Götaland,REJECT,country_league_not_allowlisted,1
+Sweden,Superettan,REJECT,country_league_not_allowlisted,1
+USA,MLS Next Pro,REJECT,hard_reject_noise_league,1
+World,World Cup,REJECT,country_league_not_allowlisted,1
