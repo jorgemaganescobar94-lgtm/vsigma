@@ -1,0 +1,7 @@
+scope,group,sample,result_family_hit_pct,exact_hit_pct,neighbor_or_exact_pct,goal_profile_hit_pct,goals_2plus_hit_pct,goals_3plus_hit_pct,both_scored_hit_pct,pending_rows,note
+ALL,ALL,1,100.0,100.0,100.0,100.0,100.0,0.0,100.0,1,accuracy from finished prematch story ledger rows
+RECENT,LAST_20,1,100.0,100.0,100.0,100.0,100.0,0.0,100.0,1,accuracy from finished prematch story ledger rows
+RECENT,LAST_50,1,100.0,100.0,100.0,100.0,100.0,0.0,100.0,1,accuracy from finished prematch story ledger rows
+PREDICTED_RESULT,AWAY_OR_DRAW,1,100.0,100.0,100.0,100.0,100.0,0.0,100.0,1,accuracy from finished prematch story ledger rows
+GOAL_PROFILE,HIGH_GOALS,0,,,,,,,,1,accuracy from finished prematch story ledger rows
+GOAL_PROFILE,MODERATE_GOALS,1,100.0,100.0,100.0,100.0,100.0,0.0,100.0,0,accuracy from finished prematch story ledger rows

@@ -14,7 +14,7 @@
 - production_change: NO
 
 ## Bridge Rows
-- Malaga vs Las Palmas | status=LINEUPS_CONFIRMED_BY_FORCED_API | starters=22 (11-11) | formations=4-2-3-1 / 4-4-2 | decision=LIVE_ONLY->LIVE_ONLY | permission=NO_PREMATCH->NO_PREMATCH | action=CLEAR_LINEUPS_INACTIVE_WARNING_KEEP_EXECUTION_LOCK
+- Malaga vs Las Palmas | status=LINEUPS_CONFIRMED_BY_FORCED_API | starters=22 (11-11) | formations=4-2-3-1 / 4-4-2 | decision=NO_BET->NO_BET | permission=NO->NO | action=CLEAR_LINEUPS_INACTIVE_WARNING_KEEP_EXECUTION_LOCK
 - Cape Town City vs Magesi | status=LINEUPS_CONFIRMED_BY_FORCED_API | starters=22 (11-11) | formations=4-4-2 / 4-2-3-1 | decision=NO_BET->NO_BET | permission=NO->NO | action=CLEAR_LINEUPS_INACTIVE_WARNING_KEEP_EXECUTION_LOCK
 
 ## Guardrails
