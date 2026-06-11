@@ -116,9 +116,9 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1608
+- files_scanned: 1614
 - accepted_rows: 122
-- rejected_rows: 833
+- rejected_rows: 857
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
@@ -182,53 +182,3 @@
 - quarantine_rows: 0
 - board_rows_written: 0
 - reason: daily board already has rows
-## Forced API Board Fixture Lineups Refresh
-- fixtures_reviewed: 2
-- api_calls_executed: 2
-- lineup_fixtures_found: 2
-- lineup_fixtures_missing: 0
-- starting_xi_rows: 44
-- substitute_rows: 42
-- api_status_counts: OK=86
-- pick_permission: NO_PICK_PERMISSION
-- stake_permission: NO_STAKE_PERMISSION
-- next_action: Use direct board fixture_id API lineups as a prelock input only. No automatic pick or stake permission.
-## Forced API Lineup Bridge to Board
-- board_rows_reviewed: 2
-- lineup_confirmed_rows: 2
-- lineup_missing_rows: 0
-- board_rows_written: 2
-- bridge_status_counts: LINEUPS_CONFIRMED_BY_FORCED_API=2
-- bridge_action_counts: CLEAR_LINEUPS_INACTIVE_WARNING_KEEP_EXECUTION_LOCK=2
-- canonical_board_permission: NO_CANONICAL_BOARD_PERMISSION
-- pick_permission: NO_PICK_PERMISSION
-- stake_permission: NO_STAKE_PERMISSION
-- next_action: Use bridged copy for prelock review/repricing. Do not create picks or stake without separate governed promotion.
-## Prematch Story Accuracy Ledger
-- rows: 2
-- finished_rows: 2
-- pending_rows: 0
-- result_family_counts: HIT=2
-- score_neighbor_counts: NEIGHBOR=1; EXACT=1
-- goal_profile_counts: MISS=1; HIT=1
-- next_action: Track completed rows and calibrate prematch prediction families.
-## Rolling Prematch Accuracy Dashboard
-- finished_rows: 2
-- pending_rows: 0
-- result_family_hit_pct: 100.0
-- neighbor_or_exact_pct: 100.0
-- goal_profile_hit_pct: 50.0
-- next_action: Use rolling accuracy to calibrate prematch prediction families.
-
-## Pending Prematch Prediction Finalizer
-- pending_rows: 0
-- api_calls: 0
-- finalized_rows: 0
-- still_pending_rows: 0
-- next_action: Run accuracy ledger and rolling dashboard after this finalizer.
-## Prematch Prediction Calibration Advisor
-- advice_rows: 12
-- watch_rows: 4
-- caution_rows: 2
-- hold_rows: 6
-- next_action: Review calibration advice only; keep auto_apply disabled until sample is large enough.
