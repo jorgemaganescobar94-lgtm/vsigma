@@ -14,8 +14,8 @@
 ### Mexico (home)
 - shape: 4-1-4-1
 - sample: 6
-- avg_possession: 54.3%
-- avg_shots: 11.8 | avg_sot: 4.0 | avg_corners: 5.0
+- avg_possession: 54.0%
+- avg_shots: 12.3 | avg_sot: 4.0 | avg_corners: 5.0
 - avg_fouls: 10.2 | avg_yellows: 1.3
 - goals_for/against: 1.7 / 0.3
 - tempo: MEDIUM
@@ -26,7 +26,7 @@
 ### South Africa (away)
 - shape: 5-3-2
 - sample: 6
-- avg_possession: 62.4%
+- avg_possession: 62.8%
 - avg_shots: 11.8 | avg_sot: 3.4 | avg_corners: 3.8
 - avg_fouls: 10.2 | avg_yellows: 2.5
 - goals_for/against: 0.7 / 1.2

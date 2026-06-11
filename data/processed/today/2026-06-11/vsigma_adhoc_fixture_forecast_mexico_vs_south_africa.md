@@ -9,7 +9,7 @@
 ## Forecast
 - fixture: Mexico vs South Africa
 - competition: World / World Cup
-- status: HT | date: 2026-06-11T19:00:00+00:00
+- status: 2H | date: 2026-06-11T19:00:00+00:00
 - XI: OFFICIAL_XI | source=API_OFFICIAL_LINEUPS | shapes=4-1-4-1/5-3-2
 - probabilities: home=0.672 draw=0.216 away=0.112
 - result_forecast: HOME_OR_DRAW
