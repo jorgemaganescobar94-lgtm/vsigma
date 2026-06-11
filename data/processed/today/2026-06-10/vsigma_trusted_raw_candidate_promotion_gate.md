@@ -2,11 +2,11 @@
 
 ## Summary
 - rows_reviewed: 122
-- promoted_rows: 1
+- promoted_rows: 0
 - blocked_rows: 0
-- quarantine_rows: 94
-- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=94; NOT_TRUSTED_NO_PROMOTION=27; PROMOTED_TO_SCORING_INPUT=1
-- next_action: Promoted rows may feed normal scoring gates only.
+- quarantine_rows: 95
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=95; NOT_TRUSTED_NO_PROMOTION=27
+- next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 - auto_apply: NO
 - production_change: NO
 
@@ -43,7 +43,7 @@
 - Varbergs BoIS FC vs Norrby IF | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
 - Excelsior Maassluis vs Ijsselmeervogels | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
 - Pirmasens vs VfR Mannheim | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
-- Malaga vs Las Palmas | status=PROMOTED_TO_SCORING_INPUT | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=trusted source has matching scored row without blocking data warnings | source=data/processed/governance/vsigma_candidate_provenance_ceiling.csv
+- Malaga vs Las Palmas | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_candidate_provenance_ceiling.csv
 - Cape Town City vs Magesi | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Amical Saint-Prex vs Servette II | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - YF Juventus vs Langenthal | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv

@@ -3,7 +3,7 @@
 ## Summary
 - overall_status: REAL_CANDIDATES_AVAILABLE
 - root_cause: real shortlist or bets rows exist
-- root_scored_same_day_rows: 1
+- root_scored_same_day_rows: 0
 - real_shortlist_rows: 2
 - real_bet_rows: 1
 - proxy_rows: 0
@@ -12,8 +12,8 @@
 - production_change: NO
 
 ## Component Rows
-- root_scored_matches | status=HAS_REAL_ROWS | same_day=1 | real=1 | proxy=0 | bet_like=0 | path=data/processed/matches_vsigma_scored_v3.csv | detail=file has same-day rows
-- dated_scored_matches | status=HAS_ROWS | same_day=1 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-10/matches_vsigma_scored_v3.csv | detail=file has same-day rows
+- root_scored_matches | status=EMPTY | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/matches_vsigma_scored_v3.csv | detail=file exists but has no data rows
+- dated_scored_matches | status=EMPTY | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-10/matches_vsigma_scored_v3.csv | detail=file exists but has no data rows
 - today_execution_shortlist | status=HAS_REAL_ROWS | same_day=1 | real=1 | proxy=0 | bet_like=1 | path=data/processed/today/2026-06-10/vsigma_today_execution_shortlist.csv | detail=file has same-day rows
 - today_execution_bets_only | status=HAS_REAL_ROWS | same_day=1 | real=1 | proxy=0 | bet_like=1 | path=data/processed/today/2026-06-10/vsigma_today_execution_bets_only.csv | detail=file has same-day rows
 - context_adjusted_final_picks | status=HAS_REAL_ROWS | same_day=1 | real=1 | proxy=0 | bet_like=1 | path=data/processed/today/2026-06-10/vsigma_context_adjusted_final_picks.csv | detail=file has same-day rows

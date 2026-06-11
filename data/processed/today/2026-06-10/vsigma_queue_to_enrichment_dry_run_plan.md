@@ -1,11 +1,11 @@
 # vSIGMA Queue-to-Enrichment Dry Run Planner - 2026-06-10
 
 ## Summary
-- rows_planned: 94
-- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=94
-- risk_label_counts: MEDIUM=60; HIGH_CONTEXT_VOLATILITY=20; HIGH_LOW_COVERAGE=14
-- priority_counts: P1_TRUSTED_MISSING_SCORING=80; P2_LOW_COVERAGE_SCORING=14
-- total_estimated_call_units: 480
+- rows_planned: 95
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=95
+- risk_label_counts: MEDIUM=61; HIGH_CONTEXT_VOLATILITY=20; HIGH_LOW_COVERAGE=14
+- priority_counts: P1_TRUSTED_MISSING_SCORING=81; P2_LOW_COVERAGE_SCORING=14
+- total_estimated_call_units: 485
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
@@ -45,6 +45,7 @@
 - Varbergs BoIS FC vs Norrby IF | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Excelsior Maassluis vs Ijsselmeervogels | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Pirmasens vs VfR Mannheim | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Malaga vs Las Palmas | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Cape Town City vs Magesi | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
 - Amical Saint-Prex vs Servette II | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
 - YF Juventus vs Langenthal | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS

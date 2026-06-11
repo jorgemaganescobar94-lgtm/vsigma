@@ -1,2 +1,2 @@
 target_date,generated_at,self_heal_status,promotion_rows_reviewed,promoted_rows,blocked_rows,quarantine_rows,board_rows_written,reason,auto_apply,production_change
-2026-06-10,2026-06-11T00:14:42+01:00,NO_ACTION,0,0,0,0,0,daily board already has rows,NO,NO
+2026-06-10,2026-06-11T01:05:01+01:00,NO_ACTION,0,0,0,0,0,daily board already has rows,NO,NO

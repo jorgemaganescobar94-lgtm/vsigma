@@ -2,18 +2,18 @@
 
 ## Summary
 - fixtures_reviewed: 1
-- api_readiness_gates: WAIT_LINEUPS_OR_LIVE_ONLY=1
+- api_readiness_gates: LOW_COVERAGE_NO_BET=1
 - lineup_coverage: NONE=1
 - probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=1
 - recent_stats_coverage: FULL=1
 - injuries_coverage: NONE=1
-- standings_coverage: FULL=1
-- odds_coverage: FULL=1
+- standings_coverage: PARTIAL=1
+- odds_coverage: NONE=1
 - auto_apply: NO
 - production_change: NO
 
 ## Fixture Coverage
-- Malaga vs Las Palmas | gate=WAIT_LINEUPS_OR_LIVE_ONLY | score=65.0 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=NONE; injuries_coverage=NONE
+- Malaga vs Las Palmas | gate=LOW_COVERAGE_NO_BET | score=47.5 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=NONE | missing=lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=PARTIAL; odds_coverage=NONE
 
 ## Guardrails
 - Official lineup remains primary truth.
