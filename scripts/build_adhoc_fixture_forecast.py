@@ -13,7 +13,7 @@ from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
 BASE = Path("data/processed")
-FIELDS = ["target_date","generated_at","fixture_id","home_team","away_team","league","country","fixture_status","fixture_date","xi_status","home_shape","away_shape","home_prob","draw_prob","away_prob","result_forecast","scorelines","goal_profile","scenario","confidence","forecast_note","auto_apply","production_change"]
+FIELDS = ["target_date","generated_at","fixture_id","home_team","away_team","league","country","fixture_status","fixture_date","xi_status","xi_source","home_shape","away_shape","home_prob","draw_prob","away_prob","result_forecast","scorelines","goal_profile","scenario","confidence","forecast_note","auto_apply","production_change"]
 SUMMARY_FIELDS = ["target_date","generated_at","query_home","query_away","fixture_found","rows","next_action","auto_apply","production_change"]
 DONE = {"FT","AET","PEN"}
 
@@ -67,10 +67,23 @@ def lineups(fixture_id, key):
     try:
         resp=call("fixtures/lineups", {"fixture": fixture_id}, key).get("response") or []
     except Exception:
-        return "NO_XI", "", ""
+        return "NO_XI", "", "", "NONE"
     if len(resp) >= 2:
-        return "XI_AVAILABLE", resp[0].get("formation") or "", resp[1].get("formation") or ""
-    return "NO_XI", "", ""
+        starts=[len(x.get("startXI") or []) for x in resp[:2]]
+        if all(n == 11 for n in starts):
+            return "OFFICIAL_XI", resp[0].get("formation") or "", resp[1].get("formation") or "", "API_OFFICIAL_LINEUPS"
+    return "NO_XI", "", "", "NONE"
+def probable_xi(day, home, away, base):
+    file_slug=slug(home+"_vs_"+away)
+    p=base/"today"/day/f"vsigma_adhoc_probable_xi_{file_slug}.csv"
+    if not p.exists(): return "NO_XI", "", "", "NONE"
+    with p.open("r", encoding="utf-8-sig", newline="") as h:
+        rows=[dict(r) for r in csv.DictReader(h)]
+    if len(rows) < 2: return "NO_XI", "", "", "NONE"
+    home_row=next((r for r in rows if clean(r.get("team_side"))=="home"), rows[0])
+    away_row=next((r for r in rows if clean(r.get("team_side"))=="away"), rows[1])
+    status="ESTIMATED_XI" if "ESTIMATED" in str(home_row.get("xi_status")) and "ESTIMATED" in str(away_row.get("xi_status")) else "NO_XI"
+    return status, home_row.get("formation", ""), away_row.get("formation", ""), "API_SQUAD_HEURISTIC"
 def forecast(probs, xi_status, hs, aw):
     hp,dp,ap=probs
     if hp >= ap + 0.12:
@@ -85,10 +98,15 @@ def forecast(probs, xi_status, hs, aw):
         goal="LOW_TO_MODERATE_GOALS"; scen="TIGHT_BALANCED_GAME"
     else:
         goal="MODERATE_GOALS"; scen="CONTROLLED_GAME"
-    if xi_status == "XI_AVAILABLE" and hs.endswith("-2") and aw.endswith("-2"):
+    if xi_status in {"OFFICIAL_XI","ESTIMATED_XI"} and hs.endswith("-2") and aw.endswith("-2"):
         goal="OPEN_GOALS" if goal == "MODERATE_GOALS" else goal
-        scen="MORE_OPEN_FROM_SHAPES"
-    conf="MEDIUM" if max(hp,dp,ap) >= 0.42 else "LOW"
+        scen="MORE_OPEN_FROM_SHAPES" if xi_status == "OFFICIAL_XI" else "ESTIMATED_MORE_OPEN_FROM_SHAPES"
+    if xi_status == "OFFICIAL_XI":
+        conf="HIGH" if max(hp,dp,ap) >= 0.55 else "MEDIUM"
+    elif xi_status == "ESTIMATED_XI":
+        conf="MEDIUM" if max(hp,dp,ap) >= 0.55 else "LOW"
+    else:
+        conf="MEDIUM" if max(hp,dp,ap) >= 0.42 else "LOW"
     return result,scores,goal,scen,conf
 def write_csv(path, rows, fields):
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -99,7 +117,7 @@ def md(row, summary):
     if summary["fixture_found"] != "YES":
         lines.append("- none. Fixture not found by API search.")
     else:
-        lines += [f"- fixture: {row['home_team']} vs {row['away_team']}",f"- competition: {row['country']} / {row['league']}",f"- status: {row['fixture_status']} | date: {row['fixture_date']}",f"- XI: {row['xi_status']} | shapes={row['home_shape']}/{row['away_shape']}",f"- probabilities: home={row['home_prob']} draw={row['draw_prob']} away={row['away_prob']}",f"- result_forecast: {row['result_forecast']}",f"- scorelines: {row['scorelines']}",f"- goal_profile: {row['goal_profile']}",f"- scenario: {row['scenario']}",f"- confidence: {row['confidence']}",f"- note: {row['forecast_note']}"]
+        lines += [f"- fixture: {row['home_team']} vs {row['away_team']}",f"- competition: {row['country']} / {row['league']}",f"- status: {row['fixture_status']} | date: {row['fixture_date']}",f"- XI: {row['xi_status']} | source={row['xi_source']} | shapes={row['home_shape']}/{row['away_shape']}",f"- probabilities: home={row['home_prob']} draw={row['draw_prob']} away={row['away_prob']}",f"- result_forecast: {row['result_forecast']}",f"- scorelines: {row['scorelines']}",f"- goal_profile: {row['goal_profile']}",f"- scenario: {row['scenario']}",f"- confidence: {row['confidence']}",f"- note: {row['forecast_note']}"]
     return "\n".join(lines)+"\n"
 def run(day, home, away, tz, base):
     day=date.fromisoformat(day).isoformat(); now=datetime.now(ZoneInfo(tz)).isoformat(timespec="seconds"); key=api_key(); fixture=None
@@ -107,8 +125,12 @@ def run(day, home, away, tz, base):
     out=[]
     if fixture:
         fx=fixture.get("fixture") or {}; teams=fixture.get("teams") or {}; league=fixture.get("league") or {}; fid=str(fx.get("id")); hpdpap=implied_from_odds(fid, key) or (0.50,0.29,0.21)
-        xi,hs,aw=lineups(fid,key); res,scores,goal,scen,conf=forecast(hpdpap,xi,hs,aw)
-        out.append({"target_date":day,"generated_at":now,"fixture_id":fid,"home_team":(teams.get("home") or {}).get("name",""),"away_team":(teams.get("away") or {}).get("name",""),"league":league.get("name",""),"country":league.get("country",""),"fixture_status":(fx.get("status") or {}).get("short",""),"fixture_date":fx.get("date",""),"xi_status":xi,"home_shape":hs,"away_shape":aw,"home_prob":hpdpap[0],"draw_prob":hpdpap[1],"away_prob":hpdpap[2],"result_forecast":res,"scorelines":scores,"goal_profile":goal,"scenario":scen,"confidence":conf,"forecast_note":"Ad hoc fixture forecast from API fixture search and market-implied baseline. Not part of daily board.","auto_apply":"NO","production_change":"NO"})
+        xi,hs,aw,xi_source=lineups(fid,key)
+        if xi == "NO_XI": xi,hs,aw,xi_source=probable_xi(day, home, away, base)
+        res,scores,goal,scen,conf=forecast(hpdpap,xi,hs,aw)
+        note="Ad hoc fixture forecast from API fixture search, market-implied baseline, and lineup status. Not part of daily board."
+        if xi == "ESTIMATED_XI": note += " XI is estimated from squad pool; not official."
+        out.append({"target_date":day,"generated_at":now,"fixture_id":fid,"home_team":(teams.get("home") or {}).get("name",""),"away_team":(teams.get("away") or {}).get("name",""),"league":league.get("name",""),"country":league.get("country",""),"fixture_status":(fx.get("status") or {}).get("short",""),"fixture_date":fx.get("date",""),"xi_status":xi,"xi_source":xi_source,"home_shape":hs,"away_shape":aw,"home_prob":hpdpap[0],"draw_prob":hpdpap[1],"away_prob":hpdpap[2],"result_forecast":res,"scorelines":scores,"goal_profile":goal,"scenario":scen,"confidence":conf,"forecast_note":note,"auto_apply":"NO","production_change":"NO"})
     summary={"target_date":day,"generated_at":now,"query_home":home,"query_away":away,"fixture_found":"YES" if out else "NO","rows":len(out),"next_action":"Review as ad hoc forecast only; do not mix with daily board.","auto_apply":"NO","production_change":"NO"}
     file_slug=slug(home+"_vs_"+away)
     for folder in [base/"today"/day, base/"governance"]:
