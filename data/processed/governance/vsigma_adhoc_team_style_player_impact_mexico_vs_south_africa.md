@@ -4,9 +4,9 @@
 - fixture_found: YES
 - team_rows: 2
 - player_rows: 22
-- home_xi_strength: 66.0
+- home_xi_strength: 66.6
 - away_xi_strength: 67.4
-- xi_edge: -1.4
+- xi_edge: -0.8
 - auto_apply: NO
 - production_change: NO
 
@@ -14,21 +14,21 @@
 ### Mexico (home)
 - shape: 4-1-4-1
 - sample: 6
-- avg_possession: 54.0%
-- avg_shots: 12.3 | avg_sot: 4.0 | avg_corners: 5.0
+- avg_possession: 54.2%
+- avg_shots: 13.0 | avg_sot: 4.2 | avg_corners: 5.2
 - avg_fouls: 10.2 | avg_yellows: 1.3
 - goals_for/against: 1.7 / 0.3
 - tempo: MEDIUM
-- attack_style: CONTROL_ATTACK
+- attack_style: VOLUME_ATTACK
 - defense_style: MID_BLOCK
 - set_piece_weight: MEDIUM | transition_weight: MEDIUM
 
 ### South Africa (away)
 - shape: 5-3-2
 - sample: 6
-- avg_possession: 62.8%
-- avg_shots: 11.8 | avg_sot: 3.4 | avg_corners: 3.8
-- avg_fouls: 10.2 | avg_yellows: 2.5
+- avg_possession: 62.6%
+- avg_shots: 12.0 | avg_sot: 3.6 | avg_corners: 3.8
+- avg_fouls: 10.6 | avg_yellows: 2.5
 - goals_for/against: 0.7 / 1.2
 - tempo: MEDIUM
 - attack_style: CONTROL_ATTACK
@@ -37,17 +37,17 @@
 
 ## Player Impact Scores
 ### Mexico (home)
-- Raúl Rangel | pos=G | role=GOALKEEPER | api_pos=G | grid=1:1 | score=70.4 | atk=5 def=84 ctl=24 sp=5 | label=GOALKEEPER_STABILITY
-- Raúl Jiménez | pos=F | role=STRIKER | api_pos=F | grid=5:1 | score=70.0 | atk=88 def=19 ctl=42 sp=44 | label=PRIMARY_ATTACK_THREAT
-- Álvaro Fidalgo | pos=M | role=INTERIOR | api_pos=M | grid=4:2 | score=69.6 | atk=52 def=51 ctl=92 sp=50 | label=CONTROL_HUB
-- Brian Gutiérrez | pos=M | role=INTERIOR | api_pos=M | grid=4:3 | score=67.7 | atk=52 def=51 ctl=87 sp=47 | label=CONTROL_HUB
-- Erik Lira | pos=M | role=DEFENSIVE_MIDFIELD | api_pos=M | grid=3:1 | score=66.7 | atk=47 def=57 ctl=85 sp=47 | label=PIVOT_SCREEN
-- César Montes | pos=D | role=CENTER_BACK | api_pos=D | grid=2:3 | score=64.7 | atk=17 def=85 ctl=45 sp=49 | label=CENTER_BACK_ANCHOR
-- Johan Vásquez | pos=D | role=CENTER_BACK | api_pos=D | grid=2:2 | score=64.7 | atk=17 def=85 ctl=45 sp=49 | label=CENTER_BACK_ANCHOR
-- Roberto Alvarado | pos=M | role=WIDE_MIDFIELD | api_pos=M | grid=4:4 | score=64.6 | atk=56 def=50 ctl=76 sp=47 | label=WIDE_BALANCE
-- Julián Quiñones | pos=M | role=WIDE_MIDFIELD | api_pos=M | grid=4:1 | score=64.6 | atk=56 def=50 ctl=76 sp=47 | label=WIDE_BALANCE
-- Israel Reyes | pos=D | role=FULL_BACK | api_pos=D | grid=2:4 | score=61.5 | atk=25 def=76 ctl=47 sp=43 | label=FULL_BACK_WIDTH
-- Jesús Gallardo | pos=D | role=FULL_BACK | api_pos=D | grid=2:1 | score=61.5 | atk=25 def=76 ctl=47 sp=43 | label=FULL_BACK_WIDTH
+- Raúl Jiménez | pos=F | role=STRIKER | api_pos=F | grid=5:1 | score=71.7 | atk=92 def=19 ctl=42 sp=44 | label=PRIMARY_ATTACK_THREAT
+- Raúl Rangel | pos=G | role=GOALKEEPER | api_pos=G | grid=1:1 | score=70.4 | atk=9 def=84 ctl=24 sp=5 | label=GOALKEEPER_STABILITY
+- Álvaro Fidalgo | pos=M | role=INTERIOR | api_pos=M | grid=4:2 | score=70.4 | atk=56 def=51 ctl=92 sp=50 | label=CONTROL_HUB
+- Brian Gutiérrez | pos=M | role=INTERIOR | api_pos=M | grid=4:3 | score=68.5 | atk=56 def=51 ctl=87 sp=47 | label=CONTROL_HUB
+- Erik Lira | pos=M | role=DEFENSIVE_MIDFIELD | api_pos=M | grid=3:1 | score=67.5 | atk=51 def=57 ctl=85 sp=47 | label=PIVOT_SCREEN
+- Roberto Alvarado | pos=M | role=WIDE_MIDFIELD | api_pos=M | grid=4:4 | score=65.4 | atk=60 def=50 ctl=76 sp=47 | label=WIDE_BALANCE
+- Julián Quiñones | pos=M | role=WIDE_MIDFIELD | api_pos=M | grid=4:1 | score=65.4 | atk=60 def=50 ctl=76 sp=47 | label=WIDE_BALANCE
+- César Montes | pos=D | role=CENTER_BACK | api_pos=D | grid=2:3 | score=65.0 | atk=21 def=85 ctl=45 sp=49 | label=CENTER_BACK_ANCHOR
+- Johan Vásquez | pos=D | role=CENTER_BACK | api_pos=D | grid=2:2 | score=65.0 | atk=21 def=85 ctl=45 sp=49 | label=CENTER_BACK_ANCHOR
+- Israel Reyes | pos=D | role=FULL_BACK | api_pos=D | grid=2:4 | score=61.8 | atk=29 def=76 ctl=47 sp=43 | label=FULL_BACK_WIDTH
+- Jesús Gallardo | pos=D | role=FULL_BACK | api_pos=D | grid=2:1 | score=61.8 | atk=29 def=76 ctl=47 sp=43 | label=FULL_BACK_WIDTH
 
 ### South Africa (away)
 - Ronwen Williams | pos=G | role=GOALKEEPER | api_pos=G | grid=1:1 | score=72.4 | atk=5 def=88 ctl=24 sp=5 | label=GOALKEEPER_STABILITY

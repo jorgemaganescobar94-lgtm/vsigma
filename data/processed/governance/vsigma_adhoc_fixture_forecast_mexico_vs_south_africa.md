@@ -11,7 +11,7 @@
 - competition: World / World Cup
 - status: 2H | date: 2026-06-11T19:00:00+00:00
 - XI: OFFICIAL_XI | source=API_OFFICIAL_LINEUPS | shapes=4-1-4-1/5-3-2
-- probabilities: home=0.672 draw=0.216 away=0.112
+- probabilities: home=0.67 draw=0.216 away=0.114
 - result_forecast: HOME_OR_DRAW
 - scorelines: 1-0 / 1-1 / 2-0
 - goal_profile: MODERATE_GOALS
