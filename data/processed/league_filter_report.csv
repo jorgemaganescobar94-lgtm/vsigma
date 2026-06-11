@@ -1,34 +1,8 @@
 country,league,league_tier,league_filter_reason,matches
-Gambia,GFA League,REJECT,country_league_not_allowlisted,5
-Brazil,Brasileiro U20 A,REJECT,hard_reject_noise_league,4
-Cameroon,Elite Two,REJECT,country_league_not_allowlisted,4
-Nigeria,Federation Cup,REJECT,country_league_not_allowlisted,4
-Brazil,Paulista - U20,REJECT,hard_reject_noise_league,3
 USA,USL W League,REJECT,country_league_not_allowlisted,3
-Congo-DR,Ligue 1,REJECT,country_league_not_allowlisted,2
-Sweden,Division 2 - Norrland,REJECT,country_league_not_allowlisted,2
-Sweden,Division 2 - Västra Götaland,REJECT,country_league_not_allowlisted,2
-Sweden,Svenska Cupen,REJECT,country_league_not_allowlisted,2
-Zimbabwe,Premier Soccer League,REJECT,country_league_not_allowlisted,2
-Brazil,Baiano - 2,REJECT,country_league_not_allowlisted,1
 Brazil,Brasileiro U17,REJECT,hard_reject_noise_league,1
-Brazil,Copa Gaúcha,REJECT,country_league_not_allowlisted,1
+Brazil,Brasileiro U20 A,REJECT,hard_reject_noise_league,1
 Brazil,Maranhense - 2,REJECT,country_league_not_allowlisted,1
-Czech-Republic,3. liga - MSFL,REJECT,country_league_not_allowlisted,1
-Estonia,Esiliiga A,REJECT,country_league_not_allowlisted,1
-Finland,Kakkonen - Lohko A,REJECT,country_league_not_allowlisted,1
-Finland,Ykkönen,REJECT,country_league_not_allowlisted,1
-Kazakhstan,1. Division,REJECT,country_league_not_allowlisted,1
-Kuwait,Premier League,REJECT,country_league_not_allowlisted,1
-Kyrgyzstan,Premier League,REJECT,country_league_not_allowlisted,1
-Lebanon,Premier League,REJECT,country_league_not_allowlisted,1
-Norway,3. Division - Girone 5,REJECT,country_league_not_allowlisted,1
+Brazil,Paulista - U20,REJECT,hard_reject_noise_league,1
 Peru,Copa De La Liga,REJECT,country_league_not_allowlisted,1
-Russia,Second League A - Division A Silver,REJECT,country_league_not_allowlisted,1
-Sweden,Division 2 - Norra Götaland,REJECT,country_league_not_allowlisted,1
-Sweden,Superettan,REJECT,country_league_not_allowlisted,1
 USA,USL League Two,REJECT,country_league_not_allowlisted,1
-World,ASEAN Championship U19,REJECT,hard_reject_noise_league,1
-World,Friendlies,REJECT,hard_reject_noise_league,1
-World,Tournoi Maurice Revello,REJECT,country_league_not_allowlisted,1
-World,World Cup,REJECT,country_league_not_allowlisted,1
