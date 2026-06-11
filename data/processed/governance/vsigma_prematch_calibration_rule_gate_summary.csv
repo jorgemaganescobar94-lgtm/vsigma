@@ -1,2 +1,2 @@
 target_date,generated_at,rows,candidate_rows,blocked_sample_rows,blocked_history_rows,hold_rows,min_sample,min_repeat_days,next_action,auto_apply,production_change
-2026-06-10,2026-06-11T13:36:15+01:00,12,0,6,0,6,20,3,No automatic rule changes; review candidates only after sample and history gates pass.,NO,NO
+2026-06-10,2026-06-11T14:47:48+01:00,12,0,6,0,6,20,3,No automatic rule changes; review candidates only after sample and history gates pass.,NO,NO
