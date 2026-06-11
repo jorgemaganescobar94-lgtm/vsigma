@@ -200,12 +200,12 @@
 - stake_permission: NO_STAKE_PERMISSION
 - next_action: Use bridged copy for prelock review/repricing. Do not create picks or stake without separate governed promotion.
 ## Prematch Story Accuracy Ledger
-- rows: 2
-- finished_rows: 2
+- rows: 0
+- finished_rows: 0
 - pending_rows: 0
-- result_family_counts: HIT=2
-- score_neighbor_counts: NEIGHBOR=1; EXACT=1
-- goal_profile_counts: MISS=1; HIT=1
+- result_family_counts: none
+- score_neighbor_counts: none
+- goal_profile_counts: none
 - next_action: Track completed rows and calibrate prematch prediction families.
 
 ## Pending Prematch Prediction Finalizer
@@ -215,7 +215,7 @@
 - still_pending_rows: 0
 - next_action: Run accuracy ledger and rolling dashboard after this finalizer.
 ## Rolling Prematch Accuracy Dashboard
-- finished_rows: 4
+- finished_rows: 2
 - pending_rows: 0
 - result_family_hit_pct: 100.0
 - neighbor_or_exact_pct: 100.0
@@ -227,6 +227,7 @@
 - caution_rows: 2
 - hold_rows: 6
 - next_action: Review calibration advice only; keep auto_apply disabled until sample is large enough.
+
 ## Prematch Calibration Rule Gate
 - rows: 12
 - candidate_rows: 0

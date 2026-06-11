@@ -1,2 +1,2 @@
 target_date,generated_at,advice_rows,watch_rows,caution_rows,hold_rows,next_action,auto_apply,production_change
-2026-06-11,2026-06-11T14:55:58+01:00,12,4,2,6,Review calibration advice only; keep auto_apply disabled until sample is large enough.,NO,NO
+2026-06-11,2026-06-11T15:00:53+01:00,12,4,2,6,Review calibration advice only; keep auto_apply disabled until sample is large enough.,NO,NO
