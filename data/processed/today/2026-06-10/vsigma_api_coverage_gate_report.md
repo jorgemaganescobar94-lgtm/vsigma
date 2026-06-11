@@ -2,12 +2,12 @@
 
 ## Summary
 - rows_reviewed: 1
-- gate_actions: DOWNGRADED_TO_NO_BET=1
+- gate_actions: NO_BET_CONFIRMED=1
 - auto_apply: NO
 - production_change: NO
 
 ## Gate Rows
-- Malaga vs Las Palmas | api_gate=LOW_COVERAGE_NO_BET | action=DOWNGRADED_TO_NO_BET | decision=LIVE_ONLY->NO_BET | permission=LIVE_ONLY->NO | missing=lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=PARTIAL; odds_coverage=NONE
+- Malaga vs Las Palmas | api_gate=LOW_COVERAGE_NO_BET | action=NO_BET_CONFIRMED | decision=NO_BET->NO_BET | permission=NO->NO | missing=lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=PARTIAL; odds_coverage=NONE
 
 ## Guardrails
 - Probable XI can support early planning, never final lock by itself.
