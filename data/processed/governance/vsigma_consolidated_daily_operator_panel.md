@@ -182,3 +182,10 @@
 - quarantine_rows: 0
 - board_rows_written: 0
 - reason: daily board already has rows
+## Prematch Calibration Rule Gate
+- rows: 12
+- candidate_rows: 0
+- blocked_sample_rows: 6
+- blocked_history_rows: 0
+- hold_rows: 6
+- next_action: No automatic rule changes; review candidates only after sample and history gates pass.
