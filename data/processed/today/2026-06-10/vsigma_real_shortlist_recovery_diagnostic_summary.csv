@@ -1,2 +1,2 @@
 target_date,generated_at,overall_status,root_cause,root_scored_same_day_rows,real_shortlist_rows,real_bet_rows,proxy_rows,next_action,auto_apply,production_change
-2026-06-10,2026-06-11T19:37:49+01:00,REAL_CANDIDATES_AVAILABLE,real shortlist or bets rows exist,0,2,1,0,Use normal gates; do not rely on proxy bridge unless real rows fail downstream.,NO,NO
+2026-06-10,2026-06-11T22:34:33+01:00,REAL_CANDIDATES_AVAILABLE,real shortlist or bets rows exist,0,2,1,0,Use normal gates; do not rely on proxy bridge unless real rows fail downstream.,NO,NO

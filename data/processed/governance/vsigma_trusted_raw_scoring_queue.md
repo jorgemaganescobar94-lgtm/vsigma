@@ -42,8 +42,8 @@
 - #30 | P1_TRUSTED_MISSING_SCORING | Varbergs BoIS FC vs Norrby IF | league=Superettan | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 - #31 | P1_TRUSTED_MISSING_SCORING | Excelsior Maassluis vs Ijsselmeervogels | league=Tweede Divisie | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 - #32 | P1_TRUSTED_MISSING_SCORING | Pirmasens vs VfR Mannheim | league=Oberliga - Promotion Round | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #33 | P1_TRUSTED_MISSING_SCORING | Malaga vs Las Palmas | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #34 | P1_TRUSTED_MISSING_SCORING | Cape Town City vs Magesi | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #33 | P1_TRUSTED_MISSING_SCORING | Malaga vs Las Palmas | league=Segunda División | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #34 | P1_TRUSTED_MISSING_SCORING | Cape Town City vs Magesi | league=Premier Soccer League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 - #35 | P1_TRUSTED_MISSING_SCORING | Amical Saint-Prex vs Servette II | league=1. Liga Classic - Play-offs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 - #36 | P1_TRUSTED_MISSING_SCORING | YF Juventus vs Langenthal | league=1. Liga Classic - Play-offs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 - #37 | P1_TRUSTED_MISSING_SCORING | KFG vs Hvíti riddarinn | league=2. Deild | scoring_needed=YES | reason=trusted raw candidate has no matching scored row

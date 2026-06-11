@@ -95,9 +95,9 @@
 - status_counts: OK=7; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-11T19:37:47+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-11T19:37:47+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-11T19:37:47+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-11T22:34:31+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-11T22:34:31+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-11T22:34:31+01:00
 
 ## Key Files
 - data/processed/today/2026-06-10/vsigma_consolidated_daily_operator_panel.md
@@ -144,9 +144,9 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1629
+- files_scanned: 1631
 - accepted_rows: 122
-- rejected_rows: 769
+- rejected_rows: 777
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
@@ -338,27 +338,3 @@
 - pick_permission_counts: NO_PICK_PERMISSION=77
 - stake_permission_counts: NO_STAKE_PERMISSION=77
 - next_action: Review candidate rules only after sample grows. This board cannot activate rules, picks, or stake.
-## API Shadow Rule Outcome Ledger
-- candidate_rules_applied: 9
-- shadow_rows: 134
-- finished_shadow_rows: 116
-- pending_shadow_rows: 18
-- shadow_outcome_counts: HIT=76; MISS=32; PENDING_RESULT=18; VOID=8
-- rule_market_counts: OVER_1_5=71; API_DNB=22; API_DOUBLE_CHANCE=22; UNDER_3_5=19
-- paper_trade_permission_counts: SHADOW_ONLY=134
-- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=134
-- pick_permission_counts: NO_PICK_PERMISSION=134
-- stake_permission_counts: NO_STAKE_PERMISSION=134
-- next_action: Track shadow outcomes over future runs. This ledger cannot activate rules, picks, or stake.
-## API Shadow Rule Out-of-Sample Tracker
-- registry_rules: 19
-- rows_reviewed: 134
-- in_sample_rows: 116
-- out_of_sample_rows: 0
-- pending_rows: 18
-- oos_evaluated_rows: 0
-- oos_class_counts: IN_SAMPLE_BOOTSTRAP=116; PENDING_RESULT=18
-- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=134
-- pick_permission_counts: NO_PICK_PERMISSION=134
-- stake_permission_counts: NO_STAKE_PERMISSION=134
-- next_action: Collect future OUT_OF_SAMPLE rows. No rule activation before sufficient out-of-sample sample size.
