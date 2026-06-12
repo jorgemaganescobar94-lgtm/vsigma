@@ -13,27 +13,34 @@ DEFAULT_LEAGUE_SEASONS = [
     "78:2025", "78:2024", "78:2023",
     "61:2025", "61:2024", "61:2023",
 ]
+CORE_FIELDS = ["fixture_id", "fixture_date", "league_id", "season", "home_team", "away_team", "target_home_goals", "target_away_goals", "target_result_class"]
 
 
 def read_rows(path: Path) -> list[dict[str, str]]:
-    if not path.exists():
+    if not path.exists() or path.stat().st_size == 0:
         return []
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
-        return list(csv.DictReader(handle))
+        try:
+            return list(csv.DictReader(handle))
+        except csv.Error:
+            return []
 
 
 def write_rows(path: Path, rows: list[dict[str, str]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    if not rows:
-        path.write_text("", encoding="utf-8")
-        return
-    fields = sorted({key for row in rows for key in row.keys()})
-    core = ["fixture_id", "fixture_date", "league_id", "season", "home_team", "away_team", "target_home_goals", "target_away_goals", "target_result_class"]
-    fields = core + [f for f in fields if f not in core]
+    fields = CORE_FIELDS[:]
+    if rows:
+        extra = sorted({key for row in rows for key in row.keys() if key not in fields})
+        fields += extra
     with path.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields)
         writer.writeheader()
-        writer.writerows([{field: row.get(field, "") for field in fields} for row in rows])
+        for row in rows:
+            writer.writerow({field: row.get(field, "") for field in fields})
+
+
+def chunk_is_valid(path: Path) -> bool:
+    return len(read_rows(path)) > 0
 
 
 def merge_chunks(chunk_dir: Path, out_path: Path) -> int:
@@ -42,7 +49,10 @@ def merge_chunks(chunk_dir: Path, out_path: Path) -> int:
     for path in sorted(chunk_dir.glob("*.csv")):
         if path.name.endswith("_summary.csv"):
             continue
-        for row in read_rows(path):
+        chunk_rows = read_rows(path)
+        if not chunk_rows:
+            continue
+        for row in chunk_rows:
             fid = str(row.get("fixture_id", ""))
             key = fid or f"{row.get('league_id')}|{row.get('season')}|{row.get('home_team')}|{row.get('away_team')}|{row.get('fixture_date')}"
             if key in seen:
@@ -54,12 +64,18 @@ def merge_chunks(chunk_dir: Path, out_path: Path) -> int:
     return len(rows)
 
 
-def run_chunk(league_season: str, chunk_dir: Path, window: int, sleep: float, include_odds: bool, max_fixtures_per_chunk: int, force: bool) -> bool:
+def run_chunk(league_season: str, chunk_dir: Path, window: int, sleep: float, include_odds: bool, max_fixtures_per_chunk: int, force: bool, allow_empty: bool) -> bool:
     safe_name = league_season.replace(":", "_")
     out = chunk_dir / f"vsigma_historical_{safe_name}.csv"
-    if out.exists() and not force:
-        print(f"SKIP existing chunk {league_season}: {out}")
+    if out.exists() and chunk_is_valid(out) and not force:
+        print(f"SKIP valid existing chunk {league_season}: {out} rows={len(read_rows(out))}")
         return True
+    if out.exists() and not chunk_is_valid(out):
+        print(f"RETRY empty/invalid chunk {league_season}: {out}")
+        try:
+            out.unlink()
+        except OSError:
+            pass
     cmd = [
         sys.executable,
         "scripts/build_vsigma_historical_dataset.py",
@@ -77,6 +93,14 @@ def run_chunk(league_season: str, chunk_dir: Path, window: int, sleep: float, in
     if completed.returncode != 0:
         print(f"STOP chunk failed for {league_season}. Keep completed chunks and rerun later.")
         return False
+    rows = read_rows(out)
+    if not rows and not allow_empty:
+        print(f"STOP chunk returned 0 rows for {league_season}. This usually means API quota/rate limit, unavailable season, or empty API response. Empty chunk will not be treated as complete.")
+        try:
+            out.unlink()
+        except OSError:
+            pass
+        return False
     return True
 
 
@@ -90,11 +114,12 @@ def main() -> None:
     parser.add_argument("--include-odds", action="store_true", help="Use only if API actually returns historical odds. Otherwise it wastes quota.")
     parser.add_argument("--max-fixtures-per-chunk", type=int, default=0)
     parser.add_argument("--force", action="store_true")
+    parser.add_argument("--allow-empty", action="store_true", help="Keep zero-row chunks. Not recommended for training.")
     args = parser.parse_args()
     league_seasons = args.league_season or DEFAULT_LEAGUE_SEASONS
     args.chunk_dir.mkdir(parents=True, exist_ok=True)
     for item in league_seasons:
-        ok = run_chunk(item, args.chunk_dir, args.window, args.sleep, args.include_odds, args.max_fixtures_per_chunk, args.force)
+        ok = run_chunk(item, args.chunk_dir, args.window, args.sleep, args.include_odds, args.max_fixtures_per_chunk, args.force, args.allow_empty)
         rows = merge_chunks(args.chunk_dir, args.out)
         print(f"MERGED rows={rows} out={args.out}")
         if not ok:
