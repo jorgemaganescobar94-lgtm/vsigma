@@ -60,3 +60,5 @@ data/processed/governance/vsigma_u35_market_action_hint_*
 data/processed/today/*/vsigma_u35_market_action_hint_*
 data/processed/governance/vsigma_team_total_gate_*
 data/processed/today/*/vsigma_team_total_gate_*
+data/processed/governance/vsigma_market_governance_summary_*
+data/processed/today/*/vsigma_market_governance_summary_*
