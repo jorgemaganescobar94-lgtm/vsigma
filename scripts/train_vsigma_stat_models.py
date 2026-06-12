@@ -14,6 +14,7 @@ REGRESSION_TARGETS = [
     "target_home_shots", "target_away_shots", "target_home_sot", "target_away_sot",
     "target_home_corners", "target_away_corners", "target_home_possession", "target_away_possession",
 ]
+FALLBACK_MARKET = np.array([0.50, 0.29, 0.21], dtype=float)
 
 
 def softmax(logits: np.ndarray) -> np.ndarray:
@@ -85,14 +86,41 @@ def predict_ridge(model: dict, x: np.ndarray) -> np.ndarray:
     return add_bias(x) @ beta
 
 
+def fallback_market_mask(probs: np.ndarray) -> np.ndarray:
+    if probs.size == 0:
+        return np.array([], dtype=bool)
+    return np.all(np.isclose(probs, FALLBACK_MARKET, atol=1e-6), axis=1)
+
+
 def baseline_market_metrics(df: pd.DataFrame, y: np.ndarray) -> dict:
     needed = ["feat_market_home_prob", "feat_market_draw_prob", "feat_market_away_prob"]
     if not all(c in df.columns for c in needed):
-        return {"available": False}
-    probs = df[needed].fillna(0.0).astype(float).to_numpy()
+        return {"available": False, "reason": "missing_market_probability_columns"}
+    probs_raw = df[needed].fillna(0.0).astype(float).to_numpy()
+    if "feat_odds_available" in df.columns:
+        real_mask = pd.to_numeric(df["feat_odds_available"], errors="coerce").fillna(0.0).to_numpy(dtype=float) >= 0.5
+    else:
+        real_mask = ~fallback_market_mask(probs_raw)
+    rows_evaluated = int(real_mask.sum())
+    min_rows = max(20, int(len(df) * 0.20))
+    if rows_evaluated < min_rows:
+        return {
+            "available": False,
+            "reason": "insufficient_real_odds_rows",
+            "rows_evaluated": rows_evaluated,
+            "required_rows": min_rows,
+        }
+    probs = probs_raw[real_mask]
+    y_eval = y[real_mask]
     totals = probs.sum(axis=1, keepdims=True)
     probs = np.divide(probs, totals, out=np.full_like(probs, 1 / 3), where=totals > 0)
-    return {"available": True, "log_loss": log_loss(probs, y), "brier": brier(probs, y, 3), "accuracy": float(np.mean(np.argmax(probs, axis=1) == y))}
+    return {
+        "available": True,
+        "rows_evaluated": rows_evaluated,
+        "log_loss": log_loss(probs, y_eval),
+        "brier": brier(probs, y_eval, 3),
+        "accuracy": float(np.mean(np.argmax(probs, axis=1) == y_eval)),
+    }
 
 
 def train(dataset: Path, model_out: Path, metrics_out: Path, min_rows: int, epochs: int, lr: float, l2: float, ridge_alpha: float) -> None:
@@ -159,7 +187,9 @@ def train(dataset: Path, model_out: Path, metrics_out: Path, min_rows: int, epoc
     market = metrics["market_baseline"]
     if n < min_rows:
         promotion = "SHADOW_ONLY_INSUFFICIENT_ROWS"
-    elif market.get("available") and calibrated_loss < float(market.get("log_loss", 999)) - 0.01 and metrics["result_model"]["brier"] <= float(market.get("brier", 999)):
+    elif not market.get("available"):
+        promotion = "SHADOW_ONLY_NO_REAL_MARKET_BASELINE"
+    elif calibrated_loss < float(market.get("log_loss", 999)) - 0.01 and metrics["result_model"]["brier"] <= float(market.get("brier", 999)):
         promotion = "CANDIDATE_BEATS_MARKET_BASELINE"
     else:
         promotion = "SHADOW_ONLY_NEEDS_MORE_EDGE"
@@ -193,4 +223,4 @@ if __name__ == "__main__":
     parser.add_argument("--l2", type=float, default=0.001)
     parser.add_argument("--ridge-alpha", type=float, default=5.0)
     args = parser.parse_args()
-    train(args.dataset, args.model_out, args.metrics_out, args.min_rows, args.epochs, args.lr, args.l2, args.ridge_alpha)
+    train(args.dataset, args.model_out, args.metrics_out, args.min_rows, args.lr, args.l2, args.ridge_alpha)
