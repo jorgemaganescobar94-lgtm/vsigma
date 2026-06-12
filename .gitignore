@@ -72,3 +72,6 @@ data/processed/governance/vsigma_full_shadow_pipeline_*
 data/processed/today/*/vsigma_full_shadow_pipeline_*
 data/processed/governance/vsigma_batch_shadow_pipeline_*
 data/processed/today/*/vsigma_batch_shadow_pipeline_*
+data/processed/governance/vsigma_api_board_candidate_bridge_*
+data/processed/governance/vsigma_api_board_candidate_bridge_skipped_*
+data/processed/batch_inputs/vsigma_api_board_candidates_*
