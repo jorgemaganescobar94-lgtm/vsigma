@@ -1,0 +1,88 @@
+{
+  "rows_total": 8982,
+  "rows_train": 7185,
+  "rows_valid": 1797,
+  "feature_count_stats_only": 31,
+  "feature_count_with_market": 37,
+  "targets": {
+    "target_over25": {
+      "base_rate": {
+        "accuracy": 0.5386755703951029,
+        "log_loss": 0.6903678208388294,
+        "brier": 0.24861137814410683,
+        "avg_prediction": 0.5283228949199721,
+        "actual_rate": 0.5386755703951029
+      },
+      "ml_stats_only": {
+        "accuracy": 0.552031163049527,
+        "log_loss": 0.683960851260254,
+        "brier": 0.2454323450411277,
+        "avg_prediction": 0.529407426890271,
+        "actual_rate": 0.5386755703951029
+      },
+      "ml_with_market_features": {
+        "accuracy": 0.5976627712854758,
+        "log_loss": 0.665091676447772,
+        "brier": 0.23619471946225246,
+        "avg_prediction": 0.5494439347210026,
+        "actual_rate": 0.5386755703951029
+      },
+      "market_over25": {
+        "accuracy": 0.6021146355036171,
+        "log_loss": 0.6640071212948946,
+        "brier": 0.23573442033861994,
+        "avg_prediction": 0.5360571341124095,
+        "actual_rate": 0.5386755703951029
+      },
+      "best_by_log_loss": "market_over25"
+    },
+    "target_btts": {
+      "base_rate": {
+        "accuracy": 0.5542570951585977,
+        "log_loss": 0.6874199891520278,
+        "brier": 0.24714141109182183,
+        "avg_prediction": 0.5450243562978426,
+        "actual_rate": 0.5542570951585977
+      },
+      "ml_stats_only": {
+        "accuracy": 0.5308848080133556,
+        "log_loss": 0.6900601015921927,
+        "brier": 0.248431763214521,
+        "avg_prediction": 0.5334119259303678,
+        "actual_rate": 0.5542570951585977
+      },
+      "ml_with_market_features": {
+        "accuracy": 0.5698386199220924,
+        "log_loss": 0.6824295666380636,
+        "brier": 0.24464443840678213,
+        "avg_prediction": 0.5540218605668381,
+        "actual_rate": 0.5542570951585977
+      },
+      "best_by_log_loss": "ml_with_market_features"
+    },
+    "target_under35": {
+      "base_rate": {
+        "accuracy": 0.6783528102392877,
+        "log_loss": 0.6283313175848971,
+        "brier": 0.2182880194919167,
+        "avg_prediction": 0.6882393876130826,
+        "actual_rate": 0.6783528102392877
+      },
+      "ml_stats_only": {
+        "accuracy": 0.67779632721202,
+        "log_loss": 0.6162330569346512,
+        "brier": 0.21298582712194175,
+        "avg_prediction": 0.6931085654821354,
+        "actual_rate": 0.6783528102392877
+      },
+      "ml_with_market_features": {
+        "accuracy": 0.6828046744574291,
+        "log_loss": 0.5947345232951878,
+        "brier": 0.2042039036276877,
+        "avg_prediction": 0.6731049526030438,
+        "actual_rate": 0.6783528102392877
+      },
+      "best_by_log_loss": "ml_with_market_features"
+    }
+  }
+}
