@@ -1,0 +1,119 @@
+﻿{
+  "rule_id": "TEAM_TOTAL_GATE_OVERRIDES_V1",
+  "status": "PRECISION_FIRST_SHADOW_ACTIVE",
+  "source": "Football-Data UK top5 2020-2025 team-total by-league validation",
+  "priority": "league_and_market_specific_gate_required",
+  "global_fallback": {
+    "enabled": false,
+    "reason": "Precision-first mode: no team total gate validates unless explicitly promoted by league and market."
+  },
+  "league_overrides": {
+    "SP1": {
+      "league_name": "La Liga",
+      "markets": {
+        "HOME_TT_OVER_0_5": {
+          "status": "PROMOTE_STRONG",
+          "model_prob_min": 0.85,
+          "validation_rows": 77,
+          "actual_hit_rate": 0.94,
+          "usage": "Builder support / team scores validation. Not standalone unless price survives."
+        },
+        "AWAY_TT_OVER_0_5": {
+          "status": "PROMOTE_STRONG",
+          "model_prob_min": 0.80,
+          "validation_rows": 54,
+          "actual_hit_rate": 0.9074074074074074,
+          "usage": "Away team scores validation. Useful for BTTS/over/builders only with tactical agreement."
+        },
+        "HOME_TT_UNDER_1_5": {
+          "status": "PROMOTE_STRONG",
+          "model_prob_min": 0.75,
+          "validation_rows": 75,
+          "actual_hit_rate": 0.88,
+          "usage": "Strong low-team-total gate. Can support Under 3.5/protected builders."
+        },
+        "AWAY_TT_UNDER_1_5": {
+          "status": "PROMOTE_SUPPORT",
+          "model_prob_min": 0.70,
+          "validation_rows": 196,
+          "actual_hit_rate": 0.8163265306122449,
+          "usage": "Secondary support only. Do not use as standalone premium."
+        }
+      }
+    },
+    "I1": {
+      "league_name": "Serie A",
+      "markets": {
+        "HOME_TT_OVER_0_5": {
+          "status": "PROMOTE_STRONG",
+          "model_prob_min": 0.85,
+          "validation_rows": 83,
+          "actual_hit_rate": 0.891566265060241,
+          "usage": "Home team scores validation. Builder support, not automatic standalone."
+        },
+        "AWAY_TT_OVER_0_5": {
+          "status": "PROMOTE_STRONG",
+          "model_prob_min": 0.75,
+          "validation_rows": 118,
+          "actual_hit_rate": 0.8559322033898306,
+          "usage": "Away team scores validation. Useful for protected builders."
+        },
+        "AWAY_TT_UNDER_1_5": {
+          "status": "PROMOTE_STRONG",
+          "model_prob_min": 0.80,
+          "validation_rows": 82,
+          "actual_hit_rate": 0.8414634146341463,
+          "usage": "Strong away under 1.5 gate. Useful for side + rival under/protected low-score builders."
+        },
+        "HOME_TT_UNDER_1_5": {
+          "status": "PROMOTE_SUPPORT",
+          "model_prob_min": 0.75,
+          "validation_rows": 66,
+          "actual_hit_rate": 0.8181818181818182,
+          "usage": "Secondary support only. Needs tactical confirmation."
+        }
+      }
+    },
+    "D1": {
+      "league_name": "Bundesliga",
+      "status": "RESEARCH_ONLY",
+      "reason": "Several candidates are strong, but league volatility and some small samples require second validation."
+    },
+    "E0": {
+      "league_name": "Premier League",
+      "status": "RESEARCH_ONLY",
+      "reason": "Over 0.5 candidates look useful, but no production promotion before second validation and price survival checks."
+    },
+    "F1": {
+      "league_name": "Ligue 1",
+      "status": "RESEARCH_ONLY",
+      "reason": "Over 0.5 candidates look strong, but U35 instability means team-total gates need separate confirmation."
+    }
+  },
+  "blocked_markets": {
+    "TEAM_TOTAL_OVER_1_5": {
+      "status": "RESEARCH_ONLY",
+      "reason": "Too dependent on conversion and score-state. Not promoted yet."
+    },
+    "TEAM_TOTAL_UNDER_0_5": {
+      "status": "BLOCKED",
+      "reason": "Too fine. One goal kills the market."
+    }
+  },
+  "governance": {
+    "auto_bet": "NO",
+    "production_change": "NO",
+    "allowed_use": [
+      "builder support",
+      "team scores validation",
+      "rival under 1.5 support",
+      "overstretch veto"
+    ],
+    "forbidden_use": [
+      "automatic standalone bet",
+      "aggressive accumulator leg without price check",
+      "override tactical red flags",
+      "override lineup shock"
+    ]
+  }
+}
