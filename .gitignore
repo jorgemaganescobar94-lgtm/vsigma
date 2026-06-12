@@ -54,3 +54,5 @@ data/modeling/models/*.csv
 data/processed/governance/vsigma_ml_*
 data/processed/today/*/vsigma_ml_*
 tmp_*.py
+data/processed/governance/vsigma_under35_shadow_gate_*
+data/processed/today/*/vsigma_under35_shadow_gate_*
