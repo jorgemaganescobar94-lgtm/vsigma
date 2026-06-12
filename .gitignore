@@ -56,3 +56,5 @@ data/processed/today/*/vsigma_ml_*
 tmp_*.py
 data/processed/governance/vsigma_under35_shadow_gate_*
 data/processed/today/*/vsigma_under35_shadow_gate_*
+data/processed/governance/vsigma_u35_market_action_hint_*
+data/processed/today/*/vsigma_u35_market_action_hint_*
