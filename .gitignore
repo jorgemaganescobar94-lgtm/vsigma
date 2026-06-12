@@ -39,3 +39,18 @@ data/cache/*.sqlite3-shm
 
 .env
 data/processed/**/api_enrichment/
+
+# vSIGMA generated local artifacts
+data/modeling/*.csv
+data/modeling/*.md
+data/modeling/*.json
+data/modeling/chunks/
+data/modeling/models/*.json
+data/modeling/models/*.csv
+!data/modeling/models/vsigma_under35_shadow_gate_v1.json
+!data/modeling/models/vsigma_binary_market_tmp_metrics.json
+!data/modeling/models/vsigma_under35_shadow_candidates_summary.json
+!data/modeling/models/vsigma_under35_shadow_market_crosscheck.json
+data/processed/governance/vsigma_ml_*
+data/processed/today/*/vsigma_ml_*
+tmp_*.py
