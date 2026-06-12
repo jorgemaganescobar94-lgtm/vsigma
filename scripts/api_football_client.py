@@ -16,10 +16,21 @@ import requests
 
 ROOT = Path(__file__).resolve().parents[1]
 ENV_PATH = ROOT / ".env"
+ENV_LOCAL_PATH = ROOT / ".env.local"
 CACHE_DIR = ROOT / "data" / "cache"
 CACHE_DB_PATH = CACHE_DIR / "api_football_cache.sqlite3"
 
 DEFAULT_BASE_URL = "https://v3.football.api-sports.io"
+RAPIDAPI_BASE_URL = "https://api-football-v1.p.rapidapi.com/v3"
+RAPIDAPI_DEFAULT_HOST = "api-football-v1.p.rapidapi.com"
+DIRECT_KEY_NAMES = [
+    "API_FOOTBALL_KEY",
+    "APIFOOTBALL_KEY",
+    "API_SPORTS_KEY",
+    "APISPORTS_KEY",
+    "API_FOOTBALL_API_KEY",
+]
+RAPIDAPI_KEY_NAMES = ["RAPIDAPI_KEY", "X_RAPIDAPI_KEY"]
 
 
 def load_env_file(env_path: Path = ENV_PATH) -> None:
@@ -40,28 +51,67 @@ def load_env_file(env_path: Path = ENV_PATH) -> None:
             os.environ[key] = value
 
 
-def get_api_key() -> str:
-    load_env_file()
+def load_env_files() -> None:
+    # Keep .env first for backwards compatibility, then allow .env.local to fill missing values.
+    load_env_file(ENV_PATH)
+    load_env_file(ENV_LOCAL_PATH)
 
-    candidates = [
-        "API_FOOTBALL_KEY",
-        "APIFOOTBALL_KEY",
-        "API_SPORTS_KEY",
-        "APISPORTS_KEY",
-        "RAPIDAPI_KEY",
-        "X_RAPIDAPI_KEY",
-    ]
 
-    for name in candidates:
+def _first_env(names: list[str]) -> tuple[str, str]:
+    for name in names:
         value = os.environ.get(name)
         if value:
-            return value.strip()
+            return name, value.strip()
+    return "", ""
+
+
+@dataclass(frozen=True)
+class APITransport:
+    provider: str
+    key_name: str
+    api_key: str
+    base_url: str
+    headers: dict[str, str]
+
+
+def get_api_transport() -> APITransport:
+    load_env_files()
+
+    direct_name, direct_key = _first_env(DIRECT_KEY_NAMES)
+    if direct_key:
+        return APITransport(
+            provider="API-SPORTS_DIRECT",
+            key_name=direct_name,
+            api_key=direct_key,
+            base_url=os.getenv("API_FOOTBALL_BASE_URL", DEFAULT_BASE_URL).rstrip("/"),
+            headers={"x-apisports-key": direct_key},
+        )
+
+    rapid_name, rapid_key = _first_env(RAPIDAPI_KEY_NAMES)
+    if rapid_key:
+        host = os.getenv("API_FOOTBALL_HOST", RAPIDAPI_DEFAULT_HOST)
+        return APITransport(
+            provider="RAPIDAPI",
+            key_name=rapid_name,
+            api_key=rapid_key,
+            base_url=os.getenv("API_FOOTBALL_RAPIDAPI_BASE_URL", RAPIDAPI_BASE_URL).rstrip("/"),
+            headers={
+                "x-rapidapi-key": rapid_key,
+                "x-rapidapi-host": host,
+            },
+        )
 
     raise RuntimeError(
         "No encuentro la API key.\n"
-        "Crea C:\\vsigma\\.env con una línea como:\n"
-        "API_FOOTBALL_KEY=TU_API_KEY_AQUI"
+        f"Crea {ROOT}\\.env con una línea como:\n"
+        "API_FOOTBALL_KEY=TU_API_SPORTS_KEY_AQUI\n"
+        "o, si usas RapidAPI:\n"
+        "RAPIDAPI_KEY=TU_RAPIDAPI_KEY_AQUI"
     )
+
+
+def get_api_key() -> str:
+    return get_api_transport().api_key
 
 
 def utc_now() -> datetime:
@@ -90,8 +140,8 @@ def normalize_params(params: dict[str, Any] | None) -> dict[str, Any]:
     return cleaned
 
 
-def build_params_key(path: str, params: dict[str, Any]) -> str:
-    raw = json_dumps_stable({"path": path, "params": params})
+def build_params_key(path: str, params: dict[str, Any], provider: str = "") -> str:
+    raw = json_dumps_stable({"path": path, "params": params, "provider": provider})
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()
 
 
@@ -119,14 +169,28 @@ class APIFootballClient:
     def __init__(
         self,
         api_key: str | None = None,
-        base_url: str = DEFAULT_BASE_URL,
+        base_url: str | None = None,
         cache_db_path: Path = CACHE_DB_PATH,
         timeout_seconds: int = 30,
         min_interval_seconds: float = 0.40,
         default_ttl_hours: float = 24.0,
+        headers: dict[str, str] | None = None,
+        provider: str | None = None,
     ) -> None:
-        self.api_key = api_key or get_api_key()
-        self.base_url = base_url.rstrip("/")
+        if api_key is None and headers is None and provider is None:
+            transport = get_api_transport()
+            self.api_key = transport.api_key
+            self.provider = transport.provider
+            self.key_name = transport.key_name
+            self.base_url = (base_url or transport.base_url).rstrip("/")
+            self.headers = dict(transport.headers)
+        else:
+            self.api_key = api_key or get_api_key()
+            self.provider = provider or "API-SPORTS_DIRECT"
+            self.key_name = "EXPLICIT_API_KEY"
+            self.base_url = (base_url or DEFAULT_BASE_URL).rstrip("/")
+            self.headers = headers or {"x-apisports-key": self.api_key}
+
         self.cache_db_path = cache_db_path
         self.timeout_seconds = timeout_seconds
         self.min_interval_seconds = min_interval_seconds
@@ -246,7 +310,7 @@ class APIFootballClient:
         force_refresh: bool = False,
     ) -> dict[str, Any]:
         normalized_params = normalize_params(params)
-        params_key = build_params_key(path, normalized_params)
+        params_key = build_params_key(path, normalized_params, self.provider)
         ttl = self.default_ttl_hours if ttl_hours is None else ttl_hours
 
         if use_cache and not force_refresh:
@@ -257,11 +321,10 @@ class APIFootballClient:
         self._sleep_if_needed()
 
         url = f"{self.base_url}{path}"
-        headers = {"x-apisports-key": self.api_key}
 
         response = requests.get(
             url,
-            headers=headers,
+            headers=self.headers,
             params=normalized_params,
             timeout=self.timeout_seconds,
         )
