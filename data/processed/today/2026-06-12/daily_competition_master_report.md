@@ -130,8 +130,8 @@ _No rows._
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: daily_master_report: WARNING - daily master report missing
-- Recovery command: `.\.venv\Scripts\python.exe scripts\build_daily_competition_master_report.py --date 2026-06-12`
+- Critical warnings: ledger_target_date_rows: WARNING - ledger has no rows for target date
+- Recovery command: `.\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-06-12 --stage PRE`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-12/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
