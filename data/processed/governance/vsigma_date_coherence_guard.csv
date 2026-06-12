@@ -1,11 +1,11 @@
 target_date,generated_at,component,path,observed_date,status,detail,auto_apply,production_change
-2026-06-12,2026-06-12T18:41:52+01:00,daily_board_md,data/processed/today/2026-06-12/vsigma_daily_execution_board.md,MISSING,MISSING_CORE,required daily artifact is missing,NO,NO
-2026-06-12,2026-06-12T18:41:52+01:00,daily_board_csv,data/processed/today/2026-06-12/vsigma_daily_execution_board.csv,MISSING,MISSING_CORE,required daily artifact is missing,NO,NO
-2026-06-12,2026-06-12T18:41:52+01:00,operator_brief_md,data/processed/today/2026-06-12/vsigma_operator_brief.md,2026-06-12,OK,date coherent,NO,NO
-2026-06-12,2026-06-12T18:41:52+01:00,automation_health_md,data/processed/today/2026-06-12/vsigma_automation_health.md,2026-06-12,OK,date coherent,NO,NO
-2026-06-12,2026-06-12T18:41:52+01:00,prelock_live_recheck_md,data/processed/today/2026-06-12/vsigma_prelock_live_recheck.md,2026-06-12,OK,date coherent,NO,NO
-2026-06-12,2026-06-12T18:41:52+01:00,live_trigger_validator_md,data/processed/today/2026-06-12/vsigma_live_trigger_validator.md,2026-06-12,OK,date coherent,NO,NO
-2026-06-12,2026-06-12T18:41:52+01:00,consolidated_panel_md,data/processed/today/2026-06-12/vsigma_consolidated_daily_operator_panel.md,2026-06-12,OK,date coherent,NO,NO
-2026-06-12,2026-06-12T18:41:52+01:00,source_reliability_governor_md,data/processed/today/2026-06-12/vsigma_probable_lineup_source_reliability_governor.md,MISSING,MISSING_OPTIONAL,optional artifact not found,NO,NO
-2026-06-12,2026-06-12T18:41:52+01:00,daily_chain_trigger,.vsigma/triggers/daily_decision_chain_v2.trigger,2026-06-10,DATE_MISMATCH,observed 2026-06-10 != target 2026-06-12,NO,NO
-2026-06-12,2026-06-12T18:41:52+01:00,prelock_recheck_trigger,.vsigma/triggers/prelock_official_lineup_recheck.trigger,2026-06-10,DATE_MISMATCH,observed 2026-06-10 != target 2026-06-12,NO,NO
+2026-06-10,2026-06-12T22:04:22+01:00,daily_board_md,data/processed/today/2026-06-10/vsigma_daily_execution_board.md,2026-06-10,OK,date coherent,NO,NO
+2026-06-10,2026-06-12T22:04:22+01:00,daily_board_csv,data/processed/today/2026-06-10/vsigma_daily_execution_board.csv,2026-06-10,OK,date coherent,NO,NO
+2026-06-10,2026-06-12T22:04:22+01:00,operator_brief_md,data/processed/today/2026-06-10/vsigma_operator_brief.md,2026-06-10,OK,date coherent,NO,NO
+2026-06-10,2026-06-12T22:04:22+01:00,automation_health_md,data/processed/today/2026-06-10/vsigma_automation_health.md,2026-06-10,OK,date coherent,NO,NO
+2026-06-10,2026-06-12T22:04:22+01:00,prelock_live_recheck_md,data/processed/today/2026-06-10/vsigma_prelock_live_recheck.md,2026-06-10,OK,date coherent,NO,NO
+2026-06-10,2026-06-12T22:04:22+01:00,live_trigger_validator_md,data/processed/today/2026-06-10/vsigma_live_trigger_validator.md,2026-06-10,OK,date coherent,NO,NO
+2026-06-10,2026-06-12T22:04:22+01:00,consolidated_panel_md,data/processed/today/2026-06-10/vsigma_consolidated_daily_operator_panel.md,2026-06-10,OK,date coherent,NO,NO
+2026-06-10,2026-06-12T22:04:22+01:00,source_reliability_governor_md,data/processed/today/2026-06-10/vsigma_probable_lineup_source_reliability_governor.md,2026-06-10,OK,date coherent,NO,NO
+2026-06-10,2026-06-12T22:04:22+01:00,daily_chain_trigger,.vsigma/triggers/daily_decision_chain_v2.trigger,2026-06-10,OK,date coherent,NO,NO
+2026-06-10,2026-06-12T22:04:22+01:00,prelock_recheck_trigger,.vsigma/triggers/prelock_official_lineup_recheck.trigger,2026-06-10,OK,date coherent,NO,NO

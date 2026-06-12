@@ -10,40 +10,40 @@
 - production_change: NO
 
 ## Queue Rows
-- #1 | P1_TRUSTED_MISSING_SCORING | Neptūną Klaipėda vs Transinvest 2 | league=1 Lyga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #2 | P1_TRUSTED_MISSING_SCORING | Fjardabyggd / Leiknir vs Fjolnir | league=2. Deild | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #3 | P1_TRUSTED_MISSING_SCORING | Haukar vs Kormákur / Hvöt | league=2. Deild | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #4 | P1_TRUSTED_MISSING_SCORING | Thróttur Vogar vs Vikingur Olafsiik | league=2. Deild | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #5 | P1_TRUSTED_MISSING_SCORING | Damash Gilanian vs Mes Shahr-e Babak | league=Azadegan League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #6 | P1_TRUSTED_MISSING_SCORING | Naft Bandar Abbas vs Shahrdari Noshahr | league=Azadegan League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #7 | P1_TRUSTED_MISSING_SCORING | Blumenau vs Jaraguá | league=Catarinense - 2 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #8 | P1_TRUSTED_MISSING_SCORING | Dikaki vs Cercle Mbéri | league=Championnat D1 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #9 | P1_TRUSTED_MISSING_SCORING | Mangasport vs Bouenguidi | league=Championnat D1 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #10 | P1_TRUSTED_MISSING_SCORING | Stade Mandji vs Lozo | league=Championnat D1 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #11 | P1_TRUSTED_MISSING_SCORING | Brasil DE Pelotas vs Farroupilha | league=Copa Gaúcha | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #12 | P1_TRUSTED_MISSING_SCORING | Aigle Royal de Moungo vs PWD Bamenda | league=Elite One | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #13 | P1_TRUSTED_MISSING_SCORING | Colombe vs Jeunes Fauves | league=Elite One | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #14 | P1_TRUSTED_MISSING_SCORING | Fortuna Mfou vs Stade Renard | league=Elite One | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #15 | P1_TRUSTED_MISSING_SCORING | Gazelle vs Cotonsport | league=Elite One | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #16 | P1_TRUSTED_MISSING_SCORING | Gualaceo SC vs Cumbayá | league=Liga Pro Serie B | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #17 | P1_TRUSTED_MISSING_SCORING | Ind. Juniors vs Deportivo Cuenca Juniors | league=Liga Pro Serie B | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #18 | P1_TRUSTED_MISSING_SCORING | Tupan vs São José MA | league=Maranhense - 2 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #19 | P1_TRUSTED_MISSING_SCORING | Amawele vs Madlenya | league=Premier League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #20 | P1_TRUSTED_MISSING_SCORING | Viva Stumbo vs Magwanyana | league=Premier League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #21 | P1_TRUSTED_MISSING_SCORING | Dynamos vs Hunters | league=Premier Soccer League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #22 | P1_TRUSTED_MISSING_SCORING | Kariba vs Herentals | league=Premier Soccer League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #23 | P1_TRUSTED_MISSING_SCORING | Platinum vs Hardrock | league=Premier Soccer League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #24 | P1_TRUSTED_MISSING_SCORING | Simba Bhora vs Ngezi Platinum | league=Premier Soccer League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #25 | P1_TRUSTED_MISSING_SCORING | Afrique Football Élite vs ASKO | league=Première Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #26 | P1_TRUSTED_MISSING_SCORING | Onze Créateurs vs Bakaridjan | league=Première Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #27 | P1_TRUSTED_MISSING_SCORING | Shortan vs Gazalkent | league=Pro League A | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #28 | P1_TRUSTED_MISSING_SCORING | WDSC Wolves vs Eastern Suburbs | league=Queensland NPL | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #29 | P1_TRUSTED_MISSING_SCORING | Orebro SK vs GIF Sundsvall | league=Superettan | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #30 | P1_TRUSTED_MISSING_SCORING | Varbergs BoIS FC vs Norrby IF | league=Superettan | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #31 | P1_TRUSTED_MISSING_SCORING | Excelsior Maassluis vs Ijsselmeervogels | league=Tweede Divisie | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #32 | P1_TRUSTED_MISSING_SCORING | Pirmasens vs VfR Mannheim | league=Oberliga - Promotion Round | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #33 | P1_TRUSTED_MISSING_SCORING | Malaga vs Las Palmas | league=Segunda División | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #34 | P1_TRUSTED_MISSING_SCORING | Cape Town City vs Magesi | league=Premier Soccer League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #1 | P1_TRUSTED_MISSING_SCORING | Malaga vs Las Palmas | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #2 | P1_TRUSTED_MISSING_SCORING | Cape Town City vs Magesi | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #3 | P1_TRUSTED_MISSING_SCORING | Neptūną Klaipėda vs Transinvest 2 | league=1 Lyga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #4 | P1_TRUSTED_MISSING_SCORING | Fjardabyggd / Leiknir vs Fjolnir | league=2. Deild | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #5 | P1_TRUSTED_MISSING_SCORING | Haukar vs Kormákur / Hvöt | league=2. Deild | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #6 | P1_TRUSTED_MISSING_SCORING | Thróttur Vogar vs Vikingur Olafsiik | league=2. Deild | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #7 | P1_TRUSTED_MISSING_SCORING | Damash Gilanian vs Mes Shahr-e Babak | league=Azadegan League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #8 | P1_TRUSTED_MISSING_SCORING | Naft Bandar Abbas vs Shahrdari Noshahr | league=Azadegan League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #9 | P1_TRUSTED_MISSING_SCORING | Blumenau vs Jaraguá | league=Catarinense - 2 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #10 | P1_TRUSTED_MISSING_SCORING | Dikaki vs Cercle Mbéri | league=Championnat D1 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #11 | P1_TRUSTED_MISSING_SCORING | Mangasport vs Bouenguidi | league=Championnat D1 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #12 | P1_TRUSTED_MISSING_SCORING | Stade Mandji vs Lozo | league=Championnat D1 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #13 | P1_TRUSTED_MISSING_SCORING | Brasil DE Pelotas vs Farroupilha | league=Copa Gaúcha | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #14 | P1_TRUSTED_MISSING_SCORING | Aigle Royal de Moungo vs PWD Bamenda | league=Elite One | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #15 | P1_TRUSTED_MISSING_SCORING | Colombe vs Jeunes Fauves | league=Elite One | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #16 | P1_TRUSTED_MISSING_SCORING | Fortuna Mfou vs Stade Renard | league=Elite One | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #17 | P1_TRUSTED_MISSING_SCORING | Gazelle vs Cotonsport | league=Elite One | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #18 | P1_TRUSTED_MISSING_SCORING | Gualaceo SC vs Cumbayá | league=Liga Pro Serie B | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #19 | P1_TRUSTED_MISSING_SCORING | Ind. Juniors vs Deportivo Cuenca Juniors | league=Liga Pro Serie B | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #20 | P1_TRUSTED_MISSING_SCORING | Tupan vs São José MA | league=Maranhense - 2 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #21 | P1_TRUSTED_MISSING_SCORING | Amawele vs Madlenya | league=Premier League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #22 | P1_TRUSTED_MISSING_SCORING | Viva Stumbo vs Magwanyana | league=Premier League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #23 | P1_TRUSTED_MISSING_SCORING | Dynamos vs Hunters | league=Premier Soccer League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #24 | P1_TRUSTED_MISSING_SCORING | Kariba vs Herentals | league=Premier Soccer League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #25 | P1_TRUSTED_MISSING_SCORING | Platinum vs Hardrock | league=Premier Soccer League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #26 | P1_TRUSTED_MISSING_SCORING | Simba Bhora vs Ngezi Platinum | league=Premier Soccer League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #27 | P1_TRUSTED_MISSING_SCORING | Afrique Football Élite vs ASKO | league=Première Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #28 | P1_TRUSTED_MISSING_SCORING | Onze Créateurs vs Bakaridjan | league=Première Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #29 | P1_TRUSTED_MISSING_SCORING | Shortan vs Gazalkent | league=Pro League A | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #30 | P1_TRUSTED_MISSING_SCORING | WDSC Wolves vs Eastern Suburbs | league=Queensland NPL | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #31 | P1_TRUSTED_MISSING_SCORING | Orebro SK vs GIF Sundsvall | league=Superettan | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #32 | P1_TRUSTED_MISSING_SCORING | Varbergs BoIS FC vs Norrby IF | league=Superettan | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #33 | P1_TRUSTED_MISSING_SCORING | Excelsior Maassluis vs Ijsselmeervogels | league=Tweede Divisie | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #34 | P1_TRUSTED_MISSING_SCORING | Pirmasens vs VfR Mannheim | league=Oberliga - Promotion Round | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 - #35 | P1_TRUSTED_MISSING_SCORING | Amical Saint-Prex vs Servette II | league=1. Liga Classic - Play-offs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 - #36 | P1_TRUSTED_MISSING_SCORING | YF Juventus vs Langenthal | league=1. Liga Classic - Play-offs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 - #37 | P1_TRUSTED_MISSING_SCORING | KFG vs Hvíti riddarinn | league=2. Deild | scoring_needed=YES | reason=trusted raw candidate has no matching scored row

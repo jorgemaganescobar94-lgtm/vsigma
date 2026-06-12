@@ -2,10 +2,10 @@
 
 ## Summary
 - policy_status: MAX_COVERAGE_POLICY_READY
-- api_plan_name: API-Football Pro
+- api_plan_name: API-Football UNKNOWN
 - plan_requests_per_day: 7500
 - rows_reviewed: 95
-- rows_allowed: 95
+- rows_allowed: 0
 - full_scoring_enrichment_rows: 57
 - coverage_probe_rows: 12
 - diagnostic_only_rows: 26
@@ -13,12 +13,14 @@
 - estimated_call_units: 485
 - decision_counts: FULL_ENRICHMENT_ALLOWED_FOR_SCORING=57; DIAGNOSTIC_COVERAGE_ALLOWED_CONTEXT_VOLATILITY=14; DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST=12; COVERAGE_PROBE_ALLOWED_LOW_COVERAGE=12
 - downstream_use_counts: SCORING_ALLOWED_WITH_NORMAL_GATES=57; DIAGNOSTIC_ONLY_NO_SCORING=26; COVERAGE_GATE_ONLY=12
-- external_calls_allowed: YES_MAX_COVERAGE_POLICY
+- external_calls_allowed: NO_SUBSCRIPTION_GUARD
 - external_calls_executed: NO
 - auto_apply: NO
 - production_change: NO
 
 ## Policy Rows
+- Malaga vs Las Palmas | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
+- Cape Town City vs Magesi | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
 - Neptūną Klaipėda vs Transinvest 2 | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
 - Fjardabyggd / Leiknir vs Fjolnir | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
 - Haukar vs Kormákur / Hvöt | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
@@ -51,8 +53,6 @@
 - Varbergs BoIS FC vs Norrby IF | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
 - Excelsior Maassluis vs Ijsselmeervogels | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
 - Pirmasens vs VfR Mannheim | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
-- Malaga vs Las Palmas | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
-- Cape Town City vs Magesi | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO
 - Amical Saint-Prex vs Servette II | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
 - YF Juventus vs Langenthal | decision=DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=COVERAGE_PROBE_ONLY | calls_executed=NO
 - KFG vs Hvíti riddarinn | decision=FULL_ENRICHMENT_ALLOWED_FOR_SCORING | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=FULL_ENRICHMENT_WITH_NORMAL_GATES | calls_executed=NO

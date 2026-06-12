@@ -1,2 +1,2 @@
 target_date,generated_at,source_rows_reviewed,adapter_rows_written,adapter_promoted_review_only_rows,adapter_blocked_rows,adapter_status_counts,allowed_downstream_use_counts,pick_permission_counts,stake_permission_counts,auto_apply,production_change
-2026-06-10,2026-06-12T18:29:15+01:00,0,0,0,0,none,none,none,none,NO,NO
+2026-06-10,2026-06-12T22:04:24+01:00,0,0,0,0,none,none,none,none,NO,NO

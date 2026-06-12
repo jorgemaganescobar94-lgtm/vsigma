@@ -86,9 +86,9 @@
 - status_counts: OK=7; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-12T18:29:10+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-12T18:29:10+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-12T18:29:10+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-12T22:04:18+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-12T22:04:18+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-12T22:04:18+01:00
 
 ## Key Files
 - data/processed/today/2026-06-10/vsigma_consolidated_daily_operator_panel.md
@@ -137,7 +137,7 @@
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
 - files_scanned: 1636
 - accepted_rows: 122
-- rejected_rows: 777
+- rejected_rows: 519
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
@@ -203,7 +203,7 @@
 - reason: daily board already has rows
 ## API Quota-Aware Enrichment Gate
 - quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
-- api_plan_name: API-Football Pro
+- api_plan_name: API-Football UNKNOWN
 - plan_requests_per_day: 7500
 - rows_reviewed: 95
 - p1_rows: 81
@@ -249,23 +249,23 @@
 - next_action: Review rows manually. Any whitelist change must be a separate explicit code change after validation; this board cannot promote, score, enrich, pick, or stake.
 ## Max-Coverage API Enrichment Policy
 - policy_status: MAX_COVERAGE_POLICY_READY
-- api_plan_name: API-Football Pro
+- api_plan_name: API-Football UNKNOWN
 - plan_requests_per_day: 7500
 - rows_reviewed: 95
-- rows_allowed: 95
+- rows_allowed: 0
 - full_scoring_enrichment_rows: 57
 - coverage_probe_rows: 12
 - diagnostic_only_rows: 26
 - blocked_rows: 0
 - estimated_call_units: 485
 - downstream_use_counts: SCORING_ALLOWED_WITH_NORMAL_GATES=57; DIAGNOSTIC_ONLY_NO_SCORING=26; COVERAGE_GATE_ONLY=12
-- external_calls_allowed: YES_MAX_COVERAGE_POLICY
+- external_calls_allowed: NO_SUBSCRIPTION_GUARD
 - external_calls_executed: NO
 - next_action: Use max-coverage policy through the subscription guard and logged API executor only. Enrichment can be broad; scoring remains restricted by downstream_use and normal gates.
 ## Active API Policy
 - active_api_policy: MAX_COVERAGE
 - policy_source: vsigma_max_coverage_api_enrichment_policy
-- external_calls_allowed: YES_MAX_COVERAGE_POLICY
+- external_calls_allowed: NO_SUBSCRIPTION_GUARD
 - external_calls_executed: NO
 - scoring_allowed_rows: 57
 - coverage_probe_rows: 12
@@ -329,27 +329,3 @@
 - pick_permission_counts: NO_PICK_PERMISSION=77
 - stake_permission_counts: NO_STAKE_PERMISSION=77
 - next_action: Review candidate rules only after sample grows. This board cannot activate rules, picks, or stake.
-## API Shadow Rule Outcome Ledger
-- candidate_rules_applied: 9
-- shadow_rows: 0
-- finished_shadow_rows: 0
-- pending_shadow_rows: 0
-- shadow_outcome_counts: none
-- rule_market_counts: none
-- paper_trade_permission_counts: none
-- activation_permission_counts: none
-- pick_permission_counts: none
-- stake_permission_counts: none
-- next_action: Track shadow outcomes over future runs. This ledger cannot activate rules, picks, or stake.
-## API Shadow Rule Out-of-Sample Tracker
-- registry_rules: 19
-- rows_reviewed: 0
-- in_sample_rows: 0
-- out_of_sample_rows: 0
-- pending_rows: 0
-- oos_evaluated_rows: 0
-- oos_class_counts: none
-- activation_permission_counts: none
-- pick_permission_counts: none
-- stake_permission_counts: none
-- next_action: Collect future OUT_OF_SAMPLE rows. No rule activation before sufficient out-of-sample sample size.
