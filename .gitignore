@@ -70,3 +70,5 @@ data/processed/governance/vsigma_execution_confirmation_check_*
 data/processed/today/*/vsigma_execution_confirmation_check_*
 data/processed/governance/vsigma_full_shadow_pipeline_*
 data/processed/today/*/vsigma_full_shadow_pipeline_*
+data/processed/governance/vsigma_batch_shadow_pipeline_*
+data/processed/today/*/vsigma_batch_shadow_pipeline_*
