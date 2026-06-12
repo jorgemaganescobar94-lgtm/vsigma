@@ -1,0 +1,53 @@
+﻿{
+  "rule_id": "U35_LEAGUE_GATE_OVERRIDES_V1",
+  "status": "PRECISION_FIRST_ACTIVE",
+  "source": "Football-Data UK top5 2020-2025 by-league validation",
+  "priority": "league_override_beats_global_gate",
+  "league_overrides": {
+    "SP1": {
+      "league_name": "La Liga",
+      "status": "PROMOTE_STRONG_CLEAN",
+      "gate_label": "STRONG_CLEAN",
+      "model_under35_prob_min": 0.80,
+      "market_under25_prob_min": 0.60,
+      "validation_rows": 88,
+      "actual_under35_rate": 0.8977272727272727,
+      "usage": "Primary U35 validation league. Can validate Under 3.5/protected low-total builders when tactical read agrees."
+    },
+    "I1": {
+      "league_name": "Serie A",
+      "status": "PROMOTE_STRONG",
+      "gate_label": "STRONG",
+      "model_under35_prob_min": 0.80,
+      "market_under25_prob_min": 0.55,
+      "validation_rows": 95,
+      "actual_under35_rate": 0.8526315789473684,
+      "usage": "Strong but more conservative than La Liga. Validate only with tactical agreement and no lineup shock."
+    },
+    "D1": {
+      "league_name": "Bundesliga",
+      "status": "RESEARCH_ONLY",
+      "gate_label": "LEAGUE_RESEARCH_ONLY",
+      "reason": "Model improves globally but high-threshold sample is too small for market validation.",
+      "usage": "Diagnostic only. Do not validate premium Under 3.5 from this gate."
+    },
+    "F1": {
+      "league_name": "Ligue 1",
+      "status": "BLOCKED",
+      "gate_label": "LEAGUE_BLOCKED",
+      "reason": "High-threshold samples unstable and not reliable enough for precision-first gate.",
+      "usage": "Do not use U35 gate for market validation."
+    },
+    "E0": {
+      "league_name": "Premier League",
+      "status": "BLOCKED",
+      "gate_label": "LEAGUE_BLOCKED",
+      "reason": "League-specific model underperforms base rate on validation split.",
+      "usage": "Do not use U35 gate for market validation."
+    }
+  },
+  "global_fallback": {
+    "enabled": false,
+    "reason": "Precision-first mode: league-specific validation required before gate can validate markets."
+  }
+}
