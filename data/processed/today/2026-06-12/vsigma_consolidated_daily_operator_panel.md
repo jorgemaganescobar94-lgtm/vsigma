@@ -1,24 +1,24 @@
 # vSIGMA Consolidated Daily Operator Panel - 2026-06-12
 
 ## First Read
-- panel_status: NONE
-- operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=UNKNOWN; board_rows=1
+- panel_status: BROKEN
+- operator_detail: action=BROKEN; final=SYSTEM_FIX_REQUIRED; risk=HIGH; health=BROKEN; board_rows=1
 - executable_prematch: NONE
 - live_only: NONE
 - watchlist: NONE
 - no_bet: ROWS=1
-- health_status: MISSING
+- health_status: BROKEN
 - auto_apply: NO
 - production_change: NO
 
 ## Operator Gate
-- action_level: NONE
-- compact_final_decision: NO_OPERATOR_ACTION
-- risk_label: NONE
-- health_status: UNKNOWN
+- action_level: BROKEN
+- compact_final_decision: SYSTEM_FIX_REQUIRED
+- risk_label: HIGH
+- health_status: BROKEN
 - board_rows: 1
-- panel_status: NONE
-- next_action: Follow operator brief and panel categories; no automatic execution.
+- panel_status: BROKEN
+- next_action: Fix workflow/input before market discussion.
 
 ## Executable Prematch
 - none
@@ -55,15 +55,15 @@
 - recommended_action_counts: KEEP_ACTIVE_COLLECT_MORE_DATA=15
 
 ## Automation Health
-- system_status: MISSING
-- components_checked: UNKNOWN
-- severity_counts: UNKNOWN
-- status_counts: UNKNOWN
+- system_status: BROKEN
+- components_checked: 11
+- severity_counts: BROKEN=1; WARN=1; OK=2; INFO=7
+- status_counts: MISSING=1; OK=3; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-11T22:34:31+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-11T22:34:31+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-11T22:34:31+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-12T18:29:10+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-12T18:29:10+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-12T18:29:10+01:00
 
 ## Key Files
 - data/processed/today/2026-06-12/vsigma_consolidated_daily_operator_panel.md
@@ -85,7 +85,7 @@
 - overall_status: DATE_MISMATCH_BLOCK
 - board_status: daily_board_md=MISSING_CORE; daily_board_csv=MISSING_CORE
 - mismatch_count: 2
-- missing_core_count: 3
+- missing_core_count: 2
 - trigger_date_counts: 2026-06-10=2
 - next_action: Fix trigger/artifact date mismatch before using market signals.
 
