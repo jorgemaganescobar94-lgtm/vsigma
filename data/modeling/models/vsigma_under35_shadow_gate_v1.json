@@ -1,0 +1,57 @@
+﻿{
+  "rule_id": "U35_SHADOW_GATE_V1",
+  "status": "PROMOTED_AS_SHADOW_GATE_NOT_AUTO_BET",
+  "source_dataset": "Football-Data UK top5 2020-2025",
+  "rows_total": 8982,
+  "validation_rows": 1797,
+  "core_thresholds": {
+    "elite": {
+      "conditions": {
+        "model_under35_prob_min": 0.85,
+        "market_under25_prob_min": 0.55
+      },
+      "rows": 62,
+      "actual_under35_rate": 0.9354838709677419,
+      "usage": "Strong reinforcement only when vSIGMA tactical read agrees"
+    },
+    "strong_clean": {
+      "conditions": {
+        "model_under35_prob_min": 0.80,
+        "market_under25_prob_min": 0.60
+      },
+      "rows": 150,
+      "actual_under35_rate": 0.8866666666666667,
+      "usage": "Primary Under 3.5 robustness gate"
+    },
+    "strong": {
+      "conditions": {
+        "model_under35_prob_min": 0.80,
+        "market_under25_prob_min": 0.55
+      },
+      "rows": 245,
+      "actual_under35_rate": 0.8693877551020408,
+      "usage": "Valid support gate"
+    },
+    "support": {
+      "conditions": {
+        "model_under35_prob_min": 0.75,
+        "market_under25_prob_min": 0.60
+      },
+      "rows": 160,
+      "actual_under35_rate": 0.875,
+      "usage": "Secondary support only"
+    }
+  },
+  "do_not_use": [
+    "Do not auto-bet Under 3.5 from this model alone",
+    "Do not use p_under35 0.70-0.75 as premium validator",
+    "Do not promote Ligue 1 high-probability samples until more validation exists",
+    "Do not override tactical red flags, lineup shocks, red-card risk, or game-state elasticity"
+  ],
+  "approved_use_cases": [
+    "Validate Under 3.5 when vSIGMA tactical read and market family agree",
+    "Support 1X + Under 3.5 or DNB + Under 3.5 only when no new death route is added",
+    "Veto overstretched Over/BTTS/builders when model_under35_prob is high",
+    "Flag low-elasticity games for live monitoring"
+  ]
+}
