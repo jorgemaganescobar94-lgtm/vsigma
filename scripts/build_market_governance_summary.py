@@ -2,11 +2,14 @@ from __future__ import annotations
 
 import argparse
 import csv
+import json
 import re
 import unicodedata
 from pathlib import Path
 
 BASE = Path("data/processed")
+U35_CONFIG = Path("config/vsigma_u35_league_gate_overrides_v1.json")
+TT_CONFIG = Path("config/vsigma_team_total_gate_overrides_v1.json")
 
 
 def clean(v: object) -> str:
@@ -31,6 +34,81 @@ def read_rows(path: Path) -> list[dict[str, str]]:
 def read_one(path: Path) -> dict[str, str]:
     rows = read_rows(path)
     return rows[0] if rows else {}
+
+
+
+def read_json(path: Path) -> dict:
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+TOP5_LEAGUE_IDS = {
+    "39": "E0",
+    "140": "SP1",
+    "135": "I1",
+    "78": "D1",
+    "61": "F1",
+}
+
+TOP5_LEAGUE_NAMES = {
+    "premier_league": "E0",
+    "la_liga": "SP1",
+    "serie_a": "I1",
+    "bundesliga": "D1",
+    "ligue_1": "F1",
+}
+
+
+def infer_league_code(forecast: dict[str, str], tt_rows: list[dict[str, str]]) -> str:
+    if tt_rows and tt_rows[0].get("league_code"):
+        return str(tt_rows[0].get("league_code"))
+    lid = str(forecast.get("league_id") or "").strip()
+    if lid in TOP5_LEAGUE_IDS:
+        return TOP5_LEAGUE_IDS[lid]
+    lname = clean(forecast.get("league_name") or forecast.get("competition") or forecast.get("league") or "")
+    for key, code in TOP5_LEAGUE_NAMES.items():
+        if key in lname:
+            return code
+    return ""
+
+
+def u35_monitor_context(league_code: str, config: dict) -> dict[str, object]:
+    override = (config.get("league_overrides") or {}).get(league_code, {})
+    monitor = bool(override.get("monitor_required", False))
+    return {
+        "u35_stability_verdict": override.get("stability_verdict", ""),
+        "u35_monitor_required": "YES" if monitor else "NO",
+        "u35_passing_splits": override.get("passing_splits", ""),
+        "u35_ok_splits": override.get("ok_splits", ""),
+        "u35_min_actual_hit_rate_observed": override.get("min_actual_hit_rate_observed", ""),
+        "u35_avg_actual_hit_rate_observed": override.get("avg_actual_hit_rate_observed", ""),
+    }
+
+
+def tt_monitor_context(league_code: str, tt_rows: list[dict[str, str]], config: dict) -> dict[str, object]:
+    league_cfg = (config.get("league_overrides") or {}).get(league_code, {})
+    markets_cfg = league_cfg.get("markets") or {}
+    monitor_markets = []
+    stable_markets = []
+    for row in tt_rows:
+        label = str(row.get("team_total_gate_label"))
+        if label not in {"TEAM_TOTAL_STRONG", "TEAM_TOTAL_SUPPORT"}:
+            continue
+        market = str(row.get("market_family", ""))
+        cfg = markets_cfg.get(market, {})
+        stability = str(cfg.get("stability_verdict", ""))
+        monitor = bool(cfg.get("monitor_required", False))
+        item = f"{market}:{stability or 'NO_STABILITY'}"
+        if monitor:
+            monitor_markets.append(item)
+        elif stability:
+            stable_markets.append(item)
+    return {
+        "tt_monitor_required": "YES" if monitor_markets else "NO",
+        "tt_monitor_markets": ";".join(monitor_markets),
+        "tt_stable_markets": ";".join(stable_markets),
+    }
 
 
 def write_csv(path: Path, row: dict[str, object]) -> None:
@@ -65,6 +143,7 @@ def governance_decision(
     agreement: dict[str, str],
     u35_action: dict[str, str],
     tt_rows: list[dict[str, str]],
+    monitor_flags: list[str],
 ) -> dict[str, object]:
     agreement_label = str(agreement.get("agreement_label", ""))
     agreement_score = fnum(agreement.get("agreement_score"), 0.0)
@@ -90,6 +169,8 @@ def governance_decision(
         veto_flags.append("TT_UNDER15_VETO_OVERSTRETCH")
     if low_agreement:
         veto_flags.append("LOW_AGREEMENT_MANUAL_REVIEW")
+    if monitor_flags:
+        veto_flags.extend(monitor_flags)
 
     approved: list[str] = []
     if u35_validates:
@@ -127,9 +208,18 @@ def governance_decision(
         builder_permission = "NO"
         note = "No promoted gate supports this fixture. Prefer base vSIGMA/manual review."
 
+    if monitor_flags and builder_permission.startswith("YES"):
+        builder_permission = "YES_WITH_MONITOR_AND_PRICE_CHECK"
+        note = note + " Monitoring warning active: require extra confirmation before execution."
+    elif monitor_flags and builder_permission == "SECONDARY_ONLY":
+        builder_permission = "SECONDARY_WITH_MONITOR_ONLY"
+        note = note + " Monitoring warning active: secondary support only."
+
     return {
         "market_governance_label": label,
         "builder_permission": builder_permission,
+        "monitor_required": "YES" if monitor_flags else "NO",
+        "monitor_flags": ";".join(monitor_flags),
         "approved_market_families": ";".join([a for a in approved if a]),
         "veto_flags": ";".join(veto_flags),
         "team_total_strong_count": len(tt_strong),
@@ -151,6 +241,8 @@ def md(row: dict[str, object]) -> str:
         f"- agreement_score: {row.get('agreement_score')}",
         f"- market_governance_label: {row.get('market_governance_label')}",
         f"- builder_permission: {row.get('builder_permission')}",
+        f"- monitor_required: {row.get('monitor_required')}",
+        f"- monitor_flags: {row.get('monitor_flags')}",
         f"- approved_market_families: {row.get('approved_market_families')}",
         f"- veto_flags: {row.get('veto_flags')}",
         "",
@@ -158,6 +250,9 @@ def md(row: dict[str, object]) -> str:
         f"- u35_gate_label: {row.get('u35_gate_label')}",
         f"- u35_market_action_hint: {row.get('u35_market_action_hint')}",
         f"- u35_builder_veto_hint: {row.get('u35_builder_veto_hint')}",
+        f"- u35_stability_verdict: {row.get('u35_stability_verdict')}",
+        f"- u35_monitor_required: {row.get('u35_monitor_required')}",
+        f"- u35_passing_splits: {row.get('u35_passing_splits')}/{row.get('u35_ok_splits')}",
         "",
         "## Team-total layer",
         f"- strong_count: {row.get('team_total_strong_count')}",
@@ -165,6 +260,9 @@ def md(row: dict[str, object]) -> str:
         f"- veto_count: {row.get('team_total_veto_count')}",
         f"- strong_markets: {row.get('team_total_strong_markets')}",
         f"- support_markets: {row.get('team_total_support_markets')}",
+        f"- tt_monitor_required: {row.get('tt_monitor_required')}",
+        f"- tt_monitor_markets: {row.get('tt_monitor_markets')}",
+        f"- tt_stable_markets: {row.get('tt_stable_markets')}",
         "",
         "## Decision note",
         f"- {row.get('decision_note')}",
@@ -188,7 +286,17 @@ def run(day: str, home: str, away: str, base: Path) -> None:
     if not forecast:
         raise RuntimeError(f"Missing forecast file for {slug} on {day}")
 
-    decision = governance_decision(agreement, u35_action, tt_rows)
+    league_code = infer_league_code(forecast, tt_rows)
+    u35_ctx = u35_monitor_context(league_code, read_json(U35_CONFIG))
+    tt_ctx = tt_monitor_context(league_code, tt_rows, read_json(TT_CONFIG))
+
+    monitor_flags: list[str] = []
+    if u35_ctx.get("u35_monitor_required") == "YES" and u35_action.get("u35_market_action_hint") not in {"", "MISSING", "NO_ACTION_OUT_OF_SCOPE", "NO_ACTION_NO_GATE"}:
+        monitor_flags.append("U35_MONITOR_REQUIRED")
+    if tt_ctx.get("tt_monitor_required") == "YES":
+        monitor_flags.append("TT_MONITOR_REQUIRED")
+
+    decision = governance_decision(agreement, u35_action, tt_rows, monitor_flags)
     row = {
         "target_date": day,
         "fixture": slug.replace("_", " "),
@@ -203,7 +311,10 @@ def run(day: str, home: str, away: str, base: Path) -> None:
         "u35_gate_label": u35_gate.get("u35_gate_label", "MISSING"),
         "u35_market_action_hint": u35_action.get("u35_market_action_hint", "MISSING"),
         "u35_builder_veto_hint": u35_action.get("u35_builder_veto_hint", ""),
+        "league_code": league_code,
         "u35_market_family_hint": u35_action.get("u35_market_family_hint", ""),
+        **u35_ctx,
+        **tt_ctx,
         **decision,
         "auto_bet": "NO",
         "production_change": "NO",
