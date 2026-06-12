@@ -1,0 +1,179 @@
+name: vSIGMA Auto API Board Batch
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Target date YYYY-MM-DD. Empty = current Atlantic/Canary date."
+        required: false
+        default: ""
+      run_label:
+        description: "Optional batch label."
+        required: false
+        default: ""
+  schedule:
+    # 08:10 UTC = 09:10 Atlantic/Canary in summer. Keeps API usage to one governed daily run.
+    - cron: "10 8 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vsigma-auto-api-board-batch-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      APISPORTS_KEY: ${{ secrets.APISPORTS_KEY }}
+      API_SPORTS_KEY: ${{ secrets.API_SPORTS_KEY }}
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+      APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+      API_FOOTBALL_API_KEY: ${{ secrets.API_FOOTBALL_API_KEY }}
+      RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+      X_RAPIDAPI_KEY: ${{ secrets.X_RAPIDAPI_KEY }}
+      PYTHONIOENCODING: utf-8
+      PYTHONUTF8: "1"
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ github.token }}
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Resolve date and label
+        shell: bash
+        run: |
+          D=""
+          LABEL=""
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            D="${{ inputs.date }}"
+            LABEL="${{ inputs.run_label }}"
+          fi
+          if [ -z "$D" ]; then
+            D="$(TZ=Atlantic/Canary date +%F)"
+          fi
+          if [ -z "$LABEL" ]; then
+            SAFE_D="$(echo "$D" | tr '-' '_')"
+            LABEL="auto_api_board_${SAFE_D}"
+          fi
+          echo "VSIGMA_DATE=$D" >> "$GITHUB_ENV"
+          echo "VSIGMA_BATCH_LABEL=$LABEL" >> "$GITHUB_ENV"
+          mkdir -p "data/processed/today/$D"
+          {
+            echo "# vSIGMA Auto API Board Batch - $D"
+            echo
+            echo "- run_started_utc: $(date -u +%FT%TZ)"
+            echo "- github_event: ${{ github.event_name }}"
+            echo "- batch_label: $LABEL"
+            echo "- auto_bet: NO"
+            echo "- production_change: NO"
+            echo
+          } > "data/processed/today/$D/vsigma_auto_api_board_batch_status.md"
+
+      - name: Compile critical scripts
+        shell: bash
+        run: |
+          python -m py_compile scripts/api_football_client.py
+          python -m py_compile scripts/run_daily_competition_controller.py
+          python -m py_compile scripts/force_api_board_fixture_lineups_refresh.py
+          python -m py_compile scripts/build_full_pipeline_candidates_from_api_board.py
+          python -m py_compile scripts/run_vsigma_batch_shadow_pipeline.py
+
+      - name: PRE API refresh
+        id: pre
+        shell: bash
+        continue-on-error: true
+        run: |
+          python scripts/run_daily_competition_controller.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --mode pre
+
+      - name: Controller status after PRE
+        shell: bash
+        continue-on-error: true
+        run: |
+          python scripts/run_daily_competition_controller.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --mode status
+
+      - name: Forced API lineups from board
+        id: lineups
+        shell: bash
+        continue-on-error: true
+        run: |
+          python scripts/force_api_board_fixture_lineups_refresh.py --date "$VSIGMA_DATE" --timezone Atlantic/Canary --limit 20
+
+      - name: API board bridge and batch
+        id: bridge_batch
+        shell: bash
+        continue-on-error: true
+        run: |
+          python scripts/build_full_pipeline_candidates_from_api_board.py \
+            --date "$VSIGMA_DATE" \
+            --lineups-confirmed PENDING \
+            --tactical-confirmed PENDING \
+            --price-live PENDING \
+            --portfolio-ok PENDING \
+            --monitor-confirmed PENDING \
+            --stake-cap-pct-bankroll 0.25 \
+            --run-batch \
+            --batch-name "$VSIGMA_BATCH_LABEL"
+
+      - name: Final status summary
+        shell: bash
+        run: |
+          STATUS="data/processed/today/$VSIGMA_DATE/vsigma_auto_api_board_batch_status.md"
+          {
+            echo "## Step results"
+            echo
+            echo "- pre_outcome: ${{ steps.pre.outcome }}"
+            echo "- lineups_outcome: ${{ steps.lineups.outcome }}"
+            echo "- bridge_batch_outcome: ${{ steps.bridge_batch.outcome }}"
+            echo "- run_finished_utc: $(date -u +%FT%TZ)"
+            echo
+            echo "## Output hints"
+            echo
+            echo "- controller_status: data/processed/today/$VSIGMA_DATE/daily_controller_status.md"
+            echo "- api_board_bridge: data/processed/governance/vsigma_api_board_candidate_bridge_$VSIGMA_DATE.md"
+            echo "- batch_report: data/processed/governance/vsigma_batch_shadow_pipeline_$VSIGMA_BATCH_LABEL.md"
+            echo
+            echo "## Hard rules"
+            echo
+            echo "- This workflow never places bets."
+            echo "- EXECUTE_SMALL_STAKE, if ever produced, means manual review only."
+            echo "- auto_bet: NO"
+            echo "- production_change: NO"
+          } >> "$STATUS"
+
+      - name: Commit generated reports
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add "data/processed/today/$VSIGMA_DATE" 2>/dev/null || true
+          git add data/processed/daily_run_plan_latest.md 2>/dev/null || true
+          git add data/processed/governance/vsigma_daily_execution_board.csv 2>/dev/null || true
+          git add data/processed/governance/vsigma_forced_api_board_fixture_lineups* 2>/dev/null || true
+          git add -f data/processed/governance/vsigma_api_board_candidate_bridge_${VSIGMA_DATE}* 2>/dev/null || true
+          git add -f data/processed/governance/vsigma_api_board_candidate_bridge_skipped_${VSIGMA_DATE}* 2>/dev/null || true
+          git add -f data/processed/batch_inputs/vsigma_api_board_candidates_${VSIGMA_DATE}.csv 2>/dev/null || true
+          git add -f data/processed/governance/vsigma_batch_shadow_pipeline_${VSIGMA_BATCH_LABEL}* 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No generated vSIGMA auto API board batch changes to commit."
+            exit 0
+          fi
+
+          git commit -m "vSIGMA auto API board batch ${VSIGMA_DATE} [skip ci]"
+          git push origin HEAD:main
