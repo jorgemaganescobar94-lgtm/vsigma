@@ -1,7 +1,7 @@
-﻿{
+{
   "rule_id": "TEAM_TOTAL_GATE_OVERRIDES_V1",
   "status": "PRECISION_FIRST_SHADOW_ACTIVE",
-  "source": "Football-Data UK top5 2020-2025 team-total by-league validation",
+  "source": "Football-Data UK top5 2020-2025 team-total by-league validation + stability splits 70/30,75/25,80/20,85/15",
   "priority": "league_and_market_specific_gate_required",
   "global_fallback": {
     "enabled": false,
@@ -16,6 +16,14 @@
           "model_prob_min": 0.85,
           "validation_rows": 77,
           "actual_hit_rate": 0.94,
+          "stability_verdict": "STABLE_PROMOTE",
+          "passing_splits": 4,
+          "ok_splits": 4,
+          "min_threshold_rows_observed": 72,
+          "avg_threshold_rows_observed": 108.0,
+          "min_actual_hit_rate_observed": 0.9391891891891891,
+          "avg_actual_hit_rate_observed": 0.9465788028288028,
+          "monitor_required": false,
           "usage": "Builder support / team scores validation. Not standalone unless price survives."
         },
         "AWAY_TT_OVER_0_5": {
@@ -23,6 +31,14 @@
           "model_prob_min": 0.80,
           "validation_rows": 54,
           "actual_hit_rate": 0.9074074074074074,
+          "stability_verdict": "STABLE_PROMOTE",
+          "passing_splits": 4,
+          "ok_splits": 4,
+          "min_threshold_rows_observed": 48,
+          "avg_threshold_rows_observed": 60.25,
+          "min_actual_hit_rate_observed": 0.875,
+          "avg_actual_hit_rate_observed": 0.9022630278526504,
+          "monitor_required": false,
           "usage": "Away team scores validation. Useful for BTTS/over/builders only with tactical agreement."
         },
         "HOME_TT_UNDER_1_5": {
@@ -30,6 +46,14 @@
           "model_prob_min": 0.75,
           "validation_rows": 75,
           "actual_hit_rate": 0.88,
+          "stability_verdict": "STABLE_PROMOTE",
+          "passing_splits": 4,
+          "ok_splits": 4,
+          "min_threshold_rows_observed": 49,
+          "avg_threshold_rows_observed": 76.0,
+          "min_actual_hit_rate_observed": 0.84,
+          "avg_actual_hit_rate_observed": 0.8763647959183674,
+          "monitor_required": false,
           "usage": "Strong low-team-total gate. Can support Under 3.5/protected builders."
         },
         "AWAY_TT_UNDER_1_5": {
@@ -37,6 +61,14 @@
           "model_prob_min": 0.70,
           "validation_rows": 196,
           "actual_hit_rate": 0.8163265306122449,
+          "stability_verdict": "STABLE_PROMOTE",
+          "passing_splits": 4,
+          "ok_splits": 4,
+          "min_threshold_rows_observed": 163,
+          "avg_threshold_rows_observed": 234.75,
+          "min_actual_hit_rate_observed": 0.7975460122699386,
+          "avg_actual_hit_rate_observed": 0.8088494850271288,
+          "monitor_required": false,
           "usage": "Secondary support only. Do not use as standalone premium."
         }
       }
@@ -49,6 +81,14 @@
           "model_prob_min": 0.85,
           "validation_rows": 83,
           "actual_hit_rate": 0.891566265060241,
+          "stability_verdict": "STABLE_PROMOTE",
+          "passing_splits": 4,
+          "ok_splits": 4,
+          "min_threshold_rows_observed": 69,
+          "avg_threshold_rows_observed": 87.75,
+          "min_actual_hit_rate_observed": 0.8840579710144928,
+          "avg_actual_hit_rate_observed": 0.9012040388166632,
+          "monitor_required": false,
           "usage": "Home team scores validation. Builder support, not automatic standalone."
         },
         "AWAY_TT_OVER_0_5": {
@@ -56,6 +96,14 @@
           "model_prob_min": 0.75,
           "validation_rows": 118,
           "actual_hit_rate": 0.8559322033898306,
+          "stability_verdict": "STABLE_PROMOTE",
+          "passing_splits": 4,
+          "ok_splits": 4,
+          "min_threshold_rows_observed": 99,
+          "avg_threshold_rows_observed": 136.5,
+          "min_actual_hit_rate_observed": 0.847682119205298,
+          "avg_actual_hit_rate_observed": 0.8541295448916956,
+          "monitor_required": false,
           "usage": "Away team scores validation. Useful for protected builders."
         },
         "AWAY_TT_UNDER_1_5": {
@@ -63,13 +111,29 @@
           "model_prob_min": 0.80,
           "validation_rows": 82,
           "actual_hit_rate": 0.8414634146341463,
-          "usage": "Strong away under 1.5 gate. Useful for side + rival under/protected low-score builders."
+          "stability_verdict": "PROMOTE_BUT_MONITOR",
+          "passing_splits": 3,
+          "ok_splits": 4,
+          "min_threshold_rows_observed": 53,
+          "avg_threshold_rows_observed": 109.0,
+          "min_actual_hit_rate_observed": 0.8011049723756906,
+          "avg_actual_hit_rate_observed": 0.8266499796765303,
+          "monitor_required": true,
+          "usage": "Strong away under 1.5 gate. Useful for side + rival under/protected low-score builders, but monitoring warning is active."
         },
         "HOME_TT_UNDER_1_5": {
           "status": "PROMOTE_SUPPORT",
           "model_prob_min": 0.75,
           "validation_rows": 66,
           "actual_hit_rate": 0.8181818181818182,
+          "stability_verdict": "STABLE_PROMOTE",
+          "passing_splits": 4,
+          "ok_splits": 4,
+          "min_threshold_rows_observed": 25,
+          "avg_threshold_rows_observed": 75.0,
+          "min_actual_hit_rate_observed": 0.8068181818181818,
+          "avg_actual_hit_rate_observed": 0.8287293388429752,
+          "monitor_required": false,
           "usage": "Secondary support only. Needs tactical confirmation."
         }
       }
