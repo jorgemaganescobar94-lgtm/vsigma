@@ -1,0 +1,192 @@
+{
+  "market_crosscheck": [
+    {
+      "model_under35_threshold": 0.75,
+      "market_under25_threshold": 0.45,
+      "rows": 539,
+      "actual_under35_rate": 0.8237476808905381,
+      "avg_model_under35_prob": 0.8026485018103877,
+      "avg_market_under25_prob": 0.5813169202226346,
+      "avg_market_over25_prob": 0.4186830426716141
+    },
+    {
+      "model_under35_threshold": 0.75,
+      "market_under25_threshold": 0.5,
+      "rows": 529,
+      "actual_under35_rate": 0.8223062381852552,
+      "avg_model_under35_prob": 0.8033127079926271,
+      "avg_market_under25_prob": 0.5830198865784498,
+      "avg_market_over25_prob": 0.41698007561436673
+    },
+    {
+      "model_under35_threshold": 0.75,
+      "market_under25_threshold": 0.55,
+      "rows": 377,
+      "actual_under35_rate": 0.8355437665782494,
+      "avg_model_under35_prob": 0.815824232255898,
+      "avg_market_under25_prob": 0.6047400530503979,
+      "avg_market_over25_prob": 0.39525994694960215
+    },
+    {
+      "model_under35_threshold": 0.75,
+      "market_under25_threshold": 0.6,
+      "rows": 160,
+      "actual_under35_rate": 0.875,
+      "avg_model_under35_prob": 0.8418354902290611,
+      "avg_market_under25_prob": 0.645631375,
+      "avg_market_over25_prob": 0.354368625
+    },
+    {
+      "model_under35_threshold": 0.8,
+      "market_under25_threshold": 0.45,
+      "rows": 260,
+      "actual_under35_rate": 0.8538461538461538,
+      "avg_model_under35_prob": 0.8333335759361508,
+      "avg_market_under25_prob": 0.6161802692307693,
+      "avg_market_over25_prob": 0.38381973076923076
+    },
+    {
+      "model_under35_threshold": 0.8,
+      "market_under25_threshold": 0.5,
+      "rows": 260,
+      "actual_under35_rate": 0.8538461538461538,
+      "avg_model_under35_prob": 0.8333335759361508,
+      "avg_market_under25_prob": 0.6161802692307693,
+      "avg_market_over25_prob": 0.38381973076923076
+    },
+    {
+      "model_under35_threshold": 0.8,
+      "market_under25_threshold": 0.55,
+      "rows": 245,
+      "actual_under35_rate": 0.8693877551020408,
+      "avg_model_under35_prob": 0.8348322031492694,
+      "avg_market_under25_prob": 0.6210744081632653,
+      "avg_market_over25_prob": 0.3789255918367347
+    },
+    {
+      "model_under35_threshold": 0.8,
+      "market_under25_threshold": 0.6,
+      "rows": 150,
+      "actual_under35_rate": 0.8866666666666667,
+      "avg_model_under35_prob": 0.8454369668862711,
+      "avg_market_under25_prob": 0.6475253333333334,
+      "avg_market_over25_prob": 0.35247466666666666
+    },
+    {
+      "model_under35_threshold": 0.85,
+      "market_under25_threshold": 0.45,
+      "rows": 62,
+      "actual_under35_rate": 0.9354838709677419,
+      "avg_model_under35_prob": 0.8699693569207433,
+      "avg_market_under25_prob": 0.6729037096774194,
+      "avg_market_over25_prob": 0.32709629032258064
+    },
+    {
+      "model_under35_threshold": 0.85,
+      "market_under25_threshold": 0.5,
+      "rows": 62,
+      "actual_under35_rate": 0.9354838709677419,
+      "avg_model_under35_prob": 0.8699693569207433,
+      "avg_market_under25_prob": 0.6729037096774194,
+      "avg_market_over25_prob": 0.32709629032258064
+    },
+    {
+      "model_under35_threshold": 0.85,
+      "market_under25_threshold": 0.55,
+      "rows": 62,
+      "actual_under35_rate": 0.9354838709677419,
+      "avg_model_under35_prob": 0.8699693569207433,
+      "avg_market_under25_prob": 0.6729037096774194,
+      "avg_market_over25_prob": 0.32709629032258064
+    },
+    {
+      "model_under35_threshold": 0.85,
+      "market_under25_threshold": 0.6,
+      "rows": 61,
+      "actual_under35_rate": 0.9344262295081968,
+      "avg_model_under35_prob": 0.8702777029217962,
+      "avg_market_under25_prob": 0.6742893442622951,
+      "avg_market_over25_prob": 0.3257106557377049
+    }
+  ],
+  "league_crosscheck": [
+    {
+      "model_under35_threshold": 0.75,
+      "league_name": "Bundesliga",
+      "rows": 15,
+      "actual_under35_rate": 1.0,
+      "avg_model_under35_prob": 0.7742025210107604,
+      "avg_market_under25_prob": 0.5507446666666667
+    },
+    {
+      "model_under35_threshold": 0.75,
+      "league_name": "La Liga",
+      "rows": 225,
+      "actual_under35_rate": 0.8355555555555556,
+      "avg_model_under35_prob": 0.8183186525577313,
+      "avg_market_under25_prob": 0.6058207111111111
+    },
+    {
+      "model_under35_threshold": 0.75,
+      "league_name": "Ligue 1",
+      "rows": 72,
+      "actual_under35_rate": 0.7638888888888888,
+      "avg_model_under35_prob": 0.7784927889619548,
+      "avg_market_under25_prob": 0.54462
+    },
+    {
+      "model_under35_threshold": 0.75,
+      "league_name": "Premier League",
+      "rows": 22,
+      "actual_under35_rate": 0.8636363636363636,
+      "avg_model_under35_prob": 0.7801086326725873,
+      "avg_market_under25_prob": 0.5652845454545454
+    },
+    {
+      "model_under35_threshold": 0.75,
+      "league_name": "Serie A",
+      "rows": 205,
+      "actual_under35_rate": 0.8146341463414634,
+      "avg_model_under35_prob": 0.7984338395662943,
+      "avg_market_under25_prob": 0.5712687317073171
+    },
+    {
+      "model_under35_threshold": 0.8,
+      "league_name": "La Liga",
+      "rows": 141,
+      "actual_under35_rate": 0.8794326241134752,
+      "avg_model_under35_prob": 0.8416063031167863,
+      "avg_market_under25_prob": 0.6350504255319149
+    },
+    {
+      "model_under35_threshold": 0.8,
+      "league_name": "Ligue 1",
+      "rows": 14,
+      "actual_under35_rate": 0.6428571428571429,
+      "avg_model_under35_prob": 0.8162183844385696,
+      "avg_market_under25_prob": 0.5730364285714286
+    },
+    {
+      "model_under35_threshold": 0.8,
+      "league_name": "Serie A",
+      "rows": 97,
+      "actual_under35_rate": 0.845360824742268,
+      "avg_model_under35_prob": 0.8254709687260532,
+      "avg_market_under25_prob": 0.5967206185567011
+    },
+    {
+      "model_under35_threshold": 0.85,
+      "league_name": "La Liga",
+      "rows": 53,
+      "actual_under35_rate": 0.9622641509433962,
+      "avg_model_under35_prob": 0.8709360190898852,
+      "avg_market_under25_prob": 0.6776790566037736
+    }
+  ],
+  "governance_read": {
+    "p_under35_0_80_plus": "strong candidate gate",
+    "p_under35_0_85_plus": "elite but sample smaller",
+    "requires_market_check": true,
+    "do_not_auto_bet": true
+  }
+}

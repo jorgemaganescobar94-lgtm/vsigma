@@ -1,0 +1,115 @@
+{
+  "rows_train": 7185,
+  "rows_valid": 1797,
+  "overall_valid_under35_rate": 0.6783528102392877,
+  "overall_avg_model_under35_prob": 0.6731049526030438,
+  "buckets": [
+    {
+      "range": "[0.00,0.55)",
+      "rows": 293,
+      "actual_under35_rate": 0.5017064846416383,
+      "avg_model_under35_prob": 0.4877661986732047,
+      "gap_actual_minus_model": 0.013940285968433552
+    },
+    {
+      "range": "[0.55,0.60)",
+      "rows": 189,
+      "actual_under35_rate": 0.5608465608465608,
+      "avg_model_under35_prob": 0.5731981113191028,
+      "gap_actual_minus_model": -0.012351550472541994
+    },
+    {
+      "range": "[0.60,0.65)",
+      "rows": 233,
+      "actual_under35_rate": 0.6051502145922747,
+      "avg_model_under35_prob": 0.6257084192434428,
+      "gap_actual_minus_model": -0.020558204651168088
+    },
+    {
+      "range": "[0.65,0.70)",
+      "rows": 274,
+      "actual_under35_rate": 0.7116788321167883,
+      "avg_model_under35_prob": 0.675678172365156,
+      "gap_actual_minus_model": 0.03600065975163225
+    },
+    {
+      "range": "[0.70,0.75)",
+      "rows": 269,
+      "actual_under35_rate": 0.6914498141263941,
+      "avg_model_under35_prob": 0.7240380564666781,
+      "gap_actual_minus_model": -0.03258824234028401
+    },
+    {
+      "range": "[0.75,0.80)",
+      "rows": 279,
+      "actual_under35_rate": 0.7956989247311828,
+      "avg_model_under35_prob": 0.7740530922308235,
+      "gap_actual_minus_model": 0.02164583250035923
+    },
+    {
+      "range": "[0.80,0.85)",
+      "rows": 198,
+      "actual_under35_rate": 0.8282828282828283,
+      "avg_model_under35_prob": 0.821861765728854,
+      "gap_actual_minus_model": 0.006421062553974233
+    },
+    {
+      "range": "[0.85,1.01)",
+      "rows": 62,
+      "actual_under35_rate": 0.9354838709677419,
+      "avg_model_under35_prob": 0.8699693569207433,
+      "gap_actual_minus_model": 0.0655145140469986
+    }
+  ],
+  "thresholds": [
+    {
+      "threshold": 0.6,
+      "rows": 1315,
+      "actual_under35_rate": 0.7346007604562738,
+      "avg_model_under35_prob": 0.7287601981574983,
+      "gap_actual_minus_model": 0.005840562298775498
+    },
+    {
+      "threshold": 0.65,
+      "rows": 1082,
+      "actual_under35_rate": 0.7624768946395564,
+      "avg_model_under35_prob": 0.7509515701417635,
+      "gap_actual_minus_model": 0.011525324497792866
+    },
+    {
+      "threshold": 0.7,
+      "rows": 808,
+      "actual_under35_rate": 0.7797029702970297,
+      "avg_model_under35_prob": 0.7764774500808607,
+      "gap_actual_minus_model": 0.0032255202161690644
+    },
+    {
+      "threshold": 0.75,
+      "rows": 539,
+      "actual_under35_rate": 0.8237476808905381,
+      "avg_model_under35_prob": 0.8026485018103877,
+      "gap_actual_minus_model": 0.021099179080150354
+    },
+    {
+      "threshold": 0.8,
+      "rows": 260,
+      "actual_under35_rate": 0.8538461538461538,
+      "avg_model_under35_prob": 0.8333335759361508,
+      "gap_actual_minus_model": 0.02051257791000305
+    },
+    {
+      "threshold": 0.85,
+      "rows": 62,
+      "actual_under35_rate": 0.9354838709677419,
+      "avg_model_under35_prob": 0.8699693569207433,
+      "gap_actual_minus_model": 0.0655145140469986
+    }
+  ],
+  "governance_verdict": "UNDER35_BINARY_SHADOW_CANDIDATE",
+  "use_case": [
+    "Validate Under 3.5 only as a robustness gate",
+    "Do not auto-bet from model alone",
+    "Use to support vSIGMA when tactical read and market family agree",
+    "Use to veto overstretched Over/BTTS/builder legs when model_under35_prob is high"
+  ]
+}
