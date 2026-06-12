@@ -64,3 +64,5 @@ data/processed/governance/vsigma_market_governance_summary_*
 data/processed/today/*/vsigma_market_governance_summary_*
 data/processed/governance/vsigma_price_survival_*
 data/processed/today/*/vsigma_price_survival_*
+data/processed/governance/vsigma_final_execution_lock_*
+data/processed/today/*/vsigma_final_execution_lock_*
