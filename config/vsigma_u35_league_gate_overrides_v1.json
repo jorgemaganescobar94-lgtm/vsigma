@@ -1,7 +1,7 @@
-﻿{
+{
   "rule_id": "U35_LEAGUE_GATE_OVERRIDES_V1",
   "status": "PRECISION_FIRST_ACTIVE",
-  "source": "Football-Data UK top5 2020-2025 by-league validation",
+  "source": "Football-Data UK top5 2020-2025 by-league validation + stability splits 70/30,75/25,80/20,85/15",
   "priority": "league_override_beats_global_gate",
   "league_overrides": {
     "SP1": {
@@ -12,6 +12,14 @@
       "market_under25_prob_min": 0.60,
       "validation_rows": 88,
       "actual_under35_rate": 0.8977272727272727,
+      "stability_verdict": "STABLE_PROMOTE",
+      "passing_splits": 4,
+      "ok_splits": 4,
+      "min_threshold_rows_observed": 67,
+      "avg_threshold_rows_observed": 93.75,
+      "min_actual_hit_rate_observed": 0.8955223880597015,
+      "avg_actual_hit_rate_observed": 0.9105110692558627,
+      "monitor_required": false,
       "usage": "Primary U35 validation league. Can validate Under 3.5/protected low-total builders when tactical read agrees."
     },
     "I1": {
@@ -22,7 +30,15 @@
       "market_under25_prob_min": 0.55,
       "validation_rows": 95,
       "actual_under35_rate": 0.8526315789473684,
-      "usage": "Strong but more conservative than La Liga. Validate only with tactical agreement and no lineup shock."
+      "stability_verdict": "PROMOTE_BUT_MONITOR",
+      "passing_splits": 3,
+      "ok_splits": 4,
+      "min_threshold_rows_observed": 56,
+      "avg_threshold_rows_observed": 112.5,
+      "min_actual_hit_rate_observed": 0.8092783505154639,
+      "avg_actual_hit_rate_observed": 0.8458063092405875,
+      "monitor_required": true,
+      "usage": "Strong but more conservative than La Liga. Validate only with tactical agreement, no lineup shock, and monitoring warning active."
     },
     "D1": {
       "league_name": "Bundesliga",
