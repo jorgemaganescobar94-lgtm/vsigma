@@ -2,153 +2,30 @@
 
 ## Summary
 - registry_rules: 19
-- rows_reviewed: 134
-- in_sample_rows: 116
+- rows_reviewed: 0
+- in_sample_rows: 0
 - out_of_sample_rows: 0
-- pending_rows: 18
-- evaluated_rows: 116
+- pending_rows: 0
+- evaluated_rows: 0
 - oos_evaluated_rows: 0
 - oos_hit_rows: 0
 - oos_miss_rows: 0
 - oos_void_rows: 0
 - oos_hit_rate_pct: 
 - oos_hit_or_void_rate_pct: 
-- oos_class_counts: IN_SAMPLE_BOOTSTRAP=116; PENDING_RESULT=18
-- oos_outcome_counts: HIT=76; MISS=32; PENDING_RESULT=18; VOID=8
-- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=134
-- pick_permission_counts: NO_PICK_PERMISSION=134
-- stake_permission_counts: NO_STAKE_PERMISSION=134
+- oos_class_counts: none
+- oos_outcome_counts: none
+- activation_permission_counts: none
+- pick_permission_counts: none
+- stake_permission_counts: none
 - next_action: Collect future OUT_OF_SAMPLE rows. No rule activation before sufficient out-of-sample sample size.
 - auto_apply: NO
 - production_change: NO
 
 ## Market Out-of-Sample Summary
-- API_DNB | oos_evaluated=0 | status=NO_OUT_OF_SAMPLE_YET
-- API_DOUBLE_CHANCE | oos_evaluated=0 | status=NO_OUT_OF_SAMPLE_YET
-- OVER_1_5 | oos_evaluated=0 | status=NO_OUT_OF_SAMPLE_YET
-- UNDER_3_5 | oos_evaluated=0 | status=NO_OUT_OF_SAMPLE_YET
+- none.
 
 ## OOS Rows
-- API_OOS_00001 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Neptūną Klaipėda vs Transinvest 2 | score=3-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00002 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Fjardabyggd / Leiknir vs Fjolnir | score=2-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00003 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Haukar vs Kormákur / Hvöt | score=2-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00004 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Thróttur Vogar vs Vikingur Olafsiik | score=1-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00005 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Damash Gilanian vs Mes Shahr-e Babak | score=0-7 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00006 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Naft Bandar Abbas vs Shahrdari Noshahr | score=1-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00007 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Blumenau vs Jaraguá | score=6-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00008 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Dikaki vs Cercle Mbéri | score=1-4 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00009 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Mangasport vs Bouenguidi | score=3-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00010 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Stade Mandji vs Lozo | score=5-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00011 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Brasil DE Pelotas vs Farroupilha | score=4-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00012 | PENDING_RESULT | first_seen=2026-06-10 | Aigle Royal de Moungo vs PWD Bamenda | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00013 | PENDING_RESULT | first_seen=2026-06-10 | Colombe vs Jeunes Fauves | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00014 | PENDING_RESULT | first_seen=2026-06-10 | Fortuna Mfou vs Stade Renard | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00015 | PENDING_RESULT | first_seen=2026-06-10 | Gazelle vs Cotonsport | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00016 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Gualaceo SC vs Cumbayá | score=1-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00017 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Ind. Juniors vs Deportivo Cuenca Juniors | score=4-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00018 | PENDING_RESULT | first_seen=2026-06-10 | Tupan vs São José MA | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00019 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Amawele vs Madlenya | score=0-1 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00020 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Viva Stumbo vs Magwanyana | score=0-1 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00021 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Dynamos vs Hunters | score=2-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00022 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Kariba vs Herentals | score=0-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00023 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Platinum vs Hardrock | score=0-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00024 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Simba Bhora vs Ngezi Platinum | score=1-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00025 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Afrique Football Élite vs ASKO | score=5-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00026 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Onze Créateurs vs Bakaridjan | score=0-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00027 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Shortan vs Gazalkent | score=0-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00028 | PENDING_RESULT | first_seen=2026-06-10 | WDSC Wolves vs Eastern Suburbs | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00029 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Orebro SK vs GIF Sundsvall | score=0-1 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00030 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Varbergs BoIS FC vs Norrby IF | score=2-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00031 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Excelsior Maassluis vs Ijsselmeervogels | score=2-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00032 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Pirmasens vs VfR Mannheim | score=0-1 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00033 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Malaga vs Las Palmas | score=1-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00034 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Cape Town City vs Magesi | score=1-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00035 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Damash Gilanian vs Mes Shahr-e Babak | score=0-7 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00036 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Dikaki vs Cercle Mbéri | score=1-4 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00037 | PENDING_RESULT | first_seen=2026-06-10 | Aigle Royal de Moungo vs PWD Bamenda | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00038 | PENDING_RESULT | first_seen=2026-06-10 | Fortuna Mfou vs Stade Renard | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00039 | PENDING_RESULT | first_seen=2026-06-10 | Gazelle vs Cotonsport | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00040 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Gualaceo SC vs Cumbayá | score=1-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00041 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Ind. Juniors vs Deportivo Cuenca Juniors | score=4-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00042 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Kariba vs Herentals | score=0-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00043 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Platinum vs Hardrock | score=0-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00044 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Simba Bhora vs Ngezi Platinum | score=1-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00045 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Afrique Football Élite vs ASKO | score=5-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00046 | PENDING_RESULT | first_seen=2026-06-10 | WDSC Wolves vs Eastern Suburbs | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00047 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Excelsior Maassluis vs Ijsselmeervogels | score=2-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00048 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Pirmasens vs VfR Mannheim | score=0-1 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00049 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Cape Town City vs Magesi | score=1-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00050 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Neptūną Klaipėda vs Transinvest 2 | score=3-0 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00051 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Fjardabyggd / Leiknir vs Fjolnir | score=2-3 | market=UNDER_3_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00052 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Haukar vs Kormákur / Hvöt | score=2-2 | market=UNDER_3_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00053 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Thróttur Vogar vs Vikingur Olafsiik | score=1-2 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00054 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Naft Bandar Abbas vs Shahrdari Noshahr | score=1-0 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00055 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Blumenau vs Jaraguá | score=6-0 | market=UNDER_3_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00056 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Mangasport vs Bouenguidi | score=3-2 | market=UNDER_3_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00057 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Stade Mandji vs Lozo | score=5-1 | market=UNDER_3_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00058 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Brasil DE Pelotas vs Farroupilha | score=4-0 | market=UNDER_3_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00059 | PENDING_RESULT | first_seen=2026-06-10 | Colombe vs Jeunes Fauves | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00060 | PENDING_RESULT | first_seen=2026-06-10 | Tupan vs São José MA | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00061 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Amawele vs Madlenya | score=0-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00062 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Viva Stumbo vs Magwanyana | score=0-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00063 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Dynamos vs Hunters | score=2-2 | market=UNDER_3_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00064 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Onze Créateurs vs Bakaridjan | score=0-0 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00065 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Shortan vs Gazalkent | score=0-2 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00066 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Orebro SK vs GIF Sundsvall | score=0-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00067 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Varbergs BoIS FC vs Norrby IF | score=2-0 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00068 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Malaga vs Las Palmas | score=1-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00069 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Neptūną Klaipėda vs Transinvest 2 | score=3-0 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00070 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Haukar vs Kormákur / Hvöt | score=2-2 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00071 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Damash Gilanian vs Mes Shahr-e Babak | score=0-7 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00072 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Brasil DE Pelotas vs Farroupilha | score=4-0 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00073 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Afrique Football Élite vs ASKO | score=5-3 | market=API_DNB | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00074 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Onze Créateurs vs Bakaridjan | score=0-0 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00075 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Shortan vs Gazalkent | score=0-2 | market=API_DNB | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00076 | PENDING_RESULT | first_seen=2026-06-10 | WDSC Wolves vs Eastern Suburbs | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00077 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Varbergs BoIS FC vs Norrby IF | score=2-0 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00078 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Malaga vs Las Palmas | score=1-1 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00079 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Cape Town City vs Magesi | score=1-1 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00080 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Neptūną Klaipėda vs Transinvest 2 | score=3-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00081 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Haukar vs Kormákur / Hvöt | score=2-2 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00082 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Damash Gilanian vs Mes Shahr-e Babak | score=0-7 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00083 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Brasil DE Pelotas vs Farroupilha | score=4-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00084 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Afrique Football Élite vs ASKO | score=5-3 | market=API_DOUBLE_CHANCE | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00085 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Onze Créateurs vs Bakaridjan | score=0-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00086 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Shortan vs Gazalkent | score=0-2 | market=API_DOUBLE_CHANCE | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00087 | PENDING_RESULT | first_seen=2026-06-10 | WDSC Wolves vs Eastern Suburbs | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00088 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Varbergs BoIS FC vs Norrby IF | score=2-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00089 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Malaga vs Las Palmas | score=1-1 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00090 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Cape Town City vs Magesi | score=1-1 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00091 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Neptūną Klaipėda vs Transinvest 2 | score=3-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00092 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Haukar vs Kormákur / Hvöt | score=2-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00093 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Damash Gilanian vs Mes Shahr-e Babak | score=0-7 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00094 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Brasil DE Pelotas vs Farroupilha | score=4-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00095 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Afrique Football Élite vs ASKO | score=5-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00096 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Onze Créateurs vs Bakaridjan | score=0-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00097 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Shortan vs Gazalkent | score=0-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00098 | PENDING_RESULT | first_seen=2026-06-10 | WDSC Wolves vs Eastern Suburbs | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00099 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Varbergs BoIS FC vs Norrby IF | score=2-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00100 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Malaga vs Las Palmas | score=1-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00101 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Cape Town City vs Magesi | score=1-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00102 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Neptūną Klaipėda vs Transinvest 2 | score=3-0 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00103 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Haukar vs Kormákur / Hvöt | score=2-2 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00104 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Damash Gilanian vs Mes Shahr-e Babak | score=0-7 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00105 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Brasil DE Pelotas vs Farroupilha | score=4-0 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00106 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Afrique Football Élite vs ASKO | score=5-3 | market=API_DNB | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00107 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Onze Créateurs vs Bakaridjan | score=0-0 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00108 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Shortan vs Gazalkent | score=0-2 | market=API_DNB | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00109 | PENDING_RESULT | first_seen=2026-06-10 | WDSC Wolves vs Eastern Suburbs | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00110 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Varbergs BoIS FC vs Norrby IF | score=2-0 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00111 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Malaga vs Las Palmas | score=1-1 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00112 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Cape Town City vs Magesi | score=1-1 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00113 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Neptūną Klaipėda vs Transinvest 2 | score=3-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00114 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Haukar vs Kormákur / Hvöt | score=2-2 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00115 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Damash Gilanian vs Mes Shahr-e Babak | score=0-7 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00116 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Brasil DE Pelotas vs Farroupilha | score=4-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00117 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Afrique Football Élite vs ASKO | score=5-3 | market=API_DOUBLE_CHANCE | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00118 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Onze Créateurs vs Bakaridjan | score=0-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00119 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-10 | Shortan vs Gazalkent | score=0-2 | market=API_DOUBLE_CHANCE | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00120 | PENDING_RESULT | first_seen=2026-06-10 | WDSC Wolves vs Eastern Suburbs | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 
 ## Guardrails
 - This tracker separates bootstrap/in-sample rows from future out-of-sample rows.
