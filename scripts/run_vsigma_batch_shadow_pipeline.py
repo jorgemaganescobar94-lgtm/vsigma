@@ -133,13 +133,17 @@ def run_full_pipeline(input_row: dict[str, str], processed_dir: Path, skip_confi
 
 
 def normalize_result(input_row: dict[str, str], pipeline_row: dict[str, str], index: int, stdout: str, stderr: str) -> dict[str, object]:
+    report_slug = clean(f"{input_row.get('home', '')}_vs_{input_row.get('away', '')}")
+    report_market = clean(input_row.get("market_family", ""))
+    report_hint = f"data/processed/today/{input_row.get('date', '')}/vsigma_full_shadow_pipeline_{report_slug}_{report_market}.md"
+
     if not pipeline_row:
         verdict = "PIPELINE_ERROR"
         return {
             "rank": "",
             "input_index": index,
             "date": input_row.get("date", ""),
-            "fixture": clean(f"{input_row.get('home', '')}_vs_{input_row.get('away', '')}").replace("_", " "),
+            "fixture": report_slug.replace("_", " "),
             "home": input_row.get("home", ""),
             "away": input_row.get("away", ""),
             "market_family": input_row.get("market_family", ""),
@@ -157,6 +161,7 @@ def normalize_result(input_row: dict[str, str], pipeline_row: dict[str, str], in
             "priority_score": VERDICT_PRIORITY[verdict],
             "error": stderr,
             "stdout_tail": stdout[-600:],
+            "report_hint": report_hint,
             "auto_bet": "NO",
             "production_change": "NO",
         }
@@ -185,7 +190,7 @@ def normalize_result(input_row: dict[str, str], pipeline_row: dict[str, str], in
         "priority_score": priority,
         "error": stderr,
         "stdout_tail": stdout[-600:],
-        "report_hint": f"data/processed/today/{input_row.get('date','')}/vsigma_full_shadow_pipeline_{clean(f'{input_row.get('home','')}_vs_{input_row.get('away','')}')}_{clean(input_row.get('market_family',''))}.md",
+        "report_hint": report_hint,
         "auto_bet": "NO",
         "production_change": "NO",
     }
@@ -213,9 +218,9 @@ def section(title: str, rows: list[dict[str, object]]) -> list[str]:
         return lines
     for row in rows:
         lines.append(
-            f"{row.get('rank')}. {row.get('fixture')} — {row.get('selected_market') or row.get('market_family')} "
-            f"@{row.get('selected_odds') or row.get('odds')} — {row.get('pipeline_final_verdict')} — "
-            f"EV {row.get('selected_expected_roi')} — edge {row.get('selected_edge_prob')} — monitor {row.get('monitor_required')}"
+            f"{row.get('rank')}. {row.get('fixture')} -- {row.get('selected_market') or row.get('market_family')} "
+            f"@{row.get('selected_odds') or row.get('odds')} -- {row.get('pipeline_final_verdict')} -- "
+            f"EV {row.get('selected_expected_roi')} -- edge {row.get('selected_edge_prob')} -- monitor {row.get('monitor_required')}"
         )
     lines.append("")
     return lines
@@ -228,7 +233,7 @@ def md(batch_name: str, rows: list[dict[str, object]]) -> str:
     errors = [r for r in rows if str(r.get("pipeline_final_verdict")) == "PIPELINE_ERROR"]
 
     lines = [
-        f"# vSIGMA Batch Shadow Pipeline — {batch_name}",
+        f"# vSIGMA Batch Shadow Pipeline - {batch_name}",
         "",
         f"- candidates: {len(rows)}",
         f"- executable: {len(executable)}",
@@ -275,7 +280,7 @@ def run(args: argparse.Namespace) -> None:
     for idx, row in enumerate(rows, start=1):
         fixture = f"{row.get('home')} vs {row.get('away')}"
         market = row.get("market_family", "")
-        print(f"\n### [{idx}/{len(rows)}] {fixture} — {market} @{row.get('odds')}")
+        print(f"\n### [{idx}/{len(rows)}] {fixture} -- {market} @{row.get('odds')}")
         pipeline_row, stdout, stderr = run_full_pipeline(row, processed_dir, args.skip_confirmation)
         result = normalize_result(row, pipeline_row, idx, stdout, stderr)
         results.append(result)
