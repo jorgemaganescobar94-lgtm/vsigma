@@ -1,1 +1,5 @@
 fixture_id,home_team,away_team,tie_state_label,market_family_hint,vsigma_pre_score,vsigma_priority,tie_adjustment_note
+1522822,Džiugas Telšiai,Šiauliai,,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,21.0,NO_DATA_BLOCKED,
+1522823,FK Zalgiris Vilnius,FK Trakai,,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,21.0,NO_DATA_BLOCKED,
+1522825,Panevėžys,TransINVEST Vilnius,,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,21.0,NO_DATA_BLOCKED,
+1520721,Atletico Goianiense,CRB,,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,21.0,NO_DATA_BLOCKED,

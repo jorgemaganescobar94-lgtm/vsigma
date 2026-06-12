@@ -2,4 +2,13 @@ vSIGMA API league coverage matrix
 
 Source: official API-Football /leagues coverage metadata. Historical runs use current retrieved metadata for the requested season and do not claim exact coverage drift.
 
-No accepted leagues were available for coverage classification.
+Data-rich / good leagues:
+country  league  season league_coverage_class  league_data_reliability_score  league_has_fixture_stats_coverage  league_has_odds_coverage  league_has_injuries_coverage  league_has_lineups_coverage league_coverage_source_status
+ Brazil Serie B    2026         COVERAGE_RICH                           0.95                                  1                         1                             0                            1                  OFFICIAL_API
+
+Partial leagues:
+  country league  season league_coverage_class  league_data_reliability_score  league_has_fixture_stats_coverage  league_has_odds_coverage  league_has_injuries_coverage  league_has_lineups_coverage league_coverage_source_status
+Lithuania A Lyga    2026      COVERAGE_PARTIAL                            0.7                                  0                         1                             0                            1                  OFFICIAL_API
+
+Thin / minimal leagues:
+None
