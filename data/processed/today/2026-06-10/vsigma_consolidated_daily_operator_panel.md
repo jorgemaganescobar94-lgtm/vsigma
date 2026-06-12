@@ -115,7 +115,7 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1631
+- files_scanned: 1636
 - accepted_rows: 122
 - rejected_rows: 777
 - next_action: Review accepted rows, then feed normal scoring gates.

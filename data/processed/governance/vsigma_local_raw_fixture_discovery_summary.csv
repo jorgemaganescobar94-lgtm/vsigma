@@ -1,2 +1,2 @@
 target_date,generated_at,overall_status,files_scanned,accepted_rows,rejected_rows,next_action,auto_apply,production_change
-2026-06-10,2026-06-12T01:24:01+01:00,LOCAL_RAW_CANDIDATES_FOUND,1631,122,777,"Review accepted rows, then feed normal scoring gates.",NO,NO
+2026-06-10,2026-06-12T12:51:38+01:00,LOCAL_RAW_CANDIDATES_FOUND,1636,122,777,"Review accepted rows, then feed normal scoring gates.",NO,NO

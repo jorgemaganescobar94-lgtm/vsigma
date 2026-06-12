@@ -2,10 +2,10 @@
 
 ## Summary
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1631
+- files_scanned: 1636
 - accepted_rows: 122
 - rejected_rows: 777
-- source_status_counts: NO_SAME_DAY_ROWS=1141; EMPTY_OR_UNREADABLE=420; NO_ACCEPTED_ROWS=68; HAS_ACCEPTED_ROWS=2
+- source_status_counts: NO_SAME_DAY_ROWS=1147; EMPTY_OR_UNREADABLE=419; NO_ACCEPTED_ROWS=68; HAS_ACCEPTED_ROWS=2
 - next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO
@@ -145,6 +145,7 @@
 - data/processed/candidate_v7_historical/vsigma_candidate_v7_historical_price_guard_rows.csv | status=NO_SAME_DAY_ROWS | rows=22 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_adhoc_fixture_forecast_mexico_vs_south_africa.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_adhoc_match_stat_forecast_mexico_vs_south_africa.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_adhoc_postmatch_learning_all_2026-06-11.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_calibration_rule_candidates.csv | status=NO_ACCEPTED_ROWS | rows=77 | same_day=77 | accepted=0 | rejected=77 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv | status=HAS_ACCEPTED_ROWS | rows=34 | same_day=34 | accepted=34 | rejected=0 | detail=local source contains accepted raw fixture rows
 - data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=NO_ACCEPTED_ROWS | rows=95 | same_day=95 | accepted=0 | rejected=95 | detail=target-date rows exist but are blocked or missing identity
@@ -214,7 +215,6 @@
 - data/processed/historical/2026-04-27/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=30 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-27/vsigma_deep_analysis_candidates.csv | status=NO_SAME_DAY_ROWS | rows=21 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-27/vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/historical/2026-04-27/vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 
 ## Guardrails
 - Local discovery does not call APIs, touch secrets, increase spend, create picks or bypass No Bet.
