@@ -223,4 +223,4 @@ if __name__ == "__main__":
     parser.add_argument("--l2", type=float, default=0.001)
     parser.add_argument("--ridge-alpha", type=float, default=5.0)
     args = parser.parse_args()
-    train(args.dataset, args.model_out, args.metrics_out, args.min_rows, args.lr, args.l2, args.ridge_alpha)
+    train(args.dataset, args.model_out, args.metrics_out, args.min_rows, args.epochs, args.lr, args.l2, args.ridge_alpha)
