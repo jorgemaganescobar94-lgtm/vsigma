@@ -2,16 +2,16 @@
 
 ## Summary
 - api_status: OK
-- subscription_plan: Pro
-- subscription_active: YES
-- subscription_end: 2026-07-08T14:59:54+00:00
-- requests_current: 593
-- requests_limit_day: 7500
-- requests_remaining: 6907
-- api_calls_allowed: YES
-- executor_mode: PRO_CONTROLLED_EXECUTION
-- recommended_executor_limit: 250
-- guard_reason: pro plan detected; limit executor to 250 fixtures
+- subscription_plan: UNKNOWN
+- subscription_active: NO
+- subscription_end: 
+- requests_current: 0
+- requests_limit_day: 0
+- requests_remaining: 0
+- api_calls_allowed: NO
+- executor_mode: SKIP_API_EXECUTION
+- recommended_executor_limit: 0
+- guard_reason: subscription not active
 - auto_apply: NO
 - production_change: NO
 
