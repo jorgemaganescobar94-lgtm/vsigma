@@ -5,6 +5,11 @@ from pathlib import Path
 
 import pandas as pd
 
+try:
+    from deep_analysis_candidates import DEEP_ANALYSIS_OUTPUT_COLUMNS
+except ModuleNotFoundError:
+    from scripts.deep_analysis_candidates import DEEP_ANALYSIS_OUTPUT_COLUMNS
+
 
 DEFAULT_SOURCE_CSV = Path("data/processed/vsigma_deep_analysis_candidates.csv")
 DEFAULT_OUTPUT_DIR = Path("data/processed")
@@ -321,15 +326,86 @@ def build_governance_summary(df: pd.DataFrame) -> pd.DataFrame:
     return summary[existing]
 
 
+def load_source_candidates(source_csv: Path) -> pd.DataFrame:
+    """Load the deep candidates CSV, returning an empty frame when the file is
+    absent or has no rows (legitimate NO_BET day with zero candidates)."""
+    if not source_csv.exists():
+        return pd.DataFrame()
+    try:
+        return pd.read_csv(source_csv)
+    except pd.errors.EmptyDataError:
+        return pd.DataFrame()
+
+
+def build_no_bet_summary() -> pd.DataFrame:
+    """Coherent governance summary for a zero-candidate NO_BET day: exactly one
+    'overall' row with rows_total == 0."""
+    row = {
+        "summary_scope": "overall",
+        "final_execution_bucket": pd.NA,
+        "production_governance_status": pd.NA,
+        "final_recommendation": "NO_BET",
+        "execution_verdict": "NO_BET",
+        "production_governance_best_evidence_tier": pd.NA,
+        "rows_total": 0,
+        "base_actionable_rows": 0,
+        "final_actionable_rows": 0,
+        "bet_rows": 0,
+        "lean_play_rows": 0,
+        "avg_selection_score": pd.NA,
+        "avg_primary_edge": pd.NA,
+        "avg_production_governance_rule_count": pd.NA,
+        "avg_production_governance_premium_rule_count": pd.NA,
+        "avg_production_governance_standard_rule_count": pd.NA,
+        "avg_production_governance_generic_rule_count": pd.NA,
+    }
+    return pd.DataFrame([row])
+
+
+def generate_empty_no_bet_exports(
+    output_dir: Path,
+) -> tuple[dict[str, Path], pd.DataFrame, pd.DataFrame]:
+    """Write the full set of empty execution exports plus a NO_BET governance
+    summary, so downstream validation and the pipeline succeed with exit 0 on a
+    zero-candidate day.
+
+    The empty exports are derived through the exact same code path as a normal
+    day: a 0-row frame carrying the full deep-analysis schema is run through
+    add_final_execution_buckets, so every export carries the identical column
+    set (header) it would on a real day, only with 0 rows."""
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    exported = add_final_execution_buckets(pd.DataFrame(columns=DEEP_ANALYSIS_OUTPUT_COLUMNS))
+
+    paths: dict[str, Path] = {}
+    for bucket, filename in OUTPUT_FILENAMES.items():
+        bucket_path = output_dir / filename
+        exported[exported["final_execution_bucket"] == bucket].to_csv(bucket_path, index=False)
+        paths[bucket] = bucket_path
+
+    approved_path = output_dir / APPROVED_CSV
+    exported[
+        exported["final_execution_bucket"].isin({"APPROVED_PREMIUM", "APPROVED_STANDARD"})
+    ].to_csv(approved_path, index=False)
+    paths["APPROVED"] = approved_path
+
+    summary = build_no_bet_summary()
+    summary_path = output_dir / SUMMARY_CSV
+    summary.to_csv(summary_path, index=False)
+    paths["SUMMARY"] = summary_path
+
+    return paths, exported, summary
+
+
 def generate_final_execution_exports(
     source_csv: Path = DEFAULT_SOURCE_CSV,
     output_dir: Path = DEFAULT_OUTPUT_DIR,
 ) -> tuple[dict[str, Path], pd.DataFrame, pd.DataFrame]:
-    if not source_csv.exists():
-        raise FileNotFoundError(f"Deep analysis candidates CSV does not exist: {source_csv}")
+    source = load_source_candidates(source_csv)
+    if source.empty:
+        return generate_empty_no_bet_exports(output_dir)
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    source = pd.read_csv(source_csv)
     exported = add_final_execution_buckets(source)
 
     paths: dict[str, Path] = {}
@@ -374,6 +450,8 @@ def main() -> None:
     )
 
     print("\n=== FINAL EXECUTION EXPORTS COMPLETADO ===")
+    if exported.empty:
+        print("DAY_STATUS: NO_BET (0 candidatos; exports vacios generados)")
     for key in [
         "APPROVED_PREMIUM",
         "APPROVED_STANDARD",
