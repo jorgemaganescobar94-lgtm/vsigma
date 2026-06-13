@@ -1,2 +1,2 @@
 target_date,generated_at,rules_available,candidate_rules_applied,shadow_rows,finished_shadow_rows,pending_shadow_rows,hit_rows,miss_rows,void_rows,not_evaluated_rows,shadow_outcome_counts,rule_market_counts,rule_decision_counts,paper_trade_permission_counts,activation_permission_counts,pick_permission_counts,stake_permission_counts,next_action,auto_apply,production_change
-2026-06-10,2026-06-12T22:04:53+01:00,77,9,0,0,0,0,0,0,0,none,none,none,none,none,none,none,"Track shadow outcomes over future runs. This ledger cannot activate rules, picks, or stake.",NO,NO
+2026-06-10,2026-06-13T11:12:57+01:00,77,9,0,0,0,0,0,0,0,none,none,none,none,none,none,none,"Track shadow outcomes over future runs. This ledger cannot activate rules, picks, or stake.",NO,NO
