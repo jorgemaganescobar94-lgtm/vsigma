@@ -1,2 +1,2 @@
 date,timezone,mode,baseline_competition_rows,candidate_v2_competition_rows,candidate_v6_competition_rows,rows_processed,cache_hits,cache_misses,api_calls_made,api_errors,plan_limit_errors,available_rows,aligned_rows,disagreement_rows,prediction_adjusted_rows,prediction_strengthened_rows,prediction_weakened_rows,prediction_secondary_rows,official_baseline_preserved,candidate_v2_preserved,run_finished_at
-2026-06-13,Atlantic/Canary,SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2026-06-13T15:41:27.987041+00:00
+2026-06-13,Atlantic/Canary,SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2026-06-13T16:54:27.236817+00:00
