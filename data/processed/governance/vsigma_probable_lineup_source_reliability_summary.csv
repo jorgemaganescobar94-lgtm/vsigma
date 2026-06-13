@@ -1,2 +1,2 @@
 target_date,generated_at,sources_reviewed,sample_gate_counts,verdict_counts,recommended_action_counts,auto_apply,production_change
-2026-06-10,2026-06-12T23:55:20+01:00,15,INSUFFICIENT_SAMPLE=15,HOLD_SAMPLE=15,KEEP_ACTIVE_COLLECT_MORE_DATA=15,NO,NO
+2026-06-10,2026-06-13T01:08:56+01:00,15,INSUFFICIENT_SAMPLE=15,HOLD_SAMPLE=15,KEEP_ACTIVE_COLLECT_MORE_DATA=15,NO,NO
