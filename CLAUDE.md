@@ -119,3 +119,28 @@ git push origin main
 - Do not promote a market because it “sounds good.”
 - Do not create new API extractors if existing API board/pipeline can be used.
 - Do not alter thresholds/gates without a documented governance reason and review trail.
+
+## Niveles de autonomía (verde / amarillo / rojo)
+
+Define qué puede hacer Claude Code sin aprobación previa de Jorge. Aplica a toda sesión.
+
+**🟢 VERDE — autónomo total, sin pedir permiso.** Solo lectura y trabajo que no cambia comportamiento del sistema:
+- Diagnóstico, healthchecks, git status/git log, lectura de outputs y reports.
+- Auditoría de scripts y workflows en modo lectura.
+- Generación de reports de gobernanza.
+- Correcciones documentales menores (typos, docs) dentro de la allowlist del guardrail.
+
+**🟡 AMARILLO — autónomo hasta el push, con PARADA AUTOMÁTICA obligatoria.** Solo para cambios de bajo riesgo ya auditados y aprobados explícitamente en la conversación previa:
+- Aplicar un diff concreto previamente revisado, validarlo, commitear con archivos explícitos y pushear.
+- Si algo no casa (diff no aplica limpio, tests fallan, push rechazado): DETENERSE, no improvisar, reportar.
+- Nunca git add .; siempre archivos explícitos.
+
+**🔴 ROJO — SIEMPRE requiere aprobación explícita de Jorge antes de aplicar.** Propuesta primero, Jorge aprueba, luego se aplica:
+- Cualquier cambio a vsigma_production.yml, incluida su cadencia/schedule.
+- Thresholds, gates, fórmulas, lógica de scoring/selección, registry.
+- Cualquier cosa relacionada con apuestas, stakes o ejecución de dinero (auto_bet: NO es absoluto).
+- .env, .env.local, secrets, credenciales de API.
+- Cambios a la lógica de seguridad del automerge (guardrail, allowlist).
+- Forzar la API de fútbol cuando la cuota pueda estar agotada.
+
+**Regla de oro:** ante la duda de si algo es amarillo o rojo, es rojo. La autonomía nunca elimina la barrera humana en lo irreversible o en lo que toca dinero.
