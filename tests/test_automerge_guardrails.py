@@ -5,12 +5,16 @@ def test_allows_daily_command_center_script() -> None:
     assert evaluate_files(["scripts/build_daily_command_center.py"]) == []
 
 
-def test_allows_daily_command_center_test_file() -> None:
-    assert evaluate_files(["tests/test_daily_command_center.py"]) == []
+def test_blocks_tests_dir_changes() -> None:
+    failures = evaluate_files(["tests/test_daily_command_center.py"])
+    assert failures
+    assert "allowlist" in failures[0]
 
 
-def test_allows_github_workflow_changes() -> None:
-    assert evaluate_files([".github/workflows/vsigma_production.yml"]) == []
+def test_blocks_github_workflow_changes() -> None:
+    failures = evaluate_files([".github/workflows/vsigma_production.yml"])
+    assert failures
+    assert "allowlist" in failures[0]
 
 
 def test_blocks_data_processed_changes() -> None:

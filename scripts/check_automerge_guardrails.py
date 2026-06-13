@@ -11,8 +11,6 @@ from pathlib import Path
 from typing import Iterable, List, Sequence
 
 ALLOWED_PREFIXES = (
-    ".github/workflows/",
-    "tests/",
     "docs/",
     ".codex/",
 )
@@ -21,7 +19,6 @@ ALLOWED_EXACT_FILES = {
     "scripts/build_autonomous_monitoring_summary.py",
     "scripts/dispatch_autonomous_monitoring_notification.py",
     "scripts/build_daily_command_center.py",
-    "scripts/check_automerge_guardrails.py",
     "README.md",
     "AGENTS.md",
 }

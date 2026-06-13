@@ -76,11 +76,23 @@ jobs:
       - name: Install test dependencies
         run: python -m pip install --upgrade pip pytest
 
-      - name: Run automerge guardrails
+      - name: Run automerge guardrails (trusted copy from base branch)
+        env:
+          BASE_REF: origin/${{ github.base_ref }}
+          HEAD_REF: origin/${{ github.head_ref }}
         run: |
-          python scripts/check_automerge_guardrails.py \
-            --base-ref "origin/${{ github.base_ref }}" \
-            --head-ref "origin/${{ github.head_ref }}"
+          set -euo pipefail
+          # origin/<base> ya está disponible porque el Checkout usa fetch-depth: 0
+          # (de hecho el propio --base-ref lo usa para el git diff base...head).
+          # Extraemos el guardrail DE LA BASE a un archivo temporal y ejecutamos ESE,
+          # nunca la copia del árbol del PR (HEAD), para que un PR no pueda
+          # autovalidarse con un guardrail manipulado.
+          GUARD="$(mktemp)"
+          if ! git show "${BASE_REF}:scripts/check_automerge_guardrails.py" > "${GUARD}"; then
+            echo "::error::check_automerge_guardrails.py no existe en la base (${BASE_REF}); se rechaza el automerge (fail-closed)."
+            exit 1
+          fi
+          python "${GUARD}" --base-ref "${BASE_REF}" --head-ref "${HEAD_REF}"
 
       - name: Run relevant tests
         run: python -m pytest tests/test_automerge_guardrails.py -q
