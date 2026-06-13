@@ -2,7 +2,7 @@
 
 ## Status
 - Auto status: NO_BET
-- PRE refreshed: NO
+- PRE refreshed: YES
 - Candidates reviewed: 0
 - Executable picks: 0
 - Waiting picks: 0
@@ -20,9 +20,9 @@ _No rows._
 ## Technical Warnings
 - healthcheck_status: WARNING
 - pre_refresh_attempted: YES
-- pre_refresh_failed: YES
+- pre_refresh_failed: NO
 - pre_refresh_skipped_reason: none
-- pre_refresh_error: scripts/run_daily_competition_controller.py exited with 1
+- pre_refresh_error: none
 - prelock_failed: NO
 - prelock_error: none
 - audit_failed: NO
@@ -31,11 +31,11 @@ _No rows._
 ## Technical Notes
 - Timezone: Atlantic/Canary
 - Window minutes: 90
-- PRE refreshed by auto controller: NO
+- PRE refreshed by auto controller: YES
 - PRE refresh reasons: health summary reports ledger has no rows for target date; missing snapshot official top: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-13/vsigma_today_competition_top.csv; text trigger: Morning official picks reviewed: 0; text trigger: ledger has no rows for target date
 - PRELOCK retained no rows: YES
 - PRELOCK unavailable rows: 0
-- Candidate source used: /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_competition_top.csv
+- Candidate source used: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-13/vsigma_today_competition_top.csv
 - Global candidate fallback: /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_competition_top.csv
 - PRELOCK source: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-13/vsigma_today_prelock_competition_top.csv
 - Audit source: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-13/vsigma_prelock_exclusion_audit.csv
