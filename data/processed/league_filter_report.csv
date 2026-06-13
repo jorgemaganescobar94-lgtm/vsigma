@@ -9,7 +9,6 @@ Austria,Landesliga - Vorarlbergliga,REJECT,hard_reject_noise_league,7
 Bolivia,Primera División,REJECT,country_league_not_allowlisted,6
 Norway,Toppserien,REJECT,country_league_not_allowlisted,6
 Turkmenistan,Ýokary Liga,REJECT,country_league_not_allowlisted,4
-Argentina,Torneo Promocional Amateur,REJECT,hard_reject_noise_league,3
 Brazil,Brasiliense U20,REJECT,hard_reject_noise_league,2
 Canada,Northern Super League,REJECT,country_league_not_allowlisted,2
 Peru,Liga Women,REJECT,hard_reject_noise_league,2
