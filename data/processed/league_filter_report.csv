@@ -11,14 +11,10 @@ Norway,Toppserien,REJECT,country_league_not_allowlisted,6
 Brazil,Baiano U20,REJECT,hard_reject_noise_league,4
 Turkmenistan,Ýokary Liga,REJECT,country_league_not_allowlisted,4
 Argentina,Torneo Promocional Amateur,REJECT,hard_reject_noise_league,3
-Brazil,Serie D,REJECT,country_league_not_allowlisted,3
-Argentina,Primera Nacional,REJECT,country_league_not_allowlisted,2
 Brazil,Brasiliense U20,REJECT,hard_reject_noise_league,2
-Brazil,Mineiro - 2,REJECT,country_league_not_allowlisted,2
 Canada,Northern Super League,REJECT,country_league_not_allowlisted,2
-Chile,Primera División,REJECT,country_league_not_allowlisted,2
 Peru,Liga Women,REJECT,hard_reject_noise_league,2
-World,World Cup,REJECT,country_league_not_allowlisted,2
+Argentina,Primera Nacional,REJECT,country_league_not_allowlisted,1
 Argentina,Torneo Federal A,REJECT,country_league_not_allowlisted,1
 Australia,Capital Territory NPL,REJECT,country_league_not_allowlisted,1
 Australia,Queensland NPL,REJECT,country_league_not_allowlisted,1
@@ -31,14 +27,13 @@ Bhutan,Premier League,REJECT,country_league_not_allowlisted,1
 Brazil,Catarinense U20,REJECT,hard_reject_noise_league,1
 Brazil,Maranhense - 2,REJECT,country_league_not_allowlisted,1
 Brazil,Paranaense U20,REJECT,hard_reject_noise_league,1
+Chile,Primera División,REJECT,country_league_not_allowlisted,1
 Finland,Kansallinen Liiga,REJECT,country_league_not_allowlisted,1
 Morocco,Botola 2,REJECT,country_league_not_allowlisted,1
 Peru,Copa De La Liga,REJECT,country_league_not_allowlisted,1
-Spain,Primera División RFEF - Play Offs,REJECT,country_league_not_allowlisted,1
 Tajikistan,Vysshaya Liga,REJECT,country_league_not_allowlisted,1
 USA,MLS Next Pro,REJECT,hard_reject_noise_league,1
 USA,USL Championship,REJECT,country_league_not_allowlisted,1
 USA,USL League One,REJECT,country_league_not_allowlisted,1
-Uruguay,Segunda División,REJECT,country_league_not_allowlisted,1
 World,Friendlies Clubs,REJECT,hard_reject_noise_league,1
-Brazil,Serie C,TIER_3,brazil_serie_c_noisy,1
+World,World Cup,REJECT,country_league_not_allowlisted,1
