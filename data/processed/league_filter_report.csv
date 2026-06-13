@@ -1,6 +1,6 @@
 country,league,league_tier,league_filter_reason,matches
 USA,USL W League,REJECT,country_league_not_allowlisted,20
-USA,USL League Two,REJECT,country_league_not_allowlisted,14
+USA,USL League Two,REJECT,country_league_not_allowlisted,13
 Benin,Championnat National,REJECT,country_league_not_allowlisted,9
 Austria,Landesliga - Oberosterreich,REJECT,hard_reject_noise_league,8
 Austria,Landesliga - Salzburg,REJECT,hard_reject_noise_league,8
@@ -8,14 +8,11 @@ Austria,Landesliga - Tirol,REJECT,hard_reject_noise_league,7
 Austria,Landesliga - Vorarlbergliga,REJECT,hard_reject_noise_league,7
 Bolivia,Primera División,REJECT,country_league_not_allowlisted,6
 Norway,Toppserien,REJECT,country_league_not_allowlisted,6
-Brazil,Baiano U20,REJECT,hard_reject_noise_league,4
 Turkmenistan,Ýokary Liga,REJECT,country_league_not_allowlisted,4
 Argentina,Torneo Promocional Amateur,REJECT,hard_reject_noise_league,3
 Brazil,Brasiliense U20,REJECT,hard_reject_noise_league,2
 Canada,Northern Super League,REJECT,country_league_not_allowlisted,2
 Peru,Liga Women,REJECT,hard_reject_noise_league,2
-Argentina,Primera Nacional,REJECT,country_league_not_allowlisted,1
-Argentina,Torneo Federal A,REJECT,country_league_not_allowlisted,1
 Australia,Capital Territory NPL,REJECT,country_league_not_allowlisted,1
 Australia,Queensland NPL,REJECT,country_league_not_allowlisted,1
 Australia,South Australia State League 1,REJECT,country_league_not_allowlisted,1
@@ -26,11 +23,8 @@ Australia,Western Australia NPL,REJECT,country_league_not_allowlisted,1
 Bhutan,Premier League,REJECT,country_league_not_allowlisted,1
 Brazil,Catarinense U20,REJECT,hard_reject_noise_league,1
 Brazil,Maranhense - 2,REJECT,country_league_not_allowlisted,1
-Brazil,Paranaense U20,REJECT,hard_reject_noise_league,1
 Chile,Primera División,REJECT,country_league_not_allowlisted,1
 Finland,Kansallinen Liiga,REJECT,country_league_not_allowlisted,1
-Morocco,Botola 2,REJECT,country_league_not_allowlisted,1
-Peru,Copa De La Liga,REJECT,country_league_not_allowlisted,1
 Tajikistan,Vysshaya Liga,REJECT,country_league_not_allowlisted,1
 USA,MLS Next Pro,REJECT,hard_reject_noise_league,1
 USA,USL Championship,REJECT,country_league_not_allowlisted,1

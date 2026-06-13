@@ -6,4 +6,4 @@ Activation: event API is used only when official league coverage says events are
 Missing or unsupported event coverage is uncertainty, not weakness; it does not create a penalty.
 
  rows_processed  clean_rows  mixed_rows  polluted_rows  unknown_event_rows  home_anomalies  away_anomalies  event_fixture_requests  event_api_calls  event_cache_hits  event_errors  event_coverage_unknown  event_coverage_unsupported                 generated_at_utc
-              0           0           0              0                   0               0               0                       0                0                 0             0                       0                           0 2026-06-13T19:20:57.219212+00:00
+              0           0           0              0                   0               0               0                       0                0                 0             0                       0                           0 2026-06-13T20:46:04.663710+00:00
