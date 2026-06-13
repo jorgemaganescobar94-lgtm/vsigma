@@ -101,44 +101,44 @@
 - next_action: Build missing required upstream component first: real_objective_context_gate.
 
 ## Real Shortlist Recovery Diagnostic
-- overall_status: FILTERS_TOO_STRICT_OR_SELECTOR_NOT_RUN
-- root_cause: scoring has same-day rows but real shortlist/bets outputs are absent or empty
-- root_scored_same_day_rows: 3
+- overall_status: SCORING_SOURCE_EMPTY_FOR_DATE
+- root_cause: scored source exists but has no rows for target date
+- root_scored_same_day_rows: 0
 - real_shortlist_rows: 0
 - real_bet_rows: 0
 - proxy_rows: 0
-- next_action: Run/repair real selection step from scored matches into shortlist/bets-only outputs.
+- next_action: Refresh/fix scoring source date coverage.
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
 - files_scanned: 1695
-- accepted_rows: 232
-- rejected_rows: 18
+- accepted_rows: 112
+- rejected_rows: 0
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
-- rows_reviewed: 232
-- trusted_rows: 3
+- rows_reviewed: 112
+- trusted_rows: 0
 - quarantine_rows: 0
-- blocked_rows: 229
-- trust_status_counts: REJECTED_SOURCE_BLOCK=229; TRUSTED_RAW_SOURCE=3
+- blocked_rows: 112
+- trust_status_counts: REJECTED_SOURCE_BLOCK=112
 - next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
 
 ## Trusted Raw Candidate Promotion Gate
-- rows_reviewed: 232
+- rows_reviewed: 112
 - promoted_rows: 0
-- blocked_rows: 3
+- blocked_rows: 0
 - quarantine_rows: 0
-- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=229; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=3
+- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=112
 - next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 
 ## Scoring Gap Explainer
-- rows_reviewed: 232
+- rows_reviewed: 112
 - missing_scored_rows: 0
-- no_data_blocked_rows: 3
-- not_trusted_rows: 229
+- no_data_blocked_rows: 0
+- not_trusted_rows: 112
 - promoted_rows: 0
-- gap_status_counts: NOT_TRUSTED_SKIPPED=229; SCORED_ROW_NO_DATA_BLOCKED=3
+- gap_status_counts: NOT_TRUSTED_SKIPPED=112
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 
 ## Trusted Raw Scoring Queue
@@ -171,9 +171,9 @@
 
 ## Daily Board Self-Heal
 - self_heal_status: EMPTY_BY_PROMOTION_GATE
-- promotion_rows_reviewed: 232
+- promotion_rows_reviewed: 112
 - promoted_rows: 0
-- blocked_rows: 3
+- blocked_rows: 0
 - quarantine_rows: 0
 - board_rows_written: 1_DIAGNOSTIC_ROW
 - reason: 0 promoted raw candidates; no scoring-safe rows available
