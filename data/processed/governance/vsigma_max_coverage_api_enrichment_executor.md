@@ -1,7 +1,7 @@
 # vSIGMA Max-Coverage API Enrichment Executor - 2026-06-10
 
 ## Summary
-- executor_status: DRY_RUN_READY
+- executor_status: EXECUTION_COMPLETE
 - policy_rows_reviewed: 95
 - rows_selected: 0
 - rows_executed: 0
@@ -14,7 +14,7 @@
 - endpoint_success_counts: none
 - endpoint_failure_counts: none
 - external_calls_allowed: NO_ROWS
-- external_calls_executed: NO_DRY_RUN
+- external_calls_executed: YES_LOGGED_EXECUTION
 - auto_apply: NO
 - production_change: NO
 
