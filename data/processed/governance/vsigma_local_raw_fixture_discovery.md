@@ -5,7 +5,7 @@
 - files_scanned: 1695
 - accepted_rows: 122
 - rejected_rows: 519
-- source_status_counts: NO_SAME_DAY_ROWS=1154; EMPTY_OR_UNREADABLE=483; NO_ACCEPTED_ROWS=55; HAS_ACCEPTED_ROWS=3
+- source_status_counts: NO_SAME_DAY_ROWS=1146; EMPTY_OR_UNREADABLE=491; NO_ACCEPTED_ROWS=55; HAS_ACCEPTED_ROWS=3
 - next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO

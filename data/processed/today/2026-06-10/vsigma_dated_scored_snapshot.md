@@ -2,7 +2,7 @@
 
 ## Summary
 - snapshot_status: NO_SAME_DAY_ROWS
-- source_rows: 1
+- source_rows: 0
 - same_day_rows: 0
 - rows_written: 0
 - no_data_blocked_rows: 0
