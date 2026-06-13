@@ -61,9 +61,9 @@
 - status_counts: MISSING=1; OK=3; WAITING_OR_NOT_RUN=3; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-12T22:04:18+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-12T22:04:18+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-12T22:04:18+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-13T16:18:14+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-13T16:18:14+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-13T16:18:14+01:00
 
 ## Key Files
 - data/processed/today/2026-06-13/vsigma_consolidated_daily_operator_panel.md
@@ -101,44 +101,44 @@
 - next_action: Build missing required upstream component first: real_objective_context_gate.
 
 ## Real Shortlist Recovery Diagnostic
-- overall_status: SCORING_SOURCE_EMPTY_FOR_DATE
-- root_cause: scored source exists but has no rows for target date
-- root_scored_same_day_rows: 0
+- overall_status: FILTERS_TOO_STRICT_OR_SELECTOR_NOT_RUN
+- root_cause: scoring has same-day rows but real shortlist/bets outputs are absent or empty
+- root_scored_same_day_rows: 3
 - real_shortlist_rows: 0
 - real_bet_rows: 0
 - proxy_rows: 0
-- next_action: Refresh/fix scoring source date coverage.
+- next_action: Run/repair real selection step from scored matches into shortlist/bets-only outputs.
 
 ## Local Raw Fixture Discovery
-- overall_status: NO_LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1638
-- accepted_rows: 0
-- rejected_rows: 0
-- next_action: No local source can build raw candidates; upstream fetch/filter producer is still required.
+- overall_status: LOCAL_RAW_CANDIDATES_FOUND
+- files_scanned: 1695
+- accepted_rows: 232
+- rejected_rows: 18
+- next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
-- rows_reviewed: 0
-- trusted_rows: 0
+- rows_reviewed: 232
+- trusted_rows: 3
 - quarantine_rows: 0
-- blocked_rows: 0
-- trust_status_counts: none
+- blocked_rows: 229
+- trust_status_counts: REJECTED_SOURCE_BLOCK=229; TRUSTED_RAW_SOURCE=3
 - next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
 
 ## Trusted Raw Candidate Promotion Gate
-- rows_reviewed: 0
+- rows_reviewed: 232
 - promoted_rows: 0
-- blocked_rows: 0
+- blocked_rows: 3
 - quarantine_rows: 0
-- promotion_status_counts: none
+- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=229; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=3
 - next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 
 ## Scoring Gap Explainer
-- rows_reviewed: 0
+- rows_reviewed: 232
 - missing_scored_rows: 0
-- no_data_blocked_rows: 0
-- not_trusted_rows: 0
+- no_data_blocked_rows: 3
+- not_trusted_rows: 229
 - promoted_rows: 0
-- gap_status_counts: none
+- gap_status_counts: NOT_TRUSTED_SKIPPED=229; SCORED_ROW_NO_DATA_BLOCKED=3
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 
 ## Trusted Raw Scoring Queue
@@ -171,9 +171,9 @@
 
 ## Daily Board Self-Heal
 - self_heal_status: EMPTY_BY_PROMOTION_GATE
-- promotion_rows_reviewed: 0
+- promotion_rows_reviewed: 232
 - promoted_rows: 0
-- blocked_rows: 0
+- blocked_rows: 3
 - quarantine_rows: 0
 - board_rows_written: 1_DIAGNOSTIC_ROW
 - reason: 0 promoted raw candidates; no scoring-safe rows available
