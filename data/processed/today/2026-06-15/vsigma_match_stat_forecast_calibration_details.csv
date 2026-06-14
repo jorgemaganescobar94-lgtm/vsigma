@@ -1,0 +1,1 @@
+target_date,generated_at,fixture_id,home_team,away_team,league,forecast_confidence,metric,actual_value,pred_low,pred_mid,pred_high,range_hit,abs_error_mid,direction_error,forecast_warning,source_guard,auto_apply,production_change
