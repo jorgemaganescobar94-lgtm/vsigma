@@ -7,11 +7,11 @@ Summary
                 summary_scope               metric  rows_total
                       overall      target_fixtures           1
   odds_structure_depth_status                   OK           1
-odds_structure_coherence_flag           RICH_MIXED           1
+odds_structure_coherence_flag        RICH_COHERENT           1
       odds_total_ladder_shape             BALANCED           1
  odds_market_translation_hint CAUTION_FRAGILE_SIDE           1
     odds_line_aggression_flag              NEUTRAL           1
 
 Fixture preview
  fixture_id           league home_team away_team odds_structure_coherence_flag odds_total_ladder_shape odds_market_translation_hint odds_line_aggression_flag  odds_dispersion_score  odds_confidence_adjustment_score
-    1551271 Segunda División    Malaga   Almeria                    RICH_MIXED                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3723                            -0.015
+    1551271 Segunda División    Malaga   Almeria                 RICH_COHERENT                BALANCED         CAUTION_FRAGILE_SIDE                   NEUTRAL                 0.3471                            -0.015
