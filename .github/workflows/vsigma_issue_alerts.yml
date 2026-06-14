@@ -87,3 +87,23 @@ jobs:
             exit 0
           fi
           gh issue create --title "$TITLE" --body-file "$BODY_FILE" --label vsigma-alert
+
+      - name: Telegram notify (solo BROKEN nuevo)
+        if: always()
+        shell: bash
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          F="data/processed/today/${VSIGMA_DATE}"
+          NOTIFY="$(cat "$F/vsigma_issue_alert_notify_required.txt" 2>/dev/null || echo false)"
+          SEVERITY="$(grep -E '^- severity:' "$F/vsigma_issue_alert_status.md" 2>/dev/null | head -1 | cut -d: -f2 | tr -d ' ')"
+          TITLE="$(cat "$F/vsigma_issue_alert_title.txt" 2>/dev/null || echo 'vSIGMA ALERT')"
+          if [ "$NOTIFY" = "true" ] && [ "$SEVERITY" = "BROKEN" ]; then
+            python scripts/dispatch_telegram_alert.py \
+              --title "$TITLE" --date "$VSIGMA_DATE" \
+              --body-file "$F/vsigma_issue_alert_body.md" \
+              --link "https://github.com/${{ github.repository }}/issues?q=is%3Aissue+is%3Aopen+label%3Avsigma-alert"
+          else
+            echo "Sin cambio de estado movil-relevante (notify=$NOTIFY severity=$SEVERITY); omito Telegram."
+          fi

@@ -86,3 +86,14 @@ jobs:
             --repo "${{ github.repository }}" \
             --run-id "$VSIGMA_FAILED_RUN_ID" \
             $EXTRA_ARGS
+
+      - name: Telegram notify fallo de production
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        shell: bash
+        run: |
+          python scripts/dispatch_telegram_alert.py \
+            --title "vSIGMA PRODUCTION FAILURE" \
+            --summary "Run ${VSIGMA_FAILED_RUN_ID} fallo. Failure doctor lo diagnostico." \
+            --link "https://github.com/${{ github.repository }}/actions/runs/${VSIGMA_FAILED_RUN_ID}"
