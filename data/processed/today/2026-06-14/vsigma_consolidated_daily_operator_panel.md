@@ -56,9 +56,9 @@
 - status_counts: MISSING=2; OK=5; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-13T16:18:14+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-13T16:18:14+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-13T16:18:14+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-14T11:37:41+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-14T11:37:41+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-14T11:37:41+01:00
 
 ## Key Files
 - data/processed/today/2026-06-14/vsigma_consolidated_daily_operator_panel.md
@@ -107,33 +107,33 @@
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
 - files_scanned: 1736
-- accepted_rows: 410
+- accepted_rows: 322
 - rejected_rows: 85
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
-- rows_reviewed: 410
+- rows_reviewed: 322
 - trusted_rows: 13
 - quarantine_rows: 0
-- blocked_rows: 397
-- trust_status_counts: REJECTED_SOURCE_BLOCK=397; TRUSTED_RAW_SOURCE=13
+- blocked_rows: 309
+- trust_status_counts: REJECTED_SOURCE_BLOCK=309; TRUSTED_RAW_SOURCE=13
 - next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
 
 ## Trusted Raw Candidate Promotion Gate
-- rows_reviewed: 410
+- rows_reviewed: 322
 - promoted_rows: 1
 - blocked_rows: 12
 - quarantine_rows: 0
-- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=397; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=12; PROMOTED_TO_SCORING_INPUT=1
+- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=309; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=12; PROMOTED_TO_SCORING_INPUT=1
 - next_action: Promoted rows may feed normal scoring gates only.
 
 ## Scoring Gap Explainer
-- rows_reviewed: 410
+- rows_reviewed: 322
 - missing_scored_rows: 0
 - no_data_blocked_rows: 12
-- not_trusted_rows: 397
+- not_trusted_rows: 309
 - promoted_rows: 1
-- gap_status_counts: NOT_TRUSTED_SKIPPED=397; SCORED_ROW_NO_DATA_BLOCKED=12; PROMOTED=1
+- gap_status_counts: NOT_TRUSTED_SKIPPED=309; SCORED_ROW_NO_DATA_BLOCKED=12; PROMOTED=1
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 
 ## Trusted Raw Scoring Queue
@@ -166,7 +166,7 @@
 
 ## Daily Board Self-Heal
 - self_heal_status: NO_ACTION
-- promotion_rows_reviewed: 410
+- promotion_rows_reviewed: 322
 - promoted_rows: 1
 - blocked_rows: 12
 - quarantine_rows: 0
