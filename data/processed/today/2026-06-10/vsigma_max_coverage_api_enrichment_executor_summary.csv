@@ -1,2 +1,2 @@
 target_date,generated_at,executor_status,policy_rows_reviewed,rows_selected,rows_executed,rows_dry_run,rows_success_any,rows_failed_all,scoring_allowed_rows,coverage_probe_rows,diagnostic_only_rows,endpoint_success_counts,endpoint_failure_counts,external_calls_allowed,external_calls_executed,auto_apply,production_change
-2026-06-10,2026-06-13T16:18:20+01:00,EXECUTION_COMPLETE,95,0,0,0,0,0,0,0,0,none,none,NO_ROWS,YES_LOGGED_EXECUTION,NO,NO
+2026-06-10,2026-06-14T11:37:46+01:00,EXECUTION_COMPLETE,95,95,95,0,95,0,57,12,26,fixture_detail=95; predictions=57; events=29; odds=20; lineups=9; statistics=6,statistics=63; lineups=48; events=40; odds=37,YES_MAX_COVERAGE_POLICY,YES_LOGGED_EXECUTION,NO,NO

@@ -3,22 +3,117 @@
 ## Summary
 - executor_status: EXECUTION_COMPLETE
 - policy_rows_reviewed: 95
-- rows_selected: 0
-- rows_executed: 0
+- rows_selected: 95
+- rows_executed: 95
 - rows_dry_run: 0
-- rows_success_any: 0
+- rows_success_any: 95
 - rows_failed_all: 0
-- scoring_allowed_rows: 0
-- coverage_probe_rows: 0
-- diagnostic_only_rows: 0
-- endpoint_success_counts: none
-- endpoint_failure_counts: none
-- external_calls_allowed: NO_ROWS
+- scoring_allowed_rows: 57
+- coverage_probe_rows: 12
+- diagnostic_only_rows: 26
+- endpoint_success_counts: fixture_detail=95; predictions=57; events=29; odds=20; lineups=9; statistics=6
+- endpoint_failure_counts: statistics=63; lineups=48; events=40; odds=37
+- external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: YES_LOGGED_EXECUTION
 - auto_apply: NO
 - production_change: NO
 
 ## Executor Rows
+- Malaga vs Las Palmas | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;statistics;events;lineups;predictions;odds | failed=none | scoring_after=YES_PENDING_NORMAL_GATES
+- Cape Town City vs Magesi | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;statistics;events;lineups;predictions;odds | failed=none | scoring_after=YES_PENDING_NORMAL_GATES
+- Neptūną Klaipėda vs Transinvest 2 | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Fjardabyggd / Leiknir vs Fjolnir | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Haukar vs Kormákur / Hvöt | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Thróttur Vogar vs Vikingur Olafsiik | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Damash Gilanian vs Mes Shahr-e Babak | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Naft Bandar Abbas vs Shahrdari Noshahr | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Blumenau vs Jaraguá | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions | failed=statistics;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Dikaki vs Cercle Mbéri | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Mangasport vs Bouenguidi | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Stade Mandji vs Lozo | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Brasil DE Pelotas vs Farroupilha | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Aigle Royal de Moungo vs PWD Bamenda | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Colombe vs Jeunes Fauves | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Fortuna Mfou vs Stade Renard | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Gazelle vs Cotonsport | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Gualaceo SC vs Cumbayá | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;lineups;predictions;odds | failed=statistics | scoring_after=YES_PENDING_NORMAL_GATES
+- Ind. Juniors vs Deportivo Cuenca Juniors | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;lineups;predictions;odds | failed=statistics | scoring_after=YES_PENDING_NORMAL_GATES
+- Tupan vs São José MA | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Amawele vs Madlenya | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Viva Stumbo vs Magwanyana | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Dynamos vs Hunters | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Kariba vs Herentals | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Platinum vs Hardrock | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Simba Bhora vs Ngezi Platinum | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Afrique Football Élite vs ASKO | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Onze Créateurs vs Bakaridjan | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Shortan vs Gazalkent | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;lineups;predictions;odds | failed=statistics | scoring_after=YES_PENDING_NORMAL_GATES
+- WDSC Wolves vs Eastern Suburbs | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Orebro SK vs GIF Sundsvall | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;statistics;events;lineups;predictions;odds | failed=none | scoring_after=YES_PENDING_NORMAL_GATES
+- Varbergs BoIS FC vs Norrby IF | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;statistics;events;lineups;predictions;odds | failed=none | scoring_after=YES_PENDING_NORMAL_GATES
+- Excelsior Maassluis vs Ijsselmeervogels | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;lineups;predictions;odds | failed=statistics | scoring_after=YES_PENDING_NORMAL_GATES
+- Pirmasens vs VfR Mannheim | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Amical Saint-Prex vs Servette II | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- YF Juventus vs Langenthal | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- KFG vs Hvíti riddarinn | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions | failed=statistics;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Kári vs Selfoss | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Magni vs Dalvík / Reynir | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions | failed=statistics;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Polanka nad Odrou vs Zlín II | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Sigma Olomouc II vs Třinec | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Kladno vs Ceska Lipa | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Leça vs Vitória de Sernache | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions | failed=statistics;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- América RJ vs Cabofriense | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions | failed=statistics;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- CFRJ / Maricá vs Bonsucesso | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- FC 105 vs Pélican | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Oyem AC vs Bitam | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Vautour Club vs US Oyem | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Afturelding vs Stjarnan | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Phoenix vs Elva III | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Rakvere FC Freedom vs Kena | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Saue vs Viimsi | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Tartu Kalev vs Paide III | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Trans Narva vs Vana Hea Puur | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Volta II / Arsenal vs Tallinna Kalev II | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Fransta vs IFK Östersund | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Aigle Royal vs Panthère | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Canon vs Victoria United | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Unisport Bafang vs Dynamo de Douala | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Bombada vs Medina United | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Hawks vs GPA | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Team Rhino vs Real de Banjul | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions | failed=statistics;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Céleste vs Simba | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Vita Club vs Maniema Union | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Araioses vs Americano Bacabal | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Asiagoal vs Toktogul | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions | failed=statistics;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Chicken Inn vs CAPS United | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- MWOS vs Manica Diamonds | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- BuxDu vs Qiziriq | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;lineups;predictions | failed=statistics;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Al-Hilal Omdurman II vs Al-Merreikh II | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Ilves vs Lahti | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- KuPS vs VPS | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- SJK vs Inter Turku | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Balkan vs Eskilsminne | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Eker Örebro vs IF Karlstad | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Falu BS vs Gefle IF | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Football Primetime vs Karlskrona | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Lidköping vs Skövde AIK | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Malmslatts AIK vs Husqvarna | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Unik FK vs Karlberg | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Charlotte Eagles vs Asheville City | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=statistics;events | scoring_after=NO_COVERAGE_GATE_ONLY
+- Charlotte Independence 2 vs Port City | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=statistics;events | scoring_after=NO_COVERAGE_GATE_ONLY
+- Chicago Dutch Lions vs St. Croix | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=statistics;events | scoring_after=NO_COVERAGE_GATE_ONLY
+- Erie Sports Center vs Buffalo | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=statistics;events | scoring_after=NO_COVERAGE_GATE_ONLY
+- Nona vs Brooke House | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=statistics;events | scoring_after=NO_COVERAGE_GATE_ONLY
+- Steel City vs Pittsburgh Riverhounds 2 | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=statistics;events | scoring_after=NO_COVERAGE_GATE_ONLY
+- Slavoj Český Krumlov vs Hluboka nad Vltavou | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=statistics;events | scoring_after=NO_COVERAGE_GATE_ONLY
+- Meteor Praha vs Ústí nad Labem II | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Kozlovice vs Břeclav | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=statistics;events | scoring_after=NO_COVERAGE_GATE_ONLY
+- Opava II vs Břidličná | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- England vs Costa Rica | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;statistics;events | failed=none | scoring_after=NO_COVERAGE_GATE_ONLY
+- Pakistan vs Afghanistan | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events | failed=statistics | scoring_after=NO_COVERAGE_GATE_ONLY
+- Portugal vs Nigeria | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;statistics;events | failed=none | scoring_after=NO_COVERAGE_GATE_ONLY
+- Trelleborg vs Osters IF | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events | failed=statistics | scoring_after=NO_COVERAGE_GATE_ONLY
+- Kassel vs SG Bornheim | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
 
 ## Guardrails
 - This executor may collect API data, but it does not create picks, stake permission, or bypass normal gates.

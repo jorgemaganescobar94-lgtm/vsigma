@@ -2,17 +2,17 @@
 
 ## Summary
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1695
+- files_scanned: 1736
 - accepted_rows: 122
-- rejected_rows: 519
-- source_status_counts: NO_SAME_DAY_ROWS=1146; EMPTY_OR_UNREADABLE=491; NO_ACCEPTED_ROWS=55; HAS_ACCEPTED_ROWS=3
+- rejected_rows: 517
+- source_status_counts: NO_SAME_DAY_ROWS=1200; EMPTY_OR_UNREADABLE=483; NO_ACCEPTED_ROWS=51; HAS_ACCEPTED_ROWS=2
 - next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO
 
 ## Accepted Rows
 - Malaga vs Las Palmas | fixture_id=1548055 | league= | source=data/processed/governance/vsigma_candidate_provenance_ceiling.csv
-- Cape Town City vs Magesi | fixture_id=1546281 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
+- Cape Town City vs Magesi | fixture_id=1546281 | league= | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Neptūną Klaipėda vs Transinvest 2 | fixture_id=1530591 | league=1 Lyga | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Fjardabyggd / Leiknir vs Fjolnir | fixture_id=1543393 | league=2. Deild | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Haukar vs Kormákur / Hvöt | fixture_id=1543391 | league=2. Deild | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
@@ -150,22 +150,22 @@
 - data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_candidate_provenance_ceiling.csv | status=HAS_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=1 | rejected=0 | detail=local source contains accepted raw fixture rows
-- data/processed/governance/vsigma_dated_post_match_results_refresh.csv | status=HAS_ACCEPTED_ROWS | rows=2 | same_day=2 | accepted=1 | rejected=0 | detail=local source contains accepted raw fixture rows
+- data/processed/governance/vsigma_dated_post_match_results_refresh.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_forced_api_board_fixture_lineups.csv | status=NO_SAME_DAY_ROWS | rows=86 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_ACCEPTED_ROWS | rows=122 | same_day=122 | accepted=0 | rejected=122 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_match_stat_forecast_backtest.csv | status=NO_ACCEPTED_ROWS | rows=2 | same_day=2 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_match_stat_forecast_calibration_details.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_match_stat_forecast_backtest.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_match_stat_forecast_calibration_details.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecasts.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_pending_prematch_prediction_finalizer.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_post_match_stat_actuals.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_postmatch_pick_audit.csv | status=NO_ACCEPTED_ROWS | rows=6 | same_day=2 | accepted=0 | rejected=2 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_postmatch_pick_audit_daily.csv | status=NO_ACCEPTED_ROWS | rows=2 | same_day=2 | accepted=0 | rejected=2 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_post_match_stat_actuals.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_postmatch_pick_audit.csv | status=NO_ACCEPTED_ROWS | rows=7 | same_day=2 | accepted=0 | rejected=2 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_postmatch_pick_audit_daily.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_prematch_calibration_rule_gate.csv | status=NO_SAME_DAY_ROWS | rows=12 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_prematch_match_story_engine.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_prematch_prediction_calibration_advisor.csv | status=NO_SAME_DAY_ROWS | rows=12 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=HAS_ACCEPTED_ROWS | rows=122 | same_day=122 | accepted=120 | rejected=0 | detail=local source contains accepted raw fixture rows
+- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=HAS_ACCEPTED_ROWS | rows=122 | same_day=122 | accepted=121 | rejected=0 | detail=local source contains accepted raw fixture rows
 - data/processed/governance/vsigma_rolling_prematch_accuracy_dashboard.csv | status=NO_SAME_DAY_ROWS | rows=6 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_shadow_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_ACCEPTED_ROWS | rows=122 | same_day=122 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity

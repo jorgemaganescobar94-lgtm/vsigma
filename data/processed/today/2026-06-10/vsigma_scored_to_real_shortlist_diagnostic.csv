@@ -1,2 +1,2 @@
 target_date,generated_at,fixture_id,home_team,away_team,league,source_status,selector_status,reason,vsigma_priority,market_family_hint,data_quality_score,league_data_reliability_score,recent_stats_quality_flag,odds_bookmaker_support_count,auto_apply,production_change
-2026-06-10,2026-06-13T16:18:14+01:00,1548055,Malaga,Las Palmas,Segunda División,DATED,NO_REAL_SHORTLIST,data quality score below selector floor,A_ANALIZAR_PRIMERO,OVER_OR_BTTS_CHECK,28.0,0.95,FULL,,NO,NO
+2026-06-10,2026-06-14T11:37:42+01:00,1548055,Malaga,Las Palmas,Segunda División,DATED,NO_REAL_SHORTLIST,data quality score below selector floor,A_ANALIZAR_PRIMERO,OVER_OR_BTTS_CHECK,28.0,0.95,FULL,,NO,NO

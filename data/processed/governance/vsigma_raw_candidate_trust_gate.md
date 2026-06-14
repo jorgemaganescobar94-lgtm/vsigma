@@ -12,7 +12,7 @@
 
 ## Rows
 - Malaga vs Las Palmas | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_candidate_provenance_ceiling.csv
-- Cape Town City vs Magesi | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
+- Cape Town City vs Magesi | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Neptūną Klaipėda vs Transinvest 2 | league=1 Lyga | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Fjardabyggd / Leiknir vs Fjolnir | league=2. Deild | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Haukar vs Kormákur / Hvöt | league=2. Deild | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv

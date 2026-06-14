@@ -12,7 +12,7 @@
 
 ## Rows
 - Malaga vs Las Palmas | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_candidate_provenance_ceiling.csv
-- Cape Town City vs Magesi | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
+- Cape Town City vs Magesi | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Neptūną Klaipėda vs Transinvest 2 | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Fjardabyggd / Leiknir vs Fjolnir | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Haukar vs Kormákur / Hvöt | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv

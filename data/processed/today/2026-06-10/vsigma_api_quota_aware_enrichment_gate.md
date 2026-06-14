@@ -2,7 +2,7 @@
 
 ## Summary
 - quota_gate_status: AUTO_ENRICHMENT_ALLOWED_LIMITED
-- api_plan_name: API-Football UNKNOWN
+- api_plan_name: API-Football Pro
 - plan_requests_per_day: 7500
 - rows_reviewed: 95
 - p1_rows: 81

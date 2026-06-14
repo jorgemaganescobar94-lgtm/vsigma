@@ -12,7 +12,7 @@
 - production_change: NO
 
 ## Component Rows
-- root_scored_matches | status=EMPTY | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/matches_vsigma_scored_v3.csv | detail=file exists but has no data rows
+- root_scored_matches | status=NO_SAME_DAY_ROWS | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/matches_vsigma_scored_v3.csv | detail=file has rows but none for target date
 - dated_scored_matches | status=EMPTY | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-10/matches_vsigma_scored_v3.csv | detail=file exists but has no data rows
 - today_execution_shortlist | status=HAS_REAL_ROWS | same_day=1 | real=1 | proxy=0 | bet_like=1 | path=data/processed/today/2026-06-10/vsigma_today_execution_shortlist.csv | detail=file has same-day rows
 - today_execution_bets_only | status=HAS_REAL_ROWS | same_day=1 | real=1 | proxy=0 | bet_like=1 | path=data/processed/today/2026-06-10/vsigma_today_execution_bets_only.csv | detail=file has same-day rows

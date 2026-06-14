@@ -1,19 +1,114 @@
 # vSIGMA Promotion Input Bridge - 2026-06-10
 
 ## Summary
-- source_rows_reviewed: 0
-- bridge_rows_written: 0
-- promotion_ready_review_only_rows: 0
-- blocked_rows: 0
-- status_counts: none
-- signal_band_counts: none
-- promotion_permission_counts: none
-- pick_permission_counts: none
-- stake_permission_counts: none
+- source_rows_reviewed: 95
+- bridge_rows_written: 95
+- promotion_ready_review_only_rows: 57
+- blocked_rows: 38
+- status_counts: PROMOTION_INPUT_READY_REVIEW_ONLY=57; COVERAGE_ONLY_NO_PROMOTION=38
+- signal_band_counts: WEAK_SIGNAL=45; MEDIUM_SIGNAL_REVIEW=23; LOW_SIGNAL_REVIEW=16; HIGH_SIGNAL_REVIEW=11
+- promotion_permission_counts: REVIEW_ONLY_PROMOTION_INPUT=57; NO_PROMOTION_PERMISSION=38
+- pick_permission_counts: NO_PICK_PERMISSION=95
+- stake_permission_counts: NO_STAKE_PERMISSION=95
 - auto_apply: NO
 - production_change: NO
 
 ## Bridge Rows
+- Malaga vs Las Palmas | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=97 band=HIGH_SIGNAL_REVIEW | summary=prediction_winner=Malaga | pred_total_home_away=64.2/36.0 | 1x2=1.94/3.35/3.95 | ou2.5=2.05/1.75 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Cape Town City vs Magesi | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=100 band=HIGH_SIGNAL_REVIEW | summary=prediction_winner=Magesi | pred_total_home_away=33.5/67.0 | 1x2=1.96/3.10/4.20 | ou2.5=2.62/1.48 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Neptūną Klaipėda vs Transinvest 2 | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=90 band=HIGH_SIGNAL_REVIEW | summary=prediction_winner=Neptūną Klaipėda | pred_total_home_away=71.0/29.0 | 1x2=1.15/5.75/13.00 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Fjardabyggd / Leiknir vs Fjolnir | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=61 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Fjardabyggd / Leiknir | pred_total_home_away=55.5/44.5 | 1x2=2.25/4.00/2.38 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Haukar vs Kormákur / Hvöt | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=84 band=HIGH_SIGNAL_REVIEW | summary=prediction_winner=Haukar | pred_total_home_away=63.3/36.7 | 1x2=1.45/4.50/4.80 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Thróttur Vogar vs Vikingur Olafsiik | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=72 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Thróttur Vogar | pred_total_home_away=59.0/41.0 | 1x2=1.73/4.00/3.50 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Damash Gilanian vs Mes Shahr-e Babak | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=100 band=HIGH_SIGNAL_REVIEW | summary=prediction_winner=Mes Shahr-e Babak | pred_total_home_away=29.3/70.7 | 1x2=6.00/3.30/1.55 | ou2.5=2.50/1.50 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Naft Bandar Abbas vs Shahrdari Noshahr | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=61 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Naft Bandar Abbas | pred_total_home_away=48.0/52.2 | 1x2=2.32/2.75/3.40 | ou2.5=2.67/1.36 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Blumenau vs Jaraguá | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=70 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Blumenau | pred_total_home_away=89.7/10.3 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Dikaki vs Cercle Mbéri | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=70 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Cercle Mbéri | pred_total_home_away=27.4/72.6 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Mangasport vs Bouenguidi | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=70 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Mangasport | pred_total_home_away=75.3/24.7 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Stade Mandji vs Lozo | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=70 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Stade Mandji | pred_total_home_away=66.4/34.0 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Brasil DE Pelotas vs Farroupilha | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=100 band=HIGH_SIGNAL_REVIEW | summary=prediction_winner=Brasil DE Pelotas | pred_total_home_away=74.3/25.7 | 1x2=1.25/4.75/11.00 | ou2.5=1.70/2.05 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Aigle Royal de Moungo vs PWD Bamenda | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=60 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=PWD Bamenda | pred_total_home_away=38.2/62.0 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Colombe vs Jeunes Fauves | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=70 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Colombe | pred_total_home_away=80.2/19.8 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Fortuna Mfou vs Stade Renard | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=63 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Stade Renard | pred_total_home_away=37.3/62.7 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Gazelle vs Cotonsport | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=62 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Cotonsport | pred_total_home_away=37.5/62.5 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Gualaceo SC vs Cumbayá | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=69 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Cumbayá | pred_total_home_away=45.3/54.7 | 1x2=2.15/2.90/3.20 | ou2.5=2.30/1.48 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Ind. Juniors vs Deportivo Cuenca Juniors | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=64 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Deportivo Cuenca Juniors | pred_total_home_away=47.0/53.0 | 1x2=1.85/3.10/3.95 | ou2.5=2.25/1.50 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Tupan vs São José MA | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=70 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Tupan | pred_total_home_away=35.0/65.0 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Amawele vs Madlenya | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=70 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Amawele | pred_total_home_away=80.0/20.0 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Viva Stumbo vs Magwanyana | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=70 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Viva Stumbo | pred_total_home_away=67.0/33.0 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Dynamos vs Hunters | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=65 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Dynamos | pred_total_home_away=63.5/36.8 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Kariba vs Herentals | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=57 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Herentals | pred_total_home_away=39.2/60.8 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Platinum vs Hardrock | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=59 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Hardrock | pred_total_home_away=38.5/61.5 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Simba Bhora vs Ngezi Platinum | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=63 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Ngezi Platinum | pred_total_home_away=37.2/62.8 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Afrique Football Élite vs ASKO | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=100 band=HIGH_SIGNAL_REVIEW | summary=prediction_winner=ASKO | pred_total_home_away=31.7/68.3 | 1x2=1.80/3.45/3.70 | ou2.5=1.85/1.73 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Onze Créateurs vs Bakaridjan | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=75 band=HIGH_SIGNAL_REVIEW | summary=prediction_winner=Onze Créateurs | pred_total_home_away=60.2/39.8 | 1x2=2.75/2.33/3.10 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Shortan vs Gazalkent | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=92 band=HIGH_SIGNAL_REVIEW | summary=prediction_winner=Shortan | pred_total_home_away=62.5/37.5 | 1x2=1.91/3.30/3.40 | ou2.5=1.75/1.85 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- WDSC Wolves vs Eastern Suburbs | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=100 band=HIGH_SIGNAL_REVIEW | summary=prediction_winner=Eastern Suburbs | pred_total_home_away=33.8/66.2 | 1x2=2.90/3.80/2.05 | ou2.5=1.38/2.85 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Orebro SK vs GIF Sundsvall | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=58 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Orebro SK | pred_total_home_away=48.8/51.4 | 1x2=1.95/3.40/3.75 | ou2.5=1.95/1.85 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Varbergs BoIS FC vs Norrby IF | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=100 band=HIGH_SIGNAL_REVIEW | summary=prediction_winner=Varbergs BoIS FC | pred_total_home_away=67.7/32.3 | 1x2=1.64/3.90/5.00 | ou2.5=1.70/2.15 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Excelsior Maassluis vs Ijsselmeervogels | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=66 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=Ijsselmeervogels | pred_total_home_away=46.3/53.7 | 1x2=2.10/3.35/2.90 | ou2.5=1.60/2.05 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Pirmasens vs VfR Mannheim | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=70 band=MEDIUM_SIGNAL_REVIEW | summary=prediction_winner=VfR Mannheim | pred_total_home_away=20.0/80.0 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Amical Saint-Prex vs Servette II | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- YF Juventus vs Langenthal | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- KFG vs Hvíti riddarinn | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=46 band=LOW_SIGNAL_REVIEW | summary=prediction_winner=Hvíti riddarinn | pred_total_home_away=43.0/57.0 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Kári vs Selfoss | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=46 band=LOW_SIGNAL_REVIEW | summary=prediction_winner=Selfoss | pred_total_home_away=49.4/50.6 | 1x2=2.40/4.00/2.20 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Magni vs Dalvík / Reynir | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=51 band=LOW_SIGNAL_REVIEW | summary=prediction_winner=Magni | pred_total_home_away=58.8/41.2 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Polanka nad Odrou vs Zlín II | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Sigma Olomouc II vs Třinec | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Kladno vs Ceska Lipa | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Leça vs Vitória de Sernache | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=38 band=LOW_SIGNAL_REVIEW | summary=prediction_winner=Vitória de Sernache | pred_total_home_away=45.5/54.5 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- América RJ vs Cabofriense | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=37 band=LOW_SIGNAL_REVIEW | summary=prediction_winner=América RJ | pred_total_home_away=54.2/45.8 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- CFRJ / Maricá vs Bonsucesso | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=33 band=WEAK_SIGNAL | summary=prediction_winner=CFRJ / Maricá | pred_total_home_away=52.7/47.3 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- FC 105 vs Pélican | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=40 band=LOW_SIGNAL_REVIEW | summary=prediction_winner=FC 105 | pred_total_home_away=55.3/44.7 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Oyem AC vs Bitam | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=43 band=LOW_SIGNAL_REVIEW | summary=prediction_winner=Oyem AC | pred_total_home_away=56.2/43.8 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Vautour Club vs US Oyem | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=48 band=LOW_SIGNAL_REVIEW | summary=prediction_winner=Vautour Club | pred_total_home_away=57.7/42.3 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Afturelding vs Stjarnan | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Phoenix vs Elva III | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Rakvere FC Freedom vs Kena | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Saue vs Viimsi | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Tartu Kalev vs Paide III | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Trans Narva vs Vana Hea Puur | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Volta II / Arsenal vs Tallinna Kalev II | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Fransta vs IFK Östersund | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Aigle Royal vs Panthère | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=41 band=LOW_SIGNAL_REVIEW | summary=prediction_winner=Panthère | pred_total_home_away=44.4/55.6 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Canon vs Victoria United | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=52 band=LOW_SIGNAL_REVIEW | summary=prediction_winner=Victoria United | pred_total_home_away=40.8/59.2 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Unisport Bafang vs Dynamo de Douala | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=53 band=LOW_SIGNAL_REVIEW | summary=prediction_winner=Dynamo de Douala | pred_total_home_away=40.7/59.5 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Bombada vs Medina United | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=34 band=WEAK_SIGNAL | summary=pred_total_home_away=48.5/51.5 | 1x2=2.20/2.90/3.10 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Hawks vs GPA | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=39 band=LOW_SIGNAL_REVIEW | summary=prediction_winner=GPA | pred_total_home_away=45.3/54.7 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Team Rhino vs Real de Banjul | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=44 band=LOW_SIGNAL_REVIEW | summary=prediction_winner=Real de Banjul | pred_total_home_away=43.5/56.5 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Céleste vs Simba | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=28 band=WEAK_SIGNAL | summary=prediction_winner=Céleste | pred_total_home_away=51.3/48.7 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Vita Club vs Maniema Union | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=34 band=WEAK_SIGNAL | summary=prediction_winner=Vita Club | pred_total_home_away=53.2/46.8 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Araioses vs Americano Bacabal | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=25 band=WEAK_SIGNAL | summary=prediction_winner=Araioses | pred_total_home_away=0/0 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Asiagoal vs Toktogul | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=43 band=LOW_SIGNAL_REVIEW | summary=prediction_winner=Asiagoal | pred_total_home_away=56.3/43.8 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Chicken Inn vs CAPS United | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=42 band=LOW_SIGNAL_REVIEW | summary=prediction_winner=CAPS United | pred_total_home_away=44.3/55.7 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- MWOS vs Manica Diamonds | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=34 band=WEAK_SIGNAL | summary=prediction_winner=MWOS | pred_total_home_away=53.2/46.8 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- BuxDu vs Qiziriq | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=37 band=LOW_SIGNAL_REVIEW | summary=prediction_winner=Qiziriq | pred_total_home_away=46.0/54.0 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Al-Hilal Omdurman II vs Al-Merreikh II | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Ilves vs Lahti | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- KuPS vs VPS | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- SJK vs Inter Turku | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Balkan vs Eskilsminne | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Eker Örebro vs IF Karlstad | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Falu BS vs Gefle IF | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Football Primetime vs Karlskrona | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Lidköping vs Skövde AIK | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Malmslatts AIK vs Husqvarna | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Unik FK vs Karlberg | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Charlotte Eagles vs Asheville City | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Charlotte Independence 2 vs Port City | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Chicago Dutch Lions vs St. Croix | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Erie Sports Center vs Buffalo | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Nona vs Brooke House | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Steel City vs Pittsburgh Riverhounds 2 | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Slavoj Český Krumlov vs Hluboka nad Vltavou | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Meteor Praha vs Ústí nad Labem II | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Kozlovice vs Břeclav | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Opava II vs Břidličná | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- England vs Costa Rica | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Pakistan vs Afghanistan | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Portugal vs Nigeria | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Trelleborg vs Osters IF | bridge=COVERAGE_ONLY_NO_PROMOTION | score=10 band=WEAK_SIGNAL | summary= | promotion=NO_PROMOTION_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Kassel vs SG Bornheim | bridge=PROMOTION_INPUT_READY_REVIEW_ONLY | score=27 band=WEAK_SIGNAL | summary=prediction_winner=Kassel | pred_total_home_away=50.8/49.3 | promotion=REVIEW_ONLY_PROMOTION_INPUT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 
 ## Guardrails
 - This bridge only prepares review inputs for normal gates.

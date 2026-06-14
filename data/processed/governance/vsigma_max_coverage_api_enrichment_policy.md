@@ -2,10 +2,10 @@
 
 ## Summary
 - policy_status: MAX_COVERAGE_POLICY_READY
-- api_plan_name: API-Football UNKNOWN
+- api_plan_name: API-Football Pro
 - plan_requests_per_day: 7500
 - rows_reviewed: 95
-- rows_allowed: 0
+- rows_allowed: 95
 - full_scoring_enrichment_rows: 57
 - coverage_probe_rows: 12
 - diagnostic_only_rows: 26
@@ -13,7 +13,7 @@
 - estimated_call_units: 485
 - decision_counts: FULL_ENRICHMENT_ALLOWED_FOR_SCORING=57; DIAGNOSTIC_COVERAGE_ALLOWED_CONTEXT_VOLATILITY=14; DIAGNOSTIC_COVERAGE_ALLOWED_LOW_TRUST=12; COVERAGE_PROBE_ALLOWED_LOW_COVERAGE=12
 - downstream_use_counts: SCORING_ALLOWED_WITH_NORMAL_GATES=57; DIAGNOSTIC_ONLY_NO_SCORING=26; COVERAGE_GATE_ONLY=12
-- external_calls_allowed: NO_SUBSCRIPTION_GUARD
+- external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: NO
 - auto_apply: NO
 - production_change: NO

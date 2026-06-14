@@ -3,9 +3,9 @@
 ## Summary
 - active_api_policy: MAX_COVERAGE
 - policy_source: vsigma_max_coverage_api_enrichment_policy
-- api_plan_name: API-Football UNKNOWN
+- api_plan_name: API-Football Pro
 - plan_requests_per_day: 7500
-- external_calls_allowed: NO_SUBSCRIPTION_GUARD
+- external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: NO
 - scoring_allowed_rows: 57
 - coverage_probe_rows: 12
