@@ -57,7 +57,7 @@
 
 ## Next Triggers / Rechecks
 - .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-14T16:26:34+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-14T16:26:34+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-14; reason=run_daily_decision_chain_v2_v67_6_missing_board_self_heal; triggered_at=2026-06-14T17:45:19+01:00
 - .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-14T16:26:34+01:00
 
 ## Key Files
@@ -79,9 +79,9 @@
 ## Date Coherence Guard
 - overall_status: DATE_MISMATCH_BLOCK
 - board_status: daily_board_md=MISSING_CORE; daily_board_csv=MISSING_CORE
-- mismatch_count: 2
+- mismatch_count: 1
 - missing_core_count: 2
-- trigger_date_counts: 2026-06-10=2
+- trigger_date_counts: 2026-06-14=1; 2026-06-10=1
 - next_action: Fix trigger/artifact date mismatch before using market signals.
 
 ## Upstream Board Input Diagnostic

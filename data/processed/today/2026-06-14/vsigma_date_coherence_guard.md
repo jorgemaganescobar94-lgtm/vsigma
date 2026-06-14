@@ -3,9 +3,9 @@
 ## Summary
 - overall_status: DATE_MISMATCH_BLOCK
 - board_status: daily_board_md=MISSING_CORE; daily_board_csv=MISSING_CORE
-- mismatch_count: 2
+- mismatch_count: 1
 - missing_core_count: 2
-- trigger_date_counts: 2026-06-10=2
+- trigger_date_counts: 2026-06-14=1; 2026-06-10=1
 - next_action: Fix trigger/artifact date mismatch before using market signals.
 - auto_apply: NO
 - production_change: NO
@@ -19,7 +19,7 @@
 - live_trigger_validator_md | status=OK | observed=2026-06-14 | path=data/processed/today/2026-06-14/vsigma_live_trigger_validator.md | detail=date coherent
 - consolidated_panel_md | status=OK | observed=2026-06-14 | path=data/processed/today/2026-06-14/vsigma_consolidated_daily_operator_panel.md | detail=date coherent
 - source_reliability_governor_md | status=MISSING_OPTIONAL | observed=MISSING | path=data/processed/today/2026-06-14/vsigma_probable_lineup_source_reliability_governor.md | detail=optional artifact not found
-- daily_chain_trigger | status=DATE_MISMATCH | observed=2026-06-10 | path=.vsigma/triggers/daily_decision_chain_v2.trigger | detail=observed 2026-06-10 != target 2026-06-14
+- daily_chain_trigger | status=OK | observed=2026-06-14 | path=.vsigma/triggers/daily_decision_chain_v2.trigger | detail=date coherent
 - prelock_recheck_trigger | status=DATE_MISMATCH | observed=2026-06-10 | path=.vsigma/triggers/prelock_official_lineup_recheck.trigger | detail=observed 2026-06-10 != target 2026-06-14
 
 ## Guardrails
