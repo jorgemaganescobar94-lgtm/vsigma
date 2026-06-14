@@ -2,7 +2,7 @@
 
 ## Status
 - Auto status: WAITING_OR_BLOCKED
-- PRE refreshed: YES
+- PRE refreshed: NO
 - Candidates reviewed: 1
 - Executable picks: 0
 - Waiting picks: 1
@@ -17,11 +17,11 @@ _No rows._
 ## Waiting / Blocked Picks
 | fixture_id | league | home_team | away_team | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | retry_allowed | next_retry_time | decision_state | exclusion_reason | next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1551271 | Segunda División | Malaga | Almeria | OVER_2_5 | 2026-06-14T20:00+01:00 | 1197.93 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | YES | 2026-06-14T19:00+01:00 | WAITING_FOR_PRELOCK_WINDOW | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-06-14T19:00+01:00 |
+| 1551271 | Segunda División | Malaga | Almeria | OVER_2_5 | 2026-06-14T20:00+01:00 | 467.47 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | YES | 2026-06-14T19:00+01:00 | WAITING_FOR_PRELOCK_WINDOW | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-06-14T19:00+01:00 |
 
 ## Technical Warnings
 - healthcheck_status: WARNING
-- pre_refresh_attempted: YES
+- pre_refresh_attempted: NO
 - pre_refresh_failed: NO
 - pre_refresh_skipped_reason: none
 - pre_refresh_error: none
@@ -33,8 +33,8 @@ _No rows._
 ## Technical Notes
 - Timezone: Atlantic/Canary
 - Window minutes: 90
-- PRE refreshed by auto controller: YES
-- PRE refresh reasons: health summary reports ledger has no rows for target date; missing snapshot official top: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-14/vsigma_today_competition_top.csv; text trigger: ledger has no rows for target date
+- PRE refreshed by auto controller: NO
+- PRE refresh reasons: none
 - PRELOCK retained no rows: YES
 - PRELOCK unavailable rows: 0
 - Candidate source used: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-14/vsigma_today_competition_top.csv

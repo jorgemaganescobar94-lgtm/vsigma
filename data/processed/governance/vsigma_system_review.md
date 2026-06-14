@@ -45,9 +45,9 @@
 - API gaps detected: fixture_stats, injuries
 
 ## Model / Market Review
-- markets appearing in current/historical inputs: OVER_1_5: 132; OVER_2_5: 31; BTTS_YES: 3; UNDER_3_5: 3; AWAY_WIN: 2
-- failure modes principales: FAILURE_MODE_LOW_CONVERSION: 216; LOW_CONVERSION: 108; FAILURE_MODE_AVALANCHE_RISK: 2
-- OVER_1_5: appearances=132; calibration_sample=7; status=needs more sample
+- markets appearing in current/historical inputs: OVER_1_5: 133; OVER_2_5: 31; BTTS_YES: 3; UNDER_3_5: 3; AWAY_WIN: 2
+- failure modes principales: FAILURE_MODE_LOW_CONVERSION: 218; LOW_CONVERSION: 109; FAILURE_MODE_AVALANCHE_RISK: 2
+- OVER_1_5: appearances=133; calibration_sample=7; status=needs more sample
 - OVER_2_5: appearances=31; calibration_sample=2; status=needs more sample
 - sides / DNB / 1X / X2: appearances=2; calibration_sample=1; status=needs more sample
 - mercados con buena senal: none yet by sample rule
@@ -76,6 +76,6 @@
 | P3 | model_calibration | Defer recalibration until minimum closed-pick sample | Fewer than 30 closed picks are available. | Avoids fitting thresholds or probability adjustments to noise. | Low; no predictive change is applied. | Keep calibration reporting active and wait for at least 30 closed picks before suggestions. | NO | closed_picks=8; enough_sample=NO; recalibration_allowed=NO |
 
 ## Input Inventory
-- generated_at: 2026-06-14T00:02:05+01:00
+- generated_at: 2026-06-14T12:12:33+01:00
 - timezone: Atlantic/Canary
 - missing optional inputs: none

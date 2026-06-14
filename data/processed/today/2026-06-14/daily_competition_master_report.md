@@ -88,7 +88,7 @@ Candidate v6: NO_BET. Empty output is valid when no pick clears the frozen compe
 ### Active Pre-Lock Decisions
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1551271 | Malaga | Almeria | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 1198.33 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1551271 | Malaga | Almeria | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 489.69 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 
 ### Stale Pre-Lock Warning
 _No stale pre-lock rows excluded._
@@ -105,6 +105,7 @@ _No stale pre-lock rows excluded._
 ### Candidate v7 Calibration Advice
 | market_family | failure_mode | drift_status | clv_direction | n | profit_units | roi_percent | recommendation | recommendation_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 1 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 | OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_UNAVAILABLE | 4 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 
 ## Post-Results Summary
@@ -113,7 +114,7 @@ _No rows._
 ## Pre-Lock Status
 | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_minutes_to_kickoff | prelock_decision | prelock_decision_reason |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1551271 | Malaga | Almeria | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 1198.33 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+| 1551271 | Malaga | Almeria | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | 489.69 | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
 
 ## Drift Monitor Status
 | pattern | settled_rows | wins | losses | profit_units | drift_status |
@@ -159,19 +160,19 @@ _No rows._
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: daily_master_report: WARNING - daily master report missing
-- Recovery command: `.\.venv\Scripts\python.exe scripts\build_daily_competition_master_report.py --date 2026-06-14`
+- Critical warnings: freshness_report: WARNING - validation report contains warning rows
+- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-06-14`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-14/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1551271.0 | Malaga | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1551271.0 | Malaga | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1551271.0 | Malaga | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1551271.0 | Malaga | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V5_PLAYER_IMPACT | 1551271.0 | Malaga | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1551271.0 | Malaga | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V6_API_PREDICTIONS |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1551271.0 | Malaga | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1551271.0 | Malaga | Almeria | OVER_2_5 | PRELOCK_NOT_AVAILABLE | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V4_O25_FIREWALL | 1551271.0 | Malaga | Almeria | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
 
 ### Experiment Performance Summary
@@ -212,6 +213,7 @@ _No rows._
 | OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 2 | -24.0 |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | -100.0 |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | -100.0 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V2_SCHEDULE_ANOMALY | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V4_O25_FIREWALL | 0 |  |  | SAMPLE_TOO_SMALL |
@@ -222,7 +224,6 @@ _No rows._
 | OVER_2_5 | UNSPECIFIED | CANDIDATE_V2_SCHEDULE_ANOMALY | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | UNSPECIFIED | CANDIDATE_V5_PLAYER_IMPACT | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | UNSPECIFIED | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
-| UNDER_3_5 | AVALANCHE_RISK | OFFICIAL_BASELINE | 0 |  |  | SAMPLE_TOO_SMALL |
 
 - CLV data sufficiency: INSUFFICIENT_CLV_DATA
 - Drift alerts: 0
