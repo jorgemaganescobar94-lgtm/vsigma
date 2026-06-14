@@ -15,7 +15,7 @@
 - daily_board_csv | status=MISSING_CORE | observed=MISSING | path=data/processed/today/2026-06-14/vsigma_daily_execution_board.csv | detail=required daily artifact is missing
 - operator_brief_md | status=OK | observed=2026-06-14 | path=data/processed/today/2026-06-14/vsigma_operator_brief.md | detail=date coherent
 - automation_health_md | status=OK | observed=2026-06-14 | path=data/processed/today/2026-06-14/vsigma_automation_health.md | detail=date coherent
-- prelock_live_recheck_md | status=MISSING_OPTIONAL | observed=MISSING | path=data/processed/today/2026-06-14/vsigma_prelock_live_recheck.md | detail=optional artifact not found
+- prelock_live_recheck_md | status=OK | observed=2026-06-14 | path=data/processed/today/2026-06-14/vsigma_prelock_live_recheck.md | detail=date coherent
 - live_trigger_validator_md | status=OK | observed=2026-06-14 | path=data/processed/today/2026-06-14/vsigma_live_trigger_validator.md | detail=date coherent
 - consolidated_panel_md | status=OK | observed=2026-06-14 | path=data/processed/today/2026-06-14/vsigma_consolidated_daily_operator_panel.md | detail=date coherent
 - source_reliability_governor_md | status=MISSING_OPTIONAL | observed=MISSING | path=data/processed/today/2026-06-14/vsigma_probable_lineup_source_reliability_governor.md | detail=optional artifact not found

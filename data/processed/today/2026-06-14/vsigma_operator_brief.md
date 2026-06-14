@@ -48,9 +48,9 @@
 - watch_only: 0
 - no_bet: 0
 - board_decisions: UNKNOWN
-- recheck_decisions: UNKNOWN
+- recheck_decisions: none
 - live_triggers: none
-- alert_notify_required: false
+- alert_notify_required: true
 - auto_apply: NO
 - production_change: NO
 

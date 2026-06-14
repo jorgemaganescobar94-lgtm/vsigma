@@ -53,12 +53,12 @@
 - system_status: BROKEN
 - components_checked: 11
 - severity_counts: BROKEN=1; WARN=1; OK=5; INFO=4
-- status_counts: MISSING=2; OK=5; CONFIG_EXPECTED=4
+- status_counts: MISSING=1; OK=6; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-14T11:37:41+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-14T11:37:41+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-14T11:37:41+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-14T16:26:34+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-14T16:26:34+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-14T16:26:34+01:00
 
 ## Key Files
 - data/processed/today/2026-06-14/vsigma_consolidated_daily_operator_panel.md
