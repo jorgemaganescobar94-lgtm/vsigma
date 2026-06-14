@@ -1,7 +1,7 @@
 # vSIGMA Healthcheck Report - 2026-06-14
 
 - Global health status: WARNING
-- Generated at: 2026-06-14T17:53:00.823008+01:00
+- Generated at: 2026-06-14T18:17:51.704719+01:00
 - Mode: full
 - HEALTHY: 33
 - WARNING: 3
