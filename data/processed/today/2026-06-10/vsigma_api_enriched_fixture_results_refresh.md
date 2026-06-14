@@ -4,8 +4,8 @@
 - rows_reviewed: 34
 - api_calls_planned: 34
 - api_calls_executed: 34
-- finished_rows: 28
-- pending_rows: 6
+- finished_rows: 29
+- pending_rows: 5
 - refresh_status_counts: OK=34
 - provider_counts: API-SPORTS_DIRECT=34
 - next_action: Re-run the postmatch accuracy ledger after this refresh. This output does not create picks or stake.
@@ -32,7 +32,7 @@
 - Gazelle vs Cotonsport | status=PST | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
 - Gualaceo SC vs Cumbayá | status=FT | score=1-0 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
 - Ind. Juniors vs Deportivo Cuenca Juniors | status=FT | score=4-0 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
-- Tupan vs São José MA | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Tupan vs São José MA | status=FT | score=2-3 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
 - Amawele vs Madlenya | status=FT | score=0-1 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
 - Viva Stumbo vs Magwanyana | status=FT | score=0-1 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
 - Dynamos vs Hunters | status=FT | score=2-2 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched

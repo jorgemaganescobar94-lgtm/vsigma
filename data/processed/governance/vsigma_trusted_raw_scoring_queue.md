@@ -10,8 +10,8 @@
 - production_change: NO
 
 ## Queue Rows
-- #1 | P1_TRUSTED_MISSING_SCORING | Malaga vs Las Palmas | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #2 | P1_TRUSTED_MISSING_SCORING | Cape Town City vs Magesi | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #1 | P1_TRUSTED_MISSING_SCORING | Malaga vs Las Palmas | league=Segunda División | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #2 | P1_TRUSTED_MISSING_SCORING | Cape Town City vs Magesi | league=Premier Soccer League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 - #3 | P1_TRUSTED_MISSING_SCORING | Neptūną Klaipėda vs Transinvest 2 | league=1 Lyga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 - #4 | P1_TRUSTED_MISSING_SCORING | Fjardabyggd / Leiknir vs Fjolnir | league=2. Deild | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 - #5 | P1_TRUSTED_MISSING_SCORING | Haukar vs Kormákur / Hvöt | league=2. Deild | scoring_needed=YES | reason=trusted raw candidate has no matching scored row

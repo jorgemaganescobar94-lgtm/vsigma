@@ -2,16 +2,16 @@
 
 ## Summary
 - rows_reviewed: 34
-- finished_rows: 28
-- pending_rows: 6
-- accuracy_bucket_counts: PARTIAL_SIGNAL_VALIDATED=10; SIGNAL_FAILED=10; STRONG_SIGNAL_VALIDATED=8; PENDING_RESULT=6
-- api_1x2_counts: MISS=18; HIT=10; PENDING_RESULT=6
-- api_double_chance_counts: HIT=17; MISS=11; PENDING_RESULT=6
-- api_dnb_counts: MISS=11; HIT=10; VOID=7; PENDING_RESULT=6
-- over_1_5_counts: HIT=18; MISS=10; PENDING_RESULT=6
-- over_2_5_counts: MISS=14; HIT=14; PENDING_RESULT=6
-- under_3_5_counts: HIT=17; MISS=11; PENDING_RESULT=6
-- btts_counts: MISS=17; HIT=11; PENDING_RESULT=6
+- finished_rows: 29
+- pending_rows: 5
+- accuracy_bucket_counts: PARTIAL_SIGNAL_VALIDATED=11; SIGNAL_FAILED=10; STRONG_SIGNAL_VALIDATED=8; PENDING_RESULT=5
+- api_1x2_counts: MISS=19; HIT=10; PENDING_RESULT=5
+- api_double_chance_counts: HIT=17; MISS=12; PENDING_RESULT=5
+- api_dnb_counts: MISS=12; HIT=10; VOID=7; PENDING_RESULT=5
+- over_1_5_counts: HIT=19; MISS=10; PENDING_RESULT=5
+- over_2_5_counts: HIT=15; MISS=14; PENDING_RESULT=5
+- under_3_5_counts: HIT=17; MISS=12; PENDING_RESULT=5
+- btts_counts: MISS=17; HIT=12; PENDING_RESULT=5
 - pick_permission_counts: NO_PICK_PERMISSION=34
 - stake_permission_counts: NO_STAKE_PERMISSION=34
 - next_action: Use this ledger to calibrate signal buckets after results are final. Do not promote picks or stake from it.
@@ -38,7 +38,7 @@
 - Gazelle vs Cotonsport | result=pending | prediction=Cotonsport | side=AWAY | signal=62 MEDIUM_SIGNAL_REVIEW | 1x2=PENDING_RESULT | dc=PENDING_RESULT | dnb=PENDING_RESULT | o1.5=PENDING_RESULT | o2.5=PENDING_RESULT | u3.5=PENDING_RESULT | btts=PENDING_RESULT | bucket=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Gualaceo SC vs Cumbayá | result=1-0 | prediction=Cumbayá | side=AWAY | signal=69 MEDIUM_SIGNAL_REVIEW | 1x2=MISS | dc=MISS | dnb=MISS | o1.5=MISS | o2.5=MISS | u3.5=HIT | btts=MISS | bucket=SIGNAL_FAILED | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Ind. Juniors vs Deportivo Cuenca Juniors | result=4-0 | prediction=Deportivo Cuenca Juniors | side=AWAY | signal=64 MEDIUM_SIGNAL_REVIEW | 1x2=MISS | dc=MISS | dnb=MISS | o1.5=HIT | o2.5=HIT | u3.5=MISS | btts=MISS | bucket=SIGNAL_FAILED | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- Tupan vs São José MA | result=pending | prediction=Tupan | side=HOME | signal=70 MEDIUM_SIGNAL_REVIEW | 1x2=PENDING_RESULT | dc=PENDING_RESULT | dnb=PENDING_RESULT | o1.5=PENDING_RESULT | o2.5=PENDING_RESULT | u3.5=PENDING_RESULT | btts=PENDING_RESULT | bucket=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Tupan vs São José MA | result=2-3 | prediction=Tupan | side=HOME | signal=70 MEDIUM_SIGNAL_REVIEW | 1x2=MISS | dc=MISS | dnb=MISS | o1.5=HIT | o2.5=HIT | u3.5=MISS | btts=HIT | bucket=PARTIAL_SIGNAL_VALIDATED | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Amawele vs Madlenya | result=0-1 | prediction=Amawele | side=HOME | signal=70 MEDIUM_SIGNAL_REVIEW | 1x2=MISS | dc=MISS | dnb=MISS | o1.5=MISS | o2.5=MISS | u3.5=HIT | btts=MISS | bucket=SIGNAL_FAILED | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Viva Stumbo vs Magwanyana | result=0-1 | prediction=Viva Stumbo | side=HOME | signal=70 MEDIUM_SIGNAL_REVIEW | 1x2=MISS | dc=MISS | dnb=MISS | o1.5=MISS | o2.5=MISS | u3.5=HIT | btts=MISS | bucket=SIGNAL_FAILED | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 - Dynamos vs Hunters | result=2-2 | prediction=Dynamos | side=HOME | signal=65 MEDIUM_SIGNAL_REVIEW | 1x2=MISS | dc=HIT | dnb=VOID | o1.5=HIT | o2.5=HIT | u3.5=MISS | btts=HIT | bucket=PARTIAL_SIGNAL_VALIDATED | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION

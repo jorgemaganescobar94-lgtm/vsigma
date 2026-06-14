@@ -95,9 +95,9 @@
 - status_counts: OK=7; CONFIG_EXPECTED=4
 
 ## Next Triggers / Rechecks
-- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-14T11:37:41+01:00
-- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-14T11:37:41+01:00
-- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-14T11:37:41+01:00
+- .vsigma/triggers/daily_chain_self_heal.trigger: date=2026-06-10; reason=normalize_daily_chain_self_heal_date; triggered_at=2026-06-14T16:26:34+01:00
+- .vsigma/triggers/daily_decision_chain_v2.trigger: date=2026-06-10; reason=normalize_daily_decision_chain_v2_date; triggered_at=2026-06-14T16:26:34+01:00
+- .vsigma/triggers/prelock_official_lineup_recheck.trigger: date=2026-06-10; reason=normalize_prelock_recheck_date; triggered_at=2026-06-14T16:26:34+01:00
 
 ## Key Files
 - data/processed/today/2026-06-10/vsigma_consolidated_daily_operator_panel.md
@@ -146,7 +146,7 @@
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
 - files_scanned: 1736
 - accepted_rows: 122
-- rejected_rows: 517
+- rejected_rows: 775
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
@@ -296,30 +296,30 @@
 - rows_reviewed: 34
 - api_calls_planned: 34
 - api_calls_executed: 34
-- finished_rows: 28
-- pending_rows: 6
+- finished_rows: 29
+- pending_rows: 5
 - refresh_status_counts: OK=34
 - provider_counts: API-SPORTS_DIRECT=34
 - next_action: Re-run the postmatch accuracy ledger after this refresh. This output does not create picks or stake.
 ## API-Enriched Postmatch Accuracy Ledger
 - rows_reviewed: 34
-- finished_rows: 28
-- pending_rows: 6
-- accuracy_bucket_counts: PARTIAL_SIGNAL_VALIDATED=10; SIGNAL_FAILED=10; STRONG_SIGNAL_VALIDATED=8; PENDING_RESULT=6
-- api_1x2_counts: MISS=18; HIT=10; PENDING_RESULT=6
-- api_double_chance_counts: HIT=17; MISS=11; PENDING_RESULT=6
-- api_dnb_counts: MISS=11; HIT=10; VOID=7; PENDING_RESULT=6
-- over_1_5_counts: HIT=18; MISS=10; PENDING_RESULT=6
-- over_2_5_counts: MISS=14; HIT=14; PENDING_RESULT=6
-- under_3_5_counts: HIT=17; MISS=11; PENDING_RESULT=6
-- btts_counts: MISS=17; HIT=11; PENDING_RESULT=6
+- finished_rows: 29
+- pending_rows: 5
+- accuracy_bucket_counts: PARTIAL_SIGNAL_VALIDATED=11; SIGNAL_FAILED=10; STRONG_SIGNAL_VALIDATED=8; PENDING_RESULT=5
+- api_1x2_counts: MISS=19; HIT=10; PENDING_RESULT=5
+- api_double_chance_counts: HIT=17; MISS=12; PENDING_RESULT=5
+- api_dnb_counts: MISS=12; HIT=10; VOID=7; PENDING_RESULT=5
+- over_1_5_counts: HIT=19; MISS=10; PENDING_RESULT=5
+- over_2_5_counts: HIT=15; MISS=14; PENDING_RESULT=5
+- under_3_5_counts: HIT=17; MISS=12; PENDING_RESULT=5
+- btts_counts: MISS=17; HIT=12; PENDING_RESULT=5
 - pick_permission_counts: NO_PICK_PERMISSION=34
 - stake_permission_counts: NO_STAKE_PERMISSION=34
 - next_action: Use this ledger to calibrate signal buckets after results are final. Do not promote picks or stake from it.
 ## API Signal Calibration Summary
 - source_rows: 63
-- finished_rows: 55
-- pending_rows: 8
+- finished_rows: 56
+- pending_rows: 7
 - summary_rows: 77
 - top_market_by_hit_rate: REVIEW_PRIORITY=P1_MANUAL_REVIEW | API_DOUBLE_CHANCE | hit_rate_pct=83.3 | evaluated=24
 - top_market_by_hit_or_void_rate: REVIEW_PRIORITY=P1_MANUAL_REVIEW | API_DNB | hit_or_void_rate_pct=83.3 | evaluated=24
@@ -328,37 +328,13 @@
 - next_action: Use this summary to design future promotion rules only after enough sample size exists. It cannot create picks or stake.
 ## API Calibration Rule Candidates
 - rows_reviewed: 77
-- candidate_rows: 9
+- candidate_rows: 8
 - block_rows: 20
-- observe_rows: 48
-- rule_bucket_counts: RULE_OBSERVE_ONLY_INSUFFICIENT_SAMPLE=28; RULE_BLOCK_NEGATIVE_OR_WEAK_MARKET=20; RULE_OBSERVE_ONLY_SEGMENT=17; RULE_CANDIDATE_TOTAL_MARKET_EARLY_SAMPLE=4; RULE_CANDIDATE_PROTECTED_MARKET_EARLY_SAMPLE=4; RULE_NEUTRAL_OBSERVE_MORE=3; RULE_CANDIDATE_TOTAL_MARKET=1
-- rule_decision_counts: COLLECT_MORE_SAMPLE=28; OBSERVE_MORE_SEGMENT=17; WATCH_ONLY_COLLECT_TO_50_SAMPLE=8; BLOCK_ML_PROMOTION=7; BLOCK_OVER_2_5_PROMOTION=7; BLOCK_BTTS_YES_PROMOTION=6; OBSERVE_MORE_GLOBAL_MARKET=3; FUTURE_RULE_REVIEW_ONLY=1
-- future_rule_candidate_counts: NO_SAMPLE_TOO_SMALL=28; NO_BLOCKED_MARKET=20; NO_SEGMENT_SAMPLE_TOO_SMALL=17; YES_REVIEW_ONLY_AFTER_SAMPLE_GROWS=8; NO_OBSERVE_MORE=3; YES_REVIEW_ONLY=1
+- observe_rows: 49
+- rule_bucket_counts: RULE_OBSERVE_ONLY_INSUFFICIENT_SAMPLE=28; RULE_BLOCK_NEGATIVE_OR_WEAK_MARKET=20; RULE_OBSERVE_ONLY_SEGMENT=18; RULE_CANDIDATE_PROTECTED_MARKET_EARLY_SAMPLE=4; RULE_NEUTRAL_OBSERVE_MORE=3; RULE_CANDIDATE_TOTAL_MARKET_EARLY_SAMPLE=3; RULE_CANDIDATE_TOTAL_MARKET=1
+- rule_decision_counts: COLLECT_MORE_SAMPLE=28; OBSERVE_MORE_SEGMENT=18; BLOCK_ML_PROMOTION=7; BLOCK_OVER_2_5_PROMOTION=7; WATCH_ONLY_COLLECT_TO_50_SAMPLE=7; BLOCK_BTTS_YES_PROMOTION=6; OBSERVE_MORE_GLOBAL_MARKET=3; FUTURE_RULE_REVIEW_ONLY=1
+- future_rule_candidate_counts: NO_SAMPLE_TOO_SMALL=28; NO_BLOCKED_MARKET=20; NO_SEGMENT_SAMPLE_TOO_SMALL=18; YES_REVIEW_ONLY_AFTER_SAMPLE_GROWS=7; NO_OBSERVE_MORE=3; YES_REVIEW_ONLY=1
 - activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=77
 - pick_permission_counts: NO_PICK_PERMISSION=77
 - stake_permission_counts: NO_STAKE_PERMISSION=77
 - next_action: Review candidate rules only after sample grows. This board cannot activate rules, picks, or stake.
-## API Shadow Rule Outcome Ledger
-- candidate_rules_applied: 9
-- shadow_rows: 134
-- finished_shadow_rows: 116
-- pending_shadow_rows: 18
-- shadow_outcome_counts: HIT=76; MISS=32; PENDING_RESULT=18; VOID=8
-- rule_market_counts: OVER_1_5=71; API_DNB=22; API_DOUBLE_CHANCE=22; UNDER_3_5=19
-- paper_trade_permission_counts: SHADOW_ONLY=134
-- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=134
-- pick_permission_counts: NO_PICK_PERMISSION=134
-- stake_permission_counts: NO_STAKE_PERMISSION=134
-- next_action: Track shadow outcomes over future runs. This ledger cannot activate rules, picks, or stake.
-## API Shadow Rule Out-of-Sample Tracker
-- registry_rules: 19
-- rows_reviewed: 134
-- in_sample_rows: 116
-- out_of_sample_rows: 0
-- pending_rows: 18
-- oos_evaluated_rows: 0
-- oos_class_counts: IN_SAMPLE_BOOTSTRAP=116; PENDING_RESULT=18
-- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=134
-- pick_permission_counts: NO_PICK_PERMISSION=134
-- stake_permission_counts: NO_STAKE_PERMISSION=134
-- next_action: Collect future OUT_OF_SAMPLE rows. No rule activation before sufficient out-of-sample sample size.

@@ -1,2 +1,2 @@
 target_date,generated_at,normalized_status,board_status,mismatch_count,promoted_rows,queue_rows,board_rows,diagnostic_no_bet_rows,operator_state,next_action,auto_apply,production_change
-2026-06-10,2026-06-14T11:37:45+01:00,REVIEW_EMPTY_DIAGNOSTIC_BOARD,daily_board_md=OK; daily_board_csv=OK,0,0,95,1,0,EMPTY_REVIEW_REQUIRED,Review date guard and board diagnostics before market discussion.,NO,NO
+2026-06-10,2026-06-14T16:26:38+01:00,REVIEW_EMPTY_DIAGNOSTIC_BOARD,daily_board_md=OK; daily_board_csv=OK,0,0,95,1,0,EMPTY_REVIEW_REQUIRED,Review date guard and board diagnostics before market discussion.,NO,NO
