@@ -1,0 +1,76 @@
+name: vSIGMA Official Today Picks Mobile
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Target date YYYY-MM-DD. Leave empty for current Atlantic/Canary date."
+        required: false
+        default: ""
+      timezone:
+        description: "Timezone"
+        required: false
+        default: "Atlantic/Canary"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vsigma-official-today-picks-mobile-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ github.token }}
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Resolve date
+        id: resolve_date
+        shell: bash
+        run: |
+          INPUT_DATE="${{ inputs.date }}"
+          if [ -z "$INPUT_DATE" ]; then
+            INPUT_DATE=$(TZ='Atlantic/Canary' date +%F)
+          fi
+          echo "target_date=$INPUT_DATE" >> "$GITHUB_OUTPUT"
+          echo "Target date: $INPUT_DATE"
+
+      - name: Build official mobile picks surface
+        shell: bash
+        run: |
+          python -m py_compile scripts/build_official_today_picks_mobile.py
+          python scripts/build_official_today_picks_mobile.py \
+            --date "${{ steps.resolve_date.outputs.target_date }}" \
+            --timezone "${{ inputs.timezone }}"
+
+      - name: Assert output
+        shell: bash
+        run: |
+          test -s "data/processed/today/${{ steps.resolve_date.outputs.target_date }}/vsigma_official_today_picks_${{ steps.resolve_date.outputs.target_date }}.md"
+          test -s "data/processed/today/${{ steps.resolve_date.outputs.target_date }}/vsigma_official_today_picks_${{ steps.resolve_date.outputs.target_date }}.csv"
+          grep -q "vSIGMA Official Today Picks" "data/processed/today/${{ steps.resolve_date.outputs.target_date }}/vsigma_official_today_picks_${{ steps.resolve_date.outputs.target_date }}.md"
+
+      - name: Commit official picks output
+        shell: bash
+        run: |
+          git config user.name "vSIGMA GitHub Actions Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "data/processed/today/${{ steps.resolve_date.outputs.target_date }}/vsigma_official_today_picks_${{ steps.resolve_date.outputs.target_date }}."* 2>/dev/null || true
+          git add "data/processed/governance/vsigma_official_today_picks_${{ steps.resolve_date.outputs.target_date }}."* 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No official today picks output changes to commit."
+            exit 0
+          fi
+          git commit -m "vSIGMA official today picks ${{ steps.resolve_date.outputs.target_date }} [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
