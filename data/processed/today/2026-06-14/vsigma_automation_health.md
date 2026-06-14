@@ -4,13 +4,13 @@
 - system_status: BROKEN
 - components_checked: 11
 - severity_counts: BROKEN=1; WARN=1; OK=5; INFO=4
-- status_counts: MISSING=2; OK=5; CONFIG_EXPECTED=4
+- status_counts: MISSING=1; OK=6; CONFIG_EXPECTED=4
 - auto_apply: NO
 - production_change: NO
 
 ## Component Rows
 - daily_execution_board | status=MISSING | severity=BROKEN | action=RUN_DAILY_DECISION_CHAIN_V2 | detail=vsigma_daily_execution_board.md/csv missing
-- prelock_live_recheck | status=MISSING | severity=WARN | action=RUN_PRELOCK_RECHECK | detail=prelock/live report missing
+- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=none
 - live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
 - postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=NS=1
 - postmatch_stat_actuals | status=OK | severity=OK | action=NO | detail=rows_final=0
