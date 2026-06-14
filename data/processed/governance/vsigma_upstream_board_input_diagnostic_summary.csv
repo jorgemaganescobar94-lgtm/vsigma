@@ -1,2 +1,2 @@
 target_date,generated_at,overall_status,first_empty_required_component,missing_required_count,empty_required_count,date_issue_count,board_rows,translator_rows,forecast_rows,next_action,auto_apply,production_change
-2026-06-10,2026-06-14T19:49:11+01:00,UPSTREAM_MISSING,context_matrix,2,0,0,1,1,1,Build missing required upstream component first: context_matrix.,NO,NO
+2026-06-10,2026-06-14T21:47:31+01:00,UPSTREAM_MISSING,context_matrix,2,0,0,1,1,1,Build missing required upstream component first: context_matrix.,NO,NO
