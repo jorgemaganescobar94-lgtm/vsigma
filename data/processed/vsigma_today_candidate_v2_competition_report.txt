@@ -13,4 +13,4 @@ Competition shortlist
 
 Competition top
  accuracy_mode_rank  fixture_id           league home_team away_team market_primary  competition_raw_prob  competition_calibrated_prob  primary_edge  accuracy_confidence_score                                                                                     accuracy_mode_reason       accuracy_primary_risk  competition_prob_calibration_reason
-                  1     1551271 Segunda División    Malaga   Almeria       OVER_2_5                0.8768                     0.893925      0.361336                    148.144 ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_BUCKET_RELIABILITY_UPLIFT
+                  1     1551271 Segunda División    Malaga   Almeria       OVER_2_5                0.8768                     0.893925      0.369186                    148.144 ACCURACY_CORE_PRIORITY;ACCURACY_OVER_CONFIRMED;ACCURACY_MODEL_PROB_HIGH;ACCURACY_FAILURE_MODE_ACCEPTABLE FAILURE_MODE_LOW_CONVERSION CALIBRATED_BUCKET_RELIABILITY_UPLIFT

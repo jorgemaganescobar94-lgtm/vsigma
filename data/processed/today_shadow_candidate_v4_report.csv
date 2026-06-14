@@ -1,2 +1,2 @@
 date,timezone,mode,status,reason,baseline_competition_rows,candidate_v2_competition_rows,candidate_v4_competition_rows,firewall_checked_rows,firewall_kept_rows,firewall_downgraded_rows,firewall_secondary_rows,firewall_removed_rows,official_baseline_preserved,candidate_v2_preserved,run_finished_at
-2026-06-14,Atlantic/Canary,SHADOW_CANDIDATE_V4_O25_LOW_CONVERSION_FIREWALL,OK,,1,1,0,1,0,0,1,0,1,1,2026-06-13T23:01:55.090807+00:00
+2026-06-14,Atlantic/Canary,SHADOW_CANDIDATE_V4_O25_LOW_CONVERSION_FIREWALL,OK,,1,1,1,1,0,1,0,0,1,1,2026-06-14T10:50:36.618310+00:00

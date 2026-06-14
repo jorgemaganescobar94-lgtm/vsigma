@@ -813,7 +813,7 @@ vSIGMA Competition Accuracy Mode + Probability Calibration
 - Promotion status: SAMPLE_TOO_SMALL:4; AUDIT_ONLY:2; KEEP_OFFICIAL_BASELINE:1
 - Threshold alerts: SAMPLE_TOO_SMALL:20
 - Major drift/threshold alerts: none
-- NO BET modes: CANDIDATE_V4, CANDIDATE_V6
+- NO BET modes: CANDIDATE_V6
 - Pre-lock: PRE_LOCK_NOT_AVAILABLE
 - Drift: NO_DRIFT:5; SAMPLE_TOO_SMALL:3; WATCH_PATTERN:1
 - Failure modes: see daily master report for pick-level risks.
@@ -822,7 +822,7 @@ vSIGMA Competition Accuracy Mode + Probability Calibration
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BASELINE | PICKS_AVAILABLE | 1 | 0 | 0 | 0.0 |  | 1 | vsigma_today_competition_top.csv |
 | CANDIDATE_V2 | PICKS_AVAILABLE | 1 | 0 | 0 | 0.0 |  | 1 | vsigma_today_candidate_v2_competition_top.csv |
-| CANDIDATE_V4 | NO_BET | 0 | 0 | 0 | 0.0 |  | 0 | vsigma_today_candidate_v4_competition_top.csv |
+| CANDIDATE_V4 | PICKS_AVAILABLE | 1 | 0 | 0 | 0.0 |  | 1 | vsigma_today_candidate_v4_competition_top.csv |
 | CANDIDATE_V5 | PICKS_AVAILABLE | 1 | 0 | 0 | 0.0 |  | 1 | vsigma_today_candidate_v5_competition_top.csv |
 | CANDIDATE_V6 | NO_BET | 0 | 0 | 0 | 0.0 |  | 0 | vsigma_today_candidate_v6_competition_top.csv |
 <!-- VSIGMA_SCOREBOARD_END 2026-06-14 -->
