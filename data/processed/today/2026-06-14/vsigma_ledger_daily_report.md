@@ -3,10 +3,10 @@
 ## Ledger Update Status
 - Ledger CSV: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv
 - JSONL event log: /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.jsonl
-- Official picks registered: 1
-- Shadow picks registered: 4
+- Official picks registered: 0
+- Shadow picks registered: 0
 - No-bet records: 2
-- Pending records: 5
+- Pending records: 0
 - Settled records: 0
 - Daily winner: NO_SETTLED_RESULTS
 
@@ -24,26 +24,14 @@
 ## Daily Summary By Experiment
 | experiment_id | records | picks | no_bet_records | pending | settled | profit_units |
 | --- | --- | --- | --- | --- | --- | --- |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1 | 0 | 1 | 0 | 0.0 |
 | CANDIDATE_V3_ODDS_DEPTH | 1 | 0 | 1 | 0 | 0 | 0.0 |
-| CANDIDATE_V4_O25_FIREWALL | 1 | 1 | 0 | 1 | 0 | 0.0 |
-| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1 | 0 | 1 | 0 | 0.0 |
 | CANDIDATE_V6_API_PREDICTIONS | 1 | 0 | 1 | 0 | 0 | 0.0 |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1 | 0 | 1 | 0 | 0.0 |
-| OFFICIAL_BASELINE | 1 | 1 | 0 | 1 | 0 | 0.0 |
 
 ## Official Picks
-| experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1 | 1551271 | Malaga | Almeria | OVER_2_5 | 0.910725 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.386; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+_No rows._
 
 ## Shadow Picks
-| experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1551271 | Malaga | Almeria | OVER_2_5 | 0.893925 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.369; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1551271 | Malaga | Almeria | OVER_2_5 | 0.893925 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.369; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1551271 | Malaga | Almeria | OVER_2_5 | 0.893925 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.369; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
-| CANDIDATE_V4_O25_FIREWALL | 1 | 1551271 | Malaga | Almeria | OVER_1_5 | 0.89256 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.369; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+_No rows._
 
 ## No-Bet Modes
 | experiment_id | record_status | reason_tags | source_file |
@@ -52,26 +40,31 @@
 | CANDIDATE_V6_API_PREDICTIONS | NO_BET_RECORD | NO_BET; no competition top rows | vsigma_today_candidate_v6_competition_top.csv |
 
 ## Pre-Lock Changes
-| experiment_id | fixture_id | home_team | away_team | market_primary | prelock_status | prelock_decision | prelock_decision_reason |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1551271 | Malaga | Almeria | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1551271 | Malaga | Almeria | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| CANDIDATE_V5_PLAYER_IMPACT | 1551271 | Malaga | Almeria | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1551271 | Malaga | Almeria | OVER_2_5 | OUTSIDE_PRELOCK_WINDOW | PRELOCK_NOT_AVAILABLE | fixture is outside requested pre-lock window |
+_No rows._
 
 ## Result State
-| experiment_id | fixture_id | market_primary | result_status | result | profit_units | record_status |
-| --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1551271 | OVER_2_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1551271 | OVER_2_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1551271 | OVER_2_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1551271 | OVER_2_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
-| CANDIDATE_V4_O25_FIREWALL | 1551271 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
+_No rows._
 
 ## Freshness Warnings
 | file_name | status | detail |
 | --- | --- | --- |
+| vsigma_today_competition_shortlist.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v2_competition_shortlist.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v2_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v4_competition_shortlist.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v4_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v5_competition_shortlist.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v5_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
 | vsigma_today_candidate_v6_competition_shortlist.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
 | vsigma_today_candidate_v6_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| vsigma_today_prelock_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
-| today_post_results_report.csv | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet |
+| vsigma_today_candidate_v7_competition_shortlist.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v7_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_baseline_vs_candidate_v2.csv | EMPTY_UNEXPECTED | empty output was not expected for this report |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v4.csv | EMPTY_UNEXPECTED | empty output was not expected for this report |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v5.csv | EMPTY_UNEXPECTED | empty output was not expected for this report |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v6.csv | EMPTY_UNEXPECTED | empty output was not expected for this report |
+| vsigma_today_baseline_vs_candidate_v2_vs_candidate_v7.csv | EMPTY_UNEXPECTED | empty output was not expected for this report |
+| vsigma_today_match_script_forecasts.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v2_match_script_forecasts.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v4_match_script_forecasts.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
