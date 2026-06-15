@@ -1,25 +1,9 @@
 country,league,league_tier,league_filter_reason,matches
-Iran,Azadegan League,REJECT,country_league_not_allowlisted,5
 Brazil,Carioca C,REJECT,country_league_not_allowlisted,4
-Argentina,Primera C,REJECT,country_league_not_allowlisted,3
+Iran,Azadegan League,REJECT,country_league_not_allowlisted,3
 USA,USL W League,REJECT,country_league_not_allowlisted,3
-World,World Cup,REJECT,country_league_not_allowlisted,3
-Iceland,2. Deild,REJECT,country_league_not_allowlisted,2
-Norway,3. Division - Girone 4,REJECT,country_league_not_allowlisted,2
-Peru,Copa De La Liga,REJECT,country_league_not_allowlisted,2
-Sweden,Superettan,REJECT,country_league_not_allowlisted,2
-Argentina,Reserve League,REJECT,hard_reject_noise_league,1
 Argentina,Torneo Federal A,REJECT,country_league_not_allowlisted,1
 Bolivia,Primera División,REJECT,country_league_not_allowlisted,1
-Estonia,Esiliiga A,REJECT,country_league_not_allowlisted,1
-Estonia,Esiliiga B,REJECT,country_league_not_allowlisted,1
-Finland,Ykkösliiga,REJECT,country_league_not_allowlisted,1
-Iceland,Úrvalsdeild,REJECT,country_league_not_allowlisted,1
-Norway,3. Division - Girone 2,REJECT,country_league_not_allowlisted,1
-Norway,3. Division - Girone 3,REJECT,country_league_not_allowlisted,1
-Norway,3. Division - Girone 5,REJECT,country_league_not_allowlisted,1
-Norway,3. Division - Girone 6,REJECT,country_league_not_allowlisted,1
-Sweden,Division 2 - Norra Götaland,REJECT,country_league_not_allowlisted,1
-Sweden,Division 2 - Norrland,REJECT,country_league_not_allowlisted,1
-Sweden,Division 2 - Södra Svealand,REJECT,country_league_not_allowlisted,1
+Peru,Copa De La Liga,REJECT,country_league_not_allowlisted,1
+World,World Cup,REJECT,country_league_not_allowlisted,1
 Brazil,Serie C,TIER_3,brazil_serie_c_noisy,1
