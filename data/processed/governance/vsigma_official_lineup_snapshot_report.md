@@ -5,12 +5,12 @@
 - eligible_fixtures: 1
 - api_calls_made: 1
 - cache_hits: 0
-- lineup_rows_written: 42
+- lineup_rows_written: 44
 - full_lineup_rows: 42
 - no_lineup_rows: 0
 - api_errors: 0
 - key_status: API_SPORTS
-- api_status_counts: NO_LINEUPS_RETURNED=1
+- api_status_counts: OK=1
 - auto_apply: NO
 - production_change: NO
 
@@ -57,6 +57,8 @@
 - Cape Town City vs Magesi | side=away | players=11 | formation=4-2-3-1 | status=OK
 - Malaga vs Las Palmas | side=home | players=11 | formation=4-2-3-1 | status=OK
 - Malaga vs Las Palmas | side=away | players=11 | formation=4-4-2 | status=OK
+- Maringá vs Maranhão | side=home | players=1 | formation=4-1-4-1 | status=OK
+- Maringá vs Maranhão | side=away | players=1 | formation=4-2-3-1 | status=OK
 
 ## Guardrails
 - Official lineup importer only reads API/player snapshots; it never fabricates players.
