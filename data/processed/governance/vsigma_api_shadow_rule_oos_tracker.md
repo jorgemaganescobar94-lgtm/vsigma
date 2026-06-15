@@ -1,154 +1,154 @@
 # vSIGMA API Shadow Rule Out-of-Sample Tracker - 2026-06-15
 
 ## Summary
-- registry_rules: 20
-- rows_reviewed: 142
-- in_sample_rows: 3
-- out_of_sample_rows: 18
-- pending_rows: 121
-- evaluated_rows: 21
-- oos_evaluated_rows: 18
-- oos_hit_rows: 13
-- oos_miss_rows: 5
-- oos_void_rows: 0
-- oos_hit_rate_pct: 72.2
-- oos_hit_or_void_rate_pct: 72.2
-- oos_class_counts: PENDING_RESULT=121; OUT_OF_SAMPLE=18; IN_SAMPLE_BOOTSTRAP=3
-- oos_outcome_counts: PENDING_RESULT=121; HIT=16; MISS=5
-- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=142
-- pick_permission_counts: NO_PICK_PERMISSION=142
-- stake_permission_counts: NO_STAKE_PERMISSION=142
+- registry_rules: 26
+- rows_reviewed: 155
+- in_sample_rows: 35
+- out_of_sample_rows: 51
+- pending_rows: 69
+- evaluated_rows: 86
+- oos_evaluated_rows: 51
+- oos_hit_rows: 40
+- oos_miss_rows: 9
+- oos_void_rows: 2
+- oos_hit_rate_pct: 78.4
+- oos_hit_or_void_rate_pct: 82.4
+- oos_class_counts: PENDING_RESULT=69; OUT_OF_SAMPLE=51; IN_SAMPLE_BOOTSTRAP=35
+- oos_outcome_counts: PENDING_RESULT=69; HIT=65; MISS=17; VOID=4
+- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=155
+- pick_permission_counts: NO_PICK_PERMISSION=155
+- stake_permission_counts: NO_STAKE_PERMISSION=155
 - next_action: Collect future OUT_OF_SAMPLE rows. No rule activation before sufficient out-of-sample sample size.
 - auto_apply: NO
 - production_change: NO
 
 ## Market Out-of-Sample Summary
-- API_DNB | oos_evaluated=2 | HIT=0 | MISS=2 | VOID=0 | hit_rate=0.0 | hit_or_void=0.0
-- API_DOUBLE_CHANCE | oos_evaluated=2 | HIT=0 | MISS=2 | VOID=0 | hit_rate=0.0 | hit_or_void=0.0
-- OVER_1_5 | oos_evaluated=14 | HIT=13 | MISS=1 | VOID=0 | hit_rate=92.9 | hit_or_void=92.9
+- API_DNB | oos_evaluated=10 | HIT=6 | MISS=2 | VOID=2 | hit_rate=60.0 | hit_or_void=80.0
+- API_DOUBLE_CHANCE | oos_evaluated=10 | HIT=8 | MISS=2 | VOID=0 | hit_rate=80.0 | hit_or_void=80.0
+- OVER_1_5 | oos_evaluated=31 | HIT=26 | MISS=5 | VOID=0 | hit_rate=83.9 | hit_or_void=83.9
 - UNDER_3_5 | oos_evaluated=0 | status=NO_OUT_OF_SAMPLE_YET
 
 ## OOS Rows
 - API_OOS_00001 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Westchester SC vs Greenville Triumph | score=4-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00002 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Bigfoot vs Oly Town | score=1-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00003 | OUT_OF_SAMPLE | first_seen=2026-06-10 | City SC vs Ventura County Fusion | score=1-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00004 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Brazos Valley vs Hill Country Lobos | score=0-1 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00005 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Snohomish United vs West Seattle Junction | score=3-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00006 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Sportivo San Juan vs Almaden | score=0-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00007 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Varketili vs Betlemi | score=7-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00008 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Negelle Arsi vs Awassa Kenema | score=2-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00009 | PENDING_RESULT | first_seen=2026-06-10 | KMC vs Coastal Union | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00010 | PENDING_RESULT | first_seen=2026-06-10 | Gonio vs Margveti 2006 | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00011 | PENDING_RESULT | first_seen=2026-06-10 | Guria vs Iveria Khashuri | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00012 | PENDING_RESULT | first_seen=2026-06-10 | Adama Kenema vs Ethiopia Nigd Bank | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00013 | PENDING_RESULT | first_seen=2026-06-10 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00014 | PENDING_RESULT | first_seen=2026-06-10 | Mes Soongoun vs Nassaji Mazandaran | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00015 | PENDING_RESULT | first_seen=2026-06-10 | Lokomotivi Tbilisi vs Iberia 2010 | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00016 | PENDING_RESULT | first_seen=2026-06-10 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00017 | PENDING_RESULT | first_seen=2026-06-10 | Fard Alborz vs Sanat Naft | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00018 | PENDING_RESULT | first_seen=2026-06-10 | Havadar vs Mes Kerman | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00019 | PENDING_RESULT | first_seen=2026-06-10 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00020 | PENDING_RESULT | first_seen=2026-06-10 | Hadiya Hosaena vs Fasil Ketema | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00021 | PENDING_RESULT | first_seen=2026-06-10 | SJK Akatemia vs Haka | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00022 | PENDING_RESULT | first_seen=2026-06-10 | Naft Gachsaran vs Niroye Zamini | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00023 | PENDING_RESULT | first_seen=2026-06-10 | GIF Sundsvall vs Osters IF | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00024 | PENDING_RESULT | first_seen=2026-06-10 | IFK Norrkoping vs Varbergs BoIS FC | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00025 | PENDING_RESULT | first_seen=2026-06-10 | Nyköping vs Smedby | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00026 | PENDING_RESULT | first_seen=2026-06-10 | Vänersborgs IF vs Herrestads | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00027 | PENDING_RESULT | first_seen=2026-06-10 | Campos AA vs Uni Souza | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00028 | PENDING_RESULT | first_seen=2026-06-10 | KA Akureyri vs Fram Reykjavik | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00029 | PENDING_RESULT | first_seen=2026-06-10 | Tigres do Brasil vs Uniao Central | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00030 | PENDING_RESULT | first_seen=2026-06-10 | Defensores de Cambaceres vs Berazategui | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00031 | PENDING_RESULT | first_seen=2026-06-10 | Sacachispas vs Argentino Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00032 | PENDING_RESULT | first_seen=2026-06-10 | Sportivo Barracas vs General Lamadrid | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00033 | PENDING_RESULT | first_seen=2026-06-10 | Fénix vs Leones de Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00034 | PENDING_RESULT | first_seen=2026-06-10 | Belgium vs Egypt | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00035 | PENDING_RESULT | first_seen=2026-06-10 | Selfoss vs Thróttur Vogar | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00036 | PENDING_RESULT | first_seen=2026-06-10 | Saudi Arabia vs Uruguay | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00037 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Westchester SC vs Greenville Triumph | score=4-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00038 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Bigfoot vs Oly Town | score=1-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00039 | OUT_OF_SAMPLE | first_seen=2026-06-10 | City SC vs Ventura County Fusion | score=1-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00040 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Sportivo San Juan vs Almaden | score=0-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00041 | PENDING_RESULT | first_seen=2026-06-10 | KMC vs Coastal Union | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00042 | PENDING_RESULT | first_seen=2026-06-10 | Adama Kenema vs Ethiopia Nigd Bank | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00043 | PENDING_RESULT | first_seen=2026-06-10 | Mes Soongoun vs Nassaji Mazandaran | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00044 | PENDING_RESULT | first_seen=2026-06-10 | Fard Alborz vs Sanat Naft | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00045 | PENDING_RESULT | first_seen=2026-06-10 | SJK Akatemia vs Haka | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00046 | PENDING_RESULT | first_seen=2026-06-10 | GIF Sundsvall vs Osters IF | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00047 | PENDING_RESULT | first_seen=2026-06-10 | Vänersborgs IF vs Herrestads | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00048 | PENDING_RESULT | first_seen=2026-06-10 | KA Akureyri vs Fram Reykjavik | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00049 | PENDING_RESULT | first_seen=2026-06-10 | Defensores de Cambaceres vs Berazategui | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00050 | PENDING_RESULT | first_seen=2026-06-10 | Sportivo Barracas vs General Lamadrid | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00051 | PENDING_RESULT | first_seen=2026-06-10 | Fénix vs Leones de Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00052 | PENDING_RESULT | first_seen=2026-06-10 | Saudi Arabia vs Uruguay | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00053 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Westchester SC vs Greenville Triumph | score=4-0 | market=API_DNB | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00054 | PENDING_RESULT | first_seen=2026-06-10 | KMC vs Coastal Union | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00055 | PENDING_RESULT | first_seen=2026-06-10 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00056 | PENDING_RESULT | first_seen=2026-06-10 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00057 | PENDING_RESULT | first_seen=2026-06-10 | Fard Alborz vs Sanat Naft | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00058 | PENDING_RESULT | first_seen=2026-06-10 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00059 | PENDING_RESULT | first_seen=2026-06-10 | SJK Akatemia vs Haka | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00060 | PENDING_RESULT | first_seen=2026-06-10 | GIF Sundsvall vs Osters IF | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00061 | PENDING_RESULT | first_seen=2026-06-10 | Vänersborgs IF vs Herrestads | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00062 | PENDING_RESULT | first_seen=2026-06-10 | Defensores de Cambaceres vs Berazategui | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00063 | PENDING_RESULT | first_seen=2026-06-10 | Sacachispas vs Argentino Rosario | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00064 | PENDING_RESULT | first_seen=2026-06-10 | Belgium vs Egypt | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00065 | PENDING_RESULT | first_seen=2026-06-10 | Selfoss vs Thróttur Vogar | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00066 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Westchester SC vs Greenville Triumph | score=4-0 | market=API_DOUBLE_CHANCE | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00067 | PENDING_RESULT | first_seen=2026-06-10 | KMC vs Coastal Union | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00068 | PENDING_RESULT | first_seen=2026-06-10 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00069 | PENDING_RESULT | first_seen=2026-06-10 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00070 | PENDING_RESULT | first_seen=2026-06-10 | Fard Alborz vs Sanat Naft | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00071 | PENDING_RESULT | first_seen=2026-06-10 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00072 | PENDING_RESULT | first_seen=2026-06-10 | SJK Akatemia vs Haka | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00073 | PENDING_RESULT | first_seen=2026-06-10 | GIF Sundsvall vs Osters IF | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00074 | PENDING_RESULT | first_seen=2026-06-10 | Vänersborgs IF vs Herrestads | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00075 | PENDING_RESULT | first_seen=2026-06-10 | Defensores de Cambaceres vs Berazategui | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00076 | PENDING_RESULT | first_seen=2026-06-10 | Sacachispas vs Argentino Rosario | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00077 | PENDING_RESULT | first_seen=2026-06-10 | Belgium vs Egypt | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00078 | PENDING_RESULT | first_seen=2026-06-10 | Selfoss vs Thróttur Vogar | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00079 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Westchester SC vs Greenville Triumph | score=4-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00080 | PENDING_RESULT | first_seen=2026-06-10 | KMC vs Coastal Union | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00081 | PENDING_RESULT | first_seen=2026-06-10 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00082 | PENDING_RESULT | first_seen=2026-06-10 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00083 | PENDING_RESULT | first_seen=2026-06-10 | Fard Alborz vs Sanat Naft | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00084 | PENDING_RESULT | first_seen=2026-06-10 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00085 | PENDING_RESULT | first_seen=2026-06-10 | SJK Akatemia vs Haka | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00086 | PENDING_RESULT | first_seen=2026-06-10 | GIF Sundsvall vs Osters IF | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00087 | PENDING_RESULT | first_seen=2026-06-10 | Vänersborgs IF vs Herrestads | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00088 | PENDING_RESULT | first_seen=2026-06-10 | Defensores de Cambaceres vs Berazategui | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00089 | PENDING_RESULT | first_seen=2026-06-10 | Sacachispas vs Argentino Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00090 | PENDING_RESULT | first_seen=2026-06-10 | Belgium vs Egypt | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00091 | PENDING_RESULT | first_seen=2026-06-10 | Selfoss vs Thróttur Vogar | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00092 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Bigfoot vs Oly Town | score=1-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00093 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Brazos Valley vs Hill Country Lobos | score=0-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00094 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Negelle Arsi vs Awassa Kenema | score=2-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00095 | PENDING_RESULT | first_seen=2026-06-15 | Gonio vs Margveti 2006 | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00096 | PENDING_RESULT | first_seen=2026-06-15 | Adama Kenema vs Ethiopia Nigd Bank | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00097 | PENDING_RESULT | first_seen=2026-06-15 | Havadar vs Mes Kerman | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00098 | PENDING_RESULT | first_seen=2026-06-15 | Naft Gachsaran vs Niroye Zamini | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00099 | PENDING_RESULT | first_seen=2026-06-15 | IFK Norrkoping vs Varbergs BoIS FC | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00100 | PENDING_RESULT | first_seen=2026-06-15 | Campos AA vs Uni Souza | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00101 | PENDING_RESULT | first_seen=2026-06-15 | KA Akureyri vs Fram Reykjavik | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00102 | PENDING_RESULT | first_seen=2026-06-15 | Sportivo Barracas vs General Lamadrid | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00103 | PENDING_RESULT | first_seen=2026-06-15 | Saudi Arabia vs Uruguay | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00104 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Westchester SC vs Greenville Triumph | score=4-0 | market=API_DNB | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00105 | PENDING_RESULT | first_seen=2026-06-10 | KMC vs Coastal Union | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00106 | PENDING_RESULT | first_seen=2026-06-10 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00107 | PENDING_RESULT | first_seen=2026-06-10 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00108 | PENDING_RESULT | first_seen=2026-06-10 | Fard Alborz vs Sanat Naft | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00109 | PENDING_RESULT | first_seen=2026-06-10 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00110 | PENDING_RESULT | first_seen=2026-06-10 | SJK Akatemia vs Haka | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00111 | PENDING_RESULT | first_seen=2026-06-10 | GIF Sundsvall vs Osters IF | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00112 | PENDING_RESULT | first_seen=2026-06-10 | Vänersborgs IF vs Herrestads | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00113 | PENDING_RESULT | first_seen=2026-06-10 | Defensores de Cambaceres vs Berazategui | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00114 | PENDING_RESULT | first_seen=2026-06-10 | Sacachispas vs Argentino Rosario | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00115 | PENDING_RESULT | first_seen=2026-06-10 | Belgium vs Egypt | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00116 | PENDING_RESULT | first_seen=2026-06-10 | Selfoss vs Thróttur Vogar | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00117 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Westchester SC vs Greenville Triumph | score=4-0 | market=API_DOUBLE_CHANCE | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00118 | PENDING_RESULT | first_seen=2026-06-10 | KMC vs Coastal Union | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00119 | PENDING_RESULT | first_seen=2026-06-10 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_OOS_00120 | PENDING_RESULT | first_seen=2026-06-10 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00002 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Varketili vs Betlemi | score=7-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00003 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Negelle Arsi vs Awassa Kenema | score=2-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00004 | OUT_OF_SAMPLE | first_seen=2026-06-10 | KMC vs Coastal Union | score=1-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00005 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Gonio vs Margveti 2006 | score=4-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00006 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Guria vs Iveria Khashuri | score=5-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00007 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Adama Kenema vs Ethiopia Nigd Bank | score=2-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00008 | PENDING_RESULT | first_seen=2026-06-10 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00009 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Mes Soongoun vs Nassaji Mazandaran | score=1-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00010 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Lokomotivi Tbilisi vs Iberia 2010 | score=1-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00011 | PENDING_RESULT | first_seen=2026-06-10 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00012 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Fard Alborz vs Sanat Naft | score=1-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00013 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Havadar vs Mes Kerman | score=1-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00014 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=0-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00015 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Hadiya Hosaena vs Fasil Ketema | score=0-1 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00016 | OUT_OF_SAMPLE | first_seen=2026-06-10 | SJK Akatemia vs Haka | score=0-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00017 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Naft Gachsaran vs Niroye Zamini | score=0-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00018 | PENDING_RESULT | first_seen=2026-06-10 | GIF Sundsvall vs Osters IF | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00019 | PENDING_RESULT | first_seen=2026-06-10 | IFK Norrkoping vs Varbergs BoIS FC | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00020 | PENDING_RESULT | first_seen=2026-06-10 | Campos AA vs Uni Souza | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00021 | PENDING_RESULT | first_seen=2026-06-10 | KA Akureyri vs Fram Reykjavik | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00022 | PENDING_RESULT | first_seen=2026-06-10 | Tigres do Brasil vs Uniao Central | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00023 | PENDING_RESULT | first_seen=2026-06-10 | Defensores de Cambaceres vs Berazategui | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00024 | PENDING_RESULT | first_seen=2026-06-10 | Sacachispas vs Argentino Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00025 | PENDING_RESULT | first_seen=2026-06-10 | Sportivo Barracas vs General Lamadrid | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00026 | PENDING_RESULT | first_seen=2026-06-10 | Fénix vs Leones de Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00027 | PENDING_RESULT | first_seen=2026-06-10 | Selfoss vs Thróttur Vogar | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00028 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Westchester SC vs Greenville Triumph | score=4-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00029 | OUT_OF_SAMPLE | first_seen=2026-06-10 | KMC vs Coastal Union | score=1-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00030 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Adama Kenema vs Ethiopia Nigd Bank | score=2-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00031 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Mes Soongoun vs Nassaji Mazandaran | score=1-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00032 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Fard Alborz vs Sanat Naft | score=1-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00033 | OUT_OF_SAMPLE | first_seen=2026-06-10 | SJK Akatemia vs Haka | score=0-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00034 | PENDING_RESULT | first_seen=2026-06-10 | GIF Sundsvall vs Osters IF | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00035 | PENDING_RESULT | first_seen=2026-06-10 | KA Akureyri vs Fram Reykjavik | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00036 | PENDING_RESULT | first_seen=2026-06-10 | Defensores de Cambaceres vs Berazategui | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00037 | PENDING_RESULT | first_seen=2026-06-10 | Sportivo Barracas vs General Lamadrid | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00038 | PENDING_RESULT | first_seen=2026-06-10 | Fénix vs Leones de Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00039 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Westchester SC vs Greenville Triumph | score=4-0 | market=API_DNB | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00040 | OUT_OF_SAMPLE | first_seen=2026-06-10 | KMC vs Coastal Union | score=1-3 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00041 | PENDING_RESULT | first_seen=2026-06-10 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00042 | PENDING_RESULT | first_seen=2026-06-10 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00043 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Fard Alborz vs Sanat Naft | score=1-2 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00044 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=0-0 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00045 | OUT_OF_SAMPLE | first_seen=2026-06-10 | SJK Akatemia vs Haka | score=0-2 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00046 | PENDING_RESULT | first_seen=2026-06-10 | GIF Sundsvall vs Osters IF | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00047 | PENDING_RESULT | first_seen=2026-06-10 | Defensores de Cambaceres vs Berazategui | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00048 | PENDING_RESULT | first_seen=2026-06-10 | Sacachispas vs Argentino Rosario | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00049 | PENDING_RESULT | first_seen=2026-06-10 | Selfoss vs Thróttur Vogar | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00050 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Westchester SC vs Greenville Triumph | score=4-0 | market=API_DOUBLE_CHANCE | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00051 | OUT_OF_SAMPLE | first_seen=2026-06-10 | KMC vs Coastal Union | score=1-3 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00052 | PENDING_RESULT | first_seen=2026-06-10 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00053 | PENDING_RESULT | first_seen=2026-06-10 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00054 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Fard Alborz vs Sanat Naft | score=1-2 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00055 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=0-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00056 | OUT_OF_SAMPLE | first_seen=2026-06-10 | SJK Akatemia vs Haka | score=0-2 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00057 | PENDING_RESULT | first_seen=2026-06-10 | GIF Sundsvall vs Osters IF | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00058 | PENDING_RESULT | first_seen=2026-06-10 | Defensores de Cambaceres vs Berazategui | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00059 | PENDING_RESULT | first_seen=2026-06-10 | Sacachispas vs Argentino Rosario | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00060 | PENDING_RESULT | first_seen=2026-06-10 | Selfoss vs Thróttur Vogar | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00061 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Westchester SC vs Greenville Triumph | score=4-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00062 | OUT_OF_SAMPLE | first_seen=2026-06-10 | KMC vs Coastal Union | score=1-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00063 | PENDING_RESULT | first_seen=2026-06-10 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00064 | PENDING_RESULT | first_seen=2026-06-10 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00065 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Fard Alborz vs Sanat Naft | score=1-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00066 | OUT_OF_SAMPLE | first_seen=2026-06-10 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=0-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00067 | OUT_OF_SAMPLE | first_seen=2026-06-10 | SJK Akatemia vs Haka | score=0-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00068 | PENDING_RESULT | first_seen=2026-06-10 | GIF Sundsvall vs Osters IF | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00069 | PENDING_RESULT | first_seen=2026-06-10 | Defensores de Cambaceres vs Berazategui | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00070 | PENDING_RESULT | first_seen=2026-06-10 | Sacachispas vs Argentino Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00071 | PENDING_RESULT | first_seen=2026-06-10 | Selfoss vs Thróttur Vogar | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00072 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Negelle Arsi vs Awassa Kenema | score=2-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00073 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Gonio vs Margveti 2006 | score=4-0 | market=UNDER_3_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00074 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Adama Kenema vs Ethiopia Nigd Bank | score=2-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00075 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Havadar vs Mes Kerman | score=1-1 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00076 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Naft Gachsaran vs Niroye Zamini | score=0-3 | market=UNDER_3_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00077 | PENDING_RESULT | first_seen=2026-06-15 | IFK Norrkoping vs Varbergs BoIS FC | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00078 | PENDING_RESULT | first_seen=2026-06-15 | Campos AA vs Uni Souza | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00079 | PENDING_RESULT | first_seen=2026-06-15 | KA Akureyri vs Fram Reykjavik | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00080 | PENDING_RESULT | first_seen=2026-06-15 | Sportivo Barracas vs General Lamadrid | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00081 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Varketili vs Betlemi | score=7-1 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00082 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | KMC vs Coastal Union | score=1-3 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00083 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Guria vs Iveria Khashuri | score=5-2 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00084 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Mes Soongoun vs Nassaji Mazandaran | score=1-1 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00085 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Lokomotivi Tbilisi vs Iberia 2010 | score=1-0 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00086 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Hadiya Hosaena vs Fasil Ketema | score=0-1 | market=API_DNB | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00087 | PENDING_RESULT | first_seen=2026-06-15 | Tigres do Brasil vs Uniao Central | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00088 | PENDING_RESULT | first_seen=2026-06-15 | Defensores de Cambaceres vs Berazategui | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00089 | PENDING_RESULT | first_seen=2026-06-15 | Fénix vs Leones de Rosario | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00090 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Varketili vs Betlemi | score=7-1 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00091 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | KMC vs Coastal Union | score=1-3 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00092 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Guria vs Iveria Khashuri | score=5-2 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00093 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Mes Soongoun vs Nassaji Mazandaran | score=1-1 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00094 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Lokomotivi Tbilisi vs Iberia 2010 | score=1-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00095 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Hadiya Hosaena vs Fasil Ketema | score=0-1 | market=API_DOUBLE_CHANCE | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00096 | PENDING_RESULT | first_seen=2026-06-15 | Tigres do Brasil vs Uniao Central | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00097 | PENDING_RESULT | first_seen=2026-06-15 | Defensores de Cambaceres vs Berazategui | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00098 | PENDING_RESULT | first_seen=2026-06-15 | Fénix vs Leones de Rosario | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00099 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Varketili vs Betlemi | score=7-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00100 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | KMC vs Coastal Union | score=1-3 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00101 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Guria vs Iveria Khashuri | score=5-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00102 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Mes Soongoun vs Nassaji Mazandaran | score=1-1 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00103 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Lokomotivi Tbilisi vs Iberia 2010 | score=1-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00104 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Hadiya Hosaena vs Fasil Ketema | score=0-1 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00105 | PENDING_RESULT | first_seen=2026-06-15 | Tigres do Brasil vs Uniao Central | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00106 | PENDING_RESULT | first_seen=2026-06-15 | Defensores de Cambaceres vs Berazategui | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00107 | PENDING_RESULT | first_seen=2026-06-15 | Fénix vs Leones de Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00108 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Westchester SC vs Greenville Triumph | score=4-0 | market=API_DNB | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00109 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Fard Alborz vs Sanat Naft | score=1-2 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00110 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=0-0 | market=API_DNB | outcome=VOID | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00111 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | SJK Akatemia vs Haka | score=0-2 | market=API_DNB | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00112 | PENDING_RESULT | first_seen=2026-06-15 | GIF Sundsvall vs Osters IF | score=pending | market=API_DNB | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00113 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Westchester SC vs Greenville Triumph | score=4-0 | market=API_DOUBLE_CHANCE | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00114 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Fard Alborz vs Sanat Naft | score=1-2 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00115 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=0-0 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00116 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | SJK Akatemia vs Haka | score=0-2 | market=API_DOUBLE_CHANCE | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00117 | PENDING_RESULT | first_seen=2026-06-15 | GIF Sundsvall vs Osters IF | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00118 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Westchester SC vs Greenville Triumph | score=4-0 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00119 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Fard Alborz vs Sanat Naft | score=1-2 | market=OVER_1_5 | outcome=HIT | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_OOS_00120 | IN_SAMPLE_BOOTSTRAP | first_seen=2026-06-15 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=0-0 | market=OVER_1_5 | outcome=MISS | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 
 ## Guardrails
 - This tracker separates bootstrap/in-sample rows from future out-of-sample rows.

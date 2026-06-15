@@ -2,147 +2,147 @@
 
 ## Summary
 - rules_available: 77
-- candidate_rules_applied: 9
-- shadow_rows: 142
-- finished_shadow_rows: 21
-- pending_shadow_rows: 121
-- shadow_outcome_counts: PENDING_RESULT=121; HIT=16; MISS=5
-- rule_market_counts: OVER_1_5=78; API_DNB=26; API_DOUBLE_CHANCE=26; UNDER_3_5=12
-- paper_trade_permission_counts: SHADOW_ONLY=142
-- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=142
-- pick_permission_counts: NO_PICK_PERMISSION=142
-- stake_permission_counts: NO_STAKE_PERMISSION=142
+- candidate_rules_applied: 15
+- shadow_rows: 155
+- finished_shadow_rows: 86
+- pending_shadow_rows: 69
+- shadow_outcome_counts: PENDING_RESULT=69; HIT=65; MISS=17; VOID=4
+- rule_market_counts: OVER_1_5=74; API_DNB=36; API_DOUBLE_CHANCE=36; UNDER_3_5=9
+- paper_trade_permission_counts: SHADOW_ONLY=155
+- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=155
+- pick_permission_counts: NO_PICK_PERMISSION=155
+- stake_permission_counts: NO_STAKE_PERMISSION=155
 - next_action: Track shadow outcomes over future runs. This ledger cannot activate rules, picks, or stake.
 - auto_apply: NO
 - production_change: NO
 
 ## Market Shadow Summary
-- API_DNB | evaluated=2 | HIT=0 | MISS=2 | VOID=0 | hit_rate=0.0 | hit_or_void=0.0
-- API_DOUBLE_CHANCE | evaluated=2 | HIT=0 | MISS=2 | VOID=0 | hit_rate=0.0 | hit_or_void=0.0
-- OVER_1_5 | evaluated=14 | HIT=13 | MISS=1 | VOID=0 | hit_rate=92.9 | hit_or_void=92.9
-- UNDER_3_5 | evaluated=3 | HIT=3 | MISS=0 | VOID=0 | hit_rate=100.0 | hit_or_void=100.0
+- API_DNB | evaluated=20 | HIT=12 | MISS=4 | VOID=4 | hit_rate=60.0 | hit_or_void=80.0
+- API_DOUBLE_CHANCE | evaluated=20 | HIT=16 | MISS=4 | VOID=0 | hit_rate=80.0 | hit_or_void=80.0
+- OVER_1_5 | evaluated=41 | HIT=33 | MISS=8 | VOID=0 | hit_rate=80.5 | hit_or_void=80.5
+- UNDER_3_5 | evaluated=5 | HIT=4 | MISS=1 | VOID=0 | hit_rate=80.0 | hit_or_void=80.0
 
 ## Shadow Rows
 - API_SHADOW_00001 | API_CAL_RULE_0005 | Westchester SC vs Greenville Triumph | score=4-0 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00002 | API_CAL_RULE_0005 | Bigfoot vs Oly Town | score=1-1 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00003 | API_CAL_RULE_0005 | City SC vs Ventura County Fusion | score=1-3 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00004 | API_CAL_RULE_0005 | Brazos Valley vs Hill Country Lobos | score=0-1 | market=OVER_1_5 | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00005 | API_CAL_RULE_0005 | Snohomish United vs West Seattle Junction | score=3-2 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00006 | API_CAL_RULE_0005 | Sportivo San Juan vs Almaden | score=0-3 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00007 | API_CAL_RULE_0005 | Varketili vs Betlemi | score=7-1 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00008 | API_CAL_RULE_0005 | Negelle Arsi vs Awassa Kenema | score=2-1 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00009 | API_CAL_RULE_0005 | KMC vs Coastal Union | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00010 | API_CAL_RULE_0005 | Gonio vs Margveti 2006 | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00011 | API_CAL_RULE_0005 | Guria vs Iveria Khashuri | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00012 | API_CAL_RULE_0005 | Adama Kenema vs Ethiopia Nigd Bank | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00013 | API_CAL_RULE_0005 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00014 | API_CAL_RULE_0005 | Mes Soongoun vs Nassaji Mazandaran | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00015 | API_CAL_RULE_0005 | Lokomotivi Tbilisi vs Iberia 2010 | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00016 | API_CAL_RULE_0005 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00017 | API_CAL_RULE_0005 | Fard Alborz vs Sanat Naft | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00018 | API_CAL_RULE_0005 | Havadar vs Mes Kerman | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00019 | API_CAL_RULE_0005 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00020 | API_CAL_RULE_0005 | Hadiya Hosaena vs Fasil Ketema | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00021 | API_CAL_RULE_0005 | SJK Akatemia vs Haka | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00022 | API_CAL_RULE_0005 | Naft Gachsaran vs Niroye Zamini | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00023 | API_CAL_RULE_0005 | GIF Sundsvall vs Osters IF | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00024 | API_CAL_RULE_0005 | IFK Norrkoping vs Varbergs BoIS FC | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00025 | API_CAL_RULE_0005 | Nyköping vs Smedby | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00026 | API_CAL_RULE_0005 | Vänersborgs IF vs Herrestads | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00027 | API_CAL_RULE_0005 | Campos AA vs Uni Souza | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00028 | API_CAL_RULE_0005 | KA Akureyri vs Fram Reykjavik | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00029 | API_CAL_RULE_0005 | Tigres do Brasil vs Uniao Central | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00030 | API_CAL_RULE_0005 | Defensores de Cambaceres vs Berazategui | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00031 | API_CAL_RULE_0005 | Sacachispas vs Argentino Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00032 | API_CAL_RULE_0005 | Sportivo Barracas vs General Lamadrid | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00033 | API_CAL_RULE_0005 | Fénix vs Leones de Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00034 | API_CAL_RULE_0005 | Belgium vs Egypt | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00035 | API_CAL_RULE_0005 | Selfoss vs Thróttur Vogar | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00036 | API_CAL_RULE_0005 | Saudi Arabia vs Uruguay | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00037 | API_CAL_RULE_0012 | Westchester SC vs Greenville Triumph | score=4-0 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00038 | API_CAL_RULE_0012 | Bigfoot vs Oly Town | score=1-1 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00039 | API_CAL_RULE_0012 | City SC vs Ventura County Fusion | score=1-3 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00040 | API_CAL_RULE_0012 | Sportivo San Juan vs Almaden | score=0-3 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00041 | API_CAL_RULE_0012 | KMC vs Coastal Union | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00042 | API_CAL_RULE_0012 | Adama Kenema vs Ethiopia Nigd Bank | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00043 | API_CAL_RULE_0012 | Mes Soongoun vs Nassaji Mazandaran | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00044 | API_CAL_RULE_0012 | Fard Alborz vs Sanat Naft | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00045 | API_CAL_RULE_0012 | SJK Akatemia vs Haka | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00046 | API_CAL_RULE_0012 | GIF Sundsvall vs Osters IF | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00047 | API_CAL_RULE_0012 | Vänersborgs IF vs Herrestads | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00048 | API_CAL_RULE_0012 | KA Akureyri vs Fram Reykjavik | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00049 | API_CAL_RULE_0012 | Defensores de Cambaceres vs Berazategui | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00050 | API_CAL_RULE_0012 | Sportivo Barracas vs General Lamadrid | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00051 | API_CAL_RULE_0012 | Fénix vs Leones de Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00052 | API_CAL_RULE_0012 | Saudi Arabia vs Uruguay | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00053 | API_CAL_RULE_0023 | Westchester SC vs Greenville Triumph | score=4-0 | market=API_DNB | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00054 | API_CAL_RULE_0023 | KMC vs Coastal Union | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00055 | API_CAL_RULE_0023 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00056 | API_CAL_RULE_0023 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00057 | API_CAL_RULE_0023 | Fard Alborz vs Sanat Naft | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00058 | API_CAL_RULE_0023 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00059 | API_CAL_RULE_0023 | SJK Akatemia vs Haka | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00060 | API_CAL_RULE_0023 | GIF Sundsvall vs Osters IF | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00061 | API_CAL_RULE_0023 | Vänersborgs IF vs Herrestads | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00062 | API_CAL_RULE_0023 | Defensores de Cambaceres vs Berazategui | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00063 | API_CAL_RULE_0023 | Sacachispas vs Argentino Rosario | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00064 | API_CAL_RULE_0023 | Belgium vs Egypt | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00065 | API_CAL_RULE_0023 | Selfoss vs Thróttur Vogar | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00066 | API_CAL_RULE_0024 | Westchester SC vs Greenville Triumph | score=4-0 | market=API_DOUBLE_CHANCE | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00067 | API_CAL_RULE_0024 | KMC vs Coastal Union | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00068 | API_CAL_RULE_0024 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00069 | API_CAL_RULE_0024 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00070 | API_CAL_RULE_0024 | Fard Alborz vs Sanat Naft | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00071 | API_CAL_RULE_0024 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00072 | API_CAL_RULE_0024 | SJK Akatemia vs Haka | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00073 | API_CAL_RULE_0024 | GIF Sundsvall vs Osters IF | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00074 | API_CAL_RULE_0024 | Vänersborgs IF vs Herrestads | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00075 | API_CAL_RULE_0024 | Defensores de Cambaceres vs Berazategui | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00076 | API_CAL_RULE_0024 | Sacachispas vs Argentino Rosario | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00077 | API_CAL_RULE_0024 | Belgium vs Egypt | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00078 | API_CAL_RULE_0024 | Selfoss vs Thróttur Vogar | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00079 | API_CAL_RULE_0026 | Westchester SC vs Greenville Triumph | score=4-0 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00080 | API_CAL_RULE_0026 | KMC vs Coastal Union | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00081 | API_CAL_RULE_0026 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00082 | API_CAL_RULE_0026 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00083 | API_CAL_RULE_0026 | Fard Alborz vs Sanat Naft | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00084 | API_CAL_RULE_0026 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00085 | API_CAL_RULE_0026 | SJK Akatemia vs Haka | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00086 | API_CAL_RULE_0026 | GIF Sundsvall vs Osters IF | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00087 | API_CAL_RULE_0026 | Vänersborgs IF vs Herrestads | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00088 | API_CAL_RULE_0026 | Defensores de Cambaceres vs Berazategui | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00089 | API_CAL_RULE_0026 | Sacachispas vs Argentino Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00090 | API_CAL_RULE_0026 | Belgium vs Egypt | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00091 | API_CAL_RULE_0026 | Selfoss vs Thróttur Vogar | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00092 | API_CAL_RULE_0042 | Bigfoot vs Oly Town | score=1-1 | market=UNDER_3_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00093 | API_CAL_RULE_0042 | Brazos Valley vs Hill Country Lobos | score=0-1 | market=UNDER_3_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00094 | API_CAL_RULE_0042 | Negelle Arsi vs Awassa Kenema | score=2-1 | market=UNDER_3_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00095 | API_CAL_RULE_0042 | Gonio vs Margveti 2006 | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00096 | API_CAL_RULE_0042 | Adama Kenema vs Ethiopia Nigd Bank | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00097 | API_CAL_RULE_0042 | Havadar vs Mes Kerman | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00098 | API_CAL_RULE_0042 | Naft Gachsaran vs Niroye Zamini | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00099 | API_CAL_RULE_0042 | IFK Norrkoping vs Varbergs BoIS FC | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00100 | API_CAL_RULE_0042 | Campos AA vs Uni Souza | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00101 | API_CAL_RULE_0042 | KA Akureyri vs Fram Reykjavik | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00102 | API_CAL_RULE_0042 | Sportivo Barracas vs General Lamadrid | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00103 | API_CAL_RULE_0042 | Saudi Arabia vs Uruguay | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00104 | API_CAL_RULE_0065 | Westchester SC vs Greenville Triumph | score=4-0 | market=API_DNB | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00105 | API_CAL_RULE_0065 | KMC vs Coastal Union | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00106 | API_CAL_RULE_0065 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00107 | API_CAL_RULE_0065 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00108 | API_CAL_RULE_0065 | Fard Alborz vs Sanat Naft | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00109 | API_CAL_RULE_0065 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00110 | API_CAL_RULE_0065 | SJK Akatemia vs Haka | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00111 | API_CAL_RULE_0065 | GIF Sundsvall vs Osters IF | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00112 | API_CAL_RULE_0065 | Vänersborgs IF vs Herrestads | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00113 | API_CAL_RULE_0065 | Defensores de Cambaceres vs Berazategui | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00114 | API_CAL_RULE_0065 | Sacachispas vs Argentino Rosario | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00115 | API_CAL_RULE_0065 | Belgium vs Egypt | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00116 | API_CAL_RULE_0065 | Selfoss vs Thróttur Vogar | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00117 | API_CAL_RULE_0066 | Westchester SC vs Greenville Triumph | score=4-0 | market=API_DOUBLE_CHANCE | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00118 | API_CAL_RULE_0066 | KMC vs Coastal Union | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00119 | API_CAL_RULE_0066 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
-- API_SHADOW_00120 | API_CAL_RULE_0066 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00002 | API_CAL_RULE_0005 | Varketili vs Betlemi | score=7-1 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00003 | API_CAL_RULE_0005 | Negelle Arsi vs Awassa Kenema | score=2-1 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00004 | API_CAL_RULE_0005 | KMC vs Coastal Union | score=1-3 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00005 | API_CAL_RULE_0005 | Gonio vs Margveti 2006 | score=4-0 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00006 | API_CAL_RULE_0005 | Guria vs Iveria Khashuri | score=5-2 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00007 | API_CAL_RULE_0005 | Adama Kenema vs Ethiopia Nigd Bank | score=2-1 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00008 | API_CAL_RULE_0005 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00009 | API_CAL_RULE_0005 | Mes Soongoun vs Nassaji Mazandaran | score=1-1 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00010 | API_CAL_RULE_0005 | Lokomotivi Tbilisi vs Iberia 2010 | score=1-0 | market=OVER_1_5 | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00011 | API_CAL_RULE_0005 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00012 | API_CAL_RULE_0005 | Fard Alborz vs Sanat Naft | score=1-2 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00013 | API_CAL_RULE_0005 | Havadar vs Mes Kerman | score=1-1 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00014 | API_CAL_RULE_0005 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=0-0 | market=OVER_1_5 | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00015 | API_CAL_RULE_0005 | Hadiya Hosaena vs Fasil Ketema | score=0-1 | market=OVER_1_5 | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00016 | API_CAL_RULE_0005 | SJK Akatemia vs Haka | score=0-2 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00017 | API_CAL_RULE_0005 | Naft Gachsaran vs Niroye Zamini | score=0-3 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00018 | API_CAL_RULE_0005 | GIF Sundsvall vs Osters IF | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00019 | API_CAL_RULE_0005 | IFK Norrkoping vs Varbergs BoIS FC | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00020 | API_CAL_RULE_0005 | Campos AA vs Uni Souza | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00021 | API_CAL_RULE_0005 | KA Akureyri vs Fram Reykjavik | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00022 | API_CAL_RULE_0005 | Tigres do Brasil vs Uniao Central | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00023 | API_CAL_RULE_0005 | Defensores de Cambaceres vs Berazategui | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00024 | API_CAL_RULE_0005 | Sacachispas vs Argentino Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00025 | API_CAL_RULE_0005 | Sportivo Barracas vs General Lamadrid | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00026 | API_CAL_RULE_0005 | Fénix vs Leones de Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00027 | API_CAL_RULE_0005 | Selfoss vs Thróttur Vogar | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00028 | API_CAL_RULE_0012 | Westchester SC vs Greenville Triumph | score=4-0 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00029 | API_CAL_RULE_0012 | KMC vs Coastal Union | score=1-3 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00030 | API_CAL_RULE_0012 | Adama Kenema vs Ethiopia Nigd Bank | score=2-1 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00031 | API_CAL_RULE_0012 | Mes Soongoun vs Nassaji Mazandaran | score=1-1 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00032 | API_CAL_RULE_0012 | Fard Alborz vs Sanat Naft | score=1-2 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00033 | API_CAL_RULE_0012 | SJK Akatemia vs Haka | score=0-2 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00034 | API_CAL_RULE_0012 | GIF Sundsvall vs Osters IF | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00035 | API_CAL_RULE_0012 | KA Akureyri vs Fram Reykjavik | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00036 | API_CAL_RULE_0012 | Defensores de Cambaceres vs Berazategui | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00037 | API_CAL_RULE_0012 | Sportivo Barracas vs General Lamadrid | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00038 | API_CAL_RULE_0012 | Fénix vs Leones de Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00039 | API_CAL_RULE_0023 | Westchester SC vs Greenville Triumph | score=4-0 | market=API_DNB | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00040 | API_CAL_RULE_0023 | KMC vs Coastal Union | score=1-3 | market=API_DNB | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00041 | API_CAL_RULE_0023 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00042 | API_CAL_RULE_0023 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00043 | API_CAL_RULE_0023 | Fard Alborz vs Sanat Naft | score=1-2 | market=API_DNB | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00044 | API_CAL_RULE_0023 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=0-0 | market=API_DNB | outcome=VOID | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00045 | API_CAL_RULE_0023 | SJK Akatemia vs Haka | score=0-2 | market=API_DNB | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00046 | API_CAL_RULE_0023 | GIF Sundsvall vs Osters IF | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00047 | API_CAL_RULE_0023 | Defensores de Cambaceres vs Berazategui | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00048 | API_CAL_RULE_0023 | Sacachispas vs Argentino Rosario | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00049 | API_CAL_RULE_0023 | Selfoss vs Thróttur Vogar | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00050 | API_CAL_RULE_0024 | Westchester SC vs Greenville Triumph | score=4-0 | market=API_DOUBLE_CHANCE | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00051 | API_CAL_RULE_0024 | KMC vs Coastal Union | score=1-3 | market=API_DOUBLE_CHANCE | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00052 | API_CAL_RULE_0024 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00053 | API_CAL_RULE_0024 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00054 | API_CAL_RULE_0024 | Fard Alborz vs Sanat Naft | score=1-2 | market=API_DOUBLE_CHANCE | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00055 | API_CAL_RULE_0024 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=0-0 | market=API_DOUBLE_CHANCE | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00056 | API_CAL_RULE_0024 | SJK Akatemia vs Haka | score=0-2 | market=API_DOUBLE_CHANCE | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00057 | API_CAL_RULE_0024 | GIF Sundsvall vs Osters IF | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00058 | API_CAL_RULE_0024 | Defensores de Cambaceres vs Berazategui | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00059 | API_CAL_RULE_0024 | Sacachispas vs Argentino Rosario | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00060 | API_CAL_RULE_0024 | Selfoss vs Thróttur Vogar | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00061 | API_CAL_RULE_0026 | Westchester SC vs Greenville Triumph | score=4-0 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00062 | API_CAL_RULE_0026 | KMC vs Coastal Union | score=1-3 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00063 | API_CAL_RULE_0026 | Shahrdari Noshahr vs Navad Urmia | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00064 | API_CAL_RULE_0026 | Ario Eslamshahr vs Naft Bandar Abbas | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00065 | API_CAL_RULE_0026 | Fard Alborz vs Sanat Naft | score=1-2 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00066 | API_CAL_RULE_0026 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=0-0 | market=OVER_1_5 | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00067 | API_CAL_RULE_0026 | SJK Akatemia vs Haka | score=0-2 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00068 | API_CAL_RULE_0026 | GIF Sundsvall vs Osters IF | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00069 | API_CAL_RULE_0026 | Defensores de Cambaceres vs Berazategui | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00070 | API_CAL_RULE_0026 | Sacachispas vs Argentino Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00071 | API_CAL_RULE_0026 | Selfoss vs Thróttur Vogar | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00072 | API_CAL_RULE_0042 | Negelle Arsi vs Awassa Kenema | score=2-1 | market=UNDER_3_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00073 | API_CAL_RULE_0042 | Gonio vs Margveti 2006 | score=4-0 | market=UNDER_3_5 | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00074 | API_CAL_RULE_0042 | Adama Kenema vs Ethiopia Nigd Bank | score=2-1 | market=UNDER_3_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00075 | API_CAL_RULE_0042 | Havadar vs Mes Kerman | score=1-1 | market=UNDER_3_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00076 | API_CAL_RULE_0042 | Naft Gachsaran vs Niroye Zamini | score=0-3 | market=UNDER_3_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00077 | API_CAL_RULE_0042 | IFK Norrkoping vs Varbergs BoIS FC | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00078 | API_CAL_RULE_0042 | Campos AA vs Uni Souza | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00079 | API_CAL_RULE_0042 | KA Akureyri vs Fram Reykjavik | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00080 | API_CAL_RULE_0042 | Sportivo Barracas vs General Lamadrid | score=pending | market=UNDER_3_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00081 | API_CAL_RULE_0044 | Varketili vs Betlemi | score=7-1 | market=API_DNB | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00082 | API_CAL_RULE_0044 | KMC vs Coastal Union | score=1-3 | market=API_DNB | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00083 | API_CAL_RULE_0044 | Guria vs Iveria Khashuri | score=5-2 | market=API_DNB | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00084 | API_CAL_RULE_0044 | Mes Soongoun vs Nassaji Mazandaran | score=1-1 | market=API_DNB | outcome=VOID | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00085 | API_CAL_RULE_0044 | Lokomotivi Tbilisi vs Iberia 2010 | score=1-0 | market=API_DNB | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00086 | API_CAL_RULE_0044 | Hadiya Hosaena vs Fasil Ketema | score=0-1 | market=API_DNB | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00087 | API_CAL_RULE_0044 | Tigres do Brasil vs Uniao Central | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00088 | API_CAL_RULE_0044 | Defensores de Cambaceres vs Berazategui | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00089 | API_CAL_RULE_0044 | Fénix vs Leones de Rosario | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00090 | API_CAL_RULE_0045 | Varketili vs Betlemi | score=7-1 | market=API_DOUBLE_CHANCE | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00091 | API_CAL_RULE_0045 | KMC vs Coastal Union | score=1-3 | market=API_DOUBLE_CHANCE | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00092 | API_CAL_RULE_0045 | Guria vs Iveria Khashuri | score=5-2 | market=API_DOUBLE_CHANCE | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00093 | API_CAL_RULE_0045 | Mes Soongoun vs Nassaji Mazandaran | score=1-1 | market=API_DOUBLE_CHANCE | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00094 | API_CAL_RULE_0045 | Lokomotivi Tbilisi vs Iberia 2010 | score=1-0 | market=API_DOUBLE_CHANCE | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00095 | API_CAL_RULE_0045 | Hadiya Hosaena vs Fasil Ketema | score=0-1 | market=API_DOUBLE_CHANCE | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00096 | API_CAL_RULE_0045 | Tigres do Brasil vs Uniao Central | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00097 | API_CAL_RULE_0045 | Defensores de Cambaceres vs Berazategui | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00098 | API_CAL_RULE_0045 | Fénix vs Leones de Rosario | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00099 | API_CAL_RULE_0047 | Varketili vs Betlemi | score=7-1 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00100 | API_CAL_RULE_0047 | KMC vs Coastal Union | score=1-3 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00101 | API_CAL_RULE_0047 | Guria vs Iveria Khashuri | score=5-2 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00102 | API_CAL_RULE_0047 | Mes Soongoun vs Nassaji Mazandaran | score=1-1 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00103 | API_CAL_RULE_0047 | Lokomotivi Tbilisi vs Iberia 2010 | score=1-0 | market=OVER_1_5 | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00104 | API_CAL_RULE_0047 | Hadiya Hosaena vs Fasil Ketema | score=0-1 | market=OVER_1_5 | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00105 | API_CAL_RULE_0047 | Tigres do Brasil vs Uniao Central | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00106 | API_CAL_RULE_0047 | Defensores de Cambaceres vs Berazategui | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00107 | API_CAL_RULE_0047 | Fénix vs Leones de Rosario | score=pending | market=OVER_1_5 | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00108 | API_CAL_RULE_0058 | Westchester SC vs Greenville Triumph | score=4-0 | market=API_DNB | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00109 | API_CAL_RULE_0058 | Fard Alborz vs Sanat Naft | score=1-2 | market=API_DNB | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00110 | API_CAL_RULE_0058 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=0-0 | market=API_DNB | outcome=VOID | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00111 | API_CAL_RULE_0058 | SJK Akatemia vs Haka | score=0-2 | market=API_DNB | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00112 | API_CAL_RULE_0058 | GIF Sundsvall vs Osters IF | score=pending | market=API_DNB | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00113 | API_CAL_RULE_0059 | Westchester SC vs Greenville Triumph | score=4-0 | market=API_DOUBLE_CHANCE | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00114 | API_CAL_RULE_0059 | Fard Alborz vs Sanat Naft | score=1-2 | market=API_DOUBLE_CHANCE | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00115 | API_CAL_RULE_0059 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=0-0 | market=API_DOUBLE_CHANCE | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00116 | API_CAL_RULE_0059 | SJK Akatemia vs Haka | score=0-2 | market=API_DOUBLE_CHANCE | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00117 | API_CAL_RULE_0059 | GIF Sundsvall vs Osters IF | score=pending | market=API_DOUBLE_CHANCE | outcome=PENDING_RESULT | status=SHADOW_PENDING | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00118 | API_CAL_RULE_0061 | Westchester SC vs Greenville Triumph | score=4-0 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00119 | API_CAL_RULE_0061 | Fard Alborz vs Sanat Naft | score=1-2 | market=OVER_1_5 | outcome=HIT | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- API_SHADOW_00120 | API_CAL_RULE_0061 | Mes Shahr-e Babak vs Be'sat Kermanshah | score=0-0 | market=OVER_1_5 | outcome=MISS | status=SHADOW_EVALUATED | paper=SHADOW_ONLY | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 
 ## Guardrails
 - This ledger is shadow/paper-trading only.
