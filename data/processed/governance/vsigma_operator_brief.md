@@ -39,8 +39,8 @@
 - drift_notify_required: true
 - drift_changed_fields: action_level
 - sanity_check: PASS | no active/live/watch action; no_bet=1; closed=0
-- operator_status: REVIEW
-- primary_next_action: Open health/board/recheck summaries; no automatic action.
+- operator_status: OK
+- primary_next_action: No operator action required.
 - health_status: ATTENTION
 - active_candidates: 0
 - waiting_live_window: 0
@@ -101,3 +101,23 @@
 - Use PowerShell -Encoding UTF8 when reading local Markdown files on Windows.
 - Historical drift notifies only on material operator changes: action level, final decision, risk, or active candidates.
 - Alert routing is diagnostic only; this script writes the route but does not send comments or external notifications.
+
+## Calibration / Shadow Governance
+- calibration_shadow_status: UNAVAILABLE
+- shadow_active_candidates: 0
+- shadow_high_priority: 0
+- shadow_metrics: none
+- shadow_decisions: none
+- promotion_readiness: UNAVAILABLE
+- promotion_candidates: 0
+- promotion_decisions: none
+- learning_sanity_status: WARN
+- learning_sanity_counts: EMPTY_NO_FALLBACK=6; PASS=1
+- learning_sanity_severity: WARN=6; OK=1
+- calibration_auto_apply: NO
+- production_change: NO
+
+### Calibration Sources
+- shadow_queue: data/processed/today/2026-06-15/vsigma_calibration_shadow_patch_queue.csv
+- promotion_readiness: data/processed/today/2026-06-15/vsigma_shadow_patch_promotion_readiness.csv
+- learning_sanity: data/processed/today/2026-06-15/vsigma_learning_chain_output_sanity.csv
