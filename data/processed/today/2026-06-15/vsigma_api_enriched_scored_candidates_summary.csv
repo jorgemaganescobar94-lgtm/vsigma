@@ -1,2 +1,2 @@
 target_date,generated_at,source_rows_reviewed,candidate_rows_written,scoring_ready_pending_gates_rows,missing_required_rows,coverage_only_rows,diagnostic_only_rows,status_counts,pick_permission_counts,stake_permission_counts,auto_apply,production_change
-2026-06-15,2026-06-15T14:32:44+01:00,66,66,53,0,0,13,API_ENRICHED_SCORING_READY_PENDING_GATES=53; DIAGNOSTIC_ONLY_NO_SCORING=13,NO_PICK_PERMISSION=66,NO_STAKE_PERMISSION=66,NO,NO
+2026-06-15,2026-06-15T19:12:01+01:00,66,66,44,0,5,17,API_ENRICHED_SCORING_READY_PENDING_GATES=44; DIAGNOSTIC_ONLY_NO_SCORING=17; COVERAGE_ONLY_NO_SCORING=5,NO_PICK_PERMISSION=66,NO_STAKE_PERMISSION=66,NO,NO
