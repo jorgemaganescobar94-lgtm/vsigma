@@ -2,29 +2,29 @@
 
 ## Summary
 - rows_reported: 72
-- status_counts: 1H=2; NS=65; PST=5
+- status_counts: FT=12; NS=52; PST=5; 1H=1; HT=1; SUSP=1
 - source_guard: DATED_INPUT_ONLY
 - auto_apply: NO
 - production_change: NO
 
 ## Rows
-- Westchester SC vs Greenville Triumph | status=1H | goals=2-0 | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;results_last_refresh_at
-- Bigfoot vs Oly Town | status=1H | goals=0-0 | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;results_last_refresh_at
-- RKC vs Edgewater Castle | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- The Villages vs Nona | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
+- Westchester SC vs Greenville Triumph | status=FT | goals=4-0 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at
+- Bigfoot vs Oly Town | status=FT | goals=1-1 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at
+- RKC vs Edgewater Castle | status=FT | goals=4-0 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at
+- The Villages vs Nona | status=FT | goals=2-1 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at
 - Lancaster Inferno W vs Loudoun United FC W | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Virginia Development Academy W vs Annapolis Blues W | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Rockford Raptors W vs Rally Madison FC W | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- City SC vs Ventura County Fusion | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Brazos Valley vs Hill Country Lobos | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
+- City SC vs Ventura County Fusion | status=FT | goals=1-3 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at
+- Brazos Valley vs Hill Country Lobos | status=FT | goals=0-1 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at
 - Blooming vs The Strongest | status=PST | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Snohomish United vs West Seattle Junction | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Bangers vs Ballard | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Sportivo San Juan vs Almaden | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Sweden vs Tunisia | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Varketili vs Betlemi | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Negelle Arsi vs Awassa Kenema | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Arba Minch Kenema vs Suhul Shire | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
+- Snohomish United vs West Seattle Junction | status=FT | goals=3-2 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at
+- Bangers vs Ballard | status=FT | goals=0-2 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at
+- Sportivo San Juan vs Almaden | status=FT | goals=0-3 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at
+- Sweden vs Tunisia | status=FT | goals=5-1 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at;actual_home_sot;actual_away_sot;actual_total_sot;actual_home_shots;actual_away_shots;actual_total_shots;actual_home_corners;actual_away_corners;actual_total_corners;actual_home_fouls;actual_away_fouls;actual_total_fouls
+- Varketili vs Betlemi | status=FT | goals=7-1 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at
+- Negelle Arsi vs Awassa Kenema | status=FT | goals=2-1 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at
+- Arba Minch Kenema vs Suhul Shire | status=1H | goals=1-0 | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;results_last_refresh_at
 - Bhutan U19 vs Paro | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - KMC vs Coastal Union | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Gonio vs Margveti 2006 | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
@@ -42,7 +42,7 @@
 - Havadar vs Mes Kerman | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Mes Shahr-e Babak vs Be'sat Kermanshah | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Hadiya Hosaena vs Fasil Ketema | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Kumba vs Les Astres | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
+- Kumba vs Les Astres | status=HT | goals=1-2 | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;results_last_refresh_at
 - Union Abong-Mbang vs APEJES Academy | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - SJK Akatemia vs Haka | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Spain vs Cape Verde Islands | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
@@ -66,10 +66,10 @@
 - Kongsvinger II vs Skjetten | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - KA Akureyri vs Fram Reykjavik | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Atl. Rafaela 2 vs Deportivo Riestra Res. | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Mageense vs Ceres | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
+- Mageense vs Ceres | status=PST | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Tigres do Brasil vs Uniao Central | status=PST | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Deportivo Llacuabamba vs UTC Cajamarca | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Defensores de Cambaceres vs Berazategui | status=PST | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
+- Defensores de Cambaceres vs Berazategui | status=SUSP | goals=0-0 | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;goals_home;goals_away;results_last_refresh_at
 - Sacachispas vs Argentino Rosario | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Sportivo Barracas vs General Lamadrid | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Fénix vs Leones de Rosario | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at

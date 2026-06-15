@@ -2,14 +2,14 @@
 
 ## Summary
 - rows_reviewed: 7
-- sanity_status_counts: EMPTY_NO_FALLBACK=7
-- severity_counts: WARN=7
-- actions: REVIEW_SOURCE_CHAIN=6; REVIEW_LEDGER_BUILD=1
+- sanity_status_counts: EMPTY_NO_FALLBACK=6; PASS=1
+- severity_counts: WARN=6; OK=1
+- actions: REVIEW_SOURCE_CHAIN=5; NO_ACTION=1; REVIEW_LEDGER_BUILD=1
 - auto_apply: NO
 - production_change: NO
 
 ## Component Checks
-- post_match_actuals | status=EMPTY_NO_FALLBACK | severity=WARN | rows=0 | fallback_rows=0 | action=REVIEW_SOURCE_CHAIN | detail=Output has no rows and no same-date fallback rows were found.
+- post_match_actuals | status=PASS | severity=OK | rows=12 | fallback_rows=0 | action=NO_ACTION | detail=Output has data rows.
 - forecast_calibration_summary | status=EMPTY_NO_FALLBACK | severity=WARN | rows=0 | fallback_rows=0 | action=REVIEW_SOURCE_CHAIN | detail=Output has no rows and no same-date fallback rows were found.
 - forecast_backtest | status=EMPTY_NO_FALLBACK | severity=WARN | rows=0 | fallback_rows=0 | action=REVIEW_SOURCE_CHAIN | detail=Output has no rows and no same-date fallback rows were found.
 - stat_calibration_governor | status=EMPTY_NO_FALLBACK | severity=WARN | rows=0 | fallback_rows=0 | action=REVIEW_SOURCE_CHAIN | detail=Output has no rows and no same-date fallback rows were found.

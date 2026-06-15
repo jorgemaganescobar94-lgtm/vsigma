@@ -1,8 +1,8 @@
 target_date,generated_at,component,sanity_status,severity,recommended_action,rows_count,fallback_rows,guard_decision,commit_allowed,guard_reason,source_guard,auto_apply,production_change
-2026-06-15,2026-06-15T00:46:40+01:00,post_match_actuals,EMPTY_NO_FALLBACK,WARN,REVIEW_SOURCE_CHAIN,0,0,WARN_ONLY,YES,Non-blocking empty-output warning; keep workflow visible.,EMPTY_OUTPUT_HARD_GUARD,NO,NO
-2026-06-15,2026-06-15T00:46:40+01:00,forecast_calibration_summary,EMPTY_NO_FALLBACK,WARN,REVIEW_SOURCE_CHAIN,0,0,WARN_ONLY,YES,Non-blocking empty-output warning; keep workflow visible.,EMPTY_OUTPUT_HARD_GUARD,NO,NO
-2026-06-15,2026-06-15T00:46:40+01:00,forecast_backtest,EMPTY_NO_FALLBACK,WARN,REVIEW_SOURCE_CHAIN,0,0,WARN_ONLY,YES,Non-blocking empty-output warning; keep workflow visible.,EMPTY_OUTPUT_HARD_GUARD,NO,NO
-2026-06-15,2026-06-15T00:46:40+01:00,stat_calibration_governor,EMPTY_NO_FALLBACK,WARN,REVIEW_SOURCE_CHAIN,0,0,WARN_ONLY,YES,Non-blocking empty-output warning; keep workflow visible.,EMPTY_OUTPUT_HARD_GUARD,NO,NO
-2026-06-15,2026-06-15T00:46:40+01:00,calibration_shadow_patch_queue,EMPTY_NO_FALLBACK,WARN,REVIEW_SOURCE_CHAIN,0,0,WARN_ONLY,YES,Non-blocking empty-output warning; keep workflow visible.,EMPTY_OUTPUT_HARD_GUARD,NO,NO
-2026-06-15,2026-06-15T00:46:40+01:00,shadow_patch_promotion_readiness,EMPTY_NO_FALLBACK,WARN,REVIEW_SOURCE_CHAIN,0,0,WARN_ONLY,YES,Non-blocking empty-output warning; keep workflow visible.,EMPTY_OUTPUT_HARD_GUARD,NO,NO
-2026-06-15,2026-06-15T00:46:40+01:00,stat_calibration_memory_ledger,EMPTY_NO_FALLBACK,WARN,REVIEW_LEDGER_BUILD,0,0,WARN_ONLY,YES,Non-blocking empty-output warning; keep workflow visible.,EMPTY_OUTPUT_HARD_GUARD,NO,NO
+2026-06-15,2026-06-15T13:47:57+01:00,post_match_actuals,PASS,OK,NO_ACTION,12,0,PASS,YES,No blocking empty-output condition.,EMPTY_OUTPUT_HARD_GUARD,NO,NO
+2026-06-15,2026-06-15T13:47:57+01:00,forecast_calibration_summary,EMPTY_NO_FALLBACK,WARN,REVIEW_SOURCE_CHAIN,0,0,WARN_ONLY,YES,Non-blocking empty-output warning; keep workflow visible.,EMPTY_OUTPUT_HARD_GUARD,NO,NO
+2026-06-15,2026-06-15T13:47:57+01:00,forecast_backtest,EMPTY_NO_FALLBACK,WARN,REVIEW_SOURCE_CHAIN,0,0,WARN_ONLY,YES,Non-blocking empty-output warning; keep workflow visible.,EMPTY_OUTPUT_HARD_GUARD,NO,NO
+2026-06-15,2026-06-15T13:47:57+01:00,stat_calibration_governor,EMPTY_NO_FALLBACK,WARN,REVIEW_SOURCE_CHAIN,0,0,WARN_ONLY,YES,Non-blocking empty-output warning; keep workflow visible.,EMPTY_OUTPUT_HARD_GUARD,NO,NO
+2026-06-15,2026-06-15T13:47:57+01:00,calibration_shadow_patch_queue,EMPTY_NO_FALLBACK,WARN,REVIEW_SOURCE_CHAIN,0,0,WARN_ONLY,YES,Non-blocking empty-output warning; keep workflow visible.,EMPTY_OUTPUT_HARD_GUARD,NO,NO
+2026-06-15,2026-06-15T13:47:57+01:00,shadow_patch_promotion_readiness,EMPTY_NO_FALLBACK,WARN,REVIEW_SOURCE_CHAIN,0,0,WARN_ONLY,YES,Non-blocking empty-output warning; keep workflow visible.,EMPTY_OUTPUT_HARD_GUARD,NO,NO
+2026-06-15,2026-06-15T13:47:57+01:00,stat_calibration_memory_ledger,EMPTY_NO_FALLBACK,WARN,REVIEW_LEDGER_BUILD,0,0,WARN_ONLY,YES,Non-blocking empty-output warning; keep workflow visible.,EMPTY_OUTPUT_HARD_GUARD,NO,NO

@@ -1,2 +1,2 @@
 target_date,generated_at,metric,rows_evaluated,shadow_verdict,avg_error_delta,improved_rows,worsened_rows,quality_gate,quality_priority,promotion_allowed,manual_review_required,quality_reason,source_guard,auto_apply,production_change
-2026-06-15,2026-06-15T00:46:40+01:00,ALL,0,NO_AB_SUMMARY,0.000,0,0,NO_DATA,NONE,NO,NO,No A/B summary found.,data/processed/governance/vsigma_shadow_forecast_ab_summary.csv,NO,NO
+2026-06-15,2026-06-15T13:47:57+01:00,ALL,0,NO_AB_SUMMARY,0.000,0,0,NO_DATA,NONE,NO,NO,No A/B summary found.,data/processed/governance/vsigma_shadow_forecast_ab_summary.csv,NO,NO
