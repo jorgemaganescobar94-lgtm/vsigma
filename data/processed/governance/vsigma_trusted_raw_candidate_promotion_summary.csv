@@ -1,2 +1,2 @@
 target_date,generated_at,rows_reviewed,promoted_rows,blocked_rows,quarantine_rows,promotion_status_counts,next_action,auto_apply,production_change
-2026-06-15,2026-06-15T21:36:15+01:00,72,0,1,66,TRUSTED_SOURCE_BUT_NO_SCORED_ROW=66; NOT_TRUSTED_NO_PROMOTION=5; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=1,No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.,NO,NO
+2026-06-15,2026-06-15T23:00:22+01:00,72,0,1,66,TRUSTED_SOURCE_BUT_NO_SCORED_ROW=66; NOT_TRUSTED_NO_PROMOTION=5; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=1,No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.,NO,NO
