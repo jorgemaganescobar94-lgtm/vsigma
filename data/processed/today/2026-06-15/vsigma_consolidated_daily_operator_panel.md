@@ -179,3 +179,14 @@
 - quarantine_rows: 0
 - board_rows_written: 0
 - reason: daily board already has rows
+## Forced API Board Fixture Lineups Refresh
+- fixtures_reviewed: 1
+- api_calls_executed: 1
+- lineup_fixtures_found: 0
+- lineup_fixtures_missing: 1
+- starting_xi_rows: 0
+- substitute_rows: 0
+- api_status_counts: NO_LINEUPS_RETURNED_BY_API=1
+- pick_permission: NO_PICK_PERMISSION
+- stake_permission: NO_STAKE_PERMISSION
+- next_action: Use direct board fixture_id API lineups as a prelock input only. No automatic pick or stake permission.
