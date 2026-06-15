@@ -2,8 +2,5 @@ country,league,league_tier,league_filter_reason,matches
 Brazil,Carioca C,REJECT,country_league_not_allowlisted,4
 Iran,Azadegan League,REJECT,country_league_not_allowlisted,3
 USA,USL W League,REJECT,country_league_not_allowlisted,3
-Argentina,Torneo Federal A,REJECT,country_league_not_allowlisted,1
 Bolivia,Primera División,REJECT,country_league_not_allowlisted,1
-Peru,Copa De La Liga,REJECT,country_league_not_allowlisted,1
-World,World Cup,REJECT,country_league_not_allowlisted,1
 Brazil,Serie C,TIER_3,brazil_serie_c_noisy,1
