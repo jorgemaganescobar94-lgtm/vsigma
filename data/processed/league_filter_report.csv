@@ -1,11 +1,9 @@
 country,league,league_tier,league_filter_reason,matches
-Iran,Azadegan League,REJECT,country_league_not_allowlisted,9
+Iran,Azadegan League,REJECT,country_league_not_allowlisted,5
 Brazil,Carioca C,REJECT,country_league_not_allowlisted,4
 Argentina,Primera C,REJECT,country_league_not_allowlisted,3
 USA,USL W League,REJECT,country_league_not_allowlisted,3
 World,World Cup,REJECT,country_league_not_allowlisted,3
-Cameroon,Elite Two,REJECT,country_league_not_allowlisted,2
-Georgia,Liga 3,REJECT,country_league_not_allowlisted,2
 Iceland,2. Deild,REJECT,country_league_not_allowlisted,2
 Norway,3. Division - Girone 4,REJECT,country_league_not_allowlisted,2
 Peru,Copa De La Liga,REJECT,country_league_not_allowlisted,2
@@ -15,7 +13,6 @@ Argentina,Torneo Federal A,REJECT,country_league_not_allowlisted,1
 Bolivia,Primera División,REJECT,country_league_not_allowlisted,1
 Estonia,Esiliiga A,REJECT,country_league_not_allowlisted,1
 Estonia,Esiliiga B,REJECT,country_league_not_allowlisted,1
-Ethiopia,Premier League,REJECT,country_league_not_allowlisted,1
 Finland,Ykkösliiga,REJECT,country_league_not_allowlisted,1
 Iceland,Úrvalsdeild,REJECT,country_league_not_allowlisted,1
 Norway,3. Division - Girone 2,REJECT,country_league_not_allowlisted,1

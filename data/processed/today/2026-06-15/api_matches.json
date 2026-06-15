@@ -1428,10 +1428,10 @@
           "city": "Dar es Salaam"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 76,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
         }
       },
       "league": {
@@ -1460,7 +1460,7 @@
       },
       "goals": {
         "home": 1,
-        "away": 2
+        "away": 3
       },
       "score": {
         "halftime": {
@@ -1468,8 +1468,8 @@
           "away": 2
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 3
         },
         "extratime": {
           "home": null,
@@ -1498,10 +1498,10 @@
           "city": "Kobuleti"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 74,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
         }
       },
       "league": {
@@ -1529,7 +1529,7 @@
         }
       },
       "goals": {
-        "home": 3,
+        "home": 4,
         "away": 0
       },
       "score": {
@@ -1538,8 +1538,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 4,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -1568,9 +1568,9 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 72,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -1599,8 +1599,8 @@
         }
       },
       "goals": {
-        "home": 3,
-        "away": 1
+        "home": 5,
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -1608,8 +1608,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 5,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -1638,10 +1638,10 @@
           "city": "Khashuri"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 72,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
         }
       },
       "league": {
@@ -1670,7 +1670,7 @@
       },
       "goals": {
         "home": 1,
-        "away": 2
+        "away": 3
       },
       "score": {
         "halftime": {
@@ -1678,8 +1678,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 3
         },
         "extratime": {
           "home": null,
@@ -1708,10 +1708,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 75,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
         }
       },
       "league": {
@@ -1748,8 +1748,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -1780,7 +1780,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 46,
+          "elapsed": 85,
           "extra": null
         }
       },
@@ -1809,7 +1809,7 @@
         }
       },
       "goals": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "score": {
@@ -1910,7 +1910,7 @@
         "timestamp": 1781532000,
         "periods": {
           "first": 1781532000,
-          "second": null
+          "second": 1781535600
         },
         "venue": {
           "id": null,
@@ -1918,9 +1918,9 @@
           "city": "Tbilisi"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 28,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 46,
           "extra": null
         }
       },
@@ -1949,12 +1949,12 @@
         }
       },
       "goals": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 1,
+          "home": 2,
           "away": 0
         },
         "fulltime": {
@@ -1980,7 +1980,7 @@
         "timestamp": 1781532000,
         "periods": {
           "first": 1781532000,
-          "second": null
+          "second": 1781535600
         },
         "venue": {
           "id": null,
@@ -1988,9 +1988,9 @@
           "city": "Tbilisi"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 31,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 50,
           "extra": null
         }
       },
@@ -2050,7 +2050,7 @@
         "timestamp": 1781532000,
         "periods": {
           "first": 1781532000,
-          "second": null
+          "second": 1781535600
         },
         "venue": {
           "id": null,
@@ -2058,9 +2058,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 33,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 58,
           "extra": null
         }
       },
@@ -2119,7 +2119,7 @@
         "date": "2026-06-15T15:00:00+01:00",
         "timestamp": 1781532000,
         "periods": {
-          "first": 1781532000,
+          "first": 1781535600,
           "second": null
         },
         "venue": {
@@ -2128,10 +2128,10 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 22,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 4
         }
       },
       "league": {
@@ -2149,23 +2149,23 @@
           "id": 25430,
           "name": "Union Abong-Mbang",
           "logo": "https://media.api-sports.io/football/teams/25430.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 5398,
           "name": "APEJES Academy",
           "logo": "https://media.api-sports.io/football/teams/5398.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -2198,10 +2198,10 @@
           "city": "Tehran"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 29,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 4
         }
       },
       "league": {
@@ -2270,7 +2270,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 1,
+          "elapsed": 40,
           "extra": null
         }
       },
@@ -2410,7 +2410,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 2,
+          "elapsed": 41,
           "extra": null
         }
       },
@@ -2480,7 +2480,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 1,
+          "elapsed": 40,
           "extra": null
         }
       },
@@ -2539,7 +2539,7 @@
         "date": "2026-06-15T16:00:00+01:00",
         "timestamp": 1781535600,
         "periods": {
-          "first": null,
+          "first": 1781535600,
           "second": null
         },
         "venue": {
@@ -2548,9 +2548,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 11,
           "extra": null
         }
       },
@@ -2579,13 +2579,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -2744,7 +2744,7 @@
     {
       "fixture": {
         "id": 1489380,
-        "referee": null,
+        "referee": "Adham Mohammad, Jordan",
         "timezone": "Atlantic/Canary",
         "date": "2026-06-15T17:00:00+01:00",
         "timestamp": 1781539200,
