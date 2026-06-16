@@ -1290,7 +1290,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 51,
+          "elapsed": 70,
           "extra": null
         }
       },
@@ -1309,18 +1309,18 @@
           "id": 27458,
           "name": "Sable",
           "logo": "https://media.api-sports.io/football/teams/27458.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 16527,
           "name": "Foncha ST",
           "logo": "https://media.api-sports.io/football/teams/16527.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 2,
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -1360,7 +1360,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 51,
+          "elapsed": 69,
           "extra": null
         }
       },
@@ -1430,7 +1430,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 6,
+          "elapsed": 25,
           "extra": null
         }
       },
@@ -1500,7 +1500,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 6,
+          "elapsed": 24,
           "extra": null
         }
       },
@@ -1570,7 +1570,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 7,
+          "elapsed": 25,
           "extra": null
         }
       },
@@ -1589,22 +1589,22 @@
           "id": 4576,
           "name": "Shabab Al Sahel",
           "logo": "https://media.api-sports.io/football/teams/4576.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 4572,
           "name": "Racing",
           "logo": "https://media.api-sports.io/football/teams/4572.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -1640,7 +1640,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 7,
+          "elapsed": 25,
           "extra": null
         }
       },
@@ -1710,7 +1710,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 7,
+          "elapsed": 25,
           "extra": null
         }
       },
@@ -1780,7 +1780,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 6,
+          "elapsed": 25,
           "extra": null
         }
       },
