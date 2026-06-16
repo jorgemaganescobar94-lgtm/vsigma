@@ -1,24 +1,14 @@
 country,league,league_tier,league_filter_reason,matches
 Brazil,Brasileiro U17,REJECT,hard_reject_noise_league,5
 USA,USL W League,REJECT,country_league_not_allowlisted,4
-Brazil,Brasileiro U20 A,REJECT,hard_reject_noise_league,3
-Gambia,GFA League,REJECT,country_league_not_allowlisted,3
 Iceland,Úrvalsdeild,REJECT,country_league_not_allowlisted,3
-Iran,Azadegan League,REJECT,country_league_not_allowlisted,3
-Kuwait,Premier League,REJECT,country_league_not_allowlisted,3
 USA,USL League Two,REJECT,country_league_not_allowlisted,3
 Bolivia,Primera División,REJECT,country_league_not_allowlisted,2
-Cameroon,Elite Two,REJECT,country_league_not_allowlisted,2
-Estonia,Meistriliiga,REJECT,country_league_not_allowlisted,2
-Latvia,Virsliga,REJECT,country_league_not_allowlisted,2
-Sweden,Superettan,REJECT,country_league_not_allowlisted,2
 World,World Cup,REJECT,country_league_not_allowlisted,2
 Australia,Queensland NPL,REJECT,country_league_not_allowlisted,1
-Brazil,Brasileiro U20 B,REJECT,hard_reject_noise_league,1
 Brazil,Catarinense U20,REJECT,hard_reject_noise_league,1
 Estonia,Cup,REJECT,country_league_not_allowlisted,1
-Georgia,Erovnuli Liga,REJECT,country_league_not_allowlisted,1
+Kuwait,Premier League,REJECT,country_league_not_allowlisted,1
 Lebanon,Premier League,REJECT,country_league_not_allowlisted,1
 Tajikistan,Vysshaya Liga,REJECT,country_league_not_allowlisted,1
-Tanzania,Ligi kuu Bara,REJECT,country_league_not_allowlisted,1
-Lithuania,A Lyga,TIER_3,lithuania_a_lyga_noisy,3
+Lithuania,A Lyga,TIER_3,lithuania_a_lyga_noisy,1
