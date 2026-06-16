@@ -1,7 +1,7 @@
 # vSIGMA Daily Run Plan - 2026-06-16
 
 - Timezone: Atlantic/Canary
-- Generated at: 2026-06-16T01:08:36.937203+01:00
+- Generated at: 2026-06-16T13:56:41.741596+01:00
 - Window minutes: 90
 - Next recommended action: NO_BET_DAY
 - Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-16 --timezone Atlantic/Canary --mode status`
