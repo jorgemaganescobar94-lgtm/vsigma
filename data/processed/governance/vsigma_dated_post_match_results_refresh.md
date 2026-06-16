@@ -1,26 +1,26 @@
 # vSIGMA Dated Post-Match Results Refresh - 2026-06-16
 
 ## Summary
-- rows_reported: 62
-- status_counts: NS=60; PST=2
+- rows_reported: 57
+- status_counts: FT=6; PST=3; NS=45; TBD=1; 2H=2
 - source_guard: DATED_INPUT_ONLY
 - auto_apply: NO
 - production_change: NO
 
 ## Rows
-- Hartford Athletic W vs New England Mutiny W | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
+- Hartford Athletic W vs New England Mutiny W | status=FT | goals=2-1 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at
 - Bolívar vs Guabirá | status=PST | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Birmingham Legion W vs Chattanooga Red Wolves W | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Dakota vs Sporting | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Iran vs New Zealand | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Real Colorado Foxes vs Unión Villa Krause | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
+- Dakota vs Sporting | status=FT | goals=1-1 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at
+- Iran vs New Zealand | status=FT | goals=2-2 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at;actual_home_sot;actual_away_sot;actual_total_sot;actual_home_shots;actual_away_shots;actual_total_shots;actual_home_corners;actual_away_corners;actual_total_corners;actual_home_fouls;actual_away_fouls;actual_total_fouls
+- Real Colorado Foxes vs Unión Villa Krause | status=TBD | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Flatirons II W vs Colorado Storm W | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Rochedale Rovers vs Moreton City Excelsior | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- WDSC Wolves vs Eastern Suburbs | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Gold Coast Knights vs Lions | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Redlands United vs SC Wanderers | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Mebrat Hayl vs Mekelle Kenema | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Ugyen Academy vs Thimphu | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
+- Rochedale Rovers vs Moreton City Excelsior | status=FT | goals=2-5 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at
+- WDSC Wolves vs Eastern Suburbs | status=FT | goals=1-2 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at
+- Gold Coast Knights vs Lions | status=PST | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
+- Redlands United vs SC Wanderers | status=FT | goals=2-4 | stats=STATS_FETCHED | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at
+- Mebrat Hayl vs Mekelle Kenema | status=2H | goals=0-0 | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;results_last_refresh_at
+- Ugyen Academy vs Thimphu | status=2H | goals=2-3 | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;results_last_refresh_at
 - Bafmeng United vs Tonnerre | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Sable vs Foncha ST | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Namungo vs Tabora United | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
@@ -40,12 +40,7 @@
 - Kuressaare vs Trans Narva | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Grobiņa vs FK Liepaja | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Kose vs Kummik | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Fortune vs Real de Banjul | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- GPA vs Team Rhino | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Greater Tomorrow vs BST Galaxy | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Hart Acedemy vs Brikama United | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Medina United vs Dutch Lions | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
-- Samger vs Bombada | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - Steve Biko vs Falcons | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - TMT vs Hawks | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at
 - FK Zalgiris Vilnius vs Panevėžys | status=NS | goals=None-None | stats=NOT_FINAL | fields=fixture_status_short;fixture_status_long;results_last_refresh_at

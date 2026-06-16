@@ -1,63 +1,58 @@
 target_date,generated_at,fixture_id,home_team,away_team,status,goals,stats_status,updated_fields,source_guard
-2026-06-16,2026-06-16T01:11:49+01:00,1532448,Hartford Athletic W,New England Mutiny W,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1538395,Bolívar,Guabirá,PST,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1532205,Birmingham Legion W,Chattanooga Red Wolves W,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1547744,Dakota,Sporting,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1489378,Iran,New Zealand,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1525405,Real Colorado Foxes,Unión Villa Krause,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1532206,Flatirons II W,Colorado Storm W,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1524044,Rochedale Rovers,Moreton City Excelsior,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1524029,WDSC Wolves,Eastern Suburbs,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1524039,Gold Coast Knights,Lions,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1524151,Redlands United,SC Wanderers,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1541092,Mebrat Hayl,Mekelle Kenema,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1543580,Ugyen Academy,Thimphu,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1547544,Bafmeng United,Tonnerre,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1547545,Sable,Foncha ST,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1477248,Namungo,Tabora United,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1508054,Al Ahed,Al Hikma,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1508055,Shabab Al Sahel,Racing,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1508056,Tadamon Sour,Al Mabarrah,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1541093,Bahardar,Welayta Dicha,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1541094,Sheger Ketema,Welwalo Adigrat Uni,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1547543,FAP,Union Douala,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1547546,Yafoot,Bamboutos,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1515859,BFC Daugavpils,Super Nova,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1547575,TransINVEST Vilnius,FK Trakai,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1547576,Suduva Marijampole,Šiauliai,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1477245,Azam,Mashujaa,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1509143,Dila,Spaeri,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1513569,Vaprus,Flora Tallinn,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1513570,Kuressaare,Trans Narva,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1515860,Grobiņa,FK Liepaja,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1551260,Kose,Kummik,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1531383,Fortune,Real de Banjul,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1531384,GPA,Team Rhino,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1531385,Greater Tomorrow,BST Galaxy,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1531386,Hart Acedemy,Brikama United,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1531387,Medina United,Dutch Lions,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1531388,Samger,Bombada,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1531389,Steve Biko,Falcons,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1531390,TMT,Hawks,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1547577,FK Zalgiris Vilnius,Panevėžys,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1497602,Landskrona BoIS,United Nordic,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1497608,IFK Varnamo,Helsingborg,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1526173,América Mineiro U20,Santos U20,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1526174,Athletico PR U20,Cruzeiro U20,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1526178,Criciuma U20,Palmeiras U20,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1543903,Bahia U17,Santos U17,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1543904,Botafogo U17,Palmeiras U17,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1543906,Cruzeiro U17,Corinthians U17,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1543907,Flamengo RJ U17,Atlético Mineiro U17,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1543908,Fortaleza U17,Juventude U17,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1546569,Jwaaya FC,Al Nejmeh,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1489383,France,Senegal,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1538391,Always Ready,Universitario de Vinto,PST,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1508778,IA Akranes,Valur Reykjavik,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1508781,Stjarnan,Breidablik,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1508783,Vikingur Reykjavik,KR Reykjavik,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1524939,New Jersey Copa,Staten Island Athletic,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1532207,Norfolk W,Virginia Beach United W,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1524940,Cleveland Force,Erie Sports Center,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1532208,Brevard Riptide W,TLH Reckoning W,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
-2026-06-16,2026-06-16T01:11:49+01:00,1539016,Iraq,Norway,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:50+01:00,1532448,Hartford Athletic W,New England Mutiny W,FT,2-1,STATS_FETCHED,fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:50+01:00,1538395,Bolívar,Guabirá,PST,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:50+01:00,1532205,Birmingham Legion W,Chattanooga Red Wolves W,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:50+01:00,1547744,Dakota,Sporting,FT,1-1,STATS_FETCHED,fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:51+01:00,1489378,Iran,New Zealand,FT,2-2,STATS_FETCHED,fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at;actual_home_sot;actual_away_sot;actual_total_sot;actual_home_shots;actual_away_shots;actual_total_shots;actual_home_corners;actual_away_corners;actual_total_corners;actual_home_fouls;actual_away_fouls;actual_total_fouls,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:51+01:00,1525405,Real Colorado Foxes,Unión Villa Krause,TBD,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:51+01:00,1532206,Flatirons II W,Colorado Storm W,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:51+01:00,1524044,Rochedale Rovers,Moreton City Excelsior,FT,2-5,STATS_FETCHED,fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1524029,WDSC Wolves,Eastern Suburbs,FT,1-2,STATS_FETCHED,fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1524039,Gold Coast Knights,Lions,PST,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1524151,Redlands United,SC Wanderers,FT,2-4,STATS_FETCHED,fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;score_fulltime_home;score_fulltime_away;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1541092,Mebrat Hayl,Mekelle Kenema,2H,0-0,NOT_FINAL,fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1543580,Ugyen Academy,Thimphu,2H,2-3,NOT_FINAL,fixture_status_short;fixture_status_long;fixture_status_elapsed;goals_home;goals_away;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1547544,Bafmeng United,Tonnerre,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1547545,Sable,Foncha ST,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1477248,Namungo,Tabora United,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1508054,Al Ahed,Al Hikma,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1508055,Shabab Al Sahel,Racing,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1508056,Tadamon Sour,Al Mabarrah,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1541093,Bahardar,Welayta Dicha,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1541094,Sheger Ketema,Welwalo Adigrat Uni,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1547543,FAP,Union Douala,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1547546,Yafoot,Bamboutos,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1515859,BFC Daugavpils,Super Nova,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1547575,TransINVEST Vilnius,FK Trakai,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1547576,Suduva Marijampole,Šiauliai,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1477245,Azam,Mashujaa,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1509143,Dila,Spaeri,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1513569,Vaprus,Flora Tallinn,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1513570,Kuressaare,Trans Narva,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1515860,Grobiņa,FK Liepaja,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1551260,Kose,Kummik,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1531385,Greater Tomorrow,BST Galaxy,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1531389,Steve Biko,Falcons,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1531390,TMT,Hawks,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1547577,FK Zalgiris Vilnius,Panevėžys,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1497602,Landskrona BoIS,United Nordic,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1497608,IFK Varnamo,Helsingborg,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1526173,América Mineiro U20,Santos U20,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1526174,Athletico PR U20,Cruzeiro U20,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1526178,Criciuma U20,Palmeiras U20,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1543903,Bahia U17,Santos U17,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1543904,Botafogo U17,Palmeiras U17,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1543906,Cruzeiro U17,Corinthians U17,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1543907,Flamengo RJ U17,Atlético Mineiro U17,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1543908,Fortaleza U17,Juventude U17,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1546569,Jwaaya FC,Al Nejmeh,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1489383,France,Senegal,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1538391,Always Ready,Universitario de Vinto,PST,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1508778,IA Akranes,Valur Reykjavik,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1508781,Stjarnan,Breidablik,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1508783,Vikingur Reykjavik,KR Reykjavik,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1524939,New Jersey Copa,Staten Island Athletic,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1532207,Norfolk W,Virginia Beach United W,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1524940,Cleveland Force,Erie Sports Center,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1532208,Brevard Riptide W,TLH Reckoning W,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-16,2026-06-16T12:40:52+01:00,1539016,Iraq,Norway,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
