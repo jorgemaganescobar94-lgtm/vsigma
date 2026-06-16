@@ -1,16 +1,14 @@
 # vSIGMA Alert - 2026-06-16
 
-System status: **BROKEN**
+System status: **ATTENTION**
 Alert required: **YES**
 Notify required: **YES**
-Alert hash: `caae1276c513e30f274fbe8e180f46f072690034663685a5bd4b29c2d8173f36`
+Alert hash: `ebebaabc973b3f2dfb32ae006291aea8ab712aba15d908d05b15bdf86d4b9f00`
 
 ## Signals
+- - READY_LOW_STAKE_REVIEW still requires manual price and live/prelock confirmation.
 - - WARN means review; BROKEN means a workflow/input needs fixing.
-- - daily_execution_board | status=MISSING | severity=BROKEN | action=RUN_DAILY_DECISION_CHAIN_V2 | detail=vsigma_daily_execution_board.md/csv missing
 - - memory_decision_counts: CALIBRATION_STABLE=4; MIXED_CALIBRATION_REVIEW=1; PATCH_CANDIDATE_REVIEW=1
-- - severity_counts: BROKEN=1; WARN=1; OK=5; INFO=4
-- - system_status: BROKEN
 - - total_goals | days=5 | rows=27 | hit_rate=0.371 | bias=OVER_ESTIMATE | decision=PATCH_CANDIDATE_REVIEW | patch=YES_REVIEW_ONLY | next=Review lowering total_goals projection/range for matching profiles; do not auto-apply.
 
 ## Health Snapshot
@@ -18,16 +16,16 @@ Alert hash: `caae1276c513e30f274fbe8e180f46f072690034663685a5bd4b29c2d8173f36`
 # vSIGMA Automation Health Monitor - 2026-06-16
 
 ## Summary
-- system_status: BROKEN
+- system_status: ATTENTION
 - components_checked: 11
-- severity_counts: BROKEN=1; WARN=1; OK=5; INFO=4
-- status_counts: MISSING=2; OK=5; CONFIG_EXPECTED=4
+- severity_counts: OK=6; WARN=1; INFO=4
+- status_counts: OK=7; CONFIG_EXPECTED=4
 - auto_apply: NO
 - production_change: NO
 
 ## Component Rows
-- daily_execution_board | status=MISSING | severity=BROKEN | action=RUN_DAILY_DECISION_CHAIN_V2 | detail=vsigma_daily_execution_board.md/csv missing
-- prelock_live_recheck | status=MISSING | severity=WARN | action=RUN_PRELOCK_RECHECK | detail=prelock/live report missing
+- daily_execution_board | status=OK | severity=OK | action=NO | detail=rows=1; decisions=NO_BET=1
+- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=CANCELLED_NO_BET=1
 - live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
 - postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=FT=6; PST=3; NS=45; TBD=1; 2H=2
 - postmatch_stat_actuals | status=OK | severity=OK | action=NO | detail=rows_final=6
