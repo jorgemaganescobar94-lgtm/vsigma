@@ -1,16 +1,14 @@
 # vSIGMA Prelock/Live Recheck - 2026-06-16
 
 ## Summary
-- rows_rechecked: 3
-- recheck_decision_counts: CANCELLED_NO_BET=3
+- rows_rechecked: 1
+- recheck_decision_counts: CANCELLED_NO_BET=1
 - source_guard: DATED_INPUT_ONLY
 - auto_apply: NO
 - production_change: NO
 
 ## Recheck Rows
-- #1 | CANCELLED_NO_BET | FK Zalgiris Vilnius vs Panevėžys | market=NO_CLEAR_STAT_MARKET | stake=NO_STAKE | lineup= | min=NA | availability= | next=none | note=blocked by board or low confidence
-- #2 | CANCELLED_NO_BET | Suduva Marijampole vs Šiauliai | market=NO_CLEAR_STAT_MARKET | stake=NO_STAKE | lineup= | min=NA | availability= | next=none | note=blocked by board or low confidence
-- #3 | CANCELLED_NO_BET | TransINVEST Vilnius vs FK Trakai | market=NO_CLEAR_STAT_MARKET | stake=NO_STAKE | lineup= | min=NA | availability= | next=none | note=blocked by board or low confidence
+- #1 | CANCELLED_NO_BET | TransINVEST Vilnius vs FK Trakai | market=NO_CLEAR_STAT_MARKET | stake=NO_STAKE | lineup= | min=NA | availability= | next=none | note=blocked by board or low confidence
 
 ## Guardrails
 - This recheck does not execute automatically.
