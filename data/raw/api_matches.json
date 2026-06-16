@@ -1280,7 +1280,7 @@
         "timestamp": 1781611200,
         "periods": {
           "first": 1781611200,
-          "second": null
+          "second": 1781614800
         },
         "venue": {
           "id": null,
@@ -1288,9 +1288,9 @@
           "city": null
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 51,
           "extra": null
         }
       },
@@ -1309,18 +1309,18 @@
           "id": 27458,
           "name": "Sable",
           "logo": "https://media.api-sports.io/football/teams/27458.png",
-          "winner": true
+          "winner": null
         },
         "away": {
           "id": 16527,
           "name": "Foncha ST",
           "logo": "https://media.api-sports.io/football/teams/16527.png",
-          "winner": false
+          "winner": null
         }
       },
       "goals": {
-        "home": 2,
-        "away": 1
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
@@ -1350,7 +1350,7 @@
         "timestamp": 1781611200,
         "periods": {
           "first": 1781611200,
-          "second": null
+          "second": 1781614800
         },
         "venue": {
           "id": null,
@@ -1358,10 +1358,10 @@
           "city": null
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
-          "extra": 3
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 51,
+          "extra": null
         }
       },
       "league": {
@@ -1419,7 +1419,7 @@
         "date": "2026-06-16T14:00:00+01:00",
         "timestamp": 1781614800,
         "periods": {
-          "first": null,
+          "first": 1781614800,
           "second": null
         },
         "venue": {
@@ -1428,9 +1428,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 6,
           "extra": null
         }
       },
@@ -1459,13 +1459,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -1489,7 +1489,7 @@
         "date": "2026-06-16T14:00:00+01:00",
         "timestamp": 1781614800,
         "periods": {
-          "first": null,
+          "first": 1781614800,
           "second": null
         },
         "venue": {
@@ -1498,9 +1498,9 @@
           "city": "Beirut"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 6,
           "extra": null
         }
       },
@@ -1529,13 +1529,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -1559,7 +1559,7 @@
         "date": "2026-06-16T14:00:00+01:00",
         "timestamp": 1781614800,
         "periods": {
-          "first": null,
+          "first": 1781614800,
           "second": null
         },
         "venue": {
@@ -1568,9 +1568,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 7,
           "extra": null
         }
       },
@@ -1599,13 +1599,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -1629,7 +1629,7 @@
         "date": "2026-06-16T14:00:00+01:00",
         "timestamp": 1781614800,
         "periods": {
-          "first": null,
+          "first": 1781614800,
           "second": null
         },
         "venue": {
@@ -1638,9 +1638,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 7,
           "extra": null
         }
       },
@@ -1669,13 +1669,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -1699,7 +1699,7 @@
         "date": "2026-06-16T14:00:00+01:00",
         "timestamp": 1781614800,
         "periods": {
-          "first": null,
+          "first": 1781614800,
           "second": null
         },
         "venue": {
@@ -1708,9 +1708,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 7,
           "extra": null
         }
       },
@@ -1739,13 +1739,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -1769,7 +1769,7 @@
         "date": "2026-06-16T14:00:00+01:00",
         "timestamp": 1781614800,
         "periods": {
-          "first": null,
+          "first": 1781614800,
           "second": null
         },
         "venue": {
@@ -1778,9 +1778,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 6,
           "extra": null
         }
       },
@@ -1809,13 +1809,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -1848,8 +1848,8 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
+          "long": "Match Postponed",
+          "short": "PST",
           "elapsed": null,
           "extra": null
         }
