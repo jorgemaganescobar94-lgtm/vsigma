@@ -1,0 +1,95 @@
+name: vSIGMA World Cup Cards (Telegram)
+
+# ISOLATED notification workflow. Does NOT touch the betting pipeline / production
+# workflows / their scripts. It only: builds the World Cup forecast card (L3 from
+# committed ratings + fresh market odds via API) and sends it to Telegram.
+# It NEVER commits outputs back to the repo (permissions: contents read).
+
+on:
+  workflow_dispatch:
+    inputs:
+      days_ahead:
+        description: "Días hacia delante a incluir (ventana hoy..hoy+N, UTC)"
+        required: false
+        default: "1"
+      limit:
+        description: "Máximo de partidos en el mensaje"
+        required: false
+        default: "10"
+
+  # SCHEDULE — desactivado hasta confirmar el primer envío de prueba (workflow_dispatch).
+  # Una corrida por la mañana y otra pre-saque (UTC). Descomentar tras confirmar:
+  # schedule:
+  #   - cron: "0 8 * * *"    # ~mañana (09:00 Atlantic/Canary en verano)
+  #   - cron: "0 16 * * *"   # ~pre-saque de la sesión de tarde/noche
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vsigma-worldcup-cards
+  cancel-in-progress: false
+
+jobs:
+  send-cards:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Restore .env from GitHub Secret
+        env:
+          VSIGMA_ENV_B64: ${{ secrets.VSIGMA_ENV_B64 }}
+        run: |
+          if [ -z "$VSIGMA_ENV_B64" ]; then
+            echo "::error::Missing secret VSIGMA_ENV_B64"
+            exit 1
+          fi
+          echo "$VSIGMA_ENV_B64" | base64 --decode > .env
+          chmod 600 .env
+          echo ".env restored ($(wc -l < .env) lines)"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip wheel setuptools
+          pip install -r requirements.txt
+
+      - name: Compute date window (UTC)
+        id: win
+        run: |
+          N="${{ github.event.inputs.days_ahead || '1' }}"
+          FROM="$(date -u +%Y-%m-%d)"
+          TO="$(date -u -d "+${N} days" +%Y-%m-%d)"
+          echo "from=$FROM" >> "$GITHUB_OUTPUT"
+          echo "to=$TO" >> "$GITHUB_OUTPUT"
+          echo "window $FROM .. $TO"
+
+      - name: Build market+L3 cards (fresh odds via API)
+        run: |
+          python analysis/worldcup/build_worldcup_cards.py \
+            --from "${{ steps.win.outputs.from }}" --to "${{ steps.win.outputs.to }}"
+
+      - name: Render compact Telegram card
+        run: |
+          python analysis/worldcup/build_worldcup_full_card.py \
+            --from "${{ steps.win.outputs.from }}" --to "${{ steps.win.outputs.to }}" \
+            --limit "${{ github.event.inputs.limit || '10' }}" --compact
+          echo "----- message preview -----"
+          cat analysis/worldcup/worldcup_full_cards.txt
+
+      - name: Send to Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python scripts/dispatch_telegram_alert.py \
+            --title "Mundial 2026 — fichas (${{ steps.win.outputs.from }})" \
+            --date "${{ steps.win.outputs.from }}" \
+            --body-file analysis/worldcup/worldcup_full_cards.txt
