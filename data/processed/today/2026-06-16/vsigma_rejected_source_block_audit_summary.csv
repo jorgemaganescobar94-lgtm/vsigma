@@ -1,2 +1,2 @@
 target_date,generated_at,rows_reviewed,rejected_rows,correct_reject_rows,manual_review_rows,whitelist_candidate_rows,audit_bucket_counts,review_priority_counts,next_action,auto_apply,production_change
-2026-06-16,2026-06-16T13:26:43+01:00,5,5,0,5,5,MANUAL_REVIEW_POSSIBLE_WHITELIST=5,P1_REVIEW_CANDIDATE=5,Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.,NO,NO
+2026-06-16,2026-06-16T19:18:09+01:00,3,3,1,2,2,MANUAL_REVIEW_POSSIBLE_WHITELIST=2; CORRECT_REJECT_YOUTH_RESERVE_TEAM_TOKEN=1,P1_REVIEW_CANDIDATE=2; P3_CORRECT_REJECT=1,Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.,NO,NO

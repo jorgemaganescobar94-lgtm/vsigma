@@ -1,14 +1,12 @@
 # vSIGMA API Coverage Gate Applied to Board v2 - 2026-06-16
 
 ## Summary
-- rows_reviewed: 3
-- gate_actions: NO_BET_CONFIRMED=3
+- rows_reviewed: 1
+- gate_actions: NO_BET_CONFIRMED=1
 - auto_apply: NO
 - production_change: NO
 
 ## Gate Rows
-- FK Zalgiris Vilnius vs Panevėžys | api_gate=LOW_COVERAGE_NO_BET | action=NO_BET_CONFIRMED | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=league_coverage=PARTIAL; recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
-- Suduva Marijampole vs Šiauliai | api_gate=LOW_COVERAGE_NO_BET | action=NO_BET_CONFIRMED | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=league_coverage=PARTIAL; recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
 - TransINVEST Vilnius vs FK Trakai | api_gate=LOW_COVERAGE_NO_BET | action=NO_BET_CONFIRMED | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=league_coverage=PARTIAL; recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
 
 ## Guardrails

@@ -3,7 +3,7 @@
 ## Summary
 - self_heal_status: OK_BOARD_PRESENT
 - daily_board_exists: true
-- daily_board_rows: 3
+- daily_board_rows: 1
 - current_trigger_date: 2026-06-16
 - trigger_action: NO_TRIGGER_CHANGE
 - reason: daily board exists with rows

@@ -1,12 +1,12 @@
 # vSIGMA API-Enriched Manual Review Inspector - 2026-06-16
 
 ## Summary
-- review_rows: 27
-- bucket_counts: P1_REVIEW_STRONG_SIGNAL=14; P3_REVIEW_LOW_SIGNAL=13
-- risk_label_counts: MEDIUM=14; LOW=13
-- canonical_board_permission_counts: NO_CANONICAL_BOARD_PERMISSION=27
-- pick_permission_counts: NO_PICK_PERMISSION=27
-- stake_permission_counts: NO_STAKE_PERMISSION=27
+- review_rows: 29
+- bucket_counts: P1_REVIEW_STRONG_SIGNAL=15; P3_REVIEW_LOW_SIGNAL=14
+- risk_label_counts: MEDIUM=15; LOW=14
+- canonical_board_permission_counts: NO_CANONICAL_BOARD_PERMISSION=29
+- pick_permission_counts: NO_PICK_PERMISSION=29
+- stake_permission_counts: NO_STAKE_PERMISSION=29
 - next_action: Use this inspector only for human triage. It cannot promote, create picks, or create stake permission.
 - auto_apply: NO
 - production_change: NO
@@ -38,7 +38,9 @@
 - #24 | IA Akranes vs Valur Reykjavik | priority=P2_MANUAL_REVIEW | signal_score=63 | signal_band=MEDIUM_SIGNAL_REVIEW | bucket=P3_REVIEW_LOW_SIGNAL | risk=LOW | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | reason=Low/medium review signal. Keep as low-priority manual inspection only.
 - #25 | Stjarnan vs Breidablik | priority=P1_MANUAL_REVIEW | signal_score=100 | signal_band=HIGH_SIGNAL_REVIEW | bucket=P1_REVIEW_STRONG_SIGNAL | risk=MEDIUM | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | reason=Strong API-enriched review signal. Human review may inspect first, but no promotion is allowed.
 - #26 | Vikingur Reykjavik vs KR Reykjavik | priority=P1_MANUAL_REVIEW | signal_score=100 | signal_band=HIGH_SIGNAL_REVIEW | bucket=P1_REVIEW_STRONG_SIGNAL | risk=MEDIUM | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | reason=Strong API-enriched review signal. Human review may inspect first, but no promotion is allowed.
-- #27 | Cleveland Force vs Erie Sports Center | priority=P2_MANUAL_REVIEW | signal_score=70 | signal_band=MEDIUM_SIGNAL_REVIEW | bucket=P3_REVIEW_LOW_SIGNAL | risk=LOW | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | reason=Low/medium review signal. Keep as low-priority manual inspection only.
+- #27 | FK Zalgiris Vilnius vs Panevėžys | priority=P1_MANUAL_REVIEW | signal_score=88 | signal_band=HIGH_SIGNAL_REVIEW | bucket=P1_REVIEW_STRONG_SIGNAL | risk=MEDIUM | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | reason=Strong API-enriched review signal. Human review may inspect first, but no promotion is allowed.
+- #28 | Medina United vs Dutch Lions | priority=P2_MANUAL_REVIEW | signal_score=69 | signal_band=MEDIUM_SIGNAL_REVIEW | bucket=P3_REVIEW_LOW_SIGNAL | risk=LOW | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | reason=Low/medium review signal. Keep as low-priority manual inspection only.
+- #29 | Samger vs Bombada | priority=P2_MANUAL_REVIEW | signal_score=66 | signal_band=MEDIUM_SIGNAL_REVIEW | bucket=P3_REVIEW_LOW_SIGNAL | risk=LOW | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | reason=Low/medium review signal. Keep as low-priority manual inspection only.
 
 ## Guardrails
 - This inspector is triage-only.

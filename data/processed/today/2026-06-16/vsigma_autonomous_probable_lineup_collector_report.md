@@ -2,10 +2,10 @@
 
 ## Summary
 - search_provider: SERPAPI_SEARCH_FAILED
-- rows_seen: 3
+- rows_seen: 1
 - urls_discovered: 0
 - rows_extracted: 0
-- status_counts: NO_DATA=3
+- status_counts: NO_DATA=1
 - source_counts: none
 - max_search_queries_per_fixture: 8
 - auto_apply: NO

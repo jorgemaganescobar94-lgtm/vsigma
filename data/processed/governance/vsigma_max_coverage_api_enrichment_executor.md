@@ -2,67 +2,74 @@
 
 ## Summary
 - executor_status: EXECUTION_COMPLETE
-- policy_rows_reviewed: 44
-- rows_selected: 44
-- rows_executed: 44
+- policy_rows_reviewed: 51
+- rows_selected: 51
+- rows_executed: 51
 - rows_dry_run: 0
-- rows_success_any: 44
+- rows_success_any: 51
 - rows_failed_all: 0
-- scoring_allowed_rows: 40
-- coverage_probe_rows: 0
+- scoring_allowed_rows: 46
+- coverage_probe_rows: 1
 - diagnostic_only_rows: 4
-- endpoint_success_counts: fixture_detail=44; predictions=40; odds=28; events=5; statistics=1; lineups=1
-- endpoint_failure_counts: statistics=39; lineups=39; events=35; odds=12
+- endpoint_success_counts: fixture_detail=51; predictions=46; odds=29; events=23; statistics=2; lineups=2
+- endpoint_failure_counts: statistics=45; lineups=44; events=24; odds=17
 - external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: YES_LOGGED_EXECUTION
 - auto_apply: NO
 - production_change: NO
 
 ## Executor Rows
-- Hartford Athletic W vs New England Mutiny W | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
 - Bolívar vs Guabirá | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- Birmingham Legion W vs Chattanooga Red Wolves W | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
 - Dakota vs Sporting | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions | failed=statistics;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
-- Iran vs New Zealand | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;statistics;events;lineups;predictions;odds | failed=none | scoring_after=YES_PENDING_NORMAL_GATES
-- Real Colorado Foxes vs Unión Villa Krause | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
 - Rochedale Rovers vs Moreton City Excelsior | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
 - WDSC Wolves vs Eastern Suburbs | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
 - Gold Coast Knights vs Lions | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
 - Redlands United vs SC Wanderers | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
 - Mebrat Hayl vs Mekelle Kenema | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- Bafmeng United vs Tonnerre | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
 - Sable vs Foncha ST | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
-- Namungo vs Tabora United | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
-- Al Ahed vs Al Hikma | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- Shabab Al Sahel vs Racing | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- Tadamon Sour vs Al Mabarrah | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
-- Bahardar vs Welayta Dicha | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- Sheger Ketema vs Welwalo Adigrat Uni | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- FAP vs Union Douala | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
-- Yafoot vs Bamboutos | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
-- BFC Daugavpils vs Super Nova | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- Azam vs Mashujaa | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- Dila vs Spaeri | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- Vaprus vs Flora Tallinn | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- Kuressaare vs Trans Narva | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- Grobiņa vs FK Liepaja | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- Kose vs Kummik | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
-- Greater Tomorrow vs BST Galaxy | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- Steve Biko vs Falcons | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- TMT vs Hawks | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- Landskrona BoIS vs United Nordic | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- IFK Varnamo vs Helsingborg | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
-- Jwaaya FC vs Al Nejmeh | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
-- France vs Senegal | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Namungo vs Tabora United | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;statistics;events;predictions | failed=lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Al Ahed vs Al Hikma | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Shabab Al Sahel vs Racing | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Bahardar vs Welayta Dicha | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- BFC Daugavpils vs Super Nova | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Azam vs Mashujaa | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Dila vs Spaeri | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Vaprus vs Flora Tallinn | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Kuressaare vs Trans Narva | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Grobiņa vs FK Liepaja | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Greater Tomorrow vs BST Galaxy | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Steve Biko vs Falcons | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- TMT vs Hawks | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- IFK Varnamo vs Helsingborg | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
 - Always Ready vs Universitario de Vinto | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
 - IA Akranes vs Valur Reykjavik | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
 - Stjarnan vs Breidablik | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
 - Vikingur Reykjavik vs KR Reykjavik | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Cleveland Force vs Erie Sports Center | downstream=COVERAGE_GATE_ONLY | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=statistics;events | scoring_after=NO_COVERAGE_GATE_ONLY
+- Hartford Athletic W vs New England Mutiny W | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Birmingham Legion W vs Chattanooga Red Wolves W | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
+- Iran vs New Zealand | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;statistics;events;lineups;predictions;odds | failed=none | scoring_after=YES_PENDING_NORMAL_GATES
+- Real Colorado Foxes vs Unión Villa Krause | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Bafmeng United vs Tonnerre | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Tadamon Sour vs Al Mabarrah | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Sheger Ketema vs Welwalo Adigrat Uni | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- FAP vs Union Douala | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Yafoot vs Bamboutos | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions | failed=statistics;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Suduva Marijampole vs Šiauliai | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions | failed=statistics;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Kose vs Kummik | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- FK Zalgiris Vilnius vs Panevėžys | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Landskrona BoIS vs United Nordic | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;events;predictions;odds | failed=statistics;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Jwaaya FC vs Al Nejmeh | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- France vs Senegal | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;lineups;predictions;odds | failed=statistics;events | scoring_after=YES_PENDING_NORMAL_GATES
 - New Jersey Copa vs Staten Island Athletic | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
 - Norfolk W vs Virginia Beach United W | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
-- Cleveland Force vs Erie Sports Center | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
 - Brevard Riptide W vs TLH Reckoning W | downstream=DIAGNOSTIC_ONLY_NO_SCORING | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail | failed=none | scoring_after=NO_DIAGNOSTIC_ONLY
 - Iraq vs Norway | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions;odds | failed=statistics;events;lineups | scoring_after=YES_PENDING_NORMAL_GATES
+- Fortune vs Real de Banjul | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- GPA vs Team Rhino | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Hart Acedemy vs Brikama United | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Medina United vs Dutch Lions | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
+- Samger vs Bombada | downstream=SCORING_ALLOWED_WITH_NORMAL_GATES | mode=EXECUTE_API_CALLS | status=EXECUTED_WITH_DATA | success=fixture_detail;predictions | failed=statistics;events;lineups;odds | scoring_after=YES_PENDING_NORMAL_GATES
 
 ## Guardrails
 - This executor may collect API data, but it does not create picks, stake permission, or bypass normal gates.

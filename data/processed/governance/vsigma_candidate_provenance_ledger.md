@@ -1,17 +1,15 @@
 # vSIGMA Candidate Provenance Ledger - 2026-06-16
 
 ## Summary
-- rows_reviewed: 3
-- candidate_origin_counts: TRANSLATOR_ONLY=3
-- max_execution_permission_counts: NO_BET=3
-- allowed_downstream_use_counts: NO_BET_ONLY=3
+- rows_reviewed: 1
+- candidate_origin_counts: TRANSLATOR_ONLY=1
+- max_execution_permission_counts: NO_BET=1
+- allowed_downstream_use_counts: NO_BET_ONLY=1
 - auto_apply: NO
 - production_change: NO
 
 ## Candidate Rows
 - TransINVEST Vilnius vs FK Trakai | origin=TRANSLATOR_ONLY | market=NO_CLEAR_STAT_MARKET | direction=UNKNOWN | max_permission=NO_BET | strength=8 | allowed=NO_BET_ONLY | reason=translator row exists without identifiable shortlist origin
-- Suduva Marijampole vs Šiauliai | origin=TRANSLATOR_ONLY | market=NO_CLEAR_STAT_MARKET | direction=UNKNOWN | max_permission=NO_BET | strength=8 | allowed=NO_BET_ONLY | reason=translator row exists without identifiable shortlist origin
-- FK Zalgiris Vilnius vs Panevėžys | origin=TRANSLATOR_ONLY | market=NO_CLEAR_STAT_MARKET | direction=UNKNOWN | max_permission=NO_BET | strength=8 | allowed=NO_BET_ONLY | reason=translator row exists without identifiable shortlist origin
 
 ## Guardrails
 - Provenance ledger is diagnostic and ceiling-only; it never upgrades candidates.

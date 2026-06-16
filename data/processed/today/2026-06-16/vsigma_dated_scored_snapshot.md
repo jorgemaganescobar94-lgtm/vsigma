@@ -2,10 +2,10 @@
 
 ## Summary
 - snapshot_status: SNAPSHOT_DIAGNOSTIC_ONLY_ALL_NO_DATA_BLOCKED
-- source_rows: 3
-- same_day_rows: 3
-- rows_written: 3
-- no_data_blocked_rows: 3
+- source_rows: 1
+- same_day_rows: 1
+- rows_written: 1
+- no_data_blocked_rows: 1
 - non_blocked_rows: 0
 - source_path: data/processed/matches_vsigma_scored_v3.csv
 - output_path: data/processed/today/2026-06-16/matches_vsigma_scored_v3.csv
@@ -14,8 +14,6 @@
 - production_change: NO
 
 ## Snapshot Rows
-- FK Zalgiris Vilnius vs Panevėžys | fixture_id=1547577 | league=A Lyga | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | data_warning=OK_FULL
-- Suduva Marijampole vs Šiauliai | fixture_id=1547576 | league=A Lyga | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | data_warning=OK_FULL
 - TransINVEST Vilnius vs FK Trakai | fixture_id=1547575 | league=A Lyga | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | data_warning=OK_FULL
 
 ## Guardrails

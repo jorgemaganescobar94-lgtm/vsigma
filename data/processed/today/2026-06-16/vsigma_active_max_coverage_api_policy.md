@@ -7,8 +7,8 @@
 - plan_requests_per_day: 7500
 - external_calls_allowed: YES_MAX_COVERAGE_POLICY
 - external_calls_executed: NO
-- scoring_allowed_rows: 40
-- coverage_probe_rows: 0
+- scoring_allowed_rows: 46
+- coverage_probe_rows: 1
 - diagnostic_only_rows: 4
 - blocked_rows: 0
 - legacy_cost_gate_status: LEGACY_INFORMATIONAL_ONLY:WAIT_FOR_MANUAL_APPROVAL

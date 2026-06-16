@@ -1,24 +1,4 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
-2026-06-16,1547577,A Lyga,Lithuania,FK Zalgiris Vilnius,Panevėžys,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547577,A Lyga,Lithuania,FK Zalgiris Vilnius,Panevėžys,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547577,A Lyga,Lithuania,FK Zalgiris Vilnius,Panevėžys,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547577,A Lyga,Lithuania,FK Zalgiris Vilnius,Panevėžys,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547577,A Lyga,Lithuania,FK Zalgiris Vilnius,Panevėžys,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547577,A Lyga,Lithuania,FK Zalgiris Vilnius,Panevėžys,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547577,A Lyga,Lithuania,FK Zalgiris Vilnius,Panevėžys,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547577,A Lyga,Lithuania,FK Zalgiris Vilnius,Panevėžys,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547577,A Lyga,Lithuania,FK Zalgiris Vilnius,Panevėžys,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547577,A Lyga,Lithuania,FK Zalgiris Vilnius,Panevėžys,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547576,A Lyga,Lithuania,Suduva Marijampole,Šiauliai,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547576,A Lyga,Lithuania,Suduva Marijampole,Šiauliai,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547576,A Lyga,Lithuania,Suduva Marijampole,Šiauliai,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547576,A Lyga,Lithuania,Suduva Marijampole,Šiauliai,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547576,A Lyga,Lithuania,Suduva Marijampole,Šiauliai,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547576,A Lyga,Lithuania,Suduva Marijampole,Šiauliai,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547576,A Lyga,Lithuania,Suduva Marijampole,Šiauliai,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547576,A Lyga,Lithuania,Suduva Marijampole,Šiauliai,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547576,A Lyga,Lithuania,Suduva Marijampole,Šiauliai,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-16,1547576,A Lyga,Lithuania,Suduva Marijampole,Šiauliai,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-16,1547575,A Lyga,Lithuania,TransINVEST Vilnius,FK Trakai,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-16,1547575,A Lyga,Lithuania,TransINVEST Vilnius,FK Trakai,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-16,1547575,A Lyga,Lithuania,TransINVEST Vilnius,FK Trakai,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.

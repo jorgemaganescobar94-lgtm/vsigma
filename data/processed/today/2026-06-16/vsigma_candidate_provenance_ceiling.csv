@@ -1,4 +1,2 @@
 target_date,generated_at,fixture_id,home_team,away_team,candidate_origin,max_execution_permission,before_permission,after_permission,before_stake,after_stake,ceiling_action,reason,auto_apply,production_change
-2026-06-16,2026-06-16T13:26:38+01:00,1547577,FK Zalgiris Vilnius,Panevėžys,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-16,2026-06-16T13:26:38+01:00,1547576,Suduva Marijampole,Šiauliai,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-16,2026-06-16T13:26:38+01:00,1547575,TransINVEST Vilnius,FK Trakai,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-16,2026-06-16T19:18:06+01:00,1547575,TransINVEST Vilnius,FK Trakai,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO

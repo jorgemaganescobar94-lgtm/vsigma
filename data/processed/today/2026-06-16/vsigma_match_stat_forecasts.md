@@ -1,19 +1,17 @@
 # vSIGMA Match Statistical Forecasts - 2026-06-16
 
 ## Summary
-- rows_forecasted: 3
+- rows_forecasted: 1
 - source_file: matches_vsigma_scored_v3.csv
 - source_guard: DATED_INPUT_ONLY
-- confidence_counts: LOW=3
-- tempo_counts: MEDIUM_TEMPO=3
+- confidence_counts: LOW=1
+- tempo_counts: MEDIUM_TEMPO=1
 - calibration_note: v44.1 tightened range width and confidence penalties; no auto-execution.
 - auto_apply: NO
 - production_change: NO
 
 ## Forecast Rows
-- #1 | FK Zalgiris Vilnius vs Panevėžys | score=1-1 / 0-1 / 1-2 | goals=1.58-3.12 | shots=17-29 | SoT=5-11 | corners=6-13 | cards=2-6 | tempo=MEDIUM_TEMPO | conf=LOW(51.1) | warning=PARTIAL_RECENT_STATS; SHOT_SAMPLE_WEAK; CORNER_SAMPLE_WEAK; CARD_SAMPLE_WEAK
-- #2 | Suduva Marijampole vs Šiauliai | score=1-1 / 0-1 / 1-2 | goals=1.58-3.12 | shots=17-29 | SoT=5-11 | corners=6-13 | cards=2-6 | tempo=MEDIUM_TEMPO | conf=LOW(51.1) | warning=PARTIAL_RECENT_STATS; SHOT_SAMPLE_WEAK; CORNER_SAMPLE_WEAK; CARD_SAMPLE_WEAK
-- #3 | TransINVEST Vilnius vs FK Trakai | score=1-1 / 0-1 / 1-2 | goals=1.58-3.12 | shots=17-29 | SoT=5-11 | corners=6-13 | cards=2-6 | tempo=MEDIUM_TEMPO | conf=LOW(51.1) | warning=PARTIAL_RECENT_STATS; SHOT_SAMPLE_WEAK; CORNER_SAMPLE_WEAK; CARD_SAMPLE_WEAK
+- #1 | TransINVEST Vilnius vs FK Trakai | score=1-1 / 0-1 / 1-2 | goals=1.58-3.12 | shots=17-29 | SoT=5-11 | corners=6-13 | cards=2-6 | tempo=MEDIUM_TEMPO | conf=LOW(51.1) | warning=PARTIAL_RECENT_STATS; SHOT_SAMPLE_WEAK; CORNER_SAMPLE_WEAK; CARD_SAMPLE_WEAK
 
 ## Guardrails
 - Forecasts are ranges, not exact-stat promises.
