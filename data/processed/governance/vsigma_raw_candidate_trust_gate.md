@@ -2,10 +2,10 @@
 
 ## Summary
 - rows_reviewed: 65
-- trusted_rows: 52
-- quarantine_rows: 10
-- blocked_rows: 3
-- trust_status_counts: TRUSTED_RAW_SOURCE=52; QUARANTINE_REVIEW=10; REJECTED_SOURCE_BLOCK=3
+- trusted_rows: 54
+- quarantine_rows: 11
+- blocked_rows: 0
+- trust_status_counts: TRUSTED_RAW_SOURCE=54; QUARANTINE_REVIEW=11
 - next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
 - auto_apply: NO
 - production_change: NO
@@ -37,7 +37,9 @@
 - IA Akranes vs Valur Reykjavik | league=Úrvalsdeild | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
 - Stjarnan vs Breidablik | league=Úrvalsdeild | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
 - Vikingur Reykjavik vs KR Reykjavik | league=Úrvalsdeild | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
-- Cleveland Force vs Erie Sports Center | league=USL League Two | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- FK Zalgiris Vilnius vs Panevėžys | league=A Lyga | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Medina United vs Dutch Lions | league=GFA League | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Samger vs Bombada | league=GFA League | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
 - Hartford Athletic W vs New England Mutiny W | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Birmingham Legion W vs Chattanooga Red Wolves W | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Iran vs New Zealand | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
@@ -52,7 +54,6 @@
 - TransINVEST Vilnius vs FK Trakai | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Suduva Marijampole vs Šiauliai | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Kose vs Kummik | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- FK Zalgiris Vilnius vs Panevėžys | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Landskrona BoIS vs United Nordic | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - América Mineiro U20 vs Santos U20 | league= | status=QUARANTINE_REVIEW | allowed=QUARANTINE_ONLY | reason=youth/women/reserve/academy competition requires explicit whitelist before scoring | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Athletico PR U20 vs Cruzeiro U20 | league= | status=QUARANTINE_REVIEW | allowed=QUARANTINE_ONLY | reason=youth/women/reserve/academy competition requires explicit whitelist before scoring | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
@@ -66,16 +67,15 @@
 - France vs Senegal | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - New Jersey Copa vs Staten Island Athletic | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Norfolk W vs Virginia Beach United W | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
+- Cleveland Force vs Erie Sports Center | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Brevard Riptide W vs TLH Reckoning W | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Iraq vs Norway | league= | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Fortune vs Real de Banjul | league=GFA League | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - GPA vs Team Rhino | league=GFA League | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Hart Acedemy vs Brikama United | league=GFA League | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Medina United vs Dutch Lions | league=GFA League | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Samger vs Bombada | league=GFA League | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Al Qadsia vs Al Salmiyah | league=Premier League | status=REJECTED_SOURCE_BLOCK | allowed=DIAGNOSTIC_ONLY_NO_SCORING | reason=source path indicates the fixture came from rejected league/filter output | source=data/processed/matches_league_rejected.csv
-- Barki Tajik vs Parvoz | league=Vysshaya Liga | status=REJECTED_SOURCE_BLOCK | allowed=DIAGNOSTIC_ONLY_NO_SCORING | reason=source path indicates the fixture came from rejected league/filter output | source=data/processed/matches_league_rejected.csv
-- Concórdia U20 vs Brusque U20 | league=Catarinense U20 | status=REJECTED_SOURCE_BLOCK | allowed=DIAGNOSTIC_ONLY_NO_SCORING | reason=source path indicates the fixture came from rejected league/filter output | source=data/processed/matches_league_rejected.csv
+- Al Qadsia vs Al Salmiyah | league=Premier League | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Barki Tajik vs Parvoz | league=Vysshaya Liga | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Concórdia U20 vs Brusque U20 | league=Catarinense U20 | status=QUARANTINE_REVIEW | allowed=QUARANTINE_ONLY | reason=youth/women/reserve/academy competition requires explicit whitelist before scoring | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 
 ## Guardrails
 - Trust gate is defensive and can only restrict downstream use.

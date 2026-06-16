@@ -4,8 +4,8 @@
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
 - files_scanned: 1849
 - accepted_rows: 65
-- rejected_rows: 437
-- source_status_counts: NO_SAME_DAY_ROWS=1245; EMPTY_OR_UNREADABLE=564; NO_ACCEPTED_ROWS=36; HAS_ACCEPTED_ROWS=4
+- rejected_rows: 457
+- source_status_counts: NO_SAME_DAY_ROWS=1245; EMPTY_OR_UNREADABLE=564; NO_ACCEPTED_ROWS=37; HAS_ACCEPTED_ROWS=3
 - next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO
@@ -37,7 +37,9 @@
 - IA Akranes vs Valur Reykjavik | fixture_id=1508778 | league=Úrvalsdeild | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
 - Stjarnan vs Breidablik | fixture_id=1508781 | league=Úrvalsdeild | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
 - Vikingur Reykjavik vs KR Reykjavik | fixture_id=1508783 | league=Úrvalsdeild | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
-- Cleveland Force vs Erie Sports Center | fixture_id=1524940 | league=USL League Two | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- FK Zalgiris Vilnius vs Panevėžys | fixture_id=1547577 | league=A Lyga | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Medina United vs Dutch Lions | fixture_id=1531387 | league=GFA League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Samger vs Bombada | fixture_id=1531388 | league=GFA League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
 - Hartford Athletic W vs New England Mutiny W | fixture_id=1532448 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Birmingham Legion W vs Chattanooga Red Wolves W | fixture_id=1532205 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Iran vs New Zealand | fixture_id=1489378 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
@@ -52,7 +54,6 @@
 - TransINVEST Vilnius vs FK Trakai | fixture_id=1547575 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Suduva Marijampole vs Šiauliai | fixture_id=1547576 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Kose vs Kummik | fixture_id=1551260 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- FK Zalgiris Vilnius vs Panevėžys | fixture_id=1547577 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Landskrona BoIS vs United Nordic | fixture_id=1497602 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - América Mineiro U20 vs Santos U20 | fixture_id=1526173 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Athletico PR U20 vs Cruzeiro U20 | fixture_id=1526174 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
@@ -66,16 +67,15 @@
 - France vs Senegal | fixture_id=1489383 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - New Jersey Copa vs Staten Island Athletic | fixture_id=1524939 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Norfolk W vs Virginia Beach United W | fixture_id=1532207 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
+- Cleveland Force vs Erie Sports Center | fixture_id=1524940 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Brevard Riptide W vs TLH Reckoning W | fixture_id=1532208 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Iraq vs Norway | fixture_id=1539016 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Fortune vs Real de Banjul | fixture_id=1531383 | league=GFA League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - GPA vs Team Rhino | fixture_id=1531384 | league=GFA League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 - Hart Acedemy vs Brikama United | fixture_id=1531386 | league=GFA League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Medina United vs Dutch Lions | fixture_id=1531387 | league=GFA League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Samger vs Bombada | fixture_id=1531388 | league=GFA League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
-- Al Qadsia vs Al Salmiyah | fixture_id=1553783 | league=Premier League | source=data/processed/matches_league_rejected.csv
-- Barki Tajik vs Parvoz | fixture_id=1527688 | league=Vysshaya Liga | source=data/processed/matches_league_rejected.csv
-- Concórdia U20 vs Brusque U20 | fixture_id=1539861 | league=Catarinense U20 | source=data/processed/matches_league_rejected.csv
+- Al Qadsia vs Al Salmiyah | fixture_id=1553783 | league=Premier League | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Barki Tajik vs Parvoz | fixture_id=1527688 | league=Vysshaya Liga | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Concórdia U20 vs Brusque U20 | fixture_id=1539861 | league=Catarinense U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 
 ## Source Diagnostics
 - data/processed/batch_inputs/vsigma_api_board_candidates_2026-06-15.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
@@ -93,12 +93,12 @@
 - data/processed/governance/vsigma_api_board_candidate_bridge_2026-06-15.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-06-15.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_calibration_rule_candidates.csv | status=NO_ACCEPTED_ROWS | rows=77 | same_day=77 | accepted=0 | rejected=77 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv | status=HAS_ACCEPTED_ROWS | rows=27 | same_day=27 | accepted=27 | rejected=0 | detail=local source contains accepted raw fixture rows
-- data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=NO_ACCEPTED_ROWS | rows=44 | same_day=44 | accepted=0 | rejected=44 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv | status=HAS_ACCEPTED_ROWS | rows=29 | same_day=29 | accepted=29 | rejected=0 | detail=local source contains accepted raw fixture rows
+- data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=NO_ACCEPTED_ROWS | rows=51 | same_day=51 | accepted=0 | rejected=51 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_candidate_provenance_ceiling.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_dated_post_match_results_refresh.csv | status=HAS_ACCEPTED_ROWS | rows=57 | same_day=57 | accepted=30 | rejected=0 | detail=local source contains accepted raw fixture rows
 - data/processed/governance/vsigma_forced_api_board_fixture_lineups.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_ACCEPTED_ROWS | rows=62 | same_day=62 | accepted=0 | rejected=62 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_ACCEPTED_ROWS | rows=65 | same_day=65 | accepted=0 | rejected=65 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_match_stat_forecast_backtest.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecast_calibration_details.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecasts.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
@@ -109,13 +109,13 @@
 - data/processed/governance/vsigma_prematch_calibration_rule_gate.csv | status=NO_SAME_DAY_ROWS | rows=12 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_prematch_match_story_engine.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_prematch_prediction_calibration_advisor.csv | status=NO_SAME_DAY_ROWS | rows=12 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=NO_ACCEPTED_ROWS | rows=27 | same_day=27 | accepted=0 | rejected=27 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=NO_ACCEPTED_ROWS | rows=29 | same_day=29 | accepted=0 | rejected=29 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=HAS_ACCEPTED_ROWS | rows=62 | same_day=62 | accepted=5 | rejected=0 | detail=local source contains accepted raw fixture rows
+- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=HAS_ACCEPTED_ROWS | rows=65 | same_day=65 | accepted=6 | rejected=0 | detail=local source contains accepted raw fixture rows
 - data/processed/governance/vsigma_rolling_prematch_accuracy_dashboard.csv | status=NO_SAME_DAY_ROWS | rows=6 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_shadow_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_ACCEPTED_ROWS | rows=62 | same_day=62 | accepted=0 | rejected=3 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_ACCEPTED_ROWS | rows=47 | same_day=47 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_ACCEPTED_ROWS | rows=65 | same_day=65 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_ACCEPTED_ROWS | rows=52 | same_day=52 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/historical/2026-04-23/matches.csv | status=NO_SAME_DAY_ROWS | rows=182 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
