@@ -1,0 +1,2 @@
+target_date,fixture_id,league,home_team,away_team,market_primary,competition_calibrated_prob,accuracy_confidence_score,accuracy_primary_risk,fixture_datetime,minutes_to_kickoff,official_action,executable_now,final_block_reason,retry_allowed,next_retry_time,data_gap_flags,execution_family_status,prelock_retained,prelock_decision,prelock_decision_reason,exclusion_reason,decision_state,decision_reason,next_action
+2026-06-18,,,,,,,,,,,NO_BET,NO,NO_BET,NO,,,NO_BET,NO,,,,NO_BET,No current official baseline candidates exist for the target date.,NO_ACTION
