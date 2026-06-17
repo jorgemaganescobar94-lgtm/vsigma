@@ -344,3 +344,27 @@
 - pick_permission_counts: NO_PICK_PERMISSION=77
 - stake_permission_counts: NO_STAKE_PERMISSION=77
 - next_action: Review candidate rules only after sample grows. This board cannot activate rules, picks, or stake.
+## API Shadow Rule Outcome Ledger
+- candidate_rules_applied: 19
+- shadow_rows: 576
+- finished_shadow_rows: 39
+- pending_shadow_rows: 537
+- shadow_outcome_counts: PENDING_RESULT=537; HIT=28; MISS=11
+- rule_market_counts: OVER_1_5=309; UNDER_3_5=99; API_DNB=84; API_DOUBLE_CHANCE=84
+- paper_trade_permission_counts: SHADOW_ONLY=576
+- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=576
+- pick_permission_counts: NO_PICK_PERMISSION=576
+- stake_permission_counts: NO_STAKE_PERMISSION=576
+- next_action: Track shadow outcomes over future runs. This ledger cannot activate rules, picks, or stake.
+## API Shadow Rule Out-of-Sample Tracker
+- registry_rules: 34
+- rows_reviewed: 576
+- in_sample_rows: 10
+- out_of_sample_rows: 29
+- pending_rows: 537
+- oos_evaluated_rows: 29
+- oos_class_counts: PENDING_RESULT=537; OUT_OF_SAMPLE=29; IN_SAMPLE_BOOTSTRAP=10
+- activation_permission_counts: NO_RULE_ACTIVATION_PERMISSION=576
+- pick_permission_counts: NO_PICK_PERMISSION=576
+- stake_permission_counts: NO_STAKE_PERMISSION=576
+- next_action: Collect future OUT_OF_SAMPLE rows. No rule activation before sufficient out-of-sample sample size.
