@@ -10,7 +10,7 @@
 
 ## Component Rows
 - daily_execution_board | status=OK | severity=OK | action=NO | detail=rows=2; decisions=NO_BET=2
-- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=CANCELLED_NO_BET=7
+- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=CANCELLED_NO_BET=2
 - live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
 - postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=FT=11; NS=131; 2H=5
 - postmatch_stat_actuals | status=OK | severity=OK | action=NO | detail=rows_final=11
