@@ -1,15 +1,15 @@
 # vSIGMA Automation Health Monitor - 2026-06-17
 
 ## Summary
-- system_status: BROKEN
+- system_status: ATTENTION
 - components_checked: 11
-- severity_counts: BROKEN=1; WARN=1; OK=5; INFO=4
-- status_counts: MISSING=2; OK=5; CONFIG_EXPECTED=4
+- severity_counts: OK=6; WARN=1; INFO=4
+- status_counts: OK=6; MISSING=1; CONFIG_EXPECTED=4
 - auto_apply: NO
 - production_change: NO
 
 ## Component Rows
-- daily_execution_board | status=MISSING | severity=BROKEN | action=RUN_DAILY_DECISION_CHAIN_V2 | detail=vsigma_daily_execution_board.md/csv missing
+- daily_execution_board | status=OK | severity=OK | action=NO | detail=rows=7; decisions=NO_BET=7
 - prelock_live_recheck | status=MISSING | severity=WARN | action=RUN_PRELOCK_RECHECK | detail=prelock/live report missing
 - live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
 - postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=FT=11; NS=131; 2H=5
