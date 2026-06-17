@@ -2,10 +2,10 @@
 
 ## Summary
 - snapshot_status: SNAPSHOT_DIAGNOSTIC_ONLY_ALL_NO_DATA_BLOCKED
-- source_rows: 7
-- same_day_rows: 7
-- rows_written: 7
-- no_data_blocked_rows: 7
+- source_rows: 2
+- same_day_rows: 2
+- rows_written: 2
+- no_data_blocked_rows: 2
 - non_blocked_rows: 0
 - source_path: data/processed/matches_vsigma_scored_v3.csv
 - output_path: data/processed/today/2026-06-17/matches_vsigma_scored_v3.csv
@@ -14,13 +14,8 @@
 - production_change: NO
 
 ## Snapshot Rows
-- Hegelmann Litauen vs Džiugas Telšiai | fixture_id=1547578 | league=A Lyga | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | data_warning=OK_FULL
-- Kauno Žalgiris vs Banga | fixture_id=1547579 | league=A Lyga | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | data_warning=OK_FULL
 - Gnistan vs Lahti | fixture_id=1495707 | league=Veikkausliiga | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | data_warning=OK_FULL
-- HJK Helsinki vs Inter Turku | fixture_id=1495704 | league=Veikkausliiga | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | data_warning=OK_FULL
-- Ilves vs FF Jaro | fixture_id=1495705 | league=Veikkausliiga | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | data_warning=OK_FULL
 - SJK vs VPS | fixture_id=1495708 | league=Veikkausliiga | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | data_warning=OK_FULL
-- Turku PS vs KuPS | fixture_id=1495706 | league=Veikkausliiga | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | data_warning=OK_FULL
 
 ## Guardrails
 - Snapshot creation does not create picks, stake permission, or live permission.

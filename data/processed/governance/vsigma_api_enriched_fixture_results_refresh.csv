@@ -1,68 +1,58 @@
 target_date,generated_at,fixture_id,home_team,away_team,league,country,fixture_date_utc,provider,refresh_status,refresh_note,fixture_status_short,fixture_status_long,fixture_status_elapsed,goals_home,goals_away,score_fulltime_home,score_fulltime_away,score_halftime_home,score_halftime_away,score_extratime_home,score_extratime_away,score_penalty_home,score_penalty_away,result_ready_for_ledger,api_calls_planned,api_calls_executed,auto_apply,production_change
-2026-06-17,2026-06-17T13:08:48+01:00,1524944,Vermont Green,Seacoast United Phantoms,USL League Two,USA,2026-06-16T23:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,2,2,2,2,2,0,,,,,YES,67,1,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1525406,Eagle FC,Lehigh Valley United,USL League Two,USA,2026-06-16T23:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,1,3,1,3,0,2,,,,,YES,67,2,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1524942,Houston Sur,GFI,USL League Two,USA,2026-06-17T00:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,3,8,3,8,2,3,,,,,YES,67,3,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1547745,La Fama,Britannia,Division di Honor,Aruba,2026-06-17T00:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,2,2,2,2,1,1,,,,,YES,67,4,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1542413,Central Stallions,Ulaanbaatar,Premier League,Mongolia,2026-06-17T07:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,1,0,1,0,0,0,,,,,YES,67,5,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1542414,Khoromkhon,Ulaangom City,Premier League,Mongolia,2026-06-17T10:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,2,5,2,5,1,2,,,,,YES,67,6,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1546785,Simba,Vita Club,Ligue 1,Congo-DR,2026-06-17T11:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,7,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1550470,Arsenal Tula,Volga Ulyanovsk,Friendlies Clubs,World,2026-06-17T13:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,8,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1477249,Singida Black Stars,Dodoma Jiji,Ligi kuu Bara,Tanzania,2026-06-17T13:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,9,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1507180,Gareji,Shturmi,Erovnuli Liga 2,Georgia,2026-06-17T13:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,10,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1507182,Merani Martvili,Samtredia,Erovnuli Liga 2,Georgia,2026-06-17T13:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,11,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1546783,Don Bosco,TP Mazembe,Ligue 1,Congo-DR,2026-06-17T13:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,12,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1546786,Saint Eloi Lupopo,Céleste,Ligue 1,Congo-DR,2026-06-17T13:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,13,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1547798,Molodechno-DYuSSh 4,Bate Borisov,Coppa,Belarus,2026-06-17T13:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,14,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1507181,Kolkheti Poti,Gori,Erovnuli Liga 2,Georgia,2026-06-17T14:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,15,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1514202,Grindavik,Fylkir,1. Deild,Iceland,2026-06-17T14:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,16,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1514203,IR Reykjavik,Grotta,1. Deild,Iceland,2026-06-17T14:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,17,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1528022,Kairat Almaty,Kyzyl-Zhar,Premier League,Kazakhstan,2026-06-17T14:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,18,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1509145,Saburtalo,Rustavi,Erovnuli Liga,Georgia,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,19,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1514237,Vestri,Ægir,1. Deild,Iceland,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,20,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1515861,FS Jelgava,Ogre United,Virsliga,Latvia,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,21,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1515862,Tukums,Auda,Virsliga,Latvia,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,22,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1547799,FC Energetik-Bgu Minsk,ML Vitebsk,Coppa,Belarus,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,23,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1553763,Kawkab Marrakech,Ittihad Tanger,Botola Pro,Morocco,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,24,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1553764,Maghreb Fès,Difaa EL Jadida,Botola Pro,Morocco,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,25,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1553765,CR Khemis Zemamra,Raja Casablanca,Botola Pro,Morocco,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,26,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1553766,UTS Rabat,CODM Meknès,Botola Pro,Morocco,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,27,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1547800,FC Slutsk,Dinamo Minsk,Coppa,Belarus,2026-06-17T15:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,28,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1507183,Telavi,Odishi 1919,Erovnuli Liga 2,Georgia,2026-06-17T16:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,29,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1513571,Kalju Nomme,Tammeka,Meistriliiga,Estonia,2026-06-17T16:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,30,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1513572,Nõmme United,FC Levadia Tallinn,Meistriliiga,Estonia,2026-06-17T16:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,31,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1513573,Paide,Laagri,Meistriliiga,Estonia,2026-06-17T16:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,32,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1515863,Riga,Rīgas FS,Virsliga,Latvia,2026-06-17T16:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,33,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1553806,Veles,Novosibirsk,Second League A - Division A Gold,Russia,2026-06-17T16:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,34,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1511072,Forward,Karlslund,Division 2 - Södra Svealand,Sweden,2026-06-17T16:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,35,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1531387,Medina United,Dutch Lions,GFA League,Gambia,2026-06-17T16:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,36,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1531388,Samger,Bombada,GFA League,Gambia,2026-06-17T16:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,37,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1507179,Aragvi Dusheti,Sioni,Erovnuli Liga 2,Georgia,2026-06-17T17:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,38,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1509147,Torpedo Kutaisi,Dinamo Batumi,Erovnuli Liga,Georgia,2026-06-17T17:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,39,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1510959,IFK Trelleborg,Berga,Division 2 - Södra Götaland,Sweden,2026-06-17T17:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,40,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1510961,Oskarshamns AIK,Växjö Norra,Division 2 - Södra Götaland,Sweden,2026-06-17T17:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,41,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1510964,Torns,Österlen,Division 2 - Södra Götaland,Sweden,2026-06-17T17:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,42,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1511338,Landvetter IS,Jonsered,Division 2 - Västra Götaland,Sweden,2026-06-17T17:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,43,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1504474,Utsikten,Atvidabergs FF,Ettan - Södra,Sweden,2026-06-17T17:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,44,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1510789,Enskede,Bollstanäs,Division 2 - Norra Svealand,Sweden,2026-06-17T17:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,45,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1511337,Kongahälla,Hestrafor,Division 2 - Västra Götaland,Sweden,2026-06-17T17:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,46,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1553784,Al Jahra,Al Tadhamon,Premier League,Kuwait,2026-06-17T17:45:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,47,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1553785,Al Shabab,Al Nasar,Premier League,Kuwait,2026-06-17T17:45:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,48,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1498571,Gimnasia Jujuy,Nueva Chicago,Primera Nacional,Argentina,2026-06-17T18:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,49,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1541984,Tubarao,Blumenau,Catarinense - 2,Brazil,2026-06-17T18:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,50,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1544588,Farroupilha,Bagé,Copa Gaúcha,Brazil,2026-06-17T18:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,51,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1544589,Guarany de Bagé,Brasil DE Pelotas,Copa Gaúcha,Brazil,2026-06-17T18:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,52,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1544591,Santa Cruz RS,Gramadense,Copa Gaúcha,Brazil,2026-06-17T18:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,53,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1547683,Ipatinga,Villa Nova,Mineiro - 2,Brazil,2026-06-17T18:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,54,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1549940,Alumni Los Hornos,Ezeiza,Torneo Promocional Amateur,Argentina,2026-06-17T18:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,55,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1549941,Belgrano Zarate,Buenos Aires City,Torneo Promocional Amateur,Argentina,2026-06-17T18:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,56,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1549943,Uribelarrea,Barrancas UMET,Torneo Promocional Amateur,Argentina,2026-06-17T18:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,57,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1493545,Oakland Roots,Birmingham Legion,USL Championship,USA,2026-06-17T19:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,58,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1489384,England,Croatia,World Cup,World,2026-06-17T20:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,59,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1524951,Charlotte Eagles,SC United Bantams,USL League Two,USA,2026-06-17T21:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,60,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1550645,Vilavelhense,Vitória ES,Copa Espírito Santo,Brazil,2026-06-17T21:45:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,61,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1524952,Rochester,RKC,USL League Two,USA,2026-06-17T22:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,62,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1524953,Brooke House,Inter Gainesville,USL League Two,USA,2026-06-17T22:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,63,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1547680,Caldense,Guarani MG,Mineiro - 2,Brazil,2026-06-17T22:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,64,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1524956,Port City,Hickory,USL League Two,USA,2026-06-17T22:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,65,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1541981,Nação,Juventus SC,Catarinense - 2,Brazil,2026-06-17T22:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,66,NO,NO
-2026-06-17,2026-06-17T13:08:48+01:00,1547682,Uberaba,CAP,Mineiro - 2,Brazil,2026-06-17T22:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,67,67,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1547745,La Fama,Britannia,Division di Honor,Aruba,2026-06-17T00:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,2,2,2,2,1,1,,,,,YES,57,1,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1542413,Central Stallions,Ulaanbaatar,Premier League,Mongolia,2026-06-17T07:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,1,0,1,0,0,0,,,,,YES,57,2,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1542414,Khoromkhon,Ulaangom City,Premier League,Mongolia,2026-06-17T10:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,2,5,2,5,1,2,,,,,YES,57,3,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1546785,Simba,Vita Club,Ligue 1,Congo-DR,2026-06-17T11:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,0,0,0,0,0,0,,,,,YES,57,4,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1477249,Singida Black Stars,Dodoma Jiji,Ligi kuu Bara,Tanzania,2026-06-17T13:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,5,0,5,0,3,0,,,,,YES,57,5,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1507180,Gareji,Shturmi,Erovnuli Liga 2,Georgia,2026-06-17T13:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,0,0,0,0,0,0,,,,,YES,57,6,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1507182,Merani Martvili,Samtredia,Erovnuli Liga 2,Georgia,2026-06-17T13:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,2,1,2,1,0,1,,,,,YES,57,7,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1546783,Don Bosco,TP Mazembe,Ligue 1,Congo-DR,2026-06-17T13:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,0,3,0,3,0,3,,,,,YES,57,8,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1546786,Saint Eloi Lupopo,Céleste,Ligue 1,Congo-DR,2026-06-17T13:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,9,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1547798,Molodechno-DYuSSh 4,Bate Borisov,Coppa,Belarus,2026-06-17T13:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,1,4,1,4,0,3,,,,,YES,57,10,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1507181,Kolkheti Poti,Gori,Erovnuli Liga 2,Georgia,2026-06-17T14:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,1,1,1,1,1,0,,,,,YES,57,11,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1514202,Grindavik,Fylkir,1. Deild,Iceland,2026-06-17T14:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,0,1,0,1,0,0,,,,,YES,57,12,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1514203,IR Reykjavik,Grotta,1. Deild,Iceland,2026-06-17T14:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,2,1,2,1,0,0,,,,,YES,57,13,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1528022,Kairat Almaty,Kyzyl-Zhar,Premier League,Kazakhstan,2026-06-17T14:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,3,0,3,0,0,0,,,,,YES,57,14,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1509145,Saburtalo,Rustavi,Erovnuli Liga,Georgia,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,2H,Second Half,89,1,1,,,1,0,,,,,NO,57,15,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1514237,Vestri,Ægir,1. Deild,Iceland,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,2H,Second Half,90,3,2,,,2,1,,,,,NO,57,16,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1515861,FS Jelgava,Ogre United,Virsliga,Latvia,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,FT,Match Finished,90,0,2,0,2,0,1,,,,,YES,57,17,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1515862,Tukums,Auda,Virsliga,Latvia,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,2H,Second Half,90,2,1,,,1,1,,,,,NO,57,18,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1547799,FC Energetik-Bgu Minsk,ML Vitebsk,Coppa,Belarus,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,BT,Break Time,,2,2,,,0,0,,,,,NO,57,19,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1553763,Kawkab Marrakech,Ittihad Tanger,Botola Pro,Morocco,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,2H,Second Half,89,0,2,,,0,1,,,,,NO,57,20,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1553764,Maghreb Fès,Difaa EL Jadida,Botola Pro,Morocco,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,2H,Second Half,81,1,1,,,0,1,,,,,NO,57,21,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1553765,CR Khemis Zemamra,Raja Casablanca,Botola Pro,Morocco,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,2H,Second Half,84,2,3,,,2,2,,,,,NO,57,22,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1553766,UTS Rabat,CODM Meknès,Botola Pro,Morocco,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,2H,Second Half,83,1,0,,,0,0,,,,,NO,57,23,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1547800,FC Slutsk,Dinamo Minsk,Coppa,Belarus,2026-06-17T15:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,2H,Second Half,65,0,0,,,0,0,,,,,NO,57,24,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1507183,Telavi,Odishi 1919,Erovnuli Liga 2,Georgia,2026-06-17T16:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,1H,First Half,45,1,0,,,1,0,,,,,NO,57,25,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1513571,Kalju Nomme,Tammeka,Meistriliiga,Estonia,2026-06-17T16:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,HT,Halftime,45,1,1,,,1,1,,,,,NO,57,26,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1513572,Nõmme United,FC Levadia Tallinn,Meistriliiga,Estonia,2026-06-17T16:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,HT,Halftime,45,0,1,,,0,1,,,,,NO,57,27,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1513573,Paide,Laagri,Meistriliiga,Estonia,2026-06-17T16:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,HT,Halftime,45,1,0,,,1,0,,,,,NO,57,28,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1515863,Riga,Rīgas FS,Virsliga,Latvia,2026-06-17T16:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,1H,First Half,45,2,0,,,2,0,,,,,NO,57,29,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1553806,Veles,Novosibirsk,Second League A - Division A Gold,Russia,2026-06-17T16:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,HT,Halftime,45,1,0,,,1,0,,,,,NO,57,30,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1531387,Medina United,Dutch Lions,GFA League,Gambia,2026-06-17T16:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,1H,First Half,19,0,0,,,0,0,,,,,NO,57,31,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1531388,Samger,Bombada,GFA League,Gambia,2026-06-17T16:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,1H,First Half,18,0,0,,,0,0,,,,,NO,57,32,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1507179,Aragvi Dusheti,Sioni,Erovnuli Liga 2,Georgia,2026-06-17T17:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,33,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1509147,Torpedo Kutaisi,Dinamo Batumi,Erovnuli Liga,Georgia,2026-06-17T17:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,34,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1504474,Utsikten,Atvidabergs FF,Ettan - Södra,Sweden,2026-06-17T17:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,35,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1553784,Al Jahra,Al Tadhamon,Premier League,Kuwait,2026-06-17T17:45:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,36,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1553785,Al Shabab,Al Nasar,Premier League,Kuwait,2026-06-17T17:45:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,37,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1498571,Gimnasia Jujuy,Nueva Chicago,Primera Nacional,Argentina,2026-06-17T18:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,38,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1541984,Tubarao,Blumenau,Catarinense - 2,Brazil,2026-06-17T18:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,39,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1544588,Farroupilha,Bagé,Copa Gaúcha,Brazil,2026-06-17T18:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,40,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1544589,Guarany de Bagé,Brasil DE Pelotas,Copa Gaúcha,Brazil,2026-06-17T18:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,41,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1544591,Santa Cruz RS,Gramadense,Copa Gaúcha,Brazil,2026-06-17T18:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,42,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1547683,Ipatinga,Villa Nova,Mineiro - 2,Brazil,2026-06-17T18:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,43,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1549940,Alumni Los Hornos,Ezeiza,Torneo Promocional Amateur,Argentina,2026-06-17T18:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,44,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1549941,Belgrano Zarate,Buenos Aires City,Torneo Promocional Amateur,Argentina,2026-06-17T18:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,45,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1549943,Uribelarrea,Barrancas UMET,Torneo Promocional Amateur,Argentina,2026-06-17T18:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,46,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1493545,Oakland Roots,Birmingham Legion,USL Championship,USA,2026-06-17T19:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,47,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1550645,Vilavelhense,Vitória ES,Copa Espírito Santo,Brazil,2026-06-17T21:45:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,48,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1547680,Caldense,Guarani MG,Mineiro - 2,Brazil,2026-06-17T22:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,49,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1541981,Nação,Juventus SC,Catarinense - 2,Brazil,2026-06-17T22:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,50,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1547682,Uberaba,CAP,Mineiro - 2,Brazil,2026-06-17T22:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,51,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1495704,HJK Helsinki,Inter Turku,Veikkausliiga,Finland,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,2H,Second Half,90,3,3,,,1,2,,,,,NO,57,52,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1495705,Ilves,FF Jaro,Veikkausliiga,Finland,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,2H,Second Half,90,5,0,,,4,0,,,,,NO,57,53,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1495706,Turku PS,KuPS,Veikkausliiga,Finland,2026-06-17T15:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,2H,Second Half,90,1,2,,,0,1,,,,,NO,57,54,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1547578,Hegelmann Litauen,Džiugas Telšiai,A Lyga,Lithuania,2026-06-17T15:30:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,2H,Second Half,60,0,0,,,0,0,,,,,NO,57,55,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1547579,Kauno Žalgiris,Banga,A Lyga,Lithuania,2026-06-17T16:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,HT,Halftime,45,0,0,,,0,0,,,,,NO,57,56,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,1477246,Fountain Gate,Young Africans,Ligi kuu Bara,Tanzania,2026-06-18T13:00:00+00:00,API-SPORTS_DIRECT,OK,fixture fetched,NS,Not Started,,,,,,,,,,,,NO,57,57,NO,NO

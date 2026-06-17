@@ -1,2 +1,2 @@
 target_date,generated_at,overall_status,root_cause,root_scored_same_day_rows,real_shortlist_rows,real_bet_rows,proxy_rows,next_action,auto_apply,production_change
-2026-06-17,2026-06-17T13:04:59+01:00,FILTERS_TOO_STRICT_OR_SELECTOR_NOT_RUN,scoring has same-day rows but real shortlist/bets outputs are absent or empty,7,0,0,0,Run/repair real selection step from scored matches into shortlist/bets-only outputs.,NO,NO
+2026-06-17,2026-06-17T17:47:15+01:00,FILTERS_TOO_STRICT_OR_SELECTOR_NOT_RUN,scoring has same-day rows but real shortlist/bets outputs are absent or empty,2,0,0,0,Run/repair real selection step from scored matches into shortlist/bets-only outputs.,NO,NO

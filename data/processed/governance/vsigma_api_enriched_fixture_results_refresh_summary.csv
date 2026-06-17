@@ -1,2 +1,2 @@
 target_date,generated_at,rows_reviewed,api_calls_planned,api_calls_executed,finished_rows,pending_rows,refresh_status_counts,provider_counts,next_action,auto_apply,production_change
-2026-06-17,2026-06-17T13:08:48+01:00,67,67,67,6,61,OK=67,API-SPORTS_DIRECT=67,Re-run the postmatch accuracy ledger after this refresh. This output does not create picks or stake.,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,57,57,57,14,43,OK=57,API-SPORTS_DIRECT=57,Re-run the postmatch accuracy ledger after this refresh. This output does not create picks or stake.,NO,NO

@@ -5,16 +5,16 @@
 - rejected_rows: 2
 - correct_reject_rows: 0
 - manual_review_rows: 2
-- whitelist_candidate_rows: 1
-- audit_bucket_counts: REVIEW_REJECTED_SOURCE_UNKNOWN_COMPETITION=1; MANUAL_REVIEW_POSSIBLE_WHITELIST=1
-- review_priority_counts: P2_REVIEW_LOW_CONFIDENCE=1; P1_REVIEW_CANDIDATE=1
+- whitelist_candidate_rows: 2
+- audit_bucket_counts: MANUAL_REVIEW_POSSIBLE_WHITELIST=2
+- review_priority_counts: P1_REVIEW_CANDIDATE=2
 - next_action: Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.
 - auto_apply: NO
 - production_change: NO
 
 ## Review Candidates
-- Fountain Gate vs Young Africans | league=Ligi kuu Bara | bucket=REVIEW_REJECTED_SOURCE_UNKNOWN_COMPETITION | priority=P2_REVIEW_LOW_CONFIDENCE | candidate=MAYBE_REVIEW_ONLY | reason=source is rejected and no strong low-trust token or senior token was detected
-- Lake Macquarie vs West Wallsend | league=NNSW League 1 | bucket=MANUAL_REVIEW_POSSIBLE_WHITELIST | priority=P1_REVIEW_CANDIDATE | candidate=YES_REVIEW_ONLY | reason=source was rejected but league name looks like senior/structured competition after low-trust hardening
+- El Kanemi Warriors vs Wikki Tourist | league=Federation Cup | bucket=MANUAL_REVIEW_POSSIBLE_WHITELIST | priority=P1_REVIEW_CANDIDATE | candidate=YES_REVIEW_ONLY | reason=source was rejected but league name looks like senior/structured competition after low-trust hardening
+- Istaravshan vs Sardor Tursunzoda | league=Vysshaya Liga | bucket=MANUAL_REVIEW_POSSIBLE_WHITELIST | priority=P1_REVIEW_CANDIDATE | candidate=YES_REVIEW_ONLY | reason=source was rejected but league name looks like senior/structured competition after low-trust hardening
 
 ## Guardrails
 - This audit is advisory only.

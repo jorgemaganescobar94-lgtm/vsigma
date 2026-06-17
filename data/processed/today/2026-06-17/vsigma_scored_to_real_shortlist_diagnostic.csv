@@ -1,8 +1,3 @@
 target_date,generated_at,fixture_id,home_team,away_team,league,source_status,selector_status,reason,vsigma_priority,market_family_hint,data_quality_score,league_data_reliability_score,recent_stats_quality_flag,odds_bookmaker_support_count,auto_apply,production_change
-2026-06-17,2026-06-17T13:04:55+01:00,1547578,Hegelmann Litauen,Džiugas Telšiai,A Lyga,DATED,NO_REAL_SHORTLIST,blocked by scoring/data warning,NO_DATA_BLOCKED,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,8.0,0.7,NONE,,NO,NO
-2026-06-17,2026-06-17T13:04:55+01:00,1547579,Kauno Žalgiris,Banga,A Lyga,DATED,NO_REAL_SHORTLIST,blocked by scoring/data warning,NO_DATA_BLOCKED,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,8.0,0.7,NONE,,NO,NO
-2026-06-17,2026-06-17T13:04:55+01:00,1495707,Gnistan,Lahti,Veikkausliiga,DATED,NO_REAL_SHORTLIST,blocked by scoring/data warning,NO_DATA_BLOCKED,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,8.0,0.95,NONE,,NO,NO
-2026-06-17,2026-06-17T13:04:55+01:00,1495704,HJK Helsinki,Inter Turku,Veikkausliiga,DATED,NO_REAL_SHORTLIST,blocked by scoring/data warning,NO_DATA_BLOCKED,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,8.0,0.95,NONE,,NO,NO
-2026-06-17,2026-06-17T13:04:55+01:00,1495705,Ilves,FF Jaro,Veikkausliiga,DATED,NO_REAL_SHORTLIST,blocked by scoring/data warning,NO_DATA_BLOCKED,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,8.0,0.95,NONE,,NO,NO
-2026-06-17,2026-06-17T13:04:55+01:00,1495708,SJK,VPS,Veikkausliiga,DATED,NO_REAL_SHORTLIST,blocked by scoring/data warning,NO_DATA_BLOCKED,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,8.0,0.95,NONE,,NO,NO
-2026-06-17,2026-06-17T13:04:55+01:00,1495706,Turku PS,KuPS,Veikkausliiga,DATED,NO_REAL_SHORTLIST,blocked by scoring/data warning,NO_DATA_BLOCKED,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,8.0,0.95,NONE,,NO,NO
+2026-06-17,2026-06-17T17:47:12+01:00,1495707,Gnistan,Lahti,Veikkausliiga,DATED,NO_REAL_SHORTLIST,blocked by scoring/data warning,NO_DATA_BLOCKED,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,8.0,0.95,NONE,,NO,NO
+2026-06-17,2026-06-17T17:47:12+01:00,1495708,SJK,VPS,Veikkausliiga,DATED,NO_REAL_SHORTLIST,blocked by scoring/data warning,NO_DATA_BLOCKED,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,8.0,0.95,NONE,,NO,NO

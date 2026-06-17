@@ -6,8 +6,8 @@
 - board_status: daily_board_md=OK; daily_board_csv=OK
 - mismatch_count: 0
 - promoted_rows: 0
-- queue_rows: 119
-- board_rows: 7
+- queue_rows: 125
+- board_rows: 2
 - diagnostic_no_bet_rows: 0
 - next_action: Review date guard and board diagnostics before market discussion.
 - auto_apply: NO

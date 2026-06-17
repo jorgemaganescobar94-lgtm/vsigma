@@ -1,2 +1,2 @@
 target_date,generated_at,source_rows_reviewed,review_rows_written,ready_for_manual_review_rows,blocked_rows,review_priority_counts,review_board_status_counts,canonical_board_permission_counts,pick_permission_counts,stake_permission_counts,auto_apply,production_change
-2026-06-17,2026-06-17T13:08:48+01:00,67,67,67,0,P2_MANUAL_REVIEW=34; P1_MANUAL_REVIEW=33,API_ENRICHED_REVIEW_READY=67,NO_CANONICAL_BOARD_PERMISSION=67,NO_PICK_PERMISSION=67,NO_STAKE_PERMISSION=67,NO,NO
+2026-06-17,2026-06-17T17:50:55+01:00,57,57,57,0,P1_MANUAL_REVIEW=30; P2_MANUAL_REVIEW=27,API_ENRICHED_REVIEW_READY=57,NO_CANONICAL_BOARD_PERMISSION=57,NO_PICK_PERMISSION=57,NO_STAKE_PERMISSION=57,NO,NO

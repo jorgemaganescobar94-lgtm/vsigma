@@ -1,24 +1,4 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
-2026-06-17,1547578,A Lyga,Lithuania,Hegelmann Litauen,Džiugas Telšiai,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547578,A Lyga,Lithuania,Hegelmann Litauen,Džiugas Telšiai,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547578,A Lyga,Lithuania,Hegelmann Litauen,Džiugas Telšiai,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547578,A Lyga,Lithuania,Hegelmann Litauen,Džiugas Telšiai,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547578,A Lyga,Lithuania,Hegelmann Litauen,Džiugas Telšiai,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547578,A Lyga,Lithuania,Hegelmann Litauen,Džiugas Telšiai,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547578,A Lyga,Lithuania,Hegelmann Litauen,Džiugas Telšiai,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547578,A Lyga,Lithuania,Hegelmann Litauen,Džiugas Telšiai,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547578,A Lyga,Lithuania,Hegelmann Litauen,Džiugas Telšiai,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547578,A Lyga,Lithuania,Hegelmann Litauen,Džiugas Telšiai,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547579,A Lyga,Lithuania,Kauno Žalgiris,Banga,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547579,A Lyga,Lithuania,Kauno Žalgiris,Banga,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547579,A Lyga,Lithuania,Kauno Žalgiris,Banga,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547579,A Lyga,Lithuania,Kauno Žalgiris,Banga,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547579,A Lyga,Lithuania,Kauno Žalgiris,Banga,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547579,A Lyga,Lithuania,Kauno Žalgiris,Banga,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547579,A Lyga,Lithuania,Kauno Žalgiris,Banga,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547579,A Lyga,Lithuania,Kauno Žalgiris,Banga,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547579,A Lyga,Lithuania,Kauno Žalgiris,Banga,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1547579,A Lyga,Lithuania,Kauno Žalgiris,Banga,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-17,1495707,Veikkausliiga,Finland,Gnistan,Lahti,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-17,1495707,Veikkausliiga,Finland,Gnistan,Lahti,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-17,1495707,Veikkausliiga,Finland,Gnistan,Lahti,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
@@ -29,26 +9,6 @@ target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,
 2026-06-17,1495707,Veikkausliiga,Finland,Gnistan,Lahti,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-17,1495707,Veikkausliiga,Finland,Gnistan,Lahti,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-17,1495707,Veikkausliiga,Finland,Gnistan,Lahti,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495704,Veikkausliiga,Finland,HJK Helsinki,Inter Turku,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495704,Veikkausliiga,Finland,HJK Helsinki,Inter Turku,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495704,Veikkausliiga,Finland,HJK Helsinki,Inter Turku,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495704,Veikkausliiga,Finland,HJK Helsinki,Inter Turku,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495704,Veikkausliiga,Finland,HJK Helsinki,Inter Turku,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495704,Veikkausliiga,Finland,HJK Helsinki,Inter Turku,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495704,Veikkausliiga,Finland,HJK Helsinki,Inter Turku,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495704,Veikkausliiga,Finland,HJK Helsinki,Inter Turku,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495704,Veikkausliiga,Finland,HJK Helsinki,Inter Turku,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495704,Veikkausliiga,Finland,HJK Helsinki,Inter Turku,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495705,Veikkausliiga,Finland,Ilves,FF Jaro,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495705,Veikkausliiga,Finland,Ilves,FF Jaro,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495705,Veikkausliiga,Finland,Ilves,FF Jaro,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495705,Veikkausliiga,Finland,Ilves,FF Jaro,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495705,Veikkausliiga,Finland,Ilves,FF Jaro,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495705,Veikkausliiga,Finland,Ilves,FF Jaro,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495705,Veikkausliiga,Finland,Ilves,FF Jaro,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495705,Veikkausliiga,Finland,Ilves,FF Jaro,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495705,Veikkausliiga,Finland,Ilves,FF Jaro,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495705,Veikkausliiga,Finland,Ilves,FF Jaro,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-17,1495708,Veikkausliiga,Finland,SJK,VPS,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-17,1495708,Veikkausliiga,Finland,SJK,VPS,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-17,1495708,Veikkausliiga,Finland,SJK,VPS,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
@@ -59,13 +19,3 @@ target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,
 2026-06-17,1495708,Veikkausliiga,Finland,SJK,VPS,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-17,1495708,Veikkausliiga,Finland,SJK,VPS,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-17,1495708,Veikkausliiga,Finland,SJK,VPS,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495706,Veikkausliiga,Finland,Turku PS,KuPS,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495706,Veikkausliiga,Finland,Turku PS,KuPS,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495706,Veikkausliiga,Finland,Turku PS,KuPS,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495706,Veikkausliiga,Finland,Turku PS,KuPS,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495706,Veikkausliiga,Finland,Turku PS,KuPS,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495706,Veikkausliiga,Finland,Turku PS,KuPS,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495706,Veikkausliiga,Finland,Turku PS,KuPS,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495706,Veikkausliiga,Finland,Turku PS,KuPS,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495706,Veikkausliiga,Finland,Turku PS,KuPS,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-17,1495706,Veikkausliiga,Finland,Turku PS,KuPS,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.

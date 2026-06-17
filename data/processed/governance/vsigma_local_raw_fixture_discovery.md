@@ -2,23 +2,87 @@
 
 ## Summary
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 1892
-- accepted_rows: 149
-- rejected_rows: 59
-- source_status_counts: NO_SAME_DAY_ROWS=1272; EMPTY_OR_UNREADABLE=596; NO_ACCEPTED_ROWS=22; HAS_ACCEPTED_ROWS=2
+- files_scanned: 1901
+- accepted_rows: 151
+- rejected_rows: 857
+- source_status_counts: NO_SAME_DAY_ROWS=1264; EMPTY_OR_UNREADABLE=597; NO_ACCEPTED_ROWS=36; HAS_ACCEPTED_ROWS=4
 - next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO
 
 ## Accepted Rows
-- Vermont Green vs Seacoast United Phantoms | fixture_id=1524944 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Eagle FC vs Lehigh Valley United | fixture_id=1525406 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
+- Vermont Green vs Seacoast United Phantoms | fixture_id=1524944 | league=USL League Two | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Eagle FC vs Lehigh Valley United | fixture_id=1525406 | league=USL League Two | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Houston Sur vs GFI | fixture_id=1524942 | league=USL League Two | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- La Fama vs Britannia | fixture_id=1547745 | league=Division di Honor | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Central Stallions vs Ulaanbaatar | fixture_id=1542413 | league=Premier League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Khoromkhon vs Ulaangom City | fixture_id=1542414 | league=Premier League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Simba vs Vita Club | fixture_id=1546785 | league=Ligue 1 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Arsenal Tula vs Volga Ulyanovsk | fixture_id=1550470 | league=Friendlies Clubs | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Singida Black Stars vs Dodoma Jiji | fixture_id=1477249 | league=Ligi kuu Bara | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Gareji vs Shturmi | fixture_id=1507180 | league=Erovnuli Liga 2 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Merani Martvili vs Samtredia | fixture_id=1507182 | league=Erovnuli Liga 2 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Don Bosco vs TP Mazembe | fixture_id=1546783 | league=Ligue 1 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Saint Eloi Lupopo vs Céleste | fixture_id=1546786 | league=Ligue 1 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Molodechno-DYuSSh 4 vs Bate Borisov | fixture_id=1547798 | league=Coppa | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Kolkheti Poti vs Gori | fixture_id=1507181 | league=Erovnuli Liga 2 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Grindavik vs Fylkir | fixture_id=1514202 | league=1. Deild | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- IR Reykjavik vs Grotta | fixture_id=1514203 | league=1. Deild | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Kairat Almaty vs Kyzyl-Zhar | fixture_id=1528022 | league=Premier League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Saburtalo vs Rustavi | fixture_id=1509145 | league=Erovnuli Liga | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Vestri vs Ægir | fixture_id=1514237 | league=1. Deild | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- FS Jelgava vs Ogre United | fixture_id=1515861 | league=Virsliga | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Tukums vs Auda | fixture_id=1515862 | league=Virsliga | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- FC Energetik-Bgu Minsk vs ML Vitebsk | fixture_id=1547799 | league=Coppa | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Kawkab Marrakech vs Ittihad Tanger | fixture_id=1553763 | league=Botola Pro | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Maghreb Fès vs Difaa EL Jadida | fixture_id=1553764 | league=Botola Pro | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- CR Khemis Zemamra vs Raja Casablanca | fixture_id=1553765 | league=Botola Pro | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- UTS Rabat vs CODM Meknès | fixture_id=1553766 | league=Botola Pro | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- FC Slutsk vs Dinamo Minsk | fixture_id=1547800 | league=Coppa | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Telavi vs Odishi 1919 | fixture_id=1507183 | league=Erovnuli Liga 2 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Kalju Nomme vs Tammeka | fixture_id=1513571 | league=Meistriliiga | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Nõmme United vs FC Levadia Tallinn | fixture_id=1513572 | league=Meistriliiga | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Paide vs Laagri | fixture_id=1513573 | league=Meistriliiga | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Riga vs Rīgas FS | fixture_id=1515863 | league=Virsliga | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Veles vs Novosibirsk | fixture_id=1553806 | league=Second League A - Division A Gold | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Forward vs Karlslund | fixture_id=1511072 | league=Division 2 - Södra Svealand | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Medina United vs Dutch Lions | fixture_id=1531387 | league=GFA League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Samger vs Bombada | fixture_id=1531388 | league=GFA League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Aragvi Dusheti vs Sioni | fixture_id=1507179 | league=Erovnuli Liga 2 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Torpedo Kutaisi vs Dinamo Batumi | fixture_id=1509147 | league=Erovnuli Liga | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- IFK Trelleborg vs Berga | fixture_id=1510959 | league=Division 2 - Södra Götaland | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Oskarshamns AIK vs Växjö Norra | fixture_id=1510961 | league=Division 2 - Södra Götaland | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Torns vs Österlen | fixture_id=1510964 | league=Division 2 - Södra Götaland | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Landvetter IS vs Jonsered | fixture_id=1511338 | league=Division 2 - Västra Götaland | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Utsikten vs Atvidabergs FF | fixture_id=1504474 | league=Ettan - Södra | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Enskede vs Bollstanäs | fixture_id=1510789 | league=Division 2 - Norra Svealand | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Kongahälla vs Hestrafor | fixture_id=1511337 | league=Division 2 - Västra Götaland | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Al Jahra vs Al Tadhamon | fixture_id=1553784 | league=Premier League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Al Shabab vs Al Nasar | fixture_id=1553785 | league=Premier League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Gimnasia Jujuy vs Nueva Chicago | fixture_id=1498571 | league=Primera Nacional | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Tubarao vs Blumenau | fixture_id=1541984 | league=Catarinense - 2 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Farroupilha vs Bagé | fixture_id=1544588 | league=Copa Gaúcha | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Guarany de Bagé vs Brasil DE Pelotas | fixture_id=1544589 | league=Copa Gaúcha | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Santa Cruz RS vs Gramadense | fixture_id=1544591 | league=Copa Gaúcha | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Ipatinga vs Villa Nova | fixture_id=1547683 | league=Mineiro - 2 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Alumni Los Hornos vs Ezeiza | fixture_id=1549940 | league=Torneo Promocional Amateur | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Belgrano Zarate vs Buenos Aires City | fixture_id=1549941 | league=Torneo Promocional Amateur | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Uribelarrea vs Barrancas UMET | fixture_id=1549943 | league=Torneo Promocional Amateur | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Oakland Roots vs Birmingham Legion | fixture_id=1493545 | league=USL Championship | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- England vs Croatia | fixture_id=1489384 | league=World Cup | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Charlotte Eagles vs SC United Bantams | fixture_id=1524951 | league=USL League Two | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Vilavelhense vs Vitória ES | fixture_id=1550645 | league=Copa Espírito Santo | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Rochester vs RKC | fixture_id=1524952 | league=USL League Two | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Brooke House vs Inter Gainesville | fixture_id=1524953 | league=USL League Two | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Caldense vs Guarani MG | fixture_id=1547680 | league=Mineiro - 2 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Port City vs Hickory | fixture_id=1524956 | league=USL League Two | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Nação vs Juventus SC | fixture_id=1541981 | league=Catarinense - 2 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Uberaba vs CAP | fixture_id=1547682 | league=Mineiro - 2 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
 - Ann Arbor W vs Detroit City W | fixture_id=1532209 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Northern Virginia FC W vs Patuxent W | fixture_id=1532214 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Hudson Valley Crusaders W vs Vermont Green W | fixture_id=1532353 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Rockford Raptors W vs Rochester W | fixture_id=1532354 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Manhattan vs Long Island Rough Riders | fixture_id=1524945 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Houston Sur vs GFI | fixture_id=1524942 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - FC Motown II vs Hudson Valley Hammers | fixture_id=1524946 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Cedar Stars W vs Manhattan W | fixture_id=1532210 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Midwest United W vs Kalamazoo FC W | fixture_id=1532211 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
@@ -27,84 +91,38 @@
 - West Chester United vs Lone Star II | fixture_id=1524947 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Delaware FC vs PA Classics | fixture_id=1525407 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Lonestar San Antonio W vs Lonestar II W | fixture_id=1532212 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- La Fama vs Britannia | fixture_id=1547745 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Argentina vs Algeria | fixture_id=1489381 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Snohomish United W vs Tacoma Galaxy W | fixture_id=1532355 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - California Storm II W vs San Juan SC W | fixture_id=1532213 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Austria vs Jordan | fixture_id=1489382 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Central Stallions vs Ulaanbaatar | fixture_id=1542413 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Changnyeong W vs Suwon FMC W | fixture_id=1533729 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Gyeongju W vs Hwacheon KSPO W | fixture_id=1533730 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Gumi Sportstoto W vs Incheon Red Angels W | fixture_id=1533731 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Seoul W vs Boeun Sangmu W | fixture_id=1533732 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Khoromkhon vs Ulaangom City | fixture_id=1542414 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Maniema Union vs JSK | fixture_id=1546784 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Simba vs Vita Club | fixture_id=1546785 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Arsenal Tula vs Volga Ulyanovsk | fixture_id=1550470 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Singida Black Stars vs Dodoma Jiji | fixture_id=1477249 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Gareji vs Shturmi | fixture_id=1507180 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Merani Martvili vs Samtredia | fixture_id=1507182 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Cotonsport vs Unisport Bafang | fixture_id=1512946 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Don Bosco vs TP Mazembe | fixture_id=1546783 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Saint Eloi Lupopo vs Céleste | fixture_id=1546786 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Molodechno-DYuSSh 4 vs Bate Borisov | fixture_id=1547798 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Kolkheti Poti vs Gori | fixture_id=1507181 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Grindavik vs Fylkir | fixture_id=1514202 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- IR Reykjavik vs Grotta | fixture_id=1514203 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Kairat Almaty vs Kyzyl-Zhar | fixture_id=1528022 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Bitam vs US Oyem | fixture_id=1533181 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - HJK Helsinki vs Inter Turku | fixture_id=1495704 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Ilves vs FF Jaro | fixture_id=1495705 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Turku PS vs KuPS | fixture_id=1495706 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Saburtalo vs Rustavi | fixture_id=1509145 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Gazelle vs Canon | fixture_id=1512948 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Vestri vs Ægir | fixture_id=1514237 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- FS Jelgava vs Ogre United | fixture_id=1515861 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Tukums vs Auda | fixture_id=1515862 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - APEJES Academy vs Kumba | fixture_id=1547564 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Atlantic vs Union Abong-Mbang | fixture_id=1547565 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Les Astres vs Avion Academy | fixture_id=1547566 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- FC Energetik-Bgu Minsk vs ML Vitebsk | fixture_id=1547799 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Kawkab Marrakech vs Ittihad Tanger | fixture_id=1553763 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Maghreb Fès vs Difaa EL Jadida | fixture_id=1553764 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- CR Khemis Zemamra vs Raja Casablanca | fixture_id=1553765 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- UTS Rabat vs CODM Meknès | fixture_id=1553766 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Hegelmann Litauen vs Džiugas Telšiai | fixture_id=1547578 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- FC Slutsk vs Dinamo Minsk | fixture_id=1547800 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Häcken II W vs Gamla Upsala W | fixture_id=1501416 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Telavi vs Odishi 1919 | fixture_id=1507183 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Kalju Nomme vs Tammeka | fixture_id=1513571 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Nõmme United vs FC Levadia Tallinn | fixture_id=1513572 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Paide vs Laagri | fixture_id=1513573 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Riga vs Rīgas FS | fixture_id=1515863 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Kauno Žalgiris vs Banga | fixture_id=1547579 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Veles vs Novosibirsk | fixture_id=1553806 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Forward vs Karlslund | fixture_id=1511072 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Fortune vs Real de Banjul | fixture_id=1531383 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - GPA vs Team Rhino | fixture_id=1531384 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Hart Acedemy vs Brikama United | fixture_id=1531386 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Medina United vs Dutch Lions | fixture_id=1531387 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Samger vs Bombada | fixture_id=1531388 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Djurgården W vs Malmö FF W | fixture_id=1495495 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Hammarby W vs AIK W | fixture_id=1495498 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Aragvi Dusheti vs Sioni | fixture_id=1507179 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Torpedo Kutaisi vs Dinamo Batumi | fixture_id=1509147 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- IFK Trelleborg vs Berga | fixture_id=1510959 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Oskarshamns AIK vs Växjö Norra | fixture_id=1510961 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Torns vs Österlen | fixture_id=1510964 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Nosaby vs Lilla Torg W | fixture_id=1511055 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Landvetter IS vs Jonsered | fixture_id=1511338 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Portugal vs Congo DR | fixture_id=1539003 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Utsikten vs Atvidabergs FF | fixture_id=1504474 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Enskede vs Bollstanäs | fixture_id=1510789 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Kongahälla vs Hestrafor | fixture_id=1511337 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Rågsved vs Enköping | fixture_id=1545639 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Marke vs Kortrijk | fixture_id=1547850 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Al Jahra vs Al Tadhamon | fixture_id=1553784 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Al Shabab vs Al Nasar | fixture_id=1553785 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Gnistan vs Lahti | fixture_id=1495707 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - SJK vs VPS | fixture_id=1495708 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Gimnasia Jujuy vs Nueva Chicago | fixture_id=1498571 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Atlético Tucumán Res. vs Gimnasia La Plata Res. | fixture_id=1512472 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Banfield Res. vs River Plate Res. | fixture_id=1512473 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Gimnasia Mendoza 2 vs Argentinos Juniors Res. | fixture_id=1512479 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
@@ -117,49 +135,33 @@
 - Flamengo U20 vs Cuiabá U20 | fixture_id=1526179 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Fortaleza U20 vs Avaí U20 | fixture_id=1526180 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Juventude U20 vs São Paulo U20 | fixture_id=1526181 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Tubarao vs Blumenau | fixture_id=1541984 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - America MG U17 vs Internacional U17 | fixture_id=1543901 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Athletico PR U17 vs Atletico GO U17 | fixture_id=1543902 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - RB Bragantino U17 vs Vasco U17 | fixture_id=1543905 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Gremio U17 vs Vitoria U17 | fixture_id=1543909 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Sao Paulo U17 vs Fluminense U17 | fixture_id=1543910 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Farroupilha vs Bagé | fixture_id=1544588 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Guarany de Bagé vs Brasil DE Pelotas | fixture_id=1544589 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Monsoon vs Brasil Farroupilha | fixture_id=1544590 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Santa Cruz RS vs Gramadense | fixture_id=1544591 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Coimbra vs Democrata SL | fixture_id=1547679 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Ipatinga vs Villa Nova | fixture_id=1547683 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Coritiba U20 vs Atlético Mineiro U20 | fixture_id=1553803 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - CRB U20 vs Sport Recife U20 | fixture_id=1553804 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Sao Luis vs Araioses | fixture_id=1544787 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Tupan vs Expressinho | fixture_id=1544788 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Alumni Los Hornos vs Ezeiza | fixture_id=1549940 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Belgrano Zarate vs Buenos Aires City | fixture_id=1549941 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Las Mandarinas vs Everton La Plata | fixture_id=1549942 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Uribelarrea vs Barrancas UMET | fixture_id=1549943 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Oakland Roots vs Birmingham Legion | fixture_id=1493545 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Sporting JAX W vs Miami City W | fixture_id=1532217 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- England vs Croatia | fixture_id=1489384 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Wake W vs Port City NC W | fixture_id=1532450 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Charlotte Eagles vs SC United Bantams | fixture_id=1524951 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Tormenta W vs Carolina Ascent II W | fixture_id=1532218 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Vilavelhense vs Vitória ES | fixture_id=1550645 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Rochester vs RKC | fixture_id=1524952 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Brooke House vs Inter Gainesville | fixture_id=1524953 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Louisville City II vs Dayton Dutch Lions | fixture_id=1524954 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Miami AC vs Lakeland United | fixture_id=1524955 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - RB Bragantino U20 vs Fluminense U20 | fixture_id=1526182 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Racing Louisville W vs Dayton Dutch Lions W | fixture_id=1532219 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - North Carolina Fusion W vs NC Courage II W | fixture_id=1532220 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - AMSG W vs Sta Clarita Blue Heat W | fixture_id=1532221 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Caldense vs Guarani MG | fixture_id=1547680 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Mamoré vs BOA | fixture_id=1547681 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Port City vs Hickory | fixture_id=1524956 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Chattanooga Red Wolves W vs Knoxville W | fixture_id=1532222 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Nação vs Juventus SC | fixture_id=1541981 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Uberaba vs CAP | fixture_id=1547682 | league= | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Fountain Gate vs Young Africans | fixture_id=1477246 | league=Ligi kuu Bara | source=data/processed/matches_league_rejected.csv
-- Lake Macquarie vs West Wallsend | fixture_id=1532573 | league=NNSW League 1 | source=data/processed/matches_league_rejected.csv
+- Fountain Gate vs Young Africans | fixture_id=1477246 | league=Ligi kuu Bara | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Lake Macquarie vs West Wallsend | fixture_id=1532573 | league=NNSW League 1 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- El Kanemi Warriors vs Wikki Tourist | fixture_id=1554359 | league=Federation Cup | source=data/processed/matches_league_rejected.csv
+- Istaravshan vs Sardor Tursunzoda | fixture_id=1527692 | league=Vysshaya Liga | source=data/processed/matches_league_rejected.csv
 
 ## Source Diagnostics
 - data/processed/batch_inputs/vsigma_api_board_candidates_2026-06-15.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
@@ -176,16 +178,16 @@
 - data/processed/governance/vsigma_adhoc_postmatch_learning_all_2026-06-11.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_board_candidate_bridge_2026-06-15.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-06-15.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_api_calibration_rule_candidates.csv | status=NO_SAME_DAY_ROWS | rows=77 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv | status=NO_SAME_DAY_ROWS | rows=29 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=NO_SAME_DAY_ROWS | rows=51 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_candidate_provenance_ceiling.csv | status=NO_ACCEPTED_ROWS | rows=7 | same_day=7 | accepted=0 | rejected=7 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_dated_post_match_results_refresh.csv | status=HAS_ACCEPTED_ROWS | rows=147 | same_day=147 | accepted=147 | rejected=0 | detail=local source contains accepted raw fixture rows
+- data/processed/governance/vsigma_api_calibration_rule_candidates.csv | status=NO_ACCEPTED_ROWS | rows=77 | same_day=77 | accepted=0 | rejected=77 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv | status=HAS_ACCEPTED_ROWS | rows=67 | same_day=67 | accepted=67 | rejected=0 | detail=local source contains accepted raw fixture rows
+- data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=NO_ACCEPTED_ROWS | rows=119 | same_day=119 | accepted=0 | rejected=119 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_candidate_provenance_ceiling.csv | status=NO_ACCEPTED_ROWS | rows=2 | same_day=2 | accepted=0 | rejected=2 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_dated_post_match_results_refresh.csv | status=HAS_ACCEPTED_ROWS | rows=147 | same_day=147 | accepted=80 | rejected=0 | detail=local source contains accepted raw fixture rows
 - data/processed/governance/vsigma_forced_api_board_fixture_lineups.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_SAME_DAY_ROWS | rows=65 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_ACCEPTED_ROWS | rows=149 | same_day=149 | accepted=0 | rejected=149 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_match_stat_forecast_backtest.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecast_calibration_details.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_match_stat_forecasts.csv | status=NO_ACCEPTED_ROWS | rows=7 | same_day=7 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_match_stat_forecasts.csv | status=NO_ACCEPTED_ROWS | rows=2 | same_day=2 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_pending_prematch_prediction_finalizer.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_post_match_stat_actuals.csv | status=NO_ACCEPTED_ROWS | rows=11 | same_day=11 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_postmatch_pick_audit.csv | status=NO_ACCEPTED_ROWS | rows=10 | same_day=1 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
@@ -193,13 +195,13 @@
 - data/processed/governance/vsigma_prematch_calibration_rule_gate.csv | status=NO_SAME_DAY_ROWS | rows=12 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_prematch_match_story_engine.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_prematch_prediction_calibration_advisor.csv | status=NO_SAME_DAY_ROWS | rows=12 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=NO_SAME_DAY_ROWS | rows=29 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=NO_ACCEPTED_ROWS | rows=67 | same_day=67 | accepted=0 | rejected=67 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=NO_SAME_DAY_ROWS | rows=65 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=HAS_ACCEPTED_ROWS | rows=149 | same_day=149 | accepted=2 | rejected=0 | detail=local source contains accepted raw fixture rows
 - data/processed/governance/vsigma_rolling_prematch_accuracy_dashboard.csv | status=NO_SAME_DAY_ROWS | rows=6 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_shadow_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_SAME_DAY_ROWS | rows=65 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_SAME_DAY_ROWS | rows=54 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_ACCEPTED_ROWS | rows=149 | same_day=149 | accepted=0 | rejected=7 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_ACCEPTED_ROWS | rows=126 | same_day=126 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/historical/2026-04-23/matches.csv | status=NO_SAME_DAY_ROWS | rows=182 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
