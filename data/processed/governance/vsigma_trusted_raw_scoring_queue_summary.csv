@@ -1,2 +1,2 @@
 target_date,generated_at,queue_rows,priority_counts,scoring_needed_counts,source_gap_status,next_action,auto_apply,production_change
-2026-06-17,2026-06-17T17:47:17+01:00,125,P1_TRUSTED_MISSING_SCORING=117; P2_LOW_COVERAGE_SCORING=8,YES=125,MISSING_SCORED_ROW,Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.,NO,NO
+2026-06-17,2026-06-17T19:01:55+01:00,127,P1_TRUSTED_MISSING_SCORING=127,YES=127,MISSING_SCORED_ROW,Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.,NO,NO

@@ -5,12 +5,12 @@
 - eligible_fixtures: 2
 - api_calls_made: 2
 - cache_hits: 0
-- lineup_rows_written: 44
-- full_lineup_rows: 42
+- lineup_rows_written: 48
+- full_lineup_rows: 46
 - no_lineup_rows: 0
 - api_errors: 0
 - key_status: API_SPORTS
-- api_status_counts: NO_LINEUPS_RETURNED=2
+- api_status_counts: OK=2
 - auto_apply: NO
 - production_change: NO
 
@@ -59,6 +59,10 @@
 - Malaga vs Las Palmas | side=away | players=11 | formation=4-4-2 | status=OK
 - Maringá vs Maranhão | side=home | players=1 | formation=4-1-4-1 | status=OK
 - Maringá vs Maranhão | side=away | players=1 | formation=4-2-3-1 | status=OK
+- Gnistan vs Lahti | side=home | players=11 | formation=3-4-3 | status=OK
+- Gnistan vs Lahti | side=away | players=11 | formation=3-4-3 | status=OK
+- SJK vs VPS | side=home | players=11 | formation=3-4-3 | status=OK
+- SJK vs VPS | side=away | players=11 | formation=4-5-1 | status=OK
 
 ## Guardrails
 - Official lineup importer only reads API/player snapshots; it never fabricates players.
