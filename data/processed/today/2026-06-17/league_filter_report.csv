@@ -1,13 +1,7 @@
 country,league,league_tier,league_filter_reason,matches
 USA,USL W League,REJECT,country_league_not_allowlisted,18
 USA,USL League Two,REJECT,country_league_not_allowlisted,6
-Brazil,Brasileiro U17,REJECT,hard_reject_noise_league,5
-Argentina,Torneo Promocional Amateur,REJECT,hard_reject_noise_league,4
-Brazil,Mineiro - 2,REJECT,country_league_not_allowlisted,4
-Brazil,Copa Gaúcha,REJECT,country_league_not_allowlisted,2
-Brazil,Maranhense - 2,REJECT,country_league_not_allowlisted,2
+Brazil,Mineiro - 2,REJECT,country_league_not_allowlisted,3
 Brazil,Brasileiro U20 A,REJECT,hard_reject_noise_league,1
 Brazil,Catarinense - 2,REJECT,country_league_not_allowlisted,1
-Brazil,Copa Espírito Santo,REJECT,country_league_not_allowlisted,1
-Congo-DR,Ligue 1,REJECT,country_league_not_allowlisted,1
-World,World Cup,REJECT,country_league_not_allowlisted,1
+Brazil,Maranhense - 2,REJECT,country_league_not_allowlisted,1
