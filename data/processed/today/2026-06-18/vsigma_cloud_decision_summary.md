@@ -32,7 +32,7 @@ _No rows._
 - Timezone: Atlantic/Canary
 - Window minutes: 90
 - PRE refreshed by auto controller: YES
-- PRE refresh reasons: health summary reports ledger has no rows for target date; missing snapshot official top: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-18/vsigma_today_competition_top.csv; text trigger: ledger has no rows for target date
+- PRE refresh reasons: snapshot official top has no rows for 2026-06-18; text trigger: Morning official picks reviewed: 0
 - PRELOCK retained no rows: YES
 - PRELOCK unavailable rows: 0
 - Candidate source used: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-18/vsigma_today_competition_top.csv
