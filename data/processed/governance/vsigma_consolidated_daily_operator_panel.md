@@ -38,8 +38,8 @@
 - source_guard_counts: DATED_INPUT_ONLY; API_COVERAGE_GATE_V2=2
 - execution_permission_counts: NO=2
 - avg_coverage_score: 20.0
-- forecast_warning_counts: PARTIAL_RECENT_STATS=2; SHOT_SAMPLE_WEAK=2; CORNER_SAMPLE_WEAK=2; CARD_SAMPLE_WEAK=2
-- missing_data_counts: recent_stats_coverage=NONE=2; lineup_coverage=NONE=2; injuries_coverage=NONE=2; standings_coverage=NONE=2; odds_coverage=NONE=2
+- forecast_warning_counts: PARTIAL_RECENT_STATS=2; SHOT_SAMPLE_WEAK=2; CORNER_SAMPLE_WEAK=2; CARD_SAMPLE_WEAK=2; API_COVERAGE_UNKNOWN=2
+- missing_data_counts: recent_stats_coverage=NONE=2; lineup_coverage=NONE=2; injuries_coverage=NONE=2; standings_coverage=NONE=2; odds_coverage=NONE=2; api_gate=UNKNOWN=2; coverage_score==2; missing=unknown=2
 
 ## Official / Probable Lineups
 - data/processed/today/2026-06-17/official_lineup_sources.csv: rows=48
@@ -106,19 +106,19 @@
 - next_action: Build missing required upstream component first: real_objective_context_gate.
 
 ## Real Shortlist Recovery Diagnostic
-- overall_status: FILTERS_TOO_STRICT_OR_SELECTOR_NOT_RUN
-- root_cause: scoring has same-day rows but real shortlist/bets outputs are absent or empty
-- root_scored_same_day_rows: 2
+- overall_status: SCORING_SOURCE_EMPTY_FOR_DATE
+- root_cause: scored source exists but has no rows for target date
+- root_scored_same_day_rows: 0
 - real_shortlist_rows: 0
 - real_bet_rows: 0
 - proxy_rows: 0
-- next_action: Run/repair real selection step from scored matches into shortlist/bets-only outputs.
+- next_action: Refresh/fix scoring source date coverage.
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
 - files_scanned: 1901
 - accepted_rows: 151
-- rejected_rows: 843
+- rejected_rows: 831
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
@@ -132,41 +132,41 @@
 ## Trusted Raw Candidate Promotion Gate
 - rows_reviewed: 151
 - promoted_rows: 0
-- blocked_rows: 2
-- quarantine_rows: 127
-- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=127; NOT_TRUSTED_NO_PROMOTION=22; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=2
+- blocked_rows: 0
+- quarantine_rows: 129
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=129; NOT_TRUSTED_NO_PROMOTION=22
 - next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 
 ## Scoring Gap Explainer
 - rows_reviewed: 151
-- missing_scored_rows: 127
-- no_data_blocked_rows: 2
+- missing_scored_rows: 129
+- no_data_blocked_rows: 0
 - not_trusted_rows: 22
 - promoted_rows: 0
-- gap_status_counts: MISSING_SCORED_ROW=127; NOT_TRUSTED_SKIPPED=22; SCORED_ROW_NO_DATA_BLOCKED=2
+- gap_status_counts: MISSING_SCORED_ROW=129; NOT_TRUSTED_SKIPPED=22
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 
 ## Trusted Raw Scoring Queue
-- queue_rows: 127
-- priority_counts: P1_TRUSTED_MISSING_SCORING=127
-- scoring_needed_counts: YES=127
+- queue_rows: 129
+- priority_counts: P1_TRUSTED_MISSING_SCORING=129
+- scoring_needed_counts: YES=129
 - source_gap_status: MISSING_SCORED_ROW
 - next_action: Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.
 
 ## Queue-to-Enrichment Dry Run Planner
-- rows_planned: 127
-- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=127
-- risk_label_counts: MEDIUM=126; HIGH_CONTEXT_VOLATILITY=1
-- priority_counts: P1_TRUSTED_MISSING_SCORING=127
-- total_estimated_call_units: 636
+- rows_planned: 129
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=129
+- risk_label_counts: MEDIUM=128; HIGH_CONTEXT_VOLATILITY=1
+- priority_counts: P1_TRUSTED_MISSING_SCORING=129
+- total_estimated_call_units: 646
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
 
 ## Enrichment Cost & Approval Gate
 - approval_gate_status: WAIT_FOR_MANUAL_APPROVAL
-- rows_planned: 127
-- estimated_call_units: 636
+- rows_planned: 129
+- estimated_call_units: 646
 - approval_required: YES
 - max_allowed_without_manual_approval: 0
 - api_calls_allowed: NO

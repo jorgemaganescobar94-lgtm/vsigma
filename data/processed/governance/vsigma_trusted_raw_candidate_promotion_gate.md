@@ -3,9 +3,9 @@
 ## Summary
 - rows_reviewed: 151
 - promoted_rows: 0
-- blocked_rows: 2
-- quarantine_rows: 127
-- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=127; NOT_TRUSTED_NO_PROMOTION=22; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=2
+- blocked_rows: 0
+- quarantine_rows: 129
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=129; NOT_TRUSTED_NO_PROMOTION=22
 - next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 - auto_apply: NO
 - production_change: NO
@@ -117,8 +117,8 @@
 - Kongahälla vs Hestrafor | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Rågsved vs Enköping | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Marke vs Kortrijk | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- Gnistan vs Lahti | status=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | allowed=NO_PROMOTION_NO_BET | reason=matching scored row is NO_DATA_BLOCKED | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
-- SJK vs VPS | status=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | allowed=NO_PROMOTION_NO_BET | reason=matching scored row is NO_DATA_BLOCKED | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
+- Gnistan vs Lahti | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
+- SJK vs VPS | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Atlético Tucumán Res. vs Gimnasia La Plata Res. | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Banfield Res. vs River Plate Res. | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv
 - Gimnasia Mendoza 2 vs Argentinos Juniors Res. | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_dated_post_match_results_refresh.csv

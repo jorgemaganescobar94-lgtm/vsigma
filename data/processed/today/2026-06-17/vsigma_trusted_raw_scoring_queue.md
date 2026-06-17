@@ -1,9 +1,9 @@
 # vSIGMA Trusted Raw Scoring Queue - 2026-06-17
 
 ## Summary
-- queue_rows: 127
-- priority_counts: P1_TRUSTED_MISSING_SCORING=127
-- scoring_needed_counts: YES=127
+- queue_rows: 129
+- priority_counts: P1_TRUSTED_MISSING_SCORING=129
+- scoring_needed_counts: YES=129
 - source_gap_status: MISSING_SCORED_ROW
 - next_action: Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.
 - auto_apply: NO
@@ -111,32 +111,34 @@
 - #99 | P1_TRUSTED_MISSING_SCORING | Kongahälla vs Hestrafor | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 - #100 | P1_TRUSTED_MISSING_SCORING | Rågsved vs Enköping | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 - #101 | P1_TRUSTED_MISSING_SCORING | Marke vs Kortrijk | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #102 | P1_TRUSTED_MISSING_SCORING | Atlético Tucumán Res. vs Gimnasia La Plata Res. | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #103 | P1_TRUSTED_MISSING_SCORING | Banfield Res. vs River Plate Res. | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #104 | P1_TRUSTED_MISSING_SCORING | Gimnasia Mendoza 2 vs Argentinos Juniors Res. | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #105 | P1_TRUSTED_MISSING_SCORING | Instituto Res. vs Unión Santa Fe Res. | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #106 | P1_TRUSTED_MISSING_SCORING | Rosario Central Res. vs Vélez Sársfield Res. | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #107 | P1_TRUSTED_MISSING_SCORING | Talleres Córdoba Res. vs Racing Club Res. | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #108 | P1_TRUSTED_MISSING_SCORING | Monsoon vs Brasil Farroupilha | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #109 | P1_TRUSTED_MISSING_SCORING | Coimbra vs Democrata SL | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #110 | P1_TRUSTED_MISSING_SCORING | Sao Luis vs Araioses | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #111 | P1_TRUSTED_MISSING_SCORING | Tupan vs Expressinho | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #112 | P1_TRUSTED_MISSING_SCORING | Las Mandarinas vs Everton La Plata | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #113 | P1_TRUSTED_MISSING_SCORING | Sporting JAX W vs Miami City W | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #114 | P1_TRUSTED_MISSING_SCORING | England vs Croatia | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #115 | P1_TRUSTED_MISSING_SCORING | Wake W vs Port City NC W | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #116 | P1_TRUSTED_MISSING_SCORING | Charlotte Eagles vs SC United Bantams | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #117 | P1_TRUSTED_MISSING_SCORING | Rochester vs RKC | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #118 | P1_TRUSTED_MISSING_SCORING | Brooke House vs Inter Gainesville | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #119 | P1_TRUSTED_MISSING_SCORING | Louisville City II vs Dayton Dutch Lions | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #120 | P1_TRUSTED_MISSING_SCORING | Miami AC vs Lakeland United | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #121 | P1_TRUSTED_MISSING_SCORING | Racing Louisville W vs Dayton Dutch Lions W | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #122 | P1_TRUSTED_MISSING_SCORING | AMSG W vs Sta Clarita Blue Heat W | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #123 | P1_TRUSTED_MISSING_SCORING | Mamoré vs BOA | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #124 | P1_TRUSTED_MISSING_SCORING | Port City vs Hickory | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #125 | P1_TRUSTED_MISSING_SCORING | Chattanooga Red Wolves W vs Knoxville W | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #126 | P1_TRUSTED_MISSING_SCORING | El Kanemi Warriors vs Wikki Tourist | league=Federation Cup | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #127 | P1_TRUSTED_MISSING_SCORING | Istaravshan vs Sardor Tursunzoda | league=Vysshaya Liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #102 | P1_TRUSTED_MISSING_SCORING | Gnistan vs Lahti | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #103 | P1_TRUSTED_MISSING_SCORING | SJK vs VPS | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #104 | P1_TRUSTED_MISSING_SCORING | Atlético Tucumán Res. vs Gimnasia La Plata Res. | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #105 | P1_TRUSTED_MISSING_SCORING | Banfield Res. vs River Plate Res. | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #106 | P1_TRUSTED_MISSING_SCORING | Gimnasia Mendoza 2 vs Argentinos Juniors Res. | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #107 | P1_TRUSTED_MISSING_SCORING | Instituto Res. vs Unión Santa Fe Res. | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #108 | P1_TRUSTED_MISSING_SCORING | Rosario Central Res. vs Vélez Sársfield Res. | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #109 | P1_TRUSTED_MISSING_SCORING | Talleres Córdoba Res. vs Racing Club Res. | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #110 | P1_TRUSTED_MISSING_SCORING | Monsoon vs Brasil Farroupilha | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #111 | P1_TRUSTED_MISSING_SCORING | Coimbra vs Democrata SL | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #112 | P1_TRUSTED_MISSING_SCORING | Sao Luis vs Araioses | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #113 | P1_TRUSTED_MISSING_SCORING | Tupan vs Expressinho | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #114 | P1_TRUSTED_MISSING_SCORING | Las Mandarinas vs Everton La Plata | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #115 | P1_TRUSTED_MISSING_SCORING | Sporting JAX W vs Miami City W | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #116 | P1_TRUSTED_MISSING_SCORING | England vs Croatia | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #117 | P1_TRUSTED_MISSING_SCORING | Wake W vs Port City NC W | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #118 | P1_TRUSTED_MISSING_SCORING | Charlotte Eagles vs SC United Bantams | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #119 | P1_TRUSTED_MISSING_SCORING | Rochester vs RKC | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #120 | P1_TRUSTED_MISSING_SCORING | Brooke House vs Inter Gainesville | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #121 | P1_TRUSTED_MISSING_SCORING | Louisville City II vs Dayton Dutch Lions | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #122 | P1_TRUSTED_MISSING_SCORING | Miami AC vs Lakeland United | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #123 | P1_TRUSTED_MISSING_SCORING | Racing Louisville W vs Dayton Dutch Lions W | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #124 | P1_TRUSTED_MISSING_SCORING | AMSG W vs Sta Clarita Blue Heat W | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #125 | P1_TRUSTED_MISSING_SCORING | Mamoré vs BOA | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #126 | P1_TRUSTED_MISSING_SCORING | Port City vs Hickory | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #127 | P1_TRUSTED_MISSING_SCORING | Chattanooga Red Wolves W vs Knoxville W | league= | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #128 | P1_TRUSTED_MISSING_SCORING | El Kanemi Warriors vs Wikki Tourist | league=Federation Cup | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #129 | P1_TRUSTED_MISSING_SCORING | Istaravshan vs Sardor Tursunzoda | league=Vysshaya Liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 
 ## Guardrails
 - This queue is diagnostic/planning only.
