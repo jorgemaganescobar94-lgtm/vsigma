@@ -5,41 +5,28 @@ Argentina,Reserve League,REJECT,hard_reject_noise_league,6
 USA,USL League Two,REJECT,country_league_not_allowlisted,6
 Brazil,Brasileiro U17,REJECT,hard_reject_noise_league,5
 Brazil,Mineiro - 2,REJECT,country_league_not_allowlisted,5
-Gambia,GFA League,REJECT,country_league_not_allowlisted,5
-Georgia,Erovnuli Liga 2,REJECT,country_league_not_allowlisted,5
 Argentina,Torneo Promocional Amateur,REJECT,hard_reject_noise_league,4
 Brazil,Copa Gaúcha,REJECT,country_league_not_allowlisted,4
-Congo-DR,Ligue 1,REJECT,country_league_not_allowlisted,4
-Morocco,Botola Pro,REJECT,country_league_not_allowlisted,4
 Sweden,Division 2 - Södra Götaland,REJECT,country_league_not_allowlisted,4
-Belarus,Coppa,REJECT,country_league_not_allowlisted,3
-Estonia,Meistriliiga,REJECT,country_league_not_allowlisted,3
-Iceland,1. Deild,REJECT,country_league_not_allowlisted,3
-Latvia,Virsliga,REJECT,country_league_not_allowlisted,3
 Brazil,Brasileiro U20 B,REJECT,hard_reject_noise_league,2
 Brazil,Catarinense - 2,REJECT,country_league_not_allowlisted,2
 Brazil,Maranhense - 2,REJECT,country_league_not_allowlisted,2
-Cameroon,Elite One,REJECT,country_league_not_allowlisted,2
-Cameroon,Elite Two,REJECT,country_league_not_allowlisted,2
-Georgia,Erovnuli Liga,REJECT,country_league_not_allowlisted,2
 Kuwait,Premier League,REJECT,country_league_not_allowlisted,2
-Nigeria,Federation Cup,REJECT,country_league_not_allowlisted,2
 Sweden,Damallsvenskan,REJECT,country_league_not_allowlisted,2
 Sweden,Division 2 - Västra Götaland,REJECT,country_league_not_allowlisted,2
-World,Friendlies Clubs,REJECT,hard_reject_noise_league,2
 World,World Cup,REJECT,country_league_not_allowlisted,2
 Argentina,Primera Nacional,REJECT,country_league_not_allowlisted,1
 Brazil,Copa Espírito Santo,REJECT,country_league_not_allowlisted,1
+Cameroon,Elite One,REJECT,country_league_not_allowlisted,1
+Congo-DR,Ligue 1,REJECT,country_league_not_allowlisted,1
 Gabon,Championnat D1,REJECT,country_league_not_allowlisted,1
-Kazakhstan,Premier League,REJECT,country_league_not_allowlisted,1
-Russia,Second League A - Division A Gold,REJECT,country_league_not_allowlisted,1
+Georgia,Erovnuli Liga,REJECT,country_league_not_allowlisted,1
+Georgia,Erovnuli Liga 2,REJECT,country_league_not_allowlisted,1
+Nigeria,Federation Cup,REJECT,country_league_not_allowlisted,1
 Sweden,Division 2 - Norra Svealand,REJECT,country_league_not_allowlisted,1
-Sweden,Division 2 - Södra Svealand,REJECT,country_league_not_allowlisted,1
-Sweden,Elitettan,REJECT,country_league_not_allowlisted,1
 Sweden,Ettan - Södra,REJECT,country_league_not_allowlisted,1
 Sweden,Svenska Cupen,REJECT,country_league_not_allowlisted,1
 Tajikistan,Vysshaya Liga,REJECT,country_league_not_allowlisted,1
-Tanzania,Ligi kuu Bara,REJECT,country_league_not_allowlisted,1
 USA,USL Championship,REJECT,country_league_not_allowlisted,1
-Finland,Veikkausliiga,TIER_3,finland_veikkausliiga_noisy,5
-Lithuania,A Lyga,TIER_3,lithuania_a_lyga_noisy,2
+World,Friendlies Clubs,REJECT,hard_reject_noise_league,1
+Finland,Veikkausliiga,TIER_3,finland_veikkausliiga_noisy,2

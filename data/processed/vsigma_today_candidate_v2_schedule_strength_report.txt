@@ -5,4 +5,4 @@ Method: last five prior completed team fixtures; opponent strength from API stan
 Activation: neutral when standings context is missing; no hard vetoes.
 
 summary_scope  rows_processed  home_full_or_partial  away_full_or_partial  avg_home_opponent_strength  avg_away_opponent_strength  standings_api_calls  standings_cache_hits  standings_errors                 generated_at_utc
-      overall               0                     0                     0                         NaN                         NaN                    0                     0                 0 2026-06-17T12:49:47.022822+00:00
+      overall               0                     0                     0                         NaN                         NaN                    0                     0                 0 2026-06-17T16:37:51.206887+00:00

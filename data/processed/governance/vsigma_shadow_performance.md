@@ -1,7 +1,7 @@
 # vSIGMA Shadow Performance - 2026-06-17
 
 ## Executive Shadow Performance Summary
-- generated_at: 2026-06-17T13:50:05+01:00
+- generated_at: 2026-06-17T17:38:09+01:00
 - experiments tracked: 1
 - performance_status_counts: TRACKING_ACTIVE_INSUFFICIENT_SAMPLE=1
 - promotion_readiness_counts: NOT_READY_SAMPLE_TOO_SMALL=1
