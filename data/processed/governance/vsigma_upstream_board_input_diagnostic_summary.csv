@@ -1,2 +1,2 @@
 target_date,generated_at,overall_status,first_empty_required_component,missing_required_count,empty_required_count,date_issue_count,board_rows,translator_rows,forecast_rows,next_action,auto_apply,production_change
-2026-06-17,2026-06-17T20:33:45+01:00,UPSTREAM_MISSING,real_objective_context_gate,2,3,0,2,2,2,Build missing required upstream component first: real_objective_context_gate.,NO,NO
+2026-06-17,2026-06-17T22:28:40+01:00,UPSTREAM_MISSING,real_objective_context_gate,2,3,0,2,2,2,Build missing required upstream component first: real_objective_context_gate.,NO,NO
