@@ -3948,10 +3948,10 @@
           "city": "Oulu"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
+          "long": "Match Finished",
+          "short": "FT",
           "elapsed": 90,
-          "extra": 3
+          "extra": 4
         }
       },
       "league": {
@@ -3988,8 +3988,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -4018,10 +4018,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
+          "long": "Match Finished",
+          "short": "FT",
           "elapsed": 90,
-          "extra": 4
+          "extra": 5
         }
       },
       "league": {
@@ -4058,8 +4058,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 3
         },
         "extratime": {
           "home": null,
@@ -4158,10 +4158,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
+          "long": "Match Finished",
+          "short": "FT",
           "elapsed": 90,
-          "extra": 5
+          "extra": 6
         }
       },
       "league": {
@@ -4198,8 +4198,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -4290,7 +4290,7 @@
         "timestamp": 1781780400,
         "periods": {
           "first": 1781780400,
-          "second": null
+          "second": 1781784000
         },
         "venue": {
           "id": null,
@@ -4298,10 +4298,10 @@
           "city": null
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
-          "extra": 2
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 46,
+          "extra": null
         }
       },
       "league": {
@@ -4359,7 +4359,7 @@
         "date": "2026-06-18T13:00:00+01:00",
         "timestamp": 1781784000,
         "periods": {
-          "first": null,
+          "first": 1781784000,
           "second": null
         },
         "venue": {
@@ -4368,9 +4368,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 2,
           "extra": null
         }
       },
@@ -4399,13 +4399,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -4499,7 +4499,7 @@
         "date": "2026-06-18T13:00:00+01:00",
         "timestamp": 1781784000,
         "periods": {
-          "first": null,
+          "first": 1781784000,
           "second": null
         },
         "venue": {
@@ -4508,9 +4508,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 4,
           "extra": null
         }
       },
@@ -4539,13 +4539,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,

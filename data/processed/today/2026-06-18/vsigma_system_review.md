@@ -34,14 +34,14 @@
 |  |  |  |  |  | NO_BET | NO | NO_CANDIDATES | NO |  |  | NO_CANDIDATES |  |  |  |
 
 ## Data Coverage Review
-- coverage rich / partial / weak: COVERAGE_RICH: 1
-- odds coverage: 1/1
-- fixture stats coverage: 1/1
-- injuries coverage: 0/1
-- lineups coverage: 1/1
-- predictions coverage: 1/1
+- coverage rich / partial / weak: none
+- odds coverage: UNKNOWN
+- fixture stats coverage: UNKNOWN
+- injuries coverage: UNKNOWN
+- lineups coverage: UNKNOWN
+- predictions coverage: UNKNOWN
 - odds structure depth: target_fixtures: 0
-- API gaps detected: injuries
+- API gaps detected: none detected in available coverage inputs
 
 ## Model / Market Review
 - markets appearing in current/historical inputs: OVER_1_5: 132; OVER_2_5: 26; BTTS_YES: 3; UNDER_3_5: 3; AWAY_WIN: 2
@@ -73,6 +73,6 @@
 | P3 | model_calibration | Defer recalibration until minimum closed-pick sample | Fewer than 30 closed picks are available. | Avoids fitting thresholds or probability adjustments to noise. | Low; no predictive change is applied. | Keep calibration reporting active and wait for at least 30 closed picks before suggestions. | NO | closed_picks=8; enough_sample=NO; recalibration_allowed=NO |
 
 ## Input Inventory
-- generated_at: 2026-06-18T00:55:29+01:00
+- generated_at: 2026-06-18T13:04:30+01:00
 - timezone: Atlantic/Canary
 - missing optional inputs: none

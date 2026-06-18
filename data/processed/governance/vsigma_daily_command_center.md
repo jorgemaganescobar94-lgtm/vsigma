@@ -1,15 +1,15 @@
 # vSIGMA Daily Command Center - 2026-06-18
 
 ## Executive Command
-- generated_at: 2026-06-18T12:52:59+01:00
-- mode: pre
+- generated_at: 2026-06-18T13:04:31+01:00
+- mode: auto
 - command_center_status: NO_ACTION_REQUIRED
 - daily_classification: NO_BET_VALID
 - action_level: NO_ACTION_REQUIRED
 - operational_verdict: NO_EXECUTION_NO_BET_VALID
 - predictive_failure: NO
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/27757497729
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/27758097109
 
 ## Next Operator Action
 - No manual execution needed; keep collecting no-bet evidence.

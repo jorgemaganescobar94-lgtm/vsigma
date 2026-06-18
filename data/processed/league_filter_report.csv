@@ -7,11 +7,10 @@ Sweden,Damallsvenskan,REJECT,country_league_not_allowlisted,5
 Sweden,Division 2 - Västra Götaland,REJECT,country_league_not_allowlisted,5
 Sweden,Ettan - Norra,REJECT,country_league_not_allowlisted,5
 Sweden,Ettan - Södra,REJECT,country_league_not_allowlisted,5
-Cameroon,Elite Two,REJECT,country_league_not_allowlisted,4
 Morocco,Botola Pro,REJECT,country_league_not_allowlisted,4
 World,Friendlies Clubs,REJECT,hard_reject_noise_league,4
+Cameroon,Elite Two,REJECT,country_league_not_allowlisted,3
 Estonia,Esiliiga B,REJECT,country_league_not_allowlisted,3
-Kazakhstan,1. Division,REJECT,country_league_not_allowlisted,3
 Sweden,Division 2 - Norra Svealand,REJECT,country_league_not_allowlisted,3
 Sweden,Division 2 - Norrland,REJECT,country_league_not_allowlisted,3
 Sweden,Division 2 - Södra Götaland,REJECT,country_league_not_allowlisted,3
@@ -19,6 +18,7 @@ Sweden,Elitettan,REJECT,country_league_not_allowlisted,3
 Tanzania,Ligi kuu Bara,REJECT,country_league_not_allowlisted,3
 World,World Cup,REJECT,country_league_not_allowlisted,3
 Georgia,Erovnuli Liga,REJECT,country_league_not_allowlisted,2
+Kazakhstan,1. Division,REJECT,country_league_not_allowlisted,2
 Brazil,Brasileiro U20 B,REJECT,hard_reject_noise_league,1
 Canada,Northern Super League,REJECT,country_league_not_allowlisted,1
 Estonia,Cup,REJECT,country_league_not_allowlisted,1
