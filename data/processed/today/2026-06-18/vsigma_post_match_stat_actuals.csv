@@ -1,1 +1,33 @@
 target_date,generated_at,fixture_id,home_team,away_team,status,actual_home_goals,actual_away_goals,actual_total_goals,actual_home_sot,actual_away_sot,actual_total_sot,actual_home_shots,actual_away_shots,actual_total_shots,actual_home_corners,actual_away_corners,actual_total_corners,actual_home_cards,actual_away_cards,actual_total_cards,actual_home_fouls,actual_away_fouls,actual_total_fouls,actual_home_xg,actual_away_xg,actual_total_xg,actual_home_big,actual_away_big,actual_total_big,available_metrics,actuals_verdict,source_guard,auto_apply,production_change
+2026-06-18,2026-06-18T11:53:21+01:00,1524957,Blackwatch Rush,AC Connecticut,FT,1,0,1,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524960,Charlotte Independence 2,North Carolina Fusion,FT,3,1,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524965,Lionsbridge,Patuxent,FT,6,0,6,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524967,Pittsburgh Riverhounds 2,Lorain County Leviathan,FT,3,2,5,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524970,Sporting Jax 2,Nona,FT,0,3,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524972,Tobacco Road,Appalachian,FT,1,1,2,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524973,Toledo Villa,Kings Hammer Columbus,FT,1,2,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524974,Virginia Beach City,Bethesda SC,FT,2,3,5,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524975,Wake,North Carolina II,FT,1,2,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524441,Virginia Marauders,Charlottesville Blues,FT,0,4,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524949,East Atlanta,Montgomery United,FT,1,2,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524977,Apotheos,Southern Soccer Academy,FT,0,3,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524981,Westchester Flames,Ironbound,FT,3,3,6,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524978,Columbus United,Birmingham Legion II,FT,3,3,6,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524963,Jackson Boom,Red River,FT,0,3,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524968,Rockford Raptors,Sueno,FT,1,0,1,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524971,St. Louis Ambush,Des Moines Menace,FT,0,1,1,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524976,Weston,FC Miami City,FT,3,1,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1525408,Memphis 901,Little Rock Rangers,FT,0,1,1,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1493543,FC Tulsa,Monterey Bay,FT,2,0,2,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524979,Fort Worth Vaqueros,McKinney Chupacabras,FT,1,7,8,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524980,Springfield,Peoria,FT,0,5,5,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1493866,Forward Madison,Fort Wayne,FT,1,1,2,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1513162,Vancouver Whitecaps II,The Town,FT,3,2,5,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524983,Laredo Heat,Brazos Valley,FT,3,0,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1489386,Uzbekistan,Colombia,FT,1,3,4,2,4,6,8,15,23,3,4,7,1,1,2,14,11,25,0,0,0,0,0,0,goals; sot; shots; corners; cards; fouls; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1513163,Tacoma Defiance,Houston Dynamo FC II,FT,2,1,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524958,AMSG,Ventura County Fusion,FT,0,5,5,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524962,Davis Legacy,Marin,FT,3,1,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524969,Seahorses,Redlands,FT,2,3,5,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1524982,Capo,City SC,FT,2,5,7,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-18,2026-06-18T11:53:21+01:00,1542415,Khovd Western,Khangarid,FT,1,2,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
