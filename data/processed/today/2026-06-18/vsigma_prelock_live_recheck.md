@@ -8,7 +8,7 @@
 - production_change: NO
 
 ## Recheck Rows
-- #1 | CANCELLED_NO_BET | AC Oulu vs Mariehamn | market=NO_CLEAR_STAT_MARKET | stake=NO_STAKE | lineup= | min=NA | availability= | next=none | note=blocked by board or low confidence
+- #1 | CANCELLED_NO_BET | NO_PROMOTED_RAW_CANDIDATES vs NO_SCORING_SAFE_ROWS | market=NO_MARKET | stake=NO_STAKE | lineup= | min=NA | availability= | next=none | note=blocked by board or low confidence
 
 ## Guardrails
 - This recheck does not execute automatically.
