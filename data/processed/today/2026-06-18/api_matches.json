@@ -3948,10 +3948,10 @@
           "city": "Oulu"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
+          "long": "Match Finished",
+          "short": "FT",
           "elapsed": 90,
-          "extra": 3
+          "extra": 4
         }
       },
       "league": {
@@ -3988,8 +3988,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -4018,10 +4018,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
+          "long": "Match Finished",
+          "short": "FT",
           "elapsed": 90,
-          "extra": 4
+          "extra": 5
         }
       },
       "league": {
@@ -4058,8 +4058,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 3
         },
         "extratime": {
           "home": null,
@@ -4158,10 +4158,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
+          "long": "Match Finished",
+          "short": "FT",
           "elapsed": 90,
-          "extra": 5
+          "extra": 6
         }
       },
       "league": {
@@ -4198,8 +4198,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 0
         },
         "extratime": {
           "home": null,
