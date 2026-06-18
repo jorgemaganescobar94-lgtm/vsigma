@@ -6,9 +6,9 @@
 | Action | NONE | First-read operator priority |
 | Risk | NONE | Operational risk after sanity + health gate |
 | Alert | LOCAL_ONLY / LOW | Routing decision for operator notifications |
-| Counts | active=0; live=0; closed=0; watch=0; no_bet=0 | Candidate distribution |
-| Reason | no active/live/watch action; no_bet=0 | Why this action level was selected |
-| Final | NO_OPERATOR_ACTION | sanity=PASS; no active/live/watch action; no_bet=0; closed=0 |
+| Counts | active=0; live=0; closed=0; watch=0; no_bet=1 | Candidate distribution |
+| Reason | no active/live/watch action; no_bet=1 | Why this action level was selected |
+| Final | NO_OPERATOR_ACTION | sanity=PASS; no active/live/watch action; no_bet=1; closed=0 |
 
 ## Alert Routing
 | Field | Value | Meaning |
@@ -38,16 +38,16 @@
 - drift_status: MATERIAL_CHANGE
 - drift_notify_required: true
 - drift_changed_fields: action_level
-- sanity_check: PASS | no active/live/watch action; no_bet=0; closed=0
-- operator_status: REVIEW
-- primary_next_action: Open health/board/recheck summaries; no automatic action.
+- sanity_check: PASS | no active/live/watch action; no_bet=1; closed=0
+- operator_status: OK
+- primary_next_action: No operator action required.
 - health_status: ATTENTION
 - active_candidates: 0
 - waiting_live_window: 0
 - closed_or_missed: 0
 - watch_only: 0
-- no_bet: 0
-- board_decisions: none
+- no_bet: 1
+- board_decisions: NO_BET=0
 - recheck_decisions: CANCELLED_NO_BET=1
 - live_triggers: none
 - alert_notify_required: true
@@ -64,7 +64,7 @@
 - DRIFT_STATUS=MATERIAL_CHANGE
 - DRIFT_NOTIFY_REQUIRED=true
 - SANITY_CHECK=PASS
-- SANITY_DETAIL=no active/live/watch action; no_bet=0; closed=0
+- SANITY_DETAIL=no active/live/watch action; no_bet=1; closed=0
 - WINDOWS_READ=UTF8 | Get-Content data/processed/today/2026-06-18/vsigma_operator_brief.md -Encoding UTF8
 
 ## Active Review
@@ -80,7 +80,7 @@
 - none
 
 ## No Bet
-- none
+- #0 | NO_BET | NO_PROMOTED_RAW_CANDIDATES vs NO_SCORING_SAFE_ROWS | market=NO_MARKET | bucket=EMPTY_BY_PROMOTION_GATE | score=0 | cancel=default no bet; no promoted raw candidates
 
 ## Live Trigger Status
 - no live trigger report or no live candidates
@@ -101,3 +101,23 @@
 - Use PowerShell -Encoding UTF8 when reading local Markdown files on Windows.
 - Historical drift notifies only on material operator changes: action level, final decision, risk, or active candidates.
 - Alert routing is diagnostic only; this script writes the route but does not send comments or external notifications.
+
+## Calibration / Shadow Governance
+- calibration_shadow_status: UNAVAILABLE
+- shadow_active_candidates: 0
+- shadow_high_priority: 0
+- shadow_metrics: none
+- shadow_decisions: none
+- promotion_readiness: UNAVAILABLE
+- promotion_candidates: 0
+- promotion_decisions: none
+- learning_sanity_status: WARN
+- learning_sanity_counts: EMPTY_NO_FALLBACK=6; PASS=1
+- learning_sanity_severity: WARN=6; OK=1
+- calibration_auto_apply: NO
+- production_change: NO
+
+### Calibration Sources
+- shadow_queue: data/processed/today/2026-06-18/vsigma_calibration_shadow_patch_queue.csv
+- promotion_readiness: data/processed/today/2026-06-18/vsigma_shadow_patch_promotion_readiness.csv
+- learning_sanity: data/processed/today/2026-06-18/vsigma_learning_chain_output_sanity.csv
