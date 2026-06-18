@@ -4990,7 +4990,7 @@
         "timestamp": 1781787600,
         "periods": {
           "first": 1781787600,
-          "second": null
+          "second": 1781791200
         },
         "venue": {
           "id": null,
@@ -4998,9 +4998,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": 13
         }
       },
@@ -5029,17 +5029,17 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -8040,7 +8040,7 @@
       },
       "goals": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -8049,7 +8049,7 @@
         },
         "fulltime": {
           "home": 0,
-          "away": 1
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -9198,10 +9198,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 67,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
         }
       },
       "league": {
@@ -9238,8 +9238,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -9268,10 +9268,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 65,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
         }
       },
       "league": {
@@ -9289,18 +9289,18 @@
           "id": 26250,
           "name": "Ferro 2",
           "logo": "https://media.api-sports.io/football/teams/26250.png",
-          "winner": false
+          "winner": null
         },
         "away": {
           "id": 18691,
           "name": "Newell's Old Boys Res.",
           "logo": "https://media.api-sports.io/football/teams/18691.png",
-          "winner": true
+          "winner": null
         }
       },
       "goals": {
-        "home": 0,
-        "away": 1
+        "home": 2,
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -9308,8 +9308,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -9338,10 +9338,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 65,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
         }
       },
       "league": {
@@ -9359,17 +9359,17 @@
           "id": 18688,
           "name": "Huracán Res.",
           "logo": "https://media.api-sports.io/football/teams/18688.png",
-          "winner": false
+          "winner": null
         },
         "away": {
           "id": 18684,
           "name": "Defensa y Justicia Res.",
           "logo": "https://media.api-sports.io/football/teams/18684.png",
-          "winner": true
+          "winner": null
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "score": {
@@ -9378,8 +9378,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -9408,10 +9408,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 65,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
         }
       },
       "league": {
@@ -9429,17 +9429,17 @@
           "id": 18689,
           "name": "Independiente Res.",
           "logo": "https://media.api-sports.io/football/teams/18689.png",
-          "winner": false
+          "winner": true
         },
         "away": {
           "id": 20817,
           "name": "Belgrano Córdoba Res.",
           "logo": "https://media.api-sports.io/football/teams/20817.png",
-          "winner": true
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 3,
         "away": 2
       },
       "score": {
@@ -9448,8 +9448,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -9478,10 +9478,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 64,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
         }
       },
       "league": {
@@ -9509,8 +9509,8 @@
         }
       },
       "goals": {
-        "home": 3,
-        "away": 0
+        "home": 6,
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -9518,8 +9518,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 6,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -9548,10 +9548,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 65,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 8
         }
       },
       "league": {
@@ -9579,7 +9579,7 @@
         }
       },
       "goals": {
-        "home": 2,
+        "home": 3,
         "away": 1
       },
       "score": {
@@ -9588,8 +9588,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -9610,7 +9610,7 @@
         "timestamp": 1781809200,
         "periods": {
           "first": 1781809200,
-          "second": null
+          "second": 1781812800
         },
         "venue": {
           "id": null,
@@ -9618,10 +9618,10 @@
           "city": "Inglewood"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 25,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
         }
       },
       "league": {
@@ -9639,18 +9639,18 @@
           "id": 15,
           "name": "Switzerland",
           "logo": "https://media.api-sports.io/football/teams/15.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 1113,
           "name": "Bosnia & Herzegovina",
           "logo": "https://media.api-sports.io/football/teams/1113.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 4,
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -9658,8 +9658,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 4,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -9674,12 +9674,12 @@
     {
       "fixture": {
         "id": 1489387,
-        "referee": null,
+        "referee": "Cristian Garay, Chile",
         "timezone": "Atlantic/Canary",
         "date": "2026-06-18T23:00:00+01:00",
         "timestamp": 1781820000,
         "periods": {
-          "first": null,
+          "first": 1781820000,
           "second": null
         },
         "venue": {
@@ -9688,9 +9688,9 @@
           "city": "Vancouver"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 4,
           "extra": null
         }
       },
@@ -9719,13 +9719,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
