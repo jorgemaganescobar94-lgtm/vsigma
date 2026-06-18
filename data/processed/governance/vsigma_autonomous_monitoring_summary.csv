@@ -1,2 +1,2 @@
 target_date,generated_at,mode,daily_classification,operational_verdict,action_level,predictive_failure,evidence_basis,operator_action,run_url
-2026-06-18,2026-06-18T13:04:31+01:00,auto,NO_BET_VALID,NO_EXECUTION_NO_BET_VALID,NO_ACTION_REQUIRED,NO,decision_quality_review,No manual execution needed; keep collecting no-bet evidence.,https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/27758097109
+2026-06-18,2026-06-18T13:22:49+01:00,auto,NO_BET_VALID,NO_EXECUTION_NO_BET_VALID,NO_ACTION_REQUIRED,NO,decision_quality_review,No manual execution needed; keep collecting no-bet evidence.,https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/27759063781
