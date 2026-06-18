@@ -1,15 +1,15 @@
 # vSIGMA Empty Diagnostic Board State Normalizer - 2026-06-18
 
 ## Summary
-- normalized_status: REVIEW_EMPTY_DIAGNOSTIC_BOARD
-- operator_state: EMPTY_REVIEW_REQUIRED
+- normalized_status: OK_EMPTY_BY_PROMOTION_GATE
+- operator_state: HEALTHY_EMPTY_NO_ACTION
 - board_status: daily_board_md=OK; daily_board_csv=OK
 - mismatch_count: 0
 - promoted_rows: 0
-- queue_rows: 120
+- queue_rows: 121
 - board_rows: 1
-- diagnostic_no_bet_rows: 0
-- next_action: Review date guard and board diagnostics before market discussion.
+- diagnostic_no_bet_rows: 1
+- next_action: No picks. System is coherent and empty because zero candidates were promoted. Wait for future data or improved trusted source coverage.
 - auto_apply: NO
 - production_change: NO
 

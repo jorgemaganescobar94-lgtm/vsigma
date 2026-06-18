@@ -1,11 +1,1 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
-2026-06-18,1495703,Veikkausliiga,Finland,AC Oulu,Mariehamn,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-18,1495703,Veikkausliiga,Finland,AC Oulu,Mariehamn,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-18,1495703,Veikkausliiga,Finland,AC Oulu,Mariehamn,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-18,1495703,Veikkausliiga,Finland,AC Oulu,Mariehamn,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-18,1495703,Veikkausliiga,Finland,AC Oulu,Mariehamn,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-18,1495703,Veikkausliiga,Finland,AC Oulu,Mariehamn,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-18,1495703,Veikkausliiga,Finland,AC Oulu,Mariehamn,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-18,1495703,Veikkausliiga,Finland,AC Oulu,Mariehamn,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-18,1495703,Veikkausliiga,Finland,AC Oulu,Mariehamn,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-18,1495703,Veikkausliiga,Finland,AC Oulu,Mariehamn,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.

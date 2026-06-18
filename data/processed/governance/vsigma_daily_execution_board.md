@@ -1,17 +1,22 @@
 # vSIGMA Daily Execution Board - 2026-06-18
 
 ## Summary
-- rows_on_board: 1
-- final_decision_counts: NO_BET=1
-- board_bucket_counts: BLOCKED=1
-- source_guard: DATED_INPUT_ONLY
+- rows_on_board: 0
+- board_status: EMPTY_BY_PROMOTION_GATE
+- final_decision_counts: NO_BET=0
+- board_bucket_counts: EMPTY_BY_PROMOTION_GATE=1 diagnostic row
+- promotion_rows_reviewed: 131
+- promoted_rows: 0
+- blocked_rows: 0
+- quarantine_rows: 121
+- source_guard: PROMOTION_GATE_DIAGNOSTIC_ONLY
 - auto_apply: NO
 - production_change: NO
 
 ## Board Rows
-- #1 | NO_BET | AC Oulu vs Mariehamn | market=NO_CLEAR_STAT_MARKET | alt=NONE | stake=NO_STAKE | score=-42 | conf=LOW | bucket=BLOCKED | stats=goals 1.58-3.12 | shots 17-29 | SoT 5-11 | corners 6-13 | cards 2-6 | prelock=none | live=none | cancel=default no bet; low forecast confidence
+- diagnostic | NO_BET | NO_PROMOTED_RAW_CANDIDATES vs NO_SCORING_SAFE_ROWS | bucket=EMPTY_BY_PROMOTION_GATE | reason=0 promoted raw candidates; no scoring-safe rows available
 
 ## Guardrails
-- This board is a decision dashboard, not an auto-bet executor.
-- REVIEW_LOW_STAKE still requires price/prelock/live confirmation.
-- STAT_WATCH_ONLY is observation only unless promoted by context/portfolio later.
+- This board is diagnostic only and does not create pick permission.
+- EMPTY_BY_PROMOTION_GATE means zero promoted raw candidates reached scoring-safe state.
+- No stake, live-only, prematch, or combinada can be derived from this board.

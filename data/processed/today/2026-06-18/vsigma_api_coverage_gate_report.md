@@ -1,13 +1,12 @@
 # vSIGMA API Coverage Gate Applied to Board v2 - 2026-06-18
 
 ## Summary
-- rows_reviewed: 1
-- gate_actions: NO_BET_CONFIRMED=1
+- rows_reviewed: 0
+- gate_actions: none
 - auto_apply: NO
 - production_change: NO
 
 ## Gate Rows
-- AC Oulu vs Mariehamn | api_gate=LOW_COVERAGE_NO_BET | action=NO_BET_CONFIRMED | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE
 
 ## Guardrails
 - Probable XI can support early planning, never final lock by itself.

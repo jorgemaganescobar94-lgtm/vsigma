@@ -1,2 +1,1 @@
 target_date,generated_at,fixture_id,home_team,away_team,api_readiness_gate,coverage_score,original_final_decision,final_decision,original_execution_permission,execution_permission,gate_action,gate_reason,missing_blocks,auto_apply,production_change
-2026-06-18,2026-06-18T12:36:02+01:00,1495703,AC Oulu,Mariehamn,LOW_COVERAGE_NO_BET,20.0,NO_BET,NO_BET,NO_BET,NO,NO_BET_CONFIRMED,API coverage is too weak for reliable execution.,recent_stats_coverage=NONE; lineup_coverage=NONE; injuries_coverage=NONE; standings_coverage=NONE; odds_coverage=NONE,NO,NO

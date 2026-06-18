@@ -1,2 +1,1 @@
 target_date,generated_at,fixture_id,home_team,away_team,market_hint,before_primary,after_primary,before_permission,after_permission,guard_action,reason,auto_apply,production_change
-2026-06-18,2026-06-18T12:36:00+01:00,1495703,AC Oulu,Mariehamn,UNDER_OR_TEAM_TOTAL_UNDER_CHECK,NO_CLEAR_STAT_MARKET,NO_CLEAR_STAT_MARKET,NO_BET,NO_BET,NO_CHANGE,not a proxy inversion,NO,NO
