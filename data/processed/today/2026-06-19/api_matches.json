@@ -5908,8 +5908,8 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
+          "long": "Match Postponed",
+          "short": "PST",
           "elapsed": null,
           "extra": null
         }
@@ -5980,7 +5980,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 67,
+          "elapsed": 80,
           "extra": null
         }
       },
@@ -6050,7 +6050,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 69,
+          "elapsed": 83,
           "extra": null
         }
       },
@@ -6120,7 +6120,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 70,
+          "elapsed": 84,
           "extra": null
         }
       },
@@ -6190,7 +6190,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 70,
+          "elapsed": 83,
           "extra": null
         }
       },
@@ -6260,7 +6260,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 70,
+          "elapsed": 83,
           "extra": null
         }
       },
@@ -6330,7 +6330,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 70,
+          "elapsed": 83,
           "extra": null
         }
       },
@@ -6400,7 +6400,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 70,
+          "elapsed": 83,
           "extra": null
         }
       },
@@ -6429,7 +6429,7 @@
         }
       },
       "goals": {
-        "home": 2,
+        "home": 3,
         "away": 1
       },
       "score": {
@@ -6470,7 +6470,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 72,
+          "elapsed": 86,
           "extra": null
         }
       },
@@ -6499,7 +6499,7 @@
         }
       },
       "goals": {
-        "home": 3,
+        "home": 4,
         "away": 0
       },
       "score": {
@@ -6540,7 +6540,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 70,
+          "elapsed": 83,
           "extra": null
         }
       },
@@ -6750,7 +6750,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 64,
+          "elapsed": 77,
           "extra": null
         }
       },
@@ -6820,7 +6820,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 47,
+          "elapsed": 60,
           "extra": null
         }
       },
@@ -6890,7 +6890,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 54,
+          "elapsed": 67,
           "extra": null
         }
       },
@@ -7100,7 +7100,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 51,
+          "elapsed": 64,
           "extra": null
         }
       },
@@ -7160,7 +7160,7 @@
         "timestamp": 1781896500,
         "periods": {
           "first": 1781896500,
-          "second": null
+          "second": 1781900100
         },
         "venue": {
           "id": null,
@@ -7168,9 +7168,9 @@
           "city": "Njardvik"
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 55,
           "extra": null
         }
       },
@@ -7230,7 +7230,7 @@
         "timestamp": 1781896500,
         "periods": {
           "first": 1781896500,
-          "second": null
+          "second": 1781900100
         },
         "venue": {
           "id": null,
@@ -7238,10 +7238,10 @@
           "city": null
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
-          "extra": 2
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 50,
+          "extra": null
         }
       },
       "league": {

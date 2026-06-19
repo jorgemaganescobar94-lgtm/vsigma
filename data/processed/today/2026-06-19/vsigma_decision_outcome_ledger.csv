@@ -1,2 +1,2 @@
 ledger_id,target_date,generated_at,fixture_id,league,home_team,away_team,market_primary,candidate_present,official_action,executable_now,final_block_reason,retry_allowed,next_retry_time,execution_family_status,decision_source,competition_calibrated_prob,accuracy_confidence_score,accuracy_primary_risk,resolver_run_id,cloud_summary_status,is_actionable,is_non_actionable,is_expired,is_waiting,is_blocked,is_technical_review
-2026-06-19::NO_FIXTURE::NO_MARKET::NO_BET,2026-06-19,2026-06-19T21:12:57+01:00,,,,,,NO,NO_BET,NO,NO_CANDIDATES,NO,,NO_CANDIDATES,NO_CANDIDATES,,,,,MISSING,NO,YES,NO,NO,YES,NO
+2026-06-19::NO_FIXTURE::NO_MARKET::NO_BET,2026-06-19,2026-06-19T21:26:03+01:00,,,,,,NO,NO_BET,NO,NO_CANDIDATES,NO,,NO_CANDIDATES,NO_CANDIDATES,,,,,MISSING,NO,YES,NO,NO,YES,NO
