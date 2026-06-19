@@ -1699,8 +1699,8 @@
         "date": "2026-06-19T11:15:00+01:00",
         "timestamp": 1781864100,
         "periods": {
-          "first": null,
-          "second": null
+          "first": 1781864100,
+          "second": 1781867700
         },
         "venue": {
           "id": 0,
@@ -1708,9 +1708,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -1729,27 +1729,27 @@
           "id": 14104,
           "name": "Olympia Warriors",
           "logo": "https://media.api-sports.io/football/teams/14104.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 23527,
           "name": "South Hobart II",
           "logo": "https://media.api-sports.io/football/teams/23527.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -1848,10 +1848,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 78,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
         }
       },
       "league": {
@@ -1880,7 +1880,7 @@
       },
       "goals": {
         "home": 1,
-        "away": 4
+        "away": 5
       },
       "score": {
         "halftime": {
@@ -1888,8 +1888,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 5
         },
         "extratime": {
           "home": null,
@@ -1918,10 +1918,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 80,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 8
         }
       },
       "league": {
@@ -1949,7 +1949,7 @@
         }
       },
       "goals": {
-        "home": 2,
+        "home": 3,
         "away": 4
       },
       "score": {
@@ -1958,8 +1958,8 @@
           "away": 3
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 4
         },
         "extratime": {
           "home": null,
@@ -1988,10 +1988,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 76,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
         }
       },
       "league": {
@@ -2028,8 +2028,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -2058,10 +2058,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 78,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
         }
       },
       "league": {
@@ -2098,8 +2098,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -2128,10 +2128,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 84,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 9
         }
       },
       "league": {
@@ -2149,17 +2149,17 @@
           "id": 27696,
           "name": "Essendon Royals SC",
           "logo": "https://media.api-sports.io/football/teams/27696.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 16789,
           "name": "Werribee City",
           "logo": "https://media.api-sports.io/football/teams/16789.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 2,
+        "home": 3,
         "away": 2
       },
       "score": {
@@ -2168,8 +2168,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -2270,7 +2270,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 49,
+          "elapsed": 84,
           "extra": null
         }
       },
@@ -2299,8 +2299,8 @@
         }
       },
       "goals": {
-        "home": 0,
-        "away": 2
+        "home": 2,
+        "away": 3
       },
       "score": {
         "halftime": {
@@ -2340,7 +2340,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 51,
+          "elapsed": 86,
           "extra": null
         }
       },
@@ -2410,7 +2410,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 51,
+          "elapsed": 86,
           "extra": null
         }
       },
@@ -2439,7 +2439,7 @@
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 3
       },
       "score": {
@@ -2470,7 +2470,7 @@
         "timestamp": 1781868600,
         "periods": {
           "first": 1781868600,
-          "second": null
+          "second": 1781872200
         },
         "venue": {
           "id": null,
@@ -2478,9 +2478,9 @@
           "city": "Dingnan"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 39,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 54,
           "extra": null
         }
       },
@@ -2510,7 +2510,7 @@
       },
       "goals": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -2540,7 +2540,7 @@
         "timestamp": 1781868600,
         "periods": {
           "first": 1781868600,
-          "second": null
+          "second": 1781872200
         },
         "venue": {
           "id": 1723,
@@ -2548,9 +2548,9 @@
           "city": "Guiyang"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 38,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 56,
           "extra": null
         }
       },
@@ -2610,7 +2610,7 @@
         "timestamp": 1781868600,
         "periods": {
           "first": 1781868600,
-          "second": null
+          "second": 1781872200
         },
         "venue": {
           "id": null,
@@ -2618,9 +2618,9 @@
           "city": "Guangzhou"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 39,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 57,
           "extra": null
         }
       },
@@ -2650,7 +2650,7 @@
       },
       "goals": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -2680,7 +2680,7 @@
         "timestamp": 1781868600,
         "periods": {
           "first": 1781868600,
-          "second": null
+          "second": 1781872200
         },
         "venue": {
           "id": null,
@@ -2688,9 +2688,9 @@
           "city": "Hangzhou"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 39,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 56,
           "extra": null
         }
       },
@@ -2750,7 +2750,7 @@
         "timestamp": 1781868600,
         "periods": {
           "first": 1781868600,
-          "second": null
+          "second": 1781872200
         },
         "venue": {
           "id": 21667,
@@ -2758,9 +2758,9 @@
           "city": "Jiujiang"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 39,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 58,
           "extra": null
         }
       },
@@ -2820,7 +2820,7 @@
         "timestamp": 1781868600,
         "periods": {
           "first": 1781868600,
-          "second": null
+          "second": 1781872200
         },
         "venue": {
           "id": 21687,
@@ -2828,9 +2828,9 @@
           "city": "Lanzhou"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 39,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 56,
           "extra": null
         }
       },
@@ -2849,22 +2849,22 @@
           "id": 21328,
           "name": "Rizhao Yuqi",
           "logo": "https://media.api-sports.io/football/teams/21328.png",
-          "winner": false
+          "winner": null
         },
         "away": {
           "id": 837,
           "name": "Tianjin Teda",
           "logo": "https://media.api-sports.io/football/teams/837.png",
-          "winner": true
+          "winner": null
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 1
         },
         "fulltime": {

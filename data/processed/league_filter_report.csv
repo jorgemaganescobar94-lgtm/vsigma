@@ -18,7 +18,6 @@ World,World Cup,REJECT,country_league_not_allowlisted,2
 Argentina,Primera B Metropolitana,REJECT,country_league_not_allowlisted,1
 Argentina,Torneo Promocional Amateur,REJECT,hard_reject_noise_league,1
 Australia,Tasmania Northern Championship,REJECT,country_league_not_allowlisted,1
-Australia,Tasmania Southern Championship,REJECT,country_league_not_allowlisted,1
 Australia,Victoria Premier League 2,REJECT,country_league_not_allowlisted,1
 Belarus,Premier League,REJECT,country_league_not_allowlisted,1
 Bolivia,Primera División,REJECT,country_league_not_allowlisted,1
