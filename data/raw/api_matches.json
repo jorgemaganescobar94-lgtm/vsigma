@@ -3038,10 +3038,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
+          "long": "Match Finished",
+          "short": "FT",
           "elapsed": 90,
-          "extra": null
+          "extra": 5
         }
       },
       "league": {
@@ -3078,8 +3078,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -3110,7 +3110,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 84,
+          "elapsed": 89,
           "extra": null
         }
       },
@@ -3320,8 +3320,8 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 87,
-          "extra": null
+          "elapsed": 90,
+          "extra": 4
         }
       },
       "league": {
@@ -3390,7 +3390,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 86,
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -3460,7 +3460,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 87,
+          "elapsed": 88,
           "extra": null
         }
       },
@@ -3670,7 +3670,7 @@
         "status": {
           "long": "Second Half",
           "short": "2H",
-          "elapsed": 64,
+          "elapsed": 74,
           "extra": null
         }
       },
@@ -3808,10 +3808,10 @@
           "city": "Plunge"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 44,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 1
         }
       },
       "league": {
@@ -3878,10 +3878,10 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
+          "long": "Halftime",
+          "short": "HT",
           "elapsed": 45,
-          "extra": 1
+          "extra": 2
         }
       },
       "league": {
@@ -3948,10 +3948,10 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
+          "long": "Halftime",
+          "short": "HT",
           "elapsed": 45,
-          "extra": null
+          "extra": 1
         }
       },
       "league": {
@@ -4090,7 +4090,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 19,
+          "elapsed": 29,
           "extra": null
         }
       },
@@ -4160,7 +4160,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 16,
+          "elapsed": 25,
           "extra": null
         }
       },
@@ -4179,22 +4179,22 @@
           "id": 4256,
           "name": "Grazer AK",
           "logo": "https://media.api-sports.io/football/teams/4256.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 2402,
           "name": "Gyori ETO FC",
           "logo": "https://media.api-sports.io/football/teams/2402.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
