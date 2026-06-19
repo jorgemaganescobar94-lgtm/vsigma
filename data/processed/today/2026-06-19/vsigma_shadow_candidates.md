@@ -1,7 +1,7 @@
 # vSIGMA Shadow Candidates - 2026-06-19
 
 ## Executive Shadow Candidate Summary
-- generated_at: 2026-06-19T21:26:04+01:00
+- generated_at: 2026-06-19T22:42:08+01:00
 - shadow_candidates: 0
 - shadow_decision_counts: none
 - experiment_type_counts: none
