@@ -1,29 +1,20 @@
 country,league,league_tier,league_filter_reason,matches
-Argentina,Reserve League,REJECT,hard_reject_noise_league,6
 Ireland,First Division,REJECT,country_league_not_allowlisted,5
 Ireland,Premier Division,REJECT,country_league_not_allowlisted,5
 Northern-Ireland,Premiership Women,REJECT,hard_reject_noise_league,4
-Kuwait,Premier League,REJECT,country_league_not_allowlisted,3
-World,Friendlies Clubs,REJECT,hard_reject_noise_league,3
-Estonia,Esiliiga B,REJECT,country_league_not_allowlisted,2
-Faroe-Islands,1. Deild,REJECT,country_league_not_allowlisted,2
 Iceland,2. Deild,REJECT,country_league_not_allowlisted,2
-Peru,Copa De La Liga,REJECT,country_league_not_allowlisted,2
-Syria,Premier League,REJECT,country_league_not_allowlisted,2
 USA,USL League Two,REJECT,country_league_not_allowlisted,2
 World,World Cup,REJECT,country_league_not_allowlisted,2
 Argentina,Primera B Metropolitana,REJECT,country_league_not_allowlisted,1
+Argentina,Reserve League,REJECT,hard_reject_noise_league,1
 Argentina,Torneo Promocional Amateur,REJECT,hard_reject_noise_league,1
 Bolivia,Primera División,REJECT,country_league_not_allowlisted,1
-Brazil,Baiano - 2,REJECT,country_league_not_allowlisted,1
 Brazil,Cearense U20,REJECT,hard_reject_noise_league,1
-Faroe-Islands,Meistaradeildin,REJECT,country_league_not_allowlisted,1
 Iceland,1. Deild,REJECT,country_league_not_allowlisted,1
+Kuwait,Premier League,REJECT,country_league_not_allowlisted,1
 Latvia,Cup,REJECT,country_league_not_allowlisted,1
-Lithuania,1 Lyga,REJECT,country_league_not_allowlisted,1
-Norway,1. Division,REJECT,country_league_not_allowlisted,1
-Norway,3. Division - Girone 2,REJECT,country_league_not_allowlisted,1
-Norway,3. Division - Girone 4,REJECT,country_league_not_allowlisted,1
+Peru,Copa De La Liga,REJECT,country_league_not_allowlisted,1
 Spain,Primera División RFEF - Play Offs,REJECT,country_league_not_allowlisted,1
 USA,USL W League,REJECT,country_league_not_allowlisted,1
 Uruguay,Segunda División,REJECT,country_league_not_allowlisted,1
+World,Friendlies Clubs,REJECT,hard_reject_noise_league,1

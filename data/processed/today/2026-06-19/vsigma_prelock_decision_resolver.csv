@@ -1,2 +1,2 @@
 target_date,generated_at,fixture_id,league,home_team,away_team,market_primary,fixture_datetime,minutes_to_kickoff,official_action,executable_now,final_block_reason,retry_allowed,next_retry_time,data_gap_flags,execution_family_status,decision_source,prelock_retained,prelock_decision,prelock_decision_reason,exclusion_reason,prelock_lineup_state,prelock_odds_state,prelock_availability_state
-2026-06-19,2026-06-19T16:58:48+01:00,,,,,,,,NO_BET,NO,NO_CANDIDATES,NO,,,NO_CANDIDATES,NO_CANDIDATES,NO,,,,,,
+2026-06-19,2026-06-19T19:03:03+01:00,,,,,,,,NO_BET,NO,NO_CANDIDATES,NO,,,NO_CANDIDATES,NO_CANDIDATES,NO,,,,,,
