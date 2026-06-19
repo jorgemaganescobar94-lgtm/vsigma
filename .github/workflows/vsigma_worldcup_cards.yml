@@ -1,16 +1,17 @@
 name: vSIGMA World Cup Cards (Telegram)
 
 # ISOLATED notification + learning-loop workflow. Does NOT touch the betting pipeline /
-# production workflows / their scripts. It: builds the World Cup forecast card (L3 from
-# committed ratings + fresh market odds via API), LOGS today's predictions, SETTLES
-# finished fixtures, builds a track-record SCORECARD, sends the card (+ track record) to
-# Telegram, and commits ONLY the log + scorecard back (explicit paths, never `git add .`).
+# production workflows / their scripts. PURIFIED: the card shows ONLY our own Layer-3
+# model — real data, ZERO market/odds. It builds the L3 card, LOGS today's predictions,
+# SETTLES finished fixtures, builds a track-record SCORECARD (L3/v2 vs real + base-rate),
+# sends to Telegram, and commits ONLY the log + scorecard back (explicit paths, never
+# `git add .`).
 
 on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "Modo: morning (preview día completo) | preko (solo inminentes + cuota cierre + alineaciones)"
+        description: "Modo: morning (preview día completo) | preko (solo inminentes + alineaciones)"
         required: false
         type: choice
         default: "morning"
@@ -28,18 +29,17 @@ on:
         required: false
         default: "10"
 
-  # SCHEDULE — ACTIVO (UTC). 08:00 = briefing de mañana (día completo); el resto =
-  # refrescos PRE-KO (solo inminentes, cuota de cierre + alineaciones) en las franjas
-  # típicas del Mundial. Ajustar frecuencia aquí.
+  # SCHEDULE — ACTIVO (UTC). El briefing de mañana (08:00) es el ENVÍO PRINCIPAL.
+  # Ya NO hay cuota de cierre (modelo puro L3, sin mercado), así que los refrescos PRE-KO
+  # quedan COMENTADOS. El modo preko sigue disponible a mano (workflow_dispatch) para ver
+  # inminentes + alineaciones; descomenta los cron de abajo si quieres reactivarlos.
   schedule:
-    - cron: "0 8 * * *"     # 08:00 UTC (09:00 Canarias) — briefing día completo
-    - cron: "0 16 * * *"    # 16:00 UTC — refresco pre-KO
-    - cron: "0 19 * * *"    # 19:00 UTC — refresco pre-KO
-    - cron: "0 22 * * *"    # 22:00 UTC — refresco pre-KO
-    - cron: "0 1 * * *"     # 01:00 UTC — refresco pre-KO (sesión nocturna)
-  # Alternativas comentadas para ajustar (descomentar/quitar según calendario real):
-  #   - cron: "0 18 * * *"   # cadencia anterior (una sola tarde)
-  #   - cron: "0 13 * * *"   # franja mediodía si hay partidos tempranos
+    - cron: "0 8 * * *"     # 08:00 UTC (09:00 Canarias) — briefing día completo (PRINCIPAL)
+  # Refrescos PRE-KO desactivados (sin cuota fresca ya no aportan línea de cierre):
+  #   - cron: "0 16 * * *"   # 16:00 UTC — pre-KO (alineaciones)
+  #   - cron: "0 19 * * *"   # 19:00 UTC — pre-KO (alineaciones)
+  #   - cron: "0 22 * * *"   # 22:00 UTC — pre-KO (alineaciones)
+  #   - cron: "0 1 * * *"    # 01:00 UTC — pre-KO (sesión nocturna)
 
 # contents: write SOLO para commitear el log + scorecard de aprendizaje (rutas explícitas).
 permissions:
@@ -109,7 +109,7 @@ jobs:
           } >> "$GITHUB_OUTPUT"
           echo "mode=$MODE  window $FROM..$TO  card_args=[$CARD_ARGS]"
 
-      - name: Build market+L3 cards (fresh odds; pre-KO adds closing line + lineups)
+      - name: Build L3 cards (own model only, NO odds; pre-KO adds lineups context)
         run: |
           python analysis/worldcup/build_worldcup_cards.py \
             --from "${{ steps.win.outputs.from }}" --to "${{ steps.win.outputs.to }}" \

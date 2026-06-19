@@ -4,20 +4,24 @@ WORLD CUP 2026 - LEARNING LOOP (ISOLATED, analysis/worldcup/ only).
 Closes the feedback loop for the shadow World Cup product. Three offline-friendly
 subcommands, run once per pipeline pass:
 
-  log       Append today's per-match predictions (MARKET / L3 / v2 / xG / top score)
-            to worldcup_predictions_log.csv, DEDUP by fixture_id (keeps the FIRST =
-            locks the pre-match prediction, no hindsight). Source: worldcup_cards.csv
-            (+ worldcup_our_model_v2_predictions.csv for v2). NO API.
+PURIFIED: evaluation is L3 (and v2) against REAL results + a naive base-rate baseline.
+ZERO market/odds anywhere.
+
+  log       Append today's per-match predictions (L3 / v2 / xG / top score) to
+            worldcup_predictions_log.csv, DEDUP by fixture_id (keeps the FIRST = locks
+            the pre-match prediction, no hindsight). Source: worldcup_cards.csv
+            (+ worldcup_our_model_v2_predictions.csv for v2). NO API. NO odds.
 
   settle    For FINISHED fixtures only, attach the real result to the log. Reuses the
             SAME cached /fixtures(league=1,season=2026) call the card builder already
             made (6h TTL) -> ~0 marginal API. No per-fixture calls. 1X2 settled on the
-            90' score (score.fulltime) to match the de-vigged 90' market we logged.
+            90' score (score.fulltime).
 
-  scorecard Over RESOLVED fixtures, score each predictor (MARKET vs L3 vs v2):
-            log-loss, Brier, Brier-skill vs market, 1X2 hit%, ECE (calibration) ->
-            worldcup_scorecard.txt. First lines = compact Telegram block. Includes a
-            recalibration PROPOSAL (best L3->market shrink lambda) but NEVER applies it.
+  scorecard Over RESOLVED fixtures, score our models (L3, v2) against REAL results and
+            a base-rate baseline: log-loss, Brier, Brier-skill vs base-rate, 1X2 hit%,
+            ECE, per-bet Over2.5/BTTS, reliability, xG goal error, L3-vs-base head-to-
+            head -> worldcup_scorecard.txt (first lines = compact Telegram block).
+            Includes a base-rate shrinkage PROPOSAL but NEVER applies it. NO market.
 
 NOT production (WC league id 1 is rejected by the production allowlist). No .env edits,
 no betting logic, no auto-execution.
@@ -48,7 +52,6 @@ FINISHED = {"FT", "AET", "PEN"}
 
 LOG_COLUMNS = [
     "fixture_id", "kickoff_utc", "home", "away", "round",
-    "mkt_home", "mkt_draw", "mkt_away", "mkt_over25", "mkt_btts_yes",
     "l3_home", "l3_draw", "l3_away", "l3_xg_home", "l3_xg_away", "l3_top_score",
     "v2_home", "v2_draw", "v2_away",
     "logged_at_utc",
@@ -58,7 +61,7 @@ LOG_COLUMNS = [
 SMALL_N = 30  # below this, metrics are flagged "muestra pequeña, orientativo"
 
 # National-team confederation (public fact, not invented data) for the WC-2026 48 teams.
-# Used only for the cross-confederation breakdown of the L3-vs-market head-to-head.
+# Used only for the cross-confederation breakdown of the L3-vs-base-rate head-to-head.
 CONF_BY_TEAM = {
     # UEFA
     "Austria": "UEFA", "Belgium": "UEFA", "Bosnia & Herzegovina": "UEFA", "Croatia": "UEFA",
@@ -137,16 +140,13 @@ def cmd_log():
         fid = int(r["fixture_id"])
         if fid in known:
             continue  # lock-first: never overwrite a pre-match prediction
-        # only log fixtures that actually carry a forecast
-        if pd.isna(r.get("mkt_home")) and pd.isna(r.get("our_home")):
+        # only log fixtures that actually carry our L3 forecast
+        if pd.isna(r.get("our_home")):
             continue
         v2 = v2map.get(fid)
         row = {
             "fixture_id": fid, "kickoff_utc": r.get("kickoff_utc"),
             "home": r.get("home"), "away": r.get("away"), "round": r.get("round"),
-            "mkt_home": r.get("mkt_home"), "mkt_draw": r.get("mkt_draw"),
-            "mkt_away": r.get("mkt_away"), "mkt_over25": r.get("mkt_over25"),
-            "mkt_btts_yes": r.get("mkt_btts_yes"),
             "l3_home": r.get("our_home"), "l3_draw": r.get("our_draw"),
             "l3_away": r.get("our_away"), "l3_xg_home": r.get("our_xg_home"),
             "l3_xg_away": r.get("our_xg_away"),
@@ -337,7 +337,12 @@ def cmd_scorecard():
     y = settled["result_1x2"].map(res_idx).to_numpy(int)
     Y = np.eye(3)[y]
 
-    predictors = [("MERCADO", "mkt"), ("L3", "l3"), ("v2", "v2")]
+    # NAIVE BASELINE: base-rate = empirical H/D/A frequencies of the resolved set.
+    base = np.bincount(y, minlength=3) / n
+    Pbase = np.tile(base, (n, 1))
+    base_m = _metrics(Pbase, Y)
+
+    predictors = [("L3", "l3"), ("v2", "v2")]   # own models only — NO market
     metrics = {}
     for label, pref in predictors:
         P = _probs(settled, pref)
@@ -349,44 +354,40 @@ def cmd_scorecard():
         metrics[label] = {"m": _metrics(P[mask], Y[mask]), "n": int(mask.sum()),
                           "P": P, "mask": mask}
 
-    # Brier-skill vs market, computed on the COMMON resolved+predicted set
+    # Brier-skill vs the NAIVE BASE-RATE (positive = better than base-rate). No market.
     skill = {}
-    if "MERCADO" in metrics:
-        for label in metrics:
-            if label == "MERCADO":
-                skill[label] = 0.0
-                continue
-            common = metrics["MERCADO"]["mask"] & metrics[label]["mask"]
-            if common.sum() == 0:
-                continue
-            bm = _metrics(metrics["MERCADO"]["P"][common], Y[common])["brier"]
-            bx = _metrics(metrics[label]["P"][common], Y[common])["brier"]
-            skill[label] = (1.0 - bx / bm) if bm > 0 else 0.0
+    for label in metrics:
+        common = metrics[label]["mask"]
+        bb = _metrics(Pbase[common], Y[common])["brier"]
+        bx = _metrics(metrics[label]["P"][common], Y[common])["brier"]
+        skill[label] = (1.0 - bx / bb) if bb > 0 else 0.0
 
-    # ---- compact Telegram block (first lines) ----
+    # ---- compact Telegram block (first lines, ≤3) ----
     acc_bits = " · ".join(f"{lab} {metrics[lab]['m']['acc']*100:.0f}%"
                           for lab, _ in predictors if lab in metrics)
     out(f"📊 Track record ({n} resueltos · {date_tag})")
-    out(f"Acierto 1X2: {acc_bits}")
-    sk_bits = " · ".join(f"{lab} {skill[lab]*100:+.0f}%" for lab in skill if lab != "MERCADO")
+    out(f"Acierto 1X2: {acc_bits}" if acc_bits else "Acierto 1X2: (sin predicciones)")
+    sk_bits = " · ".join(f"{lab} {skill[lab]*100:+.0f}%" for lab, _ in predictors if lab in skill)
     if sk_bits:
-        out(f"Brier-skill vs Mkt: {sk_bits}")
+        out(f"Brier-skill vs base-rate: {sk_bits}")
     out("")
     out("===== detalle =====")
-    out(f"resueltos={n} | 1X2 liquidado a 90' (score.fulltime) | métricas multiclase H/D/A")
-    hdr = f"{'predictor':9} {'n':>3} {'logloss':>8} {'brier':>7} {'acc%':>6} {'ECE':>6} {'BrierSkill%':>11}"
+    out(f"resueltos={n} | 1X2 a 90' (score.fulltime) | métricas vs RESULTADOS REALES, sin mercado")
+    hdr = f"{'predictor':10} {'n':>3} {'logloss':>8} {'brier':>7} {'acc%':>6} {'ECE':>6} {'Skill_base%':>11}"
     out(hdr)
     out("-" * len(hdr))
+    out(f"{'base-rate':10} {n:>3} {base_m['logloss']:>8.4f} {base_m['brier']:>7.4f} "
+        f"{base_m['acc']*100:>6.1f} {base_m['ece']:>6.3f} {'0.0':>11}")
     for label, _ in predictors:
         if label not in metrics:
-            out(f"{label:9} {'-':>3} {'(sin predicciones)':>8}")
+            out(f"{label:10} {'-':>3}  (sin predicciones)")
             continue
         m = metrics[label]["m"]
         sk = skill.get(label)
         sk_s = f"{sk*100:+.1f}" if sk is not None else "n/a"
-        out(f"{label:9} {metrics[label]['n']:>3} {m['logloss']:>8.4f} {m['brier']:>7.4f} "
+        out(f"{label:10} {metrics[label]['n']:>3} {m['logloss']:>8.4f} {m['brier']:>7.4f} "
             f"{m['acc']*100:>6.1f} {m['ece']:>6.3f} {sk_s:>11}")
-    out(f"  (1X2 multiclase H/D/A.{_small(n)})")
+    out(f"  (1X2 multiclase H/D/A; baseline ingenuo = base-rate.{_small(n)})")
 
     # real binary outcomes derived from the 90' score
     gh = settled["result_ft_gh"].to_numpy(float)
@@ -396,13 +397,10 @@ def cmd_scorecard():
     real_btts = ((gh >= 1) & (ga >= 1)).astype(int)      # both teams score
     lxh = settled["l3_xg_home"].to_numpy(float)
     lxa = settled["l3_xg_away"].to_numpy(float)
-    mkt_over = settled["mkt_over25"].to_numpy(float)
-    mkt_btts = settled["mkt_btts_yes"].to_numpy(float)
     xg_ok = ~(np.isnan(lxh) | np.isnan(lxa))
     l3_over = np.array([_pois_over25(lxh[i], lxa[i]) if xg_ok[i] else np.nan for i in range(n)])
     l3_btts = np.array([_pois_btts(lxh[i], lxa[i]) if xg_ok[i] else np.nan for i in range(n)])
 
-    # ---- (1) per-market binary metrics: Over2.5 and BTTS (1X2 is the table above) ----
     def mrow(lbl, p, yv):
         p = np.asarray(p, float)
         mk = ~np.isnan(p)
@@ -411,19 +409,22 @@ def cmd_scorecard():
         a, b, l = _binary_metrics(p[mk], np.asarray(yv, float)[mk])
         return f"    {lbl:18} n={int(mk.sum()):>3}  acc {a*100:4.0f}%  Brier {b:.3f}  logloss {l:.3f}"
 
+    # ---- (1) derived binary bets: L3 (Poisson xG) vs base-rate — Over2.5 & BTTS. NO odds ----
+    base_over = np.full(n, float(real_over.mean()))
+    base_btts = np.full(n, float(real_btts.mean()))
     out("")
-    out("--- (1) POR MERCADO — binario, MERCADO vs L3 (1X2 está en la tabla de arriba) ---")
-    out(f"  Over 2.5  (base: real Over={real_over.mean()*100:.0f}%):")
-    out(mrow("MERCADO", mkt_over, real_over))
+    out("--- (1) APUESTAS DERIVADAS — L3 (Poisson xG) vs base-rate (Over2.5, BTTS) ---")
+    out(f"  Over 2.5  (real Over={real_over.mean()*100:.0f}%):")
     out(mrow("L3 (Poisson xG)", l3_over, real_over))
-    out(f"  BTTS      (base: real Yes={real_btts.mean()*100:.0f}%):")
-    out(mrow("MERCADO", mkt_btts, real_btts))
+    out(mrow("base-rate", base_over, real_over))
+    out(f"  BTTS      (real Yes={real_btts.mean()*100:.0f}%):")
     out(mrow("L3 (Poisson xG)", l3_btts, real_btts))
+    out(mrow("base-rate", base_btts, real_btts))
 
-    # ---- (2) calibration / reliability ----
+    # ---- (2) calibration / reliability (L3, v2) ----
     out("")
     out("--- (2) CALIBRACIÓN / reliability (predicho vs frecuencia real por banda) ---")
-    for lab in ("MERCADO", "L3"):
+    for lab in ("L3", "v2"):
         if lab in metrics:
             for ln in _reliability(metrics[lab]["P"], Y, lab):
                 out(ln)
@@ -436,39 +437,39 @@ def cmd_scorecard():
         bh, ba, bt = gh[xg_ok].mean(), ga[xg_ok].mean(), total[xg_ok].mean()
         out(f"  n={nh}{_small(nh)}  baseline = media torneo (home {bh:.2f}, away {ba:.2f}, total {bt:.2f})")
         out(f"    {'':6} {'L3 MAE':>8} {'base MAE':>9} {'mejora':>8}")
-        for nm, l3v, base in [("home", lxh[xg_ok], bh), ("away", lxa[xg_ok], ba),
-                              ("total", (lxh + lxa)[xg_ok], bt)]:
+        for nm, l3v, base_v in [("home", lxh[xg_ok], bh), ("away", lxa[xg_ok], ba),
+                                ("total", (lxh + lxa)[xg_ok], bt)]:
             real = {"home": gh, "away": ga, "total": total}[nm][xg_ok]
             l3mae = float(np.mean(np.abs(l3v - real)))
-            bmae = float(np.mean(np.abs(base - real)))
+            bmae = float(np.mean(np.abs(base_v - real)))
             imp = (bmae - l3mae) / bmae * 100 if bmae > 0 else 0.0
             out(f"    {nm:6} {l3mae:>8.2f} {bmae:>9.2f} {imp:>+7.0f}%")
     else:
         out("  sin xG de L3 en los resueltos.")
 
-    # ---- (4) L3 vs MERCADO head-to-head: who gave more prob to the actual result ----
+    # ---- (4) L3 vs base-rate head-to-head: who gave more prob to the actual result ----
     out("")
-    out("--- (4) L3 vs MERCADO cara a cara (prob asignada al resultado real) ---")
-    if "L3" in metrics and "MERCADO" in metrics:
-        cm = metrics["MERCADO"]["mask"] & metrics["L3"]["mask"]
+    out("--- (4) L3 vs base-rate cara a cara (prob asignada al resultado real) ---")
+    if "L3" in metrics:
+        cm = metrics["L3"]["mask"]
         idx = np.arange(n)
-        pmk = metrics["MERCADO"]["P"][idx, y]
+        pbl = Pbase[idx, y]
         pl3 = metrics["L3"]["P"][idx, y]
 
         def tally(sel):
-            d = (pl3 - pmk)[sel]
+            d = (pl3 - pbl)[sel]
             l3w = int(np.sum(d > 0.01))
-            mkw = int(np.sum(d < -0.01))
-            return l3w, mkw, int(len(d) - l3w - mkw), int(len(d))
+            bw = int(np.sum(d < -0.01))
+            return l3w, bw, int(np.sum(sel) - l3w - bw), int(np.sum(sel))
 
-        l3w, mkw, tie, tot = tally(cm)
-        out(f"  global n={tot}{_small(tot)}: L3 gana {l3w} · MERCADO gana {mkw} · empate {tie}")
-        maxmkt = metrics["MERCADO"]["P"].max(1)
-        for nm, sel in [("favorito (mkt máx≥50%)", cm & (maxmkt >= 0.50)),
-                        ("igualado (mkt máx<50%)", cm & (maxmkt < 0.50))]:
+        l3w, bw, tie, tot = tally(cm)
+        out(f"  global n={tot}{_small(tot)}: L3 mejor {l3w} · base-rate mejor {bw} · empate {tie}")
+        maxl3 = metrics["L3"]["P"].max(1)
+        for nm, sel in [("L3 marca favorito (máx≥50%)", cm & (maxl3 >= 0.50)),
+                        ("L3 lo ve igualado (máx<50%)", cm & (maxl3 < 0.50))]:
             if sel.sum():
                 a, b, t, tt = tally(sel)
-                out(f"    {nm:24} n={tt:>3}: L3 {a} · MKT {b} · empate {t}")
+                out(f"    {nm:28} n={tt:>3}: L3 {a} · base {b} · empate {t}")
         conf_pairs = [(CONF_BY_TEAM.get(str(h)), CONF_BY_TEAM.get(str(a)))
                       for h, a in zip(settled["home"], settled["away"])]
         cross = np.array([hc is not None and ac is not None and hc != ac for hc, ac in conf_pairs])
@@ -476,36 +477,33 @@ def cmd_scorecard():
         for nm, sel in [("cruce de confederación", cm & cross), ("misma confederación", cm & intra)]:
             if sel.sum():
                 a, b, t, tt = tally(sel)
-                out(f"    {nm:24} n={tt:>3}: L3 {a} · MKT {b} · empate {t}")
+                out(f"    {nm:28} n={tt:>3}: L3 {a} · base {b} · empate {t}")
     else:
-        out("  faltan predicciones L3 y/o mercado resueltas.")
+        out("  faltan predicciones L3 resueltas.")
 
-    # ---- recalibration PROPOSAL (not applied) ----
+    # ---- recalibration PROPOSAL: shrink L3 toward base-rate (calibration check, not applied) ----
     out("")
-    out("PROPUESTA de recalibración (informativa, NO aplicada):")
-    if "L3" in metrics and "MERCADO" in metrics:
-        common = metrics["MERCADO"]["mask"] & metrics["L3"]["mask"]
-        if common.sum() >= 5:
-            Pl3 = metrics["L3"]["P"][common]
-            Pmk = metrics["MERCADO"]["P"][common]
-            Yc = Y[common]
-            base_ll = _metrics(Pl3, Yc)["logloss"]
-            best_lam, best_ll = 0.0, base_ll
-            for lam in np.linspace(0, 1, 21):
-                blend = (1 - lam) * Pl3 + lam * Pmk
-                ll = _metrics(blend, Yc)["logloss"]
-                if ll < best_ll - 1e-9:
-                    best_ll, best_lam = ll, lam
-            if best_lam > 0:
-                out(f"  Mezcla L3->mercado lambda={best_lam:.2f} bajaría log-loss "
-                    f"{base_ll:.4f}->{best_ll:.4f} ({(base_ll-best_ll)/base_ll*100:+.1f}%) sobre {int(common.sum())} casos.")
-                out("  -> revisar manualmente; NO se aplica automáticamente (muestra pequeña).")
-            else:
-                out(f"  Ninguna mezcla L3->mercado mejora el log-loss ({base_ll:.4f}); L3 se mantiene.")
+    out("PROPUESTA de recalibración (calibración, informativa, NO aplicada):")
+    if "L3" in metrics and metrics["L3"]["mask"].sum() >= 5:
+        common = metrics["L3"]["mask"]
+        Pl3 = metrics["L3"]["P"][common]
+        Pb = Pbase[common]
+        Yc = Y[common]
+        base_ll = _metrics(Pl3, Yc)["logloss"]
+        best_lam, best_ll = 0.0, base_ll
+        for lam in np.linspace(0, 1, 21):
+            blend = (1 - lam) * Pl3 + lam * Pb
+            ll = _metrics(blend, Yc)["logloss"]
+            if ll < best_ll - 1e-9:
+                best_ll, best_lam = ll, lam
+        if best_lam > 0:
+            out(f"  Encoger L3 hacia base-rate lambda={best_lam:.2f} bajaría log-loss "
+                f"{base_ll:.4f}->{best_ll:.4f} ({(base_ll-best_ll)/base_ll*100:+.1f}%) sobre {int(common.sum())} casos")
+            out("  (= L3 sobreconfiado; revisar manualmente. NO se aplica solo, muestra pequeña.)")
         else:
-            out(f"  Muestra insuficiente ({int(common.sum())} casos); se necesitan >=5 para proponer.")
+            out(f"  Ningún encogimiento hacia base-rate mejora el log-loss ({base_ll:.4f}); L3 bien calibrado.")
     else:
-        out("  Faltan predicciones L3 y/o mercado resueltas para proponer.")
+        out("  Muestra insuficiente (>=5) o sin L3 resuelto.")
 
     out("")
     out(f"generated_at_utc: {now_iso()}")
