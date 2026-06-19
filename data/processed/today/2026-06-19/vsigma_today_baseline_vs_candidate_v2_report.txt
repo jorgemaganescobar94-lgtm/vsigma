@@ -1,0 +1,13 @@
+vSIGMA TODAY BASELINE VS CANDIDATE V2
+
+Baseline: official frozen Competition Accuracy Mode + Probability Calibration.
+Candidate v2: SHADOW experimental schedule-strength + anomaly-cleaning layer.
+
+Baseline official picks: 0
+Candidate v2 shadow picks: 0
+Overlap: 0
+Only baseline chose: 0
+Only candidate chose: 0
+
+Side-by-side picks
+No comparable rows.
