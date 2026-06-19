@@ -1,2 +1,7 @@
 summary_scope,metric,rows_total
-overall,target_fixtures,0
+overall,target_fixtures,1
+odds_structure_depth_status,OK,1
+odds_structure_coherence_flag,RICH_COHERENT,1
+odds_total_ladder_shape,BALANCED,1
+odds_market_translation_hint,CAUTION_FRAGILE_SIDE,1
+odds_line_aggression_flag,NEUTRAL,1
