@@ -1,9 +1,10 @@
 name: vSIGMA World Cup Cards (Telegram)
 
-# ISOLATED notification workflow. Does NOT touch the betting pipeline / production
-# workflows / their scripts. It only: builds the World Cup forecast card (L3 from
-# committed ratings + fresh market odds via API) and sends it to Telegram.
-# It NEVER commits outputs back to the repo (permissions: contents read).
+# ISOLATED notification + learning-loop workflow. Does NOT touch the betting pipeline /
+# production workflows / their scripts. It: builds the World Cup forecast card (L3 from
+# committed ratings + fresh market odds via API), LOGS today's predictions, SETTLES
+# finished fixtures, builds a track-record SCORECARD, sends the card (+ track record) to
+# Telegram, and commits ONLY the log + scorecard back (explicit paths, never `git add .`).
 
 on:
   workflow_dispatch:
@@ -17,14 +18,17 @@ on:
         required: false
         default: "10"
 
-  # SCHEDULE — desactivado hasta confirmar el primer envío de prueba (workflow_dispatch).
-  # Una corrida por la mañana y otra pre-saque (UTC). Descomentar tras confirmar:
-  # schedule:
-  #   - cron: "0 8 * * *"    # ~mañana (09:00 Atlantic/Canary en verano)
-  #   - cron: "0 16 * * *"   # ~pre-saque de la sesión de tarde/noche
+  # SCHEDULE — ACTIVO: una corrida por la mañana y otra pre-saque de tarde (UTC).
+  schedule:
+    - cron: "0 8 * * *"     # 08:00 UTC = 09:00 Atlantic/Canary (verano)
+    - cron: "0 18 * * *"    # 18:00 UTC = 19:00 Atlantic/Canary (verano)
+  # Cadencia anterior (comentada para ajustar si hiciera falta):
+  #   - cron: "0 8 * * *"
+  #   - cron: "0 16 * * *"
 
+# contents: write SOLO para commitear el log + scorecard de aprendizaje (rutas explícitas).
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: vsigma-worldcup-cards
@@ -76,11 +80,24 @@ jobs:
           python analysis/worldcup/build_worldcup_cards.py \
             --from "${{ steps.win.outputs.from }}" --to "${{ steps.win.outputs.to }}"
 
-      - name: Render compact Telegram card
+      - name: Log today's predictions (pre-match, dedup by fixture)
+        run: python analysis/worldcup/worldcup_learning_loop.py log
+
+      - name: Settle finished fixtures (cached /fixtures, ~0 marginal API)
+        run: python analysis/worldcup/worldcup_learning_loop.py settle
+
+      - name: Build accumulated track-record scorecard
+        run: |
+          python analysis/worldcup/worldcup_learning_loop.py scorecard
+          echo "----- scorecard preview -----"
+          cat analysis/worldcup/worldcup_scorecard.txt
+
+      - name: Render compact Telegram card (with track-record block)
         run: |
           python analysis/worldcup/build_worldcup_full_card.py \
             --from "${{ steps.win.outputs.from }}" --to "${{ steps.win.outputs.to }}" \
-            --limit "${{ github.event.inputs.limit || '10' }}" --compact
+            --limit "${{ github.event.inputs.limit || '10' }}" --compact \
+            --scorecard analysis/worldcup/worldcup_scorecard.txt
           echo "----- message preview -----"
           cat analysis/worldcup/worldcup_full_cards.txt
 
@@ -93,3 +110,27 @@ jobs:
             --title "Mundial 2026 — fichas (${{ steps.win.outputs.from }})" \
             --date "${{ steps.win.outputs.from }}" \
             --body-file analysis/worldcup/worldcup_full_cards.txt
+
+      - name: Persist learning-loop outputs (log + scorecard ONLY)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # EXPLICIT paths only — never `git add .`, never any other file.
+          git add analysis/worldcup/worldcup_predictions_log.csv \
+                  analysis/worldcup/worldcup_scorecard.txt
+          if git diff --cached --quiet; then
+            echo "learning loop: no changes to commit."
+          else
+            git commit -m "vSIGMA World Cup learning loop ${{ steps.win.outputs.from }} [skip ci]"
+            # Robust push: the betting pipeline commits often; rebase + retry to avoid
+            # losing the accumulated track record on a non-fast-forward race.
+            pushed=0
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push && { pushed=1; break; }
+              echo "push retry $i failed; re-syncing..."
+              sleep 5
+            done
+            if [ "$pushed" != "1" ]; then
+              echo "::warning::learning loop push failed after retries (notification already sent)."
+            fi
+          fi

@@ -125,6 +125,17 @@ def main(date_from, date_to, max_fixtures):
     if our_path.exists():
         for _, r in pd.read_csv(our_path).iterrows():
             our[int(r["fixture_id"])] = r
+    # Offline L3 predictor (saved ratings + calibration, NO API): fills L3 for any
+    # fixture missing from the precomputed CSV — e.g. NEW knockout fixtures as teams
+    # advance. Same method as the shipped L3, just sourced live from the ratings.
+    l3pred = None
+    try:
+        sys.path.insert(0, str(OUT_DIR))
+        import l3_offline  # noqa: E402
+        l3pred = l3_offline.load_predictor()
+    except Exception as e:  # noqa: BLE001
+        print(f"l3_offline predictor unavailable: {type(e).__name__}: {e}")
+
     # OUR MODEL v2 (L3 + squad blend) — EXPERIMENTAL, not validated > L3
     ourv2 = {}
     v2_path = OUT_DIR / "worldcup_our_model_v2_predictions.csv"
@@ -222,8 +233,15 @@ def main(date_from, date_to, max_fixtures):
         if mkbtts:
             out(f"    [MARKET] BTTS: Yes {mkbtts['Yes']*100:4.1f}% / No {mkbtts['No']*100:4.1f}%")
         om = our.get(int(fid))
+        from_ratings = False
+        if om is None and l3pred is not None:
+            p = l3pred.predict(home, away)
+            if p:
+                om = p
+                from_ratings = True
         if om is not None:
-            out(f"    [OUR MODEL] (L3 rating, NO odds): {home} {om['our_home']*100:4.1f}%  "
+            tag = " [regen from ratings, no API]" if from_ratings else ""
+            out(f"    [OUR MODEL]{tag} (L3 rating, NO odds): {home} {om['our_home']*100:4.1f}%  "
                 f"Draw {om['our_draw']*100:4.1f}%  {away} {om['our_away']*100:4.1f}%"
                 f"   | exp goals {om['our_xg_home']}-{om['our_xg_away']}"
                 f"   | strength {float(om['our_elo_home']):+.2f} vs {float(om['our_elo_away']):+.2f}")

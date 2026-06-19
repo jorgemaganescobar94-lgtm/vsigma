@@ -39,7 +39,25 @@ def score_matrix(lh, la):
     return M / M.sum()
 
 
-def main(date_from, date_to, limit, compact=False):
+def read_scorecard_block(path, max_lines=4):
+    """Return the compact track-record header of worldcup_scorecard.txt (lines before
+    the '=====' detail separator), capped to max_lines. [] if absent."""
+    if not path:
+        return []
+    p = Path(path)
+    if not p.exists():
+        return []
+    block = []
+    for ln in p.read_text(encoding="utf-8").splitlines():
+        if ln.strip().startswith("====="):
+            break
+        block.append(ln.rstrip())
+    while block and not block[-1].strip():
+        block.pop()
+    return block[:max_lines]
+
+
+def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24):
     df = pd.read_csv(CARDS)
     df = df[df["kickoff_utc"].notna()].copy()
     df["d"] = df["kickoff_utc"].str[:10]
@@ -51,8 +69,19 @@ def main(date_from, date_to, limit, compact=False):
         print(s); lines.append(s)
 
     if compact:
-        # COMPACT (Telegram): <=2 lines/match so it fits the 25-line dispatcher cap.
+        # COMPACT (Telegram): <=2 lines/match. The track-record block goes right after
+        # the header so it ALWAYS survives the dispatcher's 25-line cut; matches are then
+        # truncated so header + track-record + matches + footer fit in max_lines.
+        sc_block = read_scorecard_block(scorecard)
+        FOOTER = "stats córners/tarj/tiros: baseline torneo (BAJA CONF). Mercado=mejor pronóstico."
+        reserved = 1 + len(sc_block) + 1  # header + track-record + footer
+        avail = max(0, max_lines - reserved)
+        max_matches = avail // 2  # 2 lines per match
+        df = df.head(max_matches) if max_matches < len(df) else df
+
         out(f"🏆 MUNDIAL 2026 — {date_from}→{date_to} (Mkt=mercado · L3=modelo propio)")
+        for ln in sc_block:
+            out(ln)
         for _, r in df.iterrows():
             mh, md, ma = r.get("mkt_home"), r.get("mkt_draw"), r.get("mkt_away")
             lh3, ld3, la3 = r.get("our_home"), r.get("our_draw"), r.get("our_away")
@@ -81,7 +110,7 @@ def main(date_from, date_to, limit, compact=False):
             if top:
                 seg.append(top)
             out("   " + " · ".join(seg))
-        out("stats córners/tarj/tiros: baseline torneo (BAJA CONF). Mercado=mejor pronóstico.")
+        out(FOOTER)
         (OUT_DIR / "worldcup_full_cards.txt").write_text("\n".join(lines), encoding="utf-8")
         print(f"\nWritten: {OUT_DIR/'worldcup_full_cards.txt'} ({len(lines)} lines)")
         return
@@ -148,5 +177,9 @@ if __name__ == "__main__":
     ap.add_argument("--to", dest="dto", default="2026-06-18")
     ap.add_argument("--limit", type=int, default=4)
     ap.add_argument("--compact", action="store_true", help="dense <=2 lines/match for Telegram")
+    ap.add_argument("--scorecard", default=None,
+                    help="path to worldcup_scorecard.txt; its compact header is embedded (compact mode)")
+    ap.add_argument("--max-lines", type=int, default=24,
+                    help="hard line budget for the compact message (dispatcher cuts at 25)")
     a = ap.parse_args()
-    main(a.dfrom, a.dto, a.limit, a.compact)
+    main(a.dfrom, a.dto, a.limit, a.compact, a.scorecard, a.max_lines)
