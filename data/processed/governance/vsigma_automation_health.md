@@ -9,7 +9,7 @@
 - production_change: NO
 
 ## Component Rows
-- daily_execution_board | status=OK | severity=OK | action=NO | detail=rows=0; decisions=none
+- daily_execution_board | status=OK | severity=OK | action=NO | detail=rows=0; decisions=NO_BET=0
 - prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=CANCELLED_NO_BET=1
 - live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
 - postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=FT=10; NS=80; PEN=1; 2H=6; HT=1; 1H=8; PST=1
