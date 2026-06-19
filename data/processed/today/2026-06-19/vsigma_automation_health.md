@@ -12,8 +12,8 @@
 - daily_execution_board | status=MISSING | severity=BROKEN | action=RUN_DAILY_DECISION_CHAIN_V2 | detail=vsigma_daily_execution_board.md/csv missing
 - prelock_live_recheck | status=MISSING | severity=WARN | action=RUN_PRELOCK_RECHECK | detail=prelock/live report missing
 - live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
-- postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=NS=106; PST=1
-- postmatch_stat_actuals | status=OK | severity=OK | action=NO | detail=rows_final=0
+- postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=FT=10; NS=80; PEN=1; 2H=6; HT=1; 1H=8; PST=1
+- postmatch_stat_actuals | status=OK | severity=OK | action=NO | detail=rows_final=11
 - forecast_calibration | status=OK | severity=OK | action=NO | detail=detail_rows=0; statuses=none
 - calibration_memory_ledger | status=OK | severity=OK | action=NO | detail=global ledger exists
 - daily_workflow_v2 | status=CONFIG_EXPECTED | severity=INFO | action=CHECK_GH_WORKFLOW_LIST_IF_NEEDED | detail=vsigma_daily_decision_chain_v2.yml active externally
