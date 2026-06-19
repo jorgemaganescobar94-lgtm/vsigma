@@ -1,6 +1,6 @@
-fixture_id,kickoff_utc,home,away,round,mkt_home,mkt_draw,mkt_away,mkt_over25,mkt_btts_yes,l3_home,l3_draw,l3_away,l3_xg_home,l3_xg_away,l3_top_score,v2_home,v2_draw,v2_away,logged_at_utc,result_ft_gh,result_ft_ga,result_final_gh,result_final_ga,result_1x2,result_status,settled,settled_at_utc
-1489390,2026-06-19 22:00,Scotland,Morocco,Group Stage - 2,0.1673,0.2634,0.5693,0.4278,0.443,0.1537,0.2191,0.6272,0.73,1.93,0-1,0.2629,0.256,0.4811,2026-06-19T21:37:36+00:00,,,,,,,0,
-1489389,2026-06-20 00:30,Brazil,Haiti,Group Stage - 2,0.8648,0.0911,0.0441,0.7233,0.411,0.8092,0.1111,0.0798,2.34,0.31,2-0,0.6697,0.2079,0.1224,2026-06-19T21:37:36+00:00,,,,,,,0,
-1539006,2026-06-20 03:00,Türkiye,Paraguay,Group Stage - 2,0.4631,0.2843,0.2526,0.4607,0.5159,0.3619,0.3004,0.3378,1.41,1.25,1-1,0.5063,0.2519,0.2418,2026-06-19T21:37:36+00:00,,,,,,,0,
-1539007,2026-06-20 17:00,Netherlands,Sweden,Group Stage - 2,0.5449,0.2455,0.2096,0.5471,0.5535,0.4512,0.2769,0.272,1.52,1.13,1-1,0.4819,0.2559,0.2622,2026-06-19T21:37:36+00:00,,,,,,,0,
-1489393,2026-06-20 20:00,Germany,Ivory Coast,Group Stage - 2,0.6187,0.2132,0.1681,0.5865,0.5505,0.4951,0.2394,0.2655,1.62,1.04,1-1,0.4889,0.2548,0.2563,2026-06-19T21:37:36+00:00,,,,,,,0,
+fixture_id,kickoff_utc,home,away,round,l3_home,l3_draw,l3_away,l3_xg_home,l3_xg_away,l3_top_score,v2_home,v2_draw,v2_away,logged_at_utc,result_ft_gh,result_ft_ga,result_final_gh,result_final_ga,result_1x2,result_status,settled,settled_at_utc
+1489390,2026-06-19 22:00,Scotland,Morocco,Group Stage - 2,0.1537,0.2191,0.6272,0.73,1.93,0-1,0.2629,0.256,0.4811,2026-06-19T21:37:36+00:00,,,,,,,0,
+1489389,2026-06-20 00:30,Brazil,Haiti,Group Stage - 2,0.8092,0.1111,0.0798,2.34,0.31,2-0,0.6697,0.2079,0.1224,2026-06-19T21:37:36+00:00,,,,,,,0,
+1539006,2026-06-20 03:00,Türkiye,Paraguay,Group Stage - 2,0.3619,0.3004,0.3378,1.41,1.25,1-1,0.5063,0.2519,0.2418,2026-06-19T21:37:36+00:00,,,,,,,0,
+1539007,2026-06-20 17:00,Netherlands,Sweden,Group Stage - 2,0.4512,0.2769,0.272,1.52,1.13,1-1,0.4819,0.2559,0.2622,2026-06-19T21:37:36+00:00,,,,,,,0,
+1489393,2026-06-20 20:00,Germany,Ivory Coast,Group Stage - 2,0.4951,0.2394,0.2655,1.62,1.04,1-1,0.4889,0.2548,0.2563,2026-06-19T21:37:36+00:00,,,,,,,0,
