@@ -9,22 +9,37 @@ name: vSIGMA World Cup Cards (Telegram)
 on:
   workflow_dispatch:
     inputs:
+      mode:
+        description: "Modo: morning (preview día completo) | preko (solo inminentes + cuota cierre + alineaciones)"
+        required: false
+        type: choice
+        default: "morning"
+        options: ["morning", "preko"]
       days_ahead:
-        description: "Días hacia delante a incluir (ventana hoy..hoy+N, UTC)"
+        description: "MORNING: días hacia delante (ventana hoy..hoy+N, UTC)"
         required: false
         default: "1"
+      within_hours:
+        description: "PRE-KO: enviar solo partidos que arrancan en las próximas N horas"
+        required: false
+        default: "6"
       limit:
         description: "Máximo de partidos en el mensaje"
         required: false
         default: "10"
 
-  # SCHEDULE — ACTIVO: una corrida por la mañana y otra pre-saque de tarde (UTC).
+  # SCHEDULE — ACTIVO (UTC). 08:00 = briefing de mañana (día completo); el resto =
+  # refrescos PRE-KO (solo inminentes, cuota de cierre + alineaciones) en las franjas
+  # típicas del Mundial. Ajustar frecuencia aquí.
   schedule:
-    - cron: "0 8 * * *"     # 08:00 UTC = 09:00 Atlantic/Canary (verano)
-    - cron: "0 18 * * *"    # 18:00 UTC = 19:00 Atlantic/Canary (verano)
-  # Cadencia anterior (comentada para ajustar si hiciera falta):
-  #   - cron: "0 8 * * *"
-  #   - cron: "0 16 * * *"
+    - cron: "0 8 * * *"     # 08:00 UTC (09:00 Canarias) — briefing día completo
+    - cron: "0 16 * * *"    # 16:00 UTC — refresco pre-KO
+    - cron: "0 19 * * *"    # 19:00 UTC — refresco pre-KO
+    - cron: "0 22 * * *"    # 22:00 UTC — refresco pre-KO
+    - cron: "0 1 * * *"     # 01:00 UTC — refresco pre-KO (sesión nocturna)
+  # Alternativas comentadas para ajustar (descomentar/quitar según calendario real):
+  #   - cron: "0 18 * * *"   # cadencia anterior (una sola tarde)
+  #   - cron: "0 13 * * *"   # franja mediodía si hay partidos tempranos
 
 # contents: write SOLO para commitear el log + scorecard de aprendizaje (rutas explícitas).
 permissions:
@@ -65,20 +80,40 @@ jobs:
           python -m pip install --upgrade pip wheel setuptools
           pip install -r requirements.txt
 
-      - name: Compute date window (UTC)
+      - name: Compute window + mode (UTC)
         id: win
         run: |
-          N="${{ github.event.inputs.days_ahead || '1' }}"
+          DAYS="${{ github.event.inputs.days_ahead || '1' }}"
+          WH="${{ github.event.inputs.within_hours || '6' }}"
+          MODE="${{ github.event.inputs.mode }}"
+          SCHED="${{ github.event.schedule }}"
+          # Scheduled runs carry no inputs: 08:00 cron = morning briefing, others = pre-KO.
+          if [ -z "$MODE" ]; then
+            if [ "$SCHED" = "0 8 * * *" ]; then MODE="morning"; else MODE="preko"; fi
+          fi
           FROM="$(date -u +%Y-%m-%d)"
-          TO="$(date -u -d "+${N} days" +%Y-%m-%d)"
-          echo "from=$FROM" >> "$GITHUB_OUTPUT"
-          echo "to=$TO" >> "$GITHUB_OUTPUT"
-          echo "window $FROM .. $TO"
+          if [ "$MODE" = "preko" ]; then
+            TO="$(date -u -d '+1 day' +%Y-%m-%d)"            # cubre saques que cruzan medianoche
+            CARD_ARGS="--within-hours $WH"
+            RENDER_ARGS="--show-lineups --within-hours $WH"
+            TITLE="Mundial 2026 — pre-saque ($FROM)"
+          else
+            TO="$(date -u -d "+${DAYS} days" +%Y-%m-%d)"
+            CARD_ARGS=""
+            RENDER_ARGS=""
+            TITLE="Mundial 2026 — briefing ($FROM)"
+          fi
+          {
+            echo "from=$FROM"; echo "to=$TO"; echo "mode=$MODE";
+            echo "card_args=$CARD_ARGS"; echo "render_args=$RENDER_ARGS"; echo "title=$TITLE";
+          } >> "$GITHUB_OUTPUT"
+          echo "mode=$MODE  window $FROM..$TO  card_args=[$CARD_ARGS]"
 
-      - name: Build market+L3 cards (fresh odds via API)
+      - name: Build market+L3 cards (fresh odds; pre-KO adds closing line + lineups)
         run: |
           python analysis/worldcup/build_worldcup_cards.py \
-            --from "${{ steps.win.outputs.from }}" --to "${{ steps.win.outputs.to }}"
+            --from "${{ steps.win.outputs.from }}" --to "${{ steps.win.outputs.to }}" \
+            ${{ steps.win.outputs.card_args }}
 
       - name: Log today's predictions (pre-match, dedup by fixture)
         run: python analysis/worldcup/worldcup_learning_loop.py log
@@ -92,12 +127,13 @@ jobs:
           echo "----- scorecard preview -----"
           cat analysis/worldcup/worldcup_scorecard.txt
 
-      - name: Render compact Telegram card (with track-record block)
+      - name: Render compact Telegram card (track record; pre-KO adds lineups)
         run: |
           python analysis/worldcup/build_worldcup_full_card.py \
             --from "${{ steps.win.outputs.from }}" --to "${{ steps.win.outputs.to }}" \
             --limit "${{ github.event.inputs.limit || '10' }}" --compact \
-            --scorecard analysis/worldcup/worldcup_scorecard.txt
+            --scorecard analysis/worldcup/worldcup_scorecard.txt \
+            ${{ steps.win.outputs.render_args }}
           echo "----- message preview -----"
           cat analysis/worldcup/worldcup_full_cards.txt
 
@@ -107,7 +143,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python scripts/dispatch_telegram_alert.py \
-            --title "Mundial 2026 — fichas (${{ steps.win.outputs.from }})" \
+            --title "${{ steps.win.outputs.title }}" \
             --date "${{ steps.win.outputs.from }}" \
             --body-file analysis/worldcup/worldcup_full_cards.txt
 

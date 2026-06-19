@@ -57,11 +57,18 @@ def read_scorecard_block(path, max_lines=4):
     return block[:max_lines]
 
 
-def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24):
-    df = pd.read_csv(CARDS)
+def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
+         show_lineups=False, within_hours=None):
+    try:
+        df = pd.read_csv(CARDS)
+    except (pd.errors.EmptyDataError, FileNotFoundError):
+        df = pd.DataFrame()
+    if df.empty or "kickoff_utc" not in df.columns:
+        df = pd.DataFrame(columns=["kickoff_utc"])
     df = df[df["kickoff_utc"].notna()].copy()
-    df["d"] = df["kickoff_utc"].str[:10]
-    df = df[(df["d"] >= date_from) & (df["d"] <= date_to)].sort_values("kickoff_utc").head(limit)
+    if len(df):
+        df["d"] = df["kickoff_utc"].str[:10]
+        df = df[(df["d"] >= date_from) & (df["d"] <= date_to)].sort_values("kickoff_utc").head(limit)
 
     lines = []
 
@@ -69,19 +76,33 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24)
         print(s); lines.append(s)
 
     if compact:
-        # COMPACT (Telegram): <=2 lines/match. The track-record block goes right after
-        # the header so it ALWAYS survives the dispatcher's 25-line cut; matches are then
-        # truncated so header + track-record + matches + footer fit in max_lines.
+        # COMPACT (Telegram): 2 lines/match (+1 lineup line in pre-KO). The track-record
+        # block goes right after the header so it ALWAYS survives the dispatcher's 25-line
+        # cut; matches are truncated so header + track-record + matches + footer fit max_lines.
         sc_block = read_scorecard_block(scorecard)
         FOOTER = "stats córners/tarj/tiros: baseline torneo (BAJA CONF). Mercado=mejor pronóstico."
+        per_match = 3 if show_lineups else 2
         reserved = 1 + len(sc_block) + 1  # header + track-record + footer
         avail = max(0, max_lines - reserved)
-        max_matches = avail // 2  # 2 lines per match
+        max_matches = avail // per_match
         df = df.head(max_matches) if max_matches < len(df) else df
 
-        out(f"🏆 MUNDIAL 2026 — {date_from}→{date_to} (Mkt=mercado · L3=modelo propio)")
+        if within_hours is not None:
+            head = f"🏆 MUNDIAL 2026 — PRE-SAQUE (próximas {within_hours:g}h · cuota de cierre)"
+        else:
+            head = f"🏆 MUNDIAL 2026 — {date_from}→{date_to} (Mkt=mercado · L3=modelo propio)"
+        out(head)
         for ln in sc_block:
             out(ln)
+        if len(df) == 0:
+            if within_hours is not None:
+                out(f"⏸️ Sin partidos en las próximas {within_hours:g}h. (Vuelve en el próximo refresco.)")
+            else:
+                out("⏸️ Sin partidos en la ventana.")
+            out(FOOTER)
+            (OUT_DIR / "worldcup_full_cards.txt").write_text("\n".join(lines), encoding="utf-8")
+            print(f"\nWritten: {OUT_DIR/'worldcup_full_cards.txt'} ({len(lines)} lines, no fixtures)")
+            return
         for _, r in df.iterrows():
             mh, md, ma = r.get("mkt_home"), r.get("mkt_draw"), r.get("mkt_away")
             lh3, ld3, la3 = r.get("our_home"), r.get("our_draw"), r.get("our_away")
@@ -110,6 +131,21 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24)
             if top:
                 seg.append(top)
             out("   " + " · ".join(seg))
+            if show_lineups:
+                LU = {"conf": "conf", "prob": "prob", "pend": "pend"}
+                lh, la = r.get("lineup_home"), r.get("lineup_away")
+                ih = "" if pd.isna(r.get("inj_home")) else str(r.get("inj_home")).strip()
+                ia = "" if pd.isna(r.get("inj_away")) else str(r.get("inj_away")).strip()
+                has_lineup = pd.notna(lh) and str(lh) in LU
+                parts = []
+                if has_lineup:
+                    parts.append(f"XI {LU[str(lh)]}/{LU.get(str(la), 'pend')}")
+                if ih or ia:
+                    parts.append(f"bajas H:{(ih[:22] or '—')} A:{(ia[:22] or '—')}")
+                if parts:
+                    out("   📋 " + " · ".join(parts))
+                elif pd.notna(r.get("hours_to_ko")):
+                    out("   📋 alineaciones: pendientes (≈saque)")
         out(FOOTER)
         (OUT_DIR / "worldcup_full_cards.txt").write_text("\n".join(lines), encoding="utf-8")
         print(f"\nWritten: {OUT_DIR/'worldcup_full_cards.txt'} ({len(lines)} lines)")
@@ -181,5 +217,10 @@ if __name__ == "__main__":
                     help="path to worldcup_scorecard.txt; its compact header is embedded (compact mode)")
     ap.add_argument("--max-lines", type=int, default=24,
                     help="hard line budget for the compact message (dispatcher cuts at 25)")
+    ap.add_argument("--show-lineups", action="store_true",
+                    help="compact mode: add a CONTEXT line with XI status + key absences (pre-KO)")
+    ap.add_argument("--within-hours", type=float, default=None,
+                    help="pre-KO header/empty-message context (next N hours)")
     a = ap.parse_args()
-    main(a.dfrom, a.dto, a.limit, a.compact, a.scorecard, a.max_lines)
+    main(a.dfrom, a.dto, a.limit, a.compact, a.scorecard, a.max_lines,
+         a.show_lineups, a.within_hours)

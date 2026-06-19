@@ -97,7 +97,49 @@ def ou_books(bookmakers, line="2.5"):
     return out
 
 
-def main(date_from, date_to, max_fixtures):
+def lineup_status(x):
+    """(code, formation) from a lineup dict. code in conf|prob|pend."""
+    if not x:
+        return "pend", ""
+    if x.get("confirmed"):
+        return "conf", (x.get("formation") or "")
+    return "prob", (x.get("formation") or "")
+
+
+def fetch_lineups(c, fid):
+    """Fresh /fixtures/lineups for an imminent fixture. {team_name: {confirmed,formation,n}}."""
+    try:
+        r = c.request("/fixtures/lineups", {"fixture": fid}, ttl_hours=0.25,
+                      force_refresh=True).get("response", []) or []
+    except APIFootballError:
+        return {}
+    out = {}
+    for t in r:
+        nm = (t.get("team") or {}).get("name")
+        xi = t.get("startXI") or []
+        if nm:
+            out[nm] = {"confirmed": len(xi) >= 11, "formation": t.get("formation"), "n": len(xi)}
+    return out
+
+
+def fetch_injuries(c, fid):
+    """/injuries for a fixture (cached 12h). {team_name: [(player, reason), ...]}."""
+    try:
+        r = c.injuries(fixture=fid).get("response", []) or []
+    except APIFootballError:
+        return {}
+    by = {}
+    for it in r:
+        tn = (it.get("team") or {}).get("name")
+        pl = it.get("player") or {}
+        nm = pl.get("name")
+        reason = pl.get("reason") or pl.get("type") or ""
+        if tn and nm:
+            by.setdefault(tn, []).append((nm, reason))
+    return by
+
+
+def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0):
     c = APIFootballClient()
 
     def true_quota():
@@ -109,15 +151,33 @@ def main(date_from, date_to, max_fixtures):
 
     api0 = true_quota()
 
+    now = datetime.now(timezone.utc)
     fx = c.fixtures(league=WC_LEAGUE, season=WC_SEASON).get("response", []) or []
     window = []
     for f in fx:
-        d = (f.get("fixture", {}).get("date") or "")[:10]
-        short = (f.get("fixture", {}).get("status") or {}).get("short")
-        if date_from <= d <= date_to and short == "NS":
-            window.append(f)
+        fxd = f.get("fixture", {})
+        dstr = fxd.get("date") or ""
+        d = dstr[:10]
+        short = (fxd.get("status") or {}).get("short")
+        if short != "NS":
+            continue
+        try:
+            hours = (datetime.fromisoformat(dstr) - now).total_seconds() / 3600.0
+        except Exception:
+            hours = None
+        if within_hours is not None:
+            # PRE-KO mode: only fixtures kicking off within the next N hours.
+            if hours is None or not (0 <= hours <= within_hours):
+                continue
+        else:
+            # MORNING mode: full day window by date.
+            if not (date_from <= d <= date_to):
+                continue
+        f["_hours_to_ko"] = hours
+        window.append(f)
     window.sort(key=lambda f: f.get("fixture", {}).get("date") or "")
     window = window[:max_fixtures]
+    mode_label = f"PRE-KO (≤{within_hours}h)" if within_hours is not None else "MORNING (día completo)"
 
     # OUR MODEL predictions (Layer-3 rating), if available
     our = {}
@@ -170,10 +230,11 @@ def main(date_from, date_to, max_fixtures):
         report.append(s)
 
     out("=" * 96)
-    out(f"WORLD CUP 2026 (league 1) - FORECAST CARDS  window {date_from}..{date_to}  ({len(window)} fixtures)")
+    out(f"WORLD CUP 2026 (league 1) - FORECAST CARDS  [{mode_label}]  window {date_from}..{date_to}  "
+        f"({len(window)} fixtures)")
     out("=" * 96)
     out("SOURCES: [MARKET]=de-vigged consensus odds (best forecast) | [API-PRED]=API model | "
-        "[STANDINGS]=group table. No invented edge.")
+        "[STANDINGS]=group table | [LINEUPS/INJURIES]=CONTEXT only (L3 does NOT use it). No invented edge.")
     out("")
 
     for f in window:
@@ -183,14 +244,23 @@ def main(date_from, date_to, max_fixtures):
         away = (f.get("teams", {}).get("away") or {}).get("name")
         rnd = f.get("league", {}).get("round", "")
 
-        rec = {"fixture_id": fid, "kickoff_utc": ko, "home": home, "away": away, "round": rnd}
+        hours = f.get("_hours_to_ko")
+        imminent = (hours is not None and 0 <= hours <= lineups_hours)
+        fresh_odds = imminent or (within_hours is not None)
 
-        # ---- odds ----
+        rec = {"fixture_id": fid, "kickoff_utc": ko, "home": home, "away": away, "round": rnd,
+               "hours_to_ko": (round(hours, 2) if hours is not None else "")}
+
+        # ---- odds (force-refresh near kickoff = closing line) ----
         mk1x2 = mkou = mkbtts = None
         pin1x2 = None
         nbooks = 0
         try:
-            od = c.odds(fixture=fid).get("response", []) or []
+            if fresh_odds:
+                od = c.request("/odds", {"fixture": fid}, ttl_hours=1,
+                               force_refresh=True).get("response", []) or []
+            else:
+                od = c.odds(fixture=fid).get("response", []) or []
             if od:
                 bms = od[0].get("bookmakers", []) or []
                 nbooks = len(bms)
@@ -264,7 +334,25 @@ def main(date_from, date_to, max_fixtures):
             f"{ch.get('pts','?')}pts {ch.get('pld','?')}pld form {ch.get('form','-')}  ||  "
             f"{away}: grp {ca.get('group','?')} #{ca.get('rank','?')} "
             f"{ca.get('pts','?')}pts {ca.get('pld','?')}pld form {ca.get('form','-')}")
-        out("    [LINEUPS/INJURIES] not yet published (refresh ~1h before kickoff)")
+
+        # ---- lineups / injuries: CONTEXT ONLY (fetched ~4h before KO; L3 ignores it) ----
+        VERBOSE = {"conf": "XI confirmado", "prob": "probable/parcial", "pend": "pendiente"}
+        if imminent:
+            lu = fetch_lineups(c, fid)
+            inj = fetch_injuries(c, fid)
+            hc, hform = lineup_status(lu.get(home))
+            ac, aform = lineup_status(lu.get(away))
+            hi = "; ".join(n for n, _ in inj.get(home, [])[:3])
+            ai = "; ".join(n for n, _ in inj.get(away, [])[:3])
+            out(f"    [LINEUPS] (CONTEXTO — L3 no lo usa): "
+                f"{home}: {VERBOSE[hc]} {hform}".rstrip()
+                + f"  |  {away}: {VERBOSE[ac]} {aform}".rstrip())
+            out(f"    [INJURIES] (CONTEXTO) {home}: {hi or '—'}  ||  {away}: {ai or '—'}")
+            rec.update({"lineup_home": hc, "lineup_away": ac,
+                        "lineup_home_form": hform, "lineup_away_form": aform,
+                        "inj_home": hi, "inj_away": ai})
+        else:
+            out("    [LINEUPS/INJURIES] not yet published (refresh ~4h before kickoff)")
 
         if mk1x2:
             rec.update({"mkt_home": round(mk1x2["Home"], 4), "mkt_draw": round(mk1x2["Draw"], 4),
@@ -289,12 +377,18 @@ def main(date_from, date_to, max_fixtures):
     spend = (api1 - api0) if (api0 is not None and api1 is not None) else "n/a"
     out("")
     out("-" * 96)
+    n_imm = sum(1 for f in window if (f.get("_hours_to_ko") is not None
+                                      and 0 <= f["_hours_to_ko"] <= lineups_hours))
     out(f"API spend THIS run (fresh-status delta): {spend}  | true quota now: {api1}/7500")
-    out("(re-runs cost ~0: odds cached 1h, predictions 6h, fixtures/standings cached.)")
+    out(f"(imminent fixtures ≤{lineups_hours}h: {n_imm} -> each adds fresh odds + lineups + injuries; "
+        "non-imminent odds cached 1h, predictions 6h, fixtures/standings cached.)")
     out(f"generated_at_utc: {datetime.now(timezone.utc).isoformat()}")
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    pd.DataFrame(cards).to_csv(OUT_DIR / "worldcup_cards.csv", index=False)
+    # keep a stable header even when there are no fixtures (pre-KO with nothing imminent)
+    cards_df = pd.DataFrame(cards) if cards else pd.DataFrame(
+        columns=["fixture_id", "kickoff_utc", "home", "away", "round", "hours_to_ko"])
+    cards_df.to_csv(OUT_DIR / "worldcup_cards.csv", index=False)
     (OUT_DIR / "worldcup_cards_report.txt").write_text("\n".join(report), encoding="utf-8")
     print(f"\nWritten: {OUT_DIR/'worldcup_cards.csv'}")
     print(f"Written: {OUT_DIR/'worldcup_cards_report.txt'}")
@@ -305,5 +399,10 @@ if __name__ == "__main__":
     ap.add_argument("--from", dest="dfrom", default="2026-06-16")
     ap.add_argument("--to", dest="dto", default="2026-06-18")
     ap.add_argument("--max-fixtures", type=int, default=14)
+    ap.add_argument("--within-hours", type=float, default=None,
+                    help="PRE-KO mode: only fixtures kicking off within the next N hours "
+                         "(fresh closing odds + lineups). Omit for full-day MORNING mode.")
+    ap.add_argument("--lineups-hours", type=float, default=4.0,
+                    help="fetch lineups/injuries (CONTEXT) for fixtures within this many hours of KO")
     a = ap.parse_args()
-    main(a.dfrom, a.dto, a.max_fixtures)
+    main(a.dfrom, a.dto, a.max_fixtures, a.within_hours, a.lineups_hours)
