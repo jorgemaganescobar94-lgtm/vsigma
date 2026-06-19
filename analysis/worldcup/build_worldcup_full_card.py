@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import numpy as np
@@ -22,6 +23,8 @@ except Exception:
 
 OUT_DIR = Path(__file__).resolve().parent
 CARDS = OUT_DIR / "worldcup_cards.csv"
+LOG = OUT_DIR / "worldcup_predictions_log.csv"
+META = OUT_DIR / "worldcup_render_meta.txt"  # fixture count for the workflow anti-spam gate
 KMAX = 10
 
 # tournament per-team baselines (low confidence; no validated NT stats model)
@@ -57,8 +60,69 @@ def read_scorecard_block(path, max_lines=4):
     return block[:max_lines]
 
 
+def _parse_ko(s):
+    """Parse a kickoff_utc cell ('2026-06-19 22:00' or ISO) -> aware UTC datetime."""
+    s = str(s).strip()
+    for fmt in ("%Y-%m-%d %H:%M", "%Y-%m-%d %H:%M:%S", "%Y-%m-%dT%H:%M", "%Y-%m-%dT%H:%M:%S"):
+        try:
+            return datetime.strptime(s[:len(fmt) + 2], fmt).replace(tzinfo=timezone.utc)
+        except Exception:
+            continue
+    return None
+
+
+def _pick(r, pref):
+    """argmax outcome H/D/A for a predictor prefix (e.g. 'mkt','l3'), or None if missing."""
+    vals = [r.get(f"{pref}_home"), r.get(f"{pref}_draw"), r.get(f"{pref}_away")]
+    if any(pd.isna(v) for v in vals):
+        return None
+    return "HDA"[int(np.argmax([float(v) for v in vals]))]
+
+
+def build_yesterday_block(log_path, now, hours=36, max_results=6):
+    """'Cómo acertamos ayer': real score + MARKET/L3 1X2 hit (✓/✗) for fixtures resolved
+    in the last `hours`. Honest — only settled rows with a real result. [] if none."""
+    p = Path(log_path)
+    if not p.exists():
+        return []
+    try:
+        df = pd.read_csv(p)
+    except Exception:
+        return []
+    need = {"settled", "result_1x2", "result_ft_gh", "result_ft_ga", "kickoff_utc"}
+    if df.empty or not need <= set(df.columns):
+        return []
+    df = df[df["settled"].fillna(0).astype(int) == 1]
+    df = df[df["result_1x2"].isin(["H", "D", "A"])]
+    cutoff = now - timedelta(hours=hours)
+    rows = []
+    for _, r in df.iterrows():
+        ko = _parse_ko(r["kickoff_utc"])
+        if ko is None or not (cutoff <= ko <= now):
+            continue
+        rows.append((ko, r))
+    rows.sort(key=lambda t: -t[0].timestamp())
+    rows = rows[:max_results]
+    if not rows:
+        return []
+    lines = ["📅 Ayer (real · acierto 1X2):"]
+    for _, r in rows:
+        actual = r["result_1x2"]
+        mk = _pick(r, "mkt")
+        l3 = _pick(r, "l3")
+        mk_s = ("✓" if mk == actual else "✗") if mk else "–"
+        l3_s = ("✓" if l3 == actual else "✗") if l3 else "–"
+        h, a = str(r["home"])[:11], str(r["away"])[:11]
+        try:
+            score = f"{int(r['result_ft_gh'])}-{int(r['result_ft_ga'])}"
+        except Exception:
+            score = "?-?"
+        lines.append(f"{h} {score} {a} — Mkt{mk_s} L3{l3_s}")
+    return lines
+
+
 def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
-         show_lineups=False, within_hours=None):
+         show_lineups=False, within_hours=None, show_yesterday=False, log_path=None):
     try:
         df = pd.read_csv(CARDS)
     except (pd.errors.EmptyDataError, FileNotFoundError):
@@ -79,13 +143,20 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
         # COMPACT (Telegram): 2 lines/match (+1 lineup line in pre-KO). The track-record
         # block goes right after the header so it ALWAYS survives the dispatcher's 25-line
         # cut; matches are truncated so header + track-record + matches + footer fit max_lines.
-        sc_block = read_scorecard_block(scorecard)
+        sc_block = read_scorecard_block(scorecard)          # priority 1 (track record)
+        yest_block = build_yesterday_block(log_path or LOG, datetime.now(timezone.utc)) \
+            if show_yesterday else []                        # priority 2 (yesterday, morning only)
         FOOTER = "stats córners/tarj/tiros: baseline torneo (BAJA CONF). Mercado=mejor pronóstico."
         per_match = 3 if show_lineups else 2
-        reserved = 1 + len(sc_block) + 1  # header + track-record + footer
-        avail = max(0, max_lines - reserved)
-        max_matches = avail // per_match
+        # Budget priority: track record > yesterday results > today's matches (trim today first).
+        avail = max(0, max_lines - 1 - len(sc_block) - 1)    # minus header + footer
+        yest_block = yest_block[:avail]
+        avail_today = max(0, avail - len(yest_block))
+        max_matches = avail_today // per_match
         df = df.head(max_matches) if max_matches < len(df) else df
+
+        # anti-spam gate: the workflow skips the Telegram send when this is 0 in pre-KO mode.
+        META.write_text(str(len(df)), encoding="utf-8")
 
         if within_hours is not None:
             head = f"🏆 MUNDIAL 2026 — PRE-SAQUE (próximas {within_hours:g}h · cuota de cierre)"
@@ -94,14 +165,16 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
         out(head)
         for ln in sc_block:
             out(ln)
+        for ln in yest_block:
+            out(ln)
         if len(df) == 0:
             if within_hours is not None:
                 out(f"⏸️ Sin partidos en las próximas {within_hours:g}h. (Vuelve en el próximo refresco.)")
-            else:
+            elif not yest_block:
                 out("⏸️ Sin partidos en la ventana.")
             out(FOOTER)
             (OUT_DIR / "worldcup_full_cards.txt").write_text("\n".join(lines), encoding="utf-8")
-            print(f"\nWritten: {OUT_DIR/'worldcup_full_cards.txt'} ({len(lines)} lines, no fixtures)")
+            print(f"\nWritten: {OUT_DIR/'worldcup_full_cards.txt'} ({len(lines)} lines, 0 today fixtures)")
             return
         for _, r in df.iterrows():
             mh, md, ma = r.get("mkt_home"), r.get("mkt_draw"), r.get("mkt_away")
@@ -221,6 +294,10 @@ if __name__ == "__main__":
                     help="compact mode: add a CONTEXT line with XI status + key absences (pre-KO)")
     ap.add_argument("--within-hours", type=float, default=None,
                     help="pre-KO header/empty-message context (next N hours)")
+    ap.add_argument("--show-yesterday", action="store_true",
+                    help="compact mode: add 'cómo acertamos ayer' (settled results, morning briefing)")
+    ap.add_argument("--log", dest="log_path", default=None,
+                    help="path to worldcup_predictions_log.csv (for --show-yesterday)")
     a = ap.parse_args()
     main(a.dfrom, a.dto, a.limit, a.compact, a.scorecard, a.max_lines,
-         a.show_lineups, a.within_hours)
+         a.show_lineups, a.within_hours, a.show_yesterday, a.log_path)

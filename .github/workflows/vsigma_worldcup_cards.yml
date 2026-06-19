@@ -100,7 +100,7 @@ jobs:
           else
             TO="$(date -u -d "+${DAYS} days" +%Y-%m-%d)"
             CARD_ARGS=""
-            RENDER_ARGS=""
+            RENDER_ARGS="--show-yesterday"     # briefing añade 'cómo acertamos ayer'
             TITLE="Mundial 2026 — briefing ($FROM)"
           fi
           {
@@ -127,17 +127,26 @@ jobs:
           echo "----- scorecard preview -----"
           cat analysis/worldcup/worldcup_scorecard.txt
 
-      - name: Render compact Telegram card (track record; pre-KO adds lineups)
+      - name: Render compact Telegram card (track record; morning adds 'ayer', pre-KO lineups)
+        id: render
         run: |
           python analysis/worldcup/build_worldcup_full_card.py \
             --from "${{ steps.win.outputs.from }}" --to "${{ steps.win.outputs.to }}" \
             --limit "${{ github.event.inputs.limit || '10' }}" --compact \
             --scorecard analysis/worldcup/worldcup_scorecard.txt \
+            --log analysis/worldcup/worldcup_predictions_log.csv \
             ${{ steps.win.outputs.render_args }}
           echo "----- message preview -----"
           cat analysis/worldcup/worldcup_full_cards.txt
+          # anti-spam gate: number of fixtures in the message (today/imminent).
+          N="$(cat analysis/worldcup/worldcup_render_meta.txt 2>/dev/null || echo 0)"
+          if [ "${N:-0}" -gt 0 ]; then echo "has_fixtures=true" >> "$GITHUB_OUTPUT";
+          else echo "has_fixtures=false" >> "$GITHUB_OUTPUT"; fi
+          echo "rendered fixtures: ${N:-0}"
 
+      # ANTI-SPAM: MORNING siempre envía (briefing). PRE-KO solo si hay >=1 partido.
       - name: Send to Telegram
+        if: ${{ steps.win.outputs.mode == 'morning' || steps.render.outputs.has_fixtures == 'true' }}
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
