@@ -2,7 +2,7 @@
 
 - required: true
 - notify_required: true
-- severity: BROKEN
-- title: [vSIGMA ALERT] 2026-06-19 - BROKEN
-- alert_hash: bc0bb144545ec919f29cf6de46aec4905e92e5d2152fe89952501a2bb057f1e6
-- previous_hash: e653c5861d8c74c7aab5e17fd69c38dac19c953c2de3d874c70c59573625d404
+- severity: ATTENTION
+- title: [vSIGMA ALERT] 2026-06-19 - ATTENTION
+- alert_hash: ad3de856693fb65e47e6f0a20c16882eb848c3ea8a96c75fd3b215d50ceff035
+- previous_hash: bc0bb144545ec919f29cf6de46aec4905e92e5d2152fe89952501a2bb057f1e6
