@@ -5,9 +5,9 @@
 - subscription_plan: Pro
 - subscription_active: YES
 - subscription_end: 2026-07-08T14:59:54+00:00
-- requests_current: 14
+- requests_current: 578
 - requests_limit_day: 7500
-- requests_remaining: 7486
+- requests_remaining: 6922
 - api_calls_allowed: YES
 - executor_mode: PRO_CONTROLLED_EXECUTION
 - recommended_executor_limit: 250

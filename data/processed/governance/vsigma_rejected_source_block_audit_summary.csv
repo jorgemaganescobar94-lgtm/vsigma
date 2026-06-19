@@ -1,2 +1,2 @@
 target_date,generated_at,rows_reviewed,rejected_rows,correct_reject_rows,manual_review_rows,whitelist_candidate_rows,audit_bucket_counts,review_priority_counts,next_action,auto_apply,production_change
-2026-06-19,2026-06-19T12:48:51+01:00,0,0,0,0,0,none,none,Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.,NO,NO
+2026-06-19,2026-06-19T17:19:30+01:00,0,0,0,0,0,none,none,Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.,NO,NO

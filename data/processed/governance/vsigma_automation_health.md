@@ -4,13 +4,13 @@
 - system_status: ATTENTION
 - components_checked: 11
 - severity_counts: OK=6; WARN=1; INFO=4
-- status_counts: OK=6; MISSING=1; CONFIG_EXPECTED=4
+- status_counts: OK=7; CONFIG_EXPECTED=4
 - auto_apply: NO
 - production_change: NO
 
 ## Component Rows
 - daily_execution_board | status=OK | severity=OK | action=NO | detail=rows=0; decisions=none
-- prelock_live_recheck | status=MISSING | severity=WARN | action=RUN_PRELOCK_RECHECK | detail=prelock/live report missing
+- prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=CANCELLED_NO_BET=1
 - live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
 - postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=FT=10; NS=80; PEN=1; 2H=6; HT=1; 1H=8; PST=1
 - postmatch_stat_actuals | status=OK | severity=OK | action=NO | detail=rows_final=11
