@@ -55,6 +55,32 @@ LOG_COLUMNS = [
     "result_ft_gh", "result_ft_ga", "result_final_gh", "result_final_ga",
     "result_1x2", "result_status", "settled", "settled_at_utc",
 ]
+SMALL_N = 30  # below this, metrics are flagged "muestra pequeña, orientativo"
+
+# National-team confederation (public fact, not invented data) for the WC-2026 48 teams.
+# Used only for the cross-confederation breakdown of the L3-vs-market head-to-head.
+CONF_BY_TEAM = {
+    # UEFA
+    "Austria": "UEFA", "Belgium": "UEFA", "Bosnia & Herzegovina": "UEFA", "Croatia": "UEFA",
+    "Czechia": "UEFA", "England": "UEFA", "France": "UEFA", "Germany": "UEFA",
+    "Netherlands": "UEFA", "Norway": "UEFA", "Portugal": "UEFA", "Scotland": "UEFA",
+    "Spain": "UEFA", "Sweden": "UEFA", "Switzerland": "UEFA", "Türkiye": "UEFA",
+    # CONMEBOL
+    "Argentina": "CONMEBOL", "Brazil": "CONMEBOL", "Colombia": "CONMEBOL", "Ecuador": "CONMEBOL",
+    "Paraguay": "CONMEBOL", "Uruguay": "CONMEBOL",
+    # CONCACAF
+    "Canada": "CONCACAF", "Curaçao": "CONCACAF", "Haiti": "CONCACAF", "Mexico": "CONCACAF",
+    "Panama": "CONCACAF", "USA": "CONCACAF",
+    # CAF
+    "Algeria": "CAF", "Cape Verde Islands": "CAF", "Congo DR": "CAF", "Egypt": "CAF",
+    "Ghana": "CAF", "Ivory Coast": "CAF", "Morocco": "CAF", "Senegal": "CAF",
+    "South Africa": "CAF", "Tunisia": "CAF",
+    # AFC
+    "Australia": "AFC", "Iran": "AFC", "Iraq": "AFC", "Japan": "AFC", "Jordan": "AFC",
+    "Qatar": "AFC", "Saudi Arabia": "AFC", "South Korea": "AFC", "Uzbekistan": "AFC",
+    # OFC
+    "New Zealand": "OFC",
+}
 
 
 def now_iso():
@@ -242,6 +268,50 @@ def _metrics(P, Y):
     return {"logloss": ll, "brier": brier, "acc": acc, "ece": float(ece)}
 
 
+def _binary_metrics(p, y):
+    """acc / Brier / log-loss for a binary probability p vs outcome y in {0,1}."""
+    p = np.clip(np.asarray(p, float), EPS, 1 - EPS)
+    y = np.asarray(y, float)
+    acc = float(np.mean((p >= 0.5).astype(int) == y))
+    brier = float(np.mean((p - y) ** 2))
+    ll = float(-np.mean(y * np.log(p) + (1 - y) * np.log(1 - p)))
+    return acc, brier, ll
+
+
+def _pois_over25(lh, la):
+    """P(total goals > 2.5) for independent Poisson xG; total ~ Poisson(lh+la)."""
+    lam = max(float(lh) + float(la), 1e-9)
+    p012 = np.exp(-lam) * (1.0 + lam + lam * lam / 2.0)
+    return float(1.0 - p012)
+
+
+def _pois_btts(lh, la):
+    """P(both teams score) = (1-P(home=0))*(1-P(away=0)) for independent Poisson."""
+    return float((1.0 - np.exp(-max(float(lh), 1e-9))) * (1.0 - np.exp(-max(float(la), 1e-9))))
+
+
+def _small(n):
+    return "  (muestra pequeña, orientativo)" if n < SMALL_N else ""
+
+
+def _reliability(p, y, label):
+    """Reliability table: bin flattened probs into bands, predicted vs observed freq."""
+    p = np.asarray(p, float)
+    y = np.asarray(y, float)
+    m = ~np.isnan(p)
+    p, y = p[m], y[m]
+    lines = [f"  {label} (1X2 aplanado H/D/A, n_pred={len(p)}){_small(len(p) / 3)}:"]
+    lines.append(f"    {'banda':>8} {'n':>4} {'predicho':>9} {'real':>6}")
+    for lo, hi in [(0.0, 0.2), (0.2, 0.4), (0.4, 0.6), (0.6, 0.8), (0.8, 1.0001)]:
+        mm = (p >= lo) & (p < hi)
+        if mm.sum() == 0:
+            continue
+        hi_lbl = min(hi, 1.0)
+        lines.append(f"    {int(lo*100):>3}-{int(hi_lbl*100):<3}% {int(mm.sum()):>4} "
+                     f"{p[mm].mean()*100:>8.0f}% {y[mm].mean()*100:>5.0f}%")
+    return lines
+
+
 def cmd_scorecard():
     log = _read_log()
     settled = log[log["settled"].fillna(0).astype(int) == 1].copy() if len(log) else log
@@ -316,6 +386,99 @@ def cmd_scorecard():
         sk_s = f"{sk*100:+.1f}" if sk is not None else "n/a"
         out(f"{label:9} {metrics[label]['n']:>3} {m['logloss']:>8.4f} {m['brier']:>7.4f} "
             f"{m['acc']*100:>6.1f} {m['ece']:>6.3f} {sk_s:>11}")
+    out(f"  (1X2 multiclase H/D/A.{_small(n)})")
+
+    # real binary outcomes derived from the 90' score
+    gh = settled["result_ft_gh"].to_numpy(float)
+    ga = settled["result_ft_ga"].to_numpy(float)
+    total = gh + ga
+    real_over = (total >= 3).astype(int)                 # Over 2.5
+    real_btts = ((gh >= 1) & (ga >= 1)).astype(int)      # both teams score
+    lxh = settled["l3_xg_home"].to_numpy(float)
+    lxa = settled["l3_xg_away"].to_numpy(float)
+    mkt_over = settled["mkt_over25"].to_numpy(float)
+    mkt_btts = settled["mkt_btts_yes"].to_numpy(float)
+    xg_ok = ~(np.isnan(lxh) | np.isnan(lxa))
+    l3_over = np.array([_pois_over25(lxh[i], lxa[i]) if xg_ok[i] else np.nan for i in range(n)])
+    l3_btts = np.array([_pois_btts(lxh[i], lxa[i]) if xg_ok[i] else np.nan for i in range(n)])
+
+    # ---- (1) per-market binary metrics: Over2.5 and BTTS (1X2 is the table above) ----
+    def mrow(lbl, p, yv):
+        p = np.asarray(p, float)
+        mk = ~np.isnan(p)
+        if mk.sum() == 0:
+            return f"    {lbl:18} n/d"
+        a, b, l = _binary_metrics(p[mk], np.asarray(yv, float)[mk])
+        return f"    {lbl:18} n={int(mk.sum()):>3}  acc {a*100:4.0f}%  Brier {b:.3f}  logloss {l:.3f}"
+
+    out("")
+    out("--- (1) POR MERCADO — binario, MERCADO vs L3 (1X2 está en la tabla de arriba) ---")
+    out(f"  Over 2.5  (base: real Over={real_over.mean()*100:.0f}%):")
+    out(mrow("MERCADO", mkt_over, real_over))
+    out(mrow("L3 (Poisson xG)", l3_over, real_over))
+    out(f"  BTTS      (base: real Yes={real_btts.mean()*100:.0f}%):")
+    out(mrow("MERCADO", mkt_btts, real_btts))
+    out(mrow("L3 (Poisson xG)", l3_btts, real_btts))
+
+    # ---- (2) calibration / reliability ----
+    out("")
+    out("--- (2) CALIBRACIÓN / reliability (predicho vs frecuencia real por banda) ---")
+    for lab in ("MERCADO", "L3"):
+        if lab in metrics:
+            for ln in _reliability(metrics[lab]["P"], Y, lab):
+                out(ln)
+
+    # ---- (3) goal error: L3 xG MAE vs tournament-mean baseline ----
+    out("")
+    out("--- (3) ERROR DE GOLES — L3 xG vs goles reales (MAE; baseline = media torneo) ---")
+    if xg_ok.sum():
+        nh = int(xg_ok.sum())
+        bh, ba, bt = gh[xg_ok].mean(), ga[xg_ok].mean(), total[xg_ok].mean()
+        out(f"  n={nh}{_small(nh)}  baseline = media torneo (home {bh:.2f}, away {ba:.2f}, total {bt:.2f})")
+        out(f"    {'':6} {'L3 MAE':>8} {'base MAE':>9} {'mejora':>8}")
+        for nm, l3v, base in [("home", lxh[xg_ok], bh), ("away", lxa[xg_ok], ba),
+                              ("total", (lxh + lxa)[xg_ok], bt)]:
+            real = {"home": gh, "away": ga, "total": total}[nm][xg_ok]
+            l3mae = float(np.mean(np.abs(l3v - real)))
+            bmae = float(np.mean(np.abs(base - real)))
+            imp = (bmae - l3mae) / bmae * 100 if bmae > 0 else 0.0
+            out(f"    {nm:6} {l3mae:>8.2f} {bmae:>9.2f} {imp:>+7.0f}%")
+    else:
+        out("  sin xG de L3 en los resueltos.")
+
+    # ---- (4) L3 vs MERCADO head-to-head: who gave more prob to the actual result ----
+    out("")
+    out("--- (4) L3 vs MERCADO cara a cara (prob asignada al resultado real) ---")
+    if "L3" in metrics and "MERCADO" in metrics:
+        cm = metrics["MERCADO"]["mask"] & metrics["L3"]["mask"]
+        idx = np.arange(n)
+        pmk = metrics["MERCADO"]["P"][idx, y]
+        pl3 = metrics["L3"]["P"][idx, y]
+
+        def tally(sel):
+            d = (pl3 - pmk)[sel]
+            l3w = int(np.sum(d > 0.01))
+            mkw = int(np.sum(d < -0.01))
+            return l3w, mkw, int(len(d) - l3w - mkw), int(len(d))
+
+        l3w, mkw, tie, tot = tally(cm)
+        out(f"  global n={tot}{_small(tot)}: L3 gana {l3w} · MERCADO gana {mkw} · empate {tie}")
+        maxmkt = metrics["MERCADO"]["P"].max(1)
+        for nm, sel in [("favorito (mkt máx≥50%)", cm & (maxmkt >= 0.50)),
+                        ("igualado (mkt máx<50%)", cm & (maxmkt < 0.50))]:
+            if sel.sum():
+                a, b, t, tt = tally(sel)
+                out(f"    {nm:24} n={tt:>3}: L3 {a} · MKT {b} · empate {t}")
+        conf_pairs = [(CONF_BY_TEAM.get(str(h)), CONF_BY_TEAM.get(str(a)))
+                      for h, a in zip(settled["home"], settled["away"])]
+        cross = np.array([hc is not None and ac is not None and hc != ac for hc, ac in conf_pairs])
+        intra = np.array([hc is not None and ac is not None and hc == ac for hc, ac in conf_pairs])
+        for nm, sel in [("cruce de confederación", cm & cross), ("misma confederación", cm & intra)]:
+            if sel.sum():
+                a, b, t, tt = tally(sel)
+                out(f"    {nm:24} n={tt:>3}: L3 {a} · MKT {b} · empate {t}")
+    else:
+        out("  faltan predicciones L3 y/o mercado resueltas.")
 
     # ---- recalibration PROPOSAL (not applied) ----
     out("")
