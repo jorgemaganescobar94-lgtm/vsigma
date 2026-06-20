@@ -1,8 +1,8 @@
 # vSIGMA Consolidated Daily Operator Panel - 2026-06-20
 
 ## First Read
-- panel_status: LIVE
-- operator_detail: action=LIVE; final=WAIT_LIVE_WINDOW; risk=MEDIUM; health=ATTENTION; board_rows=10
+- panel_status: NONE
+- operator_detail: action=NONE; final=NO_OPERATOR_ACTION; risk=NONE; health=ATTENTION; board_rows=10
 - executable_prematch: NONE
 - live_only: ROWS=1
 - watchlist: NONE
@@ -12,19 +12,19 @@
 - production_change: NO
 
 ## Operator Gate
-- action_level: LIVE
-- compact_final_decision: WAIT_LIVE_WINDOW
-- risk_label: MEDIUM
+- action_level: NONE
+- compact_final_decision: NO_OPERATOR_ACTION
+- risk_label: NONE
 - health_status: ATTENTION
 - board_rows: 10
-- panel_status: LIVE
+- panel_status: NONE
 - next_action: Follow operator brief and panel categories; no automatic execution.
 
 ## Executable Prematch
 - none
 
 ## Live Only
-- #1 | LIVE_ONLY | Almeria vs Malaga | market=OVER_1_5_SUPPORTED | alt=OVER_2_5_REVIEW | stake=NO_STAKE_OR_SYMBOLIC | permission=NO_PREMATCH | conf=MEDIUM | score=28 | window=TOO_EARLY | live=TOO_EARLY | match=NS | min=0
+- #1 | LIVE_ONLY | Almeria vs Malaga | market=OVER_1_5_SUPPORTED | alt=OVER_2_5_REVIEW | stake=NO_STAKE_OR_SYMBOLIC | permission=NO_PREMATCH | conf=MEDIUM | score=28 | window=TOO_LATE | live=TOO_LATE | match=HT | min=45.0
 
 ## Watchlist
 - none
