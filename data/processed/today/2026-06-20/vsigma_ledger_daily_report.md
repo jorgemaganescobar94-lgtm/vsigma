@@ -35,15 +35,15 @@
 ## Official Picks
 | experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1 | 1551272 | Almeria | Malaga | OVER_2_5 | 0.910725 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.391; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1 | 1551272 | Almeria | Malaga | OVER_2_5 | 0.910725 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.391; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 
 ## Shadow Picks
 | experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1551272 | Almeria | Malaga | OVER_2_5 | 0.893925 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.374; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1551272 | Almeria | Malaga | OVER_2_5 | 0.893925 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.374; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 | CANDIDATE_V4_O25_FIREWALL | 1 | 1551272 | Almeria | Malaga | OVER_1_5 | 0.89256 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.374; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1551272 | Almeria | Malaga | OVER_2_5 | 0.893925 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.374; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1551272 | Almeria | Malaga | OVER_2_5 | 0.893925 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.374; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1551272 | Almeria | Malaga | OVER_2_5 | 0.893925 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.374; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1551272 | Almeria | Malaga | OVER_2_5 | 0.893925 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.374; market_fit=SAFE_OK; LOW_CONVERSION | PRELOCK_UPDATED |
 
 ## No-Bet Modes
 | experiment_id | record_status | reason_tags | source_file |
@@ -62,11 +62,16 @@
 ## Result State
 | experiment_id | fixture_id | market_primary | result_status | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1551272 | OVER_2_5 | PENDING | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1551272 | OVER_2_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1551272 | OVER_2_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1551272 | OVER_2_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
 | CANDIDATE_V4_O25_FIREWALL | 1551272 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1551272 | OVER_2_5 | PENDING | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1551272 | OVER_2_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1551272 | OVER_2_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1551272 | OVER_2_5 | PENDING | PENDING |  | PRELOCK_UPDATED |
 
 ## Freshness Warnings
-_No rows._
+| file_name | status | detail |
+| --- | --- | --- |
+| vsigma_today_candidate_v6_competition_shortlist.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v6_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_prelock_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| today_post_results_report.csv | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet |
