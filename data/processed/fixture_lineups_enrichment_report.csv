@@ -1,2 +1,2 @@
 rows_processed,full_rows,partial_rows,none_rows,active_rows,advisory_only_rows,inactive_rows,timing_eligible_rows,timing_ineligible_rows,lineup_available_rows,lineup_unavailable_rows,api_calls_made,cache_hits,api_errors,plan_limit_errors,avg_known_starters_count,generated_at_utc
-1,0,0,1,0,0,1,0,1,0,1,1,0,0,0,,2026-06-20T20:47:48.617724+00:00
+1,0,0,1,0,0,1,0,1,0,1,1,0,0,0,,2026-06-20T21:14:07.051229+00:00

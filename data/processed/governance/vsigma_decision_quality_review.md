@@ -1,7 +1,7 @@
 # vSIGMA Decision Quality Review - 2026-06-20
 
 ## Executive Summary
-- generated_at: 2026-06-20T21:47:54+01:00
+- generated_at: 2026-06-20T22:14:13+01:00
 - daily_classification: EXPIRED_PRELOCK
 - no_bet_classification: NO_BET_VALID
 - operational_verdict: NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA
