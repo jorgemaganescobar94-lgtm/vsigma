@@ -24,7 +24,7 @@
 - none
 
 ## Live Only
-- #1 | LIVE_ONLY | Almeria vs Malaga | market=OVER_1_5_SUPPORTED | alt=OVER_2_5_REVIEW | stake=NO_STAKE_OR_SYMBOLIC | permission=NO_PREMATCH | conf=MEDIUM | score=28 | window=TOO_LATE | live=TOO_LATE | match=HT | min=45.0
+- #1 | LIVE_ONLY | Almeria vs Malaga | market=OVER_1_5_SUPPORTED | alt=OVER_2_5_REVIEW | stake=NO_STAKE_OR_SYMBOLIC | permission=NO_PREMATCH | conf=MEDIUM | score=28 | window=MATCH_FINISHED | live=MATCH_FINISHED | match=FT | min=90.0
 
 ## Watchlist
 - none

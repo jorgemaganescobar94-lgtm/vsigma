@@ -22,10 +22,10 @@
 ## Historical Drift Check
 | Field | Value | Meaning |
 |---|---|---|
-| Previous | date=2026-06-20; action=LIVE; risk=MEDIUM; final=WAIT_LIVE_WINDOW; active=0 | data/processed/today/2026-06-20/vsigma_operator_brief.csv |
+| Previous | date=2026-06-20; action=UNKNOWN; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | data/processed/today/2026-06-20/vsigma_operator_brief.csv |
 | Current | date=2026-06-20; action=NONE; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | current_build |
-| Drift | MATERIAL_CHANGE | action_level: LIVE -> NONE; final_decision: WAIT_LIVE_WINDOW -> NO_OPERATOR_ACTION; risk_label: MEDIUM -> NONE |
-| Changed | action_level,final_decision,risk_label | Tracked fields: action/final/risk/active |
+| Drift | MATERIAL_CHANGE | action_level: UNKNOWN -> NONE |
+| Changed | action_level | Tracked fields: action/final/risk/active |
 | Notify | true | true only on material operator drift |
 
 ## Executive Summary
@@ -37,7 +37,7 @@
 - alert_reason: non-action state changed but no operator action is required
 - drift_status: MATERIAL_CHANGE
 - drift_notify_required: true
-- drift_changed_fields: action_level,final_decision,risk_label
+- drift_changed_fields: action_level
 - sanity_check: PASS | no active/live/watch action; no_bet=9; closed=1
 - operator_status: CLOSED_OR_WINDOW_MISSED
 - primary_next_action: No active candidate; previous signals are finished or outside useful window.
@@ -49,7 +49,7 @@
 - no_bet: 9
 - board_decisions: NO_BET=9; LIVE_ONLY=1
 - recheck_decisions: CANCELLED_NO_BET=9; LIVE_ONLY_WAIT_TRIGGER=1
-- live_triggers: TOO_LATE=1
+- live_triggers: MATCH_FINISHED=1
 - alert_notify_required: true
 - auto_apply: NO
 - production_change: NO
@@ -74,7 +74,7 @@
 - none
 
 ## Closed / Window Missed
-- #1 | LIVE_ONLY_WAIT_TRIGGER | Almeria vs Malaga | market=OVER_1_5_SUPPORTED | window=TOO_LATE | live=TOO_LATE | match=HT | elapsed=45.0 | score=0-0 | reason=live window passed
+- #1 | LIVE_ONLY_WAIT_TRIGGER | Almeria vs Malaga | market=OVER_1_5_SUPPORTED | window=MATCH_FINISHED | live=MATCH_FINISHED | match=FT | elapsed=90.0 | score=1-2 | reason=match already final
 
 ## Watch Only
 - none
@@ -91,9 +91,9 @@
 - #10 | NO_BET | Santa Cruz vs Ypiranga-RS | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
 
 ## Live Trigger Status
-- window_counts: TOO_LATE=1
-- live_trigger_counts: TOO_LATE=1
-- #1 | window=TOO_LATE | decision=TOO_LATE | Almeria vs Malaga | market=OVER_1_5_SUPPORTED | status=HT | min=45.0 | mtko=505.29 | score=0-0 | shots=0 | SoT=0 | corners=0 | signal=0 | reason=live window passed
+- window_counts: MATCH_FINISHED=1
+- live_trigger_counts: MATCH_FINISHED=1
+- #1 | window=MATCH_FINISHED | decision=MATCH_FINISHED | Almeria vs Malaga | market=OVER_1_5_SUPPORTED | status=FT | min=90.0 | mtko=505.29 | score=1-2 | shots=0 | SoT=0 | corners=0 | signal=0 | reason=match already final
 
 ## Learning / Calibration
 - no calibration signal
@@ -111,3 +111,23 @@
 - Use PowerShell -Encoding UTF8 when reading local Markdown files on Windows.
 - Historical drift notifies only on material operator changes: action level, final decision, risk, or active candidates.
 - Alert routing is diagnostic only; this script writes the route but does not send comments or external notifications.
+
+## Calibration / Shadow Governance
+- calibration_shadow_status: UNAVAILABLE
+- shadow_active_candidates: 0
+- shadow_high_priority: 0
+- shadow_metrics: none
+- shadow_decisions: none
+- promotion_readiness: UNAVAILABLE
+- promotion_candidates: 0
+- promotion_decisions: none
+- learning_sanity_status: WARN
+- learning_sanity_counts: EMPTY_NO_FALLBACK=7
+- learning_sanity_severity: WARN=7
+- calibration_auto_apply: NO
+- production_change: NO
+
+### Calibration Sources
+- shadow_queue: data/processed/today/2026-06-20/vsigma_calibration_shadow_patch_queue.csv
+- promotion_readiness: data/processed/today/2026-06-20/vsigma_shadow_patch_promotion_readiness.csv
+- learning_sanity: data/processed/today/2026-06-20/vsigma_learning_chain_output_sanity.csv
