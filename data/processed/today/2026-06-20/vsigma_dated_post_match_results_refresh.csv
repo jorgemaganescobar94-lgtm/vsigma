@@ -1,2 +1,2 @@
 target_date,generated_at,fixture_id,home_team,away_team,status,goals,stats_status,updated_fields,source_guard
-2026-06-20,2026-06-20T00:36:03+01:00,1551272,Almeria,Malaga,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
+2026-06-20,2026-06-20T10:48:27+01:00,1551272,Almeria,Malaga,NS,None-None,NOT_FINAL,fixture_status_short;fixture_status_long;results_last_refresh_at,DATED_INPUT_ONLY
