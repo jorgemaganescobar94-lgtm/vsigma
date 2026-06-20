@@ -1,4 +1,55 @@
-📊 Track record Mundial: aún sin partidos resueltos (2026-06-19).
+📊 Track record (3 resueltos · 2026-06-20)
+Acierto 1X2: L3 67% · v2 67%
+Brier-skill vs base-rate: L3 +31% · v2 -10%
 
 ===== detalle =====
-0 partidos liquidados todavía; el scorecard se llenará tras los primeros resultados.
+resueltos=3 | 1X2 a 90' (score.fulltime) | métricas vs RESULTADOS REALES, sin mercado
+predictor    n  logloss   brier   acc%    ECE Skill_base%
+---------------------------------------------------------
+base-rate    3   0.6365  0.4444   66.7  0.000         0.0
+L3           3   0.5879  0.3085   66.7  0.309       +30.6
+v2           3   0.8507  0.4886   66.7  0.452        -9.9
+  (1X2 multiclase H/D/A; baseline ingenuo = base-rate.  (muestra pequeña, orientativo))
+
+--- (1) APUESTAS DERIVADAS — L3 (Poisson xG) vs base-rate (Over2.5, BTTS) ---
+  Over 2.5  (real Over=33%):
+    L3 (Poisson xG)    n=  3  acc   67%  Brier 0.250  logloss 0.693
+    base-rate          n=  3  acc   67%  Brier 0.222  logloss 0.637
+  BTTS      (real Yes=0%):
+    L3 (Poisson xG)    n=  3  acc   67%  Brier 0.182  logloss 0.545
+    base-rate          n=  3  acc  100%  Brier 0.000  logloss 0.000
+
+--- (2) CALIBRACIÓN / reliability (predicho vs frecuencia real por banda) ---
+  L3 (1X2 aplanado H/D/A, n_pred=9)  (muestra pequeña, orientativo):
+       banda    n  predicho   real
+      0-20 %    3       11%     0%
+     20-40 %    4       30%    25%
+     60-80 %    1       63%   100%
+     80-100%    1       81%   100%
+  v2 (1X2 aplanado H/D/A, n_pred=9)  (muestra pequeña, orientativo):
+       banda    n  predicho   real
+      0-20 %    1       12%     0%
+     20-40 %    5       24%    20%
+     40-60 %    2       49%    50%
+     60-80 %    1       67%   100%
+
+--- (3) ERROR DE GOLES — L3 xG vs goles reales (MAE; baseline = media torneo) ---
+  n=3  (muestra pequeña, orientativo)  baseline = media torneo (home 1.00, away 0.67, total 1.67)
+             L3 MAE  base MAE   mejora
+    home       0.93      1.33     +30%
+    away       0.50      0.44     -12%
+    total      1.22      0.89     -38%
+
+--- (4) L3 vs base-rate cara a cara (prob asignada al resultado real) ---
+  global n=3  (muestra pequeña, orientativo): L3 mejor 1 · base-rate mejor 2 · empate 0
+    L3 marca favorito (máx≥50%)  n=  2: L3 1 · base 1 · empate 0
+    L3 lo ve igualado (máx<50%)  n=  1: L3 0 · base 1 · empate 0
+    cruce de confederación       n=  3: L3 1 · base 2 · empate 0
+
+--- (5) STATS córners/tarjetas/tiros — modelo de datos vs reales + base-rate ---
+  aún sin stats reales liquidadas (settle trae córners/tarjetas/tiros al terminar el partido).
+
+PROPUESTA de recalibración (calibración, informativa, NO aplicada):
+  Muestra insuficiente (>=5) o sin L3 resuelto.
+
+generated_at_utc: 2026-06-20T07:54:39+00:00
