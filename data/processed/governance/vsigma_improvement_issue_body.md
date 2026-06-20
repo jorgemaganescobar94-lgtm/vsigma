@@ -1,13 +1,14 @@
-# vSIGMA Autonomous Improvement Advisor - 2026-06-19
+# vSIGMA Autonomous Improvement Advisor - 2026-06-20
 
 ## Summary
-- top_priority: HIGH
-- rows: 7
+- top_priority: CRITICAL
+- rows: 8
 - issue_required: YES
 - auto_apply: NO
 - production_change: NO
 
 ## Recommendations
+- CRITICAL | health | BROKEN | evidence=health monitor reports BROKEN | recommendation=Fix broken component before using outputs. | safe_auto_pr=NO | auto_merge=NO
 - HIGH | calibration/total_corners | PATCH_CANDIDATE_REVIEW | evidence=days=4; total_rows=23; avg_hit=0.531; dominant_bias=OVER_ESTIMATE; statuses=MODEL_OVER_ESTIMATING;MODEL_OVER_ESTIMATING;MODEL_OVER_ESTIMATING;MODEL_UNDER_ESTIMATING | recommendation=Open manual review for metric-specific formula adjustment. No auto-apply. | safe_auto_pr=NO | auto_merge=NO
 - HIGH | calibration/total_goals | PATCH_CANDIDATE_REVIEW | evidence=days=5; total_rows=27; avg_hit=0.430; dominant_bias=OVER_ESTIMATE; statuses=MODEL_OVER_ESTIMATING;MODEL_OVER_ESTIMATING;MODEL_OVER_ESTIMATING;MODEL_OVER_ESTIMATING;LOW_SAMPLE_HOLD | recommendation=Open manual review for metric-specific formula adjustment. No auto-apply. | safe_auto_pr=NO | auto_merge=NO
 - LOW | issue_alert | MATERIAL_ALERT_CHANGE | evidence=notify_required=true | recommendation=Review vsigma-alert issue. | safe_auto_pr=NO | auto_merge=NO
