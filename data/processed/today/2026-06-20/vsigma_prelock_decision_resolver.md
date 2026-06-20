@@ -12,7 +12,7 @@
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Almeria vs Malaga | OVER_2_5 | 2026-06-20T20:00+01:00 | -21.06 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
+| Almeria vs Malaga | OVER_2_5 | 2026-06-20T20:00+01:00 | -107.89 | NO_BET | NO | KICKOFF_ALREADY_PASSED |  |
 
 ## Data Gaps
 - odds missing: 0
