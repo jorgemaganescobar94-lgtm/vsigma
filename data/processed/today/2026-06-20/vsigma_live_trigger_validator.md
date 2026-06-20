@@ -8,7 +8,7 @@
 - production_change: NO
 
 ## Rows
-- #1 | window=TOO_LATE | decision=TOO_LATE | Almeria vs Malaga | market=OVER_1_5_SUPPORTED | status=HT | min=45.0 | mtko=505.29 | score=0-0 | shots=0 | SoT=0 | corners=0 | signal=0 | reason=live window passed
+- #1 | window=TOO_LATE | decision=TOO_LATE | Almeria vs Malaga | market=OVER_1_5_SUPPORTED | status=2H | min=90.0 | mtko=505.29 | score=1-2 | shots=0 | SoT=0 | corners=0 | signal=0 | reason=live window passed
 
 ## Guardrails
 - Diagnostic only; no execution.
