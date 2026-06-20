@@ -3,7 +3,7 @@
 ## Summary
 - system_status: ATTENTION
 - components_checked: 11
-- severity_counts: WARN=2; OK=5; INFO=4
+- severity_counts: WARN=2; INFO=5; OK=4
 - status_counts: OK=7; CONFIG_EXPECTED=4
 - auto_apply: NO
 - production_change: NO
@@ -11,7 +11,7 @@
 ## Component Rows
 - daily_execution_board | status=OK | severity=WARN | action=REVIEW_BOARD | detail=rows=10; decisions=NO_BET=9; LIVE_ONLY=1
 - prelock_live_recheck | status=OK | severity=WARN | action=REVIEW_PRELOCK_LIVE | detail=decisions=CANCELLED_NO_BET=9; LIVE_ONLY_WAIT_TRIGGER=1
-- live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
+- live_trigger_validator | status=OK | severity=INFO | action=WAIT_FOR_LIVE_WINDOW | detail=windows=TOO_EARLY=1; triggers=TOO_EARLY=1
 - postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=NS=1
 - postmatch_stat_actuals | status=OK | severity=OK | action=NO | detail=rows_final=0
 - forecast_calibration | status=OK | severity=OK | action=NO | detail=detail_rows=0; statuses=none
