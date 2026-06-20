@@ -7,14 +7,14 @@ HL=540d ridge=8.0 refit=45d OOS_cutoff=2024-08-01
 WALK-FORWARD OOS — predictability vs base-rate (honest: stats are noisy)
 --------------------------------------------------------------------------------------------
   stat      n_oos   mean  baseMAE  modelMAE  dev_base  dev_model   lift%        verdict
-  corners    1298   4.41     2.43      2.18    2867.2     2456.8  +14.3%       moderada
-  cards      1248   1.89     1.09      1.10    1402.7     1371.6   +2.2%      muy débil
-  shots      1290  11.55     5.12      4.21    4687.4     3359.3  +28.3%       moderada
+  corners    1298   4.41     2.43      2.10    2867.2     2296.4  +19.9%       moderada
+  cards      1248   1.89     1.09      1.10    1402.7     1354.0   +3.5%      muy débil
+  shots      1290  11.55     5.12      3.92    4687.4     2903.8  +38.1%       moderada
 --------------------------------------------------------------------------------------------
 lift% = reduction in OOS Poisson deviance vs a constant base-rate. Higher = more
 predictable. Cards are essentially noise; corners/shots carry a little signal.
 O/U lines (from data medians): {'corners': 7.5, 'cards': 2.5, 'shots': 21.5}
 
-  most corners generated (att): Belgium +0.39, Türkiye +0.37, Spain +0.36, England +0.36, France +0.36
-  most cards generated (att): Montenegro +0.23, Bosnia & Herzegovina +0.16, Benin +0.16, Canada +0.15, Rep. Of Ireland +0.15
-  most shots generated (att): Spain +0.42, France +0.40, Germany +0.38, Portugal +0.32, Türkiye +0.30
+  most corners generated (att): Denmark +0.39, Spain +0.37, France +0.36, Portugal +0.35, Germany +0.34
+  most cards generated (att): Montenegro +0.22, Bosnia & Herzegovina +0.19, Canada +0.16, Benin +0.15, Algeria +0.15
+  most shots generated (att): Spain +0.43, France +0.41, Germany +0.37, Portugal +0.32, Brazil +0.29

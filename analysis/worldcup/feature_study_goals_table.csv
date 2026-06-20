@@ -1,0 +1,7 @@
+feature,n_oos,logloss,brier,goals_rmse,d_logloss_pct,d_brier_pct,verdict
+baseline (sup_pre_l3),2525,0.9227,0.5469,1.298,0.0,0.0,BASELINE
++rest_diff,2525,0.9228,0.5469,1.298,-0.0,-0.0,discard
++hfa,2525,0.9228,0.5467,1.298,-0.0,0.03,discard
++sup2,2525,0.9223,0.5465,1.297,0.05,0.07,discard
++xg_sup,0,,,,,,insufficient_sample
++rest+sup2,2525,0.9224,0.5465,1.297,0.04,0.07,discard

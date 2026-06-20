@@ -1,0 +1,6 @@
+xG extraction | source fixtures=1264 | already saved=0 | start quota=906/7500
+caps: max_fixtures=1400 | quota_stop=7200
+
+STOP: completed fixture list
+fresh attempts=1264 | fixtures with >=1 xg=177 | API spend(delta)=0 | quota now=906
+TOTAL rows=2528 | xg non-null=354 (14%) | fixtures with xg=177/1264 (14%)

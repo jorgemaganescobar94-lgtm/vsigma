@@ -1,0 +1,22 @@
+================================================================================================
+FEATURE STUDY B - corners / shots  (baseline = opponent-adjusted att/conc + home)
+================================================================================================
+rows=2528 fixtures=1264 | refit=45d HL=540d ridge=8.0 | OOS>=2024-08-01
+
+--- CORNERS ---
+  feature           n_oos  baseRMSE/RMSE  dRMSE%    verdict
+  baseline           1298         2.8469   +0.0%   BASELINE
+  +poss_form         1206         2.8388   +0.3%    discard
+  +sot_form          1206         2.8379   +0.3%    discard
+  +rest              1298         2.8473   -0.0%    discard
+  +opp_str           1298         2.7289   +4.1%       KEEP
+
+--- SHOTS ---
+  feature           n_oos  baseRMSE/RMSE  dRMSE%    verdict
+  baseline           1290         5.5449   +0.0%   BASELINE
+  +poss_form         1198         5.5037   +0.7%       KEEP
+  +sot_form          1198         5.4791   +1.2%       KEEP
+  +rest              1290         5.5554   -0.2%    discard
+  +opp_str           1290         5.0717   +8.5%       KEEP
+
+dRMSE% = OOS RMSE improvement vs baseline (higher=better). KEEP needs dRMSE>=0.5%.
