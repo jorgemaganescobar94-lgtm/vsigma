@@ -54,10 +54,16 @@ LOG_COLUMNS = [
     "fixture_id", "kickoff_utc", "home", "away", "round",
     "l3_home", "l3_draw", "l3_away", "l3_xg_home", "l3_xg_away", "l3_top_score",
     "v2_home", "v2_draw", "v2_away",
+    "st_corners_total", "st_corners_over", "st_corners_line", "st_cards_total", "st_shots_total",
     "logged_at_utc",
     "result_ft_gh", "result_ft_ga", "result_final_gh", "result_final_ga",
+    "result_corners", "result_cards", "result_shots",
     "result_1x2", "result_status", "settled", "settled_at_utc",
 ]
+
+# /fixtures/statistics type -> stat key (for settling real corners/cards/shots)
+STAT_TYPE_MAP = {"Corner Kicks": "corners", "Yellow Cards": "yellow", "Red Cards": "red",
+                 "Total Shots": "shots"}
 SMALL_N = 30  # below this, metrics are flagged "muestra pequeña, orientativo"
 
 # National-team confederation (public fact, not invented data) for the WC-2026 48 teams.
@@ -154,6 +160,9 @@ def cmd_log():
             "v2_home": (v2["v2_home"] if v2 is not None else np.nan),
             "v2_draw": (v2["v2_draw"] if v2 is not None else np.nan),
             "v2_away": (v2["v2_away"] if v2 is not None else np.nan),
+            "st_corners_total": r.get("st_corners_total"), "st_corners_over": r.get("st_corners_over"),
+            "st_corners_line": r.get("st_corners_line"), "st_cards_total": r.get("st_cards_total"),
+            "st_shots_total": r.get("st_shots_total"),
             "logged_at_utc": now_iso(),
             "result_ft_gh": np.nan, "result_ft_ga": np.nan,
             "result_final_gh": np.nan, "result_final_ga": np.nan,
@@ -189,6 +198,33 @@ def cmd_settle():
         except Exception:
             return None
 
+    def stat_totals(fid):
+        """Real corners/cards/shots TOTALS (home+away) via /fixtures/statistics. None if n/a."""
+        try:
+            resp = c.fixture_statistics(fid).get("response", []) or []
+        except Exception:
+            return None
+        tot = {"corners": 0.0, "cards": 0.0, "shots": 0.0}
+        seen = False
+        for t in resp:
+            d = {}
+            for s in t.get("statistics", []) or []:
+                col = STAT_TYPE_MAP.get(s.get("type"))
+                if col:
+                    v = s.get("value")
+                    if isinstance(v, str):
+                        v = v.strip().rstrip("%") or None
+                    try:
+                        d[col] = float(v) if v is not None else None
+                    except Exception:
+                        d[col] = None
+            if d:
+                seen = True
+                tot["corners"] += d.get("corners") or 0
+                tot["cards"] += (d.get("yellow") or 0) + (d.get("red") or 0)
+                tot["shots"] += d.get("shots") or 0
+        return tot if seen else None
+
     q0 = quota()
     try:
         # SAME cached call the card builder makes (6h TTL) -> ~0 marginal cost.
@@ -221,7 +257,7 @@ def cmd_settle():
     for col in ("result_1x2", "result_status", "settled_at_utc"):
         log[col] = log[col].astype(object)
 
-    newly = 0
+    newly = stats_got = 0
     for idx, r in log.iterrows():
         fid = int(r["fixture_id"])
         if int(r.get("settled") or 0) == 1:
@@ -229,6 +265,13 @@ def cmd_settle():
         if fid in results:
             for k, v in results[fid].items():
                 log.at[idx, k] = v
+            # settle REAL corners/cards/shots totals (1 bounded /fixtures/statistics call)
+            stt = stat_totals(fid)
+            if stt:
+                log.at[idx, "result_corners"] = stt["corners"]
+                log.at[idx, "result_cards"] = stt["cards"]
+                log.at[idx, "result_shots"] = stt["shots"]
+                stats_got += 1
             log.at[idx, "settled"] = 1
             log.at[idx, "settled_at_utc"] = now_iso()
             newly += 1
@@ -237,8 +280,8 @@ def cmd_settle():
     q1 = quota()
     spend = (q1 - q0) if (q0 is not None and q1 is not None) else "n/a"
     nset = int((log["settled"].fillna(0).astype(int) == 1).sum())
-    print(f"learning_loop settle: +{newly} newly settled, {nset} total settled. "
-          f"API spend this step: {spend} (fixtures cached). quota now: {q1}")
+    print(f"learning_loop settle: +{newly} newly settled ({stats_got} w/ real stats), {nset} total. "
+          f"API spend this step: {spend} (fixtures cached + {newly} stat calls). quota now: {q1}")
 
 
 # ----------------------------------------------------------------- scorecard
@@ -480,6 +523,41 @@ def cmd_scorecard():
                 out(f"    {nm:28} n={tt:>3}: L3 {a} · base {b} · empate {t}")
     else:
         out("  faltan predicciones L3 resueltas.")
+
+    # ---- (5) STATS: corners/cards/shots data-model totals vs REAL totals + base-rate ----
+    out("")
+    out("--- (5) STATS córners/tarjetas/tiros — modelo de datos vs reales + base-rate ---")
+    any_stat = False
+    for nm, pcol, rcol in [("córners", "st_corners_total", "result_corners"),
+                           ("tarjetas", "st_cards_total", "result_cards"),
+                           ("tiros", "st_shots_total", "result_shots")]:
+        if pcol not in settled.columns or rcol not in settled.columns:
+            continue
+        p = settled[pcol].to_numpy(float)
+        rr = settled[rcol].to_numpy(float)
+        m = ~(np.isnan(p) | np.isnan(rr))
+        if m.sum() == 0:
+            continue
+        any_stat = True
+        pm, rm = p[m], rr[m]
+        base = float(rm.mean())
+        mae_model = float(np.mean(np.abs(pm - rm)))
+        mae_base = float(np.mean(np.abs(base - rm)))
+        lift = (mae_base - mae_model) / mae_base * 100 if mae_base > 0 else 0.0
+        out(f"  {nm:9} n={int(m.sum()):>3}{_small(int(m.sum()))} real μ={base:.1f} | "
+            f"MAE modelo {mae_model:.2f} vs base {mae_base:.2f} ({lift:+.0f}%)")
+    if {"st_corners_over", "result_corners", "st_corners_line"} <= set(settled.columns):
+        sub = settled.dropna(subset=["st_corners_over", "result_corners", "st_corners_line"])
+        if len(sub):
+            po = sub["st_corners_over"].to_numpy(float)
+            line = sub["st_corners_line"].to_numpy(float)
+            ro = (sub["result_corners"].to_numpy(float) > line).astype(int)
+            acc, brier, _ = _binary_metrics(po, ro)
+            out(f"  córners O/U (línea~{np.median(line):g}) n={len(sub)}: "
+                f"acc {acc*100:.0f}% · Brier {brier:.3f} · real Over={ro.mean()*100:.0f}%")
+            any_stat = True
+    if not any_stat:
+        out("  aún sin stats reales liquidadas (settle trae córners/tarjetas/tiros al terminar el partido).")
 
     # ---- recalibration PROPOSAL: shrink L3 toward base-rate (calibration check, not applied) ----
     out("")

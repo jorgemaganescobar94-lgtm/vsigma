@@ -9,10 +9,11 @@ is a standalone shadow product. No .env edits, no git, BOUNDED API.
 Per upcoming fixture builds a card combining, each with its SOURCE marked:
   * [OUR MODEL] Layer-3 rating -> 1X2, xG, goals (via worldcup_our_model_predictions.csv
     or the offline l3_offline predictor for new knockout fixtures). NO odds, NO market.
+  * [OUR MODEL] stats -> corners/cards/shots from the opponent-adjusted DATA model
+    (stats_model.py, real stats only, LOW confidence per OOS validation). NO odds.
   * [STANDINGS] group context from /standings (rank, points, played, form) — context.
   * [LINEUPS/INJURIES] near kickoff (~4h) from /fixtures/lineups + /injuries — context.
 
-Corners/cards are NOT shown (pending a validated national-team stats model).
 API budget: 1 /fixtures (cached) + 1 /standings + (near KO only) lineups/injuries.
 NO /odds call. NO /predictions call.
 """
@@ -127,12 +128,18 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
     # fixture missing from the precomputed CSV — e.g. NEW knockout fixtures as teams
     # advance. Same method as the shipped L3, just sourced live from the ratings.
     l3pred = None
+    statpred = None
     try:
         sys.path.insert(0, str(OUT_DIR))
         import l3_offline  # noqa: E402
         l3pred = l3_offline.load_predictor()
     except Exception as e:  # noqa: BLE001
         print(f"l3_offline predictor unavailable: {type(e).__name__}: {e}")
+    try:
+        import stats_model  # noqa: E402  (corners/cards/shots DATA model, no market)
+        statpred = stats_model.load_predictor()
+    except Exception as e:  # noqa: BLE001
+        print(f"stats_model predictor unavailable: {type(e).__name__}: {e}")
 
     # standings -> team context
     ctx = {}
@@ -200,6 +207,22 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
                 f"   | strength {float(om['our_elo_home']):+.2f} vs {float(om['our_elo_away']):+.2f}")
         else:
             out("    [OUR MODEL] no L3 rating for one of the teams")
+        # ---- OUR MODEL stats: corners/cards/shots (opponent-adjusted DATA model, no odds) ----
+        sp = statpred.predict(home, away) if statpred is not None else None
+        if sp:
+            # only stats that beat the base-rate OOS are shown; noisy ones (e.g. cards)
+            # stay out of the ficha but are still logged for the scorecard.
+            show = getattr(statpred, "show", {"corners": True, "cards": True, "shots": True})
+            segs = []
+            if show.get("corners"):
+                segs.append(f"córners {sp['corners_home']:.1f}-{sp['corners_away']:.1f} "
+                            f"(tot {sp['corners_total']:.1f}, O{sp['corners_line']:g} {sp['corners_over']*100:.0f}%)")
+            if show.get("cards"):
+                segs.append(f"tarjetas {sp['cards_home']:.1f}-{sp['cards_away']:.1f} (tot {sp['cards_total']:.1f})")
+            if show.get("shots"):
+                segs.append(f"tiros {sp['shots_home']:.0f}-{sp['shots_away']:.0f} (tot {sp['shots_total']:.0f})")
+            if segs:
+                out("    [OUR MODEL] stats (datos, BAJA CONF): " + " · ".join(segs))
         out(f"    [STANDINGS] {home}: grp {ch.get('group','?')} #{ch.get('rank','?')} "
             f"{ch.get('pts','?')}pts {ch.get('pld','?')}pld form {ch.get('form','-')}  ||  "
             f"{away}: grp {ca.get('group','?')} #{ca.get('rank','?')} "
@@ -229,6 +252,10 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
                         "our_away": round(float(om["our_away"]), 4),
                         "our_xg_home": float(om["our_xg_home"]), "our_xg_away": float(om["our_xg_away"]),
                         "our_elo_home": int(om["our_elo_home"]), "our_elo_away": int(om["our_elo_away"])})
+        if sp:
+            rec.update({"st_corners_total": sp["corners_total"], "st_corners_over": sp["corners_over"],
+                        "st_corners_line": sp["corners_line"], "st_cards_total": sp["cards_total"],
+                        "st_shots_total": sp["shots_total"]})
         rec.update({"home_group": ch.get("group"), "home_form": ch.get("form"),
                     "away_group": ca.get("group"), "away_form": ca.get("form")})
         cards.append(rec)

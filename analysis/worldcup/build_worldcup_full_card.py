@@ -20,6 +20,13 @@ try:
 except Exception:
     pass
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+try:
+    import stats_model  # noqa: E402  (corners/cards/shots gating from OOS validation)
+    SHOW_STATS = stats_model.shown_stats()
+except Exception:
+    SHOW_STATS = {"corners", "cards", "shots"}
+
 OUT_DIR = Path(__file__).resolve().parent
 CARDS = OUT_DIR / "worldcup_cards.csv"
 LOG = OUT_DIR / "worldcup_predictions_log.csv"
@@ -140,7 +147,10 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
         sc_block = read_scorecard_block(scorecard)          # priority 1 (track record)
         yest_block = build_yesterday_block(log_path or LOG, datetime.now(timezone.utc)) \
             if show_yesterday else []                        # priority 2 (yesterday, morning only)
-        FOOTER = "L3 = modelo propio (datos reales, sin cuotas). Córners/tarjetas: pendientes (modelo de datos)."
+        _abbr = {"corners": "córn", "cards": "tarj", "shots": "tir"}
+        _shown = "/".join(_abbr[s] for s in ("corners", "cards", "shots") if s in SHOW_STATS) or "stats"
+        FOOTER = (f"L3 + {_shown} = modelo de datos propio (sin cuotas). "
+                  "Stats: BAJA CONF (señal débil OOS).")
         per_match = 3 if show_lineups else 2
         # Budget priority: track record > yesterday results > today's matches (trim today first).
         avail = max(0, max_lines - 1 - len(sc_block) - 1)    # minus header + footer
@@ -197,6 +207,15 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
                 seg.append(f"xG {xgh:.1f}-{xga:.1f}")
             if top:
                 seg.append(top)
+            # corners/cards/shots — opponent-adjusted DATA model (low conf), no odds.
+            # only stats that beat the base-rate OOS are shown (noise-gated).
+            ct, yt, sht = r.get("st_corners_total"), r.get("st_cards_total"), r.get("st_shots_total")
+            if "corners" in SHOW_STATS and pd.notna(ct):
+                seg.append(f"córn{ct:.0f}")
+            if "cards" in SHOW_STATS and pd.notna(yt):
+                seg.append(f"tarj{yt:.1f}")
+            if "shots" in SHOW_STATS and pd.notna(sht):
+                seg.append(f"tir{sht:.0f}")
             out("   " + " · ".join(seg))
             if show_lineups:
                 LU = {"conf": "conf", "prob": "prob", "pend": "pend"}
@@ -250,10 +269,33 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
             flat.sort(key=lambda kv: -kv[1])
             tops = " · ".join(f"{i}-{j} {p*100:.0f}%" for (i, j), p in flat[:4])
             out(f"     Marcadores {tops}")
+        # corners/cards/shots — opponent-adjusted DATA model (low confidence).
+        # noise-gated: only stats that beat the base-rate OOS appear in the ficha.
+        ct, co, cl = r.get("st_corners_total"), r.get("st_corners_over"), r.get("st_corners_line")
+        yt, sht = r.get("st_cards_total"), r.get("st_shots_total")
+        st_parts = []
+        if "corners" in SHOW_STATS and pd.notna(ct):
+            seg = f"córners {ct:.1f}"
+            if pd.notna(co) and pd.notna(cl):
+                seg += f" (O{cl:g} {co*100:.0f}%)"
+            st_parts.append(seg)
+        if "cards" in SHOW_STATS and pd.notna(yt):
+            st_parts.append(f"tarjetas {yt:.1f}")
+        if "shots" in SHOW_STATS and pd.notna(sht):
+            st_parts.append(f"tiros {sht:.0f}")
+        if st_parts:
+            out("Stats " + " · ".join(st_parts) + "  (modelo datos, BAJA CONF)")
 
     out("")
-    out("L3/Poisson = modelo propio independiente, datos reales, SIN cuotas.")
-    out("Córners/tarjetas/tiros: NO se muestran (pendientes de un modelo de datos validado).")
+    shown = [n for n, k in [("córners", "corners"), ("tarjetas", "cards"), ("tiros", "shots")]
+             if k in SHOW_STATS]
+    hidden = [n for n, k in [("córners", "corners"), ("tarjetas", "cards"), ("tiros", "shots")]
+              if k not in SHOW_STATS]
+    out(f"L3/Poisson + {('/'.join(shown)) or 'stats'} = modelo de datos propio, SIN cuotas.")
+    note = "Stats: opponent-adjusted, BAJA CONFIANZA (señal OOS débil)."
+    if hidden:
+        note += f" Ocultos por ruido OOS (sin señal vs media): {', '.join(hidden)}."
+    out(note)
 
     (OUT_DIR / "worldcup_full_cards.txt").write_text("\n".join(lines), encoding="utf-8")
     print(f"\nWritten: {OUT_DIR/'worldcup_full_cards.txt'}")

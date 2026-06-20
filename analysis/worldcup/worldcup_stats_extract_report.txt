@@ -1,0 +1,11 @@
+PASO B stats extraction | candidates=1707 (since 2022-08-01, >=1 WC team) | already saved=682 fixtures | start quota=111/7500
+caps: max_fixtures=1500 fresh-attempts | quota_stop=7200 | flush=25
+
+STOP: completed candidate list
+fresh attempts this run=1025 | with-stats=582 | API spend(delta)=742 | quota now=853
+TOTAL coverage: fixtures with stats=1264 | team-rows=2528 | distinct teams=174
+WC teams covered: 48/48
+  field 'corners': 2458/2528 rows non-null (97%)
+  field 'yellow': 2312/2528 rows non-null (91%)
+  field 'shots': 2388/2528 rows non-null (94%)
+  field 'sot': 2400/2528 rows non-null (95%)
