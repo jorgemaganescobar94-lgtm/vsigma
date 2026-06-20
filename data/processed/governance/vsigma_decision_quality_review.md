@@ -1,7 +1,7 @@
 # vSIGMA Decision Quality Review - 2026-06-20
 
 ## Executive Summary
-- generated_at: 2026-06-20T12:14:45+01:00
+- generated_at: 2026-06-20T14:01:58+01:00
 - daily_classification: WAITING_FOR_PRELOCK
 - no_bet_classification: NO_BET_VALID
 - operational_verdict: WAITING_FOR_PRELOCK
