@@ -5,7 +5,7 @@
 |---|---|---|
 | Action | LIVE | First-read operator priority |
 | Risk | MEDIUM | Operational risk after sanity + health gate |
-| Alert | GITHUB_ISSUE_COMMENT / MEDIUM | Routing decision for operator notifications |
+| Alert | LOCAL_ONLY / LOW | Routing decision for operator notifications |
 | Counts | active=0; live=1; closed=0; watch=0; no_bet=9 | Candidate distribution |
 | Reason | 1 candidate(s) waiting for live validation window | Why this action level was selected |
 | Final | WAIT_LIVE_WINDOW | sanity=PASS; waiting_live_window=1; manual live validator rerun required |
@@ -13,31 +13,31 @@
 ## Alert Routing
 | Field | Value | Meaning |
 |---|---|---|
-| Route | GITHUB_ISSUE_COMMENT | NO_ALERT / LOCAL_ONLY / GITHUB_ISSUE_COMMENT / CRITICAL_STOP |
-| Materiality | MEDIUM | NONE / LOW / MEDIUM / HIGH / CRITICAL |
-| Reason | live-window state changed materially | Why this route was selected |
-| Drift | MATERIAL_CHANGE | Historical drift status |
-| DriftNotify | true | Raw material drift notification flag |
+| Route | LOCAL_ONLY | NO_ALERT / LOCAL_ONLY / GITHUB_ISSUE_COMMENT / CRITICAL_STOP |
+| Materiality | LOW | NONE / LOW / MEDIUM / HIGH / CRITICAL |
+| Reason | live-window watch exists but no material drift | Why this route was selected |
+| Drift | NO_MATERIAL_CHANGE | Historical drift status |
+| DriftNotify | false | Raw material drift notification flag |
 
 ## Historical Drift Check
 | Field | Value | Meaning |
 |---|---|---|
-| Previous | date=2026-06-20; action=WATCH; risk=LOW; final=WATCH_ONLY_NO_STAKE; active=0 | data/processed/today/2026-06-20/vsigma_operator_brief.csv |
+| Previous | date=2026-06-20; action=LIVE; risk=MEDIUM; final=WAIT_LIVE_WINDOW; active=0 | data/processed/today/2026-06-20/vsigma_operator_brief.csv |
 | Current | date=2026-06-20; action=LIVE; risk=MEDIUM; final=WAIT_LIVE_WINDOW; active=0 | current_build |
-| Drift | MATERIAL_CHANGE | action_level: WATCH -> LIVE; final_decision: WATCH_ONLY_NO_STAKE -> WAIT_LIVE_WINDOW; risk_label: LOW -> MEDIUM |
-| Changed | action_level,final_decision,risk_label | Tracked fields: action/final/risk/active |
-| Notify | true | true only on material operator drift |
+| Drift | NO_MATERIAL_CHANGE | tracked operator fields unchanged |
+| Changed | none | Tracked fields: action/final/risk/active |
+| Notify | false | true only on material operator drift |
 
 ## Executive Summary
 - action_level: LIVE
 - compact_final_decision: WAIT_LIVE_WINDOW
 - risk_label: MEDIUM
-- alert_route: GITHUB_ISSUE_COMMENT
-- alert_materiality: MEDIUM
-- alert_reason: live-window state changed materially
-- drift_status: MATERIAL_CHANGE
-- drift_notify_required: true
-- drift_changed_fields: action_level,final_decision,risk_label
+- alert_route: LOCAL_ONLY
+- alert_materiality: LOW
+- alert_reason: live-window watch exists but no material drift
+- drift_status: NO_MATERIAL_CHANGE
+- drift_notify_required: false
+- drift_changed_fields: none
 - sanity_check: PASS | waiting_live_window=1; manual live validator rerun required
 - operator_status: WAIT_LIVE_WINDOW
 - primary_next_action: Wait for useful live window and rerun live trigger validator.
@@ -49,8 +49,8 @@
 - no_bet: 9
 - board_decisions: NO_BET=9; LIVE_ONLY=1
 - recheck_decisions: CANCELLED_NO_BET=9; LIVE_ONLY_WAIT_TRIGGER=1
-- live_triggers: none
-- alert_notify_required: false
+- live_triggers: TOO_EARLY=1
+- alert_notify_required: true
 - auto_apply: NO
 - production_change: NO
 
@@ -58,11 +58,11 @@
 - ACTION_LEVEL=LIVE
 - RISK_LABEL=MEDIUM
 - FINAL_DECISION=WAIT_LIVE_WINDOW
-- ALERT_ROUTE=GITHUB_ISSUE_COMMENT
-- ALERT_MATERIALITY=MEDIUM
-- ALERT_REASON=live-window state changed materially
-- DRIFT_STATUS=MATERIAL_CHANGE
-- DRIFT_NOTIFY_REQUIRED=true
+- ALERT_ROUTE=LOCAL_ONLY
+- ALERT_MATERIALITY=LOW
+- ALERT_REASON=live-window watch exists but no material drift
+- DRIFT_STATUS=NO_MATERIAL_CHANGE
+- DRIFT_NOTIFY_REQUIRED=false
 - SANITY_CHECK=PASS
 - SANITY_DETAIL=waiting_live_window=1; manual live validator rerun required
 - WINDOWS_READ=UTF8 | Get-Content data/processed/today/2026-06-20/vsigma_operator_brief.md -Encoding UTF8
@@ -71,7 +71,7 @@
 - none
 
 ## Waiting Live Window
-- #1 | LIVE_ONLY_WAIT_TRIGGER | Almeria vs Malaga | market=OVER_1_5_SUPPORTED | window=UNKNOWN | live=UNKNOWN | reason=prematch serious stake blocked
+- #1 | LIVE_ONLY_WAIT_TRIGGER | Almeria vs Malaga | market=OVER_1_5_SUPPORTED | window=TOO_EARLY | live=TOO_EARLY | match=NS | elapsed=0 | score=0-0 | reason=outside useful live window
 
 ## Closed / Window Missed
 - none
@@ -91,7 +91,9 @@
 - #10 | NO_BET | Santa Cruz vs Ypiranga-RS | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
 
 ## Live Trigger Status
-- no live trigger report or no live candidates
+- window_counts: TOO_EARLY=1
+- live_trigger_counts: TOO_EARLY=1
+- #1 | window=TOO_EARLY | decision=TOO_EARLY | Almeria vs Malaga | market=OVER_1_5_SUPPORTED | status=NS | min=0 | mtko=1165.65 | score=0-0 | shots=0 | SoT=0 | corners=0 | signal=0 | reason=outside useful live window
 
 ## Learning / Calibration
 - no calibration signal
@@ -109,3 +111,23 @@
 - Use PowerShell -Encoding UTF8 when reading local Markdown files on Windows.
 - Historical drift notifies only on material operator changes: action level, final decision, risk, or active candidates.
 - Alert routing is diagnostic only; this script writes the route but does not send comments or external notifications.
+
+## Calibration / Shadow Governance
+- calibration_shadow_status: UNAVAILABLE
+- shadow_active_candidates: 0
+- shadow_high_priority: 0
+- shadow_metrics: none
+- shadow_decisions: none
+- promotion_readiness: UNAVAILABLE
+- promotion_candidates: 0
+- promotion_decisions: none
+- learning_sanity_status: WARN
+- learning_sanity_counts: EMPTY_NO_FALLBACK=7
+- learning_sanity_severity: WARN=7
+- calibration_auto_apply: NO
+- production_change: NO
+
+### Calibration Sources
+- shadow_queue: data/processed/today/2026-06-20/vsigma_calibration_shadow_patch_queue.csv
+- promotion_readiness: data/processed/today/2026-06-20/vsigma_shadow_patch_promotion_readiness.csv
+- learning_sanity: data/processed/today/2026-06-20/vsigma_learning_chain_output_sanity.csv
