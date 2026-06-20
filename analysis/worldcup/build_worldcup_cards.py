@@ -255,7 +255,10 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
         if sp:
             rec.update({"st_corners_total": sp["corners_total"], "st_corners_over": sp["corners_over"],
                         "st_corners_line": sp["corners_line"], "st_cards_total": sp["cards_total"],
-                        "st_shots_total": sp["shots_total"]})
+                        "st_shots_total": sp["shots_total"],
+                        # per-team (home/away) for the readable ficha; totals stay for the scorecard
+                        "st_corners_home": sp["corners_home"], "st_corners_away": sp["corners_away"],
+                        "st_shots_home": sp["shots_home"], "st_shots_away": sp["shots_away"]})
         rec.update({"home_group": ch.get("group"), "home_form": ch.get("form"),
                     "away_group": ca.get("group"), "away_form": ca.get("form")})
         cards.append(rec)

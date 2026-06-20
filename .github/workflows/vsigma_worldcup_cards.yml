@@ -127,34 +127,43 @@ jobs:
           echo "----- scorecard preview -----"
           cat analysis/worldcup/worldcup_scorecard.txt
 
-      - name: Render compact Telegram card (track record; morning adds 'ayer', pre-KO lineups)
+      - name: Render paginated Telegram messages (header + match pages; morning adds 'ayer')
         id: render
         run: |
           python analysis/worldcup/build_worldcup_full_card.py \
             --from "${{ steps.win.outputs.from }}" --to "${{ steps.win.outputs.to }}" \
-            --limit "${{ github.event.inputs.limit || '10' }}" --compact \
+            --limit "${{ github.event.inputs.limit || '10' }}" --paginate --per-page 3 \
             --scorecard analysis/worldcup/worldcup_scorecard.txt \
             --log analysis/worldcup/worldcup_predictions_log.csv \
             ${{ steps.win.outputs.render_args }}
-          echo "----- message preview -----"
+          echo "----- combined preview (all messages) -----"
           cat analysis/worldcup/worldcup_full_cards.txt
-          # anti-spam gate: number of fixtures in the message (today/imminent).
-          N="$(cat analysis/worldcup/worldcup_render_meta.txt 2>/dev/null || echo 0)"
-          if [ "${N:-0}" -gt 0 ]; then echo "has_fixtures=true" >> "$GITHUB_OUTPUT";
-          else echo "has_fixtures=false" >> "$GITHUB_OUTPUT"; fi
-          echo "rendered fixtures: ${N:-0}"
+          # anti-spam: the manifest holds one 'path|title' line per message to send.
+          # morning -> >=1 (header always); pre-KO with no fixtures -> empty -> send nothing.
+          MAN="analysis/worldcup/worldcup_messages_manifest.txt"
+          N="$(grep -c . "$MAN" 2>/dev/null || echo 0)"
+          if [ "${N:-0}" -gt 0 ]; then echo "has_messages=true" >> "$GITHUB_OUTPUT";
+          else echo "has_messages=false" >> "$GITHUB_OUTPUT"; fi
+          echo "messages to send: ${N:-0}"
 
-      # ANTI-SPAM: MORNING siempre envía (briefing). PRE-KO solo si hay >=1 partido.
-      - name: Send to Telegram
-        if: ${{ steps.win.outputs.mode == 'morning' || steps.render.outputs.has_fixtures == 'true' }}
+      # ANTI-SPAM: envía solo si el manifest tiene mensajes (vacío en pre-KO sin partidos).
+      # UNA llamada al dispatcher POR MENSAJE (dispatcher compartido, NO modificado).
+      - name: Send to Telegram (one message per page)
+        if: ${{ steps.render.outputs.has_messages == 'true' }}
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          python scripts/dispatch_telegram_alert.py \
-            --title "${{ steps.win.outputs.title }}" \
-            --date "${{ steps.win.outputs.from }}" \
-            --body-file analysis/worldcup/worldcup_full_cards.txt
+          MAN="analysis/worldcup/worldcup_messages_manifest.txt"
+          while IFS='|' read -r f t; do
+            [ -z "$f" ] && continue
+            echo "-> $t"
+            python scripts/dispatch_telegram_alert.py \
+              --title "$t" \
+              --date "${{ steps.win.outputs.from }}" \
+              --body-file "$f"
+            sleep 1   # gentle pacing so Telegram doesn't rate-limit the burst
+          done < "$MAN"
 
       - name: Persist learning-loop outputs (log + scorecard ONLY)
         run: |

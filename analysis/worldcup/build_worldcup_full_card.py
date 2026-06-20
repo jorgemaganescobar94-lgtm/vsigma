@@ -31,6 +31,7 @@ OUT_DIR = Path(__file__).resolve().parent
 CARDS = OUT_DIR / "worldcup_cards.csv"
 LOG = OUT_DIR / "worldcup_predictions_log.csv"
 META = OUT_DIR / "worldcup_render_meta.txt"  # fixture count for the workflow anti-spam gate
+MANIFEST = OUT_DIR / "worldcup_messages_manifest.txt"  # paginated send list: "path|title" per line
 KMAX = 10
 
 
@@ -43,6 +44,80 @@ def pmf(lam, k=KMAX):
 def score_matrix(lh, la):
     M = np.outer(pmf(lh), pmf(la))
     return M / M.sum()
+
+
+# WC-2026 team names in Spanish (public facts); fallback = original name.
+NAME_ES = {
+    "Algeria": "Argelia", "Australia": "Australia", "Austria": "Austria", "Belgium": "Bélgica",
+    "Bosnia & Herzegovina": "Bosnia", "Brazil": "Brasil", "Canada": "Canadá",
+    "Cape Verde Islands": "Cabo Verde", "Colombia": "Colombia", "Congo DR": "RD Congo",
+    "Croatia": "Croacia", "Curaçao": "Curazao", "Czechia": "Chequia", "Ecuador": "Ecuador",
+    "Egypt": "Egipto", "England": "Inglaterra", "France": "Francia", "Germany": "Alemania",
+    "Ghana": "Ghana", "Haiti": "Haití", "Iran": "Irán", "Iraq": "Irak",
+    "Ivory Coast": "Costa de Marfil", "Japan": "Japón", "Jordan": "Jordania", "Mexico": "México",
+    "Morocco": "Marruecos", "Netherlands": "Países Bajos", "New Zealand": "Nueva Zelanda",
+    "Norway": "Noruega", "Panama": "Panamá", "Paraguay": "Paraguay", "Portugal": "Portugal",
+    "Qatar": "Catar", "Saudi Arabia": "Arabia Saudí", "Scotland": "Escocia", "Senegal": "Senegal",
+    "South Africa": "Sudáfrica", "South Korea": "Corea del Sur", "Spain": "España",
+    "Sweden": "Suecia", "Switzerland": "Suiza", "Tunisia": "Túnez", "Türkiye": "Turquía",
+    "USA": "EE. UU.", "Uruguay": "Uruguay", "Uzbekistan": "Uzbekistán",
+}
+MONTHS_ES = ["", "ene", "feb", "mar", "abr", "may", "jun",
+             "jul", "ago", "sep", "oct", "nov", "dic"]
+
+
+def es_name(name):
+    return NAME_ES.get(str(name), str(name))
+
+
+def fmt_ko(kickoff_utc):
+    """'2026-06-21 16:00' -> '21 jun · 16:00Z'. Fallback to the raw string."""
+    ko = _parse_ko(kickoff_utc)
+    if ko is None:
+        return str(kickoff_utc)[:16]
+    return f"{ko.day} {MONTHS_ES[ko.month]} · {ko:%H:%M}Z"
+
+
+def match_block(r, show_lineups=False):
+    """Readable, labelled per-match card (list of lines). Data model only, ZERO odds."""
+    h, a = es_name(r["home"]), es_name(r["away"])
+    grp = str(r.get("home_group") or "").replace("Group ", "Gr. ").strip() or "Gr. ?"
+    lines = [f"🏆 {h} vs {a} — {grp} · {fmt_ko(r.get('kickoff_utc'))}"]
+
+    lh, ld, la = r.get("our_home"), r.get("our_draw"), r.get("our_away")
+    if pd.notna(lh):
+        lines.append(f"Resultado: {h} {lh*100:.0f}% · Empate {ld*100:.0f}% · {a} {la*100:.0f}%")
+
+    xgh, xga = r.get("our_xg_home"), r.get("our_xg_away")
+    if pd.notna(xgh):
+        M = score_matrix(xgh, xga)
+        gh = np.arange(KMAX + 1)[:, None]; ga = np.arange(KMAX + 1)[None, :]
+        o25 = float(M[(gh + ga) >= 3].sum()); btts = float(M[(gh >= 1) & (ga >= 1)].sum())
+        lines.append(f"Goles esperados: {xgh:.1f}–{xga:.1f} (total {xgh + xga:.1f}) · "
+                     f"Over 2.5: {o25 * 100:.0f}% · BTTS: {btts * 100:.0f}%")
+        flat = sorted(((i, j, M[i, j]) for i in range(KMAX + 1) for j in range(KMAX + 1)),
+                      key=lambda t: -t[2])[:3]
+        lines.append("Marcadores top 3: " + " · ".join(f"{i}-{j} ({p * 100:.0f}%)" for i, j, p in flat))
+
+    # per-team córners/tiros (gated; cards never shown). BAJA CONF.
+    def side(nm, c, s):
+        seg = []
+        if "corners" in SHOW_STATS and pd.notna(c):
+            seg.append(f"córners ~{c:.0f}")
+        if "shots" in SHOW_STATS and pd.notna(s):
+            seg.append(f"tiros ~{s:.0f}")
+        return f"{nm}: " + ", ".join(seg) if seg else None
+    sh = side(h, r.get("st_corners_home"), r.get("st_shots_home"))
+    sa = side(a, r.get("st_corners_away"), r.get("st_shots_away"))
+    if sh and sa:
+        lines.append(f"Por equipo — {sh} | {sa}  (BAJA CONF)")
+
+    if show_lineups:
+        LU = {"conf": "confirmado", "prob": "probable", "pend": "pendiente"}
+        lhs, las = r.get("lineup_home"), r.get("lineup_away")
+        if pd.notna(lhs) and str(lhs) in LU:
+            lines.append(f"Alineaciones — {h}: {LU[str(lhs)]} · {a}: {LU.get(str(las), 'pendiente')}")
+    return lines
 
 
 def read_scorecard_block(path, max_lines=4):
@@ -122,8 +197,81 @@ def build_yesterday_block(log_path, now, hours=36, max_results=6):
     return lines
 
 
+def render_paginated(df, date_from, within_hours, scorecard, show_yesterday,
+                     log_path, show_lineups, per_page, max_lines):
+    """Split the briefing into SEVERAL Telegram messages so nothing is truncated:
+    msg 1 = header (track record + 'ayer'); msg 2.. = matches, per_page each.
+    Writes one file per message + a manifest ('path|title' per line) the workflow loops
+    over (dispatch_telegram_alert.py is called once per message — dispatcher untouched).
+    Anti-spam: pre-KO with no matches -> empty manifest (send nothing); morning -> header only.
+    Returns the number of messages written. ZERO odds; stats gated (cards omitted)."""
+    # clean stale page files from a previous (possibly larger) run
+    for f in OUT_DIR.glob("worldcup_msg_*.txt"):
+        try:
+            f.unlink()
+        except Exception:
+            pass
+
+    sc_block = read_scorecard_block(scorecard)
+    yest_block = build_yesterday_block(log_path or LOG, datetime.now(timezone.utc)) \
+        if show_yesterday else []
+    META.write_text(str(len(df)), encoding="utf-8")          # anti-spam fixture count
+    is_preko = within_hours is not None
+
+    # ----- header message -----
+    if is_preko:
+        htitle = f"Mundial 2026 — pre-saque ({date_from})"
+        hlead = f"🏆 MUNDIAL 2026 — PRE-SAQUE (próximas {within_hours:g}h · modelo propio, sin cuotas)"
+    else:
+        htitle = f"Mundial 2026 — briefing ({date_from})"
+        hlead = f"🏆 MUNDIAL 2026 — briefing {date_from} (modelo propio, sin cuotas)"
+    header = [hlead] + sc_block + yest_block
+    if len(df):
+        header.append(f"📋 {len(df)} partido(s) abajo (en mensajes siguientes).")
+    header.append("ℹ️ Stats por equipo = BAJA CONF (señal OOS débil). Tarjetas omitidas (ruido).")
+
+    # anti-spam: pre-KO and nothing imminent -> send NOTHING
+    if is_preko and len(df) == 0:
+        MANIFEST.write_text("", encoding="utf-8")
+        (OUT_DIR / "worldcup_full_cards.txt").write_text(
+            "(pre-KO sin partidos en ventana → no se envía nada)\n", encoding="utf-8")
+        print("paginate: pre-KO sin partidos -> 0 mensajes")
+        return 0
+
+    messages = [(htitle, header[:max_lines])]
+
+    # ----- match pages -----
+    blocks = [match_block(r, show_lineups) for _, r in df.iterrows()]
+    pages = [blocks[i:i + per_page] for i in range(0, len(blocks), per_page)]
+    npages = len(pages)
+    for idx, page in enumerate(pages, 1):
+        body = []
+        for b in page:
+            if body:
+                body.append("")                              # blank line between matches
+            body.extend(b)
+        title = f"Mundial 2026 — partidos ({idx}/{npages})" if npages > 1 else "Mundial 2026 — partidos"
+        messages.append((title, body[:max_lines]))
+
+    # ----- write files + manifest + combined preview (for the CI log) -----
+    manifest_lines, combined = [], []
+    for i, (title, body) in enumerate(messages, 1):
+        fp = OUT_DIR / f"worldcup_msg_{i}.txt"
+        fp.write_text("\n".join(body) + "\n", encoding="utf-8")
+        manifest_lines.append(f"{fp}|{title}")
+        combined.append(f"===== MENSAJE {i}: {title} =====")
+        combined.extend(body)
+        combined.append("")
+    MANIFEST.write_text("\n".join(manifest_lines) + "\n", encoding="utf-8")
+    (OUT_DIR / "worldcup_full_cards.txt").write_text("\n".join(combined), encoding="utf-8")
+    for c in combined:
+        print(c)
+    return len(messages)
+
+
 def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
-         show_lineups=False, within_hours=None, show_yesterday=False, log_path=None):
+         show_lineups=False, within_hours=None, show_yesterday=False, log_path=None,
+         paginate=False, per_page=3):
     try:
         df = pd.read_csv(CARDS)
     except (pd.errors.EmptyDataError, FileNotFoundError):
@@ -134,6 +282,12 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
     if len(df):
         df["d"] = df["kickoff_utc"].str[:10]
         df = df[(df["d"] >= date_from) & (df["d"] <= date_to)].sort_values("kickoff_utc").head(limit)
+
+    if paginate:
+        nmsg = render_paginated(df, date_from, within_hours, scorecard, show_yesterday,
+                                log_path, show_lineups, per_page, max_lines)
+        print(f"\nPaginated: {nmsg} message(s) -> {MANIFEST}")
+        return
 
     lines = []
 
@@ -319,6 +473,11 @@ if __name__ == "__main__":
                     help="compact mode: add 'cómo acertamos ayer' (settled results, morning briefing)")
     ap.add_argument("--log", dest="log_path", default=None,
                     help="path to worldcup_predictions_log.csv (for --show-yesterday)")
+    ap.add_argument("--paginate", action="store_true",
+                    help="multi-message Telegram output: header + match pages (manifest-driven)")
+    ap.add_argument("--per-page", type=int, default=3,
+                    help="matches per page message (paginate mode)")
     a = ap.parse_args()
     main(a.dfrom, a.dto, a.limit, a.compact, a.scorecard, a.max_lines,
-         a.show_lineups, a.within_hours, a.show_yesterday, a.log_path)
+         a.show_lineups, a.within_hours, a.show_yesterday, a.log_path,
+         a.paginate, a.per_page)
