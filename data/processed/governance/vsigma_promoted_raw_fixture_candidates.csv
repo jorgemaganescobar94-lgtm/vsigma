@@ -1,2 +1,2 @@
 target_date,generated_at,fixture_id,league,country,home_team,away_team,fixture_datetime_utc,promotion_status,promotion_reason,source_path,allowed_downstream_use,auto_apply,production_change
-2026-06-20,2026-06-20T11:18:04+01:00,1551272,,,Almeria,Malaga,,PROMOTED_TO_SCORING_INPUT,trusted source has matching scored row without blocking data warnings,data/processed/governance/vsigma_candidate_provenance_ceiling.csv,SCORING_ALLOWED_WITH_NORMAL_GATES,NO,NO
+2026-06-20,2026-06-20T16:22:41+01:00,1551272,,,Almeria,Malaga,,PROMOTED_TO_SCORING_INPUT,trusted source has matching scored row without blocking data warnings,data/processed/governance/vsigma_candidate_provenance_ceiling.csv,SCORING_ALLOWED_WITH_NORMAL_GATES,NO,NO

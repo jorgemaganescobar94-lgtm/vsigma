@@ -1,11 +1,11 @@
 target_date,generated_at,fixture_id,home_team,away_team,candidate_origin,max_execution_permission,before_permission,after_permission,before_stake,after_stake,ceiling_action,reason,auto_apply,production_change
-2026-06-20,2026-06-20T11:17:55+01:00,1551272,Almeria,Malaga,REAL_SHORTLIST,LIVE_ONLY,LIVE_ONLY,LIVE_ONLY,SYMBOLIC_ONLY,SYMBOLIC_ONLY,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-20,2026-06-20T11:17:55+01:00,1520732,Ceara,Botafogo SP,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-20,2026-06-20T11:17:55+01:00,1520735,Londrina,Athletic Club,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-20,2026-06-20T11:17:55+01:00,1520739,Vila Nova,Nautico Recife,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-20,2026-06-20T11:17:55+01:00,1522830,Banga,FK Zalgiris Vilnius,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-20,2026-06-20T11:17:55+01:00,1522828,Panevėžys,Šiauliai,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-20,2026-06-20T11:17:55+01:00,1522829,TransINVEST Vilnius,Kauno Žalgiris,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-20,2026-06-20T11:17:55+01:00,1526855,Anápolis,AO Itabaiana,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-20,2026-06-20T11:17:55+01:00,1526857,Botafogo PB,Volta Redonda,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-20,2026-06-20T11:17:55+01:00,1526863,Santa Cruz,Ypiranga-RS,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-20,2026-06-20T16:22:28+01:00,1551272,Almeria,Malaga,REAL_SHORTLIST,LIVE_ONLY,LIVE_ONLY,LIVE_ONLY,SYMBOLIC_ONLY,SYMBOLIC_ONLY,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-20,2026-06-20T16:22:28+01:00,1520732,Ceara,Botafogo SP,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-20,2026-06-20T16:22:28+01:00,1520735,Londrina,Athletic Club,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-20,2026-06-20T16:22:28+01:00,1520739,Vila Nova,Nautico Recife,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-20,2026-06-20T16:22:28+01:00,1522830,Banga,FK Zalgiris Vilnius,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-20,2026-06-20T16:22:28+01:00,1522828,Panevėžys,Šiauliai,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-20,2026-06-20T16:22:28+01:00,1522829,TransINVEST Vilnius,Kauno Žalgiris,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-20,2026-06-20T16:22:28+01:00,1526855,Anápolis,AO Itabaiana,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-20,2026-06-20T16:22:28+01:00,1526857,Botafogo PB,Volta Redonda,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-20,2026-06-20T16:22:28+01:00,1526863,Santa Cruz,Ypiranga-RS,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO

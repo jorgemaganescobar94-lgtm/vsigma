@@ -1,19 +1,98 @@
 # vSIGMA API-Enriched Fixture Results Refresh - 2026-06-20
 
 ## Summary
-- rows_reviewed: 0
-- api_calls_planned: 0
-- api_calls_executed: 0
-- finished_rows: 0
-- pending_rows: 0
-- refresh_status_counts: none
-- provider_counts: none
+- rows_reviewed: 80
+- api_calls_planned: 80
+- api_calls_executed: 80
+- finished_rows: 35
+- pending_rows: 45
+- refresh_status_counts: OK=80
+- provider_counts: API-SPORTS_DIRECT=80
 - next_action: Re-run the postmatch accuracy ledger after this refresh. This output does not create picks or stake.
 - auto_apply: NO
 - production_change: NO
 
 ## Result Rows
-- none. No API-enriched review board rows available.
+- Atmosfera vs Minija | status=FT | score=0-1 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Tauras vs Ekranas | status=FT | score=2-1 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Osipovichy vs Orsha | status=FT | score=2-1 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Shakhter Soligorsk vs Ostrovets FC | status=2H | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Fjardabyggd / Leiknir vs Kormákur / Hvöt | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- KFG vs Dalvík / Reynir | status=1H | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Magni vs Selfoss | status=2H | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Bjarg vs Vidar | status=FT | score=3-1 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Notodden vs Mjondalen | status=FT | score=1-2 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Pors Grenland vs Eik-Tønsberg | status=FT | score=2-0 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Sandviken vs Lysekloster | status=FT | score=2-3 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Kjelsås vs Ull/Kisa | status=FT | score=3-0 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Levanger vs Skeid | status=FT | score=2-1 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Tromsdalen Uil vs Stjørdals-Blink | status=FT | score=2-4 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Camaçari vs Grapiuna Itabuna | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Chabab Atl. Khenifra vs KAC Kenitra | status=1H | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Chabab Mohammédia vs Stade Marocain | status=1H | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- El Massira vs Racing de Casablanca | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Mouloudia Oujda vs Chabab Ben Guerir | status=1H | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Riadi Salmi vs USM Oujda | status=1H | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Belconnen United vs Queanbeyan City | status=FT | score=1-2 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Brindabella vs O'Connor Knights | status=FT | score=1-0 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Canberra Olympic vs Monaro Panthers | status=FT | score=2-5 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Cooma Tigers FC vs Canberra FC | status=FT | score=1-1 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Tuggeranong United vs Canberra White Eagles | status=PST | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- CFRJ / Maricá vs Audax Rio | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Resende vs Serrano RJ | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- São Gonçalo EC RJ vs Bonsucesso | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Dikaki vs Pélican | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Mangasport vs Vautour Club | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Mangasport vs Lozo | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Oyem AC vs Bouenguidi | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Stade Migoveen vs Stade Mandji | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- AS Cotonou vs Espoir Savalou | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Cobreloa vs Cobresal | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Coquimbo Unido vs Deportes Iquique | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Deportes Copiapo vs U. Catolica | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Everton de Vina vs San Luis | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Rangers de Talca vs Universidad de Concepcion | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- FC Cajamarca vs Deportivo Llacuabamba | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Union Comercio vs Comerciantes | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Porto Vitória vs Rio Branco-VN | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Union Abong-Mbang vs Les Astres | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Falcons vs Hart Acedemy | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Fortune vs Steve Biko | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Real de Banjul vs Greater Tomorrow | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Changwon City vs Mokpo City | status=FT | score=1-1 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Chuncheon vs Siheung Citizen | status=FT | score=2-3 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Dangjin Citizen vs Ulsan Citizen | status=FT | score=1-1 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Yangpyeong vs Yeoju Sejong | status=FT | score=1-2 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Don Bosco vs JSK | status=FT | score=1-2 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Simba vs Maniema Union | status=FT | score=2-1 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- TP Mazembe vs Céleste | status=FT | score=2-0 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- EB / Streymur vs Skála | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- NSI Runavik vs B68 | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- FC Levadia Tallinn vs Kalju Nomme | status=2H | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Laagri vs Nõmme United | status=FT | score=1-3 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Aymorés vs Coimbra | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Caldense vs Mamoré | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Ipatinga vs Valeriodoce | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Manly United vs St. George Saints | status=FT | score=2-0 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- St George City FA vs NWS Spirit | status=FT | score=1-0 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Sydney Olympic vs Rockdale City Suns | status=FT | score=0-4 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Dulwich Hill vs Blacktown Spartans | status=FT | score=1-1 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Hakoah Sydney City vs Northern Tigers | status=FT | score=1-0 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Hills Brumbies vs Prospect United | status=FT | score=0-0 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Inter Lions vs Mt Druitt Town | status=FT | score=1-0 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Rydalmere Lions vs Canterbury Bankstown | status=FT | score=1-5 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Belmont Swansea vs Broadmeadow Magic | status=FT | score=1-0 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Cooks Hill United vs Weston Bears | status=FT | score=3-3 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Lambton Jaffas vs Adamstown Rosebuds | status=FT | score=1-1 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Valentine vs Edgeworth Eagles | status=FT | score=2-1 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Guarulhos vs Sporting Paulinense | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Independente SP vs Grêmio Catanduvense | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Matonense vs Mogi Mirim | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Maua vs Barcelona EC | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Tupa vs Santa Fé FC | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Uniao Mogi vs Itaquá Athletico Clube | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Al Ansar vs Al Ahed | status=NS | score=pending | ready=NO | provider=API-SPORTS_DIRECT | note=fixture fetched
+- Al Hikma vs Jwaaya FC | status=FT | score=3-3 | ready=YES | provider=API-SPORTS_DIRECT | note=fixture fetched
 
 ## Guardrails
 - This refresh only stores fixture results for calibration.

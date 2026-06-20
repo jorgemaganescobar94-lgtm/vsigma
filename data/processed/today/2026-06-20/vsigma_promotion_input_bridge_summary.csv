@@ -1,2 +1,2 @@
 target_date,generated_at,source_rows_reviewed,bridge_rows_written,promotion_ready_review_only_rows,blocked_rows,status_counts,signal_band_counts,promotion_permission_counts,pick_permission_counts,stake_permission_counts,auto_apply,production_change
-2026-06-20,2026-06-20T11:18:06+01:00,0,0,0,0,none,none,none,none,none,NO,NO
+2026-06-20,2026-06-20T16:31:00+01:00,250,250,198,52,PROMOTION_INPUT_READY_REVIEW_ONLY=198; COVERAGE_ONLY_NO_PROMOTION=52,WEAK_SIGNAL=76; MEDIUM_SIGNAL_REVIEW=71; HIGH_SIGNAL_REVIEW=66; LOW_SIGNAL_REVIEW=37,REVIEW_ONLY_PROMOTION_INPUT=198; NO_PROMOTION_PERMISSION=52,NO_PICK_PERMISSION=250,NO_STAKE_PERMISSION=250,NO,NO

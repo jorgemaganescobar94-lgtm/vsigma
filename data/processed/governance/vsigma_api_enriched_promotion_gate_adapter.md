@@ -1,19 +1,138 @@
 # vSIGMA API-Enriched Promotion Gate Adapter - 2026-06-20
 
 ## Summary
-- source_rows_reviewed: 0
-- adapter_rows_written: 0
-- adapter_promoted_review_only_rows: 0
-- adapter_blocked_rows: 0
-- adapter_status_counts: none
-- allowed_downstream_use_counts: none
-- pick_permission_counts: none
-- stake_permission_counts: none
+- source_rows_reviewed: 250
+- adapter_rows_written: 250
+- adapter_promoted_review_only_rows: 137
+- adapter_blocked_rows: 113
+- adapter_status_counts: API_ENRICHED_PROMOTION_REVIEW_READY=137; ADAPTER_BLOCKED_WEAK_SIGNAL=61; ADAPTER_BLOCKED_NOT_READY=52
+- allowed_downstream_use_counts: SCORING_REVIEW_ONLY_WITH_NORMAL_GATES=137; NO_DOWNSTREAM_USE=113
+- pick_permission_counts: NO_PICK_PERMISSION=250
+- stake_permission_counts: NO_STAKE_PERMISSION=250
 - auto_apply: NO
 - production_change: NO
 
 ## Adapter Rows
-- none
+- Atmosfera vs Minija | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=82 | summary=prediction_winner=Minija | pred_total_home_away=40.7/59.3 | 1x2=4.60/3.65/1.60 | ou2.5=1.65/2.00 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- BFA vs Hegelmann II | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Tauras vs Ekranas | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=90 | summary=prediction_winner=Tauras | pred_total_home_away=69.3/30.7 | 1x2=1.22/4.80/9.75 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- B36 II vs B71 | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- HB II vs Hoyvík | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Bumprom vs Smorgon | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=50 | summary=prediction_winner=Bumprom | pred_total_home_away=58.5/41.5 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Osipovichy vs Orsha | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=70 | summary=prediction_winner=Orsha | pred_total_home_away=31.2/68.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Shakhter Soligorsk vs Ostrovets FC | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=70 | summary=prediction_winner=Shakhter Soligorsk | pred_total_home_away=66.2/34.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Fjardabyggd / Leiknir vs Kormákur / Hvöt | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=59 | summary=prediction_winner=Fjardabyggd / Leiknir | pred_total_home_away=54.7/45.3 | 1x2=1.91/4.10/2.85 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Haukar vs Vikingur Olafsiik | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=53 | summary=prediction_winner=Haukar | pred_total_home_away=52.7/47.3 | 1x2=1.48/4.50/4.50 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- KFG vs Dalvík / Reynir | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=76 | summary=prediction_winner=Dalvík / Reynir | pred_total_home_away=39.5/60.5 | 1x2=3.60/3.95/1.70 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Magni vs Selfoss | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=70 | summary=prediction_winner=Selfoss | pred_total_home_away=32.2/67.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Bjarg vs Vidar | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=100 | summary=prediction_winner=Bjarg | pred_total_home_away=68.2/31.8 | 1x2=1.25/5.80/7.60 | ou2.5=2.35/1.53 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Kvik Halden vs Sotra | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=50 | summary=pred_total_home_away=46.5/53.5 | 1x2=2.70/3.55/2.25 | ou2.5=1.62/2.20 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Notodden vs Mjondalen | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=100 | summary=prediction_winner=Mjondalen | pred_total_home_away=34.2/65.8 | 1x2=2.55/3.55/2.38 | ou2.5=1.62/2.20 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Pors Grenland vs Eik-Tønsberg | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=82 | summary=prediction_winner=Pors Grenland | pred_total_home_away=59.0/41.0 | 1x2=1.55/4.00/5.00 | ou2.5=1.62/2.20 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Sandviken vs Lysekloster | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=69 | summary=prediction_winner=Sandviken | pred_total_home_away=64.8/35.3 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Kjelsås vs Ull/Kisa | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=100 | summary=prediction_winner=Kjelsås | pred_total_home_away=68.0/32.2 | 1x2=1.30/5.40/6.60 | ou2.5=2.38/1.53 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Levanger vs Skeid | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=64 | summary=prediction_winner=Levanger | pred_total_home_away=53.3/46.7 | 1x2=1.75/3.90/3.70 | ou2.5=1.48/2.50 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Tromsdalen Uil vs Stjørdals-Blink | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=82 | summary=prediction_winner=Tromsdalen Uil | pred_total_home_away=59.0/41.0 | 1x2=1.57/4.10/4.50 | ou2.5=1.42/2.70 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Bærum vs Konnerud | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Heming vs Gamle Oslo | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Lokomotiv Oslo vs Frigg | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Nordstrand vs Asker | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Ullern vs KFUM II | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Union Carl Berner vs SF Grei | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Kvik Trondheim vs Herd | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Nardo vs NTNUI | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Spjelkavik vs Orkla | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Volda vs Byåsen | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Fyllingsdalen vs Djerv | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Gneist vs Askøy | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Os vs Brann II | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Stord vs Varegg | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Vard vs Austevoll | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Finnsnes vs Fauske Sprint | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Lillestrøm II vs Ulfstind | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Skjervøy vs Bossekop | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Skjetten vs Alta | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Drøbak / Frogn vs Råde | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Elverum vs Oppsal | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Gjøvik-Lyn vs Ørn Horten | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Lyn II vs Lillehammer | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Raelingen vs Bjørkelangen | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Sarpsborg 08 II vs Fram | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Camaçari vs Grapiuna Itabuna | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=67 | summary=prediction_winner=Grapiuna Itabuna | pred_total_home_away=36.0/64.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Feira FC vs Redenção FC | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=46 | summary=prediction_winner=Feira FC | pred_total_home_away=57.3/42.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Chabab Atl. Khenifra vs KAC Kenitra | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=63 | summary=prediction_winner=Chabab Atl. Khenifra | pred_total_home_away=56.3/43.7 | 1x2=2.50/2.60/3.00 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Chabab Mohammédia vs Stade Marocain | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=90 | summary=prediction_winner=Stade Marocain | pred_total_home_away=32.3/68.0 | 1x2=2.60/2.70/2.75 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- El Massira vs Racing de Casablanca | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=70 | summary=prediction_winner=El Massira | pred_total_home_away=65.8/34.2 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Moghreb Tetouan vs Amal Tiznit | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=28 | summary=prediction_winner=Moghreb Tetouan | pred_total_home_away=51.2/48.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Mouloudia Oujda vs Chabab Ben Guerir | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=84 | summary=prediction_winner=Chabab Ben Guerir | pred_total_home_away=36.8/63.2 | 1x2=2.30/2.70/3.20 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Riadi Salmi vs USM Oujda | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=86 | summary=prediction_winner=USM Oujda | pred_total_home_away=39.4/60.6 | 1x2=2.15/2.88/3.25 | ou2.5=2.30/1.48 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Union Sportive Boujaad vs Wydad Fès | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=31 | summary=prediction_winner=Wydad Fès | pred_total_home_away=52.0/48.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Widad Témara vs Raja Beni Mellal | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=50 | summary=prediction_winner=Widad Témara | pred_total_home_away=51.7/48.3 | 1x2=2.10/2.65/3.70 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Belconnen United vs Queanbeyan City | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=100 | summary=prediction_winner=Queanbeyan City | pred_total_home_away=27.3/72.7 | 1x2=4.75/4.50/1.44 | ou2.5=2.25/1.55 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Brindabella vs O'Connor Knights | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=100 | summary=prediction_winner=O'Connor Knights | pred_total_home_away=28.0/72.0 | 1x2=3.90/3.90/1.62 | ou2.5=2.50/1.40 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Canberra Olympic vs Monaro Panthers | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=100 | summary=prediction_winner=Monaro Panthers | pred_total_home_away=30.3/69.7 | 1x2=3.90/4.50/1.55 | ou2.5=2.15/1.60 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Cooma Tigers FC vs Canberra FC | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=58 | summary=prediction_winner=Canberra FC | pred_total_home_away=49.0/51.0 | 1x2=2.05/3.60/2.70 | ou2.5=2.38/1.50 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Tuggeranong United vs Canberra White Eagles | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=100 | summary=prediction_winner=Tuggeranong United | pred_total_home_away=68.2/31.8 | 1x2=1.40/4.75/5.00 | ou2.5=2.45/1.44 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- CFRJ / Maricá vs Audax Rio | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=70 | summary=prediction_winner=CFRJ / Maricá | pred_total_home_away=73.0/27.2 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Olaria vs Cabofriense | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=45 | summary=prediction_winner=Olaria | pred_total_home_away=56.8/43.2 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Pérolas Negras vs Americano Campos | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=46 | summary=prediction_winner=Americano Campos | pred_total_home_away=43.0/57.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Resende vs Serrano RJ | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=66 | summary=prediction_winner=Resende | pred_total_home_away=63.8/36.2 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- São Gonçalo EC RJ vs Bonsucesso | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=70 | summary=prediction_winner=Bonsucesso | pred_total_home_away=33.8/66.3 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Bitam vs Bouenguidi | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=26 | summary=prediction_winner=Bitam | pred_total_home_away=50.5/49.7 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Cercle Mbéri vs Ogooue FC | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=38 | summary=prediction_winner=Ogooue FC | pred_total_home_away=54.5/45.5 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Cercle Mbéri vs Pélican | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=45 | summary=prediction_winner=Cercle Mbéri | pred_total_home_away=56.8/43.2 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Dikaki vs Pélican | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=70 | summary=prediction_winner=Pélican | pred_total_home_away=33.4/66.6 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- FC 105 vs US Oyem | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=31 | summary=prediction_winner=FC 105 | pred_total_home_away=52.3/47.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- FC 105 vs Ogooue FC | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=48 | summary=prediction_winner=Ogooue FC | pred_total_home_away=42.2/57.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Mangasport vs Vautour Club | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=55 | summary=prediction_winner=Mangasport | pred_total_home_away=60.3/39.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Mangasport vs Lozo | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=70 | summary=prediction_winner=Mangasport | pred_total_home_away=71.5/28.5 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Oyem AC vs Bouenguidi | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=70 | summary=prediction_winner=Oyem AC | pred_total_home_away=66.0/34.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Stade Mandji vs Vautour Club | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=38 | summary=prediction_winner=Vautour Club | pred_total_home_away=54.5/45.5 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Stade Migoveen vs Stade Mandji | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=59 | summary=prediction_winner=Stade Mandji | pred_total_home_away=38.8/61.5 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Stade Migoveen vs US Oyem | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=33 | summary=prediction_winner=Stade Migoveen | pred_total_home_away=47.4/52.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- US Oyem vs Lozo | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=48 | summary=prediction_winner=US Oyem | pred_total_home_away=57.8/42.3 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- AS Cotonou vs Espoir Savalou | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=70 | summary=prediction_winner=Espoir Savalou | pred_total_home_away=34.7/65.3 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- ASPAC vs Cavaliers | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=42 | summary=prediction_winner=ASPAC | pred_total_home_away=55.7/44.3 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Bani Gansè vs AS Sobemap | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=25 | summary=prediction_winner=Bani Gansè | pred_total_home_away=50.2/50.2 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Coton Sport Ouidah vs Loto Popo | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=31 | summary=prediction_winner=Coton Sport Ouidah | pred_total_home_away=48.0/52.2 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Damissa vs Dadjè | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=49 | summary=prediction_winner=Damissa | pred_total_home_away=58.2/41.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Dragons vs Buffles | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=36 | summary=prediction_winner=Buffles | pred_total_home_away=46.3/53.7 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Hodio vs Ayema | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=26 | summary=prediction_winner=Ayema | pred_total_home_away=49.6/50.6 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- JSP vs ASVO | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=26 | summary=prediction_winner=JSP | pred_total_home_away=49.7/50.5 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Kraké vs Dynamo Abomey | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=46 | summary=prediction_winner=Kraké | pred_total_home_away=43.0/57.3 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Cobreloa vs Cobresal | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=100 | summary=prediction_winner=Cobreloa | pred_total_home_away=66.0/34.0 | 1x2=2.05/3.30/3.30 | ou2.5=1.85/1.85 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Coquimbo Unido vs Deportes Iquique | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=100 | summary=prediction_winner=Coquimbo Unido | pred_total_home_away=76.5/23.5 | 1x2=1.40/4.20/6.40 | ou2.5=1.53/2.35 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Deportes Copiapo vs U. Catolica | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=100 | summary=prediction_winner=U. Catolica | pred_total_home_away=18.0/82.0 | 1x2=4.20/3.80/1.68 | ou2.5=1.62/2.20 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Everton de Vina vs San Luis | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=100 | summary=prediction_winner=Everton de Vina | pred_total_home_away=72.0/28.0 | 1x2=1.67/3.65/4.33 | ou2.5=1.70/2.05 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Palestino vs Magallanes | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=50 | summary=pred_total_home_away=46.5/53.5 | 1x2=1.50/4.00/5.50 | ou2.5=3.90/1.22 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Rangers de Talca vs Universidad de Concepcion | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=100 | summary=prediction_winner=Universidad de Concepcion | pred_total_home_away=14.5/85.5 | 1x2=3.60/3.50/1.85 | ou2.5=1.80/1.93 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Recoleta vs Colo Colo | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=40 | summary=pred_total_home_away=0/0 | 1x2=4.75/3.95/1.57 | ou2.5=1.55/2.35 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- San Marcos de Arica vs Deportes Limache | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=49 | summary=pred_total_home_away=53.0/47.0 | 1x2=2.75/3.40/2.25 | ou2.5=1.77/1.95 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- FC Cajamarca vs Deportivo Llacuabamba | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=100 | summary=prediction_winner=FC Cajamarca | pred_total_home_away=80.0/20.0 | 1x2=2.15/3.25/3.10 | ou2.5=1.95/1.77 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Juan Pablo II College vs Deportiva Agropecuaria | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Union Comercio vs Comerciantes | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=70 | summary=prediction_winner=Union Comercio | pred_total_home_away=68.4/31.6 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Porto Vitória vs Rio Branco-VN | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=68 | summary=prediction_winner=Porto Vitória | pred_total_home_away=54.4/45.6 | 1x2=1.73/3.40/4.20 | ou2.5=2.38/1.53 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- JFK Ventspils vs Leevon / PPK | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Metta / LU vs Ķekava / Auda | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Riga Mariners vs JDFS Alberts | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Salaspils vs Spēks | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Union Abong-Mbang vs Les Astres | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=67 | summary=prediction_winner=Union Abong-Mbang | pred_total_home_away=64.0/36.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Guangxi Hengchen vs Shandong Luneng | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Hebei Kungfu vs Shanghai Shenhua | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Ningbo Professional vs Chongqing Tongliang Long | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Qingdao Red Lions vs Wuhan Three Towns | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Shanghai Zetian vs Chengdu Better City | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Wuxi Wugou vs Qingdao Jonoon | adapter=ADAPTER_BLOCKED_NOT_READY | allowed=NO_DOWNSTREAM_USE | score=10 | summary= | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- BST Galaxy vs Bombada | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=25 | summary=prediction_winner=BST Galaxy | pred_total_home_away=50.0/50.0 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Dutch Lions vs Brikama United | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=32 | summary=prediction_winner=Dutch Lions | pred_total_home_away=52.5/47.7 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Falcons vs Hart Acedemy | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=58 | summary=prediction_winner=Hart Acedemy | pred_total_home_away=38.8/61.3 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Fortune vs Steve Biko | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=69 | summary=prediction_winner=Fortune | pred_total_home_away=64.7/35.3 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- GPA vs Medina United | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=40 | summary=prediction_winner=GPA | pred_total_home_away=55.3/44.8 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Hawks vs Samger | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=29 | summary=prediction_winner=Hawks | pred_total_home_away=51.5/48.5 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Real de Banjul vs Greater Tomorrow | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=70 | summary=prediction_winner=Real de Banjul | pred_total_home_away=77.0/23.2 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Team Rhino vs TMT | adapter=ADAPTER_BLOCKED_WEAK_SIGNAL | allowed=NO_DOWNSTREAM_USE | score=51 | summary=prediction_winner=TMT | pred_total_home_away=41.3/58.7 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Changwon City vs Mokpo City | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=100 | summary=prediction_winner=Changwon City | pred_total_home_away=82.8/17.2 | 1x2=1.75/3.20/4.20 | ou2.5=2.15/1.55 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
+- Chuncheon vs Siheung Citizen | adapter=API_ENRICHED_PROMOTION_REVIEW_READY | allowed=SCORING_REVIEW_ONLY_WITH_NORMAL_GATES | score=100 | summary=prediction_winner=Siheung Citizen | pred_total_home_away=32.7/67.3 | 1x2=4.75/3.35/1.64 | ou2.5=2.00/1.65 | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION
 
 ## Guardrails
 - This adapter creates review-only promotion candidates, not picks.

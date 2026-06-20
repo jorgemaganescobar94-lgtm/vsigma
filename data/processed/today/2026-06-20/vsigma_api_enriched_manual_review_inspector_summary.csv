@@ -1,2 +1,2 @@
 target_date,generated_at,review_rows,bucket_counts,risk_label_counts,canonical_board_permission_counts,pick_permission_counts,stake_permission_counts,next_action,auto_apply,production_change
-2026-06-20,2026-06-20T11:18:06+01:00,0,none,none,none,none,none,"Use this inspector only for human triage. It cannot promote, create picks, or create stake permission.",NO,NO
+2026-06-20,2026-06-20T16:31:00+01:00,137,P3_REVIEW_LOW_SIGNAL=71; P1_REVIEW_STRONG_SIGNAL=66,LOW=71; MEDIUM=66,NO_CANONICAL_BOARD_PERMISSION=137,NO_PICK_PERMISSION=137,NO_STAKE_PERMISSION=137,"Use this inspector only for human triage. It cannot promote, create picks, or create stake permission.",NO,NO

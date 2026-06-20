@@ -1,2 +1,2 @@
 target_date,generated_at,source_rows,same_day_rows,real_shortlist_rows,real_bets_rows,selector_status_counts,next_action,auto_apply,production_change
-2026-06-20,2026-06-20T11:17:55+01:00,10,10,0,0,NO_REAL_SHORTLIST=10,No real shortlist rows; keep proxy bridge capped at NO_BET.,NO,NO
+2026-06-20,2026-06-20T16:22:28+01:00,10,10,0,0,NO_REAL_SHORTLIST=10,No real shortlist rows; keep proxy bridge capped at NO_BET.,NO,NO
