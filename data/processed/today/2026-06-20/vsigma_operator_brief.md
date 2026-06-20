@@ -93,7 +93,7 @@
 ## Live Trigger Status
 - window_counts: TOO_EARLY=1
 - live_trigger_counts: TOO_EARLY=1
-- #1 | window=TOO_EARLY | decision=TOO_EARLY | Almeria vs Malaga | market=OVER_1_5_SUPPORTED | status=NS | min=0 | mtko=1165.65 | score=0-0 | shots=0 | SoT=0 | corners=0 | signal=0 | reason=outside useful live window
+- #1 | window=TOO_EARLY | decision=TOO_EARLY | Almeria vs Malaga | market=OVER_1_5_SUPPORTED | status=NS | min=0 | mtko=505.29 | score=0-0 | shots=0 | SoT=0 | corners=0 | signal=0 | reason=outside useful live window
 
 ## Learning / Calibration
 - no calibration signal

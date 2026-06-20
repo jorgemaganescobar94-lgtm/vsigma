@@ -1,12 +1,12 @@
 target_date,generated_at,section,status,detail,next_action
-2026-06-20,2026-06-20T17:59:49+01:00,operator_status,WAIT_LIVE_WINDOW,health=ATTENTION; active=0; waiting=1; closed=0; watch=0; no_bet=9,Wait for useful live window and rerun live trigger validator.
-2026-06-20,2026-06-20T17:59:49+01:00,operator_action_level,LIVE,sanity=PASS; waiting_live_window=1; manual live validator rerun required,Use action_level as the first-read operator priority.
-2026-06-20,2026-06-20T17:59:49+01:00,operator_sanity_check,PASS,waiting_live_window=1; manual live validator rerun required,"If FAIL, inspect CSV/MD mismatch before using the brief."
-2026-06-20,2026-06-20T17:59:49+01:00,operator_compact_summary,WAIT_LIVE_WINDOW,action_level=LIVE; risk=MEDIUM; active_signature=; reason=1 candidate(s) waiting for live validation window,Read this row first for the final operator decision.
-2026-06-20,2026-06-20T17:59:49+01:00,operator_drift_check,NO_MATERIAL_CHANGE,notify=false; changed=none; tracked operator fields unchanged,Notify only if MATERIAL_CHANGE.
-2026-06-20,2026-06-20T17:59:49+01:00,operator_alert_route,LOCAL_ONLY,materiality=LOW; reason=live-window watch exists but no material drift; drift_status=NO_MATERIAL_CHANGE; drift_notify=false,Route only; this script does not send alerts.
-2026-06-20,2026-06-20T17:59:49+01:00,daily_board,NO_BET=9; LIVE_ONLY=1,rows=10,Review only candidates still active after live-window override.
-2026-06-20,2026-06-20T17:59:49+01:00,prelock_live,CANCELLED_NO_BET=9; LIVE_ONLY_WAIT_TRIGGER=1,rows=10,Use recheck state with live validator freshness override.
-2026-06-20,2026-06-20T17:59:49+01:00,live_trigger,TOO_EARLY=1,windows=TOO_EARLY=1,Only LIVE_TRIGGER_CONFIRMED can justify manual live review.
-2026-06-20,2026-06-20T17:59:49+01:00,issue_alert,ATTENTION,required=true; notify=true,Issue alert is informational; no auto action.
-2026-06-20,2026-06-20T17:59:49+01:00,postmatch_learning,none,actual_rows=0; detail_rows=0,Use learning only after sufficient sample.
+2026-06-20,2026-06-20T19:51:58+01:00,operator_status,WAIT_LIVE_WINDOW,health=ATTENTION; active=0; waiting=1; closed=0; watch=0; no_bet=9,Wait for useful live window and rerun live trigger validator.
+2026-06-20,2026-06-20T19:51:58+01:00,operator_action_level,LIVE,sanity=PASS; waiting_live_window=1; manual live validator rerun required,Use action_level as the first-read operator priority.
+2026-06-20,2026-06-20T19:51:58+01:00,operator_sanity_check,PASS,waiting_live_window=1; manual live validator rerun required,"If FAIL, inspect CSV/MD mismatch before using the brief."
+2026-06-20,2026-06-20T19:51:58+01:00,operator_compact_summary,WAIT_LIVE_WINDOW,action_level=LIVE; risk=MEDIUM; active_signature=; reason=1 candidate(s) waiting for live validation window,Read this row first for the final operator decision.
+2026-06-20,2026-06-20T19:51:58+01:00,operator_drift_check,NO_MATERIAL_CHANGE,notify=false; changed=none; tracked operator fields unchanged,Notify only if MATERIAL_CHANGE.
+2026-06-20,2026-06-20T19:51:58+01:00,operator_alert_route,LOCAL_ONLY,materiality=LOW; reason=live-window watch exists but no material drift; drift_status=NO_MATERIAL_CHANGE; drift_notify=false,Route only; this script does not send alerts.
+2026-06-20,2026-06-20T19:51:58+01:00,daily_board,NO_BET=9; LIVE_ONLY=1,rows=10,Review only candidates still active after live-window override.
+2026-06-20,2026-06-20T19:51:58+01:00,prelock_live,CANCELLED_NO_BET=9; LIVE_ONLY_WAIT_TRIGGER=1,rows=10,Use recheck state with live validator freshness override.
+2026-06-20,2026-06-20T19:51:58+01:00,live_trigger,TOO_EARLY=1,windows=TOO_EARLY=1,Only LIVE_TRIGGER_CONFIRMED can justify manual live review.
+2026-06-20,2026-06-20T19:51:58+01:00,issue_alert,ATTENTION,required=true; notify=true,Issue alert is informational; no auto action.
+2026-06-20,2026-06-20T19:51:58+01:00,postmatch_learning,none,actual_rows=0; detail_rows=0,Use learning only after sufficient sample.

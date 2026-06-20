@@ -1,2 +1,2 @@
 target_date,generated_at,approval_gate_status,rows_planned,estimated_call_units,approval_required,max_allowed_without_manual_approval,api_calls_allowed,api_calls_planned,api_calls_executed,recommended_action,approval_reason,auto_apply,production_change
-2026-06-20,2026-06-20T17:59:51+01:00,WAIT_FOR_MANUAL_APPROVAL,377,1896,YES,0,NO,NO,NO,WAIT_FOR_MANUAL_APPROVAL,Estimated enrichment workload is 1896 call units across 377 planned rows; manual approval is required before any API/enrichment stage.,NO,NO
+2026-06-20,2026-06-20T19:51:59+01:00,WAIT_FOR_MANUAL_APPROVAL,377,1896,YES,0,NO,NO,NO,WAIT_FOR_MANUAL_APPROVAL,Estimated enrichment workload is 1896 call units across 377 planned rows; manual approval is required before any API/enrichment stage.,NO,NO
