@@ -2,15 +2,15 @@
 
 ## Step State
 - PRE: DONE
-- Pre-lock: ['PENDING_OUTSIDE_WINDOW']
+- Pre-lock: ['PRELOCK_NOT_AVAILABLE']
 - POST: PENDING
 - Ledger: PRE_UPDATED
 - Governance: AVAILABLE
 - Stale warnings: NONE
 
 ## Next Operator Command
-- Action: WAIT_FOR_PRELOCK
-- Command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-20 --timezone Atlantic/Canary --mode prelock --window-minutes 90`
+- Action: RUN_POST_AFTER_FINISH
+- Command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-20 --timezone Atlantic/Canary --mode post`
 
 ## Official Baseline Picks
 | fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank |
@@ -34,7 +34,7 @@
 ## Pre-Lock Timing
 | fixture_id | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1551272 | Almeria | Malaga | OVER_2_5 | 2026-06-20T19:00:20+00:00 | 1165.59 | 2026-06-20T17:30:20+00:00 | PENDING_OUTSIDE_WINDOW | WAIT_FOR_PRELOCK |
+| 1551272 | Almeria | Malaga | OVER_2_5 | 2026-06-20T19:00:20.400000+00:00 | 505.22 | 2026-06-20T17:30:20.400000+00:00 | PRELOCK_NOT_AVAILABLE | RUN_POST_AFTER_FINISH |
 
 ## Ledger State
 | experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |

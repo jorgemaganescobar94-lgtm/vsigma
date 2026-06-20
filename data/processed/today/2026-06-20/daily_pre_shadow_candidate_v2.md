@@ -17,7 +17,7 @@
 
 | Rank | Fixture | League | Market | Rec | Bucket | Score | Why | Risk |
 | --- | --- | --- | --- | --- | --- | ---: | --- | --- |
-| 1 | Almeria vs Malaga | Segunda División | OVER_2_5 | BET | PREMIUM_CORE | 149.545 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.372; market_fit=SAFE_OK |
+| 1 | Almeria vs Malaga | Segunda División | OVER_2_5 | BET | PREMIUM_CORE | 149.799 | STRONG_ROLLING_STATS;CLEAN_MARKET_FIT;CORE_GATE_PASSED;EDGE_ABOVE_THRESHOLD;MODEL_PROB_STRONG;BET_EXECUTABLE | FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.374; market_fit=SAFE_OK |
 
 ## Candidate v2 Match Script Forecasts
 
