@@ -3,16 +3,16 @@
 ## Summary
 - Candidates reviewed: 1
 - Executable now: 0
-- Waiting: 1
-- No bet: 0
+- Waiting: 0
+- No bet: 1
 - Technical review: 0
-- Next automatic retry: 2026-06-20T19:00+01:00
-- OFFICIAL_ACTION_SUMMARY: WAIT
+- Next automatic retry: NONE
+- OFFICIAL_ACTION_SUMMARY: NO_BET
 
 ## Official Actions
 | fixture | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | next_retry_time |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Almeria vs Malaga | OVER_2_5 | 2026-06-20T20:00+01:00 | 96.44 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | 2026-06-20T19:00+01:00 |
+| Almeria vs Malaga | OVER_2_5 | 2026-06-20T20:00+01:00 | 6.88 | NO_BET | NO | PRELOCK_GOVERNANCE_NOT_RETAINED |  |
 
 ## Data Gaps
 - odds missing: 0
