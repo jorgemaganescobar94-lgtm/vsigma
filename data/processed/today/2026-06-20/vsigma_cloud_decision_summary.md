@@ -17,7 +17,7 @@ _No rows._
 ## Waiting / Blocked Picks
 | fixture_id | league | home_team | away_team | market_primary | fixture_datetime | minutes_to_kickoff | official_action | executable_now | final_block_reason | retry_allowed | next_retry_time | decision_state | exclusion_reason | next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1551272 | Segunda División | Almeria | Malaga | OVER_2_5 | 2026-06-20T20:00+01:00 | 218.97 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | YES | 2026-06-20T19:00+01:00 | WAITING_FOR_PRELOCK_WINDOW | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-06-20T19:00+01:00 |
+| 1551272 | Segunda División | Almeria | Malaga | OVER_2_5 | 2026-06-20T20:00+01:00 | 195.21 | WAIT | NO | OUTSIDE_PRELOCK_WINDOW | YES | 2026-06-20T19:00+01:00 | WAITING_FOR_PRELOCK_WINDOW | OUTSIDE_90_MIN_PRELOCK_WINDOW | WAIT_UNTIL_2026-06-20T19:00+01:00 |
 
 ## Technical Warnings
 - healthcheck_status: WARNING
