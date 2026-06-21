@@ -3,7 +3,7 @@
 System status: **BROKEN**
 Alert required: **YES**
 Notify required: **YES**
-Alert hash: `db8f1460e809765b75c2a19cef9c4297d633ad6e5d12ac8d4098386467ddc3b5`
+Alert hash: `0e5f886dc0167d6cf4f78b9fb7e80eb203df3aec93b82cb212a8cbe7c7e96ab1`
 
 ## Signals
 - - WARN means review; BROKEN means a workflow/input needs fixing.
@@ -29,8 +29,8 @@ Alert hash: `db8f1460e809765b75c2a19cef9c4297d633ad6e5d12ac8d4098386467ddc3b5`
 - daily_execution_board | status=MISSING | severity=BROKEN | action=RUN_DAILY_DECISION_CHAIN_V2 | detail=vsigma_daily_execution_board.md/csv missing
 - prelock_live_recheck | status=MISSING | severity=WARN | action=RUN_PRELOCK_RECHECK | detail=prelock/live report missing
 - live_trigger_validator | status=OK | severity=OK | action=NO | detail=windows=none; triggers=none
-- postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=1H=10; PST=4; NS=343
-- postmatch_stat_actuals | status=OK | severity=OK | action=NO | detail=rows_final=0
+- postmatch_results_refresh | status=OK | severity=OK | action=NO | detail=FT=70; NS=270; PST=5; PEN=1; 2H=3; 1H=6; CANC=1
+- postmatch_stat_actuals | status=OK | severity=OK | action=NO | detail=rows_final=71
 - forecast_calibration | status=OK | severity=OK | action=NO | detail=detail_rows=0; statuses=none
 - calibration_memory_ledger | status=OK | severity=OK | action=NO | detail=global ledger exists
 - daily_workflow_v2 | status=CONFIG_EXPECTED | severity=INFO | action=CHECK_GH_WORKFLOW_LIST_IF_NEEDED | detail=vsigma_daily_decision_chain_v2.yml active externally
