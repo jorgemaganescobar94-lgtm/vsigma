@@ -1,15 +1,15 @@
 # vSIGMA Daily Command Center - 2026-06-20
 
 ## Executive Command
-- generated_at: 2026-06-20T23:39:50+01:00
-- mode: auto
+- generated_at: 2026-06-21T11:48:03+01:00
+- mode: post-yesterday
 - command_center_status: REVIEW_HOLD
 - daily_classification: EXPIRED_PRELOCK
 - action_level: REVIEW_REQUIRED
 - operational_verdict: NO_EXECUTION_BLOCKED_BY_PRELOCK_OR_DATA
 - predictive_failure: NO
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/27886052750
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/27901893489
 
 ## Next Operator Action
 - Review AUTO/PRELOCK timing; do not count the row as predictive hit-rate failure.
