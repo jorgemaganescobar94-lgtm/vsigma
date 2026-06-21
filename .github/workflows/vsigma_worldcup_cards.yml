@@ -92,6 +92,10 @@ jobs:
             if [ "$SCHED" = "0 8 * * *" ]; then MODE="morning"; else MODE="preko"; fi
           fi
           FROM="$(date -u +%Y-%m-%d)"
+          # WIDE logging window (coverage margin): back 1 day, forward 3 days. Independent of
+          # the narrow Telegram window so a missed daily run still logs upcoming fixtures pre-KO.
+          LOG_FROM="$(date -u -d '-1 day' +%Y-%m-%d)"
+          LOG_TO="$(date -u -d '+3 days' +%Y-%m-%d)"
           if [ "$MODE" = "preko" ]; then
             TO="$(date -u -d '+1 day' +%Y-%m-%d)"            # cubre saques que cruzan medianoche
             CARD_ARGS="--within-hours $WH"
@@ -106,17 +110,28 @@ jobs:
           {
             echo "from=$FROM"; echo "to=$TO"; echo "mode=$MODE";
             echo "card_args=$CARD_ARGS"; echo "render_args=$RENDER_ARGS"; echo "title=$TITLE";
+            echo "log_from=$LOG_FROM"; echo "log_to=$LOG_TO";
           } >> "$GITHUB_OUTPUT"
           echo "mode=$MODE  window $FROM..$TO  card_args=[$CARD_ARGS]"
 
-      - name: Build L3 cards (own model only, NO odds; pre-KO adds lineups context)
+      # 1) WIDE build only to feed the log (coverage margin). NOT shown on Telegram.
+      - name: Build WIDE cards for log coverage ([HOY-1, HOY+3], own model, NO odds)
+        run: |
+          python analysis/worldcup/build_worldcup_cards.py \
+            --from "${{ steps.win.outputs.log_from }}" --to "${{ steps.win.outputs.log_to }}"
+
+      # 2) Log over the wide window: pre-match only (anti-hindsight guard), dedup lock-first,
+      #    writes worldcup_gaps.txt for any finished-before-logged miss. NO API, NO Telegram.
+      - name: Log predictions over wide window (pre-match only, dedup, gaps report)
+        run: python analysis/worldcup/worldcup_learning_loop.py log
+
+      # 3) Rebuild the NARROW card (original args) -> this is what settle/scorecard/render see,
+      #    so the Telegram message is byte-for-byte unchanged vs before this fix.
+      - name: Build L3 cards (Telegram view; own model only, NO odds; pre-KO adds lineups)
         run: |
           python analysis/worldcup/build_worldcup_cards.py \
             --from "${{ steps.win.outputs.from }}" --to "${{ steps.win.outputs.to }}" \
             ${{ steps.win.outputs.card_args }}
-
-      - name: Log today's predictions (pre-match, dedup by fixture)
-        run: python analysis/worldcup/worldcup_learning_loop.py log
 
       - name: Settle finished fixtures (cached /fixtures, ~0 marginal API)
         run: python analysis/worldcup/worldcup_learning_loop.py settle
@@ -172,6 +187,9 @@ jobs:
           # EXPLICIT paths only — never `git add .`, never any other file.
           git add analysis/worldcup/worldcup_predictions_log.csv \
                   analysis/worldcup/worldcup_scorecard.txt
+          # gaps file only exists once a coverage gap has been detected (explicit path)
+          [ -f analysis/worldcup/worldcup_gaps.txt ] && \
+            git add analysis/worldcup/worldcup_gaps.txt || true
           if git diff --cached --quiet; then
             echo "learning loop: no changes to commit."
           else

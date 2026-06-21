@@ -46,6 +46,7 @@ CARDS = OUT_DIR / "worldcup_cards.csv"
 V2 = OUT_DIR / "worldcup_our_model_v2_predictions.csv"
 LOG = OUT_DIR / "worldcup_predictions_log.csv"
 SCORECARD = OUT_DIR / "worldcup_scorecard.txt"
+GAPS = OUT_DIR / "worldcup_gaps.txt"   # finished-before-logged coverage gaps (dedup by fixture)
 KMAX = 10
 EPS = 1e-15
 FINISHED = {"FT", "AET", "PEN"}
@@ -96,6 +97,33 @@ def now_iso():
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
+def _parse_ko(s):
+    """Parse kickoff_utc 'YYYY-MM-DD HH:MM' (treated as UTC). None if unparseable/NaN."""
+    if s is None or (isinstance(s, float) and pd.isna(s)):
+        return None
+    try:
+        return datetime.strptime(str(s).strip()[:16], "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc)
+    except Exception:
+        return None
+
+
+def _record_gaps(gap_rows):
+    """Dedup-append coverage gaps to worldcup_gaps.txt. Idempotent by fixture_id (lock-first,
+    like the log). NO API, NO Telegram -- just a human-readable record of fixtures that
+    finished before they were ever logged. NEVER backfilled with a known result."""
+    if not gap_rows:
+        return 0
+    cols = ["fixture_id", "kickoff_utc", "home", "away", "round", "detected_at_utc", "reason"]
+    prev = pd.read_csv(GAPS) if GAPS.exists() else pd.DataFrame(columns=cols)
+    known = set(prev["fixture_id"].dropna().astype(int)) if len(prev) else set()
+    fresh = [g for g in gap_rows if int(g["fixture_id"]) not in known]
+    if not fresh:
+        return 0
+    out = pd.concat([prev, pd.DataFrame(fresh)], ignore_index=True)[cols]
+    out.to_csv(GAPS, index=False)
+    return len(fresh)
+
+
 def pmf(lam, k=KMAX):
     ks = np.arange(k + 1)
     logf = np.concatenate([[0.0], np.cumsum(np.log(np.arange(1, k + 1)))])
@@ -140,6 +168,7 @@ def cmd_log():
     known = set(log["fixture_id"].dropna().astype(int)) if len(log) else set()
 
     new_rows = []
+    gap_rows = []
     for _, r in cards.iterrows():
         if pd.isna(r.get("fixture_id")):
             continue
@@ -148,6 +177,18 @@ def cmd_log():
             continue  # lock-first: never overwrite a pre-match prediction
         # only log fixtures that actually carry our L3 forecast
         if pd.isna(r.get("our_home")):
+            continue
+        # anti-hindsight guard: never log a fixture whose kickoff already passed (it would
+        # capture the prediction with the match underway, breaking the pre-match guarantee).
+        # If it was also never logged pre-KO, that is a genuine coverage gap -> record it.
+        ko = _parse_ko(r.get("kickoff_utc"))
+        if ko is not None and ko < datetime.now(timezone.utc):
+            gap_rows.append({
+                "fixture_id": fid, "kickoff_utc": r.get("kickoff_utc"),
+                "home": r.get("home"), "away": r.get("away"), "round": r.get("round"),
+                "detected_at_utc": now_iso(),
+                "reason": "kickoff_passed_before_first_log",
+            })
             continue
         v2 = v2map.get(fid)
         row = {
@@ -175,7 +216,9 @@ def cmd_log():
     if new_rows:
         log = pd.concat([log, pd.DataFrame(new_rows)], ignore_index=True)[LOG_COLUMNS]
     log.to_csv(LOG, index=False)
-    print(f"learning_loop log: +{len(new_rows)} new, {len(log)} total -> {LOG}")
+    n_gaps = _record_gaps(gap_rows)
+    print(f"learning_loop log: +{len(new_rows)} new, {len(log)} total -> {LOG}"
+          + (f" | {n_gaps} gap(s) flagged -> {GAPS}" if n_gaps else ""))
 
 
 # ----------------------------------------------------------------- settle
