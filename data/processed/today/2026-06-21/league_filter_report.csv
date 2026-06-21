@@ -3,15 +3,15 @@ Brazil,Serie D,REJECT,country_league_not_allowlisted,20
 USA,USL W League,REJECT,country_league_not_allowlisted,18
 Argentina,Primera Nacional,REJECT,country_league_not_allowlisted,9
 Argentina,Torneo Federal A,REJECT,country_league_not_allowlisted,9
-Chile,Copa Chile,REJECT,country_league_not_allowlisted,6
 USA,USL League Two,REJECT,country_league_not_allowlisted,6
 Iceland,Úrvalsdeild,REJECT,country_league_not_allowlisted,5
 Brazil,Catarinense - 2,REJECT,country_league_not_allowlisted,4
-Iceland,1. Deild,REJECT,country_league_not_allowlisted,4
+Chile,Copa Chile,REJECT,country_league_not_allowlisted,4
 Argentina,Primera B Metropolitana,REJECT,country_league_not_allowlisted,3
 Bolivia,Primera División,REJECT,country_league_not_allowlisted,3
 Cameroon,Elite Two,REJECT,country_league_not_allowlisted,3
 Chile,Segunda División,REJECT,country_league_not_allowlisted,3
+Iceland,1. Deild,REJECT,country_league_not_allowlisted,3
 Peru,Copa De La Liga,REJECT,country_league_not_allowlisted,3
 World,Friendlies Clubs,REJECT,hard_reject_noise_league,3
 Brazil,Baiano - 2,REJECT,country_league_not_allowlisted,2
@@ -28,14 +28,10 @@ Brazil,Brasiliense U20,REJECT,hard_reject_noise_league,1
 Brazil,Goiano U20,REJECT,hard_reject_noise_league,1
 Brazil,Mineiro - 2,REJECT,country_league_not_allowlisted,1
 Brazil,Paranaense U20,REJECT,hard_reject_noise_league,1
-Gabon,Championnat D1,REJECT,country_league_not_allowlisted,1
-Kyrgyzstan,Premier League,REJECT,country_league_not_allowlisted,1
 Norway,2. Division - Group 2,REJECT,country_league_not_allowlisted,1
 Norway,Toppserien,REJECT,country_league_not_allowlisted,1
 Peru,Liga Women,REJECT,hard_reject_noise_league,1
 Spain,Tercera División RFEF - Promotion - Play-offs,REJECT,country_league_not_allowlisted,1
-Sweden,Division 2 - Norra Svealand,REJECT,country_league_not_allowlisted,1
-Sweden,Division 2 - Norrland,REJECT,country_league_not_allowlisted,1
 USA,USL League One,REJECT,country_league_not_allowlisted,1
 Uruguay,Segunda División,REJECT,country_league_not_allowlisted,1
 Brazil,Serie B,TIER_3,brazil_serie_b_noisy,3
