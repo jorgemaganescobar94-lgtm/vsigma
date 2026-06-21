@@ -1,27 +1,22 @@
 # vSIGMA Scored-to-Real Shortlist Builder - 2026-06-21
 
 ## Summary
-- source_rows: 11
-- same_day_rows: 11
+- source_rows: 6
+- same_day_rows: 6
 - real_shortlist_rows: 0
 - real_bets_rows: 0
-- selector_status_counts: NO_REAL_SHORTLIST=11
+- selector_status_counts: NO_REAL_SHORTLIST=6
 - next_action: No real shortlist rows; keep proxy bridge capped at NO_BET.
 - auto_apply: NO
 - production_change: NO
 
 ## Selector Diagnostics
-- Džiugas Telšiai vs Suduva Marijampole | status=NO_REAL_SHORTLIST | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | reason=blocked by scoring/data warning
-- Avai vs Cuiaba | status=NO_REAL_SHORTLIST | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | reason=blocked by scoring/data warning
 - CRB vs Fortaleza EC | status=NO_REAL_SHORTLIST | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | reason=blocked by scoring/data warning
 - Goias vs Operario-PR | status=NO_REAL_SHORTLIST | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | reason=blocked by scoring/data warning
 - São Bernardo vs Juventude | status=NO_REAL_SHORTLIST | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | reason=blocked by scoring/data warning
 - Barra vs Amazonas | status=NO_REAL_SHORTLIST | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | reason=blocked by scoring/data warning
 - Brusque vs Floresta | status=NO_REAL_SHORTLIST | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | reason=blocked by scoring/data warning
-- Caxias vs Maringá | status=NO_REAL_SHORTLIST | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | reason=blocked by scoring/data warning
 - Ferroviária vs Inter De Limeira | status=NO_REAL_SHORTLIST | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | reason=blocked by scoring/data warning
-- Ituano vs Figueirense | status=NO_REAL_SHORTLIST | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | reason=blocked by scoring/data warning
-- Maranhão vs Paysandu | status=NO_REAL_SHORTLIST | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | reason=blocked by scoring/data warning
 
 ## Real Shortlist Rows
 - none. No real scored row passed selector floors.

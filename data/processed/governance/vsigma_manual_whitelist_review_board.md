@@ -1,24 +1,24 @@
 # vSIGMA Manual Whitelist Review Board - 2026-06-21
 
 ## Summary
-- review_rows: 0
-- p1_review_rows: 0
+- review_rows: 1
+- p1_review_rows: 1
 - p2_review_rows: 0
-- manual_review_status_counts: none
-- manual_decision_counts: none
-- risk_label_counts: none
-- whitelist_permission_counts: none
-- canonical_board_permission_counts: none
-- scoring_permission_counts: none
-- api_enrichment_permission_counts: none
-- pick_permission_counts: none
-- stake_permission_counts: none
+- manual_review_status_counts: PENDING_OPERATOR_REVIEW=1
+- manual_decision_counts: NO_DECISION_REVIEW_ONLY=1
+- risk_label_counts: MEDIUM_REVIEW_POSSIBLE_WHITELIST=1
+- whitelist_permission_counts: NO_WHITELIST_PERMISSION=1
+- canonical_board_permission_counts: NO_CANONICAL_BOARD_PERMISSION=1
+- scoring_permission_counts: NO_SCORING_PERMISSION=1
+- api_enrichment_permission_counts: NO_API_ENRICHMENT_PERMISSION=1
+- pick_permission_counts: NO_PICK_PERMISSION=1
+- stake_permission_counts: NO_STAKE_PERMISSION=1
 - next_action: Review rows manually. Any whitelist change must be a separate explicit code change after validation; this board cannot promote, score, enrich, pick, or stake.
 - auto_apply: NO
 - production_change: NO
 
 ## Review Rows
-- none. No P1 whitelist candidates were produced by rejected source block audit.
+- #1 | Masters FC vs Creck | league=Super League | country=Malawi | priority=P1_REVIEW_CANDIDATE | risk=MEDIUM_REVIEW_POSSIBLE_WHITELIST | whitelist=NO_WHITELIST_PERMISSION | canonical=NO_CANONICAL_BOARD_PERMISSION | scoring=NO_SCORING_PERMISSION | pick=NO_PICK_PERMISSION | stake=NO_STAKE_PERMISSION | reason=source was rejected but league name looks like senior/structured competition after low-trust hardening
 
 ## Guardrails
 - This board is manual-review only.

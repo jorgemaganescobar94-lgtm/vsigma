@@ -1,2 +1,2 @@
 target_date,generated_at,rows_reviewed,trusted_rows,quarantine_rows,blocked_rows,trust_status_counts,next_action,auto_apply,production_change
-2026-06-21,2026-06-21T11:52:48+01:00,357,343,13,1,TRUSTED_RAW_SOURCE=343; QUARANTINE_REVIEW=13; REJECTED_SOURCE_BLOCK=1,Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.,NO,NO
+2026-06-21,2026-06-21T16:28:01+01:00,359,343,14,2,TRUSTED_RAW_SOURCE=343; QUARANTINE_REVIEW=14; REJECTED_SOURCE_BLOCK=2,Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.,NO,NO

@@ -1,24 +1,4 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
-2026-06-21,1522831,A Lyga,Lithuania,Džiugas Telšiai,Suduva Marijampole,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1522831,A Lyga,Lithuania,Džiugas Telšiai,Suduva Marijampole,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1522831,A Lyga,Lithuania,Džiugas Telšiai,Suduva Marijampole,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1522831,A Lyga,Lithuania,Džiugas Telšiai,Suduva Marijampole,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1522831,A Lyga,Lithuania,Džiugas Telšiai,Suduva Marijampole,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1522831,A Lyga,Lithuania,Džiugas Telšiai,Suduva Marijampole,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1522831,A Lyga,Lithuania,Džiugas Telšiai,Suduva Marijampole,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1522831,A Lyga,Lithuania,Džiugas Telšiai,Suduva Marijampole,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1522831,A Lyga,Lithuania,Džiugas Telšiai,Suduva Marijampole,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1522831,A Lyga,Lithuania,Džiugas Telšiai,Suduva Marijampole,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1520731,Serie B,Brazil,Avai,Cuiaba,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1520731,Serie B,Brazil,Avai,Cuiaba,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1520731,Serie B,Brazil,Avai,Cuiaba,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1520731,Serie B,Brazil,Avai,Cuiaba,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1520731,Serie B,Brazil,Avai,Cuiaba,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1520731,Serie B,Brazil,Avai,Cuiaba,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1520731,Serie B,Brazil,Avai,Cuiaba,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1520731,Serie B,Brazil,Avai,Cuiaba,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1520731,Serie B,Brazil,Avai,Cuiaba,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1520731,Serie B,Brazil,Avai,Cuiaba,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-21,1520733,Serie B,Brazil,CRB,Fortaleza EC,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-21,1520733,Serie B,Brazil,CRB,Fortaleza EC,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-21,1520733,Serie B,Brazil,CRB,Fortaleza EC,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
@@ -69,16 +49,6 @@ target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,
 2026-06-21,1526858,Serie C,Brazil,Brusque,Floresta,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-21,1526858,Serie C,Brazil,Brusque,Floresta,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-21,1526858,Serie C,Brazil,Brusque,Floresta,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526864,Serie C,Brazil,Caxias,Maringá,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526864,Serie C,Brazil,Caxias,Maringá,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526864,Serie C,Brazil,Caxias,Maringá,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526864,Serie C,Brazil,Caxias,Maringá,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526864,Serie C,Brazil,Caxias,Maringá,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526864,Serie C,Brazil,Caxias,Maringá,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526864,Serie C,Brazil,Caxias,Maringá,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526864,Serie C,Brazil,Caxias,Maringá,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526864,Serie C,Brazil,Caxias,Maringá,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526864,Serie C,Brazil,Caxias,Maringá,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-21,1526860,Serie C,Brazil,Ferroviária,Inter De Limeira,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-21,1526860,Serie C,Brazil,Ferroviária,Inter De Limeira,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-21,1526860,Serie C,Brazil,Ferroviária,Inter De Limeira,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
@@ -89,23 +59,3 @@ target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,
 2026-06-21,1526860,Serie C,Brazil,Ferroviária,Inter De Limeira,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-21,1526860,Serie C,Brazil,Ferroviária,Inter De Limeira,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
 2026-06-21,1526860,Serie C,Brazil,Ferroviária,Inter De Limeira,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526861,Serie C,Brazil,Ituano,Figueirense,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526861,Serie C,Brazil,Ituano,Figueirense,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526861,Serie C,Brazil,Ituano,Figueirense,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526861,Serie C,Brazil,Ituano,Figueirense,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526861,Serie C,Brazil,Ituano,Figueirense,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526861,Serie C,Brazil,Ituano,Figueirense,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526861,Serie C,Brazil,Ituano,Figueirense,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526861,Serie C,Brazil,Ituano,Figueirense,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526861,Serie C,Brazil,Ituano,Figueirense,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526861,Serie C,Brazil,Ituano,Figueirense,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526862,Serie C,Brazil,Maranhão,Paysandu,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526862,Serie C,Brazil,Maranhão,Paysandu,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526862,Serie C,Brazil,Maranhão,Paysandu,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526862,Serie C,Brazil,Maranhão,Paysandu,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526862,Serie C,Brazil,Maranhão,Paysandu,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526862,Serie C,Brazil,Maranhão,Paysandu,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526862,Serie C,Brazil,Maranhão,Paysandu,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526862,Serie C,Brazil,Maranhão,Paysandu,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526862,Serie C,Brazil,Maranhão,Paysandu,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-06-21,1526862,Serie C,Brazil,Maranhão,Paysandu,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.

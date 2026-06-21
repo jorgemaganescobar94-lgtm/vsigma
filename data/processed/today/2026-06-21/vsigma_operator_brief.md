@@ -6,9 +6,9 @@
 | Action | NONE | First-read operator priority |
 | Risk | NONE | Operational risk after sanity + health gate |
 | Alert | LOCAL_ONLY / LOW | Routing decision for operator notifications |
-| Counts | active=0; live=0; closed=0; watch=0; no_bet=11 | Candidate distribution |
-| Reason | no active/live/watch action; no_bet=11 | Why this action level was selected |
-| Final | NO_OPERATOR_ACTION | sanity=PASS; no active/live/watch action; no_bet=11; closed=0 |
+| Counts | active=0; live=0; closed=0; watch=0; no_bet=6 | Candidate distribution |
+| Reason | no active/live/watch action; no_bet=6 | Why this action level was selected |
+| Final | NO_OPERATOR_ACTION | sanity=PASS; no active/live/watch action; no_bet=6; closed=0 |
 
 ## Alert Routing
 | Field | Value | Meaning |
@@ -38,7 +38,7 @@
 - drift_status: MATERIAL_CHANGE
 - drift_notify_required: true
 - drift_changed_fields: action_level
-- sanity_check: PASS | no active/live/watch action; no_bet=11; closed=0
+- sanity_check: PASS | no active/live/watch action; no_bet=6; closed=0
 - operator_status: REVIEW
 - primary_next_action: Open health/board/recheck summaries; no automatic action.
 - health_status: ATTENTION
@@ -46,9 +46,9 @@
 - waiting_live_window: 0
 - closed_or_missed: 0
 - watch_only: 0
-- no_bet: 11
-- board_decisions: NO_BET=11
-- recheck_decisions: UNKNOWN
+- no_bet: 6
+- board_decisions: NO_BET=6
+- recheck_decisions: CANCELLED_NO_BET=11
 - live_triggers: none
 - alert_notify_required: true
 - auto_apply: NO
@@ -64,7 +64,7 @@
 - DRIFT_STATUS=MATERIAL_CHANGE
 - DRIFT_NOTIFY_REQUIRED=true
 - SANITY_CHECK=PASS
-- SANITY_DETAIL=no active/live/watch action; no_bet=11; closed=0
+- SANITY_DETAIL=no active/live/watch action; no_bet=6; closed=0
 - WINDOWS_READ=UTF8 | Get-Content data/processed/today/2026-06-21/vsigma_operator_brief.md -Encoding UTF8
 
 ## Active Review
@@ -80,17 +80,12 @@
 - none
 
 ## No Bet
-- #1 | NO_BET | Avai vs Cuiaba | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
-- #2 | NO_BET | CRB vs Fortaleza EC | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
-- #3 | NO_BET | Goias vs Operario-PR | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
-- #4 | NO_BET | São Bernardo vs Juventude | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
-- #5 | NO_BET | Džiugas Telšiai vs Suduva Marijampole | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
-- #6 | NO_BET | Barra vs Amazonas | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
-- #7 | NO_BET | Brusque vs Floresta | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
-- #8 | NO_BET | Caxias vs Maringá | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
-- #9 | NO_BET | Ferroviária vs Inter De Limeira | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
-- #10 | NO_BET | Ituano vs Figueirense | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
-- #11 | NO_BET | Maranhão vs Paysandu | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
+- #1 | NO_BET | CRB vs Fortaleza EC | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
+- #2 | NO_BET | Goias vs Operario-PR | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
+- #3 | NO_BET | São Bernardo vs Juventude | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
+- #4 | NO_BET | Barra vs Amazonas | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
+- #5 | NO_BET | Brusque vs Floresta | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
+- #6 | NO_BET | Ferroviária vs Inter De Limeira | market=NO_CLEAR_STAT_MARKET | bucket=BLOCKED | conf=LOW | score=-42 | cancel=default no bet; low forecast confidence
 
 ## Live Trigger Status
 - no live trigger report or no live candidates
@@ -111,23 +106,3 @@
 - Use PowerShell -Encoding UTF8 when reading local Markdown files on Windows.
 - Historical drift notifies only on material operator changes: action level, final decision, risk, or active candidates.
 - Alert routing is diagnostic only; this script writes the route but does not send comments or external notifications.
-
-## Calibration / Shadow Governance
-- calibration_shadow_status: UNAVAILABLE
-- shadow_active_candidates: 0
-- shadow_high_priority: 0
-- shadow_metrics: none
-- shadow_decisions: none
-- promotion_readiness: UNAVAILABLE
-- promotion_candidates: 0
-- promotion_decisions: none
-- learning_sanity_status: WARN
-- learning_sanity_counts: EMPTY_NO_FALLBACK=6; PASS=1
-- learning_sanity_severity: WARN=6; OK=1
-- calibration_auto_apply: NO
-- production_change: NO
-
-### Calibration Sources
-- shadow_queue: data/processed/today/2026-06-21/vsigma_calibration_shadow_patch_queue.csv
-- promotion_readiness: data/processed/today/2026-06-21/vsigma_shadow_patch_promotion_readiness.csv
-- learning_sanity: data/processed/today/2026-06-21/vsigma_learning_chain_output_sanity.csv

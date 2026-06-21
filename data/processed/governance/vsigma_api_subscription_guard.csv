@@ -1,2 +1,2 @@
 target_date,generated_at,api_status,subscription_plan,subscription_active,subscription_end,requests_current,requests_limit_day,requests_remaining,api_calls_allowed,executor_mode,recommended_executor_limit,guard_reason,auto_apply,production_change
-2026-06-21,2026-06-21T11:52:49+01:00,OK,Pro,YES,2026-07-08T14:59:54+00:00,73,7500,7427,YES,PRO_CONTROLLED_EXECUTION,250,pro plan detected; limit executor to 250 fixtures,NO,NO
+2026-06-21,2026-06-21T16:28:02+01:00,OK,Pro,YES,2026-07-08T14:59:54+00:00,1469,7500,6031,YES,PRO_CONTROLLED_EXECUTION,250,pro plan detected; limit executor to 250 fixtures,NO,NO

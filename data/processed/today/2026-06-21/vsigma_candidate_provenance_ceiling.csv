@@ -1,12 +1,7 @@
 target_date,generated_at,fixture_id,home_team,away_team,candidate_origin,max_execution_permission,before_permission,after_permission,before_stake,after_stake,ceiling_action,reason,auto_apply,production_change
-2026-06-21,2026-06-21T11:52:41+01:00,1520731,Avai,Cuiaba,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-21,2026-06-21T11:52:41+01:00,1520733,CRB,Fortaleza EC,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-21,2026-06-21T11:52:41+01:00,1520734,Goias,Operario-PR,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-21,2026-06-21T11:52:41+01:00,1520737,São Bernardo,Juventude,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-21,2026-06-21T11:52:41+01:00,1522831,Džiugas Telšiai,Suduva Marijampole,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-21,2026-06-21T11:52:41+01:00,1526856,Barra,Amazonas,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-21,2026-06-21T11:52:41+01:00,1526858,Brusque,Floresta,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-21,2026-06-21T11:52:41+01:00,1526864,Caxias,Maringá,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-21,2026-06-21T11:52:41+01:00,1526860,Ferroviária,Inter De Limeira,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-21,2026-06-21T11:52:41+01:00,1526861,Ituano,Figueirense,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
-2026-06-21,2026-06-21T11:52:41+01:00,1526862,Maranhão,Paysandu,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-21,2026-06-21T16:27:52+01:00,1520733,CRB,Fortaleza EC,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-21,2026-06-21T16:27:52+01:00,1520734,Goias,Operario-PR,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-21,2026-06-21T16:27:52+01:00,1520737,São Bernardo,Juventude,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-21,2026-06-21T16:27:52+01:00,1526856,Barra,Amazonas,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-21,2026-06-21T16:27:52+01:00,1526858,Brusque,Floresta,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO
+2026-06-21,2026-06-21T16:27:52+01:00,1526860,Ferroviária,Inter De Limeira,TRANSLATOR_ONLY,NO_BET,NO_BET,NO_BET,NO_STAKE,NO_STAKE,NO_CHANGE,permission already within provenance ceiling or ledger missing,NO,NO

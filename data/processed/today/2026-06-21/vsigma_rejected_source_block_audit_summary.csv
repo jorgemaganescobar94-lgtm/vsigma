@@ -1,2 +1,2 @@
 target_date,generated_at,rows_reviewed,rejected_rows,correct_reject_rows,manual_review_rows,whitelist_candidate_rows,audit_bucket_counts,review_priority_counts,next_action,auto_apply,production_change
-2026-06-21,2026-06-21T11:52:48+01:00,1,1,0,1,0,REVIEW_REJECTED_SOURCE_UNKNOWN_COMPETITION=1,P2_REVIEW_LOW_CONFIDENCE=1,Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.,NO,NO
+2026-06-21,2026-06-21T16:28:01+01:00,2,2,0,2,1,MANUAL_REVIEW_POSSIBLE_WHITELIST=1; REVIEW_REJECTED_SOURCE_UNKNOWN_COMPETITION=1,P1_REVIEW_CANDIDATE=1; P2_REVIEW_LOW_CONFIDENCE=1,Review P1/P2 rows manually. Do not change trust gates or whitelist automatically from this audit.,NO,NO
