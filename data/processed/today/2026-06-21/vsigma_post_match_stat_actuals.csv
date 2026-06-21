@@ -1,1 +1,72 @@
 target_date,generated_at,fixture_id,home_team,away_team,status,actual_home_goals,actual_away_goals,actual_total_goals,actual_home_sot,actual_away_sot,actual_total_sot,actual_home_shots,actual_away_shots,actual_total_shots,actual_home_corners,actual_away_corners,actual_total_corners,actual_home_cards,actual_away_cards,actual_total_cards,actual_home_fouls,actual_away_fouls,actual_total_fouls,actual_home_xg,actual_away_xg,actual_total_xg,actual_home_big,actual_away_big,actual_total_big,available_metrics,actuals_verdict,source_guard,auto_apply,production_change
+2026-06-21,2026-06-21T11:09:46+01:00,1493547,Brooklyn,Tampa Bay Rowdies,FT,0,2,2,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1493549,Hartford Athletic,Pittsburgh Riverhounds,FT,0,0,0,0,0,0,,,,,,,,,,,,,0,0,0,0,0,0,goals; sot; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1493554,Sporting JAX,Charleston Battery,FT,2,5,7,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1493869,Chattanooga Red Wolves,Naples,FT,1,0,1,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1493872,Greenville Triumph,Alta,FT,1,2,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1493873,Richmond Kickers,Fort Wayne,FT,0,2,2,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525000,Buffalo,Pittsburgh Riverhounds 2,FT,3,1,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525002,Bigfoot,Tacoma Stars,FT,3,1,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525018,Cedar Stars Rush,Morris Elite,FT,2,0,2,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525020,Hickory,Wake,FT,2,1,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525021,Hill City,Christos,FT,1,2,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525022,Lionsbridge,Virginia Beach City,FT,2,0,2,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525024,Manhattan,Hudson Valley Hammers,FT,3,3,6,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525026,Ocean City Nor'easters,Reading United,FT,3,0,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525029,SC United Bantams,Charlotte Eagles,FT,0,0,0,0,0,0,,,,,,,,,,,,,0,0,0,0,0,0,goals; sot; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525030,Shark Coast,The Villages,FT,0,0,0,0,0,0,,,,,,,,,,,,,0,0,0,0,0,0,goals; sot; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525031,Toledo Villa,West Virginia Alliance,FT,3,4,7,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525034,Union Macomb,Oakland County,FT,2,2,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525035,Vermont Green,Boston City,FT,10,1,11,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525410,PA Classics,Real Central New Jersey,FT,2,2,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1542667,Lexington,Indy Eleven,PEN,0,0,0,0,0,0,,,,,,,,,,,,,0,0,0,0,0,0,goals; sot; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525036,Charlotte Independence 2,Appalachian,FT,0,0,0,0,0,0,,,,,,,,,,,,,0,0,0,0,0,0,goals; sot; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1526861,Ituano,Figueirense,FT,0,0,0,0,0,0,,,,,,,,,,,,,0,0,0,0,0,0,goals; sot; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1530415,San Martín Mendoza,Huracan Las Heras,FT,3,1,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525037,Columbus United,Dothan United,FT,1,1,2,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1489392,Ecuador,Curaçao,FT,0,0,0,15,3,18,28,10,38,9,0,9,1,5,6,7,10,17,0,0,0,0,0,0,goals; sot; shots; corners; cards; fouls; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1493546,Birmingham Legion,Loudoun United,FT,1,1,2,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1493871,Forward Madison,NY Cosmos,FT,3,1,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1513166,Colorado Rapids II,Portland Timbers II,FT,0,2,2,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525023,Little Rock Rangers,Mississippi Brilla,FT,1,0,1,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525028,Red River,Louisiana Krewe,FT,4,1,5,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525033,Brazos Valley,Lonestar,FT,1,2,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525041,Apotheos,Birmingham Legion II,FT,0,1,1,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525042,Charlottesville Blues,Virginia Marauders,FT,4,0,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525409,Memphis 901,Hattiesburg,FT,3,1,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1526862,Maranhão,Paysandu,FT,0,1,1,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1493548,FC Tulsa,Colorado Springs,FT,1,2,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1493870,Corpus Christi,Sarasota Paradise,FT,4,1,5,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525038,Denton Diablos,Lubbock Matadors,FT,2,1,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525039,McKinney Chupacabras,West Texas,FT,2,1,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525040,Peoria,Sunflower State,FT,2,0,2,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1493874,Spokane Velocity,One Knoxville,FT,0,4,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525009,Almaden,SF Glens,FT,3,0,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1553055,Carlos A. Mannucci,Alianza Lima,FT,3,1,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1493868,Boise,Union Omaha,FT,1,0,1,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525014,Oly Town,Midlakes United,FT,3,1,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1493550,Monterey Bay,El Paso Locomotive,FT,1,0,1,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525015,Academica,Project 51O,FT,3,5,8,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525027,Redlands,Seahorses,FT,5,0,5,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1525032,Tucson,Ventura County Fusion,FT,2,2,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1533031,Clarence Zebras II,University of Tasmania,FT,1,4,5,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1493552,Phoenix Rising,Oakland Roots,FT,3,4,7,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1493704,Las Vegas Lights,Orange County SC,FT,2,3,5,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1493553,Sacramento Republic,New Mexico United,FT,0,1,1,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1523772,Maitland,Hamilton Olympic,FT,1,0,1,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1532585,Singleton Strikers,West Wallsend,FT,0,4,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1549304,Blacktown City U20,APIA Leichhardt U20,FT,0,1,1,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1549305,Marconi S. U20,UNSW U20,FT,3,0,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1529258,Kingborough Lions,South Hobart,FT,1,1,2,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1489394,Tunisia,Japan,FT,0,4,4,0,5,5,2,11,13,3,5,8,,,,8,15,23,0,0,0,0,0,0,goals; sot; shots; corners; fouls; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1517575,Sydney United,SD Raiders,FT,1,0,1,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1517569,Wollongong Wolves,Sydney FC U23,FT,2,3,5,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1517574,Blacktown City,APIA Leichhardt Tigers,FT,1,3,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1517665,Marconi Stallions,UNSW,FT,1,0,1,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1520508,Busan Transportation,Gyeongju HNP,FT,1,1,2,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1523773,Kahibah,Charlestown City Blues,FT,4,1,5,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1524057,Olympic,Peninsula Power,FT,1,3,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1549307,Sydney Utd U20,SD Raiders U20,FT,2,2,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1521961,St. Albans Saints,Altona Magic,FT,2,1,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1524058,Lions,Rochedale Rovers,FT,2,1,3,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO
+2026-06-21,2026-06-21T11:09:46+01:00,1536389,Irkutsk,Dinamo St. Petersburg,FT,0,4,4,,,,,,,,,,,,,,,,0,0,0,0,0,0,goals; xg; big,FINAL_ACTUALS_AVAILABLE,DATED_INPUT_ONLY,NO,NO

@@ -1,14 +1,84 @@
 # vSIGMA Post-Match Stat Actuals - 2026-06-21
 
 ## Summary
-- rows_final: 0
-- verdict_counts: none
+- rows_final: 71
+- verdict_counts: FINAL_ACTUALS_AVAILABLE=71
 - source_guard: DATED_INPUT_ONLY
 - auto_apply: NO
 - production_change: NO
 
 ## Actual Rows
-- none. No final fixtures found yet in dated matches.csv.
+- Brooklyn vs Tampa Bay Rowdies | status=FT | goals=2 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Hartford Athletic vs Pittsburgh Riverhounds | status=FT | goals=0 | SoT=0 | corners=NA | cards=NA | metrics=goals; sot; xg; big
+- Sporting JAX vs Charleston Battery | status=FT | goals=7 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Chattanooga Red Wolves vs Naples | status=FT | goals=1 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Greenville Triumph vs Alta | status=FT | goals=3 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Richmond Kickers vs Fort Wayne | status=FT | goals=2 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Buffalo vs Pittsburgh Riverhounds 2 | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Bigfoot vs Tacoma Stars | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Cedar Stars Rush vs Morris Elite | status=FT | goals=2 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Hickory vs Wake | status=FT | goals=3 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Hill City vs Christos | status=FT | goals=3 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Lionsbridge vs Virginia Beach City | status=FT | goals=2 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Manhattan vs Hudson Valley Hammers | status=FT | goals=6 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Ocean City Nor'easters vs Reading United | status=FT | goals=3 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- SC United Bantams vs Charlotte Eagles | status=FT | goals=0 | SoT=0 | corners=NA | cards=NA | metrics=goals; sot; xg; big
+- Shark Coast vs The Villages | status=FT | goals=0 | SoT=0 | corners=NA | cards=NA | metrics=goals; sot; xg; big
+- Toledo Villa vs West Virginia Alliance | status=FT | goals=7 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Union Macomb vs Oakland County | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Vermont Green vs Boston City | status=FT | goals=11 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- PA Classics vs Real Central New Jersey | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Lexington vs Indy Eleven | status=PEN | goals=0 | SoT=0 | corners=NA | cards=NA | metrics=goals; sot; xg; big
+- Charlotte Independence 2 vs Appalachian | status=FT | goals=0 | SoT=0 | corners=NA | cards=NA | metrics=goals; sot; xg; big
+- Ituano vs Figueirense | status=FT | goals=0 | SoT=0 | corners=NA | cards=NA | metrics=goals; sot; xg; big
+- San Martín Mendoza vs Huracan Las Heras | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Columbus United vs Dothan United | status=FT | goals=2 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Ecuador vs Curaçao | status=FT | goals=0 | SoT=18 | corners=9 | cards=6 | metrics=goals; sot; shots; corners; cards; fouls; xg; big
+- Birmingham Legion vs Loudoun United | status=FT | goals=2 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Forward Madison vs NY Cosmos | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Colorado Rapids II vs Portland Timbers II | status=FT | goals=2 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Little Rock Rangers vs Mississippi Brilla | status=FT | goals=1 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Red River vs Louisiana Krewe | status=FT | goals=5 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Brazos Valley vs Lonestar | status=FT | goals=3 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Apotheos vs Birmingham Legion II | status=FT | goals=1 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Charlottesville Blues vs Virginia Marauders | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Memphis 901 vs Hattiesburg | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Maranhão vs Paysandu | status=FT | goals=1 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- FC Tulsa vs Colorado Springs | status=FT | goals=3 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Corpus Christi vs Sarasota Paradise | status=FT | goals=5 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Denton Diablos vs Lubbock Matadors | status=FT | goals=3 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- McKinney Chupacabras vs West Texas | status=FT | goals=3 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Peoria vs Sunflower State | status=FT | goals=2 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Spokane Velocity vs One Knoxville | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Almaden vs SF Glens | status=FT | goals=3 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Carlos A. Mannucci vs Alianza Lima | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Boise vs Union Omaha | status=FT | goals=1 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Oly Town vs Midlakes United | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Monterey Bay vs El Paso Locomotive | status=FT | goals=1 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Academica vs Project 51O | status=FT | goals=8 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Redlands vs Seahorses | status=FT | goals=5 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Tucson vs Ventura County Fusion | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Clarence Zebras II vs University of Tasmania | status=FT | goals=5 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Phoenix Rising vs Oakland Roots | status=FT | goals=7 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Las Vegas Lights vs Orange County SC | status=FT | goals=5 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Sacramento Republic vs New Mexico United | status=FT | goals=1 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Maitland vs Hamilton Olympic | status=FT | goals=1 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Singleton Strikers vs West Wallsend | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Blacktown City U20 vs APIA Leichhardt U20 | status=FT | goals=1 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Marconi S. U20 vs UNSW U20 | status=FT | goals=3 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Kingborough Lions vs South Hobart | status=FT | goals=2 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Tunisia vs Japan | status=FT | goals=4 | SoT=5 | corners=8 | cards=NA | metrics=goals; sot; shots; corners; fouls; xg; big
+- Sydney United vs SD Raiders | status=FT | goals=1 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Wollongong Wolves vs Sydney FC U23 | status=FT | goals=5 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Blacktown City vs APIA Leichhardt Tigers | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Marconi Stallions vs UNSW | status=FT | goals=1 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Busan Transportation vs Gyeongju HNP | status=FT | goals=2 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Kahibah vs Charlestown City Blues | status=FT | goals=5 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Olympic vs Peninsula Power | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Sydney Utd U20 vs SD Raiders U20 | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- St. Albans Saints vs Altona Magic | status=FT | goals=3 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Lions vs Rochedale Rovers | status=FT | goals=3 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
+- Irkutsk vs Dinamo St. Petersburg | status=FT | goals=4 | SoT=NA | corners=NA | cards=NA | metrics=goals; xg; big
 
 ## Guardrails
 - This normalizer does not infer missing shots/corners/cards/fouls from recent averages.
