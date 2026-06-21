@@ -1,55 +1,60 @@
-📊 Track record (3 resueltos · 2026-06-20)
-Acierto 1X2: L3 67% · v2 67%
-Brier-skill vs base-rate: L3 +31% · v2 -10%
+📊 Track record (7 resueltos · 2026-06-21)
+Acierto 1X2: L3 71% · v2 71%
+Brier-skill vs base-rate: L3 +24% · v2 +18%
 
 ===== detalle =====
-resueltos=3 | 1X2 a 90' (score.fulltime) | métricas vs RESULTADOS REALES, sin mercado
+resueltos=7 | 1X2 a 90' (score.fulltime) | métricas vs RESULTADOS REALES, sin mercado
 predictor    n  logloss   brier   acc%    ECE Skill_base%
 ---------------------------------------------------------
-base-rate    3   0.6365  0.4444   66.7  0.000         0.0
-L3           3   0.5879  0.3085   66.7  0.309       +30.6
-v2           3   0.8507  0.4886   66.7  0.452        -9.9
+base-rate    7   1.0042  0.6122   42.9  0.000         0.0
+L3           7   0.8006  0.4641   71.4  0.366       +24.2
+v2           7   0.8620  0.4992   71.4  0.350       +18.5
   (1X2 multiclase H/D/A; baseline ingenuo = base-rate.  (muestra pequeña, orientativo))
 
 --- (1) APUESTAS DERIVADAS — L3 (Poisson xG) vs base-rate (Over2.5, BTTS) ---
-  Over 2.5  (real Over=33%):
-    L3 (Poisson xG)    n=  3  acc   67%  Brier 0.250  logloss 0.693
-    base-rate          n=  3  acc   67%  Brier 0.222  logloss 0.637
-  BTTS      (real Yes=0%):
-    L3 (Poisson xG)    n=  3  acc   67%  Brier 0.182  logloss 0.545
-    base-rate          n=  3  acc  100%  Brier 0.000  logloss 0.000
+  Over 2.5  (real Over=57%):
+    L3 (Poisson xG)    n=  7  acc   43%  Brier 0.251  logloss 0.696
+    base-rate          n=  7  acc   57%  Brier 0.245  logloss 0.683
+  BTTS      (real Yes=29%):
+    L3 (Poisson xG)    n=  7  acc   86%  Brier 0.169  logloss 0.521
+    base-rate          n=  7  acc   71%  Brier 0.204  logloss 0.598
 
 --- (2) CALIBRACIÓN / reliability (predicho vs frecuencia real por banda) ---
-  L3 (1X2 aplanado H/D/A, n_pred=9)  (muestra pequeña, orientativo):
+  L3 (1X2 aplanado H/D/A, n_pred=21)  (muestra pequeña, orientativo):
        banda    n  predicho   real
-      0-20 %    3       11%     0%
-     20-40 %    4       30%    25%
-     60-80 %    1       63%   100%
+      0-20 %    7       11%    14%
+     20-40 %    8       28%    12%
+     40-60 %    2       47%   100%
+     60-80 %    3       74%    67%
      80-100%    1       81%   100%
-  v2 (1X2 aplanado H/D/A, n_pred=9)  (muestra pequeña, orientativo):
+  v2 (1X2 aplanado H/D/A, n_pred=21)  (muestra pequeña, orientativo):
        banda    n  predicho   real
       0-20 %    1       12%     0%
-     20-40 %    5       24%    20%
-     40-60 %    2       49%    50%
+     20-40 %   13       24%    15%
+     40-60 %    6       50%    67%
      60-80 %    1       67%   100%
 
 --- (3) ERROR DE GOLES — L3 xG vs goles reales (MAE; baseline = media torneo) ---
-  n=3  (muestra pequeña, orientativo)  baseline = media torneo (home 1.00, away 0.67, total 1.67)
+  n=7  (muestra pequeña, orientativo)  baseline = media torneo (home 1.43, away 1.14, total 2.57)
              L3 MAE  base MAE   mejora
-    home       0.93      1.33     +30%
-    away       0.50      0.44     -12%
-    total      1.22      0.89     -38%
+    home       1.34      1.63     +18%
+    away       0.55      0.82     +33%
+    total      1.62      1.63      +1%
 
 --- (4) L3 vs base-rate cara a cara (prob asignada al resultado real) ---
-  global n=3  (muestra pequeña, orientativo): L3 mejor 1 · base-rate mejor 2 · empate 0
-    L3 marca favorito (máx≥50%)  n=  2: L3 1 · base 1 · empate 0
-    L3 lo ve igualado (máx<50%)  n=  1: L3 0 · base 1 · empate 0
-    cruce de confederación       n=  3: L3 1 · base 2 · empate 0
+  global n=7  (muestra pequeña, orientativo): L3 mejor 5 · base-rate mejor 2 · empate 0
+    L3 marca favorito (máx≥50%)  n=  4: L3 3 · base 1 · empate 0
+    L3 lo ve igualado (máx<50%)  n=  3: L3 2 · base 1 · empate 0
+    cruce de confederación       n=  6: L3 4 · base 2 · empate 0
+    misma confederación          n=  1: L3 1 · base 0 · empate 0
 
 --- (5) STATS córners/tarjetas/tiros — modelo de datos vs reales + base-rate ---
-  aún sin stats reales liquidadas (settle trae córners/tarjetas/tiros al terminar el partido).
+  córners   n=  2  (muestra pequeña, orientativo) real μ=8.5 | MAE modelo 1.90 vs base 0.50 (-279%)
+  tarjetas  n=  2  (muestra pequeña, orientativo) real μ=3.0 | MAE modelo 2.52 vs base 3.00 (+16%)
+  tiros     n=  2  (muestra pequeña, orientativo) real μ=25.5 | MAE modelo 11.83 vs base 12.50 (+5%)
+  córners O/U (línea~7.5) n=2: acc 0% · Brier 0.432 · real Over=100%
 
 PROPUESTA de recalibración (calibración, informativa, NO aplicada):
-  Muestra insuficiente (>=5) o sin L3 resuelto.
+  Ningún encogimiento hacia base-rate mejora el log-loss (0.8006); L3 bien calibrado.
 
-generated_at_utc: 2026-06-20T10:33:13+00:00
+generated_at_utc: 2026-06-21T11:17:21+00:00
