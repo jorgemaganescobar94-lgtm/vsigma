@@ -1,14 +1,14 @@
 # vSIGMA Autonomous Monitoring Summary - 2026-06-21
 
 ## Executive Status
-- generated_at: 2026-06-21T14:22:08+01:00
+- generated_at: 2026-06-21T15:02:51+01:00
 - mode: auto
 - daily_classification: NO_BET_VALID
 - operational_verdict: NO_EXECUTION_NO_BET_VALID
 - action_level: NO_ACTION_REQUIRED
 - predictive_failure: NO
 - evidence_basis: decision_quality_review
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/27905666270
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/27906729691
 
 ## Operator Action
 - No manual execution needed; keep collecting no-bet evidence.
