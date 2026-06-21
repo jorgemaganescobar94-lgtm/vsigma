@@ -22,7 +22,6 @@ Cameroon,Elite Two,REJECT,country_league_not_allowlisted,4
 Chile,Segunda División,REJECT,country_league_not_allowlisted,4
 Kazakhstan,Premier League,REJECT,country_league_not_allowlisted,4
 Peru,Copa De La Liga,REJECT,country_league_not_allowlisted,4
-Russia,Second League - Group 4,REJECT,country_league_not_allowlisted,4
 Zimbabwe,Premier Soccer League,REJECT,country_league_not_allowlisted,4
 Argentina,Primera B Metropolitana,REJECT,country_league_not_allowlisted,3
 Belarus,Premier League,REJECT,country_league_not_allowlisted,3
@@ -30,6 +29,7 @@ Bolivia,Primera División,REJECT,country_league_not_allowlisted,3
 Ethiopia,Premier League,REJECT,country_league_not_allowlisted,3
 Norway,2. Division - Group 2,REJECT,country_league_not_allowlisted,3
 Norway,3. Division - Girone 4,REJECT,country_league_not_allowlisted,3
+Russia,Second League - Group 4,REJECT,country_league_not_allowlisted,3
 Sweden,Division 2 - Norra Svealand,REJECT,country_league_not_allowlisted,3
 USA,MLS Next Pro,REJECT,hard_reject_noise_league,3
 World,World Cup,REJECT,country_league_not_allowlisted,3
@@ -39,7 +39,6 @@ Brazil,Baiano - 2,REJECT,country_league_not_allowlisted,2
 Brazil,Maranhense - 2,REJECT,country_league_not_allowlisted,2
 Brazil,Mineiro - 2,REJECT,country_league_not_allowlisted,2
 Canada,Northern Super League,REJECT,country_league_not_allowlisted,2
-Estonia,Meistriliiga,REJECT,country_league_not_allowlisted,2
 Faroe-Islands,Meistaradeildin,REJECT,country_league_not_allowlisted,2
 Kuwait,Premier League,REJECT,country_league_not_allowlisted,2
 Kyrgyzstan,Premier League,REJECT,country_league_not_allowlisted,2
@@ -60,6 +59,7 @@ Brazil,Goiano U20,REJECT,hard_reject_noise_league,1
 Brazil,Paranaense U20,REJECT,hard_reject_noise_league,1
 Estonia,Esiliiga A,REJECT,country_league_not_allowlisted,1
 Estonia,Esiliiga B,REJECT,country_league_not_allowlisted,1
+Estonia,Meistriliiga,REJECT,country_league_not_allowlisted,1
 Faroe-Islands,1. Deild,REJECT,country_league_not_allowlisted,1
 Gabon,Championnat D1,REJECT,country_league_not_allowlisted,1
 Norway,2. Division - Group 1,REJECT,country_league_not_allowlisted,1

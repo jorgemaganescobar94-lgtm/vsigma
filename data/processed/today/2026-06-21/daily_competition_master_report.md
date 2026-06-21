@@ -130,8 +130,8 @@ _No rows._
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: official_baseline_output: WARNING - only stale rows found for 2026-06-20
-- Recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-21 --timezone Atlantic/Canary --mode pre`
+- Critical warnings: freshness_report: WARNING - validation report contains warning rows
+- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-06-21`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-06-21/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
