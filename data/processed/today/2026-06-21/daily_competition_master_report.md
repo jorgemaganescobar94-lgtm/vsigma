@@ -148,13 +148,13 @@ _No rows._
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | OFFICIAL | 22 | 8 | 5 | 3 | -0.66 | -8.25 | FROZEN_OFFICIAL_BASELINE |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 30 | 7 | 4 | 3 | -1.18 | -16.857143 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
+| OFFICIAL_BASELINE | OFFICIAL | 21 | 8 | 5 | 3 | -0.66 | -8.25 | FROZEN_OFFICIAL_BASELINE |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 29 | 7 | 4 | 3 | -1.18 | -16.857143 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
 | CANDIDATE_V3_ODDS_DEPTH | NOT_PROMOTED | 0 | 0 | 0 | 0 | 0.0 |  | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V4_O25_FIREWALL | SHADOW | 28 | 7 | 5 | 2 | 0.07 | 1.0 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V5_PLAYER_IMPACT | SHADOW | 30 | 7 | 5 | 2 | 0.07 | 1.0 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V4_O25_FIREWALL | SHADOW | 27 | 7 | 5 | 2 | 0.07 | 1.0 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V5_PLAYER_IMPACT | SHADOW | 29 | 7 | 5 | 2 | 0.07 | 1.0 | PARTIAL_NOT_PROMOTED |
 | CANDIDATE_V6_API_PREDICTIONS | AUDIT_ONLY | 25 | 6 | 4 | 2 | -0.18 | -3.0 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | 15 | 1 | 0 | 1 | -1.0 | -100.0 | PRICE_DISCIPLINE_UNTESTED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | 14 | 1 | 0 | 1 | -1.0 | -100.0 | PRICE_DISCIPLINE_UNTESTED |
 
 ## Promotion & Threshold Governance
 - Official baseline status: KEEP_OFFICIAL_BASELINE
@@ -224,7 +224,7 @@ _No rows._
 | vsigma_today_candidate_v2_match_script_forecasts.csv | FORECAST_CANDIDATE_V2 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | WARNING_STALE_GLOBAL_FILE | metadata target_date=['2026-06-20'] does not match 2026-06-21 | 1 |
+| vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | today_pipeline_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
 | today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet | 0 |
 

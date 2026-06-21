@@ -6,7 +6,7 @@
 - POST: PENDING
 - Ledger: PRE_UPDATED
 - Governance: AVAILABLE
-- Stale warnings: STALE_PRELOCK_EXCLUDED: 2026-06-20
+- Stale warnings: NONE
 
 ## Next Operator Command
 - Action: NO_BET_DAY

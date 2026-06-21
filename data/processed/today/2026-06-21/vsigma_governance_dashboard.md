@@ -68,7 +68,7 @@
 | 2026-06-17 | NO_BET_DAY | No model registered a pick. |
 | 2026-06-18 | NO_BET_DAY | No model registered a pick. |
 | 2026-06-19 | NO_BET_DAY | No model registered a pick. |
-| 2026-06-20 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
+| 2026-06-20 | NO_BET_DAY | No model registered a pick. |
 | 2026-06-21 | NO_BET_DAY | No model registered a pick. |
 
 ## CLV Data Sufficiency
