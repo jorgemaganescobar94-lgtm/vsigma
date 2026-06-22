@@ -5281,6 +5281,21 @@ class VsigmBacktestCalibrationTests(unittest.TestCase):
             for path in snapshot_files:
                 if not path.exists():
                     pd.DataFrame([{"date": "2026-05-09"}]).to_csv(path, index=False)
+            # Date-scoped post inputs normally live under today/<date>/ (the PRE pipeline
+            # writes them). Seed that snapshot (under the patched tmp TODAY_DIR) so
+            # activate_date_scoped_post_inputs() finds the dir + required inputs. The
+            # shortlist snapshot must keep its real columns because load_shortlist_for_date
+            # reads it first; the other inputs only need a date-scoped stub. Working-file
+            # paths stay unpatched (real, under ROOT) and are protected by the pipeline's
+            # own backup/restore, so the repo is unchanged after the run.
+            snapshot_seed_dir = today_dir / "2026-05-09"
+            snapshot_seed_dir.mkdir(parents=True, exist_ok=True)
+            for working_path in run_today_post_results_pipeline.DATE_SCOPED_POST_INPUT_FILES:
+                dest = snapshot_seed_dir / working_path.name
+                if working_path.name == shortlist_path.name:
+                    dest.write_bytes(shortlist_path.read_bytes())
+                else:
+                    pd.DataFrame([{"date": "2026-05-09"}]).to_csv(dest, index=False)
             patchers = [
                 patch.object(run_today_post_results_pipeline, "SHORTLIST_CSV", shortlist_path),
                 patch.object(run_today_post_results_pipeline, "LEDGER_CSV", ledger_path),
@@ -5292,6 +5307,8 @@ class VsigmBacktestCalibrationTests(unittest.TestCase):
                 patch.object(run_today_post_results_pipeline, "run_shadow_candidate_v4_post_step"),
                 patch.object(run_today_post_results_pipeline, "run_shadow_candidate_v5_post_step"),
                 patch.object(run_today_post_results_pipeline, "run_shadow_candidate_v6_post_step"),
+                patch.object(run_today_post_results_pipeline, "run_shadow_candidate_v7_post_step"),
+                patch.object(run_today_post_results_pipeline, "run_odds_clv_post_steps"),
                 patch.object(run_today_post_results_pipeline, "run_daily_hardening_steps"),
             ]
 
