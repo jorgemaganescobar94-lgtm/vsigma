@@ -29,11 +29,12 @@ on:
     - cron: "0 9 * * *"
       timezone: "Atlantic/Canary"
 
-    # AUTO every 30 minutes from 09:30 to 23:30 Atlantic/Canary.
-    # The 09:30 start preserves the 90-minute PRELOCK window for early kickoffs.
-    - cron: "0 10-23 * * *"
+    # 10:00 colchón - preserva la ventana PRELOCK de 90 min para saques tempranos
+    - cron: "0 10 * * *"
       timezone: "Atlantic/Canary"
-    - cron: "30 9-23 * * *"
+
+    # Checkpoints cada 2h (11,13,15,17,19,21,23) Atlantic/Canary
+    - cron: "0 11-23/2 * * *"
       timezone: "Atlantic/Canary"
 
     # 23:55 Atlantic/Canary - POST

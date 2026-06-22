@@ -7,17 +7,10 @@ on:
         required: false
         default: ""
   schedule:
-    - cron: "5 14 * * *"
-    - cron: "5 15 * * *"
     - cron: "5 16 * * *"
-    - cron: "5 17 * * *"
     - cron: "5 18 * * *"
-    - cron: "5 19 * * *"
     - cron: "5 20 * * *"
-    - cron: "5 21 * * *"
     - cron: "5 22 * * *"
-    - cron: "5 23 * * *"
-    - cron: "5 0 * * *"
 
 permissions:
   contents: write

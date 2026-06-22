@@ -13,10 +13,6 @@ on:
         options:
           - "false"
           - "true"
-  schedule:
-    # UTC. Uses Atlantic/Canary inside the workflow to decide the dated folder.
-    - cron: "30 7 * * *"   # morning build
-    - cron: "30 13 * * *"  # midday refresh/prelock build
 
 permissions:
   contents: write

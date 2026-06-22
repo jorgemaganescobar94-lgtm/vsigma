@@ -18,7 +18,6 @@ on:
       - ".vsigma/triggers/prelock_official_lineup_recheck.trigger"
   schedule:
     # Canary/Spain summer time is UTC+1. These approximate 16:30, 18:30, 20:30, 22:30 Canary.
-    - cron: "30 15 * * *"
     - cron: "30 17 * * *"
     - cron: "30 19 * * *"
     - cron: "30 21 * * *"

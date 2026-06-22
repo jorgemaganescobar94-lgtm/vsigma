@@ -7,8 +7,6 @@ on:
         required: false
         default: ""
   schedule:
-    - cron: "55 14 * * *"
-    - cron: "55 22 * * *"
     - cron: "55 6 * * *"
 
 permissions:
