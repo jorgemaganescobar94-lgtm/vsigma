@@ -6724,6 +6724,9 @@ class VsigmBacktestCalibrationTests(unittest.TestCase):
             processed_dir = Path(tmp) / "processed"
             odds_dir = processed_dir / "odds_snapshots"
             processed_dir.mkdir(parents=True)
+            # Redirect capture's date-scoped mirror (module-level TODAY_DIR) into tmp so
+            # the test does not write data/processed/today/<date>/odds_snapshots/ in the repo.
+            self.enterContext(patch.object(capture_odds_snapshots, "TODAY_DIR", processed_dir / "today"))
             pd.DataFrame(
                 [
                     {
@@ -6752,6 +6755,7 @@ class VsigmBacktestCalibrationTests(unittest.TestCase):
             processed_dir = Path(tmp) / "processed"
             odds_dir = processed_dir / "odds_snapshots"
             processed_dir.mkdir(parents=True)
+            self.enterContext(patch.object(capture_odds_snapshots, "TODAY_DIR", processed_dir / "today"))
             pd.DataFrame([{"fixture_id": 1, "home_team": "A", "away_team": "B", "market_primary": "OVER_1_5", "primary_odds_used": 1.4}]).to_csv(
                 processed_dir / "vsigma_today_competition_top.csv",
                 index=False,
@@ -6768,6 +6772,7 @@ class VsigmBacktestCalibrationTests(unittest.TestCase):
             processed_dir = Path(tmp) / "processed"
             odds_dir = processed_dir / "odds_snapshots"
             processed_dir.mkdir(parents=True)
+            self.enterContext(patch.object(capture_odds_snapshots, "TODAY_DIR", processed_dir / "today"))
             pd.DataFrame(
                 [
                     {"date": "2026-05-14", "fixture_id": 1, "home_team": "A", "away_team": "B", "market_primary": "OVER_1_5", "primary_odds_used": 1.4},
@@ -6786,6 +6791,7 @@ class VsigmBacktestCalibrationTests(unittest.TestCase):
             processed_dir = Path(tmp) / "processed"
             odds_dir = processed_dir / "odds_snapshots"
             processed_dir.mkdir(parents=True)
+            self.enterContext(patch.object(capture_odds_snapshots, "TODAY_DIR", processed_dir / "today"))
             baseline_path = processed_dir / "vsigma_today_competition_top.csv"
             pd.DataFrame(
                 [{"date": "2026-05-14", "fixture_id": 1, "home_team": "A", "away_team": "B", "market_primary": "OVER_1_5", "primary_odds_used": 1.4}]
