@@ -26,14 +26,14 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: main
           fetch-depth: 0
           token: ${{ github.token }}
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -58,7 +58,7 @@ jobs:
             --timezone Atlantic/Canary
 
       - name: Upload learning residual quarantine artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: vsigma-learning-residual-quarantine-${{ env.VSIGMA_DATE }}-${{ github.run_id }}
           if-no-files-found: warn
