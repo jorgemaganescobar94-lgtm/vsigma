@@ -1,2 +1,2 @@
 target_date,generated_at,overall_status,files_scanned,accepted_rows,rejected_rows,next_action,auto_apply,production_change
-2026-06-24,2026-06-24T11:32:43+01:00,NO_LOCAL_RAW_CANDIDATES_FOUND,2122,0,0,No local source can build raw candidates; upstream fetch/filter producer is still required.,NO,NO
+2026-06-24,2026-06-24T20:07:37+01:00,LOCAL_RAW_CANDIDATES_FOUND,2165,110,168,"Review accepted rows, then feed normal scoring gates.",NO,NO
