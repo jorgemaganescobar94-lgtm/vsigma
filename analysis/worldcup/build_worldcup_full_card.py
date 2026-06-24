@@ -26,6 +26,10 @@ try:
     SHOW_STATS = stats_model.shown_stats()
 except Exception:
     SHOW_STATS = {"corners", "cards", "shots"}
+try:
+    import build_worldcup_enrichment as wc_enrich  # noqa: E402  (post-FT [REAL] lines, soft)
+except Exception:
+    wc_enrich = None
 
 OUT_DIR = Path(__file__).resolve().parent
 CARDS = OUT_DIR / "worldcup_cards.csv"
@@ -194,6 +198,14 @@ def build_yesterday_block(log_path, now, hours=36, max_results=6):
         except Exception:
             score = "?-?"
         lines.append(f"{h} {score} {a} — L3{l3_s}")
+        # [REAL] post-FT enrichment lines (xG/tiros/posesión/córners + 1er gol/tarjetas).
+        # SOFT: absent store -> no extra lines, briefing identical to before this feature.
+        if wc_enrich is not None and pd.notna(r.get("fixture_id")):
+            try:
+                for ln in wc_enrich.real_lines_for_fixture(int(r["fixture_id"]), score):
+                    lines.append("  " + ln)
+            except Exception:
+                pass
     return lines
 
 

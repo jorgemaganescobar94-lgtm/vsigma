@@ -133,8 +133,20 @@ jobs:
             --from "${{ steps.win.outputs.from }}" --to "${{ steps.win.outputs.to }}" \
             ${{ steps.win.outputs.card_args }}
 
+      # 3b) PRE-MATCH enrichment (SEPARATE step, SOFT): h2h + slow per-team lane (cached
+      #     7/30/90d). Non-betting only (NO odds/predictions). Never blocks the briefing.
+      - name: Enrich fixtures (pre-match; h2h + team lane; cached, soft-fail)
+        continue-on-error: true
+        run: python analysis/worldcup/build_worldcup_enrichment.py prematch
+
       - name: Settle finished fixtures (cached /fixtures, ~0 marginal API)
         run: python analysis/worldcup/worldcup_learning_loop.py settle
+
+      # POST-FT enrichment (SEPARATE step, SOFT): full statistics (incl. real xG) + events +
+      #   players for settled fixtures. Store-guarded + cached "forever" -> ~0 API on re-runs.
+      - name: Enrich fixtures (post-FT; statistics/events/players; store-guarded, soft-fail)
+        continue-on-error: true
+        run: python analysis/worldcup/build_worldcup_enrichment.py postft
 
       - name: Build accumulated track-record scorecard
         run: |
