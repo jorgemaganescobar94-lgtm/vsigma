@@ -170,4 +170,18 @@ jobs:
           fi
 
           git commit -m "vSIGMA prematch calibration advisor ${VSIGMA_DATE} [skip ci]"
-          git push origin HEAD:main
+
+          # Concurrent workflows push to main; rebase-and-retry avoids non-fast-forward rejects.
+          pushed=0
+          for attempt in 1 2 3; do
+            if git pull --rebase --autostash origin main && git push origin HEAD:main; then
+              pushed=1
+              break
+            fi
+            echo "Push attempt ${attempt} failed (remote moved); retrying after backoff..."
+            sleep $((attempt * 5))
+          done
+          if [ "$pushed" -ne 1 ]; then
+            echo "Failed to push forced lineup outputs after 3 rebase attempts."
+            exit 1
+          fi
