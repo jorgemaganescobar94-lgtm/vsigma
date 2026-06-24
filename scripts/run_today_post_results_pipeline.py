@@ -148,7 +148,11 @@ def normalize_result(value: object) -> str:
 
 def validate_shortlist_for_date(shortlist: pd.DataFrame, match_date: str) -> None:
     if shortlist.empty:
-        raise RuntimeError(f"Execution shortlist is empty for requested post-results date {match_date}.")
+        # NO_BET day: PRE writes a full-schema empty execution export (see commit 596ecc33).
+        # An empty shortlist is a valid, expected state with nothing to liquidate, not an error.
+        # Treat it as valid-but-empty here; main() short-circuits to a soft exit. Date/column
+        # mismatches (a genuinely wrong shortlist) still raise below.
+        return
     if "fixture_id" not in shortlist.columns:
         raise ValueError("Execution shortlist is missing fixture_id.")
     if "date" not in shortlist.columns:
@@ -528,6 +532,14 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     match_date = datetime.strptime(args.date, "%Y-%m-%d").date().isoformat()
+    shortlist, shortlist_source = load_shortlist_for_date(match_date)
+    if shortlist.empty:
+        print(
+            f"POST_RESULTS_NO_SHORTLIST: execution shortlist is empty for {match_date} "
+            f"(source {shortlist_source}). NO_BET day, nothing to liquidate. Soft exit 0.",
+            flush=True,
+        )
+        return
     run_today_post_results_pipeline(match_date, args.timezone)
 
 
