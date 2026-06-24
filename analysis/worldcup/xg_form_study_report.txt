@@ -1,0 +1,30 @@
+============================================================================================
+XG-FORM STUDY — does recent xG form add 1X2 signal on top of L3 supremacy?  (OFFLINE)
+============================================================================================
+feature: net xG form = mean last N=5 prior matches of (xg_for - xg_against); K_MIN=3 prior per team (else excluded)
+usable matches with xgform_sup (both teams >= 3 prior): 199  | in OOS window (>= 2024-01-01): 199
+
+--------------------------------------------------------------------------------------------
+COVERAGE GATE (pre-registered)
+--------------------------------------------------------------------------------------------
+  threshold for a CONCLUSIVE 0.005 log-loss test: >= 500 usable OOS matches
+  actual usable OOS matches: 199
+  GATE: FAIL -> INDICATIVE ONLY (underpowered)
+
+--------------------------------------------------------------------------------------------
+WALK-FORWARD OOS  (compared on the SAME 139 matches; isotonic omitted — identical for A/B)
+--------------------------------------------------------------------------------------------
+  model                  n   logloss    brier    acc%     ECE
+  base-rate            139    1.0899   0.6607    39.6  0.0000
+  L3 (sup only)        139    1.0725   0.6487    41.7  0.1244
+  L3 + xG-form         139    1.0217   0.6147    46.8  0.0858
+
+--------------------------------------------------------------------------------------------
+VERDICT vs pre-registered criterion (adopt iff Δlogloss >= +0.005 AND ECE not worse)
+--------------------------------------------------------------------------------------------
+  Δlog-loss (L3 - L3+xG) = +0.0508  (need >= +0.005)
+  ECE change (xG - L3)   = -0.0385  (need <= 0)
+  COVERAGE GATE FAILED (199 < 500) -> result is INDICATIVE, not conclusive.
+  DECISION: DO NOT ADOPT (default to keeping L3; test underpowered for a 0.005 effect).
+
+  raw direction (indicative): xG-form helps log-loss by +0.0508; ECE same/better (-0.0385).

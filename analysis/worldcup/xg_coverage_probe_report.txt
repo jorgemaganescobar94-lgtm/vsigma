@@ -1,0 +1,33 @@
+============================================================================================
+XG COVERAGE PROBE — expected_goals availability for international fixtures (sampled)
+============================================================================================
+sample/bucket=5 | hard cap=100 stat calls | quota_stop=300 | start quota=19/7500
+
+  competition     year  sampled  with_xg   cov%  note
+--------------------------------------------------------------------------------------------
+  WC              2018        5        0     0%  PRE-2024
+  WC              2022        5        0     0%  PRE-2024
+  Euro            2021        5        0     0%  PRE-2024
+  Euro            2024        5        5   100%  2024+
+  CopaAmerica     2019        5        0     0%  PRE-2024
+  CopaAmerica     2021        5        0     0%  PRE-2024
+  CopaAmerica     2024        5        5   100%  2024+
+  UNL             2018        5        0     0%  PRE-2024
+  UNL             2020        5        0     0%  PRE-2024
+  UNL             2022        5        0     0%  PRE-2024
+  UNL             2024        5        0     0%  2024+
+  WCQ_Europe      2021        5        0     0%  PRE-2024
+  AFCON           2019        5        0     0%  PRE-2024
+  AFCON           2022        5        0     0%  PRE-2024
+  AsianCup        2019        5        0     0%  PRE-2024
+  Friendlies      2018        5        0     0%  PRE-2024
+  Friendlies      2021        5        0     0%  PRE-2024
+  Friendlies      2023        5        0     0%  PRE-2024
+  Friendlies      2024        5        0     0%  2024+
+--------------------------------------------------------------------------------------------
+SUMMARY
+  PRE-2024 sampled fixtures: 75 | with xG: 0 (0%)
+  2024+    sampled fixtures: 20 | with xG: 10 (50%)
+
+STOP: complete
+fresh stat attempts this run: 95 | API spend (status delta): 0 | quota now: 19/7500
