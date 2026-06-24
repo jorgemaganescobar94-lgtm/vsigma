@@ -57,7 +57,10 @@ def fetch_lineups(c, fid):
         nm = (t.get("team") or {}).get("name")
         xi = t.get("startXI") or []
         if nm:
-            out[nm] = {"confirmed": len(xi) >= 11, "formation": t.get("formation"), "n": len(xi)}
+            # keep the count (existing behaviour) AND add the startXI player names (for L3-adj)
+            xi_names = [((p.get("player") or {}).get("name")) for p in xi]
+            out[nm] = {"confirmed": len(xi) >= 11, "formation": t.get("formation"), "n": len(xi),
+                       "xi_names": [n for n in xi_names if n]}
     return out
 
 
@@ -140,6 +143,14 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
         statpred = stats_model.load_predictor()
     except Exception as e:  # noqa: BLE001
         print(f"stats_model predictor unavailable: {type(e).__name__}: {e}")
+    # L3-adj: SECONDARY heuristic live adjustment (injuries/XI -> capped L3 nudge). SOFT.
+    adjmod = None
+    squad_idx = {}
+    try:
+        import worldcup_l3_adjust as adjmod  # noqa: E402
+        squad_idx = adjmod.load_squad_index()
+    except Exception as e:  # noqa: BLE001
+        print(f"l3_adjust unavailable: {type(e).__name__}: {e}")
 
     # standings -> team context
     ctx = {}
@@ -228,11 +239,13 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
             f"{away}: grp {ca.get('group','?')} #{ca.get('rank','?')} "
             f"{ca.get('pts','?')}pts {ca.get('pld','?')}pld form {ca.get('form','-')}")
 
-        # ---- lineups / injuries: CONTEXT ONLY (fetched ~4h before KO; L3 ignores it) ----
+        # ---- injuries (ALWAYS; matinal = canonical adj) + lineups (imminent; XI refinement) ----
         VERBOSE = {"conf": "XI confirmado", "prob": "probable/parcial", "pend": "pendiente"}
+        inj = fetch_injuries(c, fid)          # cached 12h; feeds the L3-adj on every run
+        lu = {}
+        xi_out_home = xi_out_away = None
         if imminent:
             lu = fetch_lineups(c, fid)
-            inj = fetch_injuries(c, fid)
             hc, hform = lineup_status(lu.get(home))
             ac, aform = lineup_status(lu.get(away))
             hi = "; ".join(n for n, _ in inj.get(home, [])[:3])
@@ -244,8 +257,37 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
             rec.update({"lineup_home": hc, "lineup_away": ac,
                         "lineup_home_form": hform, "lineup_away_form": aform,
                         "inj_home": hi, "inj_away": ai})
+            if adjmod is not None and lu:
+                xi_out_home = adjmod.key_players_out_of_xi(
+                    squad_idx.get(home, {}), lu.get(home), [n for n, _ in inj.get(home, [])])
+                xi_out_away = adjmod.key_players_out_of_xi(
+                    squad_idx.get(away, {}), lu.get(away), [n for n, _ in inj.get(away, [])])
         else:
             out("    [LINEUPS/INJURIES] not yet published (refresh ~4h before kickoff)")
+
+        # ---- L3-adj: SECONDARY heuristic live adjustment (labelled, capped, SOFT) ----
+        # The L3 above stays the OFFICIAL line. This nudges L3 strength for today's key
+        # absences (injuries always; XI when imminent). Δ==0 or no data -> nothing shown.
+        if adjmod is not None and l3pred is not None and om is not None:
+            try:
+                a = adjmod.compute_fixture_adjustment(
+                    l3pred, squad_idx, home, away,
+                    inj_home=[n for n, _ in inj.get(home, [])],
+                    inj_away=[n for n, _ in inj.get(away, [])],
+                    xi_out_home=xi_out_home, xi_out_away=xi_out_away)
+            except Exception:
+                a = None
+            if a:
+                motivo = []
+                if a["adj_absent_home"]:
+                    motivo.append(f"{home} sin {a['adj_absent_home']}")
+                if a["adj_absent_away"]:
+                    motivo.append(f"{away} sin {a['adj_absent_away']}")
+                out(f"    [AJUSTE HOY] (heurístico EN VIVO, NO validado, orientativo) "
+                    f"{home} {a['adj_home']*100:.0f}% · X {a['adj_draw']*100:.0f}% · "
+                    f"{away} {a['adj_away']*100:.0f}%"
+                    + (f"  — {' · '.join(motivo)}" if motivo else ""))
+                rec.update(a)
 
         if om is not None:
             rec.update({"our_home": round(float(om["our_home"]), 4), "our_draw": round(float(om["our_draw"]), 4),

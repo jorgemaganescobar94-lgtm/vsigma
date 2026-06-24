@@ -91,6 +91,20 @@ def match_block(r, show_lineups=False):
     lh, ld, la = r.get("our_home"), r.get("our_draw"), r.get("our_away")
     if pd.notna(lh):
         lines.append(f"Resultado: {h} {lh*100:.0f}% · Empate {ld*100:.0f}% · {a} {la*100:.0f}%")
+        # L3-adj SECONDARY heuristic line, UNDER the official L3. Soft: only if an adjustment
+        # was logged (Δ≠0). L3 stays first and official; this is labelled, not validated.
+        ah, ad, aa = r.get("adj_home"), r.get("adj_draw"), r.get("adj_away")
+        if pd.notna(ah):
+            lines.append(f"↳ Ajuste hoy (heurístico): {h} {ah*100:.0f}% · "
+                         f"Empate {ad*100:.0f}% · {a} {aa*100:.0f}%")
+            motivo = []
+            absh, absa = r.get("adj_absent_home"), r.get("adj_absent_away")
+            if isinstance(absh, str) and absh.strip():
+                motivo.append(f"{h} sin {absh}")
+            if isinstance(absa, str) and absa.strip():
+                motivo.append(f"{a} sin {absa}")
+            tag = "heurístico EN VIVO, NO validado, orientativo"
+            lines.append(f"   ⚠️ {' · '.join(motivo)} — {tag}" if motivo else f"   ⚠️ {tag}")
 
     xgh, xga = r.get("our_xg_home"), r.get("our_xg_away")
     if pd.notna(xgh):

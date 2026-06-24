@@ -55,6 +55,9 @@ LOG_COLUMNS = [
     "fixture_id", "kickoff_utc", "home", "away", "round",
     "l3_home", "l3_draw", "l3_away", "l3_xg_home", "l3_xg_away", "l3_top_score",
     "v2_home", "v2_draw", "v2_away",
+    # L3-adj: SECONDARY heuristic live adjustment (additive; L3 columns above are untouched).
+    "adj_home", "adj_draw", "adj_away", "adj_basis",
+    "adj_delta_home", "adj_delta_away", "adj_absent_home", "adj_absent_away",
     "st_corners_total", "st_corners_over", "st_corners_line", "st_cards_total", "st_shots_total",
     "logged_at_utc",
     "result_ft_gh", "result_ft_ga", "result_final_gh", "result_final_ga",
@@ -201,6 +204,11 @@ def cmd_log():
             "v2_home": (v2["v2_home"] if v2 is not None else np.nan),
             "v2_draw": (v2["v2_draw"] if v2 is not None else np.nan),
             "v2_away": (v2["v2_away"] if v2 is not None else np.nan),
+            # L3-adj (lock-first, like l3_*): the FIRST logged value is the canonical (morning) one
+            "adj_home": r.get("adj_home"), "adj_draw": r.get("adj_draw"), "adj_away": r.get("adj_away"),
+            "adj_basis": r.get("adj_basis"),
+            "adj_delta_home": r.get("adj_delta_home"), "adj_delta_away": r.get("adj_delta_away"),
+            "adj_absent_home": r.get("adj_absent_home"), "adj_absent_away": r.get("adj_absent_away"),
             "st_corners_total": r.get("st_corners_total"), "st_corners_over": r.get("st_corners_over"),
             "st_corners_line": r.get("st_corners_line"), "st_cards_total": r.get("st_cards_total"),
             "st_shots_total": r.get("st_shots_total"),
@@ -428,9 +436,11 @@ def cmd_scorecard():
     Pbase = np.tile(base, (n, 1))
     base_m = _metrics(Pbase, Y)
 
-    predictors = [("L3", "l3"), ("v2", "v2")]   # own models only — NO market
+    predictors = [("L3", "l3"), ("v2", "v2")]   # own models only — NO market (header + skill)
+    # L3+adj = SECONDARY heuristic; appears in the detail table only, never in the L3 header.
+    detail_predictors = predictors + [("L3+adj", "adj")]
     metrics = {}
-    for label, pref in predictors:
+    for label, pref in detail_predictors:
         P = _probs(settled, pref)
         if P is None:
             continue
@@ -464,9 +474,10 @@ def cmd_scorecard():
     out("-" * len(hdr))
     out(f"{'base-rate':10} {n:>3} {base_m['logloss']:>8.4f} {base_m['brier']:>7.4f} "
         f"{base_m['acc']*100:>6.1f} {base_m['ece']:>6.3f} {'0.0':>11}")
-    for label, _ in predictors:
+    for label, _ in detail_predictors:
         if label not in metrics:
-            out(f"{label:10} {'-':>3}  (sin predicciones)")
+            if label != "L3+adj":   # L3+adj simply absent until an adjustment resolves
+                out(f"{label:10} {'-':>3}  (sin predicciones)")
             continue
         m = metrics[label]["m"]
         sk = skill.get(label)
@@ -474,6 +485,7 @@ def cmd_scorecard():
         out(f"{label:10} {metrics[label]['n']:>3} {m['logloss']:>8.4f} {m['brier']:>7.4f} "
             f"{m['acc']*100:>6.1f} {m['ece']:>6.3f} {sk_s:>11}")
     out(f"  (1X2 multiclase H/D/A; baseline ingenuo = base-rate.{_small(n)})")
+    out("  (L3+adj = ajuste heurístico EN VIVO, NO validado, SECUNDARIO; L3 sigue siendo oficial.)")
 
     # real binary outcomes derived from the 90' score
     gh = settled["result_ft_gh"].to_numpy(float)
@@ -566,6 +578,34 @@ def cmd_scorecard():
                 out(f"    {nm:28} n={tt:>3}: L3 {a} · base {b} · empate {t}")
     else:
         out("  faltan predicciones L3 resueltas.")
+
+    # ---- (4b) L3+adj (SECONDARY heuristic) — ONLY over fixtures with an active adjustment ----
+    out("")
+    out("--- (4b) L3+adj heurístico (NO validado) — SOLO partidos con ajuste activo (Δ≠0) ---")
+    if "L3+adj" in metrics and "L3" in metrics:
+        adj_mask = metrics["L3+adj"]["mask"] & metrics["L3"]["mask"]
+        na = int(adj_mask.sum())
+        if na:
+            Yc = Y[adj_mask]
+            mL3 = _metrics(metrics["L3"]["P"][adj_mask], Yc)
+            mAdj = _metrics(metrics["L3+adj"]["P"][adj_mask], Yc)
+            out(f"  n={na}{_small(na)} (partidos donde hubo ausencias clave)")
+            out(f"    {'':8} {'logloss':>8} {'brier':>7} {'acc%':>6}")
+            out(f"    {'L3':8} {mL3['logloss']:>8.4f} {mL3['brier']:>7.4f} {mL3['acc']*100:>6.1f}")
+            out(f"    {'L3+adj':8} {mAdj['logloss']:>8.4f} {mAdj['brier']:>7.4f} {mAdj['acc']*100:>6.1f}")
+            yv = y[adj_mask]
+            pl3 = metrics["L3"]["P"][adj_mask][np.arange(na), yv]
+            padj = metrics["L3+adj"]["P"][adj_mask][np.arange(na), yv]
+            d = padj - pl3
+            aw = int(np.sum(d > 0.01)); lw = int(np.sum(d < -0.01)); tie = na - aw - lw
+            out(f"    cara a cara (prob al resultado real): L3+adj mejor {aw} · L3 mejor {lw} · empate {tie}")
+            dll = mL3["logloss"] - mAdj["logloss"]
+            out(f"    Δlog-loss (L3 − L3+adj) = {dll:+.4f}  "
+                f"({'ayuda' if dll > 0 else 'no ayuda'}; muestra pequeña, orientativo)")
+        else:
+            out("  aún sin partidos resueltos con ajuste activo.")
+    else:
+        out("  aún sin ajustes activos resueltos (o sin columnas adj en el log).")
 
     # ---- (5) STATS: corners/cards/shots data-model totals vs REAL totals + base-rate ----
     out("")
