@@ -40,6 +40,10 @@ data/cache/*.sqlite3-shm
 .env
 data/processed/**/api_enrichment/
 
+# World Cup study CSV artifacts (regenerable data; keep the .py + *_report.txt)
+analysis/worldcup/*_study*.csv
+analysis/worldcup/*_probe*.csv
+
 # vSIGMA generated local artifacts
 data/modeling/*.csv
 data/modeling/*.md
