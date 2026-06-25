@@ -60,7 +60,7 @@ ASSIST_FRAC = 0.75               # team assists ≈ this × team goals
 CARD_TEAM_SPLIT = 0.5            # half the match's expected cards per team (no per-team cards stored)
 PRIOR_MIN = 270.0                # empirical-Bayes shrinkage strength (≈3 full matches)
 MAX_API = 250                    # per-run safety cap (store-guard makes re-runs ~0)
-MAX_FIXTURES = 12
+MAX_FIXTURES = 20
 EPS = 1e-15
 
 PROPS = ["goal", "card", "shot_on", "assist"]   # binary props scored by the scorecard
@@ -200,6 +200,34 @@ def fetch_team_rates(client, tid):
     return rates
 
 
+def fetch_squad(client, tid):
+    """Store-guarded REAL World Cup squad (convocatoria): {player_id: name}, or None if
+    unavailable. /players/squads is NOT a betting endpoint. Cached 'forever' for the tournament.
+    Returns None (not {}) on empty/error so we retry next run instead of caching a bad empty."""
+    global _api_calls
+    name = f"squad_team{int(tid)}"
+    cached = _load_store(name)
+    if cached:
+        return {int(k): v for k, v in cached.items()}
+    if _api_calls >= MAX_API:
+        return None
+    try:
+        resp = client.request("/players/squads", {"team": int(tid)}, ttl_hours=24 * 3650)
+    except Exception:
+        return None
+    _api_calls += 1
+    out = {}
+    for block in ((resp.get("response") if isinstance(resp, dict) else None) or []):
+        for p in (block.get("players") or []):
+            pid = p.get("id")
+            if pid is not None:
+                out[int(pid)] = p.get("name")
+    if not out:
+        return None
+    _save_store(name, {str(k): v for k, v in out.items()})
+    return out
+
+
 # --------------------------------------------------------------- prediction (pure math)
 def poisson_p_ge1(lam):
     """P(N>=1) for N~Poisson(lam). Always in [0,1]."""
@@ -261,17 +289,22 @@ def predict_fixture(team_xg, team_shots, match_cards, xi, rates):
 
 
 # --------------------------------------------------------------- XI selection
-def get_xi(client, fid, tid, rates):
-    """(list[pid], basis). Confirmed startXI if published, else top-XI_SIZE by national starts."""
+def get_xi(client, fid, tid, rates, squad):
+    """(list[pid], basis). Confirmed startXI if published (AUTHORITATIVE); else the most-likely
+    XI by recent starts AMONG THE REAL SQUAD (convocatoria). If the squad is unavailable, returns
+    ([], 'no_squad') -> the caller OMITS this team rather than invent an XI from non-call-ups."""
     resp = _get(client, "/fixtures/lineups", {"fixture": fid}, 0.25)
     for t in (resp or []):
         if (t.get("team") or {}).get("id") == int(tid):
-            xi = [(p.get("player") or {}).get("id") for p in (t.get("startXI") or [])]
-            xi = [int(p) for p in xi if p is not None]
+            xi = [int((p.get("player") or {}).get("id")) for p in (t.get("startXI") or [])
+                  if (p.get("player") or {}).get("id") is not None]
             if len(xi) >= XI_SIZE:
                 return xi[:XI_SIZE], "lineup_confirmed"
-    ranked = sorted(rates.items(), key=lambda kv: -kv[1].get("starts", 0.0))
-    return [pid for pid, _ in ranked[:XI_SIZE]], "probable_by_starts"
+    if not squad:
+        return [], "no_squad"   # NEVER invent an XI from players who are not in the squad
+    # rank ONLY the called-up players by recent national starts (call-ups with no history go last)
+    cand = sorted(squad.keys(), key=lambda pid: -rates.get(pid, {}).get("starts", 0.0))
+    return cand[:XI_SIZE], "probable_by_squad_starts"
 
 
 # --------------------------------------------------------------- log helpers
@@ -306,12 +339,13 @@ def cmd_predict():
         print("player_props predict: no cards.csv; nothing to do."); return
     cards = pd.read_csv(CARDS)
     log = _read_log()
-    logged_fids = set(log["fixture_id"].dropna().astype(int)) if len(log) else set()
     client = _client()
     tindex = _fixture_team_index(client)
     now = datetime.now(timezone.utc)
 
-    new_rows, done = [], 0
+    _STUB = {"name": None, "starts": 0.0, "minutes": 0.0, "g90": 0.0, "a90": 0.0,
+             "sh90": 0.0, "son90": 0.0, "c90": 0.0, "on_ratio": 0.35}
+    fresh_rows, repredicted, done = [], set(), 0
     for _, r in cards.iterrows():
         if done >= MAX_FIXTURES or _api_calls >= MAX_API:
             break
@@ -319,27 +353,35 @@ def cmd_predict():
         if pd.isna(fid):
             continue
         fid = int(fid)
-        if fid in logged_fids:
-            continue  # lock-first per fixture (anti-hindsight: never re-write)
         ko = _parse_ko(r.get("kickoff_utc"))
+        # LOCK-AT-KO: (re)predict ONLY while NS / strictly pre-KO. At/after kickoff the fixture is
+        # FROZEN (skipped -> its existing rows are never touched; settled rows never touched).
         if ko is None or now >= (ko - KO_BUFFER):
-            continue  # only NS / pre-KO (freeze at kickoff)
+            continue
         ids = tindex.get(fid)
         if not ids or ids[0] is None or ids[1] is None:
             continue
+        fixture_rows = []
         for side, tid, team_name, xg_col, sh_col in (
                 ("home", ids[0], r.get("home"), "our_xg_home", "st_shots_home"),
                 ("away", ids[1], r.get("away"), "our_xg_away", "st_shots_away")):
             team_xg = r.get(xg_col)
             if pd.isna(team_xg):
                 continue
-            rates = fetch_team_rates(client, tid)
-            if not rates:
-                continue
-            xi, basis = get_xi(client, fid, tid, rates)
+            rates = dict(fetch_team_rates(client, tid) or {})
+            squad = fetch_squad(client, tid)
+            # call-ups with no historical rate are still eligible (shrunk to the XI mean): give
+            # them a stub rate carrying their squad name so they can be logged.
+            if squad:
+                for pid, nm in squad.items():
+                    if pid not in rates:
+                        rates[pid] = {**_STUB, "name": nm}
+            xi, basis = get_xi(client, fid, tid, rates, squad)
+            if not xi:
+                continue  # no squad -> OMIT this team (never show non-call-ups)
             preds = predict_fixture(team_xg, r.get(sh_col, 0.0), r.get("st_cards_total", 0.0), xi, rates)
             for p in preds:
-                new_rows.append({
+                fixture_rows.append({
                     "fixture_id": fid, "kickoff_utc": r.get("kickoff_utc"),
                     "team_id": int(tid), "team": team_name,
                     "player_id": p["player_id"], "player": p["player"], "is_xi": 1, "basis": basis,
@@ -353,13 +395,21 @@ def cmd_predict():
                     "act_shots_on": np.nan, "act_assist": np.nan, "act_minutes": np.nan,
                     "settled": 0, "settled_at_utc": np.nan,
                 })
-        logged_fids.add(fid)
-        done += 1
+        if fixture_rows:
+            fresh_rows += fixture_rows
+            repredicted.add(fid)
+            done += 1
 
-    if new_rows:
-        log = pd.concat([log, pd.DataFrame(new_rows)], ignore_index=True)[LOG_COLUMNS]
+    if repredicted:
+        if len(log):
+            settled = log["settled"].fillna(0).astype(int) == 1
+            # drop ONLY the UNSETTLED rows of re-predicted fixtures; keep settled rows + all others
+            drop = log["fixture_id"].astype("Int64").isin(repredicted) & ~settled
+            log = log[~drop]
+        log = pd.concat([log, pd.DataFrame(fresh_rows)], ignore_index=True)[LOG_COLUMNS]
         log.to_csv(LOG, index=False)
-    print(f"player_props predict: +{len(new_rows)} rows ({done} fixtures) | API calls={_api_calls} -> {LOG.name}")
+    print(f"player_props predict: {len(repredicted)} NS fixture(s) (re)predicted, +{len(fresh_rows)} rows "
+          f"| API calls={_api_calls} -> {LOG.name}")
 
 
 # --------------------------------------------------------------- settle

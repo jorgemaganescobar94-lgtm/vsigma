@@ -128,6 +128,62 @@ def test_scorecard_metrics_and_small_sample_note():
     assert "goal" in txt and "logloss" in txt
 
 
+def test_get_xi_fallback_excludes_non_callups():
+    P._get = lambda *a, **k: []   # no confirmed lineup -> fallback path
+    # player 1 has the MOST starts but is NOT called up -> must be excluded
+    rates = {i: {"name": f"P{i}", "starts": float(100 - i)} for i in range(1, 14)}
+    squad = {i: f"P{i}" for i in range(2, 13)}   # call-ups = 2..12 (11 players)
+    xi, basis = P.get_xi(None, 1, 99, rates, squad)
+    assert basis == "probable_by_squad_starts"
+    assert 1 not in xi, "highest-starts player must be excluded when not in the squad"
+    assert set(xi) == set(range(2, 13))
+    assert len(xi) == 11
+
+
+def test_get_xi_empty_squad_no_invention():
+    P._get = lambda *a, **k: []
+    rates = {i: {"name": f"P{i}", "starts": 10.0} for i in range(1, 15)}
+    assert P.get_xi(None, 1, 99, rates, None) == ([], "no_squad")
+    assert P.get_xi(None, 1, 99, rates, {})[0] == []        # empty squad -> no XI invented
+
+
+def test_get_xi_confirmed_lineup_is_authoritative():
+    lineup = [{"team": {"id": 99}, "startXI": [{"player": {"id": i}} for i in range(1, 12)]}]
+    P._get = lambda *a, **k: lineup
+    xi, basis = P.get_xi(None, 1, 99, {}, {500: "irrelevant"})
+    assert basis == "lineup_confirmed" and xi == list(range(1, 12))
+
+
+def test_lock_at_ko_repredicts_ns_and_freezes_settled():
+    tmp = Path(tempfile.mkdtemp())
+    P.CARDS = tmp / "cards.csv"; P.LOG = tmp / "log.csv"
+    pd.DataFrame([
+        {"fixture_id": 1, "kickoff_utc": FUT, "home": "A", "away": "B", "our_xg_home": 1.6,
+         "our_xg_away": 1.0, "st_shots_home": 11, "st_shots_away": 9, "st_cards_total": 4},
+        {"fixture_id": 2, "kickoff_utc": PAST, "home": "C", "away": "D", "our_xg_home": 1.2,
+         "our_xg_away": 1.1, "st_shots_home": 10, "st_shots_away": 10, "st_cards_total": 4},
+    ]).to_csv(P.CARDS, index=False)
+    pd.DataFrame([
+        {**{c: np.nan for c in P.LOG_COLUMNS}, "fixture_id": 1, "player_id": 1, "p_goal": 0.99,
+         "settled": 0, "is_xi": 1},                                   # STALE NS row -> to be replaced
+        {**{c: np.nan for c in P.LOG_COLUMNS}, "fixture_id": 2, "player_id": 5, "p_goal": 0.5,
+         "act_goal": 1, "settled": 1, "is_xi": 1},                    # SETTLED row -> must be frozen
+    ], columns=P.LOG_COLUMNS).to_csv(P.LOG, index=False)
+    rates = {i: {"name": f"P{i}", "starts": 11 - i, "minutes": 900.0, "g90": 0.2, "a90": 0.1,
+                 "sh90": 1.0, "son90": 0.4, "c90": 0.1, "on_ratio": 0.4} for i in range(1, 12)}
+    P._client = lambda: None
+    P._fixture_team_index = lambda c: {1: (10, 20, "NS"), 2: (30, 40, "FT")}
+    P.fetch_team_rates = lambda c, tid: dict(rates)
+    P.fetch_squad = lambda c, tid: {i: f"P{i}" for i in range(1, 12)}
+    P._get = lambda *a, **k: []
+    P.cmd_predict()
+    df = pd.read_csv(P.LOG)
+    f1, f2 = df[df.fixture_id == 1], df[df.fixture_id == 2]
+    assert len(f1) > 0 and 0.99 not in set(round(x, 2) for x in f1["p_goal"].dropna()), "NS rows must be re-predicted"
+    assert len(f2) == 1 and int(f2.iloc[0]["settled"]) == 1, "settled fixture frozen (1 row)"
+    assert f2.iloc[0]["act_goal"] == 1 and abs(f2.iloc[0]["p_goal"] - 0.5) < 1e-9, "settled row untouched"
+
+
 def _run():
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     for fn in fns:
