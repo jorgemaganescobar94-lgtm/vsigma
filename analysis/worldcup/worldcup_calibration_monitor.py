@@ -9,10 +9,17 @@ WHY: the isotonic calibration is FROZEN (burn-in <2024); the auto-refit changes 
 calibration. Risk: learned ratings drift away from the frozen calibrated mapping and the 1X2 quietly
 loses calibration. This monitor catches that and warns — it never "fixes" anything automatically.
 
-THRESHOLDS (defined a priori, honest + anti-false-alarm):
-  * Needs N>=20 settled predictions. Below that -> NO alert ("muestra insuficiente").
-  * ALERT if ECE > 0.12 (miscalibrated)  OR  logloss(L3) >= logloss(base-rate) (model not beating
-    the naive base rate = it is failing).
+THRESHOLDS (defined a priori, honest + NOISE-ADAPTIVE so small samples don't false-alarm):
+  * Needs N>=15 settled predictions. Below that even the null simulation is unstable -> NO alert
+    ("muestra insuficiente").
+  * ECE alarm is ADAPTIVE TO SAMPLE NOISE: simulate the NULL ECE distribution at the CURRENT N
+    (for each settled row draw the outcome FROM its own L3 probs => perfectly calibrated by
+    construction, recompute ECE with the SAME max-confidence definition, repeat N_SIM times with a
+    FIXED seed), take the p95 (NULL_PCTL). ALERT only if observed ECE > null p95 — i.e. worse than
+    sampling noise alone would explain. (At N=25 a perfectly-calibrated model already expects
+    ECE~0.17, so the old fixed 0.12 false-alarmed; this fixes it.)
+  * Independent alarm, always valid: logloss(L3) >= logloss(base-rate) (model not beating the naive
+    base rate = it is failing). NOT noise-gated.
 Anti-spam: at most ONE alert per run, and an identical alert is not repeated on consecutive days
 (small JSON state holds the last alert signature; it re-fires when the situation changes or clears
 and returns).
@@ -47,12 +54,57 @@ REPORT = OUT_DIR / "worldcup_calibration_monitor.txt"
 STATE = OUT_DIR / "worldcup_calibration_monitor_state.json"
 DISPATCHER = ROOT / "scripts" / "dispatch_telegram_alert.py"
 
-N_MIN = 20         # minimum settled predictions before the monitor is allowed to judge/alert
-ECE_MAX = 0.12     # ECE above this -> miscalibrated -> alert
+N_MIN = 15         # minimum settled predictions; below this the null ECE simulation is too unstable
+NULL_PCTL = 95     # alert only if observed ECE exceeds this percentile of the noise-null ECE
+N_SIM = 5000       # null-distribution simulations
+SEED = 20260101    # FIXED RNG seed -> the adaptive threshold is reproducible run-to-run (no flicker)
 
 
 def _now_iso():
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
+def _ece(P, y):
+    """ECE on the max-confidence reliability — the SAME definition the monitor/scorecard use
+    (worldcup_learning_loop._metrics). P row-normalised; y = int labels {0,1,2}. Used for both the
+    observed value and the null simulation so the comparison is apples-to-apples."""
+    conf = P.max(1)
+    correct = (P.argmax(1) == y).astype(float)
+    edges = np.linspace(0, 1, 11)
+    n = len(P)
+    e = 0.0
+    for i in range(10):
+        m = (conf > edges[i]) & (conf <= edges[i + 1])
+        if m.sum():
+            e += m.sum() / n * abs(conf[m].mean() - correct[m].mean())
+    return float(e)
+
+
+def null_ece_pctl(P, pctl=NULL_PCTL, n_sim=N_SIM, seed=SEED):
+    """Null ECE distribution at the CURRENT N: draw outcomes FROM each row's own probs (=> perfectly
+    calibrated by construction) and recompute ECE n_sim times; return the `pctl` percentile. SEEDED
+    -> stable run-to-run. The per-bin confidence means and bin memberships are FIXED across sims
+    (only the outcomes change), so this is cheap."""
+    n = len(P)
+    conf = P.max(1)
+    pred = P.argmax(1)
+    edges = np.linspace(0, 1, 11)
+    masks = [(conf > edges[i]) & (conf <= edges[i + 1]) for i in range(10)]
+    cnt = np.array([int(m.sum()) for m in masks])
+    conf_mean = np.array([conf[m].mean() if cnt[i] else 0.0 for i, m in enumerate(masks)])
+    cum = np.cumsum(P, axis=1)
+    rng = np.random.default_rng(seed)
+    sims = np.empty(n_sim)
+    for s in range(n_sim):
+        r = rng.random(n)
+        y = (r[:, None] < cum).argmax(1)                 # categorical draw from each row's probs
+        correct = (pred == y).astype(float)
+        e = 0.0
+        for i, m in enumerate(masks):
+            if cnt[i]:
+                e += cnt[i] / n * abs(conf_mean[i] - correct[m].mean())
+        sims[s] = e
+    return float(np.percentile(sims, pctl))
 
 
 def evaluate(log):
@@ -60,7 +112,7 @@ def evaluate(log):
     sufficient, metrics, baseline, alert flag + reasons. NO I/O, NO Telegram."""
     out = {"n": 0, "sufficient": False, "alert": False, "reasons": [],
            "ece": None, "logloss": None, "brier": None,
-           "base_logloss": None, "base_brier": None}
+           "base_logloss": None, "base_brier": None, "null_p": None, "null_pctl": NULL_PCTL}
     if log is None or len(log) == 0:
         return out
     settled = log[log["settled"].fillna(0).astype(int) == 1]
@@ -77,16 +129,18 @@ def evaluate(log):
     if n < N_MIN:
         return out                      # insufficient sample -> never alert
     out["sufficient"] = True
+    P = P / P.sum(axis=1, keepdims=True)
     Y = np.eye(3)[y]
     m = L._metrics(P, Y)                # identical math to the scorecard (ECE on max-conf reliability)
     base = np.bincount(y, minlength=3) / n
     mb = L._metrics(np.tile(base, (n, 1)), Y)
+    null_p = null_ece_pctl(P)          # noise-adaptive ECE threshold at THIS N (seeded -> stable)
     out.update(ece=m["ece"], logloss=m["logloss"], brier=m["brier"],
-               base_logloss=mb["logloss"], base_brier=mb["brier"])
+               base_logloss=mb["logloss"], base_brier=mb["brier"], null_p=null_p)
     reasons = []
-    if m["ece"] > ECE_MAX:
-        reasons.append(f"ECE={m['ece']:.3f} > {ECE_MAX:.2f} (descalibrado)")
-    if m["logloss"] >= mb["logloss"]:
+    if m["ece"] > null_p:               # worse than sampling noise alone explains at this N
+        reasons.append(f"ECE={m['ece']:.3f} > nulo p{NULL_PCTL}={null_p:.3f} (peor que el ruido a N={n})")
+    if m["logloss"] >= mb["logloss"]:   # independent, always valid
         reasons.append(f"logloss L3={m['logloss']:.4f} >= baseline={mb['logloss']:.4f} (no bate a la tasa base)")
     out["alert"] = len(reasons) > 0
     out["reasons"] = reasons
@@ -98,7 +152,8 @@ def _signature(ev):
     change (or clearing) re-fires."""
     if not ev["alert"]:
         return "OK"
-    return f"ALERT|ece={round(ev['ece'], 2)}|llbad={int(ev['logloss'] >= ev['base_logloss'])}"
+    return (f"ALERT|ece_over={int(ev['ece'] > ev['null_p'])}|"
+            f"llbad={int(ev['logloss'] >= ev['base_logloss'])}")
 
 
 def _load_state():
@@ -134,13 +189,16 @@ def _report(ev, status, sent):
     lines = [
         "WORLD CUP — MONITOR DE CALIBRACIÓN L3 (1X2 producción)  [solo monitor + alerta; NO toca el modelo]",
         f"generated_at_utc: {_now_iso()}",
-        f"UMBRALES (a priori): N>={N_MIN} · ECE>{ECE_MAX:.2f} -> alerta · logloss_L3 >= logloss_base -> alerta",
+        f"UMBRAL ADAPTATIVO AL RUIDO (a priori): N>={N_MIN} · ALERTA si ECE_obs > nulo p{NULL_PCTL} "
+        f"(sim. {N_SIM}x, seed fijo) O logloss_L3 >= logloss_base",
         f"ESTADO: {status}",
     ]
     if ev["sufficient"]:
-        lines.append(f"N={ev['n']} | ECE={ev['ece']:.3f} | logloss_L3={ev['logloss']:.4f} | "
-                     f"brier_L3={ev['brier']:.4f}")
-        lines.append(f"baseline (tasa base): logloss={ev['base_logloss']:.4f} | brier={ev['base_brier']:.4f}")
+        lines.append(f"N={ev['n']} | ECE_observado={ev['ece']:.3f} | nulo p{NULL_PCTL}(N={ev['n']})={ev['null_p']:.3f} "
+                     f"-> ECE {'POR ENCIMA del ruido' if ev['ece'] > ev['null_p'] else 'dentro del ruido'}")
+        lines.append(f"logloss_L3={ev['logloss']:.4f} vs baseline={ev['base_logloss']:.4f} "
+                     f"-> {'NO bate' if ev['logloss'] >= ev['base_logloss'] else 'bate'} la tasa base "
+                     f"| brier_L3={ev['brier']:.4f} (base {ev['base_brier']:.4f})")
         if ev["reasons"]:
             lines.append("motivo(s): " + " · ".join(ev["reasons"]))
         lines.append(f"alerta Telegram enviada: {'sí' if sent else 'no (sin cambio / OK / anti-spam)'}")
@@ -173,9 +231,10 @@ def cmd_run(now=None):
     state = _load_state()
     sig = _signature(ev)
     if ev["alert"] and sig != state.get("last_signature"):
-        body = (f"⚠️ Calibración L3 fuera de umbral: ECE={ev['ece']:.2f}, "
-                f"logloss={ev['logloss']:.4f} vs baseline={ev['base_logloss']:.4f} (N={ev['n']}). "
-                f"El auto-refit puede estar degradando la calibración del 1X2; revisar. "
+        body = (f"⚠️ Calibración L3 fuera de umbral (adaptativo al ruido, N={ev['n']}): "
+                f"ECE={ev['ece']:.3f} vs nulo p{NULL_PCTL}={ev['null_p']:.3f}; "
+                f"logloss={ev['logloss']:.4f} vs baseline={ev['base_logloss']:.4f}. "
+                f"Peor que el ruido de muestra; el auto-refit puede estar degradando el 1X2; revisar. "
                 f"[{' · '.join(ev['reasons'])}]")
         send_alert("⚠️ Monitor calibración L3 (Mundial)", body)
         sent = True
