@@ -1,11 +1,9 @@
 ========================================================================================
-AUTO-REFIT L3 — SHADOW (Phase 1b; NO swap, production ratings untouched)
+AUTO-REFIT L3 — mode=APPLY (swap)
 ========================================================================================
-generated_at_utc: 2026-06-25T14:18:21+00:00
+generated_at_utc: 2026-06-25T14:45:18+00:00
 base rows=9185 | settled-in-log=25 | NEW rows=0 (-..-) | unmapped=0 | enriched=9185
 
-NO hay partidos liquidados nuevos fuera del dataset -> refit sería NO-OP hoy.
-(El dataset commiteado ya está al día con el log; nada que aprender hasta nuevos FT.)
-GATE: N/A (sin cambios)
-
-SHADOW: ratings de producción NO escritos (correcto).
+NO hay partidos liquidados nuevos fuera del dataset -> refit NO-OP.
+(El dataset ya está al día con el log; nada que aprender hasta nuevos FT.)
+GATE: N/A (sin cambios) -> ratings de producción intactos.

@@ -4,6 +4,7 @@ Brier-skill vs base-rate: L3 +27% · v2 +21%
 
 ===== detalle =====
 resueltos=25 | 1X2 a 90' (score.fulltime) | métricas vs RESULTADOS REALES, sin mercado
+  predicción medida: 'primera predicción (mañana)' en los 25 resueltos.
 predictor    n  logloss   brier   acc%    ECE Skill_base%
 ---------------------------------------------------------
 base-rate   25   0.9979  0.6016   52.0  0.000         0.0
@@ -61,4 +62,4 @@ v2          25   0.8263  0.4762   72.0  0.200       +20.8
 PROPUESTA de recalibración (calibración, informativa, NO aplicada):
   Ningún encogimiento hacia base-rate mejora el log-loss (0.7731); L3 bien calibrado.
 
-generated_at_utc: 2026-06-25T14:18:52+00:00
+generated_at_utc: 2026-06-25T14:46:33+00:00
