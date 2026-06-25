@@ -82,6 +82,68 @@ def fmt_ko(kickoff_utc):
     return f"{ko.day} {MONTHS_ES[ko.month]} · {ko:%H:%M}Z"
 
 
+# --------------------------------------------------------------------- player props (SHADOW)
+PROPS_LOG = OUT_DIR / "worldcup_player_props_log.csv"
+PROPS_LABEL = ("⚠️ EXPERIMENTAL · heurístico · SIN VALIDAR "
+               "(en pruebas, aún sin medir — no fiarse):")
+_props_cache = None
+
+
+def _load_props():
+    """Lazy-load the shadow props log ONCE. Returns a DataFrame (empty on any problem)."""
+    global _props_cache
+    if _props_cache is None:
+        try:
+            _props_cache = pd.read_csv(PROPS_LOG) if PROPS_LOG.exists() else pd.DataFrame()
+        except Exception:
+            _props_cache = pd.DataFrame()
+    return _props_cache
+
+
+def props_lines(sub, name_fn=str):
+    """Compact props block from this fixture's logged rows (the SAME numbers as the shadow log;
+    NOT recomputed). [] if no usable rows. Soft-fail: any error -> []."""
+    try:
+        if sub is None or len(sub) == 0:
+            return []
+        if "is_xi" in sub.columns:
+            sub = sub[pd.to_numeric(sub["is_xi"], errors="coerce").fillna(1) == 1]
+        lines = [PROPS_LABEL]
+        gl = sub.dropna(subset=["p_goal"]).sort_values("p_goal", ascending=False).head(3)
+        gl = gl[pd.to_numeric(gl["p_goal"], errors="coerce") > 0]
+        if len(gl):
+            lines.append("  Gol: " + " · ".join(
+                f"{name_fn(rr['player'])} {float(rr['p_goal']) * 100:.0f}%" for _, rr in gl.iterrows()))
+        # combine card-risk + most-shots on ONE line (compact for Telegram)
+        seg = []
+        cd = sub.dropna(subset=["p_card"]).sort_values("p_card", ascending=False).head(2)
+        if len(cd):
+            seg.append("Tarjeta: " + " · ".join(
+                f"{name_fn(rr['player'])} {float(rr['p_card']) * 100:.0f}%" for _, rr in cd.iterrows()))
+        sh = sub.dropna(subset=["exp_shots"]).sort_values("exp_shots", ascending=False)
+        if len(sh):
+            t = sh.iloc[0]
+            seg.append(f"+tiros: {name_fn(t['player'])} ~{float(t['exp_shots']):.1f} "
+                       f"(a puerta {float(t['p_shot_on']) * 100:.0f}%)")
+        if seg:
+            lines.append("  " + "  |  ".join(seg))
+        return lines if len(lines) > 1 else []   # label only -> nothing useful -> omit
+    except Exception:
+        return []
+
+
+def props_block(fid):
+    """Props lines for a fixture, read from the shadow log. [] if absent/soft-fail."""
+    try:
+        df = _load_props()
+        if df is None or df.empty or "fixture_id" not in df.columns or pd.isna(fid):
+            return []
+        sub = df[pd.to_numeric(df["fixture_id"], errors="coerce") == int(fid)]
+        return props_lines(sub, name_fn=lambda n: es_name(str(n)))
+    except Exception:
+        return []
+
+
 def match_block(r, show_lineups=False):
     """Readable, labelled per-match card (list of lines). Data model only, ZERO odds."""
     h, a = es_name(r["home"]), es_name(r["away"])
@@ -151,6 +213,10 @@ def match_block(r, show_lineups=False):
         lhs, las = r.get("lineup_home"), r.get("lineup_away")
         if pd.notna(lhs) and str(lhs) in LU:
             lines.append(f"Alineaciones — {h}: {LU[str(lhs)]} · {a}: {LU.get(str(las), 'pendiente')}")
+
+    # PLAYER PROPS (EXPERIMENTAL · shadow): compact, read from the SAME shadow props log
+    # (already logged pre-KO -> lock-at-KO coherent; NOT recomputed). Soft: no props -> no block.
+    lines += props_block(r.get("fixture_id"))
     return lines
 
 
