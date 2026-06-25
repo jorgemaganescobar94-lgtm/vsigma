@@ -169,6 +169,20 @@ jobs:
           echo "----- scorecard preview -----"
           cat analysis/worldcup/worldcup_scorecard.txt
 
+      # ---- CALIBRATION MONITOR (safety net): after settle+auto-refit+scorecard, check the LIVE
+      #      1X2 calibration of the production L3 and alert on Telegram if it drifts. Monitor ONLY:
+      #      does NOT touch the model/ratings/calibration/briefing — just reads the log + alerts.
+      #      Soft-fail: a failure NEVER blocks the briefing. NO betting endpoints.
+      - name: Calibration monitor (alert-only; soft-fail)
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python analysis/worldcup/worldcup_calibration_monitor.py
+          echo "----- calibration monitor -----"
+          cat analysis/worldcup/worldcup_calibration_monitor.txt || true
+
       - name: Render paginated Telegram messages (header + match pages; morning adds 'ayer')
         id: render
         run: |
@@ -262,7 +276,9 @@ jobs:
                    analysis/worldcup/worldcup_player_props_log.csv \
                    analysis/worldcup/worldcup_player_props_scorecard.txt \
                    analysis/worldcup/worldcup_context_shadow_log.csv \
-                   analysis/worldcup/worldcup_context_shadow_scorecard.txt; do
+                   analysis/worldcup/worldcup_context_shadow_scorecard.txt \
+                   analysis/worldcup/worldcup_calibration_monitor.txt \
+                   analysis/worldcup/worldcup_calibration_monitor_state.json; do
             [ -f "$p" ] && git add "$p" || true
           done
           # gaps file only exists once a coverage gap has been detected (explicit path)
