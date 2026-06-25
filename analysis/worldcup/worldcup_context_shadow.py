@@ -64,9 +64,13 @@ SMALL_N = 20                      # graduation threshold over NON-TRIVIAL scenar
 FINISHED = {"FT", "AET", "PEN"}
 
 # scenario -> multiplier on the team's OWN attacking xG. EXPLICIT hypotheses (sign ambiguous).
+# 'tercero_en_disputa' is NEUTRAL (1.0): a 3rd-placed team may still advance as a best third in
+# the 48-team format (cross-group math we do not compute), so we refuse to claim eliminated/must-win
+# and leave the prediction untouched rather than pollute the shadow signal with a wrong scenario.
 MULT = {
     "ya_clasificado": 0.92, "eliminado": 0.95, "debe_ganar": 1.08, "le_vale_empate": 0.97,
-    "partido_decisivo": 1.00, "intrascendente": 0.90, "knockout": 1.00, "unknown": 1.00,
+    "partido_decisivo": 1.00, "intrascendente": 0.90, "tercero_en_disputa": 1.00,
+    "knockout": 1.00, "unknown": 1.00,
 }
 
 LOG_COLUMNS = [
@@ -210,6 +214,12 @@ def classify_fixture(round_str, home, away, groups, team_group, advance=ADVANCE)
         q, e, rem, rank = _team_status(name, table, advance)
         if q:
             return "ya_clasificado", True
+        # 48-team format: the 8 best thirds ALSO advance. A team currently 3rd by points may still
+        # qualify as a best third (cross-group math we do not compute) -> NEUTRAL tag, don't claim
+        # eliminated/must-win and don't change the prediction. (Residual simplification: a 4th-placed
+        # best-third long-shot is still treated by the top-2 logic below; documented.)
+        if rank == advance + 1:
+            return "tercero_en_disputa", False
         if e:
             return "eliminado", True
         if rem == 1:                                   # last group game, still alive
@@ -290,9 +300,16 @@ def _fixture_status_index(client):
         goals = f.get("goals") or {}
         score = f.get("score") or {}
         ft = score.get("fulltime") or {}
-        gh = ft.get("home") if ft.get("home") is not None else goals.get("home")
-        ga = ft.get("away") if ft.get("away") is not None else goals.get("away")
-        idx[int(fid)] = {"status": (fx.get("status") or {}).get("short"), "gh": gh, "ga": ga}
+        fth, fta = ft.get("home"), ft.get("away")
+        status = (fx.get("status") or {}).get("short")
+        if status in ("AET", "PEN"):
+            # 90' score only; NEVER fall back to goals (post-ET) for a knockout -> a missing
+            # fulltime yields gh/ga None and cmd_settle skips it (settles cleanly next run).
+            gh, ga = fth, fta
+        else:
+            gh = fth if fth is not None else goals.get("home")
+            ga = fta if fta is not None else goals.get("away")
+        idx[int(fid)] = {"status": status, "gh": gh, "ga": ga}
     return idx
 
 

@@ -333,8 +333,21 @@ def cmd_settle():
         goals = f.get("goals") or {}
         score = f.get("score") or {}
         ft = score.get("fulltime") or {}
-        gh90 = ft.get("home") if ft.get("home") is not None else goals.get("home")
-        ga90 = ft.get("away") if ft.get("away") is not None else goals.get("away")
+        fth, fta = ft.get("home"), ft.get("away")
+        if st in ("AET", "PEN"):
+            # KNOCKOUT past 90': score.fulltime is the 90' result, the ONLY thing the L3 1X2 is
+            # scored on. NEVER fall back to goals (post-extra-time) here — that would misclassify a
+            # 90' draw as a win. If fulltime is missing, SKIP (settle next run when data is clean).
+            # NOTE (inconsistency #5, deferred — moves ratings, pending Jorge): the HISTORICAL base
+            # dataset (extract_international_fixtures.py) records AET knockouts by their post-ET
+            # `goals`, not this 90' score. Settle/refit are internally consistent; the seam is only
+            # vs the legacy training data and is left untouched here on purpose.
+            if fth is None or fta is None:
+                continue
+            gh90, ga90 = fth, fta
+        else:
+            gh90 = fth if fth is not None else goals.get("home")
+            ga90 = fta if fta is not None else goals.get("away")
         if gh90 is None or ga90 is None:
             continue
         res = "H" if gh90 > ga90 else ("D" if gh90 == ga90 else "A")

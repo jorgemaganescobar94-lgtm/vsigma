@@ -53,10 +53,11 @@ def test_status_qualified_and_eliminated():
 
 
 def test_classify_must_win_vs_draw_ok():
-    # last group game (played 2). B is 3rd by points but alive -> must win; A is 1st-2nd -> draw ok
-    groups = {"Group A": _table([("A", 4, 2, 2), ("X", 4, 2, 2), ("B", 3, 2, 0), ("Y", 0, 2, -4)])}
+    # last group game (played 2). A is 1st-2nd by points -> draw ok; Y is 4th (NOT 3rd, so not the
+    # best-third exception) but still mathematically alive -> must win. 3rd (B) would be neutral.
+    groups = {"Group A": _table([("A", 4, 2, 3), ("X", 4, 2, 2), ("B", 4, 2, 1), ("Y", 1, 2, -6)])}
     tg = {"A": "Group A", "X": "Group A", "B": "Group A", "Y": "Group A"}
-    sh, sa, mh, ma, nt = C.classify_fixture("Group Stage - 3", "A", "B", groups, tg)
+    sh, sa, mh, ma, nt = C.classify_fixture("Group Stage - 3", "A", "Y", groups, tg)
     assert sh == "le_vale_empate" and sa == "debe_ganar"
     assert mh == C.MULT["le_vale_empate"] and ma == C.MULT["debe_ganar"] and nt
 
@@ -69,6 +70,45 @@ def test_classify_dead_rubber_both_resolved():
     sh, sa, mh, ma, nt = C.classify_fixture("Group Stage - 3", "A", "Y", groups, tg)
     assert sh == "intrascendente" and sa == "intrascendente"
     assert mh == C.MULT["intrascendente"] and ma == C.MULT["intrascendente"] and nt
+
+
+def test_classify_third_place_is_neutral_in_dispute():
+    # 4-group last matchday: C is 3rd by points. Top-2 logic alone would call it must-win, but in
+    # the 48-team format a best third can advance -> NEUTRAL 'tercero_en_disputa' (mult 1.0).
+    groups = {"G": _table([("A", 6, 2, 4), ("B", 4, 2, 1), ("C", 3, 2, 0), ("D", 0, 2, -5)])}
+    tg = {k: "G" for k in ("A", "B", "C", "D")}
+    sh, sa, mh, ma, nt = C.classify_fixture("Group Stage - 3", "C", "D", groups, tg)
+    assert sh == "tercero_en_disputa" and mh == 1.0 and C.MULT["tercero_en_disputa"] == 1.0
+    assert sa == "eliminado"          # 4th, clinched below -> still eliminated (documented residual)
+    # the 3rd-placed team is NOT marked eliminado/debe_ganar (signal not polluted)
+    assert sh not in ("eliminado", "debe_ganar")
+
+
+def test_fixture_status_index_aet_null_fulltime_gives_none():
+    fx = {"response": [
+        {"fixture": {"id": 1, "status": {"short": "AET"}}, "goals": {"home": 2, "away": 1},
+         "score": {"fulltime": {"home": None, "away": None}}},          # null 90' -> must be None
+        {"fixture": {"id": 2, "status": {"short": "FT"}}, "goals": {"home": 3, "away": 0},
+         "score": {"fulltime": {"home": 3, "away": 0}}},
+    ]}
+
+    class FakeClient:
+        def request(self, path, params, ttl_hours=None):
+            return fx
+    idx = C._fixture_status_index(FakeClient())
+    assert idx[1]["gh"] is None and idx[1]["ga"] is None   # AET w/o 90' -> no goals -> settle skips
+    assert idx[2]["gh"] == 3 and idx[2]["ga"] == 0
+
+
+def test_settle_skips_aet_with_null_90_score():
+    tmp = Path(tempfile.mkdtemp())
+    C.LOG = tmp / "log.csv"
+    pd.DataFrame([{**{c: np.nan for c in C.LOG_COLUMNS}, "fixture_id": 7, "settled": 0,
+                   "ctx_home": 0.5}], columns=C.LOG_COLUMNS).to_csv(C.LOG, index=False)
+    C._client = lambda: None
+    C._fixture_status_index = lambda client: {7: {"status": "AET", "gh": None, "ga": None}}
+    C.cmd_settle()
+    assert int(pd.read_csv(C.LOG).iloc[0]["settled"]) == 0   # never settled from post-ET goals
 
 
 def test_classify_knockout_is_trivial():

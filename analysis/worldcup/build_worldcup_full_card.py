@@ -82,6 +82,39 @@ def fmt_ko(kickoff_utc):
     return f"{ko.day} {MONTHS_ES[ko.month]} · {ko:%H:%M}Z"
 
 
+# Knockout round labels (ES). Order matters: 'final' is a substring of 'semi-finals' etc., so the
+# more specific keys are checked first (dict iteration is insertion order).
+KNOCKOUT_ES = {
+    "round of 32": "Dieciseisavos", "round of 16": "Octavos",
+    "quarter-finals": "Cuartos", "quarter finals": "Cuartos", "quarterfinals": "Cuartos",
+    "semi-finals": "Semifinal", "semi finals": "Semifinal", "semifinals": "Semifinal",
+    "3rd place final": "3.º y 4.º puesto", "third place": "3.º y 4.º puesto",
+    "final": "Final",
+}
+
+
+def is_knockout(round_str):
+    """True for a knockout round (anything that is NOT a group-stage match). Soft on None."""
+    return "group" not in str(round_str or "").lower()
+
+
+def round_label_es(round_str, default="Eliminatoria"):
+    """Spanish chip for a knockout round (Octavos/Cuartos/Semifinal/Final/Dieciseisavos);
+    raw string if the label is unrecognised. Pure display, no model logic."""
+    key = str(round_str or "").strip().lower()
+    for k, v in KNOCKOUT_ES.items():
+        if k in key:
+            return v
+    return str(round_str or "").strip() or default
+
+
+def chip_es(r):
+    """Header chip for a fixture: knockout round name in knockouts, group otherwise."""
+    if is_knockout(r.get("round")):
+        return round_label_es(r.get("round"))
+    return str(r.get("home_group") or "").replace("Group ", "Gr. ").strip() or "Gr. ?"
+
+
 # --------------------------------------------------------------------- player props (SHADOW)
 PROPS_LOG = OUT_DIR / "worldcup_player_props_log.csv"
 PROPS_LABEL = ("⚠️ EXPERIMENTAL · heurístico · SIN VALIDAR "
@@ -167,12 +200,22 @@ def props_block(fid):
 def match_block(r, show_lineups=False):
     """Readable, labelled per-match card (list of lines). Data model only, ZERO odds."""
     h, a = es_name(r["home"]), es_name(r["away"])
-    grp = str(r.get("home_group") or "").replace("Group ", "Gr. ").strip() or "Gr. ?"
-    lines = [f"🏆 {h} vs {a} — {grp} · {fmt_ko(r.get('kickoff_utc'))}"]
+    ko_round = is_knockout(r.get("round"))   # knockout -> round chip + advance line + draw relabel
+    lines = [f"🏆 {h} vs {a} — {chip_es(r)} · {fmt_ko(r.get('kickoff_utc'))}"]
 
     lh, ld, la = r.get("our_home"), r.get("our_draw"), r.get("our_away")
     if pd.notna(lh):
-        lines.append(f"Resultado: {h} {lh*100:.0f}% · Empate {ld*100:.0f}% · {a} {la*100:.0f}%")
+        if ko_round:
+            # In a knockout the L3 1X2 is still the 90' result (draw = goes to extra time). Relabel
+            # the draw and add a heuristic P(advance) = P(win 90') + P(draw 90')×0.5 (ET/penalties
+            # ≈ coin flip). Pure render from the stored probs; the model is NOT touched.
+            lines.append(f"Resultado a 90': {h} {lh*100:.0f}% · "
+                         f"Empate a 90' (→ prórroga) {ld*100:.0f}% · {a} {la*100:.0f}%")
+            pa_h, pa_a = lh + ld * 0.5, la + ld * 0.5
+            lines.append(f"Avance (heurístico: prórroga/penaltis ≈ moneda al aire): "
+                         f"{h} {pa_h*100:.0f}% · {a} {pa_a*100:.0f}%")
+        else:
+            lines.append(f"Resultado: {h} {lh*100:.0f}% · Empate {ld*100:.0f}% · {a} {la*100:.0f}%")
         # L3-adj SECONDARY heuristic line, UNDER the official L3. Soft: only if an adjustment
         # was logged (Δ≠0). L3 stays first and official; this is labelled, not validated.
         ah, ad, aa = r.get("adj_home"), r.get("adj_draw"), r.get("adj_away")
@@ -277,6 +320,25 @@ def _pick(r, pref):
     return "HDA"[int(np.argmax([float(v) for v in vals]))]
 
 
+def _ko_resolution_es(r, h, a):
+    """Annotation for a knockout decided beyond 90' — from result_status + result_final ONLY.
+    The 1X2 is still scored at 90' (this is just the visible note). For PEN the shootout winner
+    is NOT a stored field, so we annotate it WITHOUT naming a winner (never invent match data).
+    '' for a normal FT (or missing status)."""
+    status = str(r.get("result_status") or "").upper()
+    if status == "AET":
+        try:
+            fgh, fga = int(r["result_final_gh"]), int(r["result_final_ga"])
+            who = h if fgh > fga else (a if fga > fgh else "")
+            tail = f" · ganó {who} en la prórroga" if who else ""
+            return f" ({fgh}-{fga} tras prórroga{tail})"
+        except Exception:
+            return " (tras prórroga)"
+    if status == "PEN":
+        return " (empate a 90' · decidido en penaltis)"
+    return ""
+
+
 def build_yesterday_block(log_path, now, hours=36, max_results=6):
     """'Cómo acertamos ayer': real score + L3 1X2 hit (✓/✗) for fixtures resolved in the
     last `hours`. Honest, L3 only — ZERO market. Only settled rows with a result. [] if none."""
@@ -313,7 +375,8 @@ def build_yesterday_block(log_path, now, hours=36, max_results=6):
             score = f"{int(r['result_ft_gh'])}-{int(r['result_ft_ga'])}"
         except Exception:
             score = "?-?"
-        lines.append(f"{h} {score} {a} — L3{l3_s}")
+        # 90' score + (if AET/PEN) a note. The L3 hit (l3_s) is judged on the 90' 1X2, unchanged.
+        lines.append(f"{h} {score} {a}{_ko_resolution_es(r, h, a)} — L3{l3_s}")
         # [REAL] post-FT enrichment lines (xG/tiros/posesión/córners + 1er gol/tarjetas).
         # SOFT: absent store -> no extra lines, briefing identical to before this feature.
         if wc_enrich is not None and pd.notna(r.get("fixture_id")):
@@ -466,7 +529,9 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
             lh3, ld3, la3 = r.get("our_home"), r.get("our_draw"), r.get("our_away")
             xgh, xga = r.get("our_xg_home"), r.get("our_xg_away")
             ko = str(r["kickoff_utc"])[5:16].replace("T", " ")  # MM-DD HH:MM
-            grp = str(r.get("home_group") or "?").replace("Group ", "G")
+            # knockout -> round chip (Octavos/…); group -> short group label
+            grp = (round_label_es(r.get("round")) if is_knockout(r.get("round"))
+                   else str(r.get("home_group") or "?").replace("Group ", "G"))
             top = ""
             o25 = btts = None
             if pd.notna(xgh):
@@ -526,7 +591,8 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
     for _, r in df.iterrows():
         h, a = r["home"], r["away"]
         ko = str(r["kickoff_utc"]).replace("T", " ")[:16]
-        grp = str(r.get("home_group") or "").replace("Group ", "Gr.")
+        grp = (round_label_es(r.get("round")) if is_knockout(r.get("round"))
+               else str(r.get("home_group") or "").replace("Group ", "Gr."))
         lh3, ld3, la3 = r.get("our_home"), r.get("our_draw"), r.get("our_away")
         xgh, xga = r.get("our_xg_home"), r.get("our_xg_away")
 

@@ -25,6 +25,12 @@ METHOD (honest heuristic — split a team total among its XI by historical share
 Subcommands:  predict (NS only, anti-hindsight, lock-first per fixture) · settle (after FT) ·
               scorecard (per prop type: logloss/brier/ECE + base-rate skill).
 
+KNOCKOUT NOTE (#7, documented bias — behaviour unchanged): the λ are derived from the team's 90'
+xG, but settle counts per-player stats over the WHOLE match (incl. extra time). So in a knockout
+that goes to 120', settle can mark a prop "hit" on an extra-time event the 90' model never modelled
+AND the 90'-based λ under-counts events. Both inflate noise in those few fixtures. This is SHADOW-
+only (never shown/sent), so it just adds variance to the props' own scorecard; left as-is for now.
+
 SAFEGUARDS: does NOT touch the L3 / calibration / lock-at-KO / briefing. Anti-hindsight
 (predict pre-KO, freeze at KO, settle only after FT). API store-guarded + cached "forever".
 SOFT-FAIL everywhere. NO betting endpoints. Explicit git add (log + scorecard only).

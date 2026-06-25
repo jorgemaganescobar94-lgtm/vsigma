@@ -127,6 +127,56 @@ def test_gap_when_first_seen_after_kickoff():
         assert W.GAPS.exists(), "should record a coverage gap"
 
 
+def _patch_client(fixtures):
+    """Patch api_football_client.APIFootballClient with a fake serving `fixtures` (no network)."""
+    sys.path.insert(0, str(Path(W.__file__).resolve().parents[2] / "scripts"))
+    import api_football_client as afc
+
+    class FakeClient:
+        def request(self, path, params=None, **kw):
+            return {"response": {"requests": {"current": 0}}}   # /status quota
+
+        def fixtures(self, league, season):
+            return {"response": fixtures}
+
+        def fixture_statistics(self, fid):
+            return {"response": []}
+    afc.APIFootballClient = lambda *a, **k: FakeClient()
+
+
+def test_settle_knockout_scores_90_not_extratime():
+    """AET decided in extra time: 1X2 MUST be scored on the 90' draw (score.fulltime), not the
+    post-ET goals. result_final keeps the post-ET score separately."""
+    with tempfile.TemporaryDirectory() as tmp:
+        _setup(tmp)
+        _seed_log([{"fixture_id": 9, "kickoff_utc": PAST, "home": "X", "away": "Y",
+                    "round": "Round of 16", "l3_home": 0.5, "settled": 0}])
+        _patch_client([{"fixture": {"id": 9, "status": {"short": "AET"}},
+                        "goals": {"home": 2, "away": 1},
+                        "score": {"fulltime": {"home": 1, "away": 1}}}])
+        W.cmd_settle()
+        row = _log().iloc[0]
+        assert int(row.settled) == 1 and row.result_1x2 == "D", "knockout 1X2 scored at 90'"
+        assert row.result_ft_gh == 1 and row.result_ft_ga == 1
+        assert row.result_final_gh == 2 and row.result_final_ga == 1   # post-ET stored, not used for 1X2
+
+
+def test_settle_skips_aet_when_fulltime_null():
+    """AET with a missing score.fulltime must be SKIPPED, never settled from post-ET goals
+    (which would misclassify a 90' draw as a win)."""
+    with tempfile.TemporaryDirectory() as tmp:
+        _setup(tmp)
+        _seed_log([{"fixture_id": 8, "kickoff_utc": PAST, "home": "X", "away": "Y",
+                    "round": "Round of 16", "l3_home": 0.5, "settled": 0}])
+        _patch_client([{"fixture": {"id": 8, "status": {"short": "AET"}},
+                        "goals": {"home": 2, "away": 1},
+                        "score": {"fulltime": {"home": None, "away": None}}}])
+        W.cmd_settle()
+        row = _log().iloc[0]
+        assert int(row.settled) == 0, "AET with null 90' score must NOT settle"
+        assert pd.isna(row.result_1x2)
+
+
 def _run():
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     for fn in fns:
