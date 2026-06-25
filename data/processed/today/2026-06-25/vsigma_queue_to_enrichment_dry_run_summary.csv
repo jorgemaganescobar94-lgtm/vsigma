@@ -1,2 +1,2 @@
 target_date,generated_at,rows_planned,dry_run_decision_counts,risk_label_counts,priority_counts,total_estimated_call_units,api_calls_planned,api_calls_executed,next_action,auto_apply,production_change
-2026-06-25,2026-06-25T11:25:14+01:00,0,none,none,none,0,NO,NO,Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.,NO,NO
+2026-06-25,2026-06-25T20:20:47+01:00,0,none,none,none,0,NO,NO,Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.,NO,NO

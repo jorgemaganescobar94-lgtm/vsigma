@@ -14,8 +14,8 @@
 ## Component Rows
 - root_scored_matches | status=EMPTY | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/matches_vsigma_scored_v3.csv | detail=file exists but has no data rows
 - dated_scored_matches | status=EMPTY | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-25/matches_vsigma_scored_v3.csv | detail=file exists but has no data rows
-- today_execution_shortlist | status=MISSING | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-25/vsigma_today_execution_shortlist.csv | detail=file is not present
-- today_execution_bets_only | status=MISSING | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-25/vsigma_today_execution_bets_only.csv | detail=file is not present
+- today_execution_shortlist | status=EMPTY | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-25/vsigma_today_execution_shortlist.csv | detail=file exists but has no data rows
+- today_execution_bets_only | status=EMPTY | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-25/vsigma_today_execution_bets_only.csv | detail=file exists but has no data rows
 - context_adjusted_final_picks | status=EMPTY | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-25/vsigma_context_adjusted_final_picks.csv | detail=file exists but has no data rows
 - real_objective_context_gate | status=EMPTY | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-25/vsigma_real_objective_context_gate.csv | detail=file exists but has no data rows
 - objective_context_execution_bridge | status=EMPTY | same_day=0 | real=0 | proxy=0 | bet_like=0 | path=data/processed/today/2026-06-25/vsigma_objective_context_execution_bridge.csv | detail=file exists but has no data rows
