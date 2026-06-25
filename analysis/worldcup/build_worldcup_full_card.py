@@ -100,6 +100,26 @@ def _load_props():
     return _props_cache
 
 
+def _xi_status(sub):
+    """XI-provisionality suffix for the props label, read from the logged 'basis' (SAME origin as
+    the props themselves). 'probable*' -> provisional note; 'lineup_confirmed' -> confirmed.
+    Provisional wins when the two teams disagree (honest). '' if basis missing (soft-fail)."""
+    try:
+        if sub is None or "basis" not in sub.columns:
+            return ""
+        vals = [str(b) for b in sub["basis"].dropna().unique() if str(b).strip()]
+        if not vals:
+            return ""
+        if all(v == "lineup_confirmed" for v in vals):
+            return " (XI confirmado)"
+        if any(v.startswith("probable") for v in vals):
+            return (" (XI probable · provisional — se actualiza con la alineación "
+                    "oficial ~1h antes del saque)")
+        return ""
+    except Exception:
+        return ""
+
+
 def props_lines(sub, name_fn=str):
     """Compact props block from this fixture's logged rows (the SAME numbers as the shadow log;
     NOT recomputed). [] if no usable rows. Soft-fail: any error -> []."""
@@ -108,7 +128,7 @@ def props_lines(sub, name_fn=str):
             return []
         if "is_xi" in sub.columns:
             sub = sub[pd.to_numeric(sub["is_xi"], errors="coerce").fillna(1) == 1]
-        lines = [PROPS_LABEL]
+        lines = [PROPS_LABEL + _xi_status(sub)]
         gl = sub.dropna(subset=["p_goal"]).sort_values("p_goal", ascending=False).head(3)
         gl = gl[pd.to_numeric(gl["p_goal"], errors="coerce") > 0]
         if len(gl):

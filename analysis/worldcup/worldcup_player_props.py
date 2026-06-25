@@ -6,8 +6,11 @@ Four props per starter: (1) marca gol, (2) ve tarjeta, (3) tiros (+ P≥1 a puer
 they are NEVER shown in the ficha and NEVER sent to Telegram. ZERO betting endpoints.
 
 METHOD (honest heuristic — split a team total among its XI by historical share):
-  * XI: confirmed /fixtures/lineups startXI if available; else the most-likely XI by recent
-        national-team starts (games.lineups) from /players?team&season.
+  * XI: confirmed /fixtures/lineups startXI if available; else the most-likely XI by RECENT
+        national-team starts — how many of the team's last RECENT_N finished matches each
+        call-up STARTED (/fixtures?team&last=N + /fixtures/lineups per fixture, store-guarded;
+        per-fixture lineups are immutable -> cached 'forever'). Falls back to accumulated
+        /players starts (history) only when recent lineups are unavailable (soft-fail).
   * Per-player /90 rates (goals/assists/shots/shots-on/cards) from /players?team&season over
         RATE_SEASONS. Small national samples are SHRUNK toward the XI mean (empirical-Bayes,
         weight minutes/(minutes+PRIOR_MIN)); this is the documented "mix" that stabilises thin
@@ -53,6 +56,7 @@ STORE_DIR = ROOT / "data" / "processed" / "worldcup" / "player_props"   # gitign
 
 LEAGUE, SEASON = 1, 2026
 RATE_SEASONS = [2024, 2025]      # national-team seasons for historical /90 rates
+RECENT_N = 8                     # last N finished national-team matches for "probable XI" form
 KO_BUFFER = timedelta(minutes=5)
 XI_SIZE = 11
 XI_ATTR = 0.85                   # fraction of team goals attributed to the XI (rest unattributed)
@@ -228,6 +232,41 @@ def fetch_squad(client, tid):
     return out
 
 
+def fetch_recent_starts(client, tid):
+    """Store-guarded RECENT national-team starts: of the team's last RECENT_N FINISHED matches,
+    how many each player STARTED (recent form, not accumulated history). Returns {pid: rstarts}
+    or {} (soft-fail -> caller falls back to accumulated /players starts).
+
+    API discipline: the fixtures list uses the client TTL (24h) so it refreshes as new matches
+    are played; each fixture's startXI is IMMUTABLE -> cached 'forever' in the store. After the
+    first warm-up, re-runs cost ~0-1 calls. Never a betting endpoint. Honors the per-run cap."""
+    resp = _get(client, "/fixtures", {"team": int(tid), "last": RECENT_N}, 24)
+    fids = []
+    for f in (resp or []):
+        fx = f.get("fixture") or {}
+        fid = fx.get("id")
+        if fid is not None and (fx.get("status") or {}).get("short") in ("FT", "AET", "PEN"):
+            fids.append(int(fid))
+    out = {}
+    for fid in fids:
+        name = f"lineup_fx{fid}"
+        store = _load_store(name)
+        if store is None:
+            r = _get(client, "/fixtures/lineups", {"fixture": fid}, 24 * 3650)
+            if r is None:
+                continue  # cap hit or error -> skip this fixture (soft-fail), keep the rest
+            store = r
+            _save_store(name, store)
+        for t in (store or []):
+            if (t.get("team") or {}).get("id") != int(tid):
+                continue
+            for p in (t.get("startXI") or []):
+                pid = (p.get("player") or {}).get("id")
+                if pid is not None:
+                    out[int(pid)] = out.get(int(pid), 0.0) + 1.0
+    return out
+
+
 # --------------------------------------------------------------- prediction (pure math)
 def poisson_p_ge1(lam):
     """P(N>=1) for N~Poisson(lam). Always in [0,1]."""
@@ -289,10 +328,15 @@ def predict_fixture(team_xg, team_shots, match_cards, xi, rates):
 
 
 # --------------------------------------------------------------- XI selection
-def get_xi(client, fid, tid, rates, squad):
+def get_xi(client, fid, tid, rates, squad, recent=None):
     """(list[pid], basis). Confirmed startXI if published (AUTHORITATIVE); else the most-likely
-    XI by recent starts AMONG THE REAL SQUAD (convocatoria). If the squad is unavailable, returns
-    ([], 'no_squad') -> the caller OMITS this team rather than invent an XI from non-call-ups."""
+    XI AMONG THE REAL SQUAD (convocatoria), ranked by RECENT starts when available (titularidades
+    de los últimos RECENT_N partidos), tie-broken by accumulated history. If recent starts are
+    unavailable it falls back to accumulated /players starts. If the squad is unavailable, returns
+    ([], 'no_squad') -> the caller OMITS this team rather than invent an XI from non-call-ups.
+
+    Only the RANKING of the probable XI changes; call-ups with neither recent nor historical data
+    sort LAST, and non-call-ups are NEVER eligible. The confirmed-lineup path is untouched."""
     resp = _get(client, "/fixtures/lineups", {"fixture": fid}, 0.25)
     for t in (resp or []):
         if (t.get("team") or {}).get("id") == int(tid):
@@ -302,9 +346,16 @@ def get_xi(client, fid, tid, rates, squad):
                 return xi[:XI_SIZE], "lineup_confirmed"
     if not squad:
         return [], "no_squad"   # NEVER invent an XI from players who are not in the squad
-    # rank ONLY the called-up players by recent national starts (call-ups with no history go last)
-    cand = sorted(squad.keys(), key=lambda pid: -rates.get(pid, {}).get("starts", 0.0))
-    return cand[:XI_SIZE], "probable_by_squad_starts"
+    recent = recent or {}
+    have_recent = any(float(recent.get(pid, 0.0)) > 0 for pid in squad)
+    # rank ONLY the called-up players: recent starts first (form), then accumulated history,
+    # then accumulated minutes. Call-ups with no data at all fall to the back.
+    cand = sorted(squad.keys(), key=lambda pid: (
+        -float(recent.get(pid, 0.0)),
+        -rates.get(pid, {}).get("starts", 0.0),
+        -rates.get(pid, {}).get("minutes", 0.0)))
+    basis = "probable_by_recent_starts" if have_recent else "probable_by_squad_starts"
+    return cand[:XI_SIZE], basis
 
 
 # --------------------------------------------------------------- log helpers
@@ -370,13 +421,14 @@ def cmd_predict():
                 continue
             rates = dict(fetch_team_rates(client, tid) or {})
             squad = fetch_squad(client, tid)
+            recent = fetch_recent_starts(client, tid)   # {pid: recent starts}; {} -> soft fallback
             # call-ups with no historical rate are still eligible (shrunk to the XI mean): give
             # them a stub rate carrying their squad name so they can be logged.
             if squad:
                 for pid, nm in squad.items():
                     if pid not in rates:
                         rates[pid] = {**_STUB, "name": nm}
-            xi, basis = get_xi(client, fid, tid, rates, squad)
+            xi, basis = get_xi(client, fid, tid, rates, squad, recent)
             if not xi:
                 continue  # no squad -> OMIT this team (never show non-call-ups)
             preds = predict_fixture(team_xg, r.get(sh_col, 0.0), r.get("st_cards_total", 0.0), xi, rates)

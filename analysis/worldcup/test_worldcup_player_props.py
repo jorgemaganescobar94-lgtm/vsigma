@@ -140,6 +140,74 @@ def test_get_xi_fallback_excludes_non_callups():
     assert len(xi) == 11
 
 
+def test_get_xi_recent_starts_outrank_history():
+    P._get = lambda *a, **k: []   # no confirmed lineup -> probable path
+    squad = {i: f"P{i}" for i in range(1, 14)}          # 13 call-ups, XI picks 11
+    # historical starts ascending with id: 13,12,11 are the "historical" front-runners
+    rates = {i: {"name": f"P{i}", "starts": float(i), "minutes": 90.0 * i} for i in range(1, 14)}
+    # players 1 & 2 (historical also-rans) have STARTED the most RECENTLY
+    recent = {1: 8.0, 2: 7.0}
+    xi, basis = P.get_xi(None, 1, 99, rates, squad, recent)
+    assert basis == "probable_by_recent_starts"
+    assert 1 in xi and 2 in xi, "recent starters must enter the probable XI"
+    # the two lowest-history call-ups with NO recent starts drop out
+    assert 3 not in xi and 4 not in xi, "displaced by the recent starters"
+    # the recent starters lead the ranking order
+    assert xi[0] == 1 and xi[1] == 2
+    assert len(xi) == 11 and set(xi) <= set(squad)
+
+
+def test_get_xi_recent_soft_fallback_to_history():
+    P._get = lambda *a, **k: []
+    squad = {i: f"P{i}" for i in range(1, 13)}
+    rates = {i: {"name": f"P{i}", "starts": float(100 - i), "minutes": 900.0} for i in range(1, 13)}
+    # no recent data ({} or None) -> fall back to accumulated history, OLD basis
+    for rec in ({}, None):
+        xi, basis = P.get_xi(None, 1, 99, rates, squad, rec)
+        assert basis == "probable_by_squad_starts"
+        assert xi[0] == 1, "lowest id == most historical starts ranks first"
+
+
+def test_get_xi_recent_excludes_non_callups():
+    P._get = lambda *a, **k: []
+    # a non-call-up (id 999) with huge recent starts must NEVER appear
+    rates = {i: {"name": f"P{i}", "starts": 5.0} for i in range(1, 13)}
+    rates[999] = {"name": "Impostor", "starts": 50.0}
+    squad = {i: f"P{i}" for i in range(1, 12)}     # 11 call-ups, 999 NOT among them
+    recent = {999: 8.0, 1: 6.0}
+    xi, _ = P.get_xi(None, 1, 99, rates, squad, recent)
+    assert 999 not in xi and len(xi) == 11
+    assert set(xi) == set(range(1, 12))
+
+
+def test_fetch_recent_starts_counts_startxi_and_softfails(monkeypatch=None):
+    # synthetic /fixtures (2 FT + 1 NS) then per-fixture lineups via a stubbed _get / store
+    P.STORE_DIR = Path(tempfile.mkdtemp())
+    fixtures = [
+        {"fixture": {"id": 10, "status": {"short": "FT"}}},
+        {"fixture": {"id": 11, "status": {"short": "FT"}}},
+        {"fixture": {"id": 12, "status": {"short": "NS"}}},   # not finished -> ignored
+    ]
+    lineups = {
+        10: [{"team": {"id": 99}, "startXI": [{"player": {"id": 1}}, {"player": {"id": 2}}]}],
+        11: [{"team": {"id": 99}, "startXI": [{"player": {"id": 1}}, {"player": {"id": 3}}]},
+             {"team": {"id": 77}, "startXI": [{"player": {"id": 500}}]}],  # other team ignored
+    }
+
+    def _fake_get(client, path, params, ttl):
+        if path == "/fixtures":
+            return fixtures
+        if path == "/fixtures/lineups":
+            return lineups.get(int(params["fixture"]))
+        return None
+    P._get = _fake_get
+    rec = P.fetch_recent_starts(None, 99)
+    assert rec.get(1) == 2.0          # started both finished matches
+    assert rec.get(2) == 1.0 and rec.get(3) == 1.0
+    assert 500 not in rec             # belonged to the opponent
+    assert 12 not in [k for k in rec]  # NS fixture never counted
+
+
 def test_get_xi_empty_squad_no_invention():
     P._get = lambda *a, **k: []
     rates = {i: {"name": f"P{i}", "starts": 10.0} for i in range(1, 15)}

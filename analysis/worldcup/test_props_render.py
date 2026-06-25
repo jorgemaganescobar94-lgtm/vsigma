@@ -55,6 +55,40 @@ def test_only_xi_rows_used():
     assert "Starter" in txt and "SubMan" not in txt
 
 
+def test_label_marks_provisional_xi():
+    df = _df([{"player": "X", "is_xi": 1, "basis": "probable_by_recent_starts",
+               "p_goal": 0.2, "p_card": 0.3, "exp_shots": 1.0, "p_shot_on": 0.4}])
+    label = F.props_lines(df)[0]
+    assert "EXPERIMENTAL" in label
+    assert "provisional" in label and "alineación oficial" in label
+    assert "confirmado" not in label
+
+
+def test_label_marks_confirmed_xi():
+    df = _df([{"player": "X", "is_xi": 1, "basis": "lineup_confirmed",
+               "p_goal": 0.2, "p_card": 0.3, "exp_shots": 1.0, "p_shot_on": 0.4}])
+    label = F.props_lines(df)[0]
+    assert "(XI confirmado)" in label and "provisional" not in label
+
+
+def test_label_provisional_wins_when_teams_disagree():
+    # one team confirmed, the other still probable -> provisional note (honest)
+    df = _df([
+        {"player": "Conf", "is_xi": 1, "basis": "lineup_confirmed",
+         "p_goal": 0.2, "p_card": 0.3, "exp_shots": 1.0, "p_shot_on": 0.4},
+        {"player": "Prob", "is_xi": 1, "basis": "probable_by_recent_starts",
+         "p_goal": 0.1, "p_card": 0.2, "exp_shots": 0.8, "p_shot_on": 0.3},
+    ])
+    assert "provisional" in F.props_lines(df)[0]
+
+
+def test_label_no_status_when_basis_missing():
+    # no 'basis' column -> soft-fail, label unchanged (back-compat with old logs)
+    df = _df([{"player": "X", "is_xi": 1, "p_goal": 0.2, "p_card": 0.3,
+               "exp_shots": 1.0, "p_shot_on": 0.4}])
+    assert F.props_lines(df)[0] == F.PROPS_LABEL
+
+
 def test_no_certainty_language():
     df = _df([{"player": "X", "is_xi": 1, "p_goal": 0.9, "p_card": 0.1, "exp_shots": 3.0, "p_shot_on": 0.7}])
     txt = " ".join(F.props_lines(df)).lower()
