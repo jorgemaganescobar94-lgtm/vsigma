@@ -1,0 +1,13 @@
+# CRITERIO DE GRADUACIÓN (definido ANTES de ver datos; no post-hoc): un prop pasa de SOMBRA
+# a producción (mostrarse en Telegram) SOLO si, con N>=30 PARTIDOS liquidados, su predicción
+# supera al baseline (tasa base del prop) en logloss Y en brier, y tiene ECE<=0.08. Si no,
+# se queda en sombra. Etiqueta interna: heurístico / no validado.
+
+==============================================================================
+PLAYER PROPS — track record (SOMBRA · heurístico · NO validado · sin mercado)
+==============================================================================
+generated_at_utc: 2026-06-25T15:19:20+00:00
+partidos liquidados=0 | filas jugador-prop=0 | umbral graduación N>=30
+MUESTRA INSUFICIENTE para graduar (N<30). Métricas mostradas son orientativas.
+
+Aún sin filas liquidadas; el scorecard se llenará tras los primeros FT.
