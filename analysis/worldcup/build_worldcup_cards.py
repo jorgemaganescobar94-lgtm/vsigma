@@ -310,7 +310,10 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
             rec.update({"our_home": round(float(om["our_home"]), 4), "our_draw": round(float(om["our_draw"]), 4),
                         "our_away": round(float(om["our_away"]), 4),
                         "our_xg_home": float(om["our_xg_home"]), "our_xg_away": float(om["our_xg_away"]),
-                        "our_elo_home": int(om["our_elo_home"]), "our_elo_away": int(om["our_elo_away"])})
+                        # store REAL strength (float, 2dp) — feeds the "Por qué" explanation;
+                        # the L3 calibration reads the CACHE (also float), not this cards file.
+                        "our_elo_home": round(float(om["our_elo_home"]), 2),
+                        "our_elo_away": round(float(om["our_elo_away"]), 2)})
         if sp:
             rec.update({"st_corners_total": sp["corners_total"], "st_corners_over": sp["corners_over"],
                         "st_corners_line": sp["corners_line"], "st_cards_total": sp["cards_total"],
@@ -320,6 +323,26 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
                         "st_shots_home": sp["shots_home"], "st_shots_away": sp["shots_away"]})
         rec.update({"home_group": ch.get("group"), "home_form": ch.get("form"),
                     "away_group": ca.get("group"), "away_form": ca.get("form")})
+
+        # ---- "POR QUÉ": readable explanation of THIS prediction (pure rendering, soft-fail).
+        # Derived from the SAME fields just shown (om strengths/xg/probs + adj_*); NO recompute.
+        # Coherent with lock-at-KO: om is the live-NS or frozen prediction actually displayed.
+        if om is not None:
+            try:
+                import worldcup_explain
+                why = worldcup_explain.explain_l3(
+                    home, away, om.get("our_elo_home"), om.get("our_elo_away"), neutral=1,
+                    xg_home=om.get("our_xg_home"), xg_away=om.get("our_xg_away"),
+                    p_home=om.get("our_home"), p_draw=om.get("our_draw"), p_away=om.get("our_away"),
+                    adj_basis=rec.get("adj_basis"),
+                    adj_absent_home=rec.get("adj_absent_home"), adj_absent_away=rec.get("adj_absent_away"),
+                    adj_delta_home=rec.get("adj_delta_home"), adj_delta_away=rec.get("adj_delta_away"))
+            except Exception as e:  # noqa: BLE001
+                why = ""
+                print(f"explain soft-fail: {type(e).__name__}")
+            if why:
+                out(f"    [POR QUÉ] {why}")
+                rec["why"] = why
         cards.append(rec)
 
     # ---- LOCK-AT-KO: persist the L3 cache = locked rows (frozen) + NS rows re-predicted now ----

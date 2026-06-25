@@ -106,6 +106,22 @@ def match_block(r, show_lineups=False):
             tag = "heurístico EN VIVO, NO validado, orientativo"
             lines.append(f"   ⚠️ {' · '.join(motivo)} — {tag}" if motivo else f"   ⚠️ {tag}")
 
+        # "POR QUÉ": readable explanation, Spanish team names, from the SAME stored fields
+        # (strength/xg/probs/adj) — pure rendering, no model recompute. Soft-fail.
+        try:
+            import worldcup_explain
+            why = worldcup_explain.explain_l3(
+                h, a, r.get("our_elo_home"), r.get("our_elo_away"), neutral=1,
+                xg_home=r.get("our_xg_home"), xg_away=r.get("our_xg_away"),
+                p_home=lh, p_draw=ld, p_away=la,
+                adj_basis=r.get("adj_basis"),
+                adj_absent_home=r.get("adj_absent_home"), adj_absent_away=r.get("adj_absent_away"),
+                adj_delta_home=r.get("adj_delta_home"), adj_delta_away=r.get("adj_delta_away"))
+        except Exception:
+            why = ""
+        if why:
+            lines.append(why)
+
     xgh, xga = r.get("our_xg_home"), r.get("our_xg_away")
     if pd.notna(xgh):
         M = score_matrix(xgh, xga)
