@@ -1,7 +1,7 @@
 ========================================================================================
 AUTO-REFIT L3 — SHADOW (Phase 1b; NO swap, production ratings untouched)
 ========================================================================================
-generated_at_utc: 2026-06-25T14:12:48+00:00
+generated_at_utc: 2026-06-25T14:18:21+00:00
 base rows=9185 | settled-in-log=25 | NEW rows=0 (-..-) | unmapped=0 | enriched=9185
 
 NO hay partidos liquidados nuevos fuera del dataset -> refit sería NO-OP hoy.
