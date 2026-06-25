@@ -102,6 +102,21 @@ def test_settled_row_never_touched():
         assert int(row.result_ft_gh) == 2 and int(row.result_ft_ga) == 0
 
 
+def test_update_row_predating_lockatko():
+    """Regression: an existing NS row whose pred_policy/lead are all-NaN (logged before
+    lock-at-KO) must update cleanly, not raise LossySetitemError."""
+    with tempfile.TemporaryDirectory() as tmp:
+        _setup(tmp)
+        # seed WITHOUT pred_policy/pred_lead_min (NaN float64 columns after _read_log)
+        _seed_log([{"fixture_id": 5, "kickoff_utc": FUT, "home": "Mu", "away": "Nu",
+                    "round": "G3", "l3_home": 0.33, "settled": 0}])
+        _write_cards([_card(5, FUT, "Mu", "Nu", 0.66)])
+        W.cmd_log()
+        row = _log().iloc[0]
+        assert abs(row.l3_home - 0.66) < 1e-9
+        assert row.pred_policy == "last_preko"
+
+
 def test_gap_when_first_seen_after_kickoff():
     with tempfile.TemporaryDirectory() as tmp:
         _setup(tmp)

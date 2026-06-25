@@ -175,6 +175,20 @@ def cmd_log():
 
     log = _read_log()
     now = datetime.now(timezone.utc)
+    # The mutable pre-KO snapshot columns must accept strings (l3_top_score, adj_basis,
+    # pred_policy, logged_at_utc...). On a committed log those columns may be all-NaN float64
+    # (e.g. pred_policy on rows predating lock-at-KO), so in-place writes would raise
+    # LossySetitemError. Cast them to object up-front to make per-cell updates dtype-safe.
+    SNAP_COLS = [
+        "l3_home", "l3_draw", "l3_away", "l3_xg_home", "l3_xg_away", "l3_top_score",
+        "v2_home", "v2_draw", "v2_away",
+        "adj_home", "adj_draw", "adj_away", "adj_basis",
+        "adj_delta_home", "adj_delta_away", "adj_absent_home", "adj_absent_away",
+        "st_corners_total", "st_corners_over", "st_corners_line", "st_cards_total", "st_shots_total",
+        "logged_at_utc", "pred_policy", "pred_lead_min",
+    ]
+    for c in SNAP_COLS:
+        log[c] = log[c].astype(object)
     idx_by_fid = {int(f): i for i, f in zip(log.index, log["fixture_id"]) if pd.notna(f)}
 
     def _snapshot(r, ko):
