@@ -117,8 +117,13 @@ def chip_es(r):
 
 # --------------------------------------------------------------------- player props (SHADOW)
 PROPS_LOG = OUT_DIR / "worldcup_player_props_log.csv"
-PROPS_LABEL = ("⚠️ EXPERIMENTAL · heurístico · SIN VALIDAR "
-               "(en pruebas, aún sin medir — no fiarse):")
+# Per-prop labelling after the historical backtest (N=3062 jugador-partido, internacionales 2024-25):
+# gol + asistencia GRADUARON (baten baseline en logloss+brier, ECE<=0.02) -> sección VALIDADOS, sin
+# "no fiarse". tarjeta + tiros NO graduaron limpio (su % depende de inputs constantes / está inflado)
+# -> sección EXPERIMENTAL (tarjeta con %, tiros solo como ORDEN, no probabilidad).
+VALID_LABEL = "📊 Validado en backtest histórico (probabilístico):"
+EXP_LABEL = "⚠️ Experimental · en pruebas:"
+VALID_NOTE = "  (Mundial neutral/eliminatoria: se sigue confirmando en vivo.)"
 _props_cache = None
 
 
@@ -154,33 +159,54 @@ def _xi_status(sub):
 
 
 def props_lines(sub, name_fn=str):
-    """Compact props block from this fixture's logged rows (the SAME numbers as the shadow log;
-    NOT recomputed). [] if no usable rows. Soft-fail: any error -> []."""
+    """Two-section props block from this fixture's logged rows (the SAME numbers as the shadow log;
+    NOT recomputed). VALIDADOS = gol + asistencia (graduados por backtest, % fiables); EXPERIMENTAL =
+    tarjeta (%) + tiros (solo ORDEN, sin %). [] if no usable rows. Soft-fail: any error -> []; a
+    missing prop just omits its line. The XI provisional/confirmado tag rides the VALIDADOS header."""
     try:
         if sub is None or len(sub) == 0:
             return []
         if "is_xi" in sub.columns:
             sub = sub[pd.to_numeric(sub["is_xi"], errors="coerce").fillna(1) == 1]
-        lines = [PROPS_LABEL + _xi_status(sub)]
-        gl = sub.dropna(subset=["p_goal"]).sort_values("p_goal", ascending=False).head(3)
-        gl = gl[pd.to_numeric(gl["p_goal"], errors="coerce") > 0]
-        if len(gl):
-            lines.append("  Gol: " + " · ".join(
-                f"{name_fn(rr['player'])} {float(rr['p_goal']) * 100:.0f}%" for _, rr in gl.iterrows()))
-        # combine card-risk + most-shots on ONE line (compact for Telegram)
-        seg = []
-        cd = sub.dropna(subset=["p_card"]).sort_values("p_card", ascending=False).head(2)
-        if len(cd):
-            seg.append("Tarjeta: " + " · ".join(
-                f"{name_fn(rr['player'])} {float(rr['p_card']) * 100:.0f}%" for _, rr in cd.iterrows()))
-        sh = sub.dropna(subset=["exp_shots"]).sort_values("exp_shots", ascending=False)
-        if len(sh):
-            t = sh.iloc[0]
-            seg.append(f"+tiros: {name_fn(t['player'])} ~{float(t['exp_shots']):.1f} "
-                       f"(a puerta {float(t['p_shot_on']) * 100:.0f}%)")
-        if seg:
-            lines.append("  " + "  |  ".join(seg))
-        return lines if len(lines) > 1 else []   # label only -> nothing useful -> omit
+        if len(sub) == 0:
+            return []
+
+        def _top(col, k):
+            if col not in sub.columns:
+                return []
+            t = sub.dropna(subset=[col]).copy()
+            t = t[pd.to_numeric(t[col], errors="coerce") > 0].sort_values(col, ascending=False).head(k)
+            return list(t.iterrows())
+
+        lines = []
+        # ---- VALIDADOS: gol + asistencia (backtest: baten baseline en logloss+brier, ECE<=0.02) ----
+        valid = []
+        gl = _top("p_goal", 3)
+        if gl:
+            valid.append("  Gol: " + " · ".join(
+                f"{name_fn(rr['player'])} {float(rr['p_goal']) * 100:.0f}%" for _, rr in gl))
+        asst = _top("p_assist", 3)
+        if asst:
+            valid.append("  Asistencia: " + " · ".join(
+                f"{name_fn(rr['player'])} {float(rr['p_assist']) * 100:.0f}%" for _, rr in asst))
+        if valid:
+            lines.append(VALID_LABEL + _xi_status(sub))
+            lines += valid
+            lines.append(VALID_NOTE)
+        # ---- EXPERIMENTAL: tarjeta (%) + tiros (ORDEN, sin % — su % está inflado/no calibrado) ----
+        exp = []
+        cd = _top("p_card", 2)
+        if cd:
+            exp.append("  Tarjeta: " + " · ".join(
+                f"{name_fn(rr['player'])} {float(rr['p_card']) * 100:.0f}%" for _, rr in cd))
+        sh = _top("exp_shots", 3)
+        if sh:
+            exp.append("  Tiros (orden, no probabilidad): "
+                       + " > ".join(name_fn(rr["player"]) for _, rr in sh))
+        if exp:
+            lines.append(EXP_LABEL)
+            lines += exp
+        return lines
     except Exception:
         return []
 

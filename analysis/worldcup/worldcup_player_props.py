@@ -549,6 +549,18 @@ GRADUATION_NOTE = (
     "# a producción (mostrarse en Telegram) SOLO si, con N>=30 PARTIDOS liquidados, su predicción\n"
     "# supera al baseline (tasa base del prop) en logloss Y en brier, y tiene ECE<=0.08. Si no,\n"
     "# se queda en sombra. Etiqueta interna: heurístico / no validado.\n"
+    "#\n"
+    "# ESTADO TRAS BACKTEST HISTÓRICO (internacionales 2024-25, N=3062 jugador-partido, anti-leakage:\n"
+    "#   rates de temporada anterior + xG L3 walk-forward + XI confirmado; target nunca como feature):\n"
+    "#   * GOL y ASISTENCIA -> GRADUADOS: baten al baseline en logloss Y brier, ECE<=0.02, % fiables\n"
+    "#     (gol skill ll +20%/br +13%; asistencia +20%/+11%). Se muestran en la sección VALIDADOS de\n"
+    "#     la ficha, sin la etiqueta 'no fiarse'.\n"
+    "#   * TARJETA y TIROS-A-PUERTA -> SIGUEN EN PRUEBAS: el backtest usó inputs CONSTANTES (tarjetas\n"
+    "#     y tiros de equipo) en vez del modelo de stats, así que su % está confundido/ inflado\n"
+    "#     (tiros: logloss peor que baseline, ECE 0.079; tarjeta: bate baseline pero % optimista en la\n"
+    "#     cola). Re-test pendiente con los inputs de producción. En la ficha: tarjeta con % EXPERIMENTAL,\n"
+    "#     tiros solo como ORDEN (no probabilidad).\n"
+    "# Este scorecard EN VIVO sigue corriendo como CONFIRMACIÓN independiente sobre partidos del Mundial.\n"
 )
 
 
