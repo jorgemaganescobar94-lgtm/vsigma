@@ -1,0 +1,497 @@
+"""
+WORLD CUP — PLAYER-PROP predictions in SHADOW MODE.  ISOLATED · heurístico · NO validado.
+
+Four props per starter: (1) marca gol, (2) ve tarjeta, (3) tiros (+ P≥1 a puerta),
+(4) da asistencia. They are PREDICTED, SETTLED and SCORED against their own scorecard —
+they are NEVER shown in the ficha and NEVER sent to Telegram. ZERO betting endpoints.
+
+METHOD (honest heuristic — split a team total among its XI by historical share):
+  * XI: confirmed /fixtures/lineups startXI if available; else the most-likely XI by recent
+        national-team starts (games.lineups) from /players?team&season.
+  * Per-player /90 rates (goals/assists/shots/shots-on/cards) from /players?team&season over
+        RATE_SEASONS. Small national samples are SHRUNK toward the XI mean (empirical-Bayes,
+        weight minutes/(minutes+PRIOR_MIN)); this is the documented "mix" that stabilises thin
+        national samples in the shadow (a true club blend via /players?id is a future refinement).
+  * GOL:      λ_i = our_xg_team(L3) × share_goal_i × XI_ATTR;   P = 1−exp(−λ_i).
+  * TARJETA:  λ_i = (st_cards_total/2) × share_card_i;          P = 1−exp(−λ_i).
+  * TIROS:    λ_shots_i = st_shots_team × share_shots_i;  exp tiros = λ_shots_i;
+              P(≥1 a puerta) = 1−exp(−λ_shots_i × on_target_ratio_i).
+  * ASIST:    λ_i = our_xg_team × ASSIST_FRAC × share_assist_i; P = 1−exp(−λ_i).
+  XI_ATTR<1 leaves "resto no atribuido" (subs/own goals). All probabilistic — no certainty.
+
+Subcommands:  predict (NS only, anti-hindsight, lock-first per fixture) · settle (after FT) ·
+              scorecard (per prop type: logloss/brier/ECE + base-rate skill).
+
+SAFEGUARDS: does NOT touch the L3 / calibration / lock-at-KO / briefing. Anti-hindsight
+(predict pre-KO, freeze at KO, settle only after FT). API store-guarded + cached "forever".
+SOFT-FAIL everywhere. NO betting endpoints. Explicit git add (log + scorecard only).
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import math
+import sys
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts"))
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
+OUT_DIR = Path(__file__).resolve().parent
+CARDS = OUT_DIR / "worldcup_cards.csv"
+LOG = OUT_DIR / "worldcup_player_props_log.csv"
+SCORECARD = OUT_DIR / "worldcup_player_props_scorecard.txt"
+STORE_DIR = ROOT / "data" / "processed" / "worldcup" / "player_props"   # gitignored raw cache
+
+LEAGUE, SEASON = 1, 2026
+RATE_SEASONS = [2024, 2025]      # national-team seasons for historical /90 rates
+KO_BUFFER = timedelta(minutes=5)
+XI_SIZE = 11
+XI_ATTR = 0.85                   # fraction of team goals attributed to the XI (rest unattributed)
+ASSIST_FRAC = 0.75               # team assists ≈ this × team goals
+CARD_TEAM_SPLIT = 0.5            # half the match's expected cards per team (no per-team cards stored)
+PRIOR_MIN = 270.0                # empirical-Bayes shrinkage strength (≈3 full matches)
+MAX_API = 250                    # per-run safety cap (store-guard makes re-runs ~0)
+MAX_FIXTURES = 12
+EPS = 1e-15
+
+PROPS = ["goal", "card", "shot_on", "assist"]   # binary props scored by the scorecard
+LOG_COLUMNS = [
+    "fixture_id", "kickoff_utc", "team_id", "team", "player_id", "player", "is_xi", "basis",
+    "p_goal", "p_card", "p_shot_on", "p_assist", "exp_shots",
+    "lam_goal", "lam_card", "lam_shot_on", "lam_assist",
+    "logged_at_utc",
+    "act_goal", "act_card", "act_shots", "act_shots_on", "act_assist", "act_minutes",
+    "settled", "settled_at_utc",
+]
+
+_api_calls = 0
+
+
+def _now_iso():
+    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
+def _parse_ko(s):
+    if s is None or (isinstance(s, float) and pd.isna(s)):
+        return None
+    try:
+        return datetime.strptime(str(s).strip()[:16], "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc)
+    except Exception:
+        return None
+
+
+def _num(v):
+    try:
+        if v is None:
+            return 0.0
+        return float(v)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+# --------------------------------------------------------------- store-guarded API
+def _client():
+    from api_football_client import APIFootballClient  # noqa: E402
+    return APIFootballClient()
+
+
+def _get(client, path, params, ttl):
+    """Cached, SOFT-FAILING request honoring the per-run API cap. Returns 'response' or None."""
+    global _api_calls
+    if path in ("/odds", "/predictions", "/odds/live"):
+        raise RuntimeError("PURIFICATION VIOLATION: betting endpoint forbidden")
+    if _api_calls >= MAX_API:
+        return None
+    try:
+        resp = client.request(path, params, ttl_hours=ttl)
+        _api_calls += 1
+        return resp.get("response") if isinstance(resp, dict) else None
+    except Exception:
+        return None
+
+
+def _store_path(name):
+    return STORE_DIR / f"{name}.json"
+
+
+def _load_store(name):
+    p = _store_path(name)
+    if p.exists():
+        try:
+            return json.loads(p.read_text(encoding="utf-8"))
+        except Exception:
+            return None
+    return None
+
+
+def _save_store(name, data):
+    STORE_DIR.mkdir(parents=True, exist_ok=True)
+    _store_path(name).write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+
+
+# --------------------------------------------------------------- rates (pure aggregation)
+def aggregate_rates(player_rows):
+    """player_rows: list of /players items. -> {pid: {name, starts, minutes, g90,a90,sh90,son90,c90,
+    on_ratio}} aggregated across all statistics blocks (all seasons/teams provided)."""
+    acc = {}
+    for it in player_rows or []:
+        pl = (it.get("player") or {})
+        pid = pl.get("id")
+        if pid is None:
+            continue
+        a = acc.setdefault(int(pid), {"name": pl.get("name"), "starts": 0.0, "minutes": 0.0,
+                                      "goals": 0.0, "assists": 0.0, "shots": 0.0, "shots_on": 0.0,
+                                      "cards": 0.0})
+        for st in (it.get("statistics") or []):
+            g = st.get("games") or {}
+            a["starts"] += _num(g.get("lineups"))
+            a["minutes"] += _num(g.get("minutes"))
+            gl = st.get("goals") or {}
+            a["goals"] += _num(gl.get("total")); a["assists"] += _num(gl.get("assists"))
+            sh = st.get("shots") or {}
+            a["shots"] += _num(sh.get("total")); a["shots_on"] += _num(sh.get("on"))
+            cd = st.get("cards") or {}
+            a["cards"] += _num(cd.get("yellow")) + _num(cd.get("red"))
+    out = {}
+    for pid, a in acc.items():
+        m = a["minutes"]
+        per90 = (lambda x: (x / (m / 90.0)) if m > 0 else 0.0)
+        out[pid] = {
+            "name": a["name"], "starts": a["starts"], "minutes": m,
+            "g90": per90(a["goals"]), "a90": per90(a["assists"]),
+            "sh90": per90(a["shots"]), "son90": per90(a["shots_on"]), "c90": per90(a["cards"]),
+            "on_ratio": (a["shots_on"] / a["shots"]) if a["shots"] > 0 else 0.35,
+        }
+    return out
+
+
+def fetch_team_rates(client, tid):
+    """Store-guarded national-team /90 rates for a team across RATE_SEASONS. ~0 API on re-run."""
+    global _api_calls
+    name = f"rates_team{int(tid)}_s{'-'.join(map(str, RATE_SEASONS))}"
+    cached = _load_store(name)
+    if cached is not None:
+        return {int(k): v for k, v in cached.items()}
+    rows = []
+    for s in RATE_SEASONS:
+        page, total = 1, 1
+        while page <= total and page <= 6 and _api_calls < MAX_API:
+            try:
+                resp = client.request("/players", {"team": int(tid), "season": s, "page": page},
+                                      ttl_hours=24 * 3650)
+            except Exception:
+                break
+            _api_calls += 1
+            data = resp if isinstance(resp, dict) else {}
+            rows += (data.get("response") or [])
+            total = int((data.get("paging") or {}).get("total") or 1)
+            page += 1
+    rates = aggregate_rates(rows)
+    _save_store(name, {str(k): v for k, v in rates.items()})
+    return rates
+
+
+# --------------------------------------------------------------- prediction (pure math)
+def poisson_p_ge1(lam):
+    """P(N>=1) for N~Poisson(lam). Always in [0,1]."""
+    lam = max(0.0, float(lam))
+    return 1.0 - math.exp(-lam)
+
+
+def _shrunk(rate, minutes, xi_mean):
+    """Empirical-Bayes shrink a per-90 rate toward the XI mean for thin samples."""
+    w = minutes / (minutes + PRIOR_MIN) if minutes > 0 else 0.0
+    return w * rate + (1.0 - w) * xi_mean
+
+
+def _shares(xi, rates, key):
+    """Minutes-shrunk rate per player, then shares within the XI (sum=1, or uniform if all 0)."""
+    raw = {pid: rates.get(pid, {}).get(key, 0.0) for pid in xi}
+    mean = (sum(raw.values()) / len(xi)) if xi else 0.0
+    shr = {pid: _shrunk(raw[pid], rates.get(pid, {}).get("minutes", 0.0), mean) for pid in xi}
+    tot = sum(shr.values())
+    if tot <= 0:
+        return {pid: 1.0 / len(xi) for pid in xi} if xi else {}
+    return {pid: shr[pid] / tot for pid in xi}
+
+
+def _pos(x):
+    """nan/None-safe non-negative float."""
+    try:
+        v = float(x)
+        return v if (v == v and v > 0) else 0.0
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def predict_fixture(team_xg, team_shots, match_cards, xi, rates):
+    """Pure: distribute team totals among the XI -> per-player prop dict. team_xg/team_shots are
+    THIS team's expected goals/shots; match_cards is the MATCH total (split per team)."""
+    team_xg, team_shots, match_cards = _pos(team_xg), _pos(team_shots), _pos(match_cards)
+    sh_goal = _shares(xi, rates, "g90")
+    sh_assist = _shares(xi, rates, "a90")
+    sh_shots = _shares(xi, rates, "sh90")
+    sh_card = _shares(xi, rates, "c90")
+    team_cards = max(0.0, float(match_cards)) * CARD_TEAM_SPLIT
+    out = []
+    for pid in xi:
+        r = rates.get(pid, {})
+        lam_goal = max(0.0, float(team_xg)) * sh_goal.get(pid, 0.0) * XI_ATTR
+        lam_assist = max(0.0, float(team_xg)) * ASSIST_FRAC * sh_assist.get(pid, 0.0) * XI_ATTR
+        lam_shots = max(0.0, float(team_shots)) * sh_shots.get(pid, 0.0)
+        lam_card = team_cards * sh_card.get(pid, 0.0)
+        lam_son = lam_shots * float(r.get("on_ratio", 0.35))
+        out.append({
+            "player_id": pid, "player": r.get("name"),
+            "p_goal": poisson_p_ge1(lam_goal), "lam_goal": lam_goal,
+            "p_card": poisson_p_ge1(lam_card), "lam_card": lam_card,
+            "exp_shots": lam_shots, "p_shot_on": poisson_p_ge1(lam_son), "lam_shot_on": lam_son,
+            "p_assist": poisson_p_ge1(lam_assist), "lam_assist": lam_assist,
+        })
+    return out
+
+
+# --------------------------------------------------------------- XI selection
+def get_xi(client, fid, tid, rates):
+    """(list[pid], basis). Confirmed startXI if published, else top-XI_SIZE by national starts."""
+    resp = _get(client, "/fixtures/lineups", {"fixture": fid}, 0.25)
+    for t in (resp or []):
+        if (t.get("team") or {}).get("id") == int(tid):
+            xi = [(p.get("player") or {}).get("id") for p in (t.get("startXI") or [])]
+            xi = [int(p) for p in xi if p is not None]
+            if len(xi) >= XI_SIZE:
+                return xi[:XI_SIZE], "lineup_confirmed"
+    ranked = sorted(rates.items(), key=lambda kv: -kv[1].get("starts", 0.0))
+    return [pid for pid, _ in ranked[:XI_SIZE]], "probable_by_starts"
+
+
+# --------------------------------------------------------------- log helpers
+def _read_log():
+    if LOG.exists():
+        df = pd.read_csv(LOG)
+        for c in LOG_COLUMNS:
+            if c not in df.columns:
+                df[c] = np.nan
+        return df[LOG_COLUMNS]
+    return pd.DataFrame(columns=LOG_COLUMNS)
+
+
+def _fixture_team_index(client):
+    """fid -> (home_id, away_id, status) from the cached /fixtures call (~0 marginal API)."""
+    idx = {}
+    resp = _get(client, "/fixtures", {"league": LEAGUE, "season": SEASON}, 6)
+    for f in (resp or []):
+        fx = f.get("fixture") or {}
+        tm = f.get("teams") or {}
+        fid = fx.get("id")
+        if fid is None:
+            continue
+        idx[int(fid)] = ((tm.get("home") or {}).get("id"), (tm.get("away") or {}).get("id"),
+                         (fx.get("status") or {}).get("short"))
+    return idx
+
+
+# --------------------------------------------------------------- predict
+def cmd_predict():
+    if not CARDS.exists():
+        print("player_props predict: no cards.csv; nothing to do."); return
+    cards = pd.read_csv(CARDS)
+    log = _read_log()
+    logged_fids = set(log["fixture_id"].dropna().astype(int)) if len(log) else set()
+    client = _client()
+    tindex = _fixture_team_index(client)
+    now = datetime.now(timezone.utc)
+
+    new_rows, done = [], 0
+    for _, r in cards.iterrows():
+        if done >= MAX_FIXTURES or _api_calls >= MAX_API:
+            break
+        fid = r.get("fixture_id")
+        if pd.isna(fid):
+            continue
+        fid = int(fid)
+        if fid in logged_fids:
+            continue  # lock-first per fixture (anti-hindsight: never re-write)
+        ko = _parse_ko(r.get("kickoff_utc"))
+        if ko is None or now >= (ko - KO_BUFFER):
+            continue  # only NS / pre-KO (freeze at kickoff)
+        ids = tindex.get(fid)
+        if not ids or ids[0] is None or ids[1] is None:
+            continue
+        for side, tid, team_name, xg_col, sh_col in (
+                ("home", ids[0], r.get("home"), "our_xg_home", "st_shots_home"),
+                ("away", ids[1], r.get("away"), "our_xg_away", "st_shots_away")):
+            team_xg = r.get(xg_col)
+            if pd.isna(team_xg):
+                continue
+            rates = fetch_team_rates(client, tid)
+            if not rates:
+                continue
+            xi, basis = get_xi(client, fid, tid, rates)
+            preds = predict_fixture(team_xg, r.get(sh_col, 0.0), r.get("st_cards_total", 0.0), xi, rates)
+            for p in preds:
+                new_rows.append({
+                    "fixture_id": fid, "kickoff_utc": r.get("kickoff_utc"),
+                    "team_id": int(tid), "team": team_name,
+                    "player_id": p["player_id"], "player": p["player"], "is_xi": 1, "basis": basis,
+                    "p_goal": round(p["p_goal"], 4), "p_card": round(p["p_card"], 4),
+                    "p_shot_on": round(p["p_shot_on"], 4), "p_assist": round(p["p_assist"], 4),
+                    "exp_shots": round(p["exp_shots"], 2),
+                    "lam_goal": round(p["lam_goal"], 4), "lam_card": round(p["lam_card"], 4),
+                    "lam_shot_on": round(p["lam_shot_on"], 4), "lam_assist": round(p["lam_assist"], 4),
+                    "logged_at_utc": _now_iso(),
+                    "act_goal": np.nan, "act_card": np.nan, "act_shots": np.nan,
+                    "act_shots_on": np.nan, "act_assist": np.nan, "act_minutes": np.nan,
+                    "settled": 0, "settled_at_utc": np.nan,
+                })
+        logged_fids.add(fid)
+        done += 1
+
+    if new_rows:
+        log = pd.concat([log, pd.DataFrame(new_rows)], ignore_index=True)[LOG_COLUMNS]
+        log.to_csv(LOG, index=False)
+    print(f"player_props predict: +{len(new_rows)} rows ({done} fixtures) | API calls={_api_calls} -> {LOG.name}")
+
+
+# --------------------------------------------------------------- settle
+def cmd_settle():
+    log = _read_log()
+    if log.empty:
+        print("player_props settle: empty log."); return
+    client = _client()
+    tindex = _fixture_team_index(client)
+    now = datetime.now(timezone.utc)
+    unsettled = log[log["settled"].fillna(0).astype(int) == 0]
+    fids = sorted(set(unsettled["fixture_id"].dropna().astype(int)))
+    n_set = 0
+    for fid in fids:
+        if _api_calls >= MAX_API:
+            break
+        st = (tindex.get(fid) or (None, None, None))[2]
+        if st not in ("FT", "AET", "PEN"):
+            continue  # settle ONLY after the match is finished
+        name = f"fxplayers_{fid}"
+        store = _load_store(name)
+        if store is None:
+            resp = _get(client, "/fixtures/players", {"fixture": fid}, 24 * 3650)
+            if resp is None:
+                continue
+            store = resp
+            _save_store(name, store)
+        actual = {}
+        for t in (store or []):
+            for pl in (t.get("players") or []):
+                pid = (pl.get("player") or {}).get("id")
+                sblk = (pl.get("statistics") or [{}])[0]
+                g = sblk.get("games") or {}; gl = sblk.get("goals") or {}
+                sh = sblk.get("shots") or {}; cd = sblk.get("cards") or {}
+                if pid is None:
+                    continue
+                actual[int(pid)] = {
+                    "min": _num(g.get("minutes")), "goal": 1 if _num(gl.get("total")) > 0 else 0,
+                    "assist": 1 if _num(gl.get("assists")) > 0 else 0,
+                    "shots": _num(sh.get("total")), "shots_on": _num(sh.get("on")),
+                    "card": 1 if (_num(cd.get("yellow")) + _num(cd.get("red"))) > 0 else 0,
+                }
+        mask = (log["fixture_id"].astype("Int64") == fid) & (log["settled"].fillna(0).astype(int) == 0)
+        for i in log[mask].index:
+            pid = int(log.at[i, "player_id"]) if not pd.isna(log.at[i, "player_id"]) else None
+            a = actual.get(pid, {"min": 0, "goal": 0, "assist": 0, "shots": 0, "shots_on": 0, "card": 0})
+            log.at[i, "act_minutes"] = a["min"]; log.at[i, "act_goal"] = a["goal"]
+            log.at[i, "act_assist"] = a["assist"]; log.at[i, "act_shots"] = a["shots"]
+            log.at[i, "act_shots_on"] = a["shots_on"]; log.at[i, "act_card"] = a["card"]
+            log.at[i, "settled"] = 1; log.at[i, "settled_at_utc"] = _now_iso()
+        n_set += 1
+    log.to_csv(LOG, index=False)
+    print(f"player_props settle: {n_set} fixture(s) settled | API calls={_api_calls} -> {LOG.name}")
+
+
+# --------------------------------------------------------------- scorecard
+def _logloss(p, y):
+    p = np.clip(np.asarray(p, float), EPS, 1 - EPS)
+    y = np.asarray(y, float)
+    return float(-np.mean(y * np.log(p) + (1 - y) * np.log(1 - p)))
+
+
+def _brier(p, y):
+    return float(np.mean((np.asarray(p, float) - np.asarray(y, float)) ** 2))
+
+
+def _ece(p, y, bins=10):
+    p = np.asarray(p, float); y = np.asarray(y, float)
+    edges = np.linspace(0, 1, bins + 1); e = 0.0
+    for i in range(bins):
+        m = (p > edges[i]) & (p <= edges[i + 1])
+        if m.sum():
+            e += m.sum() / len(p) * abs(p[m].mean() - y[m].mean())
+    return float(e)
+
+
+GRADUATION_NOTE = (
+    "# CRITERIO DE GRADUACIÓN (definido ANTES de ver datos; no post-hoc): un prop pasa de SOMBRA\n"
+    "# a producción (mostrarse en Telegram) SOLO si, con N>=30 PARTIDOS liquidados, su predicción\n"
+    "# supera al baseline (tasa base del prop) en logloss Y en brier, y tiene ECE<=0.08. Si no,\n"
+    "# se queda en sombra. Etiqueta interna: heurístico / no validado.\n"
+)
+
+
+def cmd_scorecard():
+    log = _read_log()
+    lines = [GRADUATION_NOTE, "=" * 78,
+             "PLAYER PROPS — track record (SOMBRA · heurístico · NO validado · sin mercado)",
+             "=" * 78]
+    settled = log[log["settled"].fillna(0).astype(int) == 1] if len(log) else log
+    n_matches = int(settled["fixture_id"].nunique()) if len(settled) else 0
+    n_rows = len(settled)
+    lines.append(f"generated_at_utc: {_now_iso()}")
+    lines.append(f"partidos liquidados={n_matches} | filas jugador-prop={n_rows} | umbral graduación N>=30")
+    if n_matches < 30:
+        lines.append("MUESTRA INSUFICIENTE para graduar (N<30). Métricas mostradas son orientativas.")
+    lines.append("")
+    act_map = {"goal": "act_goal", "card": "act_card", "shot_on": "act_shots_on", "assist": "act_assist"}
+    pcol = {"goal": "p_goal", "card": "p_card", "shot_on": "p_shot_on", "assist": "p_assist"}
+    if n_rows == 0:
+        lines.append("Aún sin filas liquidadas; el scorecard se llenará tras los primeros FT.")
+    else:
+        hdr = f"  {'prop':9} {'n':>5} {'base%':>6} {'logloss':>8} {'brier':>7} {'ECE':>6} {'ll_base':>8} {'br_base':>7} {'mejora?':>8}"
+        lines.append(hdr); lines.append("  " + "-" * (len(hdr) - 2))
+        for prop in PROPS:
+            ac = act_map[prop]
+            sub = settled[pd.notna(settled[ac])]
+            if prop == "shot_on":
+                y = (pd.to_numeric(sub[ac], errors="coerce").fillna(0) >= 1).astype(int).to_numpy()
+            else:
+                y = pd.to_numeric(sub[ac], errors="coerce").fillna(0).astype(int).to_numpy()
+            p = pd.to_numeric(sub[pcol[prop]], errors="coerce").to_numpy()
+            ok = ~np.isnan(p)
+            y, p = y[ok], p[ok]
+            if len(y) == 0:
+                lines.append(f"  {prop:9} {0:>5}  (sin datos)"); continue
+            base = float(y.mean())
+            pbase = np.full_like(p, base, dtype=float)
+            ll, br, ece = _logloss(p, y), _brier(p, y), _ece(p, y)
+            llb, brb = _logloss(pbase, y), _brier(pbase, y)
+            better = "sí" if (ll < llb and br < brb and ece <= 0.08) else "no"
+            lines.append(f"  {prop:9} {len(y):>5} {base*100:>5.0f}% {ll:>8.4f} {br:>7.4f} {ece:>6.3f} "
+                         f"{llb:>8.4f} {brb:>7.4f} {better:>8}")
+        lines.append("")
+        lines.append("  (baseline = tasa base del prop; 'mejora?'=sí solo si bate logloss Y brier Y ECE<=0.08.)")
+        lines.append("  (muestra pequeña -> orientativo; la graduación exige N>=30 partidos.)")
+    SCORECARD.write_text("\n".join(lines), encoding="utf-8")
+    print(f"player_props scorecard: matches={n_matches} rows={n_rows} -> {SCORECARD.name}")
+
+
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser(description="World Cup player props (SHADOW; isolated).")
+    ap.add_argument("cmd", choices=["predict", "settle", "scorecard"])
+    a = ap.parse_args()
+    {"predict": cmd_predict, "settle": cmd_settle, "scorecard": cmd_scorecard}[a.cmd]()

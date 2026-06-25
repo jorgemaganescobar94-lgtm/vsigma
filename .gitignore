@@ -39,6 +39,7 @@ data/cache/*.sqlite3-shm
 
 .env
 data/processed/**/api_enrichment/
+data/processed/**/player_props/
 
 # World Cup study CSV artifacts (regenerable data; keep the .py + *_report.txt)
 analysis/worldcup/*_study*.csv
