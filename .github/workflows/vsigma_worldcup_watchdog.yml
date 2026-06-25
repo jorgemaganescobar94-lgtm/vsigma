@@ -1,0 +1,60 @@
+name: vSIGMA World Cup Watchdog (Telegram)
+
+# ISOLATED freshness watchdog for the World Cup daily run. Does NOT touch the betting
+# pipeline / production workflows / the model / the purification. It only READS the
+# timestamp of the daily output (worldcup_scorecard.txt generated_at_utc, with the git
+# commit time as fallback) and, if the freshest output is older than ~26h (or unreadable),
+# sends ONE Telegram alert via the EXISTING dispatcher + the same TELEGRAM_* secrets.
+# Fresh output -> total silence. ZERO odds/predictions. Stdlib only (no pip install).
+#
+# CAVEAT: it runs inside Actions, so a full Actions outage would stop it too. The repo is
+# PUBLIC (no billing block), so this covers the common case: main cron skipped, Actions up.
+
+on:
+  workflow_dispatch:
+    inputs:
+      test:
+        description: "Enviar UN mensaje '✅ Watchdog activo' y salir (confirma la vía Telegram)"
+        required: false
+        type: boolean
+        default: false
+
+  schedule:
+    # 14:00 UTC — tras el ENVÍO PRINCIPAL del Mundial (08:00 UTC) + amplio margen por el
+    # retraso habitual de los cron de GitHub. Un run principal saltado deja el scorecard
+    # del día anterior (~30h) > 26h -> dispara la alerta.
+    - cron: "0 14 * * *"
+
+permissions:
+  contents: read   # solo lectura: el watchdog no commitea nada
+
+concurrency:
+  group: vsigma-worldcup-watchdog
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0   # historia completa para el fallback git-last-commit
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Run watchdog (freshness check; Telegram solo si stale o --test)
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ "${{ github.event.inputs.test }}" = "true" ]; then
+            python analysis/worldcup/cloud_watchdog.py --test
+          else
+            python analysis/worldcup/cloud_watchdog.py
+          fi
