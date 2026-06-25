@@ -30,7 +30,7 @@ from __future__ import annotations
 
 import argparse
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import numpy as np
@@ -63,7 +63,13 @@ LOG_COLUMNS = [
     "result_ft_gh", "result_ft_ga", "result_final_gh", "result_final_ga",
     "result_corners", "result_cards", "result_shots",
     "result_1x2", "result_status", "settled", "settled_at_utc",
+    # lock-at-KO bookkeeping (Phase 2): which prediction policy the stored row reflects and
+    # how many minutes before kickoff the FINAL pre-KO snapshot was taken. Old rows (logged
+    # before lock-at-KO) carry NaN -> treated as "first_log" by the scorecard.
+    "pred_policy", "pred_lead_min",
 ]
+
+KO_BUFFER = timedelta(minutes=5)  # freeze a fixture's prediction this long BEFORE kickoff (anti-hindsight margin)
 
 # /fixtures/statistics type -> stat key (for settling real corners/cards/shots)
 STAT_TYPE_MAP = {"Corner Kicks": "corners", "Yellow Cards": "yellow", "Red Cards": "red",
@@ -168,35 +174,15 @@ def cmd_log():
             v2map[int(r["fixture_id"])] = r
 
     log = _read_log()
-    known = set(log["fixture_id"].dropna().astype(int)) if len(log) else set()
+    now = datetime.now(timezone.utc)
+    idx_by_fid = {int(f): i for i, f in zip(log.index, log["fixture_id"]) if pd.notna(f)}
 
-    new_rows = []
-    gap_rows = []
-    for _, r in cards.iterrows():
-        if pd.isna(r.get("fixture_id")):
-            continue
-        fid = int(r["fixture_id"])
-        if fid in known:
-            continue  # lock-first: never overwrite a pre-match prediction
-        # only log fixtures that actually carry our L3 forecast
-        if pd.isna(r.get("our_home")):
-            continue
-        # anti-hindsight guard: never log a fixture whose kickoff already passed (it would
-        # capture the prediction with the match underway, breaking the pre-match guarantee).
-        # If it was also never logged pre-KO, that is a genuine coverage gap -> record it.
-        ko = _parse_ko(r.get("kickoff_utc"))
-        if ko is not None and ko < datetime.now(timezone.utc):
-            gap_rows.append({
-                "fixture_id": fid, "kickoff_utc": r.get("kickoff_utc"),
-                "home": r.get("home"), "away": r.get("away"), "round": r.get("round"),
-                "detected_at_utc": now_iso(),
-                "reason": "kickoff_passed_before_first_log",
-            })
-            continue
-        v2 = v2map.get(fid)
-        row = {
-            "fixture_id": fid, "kickoff_utc": r.get("kickoff_utc"),
-            "home": r.get("home"), "away": r.get("away"), "round": r.get("round"),
+    def _snapshot(r, ko):
+        """Prediction columns (the mutable pre-KO part) — NEVER includes result_*/settled/
+        fixture_id/kickoff_utc/home/away/round."""
+        v2 = v2map.get(int(r["fixture_id"]))
+        lead = int((ko - now).total_seconds() / 60) if ko is not None else np.nan
+        return {
             "l3_home": r.get("our_home"), "l3_draw": r.get("our_draw"),
             "l3_away": r.get("our_away"), "l3_xg_home": r.get("our_xg_home"),
             "l3_xg_away": r.get("our_xg_away"),
@@ -204,7 +190,6 @@ def cmd_log():
             "v2_home": (v2["v2_home"] if v2 is not None else np.nan),
             "v2_draw": (v2["v2_draw"] if v2 is not None else np.nan),
             "v2_away": (v2["v2_away"] if v2 is not None else np.nan),
-            # L3-adj (lock-first, like l3_*): the FIRST logged value is the canonical (morning) one
             "adj_home": r.get("adj_home"), "adj_draw": r.get("adj_draw"), "adj_away": r.get("adj_away"),
             "adj_basis": r.get("adj_basis"),
             "adj_delta_home": r.get("adj_delta_home"), "adj_delta_away": r.get("adj_delta_away"),
@@ -213,19 +198,60 @@ def cmd_log():
             "st_corners_line": r.get("st_corners_line"), "st_cards_total": r.get("st_cards_total"),
             "st_shots_total": r.get("st_shots_total"),
             "logged_at_utc": now_iso(),
+            "pred_policy": "last_preko", "pred_lead_min": lead,
+        }
+
+    new_rows, gap_rows = [], []
+    n_updated = 0
+    for _, r in cards.iterrows():
+        if pd.isna(r.get("fixture_id")):
+            continue
+        fid = int(r["fixture_id"])
+        if pd.isna(r.get("our_home")):
+            continue  # only log fixtures that carry our L3 forecast
+        ko = _parse_ko(r.get("kickoff_utc"))
+        # LOCK-AT-KO: a fixture is updatable only while strictly BEFORE (kickoff - buffer).
+        # At/after that cutoff it is FROZEN (anti-hindsight) — never touched again. Reuses the
+        # existing kickoff guard, just with a small safety margin.
+        pre_ko = ko is not None and now < (ko - KO_BUFFER)
+
+        if fid in idx_by_fid:
+            i = idx_by_fid[fid]
+            settled = int(log.at[i, "settled"]) if not pd.isna(log.at[i, "settled"]) else 0
+            if pre_ko and settled == 0:
+                # UPDATE the pre-KO snapshot in place (NEVER result_*/settled/kickoff/teams).
+                for col, val in _snapshot(r, ko).items():
+                    log.at[i, col] = val
+                n_updated += 1
+            # else: kickoff passed (or already settled) -> FREEZE, do nothing.
+            continue
+
+        # NEW fixture
+        if not pre_ko:
+            gap_rows.append({
+                "fixture_id": fid, "kickoff_utc": r.get("kickoff_utc"),
+                "home": r.get("home"), "away": r.get("away"), "round": r.get("round"),
+                "detected_at_utc": now_iso(),
+                "reason": "kickoff_passed_before_first_log",
+            })
+            continue
+        row = {
+            "fixture_id": fid, "kickoff_utc": r.get("kickoff_utc"),
+            "home": r.get("home"), "away": r.get("away"), "round": r.get("round"),
             "result_ft_gh": np.nan, "result_ft_ga": np.nan,
             "result_final_gh": np.nan, "result_final_ga": np.nan,
             "result_1x2": np.nan, "result_status": np.nan,
             "settled": 0, "settled_at_utc": np.nan,
+            **_snapshot(r, ko),
         }
         new_rows.append(row)
-        known.add(fid)
+        idx_by_fid[fid] = len(log) + len(new_rows) - 1  # guard against dup fixture in same card set
 
     if new_rows:
         log = pd.concat([log, pd.DataFrame(new_rows)], ignore_index=True)[LOG_COLUMNS]
     log.to_csv(LOG, index=False)
     n_gaps = _record_gaps(gap_rows)
-    print(f"learning_loop log: +{len(new_rows)} new, {len(log)} total -> {LOG}"
+    print(f"learning_loop log: +{len(new_rows)} new, {n_updated} updated (pre-KO), {len(log)} total -> {LOG}"
           + (f" | {n_gaps} gap(s) flagged -> {GAPS}" if n_gaps else ""))
 
 
@@ -469,6 +495,18 @@ def cmd_scorecard():
     out("")
     out("===== detalle =====")
     out(f"resueltos={n} | 1X2 a 90' (score.fulltime) | métricas vs RESULTADOS REALES, sin mercado")
+    # semantics note (lock-at-KO): rows logged before lock-at-KO carry NaN pred_policy and were
+    # scored at "first prediction (morning)"; newer rows are the "last pre-KO" snapshot.
+    pol = settled["pred_policy"] if "pred_policy" in settled.columns else pd.Series([np.nan] * n)
+    n_last = int((pol == "last_preko").sum())
+    n_first = n - n_last
+    if n_last and n_first:
+        out(f"  SEMÁNTICA MIXTA: {n_first} a 'primera predicción (mañana)' · {n_last} a 'última pre-saque' "
+            f"(cambio lock-at-KO a mitad de torneo; interpretar la mejora con cautela, no es homogéneo).")
+    elif n_last:
+        out(f"  predicción medida: 'última pre-saque' (lock-at-KO) en los {n_last} resueltos.")
+    else:
+        out(f"  predicción medida: 'primera predicción (mañana)' en los {n_first} resueltos.")
     hdr = f"{'predictor':10} {'n':>3} {'logloss':>8} {'brier':>7} {'acc%':>6} {'ECE':>6} {'Skill_base%':>11}"
     out(hdr)
     out("-" * len(hdr))

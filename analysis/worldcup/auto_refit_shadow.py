@@ -17,6 +17,7 @@ Calibration is invariant (burn-in <2024 only) -> never rebuilt here.
 from __future__ import annotations
 
 import argparse
+import subprocess
 import sys
 from collections import Counter
 from datetime import datetime, timezone
@@ -31,6 +32,8 @@ except Exception:
     pass
 
 HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
+DISPATCHER = ROOT / "scripts" / "dispatch_telegram_alert.py"
 sys.path.insert(0, str(HERE))
 import national_elo_layer3 as L3  # noqa: E402  (module import does NOT hit the API)
 
@@ -177,6 +180,23 @@ def oos_not_worse(mo, mn, tol=1e-6) -> bool:
     return bool(ll_ok and ece_ok)
 
 
+def send_alert(title: str, body: str) -> None:
+    """Reuse the shared dispatcher (TELEGRAM_* from env; fail-soft; no secrets printed)."""
+    try:
+        subprocess.run(
+            [sys.executable, str(DISPATCHER), "--title", title,
+             "--date", datetime.now(timezone.utc).strftime("%Y-%m-%d"), "--summary", body],
+            cwd=str(ROOT), timeout=30,
+        )
+    except Exception as exc:  # noqa: BLE001
+        print(f"[auto-refit] alerta no fatal: {type(exc).__name__}")
+
+
+def write_ratings(path, s_final, name_by_id):
+    pd.DataFrame([{"team_id": k, "team": name_by_id.get(k, k), "strength": round(v, 3)}
+                  for k, v in sorted(s_final.items(), key=lambda kv: -kv[1])]).to_csv(path, index=False)
+
+
 def evaluate_gate(candidate, committed, repro, mo, mn, move_cap=MOVE_CAP, repro_tol=REPRO_TOL):
     mv, mv_tid, mv_old, mv_new = max_move(candidate, committed)
     checks = {
@@ -192,13 +212,17 @@ def evaluate_gate(candidate, committed, repro, mo, mn, move_cap=MOVE_CAP, repro_
 
 # --------------------------------------------------------------------- main
 def main(argv=None) -> int:
-    ap = argparse.ArgumentParser(description="Auto-refit L3 — SHADOW (no swap).")
+    ap = argparse.ArgumentParser(description="Auto-refit L3 — gate + optional SWAP.")
     ap.add_argument("--base", default=str(DEF_BASE))
     ap.add_argument("--log", default=str(DEF_LOG))
     ap.add_argument("--committed", default=str(DEF_COMMITTED))
     ap.add_argument("--report", default=str(DEF_REPORT))
     ap.add_argument("--move-cap", type=float, default=MOVE_CAP)
+    ap.add_argument("--apply", action="store_true",
+                    help="Fase 1c: si GATE PASS, ESCRIBIR ratings+dataset de producción "
+                         "(si FALLA, mantener viejos + alerta Telegram). Default: shadow.")
     a = ap.parse_args(argv)
+    mode = "APPLY (swap)" if a.apply else "SHADOW (no swap)"
 
     rep = []
     def out(s=""):
@@ -215,7 +239,7 @@ def main(argv=None) -> int:
     drng = (min(x["date"][:10] for x in new_rows), max(x["date"][:10] for x in new_rows)) if new_rows else ("-", "-")
 
     out("=" * 88)
-    out("AUTO-REFIT L3 — SHADOW (Phase 1b; NO swap, production ratings untouched)")
+    out(f"AUTO-REFIT L3 — mode={mode}")
     out("=" * 88)
     out(f"generated_at_utc: {datetime.now(timezone.utc).isoformat(timespec='seconds')}")
     out(f"base rows={len(base)} | settled-in-log={int((log.get('settled', pd.Series(dtype=int)).fillna(0).astype(int)==1).sum())} "
@@ -223,11 +247,9 @@ def main(argv=None) -> int:
 
     if not new_rows:
         out("")
-        out("NO hay partidos liquidados nuevos fuera del dataset -> refit sería NO-OP hoy.")
-        out("(El dataset commiteado ya está al día con el log; nada que aprender hasta nuevos FT.)")
-        out("GATE: N/A (sin cambios)")
-        out("")
-        out("SHADOW: ratings de producción NO escritos (correcto).")
+        out("NO hay partidos liquidados nuevos fuera del dataset -> refit NO-OP.")
+        out("(El dataset ya está al día con el log; nada que aprender hasta nuevos FT.)")
+        out("GATE: N/A (sin cambios) -> ratings de producción intactos.")
         Path(a.report).write_text("\n".join(rep), encoding="utf-8")
         print(f"\nReport -> {a.report}")
         return 0
@@ -266,11 +288,25 @@ def main(argv=None) -> int:
     out(f"  max|Δ| = {g['max_move']:.3f} ({new['name_by_id'].get(g['move_team'], g['move_team'])}: "
         f"{g['move_old']:+.2f}->{g['move_new']:+.2f})")
     out(f"  -> GATE: {'PASS' if g['ok'] else 'FAIL'}")
-    if not g["ok"]:
-        fails = [k for k, v in g["checks"].items() if not v]
-        out(f"  NOTA: gate FALLÓ ({', '.join(fails)}) -> en producción se MANTENDRÍAN los ratings viejos + alerta Telegram.")
+    fails = [k for k, v in g["checks"].items() if not v]
     out("")
-    out("SHADOW: ratings de producción NO escritos (correcto). El swap es Fase 1c.")
+    if not a.apply:
+        if not g["ok"]:
+            out(f"  NOTA: gate FALLÓ ({', '.join(fails)}) -> en producción se MANTENDRÍAN los viejos + alerta.")
+        out("SHADOW: ratings de producción NO escritos. El swap requiere --apply (Fase 1c).")
+    else:
+        if g["ok"]:
+            # SWAP: write new ratings + persist the enriched dataset so (data, ratings) stay
+            # consistent for the next run's repro check. Calibration is invariant -> not rebuilt.
+            write_ratings(a.committed, new["s_final"], new["name_by_id"])
+            enriched.to_csv(a.base, index=False)
+            out(f"SWAP APLICADO ✅  ratings -> {Path(a.committed).name} | dataset -> {Path(a.base).name} "
+                f"(+{len(new_rows)} FT). Calibración intacta (invariante).")
+        else:
+            out(f"SWAP RECHAZADO por gate ({', '.join(fails)}) -> ratings de producción SIN tocar.")
+            send_alert("🚨 auto-refit RECHAZADO por gate",
+                       f"El auto-refit del L3 NO se adoptó: gate FALLÓ ({', '.join(fails)}). "
+                       f"Se mantienen los ratings previos. max|Δ|={g['max_move']:.3f}. Revisa el reporte.")
 
     Path(a.report).write_text("\n".join(rep), encoding="utf-8")
     print(f"\nReport -> {a.report}")

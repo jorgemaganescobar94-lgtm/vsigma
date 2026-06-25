@@ -173,6 +173,7 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
         print("standings error:", e)
 
     report, cards = [], []
+    cache_upserts = {}   # lock-at-KO: NS fixtures re-predicted live -> upsert into the L3 cache
 
     def out(s=""):
         print(s)
@@ -203,15 +204,31 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
 
         # ---- print card: OUR MODEL (Layer-3) ONLY — real data, ZERO odds/market ----
         out(f"\n  {home} vs {away}   [{ko} UTC | {rnd}]")
-        om = our.get(int(fid))
+        # LOCK-AT-KO: re-predict a fixture from the CURRENT ratings only while it is NOT
+        # started (status NS) AND still > 5 min before kickoff; once started/imminent we use
+        # the FROZEN cache row (last pre-KO snapshot) and never recompute (anti-hindsight).
+        status_short = ((f.get("fixture") or {}).get("status") or {}).get("short")
+        pre_ko_pred = (status_short == "NS") and (hours is not None) and (hours > 5.0 / 60.0)
+        cached = our.get(int(fid))
+        om = None
         from_ratings = False
-        if om is None and l3pred is not None:
+        live_ns = False
+        if pre_ko_pred and l3pred is not None:
             p = l3pred.predict(home, away)
             if p:
-                om = p
-                from_ratings = True
+                om = p; from_ratings = True; live_ns = True
+                cache_upserts[int(fid)] = {"fixture_id": int(fid), "home": home, "away": away, **p}
+            else:
+                om = cached
+        elif cached is not None:
+            om = cached                      # frozen pre-KO snapshot (locked at/after KO)
+        elif l3pred is not None:
+            p = l3pred.predict(home, away)   # not cached & not pre-KO -> display only, NOT persisted
+            if p:
+                om = p; from_ratings = True
         if om is not None:
-            tag = " [regen from ratings]" if from_ratings else ""
+            tag = (" [ratings al día · NS]" if live_ns
+                   else " [regen from ratings]" if from_ratings else " [congelado pre-saque]")
             out(f"    [OUR MODEL]{tag} (L3 rating — modelo propio, sin cuotas): "
                 f"{home} {om['our_home']*100:4.1f}%  Draw {om['our_draw']*100:4.1f}%  {away} {om['our_away']*100:4.1f}%"
                 f"   | exp goals {om['our_xg_home']}-{om['our_xg_away']}"
@@ -304,6 +321,20 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
         rec.update({"home_group": ch.get("group"), "home_form": ch.get("form"),
                     "away_group": ca.get("group"), "away_form": ca.get("form")})
         cards.append(rec)
+
+    # ---- LOCK-AT-KO: persist the L3 cache = locked rows (frozen) + NS rows re-predicted now ----
+    if cache_upserts:
+        CACHE_COLS = ["fixture_id", "home", "away", "our_elo_home", "our_elo_away",
+                      "our_home", "our_draw", "our_away", "our_xg_home", "our_xg_away"]
+        cache_rows = {}
+        if our_path.exists():
+            for _, rr in pd.read_csv(our_path).iterrows():
+                cache_rows[int(rr["fixture_id"])] = {col: rr.get(col) for col in CACHE_COLS}
+        for cfid, crow in cache_upserts.items():
+            cache_rows[cfid] = {col: crow.get(col) for col in CACHE_COLS}
+        pd.DataFrame([cache_rows[k] for k in cache_rows])[CACHE_COLS].to_csv(our_path, index=False)
+        out(f"L3 cache lock-at-KO: {len(cache_upserts)} NS fixture(s) re-predicted; locked rows kept "
+            f"-> {our_path.name}")
 
     api1 = true_quota()
     spend = (api1 - api0) if (api0 is not None and api1 is not None) else "n/a"

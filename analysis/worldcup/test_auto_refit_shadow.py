@@ -133,6 +133,46 @@ def test_shadow_does_not_touch_production_ratings():
     assert before == after, "SHADOW violated: production ratings file changed!"
 
 
+def test_apply_noop_when_no_new_leaves_ratings():
+    """--apply with no new settled matches must NOT rewrite the committed ratings."""
+    prod_rat = HERE / "national_elo_layer3_ratings.csv"
+    base = HERE / "international_results.csv"
+    log = HERE / "worldcup_predictions_log.csv"
+    if not (prod_rat.exists() and base.exists() and log.exists()):
+        print("  SKIP apply-noop (production files absent)"); return
+    with tempfile.TemporaryDirectory() as td:
+        committed = Path(td) / "ratings.csv"
+        committed.write_bytes(prod_rat.read_bytes())
+        before = hashlib.md5(committed.read_bytes()).hexdigest()
+        rc = S.main(["--apply", "--base", str(base), "--log", str(log),
+                     "--committed", str(committed), "--report", str(Path(td) / "r.txt")])
+        assert rc == 0
+        assert hashlib.md5(committed.read_bytes()).hexdigest() == before, "no-op must not rewrite ratings"
+
+
+def test_apply_swaps_on_gate_pass():
+    """--apply on the pre-adoption backup (9160 base + old ratings + 25 settled) must PASS the
+    gate and WRITE new ratings (Argentina moves up) + an enriched dataset. Temp copies only."""
+    bkp = HERE / "staging" / "backup_pre_wc_adopt_partial"
+    base0 = bkp / "international_results.csv"
+    rat0 = bkp / "national_elo_layer3_ratings.csv"
+    log = HERE / "worldcup_predictions_log.csv"
+    if not (base0.exists() and rat0.exists() and log.exists()):
+        print("  SKIP apply-swap (backup absent)"); return
+    with tempfile.TemporaryDirectory() as td:
+        base = Path(td) / "intl.csv"; base.write_bytes(base0.read_bytes())
+        committed = Path(td) / "ratings.csv"; committed.write_bytes(rat0.read_bytes())
+        n_base = len(pd.read_csv(base))
+        arg_before = {int(r.team_id): float(r.strength)
+                      for r in pd.read_csv(committed).itertuples()}.get(26)
+        rc = S.main(["--apply", "--base", str(base), "--log", str(log),
+                     "--committed", str(committed), "--report", str(Path(td) / "r.txt")])
+        assert rc == 0
+        new = {int(r.team_id): float(r.strength) for r in pd.read_csv(committed).itertuples()}
+        assert new.get(26) is not None and abs(new[26] - arg_before) > 0.01, "ratings should change on swap"
+        assert len(pd.read_csv(base)) > n_base, "dataset should be enriched on swap"
+
+
 def _run():
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     for fn in fns:
