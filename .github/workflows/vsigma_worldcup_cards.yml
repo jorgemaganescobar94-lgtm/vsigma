@@ -260,6 +260,16 @@ jobs:
           echo "----- context shadow scorecard -----"
           cat analysis/worldcup/worldcup_context_shadow_scorecard.txt || true
 
+      # ---- CONSOLIDATED TRACK-RECORD PANEL: read-only digest of the scorecards above into ONE
+      #      Markdown file. Display/report only — does NOT recompute predictions, does NOT touch the
+      #      model. Soft-fail (continue-on-error): a failure NEVER blocks the briefing or the commit.
+      - name: Build consolidated track-record panel (read-only, soft-fail)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/build_worldcup_trackrecord_panel.py
+          echo "----- track-record panel preview -----"
+          cat analysis/worldcup/worldcup_trackrecord_panel.md || true
+
       - name: Persist learning-loop outputs (log + scorecard + ratings + dataset + cache + report)
         run: |
           git config user.name "github-actions[bot]"
@@ -278,7 +288,8 @@ jobs:
                    analysis/worldcup/worldcup_context_shadow_log.csv \
                    analysis/worldcup/worldcup_context_shadow_scorecard.txt \
                    analysis/worldcup/worldcup_calibration_monitor.txt \
-                   analysis/worldcup/worldcup_calibration_monitor_state.json; do
+                   analysis/worldcup/worldcup_calibration_monitor_state.json \
+                   analysis/worldcup/worldcup_trackrecord_panel.md; do
             [ -f "$p" ] && git add "$p" || true
           done
           # gaps file only exists once a coverage gap has been detected (explicit path)
