@@ -35,6 +35,17 @@ OUT_DIR = Path(__file__).resolve().parent
 WC_LEAGUE = 1
 WC_SEASON = 2026
 
+# 🔴 EN VIVO: ajustar la predicción 1X2/OU MOSTRADA Y ENVIADA por el contexto de grupo
+# (worldcup_context_shadow: classify_fixture + MULT + recompute Poisson con calibración congelada).
+# Solo afecta a grupos con escenario NO trivial; knockout/unknown/tercero/intrascendente = 1.0 (sin
+# cambio). Se guarda en columnas ctx_* (NO se toca our_* = L3 puro -> el aprendizaje del L3 queda
+# intacto); la ficha muestra ctx_* cuando existen. CONTEXT_LIVE=False -> rollback instantáneo a L3
+# puro (no se escriben columnas ctx_*). El A/B de sombra sigue corriendo aparte como panel de control.
+CONTEXT_LIVE = True
+SCENARIO_ES = {"ya_clasificado": "ya clasificado", "eliminado": "eliminado",
+               "debe_ganar": "debe ganar", "le_vale_empate": "le vale el empate",
+               "intrascendente": "intrascendente"}
+
 
 def lineup_status(x):
     """(code, formation) from a lineup dict. code in conf|prob|pend."""
@@ -79,6 +90,36 @@ def fetch_injuries(c, fid):
         if tn and nm:
             by.setdefault(tn, []).append((nm, reason))
     return by
+
+
+def compute_context_adjustment(ctxmod, l3pred, ctx_groups, ctx_team_group, rnd, home, away, om):
+    """LIVE qualification-context adjustment for ONE fixture, REUSING the shadow module
+    (classify_fixture + adjust_prediction). Scales the displayed L3 xG by the per-team scenario
+    multiplier and recomputes 1X2/OU with the frozen calibration. Returns a dict of ctx_* fields
+    (incl. 'context_note') when the scenario is NON-trivial; None when trivial/knockout/no-rating or
+    on ANY error (soft-fail -> caller keeps pure L3). 'our_*' is never touched."""
+    if ctxmod is None or om is None or l3pred is None:
+        return None
+    try:
+        sc_h, sc_a, m_h, m_a, nt = ctxmod.classify_fixture(rnd, home, away, ctx_groups, ctx_team_group)
+        if not nt:
+            return None
+        adj = ctxmod.adjust_prediction(l3pred, om["our_xg_home"], om["our_xg_away"], m_h, m_a)
+        parts = []
+        if m_h != 1.0:
+            parts.append(f"{home} {SCENARIO_ES.get(sc_h, sc_h)}")
+        if m_a != 1.0:
+            parts.append(f"{away} {SCENARIO_ES.get(sc_a, sc_a)}")
+        note = "ajustado por contexto de grupo: " + ", ".join(parts)
+        return {"ctx_home": round(adj["home"], 4), "ctx_draw": round(adj["draw"], 4),
+                "ctx_away": round(adj["away"], 4),
+                "ctx_xg_home": round(adj["xg_home"], 2), "ctx_xg_away": round(adj["xg_away"], 2),
+                "ctx_over25": round(adj["over25"], 4),
+                "ctx_scenario_home": sc_h, "ctx_scenario_away": sc_a,
+                "ctx_mult_home": m_h, "ctx_mult_away": m_a, "context_note": note}
+    except Exception as e:  # noqa: BLE001  (soft-fail -> L3 puro)
+        print(f"context live soft-fail (-> L3 puro): {type(e).__name__}")
+        return None
 
 
 def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0):
@@ -152,8 +193,19 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
     except Exception as e:  # noqa: BLE001
         print(f"l3_adjust unavailable: {type(e).__name__}: {e}")
 
+    # context-adjustment module (SHADOW logic reused LIVE): classify_fixture + adjust_prediction.
+    ctxmod = None
+    ctx_groups, ctx_team_group = {}, {}
+    if CONTEXT_LIVE:
+        try:
+            import worldcup_context_shadow as ctxmod  # noqa: E402
+        except Exception as e:  # noqa: BLE001
+            print(f"context_shadow unavailable (-> L3 puro): {type(e).__name__}: {e}")
+            ctxmod = None
+
     # standings -> team context
     ctx = {}
+    st = []
     try:
         st = c.standings(league=WC_LEAGUE, season=WC_SEASON).get("response", []) or []
         for grp in (st[0].get("league", {}).get("standings", []) if st else []):
@@ -171,6 +223,14 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
                 }
     except APIFootballError as e:
         print("standings error:", e)
+
+    # group/standing maps for the LIVE context adjustment (same builder the shadow uses). Built
+    # ONCE from the pre-match /standings; soft-fail -> empty -> no adjustment (pure L3).
+    if ctxmod is not None:
+        try:
+            ctx_groups, ctx_team_group = ctxmod.build_status_maps(st)
+        except Exception:  # noqa: BLE001
+            ctx_groups, ctx_team_group = {}, {}
 
     report, cards = [], []
     cache_upserts = {}   # lock-at-KO: NS fixtures re-predicted live -> upsert into the L3 cache
@@ -235,6 +295,18 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
                 f"   | strength {float(om['our_elo_home']):+.2f} vs {float(om['our_elo_away']):+.2f}")
         else:
             out("    [OUR MODEL] no L3 rating for one of the teams")
+
+        # ---- CONTEXTO EN VIVO: ajustar la predicción mostrada/enviada por el escenario de grupo ----
+        # Reutiliza la maquinaria del módulo de sombra. Solo grupos NO triviales; knockout/unknown/
+        # tercero/intrascendente = 1.0 -> sin cambio. Guarda ctx_* (NO toca our_* = L3 puro). Soft-fail.
+        ctx_adj = compute_context_adjustment(
+            ctxmod, l3pred, ctx_groups, ctx_team_group, rnd, home, away, om) if CONTEXT_LIVE else None
+        context_note = ctx_adj["context_note"] if ctx_adj else None
+        if ctx_adj is not None:
+            out(f"    [CONTEXTO EN VIVO] (ajuste de grupo aplicado a la ficha): "
+                f"{home} {ctx_adj['ctx_home']*100:4.1f}%  Draw {ctx_adj['ctx_draw']*100:4.1f}%  "
+                f"{away} {ctx_adj['ctx_away']*100:4.1f}%   | exp goals "
+                f"{ctx_adj['ctx_xg_home']}-{ctx_adj['ctx_xg_away']}  — {context_note}")
         # ---- OUR MODEL stats: corners/cards/shots (opponent-adjusted DATA model, no odds) ----
         sp = statpred.predict(home, away) if statpred is not None else None
         if sp:
@@ -314,6 +386,8 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
                         # the L3 calibration reads the CACHE (also float), not this cards file.
                         "our_elo_home": round(float(om["our_elo_home"]), 2),
                         "our_elo_away": round(float(om["our_elo_away"]), 2)})
+        if ctx_adj is not None:
+            rec.update(ctx_adj)   # ctx_* = predicción ajustada por contexto (la ficha la mostrará)
         if sp:
             rec.update({"st_corners_total": sp["corners_total"], "st_corners_over": sp["corners_over"],
                         "st_corners_line": sp["corners_line"], "st_cards_total": sp["cards_total"],

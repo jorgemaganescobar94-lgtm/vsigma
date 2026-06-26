@@ -137,13 +137,17 @@ def render_message(r, mins, props_fn=None):
     lines = [f"⚡ Alineación confirmada — {h} vs {a}",
              f"⏱️ Saque en ~{mins_i} min · {grp} · {F.fmt_ko(r.get('kickoff_utc'))}"]
 
-    lh, ld, la = r.get("our_home"), r.get("our_draw"), r.get("our_away")
+    # CONTEXTO EN VIVO: misma predicción que la ficha (ctx_* ajustado por escenario de grupo si
+    # existe, si no L3 puro). Evita mostrar números distintos en Telegram. 'our_*' no se toca.
+    lh, ld, la, xgh, xga, ctx_note = F.pred_1x2(r)
     if pd.notna(lh):
-        lines.append(f"Resultado L3: {h} {lh*100:.0f}% · Empate {ld*100:.0f}% · {a} {la*100:.0f}% "
+        etiqueta = "Resultado L3·ctx" if ctx_note else "Resultado L3"
+        lines.append(f"{etiqueta}: {h} {lh*100:.0f}% · Empate {ld*100:.0f}% · {a} {la*100:.0f}% "
                      f"(apenas cambia con el XI — es fuerza de selección)")
+        if ctx_note:
+            lines.append(f"   ↳ {ctx_note}")
         lines += _l3_adj_lines(r, h, a)
 
-    xgh, xga = r.get("our_xg_home"), r.get("our_xg_away")
     if pd.notna(xgh):
         M = F.score_matrix(xgh, xga)
         gh = np.arange(F.KMAX + 1)[:, None]; ga = np.arange(F.KMAX + 1)[None, :]

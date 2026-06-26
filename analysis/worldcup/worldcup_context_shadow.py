@@ -247,31 +247,39 @@ def _over25(lh, la):
     return float(1.0 - np.exp(-lam) * (1.0 + lam + lam * lam / 2.0))
 
 
+def adjust_prediction(pred, xg_home, xg_away, mult_home, mult_away):
+    """Scale an ALREADY-COMPUTED L3 xG pair by per-team context multipliers and recompute 1X2 +
+    Over2.5 with the SAME Poisson + the SAME (frozen) L3 isotonic calibration. PURE — this is the
+    single source of truth for the context recompute, shared by the SHADOW scorecard (via
+    context_predict) and the LIVE ficha path (build_worldcup_cards). Multipliers of 1.0 -> identical
+    to pure L3."""
+    clh = max(0.0, float(xg_home)) * float(mult_home)
+    cla = max(0.0, float(xg_away)) * float(mult_away)
+    raw = l3_offline.wdl(clh, cla)
+    c = np.array([np.interp(raw[k], pred.iso[k]["ux"], pred.iso[k]["uf"]) for k in range(3)])
+    c = np.clip(c, 1e-6, None)
+    c = c / c.sum()
+    return {"home": float(c[0]), "draw": float(c[1]), "away": float(c[2]),
+            "xg_home": clh, "xg_away": cla, "over25": _over25(clh, cla)}
+
+
 def context_predict(pred, home, away, mult_home, mult_away):
-    """Pure L3 vs context-adjusted via the SAME machinery (raw_xg -> Poisson wdl -> L3 isotonic).
-    The ONLY difference is the per-team xG multiplier. None if a team has no rating."""
+    """Pure L3 vs context-adjusted via the SAME machinery (raw_xg -> adjust_prediction). The ONLY
+    difference is the per-team xG multiplier. None if a team has no rating."""
     sh = pred.strength.get(home)
     sa = pred.strength.get(away)
     if sh is None or sa is None:
         return None
     lh, la = l3_offline.raw_xg(sh - sa, pred.a0, pred.a1, pred.total_mean)
-
-    def cal(lhh, laa):
-        raw = l3_offline.wdl(lhh, laa)
-        c = np.array([np.interp(raw[k], pred.iso[k]["ux"], pred.iso[k]["uf"]) for k in range(3)])
-        c = np.clip(c, 1e-6, None)
-        return c / c.sum()
-
-    l3 = cal(lh, la)
-    clh, cla = lh * float(mult_home), la * float(mult_away)
-    ctx = cal(clh, cla)
+    base = adjust_prediction(pred, lh, la, 1.0, 1.0)
+    adj = adjust_prediction(pred, lh, la, mult_home, mult_away)
     return {
-        "l3_home": round(float(l3[0]), 4), "l3_draw": round(float(l3[1]), 4),
-        "l3_away": round(float(l3[2]), 4), "l3_xg_home": round(float(lh), 3),
-        "l3_xg_away": round(float(la), 3), "l3_over25": round(_over25(lh, la), 4),
-        "ctx_home": round(float(ctx[0]), 4), "ctx_draw": round(float(ctx[1]), 4),
-        "ctx_away": round(float(ctx[2]), 4), "ctx_xg_home": round(float(clh), 3),
-        "ctx_xg_away": round(float(cla), 3), "ctx_over25": round(_over25(clh, cla), 4),
+        "l3_home": round(base["home"], 4), "l3_draw": round(base["draw"], 4),
+        "l3_away": round(base["away"], 4), "l3_xg_home": round(base["xg_home"], 3),
+        "l3_xg_away": round(base["xg_away"], 3), "l3_over25": round(base["over25"], 4),
+        "ctx_home": round(adj["home"], 4), "ctx_draw": round(adj["draw"], 4),
+        "ctx_away": round(adj["away"], 4), "ctx_xg_home": round(adj["xg_home"], 3),
+        "ctx_xg_away": round(adj["xg_away"], 3), "ctx_over25": round(adj["over25"], 4),
     }
 
 

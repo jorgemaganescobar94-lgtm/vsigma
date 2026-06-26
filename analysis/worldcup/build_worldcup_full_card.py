@@ -239,13 +239,29 @@ def props_block(fid):
         return []
 
 
+def pred_1x2(r):
+    """Prediction to DISPLAY/SEND: the live context-adjusted ctx_* (written by build_worldcup_cards
+    when CONTEXT_LIVE is on AND the group scenario is non-trivial) when present, else pure L3 our_*.
+    'our_*' is never overwritten -> the L3 learning reads it untouched. Returns
+    (p_home, p_draw, p_away, xg_home, xg_away, context_note); context_note is None unless adjusted."""
+    if pd.notna(r.get("ctx_home")):
+        note = r.get("context_note")
+        return (r.get("ctx_home"), r.get("ctx_draw"), r.get("ctx_away"),
+                r.get("ctx_xg_home"), r.get("ctx_xg_away"),
+                note if isinstance(note, str) and note.strip() else None)
+    return (r.get("our_home"), r.get("our_draw"), r.get("our_away"),
+            r.get("our_xg_home"), r.get("our_xg_away"), None)
+
+
 def match_block(r, show_lineups=False):
     """Readable, labelled per-match card (list of lines). Data model only, ZERO odds."""
     h, a = es_name(r["home"]), es_name(r["away"])
     ko_round = is_knockout(r.get("round"))   # knockout -> round chip + advance line + draw relabel
     lines = [f"🏆 {h} vs {a} — {chip_es(r)} · {fmt_ko(r.get('kickoff_utc'))}"]
 
-    lh, ld, la = r.get("our_home"), r.get("our_draw"), r.get("our_away")
+    # CONTEXTO EN VIVO: la predicción mostrada/enviada es la ajustada por escenario de grupo (ctx_*)
+    # cuando existe; si no (flag off / trivial / soft-fail) -> L3 puro. 'our_*' nunca se sobrescribe.
+    lh, ld, la, xgh, xga, ctx_note = pred_1x2(r)
     if pd.notna(lh):
         if ko_round:
             # In a knockout the L3 1X2 is still the 90' result (draw = goes to extra time). Relabel
@@ -279,17 +295,20 @@ def match_block(r, show_lineups=False):
             import worldcup_explain
             why = worldcup_explain.explain_l3(
                 h, a, r.get("our_elo_home"), r.get("our_elo_away"), neutral=1,
-                xg_home=r.get("our_xg_home"), xg_away=r.get("our_xg_away"),
+                xg_home=xgh, xg_away=xga,
                 p_home=lh, p_draw=ld, p_away=la,
                 adj_basis=r.get("adj_basis"),
                 adj_absent_home=r.get("adj_absent_home"), adj_absent_away=r.get("adj_absent_away"),
                 adj_delta_home=r.get("adj_delta_home"), adj_delta_away=r.get("adj_delta_away"))
         except Exception:
             why = ""
+        # TRANSPARENCIA: si la predicción mostrada lleva el ajuste de contexto, anótalo en el "por qué"
+        # (solo cuando lo hay). Frase ya construida por build_worldcup_cards (context_note).
+        if isinstance(ctx_note, str) and ctx_note.strip():
+            why = (f"{why} · {ctx_note}" if why else ctx_note)
         if why:
             lines.append(why)
 
-    xgh, xga = r.get("our_xg_home"), r.get("our_xg_away")
     if pd.notna(xgh):
         M = score_matrix(xgh, xga)
         gh = np.arange(KMAX + 1)[:, None]; ga = np.arange(KMAX + 1)[None, :]
@@ -568,8 +587,7 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
             print(f"\nWritten: {OUT_DIR/'worldcup_full_cards.txt'} ({len(lines)} lines, 0 today fixtures)")
             return
         for _, r in df.iterrows():
-            lh3, ld3, la3 = r.get("our_home"), r.get("our_draw"), r.get("our_away")
-            xgh, xga = r.get("our_xg_home"), r.get("our_xg_away")
+            lh3, ld3, la3, xgh, xga, ctx_note = pred_1x2(r)   # ctx_* (ajustado) si existe, si no L3 puro
             ko = str(r["kickoff_utc"])[5:16].replace("T", " ")  # MM-DD HH:MM
             # knockout -> round chip (Octavos/…); group -> short group label
             grp = (round_label_es(r.get("round")) if is_knockout(r.get("round"))
@@ -587,7 +605,7 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
             out(f"⚽ {r['home']} v {r['away']} · {grp} · {ko}Z")
             seg = []
             if pd.notna(lh3):
-                seg.append(f"L3 {lh3*100:.0f}/{ld3*100:.0f}/{la3*100:.0f}")
+                seg.append(f"{'L3·ctx' if ctx_note else 'L3'} {lh3*100:.0f}/{ld3*100:.0f}/{la3*100:.0f}")
             if o25 is not None:
                 seg.append(f"O2.5 {o25*100:.0f}")
             if btts is not None:
@@ -606,6 +624,8 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
             if "shots" in SHOW_STATS and pd.notna(sht):
                 seg.append(f"tir{sht:.0f}")
             out("   " + " · ".join(seg))
+            if ctx_note:                       # transparencia compacta del ajuste de contexto
+                out("   ↳ " + ctx_note)
             if show_lineups:
                 LU = {"conf": "conf", "prob": "prob", "pend": "pend"}
                 lh, la = r.get("lineup_home"), r.get("lineup_away")
@@ -635,16 +655,17 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
         ko = str(r["kickoff_utc"]).replace("T", " ")[:16]
         grp = (round_label_es(r.get("round")) if is_knockout(r.get("round"))
                else str(r.get("home_group") or "").replace("Group ", "Gr."))
-        lh3, ld3, la3 = r.get("our_home"), r.get("our_draw"), r.get("our_away")
-        xgh, xga = r.get("our_xg_home"), r.get("our_xg_away")
+        lh3, ld3, la3, xgh, xga, ctx_note = pred_1x2(r)   # ctx_* (ajustado) si existe, si no L3 puro
 
         out("")
         out(f"🏆 {h} vs {a}")
         out(f"   {ko} · {grp}")
-        # 1X2 (L3 only)
+        # 1X2 (L3, o L3·ctx si lleva ajuste de contexto de grupo)
         if pd.notna(lh3):
-            out(f"1X2  L3 {lh3*100:.0f}/{ld3*100:.0f}/{la3*100:.0f}")
+            out(f"1X2  {'L3·ctx' if ctx_note else 'L3'} {lh3*100:.0f}/{ld3*100:.0f}/{la3*100:.0f}")
             out(f"DC   1X {(lh3+ld3)*100:.0f}% · 12 {(lh3+la3)*100:.0f}% · X2 {(ld3+la3)*100:.0f}%")
+            if ctx_note:
+                out(f"     ({ctx_note})")
         # goals (L3 Poisson)
         if pd.notna(xgh):
             M = score_matrix(xgh, xga)
