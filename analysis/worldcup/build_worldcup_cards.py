@@ -386,6 +386,15 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
                         # the L3 calibration reads the CACHE (also float), not this cards file.
                         "our_elo_home": round(float(om["our_elo_home"]), 2),
                         "our_elo_away": round(float(om["our_elo_away"]), 2)})
+            # A/B del TOTAL DE GOLES: variante con total CONSTANTE (modelo viejo), si el predictor la
+            # adjunta (solo en predicciones FRESCAS NS; las filas congeladas no la llevan). Nunca se
+            # muestra; alimenta el scorecard A/B (learning_loop) para vigilar matchup vs constante.
+            if "our_xg_home_const" in om and pd.notna(om.get("our_xg_home_const")):
+                rec.update({"our_xg_home_const": float(om["our_xg_home_const"]),
+                            "our_xg_away_const": float(om["our_xg_away_const"]),
+                            "our_home_const": round(float(om["our_home_const"]), 4),
+                            "our_draw_const": round(float(om["our_draw_const"]), 4),
+                            "our_away_const": round(float(om["our_away_const"]), 4)})
         if ctx_adj is not None:
             rec.update(ctx_adj)   # ctx_* = predicción ajustada por contexto (la ficha la mostrará)
         if sp:

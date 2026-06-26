@@ -19,6 +19,7 @@ predict each match pre-fit. Calibrate isotonic on burn-in, validate OOS vs L2.
 """
 from __future__ import annotations
 
+import json
 import sys
 from collections import Counter
 from pathlib import Path
@@ -28,7 +29,9 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from api_football_client import APIFootballClient  # noqa: E402
+import l3_offline  # noqa: E402  (TOTAL_MATCHUP_LIVE flag — single source of truth; no API on import)
 
 OUT_DIR = Path(__file__).resolve().parent
 DATA = OUT_DIR / "international_results.csv"
@@ -212,26 +215,49 @@ def main():
     A = np.c_[np.ones(bturn.sum()), sup_pre[bturn]]
     coef, *_ = np.linalg.lstsq(A, (gh - ga)[bturn], rcond=None)
     a0, a1 = float(coef[0]), float(coef[1])
-    total_mean = float(np.mean((gh + ga)[bturn]))
-    out(f"burn-in calibration: total={total_mean:.3f} | margin = {a0:+.3f} + {a1:.3f}*raw_sup")
+    total_mean = float(np.mean((gh + ga)[bturn]))   # BASELINE constant total (flag-off)
+    # MATCH-DEPENDENT total (auditoría candidato #1, forma b): total = tb0 + tb1|sup| + tb2 sup^2,
+    # fit on burn-in real total (gh+ga). Same burn-in, lstsq — igual que total_mean hoy.
+    sb = sup_pre[bturn]
+    total_coef = [float(c) for c in np.linalg.lstsq(
+        np.c_[np.ones(len(sb)), np.abs(sb), sb ** 2], (gh + ga)[bturn], rcond=None)[0]]
+    live_matchup = bool(l3_offline.TOTAL_MATCHUP_LIVE)
+    out(f"burn-in calibration: total const={total_mean:.3f} | matchup total = "
+        f"{total_coef[0]:+.3f}{total_coef[1]:+.3f}|sup|{total_coef[2]:+.3f}sup^2 | "
+        f"margin = {a0:+.3f}{a1:+.3f}*raw_sup | TOTAL_MATCHUP_LIVE={live_matchup}")
     out("")
 
-    def probs(sup):
+    def _total(sup, matchup):
+        if matchup:
+            return total_coef[0] + total_coef[1] * abs(sup) + total_coef[2] * sup * sup
+        return total_mean
+
+    def probs(sup, matchup):
         s = a0 + a1 * sup
-        lh = max(0.05, (total_mean + s) / 2.0); la = max(0.05, (total_mean - s) / 2.0)
+        t = _total(sup, matchup)
+        lh = max(0.05, (t + s) / 2.0); la = max(0.05, (t - s) / 2.0)
         return wdl(lh, la), lh, la
 
-    P3 = np.zeros((n, 3))
-    for i in range(n):
-        if ok[i]:
-            P3[i] = probs(sup_pre[i])[0]
-    P3[~ok] = np.array([0.45, 0.27, 0.28])  # fallback (rare, early matches)
-    P3 /= P3.sum(1, keepdims=True)
+    def calibrated(matchup):
+        """raw 1X2 + isotonic fit (burn-in) for a given total mode. CRÍTICO: cada total lleva su
+        propia isotónica (el backtest mostró que el total nuevo con la isotónica vieja ROMPE el 1X2)."""
+        P = np.zeros((n, 3))
+        for i in range(n):
+            if ok[i]:
+                P[i] = probs(sup_pre[i], matchup)[0]
+        P[~ok] = np.array([0.45, 0.27, 0.28])  # fallback (rare, early matches)
+        P /= P.sum(1, keepdims=True)
+        isos = [Isotonic().fit(P[bturn, k], Y[bturn, k]) for k in range(3)]
+        Pc = np.c_[isos[0].predict(P[:, 0]), isos[1].predict(P[:, 1]), isos[2].predict(P[:, 2])]
+        Pc = np.clip(Pc, 1e-6, None); Pc /= Pc.sum(1, keepdims=True)
+        return P, Pc, isos
 
-    # ---- isotonic calibration (fit on burn-in) ----
-    isos = [Isotonic().fit(P3[bturn, k], Y[bturn, k]) for k in range(3)]
-    P3c = np.c_[isos[0].predict(P3[:, 0]), isos[1].predict(P3[:, 1]), isos[2].predict(P3[:, 2])]
-    P3c = np.clip(P3c, 1e-6, None); P3c /= P3c.sum(1, keepdims=True)
+    P3_const, P3c_const, isos_const = calibrated(False)
+    P3_match, P3c_match, isos_match = calibrated(True)
+    # LIVE selection (shipped predictions + OOS validation use the live total/isotonic)
+    P3 = P3_match if live_matchup else P3_const
+    P3c = P3c_match if live_matchup else P3c_const
+    isos = isos_match if live_matchup else isos_const
 
     # base-rate
     base = np.bincount(res[burn], minlength=3) / burn.sum()
@@ -303,7 +329,7 @@ def main():
             continue
         hidd, aidd = int(h["id"]), int(a["id"])
         sup = s_final.get(hidd, 0.0) - s_final.get(aidd, 0.0)  # WC neutral, no HFA
-        P, lh, la = probs(sup)
+        P, lh, la = probs(sup, live_matchup)                   # LIVE total (matchup unless reverted)
         P = P / P.sum()
         pc = np.array([isos[0].predict([P[0]])[0], isos[1].predict([P[1]])[0], isos[2].predict([P[2]])[0]])
         pc = np.clip(pc, 1e-6, None); pc = pc / pc.sum()
@@ -335,9 +361,29 @@ def main():
                   for k, v in sorted(s_final.items(), key=lambda kv: -kv[1])]).to_csv(
         OUT_DIR / "national_elo_layer3_ratings.csv", index=False)
     (OUT_DIR / "national_elo_layer3_report.txt").write_text("\n".join(report), encoding="utf-8")
+
+    # ---- authoritative calibration JSON (margin + BOTH totals + BOTH isotonics) ----
+    # l3_offline.Predictor picks total/iso by TOTAL_MATCHUP_LIVE: True -> matchup total + iso;
+    # False -> constant total_mean + iso_const (reversal EXACTA al modelo viejo).
+    def _iso_json(isos_obj):
+        return [{"ux": [float(x) for x in io.ux], "uf": [float(x) for x in io.uf]} for io in isos_obj]
+    calib_json = {
+        "a0": a0, "a1": a1, "total_mean": total_mean, "total_coef": total_coef,
+        "iso": _iso_json(isos_match), "iso_const": _iso_json(isos_const),
+        "total_matchup": live_matchup,
+        "_note": "authored by national_elo_layer3.main(): margin (a0,a1), constant total_mean, "
+                 "match-dependent total_coef (forma b: tb0+tb1|sup|+tb2 sup^2), matchup isotonic "
+                 "(iso) + constant-total isotonic (iso_const for the flag-off reversal). "
+                 "l3_offline picks by TOTAL_MATCHUP_LIVE.",
+        "_oos_cutoff": OOS_CUTOFF,
+    }
+    (OUT_DIR / "national_elo_layer3_calibration.json").write_text(
+        json.dumps(calib_json, indent=2, ensure_ascii=False), encoding="utf-8")
+
     print(f"\nWritten: {OUT_DIR/'national_elo_layer3_validation.csv'}")
     print(f"Written: {pred_path} (now Layer-3)")
     print(f"Written: {OUT_DIR/'national_elo_layer3_ratings.csv'}")
+    print(f"Written: {OUT_DIR/'national_elo_layer3_calibration.json'}")
     print(f"Written: {OUT_DIR/'national_elo_layer3_report.txt'}")
 
 

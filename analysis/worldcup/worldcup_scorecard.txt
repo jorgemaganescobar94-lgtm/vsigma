@@ -21,6 +21,8 @@ v2          31   0.8728  0.5065   67.7  0.133       +18.9
     L3 (Poisson xG)    n= 31  acc   74%  Brier 0.217  logloss 0.631
     base-rate          n= 31  acc   58%  Brier 0.243  logloss 0.680
 
+--- (1b) A/B TOTAL DE GOLES — aún sin filas con xG constante logueado (se llenará tras NS nuevos) ---
+
 --- (2) CALIBRACIÓN / reliability (predicho vs frecuencia real por banda) ---
   L3 (1X2 aplanado H/D/A, n_pred=93):
        banda    n  predicho   real
@@ -62,4 +64,4 @@ v2          31   0.8728  0.5065   67.7  0.133       +18.9
 PROPUESTA de recalibración (calibración, informativa, NO aplicada):
   Ningún encogimiento hacia base-rate mejora el log-loss (0.8284); L3 bien calibrado.
 
-generated_at_utc: 2026-06-26T10:54:05+00:00
+generated_at_utc: 2026-06-26T13:35:55+00:00

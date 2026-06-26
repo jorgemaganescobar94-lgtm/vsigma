@@ -54,6 +54,9 @@ FINISHED = {"FT", "AET", "PEN"}
 LOG_COLUMNS = [
     "fixture_id", "kickoff_utc", "home", "away", "round",
     "l3_home", "l3_draw", "l3_away", "l3_xg_home", "l3_xg_away", "l3_top_score",
+    # A/B del TOTAL DE GOLES: xG con total CONSTANTE (modelo viejo) en paralelo al l3_xg (matchup,
+    # mostrado). El scorecard puntúa Over2.5/BTTS de AMBOS sobre partidos liquidados (panel de control).
+    "l3_xg_home_const", "l3_xg_away_const",
     "v2_home", "v2_draw", "v2_away",
     # L3-adj: SECONDARY heuristic live adjustment (additive; L3 columns above are untouched).
     "adj_home", "adj_draw", "adj_away", "adj_basis",
@@ -201,6 +204,7 @@ def cmd_log():
             "l3_away": r.get("our_away"), "l3_xg_home": r.get("our_xg_home"),
             "l3_xg_away": r.get("our_xg_away"),
             "l3_top_score": top_scoreline(r.get("our_xg_home"), r.get("our_xg_away")),
+            "l3_xg_home_const": r.get("our_xg_home_const"), "l3_xg_away_const": r.get("our_xg_away_const"),
             "v2_home": (v2["v2_home"] if v2 is not None else np.nan),
             "v2_draw": (v2["v2_draw"] if v2 is not None else np.nan),
             "v2_away": (v2["v2_away"] if v2 is not None else np.nan),
@@ -583,6 +587,30 @@ def cmd_scorecard():
     out(f"  BTTS      (real Yes={real_btts.mean()*100:.0f}%):")
     out(mrow("L3 (Poisson xG)", l3_btts, real_btts))
     out(mrow("base-rate", base_btts, real_btts))
+
+    # ---- (1b) A/B del TOTAL DE GOLES: matchup EN VIVO (l3_xg, mostrado) vs CONSTANTE (modelo viejo).
+    # Panel de control para confirmar en vivo que el total dependiente sigue ganando (o revertir).
+    lxhc = settled["l3_xg_home_const"].to_numpy(float) if "l3_xg_home_const" in settled.columns else np.full(n, np.nan)
+    lxac = settled["l3_xg_away_const"].to_numpy(float) if "l3_xg_away_const" in settled.columns else np.full(n, np.nan)
+    ab = xg_ok & ~(np.isnan(lxhc) | np.isnan(lxac))   # filas con AMBOS xG (apples-to-apples)
+    if ab.sum():
+        over_m = np.array([_pois_over25(lxh[i], lxa[i]) for i in range(n)])[ab]
+        over_c = np.array([_pois_over25(lxhc[i], lxac[i]) for i in range(n)])[ab]
+        btts_m = np.array([_pois_btts(lxh[i], lxa[i]) for i in range(n)])[ab]
+        btts_c = np.array([_pois_btts(lxhc[i], lxac[i]) for i in range(n)])[ab]
+        ro, rb = real_over[ab], real_btts[ab]
+        out("")
+        out(f"--- (1b) A/B TOTAL DE GOLES — matchup EN VIVO vs CONSTANTE (n={int(ab.sum())}) ---")
+        out(f"  Over 2.5 (real Over={ro.mean()*100:.0f}%):")
+        out(mrow("matchup (EN VIVO)", over_m, ro))
+        out(mrow("constante (viejo)", over_c, ro))
+        out(f"  BTTS     (real Yes={rb.mean()*100:.0f}%):")
+        out(mrow("matchup (EN VIVO)", btts_m, rb))
+        out(mrow("constante (viejo)", btts_c, rb))
+        out("  (si 'constante' bate sostenidamente a 'matchup' -> revisar / poner TOTAL_MATCHUP_LIVE=False)")
+    else:
+        out("")
+        out("--- (1b) A/B TOTAL DE GOLES — aún sin filas con xG constante logueado (se llenará tras NS nuevos) ---")
 
     # ---- (2) calibration / reliability (L3, v2) ----
     out("")
