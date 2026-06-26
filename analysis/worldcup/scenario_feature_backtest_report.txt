@@ -1,0 +1,53 @@
+================================================================================================
+PARTE 1 — MOTOR DE CLASIFICACIÓN: validación con casos construidos
+================================================================================================
+
+  clasificado (cierto)           -> qualified          [qualified,controls_destiny]   (esperado: qualified)
+  le vale empate (controla)      -> draw_enough        [controls_destiny,draw_enough,gd_dependent]   (esperado: draw_enough)
+  debe ganar (solo ganando)      -> must_win           [controls_destiny,must_win,gd_dependent]   (esperado: must_win)
+  depende de otros / GD          -> depends_on_others  [depends_on_others,gd_dependent]   (esperado: depends/gd)
+  eliminado (4º seguro)          -> eliminated         [eliminated]   (esperado: eliminated)
+  vivo como mejor tercero        -> alive_as_third     [gd_dependent,alive_as_third]   (esperado: alive_as_third)
+
+================================================================================================
+PARTE 2 — ESCENARIO COMO FEATURE APRENDIDA (no multiplicador fijo)
+================================================================================================
+team-matches=324 (partidos=162) | burn-in(<2024)=188 | OOS(>=2024)=136
+distribución de features (team-matches con la flag activa):
+   f_qualified          burn=  6  OOS=  8
+   f_eliminated         burn= 27  OOS=  5
+   f_controls_destiny   burn= 66  OOS= 43
+   f_draw_enough        burn= 21  OOS= 19
+   f_must_win           burn= 39  OOS= 16
+   f_depends_on_others  burn= 84  OOS= 75
+   f_gd_dependent       burn=174  OOS=121
+   f_alive_as_third     burn= 47  OOS= 89
+
+
+Δ = baseline − feature (logloss); >0 con IC95% que EXCLUYE 0 = la feature MEJORA OOS.
+
+--- modelo: FULL (8 flags, OLS)  (features: qualified, eliminated, controls_destiny, draw_enough, must_win, depends_on_others, gd_dependent, alive_as_third; ridge=0.0) ---
+  coef (×mult): qualified -0.75(×0.47) · eliminated -0.41(×0.67) · controls_destiny -1.00(×0.37) · draw_enough +0.09(×1.09) · must_win +0.35(×1.42) · depends_on_others -0.29(×0.75) · gd_dependent -0.53(×0.59) · alive_as_third -0.21(×0.81)  | intercepto +0.84
+  GOLES Poisson dev OOS: base 167.1 vs feat 207.3 (Δ -40.2)
+  Over2.5  ll base 0.6924 feat 0.8052 (Δ -0.1128) | IC95[-0.2992,+0.0541] no signif (IC∋0)
+  BTTS     ll base 0.6921 feat 0.8757 (Δ -0.1837) | IC95[-0.3637,-0.0243] SIGNIF
+  1X2      ll base 1.0498 feat 1.0988 (Δ -0.0489) | IC95[-0.1539,+0.0598] no signif (IC∋0)
+
+--- modelo: FULL + ridge  (features: qualified, eliminated, controls_destiny, draw_enough, must_win, depends_on_others, gd_dependent, alive_as_third; ridge=10.0) ---
+  coef (×mult): qualified -0.22(×0.80) · eliminated +0.04(×1.04) · controls_destiny -0.36(×0.70) · draw_enough -0.16(×0.86) · must_win +0.02(×1.02) · depends_on_others +0.03(×1.03) · gd_dependent -0.08(×0.92) · alive_as_third -0.08(×0.92)  | intercepto +0.05
+  GOLES Poisson dev OOS: base 167.1 vs feat 183.4 (Δ -16.3)
+  Over2.5  ll base 0.6924 feat 0.7351 (Δ -0.0427) | IC95[-0.1673,+0.0730] no signif (IC∋0)
+  BTTS     ll base 0.6921 feat 0.7914 (Δ -0.0994) | IC95[-0.2060,-0.0045] SIGNIF
+  1X2      ll base 1.0498 feat 1.0640 (Δ -0.0142) | IC95[-0.0872,+0.0598] no signif (IC∋0)
+
+--- modelo: PARSIMONIOSO (low_stakes + must_win)  (features: low_stakes, must_win; ridge=0.0) ---
+  coef (×mult): low_stakes -0.01(×0.99) · must_win -0.28(×0.76)  | intercepto -0.12
+  GOLES Poisson dev OOS: base 167.1 vs feat 166.9 (Δ +0.2)
+  Over2.5  ll base 0.6924 feat 0.6939 (Δ -0.0015) | IC95[-0.0730,+0.0656] no signif (IC∋0)
+  BTTS     ll base 0.6921 feat 0.7238 (Δ -0.0318) | IC95[-0.0882,+0.0233] no signif (IC∋0)
+  1X2      ll base 1.0498 feat 1.0404 (Δ +0.0094) | IC95[-0.0315,+0.0517] no signif (IC∋0)
+
+================================================================================================
+LECTURA: la feature aporta solo si Δ>0 con IC95% que EXCLUYE 0 (mejora real OOS) en goles/OU/
+BTTS sin dañar el 1X2. Si los IC incluyen 0 (o la muestra es pequeña) -> no concluyente.
+================================================================================================
