@@ -1,0 +1,72 @@
+============================================================================================
+RE-TEST · TARJETA y TIROS-A-PUERTA con INPUTS DEL MODELO DE STATS (vs constantes)
+READ-ONLY · sin cambios en producción · sin API · sin Telegram
+============================================================================================
+muestra original backtest: 150 partidos cacheados (ene-jun 2024).
+cubiertos por el modelo de stats (en worldcup_stats_raw.csv): 97 partidos.
+  -> los 53 restantes (AFCON/AsianCup en su mayoria) NO estan en el dataset del modelo;
+     el modelo no puede ratearlos sin inventar. Se excluyen del re-test (documentado).
+
+ANTI-LEAKAGE confirmado:
+  * rates /90 = temporada 2023 (estrictamente previa a los partidos de 2024).
+  * betas del modelo de stats = walk-forward, refit solo con date<partido (MIN_PAST=150, HL=540d).
+  * XI = startXI CONFIRMADO (input observado).  target = actuals (solo salida).
+  * unica mira-adelante menor: feature opp_str (L3 final + estandarizacion full-sample),
+    identica a la del modelo de stats de produccion; coef pequenio. Documentado.
+
+--------------------------------------------------------------------------------------------
+A) CONSTANTES (tiros=12, tarjetas=3.8) · muestra ORIGINAL (150 partidos) — reproduccion
+  prop          n  base%  logloss  ll_base ll_skill   brier br_base br_skill    ECE  GRADUA?
+  ------------------------------------------------------------------------------------------
+  card       3062  12.9%   0.3454   0.3851   +10.3%  0.1044  0.1126    +7.3%  0.032       SI
+  shot_on    3062  21.9%   0.5864   0.5262   -11.4%  0.1376  0.1713   +19.7%  0.082       no
+
+--------------------------------------------------------------------------------------------
+B) CONSTANTES · MISMOS 97 partidos del re-test (control apples-to-apples)
+  prop          n  base%  logloss  ll_base ll_skill   brier br_base br_skill    ECE  GRADUA?
+  ------------------------------------------------------------------------------------------
+  card       2059  13.3%   0.3422   0.3913   +12.5%  0.1042  0.1150    +9.4%  0.035       SI
+  shot_on    2059  21.3%   0.5560   0.5175    -7.4%  0.1323  0.1675   +21.0%  0.089       no
+
+--------------------------------------------------------------------------------------------
+C) INPUTS DEL MODELO DE STATS · 93 partidos (EL RE-TEST)
+  prop          n  base%  logloss  ll_base ll_skill   brier br_base br_skill    ECE  GRADUA?
+  ------------------------------------------------------------------------------------------
+  card       1971  13.9%   0.3477   0.4022   +13.6%  0.1067  0.1193   +10.6%  0.032       SI
+  shot_on    1971  21.2%   0.5466   0.5160    -5.9%  0.1264  0.1668   +24.2%  0.059       no
+
+--------------------------------------------------------------------------------------------
+CALIBRACION POR BANDA (B constantes vs C modelo, mismos 97 partidos)
+
+  CARD:
+    banda        inputs      n   pred%    obs%     gap
+    (0.00,0.10]  const     799    6.0%    1.6%   +4.4%
+    (0.10,0.20]  const     657   14.8%   13.4%   +1.4%
+    (0.20,0.30]  const     425   24.4%   28.0%   -3.6%
+    (0.30,0.50]  const     169   36.2%   29.6%   +6.6%
+    (0.50,1.00]  const       9   56.1%   33.3%  +22.8%
+    (0.00,0.10]  model     790    6.0%    1.9%   +4.1%
+    (0.10,0.20]  model     637   14.9%   14.0%   +0.9%
+    (0.20,0.30]  model     379   24.4%   29.8%   -5.4%
+    (0.30,0.50]  model     155   35.4%   34.2%   +1.2%
+    (0.50,1.00]  model      10   54.1%   30.0%  +24.1%
+
+  SHOT_ON:
+    banda        inputs      n   pred%    obs%     gap
+    (0.00,0.10]  const     606    2.4%    1.8%   +0.6%
+    (0.10,0.20]  const     303   14.6%    4.6%  +10.0%
+    (0.20,0.30]  const     232   24.9%   15.1%   +9.8%
+    (0.30,0.50]  const     427   38.0%   26.7%  +11.3%
+    (0.50,1.00]  const     491   67.6%   53.8%  +13.8%
+    (0.00,0.10]  model     668    2.9%    1.5%   +1.4%
+    (0.10,0.20]  model     274   14.7%    7.3%   +7.4%
+    (0.20,0.30]  model     300   25.1%   18.3%   +6.7%
+    (0.30,0.50]  model     362   39.7%   33.1%   +6.6%
+    (0.50,1.00]  model     367   66.6%   57.8%   +8.8%
+
+============================================================================================
+LECTURA:
+  * skill>0 y GRADUA?=SI exige: logloss Y brier baten baseline Y ECE<=0.08.
+  * compara B (constantes) vs C (modelo) en los MISMOS partidos para aislar el cambio de input.
+  * 'gap' = pred% - obs% por banda; gap>0 en la cola = sobre-optimista (lo que se vio antes).
+============================================================================================

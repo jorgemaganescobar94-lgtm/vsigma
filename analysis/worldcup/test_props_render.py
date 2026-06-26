@@ -2,10 +2,11 @@
 Offline tests for the player-props block in the Telegram ficha (build_worldcup_full_card.props_lines
 / props_block) AFTER per-prop labelling. NO network, NO API.
 
-Covers: VALIDADOS section (gol + asistencia) with NO 'no fiarse' disclaimer · EXPERIMENTAL section
-(tarjeta with %, tiros as ORDER only — no % / no number) · numbers come straight from the log · no
-props -> no block · only XI rows · XI provisional/confirmado tag on the validados header · no
-certainty language.
+Covers: VALIDADOS section (gol + asistencia + TARJETA graduada + tiros como ORDEN) with NO
+'no fiarse' disclaimer · tarjeta % shown with the tail cap (p>0.45 -> '45%+' + nota) · NO
+experimental section · tiros as ORDER only (no % / no number) · numbers come straight from the
+log · no props -> no block · only XI rows · XI provisional/confirmado tag on the validados header
+· no certainty language.
 
 Run:  python analysis/worldcup/test_props_render.py
 """
@@ -51,16 +52,40 @@ def test_validados_goal_assist_no_disclaimer():
     assert "se sigue confirmando en vivo" in txt                        # WC neutral/knockout note
 
 
-def test_experimental_card_pct_and_shots_ranking():
+def test_card_in_validados_and_shots_ranking():
     lines = F.props_lines(_df3(), name_fn=str)
     txt = "\n".join(lines)
-    assert F.EXP_LABEL in txt and "Experimental" in F.EXP_LABEL
-    # tarjeta top 2 by p_card WITH %: Kante 35 · Dembele 15
+    # NO experimental section anymore: everything shown is validado
+    assert "Experimental" not in txt and "en pruebas" not in txt
+    # tarjeta is now INSIDE the validados block (after the VALIDADOS header, no separate header)
+    assert F.VALID_LABEL in lines[0]
+    # tarjeta top 2 by p_card WITH % (mid values, NOT capped): Kante 35 · Dembele 15
     assert "Tarjeta: Kante 35%" in txt and "Dembele 15%" in txt
+    assert "45%+" not in txt                                            # nothing above 0.45 here
     # tiros as ORDER only (by exp_shots): Mbappe > Dembele > Kante, NO % / NO number
     shot_line = next(l for l in lines if "Tiros (orden" in l)
     assert "Mbappe > Dembele > Kante" in shot_line
     assert "%" not in shot_line and "~" not in shot_line and "3.2" not in shot_line
+
+
+def test_card_high_pct_is_capped_in_display():
+    # a starter with an inflated card prob in the optimistic tail (p>0.45) must show the CAP, not
+    # the inflated value, and the conservative-tail note must appear.
+    df = pd.DataFrame([
+        _row("Hothead", p_goal=0.05, p_assist=0.03, p_card=0.62, exp_shots=0.4, p_shot_on=0.1),
+        _row("Calm", p_goal=0.04, p_assist=0.04, p_card=0.12, exp_shots=0.5, p_shot_on=0.1),
+    ])
+    lines = F.props_lines(df, name_fn=str)
+    txt = "\n".join(lines)
+    assert "Hothead 45%+" in txt                                        # capped display
+    assert "62%" not in txt and "0.62" not in txt                       # inflated value never shown
+    assert "Calm 12%" in txt                                            # mid value shown normally
+    assert F.CARD_NOTE in lines                                         # conservative-tail note present
+
+
+def test_card_note_absent_when_no_cap():
+    # mid card values only -> no cap triggered -> no CARD_NOTE clutter
+    assert F.CARD_NOTE not in F.props_lines(_df3(), name_fn=str)
 
 
 def test_no_props_no_block():

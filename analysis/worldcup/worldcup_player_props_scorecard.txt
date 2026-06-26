@@ -2,11 +2,25 @@
 # a producción (mostrarse en Telegram) SOLO si, con N>=30 PARTIDOS liquidados, su predicción
 # supera al baseline (tasa base del prop) en logloss Y en brier, y tiene ECE<=0.08. Si no,
 # se queda en sombra. Etiqueta interna: heurístico / no validado.
+#
+# ESTADO TRAS BACKTEST HISTÓRICO (internacionales 2024-25, N=3062 jugador-partido, anti-leakage:
+#   rates de temporada anterior + xG L3 walk-forward + XI confirmado; target nunca como feature):
+#   * GOL y ASISTENCIA -> GRADUADOS: baten al baseline en logloss Y brier, ECE<=0.02, % fiables
+#     (gol skill ll +20%/br +13%; asistencia +20%/+11%). Se muestran en la sección VALIDADOS de
+#     la ficha, sin la etiqueta 'no fiarse'.
+#   * TARJETA -> GRADUADA tras el RE-TEST con los inputs del MODELO DE STATS de producción
+#     (props_retest_stats_inputs_*): bate baseline en logloss Y brier, ECE 0.032. Se muestra en la
+#     sección VALIDADOS, con TOPE de display en la cola (p>0.45 -> '45%+'): la calibración es
+#     conservadora/optimista en la cola alta y con n pequeño, así que el % alto se capa.
+#   * TIROS-A-PUERTA -> RANKING ONLY (no gradúa): incluso con los inputs del modelo el logloss
+#     sigue por debajo del baseline (skill -5.9%; mejora ECE 0.089->0.059 y brier, pero no logloss).
+#     En la ficha: solo ORDEN (no probabilidad), sin %.
+# Este scorecard EN VIVO sigue corriendo como CONFIRMACIÓN independiente sobre partidos del Mundial.
 
 ==============================================================================
 PLAYER PROPS — track record (SOMBRA · heurístico · NO validado · sin mercado)
 ==============================================================================
-generated_at_utc: 2026-06-25T15:45:37+00:00
+generated_at_utc: 2026-06-26T06:25:32+00:00
 partidos liquidados=0 | filas jugador-prop=0 | umbral graduación N>=30
 MUESTRA INSUFICIENTE para graduar (N<30). Métricas mostradas son orientativas.
 

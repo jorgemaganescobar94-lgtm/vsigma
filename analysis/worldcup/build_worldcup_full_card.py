@@ -117,14 +117,29 @@ def chip_es(r):
 
 # --------------------------------------------------------------------- player props (SHADOW)
 PROPS_LOG = OUT_DIR / "worldcup_player_props_log.csv"
-# Per-prop labelling after the historical backtest (N=3062 jugador-partido, internacionales 2024-25):
-# gol + asistencia GRADUARON (baten baseline en logloss+brier, ECE<=0.02) -> sección VALIDADOS, sin
-# "no fiarse". tarjeta + tiros NO graduaron limpio (su % depende de inputs constantes / está inflado)
-# -> sección EXPERIMENTAL (tarjeta con %, tiros solo como ORDEN, no probabilidad).
+# Per-prop labelling after the historical backtest (N=3062 jugador-partido, internacionales 2024-25)
+# AND the re-test con los inputs del MODELO DE STATS de producción (props_retest_stats_inputs_*):
+# gol + asistencia GRADUARON (baten baseline en logloss+brier, ECE<=0.02). tarjeta GRADÚA con los
+# inputs del modelo (bate baseline logloss+brier, ECE 0.032) -> VALIDADOS, con TOPE de display en la
+# cola (p>CARD_CAP_P: calibración optimista/n pequeño en la cola alta). tiros = RANKING validado
+# (orden fiable; su % NO se muestra: con inputs del modelo el logloss sigue < baseline). Sin sección
+# experimental: todo lo que se muestra está validado, los tiros solo como ORDEN (no probabilidad).
 VALID_LABEL = "📊 Validado en backtest histórico (probabilístico):"
-EXP_LABEL = "⚠️ Experimental · en pruebas:"
 VALID_NOTE = "  (Mundial neutral/eliminatoria: se sigue confirmando en vivo.)"
+CARD_CAP_P = 0.45                # display cap: card % above this is shown as "45%+"
+CARD_CAP_LABEL = "45%+"
+CARD_NOTE = ("  (Tarjeta: los % por encima de 45% se muestran como \"45%+\" — calibración "
+             "conservadora en la cola alta, muestra pequeña.)")
 _props_cache = None
+
+
+def _card_pct(p):
+    """Card % string with the tail cap: p>CARD_CAP_P -> '45%+' (no se muestra el valor inflado)."""
+    try:
+        p = float(p)
+    except (TypeError, ValueError):
+        return CARD_CAP_LABEL
+    return CARD_CAP_LABEL if p > CARD_CAP_P else f"{p * 100:.0f}%"
 
 
 def _load_props():
@@ -159,10 +174,11 @@ def _xi_status(sub):
 
 
 def props_lines(sub, name_fn=str):
-    """Two-section props block from this fixture's logged rows (the SAME numbers as the shadow log;
-    NOT recomputed). VALIDADOS = gol + asistencia (graduados por backtest, % fiables); EXPERIMENTAL =
-    tarjeta (%) + tiros (solo ORDEN, sin %). [] if no usable rows. Soft-fail: any error -> []; a
-    missing prop just omits its line. The XI provisional/confirmado tag rides the VALIDADOS header."""
+    """VALIDADOS props block from this fixture's logged rows (the SAME numbers as the shadow log;
+    NOT recomputed). All shown props are validados: gol + asistencia (ECE<=0.02), tarjeta (con TOPE
+    de display en p>CARD_CAP_P, calibración optimista en la cola) y tiros (solo ORDEN, sin %: su
+    logloss no bate baseline ni con los inputs del modelo). [] if no usable rows. Soft-fail: any
+    error -> []; a missing prop just omits its line. The XI tag rides the VALIDADOS header."""
     try:
         if sub is None or len(sub) == 0:
             return []
@@ -179,7 +195,6 @@ def props_lines(sub, name_fn=str):
             return list(t.iterrows())
 
         lines = []
-        # ---- VALIDADOS: gol + asistencia (backtest: baten baseline en logloss+brier, ECE<=0.02) ----
         valid = []
         gl = _top("p_goal", 3)
         if gl:
@@ -189,23 +204,24 @@ def props_lines(sub, name_fn=str):
         if asst:
             valid.append("  Asistencia: " + " · ".join(
                 f"{name_fn(rr['player'])} {float(rr['p_assist']) * 100:.0f}%" for _, rr in asst))
+        # tarjeta GRADUADA (inputs del modelo: bate baseline logloss+brier, ECE 0.032) con TOPE en cola
+        cd = _top("p_card", 2)
+        card_capped = False
+        if cd:
+            valid.append("  Tarjeta: " + " · ".join(
+                f"{name_fn(rr['player'])} {_card_pct(rr['p_card'])}" for _, rr in cd))
+            card_capped = any(float(rr["p_card"]) > CARD_CAP_P for _, rr in cd)
+        # tiros = ranking validado: orden fiable, % NO mostrado (no aporta skill de logloss)
+        sh = _top("exp_shots", 3)
+        if sh:
+            valid.append("  Tiros (orden, no probabilidad): "
+                         + " > ".join(name_fn(rr["player"]) for _, rr in sh))
         if valid:
             lines.append(VALID_LABEL + _xi_status(sub))
             lines += valid
             lines.append(VALID_NOTE)
-        # ---- EXPERIMENTAL: tarjeta (%) + tiros (ORDEN, sin % — su % está inflado/no calibrado) ----
-        exp = []
-        cd = _top("p_card", 2)
-        if cd:
-            exp.append("  Tarjeta: " + " · ".join(
-                f"{name_fn(rr['player'])} {float(rr['p_card']) * 100:.0f}%" for _, rr in cd))
-        sh = _top("exp_shots", 3)
-        if sh:
-            exp.append("  Tiros (orden, no probabilidad): "
-                       + " > ".join(name_fn(rr["player"]) for _, rr in sh))
-        if exp:
-            lines.append(EXP_LABEL)
-            lines += exp
+            if card_capped:
+                lines.append(CARD_NOTE)
         return lines
     except Exception:
         return []
@@ -303,7 +319,7 @@ def match_block(r, show_lineups=False):
         if pd.notna(lhs) and str(lhs) in LU:
             lines.append(f"Alineaciones — {h}: {LU[str(lhs)]} · {a}: {LU.get(str(las), 'pendiente')}")
 
-    # PLAYER PROPS (EXPERIMENTAL · shadow): compact, read from the SAME shadow props log
+    # PLAYER PROPS (shadow · validados): compact, read from the SAME shadow props log
     # (already logged pre-KO -> lock-at-KO coherent; NOT recomputed). Soft: no props -> no block.
     lines += props_block(r.get("fixture_id"))
     return lines

@@ -555,11 +555,13 @@ GRADUATION_NOTE = (
     "#   * GOL y ASISTENCIA -> GRADUADOS: baten al baseline en logloss Y brier, ECE<=0.02, % fiables\n"
     "#     (gol skill ll +20%/br +13%; asistencia +20%/+11%). Se muestran en la sección VALIDADOS de\n"
     "#     la ficha, sin la etiqueta 'no fiarse'.\n"
-    "#   * TARJETA y TIROS-A-PUERTA -> SIGUEN EN PRUEBAS: el backtest usó inputs CONSTANTES (tarjetas\n"
-    "#     y tiros de equipo) en vez del modelo de stats, así que su % está confundido/ inflado\n"
-    "#     (tiros: logloss peor que baseline, ECE 0.079; tarjeta: bate baseline pero % optimista en la\n"
-    "#     cola). Re-test pendiente con los inputs de producción. En la ficha: tarjeta con % EXPERIMENTAL,\n"
-    "#     tiros solo como ORDEN (no probabilidad).\n"
+    "#   * TARJETA -> GRADUADA tras el RE-TEST con los inputs del MODELO DE STATS de producción\n"
+    "#     (props_retest_stats_inputs_*): bate baseline en logloss Y brier, ECE 0.032. Se muestra en la\n"
+    "#     sección VALIDADOS, con TOPE de display en la cola (p>0.45 -> '45%+'): la calibración es\n"
+    "#     conservadora/optimista en la cola alta y con n pequeño, así que el % alto se capa.\n"
+    "#   * TIROS-A-PUERTA -> RANKING ONLY (no gradúa): incluso con los inputs del modelo el logloss\n"
+    "#     sigue por debajo del baseline (skill -5.9%; mejora ECE 0.089->0.059 y brier, pero no logloss).\n"
+    "#     En la ficha: solo ORDEN (no probabilidad), sin %.\n"
     "# Este scorecard EN VIVO sigue corriendo como CONFIRMACIÓN independiente sobre partidos del Mundial.\n"
 )
 
