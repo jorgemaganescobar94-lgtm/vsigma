@@ -5,12 +5,12 @@
 - eligible_fixtures: 1
 - api_calls_made: 1
 - cache_hits: 0
-- lineup_rows_written: 62
+- lineup_rows_written: 64
 - full_lineup_rows: 60
 - no_lineup_rows: 0
 - api_errors: 0
 - key_status: API_SPORTS
-- api_status_counts: NO_LINEUPS_RETURNED=1
+- api_status_counts: OK=1
 - auto_apply: NO
 - production_change: NO
 
@@ -77,6 +77,8 @@
 - Brusque vs Floresta | side=away | players=11 | formation= | status=OK
 - Ferroviária vs Inter De Limeira | side=home | players=11 | formation= | status=OK
 - Ferroviária vs Inter De Limeira | side=away | players=11 | formation= | status=OK
+- Novorizontino vs Vila Nova | side=home | players=8 | formation=4-2-3-1 | status=OK
+- Novorizontino vs Vila Nova | side=away | players=8 | formation=4-2-3-1 | status=OK
 
 ## Guardrails
 - Official lineup importer only reads API/player snapshots; it never fabricates players.
