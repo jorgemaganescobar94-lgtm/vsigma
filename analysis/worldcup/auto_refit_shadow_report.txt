@@ -1,7 +1,7 @@
 ========================================================================================
 AUTO-REFIT L3 — mode=APPLY (swap)
 ========================================================================================
-generated_at_utc: 2026-06-26T16:20:46+00:00
+generated_at_utc: 2026-06-26T20:55:14+00:00
 base rows=9191 | settled-in-log=31 | NEW rows=0 (-..-) | unmapped=0 | enriched=9191
 
 NO hay partidos liquidados nuevos fuera del dataset -> refit NO-OP.
