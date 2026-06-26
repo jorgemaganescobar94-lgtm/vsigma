@@ -1,0 +1,98 @@
+==========================================================================================
+QUAL-ENGINE AUDIT — honest conditional labels, EVERY current group (READ-ONLY, no API)
+==========================================================================================
+standings source : standings_2026-06-25.json
+format           : 12 groups -> top-2 + 8 best thirds advance
+
+------------------------------------------------------------------------------------------
+Group A:  Mexico=9(pj3)  South Africa=4(pj3)  South Korea=3(pj3)  Czechia=1(pj3)
+    Mexico                   [final]            ya clasificado (top-2, grupo terminado)
+    South Africa             [final]            ya clasificado (top-2, grupo terminado)
+    South Korea              [final]            3º — vivo como mejor tercero (pendiente del corte)
+    Czechia                  [final]            eliminado (4º)
+
+------------------------------------------------------------------------------------------
+Group B:  Switzerland=7(pj3)  Canada=4(pj3)  Bosnia & Herzegovina=4(pj3)  Qatar=1(pj3)
+    Switzerland              [final]            ya clasificado (top-2, grupo terminado)
+    Canada                   [final]            ya clasificado (top-2, grupo terminado)
+    Bosnia & Herzegovina     [final]            3º — vivo como mejor tercero (pendiente del corte)
+    Qatar                    [final]            eliminado (4º)
+
+------------------------------------------------------------------------------------------
+Group C:  Brazil=7(pj3)  Morocco=7(pj3)  Scotland=3(pj3)  Haiti=0(pj3)
+    Brazil                   [final]            ya clasificado (top-2, grupo terminado)
+    Morocco                  [final]            ya clasificado (top-2, grupo terminado)
+    Scotland                 [final]            3º — vivo como mejor tercero (pendiente del corte)
+    Haiti                    [final]            eliminado (4º)
+
+------------------------------------------------------------------------------------------
+Group D:  USA=6(pj2)  Australia=3(pj2)  Paraguay=3(pj2)  Türkiye=0(pj2)
+  última jornada — partidos: Türkiye vs USA  ||  Paraguay vs Australia
+    Türkiye                  [debe_ganar          ] debe ganar (y aun así seguiría vivo como mejor tercero si Australia y Paraguay no empatan)
+    USA                      [qualified           ] ya clasificado
+    Paraguay                 [gana_y_pasa         ] con el empate se jugaría la 2ª por diferencia de goles; gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero
+    Australia                [gana_y_pasa         ] con el empate se jugaría la 2ª por diferencia de goles; gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero
+
+------------------------------------------------------------------------------------------
+Group E:  Germany=6(pj2)  Ivory Coast=3(pj2)  Ecuador=1(pj2)  Curaçao=1(pj2)
+  última jornada — partidos: Ecuador vs Germany  ||  Curaçao vs Ivory Coast
+    Ecuador                  [vivo_mejor_tercero  ] con el empate seguiría vivo como mejor tercero si Curaçao no gana; ganando se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero)
+    Germany                  [qualified           ] ya clasificado
+    Curaçao                  [gana_y_pasa_cond    ] con el empate seguiría vivo como mejor tercero si Ecuador no gana; gana y pasa 2ª si Ecuador no gana (en otro caso, se jugaría la 2ª por diferencia de goles)
+    Ivory Coast              [le_vale_empate_cond ] le vale el empate si Ecuador no gana (en otro caso, se jugaría la 2ª por diferencia de goles); gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero si Ecuador no gana
+
+------------------------------------------------------------------------------------------
+Group F:  Netherlands=4(pj2)  Japan=4(pj2)  Sweden=3(pj2)  Tunisia=0(pj2)
+  última jornada — partidos: Japan vs Sweden  ||  Tunisia vs Netherlands
+    Japan                    [le_vale_empate      ] le vale el empate; perdiendo se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero)
+    Sweden                   [gana_y_pasa         ] con el empate se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero); gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero
+    Tunisia                  [debe_ganar          ] debe ganar (y aun así seguiría vivo como mejor tercero si Japan gana)
+    Netherlands              [le_vale_empate      ] le vale el empate; perdiendo aún pasa si Japan gana (en otro caso, se jugaría la 2ª por diferencia de goles)
+
+------------------------------------------------------------------------------------------
+Group G:  Egypt=4(pj2)  Iran=2(pj2)  Belgium=2(pj2)  New Zealand=1(pj2)
+  última jornada — partidos: Egypt vs Iran  ||  New Zealand vs Belgium
+    Egypt                    [le_vale_empate      ] le vale el empate; perdiendo aún pasa si Belgium y New Zealand empatan (en otro caso, se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero))
+    Iran                     [gana_y_pasa         ] con el empate se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero); gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero
+    New Zealand              [gana_y_pasa_cond    ] con el empate seguiría vivo como mejor tercero si Egypt gana; gana y pasa 2ª si Iran no gana (en otro caso, se jugaría la 2ª por diferencia de goles)
+    Belgium                  [le_vale_empate_cond ] le vale el empate si Egypt gana (en otro caso, se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero)); gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero si Egypt gana
+
+------------------------------------------------------------------------------------------
+Group H:  Spain=4(pj2)  Uruguay=2(pj2)  Cape Verde Islands=2(pj2)  Saudi Arabia=1(pj2)
+  última jornada — partidos: Uruguay vs Spain  ||  Cape Verde Islands vs Saudi Arabia
+    Uruguay                  [gana_y_pasa         ] con el empate se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero); gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero
+    Spain                    [le_vale_empate      ] le vale el empate; perdiendo aún pasa si Cape Verde Islands y Saudi Arabia empatan (en otro caso, se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero))
+    Cape Verde Islands       [le_vale_empate_cond ] le vale el empate si Spain gana (en otro caso, se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero)); gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero si Spain gana
+    Saudi Arabia             [gana_y_pasa_cond    ] con el empate seguiría vivo como mejor tercero si Spain gana; gana y pasa 2ª si Uruguay no gana (en otro caso, se jugaría la 2ª por diferencia de goles)
+
+------------------------------------------------------------------------------------------
+Group I:  France=6(pj2)  Norway=6(pj2)  Senegal=0(pj2)  Iraq=0(pj2)
+  última jornada — partidos: Senegal vs Iraq  ||  Norway vs France
+    Senegal                  [debe_ganar          ] debe ganar (y aun así seguiría vivo como mejor tercero)
+    Iraq                     [debe_ganar          ] debe ganar (y aun así seguiría vivo como mejor tercero)
+    Norway                   [qualified           ] ya clasificado
+    France                   [qualified           ] ya clasificado
+
+------------------------------------------------------------------------------------------
+Group J:  Argentina=6(pj2)  Austria=3(pj2)  Algeria=3(pj2)  Jordan=0(pj2)
+  última jornada — partidos: Algeria vs Austria  ||  Jordan vs Argentina
+    Algeria                  [gana_y_pasa         ] con el empate se jugaría la 2ª por diferencia de goles; gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero
+    Austria                  [gana_y_pasa         ] con el empate se jugaría la 2ª por diferencia de goles; gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero
+    Jordan                   [debe_ganar          ] debe ganar (y aun así seguiría vivo como mejor tercero si Austria y Algeria no empatan)
+    Argentina                [qualified           ] ya clasificado
+
+------------------------------------------------------------------------------------------
+Group K:  Colombia=6(pj2)  Portugal=4(pj2)  Congo DR=1(pj2)  Uzbekistan=0(pj2)
+  última jornada — partidos: Colombia vs Portugal  ||  Congo DR vs Uzbekistan
+    Colombia                 [qualified           ] ya clasificado
+    Portugal                 [le_vale_empate      ] le vale el empate; perdiendo aún pasa si Congo DR no gana (en otro caso, se jugaría la 2ª por diferencia de goles)
+    Congo DR                 [vivo_mejor_tercero  ] con el empate seguiría vivo como mejor tercero; ganando se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero)
+    Uzbekistan               [debe_ganar          ] debe ganar (y aun así seguiría vivo como mejor tercero)
+
+------------------------------------------------------------------------------------------
+Group L:  England=4(pj2)  Ghana=4(pj2)  Croatia=3(pj2)  Panama=0(pj2)
+  última jornada — partidos: Croatia vs Ghana  ||  Panama vs England
+    Croatia                  [gana_y_pasa         ] con el empate se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero); gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero
+    Ghana                    [le_vale_empate      ] le vale el empate; perdiendo se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero)
+    Panama                   [debe_ganar          ] debe ganar (y aun así seguiría vivo como mejor tercero si Ghana gana)
+    England                  [le_vale_empate      ] le vale el empate; perdiendo aún pasa si Ghana gana (en otro caso, se jugaría la 2ª por diferencia de goles)
