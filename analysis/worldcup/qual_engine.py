@@ -13,11 +13,13 @@ TWO layers live here:
       `phrase_es()` turns that into an honest, conditional Spanish sentence. This is the engine the
       validation and tests exercise; phase 2 will wire it into the ficha.
 
-  (2) LEGACY shim (kept verbatim, DO NOT trust its single label): `classify_team()` + `LABEL_ES` +
-      `FEATURES`. The live ficha (build_worldcup_cards.compute_group_info) still calls it. It collapses
-      each team to ONE tag and is exactly the thing being replaced (it mislabels e.g. a team that can go
-      through 2nd directly as merely "alive as third", and overstates a 4-pt leader as "qualified"). Left
-      UNTOUCHED so production behavior does not change in this read-only phase; rewire it in phase 2.
+  (2) LEGACY shim (DEPRECATED — DO NOT trust its single label, DO NOT use in new code): `classify_team()`
+      + `LABEL_ES` + `FEATURES`. As of phase 2 PRODUCTION NO LONGER calls it — the ficha info line
+      (build_worldcup_cards.compute_group_info) and the multiplier path (worldcup_context_shadow.
+      classify_fixture) both use the honest engine above. It is kept ONLY for the offline research artifact
+      `scenario_feature_backtest.py` (which imports classify_team/FEATURES); remove once that is migrated.
+      It collapses each team to ONE tag and mislabels (e.g. a 2nd-direct team as merely "alive as third",
+      a 4-pt leader as "qualified").
 
 KEY HONESTY RULE (the bug being fixed): a team is qualified FOR CERTAIN in a branch ONLY when it is top-2
 by POINTS (GD-independent). A points tie at the boundary (GD decides 2nd vs 3rd) and a best-third spot
@@ -289,8 +291,8 @@ def short_tag(scenario):
 
 
 # ============================================================================================
-# (2) LEGACY shim — kept verbatim for the live ficha (build_worldcup_cards.compute_group_info).
-#     DO NOT trust its single collapsed label; it is the thing being replaced. Phase 2 removes it.
+# (2) LEGACY shim — DEPRECATED. Production no longer uses it (phase 2). Kept ONLY for the offline
+#     scenario_feature_backtest.py. Do NOT use in new code; prefer analyze_team + phrase_es / short_tag.
 # ============================================================================================
 
 FEATURES = ["qualified", "eliminated", "controls_destiny", "draw_enough", "must_win",

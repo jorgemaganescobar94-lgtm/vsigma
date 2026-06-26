@@ -70,12 +70,44 @@ def test_knockout_is_not_adjusted():
     assert adj is None        # knockout -> trivial -> no ctx_* -> pure L3
 
 
-def test_trivial_group_is_not_adjusted():
-    # both teams already clinched (A,B=6; C,D=0 ceiling 3) -> dead rubber -> intrascendente (×1.0)
-    # -> trivial -> None (no adjustment written).
+def test_two_qualified_group_is_adjusted_092():
+    # FASE 2 (un solo motor, sin 'intrascendente'): ambos ya clasificados (A,B=6; C,D=0 techo 3) ->
+    # CADA UNO qualified ×0.92 -> NON-trivial -> ctx_* SÍ se escribe (rotación), no None.
     g = {"G": _table([("A", 6, 2, 3), ("B", 6, 2, 3), ("C", 0, 2, -3), ("D", 0, 2, -3)])}
     tg = {k: "G" for k in ("A", "B", "C", "D")}
-    assert BC.compute_context_adjustment(C, FakePred(), g, tg, "Group Stage - 3", "A", "B", OM) is None
+    adj = BC.compute_context_adjustment(C, FakePred(), g, tg, "Group Stage - 3", "A", "B", OM)
+    assert adj is not None
+    assert adj["ctx_mult_home"] == C.MULT["qualified"] == 0.92
+    assert "ya clasificado" in adj["context_note"]
+
+
+def test_conditional_group_is_pure_l3():
+    # REVERSA por escenario: un grupo donde AMBOS lados son CONDICIONALES (P y A, ambos a 3; ganar
+    # asegura 2ª pero el empate solo se juega por diferencia de goles -> tag 'gana_y_pasa', neutral)
+    # -> mult 1.0 ambos -> trivial -> None -> la ficha queda en L3 puro (sin ctx_*). Réplica del caso
+    # real Paraguay/Australia. 12 grupos (formato real con terceros).
+    g = {"G": _table([("P", 3, 2, 0), ("A", 3, 2, 0), ("Lead", 6, 2, 5), ("T", 0, 2, -5)])}
+    for i in range(11):
+        g[f"F{i}"] = _table([(f"f{i}a", 0, 2, 0), (f"f{i}b", 0, 2, 0),
+                             (f"f{i}c", 0, 2, 0), (f"f{i}d", 0, 2, 0)])
+    tg = {k: "G" for k in ("P", "A", "Lead", "T")}
+    assert BC.compute_context_adjustment(C, FakePred(), g, tg, "Group Stage - 3", "P", "A", OM) is None
+
+
+def test_group_info_line_is_honest_and_conditional():
+    # (A) la línea "Contexto de grupo" usa phrase_es (motor honesto): condicional, no etiqueta única.
+    # Grupo H real: Cabo Verde 'le vale el empate si España gana'; Arabia 'gana y pasa 2ª si Uruguay
+    # no gana' (la vía 2ª-directa que el shim legacy ocultaba).
+    gh = {"Group H": _table([("Spain", 4, 2, 4), ("Uruguay", 2, 2, 0),
+                             ("Cape Verde Islands", 2, 2, 0), ("Saudi Arabia", 1, 2, -4)])}
+    for i in range(11):   # 12-group format (8 best thirds), as in the real World Cup standings
+        gh[f"F{i}"] = _table([(f"f{i}a", 0, 2, 0), (f"f{i}b", 0, 2, 0),
+                             (f"f{i}c", 0, 2, 0), (f"f{i}d", 0, 2, 0)])
+    line = BC.compute_group_info(gh, "Cape Verde Islands", "Saudi Arabia")
+    assert line is not None
+    assert "Cape Verde Islands le vale el empate si Spain gana" in line
+    cv, saudi = line.split(" · ")           # one honest clause per team
+    assert saudi.startswith("Saudi Arabia") and "gana y pasa 2ª si Uruguay no gana" in saudi
 
 
 def test_soft_fail_returns_none():

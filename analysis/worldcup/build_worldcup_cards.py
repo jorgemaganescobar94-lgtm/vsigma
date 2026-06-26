@@ -42,9 +42,9 @@ WC_SEASON = 2026
 # intacto); la ficha muestra ctx_* cuando existen. CONTEXT_LIVE=False -> rollback instantáneo a L3
 # puro (no se escriben columnas ctx_*). El A/B de sombra sigue corriendo aparte como panel de control.
 CONTEXT_LIVE = True
-SCENARIO_ES = {"ya_clasificado": "ya clasificado", "eliminado": "eliminado",
-               "debe_ganar": "debe ganar", "le_vale_empate": "le vale el empate",
-               "intrascendente": "intrascendente"}
+# nota del MULTIPLICADOR (solo aparecen los escenarios que ajustan, mult != 1.0). short_tag honesto.
+SCENARIO_ES = {"qualified": "ya clasificado", "eliminated": "eliminado",
+               "debe_ganar": "debe ganar", "le_vale_empate": "le vale el empate"}
 
 
 def lineup_status(x):
@@ -123,9 +123,11 @@ def compute_context_adjustment(ctxmod, l3pred, ctx_groups, ctx_team_group, rnd, 
 
 
 def compute_group_info(ctx_groups, home, away):
-    """INFORMATION line (NOT the prediction) from the corrected qualification engine (qual_engine:
-    FIFA tiebreakers, best thirds). Returns a readable string for a LAST-MATCHDAY 4-team group with
-    both teams, else None. Soft-fail -> None. Independent of CONTEXT_LIVE (it is information)."""
+    """INFORMATION line (NOT the prediction) from the HONEST qualification engine (qual_engine:
+    analyze_team + phrase_es — FIFA tiebreakers, best thirds, CONDICIONAL). Returns a readable string
+    for a LAST-MATCHDAY 4-team group with both teams (e.g. 'Arabia gana y pasa 2ª si Uruguay no gana'),
+    else None. Soft-fail -> None. Independent of CONTEXT_LIVE (it is information). Single engine: this is
+    the SAME analyze_team the multiplier path uses."""
     try:
         import qual_engine  # noqa: E402  (lightweight, pure-Python; no API)
         gh = next((g for g, rows in ctx_groups.items() if any(r.get("name") == home for r in rows)), None)
@@ -135,14 +137,15 @@ def compute_group_info(ctx_groups, home, away):
         rows = ctx_groups[gh]
         if len(rows) != 4 or any(int(r.get("played", 0)) != 2 for r in rows):
             return None                          # only the LAST group matchday (each played 2)
-        table = {r["name"]: {"pts": float(r["points"]), "played": int(r.get("played", 0))} for r in rows}
+        table = {r["name"]: {"pts": float(r["points"])} for r in rows}
         all_tables = [{rr["name"]: {"pts": float(rr["points"])} for rr in rws}
                       for rws in ctx_groups.values() if len(rws) == 4]
         n_groups = len(all_tables)
-        _, lab_h = qual_engine.classify_team(table, home, away, home, all_tables, n_groups)
-        _, lab_a = qual_engine.classify_team(table, home, away, away, all_tables, n_groups)
+        # this fixture is home vs away; the OTHER two teams are the PARALLEL match (analyze_team handles it)
+        sc_h = qual_engine.analyze_team(table, (home, away), home, all_tables, n_groups)
+        sc_a = qual_engine.analyze_team(table, (home, away), away, all_tables, n_groups)
         parts = []
-        ph, pa = qual_engine.LABEL_ES.get(lab_h, ""), qual_engine.LABEL_ES.get(lab_a, "")
+        ph, pa = qual_engine.phrase_es(sc_h), qual_engine.phrase_es(sc_a)
         if ph:
             parts.append(f"{home} {ph}")
         if pa:

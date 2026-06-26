@@ -12,14 +12,17 @@ THE MULTIPLIERS ARE HYPOTHESES, NOT TRUTHS. The sign is genuinely ambiguous: 'al
 rotate OR play normally; 'must-win' may attack more OR sit cautious. We do NOT assume it helps; the
 scorecard is the judge.
 
-Scenario -> multiplier on THAT team's own attacking xG (documented defaults, see MULT):
-  ya_clasificado    ×0.92   (menos intensidad / rotación)
-  eliminado         ×0.95   (poco que jugar)
-  debe_ganar        ×1.08   (va por detrás, sale a por el partido)
-  le_vale_empate    ×0.97   (le sirve el empate, algo más conservador)
-  partido_decisivo  ×1.00   (todo en juego, intensidad normal -> sin cambio)
-  intrascendente    ×1.00   (NEUTRALIZADO: el backtest mostró que ×0.90 empeora -> sin ajuste)
-  knockout/unknown  ×1.00   (sin contexto de grupo -> sin ajuste)
+FASE 2 — UN SOLO MOTOR: el escenario lo decide el motor HONESTO (qual_engine.analyze_team +
+short_tag), el MISMO que la línea de información de la ficha. El multiplicador se aplica SOLO a los
+4 escenarios CIERTOS por puntos; TODO lo condicional/incierto -> ×1.0 NEUTRAL (si no es claro, no se
+ajusta). short_tag -> multiplier on THAT team's own attacking xG (documented defaults, see MULT):
+  qualified            ×0.92   (ya clasificado: menos intensidad / rotación)
+  le_vale_empate       ×0.97   (le sirve el empate seguro, algo más conservador)
+  debe_ganar           ×1.08   (debe ganar sí o sí, sale a por el partido)
+  eliminated           ×0.95   (eliminado: poco que jugar)
+  le_vale_empate_cond / gana_y_pasa / gana_y_pasa_cond / vivo_mejor_tercero / depende  ×1.00 (CONDICIONAL
+                       o incierto -> NO se ajusta)
+  no_ultima_jornada / knockout / unknown                                               ×1.00 (sin escenario)
 
 Subcommands:  predict (NS only, anti-hindsight, lock-at-KO) · settle (after FT) ·
               scorecard (context-adjusted VS pure L3, ONLY over NON-TRIVIAL scenarios).
@@ -50,6 +53,7 @@ except Exception:
     pass
 
 import l3_offline  # noqa: E402  (reuse the exact L3 Poisson + calibration machinery)
+import qual_engine as Q  # noqa: E402  (THE honest qualification engine — single source of truth)
 
 CARDS = OUT_DIR / "worldcup_cards.csv"
 LOG = OUT_DIR / "worldcup_context_shadow_log.csv"
@@ -63,19 +67,19 @@ EPS = 1e-15
 SMALL_N = 20                      # graduation threshold over NON-TRIVIAL scenarios
 FINISHED = {"FT", "AET", "PEN"}
 
-# scenario -> multiplier on the team's OWN attacking xG. EXPLICIT hypotheses (sign ambiguous).
-# 'tercero_en_disputa' is NEUTRAL (1.0): a 3rd-placed team may still advance as a best third in
-# the 48-team format (cross-group math we do not compute), so we refuse to claim eliminated/must-win
-# and leave the prediction untouched rather than pollute the shadow signal with a wrong scenario.
-# 'intrascendente' NEUTRALIZADO a 1.00 (antes 0.90): el backtest histórico
-# (context_shadow_backtest.py, 162 partidos de última jornada de torneos de selecciones) mostró que
-# ×0.90 EMPEORA de forma consistente (mejora en solo 18% de 11 partidos; Δlogloss −0.0245). 1.0 =
-# sin ajuste es el default honesto. El resto de multiplicadores se mantienen; el contexto sigue EN
-# SOMBRA (no afecta predicciones en vivo).
+# short_tag (qual_engine.short_tag) -> multiplier on the team's OWN attacking xG. EXPLICIT hypotheses
+# (sign ambiguous; the scorecard is the only judge). PRINCIPIO HONESTO: ajustar SOLO cuando el escenario
+# es CIERTO por puntos. Todo lo CONDICIONAL/incierto (el empate depende del paralelo, la 2ª se juega por
+# diferencia de goles, plaza de mejor tercero, etc.) -> 1.0 NEUTRAL: si no es claro, no se ajusta. Esto
+# REEMPLAZA el clasificador heurístico anterior (un solo motor = qual_engine). No hay 'intrascendente':
+# un partido entre dos ya-clasificados aplica qualified ×0.92 a cada uno (rotación), no una excepción.
 MULT = {
-    "ya_clasificado": 0.92, "eliminado": 0.95, "debe_ganar": 1.08, "le_vale_empate": 0.97,
-    "partido_decisivo": 1.00, "intrascendente": 1.00, "tercero_en_disputa": 1.00,
-    "knockout": 1.00, "unknown": 1.00,
+    "qualified": 0.92, "le_vale_empate": 0.97, "debe_ganar": 1.08, "eliminated": 0.95,
+    # condicional / incierto -> sin ajuste
+    "le_vale_empate_cond": 1.00, "gana_y_pasa": 1.00, "gana_y_pasa_cond": 1.00,
+    "vivo_mejor_tercero": 1.00, "depende": 1.00,
+    # fuera de última jornada / no es grupo / sin tabla -> sin ajuste
+    "no_ultima_jornada": 1.00, "knockout": 1.00, "unknown": 1.00,
 }
 
 LOG_COLUMNS = [
@@ -175,139 +179,39 @@ def _num(v):
         return 0.0
 
 
-# --------------------------------------------------------------- scenario classification
-# PRINCIPIO (honesto y conservador): asignar un escenario NO neutral (mult != 1.0) SOLO cuando es
-# MATEMÁTICAMENTE CIERTO POR PUNTOS. Cuando dependa de la diferencia de goles, del head-to-head o de
-# resultados ajenos inciertos -> NEUTRAL (×1.0, sin ajuste). Mejor no ajustar que ajustar dudoso.
-_RES = {"W": (3, 0), "D": (1, 1), "L": (0, 3)}   # (puntos del local, puntos del visitante) del partido
-
-
-def _certain_top2(fp, T):
-    """¿T está SEGURO en top-2 SOLO POR PUNTOS en esta config de puntos finales? (sin desempate por GD:
-    una igualdad a puntos con un rival cuenta EN CONTRA de la certeza). Cierto sii a lo sumo 1 rival
-    está por encima o empatado a puntos con T (peor caso de GD: empatados rankeados por encima)."""
-    p = fp[T]
-    above = sum(1 for n, q in fp.items() if n != T and q > p)
-    equal = sum(1 for n, q in fp.items() if n != T and q == p)
-    return (above + equal) <= 1
-
-
-def _certain_last(fp, T):
-    """¿T es CIERTAMENTE el ÚLTIMO (4º) por puntos? -> ni top-2 ni 3º (no puede ser mejor tercero).
-    Cierto sii TODOS los demás tienen estrictamente MÁS puntos que T (en peor caso de GD sigue 4º)."""
-    p = fp[T]
-    above = sum(1 for n, q in fp.items() if n != T and q > p)
-    return above == len(fp) - 1
-
-
-def _scenario_last_matchday(table, home, away):
-    """Escenarios (scen_home, scen_away) por ENUMERACIÓN del partido paralelo, o None si NO es una
-    última jornada limpia de grupo de 4 (los 4 con exactamente 1 partido por jugar).
-
-    El grupo son 4 {home, away, X, Y}; este partido = home vs away, el PARALELO = X vs Y. Se enumeran
-    los 9 resultados (W/D/L de ambos), se calculan los puntos finales y se determina top-2 SOLO POR
-    PUNTOS. Mejores terceros: NO se calcula cross-group; si un no-top-2 PODRÍA ser 3º -> neutral
-    (tercero_en_disputa, ×1.0), nunca 'eliminado'/'debe_ganar'."""
-    if len(table) != 4:
-        return None
-    per_team = len(table) - 1            # = 3
-    if any(int(r.get("played", 0)) != per_team - 1 for r in table):   # todos con exactamente 1 por jugar
-        return None
-    names = [r["name"] for r in table]
-    if home not in names or away not in names:
-        return None
-    others = [n for n in names if n not in (home, away)]
-    if len(others) != 2:
-        return None
-    X, Y = others
-    pts0 = {r["name"]: float(r["points"]) for r in table}
-    configs = []                          # [(resultado_local, {equipo: puntos_finales})]
-    for hr in ("W", "D", "L"):
-        ph, pa = _RES[hr]
-        for pr in ("W", "D", "L"):
-            px, py = _RES[pr]
-            fp = dict(pts0)
-            fp[home] += ph; fp[away] += pa; fp[X] += px; fp[Y] += py
-            configs.append((hr, fp))
-
-    def res_of(T, hr):                    # resultado de T dado el resultado del LOCAL
-        return hr if T == home else {"W": "L", "D": "D", "L": "W"}[hr]
-
-    def scen(T):
-        byres = {"W": [], "D": [], "L": []}
-        for hr, fp in configs:
-            byres[res_of(T, hr)].append(fp)
-        if all(_certain_top2(fp, T) for _, fp in configs):
-            return "ya_clasificado"                       # top-2 cierto en TODOS los resultados
-        if byres["D"] and all(_certain_top2(fp, T) for fp in byres["D"]):
-            return "le_vale_empate"                       # el EMPATE garantiza top-2 por puntos
-        win_safe = bool(byres["W"]) and all(_certain_top2(fp, T) for fp in byres["W"])
-        nonwin_last = all(_certain_last(fp, T) for fp in byres["D"] + byres["L"])
-        if win_safe and nonwin_last:
-            # 'debe_ganar' EXACTO: ganar garantiza top-2 y NO ganar -> 4º seguro (sin opción de mejor
-            # tercero). Demostrablemente INALCANZABLE en grupo de 4 (el empate del paralelo siempre
-            # crea empate/adelantamiento) -> en la práctica nunca se asigna; se mantiene por corrección.
-            return "debe_ganar"
-        if all(_certain_last(fp, T) for _, fp in configs):
-            return "eliminado"                            # 4º seguro en TODOS los resultados
-        # ni top-2 seguro ni 4º seguro: podría ser 3º -> posible mejor tercero -> NEUTRAL
-        could_be_third = any(not _certain_top2(fp, T) and not _certain_last(fp, T) for _, fp in configs)
-        return "tercero_en_disputa" if could_be_third else "partido_decisivo"
-
-    return scen(home), scen(away)
-
-
-def _scenario_bounds(table, name):
-    """Escenario CONSERVADOR por COTAS de puntos para casos que NO son última jornada limpia de 4
-    (jornadas previas rem>1, grupos no-de-4). Solo certifica 'ya_clasificado' (top-2 garantizado por
-    puntos en el peor caso) o 'eliminado' (4º seguro: todos los demás ya por encima de mi techo); en
-    cualquier otro caso NEUTRAL. Respeta mejores terceros (no 'eliminado' si podría ser 3º)."""
-    per_team = max(len(table) - 1, 1)
-    me = next((r for r in table if r["name"] == name), None)
-    if me is None:
-        return "partido_decisivo"
-    rem_me = max(per_team - int(me.get("played", 0)), 0)
-    my_floor = float(me["points"])
-    my_ceil = my_floor + 3 * rem_me
-    others = [r for r in table if r["name"] != name]
-    # ya_clasificado: menos de ADVANCE rivales pueden ALCANZAR mi suelo (igualdad cuenta en contra)
-    can_reach = sum(1 for o in others
-                    if float(o["points"]) + 3 * max(per_team - int(o.get("played", 0)), 0) >= my_floor)
-    if can_reach < ADVANCE:
-        return "ya_clasificado"
-    # eliminado: todos los demás ya tienen MÁS puntos que mi techo -> 4º seguro (ni top-2 ni 3º)
-    if sum(1 for o in others if float(o["points"]) > my_ceil) >= len(table) - 1:
-        return "eliminado"
-    return "partido_decisivo"
-
-
+# --------------------------------------------------------------- scenario classification (HONEST ENGINE)
+# UN SOLO MOTOR: el escenario lo decide qual_engine.analyze_team + short_tag (el MISMO que la línea de
+# información de la ficha). El multiplicador se asigna por short_tag via MULT; todo lo condicional/incierto
+# queda en 1.0. Solo se clasifica la ÚLTIMA jornada limpia de un grupo de 4; cualquier otra cosa -> neutral.
 def classify_fixture(round_str, home, away, groups, team_group, advance=ADVANCE):
-    """(scenario_home, scenario_away, mult_home, mult_away, nontrivial). Knockouts / missing or
-    cross-group standings -> 'knockout'/'unknown' (×1.0). Última jornada de grupo de 4: enumerador
-    del partido paralelo (matemáticamente cierto por puntos). Otros casos: cotas conservadoras.
-    Dead rubber (ambos resueltos) -> 'intrascendente' (neutralizado, ×1.0)."""
+    """(tag_home, tag_away, mult_home, mult_away, nontrivial) usando el motor honesto.
+
+    tag_* es el short_tag de qual_engine (qualified · le_vale_empate · debe_ganar · eliminated ·
+    le_vale_empate_cond · gana_y_pasa · gana_y_pasa_cond · vivo_mejor_tercero · depende) o uno de los
+    neutrales estructurales (no_ultima_jornada · knockout · unknown). Solo los 4 CIERTOS por puntos
+    (qualified/le_vale_empate/debe_ganar/eliminated) llevan mult != 1.0 -> nontrivial. NO toca knockouts,
+    grupos cross-table, jornadas previas (rem>1) ni grupos no-de-4 (todos neutrales)."""
     if "group" not in str(round_str).lower():
         return "knockout", "knockout", 1.0, 1.0, False
     gh, ga = team_group.get(home), team_group.get(away)
-    table = groups.get(gh) if gh else None
-    # ambos equipos deben estar en el MISMO grupo reconstruido con tabla completa
-    if not table or gh != ga or not any(r.get("name") == home for r in table) \
-            or not any(r.get("name") == away for r in table):
+    rows = groups.get(gh) if gh else None
+    if not rows or gh != ga or len(rows) != 4 \
+            or not any(r.get("name") == home for r in rows) \
+            or not any(r.get("name") == away for r in rows):
         return "unknown", "unknown", 1.0, 1.0, False
+    per_team = len(rows) - 1                                   # 3 partidos por equipo en un grupo de 4
+    if any(int(r.get("played", 0)) != per_team - 1 for r in rows):   # solo la ÚLTIMA jornada (1 por jugar)
+        return "no_ultima_jornada", "no_ultima_jornada", 1.0, 1.0, False
 
-    enum = _scenario_last_matchday(table, home, away)
-    if enum is not None:
-        sh, sa = enum
-    else:
-        sh, sa = _scenario_bounds(table, home), _scenario_bounds(table, away)
-
-    # dead rubber: AMBOS resueltos (clasificado o eliminado) -> amistoso de facto -> intrascendente
-    if sh in ("ya_clasificado", "eliminado") and sa in ("ya_clasificado", "eliminado"):
-        sh = sa = "intrascendente"
-
-    mh, ma = MULT.get(sh, 1.0), MULT.get(sa, 1.0)
+    table = {r["name"]: {"pts": float(r["points"])} for r in rows}
+    all_tables = [{r["name"]: {"pts": float(r["points"])} for r in rws}
+                  for rws in groups.values() if len(rws) == 4]   # cota cross-group de mejores terceros
+    n_groups = len(all_tables)
+    tag_h = Q.short_tag(Q.analyze_team(table, (home, away), home, all_tables, n_groups))
+    tag_a = Q.short_tag(Q.analyze_team(table, (home, away), away, all_tables, n_groups))
+    mh, ma = MULT.get(tag_h, 1.0), MULT.get(tag_a, 1.0)
     nontrivial = (mh != 1.0) or (ma != 1.0)
-    return sh, sa, mh, ma, nontrivial
+    return tag_h, tag_a, mh, ma, nontrivial
 
 
 # --------------------------------------------------------------- prediction (pure math)

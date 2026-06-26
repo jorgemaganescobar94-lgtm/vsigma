@@ -47,6 +47,26 @@ Tabla completa de los 12 grupos: `qual_engine_audit_report.txt` (auditada a mano
 - `test_qual_engine_honest.py` — 16 tests (una por categoría + 4 casos reales + cotas). 16/16 OK.
 - La suite legacy `test_qual_engine.py` sigue pasando 15/15 (la ficha no se tocó).
 
-## FASE 2 (pendiente de aprobación)
-Sustituir `compute_group_info` (y, si procede, la pata de predicción) por `analyze_team`/`phrase_es`,
-retirando el shim legacy `classify_team`/`LABEL_ES`.
+## FASE 2 — APLICADA (🔴 aprobada por Jorge, 2026-06-27)
+Un solo motor (`analyze_team`) cableado en producción; el shim legacy queda DEPRECADO (solo lo usa el
+backtest offline `scenario_feature_backtest`).
+
+**(A) Línea de información de la ficha** — `build_worldcup_cards.compute_group_info` usa ahora
+`analyze_team` + `phrase_es`: la línea "ℹ️ Contexto de grupo" es la honesta y CONDICIONAL
+(p.ej. *"Arabia gana y pasa 2ª si Uruguay no gana"*, *"Cabo Verde le vale el empate si España gana"*).
+
+**(B) Multiplicador de predicción** — `worldcup_context_shadow.classify_fixture` usa el MISMO motor
+(`analyze_team` → `short_tag`) y mapea por `MULT`:
+- `qualified` ×0.92 · `le_vale_empate` ×0.97 · `debe_ganar` ×1.08 · `eliminated` ×0.95.
+- TODO lo condicional/incierto (`le_vale_empate_cond`, `gana_y_pasa`, `gana_y_pasa_cond`,
+  `vivo_mejor_tercero`, `depende`) y los neutrales estructurales (`no_ultima_jornada`, `knockout`,
+  `unknown`) → ×1.0 NEUTRAL. Se eliminó `intrascendente` (dos clasificados → cada uno ×0.92).
+- Se aplica por el camino `ctx_*` existente (`CONTEXT_LIVE=True`, `our_*`=L3 puro intacto); el A/B de
+  sombra y la maquinaria anti-hindsight/lock-at-KO/settle/scorecard quedan SIN tocar. No toca
+  total-goles/props/calibración/1X2. `CONTEXT_LIVE=False` → reversa instantánea a L3 puro.
+
+**Validación** (`qual_engine_fase2_validation_report.txt`): los 12 grupos con la línea de ficha real y
+la decisión de multiplicador por partido. Sobre las 9 jornadas finales: **13 partidos ajustan**
+(algún equipo cierto por puntos) · **5 neutrales** (todos condicionales, incl. Grupo H Cabo Verde vs
+Arabia). Tests: honest 16/16 · context-shadow 23/23 · context-live 14/14 · qual-engine (legacy+info)
+15/15.

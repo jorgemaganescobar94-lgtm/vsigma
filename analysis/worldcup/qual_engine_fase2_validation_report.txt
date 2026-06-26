@@ -1,0 +1,92 @@
+================================================================================================
+FASE 2 VALIDATION — ficha info line (compute_group_info) + multiplier (classify_fixture)
+================================================================================================
+standings: standings_2026-06-25.json | last-matchday groups: 9 | format: 12 grupos, 8 terceros
+
+------------------------------------------------------------------------------------------------
+Group D:  USA=6  Australia=3  Paraguay=3  Türkiye=0
+  ℹ️ Contexto de grupo [Türkiye vs USA]: Türkiye debe ganar (y aun así seguiría vivo como mejor tercero si Australia y Paraguay no empatan) · USA ya clasificado
+     multiplicador -> Türkiye: debe_ganar ×1.08  |  USA: qualified ×0.92   => AJUSTA
+  ℹ️ Contexto de grupo [Paraguay vs Australia]: Paraguay con el empate se jugaría la 2ª por diferencia de goles; gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero · Australia con el empate se jugaría la 2ª por diferencia de goles; gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero
+     multiplicador -> Paraguay: gana_y_pasa ×1.0  |  Australia: gana_y_pasa ×1.0   => NEUTRAL
+
+------------------------------------------------------------------------------------------------
+Group E:  Germany=6  Ivory Coast=3  Ecuador=1  Curaçao=1
+  ℹ️ Contexto de grupo [Ecuador vs Germany]: Ecuador con el empate seguiría vivo como mejor tercero si Curaçao no gana; ganando se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero) · Germany ya clasificado
+     multiplicador -> Ecuador: vivo_mejor_tercero ×1.0  |  Germany: qualified ×0.92   => AJUSTA
+  ℹ️ Contexto de grupo [Curaçao vs Ivory Coast]: Curaçao con el empate seguiría vivo como mejor tercero si Ecuador no gana; gana y pasa 2ª si Ecuador no gana (en otro caso, se jugaría la 2ª por diferencia de goles) · Ivory Coast le vale el empate si Ecuador no gana (en otro caso, se jugaría la 2ª por diferencia de goles); gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero si Ecuador no gana
+     multiplicador -> Curaçao: gana_y_pasa_cond ×1.0  |  Ivory Coast: le_vale_empate_cond ×1.0   => NEUTRAL
+
+------------------------------------------------------------------------------------------------
+Group F:  Netherlands=4  Japan=4  Sweden=3  Tunisia=0
+  ℹ️ Contexto de grupo [Japan vs Sweden]: Japan le vale el empate; perdiendo se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero) · Sweden con el empate se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero); gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero
+     multiplicador -> Japan: le_vale_empate ×0.97  |  Sweden: gana_y_pasa ×1.0   => AJUSTA
+  ℹ️ Contexto de grupo [Tunisia vs Netherlands]: Tunisia debe ganar (y aun así seguiría vivo como mejor tercero si Japan gana) · Netherlands le vale el empate; perdiendo aún pasa si Japan gana (en otro caso, se jugaría la 2ª por diferencia de goles)
+     multiplicador -> Tunisia: debe_ganar ×1.08  |  Netherlands: le_vale_empate ×0.97   => AJUSTA
+
+------------------------------------------------------------------------------------------------
+Group G:  Egypt=4  Iran=2  Belgium=2  New Zealand=1
+  ℹ️ Contexto de grupo [Egypt vs Iran]: Egypt le vale el empate; perdiendo aún pasa si Belgium y New Zealand empatan (en otro caso, se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero)) · Iran con el empate se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero); gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero
+     multiplicador -> Egypt: le_vale_empate ×0.97  |  Iran: gana_y_pasa ×1.0   => AJUSTA
+  ℹ️ Contexto de grupo [New Zealand vs Belgium]: New Zealand con el empate seguiría vivo como mejor tercero si Egypt gana; gana y pasa 2ª si Iran no gana (en otro caso, se jugaría la 2ª por diferencia de goles) · Belgium le vale el empate si Egypt gana (en otro caso, se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero)); gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero si Egypt gana
+     multiplicador -> New Zealand: gana_y_pasa_cond ×1.0  |  Belgium: le_vale_empate_cond ×1.0   => NEUTRAL
+
+------------------------------------------------------------------------------------------------
+Group H:  Spain=4  Uruguay=2  Cape Verde Islands=2  Saudi Arabia=1
+  ℹ️ Contexto de grupo [Uruguay vs Spain]: Uruguay con el empate se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero); gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero · Spain le vale el empate; perdiendo aún pasa si Cape Verde Islands y Saudi Arabia empatan (en otro caso, se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero))
+     multiplicador -> Uruguay: gana_y_pasa ×1.0  |  Spain: le_vale_empate ×0.97   => AJUSTA
+  ℹ️ Contexto de grupo [Cape Verde Islands vs Saudi Arabia]: Cape Verde Islands le vale el empate si Spain gana (en otro caso, se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero)); gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero si Spain gana · Saudi Arabia con el empate seguiría vivo como mejor tercero si Spain gana; gana y pasa 2ª si Uruguay no gana (en otro caso, se jugaría la 2ª por diferencia de goles)
+     multiplicador -> Cape Verde Islands: le_vale_empate_cond ×1.0  |  Saudi Arabia: gana_y_pasa_cond ×1.0   => NEUTRAL
+
+------------------------------------------------------------------------------------------------
+Group I:  France=6  Norway=6  Senegal=0  Iraq=0
+  ℹ️ Contexto de grupo [Senegal vs Iraq]: Senegal debe ganar (y aun así seguiría vivo como mejor tercero) · Iraq debe ganar (y aun así seguiría vivo como mejor tercero)
+     multiplicador -> Senegal: debe_ganar ×1.08  |  Iraq: debe_ganar ×1.08   => AJUSTA
+  ℹ️ Contexto de grupo [Norway vs France]: Norway ya clasificado · France ya clasificado
+     multiplicador -> Norway: qualified ×0.92  |  France: qualified ×0.92   => AJUSTA
+
+------------------------------------------------------------------------------------------------
+Group J:  Argentina=6  Austria=3  Algeria=3  Jordan=0
+  ℹ️ Contexto de grupo [Algeria vs Austria]: Algeria con el empate se jugaría la 2ª por diferencia de goles; gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero · Austria con el empate se jugaría la 2ª por diferencia de goles; gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero
+     multiplicador -> Algeria: gana_y_pasa ×1.0  |  Austria: gana_y_pasa ×1.0   => NEUTRAL
+  ℹ️ Contexto de grupo [Jordan vs Argentina]: Jordan debe ganar (y aun así seguiría vivo como mejor tercero si Austria y Algeria no empatan) · Argentina ya clasificado
+     multiplicador -> Jordan: debe_ganar ×1.08  |  Argentina: qualified ×0.92   => AJUSTA
+
+------------------------------------------------------------------------------------------------
+Group K:  Colombia=6  Portugal=4  Congo DR=1  Uzbekistan=0
+  ℹ️ Contexto de grupo [Colombia vs Portugal]: Colombia ya clasificado · Portugal le vale el empate; perdiendo aún pasa si Congo DR no gana (en otro caso, se jugaría la 2ª por diferencia de goles)
+     multiplicador -> Colombia: qualified ×0.92  |  Portugal: le_vale_empate ×0.97   => AJUSTA
+  ℹ️ Contexto de grupo [Congo DR vs Uzbekistan]: Congo DR con el empate seguiría vivo como mejor tercero; ganando se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero) · Uzbekistan debe ganar (y aun así seguiría vivo como mejor tercero)
+     multiplicador -> Congo DR: vivo_mejor_tercero ×1.0  |  Uzbekistan: debe_ganar ×1.08   => AJUSTA
+
+------------------------------------------------------------------------------------------------
+Group L:  England=4  Ghana=4  Croatia=3  Panama=0
+  ℹ️ Contexto de grupo [Croatia vs Ghana]: Croatia con el empate se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero); gana y pasa 2ª; perdiendo seguiría vivo como mejor tercero · Ghana le vale el empate; perdiendo se jugaría la 2ª por diferencia de goles (o pasaría como mejor tercero)
+     multiplicador -> Croatia: gana_y_pasa ×1.0  |  Ghana: le_vale_empate ×0.97   => AJUSTA
+  ℹ️ Contexto de grupo [Panama vs England]: Panama debe ganar (y aun así seguiría vivo como mejor tercero si Ghana gana) · England le vale el empate; perdiendo aún pasa si Ghana gana (en otro caso, se jugaría la 2ª por diferencia de goles)
+     multiplicador -> Panama: debe_ganar ×1.08  |  England: le_vale_empate ×0.97   => AJUSTA
+
+================================================================================================
+RESUMEN MULTIPLICADOR: 13 partidos AJUSTAN · 5 NEUTRALES
+================================================================================================
+Partidos que AJUSTAN (algún equipo con escenario CIERTO por puntos):
+  Group D: Türkiye(debe_ganar ×1.08) vs USA(qualified ×0.92)
+  Group E: Ecuador(vivo_mejor_tercero ×1.0) vs Germany(qualified ×0.92)
+  Group F: Japan(le_vale_empate ×0.97) vs Sweden(gana_y_pasa ×1.0)
+  Group F: Tunisia(debe_ganar ×1.08) vs Netherlands(le_vale_empate ×0.97)
+  Group G: Egypt(le_vale_empate ×0.97) vs Iran(gana_y_pasa ×1.0)
+  Group H: Uruguay(gana_y_pasa ×1.0) vs Spain(le_vale_empate ×0.97)
+  Group I: Senegal(debe_ganar ×1.08) vs Iraq(debe_ganar ×1.08)
+  Group I: Norway(qualified ×0.92) vs France(qualified ×0.92)
+  Group J: Jordan(debe_ganar ×1.08) vs Argentina(qualified ×0.92)
+  Group K: Colombia(qualified ×0.92) vs Portugal(le_vale_empate ×0.97)
+  Group K: Congo DR(vivo_mejor_tercero ×1.0) vs Uzbekistan(debe_ganar ×1.08)
+  Group L: Croatia(gana_y_pasa ×1.0) vs Ghana(le_vale_empate ×0.97)
+  Group L: Panama(debe_ganar ×1.08) vs England(le_vale_empate ×0.97)
+
+Partidos NEUTRALES (condicional/incierto -> sin ajuste, ×1.0 ambos):
+  Group D: Paraguay(gana_y_pasa) vs Australia(gana_y_pasa)
+  Group E: Curaçao(gana_y_pasa_cond) vs Ivory Coast(le_vale_empate_cond)
+  Group G: New Zealand(gana_y_pasa_cond) vs Belgium(le_vale_empate_cond)
+  Group H: Cape Verde Islands(le_vale_empate_cond) vs Saudi Arabia(gana_y_pasa_cond)
+  Group J: Algeria(gana_y_pasa) vs Austria(gana_y_pasa)
