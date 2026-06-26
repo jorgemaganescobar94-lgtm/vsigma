@@ -20,7 +20,7 @@
 ==============================================================================
 PLAYER PROPS — track record (SOMBRA · heurístico · NO validado · sin mercado)
 ==============================================================================
-generated_at_utc: 2026-06-26T22:24:01+00:00
+generated_at_utc: 2026-06-26T23:37:20+00:00
 partidos liquidados=8 | filas jugador-prop=176 | umbral graduación N>=30
 MUESTRA INSUFICIENTE para graduar (N<30). Métricas mostradas son orientativas.
 
