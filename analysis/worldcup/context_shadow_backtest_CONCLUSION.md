@@ -1,84 +1,94 @@
-# Backtest de la heurística de CONTEXTO de clasificación (worldcup_context_shadow)
+# Backtest del contexto de clasificación — RE-CORRIDO con classify_fixture corregido
 
 **Fecha:** 2026-06-26 · **Modo:** READ-ONLY · **NO** se tocó producción · **NO** API
-**Script:** `analysis/worldcup/context_shadow_backtest.py`
+**Script:** `analysis/worldcup/context_shadow_backtest.py` (importa el `classify_fixture` nuevo)
 **Salidas:** `..._report.txt`, `..._rows.csv`, `..._metrics.csv`
+**Sustituye** a la CONCLUSION anterior (lógica vieja/errónea, obsoleta).
 
-## Qué se midió
-Backtest histórico de la heurística que ajusta el xG L3 por el ESCENARIO de grupo (ya clasificado,
-eliminado, debe ganar, le vale empate, intrascendente) sobre la **última jornada de fase de grupos**
-de torneos finales de **SELECCIONES NACIONALES** pasados. Se reutiliza la lógica del módulo
-(`classify_fixture` + `MULT` + `context_predict`), sin duplicarla. Se mide **context-adjusted vs L3
-puro** solo en escenarios NO triviales (donde el multiplicador cambia la predicción).
+## Qué cambió
+`classify_fixture` se reconstruyó: ahora afirma un escenario NO neutral SOLO cuando es
+**matemáticamente cierto por puntos** (enumerador del partido paralelo en la última jornada; respeta
+mejores terceros y desempates → si dependen de GD/ajenos, NEUTRAL). El backtest se re-ejecutó tal
+cual, mismo universo (17 torneos-temporada de selecciones, K4 limpio), mismo anti-leakage (standings
+de jornadas previas, ratings L3 walk-forward, calibración congelada). 162 partidos de última jornada;
+sin cambio de muestra, solo cambia el etiquetado.
 
-## (a) Muestra — 0 clubes confirmado
-- **Filas de clubes en el dataset: 0.** `international_results.csv` es de selecciones; todos los
-  `league_tag` son competiciones de selección.
-- **17 torneos-temporada INCLUIDOS** (reconstrucción K4 limpia, grupos de 4 de liga simple):
-  WC 2018/2022, Euro 2024, AFCON 2021/2023/2025, AsianCup 2019/2023, CopaAmerica 2019/2024,
-  GoldCup 2019/2021/2023/2025, GulfCup 2019/2023/2024.
-- **6 EXCLUIDOS automáticamente** (no reconstruyen K4 limpio / formato no liga-simple / datos
-  polucionados): AFCON 2019 (198 partidos — tag contaminado), Euro 2020 (313 — incluye clasif.),
-  ArabCup 2021/2025, CopaAmerica 2021 (grupos de 5), WC 2026 (torneo en curso, incompleto).
-- **162 partidos** de última jornada con rating L3 walk-forward disponible; **todos no triviales.**
+## (a) Partidos NO triviales: 162 → **81** (la mitad)
 
-**Distribución por escenario** (sobre ambos equipos, 324 etiquetas):
-`le_vale_empate` 112 · `tercero_en_disputa` 81 (neutral, ×1.0) · `debe_ganar` 41 · `eliminado` 40 ·
-`ya_clasificado` 28 · `intrascendente` 22.
+| | Clasificador VIEJO (obsoleto) | Clasificador NUEVO (cierto por puntos) |
+|---|---|---|
+| no triviales (mult≠1.0) | **162** | **81** |
 
-## (b) Métricas context vs L3 puro (1X2, solo no triviales)
+**Distribución por escenario** (sobre ambos equipos, 324 etiquetas) con el clasificador nuevo:
 
-| Corte | n | Δlogloss | Δbrier | ¿ctx bate? |
-|---|---|---|---|---|
-| **GLOBAL** | 162 | **+0.0055** | **+0.0032** | sí (nominal) |
-| ya_clasificado (×0.92) | 28 | +0.0120 | +0.0071 | sí |
-| eliminado (×0.95) | 40 | +0.0054 | +0.0035 | sí |
-| debe_ganar (×1.08) | 41 | **+0.0178** | +0.0126 | sí (más fuerte) |
-| le_vale_empate (×0.97) | 101 | +0.0062 | +0.0029 | sí |
-| **intrascendente (×0.90)** | 11 | **−0.0245** | **−0.0128** | **no (empeora)** |
+| escenario | nº | mult | ¿ajusta? |
+|---|---|---|---|
+| tercero_en_disputa | 207 | ×1.0 | no (neutral) |
+| le_vale_empate | 58 | ×0.97 | sí |
+| ya_clasificado | 33 | ×0.92 | sí |
+| intrascendente | 22 | ×1.0 | no (dead rubber) |
+| partido_decisivo | 3 | ×1.0 | no |
+| eliminado | 1 | ×0.95 | sí |
+| debe_ganar | 0 | — | nunca (inalcanzable en grupo de 4) |
 
-(Δ = L3 − ctx; positivo = ctx mejora.) Over 2.5: ctx también mejora (logloss 0.6932→0.6863).
+Lo esperado: el clasificador estricto manda la mayoría a **neutral** (tercero_en_disputa, ×1.0) y
+solo etiqueta lo cierto. Quedan dos escenarios con muestra real (le_vale_empate 58, ya_clasificado
+33); `eliminado` casi no aparece (1) y `debe_ganar` no aparece (demostrablemente inalcanzable).
 
-**Significancia (bootstrap pareado por partido, 20000 resamples, semilla fija):**
-- Δlogloss media **+0.0055** (0.52% del L3); ctx mejor en **solo 45% de los partidos** (el agregado
-  lo arrastran pocos partidos donde ayuda mucho).
-- **IC95% Δlogloss = [−0.0036, +0.0148] → INCLUYE 0 (NO significativo).** P(Δ>0)=88%.
-- IC95% Δbrier = [−0.0025, +0.0089] → INCLUYE 0. P(Δ>0)=86%.
+## (b) Métricas context-adjusted vs L3 puro (solo no triviales, N=81)
 
-## (c) ¿Mejora, empeora o es indistinguible?
-**Direccionalmente MEJORA, pero dentro del ruido.** El ajuste bate al L3 en logloss y brier de forma
-agregada (cumple el criterio nominal del módulo: bate ambos con N≥20), y mejora en 4 de 5 escenarios
-con signo consistente — pero el **IC95% incluye 0**: a 95% de confianza no se distingue del ruido
-(confianza one-sided 88%). La mejora relativa es minúscula (0.52%) y solo el 45% de partidos mejoran.
+| corte | n | Δlogloss | Δbrier | acc L3→ctx | ¿ctx bate? |
+|---|---|---|---|---|---|
+| **GLOBAL** | 81 | **+0.0117** | **+0.0066** | 45.7→44.4% | sí (nominal) |
+| le_vale_empate (×0.97) | 58 | +0.0157 | +0.0091 | 44.8→43.1% | sí |
+| ya_clasificado (×0.92) | 33 | +0.0085 | +0.0053 | 48.5→48.5% | sí |
+| eliminado (×0.95) | 1 | −0.069 | −0.038 | — | no (n=1, ruido) |
 
-## (d) Recomendación honesta
-- **SEGUIR EN SOMBRA (no graduar a vivo todavía).** El veredicto es **ambiguo, no claro**: el signo
-  es favorable y consistente, pero no supera el ruido. Graduar exigiría una señal robusta; esta no lo
-  es aún. El scorecard en vivo del módulo debe seguir acumulando partidos de Mundial.
-- **`debe_ganar` (×1.08) es el multiplicador más prometedor** (Δll +0.0178, mejor en 54% de partidos):
-  la hipótesis "el que debe ganar ataca más" es la que mejor aguanta. Candidato a graduar primero si
-  se aísla, pero aún con N pequeño.
-- **`intrascendente` (×0.90) es el ÚNICO que EMPEORA** de forma consistente (Δll −0.0245, mejor en
-  solo 18% de 11 partidos). Es el candidato a **RETIRAR o poner a 1.0** (revisar): bajar el xG de
-  ambos equipos en partidos "de facto amistoso" no se sostiene en estos datos. Muestra pequeña (n=11),
-  así que: marcar para vigilancia y, si persiste, retirar — NO aplicar nada automáticamente.
-- Ningún cambio en producción aquí: los multiplicadores son hipótesis; el scorecard es el juez.
+(Δ = L3 − ctx; positivo = ctx mejora.) Over 2.5: ctx mejora (logloss 0.6938→0.6868).
 
-## Anti-leakage (confirmado)
-- **Standings pre-partido** reconstruidos SOLO desde jornadas previas del mismo grupo (fecha
-  estrictamente anterior); nunca de la jornada predicha. Sin API.
-- **Ratings L3 walk-forward**: `fit_rating` sobre partidos internacionales con `date < fecha_partido`
-  (mismos pesos: importancia por tag, cross-conf, decaimiento HL=730d). Ningún partido futuro entra.
-- **Calibración congelada** (`national_elo_layer3_calibration.json`: a0/a1/total_mean/iso) como
-  transformación fija — la "calibración congelada" pedida; lenta y no discriminativa. Documentado.
-- **Target** = resultado 90' (1X2 / Over2.5) solo para puntuar, nunca como feature.
+**Significancia (bootstrap pareado, 20000 resamples, semilla fija):**
+- Δlogloss media **+0.0117** (1.05% del L3); ctx mejor en **46% de los partidos**.
+- **IC95% Δlogloss = [−0.0020, +0.0263] → INCLUYE 0 (no significativo)**, P(Δ>0) = **95%**.
+- IC95% Δbrier = [−0.0018, +0.0152] → incluye 0, P(Δ>0) = 94%.
 
-## Limitaciones (honestas)
-- `classify_fixture` se usa TAL CUAL, incluida su regla WC-2026 de mejores terceros
-  (rank==3 → `tercero_en_disputa`, neutral). En torneos de solo-top-2 (WC 2018/2022) esto etiqueta
-  como trivial a algunos terceros genuinamente "a vida o muerte" → quedan fuera del set graduado
-  (reduce N, no corrompe las filas incluidas).
-- Se omite ventaja de campo (el módulo asume neutral); algún anfitrión de fase de grupos no era neutral.
-- N por escenario pequeño (11–101); los veredictos por escenario son orientativos.
-- Formatos de doble vuelta (Nations League, clasificatorios) quedan fuera: `classify_fixture` asume
-  liga simple (per_team=G−1) y los mal-clasificaría.
+**Comparativa con la corrida anterior (clasificador viejo):**
+
+| | viejo (N=162) | nuevo (N=81) |
+|---|---|---|
+| Δlogloss medio | +0.0055 | **+0.0117** |
+| mejora relativa | 0.52% | **1.05%** |
+| P(Δ>0) bootstrap | 88% | **95%** |
+| IC95% Δlogloss | [−0.0036, +0.0148] | [−0.0020, +0.0263] |
+| ¿significativo (IC excluye 0)? | no | **no (al borde)** |
+
+## (c) Veredicto honesto
+Con el clasificador corregido la señal es **más limpia y un poco más fuerte**: solo dos escenarios
+ciertos (le_vale_empate, ya_clasificado), ambos mejoran de forma consistente, el efecto relativo
+dobla al anterior (1.05% vs 0.52%) y la confianza sube a P≈95%. **PERO sigue SIN ser
+estadísticamente significativo**: el IC95% de Δlogloss y Δbrier **todavía incluye el 0** (apenas:
+límite inferior −0.002), y ctx solo gana en el 46% de los partidos (el agregado lo arrastran pocos).
+La muestra no-trivial se **redujo a la mitad (81)** justamente porque el clasificador honesto se niega
+a etiquetar lo dudoso. No es "mejora clara y significativa": es una mejora direccional, al borde de
+la significancia, sobre una muestra modesta.
+
+## (d) Recomendación
+**DEJAR DORMIDO EN SOMBRA — no reactivar (`CONTEXT_LIVE` sigue False).** El criterio para reactivar
+era "mejora clara y significativa"; no se cumple (IC95% incluye 0). Reactivar ajustaría las
+predicciones reales con un edge que no se distingue del ruido al 95%.
+- **No invertir más esfuerzo aquí por ahora.** El clasificador ya es correcto y conservador; el A/B
+  en sombra puede seguir corriendo gratis y acumulando partidos reales del Mundial como red de
+  seguridad, pero sin trabajo adicional.
+- **Umbral para una futura reactivación:** que el IC95% de Δlogloss Y Δbrier **excluya el 0** sobre
+  una muestra mayor (acumulando Mundial 2026 + futuros torneos), y que la mejora se mantenga por
+  escenario (le_vale_empate y ya_clasificado, los únicos que firman). Hasta entonces, dormido.
+
+## Anti-leakage (sin cambios respecto a la corrida anterior)
+Standings reconstruidos solo de jornadas previas del mismo grupo; ratings L3 walk-forward
+(`fit_rating` con `date < partido`); calibración congelada; target solo para puntuar. Sin API.
+
+## Limitaciones
+- N no-trivial modesto (81); por escenario aún menor (le_vale_empate 58, ya_clasificado 33).
+- `eliminado` (n=1) y `debe_ganar` (n=0) no son evaluables — el clasificador estricto casi nunca los
+  certifica en grupos de 4 (correcto, pero deja esos escenarios sin medir).
+- Mejores terceros aproximados de forma conservadora (no cross-group) → muchos partidos genuinamente
+  tensos quedan neutral; es el precio honesto de no etiquetar lo incierto.
