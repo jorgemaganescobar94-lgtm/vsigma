@@ -1,67 +1,74 @@
-📊 Track record (31 resueltos · 2026-06-26)
-Acierto 1X2: L3 68% · v2 68%
-Brier-skill vs base-rate: L3 +23% · v2 +19%
+📊 Track record (33 resueltos · 2026-06-26)
+Acierto 1X2: L3 70% · v2 70%
+Brier-skill vs base-rate: L3 +25% · v2 +21%
 
 ===== detalle =====
-resueltos=31 | 1X2 a 90' (score.fulltime) | métricas vs RESULTADOS REALES, sin mercado
-  SEMÁNTICA MIXTA: 25 a 'primera predicción (mañana)' · 6 a 'última pre-saque' (cambio lock-at-KO a mitad de torneo; interpretar la mejora con cautela, no es homogéneo).
+resueltos=33 | 1X2 a 90' (score.fulltime) | métricas vs RESULTADOS REALES, sin mercado
+  SEMÁNTICA MIXTA: 25 a 'primera predicción (mañana)' · 8 a 'última pre-saque' (cambio lock-at-KO a mitad de torneo; interpretar la mejora con cautela, no es homogéneo).
 predictor    n  logloss   brier   acc%    ECE Skill_base%
 ---------------------------------------------------------
-base-rate   31   1.0341  0.6243   48.4  0.000         0.0
-L3          31   0.8284  0.4782   67.7  0.153       +23.4
-v2          31   0.8728  0.5065   67.7  0.133       +18.9
+base-rate   33   1.0271  0.6208   48.5  0.000         0.0
+L3          33   0.8143  0.4677   69.7  0.117       +24.7
+v2          33   0.8544  0.4932   69.7  0.151       +20.5
   (1X2 multiclase H/D/A; baseline ingenuo = base-rate.)
   (L3+adj = ajuste heurístico EN VIVO, NO validado, SECUNDARIO; L3 sigue siendo oficial.)
 
 --- (1) APUESTAS DERIVADAS — L3 (Poisson xG) vs base-rate (Over2.5, BTTS) ---
-  Over 2.5  (real Over=61%):
-    L3 (Poisson xG)    n= 31  acc   39%  Brier 0.251  logloss 0.696
-    base-rate          n= 31  acc   61%  Brier 0.237  logloss 0.667
+  Over 2.5  (real Over=64%):
+    L3 (Poisson xG)    n= 33  acc   36%  Brier 0.253  logloss 0.699
+    base-rate          n= 33  acc   64%  Brier 0.231  logloss 0.655
   BTTS      (real Yes=42%):
-    L3 (Poisson xG)    n= 31  acc   74%  Brier 0.217  logloss 0.631
-    base-rate          n= 31  acc   58%  Brier 0.243  logloss 0.680
+    L3 (Poisson xG)    n= 33  acc   73%  Brier 0.219  logloss 0.634
+    base-rate          n= 33  acc   58%  Brier 0.244  logloss 0.682
 
---- (1b) A/B TOTAL DE GOLES — aún sin filas con xG constante logueado (se llenará tras NS nuevos) ---
+--- (1b) A/B TOTAL DE GOLES — matchup EN VIVO vs CONSTANTE (n=2) ---
+  Over 2.5 (real Over=100%):
+    matchup (EN VIVO)  n=  2  acc    0%  Brier 0.283  logloss 0.759
+    constante (viejo)  n=  2  acc    0%  Brier 0.255  logloss 0.703
+  BTTS     (real Yes=50%):
+    matchup (EN VIVO)  n=  2  acc   50%  Brier 0.243  logloss 0.678
+    constante (viejo)  n=  2  acc  100%  Brier 0.226  logloss 0.646
+  (si 'constante' bate sostenidamente a 'matchup' -> revisar / poner TOTAL_MATCHUP_LIVE=False)
 
 --- (2) CALIBRACIÓN / reliability (predicho vs frecuencia real por banda) ---
-  L3 (1X2 aplanado H/D/A, n_pred=93):
+  L3 (1X2 aplanado H/D/A, n_pred=99):
        banda    n  predicho   real
-      0-20 %   34       13%    12%
-     20-40 %   31       28%    26%
-     40-60 %   13       52%    46%
+      0-20 %   35       13%    11%
+     20-40 %   34       27%    24%
+     40-60 %   15       52%    53%
      60-80 %   12       73%    83%
      80-100%    3       82%   100%
-  v2 (1X2 aplanado H/D/A, n_pred=93):
+  v2 (1X2 aplanado H/D/A, n_pred=99):
        banda    n  predicho   real
-      0-20 %   14       15%    14%
-     20-40 %   50       26%    18%
-     40-60 %   19       51%    63%
-     60-80 %   10       65%    80%
+      0-20 %   15       15%    13%
+     20-40 %   53       26%    17%
+     40-60 %   20       50%    65%
+     60-80 %   11       65%    82%
 
 --- (3) ERROR DE GOLES — L3 xG vs goles reales (MAE; baseline = media torneo) ---
-  n=31  baseline = media torneo (home 1.58, away 1.19, total 2.77)
+  n=33  baseline = media torneo (home 1.67, away 1.24, total 2.91)
              L3 MAE  base MAE   mejora
-    home       1.11      1.35     +17%
-    away       0.70      0.96     +27%
-    total      1.47      1.44      -2%
+    home       1.15      1.39     +18%
+    away       0.76      1.04     +27%
+    total      1.53      1.45      -5%
 
 --- (4) L3 vs base-rate cara a cara (prob asignada al resultado real) ---
-  global n=31: L3 mejor 22 · base-rate mejor 9 · empate 0
-    L3 marca favorito (máx≥50%)  n= 23: L3 18 · base 5 · empate 0
-    L3 lo ve igualado (máx<50%)  n=  8: L3 4 · base 4 · empate 0
-    cruce de confederación       n= 30: L3 22 · base 8 · empate 0
-    misma confederación          n=  1: L3 0 · base 1 · empate 0
+  global n=33: L3 mejor 23 · base-rate mejor 9 · empate 1
+    L3 marca favorito (máx≥50%)  n= 25: L3 20 · base 5 · empate 0
+    L3 lo ve igualado (máx<50%)  n=  8: L3 3 · base 4 · empate 1
+    cruce de confederación       n= 31: L3 22 · base 8 · empate 1
+    misma confederación          n=  2: L3 1 · base 1 · empate 0
 
 --- (4b) L3+adj heurístico (NO validado) — SOLO partidos con ajuste activo (Δ≠0) ---
   aún sin ajustes activos resueltos (o sin columnas adj en el log).
 
 --- (5) STATS córners/tarjetas/tiros — modelo de datos vs reales + base-rate ---
-  córners   n= 26  (muestra pequeña, orientativo) real μ=8.6 | MAE modelo 2.57 vs base 2.14 (-20%)
-  tarjetas  n= 26  (muestra pequeña, orientativo) real μ=2.3 | MAE modelo 2.02 vs base 1.02 (-97%)
-  tiros     n= 26  (muestra pequeña, orientativo) real μ=24.0 | MAE modelo 6.84 vs base 4.89 (-40%)
-  córners O/U (línea~7.5) n=26: acc 38% · Brier 0.302 · real Over=65%
+  córners   n= 28  (muestra pequeña, orientativo) real μ=8.8 | MAE modelo 2.73 vs base 2.16 (-27%)
+  tarjetas  n= 28  (muestra pequeña, orientativo) real μ=2.4 | MAE modelo 1.94 vs base 1.06 (-82%)
+  tiros     n= 28  (muestra pequeña, orientativo) real μ=24.5 | MAE modelo 7.30 vs base 5.07 (-44%)
+  córners O/U (línea~7.5) n=28: acc 39% · Brier 0.307 · real Over=68%
 
 PROPUESTA de recalibración (calibración, informativa, NO aplicada):
-  Ningún encogimiento hacia base-rate mejora el log-loss (0.8284); L3 bien calibrado.
+  Ningún encogimiento hacia base-rate mejora el log-loss (0.8143); L3 bien calibrado.
 
-generated_at_utc: 2026-06-26T20:56:39+00:00
+generated_at_utc: 2026-06-26T22:22:22+00:00
