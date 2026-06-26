@@ -1,0 +1,45 @@
+====================================================================================================
+SQUAD-QUALITY (jugadores) BLEND con L3 — ¿añade poder predictivo OOS al 1X2/goles? READ-ONLY
+====================================================================================================
+fuerza-por-jugadores: compuesto OFENSIVO de tasas /90 de SELECCIÓN 2023 (escala internacional
+común -> sin problema de comparabilidad entre ligas). q_p=z(g90)+0.5*z(a90). Agregación:
+  avg = media ponderada por minutos sobre la plantilla; topN = media de los 14 con más minutos;
+  min = concentración de minutos top-N (señal NO ofensiva: profundidad/cohesión, control).
+LIMITACIÓN honesta: g90/a90 son ofensivos (defensas/porteros puntúan bajo); minutos corrigen
+parcialmente por rol. games.rating NO está en caché y traerlo costaría API (cuota=rojo) -> compuesto.
+
+equipos con rates 2023 en caché: 92
+muestra: 759 partidos (entre 2 equipos cacheados, con L3 walk-forward).
+  BURN-IN 2024: 442  |  OOS 2025: 317
+correlación sup_L3 ~ sqd_avg (toda la muestra): r=+0.353 (alta r -> el L3 ya contiene gran parte de la calidad de plantilla)
+
+----------------------------------------------------------------------------------------------------
+1X2 OOS — BASELINE (sólo supremacía L3) vs CANDIDATO (+ diferencial de plantilla). a2 aprendido en burn-in.
+----------------------------------------------------------------------------------------------------
+  modelo                          logloss    brier     ECE   acc%    a2 (peso plantilla)
+  --------------------------------------------------------------------------------------
+  baseline [sup_L3]               0.90684  0.54521  0.0236  53.9%                      —
+  +sqd_avg (min-weighted)         0.91493  0.54832  0.0652  51.4%                -0.1782
+     Δlogloss(base−cand) mean=-0.00809 IC95[-0.02189,+0.00552] P(Δ>0)=12% -> no signif  | Δbrier mean=-0.00311 IC95[-0.01180,+0.00534]
+  +sqd_top14                      0.91081  0.54692  0.0456  54.3%                -0.1221
+     Δlogloss(base−cand) mean=-0.00397 IC95[-0.01489,+0.00680] P(Δ>0)=24% -> no signif  | Δbrier mean=-0.00171 IC95[-0.00861,+0.00505]
+  +sqd_min (no-offense ctrl)      0.91828  0.55257  0.0508  53.6%                -1.3572
+     Δlogloss(base−cand) mean=-0.01144 IC95[-0.02998,+0.00734] P(Δ>0)=12% -> no signif  | Δbrier mean=-0.00735 IC95[-0.01957,+0.00482]
+
+----------------------------------------------------------------------------------------------------
+SUBGRUPO: ¿ayuda MÁS con POCOS partidos recientes? (min(local,visit) internacionales en 365d previos)
+----------------------------------------------------------------------------------------------------
+  umbral (mediana recent_min) = 11.  thin = recent_min <= 11;  thick = > 11.
+  thin (pocos)     n=232  ll_base=0.86794 ll_cand=0.87525  Δll=-0.00732 IC95[-0.02531,+0.01066] P(Δ>0)=21% -> no signif
+  thick (muchos)   n= 85  ll_base=1.01304 ll_cand=1.02322  Δll=-0.01019 IC95[-0.02670,+0.00684] P(Δ>0)=12% -> no signif
+
+----------------------------------------------------------------------------------------------------
+Over 2.5 (secundario): el total es constante (media burn-in) e igual para ambos modelos -> el
+diferencial de plantilla sólo mueve el reparto local/visitante, no el total. Se reporta por
+completitud; el 1X2 es el test principal de la hipótesis.
+  real Over2.5 OOS = 42%  (n=317)  (total constante burn-in = 2.674 -> P(Over) idéntica entre modelos; sin señal added)
+
+====================================================================================================
+VEREDICTO 1X2 (mejor agregación = topN): NO añade señal OOS distinguible (IC95% incluye 0) -> el L3 ya la captura.
+  a2=-0.1221, Δlogloss OOS=-0.00397, IC95[-0.01489,+0.00680].
+====================================================================================================
