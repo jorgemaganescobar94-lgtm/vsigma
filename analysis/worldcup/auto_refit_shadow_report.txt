@@ -1,9 +1,33 @@
 ========================================================================================
 AUTO-REFIT L3 — mode=APPLY (swap)
 ========================================================================================
-generated_at_utc: 2026-06-25T15:43:30+00:00
-base rows=9185 | settled-in-log=25 | NEW rows=0 (-..-) | unmapped=0 | enriched=9185
+generated_at_utc: 2026-06-26T07:22:29+00:00
+base rows=9185 | settled-in-log=31 | NEW rows=6 (2026-06-25..2026-06-26) | unmapped=0 | enriched=9191
 
-NO hay partidos liquidados nuevos fuera del dataset -> refit NO-OP.
-(El dataset ya está al día con el log; nada que aprender hasta nuevos FT.)
-GATE: N/A (sin cambios) -> ratings de producción intactos.
+OOS 1X2 — ventana común [2024-01-01 .. 2026-06-25)  (leakage-safe)
+  base     n=3269  ll=0.93001  ECE=0.0187  acc=55.9%
+  enriched n=3269  ll=0.93001  ECE=0.0187  acc=55.9%
+repro (refit base vs committed): max|Δ|=0.0005
+
+MOVIMIENTOS DE RATING destacados (candidato vs commiteado; cap 0.6):
+    Germany                  +1.86 -> +1.73  (-0.14)
+    Türkiye                  +0.78 -> +0.91  (+0.13)
+    Ecuador                  +1.19 -> +1.29  (+0.10)
+    Curaçao                  +0.06 -> -0.02  (-0.08)
+    USA                      +1.20 -> +1.12  (-0.08)
+    Sweden                   +1.20 -> +1.26  (+0.07)
+    Ivory Coast              +1.27 -> +1.32  (+0.05)
+    Netherlands              +1.79 -> +1.84  (+0.05)
+    Japan                    +1.86 -> +1.81  (-0.04)
+    Paraguay                 +0.83 -> +0.87  (+0.04)
+
+GATE (anti-corrupción):
+    PASS  finite
+    PASS  team_count_non_decreasing
+    PASS  max_move<=cap
+    PASS  oos_not_worse
+    PASS  repro<tol
+  max|Δ| = 0.135 (Germany: +1.86->+1.73)
+  -> GATE: PASS
+
+SWAP APLICADO ✅  ratings -> national_elo_layer3_ratings.csv | dataset -> international_results.csv (+6 FT). Calibración intacta (invariante).

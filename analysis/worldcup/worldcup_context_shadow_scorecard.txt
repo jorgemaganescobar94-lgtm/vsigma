@@ -1,0 +1,16 @@
+# CRITERIO DE GRADUACIÓN (definido ANTES de ver datos; no post-hoc): el ajuste por CONTEXTO
+# pasa de SOMBRA a producción SOLO si, sobre N>=20 PARTIDOS de escenario NO TRIVIAL, BATE al
+# L3 puro en logloss Y brier (1X2). Si no, se queda en sombra.
+# NOTA HONESTA: en un solo torneo la muestra de escenarios no triviales será probablemente
+# <20 -> se quedará en sombra (resultado VÁLIDO, no un fallo). Los multiplicadores son
+# HIPÓTESIS explícitas (signo ambiguo), no verdades; el scorecard es el único juez.
+
+==============================================================================
+CONTEXT-ADJUSTMENT — context-adjusted VS pure L3 (SOMBRA · heurístico · NO validado)
+==============================================================================
+generated_at_utc: 2026-06-26T07:25:51+00:00
+partidos liquidados (total)=0 | con escenario NO trivial=0 | triviales (sin cambio, excluidos)=0 | umbral graduación N>=20
+MUESTRA INSUFICIENTE para graduar (N<20). Métricas orientativas; sigue en SOMBRA.
+
+Aún sin partidos de escenario no trivial liquidados; el scorecard se llenará tras los FT.
+(log: 10 filas, 9 no triviales pendientes de resolver)
