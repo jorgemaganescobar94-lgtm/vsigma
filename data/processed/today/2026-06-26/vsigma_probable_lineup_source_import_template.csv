@@ -1,1 +1,11 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
+2026-06-26,1520748,Serie B,Brazil,Novorizontino,Vila Nova,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-26,1520748,Serie B,Brazil,Novorizontino,Vila Nova,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-26,1520748,Serie B,Brazil,Novorizontino,Vila Nova,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-26,1520748,Serie B,Brazil,Novorizontino,Vila Nova,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-26,1520748,Serie B,Brazil,Novorizontino,Vila Nova,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-26,1520748,Serie B,Brazil,Novorizontino,Vila Nova,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-26,1520748,Serie B,Brazil,Novorizontino,Vila Nova,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-26,1520748,Serie B,Brazil,Novorizontino,Vila Nova,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-26,1520748,Serie B,Brazil,Novorizontino,Vila Nova,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-26,1520748,Serie B,Brazil,Novorizontino,Vila Nova,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.

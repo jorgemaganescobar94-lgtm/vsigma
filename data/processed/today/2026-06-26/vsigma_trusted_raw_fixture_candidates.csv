@@ -1,1 +1,2 @@
 target_date,generated_at,fixture_id,league,country,home_team,away_team,fixture_datetime_utc,source_path,raw_trust_status,trust_reason,allowed_downstream_use,auto_apply,production_change
+2026-06-26,2026-06-26T20:13:22+01:00,1520748,Serie B,Brazil,Novorizontino,Vila Nova,2026-06-26T23:00:00+01:00,data/processed/matches_league_filtered.csv,TRUSTED_RAW_SOURCE,source is not rejected and competition is not low-trust by token gate,SCORING_ALLOWED_WITH_NORMAL_GATES,NO,NO
