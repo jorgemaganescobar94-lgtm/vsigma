@@ -1,0 +1,43 @@
+====================================================================================================
+BACKTEST · TOTAL DE GOLES dependiente del partido vs total CONSTANTE — READ-ONLY, sin API
+====================================================================================================
+walk-forward recomputado (refit cada 30d, MIN_PAST=300); cross-check sup vs permatch committeado: max|Δ|=8.881784197001252e-16
+burn-in=5614 (date<2024-01-01) | OOS=3277 | margin: s=-0.092+1.509·sup
+
+(a) FORMAS DEL TOTAL y coeficientes (ajustados SOLO en burn-in, lstsq sobre gh+ga):
+   baseline (constante)  total = 2.6578
+   (a) |sup|            total = +2.1930 +0.6751·|sup|
+   (b) |sup|+sup^2      total = +2.3930 +0.0754·|sup| +0.2733·sup^2
+   (c) s_home+s_away    total = +2.6867 -0.0886·(s_h+s_a)
+
+(b)/(d) OOS — BASELINE (total constante):
+   Over2.5 : logloss 0.69082 brier 0.24886 ECE 0.0070
+   BTTS    : logloss 0.69996 brier 0.24949 ECE 0.0601
+   total   : MAE 1.4402 (real medio 2.735, pred 2.670)
+   1X2     : logloss 0.93013 brier 0.54989  [chequeo de NO-DAÑO]
+
+CANDIDATO (a |sup|) vs baseline — Δ = baseline − candidato (>0 = candidato mejor):
+   Over2.5 : ll 0.68836 (Δ +0.00246) brier 0.24770 ECE 0.0322 | IC95[-0.00284,+0.00777] no signif (IC∋0)
+   BTTS    : ll 0.67906 (Δ +0.02090) brier 0.24317 ECE 0.0096 | IC95[+0.01233,+0.02960] SIGNIF
+   total   : MAE 1.4227 (Δ +0.0175, pred medio 2.641)
+   1X2     : logloss 0.93045 (Δ -0.000322) | IC95[-0.001137,+0.000430] -> OK no daña (cambio negligible/no signif.)
+
+CANDIDATO (b |sup|+sup2) vs baseline — Δ = baseline − candidato (>0 = candidato mejor):
+   Over2.5 : ll 0.68610 (Δ +0.00472) brier 0.24660 ECE 0.0197 | IC95[+0.00035,+0.00907] SIGNIF
+   BTTS    : ll 0.68011 (Δ +0.01985) brier 0.24373 ECE 0.0141 | IC95[+0.01185,+0.02818] SIGNIF
+   total   : MAE 1.4236 (Δ +0.0166, pred medio 2.638)
+   1X2     : logloss 0.93067 (Δ -0.000545) | IC95[-0.001319,+0.000155] -> OK no daña (cambio negligible/no signif.)
+
+CANDIDATO (c s_h+s_a) vs baseline — Δ = baseline − candidato (>0 = candidato mejor):
+   Over2.5 : ll 0.69145 (Δ -0.00063) brier 0.24918 ECE 0.0077 | IC95[-0.00252,+0.00122] no signif (IC∋0)
+   BTTS    : ll 0.70342 (Δ -0.00346) brier 0.25084 ECE 0.0706 | IC95[-0.00616,-0.00076] SIGNIF
+   total   : MAE 1.4384 (Δ +0.0018, pred medio 2.668)
+   1X2     : logloss 0.93139 (Δ -0.001265) | IC95[-0.003215,+0.000710] -> OK no daña (cambio negligible/no signif.)
+
+(c) ¿el total real SUBE con |sup|? coef b1 (forma a) = +0.6751 goles por unidad de |sup|  ->  sube (mismatch -> más goles)
+    rango |sup| OOS p10..p90 = 0.11..1.42 -> swing de total ≈ +0.883 goles entre partido parejo y desajuste.
+
+====================================================================================================
+LECTURA: integrar SOLO si OU/BTTS mejora claro Y significativo (IC95% excluye 0, Δ>0) SIN dañar
+el 1X2. Si no es significativo o daña el 1X2 -> el total constante ya es suficiente -> descartar.
+====================================================================================================
