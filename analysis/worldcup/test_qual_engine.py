@@ -48,7 +48,9 @@ def test_must_win():
 
 
 def test_depends_on_others():
-    g = _tbl([("A", 3), ("B", 3), ("C", 3), ("D", 0)])
+    # A=1,B=1 (se enfrentan), C=4,D=4 (paralelo fuerte): A gana->4, pero el paralelo puede dejarlo
+    # fuera o empatado -> ni ganando asegura -> depende del otro resultado.
+    g = _tbl([("A", 1), ("B", 1), ("C", 4), ("D", 4)])
     _, lab = Q.classify_team(g, "A", "B", "A", [g], 8)
     assert lab in ("depends_on_others", "gd_dependent")
 
@@ -67,6 +69,30 @@ def test_alive_as_third_only_with_thirds_format():
     _, lab8 = Q.classify_team(g, "C", "D", "C", [g], 8)
     assert lab6 == "alive_as_third"
     assert lab8 != "alive_as_third"
+
+
+def test_draw_enough_when_tied_for_first_is_safe():
+    # REGRESIÓN: A=4,B=4 (se enfrentan), C=1,D=1. A empata -> A=5,B=5, C/D techo 4 -> A y B top-2
+    # SEGURO (empatados 1º, 2 abajo) -> 'le vale el empate', NO 'debe ganar' ni gd_dependent.
+    g = _tbl([("A", 4), ("B", 4), ("C", 1), ("D", 1)])
+    _, lab = Q.classify_team(g, "A", "B", "A", [g], 8)
+    assert lab == "draw_enough"
+
+
+def test_info_agrees_with_multiplier_classifier():
+    # el motor de información (qual_engine) y el del multiplicador (classify_fixture) deben coincidir
+    # en el caso top-2 (no contradicciones le_vale_empate vs debe_ganar).
+    import worldcup_context_shadow as C
+    groups = {"G": [{"name": "A", "points": 4, "played": 2, "gd": 2},
+                    {"name": "B", "points": 4, "played": 2, "gd": 1},
+                    {"name": "C", "points": 1, "played": 2, "gd": -1},
+                    {"name": "D", "points": 1, "played": 2, "gd": -2}]}
+    tg = {t: "G" for t in ("A", "B", "C", "D")}
+    sh, sa, mh, ma, nt = C.classify_fixture("Group Stage - 3", "A", "B", groups, tg)
+    tbl = {r["name"]: {"pts": r["points"]} for r in groups["G"]}
+    _, lab = Q.classify_team(tbl, "A", "B", "A", [tbl], 8)
+    # ambos: A le vale el empate
+    assert sh == "le_vale_empate" and lab == "draw_enough"
 
 
 def test_unknown_when_not_4_team():

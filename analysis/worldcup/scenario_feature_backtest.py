@@ -94,8 +94,9 @@ def part1_validation(out):
         ("le vale empate (controla)", _mk_group([(1, 4, 2, 2, 4), (2, 3, 2, 0, 3), (3, 1, 2, -1, 2), (4, 1, 2, -1, 2)]), 1, 2, 1, 8, "draw_enough"),
         # A debe ganar: ganar=6 entra seguro; empatar=4 empata con B (frontera); perder fuera
         ("debe ganar (solo ganando)", _mk_group([(1, 3, 2, 0, 3), (2, 3, 2, 0, 3), (3, 1, 2, -1, 2), (4, 1, 2, -1, 2)]), 1, 2, 1, 8, "must_win"),
-        # depende del otro partido / GD: todos parejos
-        ("depende de otros / GD", _mk_group([(1, 3, 2, 0, 3), (2, 3, 2, 0, 3), (3, 3, 2, 0, 3), (4, 0, 2, 0, 1)]), 1, 2, 1, 8, "depends/gd"),
+        # depende del otro partido: A,B=1 (se enfrentan), C,D=4 (paralelo fuerte) -> ni ganando A
+        # asegura (el paralelo puede dejarlo fuera/empatado) -> depende de otros
+        ("depende de otros", _mk_group([(1, 1, 2, -2, 2), (2, 1, 2, -2, 2), (3, 4, 2, 2, 4), (4, 4, 2, 2, 4)]), 1, 2, 1, 8, "depends_on_others"),
         # eliminado: 4º seguro (los otros 3 por encima de su techo) incluso con terceros
         ("eliminado (4º seguro)", _mk_group([(1, 6, 2, 5, 7), (2, 6, 2, 5, 7), (3, 4, 2, 0, 3), (4, 0, 2, -10, 0)]), 3, 4, 4, 6, "eliminated"),
         # posible mejor tercero (6 grupos): 3º por puntos, no 4º -> NO eliminado

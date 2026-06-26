@@ -42,22 +42,27 @@ Features muy **colineales** (`gd_dependent` activa en 174/188 burn-in).
 
 **Resultados OOS (Δ = baseline − feature; >0 con IC95% que excluye 0 = la feature mejora):**
 
+(Números con el motor de clasificación corregido — `qual_engine`, empate-a-puntos por el 1º tratado
+como seguro; ver test de regresión.)
+
 | modelo | Goles dev (base→feat) | Over2.5 Δ | BTTS Δ | 1X2 Δ |
 |---|---|---|---|---|
-| FULL (8 flags, OLS) | 167 → **207 (peor)** | −0.113 (n.s.) | **−0.184 SIGNIF (peor)** | −0.049 (n.s.) |
-| FULL + ridge | 167 → **183 (peor)** | −0.043 (n.s.) | **−0.099 SIGNIF (peor)** | −0.014 (n.s.) |
-| PARSIMONIOSO (low_stakes + must_win) | 167 → 167 (≈igual) | −0.002 (n.s.) | −0.032 (n.s.) | +0.009 (n.s.) |
+| FULL (8 flags, OLS) | 167 → **193 (peor)** | −0.106 (n.s.) | −0.102 (n.s.) | −0.048 (n.s.) |
+| FULL + ridge | 167 → **177 (peor)** | −0.036 (n.s.) | −0.065 (n.s.) | −0.027 (n.s.) |
+| PARSIMONIOSO (low_stakes + must_win) | 167 → 167 (≈igual) | ~0 (n.s.) | −0.028 (n.s.) | ~0 (n.s.) |
 
-- Los modelos ricos (full, ridge) **SOBREAJUSTAN** y **empeoran OOS** de forma **significativa en BTTS**
-  (las features colineales aprenden ruido en burn-in que no generaliza).
-- El modelo **parsimonioso** (que no puede sobreajustar) es **NEUTRAL**: ningún delta significativo en
-  ninguna métrica. No hay señal.
+- Los modelos ricos (full, ridge) **SOBREAJUSTAN** y **tienden a empeorar OOS** (goles y BTTS peores),
+  aunque con el motor corregido los IC ya **incluyen 0** (no significativo): las features colineales
+  aprenden ruido en burn-in que no generaliza.
+- El modelo **parsimonioso** (que no puede sobreajustar) es **NEUTRAL**: ningún delta significativo.
+- **Ningún IC95% excluye 0 en ninguna métrica/modelo** → no hay señal de mejora en ninguna parte.
 
 ## (c) ¿Mejora la feature de escenario?
-**NO.** En el mejor caso (parsimonioso) es neutral (cero mejora significativa); en los ricos, empeora
-(BTTS significativamente). El 1X2 nunca mejora. Es **coherente con el hallazgo previo** del escenario
-como multiplicador fijo (no significativo): la calidad del rival y la fuerza ya están en el xG L3, y el
-escenario de clasificación **no aporta poder predictivo marginal** al modelo de goles/1X2.
+**NO.** En el mejor caso (parsimonioso) es neutral (cero mejora significativa); los ricos tienden a
+empeorar (no significativo). Ningún IC95% excluye 0 en ninguna métrica. El 1X2 nunca mejora. Es
+**coherente con el hallazgo previo** del escenario como multiplicador fijo (no significativo): la
+calidad del rival y la fuerza ya están en el xG L3, y el escenario de clasificación **no aporta poder
+predictivo marginal** al modelo de goles/1X2.
 
 La muestra es modesta (OOS 68 partidos) — pero la conclusión es robusta: el test parsimonioso, que NO
 puede sobreajustar, no muestra señal, y los tests ricos empeoran. No es solo "insuficiente": no hay

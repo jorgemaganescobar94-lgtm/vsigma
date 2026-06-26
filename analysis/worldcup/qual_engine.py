@@ -33,20 +33,20 @@ LABEL_ES = {
 
 
 def _status_in_branch(pts, team):
-    """By POINTS only, in this final-points config: 'in' (top-2 certain) / 'tie' (boundary tie,
-    GD-dependent) / 'third' (alone 3rd) / 'third_tie' / 'out' (certain 4th)."""
+    """By POINTS only, in this final-points config: 'in' (top-2 CERTAIN, GD-independent) / 'tie'
+    (boundary tie: could be top-2 OR 3rd, GD decides) / 'third' (alone 3rd) / 'third_tie' / 'out'
+    (certain 4th). A team is CERTAINLY top-2 iff at most one other is at-or-above it on points
+    (above+equal <= 1) — incl. being tied for 1st with one team and two below (both advance)."""
     p = pts[team]
     above = sum(1 for t, q in pts.items() if t != team and q > p)
     equal = sum(1 for t, q in pts.items() if t != team and q == p)
-    if above <= 1 and equal == 0:
-        return "in"
-    if above <= 1 and equal >= 1:
-        return "tie"
-    if above == 2 and equal == 0:
-        return "third"
-    if above == 2 and equal >= 1:
-        return "third_tie"
-    return "out"
+    if above + equal <= 1:
+        return "in"                       # safely top-2 (alone, or tied-for-1st with one, 2 below)
+    if above <= 1:
+        return "tie"                       # could be 2nd OR 3rd by GD (a boundary tie of 3+ teams)
+    if above == 2:
+        return "third" if equal == 0 else "third_tie"
+    return "out"                           # >=3 strictly above -> alone last (4th)
 
 
 def classify_team(table, home_key, away_key, team_key, all_tables, n_groups):
