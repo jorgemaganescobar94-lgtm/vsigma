@@ -1,0 +1,33 @@
+================================================================================================
+VALOR MARGINAL de la GRANULARIDAD DE MATCHUP en gol/asistencia — READ-ONLY, sin API
+baseline = método ACTUAL ya validado (λ = xG_equipo(L3) × cuota). matchup = + interacción
+================================================================================================
+partidos usados=150 | filas jugador-prop=3062
+β (fuerza de interacción, hipótesis fija) = 0.25
+z_off = calidad ofensiva del jugador (g90/a90, temp. previa, estandarizado).
+FORM A z_weak = −fuerza L3 del rival (walk-forward; mismo signal del xG, en INTERACCIÓN).
+FORM B z_weak = goles encajados/partido del rival en internacionales previos (walk-forward).
+
+--- GOAL (n=3062, base rate=8.1%) · β=0.25 ---
+  método               logloss    brier     ECE  Δll vs base             sig?
+  ACTUAL (baseline)    0.22394  0.06437  0.0200            —            (ref)
+  matchup A:−L3opp     0.26474  0.06674  0.0145              Δll(base−m)=-0.04080 IC95[-0.08422,-0.00870] SIGNIF
+  matchup B:opp_gc     0.25311  0.06658  0.0176              Δll(base−m)=-0.02917 IC95[-0.06276,-0.00558] SIGNIF
+
+--- ASSIST (n=3062, base rate=5.6%) · β=0.25 ---
+  método               logloss    brier     ECE  Δll vs base             sig?
+  ACTUAL (baseline)    0.17241  0.04693  0.0161            —            (ref)
+  matchup A:−L3opp     0.20962  0.04880  0.0160              Δll(base−m)=-0.03722 IC95[-0.07908,-0.00600] SIGNIF
+  matchup B:opp_gc     0.18807  0.04831  0.0158              Δll(base−m)=-0.01567 IC95[-0.03885,-0.00248] SIGNIF
+
+--- SENSIBILIDAD a β (Δlogloss base−matchup; >0 = matchup mejor) ---
+  prop     form       β=-0.25 β=-0.15 β=0.15  β=0.25  β=0.4  
+  goal     A:−L3opp   -0.08843   -0.01296   -0.01498   -0.04080   -0.11129
+  goal     B:opp_gc   -0.06652   -0.02278   -0.00470   -0.02917   -0.08803
+  assist   A:−L3opp   -0.06646   -0.02189   -0.02387   -0.03722   -0.07506
+  assist   B:opp_gc   -0.06602   -0.03307   -0.00255   -0.01567   -0.05216
+
+================================================================================================
+LECTURA: lo relevante es Δll(base−matchup) > 0 con IC95% que EXCLUYA 0 (valor marginal real).
+Si el IC incluye 0, el xG de equipo ya captura la calidad del rival y la interacción no aporta.
+================================================================================================
