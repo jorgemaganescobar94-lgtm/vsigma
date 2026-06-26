@@ -480,6 +480,9 @@ def cmd_settle():
     now = datetime.now(timezone.utc)
     unsettled = log[log["settled"].fillna(0).astype(int) == 0]
     fids = sorted(set(unsettled["fixture_id"].dropna().astype(int)))
+    # columns that hold strings must be object dtype (empty cols load as float64;
+    # pandas 2.x raises LossySetitemError writing an ISO string into a float64 column)
+    log["settled_at_utc"] = log["settled_at_utc"].astype(object)
     n_set = 0
     for fid in fids:
         if _api_calls >= MAX_API:
