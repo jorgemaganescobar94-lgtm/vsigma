@@ -37,9 +37,10 @@ def _table(rows):
     return [{"name": n, "points": p, "played": pl, "gd": gd} for n, p, pl, gd in rows]
 
 
-# last group game: A is 1st-2nd -> le_vale_empate (0.97); Y is 4th but alive -> debe_ganar (1.08).
-NONTRIVIAL_GROUPS = {"G": _table([("A", 4, 2, 3), ("X", 4, 2, 2), ("B", 4, 2, 1), ("Y", 1, 2, -6)])}
-NONTRIVIAL_TG = {k: "G" for k in ("A", "X", "B", "Y")}
+# last group game, CERTAIN by points: A,B=4 with C,D=1 (ceiling 4) -> a draw (=5) guarantees top-2
+# in every parallel outcome -> both le_vale_empate (0.97). Non-trivial and mathematically sound.
+NONTRIVIAL_GROUPS = {"G": _table([("A", 4, 2, 2), ("B", 4, 2, 2), ("C", 1, 2, -2), ("D", 1, 2, -2)])}
+NONTRIVIAL_TG = {k: "G" for k in ("A", "B", "C", "D")}
 OM = {"our_home": 0.50, "our_draw": 0.27, "our_away": 0.23,
       "our_xg_home": 1.60, "our_xg_away": 1.00,
       "our_elo_home": 0.50, "our_elo_away": -0.50}
@@ -48,17 +49,17 @@ OM = {"our_home": 0.50, "our_draw": 0.27, "our_away": 0.23,
 # ----------------------------------------------------------------- compute_context_adjustment
 def test_nontrivial_group_is_adjusted():
     adj = BC.compute_context_adjustment(C, FakePred(), NONTRIVIAL_GROUPS, NONTRIVIAL_TG,
-                                        "Group Stage - 3", "A", "Y", OM)
+                                        "Group Stage - 3", "A", "B", OM)
     assert adj is not None
-    # multipliers picked up from the scenario (A draw-ok 0.97, Y must-win 1.08)
-    assert adj["ctx_mult_home"] == C.MULT["le_vale_empate"] and adj["ctx_mult_away"] == C.MULT["debe_ganar"]
-    # xG was scaled by the multipliers, recomputed via the module's machinery (ctx_xg rounded 2dp)
+    # both sides 'le_vale_empate' (×0.97), picked up from the parallel-match enumerator
+    assert adj["ctx_mult_home"] == C.MULT["le_vale_empate"] and adj["ctx_mult_away"] == C.MULT["le_vale_empate"]
+    # xG scaled by the multipliers, recomputed via the module's machinery (ctx_xg rounded 2dp)
     assert adj["ctx_xg_home"] == round(1.60 * 0.97, 2)
-    assert adj["ctx_xg_away"] == round(1.00 * 1.08, 2)
+    assert adj["ctx_xg_away"] == round(1.00 * 0.97, 2)
     # probs differ from pure L3 (the adjustment actually moved the prediction)
     assert abs(adj["ctx_home"] - OM["our_home"]) > 1e-4 or abs(adj["ctx_away"] - OM["our_away"]) > 1e-4
     assert "ajustado por contexto de grupo" in adj["context_note"]
-    assert "A le vale el empate" in adj["context_note"] and "Y debe ganar" in adj["context_note"]
+    assert "A le vale el empate" in adj["context_note"] and "B le vale el empate" in adj["context_note"]
 
 
 def test_knockout_is_not_adjusted():
@@ -67,10 +68,11 @@ def test_knockout_is_not_adjusted():
 
 
 def test_trivial_group_is_not_adjusted():
-    # both teams already resolved -> intrascendente (NEUTRALISED to 1.0) -> trivial -> None
-    g = {"G": _table([("A", 6, 2, 6), ("X", 4, 2, 1), ("B", 1, 2, -3), ("Y", 0, 2, -4)])}
-    tg = {k: "G" for k in ("A", "X", "B", "Y")}
-    assert BC.compute_context_adjustment(C, FakePred(), g, tg, "Group Stage - 3", "A", "Y", OM) is None
+    # both teams already clinched (A,B=6; C,D=0 ceiling 3) -> dead rubber -> intrascendente (×1.0)
+    # -> trivial -> None (no adjustment written).
+    g = {"G": _table([("A", 6, 2, 3), ("B", 6, 2, 3), ("C", 0, 2, -3), ("D", 0, 2, -3)])}
+    tg = {k: "G" for k in ("A", "B", "C", "D")}
+    assert BC.compute_context_adjustment(C, FakePred(), g, tg, "Group Stage - 3", "A", "B", OM) is None
 
 
 def test_soft_fail_returns_none():
@@ -84,7 +86,7 @@ def test_soft_fail_returns_none():
 
 def test_adjustment_never_touches_our_fields():
     adj = BC.compute_context_adjustment(C, FakePred(), NONTRIVIAL_GROUPS, NONTRIVIAL_TG,
-                                        "Group Stage - 3", "A", "Y", OM)
+                                        "Group Stage - 3", "A", "B", OM)
     assert all(not k.startswith("our_") for k in adj)   # only ctx_*/context_note are produced
 
 
@@ -129,8 +131,10 @@ def test_pred_1x2_falls_back_to_l3_without_ctx():
     assert lh == 0.50 and la == 0.23 and xgh == 1.60 and note is None
 
 
-def test_context_live_flag_exists_and_default_on():
-    assert hasattr(BC, "CONTEXT_LIVE") and BC.CONTEXT_LIVE is True
+def test_context_live_flag_off_after_safety_revert():
+    # PARTE A: el contexto en vivo está APAGADO (revertido por seguridad tras detectar el classify
+    # simplista). El flag existe y es False -> las predicciones mostradas/enviadas = L3 puro.
+    assert hasattr(BC, "CONTEXT_LIVE") and BC.CONTEXT_LIVE is False
 
 
 def test_match_block_shows_adjusted_and_note():

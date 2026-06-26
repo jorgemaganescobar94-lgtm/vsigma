@@ -176,66 +176,135 @@ def _num(v):
 
 
 # --------------------------------------------------------------- scenario classification
-def _team_status(name, table, advance=ADVANCE):
-    """(qualified, eliminated, remaining, rank_by_points) using clinch/elimination point bounds
-    (tiebreakers/best-thirds IGNORED -> conservative, documented simplification)."""
-    G = len(table)
-    per_team = max(G - 1, 1)
+# PRINCIPIO (honesto y conservador): asignar un escenario NO neutral (mult != 1.0) SOLO cuando es
+# MATEMÁTICAMENTE CIERTO POR PUNTOS. Cuando dependa de la diferencia de goles, del head-to-head o de
+# resultados ajenos inciertos -> NEUTRAL (×1.0, sin ajuste). Mejor no ajustar que ajustar dudoso.
+_RES = {"W": (3, 0), "D": (1, 1), "L": (0, 3)}   # (puntos del local, puntos del visitante) del partido
+
+
+def _certain_top2(fp, T):
+    """¿T está SEGURO en top-2 SOLO POR PUNTOS en esta config de puntos finales? (sin desempate por GD:
+    una igualdad a puntos con un rival cuenta EN CONTRA de la certeza). Cierto sii a lo sumo 1 rival
+    está por encima o empatado a puntos con T (peor caso de GD: empatados rankeados por encima)."""
+    p = fp[T]
+    above = sum(1 for n, q in fp.items() if n != T and q > p)
+    equal = sum(1 for n, q in fp.items() if n != T and q == p)
+    return (above + equal) <= 1
+
+
+def _certain_last(fp, T):
+    """¿T es CIERTAMENTE el ÚLTIMO (4º) por puntos? -> ni top-2 ni 3º (no puede ser mejor tercero).
+    Cierto sii TODOS los demás tienen estrictamente MÁS puntos que T (en peor caso de GD sigue 4º)."""
+    p = fp[T]
+    above = sum(1 for n, q in fp.items() if n != T and q > p)
+    return above == len(fp) - 1
+
+
+def _scenario_last_matchday(table, home, away):
+    """Escenarios (scen_home, scen_away) por ENUMERACIÓN del partido paralelo, o None si NO es una
+    última jornada limpia de grupo de 4 (los 4 con exactamente 1 partido por jugar).
+
+    El grupo son 4 {home, away, X, Y}; este partido = home vs away, el PARALELO = X vs Y. Se enumeran
+    los 9 resultados (W/D/L de ambos), se calculan los puntos finales y se determina top-2 SOLO POR
+    PUNTOS. Mejores terceros: NO se calcula cross-group; si un no-top-2 PODRÍA ser 3º -> neutral
+    (tercero_en_disputa, ×1.0), nunca 'eliminado'/'debe_ganar'."""
+    if len(table) != 4:
+        return None
+    per_team = len(table) - 1            # = 3
+    if any(int(r.get("played", 0)) != per_team - 1 for r in table):   # todos con exactamente 1 por jugar
+        return None
+    names = [r["name"] for r in table]
+    if home not in names or away not in names:
+        return None
+    others = [n for n in names if n not in (home, away)]
+    if len(others) != 2:
+        return None
+    X, Y = others
+    pts0 = {r["name"]: float(r["points"]) for r in table}
+    configs = []                          # [(resultado_local, {equipo: puntos_finales})]
+    for hr in ("W", "D", "L"):
+        ph, pa = _RES[hr]
+        for pr in ("W", "D", "L"):
+            px, py = _RES[pr]
+            fp = dict(pts0)
+            fp[home] += ph; fp[away] += pa; fp[X] += px; fp[Y] += py
+            configs.append((hr, fp))
+
+    def res_of(T, hr):                    # resultado de T dado el resultado del LOCAL
+        return hr if T == home else {"W": "L", "D": "D", "L": "W"}[hr]
+
+    def scen(T):
+        byres = {"W": [], "D": [], "L": []}
+        for hr, fp in configs:
+            byres[res_of(T, hr)].append(fp)
+        if all(_certain_top2(fp, T) for _, fp in configs):
+            return "ya_clasificado"                       # top-2 cierto en TODOS los resultados
+        if byres["D"] and all(_certain_top2(fp, T) for fp in byres["D"]):
+            return "le_vale_empate"                       # el EMPATE garantiza top-2 por puntos
+        win_safe = bool(byres["W"]) and all(_certain_top2(fp, T) for fp in byres["W"])
+        nonwin_last = all(_certain_last(fp, T) for fp in byres["D"] + byres["L"])
+        if win_safe and nonwin_last:
+            # 'debe_ganar' EXACTO: ganar garantiza top-2 y NO ganar -> 4º seguro (sin opción de mejor
+            # tercero). Demostrablemente INALCANZABLE en grupo de 4 (el empate del paralelo siempre
+            # crea empate/adelantamiento) -> en la práctica nunca se asigna; se mantiene por corrección.
+            return "debe_ganar"
+        if all(_certain_last(fp, T) for _, fp in configs):
+            return "eliminado"                            # 4º seguro en TODOS los resultados
+        # ni top-2 seguro ni 4º seguro: podría ser 3º -> posible mejor tercero -> NEUTRAL
+        could_be_third = any(not _certain_top2(fp, T) and not _certain_last(fp, T) for _, fp in configs)
+        return "tercero_en_disputa" if could_be_third else "partido_decisivo"
+
+    return scen(home), scen(away)
+
+
+def _scenario_bounds(table, name):
+    """Escenario CONSERVADOR por COTAS de puntos para casos que NO son última jornada limpia de 4
+    (jornadas previas rem>1, grupos no-de-4). Solo certifica 'ya_clasificado' (top-2 garantizado por
+    puntos en el peor caso) o 'eliminado' (4º seguro: todos los demás ya por encima de mi techo); en
+    cualquier otro caso NEUTRAL. Respeta mejores terceros (no 'eliminado' si podría ser 3º)."""
+    per_team = max(len(table) - 1, 1)
     me = next((r for r in table if r["name"] == name), None)
     if me is None:
-        return False, False, None, None
-    rem = max(per_team - me["played"], 0)
-    my_best = me["points"] + 3 * rem
-    my_worst = me["points"]
-    can_pass = clinched_above = 0
-    for o in table:
-        if o["name"] == name:
-            continue
-        o_rem = max(per_team - o["played"], 0)
-        o_best = o["points"] + 3 * o_rem
-        if o_best >= my_worst:          # o could end at/above my floor -> could pass me (conservative)
-            can_pass += 1
-        if o["points"] > my_best:       # o already guaranteed strictly above my ceiling
-            clinched_above += 1
-    qualified = can_pass < advance      # at most advance-1 others can reach me -> I'm in (conservative)
-    eliminated = clinched_above >= advance
-    order = sorted(table, key=lambda r: (-r["points"], -r["gd"]))
-    rank = 1 + [r["name"] for r in order].index(name)
-    return qualified, eliminated, rem, rank
+        return "partido_decisivo"
+    rem_me = max(per_team - int(me.get("played", 0)), 0)
+    my_floor = float(me["points"])
+    my_ceil = my_floor + 3 * rem_me
+    others = [r for r in table if r["name"] != name]
+    # ya_clasificado: menos de ADVANCE rivales pueden ALCANZAR mi suelo (igualdad cuenta en contra)
+    can_reach = sum(1 for o in others
+                    if float(o["points"]) + 3 * max(per_team - int(o.get("played", 0)), 0) >= my_floor)
+    if can_reach < ADVANCE:
+        return "ya_clasificado"
+    # eliminado: todos los demás ya tienen MÁS puntos que mi techo -> 4º seguro (ni top-2 ni 3º)
+    if sum(1 for o in others if float(o["points"]) > my_ceil) >= len(table) - 1:
+        return "eliminado"
+    return "partido_decisivo"
 
 
 def classify_fixture(round_str, home, away, groups, team_group, advance=ADVANCE):
-    """(scenario_home, scenario_away, mult_home, mult_away, nontrivial). Knockouts / missing
-    standings -> 'knockout'/'unknown' (mult 1.0 -> trivial). Dead rubber (both resolved) ->
-    'intrascendente' for both."""
+    """(scenario_home, scenario_away, mult_home, mult_away, nontrivial). Knockouts / missing or
+    cross-group standings -> 'knockout'/'unknown' (×1.0). Última jornada de grupo de 4: enumerador
+    del partido paralelo (matemáticamente cierto por puntos). Otros casos: cotas conservadoras.
+    Dead rubber (ambos resueltos) -> 'intrascendente' (neutralizado, ×1.0)."""
     if "group" not in str(round_str).lower():
         return "knockout", "knockout", 1.0, 1.0, False
+    gh, ga = team_group.get(home), team_group.get(away)
+    table = groups.get(gh) if gh else None
+    # ambos equipos deben estar en el MISMO grupo reconstruido con tabla completa
+    if not table or gh != ga or not any(r.get("name") == home for r in table) \
+            or not any(r.get("name") == away for r in table):
+        return "unknown", "unknown", 1.0, 1.0, False
 
-    def scen(name):
-        g = team_group.get(name)
-        table = groups.get(g) if g else None
-        if not table:
-            return "unknown", True  # (scenario, resolved?) — unknown counts as not-resolved
-        q, e, rem, rank = _team_status(name, table, advance)
-        if q:
-            return "ya_clasificado", True
-        # 48-team format: the 8 best thirds ALSO advance. A team currently 3rd by points may still
-        # qualify as a best third (cross-group math we do not compute) -> NEUTRAL tag, don't claim
-        # eliminated/must-win and don't change the prediction. (Residual simplification: a 4th-placed
-        # best-third long-shot is still treated by the top-2 logic below; documented.)
-        if rank == advance + 1:
-            return "tercero_en_disputa", False
-        if e:
-            return "eliminado", True
-        if rem == 1:                                   # last group game, still alive
-            return ("le_vale_empate" if (rank is not None and rank <= advance) else "debe_ganar"), False
-        return "partido_decisivo", False               # earlier group game, full stakes
+    enum = _scenario_last_matchday(table, home, away)
+    if enum is not None:
+        sh, sa = enum
+    else:
+        sh, sa = _scenario_bounds(table, home), _scenario_bounds(table, away)
 
-    sh, rh = scen(home)
-    sa, ra = scen(away)
-    # dead rubber: BOTH teams already resolved (qualified OR eliminated) -> de-facto friendly
-    if rh and ra and sh != "unknown" and sa != "unknown":
+    # dead rubber: AMBOS resueltos (clasificado o eliminado) -> amistoso de facto -> intrascendente
+    if sh in ("ya_clasificado", "eliminado") and sa in ("ya_clasificado", "eliminado"):
         sh = sa = "intrascendente"
+
     mh, ma = MULT.get(sh, 1.0), MULT.get(sa, 1.0)
     nontrivial = (mh != 1.0) or (ma != 1.0)
     return sh, sa, mh, ma, nontrivial

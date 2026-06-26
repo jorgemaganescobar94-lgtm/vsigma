@@ -41,7 +41,7 @@ WC_SEASON = 2026
 # cambio). Se guarda en columnas ctx_* (NO se toca our_* = L3 puro -> el aprendizaje del L3 queda
 # intacto); la ficha muestra ctx_* cuando existen. CONTEXT_LIVE=False -> rollback instantáneo a L3
 # puro (no se escriben columnas ctx_*). El A/B de sombra sigue corriendo aparte como panel de control.
-CONTEXT_LIVE = True
+CONTEXT_LIVE = False
 SCENARIO_ES = {"ya_clasificado": "ya clasificado", "eliminado": "eliminado",
                "debe_ganar": "debe ganar", "le_vale_empate": "le vale el empate",
                "intrascendente": "intrascendente"}

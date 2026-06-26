@@ -42,49 +42,78 @@ def _table(rows):
 
 
 # ----------------------------------------------------------------- scenario classification
-def test_status_qualified_and_eliminated():
-    # group of 4, 2 played each; leader 6 pts is mathematically safe vs the field below
-    table = _table([("A", 6, 2, 5), ("B", 4, 2, 2), ("C", 1, 2, -3), ("D", 0, 2, -4)])
-    qA, eA, remA, rankA = C._team_status("A", table)
-    assert qA and not eA and remA == 1 and rankA == 1
-    # D: 0 pts, 1 game left (max 3); two teams (A,B) already strictly above its ceiling -> eliminated
-    qD, eD, remD, _ = C._team_status("D", table)
-    assert eD and not qD
+# Nuevo classify_fixture (enumerador del partido paralelo): escenario NO neutral SOLO si es cierto
+# POR PUNTOS; ante cualquier dependencia de GD / mejores terceros / resultados ajenos -> neutral.
+def _grp(rows):
+    g = {"G": _table(rows)}
+    tg = {n: "G" for n, *_ in rows}
+    return g, tg
 
 
-def test_classify_must_win_vs_draw_ok():
-    # last group game (played 2). A is 1st-2nd by points -> draw ok; Y is 4th (NOT 3rd, so not the
-    # best-third exception) but still mathematically alive -> must win. 3rd (B) would be neutral.
-    groups = {"Group A": _table([("A", 4, 2, 3), ("X", 4, 2, 2), ("B", 4, 2, 1), ("Y", 1, 2, -6)])}
-    tg = {"A": "Group A", "X": "Group A", "B": "Group A", "Y": "Group A"}
-    sh, sa, mh, ma, nt = C.classify_fixture("Group Stage - 3", "A", "Y", groups, tg)
-    assert sh == "le_vale_empate" and sa == "debe_ganar"
-    assert mh == C.MULT["le_vale_empate"] and ma == C.MULT["debe_ganar"] and nt
+def test_classify_ya_clasificado_cierto():
+    # A=6: su ÚNICO posible alcanzador por puntos es su rival B (resto 0 pts, techo 3<6) -> A top-2
+    # seguro en TODOS los resultados (incluso perdiendo) -> ya_clasificado.
+    g, tg = _grp([("A", 6, 2, 4), ("B", 3, 2, 0), ("C", 0, 2, -2), ("D", 0, 2, -2)])
+    sh, sa, mh, ma, nt = C.classify_fixture("Group Stage - 3", "A", "B", g, tg)
+    assert sh == "ya_clasificado" and mh == C.MULT["ya_clasificado"] and nt
+
+
+def test_classify_le_vale_empate_cierto():
+    # A,B = 4; C,D = 1 (techo 4). Con EMPATE A=5 queda top-2 en TODO resultado del paralelo C-D
+    # (máx 4 < 5) -> le_vale_empate. Pero perder no es seguro -> no ya_clasificado.
+    g, tg = _grp([("A", 4, 2, 2), ("B", 4, 2, 2), ("C", 1, 2, -2), ("D", 1, 2, -2)])
+    sh, sa, mh, ma, nt = C.classify_fixture("Group Stage - 3", "A", "B", g, tg)
+    assert sh == "le_vale_empate" and sa == "le_vale_empate"
+    assert mh == C.MULT["le_vale_empate"] and nt
+
+
+def test_classify_uruguay_draw_not_safe_is_neutral():
+    # CASO URUGUAY: U va top-2 por PUNTOS ahora, pero si EMPATA (U=4) y el paralelo V-Z EMPATA
+    # (V=4, Z=4) queda empatado a puntos -> el empate NO es seguro -> NO 'le_vale_empate' -> neutral.
+    g, tg = _grp([("U", 3, 2, 0), ("W", 0, 2, 0), ("V", 3, 2, 0), ("Z", 3, 2, 0)])
+    sh, sa, mh, ma, nt = C.classify_fixture("Group Stage - 3", "U", "W", g, tg)
+    assert sh not in ("le_vale_empate", "ya_clasificado", "debe_ganar", "eliminado")
+    assert mh == 1.0 and not nt          # neutral -> sin ajuste
+
+
+def test_classify_iraq_possible_best_third_is_neutral():
+    # CASO IRAQ: fuera de top-2 (A,B=6 mandan) pero GANANDO llega a 4 y queda 3º (D abajo) -> posible
+    # mejor tercero -> NO 'eliminado' -> neutral (tercero_en_disputa, ×1.0).
+    g, tg = _grp([("A", 6, 2, 3), ("B", 6, 2, 3), ("Iraq", 1, 2, -3), ("D", 1, 2, -3)])
+    sh, sa, mh, ma, nt = C.classify_fixture("Group Stage - 3", "Iraq", "D", g, tg)
+    assert sh != "eliminado" and ma == 1.0 and not nt
+    assert sh in ("tercero_en_disputa", "partido_decisivo")
+
+
+def test_classify_eliminado_only_when_certain_last():
+    # T=0 y los otros tres siempre por encima incluso si T gana (T máx 3 < C=4 y < A,B≥6) -> 4º
+    # seguro en TODOS los resultados -> eliminado (no puede ni ser 3º).
+    g, tg = _grp([("A", 6, 2, 5), ("B", 6, 2, 5), ("C", 4, 2, 0), ("T", 0, 2, -10)])
+    sh, sa, mh, ma, nt = C.classify_fixture("Group Stage - 3", "T", "C", g, tg)
+    assert sh == "eliminado" and mh == C.MULT["eliminado"] and nt
 
 
 def test_classify_dead_rubber_both_resolved():
-    # A clinched (6=2W, only 1 rival can reach its floor), Y eliminated (0; two rivals already
-    # strictly above its ceiling of 3) -> both resolved -> intrascendente. (Max 6 pts after 2 games.)
-    groups = {"Group A": _table([("A", 6, 2, 6), ("X", 4, 2, 1), ("B", 1, 2, -3), ("Y", 0, 2, -4)])}
-    tg = {k: "Group A" for k in ("A", "X", "B", "Y")}
-    sh, sa, mh, ma, nt = C.classify_fixture("Group Stage - 3", "A", "Y", groups, tg)
-    assert sh == "intrascendente" and sa == "intrascendente"     # scenario tag unchanged
-    # 'intrascendente' NEUTRALIZADO a 1.00 (backtest): el escenario se sigue detectando, pero ya NO
-    # ajusta -> mult 1.0/1.0 -> el partido es TRIVIAL (nt=False), idéntico a L3.
-    assert mh == C.MULT["intrascendente"] == 1.0 and ma == C.MULT["intrascendente"] == 1.0
-    assert not nt
+    # AMBOS ya clasificados (A,B=6; C,D=0, techo 3) -> amistoso de facto -> intrascendente (×1.0).
+    g, tg = _grp([("A", 6, 2, 3), ("B", 6, 2, 3), ("C", 0, 2, -3), ("D", 0, 2, -3)])
+    sh, sa, mh, ma, nt = C.classify_fixture("Group Stage - 3", "A", "B", g, tg)
+    assert sh == "intrascendente" and sa == "intrascendente"
+    assert mh == C.MULT["intrascendente"] == 1.0 and not nt
 
 
-def test_classify_third_place_is_neutral_in_dispute():
-    # 4-group last matchday: C is 3rd by points. Top-2 logic alone would call it must-win, but in
-    # the 48-team format a best third can advance -> NEUTRAL 'tercero_en_disputa' (mult 1.0).
-    groups = {"G": _table([("A", 6, 2, 4), ("B", 4, 2, 1), ("C", 3, 2, 0), ("D", 0, 2, -5)])}
-    tg = {k: "G" for k in ("A", "B", "C", "D")}
-    sh, sa, mh, ma, nt = C.classify_fixture("Group Stage - 3", "C", "D", groups, tg)
-    assert sh == "tercero_en_disputa" and mh == 1.0 and C.MULT["tercero_en_disputa"] == 1.0
-    assert sa == "eliminado"          # 4th, clinched below -> still eliminated (documented residual)
-    # the 3rd-placed team is NOT marked eliminado/debe_ganar (signal not polluted)
-    assert sh not in ("eliminado", "debe_ganar")
+def test_classify_earlier_matchday_neutral_unless_certain():
+    # jornada previa (rem>1, played=1): nadie cierto por puntos -> partido_decisivo (neutral).
+    g, tg = _grp([("A", 3, 1, 1), ("B", 3, 1, 1), ("C", 0, 1, -1), ("D", 0, 1, -1)])
+    sh, sa, mh, ma, nt = C.classify_fixture("Group Stage - 2", "A", "B", g, tg)
+    assert mh == 1.0 and ma == 1.0 and not nt
+
+
+def test_classify_parallel_enumerator_picks_right_pair():
+    # el enumerador debe emparejar el PARALELO correcto: en A vs B, el paralelo es C vs D (no otro).
+    # A=6 sólo alcanzable por B -> ya_clasificado independientemente del paralelo C-D.
+    g, tg = _grp([("A", 6, 2, 4), ("B", 3, 2, 0), ("C", 2, 2, 0), ("D", 2, 2, 0)])
+    sh, _, _, _, _ = C.classify_fixture("Group Stage - 3", "A", "B", g, tg)
+    assert sh == "ya_clasificado"
 
 
 def test_fixture_status_index_aet_null_fulltime_gives_none():
