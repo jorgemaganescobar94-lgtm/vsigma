@@ -1,0 +1,40 @@
+========================================================================================================
+BAKE-OFF OOS · L3 (campeón) vs DIXON-COLES vs ML(GBM) — 1X2 y goles · READ-ONLY · sin API · sin producción
+========================================================================================================
+ML learner: sklearn HistGradientBoostingClassifier
+bloques walk-forward (refit DC/ML cada 60d, ventana 6.0a, HL=730d): 41
+partidos USABLES (los 3 con predicción): burn-in 3648 | OOS 2024-2025 2360
+L3 margin: a0=-0.1178 a1=1.5325 total_const=2.673 (lstsq/burn-in)
+DC rho (último bloque)≈-0.020 (mediana OOS)
+
+--------------------------------------------------------------------------------------------------------
+1X2 (H/D/A) OOS — calibración isotónica en burn-in para los 3
+--------------------------------------------------------------------------------------------------------
+  modelo         logloss    brier     ECE   acc%            Δlogloss vs L3 (IC95%, paired boot)
+  L3             0.90215  0.53047  0.0246  58.2%                                  (campeón ref)
+  L3_const       0.90147  0.53005  0.0241  58.2%       Δ=+0.00067 [-0.00038,+0.00175] no signif
+  DixonColes     0.94246  0.53571  0.0468  58.6%            Δ=-0.04032 [-0.07311,-0.01103] PEOR
+  ML_GBM         0.92741  0.53869  0.0491  57.8%            Δ=-0.02526 [-0.04182,-0.01167] PEOR
+
+--------------------------------------------------------------------------------------------------------
+Over2.5 (binario) OOS — calibración isotónica en burn-in
+--------------------------------------------------------------------------------------------------------
+  real Over2.5=49%   modelo         logloss    brier                     Δlogloss vs L3 (IC95%)
+                   L3             0.70250  0.24556                              (campeón ref)
+                   L3_const       0.69738  0.24769   Δ=+0.00512 [-0.00823,+0.02348] no signif
+                   DixonColes     0.68165  0.24431        Δ=+0.02085 [+0.00107,+0.04567] BATE
+                   ML_GBM         0.68351  0.24306        Δ=+0.01899 [+0.00238,+0.04030] BATE
+
+--------------------------------------------------------------------------------------------------------
+BTTS (binario) OOS — calibración isotónica en burn-in
+--------------------------------------------------------------------------------------------------------
+  real BTTS=44%   modelo         logloss    brier                     Δlogloss vs L3 (IC95%)
+                   L3             0.68413  0.24335                              (campeón ref)
+                   L3_const       0.70606  0.24476   Δ=-0.02192 [-0.04961,+0.00197] no signif
+                   DixonColes     0.68129  0.24409   Δ=+0.00284 [-0.00777,+0.01760] no signif
+                   ML_GBM         0.68087  0.24398   Δ=+0.00326 [-0.00597,+0.01741] no signif
+
+========================================================================================================
+LECTURA: 'BATE' = IC95% de Δlogloss(L3−modelo) EXCLUYE 0 con media>0 (mejora clara y significativa).
+Si todos los IC incluyen 0 (o son PEOR), L3 es el techo en ese mercado.
+========================================================================================================
