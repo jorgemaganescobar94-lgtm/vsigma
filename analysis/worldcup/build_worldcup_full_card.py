@@ -253,6 +253,84 @@ def pred_1x2(r):
             r.get("our_xg_home"), r.get("our_xg_away"), None)
 
 
+# --------------------------------------------------------------------- briefing digest (display-only)
+# Two ADDITIVE briefing extras derived ONLY from the predictions already shown (pred_1x2 -> ctx_* if
+# present, else our_*). NO recompute, NO model touch, NO market (so NO "value"/"apuesta" wording —
+# this is a digest of the model's most confident calls, not a betting recommendation). Soft-fail:
+# any problem -> None/[] and the briefing renders exactly as before.
+FIRMEST_LABEL = "🎯 PREDICCIONES MÁS FIRMES DE HOY (mayor confianza del modelo · solo informativo):"
+
+
+def _displayed_probs(r):
+    """(p_home, p_draw, p_away, xg_home, xg_away) as DISPLAYED (ctx_* if present, else our_*).
+    None if the 1X2 probabilities are missing."""
+    lh, ld, la, xgh, xga, _note = pred_1x2(r)
+    if pd.isna(lh) or pd.isna(ld) or pd.isna(la):
+        return None
+    return float(lh), float(ld), float(la), xgh, xga
+
+
+def day_summary_line(df):
+    """One-line day digest from the DISPLAYED predictions: #matches + clearest favourite (highest
+    single-TEAM prob across the slate) + most balanced match (lowest max-class prob). Display only.
+    None if no usable prediction. Soft-fail -> None."""
+    try:
+        best_fav = None    # (team_prob, team_name)
+        most_even = None   # (max_class_prob, "home–away")
+        n = 0
+        for _, r in df.iterrows():
+            p = _displayed_probs(r)
+            if p is None:
+                continue
+            n += 1
+            ph, pd_, pa, _xgh, _xga = p
+            h, a = es_name(r["home"]), es_name(r["away"])
+            fav_prob, fav_team = (ph, h) if ph >= pa else (pa, a)
+            if best_fav is None or fav_prob > best_fav[0]:
+                best_fav = (fav_prob, fav_team)
+            mx = max(ph, pd_, pa)
+            if most_even is None or mx < most_even[0]:
+                most_even = (mx, f"{h}–{a}")
+        if n == 0:
+            return None
+        parts = [f"📅 {len(df)} partido{'s' if len(df) != 1 else ''} hoy"]
+        if best_fav is not None:
+            parts.append(f"favorito más claro: {best_fav[1]} ({best_fav[0] * 100:.0f}%)")
+        if most_even is not None and n >= 2:   # 'most even' only means something with >=2 matches
+            parts.append(f"más parejo: {most_even[1]}")
+        return " · ".join(parts)
+    except Exception:
+        return None
+
+
+def firmest_predictions_block(df, top_n=3):
+    """Top-N matches by MODEL CONFIDENCE (highest winning-class prob), with the called outcome,
+    its % and xG. A digest of the most confident calls — explicitly NOT value/bets (no market).
+    [] if <2 usable predictions (a 'top' needs a ranking) or on soft-fail."""
+    try:
+        cand = []
+        for _, r in df.iterrows():
+            p = _displayed_probs(r)
+            if p is None:
+                continue
+            ph, pd_, pa, xgh, xga = p
+            probs = [ph, pd_, pa]
+            k = int(np.argmax(probs))
+            h, a = es_name(r["home"]), es_name(r["away"])
+            winner = h if k == 0 else ("Empate" if k == 1 else a)
+            cand.append((probs[k], h, a, winner, xgh, xga))
+        if len(cand) < 2:
+            return []
+        cand.sort(key=lambda t: -t[0])
+        lines = [FIRMEST_LABEL]
+        for conf, h, a, winner, xgh, xga in cand[:top_n]:
+            xg = f" · xG {float(xgh):.1f}-{float(xga):.1f}" if pd.notna(xgh) and pd.notna(xga) else ""
+            lines.append(f"  {h} vs {a} — {winner} {conf * 100:.0f}%{xg}")
+        return lines
+    except Exception:
+        return []
+
+
 def match_block(r, show_lineups=False):
     """Readable, labelled per-match card (list of lines). Data model only, ZERO odds."""
     h, a = es_name(r["home"]), es_name(r["away"])
@@ -483,7 +561,9 @@ def render_paginated(df, date_from, within_hours, scorecard, show_yesterday,
     else:
         htitle = f"Mundial 2026 — briefing ({date_from})"
         hlead = f"🏆 MUNDIAL 2026 — briefing {date_from} (modelo propio, sin cuotas)"
-    header = [hlead] + sc_block + yest_block
+    # day-summary digest line right under the banner (1 line, display-only, soft-fail)
+    ds_line = day_summary_line(df)
+    header = [hlead] + ([ds_line] if ds_line else []) + sc_block + yest_block
     if len(df):
         header.append(f"📋 {len(df)} partido(s) abajo (en mensajes siguientes).")
     header.append("ℹ️ Stats por equipo = BAJA CONF (señal OOS débil). Tarjetas omitidas (ruido).")
@@ -497,6 +577,12 @@ def render_paginated(df, date_from, within_hours, scorecard, show_yesterday,
         return 0
 
     messages = [(htitle, header[:max_lines])]
+
+    # ----- 'predicciones más firmes' digest as its OWN short message (so it never crowds out or
+    # truncates the header/match pages). Display-only, soft-fail -> omitted entirely. -----
+    firmest = firmest_predictions_block(df)
+    if firmest:
+        messages.append(("Mundial 2026 — predicciones más firmes", firmest[:max_lines]))
 
     # ----- match pages -----
     blocks = [match_block(r, show_lineups) for _, r in df.iterrows()]
