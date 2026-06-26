@@ -18,7 +18,7 @@ Scenario -> multiplier on THAT team's own attacking xG (documented defaults, see
   debe_ganar        ×1.08   (va por detrás, sale a por el partido)
   le_vale_empate    ×0.97   (le sirve el empate, algo más conservador)
   partido_decisivo  ×1.00   (todo en juego, intensidad normal -> sin cambio)
-  intrascendente    ×0.90   (AMBOS equipos ya resueltos: amistoso de facto, menos goles)
+  intrascendente    ×1.00   (NEUTRALIZADO: el backtest mostró que ×0.90 empeora -> sin ajuste)
   knockout/unknown  ×1.00   (sin contexto de grupo -> sin ajuste)
 
 Subcommands:  predict (NS only, anti-hindsight, lock-at-KO) · settle (after FT) ·
@@ -67,9 +67,14 @@ FINISHED = {"FT", "AET", "PEN"}
 # 'tercero_en_disputa' is NEUTRAL (1.0): a 3rd-placed team may still advance as a best third in
 # the 48-team format (cross-group math we do not compute), so we refuse to claim eliminated/must-win
 # and leave the prediction untouched rather than pollute the shadow signal with a wrong scenario.
+# 'intrascendente' NEUTRALIZADO a 1.00 (antes 0.90): el backtest histórico
+# (context_shadow_backtest.py, 162 partidos de última jornada de torneos de selecciones) mostró que
+# ×0.90 EMPEORA de forma consistente (mejora en solo 18% de 11 partidos; Δlogloss −0.0245). 1.0 =
+# sin ajuste es el default honesto. El resto de multiplicadores se mantienen; el contexto sigue EN
+# SOMBRA (no afecta predicciones en vivo).
 MULT = {
     "ya_clasificado": 0.92, "eliminado": 0.95, "debe_ganar": 1.08, "le_vale_empate": 0.97,
-    "partido_decisivo": 1.00, "intrascendente": 0.90, "tercero_en_disputa": 1.00,
+    "partido_decisivo": 1.00, "intrascendente": 1.00, "tercero_en_disputa": 1.00,
     "knockout": 1.00, "unknown": 1.00,
 }
 

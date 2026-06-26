@@ -68,8 +68,11 @@ def test_classify_dead_rubber_both_resolved():
     groups = {"Group A": _table([("A", 6, 2, 6), ("X", 4, 2, 1), ("B", 1, 2, -3), ("Y", 0, 2, -4)])}
     tg = {k: "Group A" for k in ("A", "X", "B", "Y")}
     sh, sa, mh, ma, nt = C.classify_fixture("Group Stage - 3", "A", "Y", groups, tg)
-    assert sh == "intrascendente" and sa == "intrascendente"
-    assert mh == C.MULT["intrascendente"] and ma == C.MULT["intrascendente"] and nt
+    assert sh == "intrascendente" and sa == "intrascendente"     # scenario tag unchanged
+    # 'intrascendente' NEUTRALIZADO a 1.00 (backtest): el escenario se sigue detectando, pero ya NO
+    # ajusta -> mult 1.0/1.0 -> el partido es TRIVIAL (nt=False), idéntico a L3.
+    assert mh == C.MULT["intrascendente"] == 1.0 and ma == C.MULT["intrascendente"] == 1.0
+    assert not nt
 
 
 def test_classify_third_place_is_neutral_in_dispute():

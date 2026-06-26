@@ -1,0 +1,68 @@
+================================================================================================
+BACKTEST · heurística de CONTEXTO de clasificación (worldcup_context_shadow) — READ-ONLY
+última jornada de fase de grupos · SELECCIONES NACIONALES · sin API · sin cambios en producción
+================================================================================================
+filas de clubes en el dataset: 0  (debe ser 0: international_results.csv es de selecciones)
+
+torneos-temporada INCLUIDOS (K4 limpio): 17
+   + AFCON 2021: 52 partidos, 6 grupos de 4
+   + AFCON 2023: 52 partidos, 6 grupos de 4
+   + AFCON 2025: 52 partidos, 6 grupos de 4
+   + AsianCup 2019: 51 partidos, 6 grupos de 4
+   + AsianCup 2023: 51 partidos, 6 grupos de 4
+   + CopaAmerica 2019: 26 partidos, 3 grupos de 4
+   + CopaAmerica 2024: 32 partidos, 4 grupos de 4
+   + Euro 2024: 51 partidos, 6 grupos de 4
+   + GoldCup 2019: 31 partidos, 4 grupos de 4
+   + GoldCup 2021: 31 partidos, 4 grupos de 4
+   + GoldCup 2023: 31 partidos, 4 grupos de 4
+   + GoldCup 2025: 31 partidos, 4 grupos de 4
+   + GulfCup 2019: 15 partidos, 2 grupos de 4
+   + GulfCup 2023: 15 partidos, 2 grupos de 4
+   + GulfCup 2024: 15 partidos, 2 grupos de 4
+   + WC 2018: 64 partidos, 8 grupos de 4
+   + WC 2022: 64 partidos, 8 grupos de 4
+torneos-temporada EXCLUIDOS (no reconstruyen K4 limpio / formato no liga simple): 6
+   - AFCON 2019: 198 partidos (no_clean_K4)
+   - ArabCup 2021: 39 partidos (no_clean_K4)
+   - ArabCup 2025: 38 partidos (no_clean_K4)
+   - CopaAmerica 2021: 28 partidos (no_clean_K4)
+   - Euro 2020: 313 partidos (no_clean_K4)
+   - WC 2026: 41 partidos (no_clean_K4)
+
+PARTIDOS de última jornada (con rating L3 walk-forward disponible): 162
+  de ellos NO triviales (mult != 1.0): 162
+
+--- distribución por escenario (ambos equipos; mult del escenario) ---
+   le_vale_empate      112   (mult 0.97)
+   tercero_en_disputa   81   (mult 1.0)
+   debe_ganar           41   (mult 1.08)
+   eliminado            40   (mult 0.95)
+   ya_clasificado       28   (mult 0.92)
+   intrascendente       22   (mult 0.9)
+
+--- 1X2 (H/D/A) — context-adjusted VS L3 puro, SOLO escenarios no triviales ---
+  corte                     n   ll_L3  ll_ctx     Δll   br_L3  br_ctx     Δbr  acc_L3 acc_ctx  bate?
+  --------------------------------------------------------------------------------------------------
+  GLOBAL no-trivial       162  1.0580  1.0526 +0.0055  0.6300  0.6268 +0.0032   49.4%   48.1%     SÍ
+  ya_clasificado           28  1.2153  1.2034 +0.0120  0.6927  0.6856 +0.0071   46.4%   46.4%     SÍ
+  eliminado                40  0.9612  0.9558 +0.0054  0.5643  0.5608 +0.0035   60.0%   60.0%     SÍ
+  debe_ganar               41  1.1114  1.0936 +0.0178  0.6658  0.6532 +0.0126   48.8%   46.3%     SÍ
+  le_vale_empate          101  1.0232  1.0170 +0.0062  0.6177  0.6149 +0.0029   48.5%   46.5%     SÍ
+  intrascendente           11  1.0525  1.0770 -0.0245  0.6382  0.6510 -0.0128   36.4%   36.4%     no
+
+  Δ = L3 − ctx (positivo = ctx mejora). 'bate?' = ctx mejora en logloss Y brier.
+
+--- ¿supera el ruido? bootstrap pareado por partido (20000 resamples, semilla fija) ---
+  logloss: media Δ(L3-ctx)=+0.00547 | ctx mejor en 45% de partidos | mejora rel. 0.52% del L3
+  IC95% Δlogloss=[-0.00360,+0.01475] -> NO significativo (incluye 0)  | P(Δ>0)=88%
+  IC95% Δbrier  =[-0.00251,+0.00888] -> NO significativo (incluye 0)  | P(Δ>0)=86%
+
+--- Over 2.5 (binario) sobre no triviales ---
+  real Over=46% (n=162)
+  L3 puro     logloss 0.6932 · brier 0.2500
+  context-adj logloss 0.6863 · brier 0.2466
+
+================================================================================================
+VEREDICTO GLOBAL (no triviales, N=162, umbral=20): MEJORA
+================================================================================================
