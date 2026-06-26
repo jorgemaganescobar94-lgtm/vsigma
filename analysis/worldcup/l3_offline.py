@@ -43,6 +43,14 @@ CALIB = OUT_DIR / "national_elo_layer3_calibration.json"
 PREDS = OUT_DIR / "worldcup_our_model_predictions.csv"
 KMAX = 12
 
+# 🛡️ TOPE DE SEGURIDAD del total de goles dependiente del partido (auditoría read-only, fix defensivo).
+# El total matchup = tb0+tb1·|sup|+tb2·sup² crece con el cuadrado del desnivel; extrapolado a un |sup|
+# extremo (>3.5, INALCANZABLE en el campo del Mundial: máx real ~2.24 -> total ~3.93) daría totales
+# irreales (>6) y xG >7. TOTAL_CAP capa el total para eliminar esa cola. NUNCA muerde en datos reales
+# (máx WC 3.93 < 5.5; máx burn-in < 5.5) -> NO cambia ninguna predicción ni la calibración committeada.
+# Constante nombrada por si se quiere ajustar; es la ÚNICA fuente de verdad (national_elo_layer3 la reutiliza).
+TOTAL_CAP = 5.5
+
 # 🔴 FLAG DE REVERSA del TOTAL DE GOLES dependiente del partido (auditoría candidato #1, forma b:
 # total = tb0 + tb1·|sup| + tb2·sup²). True (default) -> total dependiente del partido (mejora OU/BTTS
 # OOS sin dañar el 1X2; backtest total_goals_backtest). False -> total CONSTANTE total_mean (= modelo
@@ -73,7 +81,7 @@ def total_goals(sup, total_mean, total_coef, matchup):
     total = tb0 + tb1·|sup| + tb2·sup² (forma b); else the CONSTANT total_mean (old behaviour)."""
     if matchup and total_coef is not None:
         tb0, tb1, tb2 = (float(total_coef[0]), float(total_coef[1]), float(total_coef[2]))
-        return tb0 + tb1 * abs(sup) + tb2 * sup * sup
+        return min(tb0 + tb1 * abs(sup) + tb2 * sup * sup, TOTAL_CAP)   # 🛡️ tope de seguridad
     return total_mean
 
 

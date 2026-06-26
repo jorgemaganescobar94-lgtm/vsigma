@@ -339,7 +339,12 @@ def context_predict(pred, home, away, mult_home, mult_away):
     sa = pred.strength.get(away)
     if sh is None or sa is None:
         return None
-    lh, la = l3_offline.raw_xg(sh - sa, pred.a0, pred.a1, pred.total_mean)
+    # baseline L3 con el MISMO total que producción (auditoría: antes usaba total CONSTANTE -> el
+    # scorecard de sombra validaba contra un baseline distinto del live). Pasamos total_coef y el flag
+    # vivo (TOTAL_MATCHUP_LIVE) -> shadow == producción en cualquier estado del flag; la pata ctx ya
+    # parte de aquí, así que siguen apples-to-apples Y ahora reflejan la ficha en vivo.
+    lh, la = l3_offline.raw_xg(sh - sa, pred.a0, pred.a1, pred.total_mean,
+                               pred.total_coef, matchup=l3_offline.TOTAL_MATCHUP_LIVE)
     base = adjust_prediction(pred, lh, la, 1.0, 1.0)
     adj = adjust_prediction(pred, lh, la, mult_home, mult_away)
     return {

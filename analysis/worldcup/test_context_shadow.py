@@ -32,6 +32,9 @@ class FakePred:
     def __init__(self):
         self.strength = {"A": 0.5, "B": -0.5, "C": 0.0, "D": 0.0}
         self.a0, self.a1, self.total_mean = 0.0, 1.0, 2.6
+        # total matchup coef (forma b) — mirrors the real Predictor so context_predict exercises the
+        # match-dependent total path (FIX 2: shadow baseline usa el mismo total que producción).
+        self.total_coef = [2.39, 0.075, 0.273]
         ident = {"ux": [0.0, 1.0], "uf": [0.0, 1.0]}
         self.iso = [dict(ident), dict(ident), dict(ident)]
 

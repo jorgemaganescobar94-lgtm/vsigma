@@ -229,7 +229,9 @@ def main():
 
     def _total(sup, matchup):
         if matchup:
-            return total_coef[0] + total_coef[1] * abs(sup) + total_coef[2] * sup * sup
+            # 🛡️ mismo tope de seguridad que l3_offline (fuente única TOTAL_CAP) -> ambos caminos coinciden
+            return min(total_coef[0] + total_coef[1] * abs(sup) + total_coef[2] * sup * sup,
+                       l3_offline.TOTAL_CAP)
         return total_mean
 
     def probs(sup, matchup):
