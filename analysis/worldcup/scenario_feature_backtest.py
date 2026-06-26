@@ -40,16 +40,10 @@ except Exception:
 
 import context_shadow_backtest as CB     # reconstruct_groups, WFRatings, data load, L3 calib
 import l3_offline                          # raw_xg, wdl (Poisson + frozen calibration)
+from qual_engine import classify_team, FEATURES   # single source of truth for the scenario engine
 
 REPORT = HERE / "scenario_feature_backtest_report.txt"
 METRICS_CSV = HERE / "scenario_feature_backtest_metrics.csv"
-
-# best thirds advancing by number of groups in the tournament (real formats; else top-2 only):
-#   6 groups (24-team Euro/AFCON/AsianCup) -> 4 thirds ; 12 groups (WC2026) -> 8 thirds.
-THIRDS_BY_NGROUPS = {6: 4, 12: 8}
-RES_PTS = {"W": (3, 0), "D": (1, 1), "L": (0, 3)}
-FEATURES = ["qualified", "eliminated", "controls_destiny", "draw_enough", "must_win",
-            "depends_on_others", "gd_dependent", "alive_as_third"]
 
 
 # --------------------------------------------------------------- standings (with GF for tiebreak)
@@ -78,101 +72,7 @@ def full_table(group, upto_date):
     return acc
 
 
-def _status_in_branch(pts, team):
-    """By POINTS only, in this final-points config: (-> 'in' top-2 certain / 'tie' boundary tie
-    (gd-dependent) / 'third' alone 3rd / 'third_tie' / 'out' certain 4th). pts: {tid:points}."""
-    p = pts[team]
-    above = sum(1 for t, q in pts.items() if t != team and q > p)
-    equal = sum(1 for t, q in pts.items() if t != team and q == p)
-    if above <= 1 and equal == 0:
-        return "in"                      # alone in top-2 by points -> certain
-    if above <= 1 and equal >= 1:
-        return "tie"                     # tie at the top-2 boundary -> GD/GF/h2h decide
-    if above == 2 and equal == 0:
-        return "third"                   # alone 3rd by points
-    if above == 2 and equal >= 1:
-        return "third_tie"               # could be 2nd or 3rd by GD
-    return "out"                         # >=3 strictly above -> 4th (last)
-
-
-def classify_team(table, home_id, away_id, team, all_tables, n_groups):
-    """Scenario FEATURES for `team` at the last matchday. table: this group's current full_table.
-    home_id/away_id = this match; the other two teams play the PARALLEL match. all_tables: list of
-    every group's current full_table (for the conservative best-third bound)."""
-    tids = list(table.keys())
-    others = [t for t in tids if t not in (home_id, away_id)]
-    base = {t: table[t]["pts"] for t in tids}
-    feat = {f: 0 for f in FEATURES}
-    if len(table) != 4 or len(others) != 2:
-        return feat, "unknown"           # not a clean 4-team group -> all flags 0 (conservative)
-    X, Y = others
-
-    # enumerate the 9 branches: own result (for `team`) × parallel result (X vs Y)
-    # own result maps to (home,away) points; `team` is home_id or away_id.
-    opp = away_id if team == home_id else home_id   # `team`'s opponent in THIS match
-    branches = []
-    for own in ("W", "D", "L"):                     # own = result of `team`
-        tp = 3 if own == "W" else (1 if own == "D" else 0)
-        op = 0 if own == "W" else (1 if own == "D" else 3)
-        for par in ("W", "D", "L"):
-            px, py = RES_PTS[par]
-            pts = dict(base)
-            pts[team] += tp; pts[opp] += op; pts[X] += px; pts[Y] += py
-            branches.append((own, par, pts))
-
-    def st(own_filter):
-        return [_status_in_branch(pts, team) for own, par, pts in branches if own in own_filter]
-
-    win = st({"W"}); draw = st({"D"}); loss = st({"L"}); allb = st({"W", "D", "L"})
-    in_certain = lambda lst: all(s == "in" for s in lst)
-    none_out_top2 = lambda lst: all(s in ("in", "tie") for s in lst)  # could still be top-2
-
-    feat["qualified"] = int(in_certain(allb))
-    feat["draw_enough"] = int(bool(draw) and in_certain(draw) and not feat["qualified"])
-    feat["must_win"] = int(bool(win) and in_certain(win) and not in_certain(draw) and not feat["qualified"])
-    feat["controls_destiny"] = int(feat["qualified"] or feat["draw_enough"] or feat["must_win"])
-    # depends_on_others: best own result (win) does NOT guarantee by points, but could still qualify
-    feat["depends_on_others"] = int(not feat["controls_destiny"] and any(s in ("in", "tie") for s in win))
-    # gd_dependent: some branch hinges on a points tie at the boundary
-    feat["gd_dependent"] = int(any(s in ("tie", "third_tie") for s in allb))
-    # alive_as_third: could finish 3rd AND the format has thirds AND (conservative cross-group) could
-    # rank among the top-N thirds.
-    can_third = any(s in ("third", "third_tie", "tie") for s in allb)
-    n_thirds = THIRDS_BY_NGROUPS.get(n_groups, 0)
-    alive_third = False
-    if n_thirds > 0 and can_third:
-        # team's BEST possible final points (win own match)
-        best_pts = base[team] + 3
-        # count groups whose 3rd-place team is GUARANTEED to finish strictly above best_pts
-        # (their current 3rd already has > best_pts and 2 ahead of it are safe). Conservative:
-        # use current points only -> a group "outranks for sure" if its 3rd-by-current-pts > best_pts.
-        sure_better = 0
-        for tb in all_tables:
-            if tb is table:
-                continue
-            ordered = sorted(tb.values(), key=lambda r: -r["pts"])
-            if len(ordered) >= 3 and ordered[2]["pts"] > best_pts:
-                sure_better += 1
-        alive_third = sure_better < n_thirds
-    feat["alive_as_third"] = int(alive_third)
-    feat["eliminated"] = int(not none_out_top2(allb) and not any(s in ("in", "tie") for s in allb)
-                             and not alive_third)
-    # readable label (priority order)
-    if feat["qualified"]:
-        lab = "qualified"
-    elif feat["eliminated"]:
-        lab = "eliminated"
-    elif feat["draw_enough"]:
-        lab = "draw_enough"
-    elif feat["must_win"]:
-        lab = "must_win"
-    elif feat["alive_as_third"]:
-        lab = "alive_as_third"
-    elif feat["depends_on_others"]:
-        lab = "depends_on_others"
-    else:
-        lab = "gd_dependent" if feat["gd_dependent"] else "decisive"
-    return feat, lab
+# classify_team / _status_in_branch / FEATURES / THIRDS_BY_NGROUPS / RES_PTS -> qual_engine (imported)
 
 
 # --------------------------------------------------------------- PART 1 validation

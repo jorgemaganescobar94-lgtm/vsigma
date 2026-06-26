@@ -41,7 +41,7 @@ WC_SEASON = 2026
 # cambio). Se guarda en columnas ctx_* (NO se toca our_* = L3 puro -> el aprendizaje del L3 queda
 # intacto); la ficha muestra ctx_* cuando existen. CONTEXT_LIVE=False -> rollback instantáneo a L3
 # puro (no se escriben columnas ctx_*). El A/B de sombra sigue corriendo aparte como panel de control.
-CONTEXT_LIVE = False
+CONTEXT_LIVE = True
 SCENARIO_ES = {"ya_clasificado": "ya clasificado", "eliminado": "eliminado",
                "debe_ganar": "debe ganar", "le_vale_empate": "le vale el empate",
                "intrascendente": "intrascendente"}
@@ -122,6 +122,36 @@ def compute_context_adjustment(ctxmod, l3pred, ctx_groups, ctx_team_group, rnd, 
         return None
 
 
+def compute_group_info(ctx_groups, home, away):
+    """INFORMATION line (NOT the prediction) from the corrected qualification engine (qual_engine:
+    FIFA tiebreakers, best thirds). Returns a readable string for a LAST-MATCHDAY 4-team group with
+    both teams, else None. Soft-fail -> None. Independent of CONTEXT_LIVE (it is information)."""
+    try:
+        import qual_engine  # noqa: E402  (lightweight, pure-Python; no API)
+        gh = next((g for g, rows in ctx_groups.items() if any(r.get("name") == home for r in rows)), None)
+        ga = next((g for g, rows in ctx_groups.items() if any(r.get("name") == away for r in rows)), None)
+        if gh is None or gh != ga:
+            return None
+        rows = ctx_groups[gh]
+        if len(rows) != 4 or any(int(r.get("played", 0)) != 2 for r in rows):
+            return None                          # only the LAST group matchday (each played 2)
+        table = {r["name"]: {"pts": float(r["points"]), "played": int(r.get("played", 0))} for r in rows}
+        all_tables = [{rr["name"]: {"pts": float(rr["points"])} for rr in rws}
+                      for rws in ctx_groups.values() if len(rws) == 4]
+        n_groups = len(all_tables)
+        _, lab_h = qual_engine.classify_team(table, home, away, home, all_tables, n_groups)
+        _, lab_a = qual_engine.classify_team(table, home, away, away, all_tables, n_groups)
+        parts = []
+        ph, pa = qual_engine.LABEL_ES.get(lab_h, ""), qual_engine.LABEL_ES.get(lab_a, "")
+        if ph:
+            parts.append(f"{home} {ph}")
+        if pa:
+            parts.append(f"{away} {pa}")
+        return " · ".join(parts) if parts else None
+    except Exception:
+        return None
+
+
 def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0):
     c = APIFootballClient()
 
@@ -193,15 +223,14 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
     except Exception as e:  # noqa: BLE001
         print(f"l3_adjust unavailable: {type(e).__name__}: {e}")
 
-    # context-adjustment module (SHADOW logic reused LIVE): classify_fixture + adjust_prediction.
-    ctxmod = None
+    # context module — used for BOTH the multiplier adjustment (gated on CONTEXT_LIVE) and the
+    # group-context INFORMATION line (always). build_status_maps is needed in both cases.
     ctx_groups, ctx_team_group = {}, {}
-    if CONTEXT_LIVE:
-        try:
-            import worldcup_context_shadow as ctxmod  # noqa: E402
-        except Exception as e:  # noqa: BLE001
-            print(f"context_shadow unavailable (-> L3 puro): {type(e).__name__}: {e}")
-            ctxmod = None
+    try:
+        import worldcup_context_shadow as ctxmod  # noqa: E402
+    except Exception as e:  # noqa: BLE001
+        print(f"context_shadow unavailable: {type(e).__name__}: {e}")
+        ctxmod = None
 
     # standings -> team context
     ctx = {}
@@ -307,6 +336,13 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
                 f"{home} {ctx_adj['ctx_home']*100:4.1f}%  Draw {ctx_adj['ctx_draw']*100:4.1f}%  "
                 f"{away} {ctx_adj['ctx_away']*100:4.1f}%   | exp goals "
                 f"{ctx_adj['ctx_xg_home']}-{ctx_adj['ctx_xg_away']}  — {context_note}")
+
+        # ---- INFORMACIÓN (no es la predicción): contexto de grupo del motor de clasificación
+        # correcto (qual_engine: desempates FIFA, mejores terceros). Solo grupos última jornada.
+        group_info = compute_group_info(ctx_groups, home, away)
+        if group_info:
+            out(f"    [CONTEXTO DE GRUPO] (información, no es la predicción): {group_info}")
+
         # ---- OUR MODEL stats: corners/cards/shots (opponent-adjusted DATA model, no odds) ----
         sp = statpred.predict(home, away) if statpred is not None else None
         if sp:
@@ -397,6 +433,8 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
                             "our_away_const": round(float(om["our_away_const"]), 4)})
         if ctx_adj is not None:
             rec.update(ctx_adj)   # ctx_* = predicción ajustada por contexto (la ficha la mostrará)
+        if group_info:
+            rec["group_info"] = group_info   # línea de INFORMACIÓN (motor de clasificación correcto)
         if sp:
             rec.update({"st_corners_total": sp["corners_total"], "st_corners_over": sp["corners_over"],
                         "st_corners_line": sp["corners_line"], "st_cards_total": sp["cards_total"],

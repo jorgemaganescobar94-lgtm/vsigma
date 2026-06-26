@@ -309,6 +309,12 @@ def match_block(r, show_lineups=False):
         if why:
             lines.append(why)
 
+    # INFORMACIÓN (no es la predicción): contexto de clasificación del grupo (motor correcto,
+    # desempates FIFA). Solo grupos última jornada; soft-fail -> no aparece.
+    gi = r.get("group_info")
+    if not ko_round and isinstance(gi, str) and gi.strip():
+        lines.append(f"ℹ️ Contexto de grupo (información, no es la predicción): {gi}")
+
     if pd.notna(xgh):
         M = score_matrix(xgh, xga)
         gh = np.arange(KMAX + 1)[:, None]; ga = np.arange(KMAX + 1)[None, :]
@@ -626,6 +632,9 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
             out("   " + " · ".join(seg))
             if ctx_note:                       # transparencia compacta del ajuste de contexto
                 out("   ↳ " + ctx_note)
+            gic = r.get("group_info")          # INFORMACIÓN: contexto de clasificación (solo grupos)
+            if not is_knockout(r.get("round")) and isinstance(gic, str) and gic.strip():
+                out(f"   ℹ️ Contexto: {gic}")
             if show_lineups:
                 LU = {"conf": "conf", "prob": "prob", "pend": "pend"}
                 lh, la = r.get("lineup_home"), r.get("lineup_away")

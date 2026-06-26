@@ -131,10 +131,10 @@ def test_pred_1x2_falls_back_to_l3_without_ctx():
     assert lh == 0.50 and la == 0.23 and xgh == 1.60 and note is None
 
 
-def test_context_live_flag_off_after_safety_revert():
-    # PARTE A: el contexto en vivo está APAGADO (revertido por seguridad tras detectar el classify
-    # simplista). El flag existe y es False -> las predicciones mostradas/enviadas = L3 puro.
-    assert hasattr(BC, "CONTEXT_LIVE") and BC.CONTEXT_LIVE is False
+def test_context_live_flag_on_with_corrected_classifier():
+    # RE-ACTIVADO con el classify_fixture corregido (cierto por puntos). El flag existe y es True
+    # -> la predicción mostrada/enviada lleva el ajuste por contexto en grupos no triviales.
+    assert hasattr(BC, "CONTEXT_LIVE") and BC.CONTEXT_LIVE is True
 
 
 def test_match_block_shows_adjusted_and_note():
