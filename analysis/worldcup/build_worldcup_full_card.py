@@ -24,8 +24,24 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 try:
     import stats_model  # noqa: E402  (corners/cards/shots gating from OOS validation)
     SHOW_STATS = stats_model.shown_stats()
+    STAT_CONF = stats_model.stat_confidence()   # {stat: 'media'|'baja'} per measured OOS lift
 except Exception:
     SHOW_STATS = {"corners", "cards", "shots"}
+    STAT_CONF = {}
+
+# per-stat confidence rendering: honest, data-driven (shots ~43% lift -> media; corners ~24% ->
+# baja; cards hidden). One tag PER STAT (not a single global label that mixes media + baja).
+_STAT_ES = {"corners": "córners", "shots": "tiros", "cards": "tarjetas"}
+_CONF_ES = {"media": "conf media", "baja": "baja conf"}
+
+
+def _conf_legend(stats):
+    """Confidence legend for the given shown stats, most-confident first: 'tiros: conf media ·
+    córners: baja conf'. '' if no confidence info (soft-fail -> the line just shows no tag)."""
+    order = {"media": 0, "baja": 1}
+    items = [(s, STAT_CONF.get(s)) for s in stats if STAT_CONF.get(s) in _CONF_ES]
+    items.sort(key=lambda kv: (order.get(kv[1], 9), kv[0]))
+    return " · ".join(f"{_STAT_ES.get(s, s)}: {_CONF_ES[lvl]}" for s, lvl in items)
 try:
     import build_worldcup_enrichment as wc_enrich  # noqa: E402  (post-FT [REAL] lines, soft)
 except Exception:
@@ -403,18 +419,27 @@ def match_block(r, show_lineups=False):
                       key=lambda t: -t[2])[:3]
         lines.append("Marcadores top 3: " + " · ".join(f"{i}-{j} ({p * 100:.0f}%)" for i, j, p in flat))
 
-    # per-team córners/tiros (gated; cards never shown). BAJA CONF.
+    # per-team córners/tiros (gated; cards never shown). Confidence PER STAT (tiros media / córners
+    # baja), shown once as a legend at the end — not a single global label that mixes the two.
+    shown_here = []
+
     def side(nm, c, s):
         seg = []
         if "corners" in SHOW_STATS and pd.notna(c):
             seg.append(f"córners ~{c:.0f}")
+            if "corners" not in shown_here:
+                shown_here.append("corners")
         if "shots" in SHOW_STATS and pd.notna(s):
             seg.append(f"tiros ~{s:.0f}")
+            if "shots" not in shown_here:
+                shown_here.append("shots")
         return f"{nm}: " + ", ".join(seg) if seg else None
     sh = side(h, r.get("st_corners_home"), r.get("st_shots_home"))
     sa = side(a, r.get("st_corners_away"), r.get("st_shots_away"))
     if sh and sa:
-        lines.append(f"Por equipo — {sh} | {sa}  (BAJA CONF)")
+        legend = _conf_legend(shown_here)
+        tag = f"  ({legend})" if legend else ""
+        lines.append(f"Por equipo — {sh} | {sa}{tag}")
 
     if show_lineups:
         LU = {"conf": "confirmado", "prob": "probable", "pend": "pendiente"}
@@ -567,7 +592,12 @@ def render_paginated(df, date_from, within_hours, scorecard, show_yesterday,
     header = [hlead] + ([ds_line] if ds_line else []) + sc_block + yest_block
     if len(df):
         header.append(f"📋 {len(df)} partido(s) abajo (en mensajes siguientes).")
-    header.append("ℹ️ Stats por equipo = BAJA CONF (señal OOS débil). Tarjetas omitidas (ruido).")
+    # honest per-stat confidence summary in the header (data-driven OOS lift), not a single label
+    _hdr_conf = _conf_legend([s for s in ("shots", "corners") if s in SHOW_STATS])
+    header.append(
+        f"ℹ️ Stats por equipo (confianza por stat — {_hdr_conf}). Tarjetas omitidas (ruido)."
+        if _hdr_conf else
+        "ℹ️ Stats por equipo = orientativas (señal OOS débil). Tarjetas omitidas (ruido).")
 
     # anti-spam: pre-KO and nothing imminent -> send NOTHING
     if is_preko and len(df) == 0:
@@ -663,8 +693,10 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
             if show_yesterday else []                        # priority 2 (yesterday, morning only)
         _abbr = {"corners": "córn", "cards": "tarj", "shots": "tir"}
         _shown = "/".join(_abbr[s] for s in ("corners", "cards", "shots") if s in SHOW_STATS) or "stats"
+        _cfoot = _conf_legend([s for s in ("shots", "corners") if s in SHOW_STATS])
         FOOTER = (f"L3 + {_shown} = modelo de datos propio (sin cuotas). "
-                  "Stats: BAJA CONF (señal débil OOS).")
+                  + (f"Stats (confianza por stat — {_cfoot})." if _cfoot
+                     else "Stats: orientativas (señal débil OOS)."))
         per_match = 3 if show_lineups else 2
         # Budget priority: track record > yesterday results > today's matches (trim today first).
         avail = max(0, max_lines - 1 - len(sc_block) - 1)    # minus header + footer
@@ -806,7 +838,9 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
         if "shots" in SHOW_STATS and pd.notna(sht):
             st_parts.append(f"tiros {sht:.0f}")
         if st_parts:
-            out("Stats " + " · ".join(st_parts) + "  (modelo datos, BAJA CONF)")
+            _vc = _conf_legend([s for s in ("shots", "corners") if s in SHOW_STATS])
+            out("Stats " + " · ".join(st_parts)
+                + (f"  (modelo datos · {_vc})" if _vc else "  (modelo datos, orientativo)"))
 
     out("")
     shown = [n for n, k in [("córners", "corners"), ("tarjetas", "cards"), ("tiros", "shots")]
@@ -814,7 +848,9 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
     hidden = [n for n, k in [("córners", "corners"), ("tarjetas", "cards"), ("tiros", "shots")]
               if k not in SHOW_STATS]
     out(f"L3/Poisson + {('/'.join(shown)) or 'stats'} = modelo de datos propio, SIN cuotas.")
-    note = "Stats: opponent-adjusted, BAJA CONFIANZA (señal OOS débil)."
+    _nc = _conf_legend([s for s in ("shots", "corners") if s in SHOW_STATS])
+    note = (f"Stats: opponent-adjusted, confianza por stat — {_nc}."
+            if _nc else "Stats: opponent-adjusted, orientativas (señal OOS débil).")
     if hidden:
         note += f" Ocultos por ruido OOS (sin señal vs media): {', '.join(hidden)}."
     out(note)

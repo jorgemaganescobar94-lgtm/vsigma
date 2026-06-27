@@ -1,0 +1,37 @@
+====================================================================================================
+STATS CONFIDENCE STUDY — corners / shots  (READ-ONLY, reuses stats_model walk-forward)
+====================================================================================================
+rows=2528 fixtures=1264 teams=174 | HL=540d ridge=8.0 refit=45d OOS>=2024-08-01 | boot=3000
+Training base is ALREADY broad internationals (Friendlies/UNL/WCQ/AFCON/Euro/CopaAmérica/…),
+NOT World-Cup-only. international_results.csv has 9197 fixtures but NO corners/shots -> the
+binding limit is STAT coverage, not match coverage (more would need API extraction).
+
+--- CORNERS  (n_oos common = 1298, base mean = 4.43) ---
+  candidate                   devLift%    RMSE  vsC0 dLift%           95% CI  p(better)  signif
+  base (no opp_str)             14.31%   2.847       -5.59% [-7.64,-3.51]      1.000   WORSE
+  C0 shipped (+opp_str)         19.90%   2.730  (reference)                                    
+  +own_form                     20.04%   2.725       +0.14% [-0.22,+0.51]      0.219      no
+  +own_str                      23.62%   2.677       +3.72% [+1.97,+5.41]      0.000     YES
+  +own_form+own_str             23.61%   2.679       +3.71% [+2.10,+5.45]      0.000     YES
+  GLM Poisson (C0 feats)        20.18%   2.733       +0.28% [-1.46,+2.05]      0.380      no
+
+  learning curve corners (C0 feats, cap training history): devLift% by train_cap
+    cap=300:+15.34% | cap=600:+17.78% | cap=900:+18.60% | cap=1200:+18.63% | cap=all:+19.90%
+
+--- SHOTS  (n_oos common = 1290, base mean = 11.69) ---
+  candidate                   devLift%    RMSE  vsC0 dLift%           95% CI  p(better)  signif
+  base (no opp_str)             28.30%   5.545       -9.76% [-12.47,-7.28]      1.000   WORSE
+  C0 shipped (+opp_str)         38.06%   5.076  (reference)                                    
+  +own_form                     39.03%   5.029       +0.98% [+0.18,+1.76]      0.007     YES
+  +own_str                      42.93%   4.889       +4.87% [+2.84,+6.99]      0.000     YES
+  +own_form+own_str             42.59%   4.908       +4.54% [+2.45,+6.59]      0.000     YES
+  GLM Poisson (C0 feats)        39.43%   5.044       +1.38% [-0.85,+3.61]      0.109      no
+
+  learning curve shots (C0 feats, cap training history): devLift% by train_cap
+    cap=300:+31.20% | cap=600:+35.35% | cap=900:+36.87% | cap=1200:+37.08% | cap=all:+38.06%
+
+====================================================================================================
+READING: devLift% = OOS Poisson-deviance reduction vs a constant base-rate (same metric as
+worldcup_stats_validation.csv). 'vsC0 dLift%' = paired bootstrap deviance reduction of the
+candidate OVER the shipped C0 model, as % of base deviance; signif=YES needs 95% CI>0 AND
+p<0.05. The +opp_str gain over base is the ~4%/~8% the ficha currently relies on.

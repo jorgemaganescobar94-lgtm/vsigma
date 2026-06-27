@@ -146,6 +146,23 @@ def test_phrase_es_short_is_concise_and_conditional():
     assert " · " not in s_cv and " · " not in s_sa
 
 
+def test_por_equipo_shows_per_stat_confidence():
+    """The 'Por equipo' line tags confidence PER STAT (tiros media / córners baja), not one global
+    label. Reads the committed calibration via build_worldcup_full_card.STAT_CONF."""
+    # legend helper, most-confident first
+    legend = F._conf_legend(["shots", "corners"])
+    assert "tiros: conf media" in legend
+    assert "córners: baja conf" in legend
+    assert legend.index("tiros") < legend.index("córners"), "media stat listed before baja"
+    # and it actually renders in a real block (Croatia row carries st_corners/st_shots)
+    r = SLATE.iloc[0]
+    block = F.match_block(r, show_lineups=False)
+    pe = [ln for ln in block if ln.startswith("Por equipo")]
+    assert pe, "expected a 'Por equipo' line"
+    assert "tiros: conf media" in pe[0] and "córners: baja conf" in pe[0]
+    assert "BAJA CONF" not in pe[0], "no stale single global label"
+
+
 if __name__ == "__main__":
     test_no_match_block_is_ever_truncated()
     test_each_block_alone_fits_the_budget()

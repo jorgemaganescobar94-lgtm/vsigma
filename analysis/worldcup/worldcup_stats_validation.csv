@@ -1,4 +1,4 @@
 stat,n_oos,base_mean,base_mae,model_mae,dev_lift_pct,verdict
-corners,1298,4.408,2.431,2.104,19.91,moderada
-cards,1248,1.892,1.085,1.097,3.47,muy débil
-shots,1290,11.553,5.117,3.92,38.05,moderada
+corners,1298,4.408,2.431,2.068,23.62,moderada
+cards,1248,1.892,1.085,1.1,3.43,muy débil
+shots,1290,11.553,5.117,3.712,42.96,moderada

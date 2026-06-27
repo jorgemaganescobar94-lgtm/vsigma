@@ -1,30 +1,36 @@
 {
   "corners": {
-    "mu": 1.2174439782094344,
-    "gamma": 0.18982606786588485,
-    "oppstr_beta": -0.243,
-    "lift": 19.91,
+    "mu": 1.2905670436991272,
+    "gamma": 0.16651320321325677,
+    "oppstr_beta": -0.2379,
+    "ownstr_beta": 0.2677,
+    "lift": 23.62,
     "show": true,
+    "conf": "baja",
     "line": 7.5
   },
   "cards": {
-    "mu": 0.7245506002799035,
-    "gamma": -0.09456486504090969,
-    "oppstr_beta": 0.1177,
-    "lift": 3.47,
+    "mu": 0.7047976407529,
+    "gamma": -0.09029744623025061,
+    "oppstr_beta": 0.1141,
+    "ownstr_beta": -0.0674,
+    "lift": 3.43,
     "show": false,
+    "conf": "oculta",
     "line": 2.5
   },
   "shots": {
-    "mu": 2.1702691124673965,
-    "gamma": 0.21493214251398504,
-    "oppstr_beta": -0.2436,
-    "lift": 38.05,
+    "mu": 2.2424796680312404,
+    "gamma": 0.19144916801591366,
+    "oppstr_beta": -0.2376,
+    "ownstr_beta": 0.2753,
+    "lift": 42.96,
     "show": true,
+    "conf": "media",
     "line": 21.5
   },
   "_oppstr": {
-    "mean": 0.8448,
-    "std": 0.7055
+    "mean": 0.8555,
+    "std": 0.7544
   }
 }
