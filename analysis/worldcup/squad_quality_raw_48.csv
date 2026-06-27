@@ -1,0 +1,1249 @@
+team,team_id,player_id,player_name,position,club,club_country,club_league,apps,minutes,rating
+Mexico,16,35769,C. Acevedo,Goalkeeper,Santos Laguna,Mexico,Liga MX,32,2856,6.92
+Mexico,16,2098,G. Ochoa,Goalkeeper,AEL,Cyprus,1. Division,22,720,6.71
+Mexico,16,270774,J. Rangel,Goalkeeper,Guadalajara Chivas,Mexico,Liga MX,33,3099,6.89
+Mexico,16,2881,J. Gallardo,Defender,Toluca,Mexico,Liga MX,30,2733,6.94
+Mexico,16,2873,C. Montes,Defender,Lokomotiv,Russia,Premier League,26,2208,7.25
+Mexico,16,127227,I. Reyes,Defender,Club America,Mexico,Liga MX,32,2857,7.07
+Mexico,16,2878,J. Sánchez,Defender,Cruz Azul,Mexico,Liga MX,17,1451,6.56
+Mexico,16,35544,J. Vásquez,Defender,Genoa,Italy,Serie A,36,3217,6.8
+Mexico,16,2869,E. Álvarez,Midfielder,Fenerbahçe,Turkey,Süper Lig,12,768,6.9
+Mexico,16,390002,M. Chávez,Defender,AZ Alkmaar,Netherlands,Eredivisie,20,839,6.88
+Mexico,16,313383,O. Vargas,Midfielder,Seattle Sounders,USA,Major League Soccer,28,2546,7.24
+Mexico,16,35690,L. Chávez,Midfielder,Dynamo,Russia,Premier League,4,164,6.8
+Mexico,16,750,Álvaro Fidalgo,Midfielder,Club America,Mexico,Liga MX,20,1537,7.16
+Mexico,16,212233,B. Gutiérrez,Midfielder,Chicago Fire,USA,Major League Soccer,31,2252,7.28
+Mexico,16,266345,É. Lira,Midfielder,Cruz Azul,Mexico,Liga MX,35,3023,6.84
+Mexico,16,482605,G. Mora,Midfielder,Club Tijuana,Mexico,Liga MX,19,1396,7.15
+Mexico,16,35576,O. Pineda,Midfielder,AEK Athens FC,Greece,Super League 1,30,2487,7.33
+Mexico,16,35970,L. Romo,Midfielder,Guadalajara Chivas,Mexico,Liga MX,27,2466,7.06
+Mexico,16,2879,R. Alvarado,Midfielder,Guadalajara Chivas,Mexico,Liga MX,30,2385,7.17
+Mexico,16,94562,S. Giménez,Attacker,AC Milan,Italy,Serie A,16,896,6.49
+Mexico,16,291713,A. González,Attacker,Guadalajara Chivas,Mexico,Liga MX,34,2459,6.93
+Mexico,16,36111,C. Huerta,Midfielder,Anderlecht,Belgium,Jupiler Pro League,11,544,6.54
+Mexico,16,2887,R. Jiménez,Attacker,Fulham,England,Premier League,36,2216,6.68
+Mexico,16,36088,G. Martínez,Attacker,U.N.A.M. - Pumas,Mexico,Liga MX,26,1374,6.89
+Mexico,16,35532,J. Quiñones,Midfielder,Al-Qadisiyah FC,Saudi-Arabia,Pro League,31,2724,7.63
+Mexico,16,2889,A. Vega,Attacker,Toluca,Mexico,Liga MX,22,1528,7.57
+South Africa,1531,46417,S. Chaine,Goalkeeper,Orlando Pirates,South-Africa,Premier Soccer League,30,2700,7.05
+South Africa,1531,46245,R. Goss,Goalkeeper,Siwelele,South-Africa,Premier Soccer League,29,2610,7.13
+South Africa,1531,3275,R. Williams,Goalkeeper,Mamelodi Sundowns,South-Africa,Premier Soccer League,28,2610,7.14
+South Africa,1531,163041,B. Cross,Defender,Kaizer Chiefs,South-Africa,Premier Soccer League,21,1729,7.15
+South Africa,1531,430078,S. Kabini,Defender,Molde,Norway,Eliteserien,18,1505,7.33
+South Africa,1531,392387,O. Makhanya,Defender,Philadelphia Union,USA,Major League Soccer,31,2448,7.0
+South Africa,1531,510799,M. Mbokazi,Defender,Orlando Pirates,South-Africa,Premier Soccer League,11,909,7.25
+South Africa,1531,46334,A. Modiba,Defender,Mamelodi Sundowns,South-Africa,Premier Soccer League,26,2018,6.98
+South Africa,1531,46601,K. Mudau,Defender,Mamelodi Sundowns,South-Africa,Premier Soccer League,21,1527,7.05
+South Africa,1531,474630,K. Ndamane,Defender,TS Galaxy,South-Africa,Premier Soccer League,13,1170,7.12
+South Africa,1531,406752,I. Okon,Defender,Hannover 96,Germany,2. Bundesliga,25,1716,6.71
+South Africa,1531,46458,N. Sibisi,Defender,Orlando Pirates,South-Africa,Premier Soccer League,23,1962,7.15
+South Africa,1531,330174,T. Matuludi,Defender,Polokwane City,South-Africa,Premier Soccer League,23,1950,7.32
+South Africa,1531,268710,J. Adams,Midfielder,Mamelodi Sundowns,South-Africa,Premier Soccer League,22,1422,6.92
+South Africa,1531,194430,T. Mbatha,Midfielder,Orlando Pirates,South-Africa,Premier Soccer League,22,1607,7.26
+South Africa,1531,3287,T. Mokoena,Midfielder,Mamelodi Sundowns,South-Africa,Premier Soccer League,22,1622,7.27
+South Africa,1531,158433,S. Sithole,Midfielder,Tondela,Portugal,Primeira Liga,26,1560,6.62
+South Africa,1531,3289,T. Zwane,Midfielder,Mamelodi Sundowns,South-Africa,Premier Soccer League,15,533,6.66
+South Africa,1531,179893,O. Appollis,Attacker,Orlando Pirates,South-Africa,Premier Soccer League,30,2170,7.18
+South Africa,1531,98936,L. Foster,Attacker,Burnley,England,Premier League,26,1372,6.47
+South Africa,1531,201354,E. Makgopa,Attacker,Orlando Pirates,South-Africa,Premier Soccer League,24,1068,6.71
+South Africa,1531,354831,T. Maseko,Attacker,AEL,Cyprus,1. Division,12,401,6.49
+South Africa,1531,414149,R. Mofokeng,Attacker,Orlando Pirates,South-Africa,Premier Soccer League,27,2132,7.53
+South Africa,1531,295977,T. Moremi,Midfielder,Orlando Pirates,South-Africa,Premier Soccer League,28,1546,6.89
+South Africa,1531,127429,I. Rayners,Attacker,Mamelodi Sundowns,South-Africa,Premier Soccer League,25,1439,6.65
+South Africa,1531,359561,K. Sebelebele,Midfielder,Orlando Pirates,South-Africa,Premier Soccer League,24,1783,7.26
+South Korea,17,2890,Jo Hyeon-Woo,Goalkeeper,Ulsan Hyundai FC,South-Korea,K League 1,33,1530,6.98
+South Korea,17,2892,Kim Seung-Gyu,Goalkeeper,FC Tokyo,Japan,J1 League,14,1260,6.97
+South Korea,17,34374,Song Bum-Keun,Goalkeeper,Jeonbuk Motors,South-Korea,K League 1,38,1440,7.46
+South Korea,17,547307,Cho Wi-Je,Defender,,,,0,0,
+South Korea,17,2897,Kim Min-Jae,Defender,Bayern München,Germany,Bundesliga,25,1621,7.23
+South Korea,17,2912,Kim Moon-Hwan,Defender,Daejeon Citizen,South-Korea,K League 1,24,1014,6.85
+South Korea,17,34418,Kim Tae-Hyeon,Defender,Kashima,Japan,J1 League,30,2183,6.97
+South Korea,17,237218,Lee Han-Beom,Defender,FC Midtjylland,Denmark,Superliga,29,2347,6.99
+South Korea,17,99211,Park Jin-Seop,Midfielder,Jeonbuk Motors,South-Korea,K League 1,35,1260,7.38
+South Korea,17,237220,Lee Tae-Seok,Midfielder,Austria Vienna,Austria,Bundesliga,30,2577,7.05
+South Korea,17,197985,Seol Young-Woo,Midfielder,FK Crvena Zvezda,Serbia,Super Liga,31,2675,7.16
+South Korea,17,280358,J. Castrop,Midfielder,Borussia Mönchengladbach,Germany,Bundesliga,26,1599,6.69
+South Korea,17,304951,Lee Gi-Hyuk,Defender,Gangwon FC,South-Korea,K League 1,31,792,6.87
+South Korea,17,357286,Bae Jun-Ho,Attacker,Stoke City,England,Championship,42,2943,6.67
+South Korea,17,237050,Eom Ji-Sung,Attacker,Swansea,England,Championship,44,2457,6.8
+South Korea,17,2901,Hwang In-Beom,Midfielder,Feyenoord,Netherlands,Eredivisie,17,991,6.91
+South Korea,17,34168,Kim Jin-Gyu,Midfielder,Jeonbuk Motors,South-Korea,K League 1,35,1151,6.99
+South Korea,17,34431,Lee Dong-Gyeong,Attacker,Gimcheon Sangmu FC,South-Korea,K League 1,34,1206,7.86
+South Korea,17,2906,Lee Jae-Sung,Attacker,FSV Mainz 05,Germany,Bundesliga,28,2198,6.68
+South Korea,17,927,Lee Kang-In,Attacker,Paris Saint Germain,France,Ligue 1,27,1522,7.04
+South Korea,17,2909,Paik Seung-Ho,Midfielder,Birmingham,England,Championship,43,3374,6.96
+South Korea,17,304958,Yang Hyun-Jun,Attacker,Celtic,Scotland,Premiership,31,2078,6.92
+South Korea,17,24888,Hwang Hee-Chan,Attacker,Wolves,England,Premier League,26,1461,6.61
+South Korea,17,34211,Cho Gue-Sung,Attacker,FC Midtjylland,Denmark,Superliga,26,1351,6.43
+South Korea,17,34710,Oh Hyeon-Gyu,Attacker,Genk,Belgium,Jupiler Pro League,20,1116,6.75
+South Korea,17,186,Son Heung-Min,Attacker,Los Angeles FC,USA,Major League Soccer,11,1103,8.18
+Czechia,770,269349,L. Hornícek,Goalkeeper,SC Braga,Portugal,Primeira Liga,33,2960,6.96
+Czechia,770,138804,M. Kovár,Goalkeeper,PSV Eindhoven,Netherlands,Eredivisie,31,2790,7.1
+Czechia,770,66347,J. Stanek,Goalkeeper,Slavia Praha,Czech-Republic,Czech Liga,19,1710,6.85
+Czechia,770,337740,S. Chaloupek,Defender,Slavia Praha,Czech-Republic,Czech Liga,28,1836,7.21
+Czechia,770,1231,V. Coufal,Midfielder,1899 Hoffenheim,Germany,Bundesliga,34,3017,7.16
+Czechia,770,2252,T. Holes,Defender,Slavia Praha,Czech-Republic,Czech Liga,25,2094,7.41
+Czechia,770,162964,R. Hranác,Defender,1899 Hoffenheim,Germany,Bundesliga,29,2251,6.74
+Czechia,770,128793,D. Jurásek,Defender,Slavia Praha,Czech-Republic,Czech Liga,16,1346,7.38
+Czechia,770,66407,L. Krejcí,Defender,Wolves,England,Premier League,28,2361,6.71
+Czechia,770,1237,J. Zelený,Midfielder,Sparta Praha,Czech-Republic,Czech Liga,25,1761,6.9
+Czechia,770,128772,D. Zima,Defender,Slavia Praha,Czech-Republic,Czech Liga,24,1823,6.94
+Czechia,770,66214,D. Doudera,Midfielder,Slavia Praha,Czech-Republic,Czech Liga,22,1506,7.03
+Czechia,770,162194,L. Cerv,Midfielder,Plzen,Czech-Republic,Czech Liga,32,2656,7.01
+Czechia,770,25348,V. Darida,Midfielder,Hradec Králové,Czech-Republic,Czech Liga,32,2775,7.44
+Czechia,770,66353,L. Provod,Attacker,Slavia Praha,Czech-Republic,Czech Liga,30,2480,7.44
+Czechia,770,241,M. Sadílek,Midfielder,Slavia Praha,Czech-Republic,Czech Liga,29,2057,7.02
+Czechia,770,555437,H. Sochurek,Midfielder,Sparta Praha,Czech-Republic,Czech Liga,8,516,6.96
+Czechia,770,386837,A. Sojka,Midfielder,Hradec Králové,Czech-Republic,Czech Liga,18,1093,6.65
+Czechia,770,1243,T. Soucek,Midfielder,West Ham,England,Premier League,35,2220,6.77
+Czechia,770,66387,P. Sulc,Attacker,Lyon,France,Ligue 1,27,1568,6.91
+Czechia,770,818,T. Chorý,Attacker,Slavia Praha,Czech-Republic,Czech Liga,24,1891,7.28
+Czechia,770,66275,M. Chytil,Attacker,Slavia Praha,Czech-Republic,Czech Liga,29,1486,6.88
+Czechia,770,66019,A. Hlozek,Attacker,1899 Hoffenheim,Germany,Bundesliga,5,36,6.43
+Czechia,770,66340,J. Kuchta,Attacker,Sparta Praha,Czech-Republic,Czech Liga,30,1703,6.91
+Czechia,770,794,P. Schick,Attacker,Bayer Leverkusen,Germany,Bundesliga,28,1995,6.95
+Czechia,770,290212,D. Visinský,Midfielder,Plzen,Czech-Republic,Czech Liga,27,1671,7.05
+Canada,5529,51274,M. Crépeau,Goalkeeper,Portland Timbers,USA,Major League Soccer,15,1350,6.99
+Canada,5529,284554,O. Goodman,Goalkeeper,Barnsley,England,League One,22,1980,6.73
+Canada,5529,51148,D. St. Clair,Goalkeeper,Minnesota United FC,USA,Major League Soccer,33,3066,7.19
+Canada,5529,51295,D. Cornelius,Defender,Rangers,Scotland,Premiership,7,559,7.36
+Canada,5529,327738,L. De Fougerolles,Defender,Dender,Belgium,Jupiler Pro League,28,1717,6.78
+Canada,5529,50816,R. Laryea,Defender,Toronto FC,USA,Major League Soccer,17,1265,6.84
+Canada,5529,78494,J. Waterman,Defender,CF Montreal,USA,Major League Soccer,18,1438,6.85
+Canada,5529,78547,A. Johnston,Defender,Celtic,Scotland,Premiership,7,501,7.06
+Canada,5529,18938,A. Jones,Defender,Middlesbrough,England,Championship,22,1886,6.92
+Canada,5529,407017,M. Bombito,Defender,Nice,France,Ligue 1,2,146,6.55
+Canada,5529,509,A. Davies,Defender,Bayern München,Germany,Bundesliga,13,534,6.84
+Canada,5529,416901,N. Sigur,Midfielder,HNK Hajduk Split,Croatia,HNL,29,2235,7.12
+Canada,5529,50826,J. Shaffelburg,Midfielder,Nashville SC,USA,Major League Soccer,25,1297,6.85
+Canada,5529,44798,L. Millar,Midfielder,Hull City,England,Championship,36,2063,6.82
+Canada,5529,50788,M. Choinière,Midfielder,Los Angeles FC,USA,Major League Soccer,11,728,7.0
+Canada,5529,35570,S. Eustáquio,Midfielder,FC Porto,Portugal,Primeira Liga,8,184,6.68
+Canada,5529,328046,I. Koné,Midfielder,Sassuolo,Italy,Serie A,35,2756,7.03
+Canada,5529,50817,J. Osorio,Midfielder,Toronto FC,USA,Major League Soccer,24,1937,7.03
+Canada,5529,294824,N. Saliba,Midfielder,Anderlecht,Belgium,Jupiler Pro League,34,2319,6.88
+Canada,5529,193279,J. Nelson,Attacker,Vancouver Whitecaps,USA,Major League Soccer,25,1405,6.85
+Canada,5529,51016,T. Buchanan,Midfielder,Villarreal,Spain,La Liga,34,1835,6.81
+Canada,5529,8489,J. David,Attacker,Juventus,Italy,Serie A,35,1801,6.43
+Canada,5529,313353,P. David,Attacker,Union St. Gilloise,Belgium,Jupiler Pro League,24,1493,6.73
+Canada,5529,2001,C. Larin,Attacker,Southampton,England,Championship,18,949,6.72
+Canada,5529,362145,A. Ahmed,Midfielder,Vancouver Whitecaps,USA,Major League Soccer,24,1694,7.3
+Canada,5529,351587,T. Oluwaseyi,Attacker,Villarreal,Spain,La Liga,27,922,6.49
+Bosnia & Herzegovina,1113,446130,M. Jurkas,Goalkeeper,,,,0,0,
+Bosnia & Herzegovina,1113,9026,N. Vasilj,Goalkeeper,FC St. Pauli,Germany,Bundesliga,34,3060,7.12
+Bosnia & Herzegovina,1113,108370,M. Zlomislic,Goalkeeper,HNK Rijeka,Croatia,HNL,33,2894,6.83
+Bosnia & Herzegovina,1113,409670,A. Malic,Defender,Sturm Graz,Austria,Bundesliga,18,1046,6.77
+Bosnia & Herzegovina,1113,7318,A. Dedic,Defender,Benfica,Portugal,Primeira Liga,24,1911,6.8
+Bosnia & Herzegovina,1113,53517,D. Hadzikadunic,Defender,Sampdoria,Italy,Serie B,28,2220,6.88
+Bosnia & Herzegovina,1113,1741,N. Katic,Defender,FC Schalke 04,Germany,2. Bundesliga,26,2268,6.97
+Bosnia & Herzegovina,1113,1442,S. Kolasinac,Defender,Atalanta,Italy,Serie A,19,1224,6.66
+Bosnia & Herzegovina,1113,271350,T. Muharemovic,Defender,Sassuolo,Italy,Serie A,32,2835,6.86
+Bosnia & Herzegovina,1113,76867,N. Mujakic,Defender,Eyüpspor,Turkey,Süper Lig,16,1356,6.64
+Bosnia & Herzegovina,1113,14301,S. Radeljic,Defender,HNK Rijeka,Croatia,HNL,25,2001,7.2
+Bosnia & Herzegovina,1113,162222,I. Basic,Midfielder,FC Astana,Kazakhstan,Premier League,3,89,6.61
+Bosnia & Herzegovina,1113,70514,A. Gigovic,Midfielder,BSC Young Boys,Switzerland,Super League,31,2117,6.76
+Bosnia & Herzegovina,1113,50006,A. Hadziahmetovic,Midfielder,Hull City,England,Championship,37,2153,6.78
+Bosnia & Herzegovina,1113,340173,Ermin Mahmic,Midfielder,Slovan Liberec,Czech-Republic,Czech Liga,28,1559,6.91
+Bosnia & Herzegovina,1113,1324,I. Sunjic,Midfielder,Pafos,Cyprus,1. Division,29,1104,6.79
+Bosnia & Herzegovina,1113,264094,B. Tahirovic,Midfielder,Brondby,Denmark,Superliga,25,1199,6.75
+Bosnia & Herzegovina,1113,322101,A. Memic,Midfielder,Plzen,Czech-Republic,Czech Liga,30,2344,6.98
+Bosnia & Herzegovina,1113,25129,D. Burnic,Midfielder,Karlsruher SC,Germany,2. Bundesliga,32,2097,6.55
+Bosnia & Herzegovina,1113,395559,Kerim-Sam Alajbegovic,Midfielder,Red Bull Salzburg,Austria,Bundesliga,28,1913,7.3
+Bosnia & Herzegovina,1113,329409,E. Bajraktarevic,Midfielder,PSV Eindhoven,Netherlands,Eredivisie,28,1062,6.99
+Bosnia & Herzegovina,1113,314377,S. Bazdar,Attacker,Jagiellonia,Poland,Ekstraklasa,15,408,6.67
+Bosnia & Herzegovina,1113,46930,E. Demirovic,Attacker,VfB Stuttgart,Germany,Bundesliga,25,1506,6.9
+Bosnia & Herzegovina,1113,790,E. Dzeko,Attacker,FC Schalke 04,Germany,2. Bundesliga,11,599,7.38
+Bosnia & Herzegovina,1113,77037,J. Lukic,Attacker,Universitatea Cluj,Romania,Liga I,32,2504,7.18
+Bosnia & Herzegovina,1113,28382,H. Tabakovic,Attacker,Borussia Mönchengladbach,Germany,Bundesliga,32,2394,6.71
+USA,2384,266606,C. Brady,Goalkeeper,Chicago Fire,USA,Major League Soccer,30,2655,6.94
+USA,2384,50728,M. Freese,Goalkeeper,New York City FC,USA,Major League Soccer,34,3236,7.04
+USA,2384,50999,M. Turner,Goalkeeper,New England Revolution,USA,Major League Soccer,10,900,7.14
+USA,2384,38735,S. Dest,Midfielder,PSV Eindhoven,Netherlands,Eredivisie,27,2204,7.04
+USA,2384,355994,A. Freeman,Defender,Orlando City SC,USA,Major League Soccer,30,2550,7.32
+USA,2384,50735,M. McKenzie,Defender,Toulouse,France,Ligue 1,30,2422,6.81
+USA,2384,19023,T. Ream,Defender,Charlotte,USA,Major League Soccer,29,2482,6.93
+USA,2384,126949,C. Richards,Defender,Crystal Palace,England,Premier League,33,2826,6.9
+USA,2384,19549,A. Robinson,Defender,Fulham,England,Premier League,22,1502,6.83
+USA,2384,50879,M. Robinson,Defender,FC Cincinnati,USA,Major League Soccer,28,2601,7.09
+USA,2384,50852,J. Scally,Defender,Borussia Mönchengladbach,Germany,Bundesliga,32,2611,6.63
+USA,2384,50737,A. Trusty,Defender,Celtic,Scotland,Premiership,26,2162,7.2
+USA,2384,362400,M. Arfsten,Midfielder,Columbus Crew,USA,Major League Soccer,31,2862,7.41
+USA,2384,201713,S. Berhalter,Midfielder,Vancouver Whitecaps,USA,Major League Soccer,31,2792,7.61
+USA,2384,415,W. McKennie,Midfielder,Juventus,Italy,Serie A,36,2847,6.87
+USA,2384,161921,G. Reyna,Midfielder,Borussia Mönchengladbach,Germany,Bundesliga,19,526,6.78
+USA,2384,51114,C. Roldan,Midfielder,Seattle Sounders,USA,Major League Soccer,33,2915,7.52
+USA,2384,162037,M. Tillman,Midfielder,Bayer Leverkusen,Germany,Bundesliga,29,1689,6.92
+USA,2384,1150,T. Adams,Midfielder,Bournemouth,England,Premier League,25,1778,6.85
+USA,2384,1138,T. Weah,Attacker,Marseille,France,Ligue 1,29,2263,6.76
+USA,2384,35885,A. Zendejas,Attacker,Club America,Mexico,Liga MX,27,2117,7.31
+USA,2384,50739,B. Aaronson,Midfielder,Leeds,England,Premier League,37,2475,6.76
+USA,2384,138835,F. Balogun,Attacker,Monaco,France,Ligue 1,30,2245,6.77
+USA,2384,73868,R. Pepi,Attacker,PSV Eindhoven,Netherlands,Eredivisie,26,1433,7.04
+USA,2384,17,C. Pulisic,Midfielder,AC Milan,Italy,Serie A,30,1619,6.99
+USA,2384,427,H. Wright,Attacker,Coventry,England,Championship,40,2593,6.84
+Paraguay,2380,535737,R. Fernandez,Goalkeeper,,,,0,0,
+Paraguay,2380,70852,O. Gill,Goalkeeper,San Lorenzo,Argentina,Liga Profesional Argentina,34,3105,6.94
+Paraguay,2380,51733,G. Olveira,Goalkeeper,Olimpia,Paraguay,Division Profesional - Apertura,8,648,7.09
+Paraguay,2380,6168,O. Alderete,Defender,Sunderland,England,Premier League,33,2802,6.83
+Paraguay,2380,2499,J. Alonso,Defender,Atletico-MG,Brazil,Serie A,31,2684,7.02
+Paraguay,2380,195992,J. Cáceres,Defender,Dynamo,Russia,Premier League,24,2065,7.02
+Paraguay,2380,2500,F. Balbuena,Defender,Gremio,Brazil,Serie A,3,234,7.13
+Paraguay,2380,2502,G. Gómez,Defender,Palmeiras,Brazil,Serie A,27,2337,7.23
+Paraguay,2380,425020,A. Maidana,Defender,Club Guarani,Paraguay,Division Profesional - Apertura,13,1116,7.0
+Paraguay,2380,35808,G. Velázquez,Defender,Cerro Porteno,Paraguay,Division Profesional - Apertura,18,1546,7.23
+Paraguay,2380,70732,J. Canale,Defender,Lanus,Argentina,Liga Profesional Argentina,11,1010,7.35
+Paraguay,2380,195107,D. Bobadilla,Midfielder,Sao Paulo,Brazil,Serie A,31,2166,7.04
+Paraguay,2380,119128,G. Caballero,Midfielder,Nacional Asuncion,Paraguay,Division Profesional - Apertura,18,1384,
+Paraguay,2380,6236,A. Cubas,Midfielder,Vancouver Whitecaps,USA,Major League Soccer,28,2441,6.99
+Paraguay,2380,305832,M. Galarza,Midfielder,Talleres Cordoba,Argentina,Liga Profesional Argentina,13,846,6.6
+Paraguay,2380,278370,D. Gómez,Midfielder,Brighton,England,Premier League,32,2137,6.74
+Paraguay,2380,106485,Maurício,Midfielder,Palmeiras,Brazil,Serie A,29,1634,6.92
+Paraguay,2380,70767,B. Ojeda,Midfielder,Real Salt Lake,USA,Major League Soccer,31,2192,6.96
+Paraguay,2380,196298,R. Sosa,Attacker,Palmeiras,Brazil,Serie A,23,883,6.89
+Paraguay,2380,2507,M. Almirón,Midfielder,Atlanta United FC,USA,Major League Soccer,31,2713,7.22
+Paraguay,2380,2514,A. Romero,Attacker,Al Ain,United-Arab-Emirates,Pro League,21,1119,7.06
+Paraguay,2380,95460,A. Arce,Attacker,LDU de Quito,Ecuador,Liga Pro,12,982,6.97
+Paraguay,2380,6483,G. Ávalos,Attacker,Independiente,Argentina,Liga Profesional Argentina,30,1871,6.93
+Paraguay,2380,70747,J. Enciso,Attacker,Strasbourg,France,Ligue 1,27,1892,7.06
+Paraguay,2380,70670,I. Pitta,Attacker,RB Bragantino,Brazil,Serie A,24,1113,6.96
+Paraguay,2380,2522,A. Sanabria,Attacker,Cremonese,Italy,Serie A,25,940,6.5
+Qatar,1569,42207,Mahmud Abunada,Goalkeeper,Al-Rayyan SC,Qatar,Stars League,20,990,6.81
+Qatar,1569,42021,Meshaal Barsham,Goalkeeper,Al Sadd,Qatar,Stars League,20,900,6.82
+Qatar,1569,136503,Salah Zakaria,Goalkeeper,Al-Duhail SC,Qatar,Stars League,14,810,6.94
+Qatar,1569,175439,Homam Ahmed,Defender,Cultural Leonesa,Spain,Segunda División,14,697,6.56
+Qatar,1569,42060,Sultan Al Braik,Defender,Al-Duhail SC,Qatar,Stars League,18,720,6.86
+Qatar,1569,542542,A. Al Hussain,Defender,,,,0,0,
+Qatar,1569,542548,A. Al Oui,Defender,,,,0,0,
+Qatar,1569,200981,Jassem Gaber,Midfielder,Al-Rayyan SC,Qatar,Stars League,15,418,6.91
+Qatar,1569,2532,Boualem Khoukhi,Defender,Al Sadd,Qatar,Stars League,18,810,6.87
+Qatar,1569,42288,Lucas Mendes,Defender,Al Wakrah,Qatar,Stars League,17,954,7.09
+Qatar,1569,366516,G. Laye,Midfielder,Al-Arabi SC,Qatar,Stars League,0,419,6.7
+Qatar,1569,2530,Pedro Miguel,Defender,Al Sadd,Qatar,Stars League,18,656,6.98
+Qatar,1569,2535,Assim Madibo,Midfielder,Al Wakrah,Qatar,Stars League,13,485,6.88
+Qatar,1569,42286,Ahmed Al Ganehi,Attacker,Al-Gharafa,Qatar,Stars League,11,320,6.45
+Qatar,1569,2533,Abdulaziz Hatem,Midfielder,Al-Rayyan SC,Qatar,Stars League,18,431,6.8
+Qatar,1569,2537,Karim Boudiaf,Midfielder,Al-Duhail SC,Qatar,Stars League,12,163,7.27
+Qatar,1569,2539,Ahmed Fathi,Midfielder,Al-Arabi SC,Qatar,Stars League,19,876,7.15
+Qatar,1569,2545,Hassan Al Haydos,Attacker,Al Sadd,Qatar,Stars League,12,83,6.85
+Qatar,1569,283174,Mohamed Al Manai,Midfielder,Al Shamal,Qatar,Stars League,19,851,6.96
+Qatar,1569,542541,Y. Abdurisag,Attacker,Al Wakrah,Qatar,Stars League,18,611,6.6
+Qatar,1569,2544,Akram Afif,Attacker,Al Sadd,Qatar,Stars League,22,948,8.18
+Qatar,1569,2542,Ahmed Alaa,Attacker,Al-Rayyan SC,Qatar,Stars League,20,442,6.66
+Qatar,1569,2543,Almoez Ali,Attacker,Al-Duhail SC,Qatar,Stars League,4,152,6.8
+Qatar,1569,42075,Edmilson Junior,Attacker,Al-Duhail SC,Qatar,Stars League,19,780,7.19
+Qatar,1569,423737,Tahsin Jamshid,Attacker,Al-Duhail SC,Qatar,Stars League,14,214,6.59
+Qatar,1569,42089,Mohammed Muntari,Attacker,Al-Gharafa,Qatar,Stars League,7,70,6.3
+Switzerland,15,123468,M. Keller,Goalkeeper,BSC Young Boys,Switzerland,Super League,38,3420,7.2
+Switzerland,15,25282,G. Kobel,Goalkeeper,Borussia Dortmund,Germany,Bundesliga,34,3060,7.18
+Switzerland,15,1142,Y. Mvogo,Goalkeeper,Lorient,France,Ligue 1,31,2790,7.01
+Switzerland,15,5,M. Akanji,Defender,Inter,Italy,Serie A,33,2820,7.15
+Switzerland,15,162414,A. Amenda,Defender,Eintracht Frankfurt,Germany,Bundesliga,24,1685,6.67
+Switzerland,15,48372,E. Cömert,Defender,Valencia,Spain,La Liga,17,1339,6.77
+Switzerland,15,2803,N. Elvedi,Defender,Borussia Mönchengladbach,Germany,Bundesliga,33,2967,7.03
+Switzerland,15,349344,L. Jaquez,Defender,VfB Stuttgart,Germany,Bundesliga,14,899,6.82
+Switzerland,15,48489,M. Muheim,Defender,Hamburger SV,Germany,Bundesliga,29,2437,6.96
+Switzerland,15,1631,R. Rodríguez,Defender,Real Betis,Spain,La Liga,23,1561,6.67
+Switzerland,15,48378,S. Widmer,Defender,FSV Mainz 05,Germany,Bundesliga,27,1819,6.81
+Switzerland,15,951,M. Aebischer,Midfielder,Pisa,Italy,Serie A,35,2900,6.91
+Switzerland,15,2807,R. Freuler,Midfielder,Bologna,Italy,Serie A,29,2217,6.92
+Switzerland,15,264705,A. Jashari,Midfielder,AC Milan,Italy,Serie A,14,706,6.72
+Switzerland,15,957,D. Sow,Midfielder,Sevilla,Spain,La Liga,33,2195,6.77
+Switzerland,15,1464,G. Xhaka,Midfielder,Sunderland,England,Premier League,34,2916,7.32
+Switzerland,15,2810,D. Zakaria,Defender,Monaco,France,Ligue 1,24,2033,6.86
+Switzerland,15,952,C. Fassnacht,Midfielder,BSC Young Boys,Switzerland,Super League,33,2361,7.04
+Switzerland,15,48497,C. Itten,Attacker,Fortuna Düsseldorf,Germany,2. Bundesliga,30,2625,7.01
+Switzerland,15,163032,F. Rieder,Midfielder,FC Augsburg,Germany,Bundesliga,32,2359,6.88
+Switzerland,15,48471,R. Vargas,Attacker,Sevilla,Spain,La Liga,24,1608,6.74
+Switzerland,15,123469,Z. Amdouni,Attacker,Burnley,England,Premier League,4,69,6.43
+Switzerland,15,421,B. Embolo,Attacker,Rennes,France,Ligue 1,31,1872,6.71
+Switzerland,15,406244,J. Manzambi,Attacker,SC Freiburg,Germany,Bundesliga,27,2094,7.21
+Switzerland,15,48389,N. Okafor,Attacker,Leeds,England,Premier League,28,1573,6.93
+Switzerland,15,48648,D. Ndoye,Midfielder,Nottingham Forest,England,Premier League,24,1176,6.63
+Brazil,6,280,Alisson Becker,Goalkeeper,Liverpool,England,Premier League,26,2351,6.78
+Brazil,6,617,Ederson,Goalkeeper,Fenerbahçe,Turkey,Süper Lig,24,2132,6.94
+Brazil,6,2410,Weverton,Goalkeeper,Palmeiras,Brazil,Serie A,26,2355,6.87
+Brazil,6,860,Alex Sandro,Defender,Flamengo,Brazil,Serie A,20,1565,7.06
+Brazil,6,30497,Bremer,Defender,Juventus,Italy,Serie A,26,2175,7.13
+Brazil,6,22224,Gabriel Magalhães,Defender,Arsenal,England,Premier League,32,2751,7.36
+Brazil,6,30424,Ibañez,Defender,Al-Ahli Jeddah,Saudi-Arabia,Pro League,28,2336,7.31
+Brazil,6,10124,Léo Pereira,Defender,Flamengo,Brazil,Serie A,34,2993,7.23
+Brazil,6,257,Marquinhos,Defender,Paris Saint Germain,France,Ligue 1,14,1049,7.27
+Brazil,6,24866,Douglas Santos,Defender,Zenit,Russia,Premier League,23,1921,7.18
+Brazil,6,10097,Éderson Silva,Midfielder,Atalanta,Italy,Serie A,30,2235,7.0
+Brazil,6,618,Danilo,Defender,Flamengo,Brazil,Serie A,20,1417,6.91
+Brazil,6,10135,Bruno Guimarães,Midfielder,Newcastle,England,Premier League,29,2455,7.47
+Brazil,6,747,Casemiro,Midfielder,Manchester United,England,Premier League,34,2593,7.19
+Brazil,6,299,Fabinho,Midfielder,Al-Ittihad FC,Saudi-Arabia,Pro League,30,2648,7.13
+Brazil,6,1646,Lucas Paquetá,Midfielder,West Ham,England,Premier League,18,1521,6.89
+Brazil,6,275170,Danilo Santos,Midfielder,Botafogo,Brazil,Serie A,12,741,7.008333
+Brazil,6,1165,Matheus Cunha,Attacker,Manchester United,England,Premier League,33,2503,7.13
+Brazil,6,377122,Endrick,Attacker,Lyon,France,Ligue 1,16,1222,7.09
+Brazil,6,265785,Luiz Henrique,Attacker,Zenit,Russia,Premier League,28,2035,6.99
+Brazil,6,127769,Gabriel Martinelli,Attacker,Arsenal,England,Premier League,30,1079,6.6
+Brazil,6,276,Neymar,Attacker,Santos,Brazil,Serie A,20,1535,7.37
+Brazil,6,1496,Raphinha,Midfielder,Barcelona,Spain,La Liga,22,1388,7.55
+Brazil,6,407806,Rayan,Attacker,Vasco DA Gama,Brazil,Serie A,34,2875,7.17
+Brazil,6,196156,Thiago,Attacker,Brentford,England,Premier League,38,3295,6.94
+Brazil,6,762,Vinícius Júnior,Midfielder,Real Madrid,Spain,La Liga,36,2825,7.51
+Morocco,31,2701,Y. Bounou,Goalkeeper,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,26,2346,6.93
+Morocco,31,2702,M. Mohamedi,Goalkeeper,Renaissance Berkane,Morocco,Botola Pro,3,0,
+Morocco,31,2703,A. Tagnaouti,Goalkeeper,,,,0,0,
+Morocco,31,50042,M. Saâdane,Defender,Al-Fateh,Saudi-Arabia,Pro League,29,2496,7.06
+Morocco,31,18814,I. Diop,Defender,Fulham,England,Premier League,13,827,6.64
+Morocco,31,283252,Z. El Ouahdi,Defender,Genk,Belgium,Jupiler Pro League,34,2996,7.09
+Morocco,31,9,A. Hakimi,Defender,Paris Saint Germain,France,Ligue 1,18,1374,6.79
+Morocco,31,326183,R. Halhal,Defender,KV Mechelen,Belgium,Jupiler Pro League,33,2849,6.84
+Morocco,31,545,N. Mazraoui,Defender,Manchester United,England,Premier League,20,1022,6.89
+Morocco,31,278898,C. Riad,Defender,Crystal Palace,England,Premier League,9,554,6.57
+Morocco,31,162451,A. Salah-Eddine,Defender,PSV Eindhoven,Netherlands,Eredivisie,17,1092,6.74
+Morocco,31,146772,Y. Belammari,Defender,Al Ahly,Egypt,Premier League,9,715,6.94
+Morocco,31,74,S. Amrabat,Midfielder,Real Betis,Spain,La Liga,17,1296,6.98
+Morocco,31,438688,A. Bouaddi,Midfielder,Lille,France,Ligue 1,30,2338,6.78
+Morocco,31,277003,N. El Aynaoui,Midfielder,AS Roma,Italy,Serie A,25,1003,6.7
+Morocco,31,340573,B. El Khannouss,Midfielder,VfB Stuttgart,Germany,Bundesliga,25,1634,6.98
+Morocco,31,415431,S. El Mourabet,Midfielder,Strasbourg,France,Ligue 1,33,2141,6.95
+Morocco,31,129678,A. Ounahi,Midfielder,Girona,Spain,La Liga,24,1766,7.27
+Morocco,31,161897,I. Saibari,Attacker,PSV Eindhoven,Netherlands,Eredivisie,27,2145,7.21
+Morocco,31,336659,C. Talbi,Midfielder,Sunderland,England,Premier League,28,1561,6.63
+Morocco,31,369544,Gessime Yassine,Attacker,Dunkerque,France,Ligue 2,13,803,7.08
+Morocco,31,744,Brahim Díaz,Midfielder,Real Madrid,Spain,La Liga,30,1284,6.68
+Morocco,31,535046,A. Amaimouni,Midfielder,Hoffenheim II,Germany,3. Liga,18,884,7.68
+Morocco,31,2722,A. El Kaabi,Attacker,Olympiakos Piraeus,Greece,Super League 1,27,2108,6.8
+Morocco,31,191289,A. Sbaï,Attacker,Angers,France,Ligue 1,25,1834,6.73
+Morocco,31,36579,S. Rahimi,Attacker,Al Ain,United-Arab-Emirates,Pro League,15,885,6.98
+Haiti,2386,123742,J. Duverger,Goalkeeper,,,,0,0,
+Haiti,2386,174768,A. Pierre,Goalkeeper,Sochaux,France,National 1,0,0,
+Haiti,2386,87789,J. Placide,Goalkeeper,Bastia,France,Ligue 2,24,2128,6.83
+Haiti,2386,20850,C. Arcus,Defender,Angers,France,Ligue 1,26,2051,6.71
+Haiti,2386,573613,K. Thermoncy,Defender,BSC Young Boys,Switzerland,Super League,0,0,
+Haiti,2386,12303,Ricardo Ade,Defender,LDU de Quito,Ecuador,Liga Pro,30,2625,7.09
+Haiti,2386,1411,H. Delcroix,Defender,FC Lugano,Switzerland,Super League,14,1155,7.07
+Haiti,2386,20655,J. Duverne,Defender,Gent,Belgium,Jupiler Pro League,22,1174,6.65
+Haiti,2386,190747,M. Expérience,Defender,Nancy,France,Ligue 2,20,1272,6.75
+Haiti,2386,102505,D. Lacroix,Defender,Colorado Springs,USA,USL Championship,8,658,
+Haiti,2386,275367,W. Paugain,Defender,Zulte Waregem,Belgium,Jupiler Pro League,24,1298,6.82
+Haiti,2386,20665,J. Bellegarde,Midfielder,Wolves,England,Premier League,26,1251,6.78
+Haiti,2386,338367,D. Jean-Jacques,Midfielder,Philadelphia Union,USA,Major League Soccer,33,2597,6.95
+Haiti,2386,318930,G. Métusala,Defender,Colorado Springs,USA,USL Championship,7,588,
+Haiti,2386,371050,W. Pierre,Midfielder,Real du Cap,Haiti,Ligue Haïtienne,0,0,
+Haiti,2386,540857,C. F. Sainte,Midfielder,,,,0,0,
+Haiti,2386,194242,D. Simon,Midfielder,Tatran Prešov,Slovakia,Super Liga,20,576,6.71
+Haiti,2386,174915,J. Casimir,Attacker,Auxerre,France,Ligue 1,31,1532,6.61
+Haiti,2386,128766,L. Deedson,Midfielder,FC Dallas,USA,Major League Soccer,2,22,6.3
+Haiti,2386,50958,D. Etienne,Attacker,Toronto FC,USA,Major League Soccer,25,1007,6.72
+Haiti,2386,48535,Y. Fortuné,Attacker,Vizela,Portugal,Segunda Liga,23,414,6.53
+Haiti,2386,84087,W. Isidor,Attacker,Sunderland,England,Premier League,32,1186,6.65
+Haiti,2386,21613,L. Joseph,Attacker,Ferencvarosi TC,Hungary,NB I,25,882,6.96
+Haiti,2386,45020,D. Nazon,Attacker,Esteghlal FC,Iran,Persian Gulf Pro League,9,0,
+Haiti,2386,8601,F. Pierrot,Attacker,Rizespor,Turkey,Süper Lig,10,127,6.36
+Haiti,2386,162733,R. Providence,Midfielder,Almere City FC,Netherlands,Eerste Divisie,28,1039,6.47
+Scotland,1108,1106,C. Gordon,Goalkeeper,Heart Of Midlothian,Scotland,Premiership,3,226,6.8
+Scotland,1108,18933,A. Gunn,Goalkeeper,Nottingham Forest,England,Premier League,1,45,6.3
+Scotland,1108,44937,L. Kelly,Goalkeeper,Rangers,Scotland,Premiership,0,0,
+Scotland,1108,19066,G. Hanley,Defender,Hibernian,Scotland,Premiership,24,1932,6.71
+Scotland,1108,1111,J. Hendry,Defender,Al-Ettifaq,Saudi-Arabia,Pro League,30,2571,6.75
+Scotland,1108,44871,A. Hickey,Defender,Brentford,England,Premier League,21,727,6.65
+Scotland,1108,19987,D. Hyam,Defender,Wrexham,England,Championship,40,3590,6.77
+Scotland,1108,44811,S. McKenna,Defender,Dinamo Zagreb,Croatia,HNL,30,2639,7.25
+Scotland,1108,138417,N. Patterson,Defender,Everton,England,Premier League,7,266,6.87
+Scotland,1108,1115,A. Ralston,Defender,Celtic,Scotland,Premiership,24,1300,6.89
+Scotland,1108,289,A. Robertson,Defender,Liverpool,England,Premier League,24,1188,6.74
+Scotland,1108,44865,J. Souttar,Defender,Rangers,Scotland,Premiership,24,2020,7.3
+Scotland,1108,1117,K. Tierney,Defender,Celtic,Scotland,Premiership,35,2515,7.28
+Scotland,1108,1125,R. Christie,Midfielder,Bournemouth,England,Premier League,26,986,6.72
+Scotland,1108,44814,L. Ferguson,Midfielder,Bologna,Italy,Serie A,27,1608,6.74
+Scotland,1108,557460,T. Fletcher,Midfielder,Manchester United,England,Premier League,2,17,6.7
+Scotland,1108,19191,J.  McGinn,Midfielder,Aston Villa,England,Premier League,30,2169,6.95
+Scotland,1108,19077,K. McLean,Midfielder,Norwich,England,Championship,42,3620,7.23
+Scotland,1108,903,S. McTominay,Midfielder,Napoli,Italy,Serie A,33,2793,7.06
+Scotland,1108,19524,C. Adams,Attacker,Torino,Italy,Serie A,33,1902,6.71
+Scotland,1108,45307,L. Dykes,Attacker,Birmingham,England,Championship,21,467,6.6
+Scotland,1108,343576,B. Doak,Midfielder,Bournemouth,England,Premier League,8,122,6.43
+Scotland,1108,8794,G. Hirst,Attacker,Ipswich,England,Championship,42,2111,6.61
+Scotland,1108,45175,L. Shankland,Attacker,Heart Of Midlothian,Scotland,Premiership,29,2495,6.98
+Scotland,1108,45078,R. Stewart,Attacker,Southampton,England,Championship,27,1105,6.83
+Scotland,1108,433272,Findlay Curtis,Attacker,Kilmarnock,Scotland,Premiership,14,1076,7.32
+Australia,20,353883,P. Beach,Goalkeeper,Melbourne City,Australia,A-League,25,2280,7.0
+Australia,20,6870,P. Izzo,Goalkeeper,Randers FC,Denmark,Superliga,26,2340,7.14
+Australia,20,2741,M. Ryan,Goalkeeper,Levante,Spain,La Liga,36,3240,7.24
+Australia,20,225,A. Behich,Midfielder,Melbourne City,Australia,A-League,25,2280,7.13
+Australia,20,337587,J. Bos,Defender,Feyenoord,Netherlands,Eredivisie,28,2058,7.19
+Australia,20,20457,C. Burgess,Defender,Swansea,England,Championship,46,4140,7.0
+Australia,20,348568,A. Circati,Defender,Parma,Italy,Serie A,31,2673,6.99
+Australia,20,33847,J. Geria,Defender,Albirex Niigata,Japan,J1 League,22,1456,6.73
+Australia,20,426480,L. Herrington,Defender,Brisbane Roar,Australia,A-League,11,930,7.12
+Australia,20,20079,H. Souttar,Defender,Leicester,England,Championship,2,178,8.2
+Australia,20,2742,M. Degenek,Defender,TSC Backa Topola,Serbia,Super Liga,13,1052,6.86
+Australia,20,6808,J. Italiano,Defender,Grazer AK,Austria,Bundesliga,24,2065,7.12
+Australia,20,153622,K. Trewin,Defender,Melbourne City,Australia,A-League,13,1104,7.22
+Australia,20,2749,J. Irvine,Midfielder,FC St. Pauli,Germany,Bundesliga,24,1632,6.7
+Australia,20,6832,C. Devlin,Midfielder,Heart Of Midlothian,Scotland,Premiership,28,2400,7.16
+Australia,20,7050,A. O Neill,Midfielder,New York City FC,USA,Major League Soccer,22,1884,6.89
+Australia,20,441269,Paul Okon-Engstler,Midfielder,Sydney,Australia,A-League,27,2325,7.21
+Australia,20,6904,C. Metcalfe,Midfielder,FC St. Pauli,Germany,Bundesliga,25,600,6.56
+Australia,20,38123,A. Hrustic,Midfielder,Heracles,Netherlands,Eredivisie,27,2222,6.83
+Australia,20,342035,C. Volpato,Attacker,Sassuolo,Italy,Serie A,24,1090,6.75
+Australia,20,338014,N. Irankunda,Midfielder,Watford,England,Championship,40,2041,6.85
+Australia,20,2751,M. Leckie,Attacker,Melbourne City,Australia,A-League,7,362,6.89
+Australia,20,2755,A. Mabil,Midfielder,Castellón,Spain,Segunda División,30,1721,6.69
+Australia,20,296645,T. Yengi,Attacker,Livingston,Scotland,Premiership,19,1065,6.76
+Australia,20,198352,M. Touré,Attacker,Randers FC,Denmark,Superliga,17,1117,6.79
+Australia,20,312459,N. Velupillay,Attacker,Melbourne Victory,Australia,A-League,22,1467,6.78
+Türkiye,777,50132,A. Bayindir,Goalkeeper,Manchester United,England,Premier League,6,540,6.58
+Türkiye,777,49866,U. Çakir,Goalkeeper,Galatasaray,Turkey,Süper Lig,25,2250,7.05
+Türkiye,777,49837,M. Günok,Goalkeeper,Beşiktaş,Turkey,Süper Lig,8,720,6.63
+Türkiye,777,62490,S. Akaydin,Defender,Rizespor,Turkey,Süper Lig,29,2571,6.96
+Türkiye,777,61837,A. Bardakci,Defender,Galatasaray,Turkey,Süper Lig,30,2546,7.14
+Türkiye,777,22222,Z. Çelik,Defender,AS Roma,Italy,Serie A,34,2737,6.84
+Türkiye,777,30521,M. Demiral,Defender,Al-Ahli Jeddah,Saudi-Arabia,Pro League,20,1556,7.01
+Türkiye,777,50057,E. Elmali,Defender,Galatasaray,Turkey,Süper Lig,25,1530,6.93
+Türkiye,777,26300,O. Kabak,Defender,1899 Hoffenheim,Germany,Bundesliga,25,1763,6.92
+Türkiye,777,1361,F. Kadioglu,Defender,Brighton,England,Premier League,37,3135,6.83
+Türkiye,777,1719,M. Müldür,Defender,Fenerbahçe,Turkey,Süper Lig,24,1222,6.73
+Türkiye,777,18776,Ç. Söyüncü,Defender,Fenerbahçe,Turkey,Süper Lig,11,772,7.08
+Türkiye,777,1640,H. Çalhanoglu,Midfielder,Inter,Italy,Serie A,22,1650,7.51
+Türkiye,777,25448,K. Ayhan,Defender,Galatasaray,Turkey,Süper Lig,19,419,6.89
+Türkiye,777,37155,O. Kokçu,Midfielder,Beşiktaş,Turkey,Süper Lig,30,2487,7.57
+Türkiye,777,24807,S. Özcan,Midfielder,Borussia Dortmund,Germany,Bundesliga,11,93,6.62
+Türkiye,777,214463,I. Yüksek,Midfielder,Fenerbahçe,Turkey,Süper Lig,30,1768,6.93
+Türkiye,777,339887,C. Uzun,Midfielder,Eintracht Frankfurt,Germany,Bundesliga,21,1172,7.18
+Türkiye,777,134590,O. Aydin,Attacker,Fenerbahçe,Turkey,Süper Lig,21,647,6.69
+Türkiye,777,291964,A. Güler,Midfielder,Real Madrid,Spain,La Liga,33,2026,7.18
+Türkiye,777,454,Y. Akgün,Attacker,Galatasaray,Turkey,Süper Lig,28,1833,7.23
+Türkiye,777,142959,K. Aktürkoglu,Attacker,Fenerbahçe,Turkey,Süper Lig,29,1959,7.08
+Türkiye,777,388570,D. Gül,Attacker,FC Porto,Portugal,Primeira Liga,29,1179,6.5
+Türkiye,777,49857,I. Kahveci,Midfielder,Kasımpaşa,Turkey,Süper Lig,16,1371,7.11
+Türkiye,777,339883,K. Yildiz,Attacker,Juventus,Italy,Serie A,36,2838,7.39
+Türkiye,777,63274,B. Yilmaz,Midfielder,Galatasaray,Turkey,Süper Lig,30,2318,7.08
+Germany,25,702,O. Baumann,Goalkeeper,1899 Hoffenheim,Germany,Bundesliga,34,3060,6.81
+Germany,25,497,M. Neuer,Goalkeeper,Bayern München,Germany,Bundesliga,22,1860,6.9
+Germany,25,399,A. Nübel,Goalkeeper,VfB Stuttgart,Germany,Bundesliga,34,3060,7.2
+Germany,25,25368,W. Anton,Defender,Borussia Dortmund,Germany,Bundesliga,32,2880,7.26
+Germany,25,280074,N. Brown,Defender,Eintracht Frankfurt,Germany,Bundesliga,33,2658,6.77
+Germany,25,25158,D. Raum,Defender,RB Leipzig,Germany,Bundesliga,30,2556,7.37
+Germany,25,2285,A. Rüdiger,Defender,Real Madrid,Spain,La Liga,18,1492,6.91
+Germany,25,26243,N. Schlotterbeck,Defender,Borussia Dortmund,Germany,Bundesliga,28,2520,7.7
+Germany,25,972,J. Tah,Defender,Bayern München,Germany,Bundesliga,28,2024,7.27
+Germany,25,163189,M. Thiaw,Defender,Newcastle,England,Premier League,35,2973,7.04
+Germany,25,502,J. Kimmich,Defender,Bayern München,Germany,Bundesliga,29,2280,7.74
+Germany,25,714,N. Amiri,Midfielder,FSV Mainz 05,Germany,Bundesliga,26,2090,7.45
+Germany,25,511,L. Goretzka,Midfielder,Bayern München,Germany,Bundesliga,31,1954,7.13
+Germany,25,18970,P. Groß,Midfielder,Brighton,England,Premier League,19,1636,7.05
+Germany,25,380978,A. Ouédraogo,Midfielder,RB Leipzig,Germany,Bundesliga,19,974,6.92
+Germany,25,128533,J. Leweling,Attacker,VfB Stuttgart,Germany,Bundesliga,32,2375,7.03
+Germany,25,181812,J. Musiala,Midfielder,Bayern München,Germany,Bundesliga,15,685,6.68
+Germany,25,637,F. Nmecha,Midfielder,Borussia Dortmund,Germany,Bundesliga,29,2184,6.93
+Germany,25,328033,A. Pavlovic,Midfielder,Bayern München,Germany,Bundesliga,24,1460,7.19
+Germany,25,644,L. Sané,Midfielder,Galatasaray,Turkey,Süper Lig,28,2291,7.17
+Germany,25,137210,A. Stiller,Midfielder,VfB Stuttgart,Germany,Bundesliga,34,2750,7.26
+Germany,25,203224,F. Wirtz,Midfielder,Liverpool,England,Premier League,33,2399,6.81
+Germany,25,978,K. Havertz,Attacker,Arsenal,England,Premier League,12,583,6.68
+Germany,25,158644,M. Beier,Attacker,Borussia Dortmund,Germany,Bundesliga,32,2036,6.8
+Germany,25,26475,D. Undav,Attacker,VfB Stuttgart,Germany,Bundesliga,29,2247,7.18
+Germany,25,158054,N. Woltemade,Attacker,Newcastle,England,Premier League,33,1939,6.66
+Curaçao,5530,214129,T. Bodak,Goalkeeper,Telstar,Netherlands,KNVB Beker,0,0,
+Curaçao,5530,36967,T. Doornbusch,Goalkeeper,VVV Venlo,Netherlands,KNVB Beker,1,56,6.2
+Curaçao,5530,221,E. Room,Goalkeeper,Cercle Brugge,Belgium,Jupiler Pro League,0,0,
+Curaçao,5530,37175,R. Bazoer,Defender,Konyaspor,Turkey,Süper Lig,15,935,6.48
+Curaçao,5530,706,J. Brenet,Defender,Livingston,Scotland,Premiership,14,884,6.59
+Curaçao,5530,36970,S. Floranus,Defender,PEC Zwolle,Netherlands,Eredivisie,32,2801,6.38
+Curaçao,5530,353808,Deveron Fonville,Defender,NEC Nijmegen,Netherlands,Eredivisie,29,1478,6.85
+Curaçao,5530,36857,J. Gaari,Defender,,,,0,0,
+Curaçao,5530,194645,S. Sambo,Defender,Sparta Rotterdam,Netherlands,Eredivisie,25,1626,6.63
+Curaçao,5530,37066,R. van Eijma,Defender,Waalwijk,Netherlands,Eerste Divisie,30,2047,6.79
+Curaçao,5530,228,A. Obispo,Defender,PSV Eindhoven,Netherlands,Eredivisie,17,821,6.84
+Curaçao,5530,18997,L. Bacuna,Midfielder,Bandırmaspor,Turkey,1. Lig,19,1704,7.1
+Curaçao,5530,162199,A. Martha,Midfielder,Rotherham,England,League One,41,2578,6.58
+Curaçao,5530,406846,T. Noslin,Midfielder,Telstar,Netherlands,Eredivisie,34,2306,6.81
+Curaçao,5530,309763,L. Comenencia,Midfielder,FC Zurich,Switzerland,Super League,24,1522,6.66
+Curaçao,5530,37461,K. Felida,Midfielder,Den Bosch,Netherlands,Eerste Divisie,36,2928,7.3
+Curaçao,5530,906,T. Chong,Midfielder,Sheffield Utd,England,Championship,21,697,6.66
+Curaçao,5530,36842,G. Roemeratoe,Midfielder,Waalwijk,Netherlands,Eerste Divisie,35,2290,6.74
+Curaçao,5530,19047,J. Bacuna,Midfielder,FC Volendam,Netherlands,Eredivisie,13,717,7.01
+Curaçao,5530,163220,J. Antonisse,Attacker,Kifisia,Greece,Super League 1,28,2006,6.8
+Curaçao,5530,37272,B. Kuwas,Attacker,FC Volendam,Netherlands,Eredivisie,32,2030,6.73
+Curaçao,5530,41627,K. Gorré,Attacker,Maccabi Haifa,Israel,Ligat Ha'al,25,1122,6.87
+Curaçao,5530,161884,S. Hansen,Attacker,Middlesbrough,England,Championship,19,530,6.55
+Curaçao,5530,38708,G. Kastaneer,Attacker,,,,0,0,
+Curaçao,5530,18981,J. Locadia,Attacker,,,,0,0,
+Curaçao,5530,195067,J. Margaritha,Attacker,SK Beveren,Belgium,Challenger Pro League,31,1604,7.24
+Netherlands,1118,26232,M. Flekken,Goalkeeper,Bayer Leverkusen,Germany,Bundesliga,24,2130,6.92
+Netherlands,1118,194536,R. Roefs,Goalkeeper,Sunderland,England,Premier League,35,3163,6.98
+Netherlands,1118,129058,B. Verbruggen,Goalkeeper,Brighton,England,Premier League,38,3420,7.05
+Netherlands,1118,18861,N. Aké,Defender,Manchester City,England,Premier League,18,703,6.81
+Netherlands,1118,226,D. Dumfries,Defender,Inter,Italy,Serie A,20,1327,6.62
+Netherlands,1118,341642,J. Hato,Defender,Chelsea,England,Premier League,22,1160,6.54
+Netherlands,1118,37143,L. Geertruida,Defender,Sunderland,England,Premier League,28,1715,6.83
+Netherlands,1118,290,V. van Dijk,Defender,Liverpool,England,Premier League,38,3431,7.28
+Netherlands,1118,38695,J. van Hecke,Defender,Brighton,England,Premier League,36,3211,7.26
+Netherlands,1118,152849,M. van de Ven,Defender,Tottenham,England,Premier League,35,3055,6.73
+Netherlands,1118,92993,M. Wieffer,Defender,Brighton,England,Premier League,26,1914,6.74
+Netherlands,1118,542,R. Gravenberch,Midfielder,Liverpool,England,Premier League,36,2996,7.06
+Netherlands,1118,36899,T. Koopmeiners,Midfielder,Juventus,Italy,Serie A,33,1835,6.71
+Netherlands,1118,36902,T. Reijnders,Midfielder,Manchester City,England,Premier League,28,1640,6.85
+Netherlands,1118,36905,G. Til,Midfielder,PSV Eindhoven,Netherlands,Eredivisie,29,2247,6.9
+Netherlands,1118,38747,Q. Timber,Midfielder,Feyenoord,Netherlands,Eredivisie,17,1316,6.91
+Netherlands,1118,538,F. de Jong,Midfielder,Barcelona,Spain,La Liga,25,1637,7.29
+Netherlands,1118,30432,M. de Roon,Midfielder,Atalanta,Italy,Serie A,34,2704,7.04
+Netherlands,1118,792,J. Kluivert,Attacker,Bournemouth,England,Premier League,20,951,6.54
+Netherlands,1118,38750,B. Brobbey,Attacker,Sunderland,England,Premier League,31,1944,6.63
+Netherlands,1118,667,M. Depay,Attacker,Corinthians,Brazil,Serie A,23,1571,6.97
+Netherlands,1118,247,C. Gakpo,Attacker,Liverpool,England,Premier League,36,2765,6.89
+Netherlands,1118,544,N. Lang,Attacker,Napoli,Italy,Serie A,18,668,6.96
+Netherlands,1118,249,D. Malen,Attacker,Aston Villa,England,Premier League,21,680,6.6
+Netherlands,1118,37724,C. Summerville,Attacker,West Ham,England,Premier League,31,2485,7.05
+Netherlands,1118,25416,W. Weghorst,Attacker,Ajax,Netherlands,Eredivisie,29,1903,6.83
+Japan,12,304782,T. Hayakawa,Goalkeeper,Kashima,Japan,J1 League,38,3420,7.15
+Japan,12,33034,K. Osako,Goalkeeper,Sanfrecce Hiroshima,Japan,J1 League,38,3420,6.98
+Japan,12,199578,Z. Suzuki,Goalkeeper,Parma,Italy,Serie A,20,1800,7.06
+Japan,12,38114,K. Itakura,Defender,Ajax,Netherlands,Eredivisie,19,1379,6.99
+Japan,12,32893,H. Ito,Defender,Bayern München,Germany,Bundesliga,16,932,6.81
+Japan,12,440,Y. Nagatomo,Defender,FC Tokyo,Japan,J1 League,26,1759,6.692307
+Japan,12,33165,A. Seko,Defender,Le Havre,France,Ligue 1,30,2625,6.8
+Japan,12,32887,Y. Sugawara,Defender,Werder Bremen,Germany,Bundesliga,31,2432,6.53
+Japan,12,351014,J. Suzuki,Defender,FC Copenhagen,Denmark,Superliga,22,1898,6.96
+Japan,12,32954,S. Taniguchi,Defender,St. Truiden,Belgium,Jupiler Pro League,38,2962,7.1
+Japan,12,2597,T. Tomiyasu,Defender,Ajax,Netherlands,Eredivisie,9,247,6.61
+Japan,12,32858,T. Watanabe,Defender,Feyenoord,Netherlands,Eredivisie,30,2637,7.12
+Japan,12,2598,R. Doan,Midfielder,Eintracht Frankfurt,Germany,Bundesliga,31,2379,6.82
+Japan,12,2601,D. Kamada,Midfielder,Crystal Palace,England,Premier League,28,1908,6.86
+Japan,12,33889,K. Sano,Midfielder,FSV Mainz 05,Germany,Bundesliga,34,3059,7.05
+Japan,12,32966,A. Tanaka,Midfielder,Leeds,England,Premier League,28,1326,6.74
+Japan,12,1942,J. Ito,Attacker,Genk,Belgium,Jupiler Pro League,28,1785,7.1
+Japan,12,32862,T. Kubo,Attacker,Real Sociedad,Spain,La Liga,24,1508,7.05
+Japan,12,33224,D. Maeda,Attacker,Celtic,Scotland,Premiership,36,2837,6.77
+Japan,12,33321,Keito Nakamura,Midfielder,Reims,France,Ligue 2,29,2357,7.18
+Japan,12,199143,Y. Suzuki,Midfielder,SC Freiburg,Germany,Bundesliga,25,1636,6.77
+Japan,12,375930,K. Goto,Attacker,St. Truiden,Belgium,Jupiler Pro League,38,2885,6.79
+Japan,12,33289,Koki Ogawa,Attacker,NEC Nijmegen,Netherlands,Eredivisie,26,1274,6.82
+Japan,12,422572,K. Shiogai,Attacker,VfL Wolfsburg,Germany,Bundesliga,13,344,6.52
+Japan,12,72155,A. Ueda,Attacker,Feyenoord,Netherlands,Eredivisie,31,2533,7.17
+Japan,12,106851,S. Machino,Attacker,Borussia Mönchengladbach,Germany,Bundesliga,32,1084,6.63
+Ivory Coast,1501,64190,Y. Fofana,Goalkeeper,Rizespor,Turkey,Süper Lig,27,2430,6.78
+Ivory Coast,1501,277046,M. Koné,Goalkeeper,Charleroi,Belgium,Jupiler Pro League,19,1710,7.18
+Ivory Coast,1501,30393,A. Lafont,Goalkeeper,Panathinaikos,Greece,Super League 1,22,1943,6.83
+Ivory Coast,1501,135068,E. Agbadou,Defender,Wolves,England,Premier League,14,1101,6.85
+Ivory Coast,1501,354753,O. Diomande,Defender,Sporting CP,Portugal,Primeira Liga,17,1296,7.06
+Ivory Coast,1501,161747,G. Doué,Defender,Strasbourg,France,Ligue 1,24,2063,6.92
+Ivory Coast,1501,22002,G. Konan,Defender,GIL Vicente,Portugal,Primeira Liga,30,2661,6.74
+Ivory Coast,1501,48119,O. Kossounou,Defender,Atalanta,Italy,Serie A,19,994,6.65
+Ivory Coast,1501,1807,E. Ndicka,Defender,AS Roma,Italy,Serie A,31,2683,6.97
+Ivory Coast,1501,20836,C. Operi,Defender,Başakşehir,Turkey,Süper Lig,22,1824,6.97
+Ivory Coast,1501,30504,W. Singo,Defender,Galatasaray,Turkey,Süper Lig,19,955,6.88
+Ivory Coast,1501,30807,S. Fofana,Midfielder,Rennes,France,Ligue 1,12,668,6.85
+Ivory Coast,1501,474591,C. Inao Oulai,Midfielder,Trabzonspor,Turkey,Süper Lig,25,2078,7.06
+Ivory Coast,1501,1642,F. Kessié,Midfielder,Al-Ahli Jeddah,Saudi-Arabia,Pro League,26,2083,7.0
+Ivory Coast,1501,22149,I. Sangaré,Midfielder,Nottingham Forest,England,Premier League,28,2080,6.97
+Ivory Coast,1501,3243,J. Seri,Midfielder,Maribor,Slovenia,1. SNL,4,0,
+Ivory Coast,1501,263228,P. Guiagon,Midfielder,Charleroi,Belgium,Jupiler Pro League,33,2555,7.07
+Ivory Coast,1501,387643,B. Touré,Attacker,1899 Hoffenheim,Germany,Bundesliga,30,2325,6.9
+Ivory Coast,1501,301771,S. Adingra,Attacker,Monaco,France,Ligue 1,14,868,6.71
+Ivory Coast,1501,275651,A. Bonny,Attacker,Inter,Italy,Serie A,33,1156,6.76
+Ivory Coast,1501,334429,O. Diakité,Midfielder,Cercle Brugge,Belgium,Jupiler Pro League,25,1429,6.6
+Ivory Coast,1501,157997,A. Diallo,Attacker,Manchester United,England,Premier League,32,2344,6.89
+Ivory Coast,1501,513776,Y. Diomande,Midfielder,RB Leipzig,Germany,Bundesliga,33,2476,7.72
+Ivory Coast,1501,137303,E. Guessand,Attacker,Aston Villa,England,Premier League,13,597,6.41
+Ivory Coast,1501,3246,N. Pépé,Attacker,Villarreal,Spain,La Liga,36,2397,7.25
+Ivory Coast,1501,162707,E. Wahi,Attacker,Nice,France,Ligue 1,15,1015,6.81
+Ecuador,2382,16380,H. Galíndez,Goalkeeper,Huracan,Argentina,Liga Profesional Argentina,30,2840,7.04
+Ecuador,2382,81224,M. Ramírez,Goalkeeper,Kifisia,Greece,Super League 1,27,2520,7.06
+Ecuador,2382,16642,G. Valle,Goalkeeper,LDU de Quito,Ecuador,Liga Pro,14,860,6.86
+Ecuador,2382,46731,P. Estupiñán,Defender,AC Milan,Italy,Serie A,19,1046,6.72
+Ecuador,2382,127817,P. Hincapié,Midfielder,Arsenal,England,Premier League,25,1792,6.92
+Ecuador,2382,306940,Y. Medina,Midfielder,Genk,Belgium,Jupiler Pro League,27,1534,6.73
+Ecuador,2382,354027,J. Ordoñez,Defender,Club Brugge KV,Belgium,Jupiler Pro League,33,2675,6.96
+Ecuador,2382,16367,W. Pacho,Defender,Paris Saint Germain,France,Ligue 1,23,1915,6.98
+Ecuador,2382,2575,J. Porozo,Defender,Club Tijuana,Mexico,Liga MX,34,3126,6.97
+Ecuador,2382,2583,A. Preciado,Defender,Sparta Praha,Czech-Republic,Czech Liga,14,970,6.89
+Ecuador,2382,63964,F. Torres,Defender,Corinthians,Brazil,Serie A,10,673,6.86
+Ecuador,2382,16470,J. Alcívar,Midfielder,Independiente del Valle,Ecuador,Liga Pro,31,1894,7.04
+Ecuador,2382,116117,M. Caicedo,Midfielder,Chelsea,England,Premier League,33,2802,7.17
+Ecuador,2382,338045,D. Castillo,Midfielder,FC Midtjylland,Denmark,Superliga,26,1725,6.87
+Ecuador,2382,16360,A. Franco,Defender,Atletico-MG,Brazil,Serie A,30,2701,6.9
+Ecuador,2382,406303,K. Páez,Attacker,Strasbourg,France,Ligue 1,15,431,6.5
+Ecuador,2382,280695,A. Minda,Midfielder,Cercle Brugge,Belgium,Jupiler Pro League,17,974,6.85
+Ecuador,2382,198347,A. Valencia,Attacker,Antwerp,Belgium,Jupiler Pro League,23,1331,6.94
+Ecuador,2382,237078,P. Vite,Midfielder,U.N.A.M. - Pumas,Mexico,Liga MX,38,2904,6.9
+Ecuador,2382,361966,K. Rodríguez,Attacker,Union St. Gilloise,Belgium,Jupiler Pro League,31,1825,6.71
+Ecuador,2382,25414,J. Yeboah,Attacker,Venezia,Italy,Serie B,34,2614,7.31
+Ecuador,2382,311543,N. Angulo,Attacker,Anderlecht,Belgium,Jupiler Pro League,22,1902,7.26
+Ecuador,2382,16590,J. Caicedo,Attacker,Sporting Gijon,Spain,Segunda División,10,155,6.45
+Ecuador,2382,350799,Jeremy Arévalo,Attacker,Racing Santander,Spain,Segunda División,18,890,7.03
+Ecuador,2382,16369,G. Plata,Attacker,Flamengo,Brazil,Serie A,28,1360,6.89
+Ecuador,2382,35533,E. Valencia,Attacker,CF Pachuca,Mexico,Liga MX,22,1376,6.85
+Sweden,5,158700,V. Johansson,Goalkeeper,Stoke City,England,Championship,25,2250,7.2
+Sweden,5,2851,K. Nordfeldt,Goalkeeper,AIK Stockholm,Sweden,Allsvenskan,28,2520,6.803571
+Sweden,5,48033,J. Widell Zetterström,Goalkeeper,Derby,England,Championship,32,2880,7.14
+Sweden,5,47903,H. Ekdal,Defender,Burnley,England,Premier League,19,1539,6.67
+Sweden,5,47969,G. Gudmundsson,Midfielder,Leeds,England,Premier League,32,2642,6.67
+Sweden,5,137976,I. Hien,Defender,Atalanta,Italy,Serie A,28,1965,6.87
+Sweden,5,137721,G. Lagerbielke,Defender,SC Braga,Portugal,Primeira Liga,28,2392,7.03
+Sweden,5,889,V. Lindelöf,Defender,Aston Villa,England,Premier League,17,985,6.67
+Sweden,5,47988,C. Starfelt,Defender,Celta Vigo,Spain,La Liga,19,1493,6.86
+Sweden,5,161504,H. Johansson,Midfielder,Mjallby AIF,Sweden,Allsvenskan,30,2290,7.24
+Sweden,5,8486,E. Smith,Defender,FC St. Pauli,Germany,Bundesliga,27,2314,6.88
+Sweden,5,226765,E. Stroud,Midfielder,Mjallby AIF,Sweden,Allsvenskan,28,2449,7.41
+Sweden,5,198654,D. Svensson,Defender,Borussia Dortmund,Germany,Bundesliga,33,2452,6.76
+Sweden,5,47696,A. Bernhardsson,Midfielder,Holstein Kiel,Germany,2. Bundesliga,20,1405,7.2
+Sweden,5,265820,Y. Ayari,Midfielder,Brighton,England,Premier League,29,1941,6.76
+Sweden,5,347316,L. Bergvall,Midfielder,Tottenham,England,Premier League,23,979,6.57
+Sweden,5,48002,B. Nygren,Midfielder,Celtic,Scotland,Premiership,38,2545,7.16
+Sweden,5,48047,J. Karlström,Midfielder,Udinese,Italy,Serie A,36,3152,6.78
+Sweden,5,2860,K. Sema,Midfielder,Pafos,Cyprus,1. Division,23,637,6.68
+Sweden,5,30484,M. Svanberg,Midfielder,VfL Wolfsburg,Germany,Bundesliga,26,1028,6.61
+Sweden,5,350850,B. Zeneli,Midfielder,IF Elfsborg,Sweden,Allsvenskan,27,2398,7.45
+Sweden,5,160925,T. Ali,Midfielder,Malmo FF,Sweden,Allsvenskan,26,1505,7.01
+Sweden,5,153430,A. Elanga,Attacker,Newcastle,England,Premier League,32,1347,6.57
+Sweden,5,18979,V. Gyökeres,Attacker,Arsenal,England,Premier League,36,2254,6.62
+Sweden,5,2864,A. Isak,Attacker,Liverpool,England,Premier League,14,714,6.51
+Sweden,5,15683,G. Nilsson,Attacker,Club Brugge KV,Belgium,Jupiler Pro League,7,64,6.36
+Tunisia,28,49423,S. Ben Hsan,Goalkeeper,,,,0,0,
+Tunisia,28,533394,C. Abdelmouhib,Goalkeeper,,,,0,0,
+Tunisia,28,49424,A. Dahmen,Goalkeeper,,,,0,0,
+Tunisia,28,49583,A. Abdi,Defender,Nice,France,Ligue 1,23,1210,6.62
+Tunisia,28,393977,A. Arous,Defender,Kasımpaşa,Turkey,Süper Lig,21,1672,6.82
+Tunisia,28,135059,A. Ben Hmida,Defender,,,,0,0,
+Tunisia,28,2945,D. Bronn,Defender,Servette FC,Switzerland,Super League,14,1215,6.67
+Tunisia,28,533360,R. Chikhaoui,Defender,,,,0,0,
+Tunisia,28,375608,M. Neffati,Defender,IFK Norrkoping,Sweden,Allsvenskan,28,2395,7.02
+Tunisia,28,163068,O. Rekik,Defender,,,,0,0,
+Tunisia,28,50030,M. Talbi,Defender,Lorient,France,Ligue 1,29,2610,6.9
+Tunisia,28,18942,Y. Valery,Defender,Sheffield Wednesday,England,Championship,23,2050,6.64
+Tunisia,28,49469,M. Ben Ouanes,Midfielder,Kasımpaşa,Turkey,Süper Lig,28,2285,6.78
+Tunisia,28,533295,K. Ayari,Attacker,,,,0,0,
+Tunisia,28,310196,Ismaël Gharbi,Attacker,FC Augsburg,Germany,Bundesliga,6,92,6.58
+Tunisia,28,25300,R. Khedira,Midfielder,Union Berlin,Germany,Bundesliga,32,2835,6.67
+Tunisia,28,180560,H. Mejbri,Midfielder,Burnley,England,Premier League,27,1253,6.72
+Tunisia,28,21587,E. Skhiri,Midfielder,Eintracht Frankfurt,Germany,Bundesliga,25,1450,6.71
+Tunisia,28,199310,A. Ben Slimane,Attacker,Norwich,England,Championship,22,1235,6.75
+Tunisia,28,67195,H. Mahmoud,Midfielder,FC Lugano,Switzerland,Super League,28,1532,6.74
+Tunisia,28,57518,S. Tounekti,Attacker,Celtic,Scotland,Premiership,27,1515,6.89
+Tunisia,28,42012,E. Achouri,Midfielder,FC Copenhagen,Denmark,Superliga,21,1387,6.9
+Tunisia,28,2962,F. Chaouat,Attacker,,,,0,0,
+Tunisia,28,566059,R. Elloumi,Attacker,Vancouver Whitecaps,USA,Major League Soccer,8,241,7.01
+Tunisia,28,344862,H. Mastouri,Attacker,Dinamo Makhachkala,Russia,Premier League,22,1123,6.56
+Tunisia,28,323974,E. Saad,Attacker,Hannover 96,Germany,2. Bundesliga,13,716,6.9
+Spain,9,182718,Joan García,Goalkeeper,Barcelona,Spain,La Liga,30,2700,7.35
+Spain,9,19465,David Raya,Goalkeeper,Arsenal,England,Premier League,37,3330,6.95
+Spain,9,47270,Unai Simón,Goalkeeper,Athletic Club,Spain,La Liga,37,3330,6.88
+Spain,9,396623,Pau Cubarsí Paredes,Defender,Barcelona,Spain,La Liga,31,2708,7.21
+Spain,9,47380,Marc Cucurella,Defender,Chelsea,England,Premier League,34,2723,6.68
+Spain,9,619,Eric García,Defender,Barcelona,Spain,La Liga,34,2730,7.06
+Spain,9,563,Álex Grimaldo,Defender,Bayer Leverkusen,Germany,Bundesliga,29,2524,7.32
+Spain,9,622,Aymeric Laporte,Defender,Athletic Club,Spain,La Liga,25,2060,6.85
+Spain,9,753,Marcos Llorente,Midfielder,Atletico Madrid,Spain,La Liga,29,2185,6.93
+Spain,9,47519,Pedro Porro,Defender,Tottenham,England,Premier League,34,2810,6.89
+Spain,9,295793,Marc Pubill,Defender,Atletico Madrid,Spain,La Liga,19,1382,7.11
+Spain,9,296667,Gavi,Midfielder,Barcelona,Spain,La Liga,11,574,6.87
+Spain,9,47311,Mikel Merino,Midfielder,Arsenal,England,Premier League,22,1035,6.86
+Spain,9,133609,Pedri,Midfielder,Barcelona,Spain,La Liga,29,2107,7.54
+Spain,9,44,Rodri,Midfielder,Manchester City,England,Premier League,21,1513,7.46
+Spain,9,328,Fabián Ruiz,Midfielder,Paris Saint Germain,France,Ligue 1,20,1129,7.11
+Spain,9,47315,Martín Zubimendi,Midfielder,Arsenal,England,Premier League,38,3001,7.06
+Spain,9,182219,Álex Baena,Midfielder,Atletico Madrid,Spain,La Liga,27,1572,6.95
+Spain,9,1323,Dani Olmo,Midfielder,Barcelona,Spain,La Liga,33,2077,7.03
+Spain,9,47348,Borja Iglesias,Attacker,Celta Vigo,Spain,La Liga,35,1903,6.75
+Spain,9,386828,Lamine Yamal,Attacker,Barcelona,Spain,La Liga,28,2268,7.95
+Spain,9,338751,Víctor Muñoz,Attacker,Osasuna,Spain,La Liga,34,2668,6.89
+Spain,9,47323,Mikel Oyarzabal,Attacker,Real Sociedad,Spain,La Liga,34,2714,7.08
+Spain,9,184226,Yeremy Pino,Midfielder,Crystal Palace,England,Premier League,34,2100,6.86
+Spain,9,931,Ferran Torres,Midfielder,Barcelona,Spain,La Liga,33,1984,6.83
+Spain,9,183799,Nico Williams,Attacker,Athletic Club,Spain,La Liga,25,1687,6.97
+Cape Verde Islands,1533,41764,Márcio Rosa,Goalkeeper,Montana,Bulgaria,First League,19,1170,7.04
+Cape Verde Islands,1533,15304,Vózinha,Goalkeeper,Chaves,Portugal,Segunda Liga,19,630,6.46
+Cape Verde Islands,1533,163200,C. dos Santos,Goalkeeper,San Diego,USA,Major League Soccer,31,2838,7.0
+Cape Verde Islands,1533,41608,Diney Borges,Defender,Al Bataeh,United-Arab-Emirates,Pro League,24,990,6.88
+Cape Verde Islands,1533,21997,Logan Costa,Defender,Villarreal,Spain,La Liga,2,29,6.9
+Cape Verde Islands,1533,308689,S. Lopes Cabral,Defender,,Portugal,Primeira Liga,15,1324,7.3
+Cape Verde Islands,1533,69260,Pico,Defender,Shamrock Rovers,Ireland,Premier Division,34,2708,7.27
+Cape Verde Islands,1533,22139,S. Moreira,Defender,Columbus Crew,USA,Major League Soccer,32,2747,6.9
+Cape Verde Islands,1533,332056,Wagner Pina,Defender,Trabzonspor,Turkey,Süper Lig,31,2444,6.96
+Cape Verde Islands,1533,268806,Kelvin Pires,Defender,SJK,Finland,Veikkausliiga,19,727,6.64
+Cape Verde Islands,1533,2331,Stopira,Defender,Torreense,Portugal,Segunda Liga,31,450,6.92
+Cape Verde Islands,1533,265556,Telmo Arcanjo,Midfielder,Guimaraes,Portugal,Primeira Liga,29,1258,6.8
+Cape Verde Islands,1533,37435,Deroy Duarte,Midfielder,Ludogorets,Bulgaria,First League,34,1641,7.11
+Cape Verde Islands,1533,37436,L. Duarte,Midfielder,Puskas Academy,Hungary,NB I,29,1964,6.88
+Cape Verde Islands,1533,142016,João Paulo,Midfielder,Oţelul,Romania,Liga I,20,1635,7.16
+Cape Verde Islands,1533,96512,Kevin Pina,Midfielder,FC Krasnodar,Russia,Premier League,27,1211,6.94
+Cape Verde Islands,1533,50745,Jamiro Monteiro,Midfielder,PEC Zwolle,Netherlands,Eredivisie,21,1276,6.73
+Cape Verde Islands,1533,128007,Yannick Semedo,Midfielder,Farense,Portugal,Segunda Liga,31,608,7.13
+Cape Verde Islands,1533,44612,Garry Rodrigues,Midfielder,Apollon Limassol,Cyprus,1. Division,31,795,6.98
+Cape Verde Islands,1533,22265,Nuno da Costa,Attacker,Başakşehir,Turkey,Süper Lig,26,930,6.65
+Cape Verde Islands,1533,1494,Jovane Cabral,Attacker,,Portugal,Primeira Liga,27,1679,7.04
+Cape Verde Islands,1533,113580,Willy Semedo,Midfielder,Omonia Nicosia,Cyprus,1. Division,28,682,7.84
+Cape Verde Islands,1533,291024,Hélio Varela,Midfielder,Maccabi Tel Aviv,Israel,Ligat Ha'al,30,1557,6.88
+Cape Verde Islands,1533,50270,Ryan Mendes,Midfielder,Iğdır FK,Turkey,1. Lig,28,1871,6.73
+Cape Verde Islands,1533,309182,Gilson Benchimol,Attacker,Akron,Russia,Premier League,22,1182,6.74
+Cape Verde Islands,1533,343287,D. Livramento,Attacker,Casa Pia,Portugal,Primeira Liga,26,1060,6.44
+Belgium,1,730,T. Courtois,Goalkeeper,Real Madrid,Spain,La Liga,32,2880,6.93
+Belgium,1,162511,S. Lammens,Goalkeeper,Manchester United,England,Premier League,32,2880,7.01
+Belgium,1,340151,M. Penders,Goalkeeper,Strasbourg,France,Ligue 1,33,2970,6.95
+Belgium,1,2920,T. Castagne,Defender,Fulham,England,Premier League,30,1881,6.75
+Belgium,1,162007,M. De Cuyper,Defender,Brighton,England,Premier League,30,1443,6.86
+Belgium,1,162141,K. De Winter,Defender,AC Milan,Italy,Serie A,26,1805,6.88
+Belgium,1,304228,Z. Debast,Defender,Sporting CP,Portugal,Primeira Liga,17,1183,7.12
+Belgium,1,69,B. Mechele,Defender,Club Brugge KV,Belgium,Jupiler Pro League,39,3442,7.3
+Belgium,1,264,T. Meunier,Defender,Lille,France,Ligue 1,25,1915,6.87
+Belgium,1,312964,N. Ngoy,Defender,Lille,France,Ligue 1,29,2412,6.85
+Belgium,1,375974,J. Seys,Defender,Club Brugge KV,Belgium,Jupiler Pro League,39,2977,6.81
+Belgium,1,204043,A. Theate,Defender,Eintracht Frankfurt,Germany,Bundesliga,24,2143,6.8
+Belgium,1,629,K. De Bruyne,Midfielder,Napoli,Italy,Serie A,18,1169,7.04
+Belgium,1,162714,A. Onana,Midfielder,Aston Villa,England,Premier League,25,1788,7.03
+Belgium,1,2120,N. Raskin,Midfielder,Rangers,Scotland,Premiership,33,2785,7.46
+Belgium,1,1417,A. Saelemaekers,Attacker,AC Milan,Italy,Serie A,35,2805,7.17
+Belgium,1,2926,Y. Tielemans,Midfielder,Aston Villa,England,Premier League,25,1874,7.21
+Belgium,1,335056,D. Moreira,Attacker,Strasbourg,France,Ligue 1,27,2041,7.02
+Belgium,1,78,H. Vanaken,Midfielder,Club Brugge KV,Belgium,Jupiler Pro League,39,3373,7.45
+Belgium,1,20,A. Witsel,Midfielder,Girona,Spain,La Liga,32,2533,6.85
+Belgium,1,1422,J. Doku,Midfielder,Manchester City,England,Premier League,30,1796,7.39
+Belgium,1,340077,M. Fernandez-Pardo,Attacker,Lille,France,Ligue 1,29,2379,7.0
+Belgium,1,907,R. Lukaku,Attacker,Napoli,Italy,Serie A,5,50,6.63
+Belgium,1,25458,D. Lukebakio,Attacker,Benfica,Portugal,Primeira Liga,17,745,7.04
+Belgium,1,147859,C. De Ketelaere,Attacker,Atalanta,Italy,Serie A,31,2188,7.25
+Belgium,1,1946,L. Trossard,Midfielder,Arsenal,England,Premier League,31,2006,6.96
+Egypt,32,550469,M. Alaa,Goalkeeper,,,,0,0,
+Egypt,32,16797,Mohamed El Shenawy,Goalkeeper,Al Ahly,Egypt,Premier League,15,1350,6.82
+Egypt,32,269174,Mostafa Shobeir,Goalkeeper,Al Ahly,Egypt,Premier League,11,990,7.03
+Egypt,32,16831,Al Mahdi Soliman,Goalkeeper,Zamalek SC,Egypt,Premier League,11,926,6.95
+Egypt,32,269621,Hossam Abdelmaguid,Defender,Zamalek SC,Egypt,Premier League,25,2233,7.31
+Egypt,32,196343,Mohamed Abdelmonem,Defender,Nice,France,Ligue 1,0,0,
+Egypt,32,2649,Ahmed Fatouh,Defender,Zamalek SC,Egypt,Premier League,17,910,7.01
+Egypt,32,2656,Karim Hafez,Defender,Pyramids FC,Egypt,Premier League,18,1174,6.96
+Egypt,32,2654,Mohamed Hany,Defender,Al Ahly,Egypt,Premier League,23,1963,7.06
+Egypt,32,16804,Yasser Ibrahim,Defender,Al Ahly,Egypt,Premier League,18,1566,7.11
+Egypt,32,16805,Rami Rabia,Defender,Al Ain,United-Arab-Emirates,Pro League,17,810,7.19
+Egypt,32,550371,T. Alaa,Defender,Masr,Egypt,Premier League,12,860,6.73
+Egypt,32,17269,Emam Ashour,Midfielder,Al Ahly,Egypt,Premier League,13,962,7.46
+Egypt,32,190575,Marwan Attia,Midfielder,Al Ahly,Egypt,Premier League,21,1638,7.3
+Egypt,32,2660,Nabil Emad Dunga,Midfielder,Al Najma,Saudi-Arabia,Pro League,12,914,6.81
+Egypt,32,16813,Hamdi Fathy,Defender,Al Wakrah,Qatar,Stars League,18,772,7.26
+Egypt,32,16841,Mohanad Lasheen,Midfielder,Pyramids FC,Egypt,Premier League,24,2009,7.21
+Egypt,32,69196,Mahmoud Saber,Midfielder,Masr,Egypt,Premier League,26,1851,7.13
+Egypt,32,395075,Mostafa Zico,Midfielder,Pyramids FC,Egypt,Premier League,22,1191,6.59
+Egypt,32,2664,Trézéguet,Midfielder,Al Ahly,Egypt,Premier League,21,1688,7.04
+Egypt,32,20844,H. Hassan,Midfielder,Oviedo,Spain,La Liga,37,1943,6.81
+Egypt,32,16871,Ahmed Zizo,Attacker,Al Ahly,Egypt,Premier League,20,1270,7.08
+Egypt,32,550547,H. Abdelkarim,Attacker,,,,0,0,
+Egypt,32,70535,Ibrahim Adel,Attacker,FC Nordsjaelland,Denmark,Superliga,11,629,6.83
+Egypt,32,81573,Omar Marmoush,Attacker,Manchester City,England,Premier League,21,734,6.7
+Egypt,32,306,Mohamed Salah,Attacker,Liverpool,England,Premier League,27,2148,6.93
+Saudi Arabia,23,193288,Nawaf Al Aqidi,Goalkeeper,Al-Nassr,Saudi-Arabia,Pro League,11,960,6.86
+Saudi Arabia,23,44449,Ahmed Al Kassar,Goalkeeper,Al-Qadisiyah FC,Saudi-Arabia,Pro League,3,205,6.9
+Saudi Arabia,23,44411,Mohammed Al Owais,Goalkeeper,,,,0,0,
+Saudi Arabia,23,44594,Saud Abdulhamid,Defender,Lens,France,Ligue 1,25,1356,6.99
+Saudi Arabia,23,403087,Mohammed Abu Al Shamat,Midfielder,Al-Qadisiyah FC,Saudi-Arabia,Pro League,31,2497,7.3
+Saudi Arabia,23,134995,Nawaf Boushal,Defender,Al-Nassr,Saudi-Arabia,Pro League,32,1895,6.96
+Saudi Arabia,23,44475,Abdulelah Al Amri,Defender,Al-Nassr,Saudi-Arabia,Pro League,25,1802,7.08
+Saudi Arabia,23,202381,Moteb Al Harbi,Defender,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,30,1846,6.81
+Saudi Arabia,23,44335,Hassan Kadesh,Defender,Al-Ittihad FC,Saudi-Arabia,Pro League,27,2275,6.76
+Saudi Arabia,23,44507,Ali Lajami,Defender,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,25,654,6.67
+Saudi Arabia,23,44367,Ali Majrashi,Defender,Al-Ahli Jeddah,Saudi-Arabia,Pro League,27,2079,6.93
+Saudi Arabia,23,44362,Hassan Tambakti,Defender,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,29,2364,7.09
+Saudi Arabia,23,543059,J. Thakri,Defender,,,,0,0,
+Saudi Arabia,23,44339,Nasser Al Dawsari,Midfielder,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,27,1638,6.87
+Saudi Arabia,23,44349,Mohamed Kanno,Midfielder,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,32,2095,7.17
+Saudi Arabia,23,269172,Ziyad Al Johani,Midfielder,Al-Ahli Jeddah,Saudi-Arabia,Pro League,26,1532,6.68
+Saudi Arabia,23,306380,Musab Al Juwayr,Attacker,Al-Qadisiyah FC,Saudi-Arabia,Pro League,31,2540,7.39
+Saudi Arabia,23,44315,Abdullah Al Khaibari,Midfielder,Al-Nassr,Saudi-Arabia,Pro League,32,1688,6.74
+Saudi Arabia,23,593759,Ala Al Haji,Midfielder,,,,0,0,
+Saudi Arabia,23,44701,Khalid Al Ghannam,Attacker,Al-Ettifaq,Saudi-Arabia,Pro League,32,2191,7.27
+Saudi Arabia,23,2639,Sultan Mandash,Attacker,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,15,466,7.1
+Saudi Arabia,23,147812,Ayman Yahya,Attacker,Al-Nassr,Saudi-Arabia,Pro League,27,1277,6.79
+Saudi Arabia,23,44324,Feras Al Brikan,Attacker,Al-Ahli Jeddah,Saudi-Arabia,Pro League,34,1673,6.71
+Saudi Arabia,23,44382,Abdullah Al Hamdan,Attacker,Al-Nassr,Saudi-Arabia,Pro League,15,312,6.83
+Saudi Arabia,23,44551,Saleh Al Shehri,Attacker,Al-Ittihad FC,Saudi-Arabia,Pro League,18,458,6.56
+Saudi Arabia,23,44340,Salem Al Dawsari,Midfielder,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,26,1900,7.3
+Uruguay,7,61895,S. Mele,Goalkeeper,Junior,Colombia,Primera A,18,1553,6.96
+Uruguay,7,429,F. Muslera,Goalkeeper,Estudiantes L.P.,Argentina,Liga Profesional Argentina,19,1740,7.152631
+Uruguay,7,50077,S. Rochet,Goalkeeper,Internacional,Brazil,Serie A,14,1215,6.878571
+Uruguay,7,101814,R. Araújo,Defender,Barcelona,Spain,La Liga,24,1072,6.9
+Uruguay,7,135334,S. Bueno,Defender,Wolves,England,Premier League,29,2553,6.77
+Uruguay,7,51535,S. Cáceres,Defender,Club America,Mexico,Liga MX,27,2413,6.74
+Uruguay,7,31,J. Giménez,Defender,Atletico Madrid,Spain,La Liga,16,1177,6.99
+Uruguay,7,47254,M. Olivera,Defender,Napoli,Italy,Serie A,25,1368,6.79
+Uruguay,7,1290,G. Varela,Defender,Flamengo,Brazil,Serie A,20,1372,7.1
+Uruguay,7,51572,M. Viña,Defender,Flamengo,Brazil,Serie A,8,286,6.64
+Uruguay,7,863,R. Bentancur,Midfielder,Tottenham,England,Premier League,26,1892,6.76
+Uruguay,7,153083,E. Martínez,Midfielder,Palmeiras,Brazil,Serie A,25,1535,6.85
+Uruguay,7,162891,J. Sanabria,Midfielder,Atletico San Luis,Mexico,Liga MX,19,1710,7.08
+Uruguay,7,51494,M. Ugarte,Midfielder,Manchester United,England,Premier League,22,901,6.68
+Uruguay,7,756,F. Valverde,Midfielder,Real Madrid,Spain,La Liga,33,2746,7.33
+Uruguay,7,108563,R. Zalazar,Midfielder,SC Braga,Portugal,Primeira Liga,28,1944,7.31
+Uruguay,7,2612,G. de Arrascaeta,Midfielder,Flamengo,Brazil,Serie A,33,2383,7.73
+Uruguay,7,5995,N. de la Cruz,Midfielder,Flamengo,Brazil,Serie A,19,1035,7.03
+Uruguay,7,51776,M. Araújo,Midfielder,Sporting CP,Portugal,Primeira Liga,29,2214,6.84
+Uruguay,7,51603,A. Canobbio,Midfielder,Fluminense,Brazil,Serie A,30,2130,6.91
+Uruguay,7,16482,R. Aguirre,Attacker,Club America,Mexico,Liga MX,19,1167,6.57
+Uruguay,7,51466,J. Piquerez,Attacker,Palmeiras,Brazil,Serie A,30,2481,7.06
+Uruguay,7,51617,D. Núñez,Attacker,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,16,1251,6.91
+Uruguay,7,70078,F. Pellistri,Attacker,Panathinaikos,Greece,Super League 1,8,326,6.55
+Uruguay,7,51618,B. Rodríguez,Attacker,Club America,Mexico,Liga MX,36,2406,7.28
+Uruguay,7,51530,F. Viñas,Attacker,Oviedo,Spain,La Liga,33,2451,6.95
+Iran,22,2682,A. Beiranvand,Goalkeeper,Tractor Sazi,World,AFC Champions League Elite,9,772,7.34
+Iran,22,29755,H. Hosseini,Goalkeeper,Sepahan FC,World,AFC Champions League Two,4,360,6.73
+Iran,22,2681,P. Niazmand,Goalkeeper,Persepolis FC,Iran,Persian Gulf Pro League,0,0,
+Iran,22,532950,D. Eiri,Defender,,,,0,0,
+Iran,22,2691,R. Rezaeian,Defender,Esteghlal FC,Iran,Persian Gulf Pro League,7,0,
+Iran,22,2685,E. Hajisafi,Defender,Sepahan FC,World,AFC Champions League Two,5,291,7.4
+Iran,22,136880,Saleh Hardani,Defender,Esteghlal FC,World,AFC Champions League Two,5,448,7.32
+Iran,22,2687,H. Kanani,Defender,,,,0,0,
+Iran,22,29704,S. Khalilzadeh,Defender,Tractor Sazi,World,AFC Champions League Elite,9,805,7.14
+Iran,22,2688,M. Mohammadi,Defender,Persepolis FC,Iran,Persian Gulf Pro League,18,0,
+Iran,22,533035,A. Nemati,Defender,,,,0,0,
+Iran,22,343405,A. Yousefi,Defender,Sepahan FC,World,AFC Champions League Two,5,315,7.88
+Iran,22,2700,A. Jahanbakhsh,Midfielder,Dender,Belgium,Jupiler Pro League,21,907,6.62
+Iran,22,2683,R. Cheshmi,Midfielder,Esteghlal FC,World,AFC Champions League Two,2,90,6.9
+Iran,22,19614,S. Ezatolahi,Midfielder,Shabab Al Ahli Dubai,United-Arab-Emirates,Pro League,21,740,7.1
+Iran,22,2699,S. Ghoddos,Midfielder,Al-Ittihad Kalba,United-Arab-Emirates,Pro League,25,1053,7.15
+Iran,22,423753,A. Razzaghinia,Midfielder,Esteghlal FC,World,AFC Champions League Two,6,443,6.43
+Iran,22,341844,M. Ghorbani,Midfielder,Al Wahda FC,United-Arab-Emirates,Pro League,21,352,6.59
+Iran,22,134217,M. Mohebi,Attacker,FC Rostov,Russia,Premier League,28,1619,6.57
+Iran,22,2697,M. Torabi,Midfielder,Tractor Sazi,World,AFC Champions League Elite,6,314,7.1
+Iran,22,643918,M. Ghaedi,Attacker,,,,0,0,
+Iran,22,29937,A. Hosseinzadeh,Attacker,Tractor Sazi,Iran,Persian Gulf Pro League,26,1104,6.795454
+Iran,22,29720,A. Alipour,Attacker,,,,0,0,
+Iran,22,89982,S. Moghanlou,Attacker,Al-Ittihad Kalba,United-Arab-Emirates,Pro League,25,1101,7.05
+Iran,22,37892,D. Eckert Ayensa,Attacker,Standard Liege,Belgium,Jupiler Pro League,35,1987,6.63
+Iran,22,42315,M. Taremi,Attacker,Olympiakos Piraeus,Greece,Super League 1,24,1261,7.07
+New Zealand,4673,18110,M. Crocombe,Goalkeeper,Millwall,England,Championship,23,2070,7.02
+New Zealand,4673,94360,A. Paulsen,Goalkeeper,Lechia Gdansk,Poland,Ekstraklasa,24,2160,6.69
+New Zealand,4673,36777,M. Woud,Goalkeeper,Auckland,Australia,A-League,28,2481,7.16
+New Zealand,4673,430835,Tyler Bindon,Defender,Sheffield Utd,England,Championship,25,2029,6.92
+New Zealand,4673,51149,M. Boxall,Defender,Minnesota United FC,USA,Major League Soccer,34,3022,7.03
+New Zealand,4673,6931,L. Cacace,Defender,Wrexham,England,Championship,12,727,6.62
+New Zealand,4673,94405,F. de Vries,Defender,Auckland,Australia,A-League,25,2022,7.32
+New Zealand,4673,6932,C. Elliot,Defender,Auckland,Australia,A-League,27,1762,6.84
+New Zealand,4673,94346,T. Payne,Defender,Wellington Phoenix,Australia,A-League,14,868,6.59
+New Zealand,4673,94344,N. Pijnaker,Defender,Auckland,Australia,A-League,17,968,6.8
+New Zealand,4673,51307,T. Smith,Defender,,,,0,0,
+New Zealand,4673,210165,F. Surman,Defender,Portland Timbers,USA,Major League Soccer,34,3096,7.03
+New Zealand,4673,405957,L. Bayliss,Midfielder,Newcastle Jets,Australia,A-League,27,1850,7.03
+New Zealand,4673,94541,J. Bell,Midfielder,Viking,Norway,Eliteserien,29,2542,7.34
+New Zealand,4673,180455,M. Garbett,Midfielder,Peterborough,England,League One,30,2124,6.89
+New Zealand,4673,94322,C. McCowatt,Midfielder,Silkeborg,Denmark,Superliga,32,2499,7.23
+New Zealand,4673,6934,A. Rufer,Midfielder,Wellington Phoenix,Australia,A-League,23,2044,7.18
+New Zealand,4673,6935,S. Singh,Midfielder,TSC Backa Topola,Serbia,Super Liga,15,886,6.82
+New Zealand,4673,179862,M. Stamenic,Midfielder,Swansea,England,Championship,36,2500,6.75
+New Zealand,4673,242,R. Thomas,Midfielder,PEC Zwolle,Netherlands,Eredivisie,27,2157,7.13
+New Zealand,4673,94333,E. Just,Midfielder,Motherwell,Scotland,Premiership,35,2698,7.11
+New Zealand,4673,179856,B. Old,Attacker,Saint Etienne,France,Ligue 2,30,1905,6.65
+New Zealand,4673,6865,K. Barbarouses,Attacker,Western Sydney Wanderers,Australia,A-League,22,1340,6.6
+New Zealand,4673,158688,J. Randall,Attacker,Auckland,Australia,A-League,30,2475,7.18
+New Zealand,4673,6938,B. Waine,Attacker,Port Vale,England,League One,27,1140,6.65
+New Zealand,4673,18931,C. Wood,Attacker,Nottingham Forest,England,Premier League,15,906,6.61
+France,2,22221,M. Maignan,Goalkeeper,AC Milan,Italy,Serie A,37,3303,7.23
+France,2,347211,R. Risser,Goalkeeper,Lens,France,Ligue 1,33,2970,7.08
+France,2,21628,B. Samba,Goalkeeper,Rennes,France,Ligue 1,32,2880,6.96
+France,2,2724,L. Digne,Defender,Aston Villa,England,Premier League,31,1866,6.78
+France,2,161907,M. Gusto,Defender,Chelsea,England,Premier League,34,2267,6.66
+France,2,33,L. Hernández,Defender,Paris Saint Germain,France,Ligue 1,25,1751,7.07
+France,2,47300,T. Hernández,Defender,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,31,2749,7.08
+France,2,1145,I. Konaté,Defender,Liverpool,England,Premier League,36,3100,7.07
+France,2,1257,J. Koundé,Defender,Barcelona,Spain,La Liga,30,2269,6.92
+France,2,20995,M. Lacroix,Defender,Crystal Palace,England,Premier League,35,3087,6.9
+France,2,22090,W. Saliba,Defender,Arsenal,England,Premier League,31,2615,7.04
+France,2,1149,D. Upamecano,Defender,Bayern München,Germany,Bundesliga,24,1797,7.22
+France,2,156477,R. Cherki,Midfielder,Manchester City,England,Premier League,33,1806,7.2
+France,2,2290,N. Kanté,Midfielder,Al-Ittihad FC,Saudi-Arabia,Pro League,18,1573,7.06
+France,2,22147,M. Koné,Midfielder,AS Roma,Italy,Serie A,29,2466,7.04
+France,2,272,A. Rabiot,Midfielder,AC Milan,Italy,Serie A,29,2557,7.24
+France,2,1271,A. Tchouaméni,Midfielder,Real Madrid,Spain,La Liga,33,2622,7.23
+France,2,336657,W. Zaïre-Emery,Midfielder,Paris Saint Germain,France,Ligue 1,32,2453,7.0
+France,2,274300,M. Akliouche,Midfielder,Monaco,France,Ligue 1,31,2410,7.04
+France,2,161904,B. Barcola,Attacker,Paris Saint Germain,France,Ligue 1,29,1750,7.21
+France,2,25927,J. Mateta,Attacker,Crystal Palace,England,Premier League,32,2222,6.73
+France,2,153,O. Dembélé,Midfielder,Paris Saint Germain,France,Ligue 1,22,1062,7.41
+France,2,343027,D. Doué,Midfielder,Paris Saint Germain,France,Ligue 1,23,1356,7.14
+France,2,278,Kylian Mbappé,Attacker,Real Madrid,Spain,La Liga,31,2604,7.53
+France,2,21509,M. Thuram,Midfielder,Inter,Italy,Serie A,29,1913,7.04
+France,2,19617,M. Olise,Midfielder,Bayern München,Germany,Bundesliga,32,2317,7.89
+Senegal,13,119853,M. Diaw,Goalkeeper,Le Havre,France,Ligue 1,30,2655,7.02
+Senegal,13,20566,Y. Diouf,Goalkeeper,Nice,France,Ligue 1,28,2520,6.99
+Senegal,13,2986,É. Mendy,Goalkeeper,Al-Ahli Jeddah,Saudi-Arabia,Pro League,26,2250,6.97
+Senegal,13,409303,E. Diouf,Defender,West Ham,England,Premier League,32,2716,6.74
+Senegal,13,158121,I. Jakobs,Midfielder,Galatasaray,Turkey,Süper Lig,25,1310,6.73
+Senegal,13,318,K. Koulibaly,Defender,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,18,1601,7.4
+Senegal,13,313937,A. Mendy,Defender,Nice,France,Ligue 1,27,2278,6.8
+Senegal,13,25916,M. Niakhaté,Defender,Lyon,France,Ligue 1,32,2758,7.22
+Senegal,13,276184,M. Sarr,Defender,Strasbourg,France,Ligue 1,15,1305,6.79
+Senegal,13,8450,A. Seck,Defender,Maccabi Haifa,Israel,Ligat Ha'al,26,1404,6.82
+Senegal,13,81,K. Diatta,Defender,Monaco,France,Ligue 1,18,1026,6.9
+Senegal,13,374058,L. Camara,Midfielder,Monaco,France,Ligue 1,24,1851,7.16
+Senegal,13,41552,P. Ciss,Midfielder,Rayo Vallecano,Spain,La Liga,29,2003,7.01
+Senegal,13,327631,H. Diarra,Attacker,Sunderland,England,Premier League,20,1420,6.72
+Senegal,13,2990,I. Gueye,Midfielder,Everton,England,Premier League,25,2101,6.79
+Senegal,13,20696,P. Gueye,Midfielder,Villarreal,Spain,La Liga,30,2143,7.12
+Senegal,13,630895,Bara Ndiaye,Midfielder,Bayern München,Germany,Bundesliga,4,148,6.68
+Senegal,13,237129,P. Sarr,Midfielder,Tottenham,England,Premier League,26,1410,6.82
+Senegal,13,400948,Assane Diao,Attacker,Como,Italy,Serie A,17,1089,6.74
+Senegal,13,284072,B. Dieng,Attacker,Lorient,France,Ligue 1,22,1220,6.81
+Senegal,13,283058,N. Jackson,Attacker,Bayern München,Germany,Bundesliga,23,1037,6.77
+Senegal,13,304,S. Mané,Attacker,Al-Nassr,Saudi-Arabia,Pro League,25,2138,7.28
+Senegal,13,446249,I. Mbaye,Attacker,Paris Saint Germain,France,Ligue 1,24,997,6.77
+Senegal,13,14379,C. Ndiaye,Attacker,Samsunspor,Turkey,Süper Lig,23,1433,6.72
+Senegal,13,18592,I. Ndiaye,Midfielder,Everton,England,Premier League,32,2798,6.88
+Senegal,13,2218,I. Sarr,Attacker,Crystal Palace,England,Premier League,28,2176,6.83
+Iraq,1567,197933,Ahmed Basil,Goalkeeper,Al Shorta,World,AFC Champions League Elite,5,450,6.4
+Iraq,1567,53886,Jalal Hassan Hachim,Goalkeeper,Al Zawra'a,World,AFC Champions League Two,7,660,6.39
+Iraq,1567,123802,Fahad Talib,Goalkeeper,,,,0,0,
+Iraq,1567,145465,Hussein Ali,Defender,Pogon Szczecin,Poland,Ekstraklasa,16,526,6.43
+Iraq,1567,271444,Merchas Doski,Defender,Plzen,Czech-Republic,Czech Liga,30,2047,6.95
+Iraq,1567,15769,Frans Putros,Defender,Persib Bandung,World,AFC Champions League Two,6,424,6.84
+Iraq,1567,427187,Mustafa Saadoun,Defender,Al Shorta,World,AFC Champions League Elite,0,365,6.33
+Iraq,1567,42261,Rebin Solaka,Defender,Port FC,Thailand,Thai League 1,23,1003,6.82
+Iraq,1567,296373,Zayed Tahseen,Defender,,,,0,0,
+Iraq,1567,292253,Ahmed Hasan Al Reeshawee,Defender,,,,0,0,
+Iraq,1567,295394,Munaf Younus,Defender,Al Shorta,World,AFC Champions League Elite,6,492,6.1
+Iraq,1567,453073,Akam Rahman,Defender,Al Zawra'a,World,AFC Champions League Two,7,651,6.628571
+Iraq,1567,47792,Amir Al Ammari,Midfielder,Cracovia Krakow,Poland,Ekstraklasa,33,2505,6.93
+Iraq,1567,282065,Youssef Amyn,Attacker,AEK Larnaca,Cyprus,1. Division,14,129,6.8
+Iraq,1567,140747,Ibraheem Bayesh,Midfielder,Al Riyadh,Saudi-Arabia,Pro League,12,1036,6.57
+Iraq,1567,284295,Zidane Iqbal,Midfielder,Jong Utrecht,Netherlands,Eerste Divisie,11,506,6.96
+Iraq,1567,626479,Z. Ismaeel,Midfielder,,,,0,0,
+Iraq,1567,48129,A. Sher,Midfielder,Sarpsborg 08 FF,Norway,Eliteserien,19,1612,7.14
+Iraq,1567,48025,Kevin Yakob,Midfielder,Aarhus,Denmark,Superliga,26,1460,6.82
+Iraq,1567,542644,A. Jasim,Attacker,Al Najma,Saudi-Arabia,Pro League,23,1183,6.79
+Iraq,1567,299813,Ali Al Hamadi,Attacker,Luton,England,League One,13,427,6.34
+Iraq,1567,265448,M. Farji,Midfielder,Stromsgodset,Norway,Eliteserien,29,2336,7.04
+Iraq,1567,49451,Aymen Hussein,Attacker,,,,0,0,
+Iraq,1567,53894,Meme,Attacker,Dibba Al-Fujairah,United-Arab-Emirates,Pro League,0,0,
+Iraq,1567,229112,A. Qasem,Midfielder,Nashville SC,USA,Major League Soccer,28,1241,6.64
+Iraq,1567,163854,A. Y. Hashim,Attacker,,,,0,0,
+Norway,1090,19172,Ø. Nyland,Goalkeeper,Sevilla,Spain,La Liga,5,450,6.6
+Norway,1090,39082,E. Selvik,Goalkeeper,Watford,England,Championship,40,3555,6.94
+Norway,1090,264378,S. Tangvik,Goalkeeper,Rosenborg,Norway,Eliteserien,30,2700,7.13
+Norway,1090,1119,K. Ajer,Defender,Brentford,England,Premier League,27,1820,6.66
+Norway,1090,39058,F. Bjørkan,Defender,Bodo/Glimt,Norway,Eliteserien,29,2382,7.43
+Norway,1090,180937,H. Falchener,Defender,Viking,Norway,Eliteserien,29,2578,7.41
+Norway,1090,265444,S. Langås,Defender,Derby,England,Championship,24,1968,6.75
+Norway,1090,39254,T. Heggem,Defender,Bologna,Italy,Serie A,27,2113,6.69
+Norway,1090,18967,L. Østigård,Defender,Genoa,Italy,Serie A,30,2623,7.23
+Norway,1090,39362,M. Pedersen,Defender,Torino,Italy,Serie A,29,2138,6.56
+Norway,1090,265782,D. Møller Wolfe,Defender,Wolves,England,Premier League,22,1061,6.57
+Norway,1090,277930,T. Aasgaard,Midfielder,Rangers,Scotland,Premiership,33,1828,7.02
+Norway,1090,39043,F. Aursnes,Midfielder,Benfica,Portugal,Primeira Liga,28,2294,7.16
+Norway,1090,39064,P. Berg,Midfielder,Bodo/Glimt,Norway,Eliteserien,28,2211,7.89
+Norway,1090,1934,S. Berge,Midfielder,Fulham,England,Premier League,35,2920,6.89
+Norway,1090,278133,Oscar Bobb,Midfielder,Fulham,England,Premier League,14,578,6.75
+Norway,1090,37127,M. Ødegaard,Midfielder,Arsenal,England,Premier League,24,1370,7.01
+Norway,1090,36980,M. Thorsby,Midfielder,Genoa,Italy,Serie A,13,736,6.62
+Norway,1090,39143,K. Thorstvedt,Midfielder,Sassuolo,Italy,Serie A,32,2459,6.88
+Norway,1090,301528,A. Schjelderup,Attacker,Benfica,Portugal,Primeira Liga,28,1732,7.33
+Norway,1090,39073,J. Hauge,Midfielder,Bodo/Glimt,Norway,Eliteserien,28,2230,7.64
+Norway,1090,1100,E. Haaland,Attacker,Manchester City,England,Premier League,35,2958,7.31
+Norway,1090,2032,J. Strand Larsen,Attacker,Wolves,England,Premier League,22,1405,6.37
+Norway,1090,314511,A. Nusa,Attacker,RB Leipzig,Germany,Bundesliga,31,2035,7.1
+Norway,1090,8492,A. Sørloth,Attacker,Atletico Madrid,Spain,La Liga,35,1982,6.81
+Norway,1090,24845,J. Ryerson,Defender,Borussia Dortmund,Germany,Bundesliga,31,2272,7.11
+Argentina,26,19599,E. Martínez,Goalkeeper,Aston Villa,England,Premier League,32,2835,6.98
+Argentina,26,2465,J. Musso,Goalkeeper,Atletico Madrid,Spain,La Liga,8,721,6.84
+Argentina,26,47296,G. Rulli,Goalkeeper,Marseille,France,Ligue 1,29,2610,7.07
+Argentina,26,2467,Lisandro Martínez,Defender,Manchester United,England,Premier League,18,1237,7.1
+Argentina,26,6231,F. Medina,Defender,Marseille,France,Ligue 1,17,1376,6.81
+Argentina,26,6503,N. Molina,Defender,Atletico Madrid,Spain,La Liga,26,1332,6.79
+Argentina,26,2468,G. Montiel,Defender,River Plate,Argentina,Liga Profesional Argentina,22,1788,7.22
+Argentina,26,624,N. Otamendi,Defender,Benfica,Portugal,Primeira Liga,30,2605,7.41
+Argentina,26,30776,C. Romero,Defender,Tottenham,England,Premier League,23,1872,7.13
+Argentina,26,529,N. Tagliafico,Defender,Lyon,France,Ligue 1,20,1320,6.68
+Argentina,26,319572,V. Barco,Midfielder,Strasbourg,France,Ligue 1,27,2170,7.14
+Argentina,26,5996,E. Fernández,Midfielder,Chelsea,England,Premier League,36,3134,7.18
+Argentina,26,1578,G. Lo Celso,Midfielder,Real Betis,Spain,La Liga,24,1396,7.01
+Argentina,26,6716,A. Mac Allister,Midfielder,Liverpool,England,Premier League,37,2686,6.71
+Argentina,26,6002,E. Palacios,Midfielder,Bayer Leverkusen,Germany,Bundesliga,18,1097,7.09
+Argentina,26,271,L. Paredes,Midfielder,Boca Juniors,Argentina,Liga Profesional Argentina,17,1489,7.76
+Argentina,26,26315,N. González,Attacker,Atletico Madrid,Spain,La Liga,24,1460,6.91
+Argentina,26,2472,R. De Paul,Midfielder,Inter Miami,USA,Major League Soccer,14,1447,7.12
+Argentina,26,6067,T. Almada,Midfielder,Atletico Madrid,Spain,La Liga,27,1312,6.83
+Argentina,26,6009,J. Álvarez,Attacker,Atletico Madrid,Spain,La Liga,29,1902,6.97
+Argentina,26,350037,N. Paz,Attacker,Como,Italy,Serie A,35,2884,7.31
+Argentina,26,295513,J. López,Attacker,Palmeiras,Brazil,Serie A,33,2011,7.21
+Argentina,26,217,Lautaro Martínez,Attacker,Inter,Italy,Serie A,30,2178,7.08
+Argentina,26,154,L. Messi,Attacker,Inter Miami,USA,Major League Soccer,31,2978,8.6
+Argentina,26,323935,G. Simeone,Midfielder,Atletico Madrid,Spain,La Liga,31,2109,6.93
+Argentina,26,6610,M. Senesi,Midfielder,Bournemouth,England,Premier League,37,3290,7.24
+Algeria,1532,4414,O. Benbot,Goalkeeper,USM Alger,Algeria,Ligue 1,14,0,
+Algeria,1532,304229,M. Mastil,Goalkeeper,,,,0,0,
+Algeria,1532,732,L. Zidane,Goalkeeper,Granada CF,Spain,Segunda División,26,2339,7.02
+Algeria,1532,342740,A. Abada,Defender,ASO Chlef,Algeria,Ligue 1,13,0,
+Algeria,1532,21138,R. Aït-Nouri,Defender,Manchester City,England,Premier League,17,988,6.92
+Algeria,1532,4561,Z. Belaïd,Defender,JS Kabylie,Algeria,Ligue 1,19,0,
+Algeria,1532,303362,R. Belghali,Defender,Hellas Verona,Italy,Serie A,26,1926,6.72
+Algeria,1532,2194,R. Bensebaïni,Defender,Borussia Dortmund,Germany,Bundesliga,21,1529,7.44
+Algeria,1532,20869,S. Chergui,Defender,Paris FC,France,Ligue 1,15,1155,6.53
+Algeria,1532,271539,J. Hadjam,Defender,BSC Young Boys,Switzerland,Super League,20,1236,7.17
+Algeria,1532,1567,A. Mandi,Defender,Lille,France,Ligue 1,29,2435,7.25
+Algeria,1532,4569,M. Tougai,Defender,ES Tunis,Tunisia,Ligue 1,11,0,
+Algeria,1532,658,H. Aouar,Midfielder,Al-Ittihad FC,Saudi-Arabia,Pro League,23,1905,7.08
+Algeria,1532,409,N. Bentaleb,Midfielder,Lille,France,Ligue 1,26,1287,7.04
+Algeria,1532,4399,H. Boudaoui,Midfielder,Nice,France,Ligue 1,26,1705,6.8
+Algeria,1532,380587,I. Maza,Midfielder,Bayer Leverkusen,Germany,Bundesliga,28,1859,7.11
+Algeria,1532,327599,Y. Titraoui,Midfielder,Charleroi,Belgium,Jupiler Pro League,35,2904,7.26
+Algeria,1532,129047,R. Zerrouki,Midfielder,Twente,Netherlands,Eredivisie,32,2667,7.22
+Algeria,1532,276670,F. Chaïbi,Midfielder,Eintracht Frankfurt,Germany,Bundesliga,28,1797,6.83
+Algeria,1532,200139,M. Amoura,Attacker,VfL Wolfsburg,Germany,Bundesliga,32,1975,6.72
+Algeria,1532,292924,A. Benbouali,Attacker,Gyori ETO FC,Hungary,NB I,31,1060,6.99
+Algeria,1532,329163,A. Boulbina,Attacker,Al-Duhail SC,World,AFC Champions League Elite,8,703,7.4
+Algeria,1532,334915,F. Ghedjemis,Attacker,Frosinone,Italy,Serie B,37,3023,7.27
+Algeria,1532,85041,A. Gouiri,Attacker,Marseille,France,Ligue 1,22,1328,6.96
+Algeria,1532,326067,A. Hadj-Moussa,Attacker,Feyenoord,Netherlands,Eredivisie,30,2553,7.47
+Algeria,1532,635,R. Mahrez,Attacker,Al-Ahli Jeddah,Saudi-Arabia,Pro League,27,2221,7.53
+Austria,775,7598,P. Pentz,Goalkeeper,Brondby,Denmark,Superliga,31,2805,7.25
+Austria,775,7525,A. Schlager,Goalkeeper,Red Bull Salzburg,Austria,Bundesliga,31,2790,7.07
+Austria,775,221605,F. Wiegele,Goalkeeper,Plzen,Czech-Republic,Czech Liga,20,1786,7.18
+Austria,775,126640,D. Affengruber,Defender,Elche,Spain,La Liga,36,2953,6.93
+Austria,775,505,D. Alaba,Defender,Real Madrid,Spain,La Liga,11,428,6.84
+Austria,775,25287,K. Danso,Defender,Tottenham,England,Premier League,24,1519,6.86
+Austria,775,25314,M. Friedl,Defender,Werder Bremen,Germany,Bundesliga,30,2549,6.88
+Austria,775,26240,P. Lienhart,Defender,SC Freiburg,Germany,Bundesliga,20,1305,6.98
+Austria,775,25915,P. Mwene,Defender,FSV Mainz 05,Germany,Bundesliga,29,2072,6.82
+Austria,775,711,S. Posch,Defender,FSV Mainz 05,Germany,Bundesliga,16,1395,6.96
+Austria,775,7090,M. Svoboda,Defender,Venezia,Italy,Serie B,29,2532,7.33
+Austria,775,1725,D. Ljubičić,Midfielder,FC Schalke 04,Germany,2. Bundesliga,15,1182,6.93
+Austria,775,138935,C. Chukwuemeka,Midfielder,Borussia Dortmund,Germany,Bundesliga,28,939,6.68
+Austria,775,719,F. Grillitsch,Midfielder,SC Braga,Portugal,Primeira Liga,20,1129,6.89
+Austria,775,1157,K. Laimer,Defender,Bayern München,Germany,Bundesliga,29,1997,6.82
+Austria,775,7327,A. Prass,Defender,1899 Hoffenheim,Germany,Bundesliga,32,1318,6.82
+Austria,775,1159,M. Sabitzer,Midfielder,Borussia Dortmund,Germany,Bundesliga,26,1822,6.92
+Austria,775,1095,X. Schlager,Midfielder,RB Leipzig,Germany,Bundesliga,26,1837,6.93
+Austria,775,7562,R. Schmid,Midfielder,Werder Bremen,Germany,Bundesliga,34,2988,6.94
+Austria,775,417,A. Schöpf,Midfielder,Wolfsberger AC,Austria,Bundesliga,25,1825,6.82
+Austria,775,7328,N. Seiwald,Midfielder,RB Leipzig,Germany,Bundesliga,33,2703,6.88
+Austria,775,327895,P. Wanner,Midfielder,PSV Eindhoven,Netherlands,Eredivisie,22,1649,7.01
+Austria,775,126642,P. Wimmer,Midfielder,VfL Wolfsburg,Germany,Bundesliga,25,1634,6.92
+Austria,775,18830,M. Arnautovic,Attacker,FK Crvena Zvezda,Serbia,Super Liga,16,993,7.05
+Austria,775,25297,M. Gregoritsch,Midfielder,FC Augsburg,Germany,Bundesliga,17,927,6.75
+Austria,775,7722,S. Kalajdzic,Attacker,Lask Linz,Austria,Bundesliga,23,1323,7.07
+Jordan,1548,140607,Yazid Abu Layla,Goalkeeper,Al Hussein,World,AFC Champions League Two,4,90,7.3
+Jordan,1548,163884,Abdallah Al Fakhouri,Goalkeeper,Al Wihdat,World,AFC Champions League Two,5,209,7.1
+Jordan,1548,163908,Noureddin Zaid,Goalkeeper,,,,0,0,
+Jordan,1548,542822,H. Abu Al Dahab,Defender,,,,0,0,
+Jordan,1548,542710,M. Abu Hasheesh,Defender,,,,0,0,
+Jordan,1548,102538,M. Abualnadi,Defender,Selangor,World,AFC Champions League Two,6,385,6.8
+Jordan,1548,53900,Yazan Al Arab,Defender,FC Seoul,South-Korea,K League 1,34,1528,6.88
+Jordan,1548,213978,Saed Al Rosan,Defender,Al Hussein,World,AFC Champions League Two,6,180,6.95
+Jordan,1548,664028,A. Badawi,Defender,,,,0,0,
+Jordan,1548,310835,Abdallah Naseeb,Defender,Al Zawra'a,World,AFC Champions League Two,4,480,6.64
+Jordan,1548,72140,Saleem Obaid,Defender,Al Hussein,World,AFC Champions League Two,5,168,6.65
+Jordan,1548,53902,Ehsan Haddad,Defender,,,,0,0,
+Jordan,1548,310785,Mohannad Abu Taha,Defender,,,,0,0,
+Jordan,1548,651096,M. Al Daoud,Midfielder,,,,0,0,
+Jordan,1548,542768,Ibrahim Sa'deh,Midfielder,,,,0,0,
+Jordan,1548,213980,Nizar Al Rashdan,Midfielder,Qatar SC,Qatar,Stars League,11,785,6.99
+Jordan,1548,140609,Noor Al Rawabdeh,Midfielder,Selangor,World,AFC Champions League Two,5,315,6.75
+Jordan,1548,104242,Rajaei Ayed,Midfielder,Al Hussein,World,AFC Champions League Two,6,180,6.95
+Jordan,1548,198211,Amer Jamous,Midfielder,Al Wihdat,World,AFC Champions League Two,5,270,6.73
+Jordan,1548,123530,Mahmoud Al Mardi,Attacker,Dibba Al-Fujairah,United-Arab-Emirates,Pro League,8,77,6.25
+Jordan,1548,72142,Mohammed Abu Zurayq,Attacker,,,,0,0,
+Jordan,1548,568556,O. Al Fakhouri,Attacker,,,,0,0,
+Jordan,1548,575283,A. Azaizeh,Attacker,Al Shabab,Saudi-Arabia,Pro League,15,638,6.73
+Jordan,1548,164026,Ali Olwan,Attacker,Al-Sailiya,Qatar,Stars League,2,126,6.35
+Jordan,1548,601853,M. Abu Ghoush,Midfielder,Shabab Al Ordon,Jordan,League,4,0,
+Jordan,1548,15286,Mousa Tamari,Midfielder,Rennes,France,Ligue 1,33,2224,6.9
+Portugal,27,369,Diogo Costa,Goalkeeper,FC Porto,Portugal,Primeira Liga,33,2907,7.07
+Portugal,27,1590,José Sá,Goalkeeper,Wolves,England,Premier League,23,2070,6.85
+Portugal,27,46672,Rui Silva,Goalkeeper,Sporting CP,Portugal,Primeira Liga,32,2879,7.12
+Portugal,27,161939,Tomás Araújo,Defender,Benfica,Portugal,Primeira Liga,23,1685,7.09
+Portugal,27,855,João Cancelo,Defender,Barcelona,Spain,La Liga,16,962,7.19
+Portugal,27,886,Diogo Dalot,Defender,Manchester United,England,Premier League,34,2617,6.86
+Portugal,27,567,Rúben Dias,Defender,Manchester City,England,Premier League,26,2161,7.17
+Portugal,27,265595,Gonçalo Inácio,Defender,Sporting CP,Portugal,Primeira Liga,29,2505,7.59
+Portugal,27,263482,Nuno Mendes,Defender,Paris Saint Germain,France,Ligue 1,20,1251,7.3
+Portugal,27,130,Nélson Semedo,Defender,Fenerbahçe,Turkey,Süper Lig,26,1942,6.89
+Portugal,27,336671,Renato Veiga,Defender,Villarreal,Spain,La Liga,32,2485,6.76
+Portugal,27,190485,Samú Costa,Midfielder,Mallorca,Spain,La Liga,34,2705,6.99
+Portugal,27,1485,Bruno Fernandes,Midfielder,Manchester United,England,Premier League,35,3066,7.63
+Portugal,27,335051,João Neves,Midfielder,Paris Saint Germain,France,Ligue 1,21,1287,7.16
+Portugal,27,2676,Rúben Neves,Midfielder,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,31,2755,7.82
+Portugal,27,41621,Matheus Nunes,Midfielder,Manchester City,England,Premier League,34,2865,6.97
+Portugal,27,636,Bernardo Silva,Midfielder,Manchester City,England,Premier League,38,2890,6.85
+Portugal,27,128384,Vitinha,Midfielder,Paris Saint Germain,France,Ligue 1,29,2121,7.58
+Portugal,27,161585,Francisco Conceição,Midfielder,Juventus,Italy,Serie A,31,2098,6.99
+Portugal,27,925,Gonçalo Guedes,Attacker,Real Sociedad,Spain,La Liga,32,1839,6.88
+Portugal,27,583,João Félix,Attacker,Al-Nassr,Saudi-Arabia,Pro League,33,2914,7.75
+Portugal,27,22236,Rafael Leão,Midfielder,AC Milan,Italy,Serie A,29,1866,6.92
+Portugal,27,1864,Pedro Neto,Midfielder,Chelsea,England,Premier League,34,2643,6.97
+Portugal,27,41585,Gonçalo Ramos,Attacker,Paris Saint Germain,France,Ligue 1,30,1320,6.61
+Portugal,27,874,Cristiano Ronaldo,Attacker,Al-Nassr,Saudi-Arabia,Pro League,30,2616,7.16
+Portugal,27,41112,Trincão,Midfielder,Sporting CP,Portugal,Primeira Liga,34,2850,7.16
+Congo DR,1508,314509,M. Epolo,Goalkeeper,Standard Liege,Belgium,Jupiler Pro League,29,2610,7.28
+Congo DR,1508,48501,T. Fayulu,Goalkeeper,FC Sion,Switzerland,Super League,0,0,
+Congo DR,1508,24012,L. Mpasi,Goalkeeper,Le Havre,France,Ligue 1,4,315,7.8
+Congo DR,1508,8445,D. Batubinsika,Defender,Larisa,Greece,Super League 1,16,1412,6.76
+Congo DR,1508,24245,G. Kalulu,Defender,Aris,Cyprus,1. Division,17,276,6.5
+Congo DR,1508,199767,S. Kapuadi,Defender,Legia Warszawa,Poland,Ekstraklasa,16,1400,6.68
+Congo DR,1508,21098,J. Kayembe,Defender,Genk,Belgium,Jupiler Pro League,28,2111,7.0
+Congo DR,1508,18816,A. Masuaku,Defender,Lens,France,Ligue 1,4,229,6.3
+Congo DR,1508,375,C. Mbemba,Defender,Lille,France,Ligue 1,13,953,6.78
+Congo DR,1508,19182,A. Tuanzebe,Defender,Burnley,England,Premier League,14,1202,6.53
+Congo DR,1508,18846,A. Wan-Bissaka,Defender,West Ham,England,Premier League,25,2084,6.64
+Congo DR,1508,1424,E. Kayembe,Midfielder,Watford,England,Championship,37,2503,6.83
+Congo DR,1508,21101,S. Moutoussamy,Midfielder,Atromitos,Greece,Super League 1,27,2337,6.94
+Congo DR,1508,375598,N. Mukau,Midfielder,Lille,France,Ligue 1,30,1566,6.61
+Congo DR,1508,48555,C. Pickel,Midfielder,Espanyol,Spain,La Liga,24,712,6.53
+Congo DR,1508,365331,N. Sadiki,Midfielder,Sunderland,England,Premier League,33,2907,6.76
+Congo DR,1508,44791,A. Tshibola,Midfielder,Kilmarnock,Scotland,Premiership,14,886,7.01
+Congo DR,1508,129670,N. Mbuku,Midfielder,Montpellier,France,Ligue 2,30,2191,6.95
+Congo DR,1508,8627,T. Bongonda,Midfielder,Spartak Moscow,Russia,Premier League,4,47,6.63
+Congo DR,1508,3033,C. Bakambu,Attacker,Real Betis,Spain,La Liga,18,593,6.65
+Congo DR,1508,20674,S. Banza,Attacker,Al-Jazira,United-Arab-Emirates,Pro League,15,516,6.91
+Congo DR,1508,279482,B. Cipenga,Attacker,Castellón,Spain,Segunda División,30,2250,7.15
+Congo DR,1508,3034,M. Elia,Attacker,Alanyaspor,Turkey,Süper Lig,22,842,6.64
+Congo DR,1508,47545,G. Kakuta,Attacker,Sakaryaspor,Turkey,1. Lig,20,1615,7.1
+Congo DR,1508,179699,F. Mayele,Attacker,Pyramids FC,Egypt,Premier League,24,1527,6.62
+Congo DR,1508,20649,Y. Wissa,Attacker,Newcastle,England,Premier League,19,548,6.47
+England,10,19088,D. Henderson,Goalkeeper,Crystal Palace,England,Premier League,37,3330,6.94
+England,10,2932,J. Pickford,Goalkeeper,Everton,England,Premier League,38,3432,7.02
+England,10,162489,J. Trafford,Goalkeeper,Manchester City,England,Premier League,4,372,7.08
+England,10,18961,D. Burn,Defender,Newcastle,England,Premier League,29,2209,6.59
+England,10,67971,M. Guéhi,Defender,Crystal Palace,England,Premier League,20,1800,7.22
+England,10,19545,R. James,Defender,Chelsea,England,Premier League,29,1973,7.19
+England,10,19354,E. Konsa,Defender,Aston Villa,England,Premier League,34,3036,7.0
+England,10,158694,T. Livramento,Defender,Newcastle,England,Premier League,17,1328,6.8
+England,10,307123,N. Oreilly,Defender,Manchester City,England,Premier League,34,2648,6.88
+England,10,158698,J. Quansah,Defender,Bayer Leverkusen,Germany,Bundesliga,28,2308,6.9
+England,10,19235,D. Spence,Defender,Tottenham,England,Premier League,30,2090,6.56
+England,10,626,J. Stones,Defender,Manchester City,England,Premier League,9,449,6.5
+England,10,138908,E. Anderson,Midfielder,Nottingham Forest,England,Premier League,38,3334,7.35
+England,10,129718,J. Bellingham,Midfielder,Real Madrid,Spain,La Liga,28,1917,7.28
+England,10,19586,E. Eze,Midfielder,Arsenal,England,Premier League,32,1816,6.96
+England,10,292,J. Henderson,Midfielder,Brentford,England,Premier League,32,1929,6.8
+England,10,284322,K. Mainoo,Midfielder,Manchester United,England,Premier League,28,1670,6.87
+England,10,2937,D. Rice,Midfielder,Arsenal,England,Premier League,36,3099,7.46
+England,10,19170,M. Rogers,Midfielder,Aston Villa,England,Premier League,37,3285,6.84
+England,10,138787,A. Gordon,Midfielder,Newcastle,England,Premier League,26,1817,7.08
+England,10,184,H. Kane,Attacker,Bayern München,Germany,Bundesliga,31,2382,7.87
+England,10,136723,N. Madueke,Midfielder,Arsenal,England,Premier League,26,1226,6.79
+England,10,909,M. Rashford,Midfielder,Barcelona,Spain,La Liga,32,1761,6.82
+England,10,1460,B. Saka,Attacker,Arsenal,England,Premier League,31,2225,7.24
+England,10,19974,I. Toney,Attacker,Al-Ahli Jeddah,Saudi-Arabia,Pro League,32,2659,7.37
+England,10,19366,O. Watkins,Midfielder,Aston Villa,England,Premier League,37,2864,6.87
+Croatia,3,524,D. Kotarski,Goalkeeper,FC Copenhagen,Denmark,Superliga,31,2820,6.86
+Croatia,3,1305,D. Livakovic,Goalkeeper,Dinamo Zagreb,Croatia,HNL,14,1260,6.99
+Croatia,3,14268,I. Pandur,Goalkeeper,Hull City,England,Championship,48,4320,6.96
+Croatia,3,1902,D. Caleta-Car,Defender,Real Sociedad,Spain,La Liga,27,2152,6.81
+Croatia,3,30827,M. Erlic,Defender,FC Midtjylland,Denmark,Superliga,18,1422,6.82
+Croatia,3,129033,J. Gvardiol,Defender,Manchester City,England,Premier League,18,1386,7.01
+Croatia,3,1084,M. Pongracic,Defender,Fiorentina,Italy,Serie A,35,2917,6.77
+Croatia,3,125171,J. Stanisic,Defender,Bayern München,Germany,Bundesliga,26,1855,6.92
+Croatia,3,14701,J. Sutalo,Defender,Ajax,Netherlands,Eredivisie,24,1797,6.86
+Croatia,3,387521,L. Vuskovic,Defender,Hamburger SV,Germany,Bundesliga,28,2441,7.26
+Croatia,3,295026,M. Baturina,Midfielder,Como,Italy,Serie A,29,1591,7.14
+Croatia,3,284869,T. Fruk,Midfielder,HNK Rijeka,Croatia,HNL,31,2054,7.09
+Croatia,3,14395,K. Jakic,Midfielder,FC Augsburg,Germany,Bundesliga,26,1653,6.77
+Croatia,3,2291,M. Kovacic,Midfielder,Manchester City,England,Premier League,6,146,6.8
+Croatia,3,754,L. Modric,Midfielder,AC Milan,Italy,Serie A,34,2828,7.55
+Croatia,3,1322,N. Moro,Midfielder,Bologna,Italy,Serie A,30,1797,7.14
+Croatia,3,2763,M. Pasalic,Midfielder,Atalanta,Italy,Serie A,33,1932,6.88
+Croatia,3,7332,L. Sucic,Midfielder,Real Sociedad,Spain,La Liga,22,1018,6.77
+Croatia,3,348205,P. Sucic,Midfielder,Inter,Italy,Serie A,34,1783,6.88
+Croatia,3,842,N. Vlasic,Midfielder,Torino,Italy,Serie A,37,3059,6.92
+Croatia,3,46746,A. Budimir,Attacker,Osasuna,Spain,La Liga,37,2953,6.84
+Croatia,3,726,A. Kramaric,Midfielder,1899 Hoffenheim,Germany,Bundesliga,34,2222,7.07
+Croatia,3,202696,I. Matanovic,Attacker,SC Freiburg,Germany,Bundesliga,31,1570,6.81
+Croatia,3,66055,P. Musa,Attacker,FC Dallas,USA,Major League Soccer,31,2488,7.38
+Croatia,3,260865,M. Pasalic,Midfielder,Orlando City SC,USA,Major League Soccer,34,2671,7.21
+Croatia,3,207,I. Perisic,Midfielder,PSV Eindhoven,Netherlands,Eredivisie,30,2218,7.23
+Ghana,1504,480108,B. Asare,Goalkeeper,,,,0,0,
+Ghana,1504,144709,J. Anang,Goalkeeper,St Patrick's Athl.,Ireland,Premier Division,36,3133,7.05
+Ghana,1504,3412,L. Zigi,Goalkeeper,FC ST. Gallen,Switzerland,Super League,35,3150,7.42
+Ghana,1504,369425,J. Adjetey,Defender,FC Basel 1893,Switzerland,Super League,15,1255,7.05
+Ghana,1504,25341,D. Luckassen,Defender,,Cyprus,1. Division,28,1048,6.83
+Ghana,1504,7578,G. Mensah,Defender,Auxerre,France,Ligue 1,30,2333,6.84
+Ghana,1504,196187,A. Seidu,Defender,Rennes,France,Ligue 1,21,1185,6.88
+Ghana,1504,137223,J. Opoku,Defender,Başakşehir,Turkey,Süper Lig,32,2741,6.85
+Ghana,1504,404172,K. Peprah Oppong,Defender,Nice,France,Ligue 1,31,2608,6.82
+Ghana,1504,15900,A. Mumin,Defender,Rayo Vallecano,Spain,La Liga,3,78,6.47
+Ghana,1504,191240,M. Senaya,Defender,Auxerre,France,Ligue 1,25,1784,6.86
+Ghana,1504,21996,A. Baba,Defender,PAOK,Greece,Super League 1,25,1915,6.85
+Ghana,1504,21010,E. Owusu,Midfielder,Auxerre,France,Ligue 1,29,2353,6.79
+Ghana,1504,49,T. Partey,Midfielder,Villarreal,Spain,La Liga,25,930,6.58
+Ghana,1504,3608,K. Sibo,Midfielder,Oviedo,Spain,La Liga,26,1689,6.59
+Ghana,1504,475575,Caleb Marfo Yirenkyi,Midfielder,FC Nordsjaelland,Denmark,Superliga,30,2614,7.08
+Ghana,1504,19281,A. Semenyo,Attacker,Bournemouth,England,Premier League,20,1798,7.13
+Ghana,1504,337426,A. Boakye,Midfielder,Saint Etienne,France,Ligue 2,31,2476,7.13
+Ghana,1504,303467,A. Fatawu,Midfielder,Leicester,England,Championship,44,3726,6.86
+Ghana,1504,410016,P. Adu,Midfielder,Plzen,Czech-Republic,Czech Liga,29,1561,6.83
+Ghana,1504,82090,B. Thomas-Asante,Attacker,Coventry,England,Championship,32,1880,6.88
+Ghana,1504,3428,J. Ayew,Attacker,Leicester,England,Championship,42,2280,6.58
+Ghana,1504,411800,C. Bonsu Baah,Attacker,Al-Qadisiyah FC,Saudi-Arabia,Pro League,32,2679,7.26
+Ghana,1504,47294,I. Williams,Attacker,Athletic Club,Spain,La Liga,30,2168,6.6
+Ghana,1504,350856,E. Nuamah,Attacker,Lyon,France,Ligue 1,3,47,6.6
+Ghana,1504,199837,K. Sulemana,Attacker,Atalanta,Italy,Serie A,25,1008,6.74
+Panama,11,2967,L. Mejía,Goalkeeper,Club Nacional,Uruguay,Primera División - Clausura,14,1247,
+Panama,11,2968,O. Mosquera,Goalkeeper,Al-Fayha,Saudi-Arabia,Pro League,32,2880,7.02
+Panama,11,57861,C. Samudio,Goalkeeper,CD Marathon,Honduras,Liga Nacional,1,90,7.1
+Panama,11,7197,A. Andrade,Defender,Lask Linz,Austria,Bundesliga,30,2697,7.3
+Panama,11,2975,C. Blackman,Defender,Slovan Bratislava,Slovakia,Super Liga,27,1408,7.0
+Panama,11,57739,J. Córdoba,Defender,Norwich,England,Championship,28,2255,6.93
+Panama,11,2970,É. Davis,Defender,Vila Nova,Brazil,Goiano - 1,0,0,
+Panama,11,2971,F. Escobar,Defender,Deportivo Saprissa,Costa-Rica,Primera División,1,90,8.11
+Panama,11,328148,E. Fariña,Defender,Nizhny Novgorod,Russia,Premier League,14,1084,6.82
+Panama,11,57803,J. Gutiérrez,Defender,Deportivo La Guaira,Venezuela,Primera División,15,1350,
+Panama,11,71230,C. Harvey,Midfielder,Minnesota United FC,USA,Major League Soccer,27,1637,7.0
+Panama,11,81659,R. Miller,Defender,,,,0,0,
+Panama,11,2973,A. Murillo,Defender,Marseille,France,Ligue 1,16,988,6.71
+Panama,11,57667,J. Ramos,Defender,Independiente de La Chorrera,Panama,Liga Panameña de Fútbol,10,900,
+Panama,11,57807,A. Carrasquilla,Midfielder,U.N.A.M. - Pumas,Mexico,Liga MX,38,2860,6.92
+Panama,11,2977,A. Godoy,Midfielder,San Diego,USA,Major League Soccer,28,2106,7.13
+Panama,11,554208,C. Martinez,Midfielder,,,,0,0,
+Panama,11,2979,J. Rodríguez,Midfielder,FC Juarez,Mexico,Liga MX,36,2949,6.92
+Panama,11,46855,Y. Bárcenas,Midfielder,Mazatlán,Mexico,Liga MX,30,2276,6.83
+Panama,11,96615,I. Díaz,Midfielder,Leon,Mexico,Liga MX,27,1942,6.92
+Panama,11,2978,A. Quintero,Midfielder,Plaza Amador,Panama,Liga Panameña de Fútbol,14,647,
+Panama,11,57875,C. Yanis,Midfielder,Cobresal,Chile,Primera División,26,1674,7.12
+Panama,11,2983,J. Fajardo,Attacker,Universidad Catolica,Ecuador,Liga Pro,27,1072,6.79
+Panama,11,292396,A. Londoño,Midfielder,Universidad Catolica,Ecuador,Liga Pro,34,2331,7.2
+Panama,11,57910,T. Rodríguez,Attacker,Monagas SC,Venezuela,Primera División,0,0,
+Panama,11,51648,C. Waterman,Attacker,Coquimbo Unido,Chile,Primera División,27,1892,6.99
+Uzbekistan,1568,72120,B. Ergashev,Goalkeeper,Neftchi,Uzbekistan,Super League,5,404,
+Uzbekistan,1568,73507,A. Nematov,Goalkeeper,Nasaf,Uzbekistan,Super League,9,810,
+Uzbekistan,1568,73534,U. Yusupov,Goalkeeper,Foolad FC,Iran,Persian Gulf Pro League,0,0,
+Uzbekistan,1568,72122,K. Alijonov,Defender,Pakhtakor,Uzbekistan,Super League,9,729,
+Uzbekistan,1568,34121,R. Ashurmatov,Defender,Esteghlal FC,Iran,Persian Gulf Pro League,29,742,6.8
+Uzbekistan,1568,73510,U. Eshmurodov,Defender,Nasaf,Uzbekistan,Super League,9,810,
+Uzbekistan,1568,416964,B. Karimov,Defender,Surkhon,Uzbekistan,Super League,3,165,
+Uzbekistan,1568,360114,A. Khusanov,Defender,Manchester City,England,Premier League,21,1429,6.91
+Uzbekistan,1568,73514,S. Nasrullayev,Midfielder,Nasaf,World,AFC Champions League Elite,6,540,5.87
+Uzbekistan,1568,532759,F. Sayfiev,Defender,,,,0,0,
+Uzbekistan,1568,358427,J. Urozov,Defender,Dinamo Samarqand,Uzbekistan,Super League,28,0,
+Uzbekistan,1568,73418,A. Abdullaev,Defender,Dibba Al-Fujairah,United-Arab-Emirates,Pro League,9,570,6.57
+Uzbekistan,1568,65571,A. Ulmasaliev,Defender,Olmaliq,Uzbekistan,Super League,14,1105,7.36
+Uzbekistan,1568,53836,J. Masharipov,Midfielder,Esteghlal FC,Iran,Persian Gulf Pro League,0,0,
+Uzbekistan,1568,73520,A. Ganiyev,Attacker,Al Bataeh,United-Arab-Emirates,Pro League,24,922,6.82
+Uzbekistan,1568,65576,J. Iskanderov,Midfielder,Neftchi,Uzbekistan,Super League,8,603,
+Uzbekistan,1568,53835,O. Hamrobekov,Midfielder,Bunyodkor,Uzbekistan,Super League,9,810,
+Uzbekistan,1568,73522,A. Mozgovoy,Midfielder,Baniyas SC,United-Arab-Emirates,Pro League,11,174,6.68
+Uzbekistan,1568,50272,O. Shukurov,Midfielder,Baniyas SC,United-Arab-Emirates,Pro League,18,953,6.67
+Uzbekistan,1568,263676,A. Fayzullaev,Attacker,Başakşehir,Turkey,Süper Lig,20,1117,6.94
+Uzbekistan,1568,363723,S. Esanov,Midfielder,,,,0,0,
+Uzbekistan,1568,72127,O. Orunov,Attacker,Persepolis FC,Iran,Persian Gulf Pro League,4,52,6.5
+Uzbekistan,1568,53834,D. Khamdamov,Midfielder,Pakhtakor,Uzbekistan,Super League,6,304,
+Uzbekistan,1568,65584,A. Amonov,Attacker,Bunyodkor,Uzbekistan,Super League,9,357,
+Uzbekistan,1568,72128,I. Sergeev,Attacker,Pakhtakor,Uzbekistan,Super League,9,772,
+Uzbekistan,1568,53535,E. Shomurodov,Attacker,Başakşehir,Turkey,Süper Lig,34,2928,7.18
+Colombia,8,2481,Á. Montero,Goalkeeper,Millonarios,Colombia,Primera A,23,2081,7.15
+Colombia,8,313,D. Ospina,Goalkeeper,Atletico Nacional,Colombia,Primera A,33,2887,6.93
+Colombia,8,2482,C. Vargas,Goalkeeper,Atlas,Mexico,Liga MX,33,2995,6.91
+Colombia,8,30,S. Arias,Defender,Bahia,Brazil,Serie A,21,1450,6.78
+Colombia,8,13571,W. Ditta,Defender,Cruz Azul,Mexico,Liga MX,41,3825,7.01
+Colombia,8,1929,J. Lucumí,Defender,Bologna,Italy,Serie A,29,2300,7.0
+Colombia,8,2483,D. Machado,Defender,Nantes,France,Ligue 1,14,911,6.64
+Colombia,8,2484,Y. Mina,Defender,Cagliari,Italy,Serie A,26,2160,6.96
+Colombia,8,64268,J. Mojica,Defender,Mallorca,Spain,La Liga,35,2737,6.68
+Colombia,8,13736,D. Muñoz,Defender,Crystal Palace,England,Premier League,29,2403,6.91
+Colombia,8,324034,G. Puerta,Midfielder,Racing Santander,Spain,Segunda División,32,2678,7.07
+Colombia,8,168,D. Sánchez,Defender,Galatasaray,Turkey,Süper Lig,30,2424,7.1
+Colombia,8,289592,K. Castaño,Midfielder,River Plate,Argentina,Liga Profesional Argentina,22,1713,6.91
+Colombia,8,2490,J. Lerma,Midfielder,Crystal Palace,England,Premier League,31,1731,6.72
+Colombia,8,13151,J. Portilla,Midfielder,Talleres Cordoba,Argentina,Liga Profesional Argentina,23,1663,6.9
+Colombia,8,13708,J. Arias,Midfielder,Wolves,England,Premier League,23,1121,6.63
+Colombia,8,5994,J. Carrascal,Midfielder,Flamengo,Brazil,Serie A,16,829,7.15
+Colombia,8,6005,J. Quintero,Midfielder,America de Cali,Colombia,Primera A,14,1077,7.46
+Colombia,8,195104,R. Rios,Midfielder,Benfica,Portugal,Primeira Liga,27,2279,7.09
+Colombia,8,517,J. Rodríguez,Midfielder,Leon,Mexico,Liga MX,14,982,7.31
+Colombia,8,13376,J. Campaz,Midfielder,Rosario Central,Argentina,Liga Profesional Argentina,28,2103,6.96
+Colombia,8,24810,J. Córdoba,Attacker,FC Krasnodar,Russia,Premier League,28,2484,7.19
+Colombia,8,47582,C. Hernández,Attacker,Real Betis,Spain,La Liga,32,2592,6.89
+Colombia,8,2489,L. Díaz,Midfielder,Bayern München,Germany,Bundesliga,32,2450,7.28
+Colombia,8,345748,A. Gómez,Midfielder,Vasco DA Gama,Brazil,Serie A,16,1041,6.91
+Colombia,8,47237,L. Suárez,Attacker,Sporting CP,Portugal,Primeira Liga,32,2697,7.42

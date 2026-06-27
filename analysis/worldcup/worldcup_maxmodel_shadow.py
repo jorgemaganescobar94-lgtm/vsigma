@@ -213,6 +213,13 @@ FEATURES = ["sup_pre_l3", "gf_diff", "ga_diff", "ppg_diff", "strk_diff", "rest_d
 
 
 def main(do_injuries=False):
+    # SOFT-FAIL: the model trains on the L3 per-match supremacy. If it (or international_results) is
+    # absent in this checkout, do nothing and leave the last committed mx predictions in place -> the
+    # briefing keeps using them (build_worldcup_cards falls back gracefully). Never crash the step.
+    for need in (PERMATCH, RESULTS):
+        if not need.exists():
+            print(f"maxmodel: missing {need.name} -> skip refresh (keep committed mx predictions)")
+            return
     df = build_features()
     burn = df["date"].to_numpy() < OOS_CUTOFF
     oos = ~burn
