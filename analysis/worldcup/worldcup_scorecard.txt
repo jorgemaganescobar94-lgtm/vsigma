@@ -1,74 +1,74 @@
-📊 Track record (33 resueltos · 2026-06-26)
-Acierto 1X2: L3 70% · v2 70%
-Brier-skill vs base-rate: L3 +25% · v2 +21%
+📊 Track record (37 resueltos · 2026-06-27)
+Acierto 1X2: L3 68% · v2 68%
+Brier-skill vs base-rate: L3 +27% · v2 +23%
 
 ===== detalle =====
-resueltos=33 | 1X2 a 90' (score.fulltime) | métricas vs RESULTADOS REALES, sin mercado
-  SEMÁNTICA MIXTA: 25 a 'primera predicción (mañana)' · 8 a 'última pre-saque' (cambio lock-at-KO a mitad de torneo; interpretar la mejora con cautela, no es homogéneo).
+resueltos=37 | 1X2 a 90' (score.fulltime) | métricas vs RESULTADOS REALES, sin mercado
+  SEMÁNTICA MIXTA: 25 a 'primera predicción (mañana)' · 12 a 'última pre-saque' (cambio lock-at-KO a mitad de torneo; interpretar la mejora con cautela, no es homogéneo).
 predictor    n  logloss   brier   acc%    ECE Skill_base%
 ---------------------------------------------------------
-base-rate   33   1.0271  0.6208   48.5  0.000         0.0
-L3          33   0.8143  0.4677   69.7  0.117       +24.7
-v2          33   0.8544  0.4932   69.7  0.151       +20.5
+base-rate   37   1.0612  0.6428   43.2  0.000         0.0
+L3          37   0.8164  0.4698   67.6  0.126       +26.9
+v2          37   0.8594  0.4955   67.6  0.141       +22.9
   (1X2 multiclase H/D/A; baseline ingenuo = base-rate.)
   (L3+adj = ajuste heurístico EN VIVO, NO validado, SECUNDARIO; L3 sigue siendo oficial.)
 
 --- (1) APUESTAS DERIVADAS — L3 (Poisson xG) vs base-rate (Over2.5, BTTS) ---
-  Over 2.5  (real Over=64%):
-    L3 (Poisson xG)    n= 33  acc   36%  Brier 0.253  logloss 0.699
-    base-rate          n= 33  acc   64%  Brier 0.231  logloss 0.655
-  BTTS      (real Yes=42%):
-    L3 (Poisson xG)    n= 33  acc   73%  Brier 0.219  logloss 0.634
-    base-rate          n= 33  acc   58%  Brier 0.244  logloss 0.682
+  Over 2.5  (real Over=59%):
+    L3 (Poisson xG)    n= 37  acc   43%  Brier 0.249  logloss 0.691
+    base-rate          n= 37  acc   59%  Brier 0.241  logloss 0.675
+  BTTS      (real Yes=43%):
+    L3 (Poisson xG)    n= 37  acc   70%  Brier 0.223  logloss 0.643
+    base-rate          n= 37  acc   57%  Brier 0.245  logloss 0.684
 
---- (1b) A/B TOTAL DE GOLES — matchup EN VIVO vs CONSTANTE (n=2) ---
-  Over 2.5 (real Over=100%):
-    matchup (EN VIVO)  n=  2  acc    0%  Brier 0.283  logloss 0.759
-    constante (viejo)  n=  2  acc    0%  Brier 0.255  logloss 0.703
+--- (1b) A/B TOTAL DE GOLES — matchup EN VIVO vs CONSTANTE (n=6) ---
+  Over 2.5 (real Over=50%):
+    matchup (EN VIVO)  n=  6  acc   67%  Brier 0.239  logloss 0.670
+    constante (viejo)  n=  6  acc   50%  Brier 0.250  logloss 0.694
   BTTS     (real Yes=50%):
-    matchup (EN VIVO)  n=  2  acc   50%  Brier 0.243  logloss 0.678
-    constante (viejo)  n=  2  acc  100%  Brier 0.226  logloss 0.646
+    matchup (EN VIVO)  n=  6  acc   50%  Brier 0.255  logloss 0.704
+    constante (viejo)  n=  6  acc   67%  Brier 0.253  logloss 0.701
   (si 'constante' bate sostenidamente a 'matchup' -> revisar / poner TOTAL_MATCHUP_LIVE=False)
 
 --- (2) CALIBRACIÓN / reliability (predicho vs frecuencia real por banda) ---
-  L3 (1X2 aplanado H/D/A, n_pred=99):
+  L3 (1X2 aplanado H/D/A, n_pred=111):
        banda    n  predicho   real
-      0-20 %   35       13%    11%
-     20-40 %   34       27%    24%
-     40-60 %   15       52%    53%
-     60-80 %   12       73%    83%
+      0-20 %   40       14%    10%
+     20-40 %   38       28%    26%
+     40-60 %   16       53%    50%
+     60-80 %   14       72%    86%
      80-100%    3       82%   100%
-  v2 (1X2 aplanado H/D/A, n_pred=99):
+  v2 (1X2 aplanado H/D/A, n_pred=111):
        banda    n  predicho   real
-      0-20 %   15       15%    13%
-     20-40 %   53       26%    17%
-     40-60 %   20       50%    65%
-     60-80 %   11       65%    82%
+      0-20 %   17       15%    12%
+     20-40 %   60       26%    18%
+     40-60 %   22       50%    64%
+     60-80 %   12       65%    83%
 
 --- (3) ERROR DE GOLES — L3 xG vs goles reales (MAE; baseline = media torneo) ---
-  n=33  baseline = media torneo (home 1.67, away 1.24, total 2.91)
+  n=37  baseline = media torneo (home 1.54, away 1.30, total 2.84)
              L3 MAE  base MAE   mejora
-    home       1.15      1.39     +18%
-    away       0.76      1.04     +27%
-    total      1.53      1.45      -5%
+    home       1.10      1.35     +18%
+    away       0.81      1.09     +26%
+    total      1.57      1.54      -2%
 
 --- (4) L3 vs base-rate cara a cara (prob asignada al resultado real) ---
-  global n=33: L3 mejor 23 · base-rate mejor 9 · empate 1
-    L3 marca favorito (máx≥50%)  n= 25: L3 20 · base 5 · empate 0
-    L3 lo ve igualado (máx<50%)  n=  8: L3 3 · base 4 · empate 1
-    cruce de confederación       n= 31: L3 22 · base 8 · empate 1
-    misma confederación          n=  2: L3 1 · base 1 · empate 0
+  global n=37: L3 mejor 29 · base-rate mejor 8 · empate 0
+    L3 marca favorito (máx≥50%)  n= 28: L3 23 · base 5 · empate 0
+    L3 lo ve igualado (máx<50%)  n=  9: L3 6 · base 3 · empate 0
+    cruce de confederación       n= 35: L3 27 · base 8 · empate 0
+    misma confederación          n=  2: L3 2 · base 0 · empate 0
 
 --- (4b) L3+adj heurístico (NO validado) — SOLO partidos con ajuste activo (Δ≠0) ---
   aún sin ajustes activos resueltos (o sin columnas adj en el log).
 
 --- (5) STATS córners/tarjetas/tiros — modelo de datos vs reales + base-rate ---
-  córners   n= 28  (muestra pequeña, orientativo) real μ=8.8 | MAE modelo 2.73 vs base 2.16 (-27%)
-  tarjetas  n= 28  (muestra pequeña, orientativo) real μ=2.4 | MAE modelo 1.94 vs base 1.06 (-82%)
-  tiros     n= 28  (muestra pequeña, orientativo) real μ=24.5 | MAE modelo 7.30 vs base 5.07 (-44%)
-  córners O/U (línea~7.5) n=28: acc 39% · Brier 0.307 · real Over=68%
+  córners   n= 32 real μ=8.8 | MAE modelo 2.67 vs base 2.20 (-22%)
+  tarjetas  n= 32 real μ=2.7 | MAE modelo 1.84 vs base 1.22 (-51%)
+  tiros     n= 32 real μ=24.6 | MAE modelo 7.65 vs base 5.54 (-38%)
+  córners O/U (línea~7.5) n=32: acc 44% · Brier 0.296 · real Over=66%
 
 PROPUESTA de recalibración (calibración, informativa, NO aplicada):
-  Ningún encogimiento hacia base-rate mejora el log-loss (0.8143); L3 bien calibrado.
+  Ningún encogimiento hacia base-rate mejora el log-loss (0.8164); L3 bien calibrado.
 
-generated_at_utc: 2026-06-26T23:35:42+00:00
+generated_at_utc: 2026-06-27T08:08:57+00:00
