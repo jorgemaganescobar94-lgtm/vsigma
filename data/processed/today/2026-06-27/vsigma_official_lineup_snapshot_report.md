@@ -1,16 +1,16 @@
 # vSIGMA Official Lineup Snapshot Import - 2026-06-27
 
 ## Summary
-- rows_processed: 0
-- eligible_fixtures: 0
-- api_calls_made: 0
+- rows_processed: 12
+- eligible_fixtures: 12
+- api_calls_made: 12
 - cache_hits: 0
-- lineup_rows_written: 64
-- full_lineup_rows: 60
+- lineup_rows_written: 72
+- full_lineup_rows: 61
 - no_lineup_rows: 0
 - api_errors: 0
 - key_status: API_SPORTS
-- api_status_counts: none
+- api_status_counts: NO_LINEUPS_RETURNED=8; OK=4
 - auto_apply: NO
 - production_change: NO
 
@@ -79,6 +79,14 @@
 - Ferroviária vs Inter De Limeira | side=away | players=11 | formation= | status=OK
 - Novorizontino vs Vila Nova | side=home | players=8 | formation=4-2-3-1 | status=OK
 - Novorizontino vs Vila Nova | side=away | players=8 | formation=4-2-3-1 | status=OK
+- Operario-PR vs America Mineiro | side=home | players=9 | formation=4-4-1-1 | status=OK
+- Operario-PR vs America Mineiro | side=away | players=9 | formation=4-1-4-1 | status=OK
+- Inter De Limeira vs Maringá | side=home | players=2 | formation= | status=OK
+- Inter De Limeira vs Maringá | side=away | players=1 | formation= | status=OK
+- HJK Helsinki vs KuPS | side=home | players=11 | formation=4-1-4-1 | status=OK
+- HJK Helsinki vs KuPS | side=away | players=9 | formation=4-4-2 | status=OK
+- Mariehamn vs Inter Turku | side=home | players=10 | formation=4-3-3 | status=OK
+- Mariehamn vs Inter Turku | side=away | players=8 | formation=4-3-3 | status=OK
 
 ## Guardrails
 - Official lineup importer only reads API/player snapshots; it never fabricates players.
