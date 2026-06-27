@@ -111,33 +111,50 @@ def fetch_injuries(c, fid, injlive=None):
     return by
 
 
-def compute_context_adjustment(ctxmod, l3pred, ctx_groups, ctx_team_group, rnd, home, away, om):
-    """LIVE qualification-context adjustment for ONE fixture, REUSING the shadow module
-    (classify_fixture + adjust_prediction). Scales the displayed L3 xG by the per-team scenario
-    multiplier and recomputes 1X2/OU with the frozen calibration. Returns a dict of ctx_* fields
-    (incl. 'context_note') when the scenario is NON-trivial; None when trivial/knockout/no-rating or
-    on ANY error (soft-fail -> caller keeps pure L3). 'our_*' is never touched."""
-    if ctxmod is None or om is None or l3pred is None:
+def compute_context_adjustment(ctxmod, ctx_groups, ctx_team_group, rnd, home, away,
+                               base_probs, base_xg_home, base_xg_away):
+    """LIVE qualification-context adjustment CHAINED ON THE DISPLAYED ENGINE (base = mx_* if present,
+    else L3 our_*). Scales the base xG by the per-team scenario multiplier (qual_engine via
+    ctxmod.classify_fixture) and recomputes the 1X2 by the SAME DELTA-POISSON as the injuries layer
+    (l3_offline.wdl), NOT the L3 isotonic — the mx 1X2 is logistic, so we move the BASE probs by the
+    Poisson delta of the xG change. Multiplier 1.0 (trivial/knockout) -> classify returns nt=False ->
+    None -> Δ=0 -> exact reversal to the motor. Returns ctx_* (incl. context_note) or None
+    (trivial / no base / soft-fail). The SHADOW context A/B (worldcup_context_shadow.adjust_prediction)
+    is UNTOUCHED and keeps its own L3-isotonic path for the scorecard. our_*/mx_* are never overwritten."""
+    if ctxmod is None or base_probs is None:
         return None
     try:
+        if any(v is None or pd.isna(v) for v in (base_xg_home, base_xg_away, *base_probs)):
+            return None
         sc_h, sc_a, m_h, m_a, nt = ctxmod.classify_fixture(rnd, home, away, ctx_groups, ctx_team_group)
         if not nt:
             return None
-        adj = ctxmod.adjust_prediction(l3pred, om["our_xg_home"], om["our_xg_away"], m_h, m_a)
+        bxh, bxa = float(base_xg_home), float(base_xg_away)
+        cxh = max(0.0, bxh) * float(m_h)
+        cxa = max(0.0, bxa) * float(m_a)
+        if abs(cxh - bxh) < 1e-9 and abs(cxa - bxa) < 1e-9:
+            return None
+        import l3_offline  # noqa: E402  (SAME Poisson machinery as the injuries layer: delta-Poisson)
+        delta = l3_offline.wdl(cxh, cxa) - l3_offline.wdl(bxh, bxa)
+        p = np.array([float(base_probs[0]), float(base_probs[1]), float(base_probs[2])]) + delta
+        p = np.clip(p, 1e-6, None)
+        p = p / p.sum()
+        lam = max(cxh + cxa, 1e-9)
+        over25 = float(1.0 - np.exp(-lam) * (1.0 + lam + lam * lam / 2.0))
         parts = []
         if m_h != 1.0:
             parts.append(f"{home} {SCENARIO_ES.get(sc_h, sc_h)}")
         if m_a != 1.0:
             parts.append(f"{away} {SCENARIO_ES.get(sc_a, sc_a)}")
         note = "ajustado por contexto de grupo: " + ", ".join(parts)
-        return {"ctx_home": round(adj["home"], 4), "ctx_draw": round(adj["draw"], 4),
-                "ctx_away": round(adj["away"], 4),
-                "ctx_xg_home": round(adj["xg_home"], 2), "ctx_xg_away": round(adj["xg_away"], 2),
-                "ctx_over25": round(adj["over25"], 4),
+        return {"ctx_home": round(float(p[0]), 4), "ctx_draw": round(float(p[1]), 4),
+                "ctx_away": round(float(p[2]), 4),
+                "ctx_xg_home": round(cxh, 2), "ctx_xg_away": round(cxa, 2),
+                "ctx_over25": round(over25, 4),
                 "ctx_scenario_home": sc_h, "ctx_scenario_away": sc_a,
                 "ctx_mult_home": m_h, "ctx_mult_away": m_a, "context_note": note}
-    except Exception as e:  # noqa: BLE001  (soft-fail -> L3 puro)
-        print(f"context live soft-fail (-> L3 puro): {type(e).__name__}")
+    except Exception as e:  # noqa: BLE001  (soft-fail -> motor sin contexto)
+        print(f"context live soft-fail (-> motor sin contexto): {type(e).__name__}")
         return None
 
 
@@ -374,17 +391,11 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
         else:
             out("    [OUR MODEL] no L3 rating for one of the teams")
 
-        # ---- CONTEXTO EN VIVO: ajustar la predicción mostrada/enviada por el escenario de grupo ----
-        # Reutiliza la maquinaria del módulo de sombra. Solo grupos NO triviales; knockout/unknown/
-        # tercero/intrascendente = 1.0 -> sin cambio. Guarda ctx_* (NO toca our_* = L3 puro). Soft-fail.
-        ctx_adj = compute_context_adjustment(
-            ctxmod, l3pred, ctx_groups, ctx_team_group, rnd, home, away, om) if CONTEXT_LIVE else None
-        context_note = ctx_adj["context_note"] if ctx_adj else None
-        if ctx_adj is not None:
-            out(f"    [CONTEXTO EN VIVO] (ajuste de grupo aplicado a la ficha): "
-                f"{home} {ctx_adj['ctx_home']*100:4.1f}%  Draw {ctx_adj['ctx_draw']*100:4.1f}%  "
-                f"{away} {ctx_adj['ctx_away']*100:4.1f}%   | exp goals "
-                f"{ctx_adj['ctx_xg_home']}-{ctx_adj['ctx_xg_away']}  — {context_note}")
+        # ---- CONTEXTO EN VIVO: se calcula MÁS ABAJO, ENCADENADO sobre el motor mostrado (mx_* si
+        # existe, si no L3 our_*), no aquí: necesita que mx_* ya esté en rec. Cadena mx -> contexto ->
+        # lesiones. ctx_adj/context_note se asignan tras el bloque MAX MODEL.
+        ctx_adj = None
+        context_note = None
 
         # ---- INFORMACIÓN (no es la predicción): contexto de grupo del motor de clasificación
         # correcto (qual_engine: desempates FIFA, mejores terceros). Solo grupos última jornada.
@@ -494,8 +505,26 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
                 f"{home} {float(mxr['mx_home'])*100:4.1f}%  Draw {float(mxr['mx_draw'])*100:4.1f}%  "
                 f"{away} {float(mxr['mx_away'])*100:4.1f}%   | exp goals {mxr['mx_xg_home']}-{mxr['mx_xg_away']}")
 
-        if ctx_adj is not None:
-            rec.update(ctx_adj)   # ctx_* = predicción ajustada por contexto (la ficha la mostrará)
+        # ---- CONTEXTO EN VIVO encadenado SOBRE el motor mostrado (mx_* si existe, si no L3 our_*).
+        # El escenario de grupo mueve el xG/1X2 MOSTRADO por delta-Poisson (misma mecánica que las
+        # bajas). Multiplicador 1.0 (trivial/knockout) -> None -> reversa exacta al motor. our_*/mx_*
+        # NO se tocan (sombra para A/B + rollback). CONTEXT_LIVE=False -> no ctx_* -> cae a mx exacto.
+        if CONTEXT_LIVE:
+            if pd.notna(rec.get("mx_home")):
+                cb = (rec.get("mx_home"), rec.get("mx_draw"), rec.get("mx_away"))
+                cbxh, cbxa = rec.get("mx_xg_home"), rec.get("mx_xg_away")
+            else:
+                cb = (rec.get("our_home"), rec.get("our_draw"), rec.get("our_away"))
+                cbxh, cbxa = rec.get("our_xg_home"), rec.get("our_xg_away")
+            ctx_adj = compute_context_adjustment(
+                ctxmod, ctx_groups, ctx_team_group, rnd, home, away, cb, cbxh, cbxa)
+            context_note = ctx_adj["context_note"] if ctx_adj else None
+            if ctx_adj is not None:
+                rec.update(ctx_adj)   # ctx_* = motor mostrado ajustado por contexto (la ficha lo mostrará)
+                out(f"    [CONTEXTO EN VIVO] (escenario aplicado al motor mostrado): "
+                    f"{home} {ctx_adj['ctx_home']*100:4.1f}%  Draw {ctx_adj['ctx_draw']*100:4.1f}%  "
+                    f"{away} {ctx_adj['ctx_away']*100:4.1f}%   | exp goals "
+                    f"{ctx_adj['ctx_xg_home']}-{ctx_adj['ctx_xg_away']}  — {ctx_adj['context_note']}")
         if group_info:
             rec["group_info"] = group_info   # línea de INFORMACIÓN (motor de clasificación correcto)
         if sp:
@@ -524,21 +553,23 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
             except Exception as e:  # noqa: BLE001
                 why = ""
                 print(f"explain soft-fail: {type(e).__name__}")
+            if why and isinstance(context_note, str) and context_note.strip():
+                why = f"{why} · {context_note}"   # transparencia: el número mostrado lleva el contexto
             if why:
                 out(f"    [POR QUÉ] {why}")
                 rec["why"] = why
 
-        # ---- INJURIES_LIVE: ajuste EN VIVO por bajas sobre el MOTOR MOSTRADO (etiquetado, reversible,
-        # NO validado). Base = misma prioridad que la ficha (mx_* > ctx_* > our_*). Recalcula 1X2 por
-        # el delta-Poisson del cambio de xG; OU/BTTS se recalculan solos en la ficha (leen inj_xg_*).
-        # Sin bajas clave / flag off (módulo) -> None -> NO se escriben inj_* -> reversa exacta. SOFT.
+        # ---- INJURIES_LIVE: ajuste EN VIVO por bajas, ÚLTIMO eslabón de la cadena mx -> contexto ->
+        # lesiones. Base = misma prioridad que la ficha: ctx_* (motor+contexto) si existe, si no mx_*,
+        # si no our_*. Recalcula 1X2 por delta-Poisson del cambio de xG; OU/BTTS se recalculan solos en
+        # la ficha (leen inj_xg_*). Sin bajas clave / flag off -> None -> NO inj_* -> reversa exacta. SOFT.
         if injlive is not None:
-            if pd.notna(rec.get("mx_home")):
-                bph = (rec.get("mx_home"), rec.get("mx_draw"), rec.get("mx_away"))
-                bxh, bxa = rec.get("mx_xg_home"), rec.get("mx_xg_away")
-            elif pd.notna(rec.get("ctx_home")):
+            if pd.notna(rec.get("ctx_home")):
                 bph = (rec.get("ctx_home"), rec.get("ctx_draw"), rec.get("ctx_away"))
                 bxh, bxa = rec.get("ctx_xg_home"), rec.get("ctx_xg_away")
+            elif pd.notna(rec.get("mx_home")):
+                bph = (rec.get("mx_home"), rec.get("mx_draw"), rec.get("mx_away"))
+                bxh, bxa = rec.get("mx_xg_home"), rec.get("mx_xg_away")
             else:
                 bph = (rec.get("our_home"), rec.get("our_draw"), rec.get("our_away"))
                 bxh, bxa = rec.get("our_xg_home"), rec.get("our_xg_away")

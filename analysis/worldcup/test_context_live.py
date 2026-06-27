@@ -44,6 +44,10 @@ def _table(rows):
 # in every parallel outcome -> both le_vale_empate (0.97). Non-trivial and mathematically sound.
 NONTRIVIAL_GROUPS = {"G": _table([("A", 4, 2, 2), ("B", 4, 2, 2), ("C", 1, 2, -2), ("D", 1, 2, -2)])}
 NONTRIVIAL_TG = {k: "G" for k in ("A", "B", "C", "D")}
+# Base = el MOTOR MOSTRADO (mx_* si existe, si no L3 our_*). El contexto se ENCADENA sobre esta base
+# por delta-Poisson (NO la isotónica del L3). Probs + xG del motor (p.ej. mx) que el escenario mueve.
+BASE_P = (0.50, 0.27, 0.23)
+BASE_XG = (1.60, 1.00)
 OM = {"our_home": 0.50, "our_draw": 0.27, "our_away": 0.23,
       "our_xg_home": 1.60, "our_xg_away": 1.00,
       "our_elo_home": 0.50, "our_elo_away": -0.50}
@@ -51,47 +55,82 @@ OM = {"our_home": 0.50, "our_draw": 0.27, "our_away": 0.23,
 
 # ----------------------------------------------------------------- compute_context_adjustment
 def test_nontrivial_group_is_adjusted():
-    adj = BC.compute_context_adjustment(C, FakePred(), NONTRIVIAL_GROUPS, NONTRIVIAL_TG,
-                                        "Group Stage - 3", "A", "B", OM)
+    adj = BC.compute_context_adjustment(C, NONTRIVIAL_GROUPS, NONTRIVIAL_TG,
+                                        "Group Stage - 3", "A", "B", BASE_P, *BASE_XG)
     assert adj is not None
     # both sides 'le_vale_empate' (×0.97), picked up from the parallel-match enumerator
     assert adj["ctx_mult_home"] == C.MULT["le_vale_empate"] and adj["ctx_mult_away"] == C.MULT["le_vale_empate"]
-    # xG scaled by the multipliers, recomputed via the module's machinery (ctx_xg rounded 2dp)
+    # xG of the MOTOR scaled by the multipliers (ctx_xg rounded 2dp)
     assert adj["ctx_xg_home"] == round(1.60 * 0.97, 2)
     assert adj["ctx_xg_away"] == round(1.00 * 0.97, 2)
-    # probs differ from pure L3 (the adjustment actually moved the prediction)
-    assert abs(adj["ctx_home"] - OM["our_home"]) > 1e-4 or abs(adj["ctx_away"] - OM["our_away"]) > 1e-4
+    # probs differ from the base motor (the adjustment actually moved the prediction)
+    assert abs(adj["ctx_home"] - BASE_P[0]) > 1e-4 or abs(adj["ctx_away"] - BASE_P[2]) > 1e-4
     assert "ajustado por contexto de grupo" in adj["context_note"]
     assert "A le vale el empate" in adj["context_note"] and "B le vale el empate" in adj["context_note"]
 
 
 def test_knockout_is_not_adjusted():
-    adj = BC.compute_context_adjustment(C, FakePred(), {}, {}, "Round of 16", "A", "B", OM)
-    assert adj is None        # knockout -> trivial -> no ctx_* -> pure L3
+    adj = BC.compute_context_adjustment(C, {}, {}, "Round of 16", "A", "B", BASE_P, *BASE_XG)
+    assert adj is None        # knockout -> trivial -> no ctx_* -> motor sin contexto (Δ=0)
 
 
 def test_two_qualified_group_is_adjusted_092():
-    # FASE 2 (un solo motor, sin 'intrascendente'): ambos ya clasificados (A,B=6; C,D=0 techo 3) ->
-    # CADA UNO qualified ×0.92 -> NON-trivial -> ctx_* SÍ se escribe (rotación), no None.
+    # ambos ya clasificados (A,B=6; C,D=0 techo 3) -> CADA UNO qualified ×0.92 -> NON-trivial.
     g = {"G": _table([("A", 6, 2, 3), ("B", 6, 2, 3), ("C", 0, 2, -3), ("D", 0, 2, -3)])}
     tg = {k: "G" for k in ("A", "B", "C", "D")}
-    adj = BC.compute_context_adjustment(C, FakePred(), g, tg, "Group Stage - 3", "A", "B", OM)
+    adj = BC.compute_context_adjustment(C, g, tg, "Group Stage - 3", "A", "B", BASE_P, *BASE_XG)
     assert adj is not None
     assert adj["ctx_mult_home"] == C.MULT["qualified"] == 0.92
     assert "ya clasificado" in adj["context_note"]
 
 
-def test_conditional_group_is_pure_l3():
-    # REVERSA por escenario: un grupo donde AMBOS lados son CONDICIONALES (P y A, ambos a 3; ganar
-    # asegura 2ª pero el empate solo se juega por diferencia de goles -> tag 'gana_y_pasa', neutral)
-    # -> mult 1.0 ambos -> trivial -> None -> la ficha queda en L3 puro (sin ctx_*). Réplica del caso
-    # real Paraguay/Australia. 12 grupos (formato real con terceros).
+def test_conditional_group_is_pure_motor():
+    # REVERSA por escenario: AMBOS lados CONDICIONALES (P y A a 3; ganar asegura 2ª pero el empate solo
+    # por diferencia -> tag 'gana_y_pasa', neutral) -> mult 1.0 ambos -> trivial -> None -> la ficha
+    # queda en el motor sin contexto (sin ctx_*). Réplica de Paraguay/Australia. 12 grupos.
     g = {"G": _table([("P", 3, 2, 0), ("A", 3, 2, 0), ("Lead", 6, 2, 5), ("T", 0, 2, -5)])}
     for i in range(11):
         g[f"F{i}"] = _table([(f"f{i}a", 0, 2, 0), (f"f{i}b", 0, 2, 0),
                              (f"f{i}c", 0, 2, 0), (f"f{i}d", 0, 2, 0)])
     tg = {k: "G" for k in ("P", "A", "Lead", "T")}
-    assert BC.compute_context_adjustment(C, FakePred(), g, tg, "Group Stage - 3", "P", "A", OM) is None
+    assert BC.compute_context_adjustment(C, g, tg, "Group Stage - 3", "P", "A", BASE_P, *BASE_XG) is None
+
+
+# --------------- VALIDACIONES de la CADENA mx -> contexto -> lesiones (decisión de Jorge) ----------
+def test_context_chains_on_mx_reduces_xg_092():
+    # (a) escenario no trivial (ambos 'ya clasificado' ×0.92) sobre la base del MOTOR MÁXIMO (mx):
+    #     el xG mostrado = mx_xg × 0.92 (REDUCIDO vs mx crudo), y el favorito baja un poco.
+    g = {"G": _table([("A", 6, 2, 3), ("B", 6, 2, 3), ("C", 0, 2, -3), ("D", 0, 2, -3)])}
+    tg = {k: "G" for k in ("A", "B", "C", "D")}
+    mx_p, mx_xg = (0.55, 0.25, 0.20), (1.72, 0.90)     # motor máximo crudo
+    adj = BC.compute_context_adjustment(C, g, tg, "Group Stage - 3", "A", "B", mx_p, *mx_xg)
+    assert adj is not None
+    assert adj["ctx_xg_home"] == round(1.72 * 0.92, 2) and adj["ctx_xg_away"] == round(0.90 * 0.92, 2)
+    assert adj["ctx_xg_home"] < mx_xg[0]               # xG REDUCIDO vs el mx crudo
+    assert abs(sum((adj["ctx_home"], adj["ctx_draw"], adj["ctx_away"])) - 1.0) < 1e-6
+
+
+def test_trivial_is_exact_motor_delta_zero():
+    # (b) fixture trivial (knockout) -> None -> la ficha = mx exacto (Δ=0). Reversa por escenario.
+    assert BC.compute_context_adjustment(C, {}, {}, "Final", "A", "B", (0.55, 0.25, 0.20), 1.72, 0.90) is None
+
+
+def test_chain_injuries_apply_on_ctx_base():
+    # (d) la cadena compone: contexto sobre mx -> luego una baja clave se aplica sobre el ctx (no el mx).
+    import worldcup_injuries_live as IL
+    g = {"G": _table([("A", 6, 2, 3), ("B", 6, 2, 3), ("C", 0, 2, -3), ("D", 0, 2, -3)])}
+    tg = {k: "G" for k in ("A", "B", "C", "D")}
+    mx_p, mx_xg = (0.55, 0.25, 0.20), (1.72, 0.90)
+    ctx = BC.compute_context_adjustment(C, g, tg, "Group Stage - 3", "A", "B", mx_p, *mx_xg)
+    assert ctx is not None
+    ctx_p = (ctx["ctx_home"], ctx["ctx_draw"], ctx["ctx_away"])
+    # baja ofensiva clave en A: el delta-Poisson de las lesiones parte del ctx_xg (no del mx_xg)
+    ia = IL.compute_fixture_injury_adjustment(
+        "A", "B", ctx_p, ctx["ctx_xg_home"], ctx["ctx_xg_away"], {}, inj_home=["X"], inj_away=[])
+    # con squad vacío no hay baja clave -> None (reversa); la base que se le pasó es ctx, no mx (verificado
+    # por construcción: ctx_xg < mx_xg y es lo que entra a la capa de lesiones)
+    assert ia is None
+    assert ctx["ctx_xg_home"] < mx_xg[0]
 
 
 def test_group_info_line_is_honest_and_conditional():
@@ -115,20 +154,21 @@ def test_soft_fail_returns_none():
         @staticmethod
         def classify_fixture(*a, **k):
             raise RuntimeError("boom")
-    assert BC.compute_context_adjustment(Boom, FakePred(), {}, {}, "Group Stage - 3", "A", "Y", OM) is None
-    assert BC.compute_context_adjustment(None, FakePred(), {}, {}, "Group Stage - 3", "A", "Y", OM) is None
+    assert BC.compute_context_adjustment(Boom, {}, {}, "Group Stage - 3", "A", "Y", BASE_P, *BASE_XG) is None
+    assert BC.compute_context_adjustment(None, {}, {}, "Group Stage - 3", "A", "Y", BASE_P, *BASE_XG) is None
 
 
-def test_adjustment_never_touches_our_fields():
-    adj = BC.compute_context_adjustment(C, FakePred(), NONTRIVIAL_GROUPS, NONTRIVIAL_TG,
-                                        "Group Stage - 3", "A", "B", OM)
-    assert all(not k.startswith("our_") for k in adj)   # only ctx_*/context_note are produced
+def test_adjustment_never_touches_our_or_mx_fields():
+    adj = BC.compute_context_adjustment(C, NONTRIVIAL_GROUPS, NONTRIVIAL_TG,
+                                        "Group Stage - 3", "A", "B", BASE_P, *BASE_XG)
+    assert all(not k.startswith("our_") and not k.startswith("mx_") for k in adj)  # only ctx_*/note
 
 
 # ----------------------------------------------------------------- A/B coherence with the shadow
-def test_live_ctx_matches_shadow_ctx():
-    # the live adjustment must equal the SHADOW context_predict ctx_* for the same (xg, mult):
-    # both call adjust_prediction with the same inputs -> identical (single source of truth).
+def test_shadow_ctx_internal_consistency():
+    # The SHADOW A/B (worldcup_context_shadow) is UNTOUCHED by the live chaining change and keeps its
+    # own L3-isotonic path: context_predict's ctx_* == adjust_prediction on the same (xg, mult). The
+    # LIVE ficha no longer uses this path (it chains delta-Poisson on mx); the shadow stays as control.
     pred = FakePred()
     cp = C.context_predict(pred, "A", "B", 0.92, 1.08)     # shadow: from strengths (rounded to 4dp)
     direct = C.adjust_prediction(pred, cp["l3_xg_home"], cp["l3_xg_away"], 0.92, 1.08)
@@ -161,9 +201,23 @@ def test_pred_1x2_prefers_ctx_when_present():
     assert lh == 0.40 and la == 0.30 and xgh == 1.5 and "ajustado por contexto" in note
 
 
-def test_pred_1x2_falls_back_to_l3_without_ctx():
-    lh, ld, la, xgh, xga, note = F.pred_1x2(_row())      # no ctx_* -> rollback to pure L3
-    assert lh == 0.50 and la == 0.23 and xgh == 1.60 and note is None
+def test_pred_1x2_ctx_outranks_mx():
+    # CLAVE de la cadena: ctx_* (ya encadenado sobre mx) tiene prioridad SOBRE mx_* en el render.
+    r = _row(mx_home=0.55, mx_draw=0.25, mx_away=0.20, mx_xg_home=1.72, mx_xg_away=0.90,
+             ctx_home=0.50, ctx_draw=0.28, ctx_away=0.22, ctx_xg_home=1.58, ctx_xg_away=0.83,
+             context_note="ajustado por contexto de grupo: A ya clasificado")
+    lh, ld, la, xgh, xga, note = F.pred_1x2(r)
+    assert lh == 0.50 and xgh == 1.58 and "ajustado por contexto" in note   # muestra ctx, no mx
+
+
+def test_pred_1x2_falls_back_to_mx_then_l3():
+    # (c) reversa exacta: con mx pero SIN ctx (CONTEXT_LIVE off / escenario trivial) -> muestra mx.
+    r = _row(mx_home=0.55, mx_draw=0.25, mx_away=0.20, mx_xg_home=1.72, mx_xg_away=0.90)
+    lh, ld, la, xgh, xga, note = F.pred_1x2(r)
+    assert lh == 0.55 and xgh == 1.72                       # mx exacto (Δ=0 vs mx)
+    # sin mx ni ctx -> L3 puro
+    lh2, ld2, la2, xgh2, xga2, note2 = F.pred_1x2(_row())
+    assert lh2 == 0.50 and xgh2 == 1.60 and note2 is None
 
 
 def test_context_live_flag_on_with_corrected_classifier():

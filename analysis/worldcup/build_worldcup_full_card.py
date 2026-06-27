@@ -261,23 +261,25 @@ MX_NOTE = ("Predicción: modelo amplio (núcleo L3 + forma/H2H/descanso) — pro
 
 
 def pred_1x2(r):
-    """Prediction to DISPLAY/SEND. Priority: inj_* (LIVE injuries adjust on the shown engine, written
-    when INJURIES_LIVE) > mx_* (the live MAX engine, MAXMODEL_LIVE) > ctx_* (L3 group-context adjust) >
-    pure L3 our_*. our_*/ctx_*/mx_* are NEVER overwritten (shadow for A/B + exact rollback): with
-    INJURIES_LIVE off no inj_* exist and this falls back to exactly the motor máximo (mx_*), and with
-    MAXMODEL_LIVE off too it falls back to the L3 output. Returns (ph,pd,pa,xg_home,xg_away,note).
-    inj_* keeps the MX engine framing (the injury label is rendered as its OWN ℹ️ line, not here)."""
+    """Prediction to DISPLAY/SEND. CHAIN mx -> contexto -> lesiones, so priority is:
+    inj_* (LIVE injuries, last link) > ctx_* (group context CHAINED on the shown engine) > mx_* (the
+    live MAX engine) > pure L3 our_*. ctx_* is now computed ON TOP of mx_* (base = mx if present, else
+    L3) by delta-Poisson, so it already carries the max engine; that is why ctx_* outranks mx_* here.
+    our_*/mx_* are NEVER overwritten (shadow for A/B + exact rollback): CONTEXT_LIVE off -> no ctx_* ->
+    falls back to mx_* exactly; MAXMODEL_LIVE off too -> L3; INJURIES_LIVE off -> no inj_*.
+    Returns (ph,pd,pa,xg_home,xg_away,note). inj_* keeps the engine framing (its label is its OWN ℹ️
+    line); ctx_* returns the context_note so the 'por qué' annotates the scenario."""
     if pd.notna(r.get("inj_home")):
         return (r.get("inj_home"), r.get("inj_draw"), r.get("inj_away"),
                 r.get("inj_xg_home"), r.get("inj_xg_away"), MX_NOTE)
-    if pd.notna(r.get("mx_home")):
-        return (r.get("mx_home"), r.get("mx_draw"), r.get("mx_away"),
-                r.get("mx_xg_home"), r.get("mx_xg_away"), MX_NOTE)
     if pd.notna(r.get("ctx_home")):
         note = r.get("context_note")
         return (r.get("ctx_home"), r.get("ctx_draw"), r.get("ctx_away"),
                 r.get("ctx_xg_home"), r.get("ctx_xg_away"),
-                note if isinstance(note, str) and note.strip() else None)
+                note if isinstance(note, str) and note.strip() else MX_NOTE)
+    if pd.notna(r.get("mx_home")):
+        return (r.get("mx_home"), r.get("mx_draw"), r.get("mx_away"),
+                r.get("mx_xg_home"), r.get("mx_xg_away"), MX_NOTE)
     return (r.get("our_home"), r.get("our_draw"), r.get("our_away"),
             r.get("our_xg_home"), r.get("our_xg_away"), None)
 

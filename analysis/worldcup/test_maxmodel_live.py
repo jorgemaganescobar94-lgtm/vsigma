@@ -48,13 +48,18 @@ def test_exact_reversal_without_mx_equals_l3():
     assert got == l3
 
 
-def test_mx_priority_over_ctx():
-    # mx_* must win over a present ctx_* (mx is the live engine; ctx is L3-only shadow machinery)
+def test_ctx_chains_over_mx():
+    # CADENA mx -> contexto: ctx_* ahora se calcula ENCADENADO sobre mx (delta-Poisson), así que en el
+    # render ctx_* tiene prioridad SOBRE mx_*. Sin nota de contexto -> mantiene el framing del motor.
     r = _row(with_mx=True)
     r["ctx_home"], r["ctx_draw"], r["ctx_away"] = 0.40, 0.30, 0.30
     r["ctx_xg_home"], r["ctx_xg_away"] = 1.3, 1.2
     ph, *_rest, note = F.pred_1x2(r)
-    assert ph == 0.61 and note == F.MX_NOTE
+    assert ph == 0.40 and note == F.MX_NOTE
+    # con nota de contexto -> se devuelve la nota (para que el "por qué" anote el escenario)
+    r["context_note"] = "ajustado por contexto de grupo: A ya clasificado"
+    ph2, *_r2, note2 = F.pred_1x2(r)
+    assert ph2 == 0.40 and "ajustado por contexto" in note2
 
 
 def test_framing_is_honest_no_accuracy_claim():
