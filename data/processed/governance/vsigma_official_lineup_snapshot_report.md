@@ -3,14 +3,14 @@
 ## Summary
 - rows_processed: 12
 - eligible_fixtures: 12
-- api_calls_made: 12
-- cache_hits: 0
+- api_calls_made: 9
+- cache_hits: 3
 - lineup_rows_written: 72
 - full_lineup_rows: 61
 - no_lineup_rows: 0
 - api_errors: 0
 - key_status: API_SPORTS
-- api_status_counts: NO_LINEUPS_RETURNED=8; OK=4
+- api_status_counts: NO_LINEUPS_RETURNED=8; OK=1
 - auto_apply: NO
 - production_change: NO
 
