@@ -35,7 +35,6 @@ sys.path.insert(0, str(HERE))
 import l3_offline  # noqa: E402  (committed L3 calibration -> faithful baseline; no API on import)
 
 from sklearn.linear_model import LogisticRegressionCV, PoissonRegressor  # noqa: E402
-from sklearn.isotonic import IsotonicRegression  # noqa: E402
 from sklearn.preprocessing import StandardScaler  # noqa: E402
 
 try:
@@ -61,6 +60,38 @@ REST_CAP = 21.0
 KMAX = 10
 NBOOT = 3000
 RNG = np.random.default_rng(0)
+# CALIBRACIÓN SUAVE: el escalón de la isotónica colapsaba entradas distintas y mapeaba extremos a 0
+# (rompía honestidad + granularidad). Temperature scaling = monótona, continua, fit SOLO en burn-in.
+EPS_FLOOR = 0.03     # suelo por clase: nunca 0.0%; tapado honesto y visible (>=3%, no falsa certeza)
+XG_CAP = 3.0         # tope per-team de xG (favoritos no deben dispararse; L3 ~<=2.9)
+
+
+def _softmax(z):
+    z = np.asarray(z, float)
+    z = z - z.max(axis=1, keepdims=True)
+    e = np.exp(z)
+    return e / e.sum(axis=1, keepdims=True)
+
+
+def _floor_norm(P, eps=EPS_FLOOR):
+    """Clip each class to >=eps and renormalise -> no class ever exactly 0/1 (honest)."""
+    P = np.clip(np.asarray(P, float), eps, None)
+    return P / P.sum(axis=1, keepdims=True)
+
+
+def _fit_temperature(logits, Y):
+    """Single temperature T>0 minimising burn-in multinomial logloss of softmax(logits/T). SMOOTH +
+    monotone: preserves the per-fixture ranking (distinct inputs -> distinct outputs), no plateaus,
+    no exact zeros. Fit on the supplied (burn-in) rows only -> no leakage."""
+    from scipy.optimize import minimize_scalar
+    logits = np.asarray(logits, float)
+
+    def nll(log_t):
+        P = np.clip(_softmax(logits / np.exp(log_t)), 1e-12, 1.0)
+        return -np.mean(np.sum(Y * np.log(P), axis=1))
+
+    r = minimize_scalar(nll, bounds=(np.log(0.3), np.log(8.0)), method="bounded")
+    return float(np.exp(r.x))
 
 
 # ------------------------------------------------------------------ metrics (3-class one-hot)
@@ -105,7 +136,9 @@ def _ou_btts(lh, la):
     gh = np.arange(KMAX + 1)[:, None]; ga = np.arange(KMAX + 1)[None, :]
     over25 = float(M[(gh + ga) >= 3].sum())
     btts = float(M[(gh >= 1) & (ga >= 1)].sum())
-    return over25, btts
+    # safety net: OU/BTTS never degenerate to exactly 0/1 (honest)
+    clip = lambda v: min(max(v, EPS_FLOOR), 1.0 - EPS_FLOOR)
+    return clip(over25), clip(btts)
 
 
 # ------------------------------------------------------------------ anti-leakage feature build
@@ -214,16 +247,16 @@ def main(do_injuries=False):
     Xs = sc.transform(X)
     clf = LogisticRegressionCV(Cs=10, cv=5, max_iter=2000, scoring="neg_log_loss")
     clf.fit(Xs[burn], res[burn])
-    raw = clf.predict_proba(Xs)                       # columns ordered by clf.classes_ (0,1,2)
-    # per-class isotonic on burn-in (same recipe as L3)
-    isos = [IsotonicRegression(out_of_bounds="clip").fit(raw[burn, k], Y[burn, k]) for k in range(3)]
-    P_mx = np.clip(np.c_[[isos[k].predict(raw[:, k]) for k in range(3)]].T, 1e-6, None)
-    P_mx /= P_mx.sum(1, keepdims=True)
+    # SMOOTH monotone calibration (temperature scaling, burn-in only) + eps-floor -> distinct inputs
+    # give distinct outputs and no class is ever 0/1 (replaces the step-isotonic that collapsed/zeroed).
+    logit = clf.decision_function(Xs)                 # columns ordered by clf.classes_ (0,1,2)
+    T = _fit_temperature(logit[burn], Y[burn])
+    P_mx = _floor_norm(_softmax(logit / T))
 
-    # ---------- MAX MODEL goals (Poisson regressions, burn-in fit) ----------
+    # ---------- MAX MODEL goals (Poisson regressions, burn-in fit; xG capped) ----------
     pr_h = PoissonRegressor(alpha=1e-2, max_iter=2000).fit(Xs[burn], gh[burn])
     pr_a = PoissonRegressor(alpha=1e-2, max_iter=2000).fit(Xs[burn], ga[burn])
-    lh_mx = pr_h.predict(Xs); la_mx = pr_a.predict(Xs)
+    lh_mx = np.minimum(pr_h.predict(Xs), XG_CAP); la_mx = np.minimum(pr_a.predict(Xs), XG_CAP)
 
     # ---------- A/B SCORECARD (OOS) ----------
     o = oos
@@ -285,11 +318,10 @@ def main(do_injuries=False):
     out("-" * 100)
     sc_all = StandardScaler().fit(X); Xa = sc_all.transform(X)
     clf_all = LogisticRegressionCV(Cs=10, cv=5, max_iter=2000, scoring="neg_log_loss").fit(Xa, res)
-    isos_all = [IsotonicRegression(out_of_bounds="clip").fit(
-        clf_all.predict_proba(Xa)[:, k], Y[:, k]) for k in range(3)]
+    T_all = _fit_temperature(clf_all.decision_function(Xa), Y)   # smooth calibration for live preds
     prh = PoissonRegressor(alpha=1e-2, max_iter=2000).fit(Xa, gh)
     pra = PoissonRegressor(alpha=1e-2, max_iter=2000).fit(Xa, ga)
-    n_wc = _write_wc_shadow(df, sc_all, clf_all, isos_all, prh, pra, out, do_injuries)
+    n_wc = _write_wc_shadow(df, sc_all, clf_all, T_all, prh, pra, out, do_injuries)
 
     SCORECARD.parent.mkdir(parents=True, exist_ok=True)
     pd.DataFrame(scrows).to_csv(SCORECARD, index=False)
@@ -329,7 +361,7 @@ def _latest_team_features(df):
     return out, g
 
 
-def _write_wc_shadow(df, scaler, clf, isos, prh, pra, out, do_injuries):
+def _write_wc_shadow(df, scaler, clf, temperature, prh, pra, out, do_injuries):
     if not WC_PREDS.exists() or not RATINGS.exists():
         out("  (no WC fixtures / ratings -> skipped)");
         pd.DataFrame().to_csv(WC_SHADOW, index=False); return 0
@@ -357,9 +389,8 @@ def _write_wc_shadow(df, scaler, clf, isos, prh, pra, out, do_injuries):
         x = np.array([[rat[h] - rat[a], fh["gf"] - fa["gf"], fh["ga"] - fa["ga"],
                        fh["ppg"] - fa["ppg"], fh["strk"] - fa["strk"], 0.0, 0.0, 1.0]])  # neutral, rest=0, h2h=0
         xs = scaler.transform(x)
-        raw = clf.predict_proba(xs)[0]
-        pc = np.array([isos[k].predict([raw[k]])[0] for k in range(3)]); pc = np.clip(pc, 1e-6, None); pc /= pc.sum()
-        lh, la = float(prh.predict(xs)[0]), float(pra.predict(xs)[0])
+        pc = _floor_norm(_softmax(clf.decision_function(xs) / temperature))[0]   # smooth + eps-floor
+        lh = min(float(prh.predict(xs)[0]), XG_CAP); la = min(float(pra.predict(xs)[0]), XG_CAP)
         sqd = (squad_z.get(h, 0.0) - squad_z.get(a, 0.0))
         rows.append({"fixture_id": int(r.fixture_id), "home": r.home, "away": r.away,
                      "mx_home": round(float(pc[0]), 4), "mx_draw": round(float(pc[1]), 4),

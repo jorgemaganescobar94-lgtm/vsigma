@@ -421,6 +421,8 @@ def match_block(r, show_lineups=False):
         M = score_matrix(xgh, xga)
         gh = np.arange(KMAX + 1)[:, None]; ga = np.arange(KMAX + 1)[None, :]
         o25 = float(M[(gh + ga) >= 3].sum()); btts = float(M[(gh >= 1) & (ga >= 1)].sum())
+        # safety net: OU/BTTS never shown at exactly 0%/100% (honest; harmless for L3 too)
+        o25 = min(max(o25, 0.01), 0.99); btts = min(max(btts, 0.01), 0.99)
         lines.append(f"Goles esperados: {xgh:.1f}–{xga:.1f} (total {xgh + xga:.1f}) · "
                      f"Over 2.5: {o25 * 100:.0f}% · BTTS: {btts * 100:.0f}%")
         flat = sorted(((i, j, M[i, j]) for i in range(KMAX + 1) for j in range(KMAX + 1)),

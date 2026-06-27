@@ -40,6 +40,35 @@ def test_ou_btts_in_range():
     assert M._ou_btts(2.5, 2.0)[0] > M._ou_btts(0.5, 0.4)[0]
 
 
+def test_floor_norm_never_zero_sums_one():
+    P = np.array([[0.999, 0.001, 0.0], [0.0, 0.0, 1.0], [0.34, 0.33, 0.33]])
+    Q = M._floor_norm(P, eps=0.03)
+    assert np.allclose(Q.sum(1), 1.0)
+    # never exactly 0 or 1; the floored class lands near eps (renorm pulls it slightly under)
+    assert (Q > 0.0).all() and (Q < 1.0).all(), "no class ever exactly 0 or 1"
+    assert Q.min() >= 0.03 / (1 + 2 * 0.03) - 1e-9, "floored class stays near eps"
+
+
+def test_softmax_distinct_inputs_distinct_outputs():
+    # two ALMOST-equal logit rows must give DIFFERENT probabilities (no plateau collapse)
+    z = np.array([[2.0, 0.5, -0.3], [2.01, 0.5, -0.3]])
+    P = M._softmax(z)
+    assert not np.allclose(P[0], P[1]), "distinct inputs must give distinct outputs (granularity)"
+    assert (P > 0).all(), "softmax never exactly 0"
+
+
+def test_temperature_is_monotone_and_positive():
+    rng = np.random.default_rng(1)
+    logits = rng.normal(size=(400, 3))
+    Y = np.eye(3)[rng.integers(0, 3, 400)]
+    T = M._fit_temperature(logits, Y)
+    assert T > 0
+    # monotone: a higher home-logit row keeps the higher home prob after temperature scaling
+    a = M._softmax(np.array([[1.0, 0.0, 0.0]]) / T)[0, 0]
+    b = M._softmax(np.array([[3.0, 0.0, 0.0]]) / T)[0, 0]
+    assert b > a
+
+
 def test_bootstrap_diff_sign():
     # b strictly better (lower loss) on every row -> obs>0, CI excludes 0, p≈0
     la = np.full(200, 1.0); lb = np.full(200, 0.8)

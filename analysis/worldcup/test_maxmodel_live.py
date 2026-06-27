@@ -77,6 +77,21 @@ def test_props_use_l3_xg_not_mx():
     assert "mx_xg" not in code, "props code must NOT read mx_xg_* (only L3 our_xg); mx_xg lives only in a comment"
 
 
+def test_live_csv_no_zeros_and_granular():
+    """Regression on the two real defects: the live mx predictions must have NO class at 0.0% and
+    distinct fixtures must get distinct 1X2 (no isotonic-plateau collapse)."""
+    p = HERE / "worldcup_maxmodel_shadow_predictions.csv"
+    if not p.exists():
+        return  # soft: artifact optional in some checkouts
+    d = pd.read_csv(p)
+    cls = d[["mx_home", "mx_draw", "mx_away"]]
+    assert (cls > 0.0).all().all(), "no mx class may be exactly 0.0% (honesty)"
+    assert (cls < 1.0).all().all(), "no mx class may be exactly 100%"
+    trip = cls.round(4).apply(tuple, axis=1)
+    # granularity: the vast majority of fixtures must be distinct (was 46/62 with the step-isotonic)
+    assert trip.nunique() >= int(0.95 * len(d)), f"too many identical 1X2 triples ({trip.nunique()}/{len(d)})"
+
+
 if __name__ == "__main__":
     for name, fn in sorted(globals().items()):
         if name.startswith("test_") and callable(fn):
