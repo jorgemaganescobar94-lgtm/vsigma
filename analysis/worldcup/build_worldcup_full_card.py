@@ -261,10 +261,15 @@ MX_NOTE = ("Predicción: modelo amplio (núcleo L3 + forma/H2H/descanso) — pro
 
 
 def pred_1x2(r):
-    """Prediction to DISPLAY/SEND. Priority: mx_* (the live MAX engine, written by build_worldcup_cards
-    when MAXMODEL_LIVE) > ctx_* (L3 group-context adjust) > pure L3 our_*. our_*/ctx_* are NEVER
-    overwritten (L3 stays as shadow for the A/B + exact rollback): with MAXMODEL_LIVE off no mx_* exist
-    and this falls back to exactly the L3 output. Returns (p_home,p_draw,p_away,xg_home,xg_away,note)."""
+    """Prediction to DISPLAY/SEND. Priority: inj_* (LIVE injuries adjust on the shown engine, written
+    when INJURIES_LIVE) > mx_* (the live MAX engine, MAXMODEL_LIVE) > ctx_* (L3 group-context adjust) >
+    pure L3 our_*. our_*/ctx_*/mx_* are NEVER overwritten (shadow for A/B + exact rollback): with
+    INJURIES_LIVE off no inj_* exist and this falls back to exactly the motor máximo (mx_*), and with
+    MAXMODEL_LIVE off too it falls back to the L3 output. Returns (ph,pd,pa,xg_home,xg_away,note).
+    inj_* keeps the MX engine framing (the injury label is rendered as its OWN ℹ️ line, not here)."""
+    if pd.notna(r.get("inj_home")):
+        return (r.get("inj_home"), r.get("inj_draw"), r.get("inj_away"),
+                r.get("inj_xg_home"), r.get("inj_xg_away"), MX_NOTE)
     if pd.notna(r.get("mx_home")):
         return (r.get("mx_home"), r.get("mx_draw"), r.get("mx_away"),
                 r.get("mx_xg_home"), r.get("mx_xg_away"), MX_NOTE)
@@ -376,10 +381,16 @@ def match_block(r, show_lineups=False):
                          f"{h} {pa_h*100:.0f}% · {a} {pa_a*100:.0f}%")
         else:
             lines.append(f"Resultado: {h} {lh*100:.0f}% · Empate {ld*100:.0f}% · {a} {la*100:.0f}%")
+        # INJURIES_LIVE: etiqueta honesta del ajuste por bajas (la predicción mostrada YA lo lleva via
+        # pred_1x2 -> inj_*). Línea propia, framing transparente. Soft: sin inj_* -> no aparece.
+        inj_note = r.get("inj_note")
+        if pd.notna(r.get("inj_home")) and isinstance(inj_note, str) and inj_note.strip():
+            lines.append(f"ℹ️ {inj_note}")
         # L3-adj SECONDARY heuristic line, UNDER the official L3. Soft: only if an adjustment
         # was logged (Δ≠0). L3 stays first and official; this is labelled, not validated.
+        # SUPRIMIDA cuando hay ajuste de bajas EN VIVO (inj_*) para no mostrar dos ajustes a la vez.
         ah, ad, aa = r.get("adj_home"), r.get("adj_draw"), r.get("adj_away")
-        if pd.notna(ah):
+        if pd.notna(ah) and pd.isna(r.get("inj_home")):
             lines.append(f"↳ Ajuste hoy (heurístico): {h} {ah*100:.0f}% · "
                          f"Empate {ad*100:.0f}% · {a} {aa*100:.0f}%")
             motivo = []
@@ -776,6 +787,9 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
             out("   " + " · ".join(seg))
             if ctx_note:                       # transparencia compacta del ajuste de contexto
                 out("   ↳ " + ctx_note)
+            inj_note_c = r.get("inj_note")     # INJURIES_LIVE: etiqueta honesta (ya aplicada a seg)
+            if pd.notna(r.get("inj_home")) and isinstance(inj_note_c, str) and inj_note_c.strip():
+                out("   ℹ️ " + inj_note_c)
             gic = r.get("group_info")          # INFORMACIÓN: contexto de clasificación (solo grupos)
             if not is_knockout(r.get("round")) and isinstance(gic, str) and gic.strip():
                 out(f"   ℹ️ Contexto: {gic}")

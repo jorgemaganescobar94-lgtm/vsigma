@@ -86,8 +86,14 @@ def fetch_lineups(c, fid):
     return out
 
 
-def fetch_injuries(c, fid):
-    """/injuries for a fixture (cached 12h). {team_name: [(player, reason), ...]}."""
+def fetch_injuries(c, fid, injlive=None):
+    """/injuries for a fixture. {team_name: [(player, reason), ...]}.
+    STORE-GUARDED: if a FOREVER store (injuries_live) has this fixture, use it (0 API); else call
+    the API (SQLite 12h cache) and persist the parsed result to the forever store. Soft-fail -> {}."""
+    if injlive is not None:
+        cached = injlive.load_injuries_store(fid)
+        if cached is not None:
+            return {k: [tuple(x) for x in v] for k, v in cached.items()}
     try:
         r = c.injuries(fixture=fid).get("response", []) or []
     except APIFootballError:
@@ -100,6 +106,8 @@ def fetch_injuries(c, fid):
         reason = pl.get("reason") or pl.get("type") or ""
         if tn and nm:
             by.setdefault(tn, []).append((nm, reason))
+    if injlive is not None:
+        injlive.save_injuries_store(fid, by)   # persist FOREVER (store-guard for later runs)
     return by
 
 
@@ -252,6 +260,16 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
         squad_idx = adjmod.load_squad_index()
     except Exception as e:  # noqa: BLE001
         print(f"l3_adjust unavailable: {type(e).__name__}: {e}")
+    # INJURIES_LIVE: capa de bajas EN VIVO sobre el motor mostrado (mx_*/ctx_*/our_*) en espacio xG.
+    # Reutiliza el matching de plantilla; flag y coeficientes viven en el módulo. SOFT (sin módulo ->
+    # sin ajuste -> reversa exacta). squad_inj lleva la POSICIÓN (ofensiva/defensiva).
+    injlive = None
+    squad_inj = {}
+    try:
+        import worldcup_injuries_live as injlive  # noqa: E402
+        squad_inj = injlive.load_squad_index()
+    except Exception as e:  # noqa: BLE001
+        print(f"injuries_live unavailable: {type(e).__name__}: {e}")
 
     # context module — used for BOTH the multiplier adjustment (gated on CONTEXT_LIVE) and the
     # group-context INFORMATION line (always). build_status_maps is needed in both cases.
@@ -293,6 +311,7 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
 
     report, cards = [], []
     cache_upserts = {}   # lock-at-KO: NS fixtures re-predicted live -> upsert into the L3 cache
+    inj_log_rows = []    # INJURIES_LIVE A/B: base motor vs injury-adjusted (per adjusted fixture)
 
     def out(s=""):
         print(s)
@@ -396,7 +415,7 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
 
         # ---- injuries (ALWAYS; matinal = canonical adj) + lineups (imminent; XI refinement) ----
         VERBOSE = {"conf": "XI confirmado", "prob": "probable/parcial", "pend": "pendiente"}
-        inj = fetch_injuries(c, fid)          # cached 12h; feeds the L3-adj on every run
+        inj = fetch_injuries(c, fid, injlive)  # forever store-guarded; feeds L3-adj + INJURIES_LIVE
         lu = {}
         xi_out_home = xi_out_away = None
         if imminent:
@@ -508,6 +527,43 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
             if why:
                 out(f"    [POR QUÉ] {why}")
                 rec["why"] = why
+
+        # ---- INJURIES_LIVE: ajuste EN VIVO por bajas sobre el MOTOR MOSTRADO (etiquetado, reversible,
+        # NO validado). Base = misma prioridad que la ficha (mx_* > ctx_* > our_*). Recalcula 1X2 por
+        # el delta-Poisson del cambio de xG; OU/BTTS se recalculan solos en la ficha (leen inj_xg_*).
+        # Sin bajas clave / flag off (módulo) -> None -> NO se escriben inj_* -> reversa exacta. SOFT.
+        if injlive is not None:
+            if pd.notna(rec.get("mx_home")):
+                bph = (rec.get("mx_home"), rec.get("mx_draw"), rec.get("mx_away"))
+                bxh, bxa = rec.get("mx_xg_home"), rec.get("mx_xg_away")
+            elif pd.notna(rec.get("ctx_home")):
+                bph = (rec.get("ctx_home"), rec.get("ctx_draw"), rec.get("ctx_away"))
+                bxh, bxa = rec.get("ctx_xg_home"), rec.get("ctx_xg_away")
+            else:
+                bph = (rec.get("our_home"), rec.get("our_draw"), rec.get("our_away"))
+                bxh, bxa = rec.get("our_xg_home"), rec.get("our_xg_away")
+            ia = injlive.compute_fixture_injury_adjustment(
+                home, away, bph, bxh, bxa, squad_inj,
+                inj_home=[n for n, _ in inj.get(home, [])],
+                inj_away=[n for n, _ in inj.get(away, [])],
+                xi_out_home=xi_out_home, xi_out_away=xi_out_away)
+            if ia is not None and all(v is not None and pd.notna(v) for v in bph):
+                rec.update(ia)
+                if ia.get("inj_note"):
+                    out(f"    [BAJAS EN VIVO] (ajuste etiquetado, NO validado) ℹ️ {ia['inj_note']}")
+                inj_log_rows.append({
+                    "fixture_id": int(fid), "kickoff_utc": ko, "home": home, "away": away,
+                    "base_home": round(float(bph[0]), 4), "base_draw": round(float(bph[1]), 4),
+                    "base_away": round(float(bph[2]), 4),
+                    "base_xg_home": float(bxh), "base_xg_away": float(bxa),
+                    "inj_home": ia["inj_home"], "inj_draw": ia["inj_draw"], "inj_away": ia["inj_away"],
+                    "inj_xg_home": ia["inj_xg_home"], "inj_xg_away": ia["inj_xg_away"],
+                    "inj_drop_home": ia["inj_drop_home"], "inj_drop_away": ia["inj_drop_away"],
+                    "inj_concede_home": ia["inj_concede_home"], "inj_concede_away": ia["inj_concede_away"],
+                    "inj_count_home": ia["inj_count_home"], "inj_count_away": ia["inj_count_away"],
+                    "inj_absent_home": ia["inj_absent_home"], "inj_absent_away": ia["inj_absent_away"],
+                    "inj_basis": ia["inj_basis"],
+                    "logged_at_utc": datetime.now(timezone.utc).isoformat()})
         cards.append(rec)
 
     # ---- LOCK-AT-KO: persist the L3 cache = locked rows (frozen) + NS rows re-predicted now ----
@@ -523,6 +579,26 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
         pd.DataFrame([cache_rows[k] for k in cache_rows])[CACHE_COLS].to_csv(our_path, index=False)
         out(f"L3 cache lock-at-KO: {len(cache_upserts)} NS fixture(s) re-predicted; locked rows kept "
             f"-> {our_path.name}")
+
+    # ---- INJURIES_LIVE A/B log: upsert by fixture_id (latest base-vs-adjusted snapshot). Lets a
+    # later learning loop score the live injuries layer against results. Soft-fail (best effort). ----
+    if inj_log_rows:
+        try:
+            inj_log_path = OUT_DIR / "worldcup_injuries_live_log.csv"
+            merged = {}
+            if inj_log_path.exists():
+                old = pd.read_csv(inj_log_path)
+                for _, rr in old.iterrows():
+                    merged[int(rr["fixture_id"])] = rr.to_dict()
+            for row in inj_log_rows:
+                merged[int(row["fixture_id"])] = row
+            cols = list(inj_log_rows[0].keys())
+            inj_df = pd.DataFrame([merged[k] for k in merged])
+            ordered = cols + [c for c in inj_df.columns if c not in cols]
+            inj_df[ordered].to_csv(inj_log_path, index=False)
+            out(f"INJURIES_LIVE: {len(inj_log_rows)} fixture(s) ajustados por bajas -> {inj_log_path.name}")
+        except Exception as e:  # noqa: BLE001
+            print(f"injuries_live log soft-fail: {type(e).__name__}: {e}")
 
     api1 = true_quota()
     spend = (api1 - api0) if (api0 is not None and api1 is not None) else "n/a"
