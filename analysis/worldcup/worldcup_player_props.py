@@ -425,6 +425,9 @@ def cmd_predict():
         if not ids or ids[0] is None or ids[1] is None:
             continue
         fixture_rows = []
+        # DECLARACIÓN (gobernanza): los props derivan del xG del L3 (our_xg_*), que es el VALIDADO en
+        # backtest. Aunque el briefing muestre el modelo amplio (mx_*) como motor en vivo, los inputs
+        # de props NO cambian a mx_xg_* sin una validación aparte de los props sobre ese xG.
         for side, tid, team_name, xg_col, sh_col in (
                 ("home", ids[0], r.get("home"), "our_xg_home", "st_shots_home"),
                 ("away", ids[1], r.get("away"), "our_xg_away", "st_shots_away")):

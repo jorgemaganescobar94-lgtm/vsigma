@@ -132,6 +132,16 @@ jobs:
           echo "----- auto-refit report -----"
           cat analysis/worldcup/auto_refit_shadow_report.txt
 
+      # 0b) MAX MODEL (motor en vivo del briefing): refresca worldcup_maxmodel_shadow_predictions.csv
+      #     (mx_* point-in-time) + el scorecard A/B vs L3. 0 API (entrena de int. results + sup_pre_l3).
+      #     SOFT (continue-on-error): si falla, build_worldcup_cards usa el CSV previo o cae a L3.
+      - name: Refresh MAX model predictions + A/B scorecard (shadow engine -> live)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/worldcup_maxmodel_shadow.py
+          echo "----- A/B scorecard (live MAX vs shadow L3) -----"
+          cat analysis/worldcup/worldcup_maxmodel_shadow_scorecard.csv || true
+
       # 1) WIDE build (now with FRESH ratings) to feed the log. LOCK-AT-KO: re-predicts NS
       #    fixtures from the current ratings; started fixtures keep their frozen cache row.
       - name: Build WIDE cards for log coverage ([HOY-1, HOY+3], own model, NO odds)
@@ -289,6 +299,8 @@ jobs:
                    analysis/worldcup/worldcup_context_shadow_scorecard.txt \
                    analysis/worldcup/worldcup_calibration_monitor.txt \
                    analysis/worldcup/worldcup_calibration_monitor_state.json \
+                   analysis/worldcup/worldcup_maxmodel_shadow_predictions.csv \
+                   analysis/worldcup/worldcup_maxmodel_shadow_scorecard.csv \
                    analysis/worldcup/worldcup_trackrecord_panel.md; do
             [ -f "$p" ] && git add "$p" || true
           done

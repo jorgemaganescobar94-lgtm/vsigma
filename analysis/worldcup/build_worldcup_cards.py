@@ -42,6 +42,17 @@ WC_SEASON = 2026
 # intacto); la ficha muestra ctx_* cuando existen. CONTEXT_LIVE=False -> rollback instantáneo a L3
 # puro (no se escriben columnas ctx_*). El A/B de sombra sigue corriendo aparte como panel de control.
 CONTEXT_LIVE = True
+
+# 🔴 EN VIVO: MOTOR DEL BRIEFING = modelo "todo incluido" (worldcup_maxmodel: núcleo L3 sup_pre +
+# forma EWMA + H2H + descanso + neutral + plantilla WC). Cuando MAXMODEL_LIVE=True se escriben
+# columnas mx_* (predicción del modelo máximo) y la ficha las MUESTRA; our_*/ctx_* (L3) NO se tocan
+# (siguen como sombra para A/B + rollback). MAXMODEL_LIVE=False -> NO se escriben mx_* -> REVERSA
+# EXACTA al L3 actual (Δ=0; la ficha vuelve a ctx_*/our_*). Las predicciones mx_* se leen de
+# worldcup_maxmodel_shadow_predictions.csv (precomputado fuera del camino crítico del briefing; 0 API,
+# point-in-time, anti-leakage). Soft-fail: sin CSV / sin fila -> ese fixture cae a L3.
+# NOTA: el A/B lo midió IGUAL en 1X2 y PEOR en BTTS — promoción por decisión explícita de Jorge.
+MAXMODEL_LIVE = True
+MX_PREDS_FILE = "worldcup_maxmodel_shadow_predictions.csv"
 # nota del MULTIPLICADOR (solo aparecen los escenarios que ajustan, mult != 1.0). short_tag honesto.
 SCENARIO_ES = {"qualified": "ya clasificado", "eliminated": "eliminado",
                "debe_ganar": "debe ganar", "le_vale_empate": "le vale el empate"}
@@ -204,6 +215,19 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
     if our_path.exists():
         for _, r in pd.read_csv(our_path).iterrows():
             our[int(r["fixture_id"])] = r
+
+    # MAX MODEL predictions (mx_*): point-in-time, precomputed offline (0 API). Read-only here; if the
+    # flag is OFF or the file/row is missing, mx_* simply isn't written -> EXACT L3 reversal. Soft-fail.
+    mxpreds = {}
+    if MAXMODEL_LIVE:
+        mx_path = OUT_DIR / MX_PREDS_FILE
+        try:
+            if mx_path.exists():
+                for _, r in pd.read_csv(mx_path).iterrows():
+                    if pd.notna(r.get("mx_home")):
+                        mxpreds[int(r["fixture_id"])] = r
+        except Exception as e:  # noqa: BLE001
+            print(f"maxmodel preds unavailable ({type(e).__name__}: {e}) -> L3 fallback")
     # Offline L3 predictor (saved ratings + calibration, NO API): fills L3 for any
     # fixture missing from the precomputed CSV — e.g. NEW knockout fixtures as teams
     # advance. Same method as the shipped L3, just sourced live from the ratings.
@@ -437,6 +461,20 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
                             "our_home_const": round(float(om["our_home_const"]), 4),
                             "our_draw_const": round(float(om["our_draw_const"]), 4),
                             "our_away_const": round(float(om["our_away_const"]), 4)})
+        # MAX MODEL (mx_*): predicción del modelo amplio para la ficha. our_*/ctx_* NO se tocan
+        # (L3 sombra para A/B + rollback). Solo NS/futuros que aún se predicen en vivo (pre_ko_pred):
+        # los partidos ya empezados/congelados conservan su última ficha (no se re-muestra mx fresco).
+        # NS pre-KO -> mx fresco del CSV (lock-at-KO: el freeze para scoring lo hace el learning_loop).
+        mxr = mxpreds.get(int(fid)) if MAXMODEL_LIVE else None
+        if mxr is not None and (pre_ko_pred or cached is None) and pd.notna(mxr.get("mx_home")):
+            rec.update({
+                "mx_home": round(float(mxr["mx_home"]), 4), "mx_draw": round(float(mxr["mx_draw"]), 4),
+                "mx_away": round(float(mxr["mx_away"]), 4),
+                "mx_xg_home": float(mxr["mx_xg_home"]), "mx_xg_away": float(mxr["mx_xg_away"])})
+            out(f"    [MAX MODEL] (modelo amplio: núcleo L3 + forma/H2H/descanso — MOTOR EN VIVO): "
+                f"{home} {float(mxr['mx_home'])*100:4.1f}%  Draw {float(mxr['mx_draw'])*100:4.1f}%  "
+                f"{away} {float(mxr['mx_away'])*100:4.1f}%   | exp goals {mxr['mx_xg_home']}-{mxr['mx_xg_away']}")
+
         if ctx_adj is not None:
             rec.update(ctx_adj)   # ctx_* = predicción ajustada por contexto (la ficha la mostrará)
         if group_info:

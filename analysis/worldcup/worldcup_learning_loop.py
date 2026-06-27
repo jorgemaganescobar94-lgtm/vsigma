@@ -58,6 +58,10 @@ LOG_COLUMNS = [
     # mostrado). El scorecard puntúa Over2.5/BTTS de AMBOS sobre partidos liquidados (panel de control).
     "l3_xg_home_const", "l3_xg_away_const",
     "v2_home", "v2_draw", "v2_away",
+    # A/B INVERTIDO: el modelo MÁXIMO corre EN VIVO (mostrado), el L3 queda como sombra. Se loguea
+    # mx_* con el MISMO freeze lock-at-KO que l3_* (snapshot mutable pre-KO, congelado al saque). El
+    # scorecard juzga live(mx) vs sombra(L3) sobre partidos liquidados = el árbitro para revertir.
+    "mx_home", "mx_draw", "mx_away", "mx_xg_home", "mx_xg_away",
     # L3-adj: SECONDARY heuristic live adjustment (additive; L3 columns above are untouched).
     "adj_home", "adj_draw", "adj_away", "adj_basis",
     "adj_delta_home", "adj_delta_away", "adj_absent_home", "adj_absent_away",
@@ -208,6 +212,9 @@ def cmd_log():
             "v2_home": (v2["v2_home"] if v2 is not None else np.nan),
             "v2_draw": (v2["v2_draw"] if v2 is not None else np.nan),
             "v2_away": (v2["v2_away"] if v2 is not None else np.nan),
+            # MAX engine (live) snapshot for the inverted A/B; NaN when MAXMODEL_LIVE is off (no mx_*)
+            "mx_home": r.get("mx_home"), "mx_draw": r.get("mx_draw"), "mx_away": r.get("mx_away"),
+            "mx_xg_home": r.get("mx_xg_home"), "mx_xg_away": r.get("mx_xg_away"),
             "adj_home": r.get("adj_home"), "adj_draw": r.get("adj_draw"), "adj_away": r.get("adj_away"),
             "adj_basis": r.get("adj_basis"),
             "adj_delta_home": r.get("adj_delta_home"), "adj_delta_away": r.get("adj_delta_away"),

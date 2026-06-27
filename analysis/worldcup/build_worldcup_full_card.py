@@ -255,11 +255,19 @@ def props_block(fid):
         return []
 
 
+# Honest framing for the live engine (NO claim of being more accurate; probabilistic, no market).
+MX_NOTE = ("Predicción: modelo amplio (núcleo L3 + forma/H2H/descanso) — probabilístico, "
+           "sin certeza ni mercado")
+
+
 def pred_1x2(r):
-    """Prediction to DISPLAY/SEND: the live context-adjusted ctx_* (written by build_worldcup_cards
-    when CONTEXT_LIVE is on AND the group scenario is non-trivial) when present, else pure L3 our_*.
-    'our_*' is never overwritten -> the L3 learning reads it untouched. Returns
-    (p_home, p_draw, p_away, xg_home, xg_away, context_note); context_note is None unless adjusted."""
+    """Prediction to DISPLAY/SEND. Priority: mx_* (the live MAX engine, written by build_worldcup_cards
+    when MAXMODEL_LIVE) > ctx_* (L3 group-context adjust) > pure L3 our_*. our_*/ctx_* are NEVER
+    overwritten (L3 stays as shadow for the A/B + exact rollback): with MAXMODEL_LIVE off no mx_* exist
+    and this falls back to exactly the L3 output. Returns (p_home,p_draw,p_away,xg_home,xg_away,note)."""
+    if pd.notna(r.get("mx_home")):
+        return (r.get("mx_home"), r.get("mx_draw"), r.get("mx_away"),
+                r.get("mx_xg_home"), r.get("mx_xg_away"), MX_NOTE)
     if pd.notna(r.get("ctx_home")):
         note = r.get("context_note")
         return (r.get("ctx_home"), r.get("ctx_draw"), r.get("ctx_away"),
