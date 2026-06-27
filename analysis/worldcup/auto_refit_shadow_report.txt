@@ -1,31 +1,9 @@
 ========================================================================================
 AUTO-REFIT L3 — mode=APPLY (swap)
 ========================================================================================
-generated_at_utc: 2026-06-27T08:07:31+00:00
-base rows=9193 | settled-in-log=37 | NEW rows=4 (2026-06-27..2026-06-27) | unmapped=0 | enriched=9197
+generated_at_utc: 2026-06-27T08:23:40+00:00
+base rows=9197 | settled-in-log=37 | NEW rows=0 (-..-) | unmapped=0 | enriched=9197
 
-OOS 1X2 — ventana común [2024-01-01 .. 2026-06-27)  (leakage-safe)
-  base     n=3279  ll=0.92992  ECE=0.0182  acc=55.9%
-  enriched n=3279  ll=0.92992  ECE=0.0182  acc=55.9%
-repro (refit base vs committed): max|Δ|=0.0005
-
-MOVIMIENTOS DE RATING destacados (candidato vs commiteado; cap 0.6):
-    New Zealand              +0.45 -> +0.21  (-0.24)
-    Belgium                  +1.48 -> +1.72  (+0.24)
-    Cape Verde Islands       +0.97 -> +0.92  (-0.05)
-    Saudi Arabia             +0.41 -> +0.44  (+0.03)
-    Spain                    +2.12 -> +2.13  (+0.02)
-    Uruguay                  +1.32 -> +1.31  (-0.01)
-    Iran                     +1.18 -> +1.18  (-0.01)
-    Egypt                    +1.11 -> +1.11  (+0.00)
-
-GATE (anti-corrupción):
-    PASS  finite
-    PASS  team_count_non_decreasing
-    PASS  max_move<=cap
-    PASS  oos_not_worse
-    PASS  repro<tol
-  max|Δ| = 0.243 (New Zealand: +0.45->+0.21)
-  -> GATE: PASS
-
-SWAP APLICADO ✅  ratings -> national_elo_layer3_ratings.csv | dataset -> international_results.csv (+4 FT). Calibración intacta (invariante).
+NO hay partidos liquidados nuevos fuera del dataset -> refit NO-OP.
+(El dataset ya está al día con el log; nada que aprender hasta nuevos FT.)
+GATE: N/A (sin cambios) -> ratings de producción intactos.
