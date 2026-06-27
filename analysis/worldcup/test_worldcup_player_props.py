@@ -252,6 +252,42 @@ def test_lock_at_ko_repredicts_ns_and_freezes_settled():
     assert f2.iloc[0]["act_goal"] == 1 and abs(f2.iloc[0]["p_goal"] - 0.5) < 1e-9, "settled row untouched"
 
 
+def test_predict_covers_full_window_beyond_old_cap():
+    """A multi-day cartelera with MORE NS fixtures than the OLD cap (20): the predict must cover
+    ALL of them (every briefing match gets props), not stop at the nearest 20. Soft-fail intact:
+    one fixture whose XI is unavailable is OMITTED, the rest still predicted. NO network."""
+    tmp = Path(tempfile.mkdtemp())
+    P.CARDS = tmp / "cards.csv"; P.LOG = tmp / "log.csv"; P.STORE_DIR = tmp / "store"
+    N = 25                                            # > old MAX_FIXTURES (20)
+    rows, tindex = [], {}
+    for k in range(1, N + 1):
+        ko = (NOW + timedelta(hours=6 + k * 6)).strftime("%Y-%m-%d %H:%M")   # spread over several days
+        rows.append({"fixture_id": k, "kickoff_utc": ko, "home": f"H{k}", "away": f"A{k}",
+                     "our_xg_home": 1.5, "our_xg_away": 1.1, "st_shots_home": 11,
+                     "st_shots_away": 9, "st_cards_total": 4})
+        tindex[k] = (10 * k, 10 * k + 1, "NS")
+    pd.DataFrame(rows).to_csv(P.CARDS, index=False)
+
+    rates = {i: {"name": f"P{i}", "starts": 11 - (i % 11), "minutes": 900.0, "g90": 0.2, "a90": 0.1,
+                 "sh90": 1.0, "son90": 0.4, "c90": 0.1, "on_ratio": 0.4} for i in range(1, 12)}
+    P._client = lambda: None
+    P._fixture_team_index = lambda c: tindex
+    P.fetch_team_rates = lambda c, tid: dict(rates)
+    P.fetch_recent_starts = lambda c, tid: {}
+    # fixture #13 -> empty squad on BOTH sides (no XI) -> omitted (soft-fail), others fine
+    P.fetch_squad = lambda c, tid: ({} if tid in (130, 131) else {i: f"P{i}" for i in range(1, 12)})
+    P._get = lambda *a, **k: []                       # never a confirmed lineup -> probable XI path
+
+    P.cmd_predict()
+    df = pd.read_csv(P.LOG)
+    covered = set(df["fixture_id"].astype(int))
+    assert len(covered) == N - 1, f"expected {N-1} fixtures covered, got {len(covered)}"
+    assert 13 not in covered, "fixture with no squad must be omitted (soft-fail), not crash"
+    assert covered == set(range(1, N + 1)) - {13}
+    # every covered fixture has a full XI worth of rows (11 per team x 2 teams)
+    assert all((df["fixture_id"] == f).sum() == 22 for f in covered)
+
+
 def _run():
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     for fn in fns:

@@ -69,8 +69,14 @@ XI_ATTR = 0.85                   # fraction of team goals attributed to the XI (
 ASSIST_FRAC = 0.75               # team assists ≈ this × team goals
 CARD_TEAM_SPLIT = 0.5            # half the match's expected cards per team (no per-team cards stored)
 PRIOR_MIN = 270.0                # empirical-Bayes shrinkage strength (≈3 full matches)
-MAX_API = 250                    # per-run safety cap (store-guard makes re-runs ~0)
-MAX_FIXTURES = 20
+# Per-run safety BACKSTOP (runaway-loop guard), NOT a coverage limiter: the predict must cover the
+# WHOLE briefing window so EVERY fixture in the ficha gets props, not only the nearest ones. The
+# store-guard caches /rates, /players/squads and recent /fixtures+lineups "forever" -> a warm run
+# costs only ~lineups-per-fixture (tens of calls); a fully cold run of a wide window is a few hundred
+# (medido: 7 fixtures = 209). Sized FAR below the Pro daily limit (~7500) with generous headroom so a
+# cold run never hits the cap and `break`s mid-loop (which is what dropped the distant fixtures).
+MAX_API = 1500                   # per-run backstop; warm ~tens, cold-wide a few hundred (<< 7500/día)
+MAX_FIXTURES = 64                # cover a multi-day briefing window with margin (was 20)
 EPS = 1e-15
 
 PROPS = ["goal", "card", "shot_on", "assist"]   # binary props scored by the scorecard
