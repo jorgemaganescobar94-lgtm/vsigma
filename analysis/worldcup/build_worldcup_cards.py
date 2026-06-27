@@ -145,7 +145,10 @@ def compute_group_info(ctx_groups, home, away):
         sc_h = qual_engine.analyze_team(table, (home, away), home, all_tables, n_groups)
         sc_a = qual_engine.analyze_team(table, (home, away), away, all_tables, n_groups)
         parts = []
-        ph, pa = qual_engine.phrase_es(sc_h), qual_engine.phrase_es(sc_a)
+        # CONCISE render for the ficha (1 line/equipo): phrase_es_short leads with the primary need
+        # + key condition and summarises the contingent route once. The full honest phrase_es is kept
+        # for the audit; the engine (analyze_team) is unchanged.
+        ph, pa = qual_engine.phrase_es_short(sc_h), qual_engine.phrase_es_short(sc_a)
         if ph:
             parts.append(f"{home} {ph}")
         if pa:

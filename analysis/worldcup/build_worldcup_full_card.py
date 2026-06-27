@@ -536,7 +536,8 @@ def build_yesterday_block(log_path, now, hours=36, max_results=6):
 def render_paginated(df, date_from, within_hours, scorecard, show_yesterday,
                      log_path, show_lineups, per_page, max_lines):
     """Split the briefing into SEVERAL Telegram messages so nothing is truncated:
-    msg 1 = header (track record + 'ayer'); msg 2.. = matches, per_page each.
+    msg 1 = header (track record + 'ayer'); msg 2.. = COMPLETE match blocks packed by a line
+    budget (max_lines) — a match block is never cut mid-way; per_page caps matches/message.
     Writes one file per message + a manifest ('path|title' per line) the workflow loops
     over (dispatch_telegram_alert.py is called once per message — dispatcher untouched).
     Anti-spam: pre-KO with no matches -> empty manifest (send nothing); morning -> header only.
@@ -584,9 +585,24 @@ def render_paginated(df, date_from, within_hours, scorecard, show_yesterday,
     if firmest:
         messages.append(("Mundial 2026 — predicciones más firmes", firmest[:max_lines]))
 
-    # ----- match pages -----
+    # ----- match pages: pack COMPLETE match blocks per message by a LINE BUDGET (max_lines, the
+    # dispatcher cut). A block is NEVER split: if adding the next block would overflow the budget it
+    # goes to the NEXT message; a lone block that alone exceeds the budget still gets its OWN message
+    # and is emitted WHOLE (never truncated — the last match keeps its props + nota). per_page is an
+    # extra upper cap on matches/message. The budget already accounts for the blank separators. -----
     blocks = [match_block(r, show_lineups) for _, r in df.iterrows()]
-    pages = [blocks[i:i + per_page] for i in range(0, len(blocks), per_page)]
+    pages, cur, cur_len = [], [], 0
+    for b in blocks:
+        sep = 1 if cur else 0                                # blank separator before a non-first block
+        too_long = bool(cur) and (cur_len + sep + len(b) > max_lines)
+        too_many = bool(cur) and per_page and len(cur) >= per_page
+        if too_long or too_many:
+            pages.append(cur)
+            cur, cur_len, sep = [], 0, 0
+        cur.append(b)
+        cur_len += sep + len(b)
+    if cur:
+        pages.append(cur)
     npages = len(pages)
     for idx, page in enumerate(pages, 1):
         body = []
@@ -595,7 +611,7 @@ def render_paginated(df, date_from, within_hours, scorecard, show_yesterday,
                 body.append("")                              # blank line between matches
             body.extend(b)
         title = f"Mundial 2026 — partidos ({idx}/{npages})" if npages > 1 else "Mundial 2026 — partidos"
-        messages.append((title, body[:max_lines]))
+        messages.append((title, body))                       # pre-fit to budget -> NO mid-block cut
 
     # ----- write files + manifest + combined preview (for the CI log) -----
     manifest_lines, combined = [], []

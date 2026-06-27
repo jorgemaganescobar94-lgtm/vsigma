@@ -261,6 +261,72 @@ def phrase_es(scenario):
     return "; ".join(uniq) if uniq else "depende de otros resultados"
 
 
+def _route_short(info):
+    """Concise summary of ONE own-result's contingent routes (best-third / GD for 2nd), keeping the
+    honest keywords 'diferencia de goles' / 'mejor tercero'. '' if there is no contingent route."""
+    rs = {info["routes"][p] for p in info.get("maybe", ())}
+    gd = "second_gd" in rs
+    third = "third" in rs or "third_gd" in rs
+    if gd and third:
+        return "2ª por diferencia de goles o mejor tercero"
+    if gd:
+        return "2ª por diferencia de goles"
+    if third:
+        return "mejor tercero"
+    return ""
+
+
+def phrase_es_short(scenario):
+    """CONCISE one-line Spanish scenario for the briefing ficha (the FULL honest version is
+    `phrase_es`, used by the audit). Leads with the team's PRIMARY need + the key condition; the
+    contingent best-third/GD route is summarised ONCE, never repeated per own-result. '' if None.
+    Same honest engine (`analyze_team`) — only the RENDER is shorter; no model logic here."""
+    if scenario is None:
+        return ""
+    if scenario["qualified"]:
+        return "ya clasificado"
+    if scenario["eliminated"]:
+        return "eliminado"
+    own = scenario["own"]
+    w, d, l = own["W"], own["D"], own["L"]
+
+    # 1) a draw is enough — the single most decision-relevant fact, lead with it.
+    if d["verdict"] == "secures":
+        return "le vale el empate"
+    if d["verdict"] == "secures_if":
+        return _clean(f"le vale el empate {d['cond_sure'] or ''}")
+
+    # 2) must win — draw AND loss are dead in every branch.
+    if w["verdict"] != "dead" and d["verdict"] == "dead" and l["verdict"] == "dead":
+        if w["verdict"] == "secures_if":
+            return _clean(f"debe ganar {w['cond_sure'] or ''}")
+        if w["verdict"] == "alive_if":
+            route = _route_short(w)
+            return _clean(f"debe ganar (y aun así depende: {route})") if route else "debe ganar"
+        return "debe ganar"
+
+    # 3) winning secures 2nd (draw not enough, but a win is a direct route).
+    if w["verdict"] == "secures":
+        return "gana y pasa 2ª"
+    if w["verdict"] == "secures_if":
+        return _clean(f"gana y pasa 2ª {w['cond_sure'] or ''}")
+
+    # 4) no result guarantees top-2 but not eliminated -> best-third / GD contention, summarised once.
+    routes = set()
+    for r in (w, d, l):
+        if r["verdict"] != "dead":
+            routes |= {r["routes"][p] for p in r["maybe"]}
+    gd = "second_gd" in routes
+    third = "third" in routes or "third_gd" in routes
+    if gd and third:
+        return "depende: 2ª por diferencia de goles o mejor tercero"
+    if gd:
+        return "depende: 2ª por diferencia de goles"
+    if third:
+        return "vivo como mejor tercero"
+    return "depende de otros resultados"
+
+
 def short_tag(scenario):
     """Coarse category tag for audit tables / tests (the honest phrase is `phrase_es`):
       qualified · eliminated · le_vale_empate · le_vale_empate_cond · gana_y_pasa · gana_y_pasa_cond ·
