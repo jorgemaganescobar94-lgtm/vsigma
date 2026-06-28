@@ -72,7 +72,13 @@ def _set_piece_line(label, side):
     if not p:
         return f"  {label}: no determinado ({side.get('confidence', 'baja')})"
     s = f" / 2º {side['secondary']}" if side.get("secondary") else ""
-    return f"  {label}: {p}{s} ({side.get('confidence')})"
+    extra = ""
+    if side.get("primary_count"):
+        extra += f" · {side['primary_count']} lanzamiento(s)"
+    last = side.get("primary_last")
+    if isinstance(last, dict) and last.get("date"):
+        extra += f" · último {last['date']}{' ✓' if last.get('scored') else ' ✗'}"
+    return f"  {label}: {p}{s} ({side.get('confidence')}){extra}"
 
 
 def render_fixture(obj):
@@ -108,7 +114,10 @@ def render_fixture(obj):
     spk = pp["set_piece_takers"]
     for side_label, side in (("Local", spk.get("home", {})), ("Visitante", spk.get("away", {}))):
         L.append(f" {side_label} ({f['home'] if side_label=='Local' else f['away']}):")
-        L.append(_set_piece_line("Penaltis", side.get("penalties", {})))
+        pen = side.get("penalties", {})
+        L.append(_set_piece_line("Penaltis", pen))
+        if pen.get("primary") and pen.get("if_primary_absent"):
+            L.append(f"    ↪ {pen['if_primary_absent']}")
         L.append(_set_piece_line("Faltas directas", side.get("direct_free_kicks", {})))
         L.append(_set_piece_line("Córners", side.get("corners_left", {})))
     cr = pp["card_risk"]
@@ -122,8 +131,11 @@ def render_fixture(obj):
     warns = []
     if obj.get("xa_source") and "no configurada" in str(obj["xa_source"]):
         warns.append("sin xA real por jugador (asistencias = proxy)")
-    if not spk.get("home", {}).get("penalties", {}).get("primary"):
-        warns.append("lanzadores de balón parado no determinados (requiere historial de eventos)")
+    if not spk.get("home", {}).get("penalties", {}).get("primary") \
+            and not spk.get("away", {}).get("penalties", {}).get("primary"):
+        warns.append("lanzadores de penalti no determinados (aún sin penaltis en eventos liquidados)")
+    if not spk.get("home", {}).get("direct_free_kicks", {}).get("primary"):
+        warns.append("faltas/córners no disponibles desde eventos (fuente externa, Fase 3)")
     st = obj.get("adapters_status", {})
     if not st.get("referee_card_rates"):
         warns.append("sin tendencia de árbitro")

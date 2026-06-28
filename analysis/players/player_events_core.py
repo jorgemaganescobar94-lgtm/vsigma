@@ -170,55 +170,65 @@ def card_risk(expanded, n=4, min_p=0.12):
 
 # ----------------------------------------------------------------- set-piece hierarchy (§4)
 def set_piece_hierarchy(xi_player_ids, names_by_id, penalty_history=None, injured_ids=None,
-                        corner_history=None, fk_history=None):
-    """Detect set-piece takers from REAL recent history (counts by player). NEVER fabricates a taker:
-    if no history is supplied, returns 'no determinado' + reason (requires the events extractor, Fase 2).
+                        corner_history=None, fk_history=None, last_taken=None, full_history=None):
+    """Detect set-piece takers from REAL history (counts by player). NEVER fabricates a taker: if no
+    history is supplied, returns 'no determinado' + reason (the events extractor populates it, Fase 2).
 
-    penalty_history / corner_history / fk_history: optional {player_id: count} from /fixtures/events or
-    an external file. injured_ids: players absent from the probable XI -> primary may be promoted.
-    Returns the §11 set_piece_takers structure with primary/secondary/confidence per category.
+    penalty_history / corner_history / fk_history: {player_id: count} from /fixtures/events or an
+    external file. injured_ids: players absent from the probable XI. last_taken: {pid:{date,scored}}
+    for the penalty explainer. full_history: the GLOBAL {pid: count} (incl. players NOT in the XI) so we
+    can explain "the usual taker is not in the XI -> who takes it instead".
+    Returns the §11 set_piece_takers structure (penalties block carries the §3 explainer fields).
     """
     xi = set(int(p) for p in (xi_player_ids or []))
     injured = set(int(p) for p in (injured_ids or []))
+    last_taken = last_taken or {}
 
     def _rank(hist):
         if not hist:
-            return None, None, "baja", "sin historial de eventos (requiere extractor de eventos · Fase 2)"
-        # only players in the probable XI and available are eligible to take it in THIS match
+            return {"primary": None, "secondary": None, "confidence": "baja",
+                    "reason": "sin historial de eventos (no determinado)"}
         avail = {int(pid): c for pid, c in hist.items()
                  if int(pid) in xi and int(pid) not in injured and c > 0}
+        # was there a usual taker who is NOT available in this XI? (explains the promotion)
+        global_top = None
+        if full_history:
+            gorder = sorted(((int(p), c) for p, c in full_history.items() if c > 0),
+                            key=lambda kv: kv[1], reverse=True)
+            global_top = gorder[0][0] if gorder else None
         if not avail:
-            # the historical taker(s) exist but are not in the available XI -> flag it honestly
-            return None, None, "baja", "lanzador habitual ausente del XI probable o sin datos en este XI"
+            return {"primary": None, "secondary": None, "confidence": "baja",
+                    "reason": "lanzador habitual ausente del XI probable (no determinado para este XI)"}
         order = sorted(avail.items(), key=lambda kv: kv[1], reverse=True)
-        primary = names_by_id.get(order[0][0])
-        secondary = names_by_id.get(order[1][0]) if len(order) > 1 else None
-        top = order[0][1]
+        primary_id, top = order[0]
+        secondary_id = order[1][0] if len(order) > 1 else None
         total = sum(avail.values())
-        # confidence by dominance + sample
         share = top / total if total else 0.0
-        if top >= 3 and share >= 0.6:
-            conf = "alta"
-        elif top >= 2:
-            conf = "media"
+        conf = "alta" if (top >= 3 and share >= 0.6) else ("media" if top >= 2 else "baja")
+        reason = f"más lanzamientos registrados ({top}); {share*100:.0f}% del XI disponible"
+        out = {"primary": names_by_id.get(primary_id),
+               "secondary": names_by_id.get(secondary_id) if secondary_id else None,
+               "confidence": conf, "reason": reason,
+               "primary_count": top,
+               "primary_last": last_taken.get(primary_id)}
+        # §3 explainer: usual taker out of the XI -> promoted alternative
+        if global_top is not None and global_top not in avail:
+            out["if_primary_absent"] = (f"el lanzador habitual no está en el XI probable; "
+                                        f"asumiría {names_by_id.get(primary_id)}")
+            out["confidence"] = "media" if conf == "alta" else "baja"
         else:
-            conf = "baja"
-        reason = f"lanzador con más registros recientes ({top}); cuota {share*100:.0f}% del XI disponible"
-        return primary, secondary, conf, reason
+            out["if_primary_absent"] = (f"si {names_by_id.get(primary_id)} no juega, asumiría "
+                                        f"{names_by_id.get(secondary_id)}" if secondary_id
+                                        else "sin suplente claro de lanzador")
+        return out
 
-    pen_p, pen_s, pen_c, pen_r = _rank(penalty_history)
-    fk_p, fk_s, fk_c, fk_r = _rank(fk_history)
-    ck_p, ck_s, ck_c, ck_r = _rank(corner_history)
-
-    return {
-        "penalties": {"primary": pen_p, "secondary": pen_s, "confidence": pen_c, "reason": pen_r},
-        "direct_free_kicks": {"primary": fk_p, "secondary": fk_s, "confidence": fk_c, "reason": fk_r},
-        # left/right corner split needs foot/side data we don't have -> single corner list, honest note
-        "corners_left": {"primary": ck_p, "secondary": ck_s, "confidence": ck_c,
-                         "reason": ck_r + " · sin split izq/der (requiere dato de lado · Fase 2)"},
-        "corners_right": {"primary": ck_p, "secondary": ck_s, "confidence": ck_c,
-                          "reason": ck_r + " · sin split izq/der (requiere dato de lado · Fase 2)"},
-    }
+    pen = _rank(penalty_history)
+    fk = _rank(fk_history)
+    ck = _rank(corner_history)
+    ck_note = " · sin split izq/der (requiere dato de lado · Fase 3)"
+    ck_left = dict(ck); ck_left["reason"] = ck["reason"] + ck_note
+    ck_right = dict(ck); ck_right["reason"] = ck["reason"] + ck_note
+    return {"penalties": pen, "direct_free_kicks": fk, "corners_left": ck_left, "corners_right": ck_right}
 
 
 # ----------------------------------------------------------------- two-XI scenarios (§12)

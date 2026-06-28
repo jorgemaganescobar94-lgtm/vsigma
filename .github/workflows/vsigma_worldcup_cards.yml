@@ -297,17 +297,29 @@ jobs:
           echo "----- player props scorecard -----"
           cat analysis/worldcup/worldcup_player_props_scorecard.txt || true
 
-      # ---- PLAYER & INDIVIDUAL-EVENTS module (Fase 1, read-only): builds the §11 structured player
-      #      predictions (likely scorers / shots-on-target / assisters, set-piece takers, card risk,
-      #      matchups, two-XI scenario) from the frozen props log + card, with honest data_quality/
-      #      confidence/reason (NO fabrication) and pluggable external adapters (xA/referee/weather,
-      #      active only if you drop a file in data/external/). NO market/odds, NO betting. SOFT.
-      - name: Player-events card (read-only; §11 structured output)
+      # ---- PLAYER-EVENTS Fase 2: REAL fixture-events extractor (/fixtures/events from the post-FT
+      #      store) -> clean per-event table (goals/assists/cards/penalties/subs). Read-only, NO market,
+      #      NO betting, no fabrication. Feeds the per-player history (penalties, last taker, cards).
+      - name: Player-events — real fixture-events extractor (Fase 2, soft)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/build_worldcup_fixture_events.py
+          echo "----- fixture events (head) -----"
+          head -15 analysis/worldcup/worldcup_fixture_events.csv || true
+
+      # ---- PLAYER & INDIVIDUAL-EVENTS module: builds the §11 structured player predictions (likely
+      #      scorers / shots-on-target / assisters, set-piece takers [REAL penalty hierarchy from
+      #      events, Fase 2], card risk, matchups, two-XI scenario) + the per-player history artifact,
+      #      with honest data_quality/confidence/reason (NO fabrication) and pluggable external adapters
+      #      (xA/referee/weather, active only if you drop a file in data/external/). NO betting. SOFT.
+      - name: Player-events card + history (read-only; §11 structured output)
         continue-on-error: true
         run: |
           python analysis/worldcup/build_worldcup_player_events.py
           echo "----- player-events (flat) -----"
           head -20 analysis/worldcup/worldcup_player_events.csv || true
+          echo "----- player history (head) -----"
+          head -10 analysis/worldcup/worldcup_player_event_history.csv || true
 
       # PLAYER-EVENTS Telegram report (§13): PURE football prediction per fixture (NO betting language,
       # asserted at build time). One message per fixture via the shared dispatcher (NOT modified).
@@ -381,6 +393,8 @@ jobs:
                    analysis/worldcup/worldcup_card_prop_correction.csv \
                    analysis/worldcup/worldcup_player_events.json \
                    analysis/worldcup/worldcup_player_events.csv \
+                   analysis/worldcup/worldcup_fixture_events.csv \
+                   analysis/worldcup/worldcup_player_event_history.csv \
                    analysis/worldcup/worldcup_context_shadow_log.csv \
                    analysis/worldcup/worldcup_context_shadow_scorecard.txt \
                    analysis/worldcup/worldcup_calibration_monitor.txt \

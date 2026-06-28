@@ -37,6 +37,8 @@ sys.path.insert(0, str(ROOT / "analysis" / "players"))
 
 import player_events_core as core  # noqa: E402
 import player_data_adapters as adapters  # noqa: E402
+import player_event_history as peh  # noqa: E402  (Fase 2: real per-player history aggregator)
+import build_worldcup_fixture_events as fxev  # noqa: E402  (Fase 2: real events extractor)
 import worldcup_learning_loop as ll  # noqa: E402  (top_scoreline only; import has no side effects)
 
 try:
@@ -49,6 +51,7 @@ PROPS_LOG = HERE / "worldcup_player_props_log.csv"
 SET_PIECE_FILE = ROOT / "data" / "external" / "set_piece_history.csv"
 OUT_JSON = HERE / "worldcup_player_events.json"
 OUT_CSV = HERE / "worldcup_player_events.csv"
+HISTORY_CSV = HERE / "worldcup_player_event_history.csv"
 
 
 def now_iso():
@@ -112,8 +115,34 @@ def build():
     cards = pd.read_csv(CARDS)
     props = pd.read_csv(PROPS_LOG)
     xa_map, xa_reason = adapters.load_xa_rates()
-    sp_hist = _load_set_piece_history()
+    sp_hist = _load_set_piece_history()      # optional external file (fk/corners fallback)
     status = adapters.adapters_status()
+
+    # Fase 2 — REAL event history: penalties / last taker / cards from /fixtures/events (cached store).
+    events_df = fxev.extract()[fxev.COLUMNS] if True else None
+    minutes_by_player = {}
+    if "player_id" in props.columns and "act_minutes" in props.columns:
+        mm = props.dropna(subset=["player_id"]).groupby("player_id")["act_minutes"].sum()
+        minutes_by_player = {int(k): float(v) for k, v in mm.items() if pd.notna(v)}
+    agg = peh.aggregate(events_df, minutes_by_player)
+    real_pen_hist = agg["penalty_history"]            # GLOBAL {pid: pens_taken} from real events
+    real_last_pen = agg["last_penalty"]
+    ev_names = agg["names"]
+    card_hist = peh.card_risk_history(agg)
+    events_source = ("eventos reales (/fixtures/events)" if real_pen_hist
+                     else "sin penaltis reales en eventos liquidados todavía")
+    # persist the per-player real history as an inspectable artifact (§2 deliverable)
+    hist_rows = []
+    for pid, d in agg["players"].items():
+        hist_rows.append({"player_id": pid, "player_name": d.get("player_name"),
+                          "goals": d["goals"], "assists": d["assists"], "goals_per90": d["goals_per90"],
+                          "pens_taken": d["pens_taken"], "pens_scored": d["pens_scored"],
+                          "pens_missed": d["pens_missed"], "yellows": d["yellows"], "reds": d["reds"],
+                          "goal_involvement": d["goal_involvement"], "set_piece_goals": d["set_piece_goals"],
+                          "sample_fixtures": d["sample_fixtures"], "data_quality": d["data_quality"],
+                          "confidence": d["confidence"], "reason": d["reason"]})
+    pd.DataFrame(hist_rows).sort_values("goal_involvement", ascending=False, ignore_index=True).to_csv(
+        HISTORY_CSV, index=False) if hist_rows else pd.DataFrame().to_csv(HISTORY_CSV, index=False)
 
     fixtures_out, flat_rows = [], []
     for _, c in cards.iterrows():
@@ -128,24 +157,26 @@ def build():
         h_exp = _expand_side(h_rows, xa_map)
         a_exp = _expand_side(a_rows, xa_map)
 
-        names_by_id = {}
+        names_by_id = dict(ev_names)     # real event names first (full names), props names fill gaps
         h_ids, a_ids = [], []
         for _, r in sub.iterrows():
             try:
-                pid = int(r["player_id"]); names_by_id[pid] = r["player"]
+                pid = int(r["player_id"]); names_by_id.setdefault(pid, r["player"])
                 (h_ids if str(r["team"]) == home else a_ids).append(pid)
             except Exception:
                 continue
         h_tid = int(h_rows["team_id"].iloc[0]) if len(h_rows) else None
         a_tid = int(a_rows["team_id"].iloc[0]) if len(a_rows) else None
-        sp_home = core.set_piece_hierarchy(h_ids, names_by_id,
-                                           penalty_history=sp_hist.get(h_tid, {}).get("penalties"),
-                                           fk_history=sp_hist.get(h_tid, {}).get("free_kicks"),
-                                           corner_history=sp_hist.get(h_tid, {}).get("corners"))
-        sp_away = core.set_piece_hierarchy(a_ids, names_by_id,
-                                           penalty_history=sp_hist.get(a_tid, {}).get("penalties"),
-                                           fk_history=sp_hist.get(a_tid, {}).get("free_kicks"),
-                                           corner_history=sp_hist.get(a_tid, {}).get("corners"))
+        # penalties from REAL events (global hist; core restricts to each team's XI ids). fk/corners
+        # from the optional external file (events can't give them reliably). last taker for the explainer.
+        sp_home = core.set_piece_hierarchy(
+            h_ids, names_by_id, penalty_history=real_pen_hist, last_taken=real_last_pen,
+            full_history=real_pen_hist, fk_history=sp_hist.get(h_tid, {}).get("free_kicks"),
+            corner_history=sp_hist.get(h_tid, {}).get("corners"))
+        sp_away = core.set_piece_hierarchy(
+            a_ids, names_by_id, penalty_history=real_pen_hist, last_taken=real_last_pen,
+            full_history=real_pen_hist, fk_history=sp_hist.get(a_tid, {}).get("free_kicks"),
+            corner_history=sp_hist.get(a_tid, {}).get("corners"))
 
         hx, ax = c.get("our_xg_home"), c.get("our_xg_away")
         h_sum = _team_summary(home, hx, ax, c.get("st_corners_home"), c.get("st_corners_away"))
@@ -166,6 +197,7 @@ def build():
         }
         obj["adapters_status"] = status
         obj["xa_source"] = xa_reason
+        obj["events_source"] = events_source
         fixtures_out.append(obj)
 
         # flat rows
