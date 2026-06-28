@@ -578,6 +578,56 @@ GRADUATION_NOTE = (
 )
 
 
+CARD_CORRECTION_CSV = OUT_DIR / "worldcup_card_prop_correction.csv"
+
+
+def _card_bias_raw_vs_corrected(settled):
+    """Lines reporting the TARJETA bias RAW vs CORRECTED (mean p_card vs real rate act_card>=1), to
+    verify the deflation pulls it toward 0. Reads the factor from the correction state (read-only,
+    soft). Returns [] if no card data / no factor. NEVER declares victory with N<30."""
+    try:
+        if "p_card" not in settled.columns or "act_card" not in settled.columns:
+            return []
+        sub = settled.dropna(subset=["p_card", "act_card"])
+        if not len(sub):
+            return []
+        p = pd.to_numeric(sub["p_card"], errors="coerce").to_numpy(float)
+        y = (pd.to_numeric(sub["act_card"], errors="coerce").fillna(0) >= 1).astype(int).to_numpy()
+        ok = ~np.isnan(p)
+        p, y = p[ok], y[ok]
+        if not len(p):
+            return []
+        n_matches = int(sub.loc[ok if len(ok) == len(sub) else sub.index, "fixture_id"].nunique()) \
+            if "fixture_id" in sub.columns else len(p)
+        mean_pred = float(p.mean())
+        real = float(y.mean())
+        bias_raw = (mean_pred - real) * 100.0
+        factor = None
+        if CARD_CORRECTION_CSV.exists():
+            try:
+                cdf = pd.read_csv(CARD_CORRECTION_CSV)
+                if not cdf.empty and "factor" in cdf.columns:
+                    factor = float(cdf["factor"].iloc[0])
+            except Exception:
+                factor = None
+        out = ["", "  TARJETA — sesgo CRUDO vs CORREGIDO (deflación de p_card; gol/asistencia NO se tocan):"]
+        out.append(f"    crudo:     media pred {mean_pred*100:5.2f}%  vs real {real*100:5.2f}%  "
+                   f"-> sesgo {bias_raw:+.2f}pp")
+        if factor is not None:
+            mp_c = mean_pred * factor
+            bias_c = (mp_c - real) * 100.0
+            drop = "baja ✓" if abs(bias_c) < abs(bias_raw) - 1e-9 else "no baja"
+            out.append(f"    corregido: media pred {mp_c*100:5.2f}%  vs real {real*100:5.2f}%  "
+                       f"-> sesgo {bias_c:+.2f}pp  (factor {factor:.4f}; |sesgo| {drop})")
+        else:
+            out.append("    corregido: (sin factor en worldcup_card_prop_correction.csv -> sin corrección)")
+        out.append("    (la corrección solo afecta el VALOR MOSTRADO; el log queda en CRUDO. "
+                   "Muestra pequeña -> orientativo, NO es victoria.)")
+        return out
+    except Exception:
+        return []
+
+
 def cmd_scorecard():
     log = _read_log()
     lines = [GRADUATION_NOTE, "=" * 78,
@@ -620,6 +670,9 @@ def cmd_scorecard():
         lines.append("")
         lines.append("  (baseline = tasa base del prop; 'mejora?'=sí solo si bate logloss Y brier Y ECE<=0.08.)")
         lines.append("  (muestra pequeña -> orientativo; la graduación exige N>=30 partidos.)")
+        # ---- TARJETA: sesgo CRUDO vs CORREGIDO (verifica que la deflación lo acerca a 0). El factor se
+        #      lee del estado de worldcup_card_prop_correction (read-only, soft); el log queda en CRUDO.
+        lines += _card_bias_raw_vs_corrected(settled)
     SCORECARD.write_text("\n".join(lines), encoding="utf-8")
     print(f"player_props scorecard: matches={n_matches} rows={n_rows} -> {SCORECARD.name}")
 

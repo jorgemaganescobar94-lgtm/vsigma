@@ -251,6 +251,17 @@ def section_props(text):
                          f"{mejora} | {_prop_backtest_status(text, prop)} |")
     else:
         lines.append(NA)
+    # TARJETA: sesgo crudo vs corregido (corrección reversible de p_card), parseado del scorecard.
+    craw = re.search(r"crudo:\s*media pred\s*([\d.]+)%\s*vs real\s*([\d.]+)%\s*->\s*sesgo\s*([+\-]?[\d.]+)pp", text)
+    ccorr = re.search(r"corregido:\s*media pred\s*([\d.]+)%\s*vs real\s*([\d.]+)%\s*->\s*sesgo\s*([+\-]?[\d.]+)pp\s*\(factor\s*([\d.]+)", text)
+    if craw:
+        lines.append("")
+        lines.append("**Tarjeta — sesgo crudo vs corregido** (deflación reversible de `p_card`; "
+                     "gol/asistencia NO se tocan):")
+        lines.append(f"- crudo: pred {craw.group(1)}% vs real {craw.group(2)}% → sesgo **{craw.group(3)}pp**")
+        if ccorr:
+            lines.append(f"- corregido: pred {ccorr.group(1)}% vs real {ccorr.group(2)}% → sesgo "
+                         f"**{ccorr.group(3)}pp** (factor {ccorr.group(4)}, flag `CARD_PROP_CORRECTION`)")
     note = _small_n_note(settled, thr)
     if note:
         lines.append(">" + note)

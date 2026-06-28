@@ -20,7 +20,7 @@
 ==============================================================================
 PLAYER PROPS — track record (SOMBRA · heurístico · NO validado · sin mercado)
 ==============================================================================
-generated_at_utc: 2026-06-28T08:56:49+00:00
+generated_at_utc: 2026-06-28T09:58:33+00:00
 partidos liquidados=18 | filas jugador-prop=396 | umbral graduación N>=30
 MUESTRA INSUFICIENTE para graduar (N<30). Métricas mostradas son orientativas.
 
@@ -33,3 +33,8 @@ MUESTRA INSUFICIENTE para graduar (N<30). Métricas mostradas son orientativas.
 
   (baseline = tasa base del prop; 'mejora?'=sí solo si bate logloss Y brier Y ECE<=0.08.)
   (muestra pequeña -> orientativo; la graduación exige N>=30 partidos.)
+
+  TARJETA — sesgo CRUDO vs CORREGIDO (deflación de p_card; gol/asistencia NO se tocan):
+    crudo:     media pred 16.23%  vs real  9.85%  -> sesgo +6.38pp
+    corregido: media pred 13.56%  vs real  9.85%  -> sesgo +3.71pp  (factor 0.8354; |sesgo| baja ✓)
+    (la corrección solo afecta el VALOR MOSTRADO; el log queda en CRUDO. Muestra pequeña -> orientativo, NO es victoria.)

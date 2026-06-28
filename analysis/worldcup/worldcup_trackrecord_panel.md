@@ -1,5 +1,5 @@
 # 📊 Panel de Track-Record — Mundial 2026 (vSIGMA)
-_Generado: 2026-06-28T09:40:44+00:00 · consolidado de scorecards existentes · **solo lectura, no recalcula predicciones** · sin mercado/cuotas._
+_Generado: 2026-06-28T09:59:40+00:00 · consolidado de scorecards existentes · **solo lectura, no recalcula predicciones** · sin mercado/cuotas._
 
 > Honestidad: **validado** = superó el baseline en backtest histórico; **sombra** = en observación en vivo; donde la muestra aún no basta se marca explícitamente.
 
@@ -69,6 +69,10 @@ _Generado: 2026-06-28T09:40:44+00:00 · consolidado de scorecards existentes · 
 | asistencia | 396 | 6% | 0.2392 | 0.0620 | 0.027 | no | validado (backtest) |
 | tarjeta | 396 | 10% | 0.3397 | 0.0956 | 0.073 | no | validado (backtest · tope en cola) |
 | tiros a puerta | 396 | 19% | 0.5231 | 0.1467 | 0.103 | no | ranking solo (no %) |
+
+**Tarjeta — sesgo crudo vs corregido** (deflación reversible de `p_card`; gol/asistencia NO se tocan):
+- crudo: pred 16.23% vs real 9.85% → sesgo **+6.38pp**
+- corregido: pred 13.56% vs real 9.85% → sesgo **+3.71pp** (factor 0.8354, flag `CARD_PROP_CORRECTION`)
 >  ⚠️ muestra pequeña (N=18 < umbral 30): métricas orientativas, aún no concluyentes.
 > _Validado (backtest) = graduó en el backtest histórico (N=3062 jugador-partido). El estado EN VIVO sigue en sombra hasta liquidar N≥umbral en partidos del Mundial._
 

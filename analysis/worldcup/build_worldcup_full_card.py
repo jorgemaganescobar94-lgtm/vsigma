@@ -50,6 +50,10 @@ try:
     import worldcup_stats_level_correction as stats_correction  # noqa: E402  (shown córners/tiros level fix)
 except Exception:
     stats_correction = None
+try:
+    import worldcup_card_prop_correction as card_correction  # noqa: E402  (shown p_card deflation, reversible)
+except Exception:
+    card_correction = None
 
 OUT_DIR = Path(__file__).resolve().parent
 CARDS = OUT_DIR / "worldcup_cards.csv"
@@ -255,6 +259,14 @@ def props_block(fid):
         if df is None or df.empty or "fixture_id" not in df.columns or pd.isna(fid):
             return []
         sub = df[pd.to_numeric(df["fixture_id"], errors="coerce") == int(fid)]
+        # 🔴 CARD_PROP_CORRECTION (reversible): deflate the SHOWN p_card only (gol/asistencia untouched),
+        # on a COPY -> the props log stays RAW (no leakage; probe/scorecard keep measuring the model).
+        # Flag OFF / no state -> Δ=0, identical card. Soft-fail.
+        if card_correction is not None:
+            try:
+                sub = card_correction.apply_to_props_df(sub)
+            except Exception:
+                pass
         return props_lines(sub, name_fn=lambda n: es_name(str(n)))
     except Exception:
         return []

@@ -278,6 +278,18 @@ jobs:
         continue-on-error: true
         run: python analysis/worldcup/worldcup_player_props.py settle
 
+      # ---- CORRECCIÓN de la prop de TARJETA (auto-aprendida, reversible): estima desde los liquidados
+      #      el factor de deflación de p_card (la tarjeta sale sesgada ALTA) y guarda el estado. Se
+      #      re-estima sola cada día. SOLO afecta el valor MOSTRADO de la ficha (display); el log queda
+      #      en CRUDO. Reversible (flag CARD_PROP_CORRECTION). Gol/asistencia NO se tocan; sin mercado.
+      #      Corre tras el settle de props para usar el dato más fresco. SOFT: sin datos -> sin corrección.
+      - name: Corrección prop de tarjeta (estima + guarda estado; read-only sobre modelo)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/worldcup_card_prop_correction.py
+          echo "----- card-prop correction state -----"
+          cat analysis/worldcup/worldcup_card_prop_correction.csv || true
+
       - name: Player props — scorecard (shadow, soft-fail)
         continue-on-error: true
         run: |
@@ -330,6 +342,7 @@ jobs:
                    analysis/worldcup/auto_refit_shadow_report.txt \
                    analysis/worldcup/worldcup_player_props_log.csv \
                    analysis/worldcup/worldcup_player_props_scorecard.txt \
+                   analysis/worldcup/worldcup_card_prop_correction.csv \
                    analysis/worldcup/worldcup_context_shadow_log.csv \
                    analysis/worldcup/worldcup_context_shadow_scorecard.txt \
                    analysis/worldcup/worldcup_calibration_monitor.txt \
