@@ -307,12 +307,23 @@ jobs:
           echo "----- fixture events (head) -----"
           head -15 analysis/worldcup/worldcup_fixture_events.csv || true
 
+      # ---- FASE 3 external-data status (read-only, NO API, NO secrets): logs which optional CSV
+      #      sources under data/external/ are active for this run (xG/xA real, set-piece takers,
+      #      referee, weather, coach tactical, positional). Pure diagnostics; never blocks. Absent
+      #      sources simply degrade downstream to data_quality/confidence/reason (no fabrication).
+      - name: Fase 3 — external-data adapters status (read-only, soft-fail)
+        continue-on-error: true
+        run: |
+          python -c "import sys; sys.path.insert(0,'analysis/players'); import player_data_adapters as a; import json; print('external_data_status:', json.dumps(a.external_data_status())); print('adapters_status:', json.dumps(a.adapters_status()))"
+
       # ---- PLAYER & INDIVIDUAL-EVENTS module: builds the §11 structured player predictions (likely
-      #      scorers / shots-on-target / assisters, set-piece takers [REAL penalty hierarchy from
-      #      events, Fase 2], card risk, matchups, two-XI scenario) + the per-player history artifact,
-      #      with honest data_quality/confidence/reason (NO fabrication) and pluggable external adapters
-      #      (xA/referee/weather, active only if you drop a file in data/external/). NO betting. SOFT.
-      - name: Player-events card + history (read-only; §11 structured output)
+      #      scorers / shots-on-target / assisters, set-piece takers, card risk, matchups, two-XI
+      #      scenario) + the per-player history artifact, with honest data_quality/confidence/reason
+      #      (NO fabrication). FASE 3 enrichment (active only if you drop the matching file in
+      #      data/external/): real xG/xA per player (source_used=real_xg_xa vs proxy), set_piece_takers
+      #      with documented source priority, referee/weather/coach contexts + individual matchups, all
+      #      surfaced in external_data_status. Pure football, NO market/odds/betting. SOFT.
+      - name: Player-events card + history (read-only; §11 + Fase 3 external context)
         continue-on-error: true
         run: |
           python analysis/worldcup/build_worldcup_player_events.py

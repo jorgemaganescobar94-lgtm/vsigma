@@ -77,8 +77,30 @@ def _set_piece_line(label, side):
         extra += f" · {side['primary_count']} lanzamiento(s)"
     last = side.get("primary_last")
     if isinstance(last, dict) and last.get("date"):
-        extra += f" · último {last['date']}{' ✓' if last.get('scored') else ' ✗'}"
+        scored = last.get("scored")
+        mark = "" if scored is None else (" ✓" if scored else " ✗")
+        extra += f" · último {last['date']}{mark}"
     return f"  {label}: {p}{s} ({side.get('confidence')}){extra}"
+
+
+# ----- Fase 3 source labels (clearly state real xG/xA vs proxy; NO betting language) -----
+_REAL_TAG = "datos reales (xG/xA)"
+_PROXY_TAG = "estimación (proxy del modelo)"
+
+
+def _fixture_uses_real(obj):
+    """True if ANY ranked player in this fixture used real xG/xA (player_xg_xa.csv)."""
+    pp = obj.get("player_predictions", {})
+    for cat in ("likely_scorers", "likely_shots_on_target", "likely_assisters"):
+        for it in pp.get(cat, []) or []:
+            if it.get("source_used") == "real_xg_xa":
+                return True
+    return bool(obj.get("external_data_status", {}).get("xg_xa_available"))
+
+
+def _src_mark(it):
+    """A compact per-player tag: ✓real when that player used real data, else nothing (proxy is default)."""
+    return " ·real" if it.get("source_used") == "real_xg_xa" else ""
 
 
 def render_fixture(obj):
@@ -96,18 +118,23 @@ def render_fixture(obj):
              f"{f['away']} {_f1(tc.get('exp_sot_away'))}")
     L.append(f"🚩 Córners esp.: {_f1(tc.get('exp_corners_total'))}  ·  "
              f"🟨 Tarjetas esp.: {_f1(tc.get('exp_cards_total'))}")
+    # Fase 3 — model source (real xG/xA vs proxy)
+    uses_real = _fixture_uses_real(obj)
+    L.append(f"🧪 Fuente del modelo de jugador: {_REAL_TAG if uses_real else _PROXY_TAG}")
     L.append("")
     sc = pp["likely_scorers"]
     L.append("🥅 Más probables para marcar:")
-    L += [f"  {i+1}. {s['player']} ({s['team']}) — {_pct(s['probability_goal'])} · xG {s['expected_goals']}"
+    L += [f"  {i+1}. {s['player']} ({s['team']}) — {_pct(s['probability_goal'])} · "
+          f"xG {s['expected_goals']}{_src_mark(s)}"
           for i, s in enumerate(sc)] or ["  — datos insuficientes —"]
     so = pp["likely_shots_on_target"]
     L.append("🎯 Más probables para tirar a puerta:")
     L += [f"  {i+1}. {s['player']} ({s['team']}) — 1+ a puerta {_pct(s['probability_1_sot'])} "
-          f"(SOT esp. {s['expected_sot']})" for i, s in enumerate(so)] or ["  — datos insuficientes —"]
+          f"(SOT esp. {s['expected_sot']}){_src_mark(s)}" for i, s in enumerate(so)] \
+        or ["  — datos insuficientes —"]
     asst = pp["likely_assisters"]
     L.append("🅰️ Más probables para asistir:")
-    L += [f"  {i+1}. {s['player']} ({s['team']}) — {_pct(s['probability_assist'])}"
+    L += [f"  {i+1}. {s['player']} ({s['team']}) — {_pct(s['probability_assist'])}{_src_mark(s)}"
           for i, s in enumerate(asst)] or ["  — datos insuficientes —"]
     L.append("")
     L.append("🎯 Balón parado:")
@@ -125,22 +152,72 @@ def render_fixture(obj):
         L.append("🟨 Riesgo de tarjeta:")
         L += [f"  {c['player']} ({c['team']}) — {_pct(c['probability_card'])}" for c in cr]
     L.append("")
+
+    # ---- Fase 3 — árbitro (§5) ----
+    rc = obj.get("referee_context") or {}
+    if rc.get("referee_name"):
+        L.append(f"🧑‍⚖️ Árbitro: {rc['referee_name']} — entorno de tarjetas: "
+                 f"{rc.get('expected_card_environment','—')} (conf. {rc.get('confidence','baja')})")
+        if rc.get("possible_penalty_environment") and rc["possible_penalty_environment"] != "no determinado":
+            L.append(f"   Penaltis: {rc['possible_penalty_environment']}")
+
+    # ---- Fase 3 — clima (§6) ----
+    wx = obj.get("weather_context") or {}
+    if wx.get("weather_summary") and wx["weather_summary"] != "no determinado":
+        L.append(f"🌦️ Clima: {wx['weather_summary']} (conf. {wx.get('confidence','baja')})")
+        if wx.get("extreme"):
+            impacts = [v for v in (wx.get("impact_on_tempo"), wx.get("impact_on_shots"),
+                                   wx.get("impact_on_crosses"), wx.get("impact_on_fatigue"))
+                       if v and v != "neutro"]
+            if impacts:
+                L.append("   Impacto: " + " · ".join(dict.fromkeys(impacts)))
+
+    # ---- Fase 3 — estilo del seleccionador (§7) ----
+    txc = obj.get("tactical_context") or {}
+    hs, as_ = txc.get("home_style") or {}, txc.get("away_style") or {}
+    if (hs.get("style") and "no determinado" not in hs["style"]) or \
+       (as_.get("style") and "no determinado" not in as_["style"]):
+        L.append("🧠 Estilo (perfil externo):")
+        if hs.get("style"):
+            L.append(f"   {f['home']}: {hs['style']}")
+        if as_.get("style"):
+            L.append(f"   {f['away']}: {as_['style']}")
+        if txc.get("expected_match_script"):
+            L.append(f"   Guion táctico: {txc['expected_match_script']}")
+
+    # ---- Fase 3 — 3 matchups clave (§8) ----
+    km = obj.get("key_matchups") or pp.get("key_matchups") or []
+    real_duels = [m for m in km if not m.get("matchups_heuristic_only")
+                  and m.get("player_a") and m.get("player_b")]
+    if real_duels:
+        L.append("⚔️ Duelos clave:")
+        for m in real_duels[:3]:
+            adv = m.get("advantage")
+            adv_txt = f" → ventaja: {adv}" if adv and adv != "no determinado" else ""
+            L.append(f"  {m['player_a']} vs {m['player_b']} ({m.get('zone','')}){adv_txt} "
+                     f"[{m.get('confidence','baja')}]")
+
+    L.append("")
     L.append(f"🎬 Guion probable: {match_script(tc)}")
     L.append(f"✅ Confianza: {obj.get('confidence','?')} · ❓ Incertidumbre/datos: {obj.get('data_quality','?')}")
     # data warnings (honest)
     warns = []
-    if obj.get("xa_source") and "no configurada" in str(obj["xa_source"]):
-        warns.append("sin xA real por jugador (asistencias = proxy)")
+    if not uses_real:
+        warns.append("sin xG/xA real por jugador (goles/tiros/asistencias = proxy del modelo)")
     if not spk.get("home", {}).get("penalties", {}).get("primary") \
             and not spk.get("away", {}).get("penalties", {}).get("primary"):
-        warns.append("lanzadores de penalti no determinados (aún sin penaltis en eventos liquidados)")
+        warns.append("lanzadores de penalti no determinados (sin eventos reales ni set_piece_takers.csv)")
     if not spk.get("home", {}).get("direct_free_kicks", {}).get("primary"):
-        warns.append("faltas/córners no disponibles desde eventos (fuente externa, Fase 3)")
-    st = obj.get("adapters_status", {})
-    if not st.get("referee_card_rates"):
+        warns.append("faltas/córners no disponibles (requiere set_piece_takers.csv · Fase 3)")
+    ext = obj.get("external_data_status", {})
+    if not ext.get("referee_available") or not rc.get("referee_name"):
         warns.append("sin tendencia de árbitro")
-    if not st.get("weather"):
+    if not ext.get("weather_available") or (wx.get("weather_summary") in (None, "no determinado")):
         warns.append("sin datos de clima")
+    if not ext.get("coach_profile_available"):
+        warns.append("sin perfil táctico del seleccionador")
+    if not real_duels:
+        warns.append("matchups solo heurísticos (faltan perfiles posicionales)")
     if warns:
         L.append("⚠️ Avisos de datos: " + " · ".join(warns))
     L.append("")

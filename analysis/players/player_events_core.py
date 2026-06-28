@@ -48,22 +48,59 @@ def _round(x, n=4):
 
 
 # ----------------------------------------------------------------- per-player expansion
-def expand_player(row: dict, xa90: Optional[float] = None, key_passes90: Optional[float] = None) -> dict:
-    """Expand one per-player prop row into the full event metric set. Poisson from the model λ's only;
-    xA / key passes come from an external adapter (None -> field None + reason, never fabricated).
+def expand_player(row: dict, xa90: Optional[float] = None, key_passes90: Optional[float] = None,
+                  real: Optional[dict] = None) -> dict:
+    """Expand one per-player prop row into the full event metric set.
+
+    Two data regimes, clearly flagged (spec §3):
+      * PROXY (default): goal/assist/shot λ's are the model's heuristic per-match expectations.
+      * REAL xG/xA (Fase 3): if `real` carries xg90/xa90/shots90/sot90 (from player_xg_xa.csv via the
+        adapter), those REPLACE the corresponding proxy λ for a near-full-match starter — per-field, so
+        a partial source (e.g. only xg90) still keeps the proxy for the rest. NEVER fabricated: a missing
+        real field falls back to the proxy and is labelled as proxy.
+
+    `xa90`/`key_passes90` kwargs remain DISPLAY-only (expected_xa / expected_key_passes), as in Fase 1.
+    `real` (when present) takes precedence for both the λ adjustment and the displayed xA/key passes.
 
     Expects row keys: player, team, player_id, is_xi, basis, lam_goal, exp_shots, lam_shot_on,
-    lam_assist, p_card.  Returns a flat dict with probabilities + expected values + a per-player
-    data_quality/confidence/reason.
+    lam_assist, p_card. Returns a flat dict with probabilities + expected values + per-player
+    data_quality/confidence/reason + source_used (real_xg_xa/proxy) and per-metric source flags.
     """
-    lam_goal = float(row.get("lam_goal") or 0.0)
-    lam_shots = float(row.get("exp_shots") or 0.0)
-    lam_son = float(row.get("lam_shot_on") or 0.0)
-    lam_assist = float(row.get("lam_assist") or 0.0)
+    real = real or {}
+    r_xg = real.get("xg90")
+    r_xa = real.get("xa90")
+    r_shots = real.get("shots90")
+    r_son = real.get("sot90")
+    r_kp = real.get("key_passes90")
+
+    lam_goal_proxy = float(row.get("lam_goal") or 0.0)
+    lam_shots_proxy = float(row.get("exp_shots") or 0.0)
+    lam_son_proxy = float(row.get("lam_shot_on") or 0.0)
+    lam_assist_proxy = float(row.get("lam_assist") or 0.0)
+
+    # per-metric: real if supplied, else proxy
+    lam_goal = float(r_xg) if r_xg is not None else lam_goal_proxy
+    lam_assist = float(r_xa) if r_xa is not None else lam_assist_proxy
+    lam_shots = float(r_shots) if r_shots is not None else lam_shots_proxy
+    lam_son = float(r_son) if r_son is not None else lam_son_proxy
+
+    goal_src = "real" if r_xg is not None else "proxy"
+    assist_src = "real" if r_xa is not None else "proxy"
+    shots_src = "real" if (r_shots is not None or r_son is not None) else "proxy"
+    used_real = any(v is not None for v in (r_xg, r_xa, r_shots, r_son))
+
+    # display extras: real first, then the legacy kwarg, else None (never invented)
+    disp_xa = r_xa if r_xa is not None else xa90
+    disp_kp = r_kp if r_kp is not None else key_passes90
+
     p_card = row.get("p_card")
     basis = str(row.get("basis") or "")
 
     dq, conf, reason = _player_confidence(row)
+    if used_real:
+        bits = [k for k, s in (("xG", goal_src), ("xA", assist_src), ("tiros/SOT", shots_src))
+                if s == "real"]
+        reason = (reason + " · " if reason else "") + f"datos reales: {', '.join(bits)} (fuente externa)"
 
     out = {
         "player": row.get("player"),
@@ -84,11 +121,16 @@ def expand_player(row: dict, xa90: Optional[float] = None, key_passes90: Optiona
         "probability_assist": _round(p_ge1(lam_assist)),
         "expected_assists": _round(lam_assist),
         # creation extras come ONLY from an external adapter (else None, never invented)
-        "expected_key_passes": _round(key_passes90) if key_passes90 is not None else None,
-        "expected_xa": _round(xa90) if xa90 is not None else None,
+        "expected_key_passes": _round(disp_kp) if disp_kp is not None else None,
+        "expected_xa": _round(disp_xa) if disp_xa is not None else None,
         # cards (p_card already produced by the model, possibly bias-corrected upstream)
         "probability_card": _round(float(p_card)) if p_card is not None else None,
         "basis": basis,
+        # provenance (spec §3 / §9): real_xg_xa vs proxy, per metric
+        "source_used": "real_xg_xa" if used_real else "proxy",
+        "goal_source": goal_src,
+        "assist_source": assist_src,
+        "shots_source": shots_src,
         "data_quality": dq,
         "confidence": conf,
         "reason": reason,
@@ -125,6 +167,7 @@ def _scorer_reason(e):
 def likely_scorers(expanded, n=3):
     return [{"player": e["player"], "team": e["team"], "probability_goal": e["probability_goal"],
              "expected_goals": e["expected_goals"], "reason": _scorer_reason(e),
+             "source_used": e.get("source_used", "proxy"), "goal_source": e.get("goal_source", "proxy"),
              "confidence": e["confidence"], "data_quality": e["data_quality"]}
             for e in rank_top(expanded, "expected_goals", n)]
 
@@ -137,6 +180,8 @@ def likely_shots_on_target(expanded, n=3):
                     "expected_shots": e["expected_shots"],
                     "reason": f"tiros esp. {e['expected_shots']:.1f}, SOT esp. {e['expected_sot']:.1f} "
                               f"({e['confidence']})",
+                    "source_used": e.get("source_used", "proxy"),
+                    "shots_source": e.get("shots_source", "proxy"),
                     "confidence": e["confidence"], "data_quality": e["data_quality"]})
     return out
 
@@ -145,12 +190,15 @@ def likely_assisters(expanded, n=3):
     out = []
     for e in rank_top(expanded, "expected_assists", n):
         kp = e.get("expected_key_passes")
+        a_src = e.get("assist_source", "proxy")
+        label = "xA real" if a_src == "real" else "xA-proxy"
         out.append({"player": e["player"], "team": e["team"],
                     "probability_assist": e["probability_assist"], "expected_assists": e["expected_assists"],
                     "expected_key_passes": kp,
-                    "reason": f"xA-proxy {e['expected_assists']:.2f}"
+                    "reason": f"{label} {e['expected_assists']:.2f}"
                               + ("" if kp is None else f", pases clave esp. {kp:.1f}")
                               + f" ({e['confidence']})",
+                    "source_used": e.get("source_used", "proxy"), "assist_source": a_src,
                     "confidence": e["confidence"], "data_quality": e["data_quality"]})
     return out
 
