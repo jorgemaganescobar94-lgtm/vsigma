@@ -297,6 +297,42 @@ jobs:
           echo "----- player props scorecard -----"
           cat analysis/worldcup/worldcup_player_props_scorecard.txt || true
 
+      # ---- PLAYER & INDIVIDUAL-EVENTS module (Fase 1, read-only): builds the §11 structured player
+      #      predictions (likely scorers / shots-on-target / assisters, set-piece takers, card risk,
+      #      matchups, two-XI scenario) from the frozen props log + card, with honest data_quality/
+      #      confidence/reason (NO fabrication) and pluggable external adapters (xA/referee/weather,
+      #      active only if you drop a file in data/external/). NO market/odds, NO betting. SOFT.
+      - name: Player-events card (read-only; §11 structured output)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/build_worldcup_player_events.py
+          echo "----- player-events (flat) -----"
+          head -20 analysis/worldcup/worldcup_player_events.csv || true
+
+      # PLAYER-EVENTS Telegram report (§13): PURE football prediction per fixture (NO betting language,
+      # asserted at build time). One message per fixture via the shared dispatcher (NOT modified).
+      - name: Player-events Telegram report (build + send; pure football, no betting)
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python analysis/worldcup/build_worldcup_player_events_telegram.py
+          MAN="analysis/worldcup/worldcup_player_events_messages_manifest.txt"
+          N="$(grep -c . "$MAN" 2>/dev/null || echo 0)"
+          echo "player-events messages: ${N:-0}"
+          if [ "${N:-0}" -gt 0 ]; then
+            while IFS='|' read -r f t; do
+              [ -z "$f" ] && continue
+              echo "-> $t"
+              python scripts/dispatch_telegram_alert.py \
+                --title "$t" \
+                --date "${{ steps.win.outputs.from }}" \
+                --body-file "$f"
+              sleep 1
+            done < "$MAN"
+          fi
+
       # ---- CONTEXT-ADJUSTMENT (SHADOW): qualification-scenario nudge vs pure L3. ISOLATED,
       #      NEVER shown on Telegram / in the ficha. predict (NS, anti-hindsight, lock-at-KO) ->
       #      settle (FT) -> scorecard (context-adjusted vs L3, only over NON-TRIVIAL scenarios).
@@ -343,6 +379,8 @@ jobs:
                    analysis/worldcup/worldcup_player_props_log.csv \
                    analysis/worldcup/worldcup_player_props_scorecard.txt \
                    analysis/worldcup/worldcup_card_prop_correction.csv \
+                   analysis/worldcup/worldcup_player_events.json \
+                   analysis/worldcup/worldcup_player_events.csv \
                    analysis/worldcup/worldcup_context_shadow_log.csv \
                    analysis/worldcup/worldcup_context_shadow_scorecard.txt \
                    analysis/worldcup/worldcup_calibration_monitor.txt \
