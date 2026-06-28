@@ -307,6 +307,18 @@ jobs:
           echo "----- fixture events (head) -----"
           head -15 analysis/worldcup/worldcup_fixture_events.csv || true
 
+      # ---- FASE 4C-2 audit + dry-run (read-only, NO API, NO writes, NO commit): report the store's
+      #      external-context coverage (referee/venue/date + post-FT sections) and the data/external/*.csv
+      #      coverage, then a prepare DRY-RUN that shows exactly what WOULD change (+rows / completed /
+      #      refreshed / protected) WITHOUT writing. Pure diagnostics before the real prepare. Persistence
+      #      of data/external from CI is NOT enabled (see docs/worldcup_external_data_persistence_policy.md).
+      - name: Fase 4C-2 — external-context audit + prepare dry-run (read-only, soft-fail)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/audit_worldcup_store_external_context.py
+          echo "----- prepare DRY-RUN (no escribe) -----"
+          python analysis/worldcup/prepare_worldcup_external_templates.py --dry-run
+
       # ---- FASE 4A/4B external-data preparer (read-only inputs, NO API, NO scraping, NO fabrication):
       #      create-if-missing the data/external/*.csv contracts AND run a SAFE INCREMENTAL MERGE that
       #      pre-populates ONLY from REAL repo data — penalty takers from real events (attempts/rank/
@@ -314,7 +326,7 @@ jobs:
       #      else coarse), fixture referee + venue IF they appear in the store. NEVER deletes rows,
       #      never overwrites a manual edit; xG/xA, coach, referee profiles, weather measurements stay
       #      EMPTY for manual entry. Runs AFTER the fixture-events extractor (its input) and BEFORE
-      #      Fase 3 so the adapters pick up any newly-merged rows.
+      #      Fase 3 so the adapters pick up any newly-merged rows. CI does NOT commit data/external.
       - name: Fase 4A/4B — prepare + incrementally merge external data (safe, soft-fail)
         continue-on-error: true
         run: |

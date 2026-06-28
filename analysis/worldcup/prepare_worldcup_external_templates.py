@@ -433,8 +433,9 @@ def write_template(path, columns, rows=None, overwrite=False):
     return ("overwritten" if path.exists() and overwrite else "created"), len(df)
 
 
-def merge_template(path, columns, new_rows, key_cols, auto_owned, default_source=None):
-    """Load (or start empty), safe-merge real rows, write back. Returns a per-file summary dict."""
+def merge_template(path, columns, new_rows, key_cols, auto_owned, default_source=None, dry_run=False):
+    """Load (or start empty), safe-merge real rows, write back. With dry_run=True the stats are computed
+    but NOTHING is written. Returns a per-file summary dict (incl. pending_columns from the merged set)."""
     path = Path(path)
     existed = path.exists()
     if existed:
@@ -446,18 +447,23 @@ def merge_template(path, columns, new_rows, key_cols, auto_owned, default_source
         existing = pd.DataFrame(columns=columns)
     before = len(existing)
     merged, stats = safe_merge(existing, new_rows, columns, key_cols, auto_owned, default_source)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    merged[columns].to_csv(path, index=False)
-    action = "created" if not existed else "merged"
+    if not dry_run:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        merged[columns].to_csv(path, index=False)
+    pending = [c for c in columns if len(merged) == 0 or merged[c].isna().all()
+               or merged[c].astype(str).str.strip().replace("nan", "").eq("").all()]
+    action = ("would-create" if dry_run else "created") if not existed else \
+             ("would-merge" if dry_run else "merged")
     return {"action": action, "rows": len(merged), "existing_rows": before,
-            "prepopulated": stats["added"], **stats}
+            "prepopulated": stats["added"], "pending_columns": pending, "dry_run": dry_run, **stats}
 
 
 # ============================================================ orchestration
-def prepare(ext_dir=EXT_DIR, events_df=None, cards_df=None, store_records=None):
+def prepare(ext_dir=EXT_DIR, events_df=None, cards_df=None, store_records=None, dry_run=False):
     """Build/maintain every template. DERIVED files go through the safe incremental merge; EMPTY_ONLY
-    files are create-if-missing (and never touched again). Callers (tests) may inject inputs; main()
-    loads them from the real repo files. Returns a per-file summary dict."""
+    files are create-if-missing (and never touched again). With dry_run=True NOTHING is written — the
+    summary reports exactly what WOULD change. Callers (tests) may inject inputs; main() loads them from
+    the real repo files. Returns a per-file summary dict."""
     ext_dir = Path(ext_dir)
     events_df = _load_events() if events_df is None else events_df
     cards_df = _load_cards() if cards_df is None else cards_df
@@ -477,23 +483,28 @@ def prepare(ext_dir=EXT_DIR, events_df=None, cards_df=None, store_records=None):
         path = ext_dir / fname
         if fname in DERIVED:
             s = merge_template(path, cols, derived_rows.get(fname, []), KEY_COLS[fname],
-                               AUTO_OWNED[fname], DEFAULT_SOURCE.get(fname))
+                               AUTO_OWNED[fname], DEFAULT_SOURCE.get(fname), dry_run=dry_run)
             s["kind"] = "derived"
         else:
-            action, n = write_template(path, cols)
+            if dry_run:
+                action = "exists" if path.exists() else "would-create"
+                n = None if path.exists() else 0
+            else:
+                action, n = write_template(path, cols)
+            # empty-only files carry no real rows -> every column pending
+            pending = []
+            try:
+                if path.exists():
+                    df = pd.read_csv(path)
+                    pending = [c for c in cols if c not in df.columns or len(df) == 0
+                               or df[c].isna().all()]
+                else:
+                    pending = list(cols)
+            except Exception:
+                pending = list(cols)
             s = {"action": action, "rows": n, "existing_rows": None, "prepopulated": 0,
                  "added": 0, "completed": 0, "refreshed": 0, "protected": 0, "manual_rows": 0,
-                 "kind": "empty"}
-        # pending columns = columns fully empty across the file
-        pending = []
-        try:
-            df = pd.read_csv(path)
-            for col in cols:
-                if col not in df.columns or len(df) == 0 or df[col].isna().all():
-                    pending.append(col)
-        except Exception:
-            pending = list(cols)
-        s["pending_columns"] = pending
+                 "pending_columns": pending, "dry_run": dry_run, "kind": "empty"}
         summary[fname] = s
     return summary
 
@@ -502,9 +513,12 @@ def main():
     ap = argparse.ArgumentParser(description="World Cup external-data template preparer + safe "
                                              "incremental merge (read-only, no API, no scraping, "
                                              "no fabrication).")
-    ap.parse_args()
-    summary = prepare()
-    print("=== external-data templates (data/external/) — Fase 4B incremental ===")
+    ap.add_argument("--dry-run", action="store_true",
+                    help="compute what WOULD change (new/completed/refreshed/protected) WITHOUT writing.")
+    a = ap.parse_args()
+    summary = prepare(dry_run=a.dry_run)
+    head = "DRY-RUN (no escribe)" if a.dry_run else "Fase 4B incremental"
+    print(f"=== external-data templates (data/external/) — {head} ===")
     for fname, s in summary.items():
         tag = s["action"].upper()
         bits = []
