@@ -27,6 +27,7 @@ PROPS = OUT_DIR / "worldcup_player_props_scorecard.txt"
 CONTEXT = OUT_DIR / "worldcup_context_shadow_scorecard.txt"
 CALIB = OUT_DIR / "worldcup_calibration_monitor.txt"
 MXVSL3 = OUT_DIR / "worldcup_mx_vs_l3_scorecard.csv"
+TEAMSTATS = OUT_DIR / "worldcup_team_stats_scorecard.csv"
 PANEL = OUT_DIR / "worldcup_trackrecord_panel.md"
 
 NA = "_— sin datos aún (scorecard ausente o aún sin liquidar) —_"
@@ -169,6 +170,56 @@ def _prop_backtest_status(text, prop):
     return "—"
 
 
+_STAT_ES = {"corners": "córners", "shots": "tiros", "cards": "tarjetas"}
+_STAT_NOTE = {"corners": " (baja conf.)", "shots": " (orientativo)", "cards": " (ruido · oculto en ficha)"}
+
+
+def _bias_read(bias):
+    """Signed bias -> short reading for the panel (pred − real)."""
+    b = _to_f(bias)
+    if b is None:
+        return "—"
+    if abs(b) < 0.25:
+        return f"{b:+.2f} (≈neutral)"
+    return f"{b:+.2f} ({'infraestima' if b < 0 else 'sobrestima'})"
+
+
+def section_team_stats(csv_text):
+    """Stats por equipo (córners/tiros/tarjetas) predicho vs real, del CSV del scorer (read-only).
+    CSV: stat,n,mae,rmse,bias,mean_pred,mean_real,line_acc (línea O/U solo para córners)."""
+    lines = ["## Stats por equipo — predicho vs real (en vivo)"]
+    rows = []
+    for i, raw in enumerate(csv_text.splitlines()):
+        raw = raw.strip()
+        if not raw or (i == 0 and raw.lower().startswith("stat,")):
+            continue
+        parts = raw.split(",")
+        if len(parts) < 8:
+            continue
+        rows.append(parts[:8])
+    if not rows:
+        lines.append("_— sin datos aún: aún no hay partidos liquidados con stats reales (settle trae "
+                     "córners/tiros/tarjetas de /fixtures/statistics al terminar el partido) —_")
+        return lines
+    n_max = max((_to_f(r[1]) or 0 for r in rows), default=0)
+    lines.append("**Total por partido** (suma de ambos equipos) · predicción congelada al saque "
+                 "(anti-hindsight) vs real liquidado · sin mercado.")
+    lines.append("")
+    lines.append("| stat | N | MAE | RMSE | sesgo (pred−real) | ¿acierto línea? |")
+    lines.append("|---|---:|---:|---:|---|---|")
+    for stat, n, mae, rmse, bias, _mp, _mr, line_acc in rows:
+        label = _STAT_ES.get(stat, stat) + _STAT_NOTE.get(stat, "")
+        la = f"{line_acc}% (O/U)" if (line_acc or "").strip() else "—"
+        lines.append(f"| {label} | {n} | {mae} | {rmse} | {_bias_read(bias)} | {la} |")
+    lines.append("> Honestidad: **córners = baja confianza · tarjetas = ruido** → un error alto es "
+                 "ESPERABLE; el marcador lo refleja sin maquillar. **No** se declara nada 'bueno/malo': "
+                 "solo se acumula durante el torneo.")
+    if n_max and n_max < 30:
+        lines.append(f"> ⚠️ muestra pequeña (N={int(n_max)} < 30): métricas orientativas, aún no concluyentes.")
+    lines.append("> _Solo mide; NO toca el modelo ni las predicciones (st_*/result_* congelados/liquidados en el log)._")
+    return lines
+
+
 def section_props(text):
     lines = ["## Props de jugador (SOMBRA · heurístico)"]
     if not text:
@@ -294,7 +345,7 @@ def section_mx_vs_l3(csv_text):
 
 # --------------------------------------------------------------------- assembly
 def build_panel_text(scorecard=SCORECARD, props=PROPS, context=CONTEXT, calib=CALIB,
-                     mxvsl3=MXVSL3, now=None):
+                     mxvsl3=MXVSL3, teamstats=TEAMSTATS, now=None):
     """Consolidated Markdown panel from the existing scorecards. Pure read + format; soft-fail."""
     gen = now or datetime.now(timezone.utc).isoformat(timespec="seconds")
     out = [
@@ -307,8 +358,8 @@ def build_panel_text(scorecard=SCORECARD, props=PROPS, context=CONTEXT, calib=CA
         "",
     ]
     for fn, src in ((section_1x2, scorecard), (section_goals, scorecard),
-                    (section_mx_vs_l3, mxvsl3), (section_props, props),
-                    (section_context, context), (section_calib, calib)):
+                    (section_mx_vs_l3, mxvsl3), (section_team_stats, teamstats),
+                    (section_props, props), (section_context, context), (section_calib, calib)):
         try:
             out += fn(_read(src))
         except Exception as e:  # noqa: BLE001  (soft-fail: a broken section never sinks the panel)

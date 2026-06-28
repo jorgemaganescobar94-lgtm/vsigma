@@ -1,0 +1,14 @@
+📐 Stats modelo vs real (N=38): córners MAE 2.6 (infraestima) · tiros MAE 7.6 (infraestima) · tarjetas MAE 1.9 (sobrestima)
+
+===== detalle stats por equipo (predicho vs real) =====
+total por partido (suma de ambos equipos) · predicción congelada al saque (anti-hindsight) vs real liquidado · sin mercado
+  stat         N    MAE   RMSE   sesgo  μpred  μreal       lectura
+  ----------------------------------------------------------------
+  córners     38   2.56   3.03   -1.47    7.0    8.5   infraestima
+  tiros       38   7.56   9.01   -6.15   18.3   24.5   infraestima
+  tarjetas    38   1.88   2.19   +1.53    4.2    2.6    sobrestima
+  córners O/U (línea modelo): acc 47% sobre n=38 (real Over=61%)
+
+HONESTIDAD: córners = BAJA confianza · tarjetas = RUIDO -> error alto ESPERABLE, no se maquilla. tiros = orientativo. NO se declara nada 'bueno/malo'; solo se acumula.
+
+generated_at_utc: 2026-06-28T09:23:37+00:00

@@ -1,0 +1,4 @@
+stat,n,mae,rmse,bias,mean_pred,mean_real,line_acc
+corners,38,2.56,3.03,-1.47,7.0,8.5,47.0
+shots,38,7.56,9.01,-6.15,18.3,24.5,
+cards,38,1.88,2.19,1.53,4.2,2.6,

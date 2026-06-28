@@ -190,6 +190,18 @@ jobs:
           echo "----- mx-vs-L3 marker -----"
           cat analysis/worldcup/worldcup_mx_vs_l3_scorecard.txt || true
 
+      # ---- MARCADOR ACUMULADO STATS POR EQUIPO (read-only): córners/tiros/tarjetas predicho vs real
+      #      leyendo el log (st_*_total congelados al saque + result_* liquidados, mismo dato que las
+      #      líneas [REAL]). Anti-hindsight: predicción pre-KO, nunca recalculada. MAE/RMSE/sesgo +
+      #      acierto de línea O/U (córners). NO recalcula predicciones, NO toca el modelo, NO mercado.
+      #      Alimenta el panel. SOFT: un fallo NUNCA bloquea el briefing.
+      - name: Marcador stats por equipo (read-only; alimenta panel)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/worldcup_team_stats_scorer.py
+          echo "----- team-stats marker -----"
+          cat analysis/worldcup/worldcup_team_stats_scorecard.txt || true
+
       # ---- CALIBRATION MONITOR (safety net): after settle+auto-refit+scorecard, check the LIVE
       #      1X2 calibration of the production L3 and alert on Telegram if it drifts. Monitor ONLY:
       #      does NOT touch the model/ratings/calibration/briefing — just reads the log + alerts.
@@ -314,6 +326,8 @@ jobs:
                    analysis/worldcup/worldcup_maxmodel_shadow_scorecard.csv \
                    analysis/worldcup/worldcup_mx_vs_l3_scorecard.txt \
                    analysis/worldcup/worldcup_mx_vs_l3_scorecard.csv \
+                   analysis/worldcup/worldcup_team_stats_scorecard.txt \
+                   analysis/worldcup/worldcup_team_stats_scorecard.csv \
                    analysis/worldcup/worldcup_trackrecord_panel.md; do
             [ -f "$p" ] && git add "$p" || true
           done

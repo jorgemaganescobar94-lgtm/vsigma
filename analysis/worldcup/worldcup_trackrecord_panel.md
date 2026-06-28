@@ -1,5 +1,5 @@
 # 📊 Panel de Track-Record — Mundial 2026 (vSIGMA)
-_Generado: 2026-06-28T09:08:26+00:00 · consolidado de scorecards existentes · **solo lectura, no recalcula predicciones** · sin mercado/cuotas._
+_Generado: 2026-06-28T09:23:37+00:00 · consolidado de scorecards existentes · **solo lectura, no recalcula predicciones** · sin mercado/cuotas._
 
 > Honestidad: **validado** = superó el baseline en backtest histórico; **sombra** = en observación en vivo; donde la muestra aún no basta se marca explícitamente.
 
@@ -47,6 +47,17 @@ _Generado: 2026-06-28T09:08:26+00:00 · consolidado de scorecards existentes · 
 | BTTS brier | 0.2906 | 0.2859 | **mx** |
 > ⚠️ muestra pequeña (N=6 < 30): **NO se declara ganador**, el acumulado crece hasta el final del Mundial. Si el mx queda por detrás, este marcador + el A/B son la base para revertir (MAXMODEL_LIVE=False).
 > _Solo mide; NO toca el modelo ni las predicciones (mx_*/l3_* congelados en el log)._
+
+## Stats por equipo — predicho vs real (en vivo)
+**Total por partido** (suma de ambos equipos) · predicción congelada al saque (anti-hindsight) vs real liquidado · sin mercado.
+
+| stat | N | MAE | RMSE | sesgo (pred−real) | ¿acierto línea? |
+|---|---:|---:|---:|---|---|
+| córners (baja conf.) | 38 | 2.56 | 3.03 | -1.47 (infraestima) | 47.0% (O/U) |
+| tiros (orientativo) | 38 | 7.56 | 9.01 | -6.15 (infraestima) | — |
+| tarjetas (ruido · oculto en ficha) | 38 | 1.88 | 2.19 | +1.53 (sobrestima) | — |
+> Honestidad: **córners = baja confianza · tarjetas = ruido** → un error alto es ESPERABLE; el marcador lo refleja sin maquillar. **No** se declara nada 'bueno/malo': solo se acumula durante el torneo.
+> _Solo mide; NO toca el modelo ni las predicciones (st_*/result_* congelados/liquidados en el log)._
 
 ## Props de jugador (SOMBRA · heurístico)
 **Liquidados = 18** partidos (396 filas jugador-prop) · umbral graduación N≥30.
