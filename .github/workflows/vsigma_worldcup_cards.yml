@@ -332,6 +332,16 @@ jobs:
         run: |
           python analysis/worldcup/prepare_worldcup_external_templates.py
 
+      # ---- FASE 4C-3 persistence GUARD (read-only, NO API, NO writes, NO commit, NO git add):
+      #      reports which data/external rows/cells would be SAFE to auto-persist under policy "option B"
+      #      (auto-derived only) and which manual rows/cells are protected; forbidden files (xg_xa,
+      #      referee_profiles, coach) are always blocked. Diagnostic only — persistence is NOT enabled.
+      #      Runs after the real prepare; --strict NOT used here so it never blocks the briefing.
+      - name: Fase 4C-3 — external-persistence guard (read-only, no commit, soft-fail)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/guard_worldcup_external_persistence.py
+
       # ---- FASE 3 external-data status (read-only, NO API, NO secrets): logs which optional CSV
       #      sources under data/external/ are active for this run (xG/xA real, set-piece takers,
       #      referee, weather, coach tactical, positional). Pure diagnostics; never blocks. Absent

@@ -62,7 +62,22 @@ explícitamente** (es un cambio de comportamiento de CI → nivel 🔴 por tocar
 Mientras tanto se mantiene la **opción A** (estado actual): CI solo **audita** y hace **dry-run**, sin
 commitear nada de `data/external/`.
 
-## Próximo paso (Fase 4C-3, sujeto a aprobación)
+## Estado de la infraestructura (Fase 4C-3, implementada — persistencia AÚN no activada)
 
-Si Jorge aprueba B: añadir al workflow un paso de commit acotado con rutas explícitas + guard
-anti-manual + dry-run previo, y documentar el trail. Hasta entonces, **no activar persistencia**.
+`analysis/worldcup/guard_worldcup_external_persistence.py` ya implementa el **guard anti-manual**
+read-only que exige la opción B:
+- analiza solo los 4 ficheros permitidos y clasifica cada fila como *auto-persistible* vs *manual
+  protegida*, contando celdas manuales;
+- bloquea siempre `player_xg_xa.csv`, `referee_profiles.csv`, `coach_tactical_profiles.csv`;
+- modo `--strict`: exit 1 si un fichero prohibido entra al set de commit, si un fichero "addable"
+  todavía contiene datos manuales (un `git add` wholesale los commitearía → hace falta filtrado),
+  o si hay inconsistencia de columnas;
+- por defecto es diagnóstico (exit 0) y escribe `worldcup_external_persistence_guard.{txt,csv}`.
+
+El workflow ejecuta el guard en modo **diagnóstico** (sin `--strict`, sin `git add`, sin commit).
+
+## Próximo paso (Fase 4C-4, sujeto a aprobación)
+
+Si Jorge aprueba B: añadir al workflow (1) generación de CSV **filtrados** que excluyan filas/celdas
+manuales, (2) `guard --strict` como gate, (3) commit acotado con rutas explícitas + dry-run previo, y
+documentar el trail. Hasta entonces, **no activar persistencia**.
