@@ -6330,7 +6330,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 28,
+          "elapsed": 31,
           "extra": null
         }
       },
@@ -6400,7 +6400,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 25,
+          "elapsed": 28,
           "extra": null
         }
       },
@@ -6470,7 +6470,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 30,
+          "elapsed": 33,
           "extra": null
         }
       },
@@ -6540,7 +6540,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 30,
+          "elapsed": 34,
           "extra": null
         }
       },
@@ -6610,7 +6610,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 28,
+          "elapsed": 32,
           "extra": null
         }
       },
@@ -6680,7 +6680,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 28,
+          "elapsed": 32,
           "extra": null
         }
       },
@@ -6709,12 +6709,12 @@
         }
       },
       "goals": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 1,
+          "home": 2,
           "away": 0
         },
         "fulltime": {
@@ -6750,7 +6750,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 29,
+          "elapsed": 32,
           "extra": null
         }
       },
@@ -6820,7 +6820,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 26,
+          "elapsed": 30,
           "extra": null
         }
       },
@@ -6839,23 +6839,23 @@
           "id": 4112,
           "name": "Bahardar",
           "logo": "https://media.api-sports.io/football/teams/4112.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 4123,
           "name": "Sidama Bunna",
           "logo": "https://media.api-sports.io/football/teams/4123.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,

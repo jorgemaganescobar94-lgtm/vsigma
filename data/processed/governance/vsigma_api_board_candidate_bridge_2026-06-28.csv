@@ -1,0 +1,2 @@
+target_date,board_rows,lineup_rows,candidates_written,skipped_rows,board_source,lineup_source,auto_bet,production_change
+2026-06-28,1,1,0,1,data/processed/today/2026-06-28/vsigma_daily_execution_board.csv,data/processed/today/2026-06-28/vsigma_forced_api_board_fixture_lineups.csv,NO,NO
