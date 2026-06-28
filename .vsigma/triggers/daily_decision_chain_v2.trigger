@@ -1,6 +1,6 @@
-date=2026-06-27
+date=2026-06-28
 include_backtest=false
 requested_by=github-actions
 reason=normalize_daily_decision_chain_v2_date
-triggered_at=2026-06-27T10:37:33+01:00
-nonce=daily-v2-2026-06-27-28285400783
+triggered_at=2026-06-28T11:11:49+01:00
+nonce=daily-v2-2026-06-28-28318901219
