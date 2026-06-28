@@ -336,6 +336,28 @@ def test_venue_not_invented_when_absent(tmp_path):
     assert w["venue"].isna().all()   # no venue in store -> stays empty
 
 
+def test_fixture_block_from_store_prepopulates_both_csvs(tmp_path):
+    # Fase 4C-1: the enrichment store now carries fixture.referee + fixture.venue.{name,city}
+    store = [{"fixture_id": 1, "fixture": {"referee": "Daniele Orsato",
+                                           "venue": {"id": 50, "name": "Estadio Azteca",
+                                                     "city": "CDMX"},
+                                           "date": "2026-06-20T18:00"}}]
+    prep.prepare(ext_dir=tmp_path, events_df=None, cards_df=_cards_df(), store_records=store)
+    fr = pd.read_csv(tmp_path / "fixture_referees.csv")
+    assert list(fr.loc[fr["fixture_id"] == 1, "referee_name"]) == ["Daniele Orsato"]
+    w = pd.read_csv(tmp_path / "weather_by_fixture.csv")
+    assert list(w.loc[w["fixture_id"] == 1, "venue"]) == ["Estadio Azteca"]
+    assert w.loc[w["fixture_id"] == 1, "temperature"].isna().all()   # still no invented weather
+
+
+def test_old_store_without_fixture_block_is_safe(tmp_path):
+    # a pre-4C1 store (no 'fixture' key) must not crash and must not invent referee/venue
+    store = [{"fixture_id": 1, "postft": {"summary": {}}}]
+    prep.prepare(ext_dir=tmp_path, events_df=None, cards_df=_cards_df(), store_records=store)
+    assert len(pd.read_csv(tmp_path / "fixture_referees.csv")) == 0
+    assert pd.read_csv(tmp_path / "weather_by_fixture.csv")["venue"].isna().all()
+
+
 def test_weather_does_not_overwrite_manual_venue(tmp_path):
     WB = "weather_by_fixture.csv"
     cols = prep.COLUMNS[WB]

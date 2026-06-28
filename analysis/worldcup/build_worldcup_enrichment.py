@@ -173,7 +173,9 @@ def parse_events_summary(events_resp, home_id, away_id) -> dict:
 
 # --------------------------------------------------------------------- fixtures index
 def _fixtures_index(client, trace) -> dict:
-    """id -> {home_id, away_id, home, away, venue_id, status} from the cached /fixtures call."""
+    """id -> {home_id, away_id, home, away, venue_id, venue_name, venue_city, referee, date, status}
+    from the cached /fixtures call. referee + venue name/city + date come straight from the SAME
+    /fixtures response already consulted (NO new endpoint) — None when the API does not provide them."""
     resp = _get(client, "/fixtures", {"league": WC_LEAGUE, "season": WC_SEASON}, TTL_FIXTURES, trace)
     idx = {}
     for f in resp or []:
@@ -182,15 +184,51 @@ def _fixtures_index(client, trace) -> dict:
         if fid is None:
             continue
         teams = f.get("teams", {}) or {}
+        venue = fx.get("venue") or {}
+        ref = fx.get("referee")
         idx[int(fid)] = {
             "home_id": (teams.get("home") or {}).get("id"),
             "away_id": (teams.get("away") or {}).get("id"),
             "home": (teams.get("home") or {}).get("name"),
             "away": (teams.get("away") or {}).get("name"),
-            "venue_id": (fx.get("venue") or {}).get("id"),
+            "venue_id": venue.get("id"),
+            "venue_name": venue.get("name"),
+            "venue_city": venue.get("city"),
+            "referee": (ref.strip() if isinstance(ref, str) and ref.strip() else None),
+            "date": fx.get("date"),
             "status": (fx.get("status") or {}).get("short"),
         }
     return idx
+
+
+def build_fixture_block(meta, existing=None):
+    """Pure: assemble the store's `fixture` block {referee, venue:{id,name,city}, date} from the
+    /fixtures meta. MERGE-SAFE: a field absent in `meta` keeps a value previously captured in
+    `existing` (a later run with a referee fills an earlier null without wiping it). NEVER invents:
+    returns None if neither meta nor existing carry anything real. Only real fields are emitted."""
+    meta = meta or {}
+    existing = existing or {}
+    ev = existing.get("venue") or {}
+    referee = meta.get("referee") or existing.get("referee")
+    v_id = meta.get("venue_id") if meta.get("venue_id") is not None else ev.get("id")
+    v_name = meta.get("venue_name") or ev.get("name")
+    v_city = meta.get("venue_city") or ev.get("city")
+    date = meta.get("date") or existing.get("date")
+    block = {}
+    if referee:
+        block["referee"] = referee
+    venue = {}
+    if v_id is not None:
+        venue["id"] = v_id
+    if v_name:
+        venue["name"] = v_name
+    if v_city:
+        venue["city"] = v_city
+    if venue:
+        block["venue"] = venue
+    if date:
+        block["date"] = date
+    return block or None
 
 
 # --------------------------------------------------------------------- prematch hook
@@ -257,6 +295,10 @@ def enrich_prematch(fixture_ids=None, date_from=None, date_to=None, client=None,
         store.setdefault("fixture_id", int(fid))
         store["home"], store["away"] = meta["home"], meta["away"]
         store["home_id"], store["away_id"], store["venue_id"] = home_id, away_id, venue_id
+        # referee + venue name/city + date from the SAME /fixtures meta (merge-safe; no invention)
+        fb = build_fixture_block(meta, store.get("fixture"))
+        if fb:
+            store["fixture"] = fb
         store["prematch"] = {"headtohead": h2h or [], "teams": team_sections, "venue": venue or []}
         store["fetched_at_utc"] = _now()
         store["endpoints_called"] = sorted(set(store.get("endpoints_called", [])) | set(ftrace))
@@ -293,10 +335,17 @@ def enrich_postft(fixture_ids=None, client=None, force=False) -> dict:
     enriched = 0
     for fid in fixture_ids:
         store = load_store(fid)
+        meta = idx.get(int(fid), {})
+        # referee + venue name/city + date from the /fixtures meta already fetched above (0 extra API).
+        # Done BEFORE the store-guard so an already-enriched fixture still gets backfilled — no need to
+        # re-pull the heavy postft endpoints. Merge-safe, no invention.
+        fb = build_fixture_block(meta, store.get("fixture"))
+        if fb and fb != store.get("fixture"):
+            store["fixture"] = fb
+            save_store(fid, store)
         # store-guard: a finished match never changes -> don't re-fetch (0 API on 2nd pass)
         if not force and (store.get("postft") or {}).get("summary"):
             continue
-        meta = idx.get(int(fid), {})
         home_id, away_id = meta.get("home_id"), meta.get("away_id")
 
         ftrace = []

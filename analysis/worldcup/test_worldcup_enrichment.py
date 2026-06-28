@@ -42,8 +42,9 @@ FIX_ID = 1001
 HOME_ID, AWAY_ID, VENUE_ID, COACH_ID = 9, 2, 50, 100
 
 FIXTURES_RESP = [{
-    "fixture": {"id": FIX_ID, "date": "2026-06-23T19:00:00+00:00",
-                "status": {"short": "FT"}, "venue": {"id": VENUE_ID, "name": "Estadio X"}},
+    "fixture": {"id": FIX_ID, "date": "2026-06-23T19:00:00+00:00", "referee": "Daniele Orsato",
+                "status": {"short": "FT"},
+                "venue": {"id": VENUE_ID, "name": "Estadio X", "city": "Ciudad"}},
     "teams": {"home": {"id": HOME_ID, "name": "Spain"}, "away": {"id": AWAY_ID, "name": "France"}},
     "goals": {"home": 2, "away": 1},
     "score": {"fulltime": {"home": 2, "away": 1}},
@@ -132,6 +133,70 @@ def test_postft_writes_json_store():
     assert any("/fixtures/statistics" in s for s in store["endpoints_called"])
     assert any("/fixtures/events" in s for s in store["endpoints_called"])
     assert any("/fixtures/players" in s for s in store["endpoints_called"])
+
+
+# ----------------------------------------------------------------- Fase 4C-1: referee/venue block
+def test_build_fixture_block_real_merge_and_empty():
+    m = {"referee": "Mr Ref", "venue_id": 50, "venue_name": "Estadio X", "venue_city": "Ciudad",
+         "date": "2026-06-23T19:00:00+00:00"}
+    fb = wc.build_fixture_block(m)
+    assert fb["referee"] == "Mr Ref" and fb["venue"] == {"id": 50, "name": "Estadio X",
+                                                         "city": "Ciudad"}
+    assert fb["date"].startswith("2026-06-23")
+    # merge-safe: a null referee in meta keeps the previously-captured one (no wipe)
+    fb2 = wc.build_fixture_block({"venue_name": "New"}, {"referee": "Kept", "venue": {"name": "Old"}})
+    assert fb2["referee"] == "Kept" and fb2["venue"]["name"] == "New"
+    # nothing real -> None (never an empty/invented block)
+    assert wc.build_fixture_block({}, {}) is None
+
+
+def test_fixtures_index_captures_referee_and_venue():
+    m = MockClient(ALL_RESPONSES)
+    idx = wc._fixtures_index(m, [])
+    meta = idx[FIX_ID]
+    assert meta["referee"] == "Daniele Orsato"
+    assert meta["venue_name"] == "Estadio X" and meta["venue_city"] == "Ciudad"
+
+
+def test_postft_writes_fixture_block_referee_venue():
+    m = MockClient(ALL_RESPONSES)
+    wc.enrich_postft([FIX_ID], client=m)
+    fx = wc.load_store(FIX_ID)["fixture"]
+    assert fx["referee"] == "Daniele Orsato"
+    assert fx["venue"]["name"] == "Estadio X" and fx["venue"]["city"] == "Ciudad"
+    assert fx["date"].startswith("2026-06-23")
+
+
+def test_postft_backfills_fixture_block_even_when_cached():
+    # first pass writes postft + fixture block
+    wc.enrich_postft([FIX_ID], client=MockClient(ALL_RESPONSES))
+    # simulate an OLD store that has postft summary but NO fixture block (pre-4C1)
+    store = wc.load_store(FIX_ID)
+    store.pop("fixture", None)
+    wc.save_store(FIX_ID, store)
+    # second pass: store-guard skips the heavy FT endpoints, but the fixture block is backfilled
+    m2 = MockClient(ALL_RESPONSES)
+    wc.enrich_postft([FIX_ID], client=m2)
+    assert m2.count("/fixtures/statistics") == 0          # heavy endpoints NOT recalled
+    assert wc.load_store(FIX_ID)["fixture"]["referee"] == "Daniele Orsato"   # but block restored
+
+
+def test_postft_no_referee_not_invented():
+    resp = dict(ALL_RESPONSES)
+    resp["/fixtures"] = [{"fixture": {"id": FIX_ID, "date": "2026-06-23T19:00:00+00:00",
+                                      "status": {"short": "FT"}, "venue": {"id": VENUE_ID}},
+                          "teams": {"home": {"id": HOME_ID, "name": "Spain"},
+                                    "away": {"id": AWAY_ID, "name": "France"}}}]
+    wc.enrich_postft([FIX_ID], client=MockClient(resp))
+    fx = wc.load_store(FIX_ID).get("fixture") or {}
+    assert "referee" not in fx                            # no referee in API -> none invented
+    assert (fx.get("venue") or {}).get("name") is None    # no venue name either
+
+
+def test_prematch_writes_fixture_block():
+    wc.enrich_prematch([FIX_ID], client=MockClient(ALL_RESPONSES))
+    fx = wc.load_store(FIX_ID)["fixture"]
+    assert fx["referee"] == "Daniele Orsato" and fx["venue"]["name"] == "Estadio X"
 
 
 def test_postft_store_guard_no_recall():
