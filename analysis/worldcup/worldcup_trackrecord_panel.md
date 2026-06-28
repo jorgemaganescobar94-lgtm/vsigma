@@ -1,5 +1,5 @@
 # 📊 Panel de Track-Record — Mundial 2026 (vSIGMA)
-_Generado: 2026-06-28T08:56:51+00:00 · consolidado de scorecards existentes · **solo lectura, no recalcula predicciones** · sin mercado/cuotas._
+_Generado: 2026-06-28T09:08:26+00:00 · consolidado de scorecards existentes · **solo lectura, no recalcula predicciones** · sin mercado/cuotas._
 
 > Honestidad: **validado** = superó el baseline en backtest histórico; **sombra** = en observación en vivo; donde la muestra aún no basta se marca explícitamente.
 
@@ -30,6 +30,23 @@ _Generado: 2026-06-28T08:56:51+00:00 · consolidado de scorecards existentes · 
 - matchup (EN VIVO)  n= 12  acc   42%  Brier 0.273  logloss 0.743
 - constante (viejo)  n= 12  acc   58%  Brier 0.297  logloss 0.856
 - (si 'constante' bate sostenidamente a 'matchup' -> revisar / poner TOTAL_MATCHUP_LIVE=False)
+
+## L3 vs Motor máximo (en vivo, desde 27-jun)
+**N = 6** partidos liquidados con predicción mx · cara a cara congelado al saque (lock-at-KO, anti-hindsight) vs resultado real · sin mercado.
+
+| métrica | L3 | mx | líder |
+|---|---:|---:|---|
+| 1X2 acc% | 66.7 | 66.7 | empate |
+| 1X2 logloss | 0.7037 | 0.7128 | L3 |
+| 1X2 brier | 0.3997 | 0.4033 | L3 |
+| Over 2.5 acc% | 33.3 | 33.3 | empate |
+| Over 2.5 logloss | 0.6825 | 0.6746 | **mx** |
+| Over 2.5 brier | 0.245 | 0.2412 | **mx** |
+| BTTS acc% | 33.3 | 33.3 | empate |
+| BTTS logloss | 0.781 | 0.7656 | **mx** |
+| BTTS brier | 0.2906 | 0.2859 | **mx** |
+> ⚠️ muestra pequeña (N=6 < 30): **NO se declara ganador**, el acumulado crece hasta el final del Mundial. Si el mx queda por detrás, este marcador + el A/B son la base para revertir (MAXMODEL_LIVE=False).
+> _Solo mide; NO toca el modelo ni las predicciones (mx_*/l3_* congelados en el log)._
 
 ## Props de jugador (SOMBRA · heurístico)
 **Liquidados = 18** partidos (396 filas jugador-prop) · umbral graduación N≥30.

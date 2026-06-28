@@ -1,0 +1,19 @@
+⚙️ Motor máximo vs L3 (N=6 · desde 27-jun): 1X2 67% vs 67% · O2.5 33% vs 33% · BTTS 33% vs 33%  (muestra pequeña, orientativo)
+
+===== detalle mx vs L3 =====
+N=6 partidos liquidados con predicción mx (lock-at-KO, anti-hindsight) · desde 27-jun · cara a cara vs RESULTADOS REALES, sin mercado
+  mercado/métrica               L3        mx    líder         Δ
+  -------------------------------------------------------------
+  1X2 acc%                    66.7      66.7   empate         -
+  1X2 logloss               0.7037    0.7128       L3    0.0091
+  1X2 brier                 0.3997    0.4033       L3    0.0036
+  Over 2.5 acc%               33.3      33.3   empate         -
+  Over 2.5 logloss          0.6825    0.6746       mx    0.0079
+  Over 2.5 brier            0.2450    0.2412       mx    0.0038
+  BTTS acc%                   33.3      33.3   empate         -
+  BTTS logloss              0.7810    0.7656       mx    0.0153
+  BTTS brier                0.2906    0.2859       mx    0.0047
+
+VEREDICTO: muestra pequeña (N=6 < 30) — NO se declara ganador; el acumulado crece hasta el final del Mundial. Orientativo.
+
+generated_at_utc: 2026-06-28T09:08:26+00:00

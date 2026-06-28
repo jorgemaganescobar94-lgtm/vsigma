@@ -26,6 +26,7 @@ SCORECARD = OUT_DIR / "worldcup_scorecard.txt"
 PROPS = OUT_DIR / "worldcup_player_props_scorecard.txt"
 CONTEXT = OUT_DIR / "worldcup_context_shadow_scorecard.txt"
 CALIB = OUT_DIR / "worldcup_calibration_monitor.txt"
+MXVSL3 = OUT_DIR / "worldcup_mx_vs_l3_scorecard.csv"
 PANEL = OUT_DIR / "worldcup_trackrecord_panel.md"
 
 NA = "_— sin datos aún (scorecard ausente o aún sin liquidar) —_"
@@ -252,8 +253,48 @@ def _to_f(x):
         return None
 
 
+def section_mx_vs_l3(csv_text):
+    """A/B EN VIVO invertido: motor máximo (mx) vs L3, leído del CSV del scorer (read-only).
+    El CSV trae una fila por (market,metric) con columnas market,metric,l3,mx,leader,diff,n,since."""
+    rows = []
+    n, since = None, None
+    for i, raw in enumerate(csv_text.splitlines()):
+        raw = raw.strip()
+        if not raw or (i == 0 and raw.lower().startswith("market,")):
+            continue
+        parts = raw.split(",")
+        if len(parts) < 8:
+            continue
+        market, metric, l3, mx, leader, diff, nn, since = parts[:8]
+        n = nn
+        rows.append((market, metric, l3, mx, leader, diff))
+    since_tag = f" (en vivo, desde {since})" if since and since != "?" else " (en vivo)"
+    lines = [f"## L3 vs Motor máximo{since_tag}"]
+    if not rows:
+        lines.append("_— sin datos aún: aún no hay partidos liquidados con predicción del motor máximo "
+                     "(mx entró en vivo el 27-jun; solo se mide desde entonces, anti-hindsight) —_")
+        return lines
+    led = {"mx": "**mx**", "L3": "L3", "empate": "empate", "n/d": "—"}
+    lines.append(f"**N = {n or '?'}** partidos liquidados con predicción mx · cara a cara congelado al "
+                 "saque (lock-at-KO, anti-hindsight) vs resultado real · sin mercado.")
+    lines.append("")
+    lines.append("| métrica | L3 | mx | líder |")
+    lines.append("|---|---:|---:|---|")
+    label = {"acc": "acc%", "logloss": "logloss", "brier": "brier"}
+    for market, metric, l3, mx, leader, _diff in rows:
+        lines.append(f"| {market} {label.get(metric, metric)} | {l3} | {mx} | {led.get(leader, leader)} |")
+    n_int = _to_f(n)
+    if n_int is not None and n_int < 30:
+        lines.append(f"> ⚠️ muestra pequeña (N={n} < 30): **NO se declara ganador**, el acumulado crece "
+                     "hasta el final del Mundial. Si el mx queda por detrás, este marcador + el A/B son la "
+                     "base para revertir (MAXMODEL_LIVE=False).")
+    lines.append("> _Solo mide; NO toca el modelo ni las predicciones (mx_*/l3_* congelados en el log)._")
+    return lines
+
+
 # --------------------------------------------------------------------- assembly
-def build_panel_text(scorecard=SCORECARD, props=PROPS, context=CONTEXT, calib=CALIB, now=None):
+def build_panel_text(scorecard=SCORECARD, props=PROPS, context=CONTEXT, calib=CALIB,
+                     mxvsl3=MXVSL3, now=None):
     """Consolidated Markdown panel from the existing scorecards. Pure read + format; soft-fail."""
     gen = now or datetime.now(timezone.utc).isoformat(timespec="seconds")
     out = [
@@ -265,7 +306,8 @@ def build_panel_text(scorecard=SCORECARD, props=PROPS, context=CONTEXT, calib=CA
         "observación en vivo; donde la muestra aún no basta se marca explícitamente.",
         "",
     ]
-    for fn, src in ((section_1x2, scorecard), (section_goals, scorecard), (section_props, props),
+    for fn, src in ((section_1x2, scorecard), (section_goals, scorecard),
+                    (section_mx_vs_l3, mxvsl3), (section_props, props),
                     (section_context, context), (section_calib, calib)):
         try:
             out += fn(_read(src))

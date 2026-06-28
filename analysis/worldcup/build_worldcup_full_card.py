@@ -52,6 +52,7 @@ CARDS = OUT_DIR / "worldcup_cards.csv"
 LOG = OUT_DIR / "worldcup_predictions_log.csv"
 META = OUT_DIR / "worldcup_render_meta.txt"  # fixture count for the workflow anti-spam gate
 MANIFEST = OUT_DIR / "worldcup_messages_manifest.txt"  # paginated send list: "path|title" per line
+MXVSL3 = OUT_DIR / "worldcup_mx_vs_l3_scorecard.txt"  # read-only mx-vs-L3 marker (compact line in header)
 KMAX = 10
 
 
@@ -494,6 +495,26 @@ def read_scorecard_block(path, max_lines=4):
     return block[:max_lines]
 
 
+def read_mx_vs_l3_line(path):
+    """Compact one-liner of the mx-vs-L3 marker (line 1 of worldcup_mx_vs_l3_scorecard.txt), so the
+    briefing shows the accumulated 'Motor máximo vs L3' at a glance. [] if absent/empty (soft-fail).
+    Display-only: this file is produced by the read-only scorer; the briefing never recomputes it."""
+    if not path:
+        return []
+    p = Path(path)
+    if not p.exists():
+        return []
+    try:
+        for ln in p.read_text(encoding="utf-8").splitlines():
+            s = ln.rstrip()
+            if s.strip():
+                # skip the "aún sin partidos liquidados" placeholder (nothing to brag about yet)
+                return [] if "aún sin partidos" in s else [s]
+    except Exception:
+        return []
+    return []
+
+
 def _parse_ko(s):
     """Parse a kickoff_utc cell ('2026-06-19 22:00' or ISO) -> aware UTC datetime."""
     s = str(s).strip()
@@ -598,6 +619,7 @@ def render_paginated(df, date_from, within_hours, scorecard, show_yesterday,
             pass
 
     sc_block = read_scorecard_block(scorecard)
+    mx_block = read_mx_vs_l3_line(MXVSL3)          # 1 compact line (or none) — display-only, soft-fail
     yest_block = build_yesterday_block(log_path or LOG, datetime.now(timezone.utc)) \
         if show_yesterday else []
     META.write_text(str(len(df)), encoding="utf-8")          # anti-spam fixture count
@@ -612,7 +634,7 @@ def render_paginated(df, date_from, within_hours, scorecard, show_yesterday,
         hlead = f"🏆 MUNDIAL 2026 — briefing {date_from} (modelo propio, sin cuotas)"
     # day-summary digest line right under the banner (1 line, display-only, soft-fail)
     ds_line = day_summary_line(df)
-    header = [hlead] + ([ds_line] if ds_line else []) + sc_block + yest_block
+    header = [hlead] + ([ds_line] if ds_line else []) + sc_block + mx_block + yest_block
     if len(df):
         header.append(f"📋 {len(df)} partido(s) abajo (en mensajes siguientes).")
     # honest per-stat confidence summary in the header (data-driven OOS lift), not a single label

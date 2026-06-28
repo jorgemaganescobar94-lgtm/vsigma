@@ -179,6 +179,17 @@ jobs:
           echo "----- scorecard preview -----"
           cat analysis/worldcup/worldcup_scorecard.txt
 
+      # ---- MARCADOR ACUMULADO mx vs L3 (read-only): mide el A/B invertido EN VIVO leyendo el log
+      #      (l3_*/mx_* congelados al saque + result_* liquidados). Anti-hindsight: solo partidos que
+      #      mx predijo pre-KO. NO recalcula predicciones, NO toca el modelo, NO mercado. Alimenta el
+      #      panel + la línea compacta del briefing. SOFT: un fallo NUNCA bloquea el briefing.
+      - name: Marcador mx vs L3 (read-only; alimenta panel + briefing)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/worldcup_mx_vs_l3_scorer.py
+          echo "----- mx-vs-L3 marker -----"
+          cat analysis/worldcup/worldcup_mx_vs_l3_scorecard.txt || true
+
       # ---- CALIBRATION MONITOR (safety net): after settle+auto-refit+scorecard, check the LIVE
       #      1X2 calibration of the production L3 and alert on Telegram if it drifts. Monitor ONLY:
       #      does NOT touch the model/ratings/calibration/briefing — just reads the log + alerts.
@@ -301,6 +312,8 @@ jobs:
                    analysis/worldcup/worldcup_calibration_monitor_state.json \
                    analysis/worldcup/worldcup_maxmodel_shadow_predictions.csv \
                    analysis/worldcup/worldcup_maxmodel_shadow_scorecard.csv \
+                   analysis/worldcup/worldcup_mx_vs_l3_scorecard.txt \
+                   analysis/worldcup/worldcup_mx_vs_l3_scorecard.csv \
                    analysis/worldcup/worldcup_trackrecord_panel.md; do
             [ -f "$p" ] && git add "$p" || true
           done
