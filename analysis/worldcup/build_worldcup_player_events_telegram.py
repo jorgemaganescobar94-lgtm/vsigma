@@ -89,13 +89,14 @@ _PROXY_TAG = "estimación (proxy del modelo)"
 
 
 def _fixture_uses_real(obj):
-    """True if ANY ranked player in this fixture used real xG/xA (player_xg_xa.csv)."""
+    """True iff a SHOWN ranked player in this fixture actually used real xG/xA (player_xg_xa.csv). A
+    headers-only template -> no player gets real data -> False (we never claim 'real' without it)."""
     pp = obj.get("player_predictions", {})
     for cat in ("likely_scorers", "likely_shots_on_target", "likely_assisters"):
         for it in pp.get(cat, []) or []:
             if it.get("source_used") == "real_xg_xa":
                 return True
-    return bool(obj.get("external_data_status", {}).get("xg_xa_available"))
+    return False
 
 
 def _src_mark(it):

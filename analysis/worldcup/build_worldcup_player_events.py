@@ -248,7 +248,16 @@ def build():
     coach_map, coach_reason = adapters.load_coach_profiles()
     pos_map, pos_reason = adapters.load_positional_profiles()
     fixture_referees = _load_fixture_referees()
-    ext_status = adapters.external_data_status()
+    # external_data_status reflects ACTUAL loaded data (an empty template file -> {} -> False), not mere
+    # file presence — so a headers-only template is honestly reported as not-yet-active.
+    ext_status = {
+        "xg_xa_available": bool(xg_xa_map),
+        "set_piece_available": bool(sp_takers_map),
+        "referee_available": bool(ref_profiles),
+        "weather_available": bool(weather_map),
+        "coach_profile_available": bool(coach_map),
+        "positional_profile_available": bool(pos_map),
+    }
 
     # Fase 2 — REAL event history: penalties / last taker / cards from /fixtures/events (cached store).
     events_df = fxev.extract()[fxev.COLUMNS] if True else None

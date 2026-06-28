@@ -1,0 +1,8 @@
+fixture_id,venue,kickoff_time,temperature,humidity,wind_speed,rain_probability,pitch_condition,source,data_quality,confidence
+1489402,,2026-06-23 20:00,,,,,,plantilla_kickoff,pendiente,pendiente
+1489403,,2026-06-23 23:00,,,,,,plantilla_kickoff,pendiente,pendiente
+1539008,,2026-06-24 02:00,,,,,,plantilla_kickoff,pendiente,pendiente
+1489408,,2026-06-24 19:00,,,,,,plantilla_kickoff,pendiente,pendiente
+1539009,,2026-06-24 19:00,,,,,,plantilla_kickoff,pendiente,pendiente
+1489405,,2026-06-24 22:00,,,,,,plantilla_kickoff,pendiente,pendiente
+1489406,,2026-06-24 22:00,,,,,,plantilla_kickoff,pendiente,pendiente

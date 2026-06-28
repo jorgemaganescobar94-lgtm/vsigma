@@ -64,6 +64,13 @@ def build_weather_context(fixture_id, weather_map=None, weather_reason=None):
 
     temp = w.get("temperature")
     wind = w.get("wind_speed")
+    # A row with NO actual measurements (e.g. a kickoff/venue-only template row) is NOT "normal
+    # weather" — it is unknown. Degrade honestly instead of implying benign conditions.
+    has_measurement = any(w.get(k) is not None for k in
+                          ("temperature", "humidity", "wind_speed", "rain_probability", "rain_mm")) \
+        or bool(w.get("pitch_condition")) or bool(w.get("condition"))
+    if not has_measurement:
+        return _none_ctx("fila de clima sin mediciones (solo kickoff/venue) — pendiente de rellenar")
     wet = _is_wet(w)
     parts = []
     if temp is not None:

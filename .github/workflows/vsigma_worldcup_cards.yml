@@ -307,6 +307,17 @@ jobs:
           echo "----- fixture events (head) -----"
           head -15 analysis/worldcup/worldcup_fixture_events.csv || true
 
+      # ---- FASE 4A external-data TEMPLATE preparer (read-only inputs, NO API, NO scraping, NO
+      #      fabrication): create-if-missing the data/external/*.csv contracts and PRE-POPULATE only
+      #      fields derivable from REAL repo data (penalty takers from real events, player position from
+      #      cached lineups, fixture_id+kickoff for weather). NEVER overwrites manual edits; xG/xA,
+      #      referee, coach, weather measurements stay EMPTY for manual entry. Runs AFTER the fixture-
+      #      events extractor (its input) and BEFORE Fase 3 so the adapters can pick up any new rows.
+      - name: Fase 4A — prepare external-data templates (create-if-missing, soft-fail)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/prepare_worldcup_external_templates.py
+
       # ---- FASE 3 external-data status (read-only, NO API, NO secrets): logs which optional CSV
       #      sources under data/external/ are active for this run (xG/xA real, set-piece takers,
       #      referee, weather, coach tactical, positional). Pure diagnostics; never blocks. Absent
