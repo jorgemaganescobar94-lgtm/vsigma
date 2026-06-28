@@ -20,16 +20,16 @@
 ==============================================================================
 PLAYER PROPS — track record (SOMBRA · heurístico · NO validado · sin mercado)
 ==============================================================================
-generated_at_utc: 2026-06-27T14:31:28+00:00
-partidos liquidados=12 | filas jugador-prop=264 | umbral graduación N>=30
+generated_at_utc: 2026-06-28T08:56:49+00:00
+partidos liquidados=18 | filas jugador-prop=396 | umbral graduación N>=30
 MUESTRA INSUFICIENTE para graduar (N<30). Métricas mostradas son orientativas.
 
   prop          n  base%  logloss   brier    ECE  ll_base br_base  mejora?
   ------------------------------------------------------------------------
-  goal        264     6%   0.2307  0.0625  0.038   0.2389  0.0602       no
-  card        264    10%   0.3447  0.0977  0.073   0.3300  0.0918       no
-  shot_on     264    17%   0.5804  0.1541  0.122   0.4566  0.1414       no
-  assist      264     7%   0.2446  0.0656  0.035   0.2489  0.0635       no
+  goal        396     8%   0.2506  0.0685  0.035   0.2746  0.0722       sí
+  card        396    10%   0.3397  0.0956  0.073   0.3217  0.0888       no
+  shot_on     396    19%   0.5231  0.1467  0.103   0.4817  0.1519       no
+  assist      396     6%   0.2392  0.0620  0.027   0.2355  0.0591       no
 
   (baseline = tasa base del prop; 'mejora?'=sí solo si bate logloss Y brier Y ECE<=0.08.)
   (muestra pequeña -> orientativo; la graduación exige N>=30 partidos.)

@@ -8,25 +8,26 @@
 ==============================================================================
 CONTEXT-ADJUSTMENT — context-adjusted VS pure L3 (SOMBRA · heurístico · NO validado)
 ==============================================================================
-generated_at_utc: 2026-06-27T14:31:29+00:00
-partidos liquidados (total)=6 | con escenario NO trivial=4 | triviales (sin cambio, excluidos)=2 | umbral graduación N>=20
+generated_at_utc: 2026-06-28T08:56:50+00:00
+partidos liquidados (total)=12 | con escenario NO trivial=9 | triviales (sin cambio, excluidos)=3 | umbral graduación N>=20
 MUESTRA INSUFICIENTE para graduar (N<20). Métricas orientativas; sigue en SOMBRA.
 
 --- 1X2 (multiclase H/D/A) sobre escenarios NO triviales ---
   modelo              n  logloss   brier   acc%
   ---------------------------------------------
-  L3 puro             4   0.8331  0.4878   50.0
-  context-adj         4   0.8286  0.4777   50.0
-  Δ(L3 − ctx): logloss +0.0045 · brier +0.0101 -> ctx BATE a L3 (1X2)
+  L3 puro             9   0.6905  0.3857   66.7
+  context-adj         9   0.6723  0.3697   66.7
+  Δ(L3 − ctx): logloss +0.0182 · brier +0.0161 -> ctx BATE a L3 (1X2)
 
 --- Over 2.5 (binario, Poisson xG) sobre escenarios NO triviales ---
-  real Over=25% (n=4)
-  L3 puro          logloss 0.6259 · brier 0.2165
-  context-adj      logloss 0.6184 · brier 0.2128
+  real Over=44% (n=9)
+  L3 puro          logloss 0.6463 · brier 0.2269
+  context-adj      logloss 0.6324 · brier 0.2199
 
 --- recuento por escenario (filas no triviales liquidadas) ---
-  le_vale_empate   2
-  debe_ganar       2
+  debe_ganar       6
+  le_vale_empate   5
+  qualified        2
 
 VEREDICTO: SIGUE EN SOMBRA (no cumple: N<20).
   (NO se aplica nada automáticamente; los multiplicadores son hipótesis, muestra pequeña.)
