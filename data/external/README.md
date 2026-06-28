@@ -47,6 +47,16 @@ fichero (o le faltan columnas mínimas) el adaptador devuelve `{} / None + reaso
 con `data_quality/confidence/reason` — **nunca inventa valores** (regla §12). Cargados por
 `analysis/players/player_data_adapters.py`; el estado se ve en `external_data_status` del JSON.
 
+> **Pre-poblado incremental seguro (Fase 4A/4B).** `analysis/worldcup/prepare_worldcup_external_templates.py`
+> crea estas plantillas y las mantiene con un *merge incremental* que **solo** rellena desde datos reales
+> ya cacheados en el repo (sin scraping, sin red, sin secrets): lanzadores de **penalti** desde
+> `/fixtures/events` (`source=api_football_events`), **posición** del jugador desde alineaciones (fina si
+> alguna fuente la trae, si no la gruesa GK/DEF/MID/FWD), y **árbitro/venue** si aparecen en el store.
+> El merge **nunca borra filas, nunca duplica y nunca pisa una celda que ya rellenaste a mano**: solo
+> añade filas nuevas, completa celdas vacías y refresca los hechos auto-derivados (p. ej. `attempts`,
+> `last_taken_date`) de las filas cuyo `source` es automático. Tus ediciones manuales (cualquier `source`
+> distinto, o cualquier celda no vacía) son intocables. Lo que no exista todavía se queda vacío.
+
 ### A) `player_xg_xa.csv` — xG/xA real por jugador  *(reemplaza el proxy en goles/tiros/asistencias)*
 Columnas mínimas: `player_id, xg90, xa90`. Opcionales: el resto (None si faltan).
 ```
