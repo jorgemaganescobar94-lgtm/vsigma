@@ -190,12 +190,24 @@ jobs:
           echo "----- mx-vs-L3 marker -----"
           cat analysis/worldcup/worldcup_mx_vs_l3_scorecard.txt || true
 
+      # ---- CORRECCIÓN DE NIVEL auto-aprendida (córners/tiros MOSTRADOS): estima el sesgo desde los
+      #      partidos liquidados (encogido ×N/(N+25), cap) y guarda el estado. Se re-estima sola cada
+      #      día = auto-aprendizaje. SOLO afecta el valor MOSTRADO de la ficha (display, en memoria);
+      #      el log queda en CRUDO. Reversible (flag STATS_LEVEL_CORRECTION). Tarjetas EXCLUIDAS, NO
+      #      toca 1X2/goles/props, NO mercado. SOFT: sin datos -> sin corrección, briefing intacto.
+      - name: Corrección de nivel stats (estima + guarda estado; read-only sobre modelo)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/worldcup_stats_level_correction.py
+          echo "----- stats-level correction state -----"
+          cat analysis/worldcup/worldcup_stats_level_correction.csv || true
+
       # ---- MARCADOR ACUMULADO STATS POR EQUIPO (read-only): córners/tiros/tarjetas predicho vs real
       #      leyendo el log (st_*_total congelados al saque + result_* liquidados, mismo dato que las
-      #      líneas [REAL]). Anti-hindsight: predicción pre-KO, nunca recalculada. MAE/RMSE/sesgo +
-      #      acierto de línea O/U (córners). NO recalcula predicciones, NO toca el modelo, NO mercado.
-      #      Alimenta el panel. SOFT: un fallo NUNCA bloquea el briefing.
-      - name: Marcador stats por equipo (read-only; alimenta panel)
+      #      líneas [REAL]). Anti-hindsight: predicción pre-KO, nunca recalculada. MAE/RMSE/sesgo CRUDO
+      #      y CORREGIDO (lee el estado de la corrección) + acierto de línea O/U (córners). NO recalcula
+      #      predicciones, NO toca el modelo, NO mercado. Alimenta el panel. SOFT: nunca bloquea.
+      - name: Marcador stats por equipo (read-only; sesgo crudo vs corregido; alimenta panel)
         continue-on-error: true
         run: |
           python analysis/worldcup/worldcup_team_stats_scorer.py
@@ -328,6 +340,7 @@ jobs:
                    analysis/worldcup/worldcup_mx_vs_l3_scorecard.csv \
                    analysis/worldcup/worldcup_team_stats_scorecard.txt \
                    analysis/worldcup/worldcup_team_stats_scorecard.csv \
+                   analysis/worldcup/worldcup_stats_level_correction.csv \
                    analysis/worldcup/worldcup_trackrecord_panel.md; do
             [ -f "$p" ] && git add "$p" || true
           done

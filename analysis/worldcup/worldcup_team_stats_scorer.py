@@ -57,7 +57,11 @@ SCORECARD_TXT = HERE / "worldcup_team_stats_scorecard.txt"
 SCORECARD_CSV = HERE / "worldcup_team_stats_scorecard.csv"
 
 SMALL_N = 30  # below this the metrics are flagged "muestra pequeña, orientativo"
-CSV_COLUMNS = ["stat", "n", "mae", "rmse", "bias", "mean_pred", "mean_real", "line_acc"]
+# bias = sesgo CRUDO del modelo (mean pred-real); bias_corr = sesgo tras la corrección de nivel
+# actual (crudo + correccion_total leída de worldcup_stats_level_correction.csv) -> verifica que baja.
+CSV_COLUMNS = ["stat", "n", "mae", "rmse", "bias", "bias_corr", "mean_pred", "mean_real", "line_acc"]
+# read-only: the level-correction state written by worldcup_stats_level_correction.py (soft).
+CORRECTION_CSV = HERE / "worldcup_stats_level_correction.csv"
 
 # stat key -> (display es, predicted total col, real col, low-confidence note)
 STATS = [
@@ -79,6 +83,26 @@ def _settled(df):
     if "result_1x2" in s.columns:
         s = s[s["result_1x2"].isin(["H", "D", "A"])]
     return s
+
+
+def _load_corrections(path=CORRECTION_CSV):
+    """{stat: correction_total} from the level-correction state file, or {} (soft). Read-only — the
+    scorer never estimates the correction; it just reads what the correction module saved, to report
+    the post-correction bias alongside the raw one."""
+    p = Path(path)
+    if not p.exists():
+        return {}
+    try:
+        df = pd.read_csv(p)
+    except Exception:
+        return {}
+    out = {}
+    for _, r in df.iterrows():
+        try:
+            out[str(r["stat"])] = float(r["correction_total"])
+        except Exception:
+            continue
+    return out
 
 
 def _line_acc(s):
@@ -113,6 +137,8 @@ def compute_from_log(log_path=LOG):
     if not len(s):
         return {"rows": []}
 
+    # resolve CORRECTION_CSV at call time (module global) so it stays patchable / testable
+    corrections = _load_corrections(CORRECTION_CSV)   # {stat: correction_total} (empty if absent)
     rows = []
     for key, label, pcol, rcol, note in STATS:
         if pcol not in s.columns or rcol not in s.columns:
@@ -124,11 +150,16 @@ def compute_from_log(log_path=LOG):
         pred = sub[pcol].to_numpy(float)
         real = sub[rcol].to_numpy(float)
         diff = pred - real
+        bias = float(np.mean(diff))
+        # post-correction bias = raw + correction_total (the level fix ADDS correction_total to the
+        # predicted total -> shifts the bias toward 0). None when this stat has no correction (cards).
+        corr = corrections.get(key)
+        bias_corr = (bias + corr) if corr is not None else None
         row = {
             "stat": key, "label": label, "note": note, "n": n,
             "mae": float(np.mean(np.abs(diff))),
             "rmse": float(np.sqrt(np.mean(diff ** 2))),
-            "bias": float(np.mean(diff)),
+            "bias": bias, "bias_corr": bias_corr, "correction": corr,
             "mean_pred": float(np.mean(pred)),
             "mean_real": float(np.mean(real)),
             "line_acc": None, "line_n": 0, "line_real_over": None,
@@ -174,14 +205,25 @@ def render_txt(res):
 
     L.append("total por partido (suma de ambos equipos) · predicción congelada al saque (anti-hindsight) "
              "vs real liquidado · sin mercado")
-    hdr = (f"  {'stat':10} {'N':>3} {'MAE':>6} {'RMSE':>6} {'sesgo':>7} "
-           f"{'μpred':>6} {'μreal':>6} {'lectura':>13}")
+    hdr = (f"  {'stat':10} {'N':>3} {'MAE':>6} {'RMSE':>6} {'sesgo_crudo':>11} "
+           f"{'sesgo_corr':>10} {'μpred':>6} {'μreal':>6} {'lectura':>13}")
     L.append(hdr)
     L.append("  " + "-" * (len(hdr) - 2))
     for r in res["rows"]:
+        bc = "—" if r.get("bias_corr") is None else f"{r['bias_corr']:+.2f}"
         L.append(f"  {r['label']:10} {r['n']:>3} {r['mae']:>6.2f} {r['rmse']:>6.2f} "
-                 f"{r['bias']:>+7.2f} {r['mean_pred']:>6.1f} {r['mean_real']:>6.1f} "
+                 f"{r['bias']:>+11.2f} {bc:>10} {r['mean_pred']:>6.1f} {r['mean_real']:>6.1f} "
                  f"{_bias_es(r['bias']):>13}")
+    # raw vs corrected bias check (córners/tiros): the level correction should shrink |sesgo|
+    corr_rows = [r for r in res["rows"] if r.get("bias_corr") is not None]
+    if corr_rows:
+        L.append("")
+        L.append("  corrección de nivel (córners/tiros MOSTRADOS): |sesgo| crudo -> corregido")
+        for r in corr_rows:
+            better = abs(r["bias_corr"]) < abs(r["bias"]) - 1e-9
+            L.append(f"    {r['label']:10} |{abs(r['bias']):.2f}| -> |{abs(r['bias_corr']):.2f}| "
+                     f"(corr {r['correction']:+.2f}) {'baja ✓' if better else 'no baja'}")
+        L.append("    (tarjetas EXCLUIDAS de la corrección; muestra pequeña -> orientativo, no es victoria)")
     # córners line O/U
     cr = next((r for r in res["rows"] if r["stat"] == "corners"), None)
     if cr and cr["line_acc"] is not None:
@@ -204,6 +246,7 @@ def write_csv(res, path=SCORECARD_CSV):
         rows.append({
             "stat": r["stat"], "n": r["n"],
             "mae": round(r["mae"], 2), "rmse": round(r["rmse"], 2), "bias": round(r["bias"], 2),
+            "bias_corr": ("" if r.get("bias_corr") is None else round(r["bias_corr"], 2)),
             "mean_pred": round(r["mean_pred"], 1), "mean_real": round(r["mean_real"], 1),
             "line_acc": ("" if r["line_acc"] is None else round(r["line_acc"], 0)),
         })

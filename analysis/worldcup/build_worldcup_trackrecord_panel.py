@@ -186,7 +186,8 @@ def _bias_read(bias):
 
 def section_team_stats(csv_text):
     """Stats por equipo (córners/tiros/tarjetas) predicho vs real, del CSV del scorer (read-only).
-    CSV: stat,n,mae,rmse,bias,mean_pred,mean_real,line_acc (línea O/U solo para córners)."""
+    CSV: stat,n,mae,rmse,bias,bias_corr,mean_pred,mean_real,line_acc (línea O/U solo córners;
+    bias_corr = sesgo tras la corrección de nivel auto-aprendida, vacío para tarjetas)."""
     lines = ["## Stats por equipo — predicho vs real (en vivo)"]
     rows = []
     for i, raw in enumerate(csv_text.splitlines()):
@@ -194,29 +195,35 @@ def section_team_stats(csv_text):
         if not raw or (i == 0 and raw.lower().startswith("stat,")):
             continue
         parts = raw.split(",")
-        if len(parts) < 8:
+        if len(parts) < 9:
             continue
-        rows.append(parts[:8])
+        rows.append(parts[:9])
     if not rows:
         lines.append("_— sin datos aún: aún no hay partidos liquidados con stats reales (settle trae "
                      "córners/tiros/tarjetas de /fixtures/statistics al terminar el partido) —_")
         return lines
     n_max = max((_to_f(r[1]) or 0 for r in rows), default=0)
+    has_corr = any((r[5] or "").strip() for r in rows)
     lines.append("**Total por partido** (suma de ambos equipos) · predicción congelada al saque "
                  "(anti-hindsight) vs real liquidado · sin mercado.")
     lines.append("")
-    lines.append("| stat | N | MAE | RMSE | sesgo (pred−real) | ¿acierto línea? |")
-    lines.append("|---|---:|---:|---:|---|---|")
-    for stat, n, mae, rmse, bias, _mp, _mr, line_acc in rows:
+    lines.append("| stat | N | MAE | RMSE | sesgo crudo (pred−real) | sesgo corregido | ¿acierto línea? |")
+    lines.append("|---|---:|---:|---:|---|---|---|")
+    for stat, n, mae, rmse, bias, bias_corr, _mp, _mr, line_acc in rows:
         label = _STAT_ES.get(stat, stat) + _STAT_NOTE.get(stat, "")
         la = f"{line_acc}% (O/U)" if (line_acc or "").strip() else "—"
-        lines.append(f"| {label} | {n} | {mae} | {rmse} | {_bias_read(bias)} | {la} |")
+        bc = _bias_read(bias_corr) if (bias_corr or "").strip() else "— (no corregido)"
+        lines.append(f"| {label} | {n} | {mae} | {rmse} | {_bias_read(bias)} | {bc} | {la} |")
+    if has_corr:
+        lines.append("> 🔧 **Corrección de nivel auto-aprendida (córners/tiros MOSTRADOS)**: aditiva, "
+                     "encogida por muestra (×N/(N+25)), reversible (flag `STATS_LEVEL_CORRECTION`). El "
+                     "**sesgo corregido** debe acercarse a 0 vs el crudo. **Tarjetas EXCLUIDAS** (ruido).")
     lines.append("> Honestidad: **córners = baja confianza · tarjetas = ruido** → un error alto es "
                  "ESPERABLE; el marcador lo refleja sin maquillar. **No** se declara nada 'bueno/malo': "
                  "solo se acumula durante el torneo.")
     if n_max and n_max < 30:
         lines.append(f"> ⚠️ muestra pequeña (N={int(n_max)} < 30): métricas orientativas, aún no concluyentes.")
-    lines.append("> _Solo mide; NO toca el modelo ni las predicciones (st_*/result_* congelados/liquidados en el log)._")
+    lines.append("> _Solo mide / corrige el valor MOSTRADO; el modelo y el log (st_*/result_*) quedan en CRUDO._")
     return lines
 
 

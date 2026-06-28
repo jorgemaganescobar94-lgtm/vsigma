@@ -46,6 +46,10 @@ try:
     import build_worldcup_enrichment as wc_enrich  # noqa: E402  (post-FT [REAL] lines, soft)
 except Exception:
     wc_enrich = None
+try:
+    import worldcup_stats_level_correction as stats_correction  # noqa: E402  (shown córners/tiros level fix)
+except Exception:
+    stats_correction = None
 
 OUT_DIR = Path(__file__).resolve().parent
 CARDS = OUT_DIR / "worldcup_cards.csv"
@@ -717,6 +721,18 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
     if len(df):
         df["d"] = df["kickoff_utc"].str[:10]
         df = df[(df["d"] >= date_from) & (df["d"] <= date_to)].sort_values("kickoff_utc").head(limit)
+
+    # 🔴 STATS_LEVEL_CORRECTION (reversible): auto-learned LEVEL fix for the SHOWN córners/tiros only,
+    # applied to the DISPLAY df IN MEMORY (the on-disk cards.csv and the learning-loop log stay RAW —
+    # no leakage). Tarjetas / 1X2 / goles / props NEVER touched. Flag OFF -> Δ=0. Soft-fail: a missing
+    # state / any error -> no correction, identical card.
+    if stats_correction is not None:
+        try:
+            n_corr = stats_correction.apply_to_df(df)
+            if n_corr:
+                print(f"stats-level correction applied to shown córners/tiros ({n_corr} stat(s)).")
+        except Exception:
+            pass
 
     if paginate:
         nmsg = render_paginated(df, date_from, within_hours, scorecard, show_yesterday,
