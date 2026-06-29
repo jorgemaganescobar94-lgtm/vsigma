@@ -485,6 +485,17 @@ jobs:
           echo "----- card-risk evaluation (report) -----"
           cat analysis/worldcup/worldcup_card_risk_evaluation_report.txt || true
 
+      # Fase 4H: ANTI-LOOK-AHEAD evaluation — rebuilds the auto profiles WITHOUT future info
+      #      (pre_fixture = only earlier match-days; leave_one_out = all but the evaluated fixture) to
+      #      test whether the 4G improvement survives. MEASURE ONLY — no weight change. Read-only, pure
+      #      football, no betting. Soft-fail. Runs after the 4G evaluator.
+      - name: Fase 4H — no-look-ahead card-risk evaluation (read-only, soft-fail)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/evaluate_worldcup_card_risk_adjustment_no_lookahead.py
+          echo "----- no-look-ahead evaluation (report) -----"
+          cat analysis/worldcup/worldcup_card_risk_no_lookahead_report.txt || true
+
       # ---- CONTEXT-ADJUSTMENT (SHADOW): qualification-scenario nudge vs pure L3. ISOLATED,
       #      NEVER shown on Telegram / in the ficha. predict (NS, anti-hindsight, lock-at-KO) ->
       #      settle (FT) -> scorecard (context-adjusted vs L3, only over NON-TRIVIAL scenarios).
@@ -549,6 +560,7 @@ jobs:
                    analysis/worldcup/worldcup_referee_profiles_auto.csv \
                    analysis/worldcup/worldcup_card_profiles_auto.csv \
                    analysis/worldcup/worldcup_card_risk_evaluation.csv \
+                   analysis/worldcup/worldcup_card_risk_no_lookahead_evaluation.csv \
                    analysis/worldcup/worldcup_trackrecord_panel.md; do
             [ -f "$p" ] && git add "$p" || true
           done

@@ -152,6 +152,15 @@ def test_recommend_lower_when_both_worsen():
     assert "bajar" in rec["weights"].lower()
 
 
+def test_recommend_zero_delta_is_no_change_not_worsen():
+    # exact no-op (adjuster inert / profiles absent) must NOT be read as "empeora" -> no weight cut.
+    overall = {"n": 400, "n_positive": 60, "delta_brier": 0.0, "delta_logloss": 0.0}
+    rec = ev.recommend(overall, {"by_direction": {}, "by_referee": {}})
+    assert "sin cambio" in rec["verdict"].lower()
+    assert "no tocar" in rec["weights"].lower()
+    assert "bajar" not in rec["weights"].lower()
+
+
 def test_recommend_flags_referee_inactive():
     overall = {"n": 400, "n_positive": 60, "delta_brier": -0.01, "delta_logloss": -0.03}
     rec = ev.recommend(overall, {"by_direction": {}, "by_referee": {"no determinado": {"n": 400}}})

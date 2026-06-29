@@ -268,6 +268,11 @@ def recommend(overall, segments):
         verdict = "muestra baja"
         weights = "no tocar nada — muestra insuficiente para concluir"
         result_word = "no concluyente"
+    elif abs(db) < 1e-9 and abs(dl) < 1e-9:
+        # exact no-op (e.g. card profiles not generated -> adjuster inert). NOT a worsening.
+        verdict = "sin cambio (ajuste inerte: perfiles no disponibles o sin señal)"
+        weights = "no tocar nada — el ajuste no se aplicó (revisar que existan los perfiles auto)"
+        result_word = "sin cambio"
     else:
         improves_brier = db < 0
         improves_logloss = dl < 0
