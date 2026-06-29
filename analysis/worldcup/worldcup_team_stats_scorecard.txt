@@ -16,4 +16,4 @@ total por partido (suma de ambos equipos) · predicción congelada al saque (ant
 
 HONESTIDAD: córners = BAJA confianza · tarjetas = RUIDO -> error alto ESPERABLE, no se maquilla. tiros = orientativo. NO se declara nada 'bueno/malo'; solo se acumula.
 
-generated_at_utc: 2026-06-29T13:56:39+00:00
+generated_at_utc: 2026-06-29T14:19:40+00:00
