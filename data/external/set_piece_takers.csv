@@ -1,1 +1,6 @@
 team_id,team_name,player_id,player_name,role,rank,attempts,last_taken_date,source,data_quality,confidence
+26,Argentina,154,Lionel Messi,penalty,1,1,2026-06-22,api_football_events,alta,baja
+26,Argentina,217,L. Martinez,penalty,2,1,2026-06-28,api_football_events,alta,baja
+1090,Norway,2032,Jørgen Strand Larsen,penalty,1,1,2026-06-26,api_football_events,alta,baja
+22,Iran,42315,M. Taremi,penalty,1,1,2026-06-27,api_football_events,alta,baja
+1508,Congo DR,20649,Y. Wissa,penalty,1,1,2026-06-27,api_football_events,alta,baja
