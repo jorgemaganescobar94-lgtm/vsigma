@@ -1,14 +1,16 @@
 # vSIGMA Probable Lineup Consensus v2 - 2026-06-29
 
 ## Summary
-- fixtures_reviewed: 0
-- probable_lineup_gates: none
-- home_confidence: none
-- away_confidence: none
+- fixtures_reviewed: 2
+- probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=2
+- home_confidence: NO_APPROVED_SOURCES=2
+- away_confidence: NO_APPROVED_SOURCES=2
 - auto_apply: NO
 - production_change: NO
 
 ## Fixture Consensus
+- Panevėžys vs Suduva Marijampole | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Šiauliai vs TransINVEST Vilnius | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
 
 ## Guardrails
 - Registry-approved probable XI is never treated as official lineup.

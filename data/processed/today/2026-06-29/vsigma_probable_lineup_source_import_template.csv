@@ -1,1 +1,21 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
+2026-06-29,1547574,A Lyga,Lithuania,Panevėžys,Suduva Marijampole,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547574,A Lyga,Lithuania,Panevėžys,Suduva Marijampole,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547574,A Lyga,Lithuania,Panevėžys,Suduva Marijampole,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547574,A Lyga,Lithuania,Panevėžys,Suduva Marijampole,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547574,A Lyga,Lithuania,Panevėžys,Suduva Marijampole,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547574,A Lyga,Lithuania,Panevėžys,Suduva Marijampole,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547574,A Lyga,Lithuania,Panevėžys,Suduva Marijampole,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547574,A Lyga,Lithuania,Panevėžys,Suduva Marijampole,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547574,A Lyga,Lithuania,Panevėžys,Suduva Marijampole,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547574,A Lyga,Lithuania,Panevėžys,Suduva Marijampole,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547573,A Lyga,Lithuania,Šiauliai,TransINVEST Vilnius,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547573,A Lyga,Lithuania,Šiauliai,TransINVEST Vilnius,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547573,A Lyga,Lithuania,Šiauliai,TransINVEST Vilnius,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547573,A Lyga,Lithuania,Šiauliai,TransINVEST Vilnius,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547573,A Lyga,Lithuania,Šiauliai,TransINVEST Vilnius,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547573,A Lyga,Lithuania,Šiauliai,TransINVEST Vilnius,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547573,A Lyga,Lithuania,Šiauliai,TransINVEST Vilnius,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547573,A Lyga,Lithuania,Šiauliai,TransINVEST Vilnius,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547573,A Lyga,Lithuania,Šiauliai,TransINVEST Vilnius,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-29,1547573,A Lyga,Lithuania,Šiauliai,TransINVEST Vilnius,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
