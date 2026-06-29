@@ -99,6 +99,11 @@ analysis/worldcup/worldcup_team_sot_correction_shadow_monitor_report.txt
 analysis/worldcup/worldcup_team_stats_level_correction_shadow_summary.json
 analysis/worldcup/worldcup_team_stats_level_correction_shadow_report.txt
 
+# Fase 4O display-correction readiness gate: the .csv is auto-committed by CI (kept); the json + report
+# are regenerable side-artifacts (ignored).
+analysis/worldcup/worldcup_display_correction_readiness.json
+analysis/worldcup/worldcup_display_correction_readiness_report.txt
+
 # Fase 4C-4 external persistable snapshot + generated reports (regenerable; NEVER auto-committed)
 analysis/worldcup/persistable_external_snapshot/
 analysis/worldcup/worldcup_external_persistable_snapshot_report.txt

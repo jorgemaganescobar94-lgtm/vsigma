@@ -561,6 +561,18 @@ jobs:
           echo "----- team stats level correction shadow (report) -----"
           cat analysis/worldcup/worldcup_team_stats_level_correction_shadow_report.txt || true
 
+      # Fase 4O: DISPLAY-CORRECTION READINESS GATE — aggregates the 4N shadow monitors (SOT/shots/
+      #      corners) into a per-module readiness_status + global should_propose_activation_any. ALERT
+      #      ONLY: activates NOTHING (activation stays 🔴, proposal-first in a later phase). Read-only,
+      #      pure football, no betting. Soft-fail. Runs AFTER the 4N monitors and BEFORE the 4J panel so
+      #      the 'Display correction readiness' module appears.
+      - name: Fase 4O — display-correction readiness gate (read-only, soft-fail)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/monitor_worldcup_display_correction_readiness.py
+          echo "----- display correction readiness (report) -----"
+          cat analysis/worldcup/worldcup_display_correction_readiness_report.txt || true
+
       # Fase 4J: GLOBAL PREDICTION-ACCURACY evaluation — panels EVERY main output (1X2, goals, per-player
       #      goal/assist/SOT/cards, team stats) against real settled outcomes with an honest status +
       #      recommendation per module. MEASURE ONLY: no weights/models/predictions/Telegram/external
@@ -637,6 +649,7 @@ jobs:
                    analysis/worldcup/worldcup_team_sot_level_correction.csv \
                    analysis/worldcup/worldcup_team_sot_correction_shadow_monitor.csv \
                    analysis/worldcup/worldcup_team_stats_level_correction_shadow.csv \
+                   analysis/worldcup/worldcup_display_correction_readiness.csv \
                    analysis/worldcup/worldcup_stats_level_correction.csv \
                    analysis/worldcup/worldcup_referee_profiles_auto.csv \
                    analysis/worldcup/worldcup_card_profiles_auto.csv \

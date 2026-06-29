@@ -39,6 +39,7 @@ TEAM_SOT_SCORECARD = HERE / "worldcup_team_sot_scorecard.csv"  # Fase 4L per-tea
 TEAM_SOT_CORRECTION_JSON = HERE / "worldcup_team_sot_level_correction_summary.json"  # Fase 4M (shadow)
 TEAM_SOT_MONITOR_JSON = HERE / "worldcup_team_sot_correction_shadow_monitor.json"     # Fase 4N (monitor)
 TEAM_STATS_CORRECTION_JSON = HERE / "worldcup_team_stats_level_correction_shadow_summary.json"  # Fase 4N
+DISPLAY_READINESS_JSON = HERE / "worldcup_display_correction_readiness.json"  # Fase 4O readiness gate
 SHADOW_MONITOR_JSON = HERE / "worldcup_card_risk_shadow_monitor.json"
 SCORELINE_EVAL_JSON = HERE / "worldcup_scoreline_evaluation_summary.json"
 OUT_CSV = HERE / "worldcup_prediction_accuracy.csv"
@@ -502,6 +503,38 @@ def team_stats_correction_shadow_module(stat, label, path=TEAM_STATS_CORRECTION_
             "reason": f"{n} fixtures (totales por partido) con corrección shadow + anti-look-ahead"}
 
 
+# ============================================================ display-correction readiness (Fase 4O, SHADOW)
+def display_readiness_module(path=DISPLAY_READINESS_JSON):
+    """Surface the Fase-4O readiness gate as a SHADOW module: should_propose_activation_any, the ready
+    modules and the first candidate. Activates NOTHING. NO_EVALUABLE if the readiness file is absent."""
+    base = {"module": "Display correction readiness", "status": "SHADOW",
+            "recommendation": "dejar shadow", "confidence": "baja"}
+    p = Path(path)
+    if not p.exists():
+        return {**base, "status": "NO_EVALUABLE", "n": 0,
+                "reason": "sin readiness gate (Fase 4O)",
+                "recommendation": "ejecutar monitor_worldcup_display_correction_readiness.py"}
+    try:
+        s = json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return {**base, "status": "NO_EVALUABLE", "n": 0, "reason": "readiness gate ilegible",
+                "recommendation": "necesita más datos"}
+    mods = s.get("modules", []) or []
+    should = bool(s.get("should_propose_activation_any", False))
+    statuses = {m["module"]: m.get("readiness_status") for m in mods}
+    return {"module": "Display correction readiness", "status": "SHADOW", "n": len(mods),
+            "primary_metric": "should_propose_activation_any", "primary_value": should,
+            "secondary": {"ready_modules": s.get("ready_modules"),
+                          "first_candidate": s.get("first_candidate"),
+                          "module_status": statuses,
+                          "action_recommended": s.get("action_recommended")},
+            "bias": "n/a (gate de readiness, no predicción)",
+            "recommendation": ("preparar propuesta (🔴, fase posterior)" if should
+                               else "seguir shadow / esperar muestra"),
+            "confidence": "baja",
+            "reason": s.get("action_recommended", "gate de readiness (shadow)")}
+
+
 # ============================================================ scoreline top-3/5 (Fase 4K)
 def evaluate_scoreline_module(path=SCORELINE_EVAL_JSON):
     """Surface the Fase-4K scoreline evaluation (top-1/3/5 exact-score hit). NO_EVALUABLE if absent."""
@@ -619,6 +652,7 @@ def build(pred_log=PRED_LOG, props_log=PROPS_LOG, team_stats=TEAM_STATS_SCORECAR
     modules.append(team_sot_monitor_module())
     modules.append(team_stats_correction_shadow_module("shots", "Team shots level correction"))
     modules.append(team_stats_correction_shadow_module("corners", "Team corners level correction"))
+    modules.append(display_readiness_module())
     modules.append(card_risk_shadow_module())
 
     summary = {"meta": {"min_sample": MIN_SAMPLE,
