@@ -75,6 +75,13 @@ analysis/worldcup/worldcup_card_risk_shadow_monitor_report.txt
 analysis/worldcup/worldcup_prediction_accuracy_summary.json
 analysis/worldcup/worldcup_prediction_accuracy_report.txt
 
+# Fase 4K scoreline distribution + evaluation: the two .csv are auto-committed by CI (kept), the
+# distribution/evaluation json + reports are regenerable side-artifacts (ignored).
+analysis/worldcup/worldcup_scoreline_distribution.json
+analysis/worldcup/worldcup_scoreline_distribution_report.txt
+analysis/worldcup/worldcup_scoreline_evaluation_summary.json
+analysis/worldcup/worldcup_scoreline_evaluation_report.txt
+
 # Fase 4C-4 external persistable snapshot + generated reports (regenerable; NEVER auto-committed)
 analysis/worldcup/persistable_external_snapshot/
 analysis/worldcup/worldcup_external_persistable_snapshot_report.txt

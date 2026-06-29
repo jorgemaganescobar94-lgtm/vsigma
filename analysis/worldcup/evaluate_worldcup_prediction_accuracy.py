@@ -36,6 +36,7 @@ PRED_LOG = HERE / "worldcup_predictions_log.csv"
 PROPS_LOG = HERE / "worldcup_player_props_log.csv"
 TEAM_STATS_SCORECARD = HERE / "worldcup_team_stats_scorecard.csv"
 SHADOW_MONITOR_JSON = HERE / "worldcup_card_risk_shadow_monitor.json"
+SCORELINE_EVAL_JSON = HERE / "worldcup_scoreline_evaluation_summary.json"
 OUT_CSV = HERE / "worldcup_prediction_accuracy.csv"
 OUT_JSON = HERE / "worldcup_prediction_accuracy_summary.json"
 OUT_TXT = HERE / "worldcup_prediction_accuracy_report.txt"
@@ -242,10 +243,9 @@ def evaluate_goals(pred_df):
                           "rmse_total": _r(rmse(total_pred, total_real)),
                           "diff_sign_accuracy": _r(sign_ok / sign_n) if sign_n else None,
                           "exact_scoreline_hit": _r(exact_hit / exact_n) if exact_n else None,
-                          "top3_top5_scoreline": "NO_DISPONIBLE (el sistema no emite distribución de marcadores)"},
+                          "top3_top5_scoreline": "ver módulo 'Marcadores top-3/5' (Fase 4K)"},
             "bias": f"total goals bias {_r(b_total)} ({'sobre' if (b_total or 0)>0 else 'infra'}-predice)",
-            "recommendation": ("necesita salida mejor estructurada (distribución de marcadores) para top-3/5"
-                               if status == "ACTIVO" else "necesita más datos"),
+            "recommendation": "mantener" if status == "ACTIVO" else "necesita más datos",
             "confidence": "media" if status == "ACTIVO" else "baja",
             "reason": f"{n} partidos liquidados con xG previsto y resultado"}
 
@@ -348,6 +348,38 @@ def evaluate_team_stats(scorecard_df):
     return mods
 
 
+# ============================================================ scoreline top-3/5 (Fase 4K)
+def evaluate_scoreline_module(path=SCORELINE_EVAL_JSON):
+    """Surface the Fase-4K scoreline evaluation (top-1/3/5 exact-score hit). NO_EVALUABLE if absent."""
+    p = Path(path)
+    base = {"module": "Marcadores top-3/5", "confidence": "baja"}
+    if not p.exists():
+        return {**base, "status": "NO_EVALUABLE", "n": 0,
+                "reason": "sin evaluación de distribución de marcadores (Fase 4K)",
+                "recommendation": "necesita salida mejor estructurada"}
+    try:
+        s = json.loads(p.read_text(encoding="utf-8")).get("summary", {})
+    except Exception:
+        return {**base, "status": "NO_EVALUABLE", "n": 0, "reason": "evaluación de marcadores ilegible",
+                "recommendation": "necesita más datos"}
+    n = s.get("n_matches", 0)
+    if not n:
+        return {**base, "status": "NO_EVALUABLE", "n": 0, "reason": s.get("reason", "sin partidos"),
+                "recommendation": "necesita más datos"}
+    status = s.get("status", "ACTIVO")
+    return {"module": "Marcadores top-3/5", "status": status, "n": n,
+            "primary_metric": "exact_score_top3_hit_rate",
+            "primary_value": s.get("exact_score_top3_hit_rate"),
+            "secondary": {"top1": s.get("exact_score_top1_hit_rate"),
+                          "top5": s.get("exact_score_top5_hit_rate"),
+                          "mean_rank_actual": s.get("mean_rank_actual_score"),
+                          "derived_1x2_accuracy": s.get("derived_1x2_accuracy")},
+            "bias": f"prob. media del marcador real {s.get('actual_score_avg_probability')}",
+            "recommendation": "monitorizar" if status == "ACTIVO" else "necesita más datos",
+            "confidence": "media" if status == "ACTIVO" else "baja",
+            "reason": s.get("reason", f"{n} partidos con distribución de marcadores")}
+
+
 # ============================================================ card-risk adjustment (SHADOW, from 4I)
 def card_risk_shadow_module():
     p = Path(SHADOW_MONITOR_JSON)
@@ -420,6 +452,7 @@ def build(pred_log=PRED_LOG, props_log=PROPS_LOG, team_stats=TEAM_STATS_SCORECAR
     modules = [
         evaluate_1x2(pred),
         evaluate_goals(pred),
+        evaluate_scoreline_module(),
         evaluate_player_binary(props, "Jugadores: gol", "p_goal", "act_goal"),
         evaluate_player_binary(props, "Jugadores: asistencia", "p_assist", "act_assist"),
         evaluate_player_binary(props, "Jugadores: tiros a puerta", "p_shot_on", "act_shots_on"),

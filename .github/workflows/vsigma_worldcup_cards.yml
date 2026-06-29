@@ -507,6 +507,18 @@ jobs:
           echo "----- card-risk shadow monitor (report) -----"
           cat analysis/worldcup/worldcup_card_risk_shadow_monitor_report.txt || true
 
+      # Fase 4K: SCORELINE DISTRIBUTION — derives top-3/5 probable scorelines (independent Poisson over
+      #      the existing xG/λ; base model NOT modified) and evaluates them vs real results. Read-only,
+      #      pure football, no betting. Soft-fail. Must run BEFORE the 4J global panel so the
+      #      'Marcadores top-3/5' module becomes ACTIVO.
+      - name: Fase 4K — scoreline distribution + evaluation (read-only, soft-fail)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/build_worldcup_scoreline_distribution.py
+          python analysis/worldcup/evaluate_worldcup_scoreline_distribution.py
+          echo "----- scoreline evaluation (report) -----"
+          cat analysis/worldcup/worldcup_scoreline_evaluation_report.txt || true
+
       # Fase 4J: GLOBAL PREDICTION-ACCURACY evaluation — panels EVERY main output (1X2, goals, per-player
       #      goal/assist/SOT/cards, team stats) against real settled outcomes with an honest status +
       #      recommendation per module. MEASURE ONLY: no weights/models/predictions/Telegram/external
@@ -586,6 +598,8 @@ jobs:
                    analysis/worldcup/worldcup_card_risk_no_lookahead_evaluation.csv \
                    analysis/worldcup/worldcup_card_risk_shadow_monitor.csv \
                    analysis/worldcup/worldcup_prediction_accuracy.csv \
+                   analysis/worldcup/worldcup_scoreline_distribution.csv \
+                   analysis/worldcup/worldcup_scoreline_evaluation.csv \
                    analysis/worldcup/worldcup_trackrecord_panel.md; do
             [ -f "$p" ] && git add "$p" || true
           done

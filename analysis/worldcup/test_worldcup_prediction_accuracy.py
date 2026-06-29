@@ -72,7 +72,7 @@ def test_evaluate_goals_mae_and_exact():
     assert m["status"] == "ACTIVO" and m["n"] == 35
     assert m["primary_metric"] == "mae_total_goals" and m["primary_value"] is not None
     assert m["secondary"]["exact_scoreline_hit"] == 1.0    # top_score 1-0 == real 1-0
-    assert "NO_DISPONIBLE" in m["secondary"]["top3_top5_scoreline"]
+    assert "Marcadores top-3/5" in m["secondary"]["top3_top5_scoreline"]   # 4K module now covers it
 
 
 # ---------------------------------------------------------------- player modules
