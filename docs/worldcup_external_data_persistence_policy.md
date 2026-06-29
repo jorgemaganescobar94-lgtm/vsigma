@@ -1,7 +1,9 @@
 # Política de persistencia de `data/external/` en CI — producto Mundial (Fase 4C-2)
 
-> Estado: **DECISIÓN PENDIENTE de Jorge.** Hoy CI **no** hace `git add` de `data/external/`.
-> Este documento describe las opciones; la persistencia automática **no está activada**.
+> Estado: **OPCIÓN B ACTIVADA (Fase 4C-5), aprobada por Jorge.** CI persiste **solo** los 4 CSV
+> auto-derivados con rutas explícitas (nunca `git add data/external` ni `git add .`), gated por
+> `guard --strict`, solo en `main`, nunca en `pull_request`, y **abortando** si `data/external`
+> contuviera datos manuales. Los 3 ficheros de relleno manual nunca se commitean automáticamente.
 
 ## Contexto
 
@@ -97,14 +99,34 @@ El workflow ejecuta las tres en modo soft-fail (check → build → guard --stri
 **sin** `git add`, **sin** commit, **sin** push. El snapshot y los reportes generados están en
 `.gitignore` (regenerables, nunca auto-commiteados).
 
-## Próximo paso (Fase 4C-5, sujeto a aprobación 🔴)
+## Activación opción B (Fase 4C-5, IMPLEMENTADA y ACTIVADA)
 
-Para activar realmente la opción B haría falta (propuesta → aprobación de Jorge → aplicación):
-1. Decidir si se persiste el **snapshot filtrado** o se escribe lo auto-derivado directamente en
-   `data/external` vía el merge seguro (Fase 4B) — y commitear con `git add <ruta-explícita>` por archivo.
-2. Sustituir la **simulación** por un `git add`/`commit` acotado **condicionado a diff real** (sin
-   commits vacíos), con `guard --strict` como gate bloqueante previo.
-3. Permisos de escritura del workflow (`contents: write`) y trail de auditoría del commit automático.
+La opción B ya está activa en `vsigma_worldcup_cards.yml` con todas las salvaguardas. Dos piezas nuevas:
 
-Hasta esa aprobación explícita, **no se activa persistencia**: CI solo audita, hace dry-run, construye
-el snapshot aislado y **simula**.
+1. `analysis/worldcup/apply_worldcup_external_persistable_snapshot.py` — copia los 4 CSV permitidos del
+   snapshot a `data/external/`, pero **solo** si pasan TODAS las comprobaciones bloqueantes: snapshot
+   existe, sin ficheros prohibidos, esquema correcto, `guard --strict` sobre el snapshot OK (0 manuales),
+   y `data/external` **libre de datos manuales** (si tuviera manuales, copiar los borraría → **aborta**
+   sin tocar nada). `--dry-run` no escribe. Nunca toca `player_xg_xa` / `referee_profiles` /
+   `coach_tactical_profiles`.
+2. `analysis/worldcup/commit_worldcup_external_auto_persistence.py` — commit **controlado**: allow-list
+   de 4 rutas explícitas + guard final `git diff --name-only` (bloquea cualquier ruta fuera de la lista),
+   detecta commit vacío (exit 0 sin commitear), y **nunca hace push**. Por defecto solo informa; con
+   `--execute` hace `git add <rutas explícitas>` + `git commit -m "chore(worldcup): persist auto-derived
+   external data [skip ci]"`.
+
+**Workflow** (paso "Fase 4C-5", `if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'`,
+soft-fail): build snapshot → `guard --strict` (gate duro) → apply → commit `--execute` → **push
+controlado por Actions** (rebase+retry) solo si hay un commit de persistencia sin pushear. Permisos:
+el workflow ya declara `permissions: contents: write`.
+
+**Estado de los datos hoy:** `data/external` ya es 100 % auto-derivado, así que la copia es idéntica y
+el commit sale **vacío** (no se commitea nada hasta que aparezca un dato auto nuevo, p.ej. un árbitro o
+un penalti real). La infraestructura está activa y lista para ese momento.
+
+## Próximo paso (Fase 4D, sujeto a aprobación 🔴)
+
+Las fuentes externas reales siguen **desactivadas**: NO xG/xA externo, NO clima real, NO scraping, NO
+árbitros externos. Fase 4D evaluaría (propuesta → aprobación → aplicación) cómo incorporar de forma
+gobernada nuevas fuentes auto-derivables sin inventar datos, ampliando el allow-list solo con trail de
+auditoría. Hasta entonces, la persistencia se limita a lo que el repo ya deriva de datos reales.

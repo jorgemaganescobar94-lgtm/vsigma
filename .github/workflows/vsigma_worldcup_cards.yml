@@ -360,6 +360,51 @@ jobs:
           echo "----- simulación de commit (NO ejecuta git) -----"
           python analysis/worldcup/simulate_worldcup_external_persistence_commit.py
 
+      # ---- FASE 4C-5 ENABLE option-B safe persistence (auto-derived external data only). main-only,
+      #      never on pull_request. NO API, NO scraping, NO secrets, NO market/odds/betting. The applier
+      #      ONLY copies the 4 allowed CSVs and ABORTS if data/external holds any manual data (it would
+      #      blank it). The committer stages ONLY explicit allow-listed paths (never `git add data/external`,
+      #      never `git add .`), is empty-commit-safe, and NEVER pushes. The PUSH is controlled HERE by
+      #      Actions (rebase+retry) and only fires if there is an unpushed persistence commit. Forbidden
+      #      files (player_xg_xa / referee_profiles / coach_tactical_profiles) are never touched. Soft-fail:
+      #      any gate failure aborts persistence WITHOUT breaking the briefing.
+      #      EXPLICIT allow-list (the ONLY paths the committer may stage — enforced in
+      #      commit_worldcup_external_auto_persistence.py, never `git add data/external`, never `git add .`):
+      #        data/external/fixture_referees.csv
+      #        data/external/weather_by_fixture.csv
+      #        data/external/set_piece_takers.csv
+      #        data/external/player_positional_profiles.csv
+      - name: Fase 4C-5 — persist auto-derived external data (option B, main only, soft-fail)
+        if: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
+        continue-on-error: true
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # rebuild the filtered snapshot fresh, then HARD-GATE on guard --strict over it.
+          python analysis/worldcup/build_worldcup_external_persistable_snapshot.py
+          if ! python analysis/worldcup/guard_worldcup_external_persistence.py --strict --snapshot analysis/worldcup/persistable_external_snapshot; then
+            echo "::warning::guard --strict failed on snapshot -> persistence ABORTED (data/external untouched)"
+            exit 0
+          fi
+          # apply the snapshot to data/external (aborts itself if data/external holds manual data)
+          if ! python analysis/worldcup/apply_worldcup_external_persistable_snapshot.py; then
+            echo "::warning::apply aborted (manual data present or snapshot unsafe) -> data/external untouched"
+            exit 0
+          fi
+          # final diff guard + commit: explicit allow-listed paths ONLY, empty-commit-safe, NO push.
+          python analysis/worldcup/commit_worldcup_external_auto_persistence.py --execute
+          # PUSH is controlled HERE (not in the script). Only if a persistence commit is unpushed.
+          if [ -n "$(git log origin/main..HEAD --oneline 2>/dev/null)" ]; then
+            pushed=0
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push && { pushed=1; break; }
+              echo "persist push retry $i failed; re-syncing..."; sleep 5
+            done
+            [ "$pushed" = "1" ] || echo "::warning::external-persistence push failed after retries."
+          else
+            echo "external persistence: nothing new to push (empty/identical)."
+          fi
+
       # ---- FASE 3 external-data status (read-only, NO API, NO secrets): logs which optional CSV
       #      sources under data/external/ are active for this run (xG/xA real, set-piece takers,
       #      referee, weather, coach tactical, positional). Pure diagnostics; never blocks. Absent
