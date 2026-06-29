@@ -1,19 +1,19 @@
-⚙️ Motor máximo vs L3 (N=6 · desde 27-jun): 1X2 67% vs 67% · O2.5 33% vs 33% · BTTS 33% vs 33%  (muestra pequeña, orientativo)
+⚙️ Motor máximo vs L3 (N=7 · desde 27-jun): 1X2 71% vs 71% · O2.5 43% vs 43% · BTTS 43% vs 43%  (muestra pequeña, orientativo)
 
 ===== detalle mx vs L3 =====
-N=6 partidos liquidados con predicción mx (lock-at-KO, anti-hindsight) · desde 27-jun · cara a cara vs RESULTADOS REALES, sin mercado
+N=7 partidos liquidados con predicción mx (lock-at-KO, anti-hindsight) · desde 27-jun · cara a cara vs RESULTADOS REALES, sin mercado
   mercado/métrica               L3        mx    líder         Δ
   -------------------------------------------------------------
-  1X2 acc%                    66.7      66.7   empate         -
-  1X2 logloss               0.7037    0.7128       L3    0.0091
-  1X2 brier                 0.3997    0.4033       L3    0.0036
-  Over 2.5 acc%               33.3      33.3   empate         -
-  Over 2.5 logloss          0.6825    0.6746       mx    0.0079
-  Over 2.5 brier            0.2450    0.2412       mx    0.0038
-  BTTS acc%                   33.3      33.3   empate         -
-  BTTS logloss              0.7810    0.7656       mx    0.0153
-  BTTS brier                0.2906    0.2859       mx    0.0047
+  1X2 acc%                    71.4      71.4   empate         -
+  1X2 logloss               0.7032    0.7389       L3    0.0357
+  1X2 brier                 0.3969    0.4207       L3    0.0238
+  Over 2.5 acc%               42.9      42.9   empate         -
+  Over 2.5 logloss          0.6693    0.6566       mx    0.0127
+  Over 2.5 brier            0.2384    0.2322       mx    0.0062
+  BTTS acc%                   42.9      42.9   empate         -
+  BTTS logloss              0.7608    0.7496       mx    0.0112
+  BTTS brier                0.2810    0.2779       mx    0.0030
 
-VEREDICTO: muestra pequeña (N=6 < 30) — NO se declara ganador; el acumulado crece hasta el final del Mundial. Orientativo.
+VEREDICTO: muestra pequeña (N=7 < 30) — NO se declara ganador; el acumulado crece hasta el final del Mundial. Orientativo.
 
-generated_at_utc: 2026-06-28T09:08:26+00:00
+generated_at_utc: 2026-06-29T06:49:04+00:00

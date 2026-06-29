@@ -1,0 +1,66 @@
+fixture_id,home,away,category,player,team,probability_goal,expected_goals,reason,source_used,goal_source,confidence,data_quality,probability_1_sot,expected_sot,expected_shots,shots_source,probability_assist,expected_assists,expected_key_passes,assist_source,probability_card
+1562344,Brazil,Japan,scorer,Vinícius Júnior,Brazil,0.2319,0.2638,"xG 0.26, P(gol) 23% (media)",proxy,proxy,media,media,,,,,,,,,
+1562344,Brazil,Japan,scorer,Lucas Paquetá,Brazil,0.1906,0.2115,"xG 0.21, P(gol) 19% (media)",proxy,proxy,media,media,,,,,,,,,
+1562344,Brazil,Japan,scorer,Keito Nakamura,Japan,0.1836,0.2029,"xG 0.20, P(gol) 18% (media)",proxy,proxy,media,media,,,,,,,,,
+1562344,Brazil,Japan,sot,Vinícius Júnior,Brazil,,,"tiros esp. 1.6, SOT esp. 1.0 (media)",proxy,,media,media,0.65,1.0497,1.57,proxy,,,,,
+1562344,Brazil,Japan,sot,Keito Nakamura,Japan,,,"tiros esp. 1.3, SOT esp. 0.8 (media)",proxy,,media,media,0.5487,0.7956,1.33,proxy,,,,,
+1562344,Brazil,Japan,sot,A. Ueda,Japan,,,"tiros esp. 1.6, SOT esp. 0.8 (media)",proxy,,media,media,0.5446,0.7865,1.57,proxy,,,,,
+1562344,Brazil,Japan,assist,T. Kubo,Japan,,,xA-proxy 0.15 (media),proxy,,media,media,,,,,0.1402,0.1511,,proxy,
+1562344,Brazil,Japan,assist,Matheus Cunha,Brazil,,,xA-proxy 0.14 (media),proxy,,media,media,,,,,0.127,0.1358,,proxy,
+1562344,Brazil,Japan,assist,K. Sano,Japan,,,xA-proxy 0.12 (media),proxy,,media,media,,,,,0.1135,0.1205,,proxy,
+1562344,Brazil,Japan,card_risk,A. Tanaka,Japan,,,P(tarjeta) 33% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.3347
+1562344,Brazil,Japan,card_risk,Lucas Paquetá,Brazil,,,P(tarjeta) 31% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.306
+1562344,Brazil,Japan,card_risk,T. Watanabe,Japan,,,P(tarjeta) 28% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.2815
+1562344,Brazil,Japan,card_risk,R. Dōan,Japan,,,P(tarjeta) 27% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.2668
+1565176,Germany,Paraguay,scorer,K. Havertz,Germany,0.2541,0.2932,"xG 0.29, P(gol) 25% (media)",proxy,proxy,media,media,,,,,,,,,
+1565176,Germany,Paraguay,scorer,J. Musiala,Germany,0.2259,0.256,"xG 0.26, P(gol) 23% (media)",proxy,proxy,media,media,,,,,,,,,
+1565176,Germany,Paraguay,scorer,F. Wirtz,Germany,0.2233,0.2527,"xG 0.25, P(gol) 22% (media)",proxy,proxy,media,media,,,,,,,,,
+1565176,Germany,Paraguay,sot,K. Havertz,Germany,,,"tiros esp. 2.6, SOT esp. 1.4 (media)",proxy,,media,media,0.757,1.4145,2.59,proxy,,,,,
+1565176,Germany,Paraguay,sot,J. Enciso,Paraguay,,,"tiros esp. 2.0, SOT esp. 0.9 (media)",proxy,,media,media,0.6128,0.9488,2.02,proxy,,,,,
+1565176,Germany,Paraguay,sot,L. Sané,Germany,,,"tiros esp. 1.5, SOT esp. 0.9 (media)",proxy,,media,media,0.6078,0.9361,1.52,proxy,,,,,
+1565176,Germany,Paraguay,assist,J. Kimmich,Germany,,,xA-proxy 0.23 (media),proxy,,media,media,,,,,0.2055,0.2301,,proxy,
+1565176,Germany,Paraguay,assist,L. Sané,Germany,,,xA-proxy 0.21 (media),proxy,,media,media,,,,,0.1859,0.2057,,proxy,
+1565176,Germany,Paraguay,assist,J. Musiala,Germany,,,xA-proxy 0.18 (media),proxy,,media,media,,,,,0.1617,0.1764,,proxy,
+1565176,Germany,Paraguay,card_risk,N. Schlotterbeck,Germany,,,P(tarjeta) 51% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.5103
+1565176,Germany,Paraguay,card_risk,J. Tah,Germany,,,P(tarjeta) 47% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.4739
+1565176,Germany,Paraguay,card_risk,A. Cubas,Paraguay,,,P(tarjeta) 47% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.4652
+1565176,Germany,Paraguay,card_risk,F. Wirtz,Germany,,,P(tarjeta) 33% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.3344
+1562345,Netherlands,Morocco,scorer,Brahim Díaz,Morocco,0.3102,0.3714,"xG 0.37, P(gol) 31% (media)",proxy,proxy,media,media,,,,,,,,,
+1562345,Netherlands,Morocco,scorer,D. Malen,Netherlands,0.2763,0.3234,"xG 0.32, P(gol) 28% (media)",proxy,proxy,media,media,,,,,,,,,
+1562345,Netherlands,Morocco,scorer,C. Gakpo,Netherlands,0.2012,0.2246,"xG 0.22, P(gol) 20% (media)",proxy,proxy,media,media,,,,,,,,,
+1562345,Netherlands,Morocco,sot,Brahim Díaz,Morocco,,,"tiros esp. 2.7, SOT esp. 1.7 (media)",proxy,,media,media,0.8125,1.6742,2.7,proxy,,,,,
+1562345,Netherlands,Morocco,sot,D. Malen,Netherlands,,,"tiros esp. 1.6, SOT esp. 1.0 (media)",proxy,,media,media,0.6251,0.9811,1.61,proxy,,,,,
+1562345,Netherlands,Morocco,sot,I. Saibari,Morocco,,,"tiros esp. 1.6, SOT esp. 0.9 (media)",proxy,,media,media,0.6022,0.9218,1.57,proxy,,,,,
+1562345,Netherlands,Morocco,assist,A. Ounahi,Morocco,,,xA-proxy 0.22 (media),proxy,,media,media,,,,,0.1938,0.2154,,proxy,
+1562345,Netherlands,Morocco,assist,D. Malen,Netherlands,,,xA-proxy 0.16 (media),proxy,,media,media,,,,,0.1439,0.1554,,proxy,
+1562345,Netherlands,Morocco,assist,F. de Jong,Netherlands,,,xA-proxy 0.14 (media),proxy,,media,media,,,,,0.1271,0.1359,,proxy,
+1562345,Netherlands,Morocco,card_risk,J. van Hecke,Netherlands,,,P(tarjeta) 41% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.4068
+1562345,Netherlands,Morocco,card_risk,V. van Dijk,Netherlands,,,P(tarjeta) 33% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.3313
+1562345,Netherlands,Morocco,card_risk,I. Saibari,Morocco,,,P(tarjeta) 30% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.3044
+1562345,Netherlands,Morocco,card_risk,A. Ounahi,Morocco,,,P(tarjeta) 29% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.2885
+1564789,Ivory Coast,Norway,scorer,E. Haaland,Norway,0.3686,0.4598,"xG 0.46, P(gol) 37% (media)",proxy,proxy,media,media,,,,,,,,,
+1564789,Ivory Coast,Norway,scorer,A. Diallo,Ivory Coast,0.1989,0.2218,"xG 0.22, P(gol) 20% (media)",proxy,proxy,media,media,,,,,,,,,
+1564789,Ivory Coast,Norway,scorer,A. Sørloth,Norway,0.198,0.2207,"xG 0.22, P(gol) 20% (media)",proxy,proxy,media,media,,,,,,,,,
+1564789,Ivory Coast,Norway,sot,E. Haaland,Norway,,,"tiros esp. 2.9, SOT esp. 2.0 (media)",proxy,,media,media,0.8589,1.9582,2.91,proxy,,,,,
+1564789,Ivory Coast,Norway,sot,A. Nusa,Norway,,,"tiros esp. 1.8, SOT esp. 1.0 (media)",proxy,,media,media,0.6367,1.0124,1.82,proxy,,,,,
+1564789,Ivory Coast,Norway,sot,A. Sørloth,Norway,,,"tiros esp. 1.9, SOT esp. 1.0 (media)",proxy,,media,media,0.6359,1.0102,1.95,proxy,,,,,
+1564789,Ivory Coast,Norway,assist,A. Sørloth,Norway,,,xA-proxy 0.18 (media),proxy,,media,media,,,,,0.1616,0.1763,,proxy,
+1564789,Ivory Coast,Norway,assist,A. Diallo,Ivory Coast,,,xA-proxy 0.17 (media),proxy,,media,media,,,,,0.1546,0.1679,,proxy,
+1564789,Ivory Coast,Norway,assist,S. Fofana,Ivory Coast,,,xA-proxy 0.15 (media),proxy,,media,media,,,,,0.1352,0.1453,,proxy,
+1564789,Ivory Coast,Norway,card_risk,W. Singo,Ivory Coast,,,P(tarjeta) 31% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.3137
+1564789,Ivory Coast,Norway,card_risk,K. Thorstvedt,Norway,,,P(tarjeta) 29% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.2892
+1564789,Ivory Coast,Norway,card_risk,A. Sørloth,Norway,,,P(tarjeta) 24% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.2411
+1564789,Ivory Coast,Norway,card_risk,I. Sangaré,Ivory Coast,,,P(tarjeta) 24% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.2399
+1565177,France,Sweden,scorer,Kylian Mbappé,France,0.3912,0.4963,"xG 0.50, P(gol) 39% (media)",proxy,proxy,media,media,,,,,,,,,
+1565177,France,Sweden,scorer,M. Olise,France,0.3261,0.3947,"xG 0.39, P(gol) 33% (media)",proxy,proxy,media,media,,,,,,,,,
+1565177,France,Sweden,scorer,A. Rabiot,France,0.245,0.2811,"xG 0.28, P(gol) 24% (media)",proxy,proxy,media,media,,,,,,,,,
+1565177,France,Sweden,sot,Kylian Mbappé,France,,,"tiros esp. 4.2, SOT esp. 2.4 (media)",proxy,,media,media,0.9128,2.4398,4.25,proxy,,,,,
+1565177,France,Sweden,sot,D. Doué,France,,,"tiros esp. 2.7, SOT esp. 2.3 (media)",proxy,,media,media,0.9006,2.3085,2.69,proxy,,,,,
+1565177,France,Sweden,sot,O. Dembélé,France,,,"tiros esp. 2.4, SOT esp. 1.0 (media)",proxy,,media,media,0.6436,1.0318,2.44,proxy,,,,,
+1565177,France,Sweden,assist,Kylian Mbappé,France,,,xA-proxy 0.47 (media),proxy,,media,media,,,,,0.3746,0.4694,,proxy,
+1565177,France,Sweden,assist,A. Tchouaméni,France,,,xA-proxy 0.21 (media),proxy,,media,media,,,,,0.1874,0.2075,,proxy,
+1565177,France,Sweden,assist,T. Hernández,France,,,xA-proxy 0.17 (media),proxy,,media,media,,,,,0.159,0.1732,,proxy,
+1565177,France,Sweden,card_risk,A. Rabiot,France,,,P(tarjeta) 42% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.4202
+1565177,France,Sweden,card_risk,J. Karlström,Sweden,,,P(tarjeta) 39% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.3851
+1565177,France,Sweden,card_risk,A. Tchouaméni,France,,,P(tarjeta) 35% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.3514
+1565177,France,Sweden,card_risk,K. Nordfeldt,Sweden,,,P(tarjeta) 28% — mercado de tarjeta es baja confianza (media),,,baja,media,,,,,,,,,0.2771
