@@ -193,34 +193,174 @@
         {
           "player": "A. Tanaka",
           "team": "Japan",
+          "player_id": 32966,
           "probability_card": 0.3347,
           "reason": "P(tarjeta) 33% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.3347,
+          "probability_card_adjusted": 0.3389,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: posición alto ↑; equipo bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador",
+          "card_risk_components": {
+            "player_history": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            }
+          }
         },
         {
           "player": "Lucas Paquetá",
           "team": "Brazil",
+          "player_id": 1646,
           "probability_card": 0.306,
           "reason": "P(tarjeta) 31% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.306,
+          "probability_card_adjusted": 0.3045,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: historial jugador bajo ↓; posición alto ↑ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador",
+          "card_risk_components": {
+            "player_history": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.035
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.0
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            }
+          }
         },
         {
           "player": "T. Watanabe",
           "team": "Japan",
+          "player_id": 32858,
           "probability_card": 0.2815,
           "reason": "P(tarjeta) 28% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.2815,
+          "probability_card_adjusted": 0.2766,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: equipo bajo ↓ · árbitro con muestra baja (peso reducido)",
+          "card_risk_components": {
+            "player_history": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            },
+            "position_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.0
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            }
+          }
         },
         {
           "player": "R. Dōan",
           "team": "Japan",
+          "player_id": 2598,
           "probability_card": 0.2668,
           "reason": "P(tarjeta) 27% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.2668,
+          "probability_card_adjusted": 0.2448,
+          "adjustment_direction": "bajar",
+          "adjustment_reason": "ajuste baja: historial jugador bajo ↓; posición bajo ↓; equipo bajo ↓ · árbitro con muestra baja (peso reducido)",
+          "card_risk_components": {
+            "player_history": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.035
+            },
+            "position_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": -0.03
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            }
+          }
         }
       ],
       "key_matchups": [
@@ -352,7 +492,8 @@
         "reason": "se esperan ~17.9 tiros a puerta del rival; el portero tendrá trabajo",
         "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
       }
-    ]
+    ],
+    "card_profiles_source": "perfiles de tarjetas auto cargados (443 jug / 48 eq / 4 pos)"
   },
   {
     "fixture": {
@@ -548,34 +689,174 @@
         {
           "player": "N. Schlotterbeck",
           "team": "Germany",
+          "player_id": 26243,
           "probability_card": 0.5103,
           "reason": "P(tarjeta) 51% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.5103,
+          "probability_card_adjusted": 0.4937,
+          "adjustment_direction": "bajar",
+          "adjustment_reason": "ajuste baja: historial jugador bajo ↓; equipo bajo ↓ · árbitro con muestra baja (peso reducido)",
+          "card_risk_components": {
+            "player_history": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": -0.015
+            },
+            "position_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.0
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            }
+          }
         },
         {
           "player": "J. Tah",
           "team": "Germany",
+          "player_id": 972,
           "probability_card": 0.4739,
           "reason": "P(tarjeta) 47% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.4739,
+          "probability_card_adjusted": 0.4656,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: equipo bajo ↓ · árbitro con muestra baja (peso reducido)",
+          "card_risk_components": {
+            "player_history": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            },
+            "position_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.0
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            }
+          }
         },
         {
           "player": "A. Cubas",
           "team": "Paraguay",
+          "player_id": 6236,
           "probability_card": 0.4652,
           "reason": "P(tarjeta) 47% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.4652,
+          "probability_card_adjusted": 0.4792,
+          "adjustment_direction": "subir",
+          "adjustment_reason": "ajuste sube: posición alto ↑ · árbitro con muestra baja (peso reducido)",
+          "card_risk_components": {
+            "player_history": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.0
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            }
+          }
         },
         {
           "player": "F. Wirtz",
           "team": "Germany",
+          "player_id": 203224,
           "probability_card": 0.3344,
           "reason": "P(tarjeta) 33% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.3344,
+          "probability_card_adjusted": 0.3135,
+          "adjustment_direction": "bajar",
+          "adjustment_reason": "ajuste baja: historial jugador bajo ↓; posición bajo ↓; equipo bajo ↓ · árbitro con muestra baja (peso reducido)",
+          "card_risk_components": {
+            "player_history": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": -0.015
+            },
+            "position_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": -0.03
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            }
+          }
         }
       ],
       "key_matchups": [
@@ -707,7 +988,8 @@
         "reason": "se esperan ~20.6 tiros a puerta del rival; el portero tendrá trabajo",
         "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
       }
-    ]
+    ],
+    "card_profiles_source": "perfiles de tarjetas auto cargados (443 jug / 48 eq / 4 pos)"
   },
   {
     "fixture": {
@@ -903,34 +1185,174 @@
         {
           "player": "J. van Hecke",
           "team": "Netherlands",
+          "player_id": 38695,
           "probability_card": 0.4068,
           "reason": "P(tarjeta) 41% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.4068,
+          "probability_card_adjusted": 0.3936,
+          "adjustment_direction": "bajar",
+          "adjustment_reason": "ajuste baja: historial jugador bajo ↓; equipo bajo ↓ · árbitro con muestra baja (peso reducido)",
+          "card_risk_components": {
+            "player_history": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": -0.015
+            },
+            "position_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.0
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            }
+          }
         },
         {
           "player": "V. van Dijk",
           "team": "Netherlands",
+          "player_id": 290,
           "probability_card": 0.3313,
           "reason": "P(tarjeta) 33% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.3313,
+          "probability_card_adjusted": 0.3255,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: equipo bajo ↓ · árbitro con muestra baja (peso reducido)",
+          "card_risk_components": {
+            "player_history": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            },
+            "position_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.0
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            }
+          }
         },
         {
           "player": "I. Saibari",
           "team": "Morocco",
+          "player_id": 161897,
           "probability_card": 0.3044,
           "reason": "P(tarjeta) 30% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.3044,
+          "probability_card_adjusted": 0.2976,
+          "adjustment_direction": "bajar",
+          "adjustment_reason": "ajuste baja: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador",
+          "card_risk_components": {
+            "player_history": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.035
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            }
+          }
         },
         {
           "player": "A. Ounahi",
           "team": "Morocco",
+          "player_id": 129678,
           "probability_card": 0.2885,
           "reason": "P(tarjeta) 29% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.2885,
+          "probability_card_adjusted": 0.2878,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador",
+          "card_risk_components": {
+            "player_history": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": -0.015
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            }
+          }
         }
       ],
       "key_matchups": [
@@ -1062,7 +1484,8 @@
         "reason": "se esperan ~18.4 tiros a puerta del rival; el portero tendrá trabajo",
         "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
       }
-    ]
+    ],
+    "card_profiles_source": "perfiles de tarjetas auto cargados (443 jug / 48 eq / 4 pos)"
   },
   {
     "fixture": {
@@ -1258,34 +1681,174 @@
         {
           "player": "W. Singo",
           "team": "Ivory Coast",
+          "player_id": 30504,
           "probability_card": 0.3137,
           "reason": "P(tarjeta) 31% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.3137,
+          "probability_card_adjusted": 0.3035,
+          "adjustment_direction": "bajar",
+          "adjustment_reason": "ajuste baja: historial jugador bajo ↓; equipo bajo ↓",
+          "card_risk_components": {
+            "player_history": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": -0.015
+            },
+            "position_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.0
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
         },
         {
           "player": "K. Thorstvedt",
           "team": "Norway",
+          "player_id": 39143,
           "probability_card": 0.2892,
           "reason": "P(tarjeta) 29% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.2892,
+          "probability_card_adjusted": 0.2885,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador",
+          "card_risk_components": {
+            "player_history": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": -0.015
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
         },
         {
           "player": "A. Sørloth",
           "team": "Norway",
+          "player_id": 8492,
           "probability_card": 0.2411,
           "reason": "P(tarjeta) 24% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.2411,
+          "probability_card_adjusted": 0.226,
+          "adjustment_direction": "bajar",
+          "adjustment_reason": "ajuste baja: historial jugador bajo ↓; posición bajo ↓; equipo bajo ↓",
+          "card_risk_components": {
+            "player_history": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": -0.015
+            },
+            "position_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": -0.03
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
         },
         {
           "player": "I. Sangaré",
           "team": "Ivory Coast",
+          "player_id": 22149,
           "probability_card": 0.2399,
           "reason": "P(tarjeta) 24% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.2399,
+          "probability_card_adjusted": 0.2393,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador",
+          "card_risk_components": {
+            "player_history": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": -0.015
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
         }
       ],
       "key_matchups": [
@@ -1417,7 +1980,8 @@
         "reason": "se esperan ~21.5 tiros a puerta del rival; el portero tendrá trabajo",
         "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
       }
-    ]
+    ],
+    "card_profiles_source": "perfiles de tarjetas auto cargados (443 jug / 48 eq / 4 pos)"
   },
   {
     "fixture": {
@@ -1613,34 +2177,174 @@
         {
           "player": "A. Rabiot",
           "team": "France",
+          "player_id": 272,
           "probability_card": 0.4202,
           "reason": "P(tarjeta) 42% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.4202,
+          "probability_card_adjusted": 0.4255,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador",
+          "card_risk_components": {
+            "player_history": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
         },
         {
           "player": "J. Karlström",
           "team": "Sweden",
+          "player_id": 48047,
           "probability_card": 0.3851,
           "reason": "P(tarjeta) 39% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.3851,
+          "probability_card_adjusted": 0.3976,
+          "adjustment_direction": "subir",
+          "adjustment_reason": "ajuste sube: historial jugador bajo ↓; posición alto ↑; equipo alto ↑ · fuentes en conflicto -> ajuste conservador",
+          "card_risk_components": {
+            "player_history": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": -0.015
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
         },
         {
           "player": "A. Tchouaméni",
           "team": "France",
+          "player_id": 1271,
           "probability_card": 0.3514,
           "reason": "P(tarjeta) 35% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.3514,
+          "probability_card_adjusted": 0.3558,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador",
+          "card_risk_components": {
+            "player_history": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
         },
         {
           "player": "K. Nordfeldt",
           "team": "Sweden",
+          "player_id": 2851,
           "probability_card": 0.2771,
           "reason": "P(tarjeta) 28% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "baja",
-          "data_quality": "media"
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.2771,
+          "probability_card_adjusted": 0.2819,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: equipo alto ↑",
+          "card_risk_components": {
+            "player_history": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            },
+            "position_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            },
+            "team_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
         }
       ],
       "key_matchups": [
@@ -1772,6 +2476,7 @@
         "reason": "se esperan ~23.6 tiros a puerta del rival; el portero tendrá trabajo",
         "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
       }
-    ]
+    ],
+    "card_profiles_source": "perfiles de tarjetas auto cargados (443 jug / 48 eq / 4 pos)"
   }
 ]
