@@ -573,6 +573,14 @@ jobs:
           echo "----- display correction readiness (report) -----"
           cat analysis/worldcup/worldcup_display_correction_readiness_report.txt || true
 
+      # Fase 4P: DISPLAY-CORRECTION REVERSIBLE SKELETON — diagnostic only. Confirms the config is loaded
+      #      and ALL flags are OFF (no correction applied; exact reversibility) and that activation is
+      #      blocked for every module. Modifies NOTHING (no file writes, no auto-commit). Read-only,
+      #      pure football, no betting. Soft-fail.
+      - name: Fase 4P — display-correction skeleton check (read-only, no writes, soft-fail)
+        continue-on-error: true
+        run: python analysis/worldcup/display_level_correction.py --check
+
       # Fase 4J: GLOBAL PREDICTION-ACCURACY evaluation — panels EVERY main output (1X2, goals, per-player
       #      goal/assist/SOT/cards, team stats) against real settled outcomes with an honest status +
       #      recommendation per module. MEASURE ONLY: no weights/models/predictions/Telegram/external

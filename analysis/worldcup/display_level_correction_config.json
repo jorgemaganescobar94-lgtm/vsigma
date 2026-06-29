@@ -1,0 +1,21 @@
+{
+  "enabled": false,
+  "_comment": "Fase 4P reversible skeleton. ALL flags OFF -> no correction is ever applied; outputs are byte-for-byte the originals. Flipping a flag is a 🔴 change (proposal-first, explicit approval). requires_readiness keeps a module blocked until the Fase-4O readiness gate marks it READY_FOR_PROPOSAL.",
+  "modules": {
+    "team_sot": {
+      "enabled": false,
+      "mode": "global_ratio",
+      "requires_readiness": true
+    },
+    "team_shots": {
+      "enabled": false,
+      "mode": "global_ratio",
+      "requires_readiness": true
+    },
+    "team_corners": {
+      "enabled": false,
+      "mode": "global_ratio",
+      "requires_readiness": true
+    }
+  }
+}

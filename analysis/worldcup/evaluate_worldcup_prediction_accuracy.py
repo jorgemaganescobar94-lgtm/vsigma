@@ -527,6 +527,8 @@ def display_readiness_module(path=DISPLAY_READINESS_JSON):
             "secondary": {"ready_modules": s.get("ready_modules"),
                           "first_candidate": s.get("first_candidate"),
                           "module_status": statuses,
+                          "display_correction_config_status": s.get("display_correction_config_status",
+                                                                     "all_disabled"),
                           "action_recommended": s.get("action_recommended")},
             "bias": "n/a (gate de readiness, no predicción)",
             "recommendation": ("preparar propuesta (🔴, fase posterior)" if should

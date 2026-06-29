@@ -41,6 +41,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import evaluate_worldcup_team_sot_level_correction as lc      # thresholds (single source of truth)
 import monitor_worldcup_team_sot_correction_shadow as mon     # MIN_CORRECTED_ROWS
+import display_level_correction as dlc                        # Fase 4P skeleton config status (read-only)
 
 try:
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -297,6 +298,13 @@ def build(write=True, csv_path=OUT_CSV, json_path=OUT_JSON, txt_path=OUT_TXT):
     else:
         action = "seguir SHADOW; aún sin señal/ muestra suficiente en ningún módulo."
 
+    # Fase 4P skeleton: report that the reversible display-correction config exists and is all-OFF
+    # (read-only; this gate NEVER flips a flag).
+    try:
+        cfg_status = dlc.config_status(dlc.load_display_correction_config())
+    except Exception:
+        cfg_status = "all_disabled"
+
     summary = {
         "generated_at_utc": now_iso(),
         "modules": mod_summaries,
@@ -304,6 +312,7 @@ def build(write=True, csv_path=OUT_CSV, json_path=OUT_JSON, txt_path=OUT_TXT):
         "should_propose_activation_any": should_propose,
         "first_candidate": first_candidate,
         "action_recommended": action,
+        "display_correction_config_status": cfg_status,
         "thresholds": {"n_min_activate": N_MIN_ACTIVATE, "delta_mae_material": DELTA_MAE_MATERIAL,
                        "min_corrected_rows": MIN_CORRECTED_ROWS},
         "note": "No activar nada en esta fase.",
@@ -344,6 +353,9 @@ def render_txt(summary, rows):
         L.append(f"      {r.get('reason','')}")
     L.append("")
     L.append(f"acción recomendada: {summary['action_recommended']}")
+    L.append(f"config de corrección de display (Fase 4P, esqueleto reversible): "
+             f"{summary.get('display_correction_config_status', 'all_disabled')} "
+             f"(flags OFF -> nada se aplica; activar es 🔴).")
     L.append("")
     L.append(">>> No activar nada en esta fase. La activación de cualquier corrección de display es 🔴 "
              "(propuesta primero, aprobación explícita de Jorge). Este gate NO toca pesos, ni "
