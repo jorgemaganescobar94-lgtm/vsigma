@@ -55,6 +55,11 @@ analysis/worldcup/worldcup_referee_profiles_auto_report.txt
 analysis/worldcup/worldcup_card_profiles_auto.json
 analysis/worldcup/worldcup_card_profiles_auto_report.txt
 
+# Fase 4G card-risk-adjustment evaluation: the .csv is auto-committed by CI (kept, accumulates over the
+# tournament), summary json + report are regenerable side-artifacts (ignored).
+analysis/worldcup/worldcup_card_risk_evaluation_summary.json
+analysis/worldcup/worldcup_card_risk_evaluation_report.txt
+
 # Fase 4C-4 external persistable snapshot + generated reports (regenerable; NEVER auto-committed)
 analysis/worldcup/persistable_external_snapshot/
 analysis/worldcup/worldcup_external_persistable_snapshot_report.txt
