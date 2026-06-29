@@ -397,7 +397,8 @@ jobs:
           if [ -n "$(git log origin/main..HEAD --oneline 2>/dev/null)" ]; then
             pushed=0
             for i in 1 2 3; do
-              git pull --rebase origin main && git push && { pushed=1; break; }
+              # --autostash: other steps' regenerated (still-unstaged) outputs must not block the rebase.
+              git pull --rebase --autostash origin main && git push && { pushed=1; break; }
               echo "persist push retry $i failed; re-syncing..."; sleep 5
             done
             [ "$pushed" = "1" ] || echo "::warning::external-persistence push failed after retries."
@@ -526,10 +527,11 @@ jobs:
           else
             git commit -m "vSIGMA World Cup learning loop ${{ steps.win.outputs.from }} [skip ci]"
             # Robust push: the betting pipeline commits often; rebase + retry to avoid
-            # losing the accumulated track record on a non-fast-forward race.
+            # losing the accumulated track record on a non-fast-forward race. --autostash so any
+            # still-unstaged regenerated outputs do not abort the rebase ("cannot pull with rebase").
             pushed=0
             for i in 1 2 3; do
-              git pull --rebase origin main && git push && { pushed=1; break; }
+              git pull --rebase --autostash origin main && git push && { pushed=1; break; }
               echo "push retry $i failed; re-syncing..."
               sleep 5
             done
