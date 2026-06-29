@@ -1,0 +1,43 @@
+referee_name,matches,fixtures,yellow_cards_total,red_cards_total,second_yellow_total,cards_total,yellow_cards_pg,red_cards_pg,cards_pg,penalties_total,penalties_pg,matches_with_penalty,penalty_match_rate,home_cards_total,away_cards_total,home_cards_pg,away_cards_pg,card_environment,penalty_environment,data_quality,confidence,reason,source
+A. Makhadmeh,1,1,2,0,0,2,2.0,0.0,2.0,0,0.0,0,0.0,2.0,0.0,2.0,0.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Abdulrahman Al-Jassim, Qatar",1,1,3,0,0,3,3.0,0.0,3.0,0,0.0,0,0.0,2.0,1.0,2.0,1.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Alejandro Hernandez, Spain",1,1,4,0,0,4,4.0,0.0,4.0,0,0.0,0,0.0,1.0,3.0,1.0,3.0,medio,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Alireza Faghani, Australia",1,1,1,0,0,1,1.0,0.0,1.0,0,0.0,0,0.0,1.0,0.0,1.0,0.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Amin Mohamed Omar, Egypt",1,1,4,0,0,4,4.0,0.0,4.0,1,1.0,1,1.0,2.0,2.0,2.0,2.0,medio,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Anthony Taylor, England",1,1,4,1,0,5,4.0,1.0,5.0,0,0.0,0,0.0,2.0,3.0,2.0,3.0,medio,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+C. Turpin,1,1,2,0,0,2,2.0,0.0,2.0,0,0.0,0,0.0,1.0,1.0,1.0,1.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"César Ramos Palazuelos, Mexico",1,1,3,0,0,3,3.0,0.0,3.0,0,0.0,0,0.0,1.0,2.0,1.0,2.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Danny Makkelie, Netherlands",1,1,3,0,0,3,3.0,0.0,3.0,0,0.0,0,0.0,0.0,3.0,0.0,3.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Dario Herrera, Argentina",1,1,2,1,0,3,2.0,1.0,3.0,0,0.0,0,0.0,2.0,1.0,2.0,1.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Drew Fischer, Canada",2,2,3,0,0,3,1.5,0.0,1.5,0,0.0,0,0.0,1.0,2.0,0.5,1.0,bajo,no determinado,baja,media-baja,"2 partidos, muestra reducida — orientativo",worldcup_events_auto
+"Espen Eskas, Norway",1,1,4,0,0,4,4.0,0.0,4.0,0,0.0,0,0.0,2.0,2.0,2.0,2.0,medio,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+F. Letexier,1,1,4,0,0,4,4.0,0.0,4.0,0,0.0,0,0.0,1.0,3.0,1.0,3.0,medio,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+F. Tello,1,1,2,0,0,2,2.0,0.0,2.0,0,0.0,0,0.0,1.0,1.0,1.0,1.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Felix Zwayer, Germany",1,1,5,0,0,5,5.0,0.0,5.0,1,1.0,1,1.0,3.0,2.0,3.0,2.0,medio,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Glenn Nyberg, Sweden",1,1,3,0,0,3,3.0,0.0,3.0,0,0.0,0,0.0,2.0,1.0,2.0,1.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+I. Elfath,1,1,4,1,0,5,4.0,1.0,5.0,0,0.0,0,0.0,4.0,1.0,4.0,1.0,medio,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Ilgiz Tantashev, Uzbekistan",2,2,3,0,0,3,1.5,0.0,1.5,0,0.0,0,0.0,1.0,2.0,0.5,1.0,bajo,no determinado,baja,media-baja,"2 partidos, muestra reducida — orientativo",worldcup_events_auto
+"Istvan Kovacs, Romania",2,2,3,0,0,3,1.5,0.0,1.5,1,0.5,1,0.5,3.0,0.0,1.5,0.0,bajo,no determinado,baja,media-baja,"2 partidos, muestra reducida — orientativo",worldcup_events_auto
+"Iván Barton, El Salvador",2,2,5,1,0,6,2.5,0.5,3.0,0,0.0,0,0.0,2.0,4.0,1.0,2.0,bajo,no determinado,baja,media-baja,"2 partidos, muestra reducida — orientativo",worldcup_events_auto
+J. Jayed,0,1,0,0,0,0,,,,0,,0,,,,,,no determinado,no determinado,baja,no determinado,árbitro sin partidos con eventos reales todavía; no extrapolar,worldcup_events_auto
+"Jalal Jayed, Morocco",1,1,2,0,0,2,2.0,0.0,2.0,0,0.0,0,0.0,1.0,1.0,1.0,1.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Jesús Valenzuela, Venezuela",1,1,2,0,0,2,2.0,0.0,2.0,0,0.0,0,0.0,1.0,1.0,1.0,1.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Joao Pedro Pinheiro, Portugal",1,1,2,0,0,2,2.0,0.0,2.0,0,0.0,0,0.0,0.0,2.0,0.0,2.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Juan Gabriel Benitez, Paraguay",1,1,0,0,0,0,0.0,0.0,0.0,0,0.0,0,0.0,,,,,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Katia García, Mexico",1,1,0,0,0,0,0.0,0.0,0.0,0,0.0,0,0.0,,,,,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+M. Ghorbal,1,1,1,0,0,1,1.0,0.0,1.0,0,0.0,0,0.0,0.0,1.0,0.0,1.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+M. Mariani,0,1,0,0,0,0,,,,0,,0,,,,,,no determinado,no determinado,baja,no determinado,árbitro sin partidos con eventos reales todavía; no extrapolar,worldcup_events_auto
+"Ma Ning, China",1,1,6,0,0,6,6.0,0.0,6.0,0,0.0,0,0.0,1.0,5.0,1.0,5.0,alto,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Maurizio Mariani, Italy",1,1,3,0,0,3,3.0,0.0,3.0,0,0.0,0,0.0,2.0,1.0,2.0,1.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Michael Oliver, England",2,2,5,0,0,5,2.5,0.0,2.5,1,0.5,1,0.5,1.0,4.0,0.5,2.0,bajo,no determinado,baja,media-baja,"2 partidos, muestra reducida — orientativo",worldcup_events_auto
+"Omar Mohamed Al Ali, United Arab Emirates",1,1,3,0,0,3,3.0,0.0,3.0,0,0.0,0,0.0,2.0,1.0,2.0,1.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Pierre Ghislain Atcho, Gabon",1,1,2,0,0,2,2.0,0.0,2.0,0,0.0,0,0.0,1.0,1.0,1.0,1.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Ramon Abatti Abel, Brazil",1,1,3,0,0,3,3.0,0.0,3.0,0,0.0,0,0.0,1.0,2.0,1.0,2.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Raphael Claus, Brazil",1,1,2,0,0,2,2.0,0.0,2.0,0,0.0,0,0.0,0.0,2.0,0.0,2.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+S. Marciniak,1,1,7,0,0,7,7.0,0.0,7.0,1,1.0,1,1.0,3.0,4.0,3.0,4.0,alto,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Said Martinez, Honduras",1,1,2,0,0,2,2.0,0.0,2.0,0,0.0,0,0.0,1.0,1.0,1.0,1.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Slavko Vinčić, Slovenia",1,1,2,0,0,2,2.0,0.0,2.0,0,0.0,0,0.0,1.0,1.0,1.0,1.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+"Tori Penso, USA",1,1,4,0,0,4,4.0,0.0,4.0,0,0.0,0,0.0,3.0,1.0,3.0,1.0,medio,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+W. Sampaio,0,1,0,0,0,0,,,,0,,0,,,,,,no determinado,no determinado,baja,no determinado,árbitro sin partidos con eventos reales todavía; no extrapolar,worldcup_events_auto
+"Wilton Pereira Sampaio, Brazil",1,1,0,0,0,0,0.0,0.0,0.0,0,0.0,0,0.0,,,,,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto
+Y. Perez,1,1,1,0,0,1,1.0,0.0,1.0,0,0.0,0,0.0,0.0,1.0,0.0,1.0,bajo,no determinado,baja,baja,"solo 1 partido, no extrapolar fuerte",worldcup_events_auto

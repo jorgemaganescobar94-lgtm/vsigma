@@ -263,7 +263,7 @@
     "external_data_status": {
       "xg_xa_available": false,
       "set_piece_available": true,
-      "referee_available": false,
+      "referee_available": true,
       "weather_available": true,
       "coach_profile_available": false,
       "positional_profile_available": true
@@ -284,16 +284,19 @@
     "set_piece_source": "lanzadores de balón parado cargados para 4 equipos (fuente externa)",
     "events_source": "eventos reales (/fixtures/events)",
     "referee_context": {
-      "referee_name": null,
-      "expected_card_environment": "no determinado",
-      "possible_penalty_environment": "no determinado",
-      "confidence": "baja",
+      "referee_name": "M. Mariani",
+      "profile_source": "worldcup_events_auto",
+      "matches_sample": 0,
+      "card_environment": "no determinado",
+      "expected_card_environment": "no determinado (muestra insuficiente)",
+      "possible_penalty_environment": "no determinado (muestra insuficiente para penaltis)",
+      "confidence": "no determinado",
       "data_quality": "baja",
-      "sample": null,
+      "sample": 0,
       "yellow_cards_pg": null,
       "red_cards_pg": null,
       "penalties_pg": null,
-      "reason": "perfiles de árbitro no configurados (data/external/referee_profiles.csv) — Fase 3"
+      "reason": "árbitro sin partidos con eventos reales todavía; no extrapolar; fuente: Mundial auto (eventos reales)"
     },
     "weather_context": {
       "weather_summary": "no determinado",
@@ -615,7 +618,7 @@
     "external_data_status": {
       "xg_xa_available": false,
       "set_piece_available": true,
-      "referee_available": false,
+      "referee_available": true,
       "weather_available": true,
       "coach_profile_available": false,
       "positional_profile_available": true
@@ -636,16 +639,19 @@
     "set_piece_source": "lanzadores de balón parado cargados para 4 equipos (fuente externa)",
     "events_source": "eventos reales (/fixtures/events)",
     "referee_context": {
-      "referee_name": null,
-      "expected_card_environment": "no determinado",
-      "possible_penalty_environment": "no determinado",
-      "confidence": "baja",
+      "referee_name": "J. Jayed",
+      "profile_source": "worldcup_events_auto",
+      "matches_sample": 0,
+      "card_environment": "no determinado",
+      "expected_card_environment": "no determinado (muestra insuficiente)",
+      "possible_penalty_environment": "no determinado (muestra insuficiente para penaltis)",
+      "confidence": "no determinado",
       "data_quality": "baja",
-      "sample": null,
+      "sample": 0,
       "yellow_cards_pg": null,
       "red_cards_pg": null,
       "penalties_pg": null,
-      "reason": "perfiles de árbitro no configurados (data/external/referee_profiles.csv) — Fase 3"
+      "reason": "árbitro sin partidos con eventos reales todavía; no extrapolar; fuente: Mundial auto (eventos reales)"
     },
     "weather_context": {
       "weather_summary": "no determinado",
@@ -967,7 +973,7 @@
     "external_data_status": {
       "xg_xa_available": false,
       "set_piece_available": true,
-      "referee_available": false,
+      "referee_available": true,
       "weather_available": true,
       "coach_profile_available": false,
       "positional_profile_available": true
@@ -988,16 +994,19 @@
     "set_piece_source": "lanzadores de balón parado cargados para 4 equipos (fuente externa)",
     "events_source": "eventos reales (/fixtures/events)",
     "referee_context": {
-      "referee_name": null,
-      "expected_card_environment": "no determinado",
-      "possible_penalty_environment": "no determinado",
-      "confidence": "baja",
+      "referee_name": "W. Sampaio",
+      "profile_source": "worldcup_events_auto",
+      "matches_sample": 0,
+      "card_environment": "no determinado",
+      "expected_card_environment": "no determinado (muestra insuficiente)",
+      "possible_penalty_environment": "no determinado (muestra insuficiente para penaltis)",
+      "confidence": "no determinado",
       "data_quality": "baja",
-      "sample": null,
+      "sample": 0,
       "yellow_cards_pg": null,
       "red_cards_pg": null,
       "penalties_pg": null,
-      "reason": "perfiles de árbitro no configurados (data/external/referee_profiles.csv) — Fase 3"
+      "reason": "árbitro sin partidos con eventos reales todavía; no extrapolar; fuente: Mundial auto (eventos reales)"
     },
     "weather_context": {
       "weather_summary": "no determinado",
@@ -1319,7 +1328,7 @@
     "external_data_status": {
       "xg_xa_available": false,
       "set_piece_available": true,
-      "referee_available": false,
+      "referee_available": true,
       "weather_available": true,
       "coach_profile_available": false,
       "positional_profile_available": true
@@ -1341,6 +1350,9 @@
     "events_source": "eventos reales (/fixtures/events)",
     "referee_context": {
       "referee_name": null,
+      "profile_source": null,
+      "matches_sample": null,
+      "card_environment": "no determinado",
       "expected_card_environment": "no determinado",
       "possible_penalty_environment": "no determinado",
       "confidence": "baja",
@@ -1671,7 +1683,7 @@
     "external_data_status": {
       "xg_xa_available": false,
       "set_piece_available": true,
-      "referee_available": false,
+      "referee_available": true,
       "weather_available": true,
       "coach_profile_available": false,
       "positional_profile_available": true
@@ -1693,6 +1705,9 @@
     "events_source": "eventos reales (/fixtures/events)",
     "referee_context": {
       "referee_name": null,
+      "profile_source": null,
+      "matches_sample": null,
+      "card_environment": "no determinado",
       "expected_card_environment": "no determinado",
       "possible_penalty_environment": "no determinado",
       "confidence": "baja",

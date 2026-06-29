@@ -1,25 +1,9 @@
 ========================================================================================
 AUTO-REFIT L3 — mode=APPLY (swap)
 ========================================================================================
-generated_at_utc: 2026-06-29T06:46:43+00:00
-base rows=9203 | settled-in-log=44 | NEW rows=1 (2026-06-28..2026-06-28) | unmapped=0 | enriched=9204
+generated_at_utc: 2026-06-29T12:36:27+00:00
+base rows=9204 | settled-in-log=44 | NEW rows=0 (-..-) | unmapped=0 | enriched=9204
 
-OOS 1X2 — ventana común [2024-01-01 .. 2026-06-28)  (leakage-safe)
-  base     n=3287  ll=0.92964  ECE=0.0180  acc=55.9%
-  enriched n=3287  ll=0.92964  ECE=0.0180  acc=55.9%
-repro (refit base vs committed): max|Δ|=0.0005
-
-MOVIMIENTOS DE RATING destacados (candidato vs commiteado; cap 0.6):
-    South Africa             +0.57 -> +0.52  (-0.05)
-    Canada                   +0.92 -> +0.95  (+0.04)
-
-GATE (anti-corrupción):
-    PASS  finite
-    PASS  team_count_non_decreasing
-    PASS  max_move<=cap
-    PASS  oos_not_worse
-    PASS  repro<tol
-  max|Δ| = 0.050 (South Africa: +0.57->+0.52)
-  -> GATE: PASS
-
-SWAP APLICADO ✅  ratings -> national_elo_layer3_ratings.csv | dataset -> international_results.csv (+1 FT). Calibración intacta (invariante).
+NO hay partidos liquidados nuevos fuera del dataset -> refit NO-OP.
+(El dataset ya está al día con el log; nada que aprender hasta nuevos FT.)
+GATE: N/A (sin cambios) -> ratings de producción intactos.

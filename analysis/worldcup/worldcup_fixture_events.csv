@@ -536,27 +536,28 @@ fixture_id,date,competition,team_id,team_name,opponent_id,opponent_name,player_i
 1489413,2026-06-27,World Cup 2026,1533,Cape Verde Islands,23,Saudi Arabia,332056.0,W. Pina,,,subst,Substitution 5,90,4.0,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489414,2026-06-27,World Cup 2026,32,Egypt,22,Iran,69196.0,M. Saber,2664.0,Trezeguet,Goal,Normal Goal,5,,1,1,0,0,0,0,,0,alta,alta,api_football_events
 1489414,2026-06-27,World Cup 2026,22,Iran,32,Egypt,42315.0,M. Taremi,,,Goal,Missed Penalty,11,,0,0,0,1,0,0,,0,alta,alta,api_football_events
-1489414,2026-06-27,World Cup 2026,22,Iran,32,Egypt,2691.0,R. Rezaeian,,,Goal,Normal Goal,14,,1,0,0,0,0,0,,0,alta,alta,api_football_events
 1489414,2026-06-27,World Cup 2026,32,Egypt,22,Iran,196343.0,M. Abdelmonem,,,subst,Substitution 1,14,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1489414,2026-06-27,World Cup 2026,22,Iran,32,Egypt,2691.0,R. Rezaeian,,,Goal,Normal Goal,14,,1,0,0,0,0,0,,0,alta,alta,api_football_events
 1489414,2026-06-27,World Cup 2026,22,Iran,32,Egypt,2687.0,H. Kanaani,,,Card,Yellow Card,19,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1489414,2026-06-27,World Cup 2026,32,Egypt,22,Iran,69196.0,M. Saber,,,Card,Yellow Card,20,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1489414,2026-06-27,World Cup 2026,32,Egypt,22,Iran,16804.0,Y. Ibrahim,,,Card,Yellow Card,42,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1489414,2026-06-27,World Cup 2026,22,Iran,32,Egypt,533035.0,A. Nemati,,,Card,Yellow Card,43,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
-1489414,2026-06-27,World Cup 2026,22,Iran,32,Egypt,2687.0,H. Kanaani,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489414,2026-06-27,World Cup 2026,32,Egypt,22,Iran,17269.0,E. Ashour,,,subst,Substitution 2,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489414,2026-06-27,World Cup 2026,32,Egypt,22,Iran,69196.0,M. Saber,,,subst,Substitution 3,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1489414,2026-06-27,World Cup 2026,22,Iran,32,Egypt,2687.0,H. Kanaani,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489414,2026-06-27,World Cup 2026,32,Egypt,22,Iran,306.0,M. Salah,,,subst,Substitution 4,57,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489414,2026-06-27,World Cup 2026,22,Iran,32,Egypt,2699.0,S. Ghoddos,,,subst,Substitution 2,67,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489414,2026-06-27,World Cup 2026,32,Egypt,22,Iran,395075.0,M. Ziko,,,subst,Substitution 5,76,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489414,2026-06-27,World Cup 2026,22,Iran,32,Egypt,19614.0,S. Ezatolahi,,,Card,Yellow Card,79,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
-1489414,2026-06-27,World Cup 2026,22,Iran,32,Egypt,134217.0,M. Mohebi,,,subst,Substitution 3,90,1.0,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489414,2026-06-27,World Cup 2026,32,Egypt,22,Iran,16841.0,M. Lasheen,,,Card,Yellow Card,90,2.0,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1489414,2026-06-27,World Cup 2026,22,Iran,32,Egypt,29704.0,S. Khalilzadeh,,,Var,Goal Disallowed - offside,90,3.0,0,0,0,0,0,0,,0,alta,media,api_football_events
 1489414,2026-06-27,World Cup 2026,22,Iran,32,Egypt,29704.0,S. Khalilzadeh,,,Card,Yellow Card,90,4.0,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1489414,2026-06-27,World Cup 2026,22,Iran,32,Egypt,134217.0,M. Mohebi,,,subst,Substitution 3,90,1.0,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,,,,,Goal,Normal Goal,21,,1,0,0,0,0,0,,0,alta,alta,api_football_events
 1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,1946.0,L. Trossard,,,Goal,Normal Goal,28,,1,0,0,0,0,0,,0,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,6935.0,S. Singh,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,242.0,R. Thomas,,,subst,Substitution 2,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,179862.0,M. Stamenic,,,Card,Yellow Card,46,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,242.0,R. Thomas,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,6935.0,S. Singh,,,subst,Substitution 2,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,1946.0,L. Trossard,78.0,H. Vanaken,Goal,Normal Goal,50,,1,1,0,0,0,0,,0,alta,alta,api_football_events
 1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,94333.0,E. Just,,,Card,Yellow Card,56,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,1422.0,J. Doku,,,subst,Substitution 1,56,,0,0,0,0,0,0,,1,alta,alta,api_football_events
@@ -570,7 +571,7 @@ fixture_id,date,competition,team_id,team_name,opponent_id,opponent_name,player_i
 1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,147859.0,C. De Ketelaere,,,subst,Substitution 4,85,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,2926.0,Y. Tielemans,,,subst,Substitution 5,85,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,907.0,R. Lukaku,2120.0,N. Raskin,Goal,Normal Goal,86,,1,1,0,0,0,0,,0,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,1417.0,A. Saelemaekers,907.0,R. Lukaku,Goal,Normal Goal,90,4.0,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,1417.0,A. Saelemaekers,907.0,R. Lukaku,Goal,Normal Goal,90,,1,1,0,0,0,0,,0,alta,alta,api_football_events
 1489420,2026-06-27,World Cup 2026,3,Croatia,1504,Ghana,348205.0,P. Sucic,2291.0,M. Kovacic,Goal,Normal Goal,31,,1,1,0,0,0,0,,0,alta,alta,api_football_events
 1489420,2026-06-27,World Cup 2026,1504,Ghana,3,Croatia,369425.0,J. Adjetey,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489420,2026-06-27,World Cup 2026,1504,Ghana,3,Croatia,21010.0,E. Owusu,,,subst,Substitution 2,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
