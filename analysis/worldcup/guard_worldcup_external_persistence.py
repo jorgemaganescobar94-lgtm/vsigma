@@ -8,8 +8,9 @@ audits and reports; it never filters, writes or commits a CSV.
 
 Policy enforced here (the ONLY files that may ever be auto-persisted, and only their auto-derived part):
   * fixture_referees.csv            -> fixture_id + referee_name (from store/prepare)
-  * weather_by_fixture.csv          -> ONLY fixture_id, kickoff_time, venue, source, data_quality,
-                                       confidence. Real weather measurements are MANUAL -> protected.
+  * weather_by_fixture.csv          -> ONLY fixture_id, kickoff_time, venue, source (plantilla_kickoff
+                                       or api_football_store), data_quality, confidence. Real weather
+                                       measurements are MANUAL -> protected.
   * set_piece_takers.csv            -> ONLY rows with source=api_football_events, role=penalty,
                                        data_quality=alta, numeric attempts, non-empty last_taken_date,
                                        confidence in {baja,media,alta}. Anything else is protected.
@@ -46,6 +47,9 @@ import prepare_worldcup_external_templates as prep  # noqa: E402  (reuse COLUMNS
 EXT_DIR = ROOT / "data" / "external"
 OUT_TXT = HERE / "worldcup_external_persistence_guard.txt"
 OUT_CSV = HERE / "worldcup_external_persistence_guard.csv"
+# separate artifacts when validating a filtered snapshot (so the data/external diagnostic is not clobbered)
+OUT_TXT_SNAP = HERE / "worldcup_external_persistence_guard_snapshot.txt"
+OUT_CSV_SNAP = HERE / "worldcup_external_persistence_guard_snapshot.csv"
 
 try:
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -69,7 +73,7 @@ ALLOWED_POLICY = {
     "weather_by_fixture.csv": {
         "manual_cols": ["temperature", "humidity", "wind_speed", "rain_probability", "pitch_condition"],
         "required_nonempty": ["fixture_id"],
-        "auto_sources": {"plantilla_kickoff"},
+        "auto_sources": {"plantilla_kickoff", "api_football_store"},
         "extra": None,
     },
     "set_piece_takers.csv": {
@@ -281,8 +285,19 @@ def main():
     ap.add_argument("--strict", action="store_true",
                     help="exit 1 if a forbidden file is in the add-set, an addable file still holds "
                          "manual data, or columns are inconsistent. Default: diagnostic (exit 0).")
+    ap.add_argument("--snapshot", metavar="DIR", default=None,
+                    help="validate a FILTERED snapshot dir (Fase 4C-4) instead of data/external. A "
+                         "well-formed auto-only snapshot must pass --strict (0 manual rows/cells).")
     a = ap.parse_args()
-    rep = run()
+    if a.snapshot:
+        snap_dir = Path(a.snapshot)
+        if not snap_dir.exists():
+            print(f"[snapshot] directorio inexistente: {snap_dir} -> exit 1")
+            return 1
+        rep = run(ext_dir=snap_dir, out_txt=OUT_TXT_SNAP, out_csv=OUT_CSV_SNAP)
+        print("(modo --snapshot: validando el snapshot filtrado)")
+    else:
+        rep = run()
     print(rep["txt"])
     if a.strict and not rep["strict_ok"]:
         print(f"\n[strict] {len(rep['violations'])} violación(es) -> exit 1")

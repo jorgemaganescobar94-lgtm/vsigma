@@ -45,6 +45,14 @@ data/processed/**/player_props/
 analysis/worldcup/*_study*.csv
 analysis/worldcup/*_probe*.csv
 
+# Fase 4C-4 external persistable snapshot + generated reports (regenerable; NEVER auto-committed)
+analysis/worldcup/persistable_external_snapshot/
+analysis/worldcup/worldcup_external_persistable_snapshot_report.txt
+analysis/worldcup/worldcup_external_persistable_snapshot_report.csv
+analysis/worldcup/worldcup_external_persistence_commit_simulation.txt
+analysis/worldcup/worldcup_external_persistence_guard_snapshot.txt
+analysis/worldcup/worldcup_external_persistence_guard_snapshot.csv
+
 # vSIGMA generated local artifacts
 data/modeling/*.csv
 data/modeling/*.md

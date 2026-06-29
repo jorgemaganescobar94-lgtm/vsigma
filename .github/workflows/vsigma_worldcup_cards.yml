@@ -342,6 +342,24 @@ jobs:
         run: |
           python analysis/worldcup/guard_worldcup_external_persistence.py
 
+      # ---- FASE 4C-4 persistable SNAPSHOT + commit SIMULATION (read-only inputs, NO API, NO writes to
+      #      data/external, NO git add, NO git commit, NO push): materialise an AUTO-ONLY filtered copy of
+      #      data/external under analysis/worldcup/persistable_external_snapshot/ (manual rows/cells
+      #      excluded/blanked, forbidden files never included), validate it with guard --strict, and
+      #      SIMULATE the bounded option-B commit. Persistence is STILL NOT activated: nothing is added or
+      #      committed — this only proves the auto-only add-set would be safe. Soft-fail; never blocks.
+      - name: Fase 4C-4 — persistable snapshot + guard-strict + commit simulation (no commit, soft-fail)
+        continue-on-error: true
+        run: |
+          echo "----- snapshot CHECK (no escribe) -----"
+          python analysis/worldcup/build_worldcup_external_persistable_snapshot.py --check
+          echo "----- snapshot BUILD (solo bajo analysis/worldcup/persistable_external_snapshot) -----"
+          python analysis/worldcup/build_worldcup_external_persistable_snapshot.py
+          echo "----- guard --strict sobre el snapshot filtrado -----"
+          python analysis/worldcup/guard_worldcup_external_persistence.py --strict --snapshot analysis/worldcup/persistable_external_snapshot
+          echo "----- simulación de commit (NO ejecuta git) -----"
+          python analysis/worldcup/simulate_worldcup_external_persistence_commit.py
+
       # ---- FASE 3 external-data status (read-only, NO API, NO secrets): logs which optional CSV
       #      sources under data/external/ are active for this run (xG/xA real, set-piece takers,
       #      referee, weather, coach tactical, positional). Pure diagnostics; never blocks. Absent

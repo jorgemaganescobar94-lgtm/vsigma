@@ -76,8 +76,35 @@ read-only que exige la opción B:
 
 El workflow ejecuta el guard en modo **diagnóstico** (sin `--strict`, sin `git add`, sin commit).
 
-## Próximo paso (Fase 4C-4, sujeto a aprobación)
+## Estado de la infraestructura (Fase 4C-4, implementada — persistencia AÚN no activada)
 
-Si Jorge aprueba B: añadir al workflow (1) generación de CSV **filtrados** que excluyan filas/celdas
-manuales, (2) `guard --strict` como gate, (3) commit acotado con rutas explícitas + dry-run previo, y
-documentar el trail. Hasta entonces, **no activar persistencia**.
+Fase 4C-4 construye y **simula** la opción B sin activarla. Tres piezas nuevas, todas read-only sobre
+`data/external/` (nunca lo mutan) y sin `git add`/`commit`/`push`:
+
+1. `analysis/worldcup/build_worldcup_external_persistable_snapshot.py` — genera bajo
+   `analysis/worldcup/persistable_external_snapshot/` una copia **filtrada auto-only** de los 4 ficheros
+   permitidos: excluye filas no-auto, **vacía** las columnas manuales (scouting de posición, mediciones
+   de clima) conservando el **esquema completo**, y solo emite penaltis reales de eventos. Nunca incluye
+   `player_xg_xa.csv` / `referee_profiles.csv` / `coach_tactical_profiles.csv`. Modo `--check`: calcula
+   sin escribir (exit 1 si una fuente tiene esquema roto/inesperado).
+2. `guard_worldcup_external_persistence.py --strict --snapshot <dir>` — valida el snapshot filtrado;
+   debe pasar strict (0 filas/celdas manuales) aunque `data/external` real tenga datos manuales.
+3. `analysis/worldcup/simulate_worldcup_external_persistence_commit.py` — **simula** el commit acotado:
+   dice qué rutas explícitas se añadirían, detecta diff real frente a `data/external` y detecta commit
+   vacío. **Nunca** ejecuta `git add`/`commit`/`push` ni toca `main`.
+
+El workflow ejecuta las tres en modo soft-fail (check → build → guard --strict snapshot → simulación),
+**sin** `git add`, **sin** commit, **sin** push. El snapshot y los reportes generados están en
+`.gitignore` (regenerables, nunca auto-commiteados).
+
+## Próximo paso (Fase 4C-5, sujeto a aprobación 🔴)
+
+Para activar realmente la opción B haría falta (propuesta → aprobación de Jorge → aplicación):
+1. Decidir si se persiste el **snapshot filtrado** o se escribe lo auto-derivado directamente en
+   `data/external` vía el merge seguro (Fase 4B) — y commitear con `git add <ruta-explícita>` por archivo.
+2. Sustituir la **simulación** por un `git add`/`commit` acotado **condicionado a diff real** (sin
+   commits vacíos), con `guard --strict` como gate bloqueante previo.
+3. Permisos de escritura del workflow (`contents: write`) y trail de auditoría del commit automático.
+
+Hasta esa aprobación explícita, **no se activa persistencia**: CI solo audita, hace dry-run, construye
+el snapshot aislado y **simula**.
