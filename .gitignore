@@ -87,6 +87,11 @@ analysis/worldcup/worldcup_scoreline_evaluation_report.txt
 analysis/worldcup/worldcup_team_sot_scorecard_summary.json
 analysis/worldcup/worldcup_team_sot_scorecard_report.txt
 
+# Fase 4M team SOT level correction (shadow): the .csv is auto-committed by CI (kept), summary json +
+# report are regenerable side-artifacts (ignored).
+analysis/worldcup/worldcup_team_sot_level_correction_summary.json
+analysis/worldcup/worldcup_team_sot_level_correction_report.txt
+
 # Fase 4C-4 external persistable snapshot + generated reports (regenerable; NEVER auto-committed)
 analysis/worldcup/persistable_external_snapshot/
 analysis/worldcup/worldcup_external_persistable_snapshot_report.txt

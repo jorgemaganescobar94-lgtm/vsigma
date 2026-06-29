@@ -531,6 +531,19 @@ jobs:
           echo "----- team SOT scorecard (report) -----"
           cat analysis/worldcup/worldcup_team_sot_scorecard_report.txt || true
 
+      # Fase 4M: TEAM SOT LEVEL-CORRECTION evaluator — SHADOW / display-only. Measures whether a simple
+      #      level correction (global/side/team ratio or subtractive bias) of the over-predicted team
+      #      SOT reduces MAE/bias AND survives an anti-look-ahead (pre_fixture, online) test. Applies
+      #      NOTHING: no weights, no lam_shot_on, no player model, no base prediction, no Telegram.
+      #      Read-only, pure football, no betting. Soft-fail. Runs AFTER the 4L scorecard and BEFORE the
+      #      4J panel so the 'Team SOT level correction' module shows as SHADOW.
+      - name: Fase 4M — team SOT level-correction evaluator (shadow, read-only, soft-fail)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/evaluate_worldcup_team_sot_level_correction.py
+          echo "----- team SOT level correction (report) -----"
+          cat analysis/worldcup/worldcup_team_sot_level_correction_report.txt || true
+
       # Fase 4J: GLOBAL PREDICTION-ACCURACY evaluation — panels EVERY main output (1X2, goals, per-player
       #      goal/assist/SOT/cards, team stats) against real settled outcomes with an honest status +
       #      recommendation per module. MEASURE ONLY: no weights/models/predictions/Telegram/external
@@ -604,6 +617,7 @@ jobs:
                    analysis/worldcup/worldcup_team_stats_scorecard.txt \
                    analysis/worldcup/worldcup_team_stats_scorecard.csv \
                    analysis/worldcup/worldcup_team_sot_scorecard.csv \
+                   analysis/worldcup/worldcup_team_sot_level_correction.csv \
                    analysis/worldcup/worldcup_stats_level_correction.csv \
                    analysis/worldcup/worldcup_referee_profiles_auto.csv \
                    analysis/worldcup/worldcup_card_profiles_auto.csv \

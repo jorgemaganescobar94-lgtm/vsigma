@@ -36,6 +36,7 @@ PRED_LOG = HERE / "worldcup_predictions_log.csv"
 PROPS_LOG = HERE / "worldcup_player_props_log.csv"
 TEAM_STATS_SCORECARD = HERE / "worldcup_team_stats_scorecard.csv"
 TEAM_SOT_SCORECARD = HERE / "worldcup_team_sot_scorecard.csv"  # Fase 4L per-team/fixture SOT scorecard
+TEAM_SOT_CORRECTION_JSON = HERE / "worldcup_team_sot_level_correction_summary.json"  # Fase 4M (shadow)
 SHADOW_MONITOR_JSON = HERE / "worldcup_card_risk_shadow_monitor.json"
 SCORELINE_EVAL_JSON = HERE / "worldcup_scoreline_evaluation_summary.json"
 OUT_CSV = HERE / "worldcup_prediction_accuracy.csv"
@@ -382,6 +383,47 @@ def evaluate_team_sot(path=TEAM_SOT_SCORECARD):
             "reason": f"{n} equipos-partido con SOT previsto (Σλ jugadores) y real liquidado"}
 
 
+# ============================================================ team SOT level correction (Fase 4M, SHADOW)
+def team_sot_correction_module(path=TEAM_SOT_CORRECTION_JSON):
+    """Surface the Fase-4M team-SOT level-correction evaluation as a SHADOW module. NEVER ACTIVO here:
+    the correction is display-only/shadow and would only be activated in a later, explicitly-approved
+    phase. Shows the anti-look-ahead (pre_fixture) delta MAE/RMSE, original vs corrected bias, and the
+    module's own recommendation. NO_EVALUABLE if the summary is absent. Reads only — applies nothing."""
+    base = {"module": "Team SOT level correction", "status": "SHADOW",
+            "recommendation": "dejar shadow", "confidence": "baja"}
+    p = Path(path)
+    if not p.exists():
+        return {**base, "status": "NO_EVALUABLE", "n": 0,
+                "reason": "sin evaluación de corrección de nivel SOT (Fase 4M)",
+                "recommendation": "ejecutar evaluate_worldcup_team_sot_level_correction.py"}
+    try:
+        s = json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return {**base, "status": "NO_EVALUABLE", "n": 0,
+                "reason": "evaluación de corrección SOT ilegible", "recommendation": "necesita más datos"}
+    n = s.get("n_team_rows", 0)
+    if not n:
+        return {**base, "status": "NO_EVALUABLE", "n": 0,
+                "reason": s.get("reason", "sin filas evaluables"), "recommendation": "necesita más datos"}
+    pf = (s.get("anti_look_ahead") or {}).get("pre_fixture", {})
+    orig = s.get("original", {})
+    rec = s.get("recommendation", "SHADOW_ONLY")
+    bias_o = pf.get("bias_original_on_corrected")
+    bias_c = pf.get("bias_corrected_on_corrected")
+    return {"module": "Team SOT level correction", "status": "SHADOW", "n": n,
+            "primary_metric": "delta_mae_pre_fixture", "primary_value": pf.get("delta_mae_on_corrected"),
+            "secondary": {"delta_rmse_pre_fixture": pf.get("delta_rmse_on_corrected"),
+                          "n_corrected": pf.get("n_corrected"), "n_kept_original": pf.get("n_kept_original"),
+                          "bias_original": _r(safe_num(bias_o)) if bias_o is not None else None,
+                          "bias_corrected": _r(safe_num(bias_c)) if bias_c is not None else None,
+                          "module_recommendation": rec},
+            "bias": (f"sesgo original {_r(safe_num(orig.get('bias')))} -> corregido pre_fixture "
+                     f"{_r(safe_num(bias_c)) if bias_c is not None else '—'} (online)"),
+            "recommendation": f"dejar shadow ({rec})",
+            "confidence": "baja",
+            "reason": s.get("recommendation_reason", "corrección shadow medida con anti-look-ahead")}
+
+
 # ============================================================ scoreline top-3/5 (Fase 4K)
 def evaluate_scoreline_module(path=SCORELINE_EVAL_JSON):
     """Surface the Fase-4K scoreline evaluation (top-1/3/5 exact-score hit). NO_EVALUABLE if absent."""
@@ -495,6 +537,7 @@ def build(pred_log=PRED_LOG, props_log=PROPS_LOG, team_stats=TEAM_STATS_SCORECAR
     ]
     modules += evaluate_team_stats(team)
     modules.append(evaluate_team_sot())
+    modules.append(team_sot_correction_module())
     modules.append(card_risk_shadow_module())
 
     summary = {"meta": {"min_sample": MIN_SAMPLE,
