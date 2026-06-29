@@ -35,6 +35,7 @@ HERE = Path(__file__).resolve().parent
 PRED_LOG = HERE / "worldcup_predictions_log.csv"
 PROPS_LOG = HERE / "worldcup_player_props_log.csv"
 TEAM_STATS_SCORECARD = HERE / "worldcup_team_stats_scorecard.csv"
+TEAM_SOT_SCORECARD = HERE / "worldcup_team_sot_scorecard.csv"  # Fase 4L per-team/fixture SOT scorecard
 SHADOW_MONITOR_JSON = HERE / "worldcup_card_risk_shadow_monitor.json"
 SCORELINE_EVAL_JSON = HERE / "worldcup_scoreline_evaluation_summary.json"
 OUT_CSV = HERE / "worldcup_prediction_accuracy.csv"
@@ -340,12 +341,45 @@ def evaluate_team_stats(scorecard_df):
                          "recommendation": "monitorizar" if status == "ACTIVO" else "necesita más datos",
                          "confidence": "media" if status == "ACTIVO" else "baja",
                          "reason": f"{n} equipos-partido liquidados (scorecard agregado)"})
-    # team SOT not separately scored today -> explicit NO_EVALUABLE (never fabricated)
-    if "sot" not in present:
-        mods.append({"module": "Team stats: SOT", "status": "NO_EVALUABLE", "n": 0,
-                     "reason": "no hay scorecard de tiros a puerta de equipo todavía",
-                     "recommendation": "necesita salida mejor estructurada", "confidence": "baja"})
+    # Team SOT is scored by its own dedicated module (evaluate_team_sot, Fase 4L) from the per-team/
+    # fixture scorecard -> NOT injected here (avoids a duplicate placeholder).
     return mods
+
+
+# ============================================================ team SOT (Fase 4L per-team scorecard)
+def evaluate_team_sot(path=TEAM_SOT_SCORECARD):
+    """Surface the Fase-4L team shots-on-target scorecard. Reads the per-team/fixture rows
+    (predicted_sot = Σ player λ_sot vs actual_sot) and aggregates MAE/RMSE/bias over the evaluable rows
+    (both values present). ACTIVO / INSUFFICIENT_SAMPLE by sample size; NO_EVALUABLE if the scorecard is
+    absent/empty. Never fabricates."""
+    base = {"module": "Team stats: SOT", "confidence": "baja"}
+    df = _read_csv(path)
+    if df is None or not {"predicted_sot", "actual_sot"} <= set(df.columns):
+        return {**base, "status": "NO_EVALUABLE", "n": 0,
+                "reason": "no hay scorecard de tiros a puerta de equipo todavía (Fase 4L)",
+                "recommendation": "ejecutar build_worldcup_team_sot_scorecard.py"}
+    preds, acts = [], []
+    for _, r in df.iterrows():
+        p, a = safe_num(r.get("predicted_sot")), safe_num(r.get("actual_sot"))
+        if p is None or a is None:
+            continue
+        preds.append(p); acts.append(a)
+    n = len(preds)
+    if n == 0:
+        return {**base, "status": "NO_EVALUABLE", "n": 0,
+                "reason": "scorecard de SOT sin filas evaluables (predicho + real)",
+                "recommendation": "necesita más datos"}
+    status = _status_for(n, True)
+    b = bias(preds, acts)
+    return {"module": "Team stats: SOT", "status": status, "n": n,
+            "primary_metric": "mae", "primary_value": _r(mae(preds, acts)),
+            "secondary": {"rmse": _r(rmse(preds, acts)), "mean_pred": _r(sum(preds) / n),
+                          "mean_real": _r(sum(acts) / n),
+                          "n_fixtures": int(df["fixture_id"].nunique()) if "fixture_id" in df.columns else None},
+            "bias": f"bias {_r(b)} ({'sobre' if (b or 0) > 0 else 'infra'}-predice)",
+            "recommendation": "monitorizar" if status == "ACTIVO" else "necesita más datos",
+            "confidence": "media" if status == "ACTIVO" else "baja",
+            "reason": f"{n} equipos-partido con SOT previsto (Σλ jugadores) y real liquidado"}
 
 
 # ============================================================ scoreline top-3/5 (Fase 4K)
@@ -423,9 +457,9 @@ def _executive(modules):
         conclusion.append("Queda en shadow: " + ", ".join(shadow) + " (no aporta señal real todavía).")
     if not_eval:
         conclusion.append("No evaluable aún: " + ", ".join(not_eval) + ".")
-    conclusion.append("Prioridad siguiente: estructurar una salida de DISTRIBUCIÓN DE MARCADORES "
-                      "(top-3/5) y un scorecard de SOT de equipo, y seguir acumulando muestra de "
-                      "props por jugador, ANTES de añadir fuentes externas.")
+    conclusion.append("Distribución de marcadores (top-3/5, Fase 4K) y SOT de equipo (Fase 4L) ya "
+                      "están estructurados y medidos. Prioridad siguiente: seguir acumulando muestra "
+                      "de props por jugador y de SOT de equipo, ANTES de añadir fuentes externas.")
     return {"active_modules": [m["module"] for m in active], "shadow_modules": shadow,
             "not_evaluable": not_eval, "insufficient_sample": insuff,
             "overprediction": over, "underprediction": under,
@@ -460,6 +494,7 @@ def build(pred_log=PRED_LOG, props_log=PROPS_LOG, team_stats=TEAM_STATS_SCORECAR
         evaluate_player_count(props, "Jugadores: nº tiros", "exp_shots", "act_shots"),
     ]
     modules += evaluate_team_stats(team)
+    modules.append(evaluate_team_sot())
     modules.append(card_risk_shadow_module())
 
     summary = {"meta": {"min_sample": MIN_SAMPLE,

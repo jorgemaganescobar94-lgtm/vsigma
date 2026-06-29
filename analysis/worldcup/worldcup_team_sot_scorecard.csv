@@ -1,0 +1,43 @@
+fixture_id,kickoff_utc,team_id,team_name,opponent_id,opponent_name,side,predicted_sot,actual_sot,error,abs_error,source_predicted,source_actual,data_quality,confidence,reason
+1489402,,10,England,1504,Ghana,home,,3.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489402,,1504,Ghana,10,England,away,,1.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489403,,3,Croatia,11,Panama,away,,2.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489403,,11,Panama,3,Croatia,home,,1.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489409,2026-06-25 20:00,1501,Ivory Coast,5530,Curaçao,away,4.213,0.0,4.213,4.213,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489409,2026-06-25 20:00,5530,Curaçao,1501,Ivory Coast,home,3.119,0.0,3.1193,3.1193,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489410,2026-06-25 20:00,25,Germany,2382,Ecuador,away,5.385,3.0,2.3851,2.3851,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489410,2026-06-25 20:00,2382,Ecuador,25,Germany,home,3.272,1.0,2.2716,2.2716,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489411,2026-06-26 02:00,20,Australia,2380,Paraguay,away,3.219,2.0,1.219,1.219,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489411,2026-06-26 02:00,2380,Paraguay,20,Australia,home,4.233,0.0,4.2326,4.2326,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489412,2026-06-25 23:00,28,Tunisia,1118,Netherlands,home,2.426,4.0,-1.5741,1.5741,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489412,2026-06-25 23:00,1118,Netherlands,28,Tunisia,away,6.235,7.0,-0.7649,0.7649,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489413,2026-06-27 00:00,23,Saudi Arabia,1533,Cape Verde Islands,away,3.995,1.0,2.9951,2.9951,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489413,2026-06-27 00:00,1533,Cape Verde Islands,23,Saudi Arabia,home,4.517,1.0,3.5171,3.5171,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489414,2026-06-27 03:00,22,Iran,32,Egypt,away,4.027,2.0,2.0273,2.0273,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489414,2026-06-27 03:00,32,Egypt,22,Iran,home,4.47,2.0,2.4695,2.4695,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489415,2026-06-27 03:00,1,Belgium,4673,New Zealand,away,8.046,6.0,2.0459,2.0459,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489415,2026-06-27 03:00,4673,New Zealand,1,Belgium,home,3.952,2.0,1.9516,1.9516,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489416,2026-06-26 19:00,2,France,1090,Norway,away,4.908,9.0,-4.0918,4.0918,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489416,2026-06-26 19:00,1090,Norway,2,France,home,3.318,4.0,-0.6821,0.6821,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489417,2026-06-27 00:00,7,Uruguay,9,Spain,home,2.804,0.0,2.8044,2.8044,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489417,2026-06-27 00:00,9,Spain,7,Uruguay,away,7.339,1.0,6.3392,6.3392,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489418,2026-06-28 02:00,775,Austria,1532,Algeria,away,4.009,2.0,2.0089,2.0089,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489418,2026-06-28 02:00,1532,Algeria,775,Austria,home,4.594,5.0,-0.4065,0.4065,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489419,2026-06-27 23:30,8,Colombia,27,Portugal,home,4.389,6.0,-1.6108,1.6108,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489419,2026-06-27 23:30,27,Portugal,8,Colombia,away,4.801,2.0,2.8009,2.8009,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489420,2026-06-27 21:00,3,Croatia,1504,Ghana,home,6.504,3.0,3.5038,3.5038,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489420,2026-06-27 21:00,1504,Ghana,3,Croatia,away,3.473,1.0,2.4726,2.4726,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489421,2026-06-28 02:00,26,Argentina,1548,Jordan,away,6.605,2.0,4.6055,4.6055,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489421,2026-06-28 02:00,1548,Jordan,26,Argentina,home,1.977,1.0,0.9772,0.9772,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489422,2026-06-27 21:00,10,England,11,Panama,away,7.435,5.0,2.4348,2.4348,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489422,2026-06-27 21:00,11,Panama,10,England,home,2.917,2.0,0.9173,0.9173,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1539011,2026-06-25 23:00,5,Sweden,12,Japan,away,3.029,5.0,-1.9711,1.9711,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1539011,2026-06-25 23:00,12,Japan,5,Sweden,home,5.366,3.0,2.3658,2.3658,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1539012,2026-06-26 02:00,777,Türkiye,2384,USA,home,5.149,2.0,3.1487,3.1487,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1539012,2026-06-26 02:00,2384,USA,777,Türkiye,away,4.257,3.0,1.2567,1.2567,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1539013,2026-06-27 23:30,1508,Congo DR,1568,Uzbekistan,home,4.37,3.0,1.37,1.37,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1539013,2026-06-27 23:30,1568,Uzbekistan,1508,Congo DR,away,2.987,1.0,1.987,1.987,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1539074,2026-06-26 19:00,13,Senegal,1567,Iraq,home,6.71,4.0,2.71,2.71,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1539074,2026-06-26 19:00,1567,Iraq,13,Senegal,away,2.063,1.0,1.0631,1.0631,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1561329,2026-06-28 19:00,1531,South Africa,5529,Canada,home,3.439,1.0,2.4388,2.4388,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1561329,2026-06-28 19:00,5529,Canada,1531,South Africa,away,3.803,4.0,-0.1969,0.1969,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores

@@ -113,13 +113,20 @@ def test_panel_marks_insufficient_sample():
     assert m["status"] == "INSUFFICIENT_SAMPLE"
 
 
-def test_team_stats_marks_sot_no_evaluable():
+def test_team_stats_no_longer_injects_sot_placeholder():
+    # Fase 4L: Team SOT is scored by its own dedicated module (evaluate_team_sot) from the per-team
+    # scorecard; evaluate_team_stats no longer injects a 'Team stats: SOT' placeholder row.
     sc = pd.DataFrame([{"stat": "shots", "n": 39, "mae": 7.4, "rmse": 8.9, "bias": -6.0,
                         "mean_pred": 18.3, "mean_real": 24.3, "line_acc": None}])
-    mods = pa.evaluate_team_stats(sc)
-    names = {m["module"]: m for m in mods}
+    names = {m["module"]: m for m in pa.evaluate_team_stats(sc)}
     assert names["Team stats: tiros"]["status"] == "ACTIVO"
-    assert names["Team stats: SOT"]["status"] == "NO_EVALUABLE"
+    assert "Team stats: SOT" not in names
+
+
+def test_team_sot_no_evaluable_when_scorecard_missing(tmp_path):
+    # absent scorecard -> Team SOT stays NO_EVALUABLE with a clear reason (no fabrication).
+    m = pa.evaluate_team_sot(tmp_path / "absent.csv")
+    assert m["module"] == "Team stats: SOT" and m["status"] == "NO_EVALUABLE" and m["n"] == 0
 
 
 # ---------------------------------------------------------------- report + round trip
