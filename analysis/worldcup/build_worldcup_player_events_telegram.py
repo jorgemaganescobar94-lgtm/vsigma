@@ -154,13 +154,25 @@ def render_fixture(obj):
         L += [f"  {c['player']} ({c['team']}) — {_pct(c['probability_card'])}" for c in cr]
     L.append("")
 
-    # ---- Fase 3 — árbitro (§5) ----
+    # ---- Fase 3 + 4E — árbitro (§5). Muestra usada + confidence + advertencia si muestra baja. ----
     rc = obj.get("referee_context") or {}
     if rc.get("referee_name"):
+        sample = rc.get("matches_sample")
+        src = rc.get("profile_source")
+        src_tag = " · fuente Mundial auto" if src == "worldcup_events_auto" else ""
         L.append(f"🧑‍⚖️ Árbitro: {rc['referee_name']} — entorno de tarjetas: "
-                 f"{rc.get('expected_card_environment','—')} (conf. {rc.get('confidence','baja')})")
-        if rc.get("possible_penalty_environment") and rc["possible_penalty_environment"] != "no determinado":
-            L.append(f"   Penaltis: {rc['possible_penalty_environment']}")
+                 f"{rc.get('expected_card_environment','—')} (conf. {rc.get('confidence','baja')}{src_tag})")
+        pen_env = rc.get("possible_penalty_environment")
+        if pen_env and not str(pen_env).startswith("no determinado"):
+            L.append(f"   Penaltis: {pen_env}")
+        else:
+            L.append("   Penaltis: no determinado")
+        if sample is not None:
+            L.append(f"   Muestra: {int(sample)} partido(s)")
+        # honest low-sample warning (1 match or no sample, or non-trusted confidence)
+        conf = str(rc.get("confidence") or "")
+        if (sample is not None and int(sample) <= 1) or conf in ("baja", "media-baja", "no determinado"):
+            L.append("   ⚠️ Muestra baja: no extrapolar la tendencia del árbitro.")
 
     # ---- Fase 3 — clima (§6) ----
     wx = obj.get("weather_context") or {}

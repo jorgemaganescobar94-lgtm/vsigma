@@ -422,6 +422,17 @@ jobs:
       #      data/external/): real xG/xA per player (source_used=real_xg_xa vs proxy), set_piece_takers
       #      with documented source priority, referee/weather/coach contexts + individual matchups, all
       #      surfaced in external_data_status. Pure football, NO market/odds/betting. SOFT.
+      # ---- FASE 4E AUTO referee profiles (read-only inputs, NO API, NO scraping, NO web, NO writes to
+      #      data/external, NO commit): derive per-referee card/penalty environment from REAL events
+      #      already captured (fixture_referees.csv + worldcup_fixture_events.csv + store home/away).
+      #      Thin samples -> low confidence + "no extrapolar". Runs AFTER the events extractor AND the
+      #      prepare/persist of fixture_referees, and BEFORE the player-events card so referee_context
+      #      can use the auto profile when no manual profile exists. Pure football. Soft-fail.
+      - name: Fase 4E — auto referee profiles from real events (read-only, soft-fail)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/build_worldcup_referee_profiles_auto.py
+
       - name: Player-events card + history (read-only; §11 + Fase 3 external context)
         continue-on-error: true
         run: |
@@ -516,6 +527,7 @@ jobs:
                    analysis/worldcup/worldcup_team_stats_scorecard.txt \
                    analysis/worldcup/worldcup_team_stats_scorecard.csv \
                    analysis/worldcup/worldcup_stats_level_correction.csv \
+                   analysis/worldcup/worldcup_referee_profiles_auto.csv \
                    analysis/worldcup/worldcup_trackrecord_panel.md; do
             [ -f "$p" ] && git add "$p" || true
           done

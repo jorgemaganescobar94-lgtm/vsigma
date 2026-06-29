@@ -244,6 +244,8 @@ def build():
     xg_xa_map, xg_xa_reason = adapters.load_player_xg_xa()
     sp_takers_map, sp_takers_reason = adapters.load_set_piece_takers()
     ref_profiles, ref_profiles_reason = adapters.load_referee_profiles()
+    # Fase 4E — AUTO referee profiles (derived from REAL events) as fallback when no manual profile.
+    ref_auto_profiles, ref_auto_reason = refctx.load_auto_referee_profiles()
     weather_map, weather_reason = adapters.load_weather_by_fixture()
     coach_map, coach_reason = adapters.load_coach_profiles()
     pos_map, pos_reason = adapters.load_positional_profiles()
@@ -253,7 +255,7 @@ def build():
     ext_status = {
         "xg_xa_available": bool(xg_xa_map),
         "set_piece_available": bool(sp_takers_map),
-        "referee_available": bool(ref_profiles),
+        "referee_available": bool(ref_profiles) or bool(ref_auto_profiles),
         "weather_available": bool(weather_map),
         "coach_profile_available": bool(coach_map),
         "positional_profile_available": bool(pos_map),
@@ -330,7 +332,8 @@ def build():
 
         # Fase 3 — contexts (§5 referee, §6 weather, §7 coach/tactical, §8 individual matchups).
         ref_name = fixture_referees.get(fid)
-        referee_ctx = refctx.build_referee_context(ref_name, ref_profiles, ref_profiles_reason)
+        referee_ctx = refctx.build_referee_context(ref_name, ref_profiles, ref_profiles_reason,
+                                                   ref_auto_profiles, ref_auto_reason)
         weather_ctx = wxctx.build_weather_context(fid, weather_map, weather_reason)
         tactical_ctx = coachctx.build_tactical_context(h_tid, a_tid, home, away, coach_map, coach_reason)
         h_xi = [{"player_id": pid, "player_name": names_by_id.get(pid), "team": home} for pid in h_ids]

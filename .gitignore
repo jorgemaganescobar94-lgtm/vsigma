@@ -45,6 +45,11 @@ data/processed/**/player_props/
 analysis/worldcup/*_study*.csv
 analysis/worldcup/*_probe*.csv
 
+# Fase 4E auto referee-profile artifacts: the .csv is auto-committed by CI (kept), json+report are
+# regenerable side-artifacts (ignored). data/external/referee_profiles.csv stays manual & blocked.
+analysis/worldcup/worldcup_referee_profiles_auto.json
+analysis/worldcup/worldcup_referee_profiles_auto_report.txt
+
 # Fase 4C-4 external persistable snapshot + generated reports (regenerable; NEVER auto-committed)
 analysis/worldcup/persistable_external_snapshot/
 analysis/worldcup/worldcup_external_persistable_snapshot_report.txt
