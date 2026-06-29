@@ -92,6 +92,13 @@ analysis/worldcup/worldcup_team_sot_scorecard_report.txt
 analysis/worldcup/worldcup_team_sot_level_correction_summary.json
 analysis/worldcup/worldcup_team_sot_level_correction_report.txt
 
+# Fase 4N shadow monitors: the .csv files are auto-committed by CI (kept); the monitor/summary json +
+# reports are regenerable side-artifacts (ignored).
+analysis/worldcup/worldcup_team_sot_correction_shadow_monitor.json
+analysis/worldcup/worldcup_team_sot_correction_shadow_monitor_report.txt
+analysis/worldcup/worldcup_team_stats_level_correction_shadow_summary.json
+analysis/worldcup/worldcup_team_stats_level_correction_shadow_report.txt
+
 # Fase 4C-4 external persistable snapshot + generated reports (regenerable; NEVER auto-committed)
 analysis/worldcup/persistable_external_snapshot/
 analysis/worldcup/worldcup_external_persistable_snapshot_report.txt

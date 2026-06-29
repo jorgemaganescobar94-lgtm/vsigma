@@ -544,6 +544,23 @@ jobs:
           echo "----- team SOT level correction (report) -----"
           cat analysis/worldcup/worldcup_team_sot_level_correction_report.txt || true
 
+      # Fase 4N: SHADOW MONITORS — (1) SOT correction ACTIVATION monitor (governance gates:
+      #      should_activate_display_correction, never activates) and (2) extend the level-correction
+      #      shadow pattern to team SHOTS and CORNERS (per-fixture totals from the predictions log, full
+      #      anti-look-ahead; aggregate-only -> NEEDS_PER_FIXTURE_DATA). Applies NOTHING: no weights, no
+      #      models, no existing correction, no base prediction, no Telegram. Read-only, pure football,
+      #      no betting. Soft-fail. Run AFTER the 4L scorecard + 4M evaluator + team-stats scorecard,
+      #      BEFORE the 4J panel so the new shadow modules appear.
+      - name: Fase 4N — team SOT/stats shadow monitors (read-only, soft-fail)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/monitor_worldcup_team_sot_correction_shadow.py
+          python analysis/worldcup/evaluate_worldcup_team_stats_level_correction_shadow.py
+          echo "----- team SOT activation monitor (report) -----"
+          cat analysis/worldcup/worldcup_team_sot_correction_shadow_monitor_report.txt || true
+          echo "----- team stats level correction shadow (report) -----"
+          cat analysis/worldcup/worldcup_team_stats_level_correction_shadow_report.txt || true
+
       # Fase 4J: GLOBAL PREDICTION-ACCURACY evaluation — panels EVERY main output (1X2, goals, per-player
       #      goal/assist/SOT/cards, team stats) against real settled outcomes with an honest status +
       #      recommendation per module. MEASURE ONLY: no weights/models/predictions/Telegram/external
@@ -618,6 +635,8 @@ jobs:
                    analysis/worldcup/worldcup_team_stats_scorecard.csv \
                    analysis/worldcup/worldcup_team_sot_scorecard.csv \
                    analysis/worldcup/worldcup_team_sot_level_correction.csv \
+                   analysis/worldcup/worldcup_team_sot_correction_shadow_monitor.csv \
+                   analysis/worldcup/worldcup_team_stats_level_correction_shadow.csv \
                    analysis/worldcup/worldcup_stats_level_correction.csv \
                    analysis/worldcup/worldcup_referee_profiles_auto.csv \
                    analysis/worldcup/worldcup_card_profiles_auto.csv \

@@ -37,6 +37,8 @@ PROPS_LOG = HERE / "worldcup_player_props_log.csv"
 TEAM_STATS_SCORECARD = HERE / "worldcup_team_stats_scorecard.csv"
 TEAM_SOT_SCORECARD = HERE / "worldcup_team_sot_scorecard.csv"  # Fase 4L per-team/fixture SOT scorecard
 TEAM_SOT_CORRECTION_JSON = HERE / "worldcup_team_sot_level_correction_summary.json"  # Fase 4M (shadow)
+TEAM_SOT_MONITOR_JSON = HERE / "worldcup_team_sot_correction_shadow_monitor.json"     # Fase 4N (monitor)
+TEAM_STATS_CORRECTION_JSON = HERE / "worldcup_team_stats_level_correction_shadow_summary.json"  # Fase 4N
 SHADOW_MONITOR_JSON = HERE / "worldcup_card_risk_shadow_monitor.json"
 SCORELINE_EVAL_JSON = HERE / "worldcup_scoreline_evaluation_summary.json"
 OUT_CSV = HERE / "worldcup_prediction_accuracy.csv"
@@ -424,6 +426,82 @@ def team_sot_correction_module(path=TEAM_SOT_CORRECTION_JSON):
             "reason": s.get("recommendation_reason", "corrección shadow medida con anti-look-ahead")}
 
 
+# ============================================================ team SOT activation monitor (Fase 4N, SHADOW)
+def team_sot_monitor_module(path=TEAM_SOT_MONITOR_JSON):
+    """Surface the Fase-4N SOT correction ACTIVATION MONITOR as a SHADOW module. Shows the governance
+    decision should_activate_display_correction (never activates anything). NO_EVALUABLE if absent."""
+    base = {"module": "Team SOT correction monitor", "status": "SHADOW",
+            "recommendation": "dejar shadow", "confidence": "baja"}
+    p = Path(path)
+    if not p.exists():
+        return {**base, "status": "NO_EVALUABLE", "n": 0,
+                "reason": "sin monitor de activación SOT (Fase 4N)",
+                "recommendation": "ejecutar monitor_worldcup_team_sot_correction_shadow.py"}
+    try:
+        s = json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return {**base, "status": "NO_EVALUABLE", "n": 0, "reason": "monitor SOT ilegible",
+                "recommendation": "necesita más datos"}
+    n = s.get("n_team_rows", 0)
+    if not n:
+        return {**base, "status": "NO_EVALUABLE", "n": 0, "reason": "monitor sin filas evaluables",
+                "recommendation": "necesita más datos"}
+    should = s.get("should_activate_display_correction", False)
+    return {"module": "Team SOT correction monitor", "status": "SHADOW", "n": n,
+            "primary_metric": "should_activate_display_correction", "primary_value": bool(should),
+            "secondary": {"delta_mae_pre_fixture": s.get("delta_mae_pre_fixture"),
+                          "delta_rmse_pre_fixture": s.get("delta_rmse_pre_fixture"),
+                          "bias_reduction": s.get("bias_reduction"),
+                          "n_min_activate": (s.get("thresholds") or {}).get("n_min_activate"),
+                          "gates": s.get("activation_gates")},
+            "bias": f"sesgo {_r(safe_num(s.get('original_bias')))} -> pre_fixture {_r(safe_num(s.get('pre_fixture_bias')))}",
+            "recommendation": ("NO activar todavía" if not should else "candidata a activación (🔴 requiere aprobación)"),
+            "confidence": "baja",
+            "reason": s.get("decision_reason", "monitor de activación (shadow)")}
+
+
+# ============================================================ team stats correction shadow (Fase 4N)
+def team_stats_correction_shadow_module(stat, label, path=TEAM_STATS_CORRECTION_JSON):
+    """Surface one stat (shots/corners) of the Fase-4N team-stats level-correction shadow evaluation.
+    Status SHADOW (per-fixture data) / NEEDS_PER_FIXTURE_DATA (aggregate only) / NO_EVALUABLE (absent)."""
+    base = {"module": label, "confidence": "baja"}
+    p = Path(path)
+    if not p.exists():
+        return {**base, "status": "NO_EVALUABLE", "n": 0,
+                "reason": "sin evaluación shadow de corrección de stats (Fase 4N)",
+                "recommendation": "ejecutar evaluate_worldcup_team_stats_level_correction_shadow.py"}
+    try:
+        s = json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return {**base, "status": "NO_EVALUABLE", "n": 0, "reason": "evaluación shadow ilegible",
+                "recommendation": "necesita más datos"}
+    st = (s.get("stats") or {}).get(stat)
+    if not st:
+        return {**base, "status": "NO_EVALUABLE", "n": 0, "reason": f"sin datos para {stat}",
+                "recommendation": "necesita más datos"}
+    mode = st.get("mode")
+    rec = st.get("recommendation", "SHADOW_ONLY")
+    n = st.get("n", 0)
+    orig = st.get("original", {}) or {}
+    if mode == "aggregate_only":
+        return {**base, "module": label, "status": "NEEDS_PER_FIXTURE_DATA", "n": n,
+                "primary_metric": "mae_aggregate", "primary_value": orig.get("mae"),
+                "bias": f"bias {_r(safe_num(orig.get('bias')))} (solo agregado)",
+                "recommendation": "necesita datos por fixture", "confidence": "baja",
+                "reason": st.get("reason", "solo scorecard agregado")}
+    pf = st.get("pre_fixture", {}) or {}
+    return {"module": label, "status": "SHADOW", "n": n,
+            "primary_metric": "delta_mae_pre_fixture", "primary_value": pf.get("delta_mae"),
+            "secondary": {"delta_rmse_pre_fixture": pf.get("delta_rmse"),
+                          "global_ratio": st.get("global_ratio"),
+                          "cumulative_best_delta_mae": st.get("cumulative_best_delta_mae"),
+                          "module_recommendation": rec, "n_corrected": pf.get("n_corrected")},
+            "bias": (f"sesgo original {_r(safe_num(orig.get('bias')))} -> pre_fixture "
+                     f"{_r(safe_num(pf.get('corrected_bias')))} (online)"),
+            "recommendation": f"dejar shadow ({rec})", "confidence": "baja",
+            "reason": f"{n} fixtures (totales por partido) con corrección shadow + anti-look-ahead"}
+
+
 # ============================================================ scoreline top-3/5 (Fase 4K)
 def evaluate_scoreline_module(path=SCORELINE_EVAL_JSON):
     """Surface the Fase-4K scoreline evaluation (top-1/3/5 exact-score hit). NO_EVALUABLE if absent."""
@@ -538,6 +616,9 @@ def build(pred_log=PRED_LOG, props_log=PROPS_LOG, team_stats=TEAM_STATS_SCORECAR
     modules += evaluate_team_stats(team)
     modules.append(evaluate_team_sot())
     modules.append(team_sot_correction_module())
+    modules.append(team_sot_monitor_module())
+    modules.append(team_stats_correction_shadow_module("shots", "Team shots level correction"))
+    modules.append(team_stats_correction_shadow_module("corners", "Team corners level correction"))
     modules.append(card_risk_shadow_module())
 
     summary = {"meta": {"min_sample": MIN_SAMPLE,
