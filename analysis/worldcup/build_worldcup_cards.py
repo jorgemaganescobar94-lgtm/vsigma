@@ -439,9 +439,12 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
                 f"{home}: {VERBOSE[hc]} {hform}".rstrip()
                 + f"  |  {away}: {VERBOSE[ac]} {aform}".rstrip())
             out(f"    [INJURIES] (CONTEXTO) {home}: {hi or '—'}  ||  {away}: {ai or '—'}")
+            # inj_names_* hold the DISPLAY string of injured names. inj_home/inj_away are RESERVED for
+            # the injury-adjusted PROBABILITY (written later via ia). Keeping them separate avoids the
+            # column-name collision that fed a names-string into pred_1x2 (expects a float).
             rec.update({"lineup_home": hc, "lineup_away": ac,
                         "lineup_home_form": hform, "lineup_away_form": aform,
-                        "inj_home": hi, "inj_away": ai})
+                        "inj_names_home": hi, "inj_names_away": ai})
             if adjmod is not None and lu:
                 xi_out_home = adjmod.key_players_out_of_xi(
                     squad_idx.get(home, {}), lu.get(home), [n for n, _ in inj.get(home, [])])

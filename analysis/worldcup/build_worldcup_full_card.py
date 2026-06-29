@@ -277,6 +277,24 @@ MX_NOTE = ("Predicción: modelo amplio (núcleo L3 + forma/H2H/descanso) — pro
            "sin certeza ni mercado")
 
 
+def _safe_num(v):
+    """Coerce to a finite float, else None. NEVER raises, NEVER invents a value."""
+    try:
+        if v is None:
+            return None
+        f = float(v)
+    except (TypeError, ValueError):
+        return None
+    return f if f == f and f not in (float("inf"), float("-inf")) else None
+
+
+def _safe_prob(v):
+    """A valid probability is a finite float in [0, 1]; anything else (None/NaN/string/out-of-range)
+    -> None. Defends pred_1x2 against a non-numeric value ever reaching a `:.0f` format."""
+    f = _safe_num(v)
+    return f if (f is not None and 0.0 <= f <= 1.0) else None
+
+
 def pred_1x2(r):
     """Prediction to DISPLAY/SEND. CHAIN mx -> contexto -> lesiones, so priority is:
     inj_* (LIVE injuries, last link) > ctx_* (group context CHAINED on the shown engine) > mx_* (the
@@ -285,20 +303,25 @@ def pred_1x2(r):
     our_*/mx_* are NEVER overwritten (shadow for A/B + exact rollback): CONTEXT_LIVE off -> no ctx_* ->
     falls back to mx_* exactly; MAXMODEL_LIVE off too -> L3; INJURIES_LIVE off -> no inj_*.
     Returns (ph,pd,pa,xg_home,xg_away,note). inj_* keeps the engine framing (its label is its OWN ℹ️
-    line); ctx_* returns the context_note so the 'por qué' annotates the scenario."""
-    if pd.notna(r.get("inj_home")):
-        return (r.get("inj_home"), r.get("inj_draw"), r.get("inj_away"),
-                r.get("inj_xg_home"), r.get("inj_xg_away"), MX_NOTE)
-    if pd.notna(r.get("ctx_home")):
-        note = r.get("context_note")
-        return (r.get("ctx_home"), r.get("ctx_draw"), r.get("ctx_away"),
-                r.get("ctx_xg_home"), r.get("ctx_xg_away"),
-                note if isinstance(note, str) and note.strip() else MX_NOTE)
-    if pd.notna(r.get("mx_home")):
-        return (r.get("mx_home"), r.get("mx_draw"), r.get("mx_away"),
-                r.get("mx_xg_home"), r.get("mx_xg_away"), MX_NOTE)
-    return (r.get("our_home"), r.get("our_draw"), r.get("our_away"),
-            r.get("our_xg_home"), r.get("our_xg_away"), None)
+    line); ctx_* returns the context_note so the 'por qué' annotates the scenario.
+
+    DEFENSIVE: every probability candidate is validated with _safe_prob — a source is used only when its
+    full 1X2 triple is numeric in [0,1]. A malformed value (e.g. a stray names-string in inj_home) is
+    ignored and the next source is tried; a string is NEVER returned as a probability."""
+    for prefix, base_note in (("inj", MX_NOTE), ("ctx", None), ("mx", MX_NOTE), ("our", None)):
+        ph = _safe_prob(r.get(f"{prefix}_home"))
+        pdr = _safe_prob(r.get(f"{prefix}_draw"))
+        pa = _safe_prob(r.get(f"{prefix}_away"))
+        if ph is None or pdr is None or pa is None:
+            continue
+        xgh = _safe_num(r.get(f"{prefix}_xg_home"))
+        xga = _safe_num(r.get(f"{prefix}_xg_away"))
+        note = base_note
+        if prefix == "ctx":
+            cn = r.get("context_note")
+            note = cn if isinstance(cn, str) and cn.strip() else MX_NOTE
+        return (ph, pdr, pa, xgh, xga, note)
+    return (None, None, None, None, None, None)
 
 
 # --------------------------------------------------------------------- briefing digest (display-only)
@@ -848,8 +871,9 @@ def main(date_from, date_to, limit, compact=False, scorecard=None, max_lines=24,
             if show_lineups:
                 LU = {"conf": "conf", "prob": "prob", "pend": "pend"}
                 lh, la = r.get("lineup_home"), r.get("lineup_away")
-                ih = "" if pd.isna(r.get("inj_home")) else str(r.get("inj_home")).strip()
-                ia = "" if pd.isna(r.get("inj_away")) else str(r.get("inj_away")).strip()
+                # injured-names DISPLAY string lives in inj_names_* (inj_home/away = probability only)
+                ih = "" if pd.isna(r.get("inj_names_home")) else str(r.get("inj_names_home")).strip()
+                ia = "" if pd.isna(r.get("inj_names_away")) else str(r.get("inj_names_away")).strip()
                 has_lineup = pd.notna(lh) and str(lh) in LU
                 parts = []
                 if has_lineup:
