@@ -16,4 +16,4 @@ N=7 partidos liquidados con predicción mx (lock-at-KO, anti-hindsight) · desde
 
 VEREDICTO: muestra pequeña (N=7 < 30) — NO se declara ganador; el acumulado crece hasta el final del Mundial. Orientativo.
 
-generated_at_utc: 2026-06-29T13:38:40+00:00
+generated_at_utc: 2026-06-29T13:56:38+00:00
