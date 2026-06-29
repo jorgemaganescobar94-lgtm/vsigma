@@ -1,0 +1,2 @@
+fixture_id,league,home_team,away_team,market_primary,kickoff_time,minutes_to_kickoff,prelock_window_start,prelock_status,recommended_next_action,recommended_command
+,,,,,,,,NO_CURRENT_PICKS,RUN_PRE,.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-06-30 --timezone Atlantic/Canary --mode pre
