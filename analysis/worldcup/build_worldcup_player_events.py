@@ -45,6 +45,7 @@ import referee_context as refctx  # noqa: E402
 import weather_context as wxctx  # noqa: E402
 import coach_tactical_context as coachctx  # noqa: E402
 import player_matchups as pmatch  # noqa: E402
+import card_risk_adjuster as cardadj  # noqa: E402  (Fase 4F: conservative card-risk adjustment)
 
 try:
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -228,6 +229,47 @@ def _team_summary(team, attack_xg, opp_xg, corners_for, corners_against):
     return {"team": team, "attack_xg": attack_xg, "def_concede_proxy": opp_xg, "corner_dominance": dom}
 
 
+def apply_card_adjustment(card_risk_list, card_profiles, pos_map, team_id_by_name, referee_ctx):
+    """Fase 4F: enrich each card_risk entry with the conservative adjustment (probability_card_original /
+    _adjusted + direction + reason + components + confidence/data_quality). Keeps the original value when
+    data is insufficient. Pure-ish (mutates copies of the entries). NEVER fabricates."""
+    card_profiles = card_profiles or {"players": {}, "teams": {}, "positions": {}}
+    players = card_profiles.get("players", {})
+    teams = card_profiles.get("teams", {})
+    positions = card_profiles.get("positions", {})
+    out = []
+    for it in card_risk_list or []:
+        e = dict(it)
+        pid = e.get("player_id")
+        try:
+            pid = int(pid) if pid is not None else None
+        except Exception:
+            pid = None
+        player_prof = players.get(pid) if pid is not None else None
+        # position label: card profile first, else positional adapter
+        pos_label = None
+        if player_prof and player_prof.get("position"):
+            pos_label = str(player_prof["position"]).strip().upper()
+        elif pid is not None and pos_map.get(pid):
+            pos_label = str((pos_map[pid] or {}).get("position") or "").strip().upper() or None
+        position_prof = positions.get(pos_label) if pos_label else None
+        tid = team_id_by_name.get(str(e.get("team")))
+        team_prof = teams.get(int(tid)) if tid is not None else None
+
+        adj = cardadj.adjust_card_risk(e.get("probability_card"), player_profile=player_prof,
+                                       position_profile=position_prof, team_profile=team_prof,
+                                       referee_context=referee_ctx)
+        e["probability_card_original"] = adj["probability_card_original"]
+        e["probability_card_adjusted"] = adj["probability_card_adjusted"]
+        e["adjustment_direction"] = adj["adjustment_direction"]
+        e["adjustment_reason"] = adj["adjustment_reason"]
+        e["card_risk_components"] = adj["card_risk_components"]
+        e["confidence"] = adj["confidence"]
+        e["data_quality"] = adj["data_quality"]
+        out.append(e)
+    return out
+
+
 def build():
     if not CARDS.exists() or not PROPS_LOG.exists():
         print("player-events: faltan cards o props log; nada que construir (soft).")
@@ -246,6 +288,8 @@ def build():
     ref_profiles, ref_profiles_reason = adapters.load_referee_profiles()
     # Fase 4E — AUTO referee profiles (derived from REAL events) as fallback when no manual profile.
     ref_auto_profiles, ref_auto_reason = refctx.load_auto_referee_profiles()
+    # Fase 4F — AUTO card-discipline profiles (player/team/position) from REAL events, for the adjuster.
+    card_profiles, card_profiles_reason = cardadj.load_card_profiles()
     weather_map, weather_reason = adapters.load_weather_by_fixture()
     coach_map, coach_reason = adapters.load_coach_profiles()
     pos_map, pos_reason = adapters.load_positional_profiles()
@@ -373,6 +417,11 @@ def build():
         obj["tactical_context"] = tactical_ctx
         # mirror matchups at the top level too (also inside player_predictions.key_matchups)
         obj["key_matchups"] = key_matchups
+        # Fase 4F — conservative card-risk adjustment from the auto discipline profiles + referee.
+        obj["player_predictions"]["card_risk"] = apply_card_adjustment(
+            obj["player_predictions"]["card_risk"], card_profiles, pos_map,
+            {home: h_tid, away: a_tid}, referee_ctx)
+        obj["card_profiles_source"] = card_profiles_reason
         fixtures_out.append(obj)
 
         # flat rows
@@ -380,7 +429,8 @@ def build():
         for cat, items in (("scorer", pp["likely_scorers"]), ("sot", pp["likely_shots_on_target"]),
                            ("assist", pp["likely_assisters"]), ("card_risk", pp["card_risk"])):
             for it in items:
-                flat_rows.append({"fixture_id": fid, "home": home, "away": away, "category": cat, **it})
+                row = {k: v for k, v in it.items() if k != "card_risk_components"}  # drop nested dict
+                flat_rows.append({"fixture_id": fid, "home": home, "away": away, "category": cat, **row})
 
     OUT_JSON.write_text(json.dumps(fixtures_out, ensure_ascii=False, indent=2, default=str),
                         encoding="utf-8")

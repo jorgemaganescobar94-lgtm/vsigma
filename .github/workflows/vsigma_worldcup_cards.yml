@@ -433,6 +433,14 @@ jobs:
         run: |
           python analysis/worldcup/build_worldcup_referee_profiles_auto.py
 
+      # Fase 4F: AUTO card-discipline profiles (player/team/position) from REAL events. Runs AFTER the
+      #      fixture-events extractor + the auto referee profiles, and BEFORE the player-events card so
+      #      card_risk_adjuster can use them. Pure football, read-only, NO data/external writes. Soft-fail.
+      - name: Fase 4F — auto card-discipline profiles from real events (read-only, soft-fail)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/build_worldcup_card_profiles_auto.py
+
       - name: Player-events card + history (read-only; §11 + Fase 3 external context)
         continue-on-error: true
         run: |
@@ -528,6 +536,7 @@ jobs:
                    analysis/worldcup/worldcup_team_stats_scorecard.csv \
                    analysis/worldcup/worldcup_stats_level_correction.csv \
                    analysis/worldcup/worldcup_referee_profiles_auto.csv \
+                   analysis/worldcup/worldcup_card_profiles_auto.csv \
                    analysis/worldcup/worldcup_trackrecord_panel.md; do
             [ -f "$p" ] && git add "$p" || true
           done

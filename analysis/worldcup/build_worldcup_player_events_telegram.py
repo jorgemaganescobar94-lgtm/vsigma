@@ -151,7 +151,21 @@ def render_fixture(obj):
     cr = pp["card_risk"]
     if cr:
         L.append("🟨 Riesgo de tarjeta:")
-        L += [f"  {c['player']} ({c['team']}) — {_pct(c['probability_card'])}" for c in cr]
+        for i, c in enumerate(cr, 1):
+            adj = c.get("probability_card_adjusted")
+            orig = c.get("probability_card_original")
+            direction = c.get("adjustment_direction")
+            shown = adj if adj is not None else c.get("probability_card")
+            tag = " ajustado" if (adj is not None and orig is not None
+                                  and direction in ("subir", "bajar")) else ""
+            L.append(f"  {i}. {c['player']} ({c['team']}) — {_pct(shown)}{tag}")
+            motivo = c.get("adjustment_reason")
+            if motivo:
+                L.append(f"     Motivo: {motivo}")
+        # honest low-sample warning (referee / player / position / team discipline)
+        if any(str(c.get("confidence") or "") in ("baja", "no determinado") for c in cr
+               if c.get("adjustment_reason")):
+            L.append("     ⚠️ Muestra baja en disciplina (árbitro/jugador/posición/equipo): no extrapolar.")
     L.append("")
 
     # ---- Fase 3 + 4E — árbitro (§5). Muestra usada + confidence + advertencia si muestra baja. ----

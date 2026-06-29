@@ -209,7 +209,8 @@ def card_risk(expanded, n=4, min_p=0.12):
     pool.sort(key=lambda e: e.get("probability_card") or 0.0, reverse=True)
     out = []
     for e in pool[:n]:
-        out.append({"player": e["player"], "team": e["team"], "probability_card": e["probability_card"],
+        out.append({"player": e["player"], "team": e["team"], "player_id": e.get("player_id"),
+                    "probability_card": e["probability_card"],
                     "reason": f"P(tarjeta) {e['probability_card']*100:.0f}% — mercado de tarjeta es "
                               f"baja confianza ({e['confidence']})",
                     "confidence": "baja", "data_quality": e["data_quality"]})
