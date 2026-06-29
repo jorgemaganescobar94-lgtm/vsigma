@@ -1,0 +1,45 @@
+fixture_id,home,away,lambda_home,lambda_away,source_lambda,actual_score,in_top1,in_top3,in_top5,actual_score_probability,rank_actual_score,pred_top1_scoreline,result_1x2,derived_1x2_pred,data_quality,confidence
+1489390,Scotland,Morocco,0.73,1.93,l3,0-1,1,1,1,0.135,1,0-1,A,A,media,media
+1489389,Brazil,Haiti,2.34,0.31,l3,3-0,0,1,1,0.1509,3,2-0,H,H,media,media
+1539006,Türkiye,Paraguay,1.41,1.25,l3,0-1,0,1,1,0.0874,3,1-1,A,H,media,media
+1539007,Netherlands,Sweden,1.52,1.13,l3,5-1,0,0,0,0.0054,22,1-1,H,H,media,media
+1489393,Germany,Ivory Coast,1.62,1.04,l3,2-1,0,1,1,0.0955,3,1-1,H,H,media,media
+1489392,Ecuador,Curaçao,2.29,0.37,l3,0-0,0,0,1,0.07,5,2-0,D,H,media,media
+1489394,Tunisia,Japan,0.45,2.21,l3,0-4,0,0,0,0.0695,7,0-2,A,A,media,media
+1489397,Spain,Saudi Arabia,2.28,0.38,l3,4-0,0,0,1,0.0788,4,2-0,H,H,media,media
+1489395,Belgium,Iran,1.5,1.16,l3,0-0,0,0,0,0.0699,7,1-1,D,H,media,media
+1489398,Uruguay,Cape Verde Islands,1.62,1.04,l3,2-2,0,0,0,0.0496,9,1-1,D,H,media,media
+1489396,New Zealand,Egypt,0.99,1.67,l3,1-3,0,0,0,0.0538,9,0-1,A,A,media,media
+1489399,Argentina,Austria,2.03,0.63,l3,2-0,1,1,1,0.1441,1,2-0,H,H,media,media
+1539017,France,Iraq,2.2,0.46,l3,3-0,0,1,1,0.1241,3,2-0,H,H,media,media
+1489401,Norway,Senegal,1.41,1.25,l3,3-2,0,0,0,0.0255,13,1-1,H,H,media,media
+1489400,Jordan,Algeria,0.58,2.08,l3,1-2,0,0,1,0.0878,4,0-2,A,A,media,media
+1489404,Portugal,Uzbekistan,1.91,0.74,l3,5-0,0,0,0,0.015,15,1-0,H,H,media,media
+1489402,England,Ghana,2.26,0.4,l3,0-0,0,0,0,0.0699,6,2-0,D,H,media,media
+1489403,Panama,Croatia,0.63,2.03,l3,0-1,0,1,1,0.142,2,0-2,A,A,media,media
+1539008,Colombia,Congo DR,2.13,0.53,l3,1-0,0,1,1,0.149,2,2-0,H,H,media,media
+1489408,Switzerland,Canada,1.6,1.06,l3,2-1,0,1,1,0.0949,3,1-1,H,H,media,media
+1539009,Bosnia & Herzegovina,Qatar,1.45,1.2,l3,3-1,0,0,0,0.0431,10,1-1,H,H,media,media
+1489405,Morocco,Haiti,2.14,0.52,l3,4-2,0,0,0,0.0083,18,2-0,H,H,media,media
+1489406,Scotland,Brazil,0.53,2.13,l3,0-3,0,1,1,0.1127,3,0-2,A,A,media,media
+1539010,Czechia,Mexico,0.88,1.78,l3,0-3,0,0,0,0.0657,6,0-1,A,A,media,media
+1489407,South Africa,South Korea,0.78,1.88,l3,1-0,0,0,0,0.0546,8,0-1,H,A,media,media
+1489410,Ecuador,Germany,0.77,1.89,l3,2-1,0,0,0,0.0392,9,0-1,H,A,media,media
+1489409,Curaçao,Ivory Coast,0.37,2.29,l3,0-2,1,1,1,0.1834,1,0-2,A,A,media,media
+1539011,Japan,Sweden,1.78,0.88,l3,1-1,0,1,1,0.1096,3,1-0,D,H,media,media
+1489412,Tunisia,Netherlands,0.19,2.46,l3,1-3,0,0,0,0.0333,8,0-2,A,A,media,media
+1539012,Türkiye,USA,0.97,1.69,l3,3-2,0,0,0,0.0152,16,0-1,H,A,media,media
+1489411,Paraguay,Australia,0.94,1.72,l3,0-0,0,0,1,0.0699,5,0-1,D,A,media,media
+1539074,Senegal,Iraq,1.88,0.75,l3,5-0,0,0,0,0.0141,15,1-0,H,H,media,media
+1489416,Norway,France,0.88,1.59,l3,1-4,0,0,0,0.0198,14,0-1,A,A,media,media
+1489417,Uruguay,Spain,0.67,1.96,l3,0-1,1,1,1,0.1413,1,0-1,A,A,media,media
+1489413,Cape Verde Islands,Saudi Arabia,1.64,0.88,l3,0-0,0,0,1,0.0805,5,1-0,D,H,media,media
+1489414,Egypt,Iran,1.1,1.3,l3,1-1,1,1,1,0.1297,1,1-1,D,A,media,media
+1489415,New Zealand,Belgium,0.56,2.2,l3,1-5,0,0,0,0.0152,15,0-2,A,A,media,media
+1489420,Croatia,Ghana,1.96,0.68,mx,2-1,0,0,1,0.0932,4,1-0,H,H,media,media
+1489422,Panama,England,0.73,2.0,mx,0-2,0,1,1,0.1304,2,0-1,A,A,media,media
+1489419,Colombia,Portugal,1.23,1.14,mx,0-0,0,0,1,0.0935,4,1-1,D,H,media,media
+1539013,Congo DR,Uzbekistan,1.59,0.84,mx,3-1,0,0,0,0.0495,8,1-0,H,H,media,media
+1489418,Algeria,Austria,1.67,0.82,mx,3-3,0,0,0,0.0059,21,1-0,D,H,media,media
+1489421,Jordan,Argentina,0.57,2.71,mx,1-3,0,0,0,0.0712,6,0-2,A,A,media,media
+1561329,South Africa,Canada,1.1,1.27,mx,0-1,0,1,1,0.1187,2,1-1,A,A,media,media
