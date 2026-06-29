@@ -1,43 +1,89 @@
 fixture_id,kickoff_utc,team_id,team_name,opponent_id,opponent_name,side,predicted_sot,actual_sot,error,abs_error,source_predicted,source_actual,data_quality,confidence,reason
+1489389,,6,Brazil,2386,Haiti,home,,5.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489389,,2386,Haiti,6,Brazil,away,,3.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489390,,31,Morocco,1108,Scotland,away,,2.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489390,,1108,Scotland,31,Morocco,home,,0.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489392,,2382,Ecuador,5530,Curaçao,home,,15.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489392,,5530,Curaçao,2382,Ecuador,away,,3.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489393,,25,Germany,1501,Ivory Coast,home,,7.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489393,,1501,Ivory Coast,25,Germany,away,,2.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489394,,12,Japan,28,Tunisia,away,,5.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489394,,28,Tunisia,12,Japan,home,,0.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489395,,1,Belgium,22,Iran,home,,7.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489395,,22,Iran,1,Belgium,away,,3.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489396,,32,Egypt,4673,New Zealand,away,,7.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489396,,4673,New Zealand,32,Egypt,home,,5.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489397,,9,Spain,23,Saudi Arabia,home,,8.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489397,,23,Saudi Arabia,9,Spain,away,,1.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489398,,7,Uruguay,1533,Cape Verde Islands,home,,2.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489398,,1533,Cape Verde Islands,7,Uruguay,away,,4.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489399,,26,Argentina,775,Austria,home,,5.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489399,,775,Austria,26,Argentina,away,,1.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489400,,1532,Algeria,1548,Jordan,away,,8.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489400,,1548,Jordan,1532,Algeria,home,,4.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489401,,13,Senegal,1090,Norway,away,,4.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489401,,1090,Norway,13,Senegal,home,,7.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
 1489402,,10,England,1504,Ghana,home,,3.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
 1489402,,1504,Ghana,10,England,away,,1.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
 1489403,,3,Croatia,11,Panama,away,,2.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
 1489403,,11,Panama,3,Croatia,home,,1.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
-1489409,2026-06-25 20:00,1501,Ivory Coast,5530,Curaçao,away,4.213,0.0,4.213,4.213,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489409,2026-06-25 20:00,5530,Curaçao,1501,Ivory Coast,home,3.119,0.0,3.1193,3.1193,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489410,2026-06-25 20:00,25,Germany,2382,Ecuador,away,5.385,3.0,2.3851,2.3851,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489410,2026-06-25 20:00,2382,Ecuador,25,Germany,home,3.272,1.0,2.2716,2.2716,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489411,2026-06-26 02:00,20,Australia,2380,Paraguay,away,3.219,2.0,1.219,1.219,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489411,2026-06-26 02:00,2380,Paraguay,20,Australia,home,4.233,0.0,4.2326,4.2326,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489412,2026-06-25 23:00,28,Tunisia,1118,Netherlands,home,2.426,4.0,-1.5741,1.5741,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489412,2026-06-25 23:00,1118,Netherlands,28,Tunisia,away,6.235,7.0,-0.7649,0.7649,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489413,2026-06-27 00:00,23,Saudi Arabia,1533,Cape Verde Islands,away,3.995,1.0,2.9951,2.9951,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489413,2026-06-27 00:00,1533,Cape Verde Islands,23,Saudi Arabia,home,4.517,1.0,3.5171,3.5171,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489414,2026-06-27 03:00,22,Iran,32,Egypt,away,4.027,2.0,2.0273,2.0273,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489414,2026-06-27 03:00,32,Egypt,22,Iran,home,4.47,2.0,2.4695,2.4695,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489415,2026-06-27 03:00,1,Belgium,4673,New Zealand,away,8.046,6.0,2.0459,2.0459,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489415,2026-06-27 03:00,4673,New Zealand,1,Belgium,home,3.952,2.0,1.9516,1.9516,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489416,2026-06-26 19:00,2,France,1090,Norway,away,4.908,9.0,-4.0918,4.0918,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489416,2026-06-26 19:00,1090,Norway,2,France,home,3.318,4.0,-0.6821,0.6821,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489417,2026-06-27 00:00,7,Uruguay,9,Spain,home,2.804,0.0,2.8044,2.8044,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489417,2026-06-27 00:00,9,Spain,7,Uruguay,away,7.339,1.0,6.3392,6.3392,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489418,2026-06-28 02:00,775,Austria,1532,Algeria,away,4.009,2.0,2.0089,2.0089,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489418,2026-06-28 02:00,1532,Algeria,775,Austria,home,4.594,5.0,-0.4065,0.4065,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489419,2026-06-27 23:30,8,Colombia,27,Portugal,home,4.389,6.0,-1.6108,1.6108,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489419,2026-06-27 23:30,27,Portugal,8,Colombia,away,4.801,2.0,2.8009,2.8009,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489420,2026-06-27 21:00,3,Croatia,1504,Ghana,home,6.504,3.0,3.5038,3.5038,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489420,2026-06-27 21:00,1504,Ghana,3,Croatia,away,3.473,1.0,2.4726,2.4726,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489421,2026-06-28 02:00,26,Argentina,1548,Jordan,away,6.605,2.0,4.6055,4.6055,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489421,2026-06-28 02:00,1548,Jordan,26,Argentina,home,1.977,1.0,0.9772,0.9772,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489422,2026-06-27 21:00,10,England,11,Panama,away,7.435,5.0,2.4348,2.4348,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1489422,2026-06-27 21:00,11,Panama,10,England,home,2.917,2.0,0.9173,0.9173,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1539011,2026-06-25 23:00,5,Sweden,12,Japan,away,3.029,5.0,-1.9711,1.9711,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1539011,2026-06-25 23:00,12,Japan,5,Sweden,home,5.366,3.0,2.3658,2.3658,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1539012,2026-06-26 02:00,777,Türkiye,2384,USA,home,5.149,2.0,3.1487,3.1487,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1539012,2026-06-26 02:00,2384,USA,777,Türkiye,away,4.257,3.0,1.2567,1.2567,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1539013,2026-06-27 23:30,1508,Congo DR,1568,Uzbekistan,home,4.37,3.0,1.37,1.37,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1539013,2026-06-27 23:30,1568,Uzbekistan,1508,Congo DR,away,2.987,1.0,1.987,1.987,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1539074,2026-06-26 19:00,13,Senegal,1567,Iraq,home,6.71,4.0,2.71,2.71,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1539074,2026-06-26 19:00,1567,Iraq,13,Senegal,away,2.063,1.0,1.0631,1.0631,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1561329,2026-06-28 19:00,1531,South Africa,5529,Canada,home,3.439,1.0,2.4388,2.4388,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
-1561329,2026-06-28 19:00,5529,Canada,1531,South Africa,away,3.803,4.0,-0.1969,0.1969,player_sot_sum,player_shots_on_sum,evaluable,media,pred=Σλ_sot 11 jugadores (XI 11); real=Σ act_shots_on jugadores
+1489404,,27,Portugal,1568,Uzbekistan,home,,9.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489404,,1568,Uzbekistan,27,Portugal,away,,2.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489405,,31,Morocco,2386,Haiti,home,,11.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489405,,2386,Haiti,31,Morocco,away,,2.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489406,,6,Brazil,1108,Scotland,away,,9.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489406,,1108,Scotland,6,Brazil,home,,5.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489407,,17,South Korea,1531,South Africa,away,,3.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489407,,1531,South Africa,17,South Korea,home,,4.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489408,,15,Switzerland,5529,Canada,home,,4.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489408,,5529,Canada,15,Switzerland,away,,7.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1489409,2026-06-25 20:00,1501,Ivory Coast,5530,Curaçao,away,4.213,3.0,1.213,1.213,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489409,2026-06-25 20:00,5530,Curaçao,1501,Ivory Coast,home,3.119,2.0,1.1193,1.1193,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489410,2026-06-25 20:00,25,Germany,2382,Ecuador,away,5.385,3.0,2.3851,2.3851,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489410,2026-06-25 20:00,2382,Ecuador,25,Germany,home,3.272,3.0,0.2716,0.2716,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489411,2026-06-26 02:00,20,Australia,2380,Paraguay,away,3.219,5.0,-1.781,1.781,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489411,2026-06-26 02:00,2380,Paraguay,20,Australia,home,4.233,2.0,2.2326,2.2326,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489412,2026-06-25 23:00,28,Tunisia,1118,Netherlands,home,2.426,4.0,-1.5741,1.5741,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489412,2026-06-25 23:00,1118,Netherlands,28,Tunisia,away,6.235,7.0,-0.7649,0.7649,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489413,2026-06-27 00:00,23,Saudi Arabia,1533,Cape Verde Islands,away,3.995,3.0,0.9951,0.9951,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489413,2026-06-27 00:00,1533,Cape Verde Islands,23,Saudi Arabia,home,4.517,2.0,2.5171,2.5171,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489414,2026-06-27 03:00,22,Iran,32,Egypt,away,4.027,4.0,0.0273,0.0273,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489414,2026-06-27 03:00,32,Egypt,22,Iran,home,4.47,3.0,1.4695,1.4695,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489415,2026-06-27 03:00,1,Belgium,4673,New Zealand,away,8.046,10.0,-1.9541,1.9541,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489415,2026-06-27 03:00,4673,New Zealand,1,Belgium,home,3.952,2.0,1.9516,1.9516,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489416,2026-06-26 19:00,2,France,1090,Norway,away,4.908,9.0,-4.0918,4.0918,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489416,2026-06-26 19:00,1090,Norway,2,France,home,3.318,4.0,-0.6821,0.6821,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489417,2026-06-27 00:00,7,Uruguay,9,Spain,home,2.804,1.0,1.8044,1.8044,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489417,2026-06-27 00:00,9,Spain,7,Uruguay,away,7.339,1.0,6.3392,6.3392,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489418,2026-06-28 02:00,775,Austria,1532,Algeria,away,4.009,3.0,1.0089,1.0089,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489418,2026-06-28 02:00,1532,Algeria,775,Austria,home,4.594,5.0,-0.4065,0.4065,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489419,2026-06-27 23:30,8,Colombia,27,Portugal,home,4.389,6.0,-1.6108,1.6108,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489419,2026-06-27 23:30,27,Portugal,8,Colombia,away,4.801,2.0,2.8009,2.8009,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489420,2026-06-27 21:00,3,Croatia,1504,Ghana,home,6.504,4.0,2.5038,2.5038,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489420,2026-06-27 21:00,1504,Ghana,3,Croatia,away,3.473,1.0,2.4726,2.4726,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489421,2026-06-28 02:00,26,Argentina,1548,Jordan,away,6.605,4.0,2.6055,2.6055,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489421,2026-06-28 02:00,1548,Jordan,26,Argentina,home,1.977,1.0,0.9772,0.9772,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489422,2026-06-27 21:00,10,England,11,Panama,away,7.435,6.0,1.4348,1.4348,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1489422,2026-06-27 21:00,11,Panama,10,England,home,2.917,2.0,0.9173,0.9173,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1539006,,777,Türkiye,2380,Paraguay,home,,5.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1539006,,2380,Paraguay,777,Türkiye,away,,2.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1539007,,5,Sweden,1118,Netherlands,away,,8.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1539007,,1118,Netherlands,5,Sweden,home,,7.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1539008,,8,Colombia,1508,Congo DR,home,,9.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1539008,,1508,Congo DR,8,Colombia,away,,1.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1539009,,1113,Bosnia & Herzegovina,1569,Qatar,home,,5.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1539009,,1569,Qatar,1113,Bosnia & Herzegovina,away,,3.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1539010,,16,Mexico,770,Czechia,away,,5.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1539010,,770,Czechia,16,Mexico,home,,1.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1539011,2026-06-25 23:00,5,Sweden,12,Japan,away,3.029,5.0,-1.9711,1.9711,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1539011,2026-06-25 23:00,12,Japan,5,Sweden,home,5.366,3.0,2.3658,2.3658,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1539012,2026-06-26 02:00,777,Türkiye,2384,USA,home,5.149,3.0,2.1487,2.1487,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1539012,2026-06-26 02:00,2384,USA,777,Türkiye,away,4.257,7.0,-2.7433,2.7433,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1539013,2026-06-27 23:30,1508,Congo DR,1568,Uzbekistan,home,4.37,4.0,0.37,0.37,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1539013,2026-06-27 23:30,1568,Uzbekistan,1508,Congo DR,away,2.987,1.0,1.987,1.987,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1539017,,2,France,1567,Iraq,home,,5.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1539017,,1567,Iraq,2,France,away,,0.0,,,none,fixture_statistics,actual_only_no_prediction,baja,SOT real disponible pero sin XI/props logueados -> no evaluable (no se empareja a posteriori)
+1539074,2026-06-26 19:00,13,Senegal,1567,Iraq,home,6.71,12.0,-5.29,5.29,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1539074,2026-06-26 19:00,1567,Iraq,13,Senegal,away,2.063,1.0,1.0631,1.0631,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1561329,2026-06-28 19:00,1531,South Africa,5529,Canada,home,3.439,1.0,2.4388,2.4388,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1561329,2026-06-28 19:00,5529,Canada,1531,South Africa,away,3.803,7.0,-3.1969,3.1969,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics

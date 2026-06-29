@@ -1,4 +1,4 @@
 module,n,rows_to_min_sample,metric_original_mae,metric_corrected_mae_pre_fixture,delta_mae_pre_fixture,delta_rmse_pre_fixture,original_bias,corrected_bias_pre_fixture,bias_reduction,direction_stable,sample_gate,improvement_gate,bias_gate,no_strong_bias_inversion_gate,anti_lookahead_available,data_quality,confidence,readiness_status,reason
-team_sot_display_correction,38,12,2.3408,1.4456,0.8864,0.7247,1.7462,0.0928,1.6534,True,False,True,True,True,True,evaluable,baja,NOT_READY_SAMPLE,n=38 < 50 (faltan 12 filas); señal aparte.
+team_sot_display_correction,38,12,1.9339,2.0039,0.0636,0.0163,0.562,0.282,0.28,True,False,False,True,True,True,evaluable,baja,NOT_READY_SAMPLE,n=38 < 50 (faltan 12 filas); señal aparte.
 team_shots_display_correction,39,11,7.4228,5.1518,2.017,2.0929,-6.0485,0.568,5.4805,True,False,True,True,True,True,evaluable,baja,NOT_READY_SAMPLE,n=39 < 50 (faltan 11 filas); señal aparte.
 team_corners_display_correction,39,11,2.5308,2.3653,0.2489,0.2959,-1.3928,0.113,1.2798,True,False,True,True,True,True,evaluable,baja,NOT_READY_SAMPLE,n=39 < 50 (faltan 11 filas); señal aparte.

@@ -1,17 +1,4 @@
 fixture_id,home,away,category,player,team,probability_goal,expected_goals,reason,source_used,goal_source,confidence,data_quality,probability_1_sot,expected_sot,expected_shots,shots_source,probability_assist,expected_assists,expected_key_passes,assist_source,player_id,probability_card,probability_card_original,probability_card_adjusted,adjustment_direction,adjustment_reason
-1562344,Brazil,Japan,scorer,Vinícius Júnior,Brazil,0.2319,0.2638,"xG 0.26, P(gol) 23% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1562344,Brazil,Japan,scorer,Lucas Paquetá,Brazil,0.1906,0.2115,"xG 0.21, P(gol) 19% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1562344,Brazil,Japan,scorer,Keito Nakamura,Japan,0.1836,0.2029,"xG 0.20, P(gol) 18% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1562344,Brazil,Japan,sot,Vinícius Júnior,Brazil,,,"tiros esp. 1.6, SOT esp. 1.0 (media)",proxy,,media,media,0.65,1.0497,1.57,proxy,,,,,,,,,,
-1562344,Brazil,Japan,sot,Keito Nakamura,Japan,,,"tiros esp. 1.3, SOT esp. 0.8 (media)",proxy,,media,media,0.5487,0.7956,1.33,proxy,,,,,,,,,,
-1562344,Brazil,Japan,sot,A. Ueda,Japan,,,"tiros esp. 1.6, SOT esp. 0.8 (media)",proxy,,media,media,0.5446,0.7865,1.57,proxy,,,,,,,,,,
-1562344,Brazil,Japan,assist,T. Kubo,Japan,,,xA-proxy 0.15 (media),proxy,,media,media,,,,,0.1402,0.1511,,proxy,,,,,,
-1562344,Brazil,Japan,assist,Matheus Cunha,Brazil,,,xA-proxy 0.14 (media),proxy,,media,media,,,,,0.127,0.1358,,proxy,,,,,,
-1562344,Brazil,Japan,assist,K. Sano,Japan,,,xA-proxy 0.12 (media),proxy,,media,media,,,,,0.1135,0.1205,,proxy,,,,,,
-1562344,Brazil,Japan,card_risk,A. Tanaka,Japan,,,P(tarjeta) 33% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,32966.0,0.3347,0.3347,0.3389,neutro,ajuste neutro: posición alto ↑; equipo bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
-1562344,Brazil,Japan,card_risk,Lucas Paquetá,Brazil,,,P(tarjeta) 31% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,1646.0,0.306,0.306,0.3045,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
-1562344,Brazil,Japan,card_risk,T. Watanabe,Japan,,,P(tarjeta) 28% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,32858.0,0.2815,0.2815,0.2766,neutro,ajuste neutro: equipo bajo ↓ · árbitro con muestra baja (peso reducido)
-1562344,Brazil,Japan,card_risk,R. Dōan,Japan,,,P(tarjeta) 27% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,2598.0,0.2668,0.2668,0.2448,bajar,ajuste baja: historial jugador bajo ↓; posición bajo ↓; equipo bajo ↓ · árbitro con muestra baja (peso reducido)
 1565176,Germany,Paraguay,scorer,K. Havertz,Germany,0.2541,0.2932,"xG 0.29, P(gol) 25% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
 1565176,Germany,Paraguay,scorer,J. Musiala,Germany,0.2259,0.256,"xG 0.26, P(gol) 23% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
 1565176,Germany,Paraguay,scorer,F. Wirtz,Germany,0.2233,0.2527,"xG 0.25, P(gol) 22% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
