@@ -4,3 +4,25 @@ team_id,team_name,player_id,player_name,role,rank,attempts,last_taken_date,sourc
 1090,Norway,2032,Jørgen Strand Larsen,penalty,1,1,2026-06-26,api_football_events,alta,baja
 22,Iran,42315,M. Taremi,penalty,1,1,2026-06-27,api_football_events,alta,baja
 1508,Congo DR,20649,Y. Wissa,penalty,1,1,2026-06-27,api_football_events,alta,baja
+25,Germany,978,K. Havertz,penalty,1,1,2026-06-29,api_football_events,alta,baja
+25,Germany,502,J. Kimmich,penalty,2,1,2026-06-29,api_football_events,alta,baja
+25,Germany,181812,J. Musiala,penalty,3,1,2026-06-29,api_football_events,alta,baja
+25,Germany,158054,N. Woltemade,penalty,4,1,2026-06-29,api_football_events,alta,baja
+25,Germany,714,N. Amiri,penalty,5,1,2026-06-29,api_football_events,alta,baja
+25,Germany,972,J. Tah,penalty,6,1,2026-06-29,api_football_events,alta,baja
+2380,Paraguay,106485,Maurício,penalty,1,1,2026-06-29,api_football_events,alta,baja
+2380,Paraguay,2502,G. Gómez,penalty,2,1,2026-06-29,api_football_events,alta,baja
+2380,Paraguay,305832,M. Galarza,penalty,3,1,2026-06-29,api_football_events,alta,baja
+2380,Paraguay,2522,A. Sanabria,penalty,4,1,2026-06-29,api_football_events,alta,baja
+2380,Paraguay,2500,F. Balbuena,penalty,5,1,2026-06-29,api_football_events,alta,baja
+2380,Paraguay,70732,J. Canale,penalty,6,1,2026-06-29,api_football_events,alta,baja
+1118,Netherlands,36899,T. Koopmeiners,penalty,1,1,2026-06-30,api_football_events,alta,baja
+1118,Netherlands,792,J. Kluivert,penalty,2,1,2026-06-30,api_football_events,alta,baja
+1118,Netherlands,25416,W. Weghorst,penalty,3,1,2026-06-30,api_football_events,alta,baja
+1118,Netherlands,38747,Q. Timber,penalty,4,1,2026-06-30,api_football_events,alta,baja
+1118,Netherlands,37724,C. Summerville,penalty,5,1,2026-06-30,api_football_events,alta,baja
+31,Morocco,277003,N. El Aynaoui,penalty,1,1,2026-06-30,api_football_events,alta,baja
+31,Morocco,36579,S. Rahimi,penalty,2,1,2026-06-30,api_football_events,alta,baja
+31,Morocco,336659,C. Talbi,penalty,3,1,2026-06-30,api_football_events,alta,baja
+31,Morocco,9,A. Hakimi,penalty,4,1,2026-06-30,api_football_events,alta,baja
+31,Morocco,161897,I. Saibari,penalty,5,1,2026-06-30,api_football_events,alta,baja

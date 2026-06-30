@@ -11,3 +11,6 @@ fixture_id,venue,kickoff_time,temperature,humidity,wind_speed,rain_probability,p
 1562345,Estadio BBVA,2026-06-30 01:00,,,,,,plantilla_kickoff,pendiente,pendiente
 1564789,AT&T Stadium,2026-06-30 17:00,,,,,,plantilla_kickoff,pendiente,pendiente
 1565177,MetLife Stadium,2026-06-30 21:00,,,,,,plantilla_kickoff,pendiente,pendiente
+1567306,Estadio Azteca,2026-07-01 01:00,,,,,,plantilla_kickoff,pendiente,pendiente
+1567307,Mercedes-Benz Stadium,2026-07-01 16:00,,,,,,plantilla_kickoff,pendiente,pendiente
+1567308,Lumen Field,2026-07-01 20:00,,,,,,plantilla_kickoff,pendiente,pendiente
