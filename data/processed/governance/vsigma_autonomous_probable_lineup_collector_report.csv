@@ -1,2 +1,2 @@
 target_date,generated_at,fixtures_reviewed,search_provider,urls_discovered,rows_extracted,status_counts,source_counts,auto_apply,production_change
-2026-06-30,2026-06-30T22:14:18+01:00,1,SERPAPI;SERPAPI_SEARCH_FAILED;SERPAPI_ERROR,2,0,FETCH_FAILED=2,whoscored=2,NO,NO
+2026-06-30,2026-06-30T23:50:21+01:00,1,SERPAPI;SERPAPI_ERROR,4,0,IRRELEVANT_FIXTURE_PAGE=2; FETCH_FAILED=2,sportsmole=2; whoscored=2,NO,NO

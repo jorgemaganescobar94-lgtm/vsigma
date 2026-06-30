@@ -1,12 +1,12 @@
 # vSIGMA Autonomous Probable Lineup Collector - 2026-06-30
 
 ## Summary
-- search_provider: SERPAPI;SERPAPI_SEARCH_FAILED;SERPAPI_ERROR
-- rows_seen: 2
-- urls_discovered: 2
+- search_provider: SERPAPI;SERPAPI_ERROR
+- rows_seen: 4
+- urls_discovered: 4
 - rows_extracted: 0
-- status_counts: FETCH_FAILED=2
-- source_counts: whoscored=2
+- status_counts: IRRELEVANT_FIXTURE_PAGE=2; FETCH_FAILED=2
+- source_counts: sportsmole=2; whoscored=2
 - max_search_queries_per_fixture: 8
 - auto_apply: NO
 - production_change: NO
