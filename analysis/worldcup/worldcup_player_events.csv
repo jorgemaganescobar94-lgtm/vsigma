@@ -1,17 +1,17 @@
 fixture_id,home,away,category,player,team,probability_goal,expected_goals,reason,source_used,goal_source,confidence,data_quality,probability_1_sot,expected_sot,expected_shots,shots_source,probability_assist,expected_assists,expected_key_passes,assist_source,player_id,probability_card,probability_card_original,probability_card_adjusted,adjustment_direction,adjustment_reason
-1564789,Ivory Coast,Norway,scorer,E. Haaland,Norway,0.3686,0.4598,"xG 0.46, P(gol) 37% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1564789,Ivory Coast,Norway,scorer,A. Diallo,Ivory Coast,0.1989,0.2218,"xG 0.22, P(gol) 20% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1564789,Ivory Coast,Norway,scorer,A. Sørloth,Norway,0.198,0.2207,"xG 0.22, P(gol) 20% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1564789,Ivory Coast,Norway,sot,E. Haaland,Norway,,,"tiros esp. 2.9, SOT esp. 2.0 (media)",proxy,,media,media,0.8594,1.962,2.92,proxy,,,,,,,,,,
-1564789,Ivory Coast,Norway,sot,A. Nusa,Norway,,,"tiros esp. 1.8, SOT esp. 1.0 (media)",proxy,,media,media,0.6374,1.0144,1.83,proxy,,,,,,,,,,
-1564789,Ivory Coast,Norway,sot,A. Sørloth,Norway,,,"tiros esp. 2.0, SOT esp. 1.0 (media)",proxy,,media,media,0.6365,1.0121,1.96,proxy,,,,,,,,,,
-1564789,Ivory Coast,Norway,assist,A. Sørloth,Norway,,,xA-proxy 0.18 (media),proxy,,media,media,,,,,0.1616,0.1763,,proxy,,,,,,
-1564789,Ivory Coast,Norway,assist,A. Diallo,Ivory Coast,,,xA-proxy 0.17 (media),proxy,,media,media,,,,,0.1546,0.1679,,proxy,,,,,,
-1564789,Ivory Coast,Norway,assist,S. Fofana,Ivory Coast,,,xA-proxy 0.15 (media),proxy,,media,media,,,,,0.1352,0.1453,,proxy,,,,,,
-1564789,Ivory Coast,Norway,card_risk,W. Singo,Ivory Coast,,,P(tarjeta) 31% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,30504.0,0.3137,0.3137,0.3035,bajar,ajuste baja: historial jugador bajo ↓; equipo bajo ↓
-1564789,Ivory Coast,Norway,card_risk,K. Thorstvedt,Norway,,,P(tarjeta) 29% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,39143.0,0.2892,0.2892,0.2885,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
-1564789,Ivory Coast,Norway,card_risk,A. Sørloth,Norway,,,P(tarjeta) 24% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,8492.0,0.2411,0.2411,0.226,bajar,ajuste baja: historial jugador bajo ↓; posición bajo ↓; equipo bajo ↓
-1564789,Ivory Coast,Norway,card_risk,I. Sangaré,Ivory Coast,,,P(tarjeta) 24% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,22149.0,0.2399,0.2399,0.2393,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+1564789,Ivory Coast,Norway,scorer,E. Haaland,Norway,0.3894,0.4933,"xG 0.49, P(gol) 39% (media)",proxy,proxy,media,alta,,,,,,,,,,,,,,
+1564789,Ivory Coast,Norway,scorer,A. Sørloth,Norway,0.2105,0.2364,"xG 0.24, P(gol) 21% (media)",proxy,proxy,media,alta,,,,,,,,,,,,,,
+1564789,Ivory Coast,Norway,scorer,N. Pépé,Ivory Coast,0.1927,0.214,"xG 0.21, P(gol) 19% (media)",proxy,proxy,media,alta,,,,,,,,,,,,,,
+1564789,Ivory Coast,Norway,sot,E. Haaland,Norway,,,"tiros esp. 3.0, SOT esp. 2.0 (media)",proxy,,media,alta,0.8673,2.0197,3.01,proxy,,,,,,,,,,
+1564789,Ivory Coast,Norway,sot,A. Nusa,Norway,,,"tiros esp. 1.9, SOT esp. 1.0 (media)",proxy,,media,alta,0.6485,1.0455,1.88,proxy,,,,,,,,,,
+1564789,Ivory Coast,Norway,sot,A. Sørloth,Norway,,,"tiros esp. 2.0, SOT esp. 1.0 (media)",proxy,,media,alta,0.6476,1.043,2.02,proxy,,,,,,,,,,
+1564789,Ivory Coast,Norway,assist,G. Konan,Ivory Coast,,,xA-proxy 0.29 (media),proxy,,media,alta,,,,,0.2506,0.2885,,proxy,,,,,,
+1564789,Ivory Coast,Norway,assist,M. Ødegaard,Norway,,,xA-proxy 0.23 (media),proxy,,media,alta,,,,,0.2079,0.2331,,proxy,,,,,,
+1564789,Ivory Coast,Norway,assist,F. Kessié,Ivory Coast,,,xA-proxy 0.17 (media),proxy,,media,alta,,,,,0.1549,0.1683,,proxy,,,,,,
+1564789,Ivory Coast,Norway,card_risk,C. Inao OulaÃ¯,Ivory Coast,,,P(tarjeta) 31% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,474591.0,0.3093,0.3093,0.3125,neutro,ajuste neutro: posición alto ↑; equipo bajo ↓; árbitro bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
+1564789,Ivory Coast,Norway,card_risk,A. Sørloth,Norway,,,P(tarjeta) 27% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,8492.0,0.2656,0.2656,0.2484,bajar,ajuste baja: historial jugador bajo ↓; posición bajo ↓; equipo bajo ↓; árbitro bajo ↓ · árbitro con muestra baja (peso reducido)
+1564789,Ivory Coast,Norway,card_risk,P. Berg,Norway,,,P(tarjeta) 25% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,39064.0,0.2533,0.2533,0.2559,neutro,ajuste neutro: posición alto ↑; equipo bajo ↓; árbitro bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
+1564789,Ivory Coast,Norway,card_risk,I. Sangaré,Ivory Coast,,,P(tarjeta) 24% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,22149.0,0.2402,0.2402,0.2391,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓; árbitro bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
 1565177,France,Sweden,scorer,Kylian Mbappé,France,0.3912,0.4963,"xG 0.50, P(gol) 39% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
 1565177,France,Sweden,scorer,M. Olise,France,0.3261,0.3947,"xG 0.39, P(gol) 33% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
 1565177,France,Sweden,scorer,A. Rabiot,France,0.245,0.2811,"xG 0.28, P(gol) 24% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,

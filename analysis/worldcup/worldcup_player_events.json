@@ -14,111 +14,111 @@
         {
           "player": "E. Haaland",
           "team": "Norway",
-          "probability_goal": 0.3686,
-          "expected_goals": 0.4598,
-          "reason": "xG 0.46, P(gol) 37% (media)",
+          "probability_goal": 0.3894,
+          "expected_goals": 0.4933,
+          "reason": "xG 0.49, P(gol) 39% (media)",
           "source_used": "proxy",
           "goal_source": "proxy",
           "confidence": "media",
-          "data_quality": "media"
-        },
-        {
-          "player": "A. Diallo",
-          "team": "Ivory Coast",
-          "probability_goal": 0.1989,
-          "expected_goals": 0.2218,
-          "reason": "xG 0.22, P(gol) 20% (media)",
-          "source_used": "proxy",
-          "goal_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
+          "data_quality": "alta"
         },
         {
           "player": "A. Sørloth",
           "team": "Norway",
-          "probability_goal": 0.198,
-          "expected_goals": 0.2207,
-          "reason": "xG 0.22, P(gol) 20% (media)",
+          "probability_goal": 0.2105,
+          "expected_goals": 0.2364,
+          "reason": "xG 0.24, P(gol) 21% (media)",
           "source_used": "proxy",
           "goal_source": "proxy",
           "confidence": "media",
-          "data_quality": "media"
+          "data_quality": "alta"
+        },
+        {
+          "player": "N. Pépé",
+          "team": "Ivory Coast",
+          "probability_goal": 0.1927,
+          "expected_goals": 0.214,
+          "reason": "xG 0.21, P(gol) 19% (media)",
+          "source_used": "proxy",
+          "goal_source": "proxy",
+          "confidence": "media",
+          "data_quality": "alta"
         }
       ],
       "likely_shots_on_target": [
         {
           "player": "E. Haaland",
           "team": "Norway",
-          "probability_1_sot": 0.8594,
-          "expected_sot": 1.962,
-          "expected_shots": 2.92,
-          "reason": "tiros esp. 2.9, SOT esp. 2.0 (media)",
+          "probability_1_sot": 0.8673,
+          "expected_sot": 2.0197,
+          "expected_shots": 3.01,
+          "reason": "tiros esp. 3.0, SOT esp. 2.0 (media)",
           "source_used": "proxy",
           "shots_source": "proxy",
           "confidence": "media",
-          "data_quality": "media"
+          "data_quality": "alta"
         },
         {
           "player": "A. Nusa",
           "team": "Norway",
-          "probability_1_sot": 0.6374,
-          "expected_sot": 1.0144,
-          "expected_shots": 1.83,
-          "reason": "tiros esp. 1.8, SOT esp. 1.0 (media)",
+          "probability_1_sot": 0.6485,
+          "expected_sot": 1.0455,
+          "expected_shots": 1.88,
+          "reason": "tiros esp. 1.9, SOT esp. 1.0 (media)",
           "source_used": "proxy",
           "shots_source": "proxy",
           "confidence": "media",
-          "data_quality": "media"
+          "data_quality": "alta"
         },
         {
           "player": "A. Sørloth",
           "team": "Norway",
-          "probability_1_sot": 0.6365,
-          "expected_sot": 1.0121,
-          "expected_shots": 1.96,
+          "probability_1_sot": 0.6476,
+          "expected_sot": 1.043,
+          "expected_shots": 2.02,
           "reason": "tiros esp. 2.0, SOT esp. 1.0 (media)",
           "source_used": "proxy",
           "shots_source": "proxy",
           "confidence": "media",
-          "data_quality": "media"
+          "data_quality": "alta"
         }
       ],
       "likely_assisters": [
         {
-          "player": "A. Sørloth",
-          "team": "Norway",
-          "probability_assist": 0.1616,
-          "expected_assists": 0.1763,
+          "player": "G. Konan",
+          "team": "Ivory Coast",
+          "probability_assist": 0.2506,
+          "expected_assists": 0.2885,
           "expected_key_passes": null,
-          "reason": "xA-proxy 0.18 (media)",
+          "reason": "xA-proxy 0.29 (media)",
           "source_used": "proxy",
           "assist_source": "proxy",
           "confidence": "media",
-          "data_quality": "media"
+          "data_quality": "alta"
         },
         {
-          "player": "A. Diallo",
+          "player": "M. Ødegaard",
+          "team": "Norway",
+          "probability_assist": 0.2079,
+          "expected_assists": 0.2331,
+          "expected_key_passes": null,
+          "reason": "xA-proxy 0.23 (media)",
+          "source_used": "proxy",
+          "assist_source": "proxy",
+          "confidence": "media",
+          "data_quality": "alta"
+        },
+        {
+          "player": "F. Kessié",
           "team": "Ivory Coast",
-          "probability_assist": 0.1546,
-          "expected_assists": 0.1679,
+          "probability_assist": 0.1549,
+          "expected_assists": 0.1683,
           "expected_key_passes": null,
           "reason": "xA-proxy 0.17 (media)",
           "source_used": "proxy",
           "assist_source": "proxy",
           "confidence": "media",
-          "data_quality": "media"
-        },
-        {
-          "player": "S. Fofana",
-          "team": "Ivory Coast",
-          "probability_assist": 0.1352,
-          "expected_assists": 0.1453,
-          "expected_key_passes": null,
-          "reason": "xA-proxy 0.15 (media)",
-          "source_used": "proxy",
-          "assist_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
+          "data_quality": "alta"
         }
       ],
       "set_piece_takers": {
@@ -191,67 +191,24 @@
       },
       "card_risk": [
         {
-          "player": "W. Singo",
+          "player": "C. Inao OulaÃ¯",
           "team": "Ivory Coast",
-          "player_id": 30504,
-          "probability_card": 0.3137,
+          "player_id": 474591,
+          "probability_card": 0.3093,
           "reason": "P(tarjeta) 31% — mercado de tarjeta es baja confianza (media)",
           "confidence": "media-baja",
-          "data_quality": "media",
-          "probability_card_original": 0.3137,
-          "probability_card_adjusted": 0.3035,
-          "adjustment_direction": "bajar",
-          "adjustment_reason": "ajuste baja: historial jugador bajo ↓; equipo bajo ↓",
+          "data_quality": "baja",
+          "probability_card_original": 0.3093,
+          "probability_card_adjusted": 0.3125,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: posición alto ↑; equipo bajo ↓; árbitro bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador",
           "card_risk_components": {
             "player_history": {
-              "label": "bajo",
-              "direction": "bajar",
-              "confidence": "baja",
-              "weight": 0.15,
-              "step": -0.015
-            },
-            "position_profile": {
-              "label": "medio",
-              "direction": "neutro",
-              "confidence": "media",
-              "weight": 0.6,
-              "step": 0.0
-            },
-            "team_profile": {
-              "label": "bajo",
-              "direction": "bajar",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": -0.0175
-            },
-            "referee_profile": {
               "label": "no determinado",
               "direction": "neutro",
-              "confidence": "baja",
-              "weight": 0.15,
+              "confidence": "no determinado",
+              "weight": 0.0,
               "step": 0.0
-            }
-          }
-        },
-        {
-          "player": "K. Thorstvedt",
-          "team": "Norway",
-          "player_id": 39143,
-          "probability_card": 0.2892,
-          "reason": "P(tarjeta) 29% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "media-baja",
-          "data_quality": "media",
-          "probability_card_original": 0.2892,
-          "probability_card_adjusted": 0.2885,
-          "adjustment_direction": "neutro",
-          "adjustment_reason": "ajuste neutro: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador",
-          "card_risk_components": {
-            "player_history": {
-              "label": "bajo",
-              "direction": "bajar",
-              "confidence": "baja",
-              "weight": 0.15,
-              "step": -0.015
             },
             "position_profile": {
               "label": "alto",
@@ -268,11 +225,11 @@
               "step": -0.0175
             },
             "referee_profile": {
-              "label": "no determinado",
-              "direction": "neutro",
+              "label": "bajo",
+              "direction": "bajar",
               "confidence": "baja",
-              "weight": 0.15,
-              "step": 0.0
+              "weight": 0.037,
+              "step": -0.0022
             }
           }
         },
@@ -280,14 +237,14 @@
           "player": "A. Sørloth",
           "team": "Norway",
           "player_id": 8492,
-          "probability_card": 0.2411,
-          "reason": "P(tarjeta) 24% — mercado de tarjeta es baja confianza (media)",
+          "probability_card": 0.2656,
+          "reason": "P(tarjeta) 27% — mercado de tarjeta es baja confianza (media)",
           "confidence": "media-baja",
-          "data_quality": "media",
-          "probability_card_original": 0.2411,
-          "probability_card_adjusted": 0.226,
+          "data_quality": "baja",
+          "probability_card_original": 0.2656,
+          "probability_card_adjusted": 0.2484,
           "adjustment_direction": "bajar",
-          "adjustment_reason": "ajuste baja: historial jugador bajo ↓; posición bajo ↓; equipo bajo ↓",
+          "adjustment_reason": "ajuste baja: historial jugador bajo ↓; posición bajo ↓; equipo bajo ↓; árbitro bajo ↓ · árbitro con muestra baja (peso reducido)",
           "card_risk_components": {
             "player_history": {
               "label": "bajo",
@@ -311,11 +268,54 @@
               "step": -0.0175
             },
             "referee_profile": {
-              "label": "no determinado",
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "baja",
+              "weight": 0.037,
+              "step": -0.0022
+            }
+          }
+        },
+        {
+          "player": "P. Berg",
+          "team": "Norway",
+          "player_id": 39064,
+          "probability_card": 0.2533,
+          "reason": "P(tarjeta) 25% — mercado de tarjeta es baja confianza (media)",
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.2533,
+          "probability_card_adjusted": 0.2559,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: posición alto ↑; equipo bajo ↓; árbitro bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador",
+          "card_risk_components": {
+            "player_history": {
+              "label": "medio",
               "direction": "neutro",
               "confidence": "baja",
               "weight": 0.15,
               "step": 0.0
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "baja",
+              "weight": 0.037,
+              "step": -0.0022
             }
           }
         },
@@ -323,14 +323,14 @@
           "player": "I. Sangaré",
           "team": "Ivory Coast",
           "player_id": 22149,
-          "probability_card": 0.2399,
+          "probability_card": 0.2402,
           "reason": "P(tarjeta) 24% — mercado de tarjeta es baja confianza (media)",
           "confidence": "media-baja",
-          "data_quality": "media",
-          "probability_card_original": 0.2399,
-          "probability_card_adjusted": 0.2393,
+          "data_quality": "baja",
+          "probability_card_original": 0.2402,
+          "probability_card_adjusted": 0.2391,
           "adjustment_direction": "neutro",
-          "adjustment_reason": "ajuste neutro: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador",
+          "adjustment_reason": "ajuste neutro: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓; árbitro bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador",
           "card_risk_components": {
             "player_history": {
               "label": "bajo",
@@ -354,11 +354,11 @@
               "step": -0.0175
             },
             "referee_profile": {
-              "label": "no determinado",
-              "direction": "neutro",
+              "label": "bajo",
+              "direction": "bajar",
               "confidence": "baja",
-              "weight": 0.15,
-              "step": 0.0
+              "weight": 0.037,
+              "step": -0.0022
             }
           }
         }
@@ -424,19 +424,19 @@
     "set_piece_source": "lanzadores de balón parado cargados para 8 equipos (fuente externa)",
     "events_source": "eventos reales (/fixtures/events)",
     "referee_context": {
-      "referee_name": null,
-      "profile_source": null,
-      "matches_sample": null,
-      "card_environment": "no determinado",
-      "expected_card_environment": "no determinado",
-      "possible_penalty_environment": "no determinado",
+      "referee_name": "Jesús Valenzuela, Venezuela",
+      "profile_source": "worldcup_events_auto",
+      "matches_sample": 1,
+      "card_environment": "bajo",
+      "expected_card_environment": "bajo (1 partido(s) Mundial auto; muestra mínima — no extrapolar)",
+      "possible_penalty_environment": "no determinado (muestra insuficiente para penaltis)",
       "confidence": "baja",
       "data_quality": "baja",
-      "sample": null,
-      "yellow_cards_pg": null,
-      "red_cards_pg": null,
-      "penalties_pg": null,
-      "reason": "árbitro no asignado al fixture (sin nombre de árbitro disponible)"
+      "sample": 1,
+      "yellow_cards_pg": 2.0,
+      "red_cards_pg": 0.0,
+      "penalties_pg": 0.0,
+      "reason": "solo 1 partido, no extrapolar fuerte; fuente: Mundial auto (eventos reales)"
     },
     "weather_context": {
       "weather_summary": "no determinado",
