@@ -1,19 +1,21 @@
-⚙️ Motor máximo vs L3 (N=10 · desde 27-jun): 1X2 60% vs 60% · O2.5 50% vs 50% · BTTS 30% vs 30%  (muestra pequeña, orientativo)
+⚙️ Ensemble vs mx vs L3 (N=10 · desde 27-jun): 1X2 ens 60% · mx 60% · L3 60% · O2.5 50% vs 50% · BTTS 30% vs 30%  (muestra pequeña, orientativo)
 
 ===== detalle mx vs L3 =====
 N=10 partidos liquidados con predicción mx (lock-at-KO, anti-hindsight) · desde 27-jun · cara a cara vs RESULTADOS REALES, sin mercado
-  mercado/métrica               L3        mx    líder         Δ
-  -------------------------------------------------------------
-  1X2 acc%                    60.0      60.0   empate         -
-  1X2 logloss               0.8545    0.8867       L3    0.0322
-  1X2 brier                 0.5045    0.5322       L3    0.0276
-  Over 2.5 acc%               50.0      50.0   empate         -
-  Over 2.5 logloss          0.6758    0.6697       mx    0.0061
-  Over 2.5 brier            0.2416    0.2386       mx    0.0029
-  BTTS acc%                   30.0      30.0   empate         -
-  BTTS logloss              0.7584    0.7542       mx    0.0042
-  BTTS brier                0.2806    0.2803   empate         -
+  mercado/métrica               L3        mx       ens    líder         Δ
+  -----------------------------------------------------------------------
+  1X2 acc%                    60.0      60.0      60.0   empate         -
+  1X2 logloss               0.8545    0.8867    0.8682       L3    0.0137
+  1X2 brier                 0.5045    0.5322    0.5155       L3    0.0110
+  Over 2.5 acc%               50.0      50.0      50.0   empate         -
+  Over 2.5 logloss          0.6758    0.6697    0.6758       mx    0.0061
+  Over 2.5 brier            0.2416    0.2386    0.2416       mx    0.0029
+  BTTS acc%                   30.0      30.0      30.0   empate         -
+  BTTS logloss              0.7584    0.7542    0.7584       mx    0.0042
+  BTTS brier                0.2806    0.2803    0.2806   empate         -
+
+  ens = ENSEMBLE 1X2 MOSTRADO (media 50/50 mx+L3). En Over2.5/BTTS ens=L3 por diseño (los goles se quedan en el L3, su mejor mercado).
 
 VEREDICTO: muestra pequeña (N=10 < 30) — NO se declara ganador; el acumulado crece hasta el final del Mundial. Orientativo.
 
-generated_at_utc: 2026-06-30T11:00:28+00:00
+generated_at_utc: 2026-06-30T16:41:19+00:00
