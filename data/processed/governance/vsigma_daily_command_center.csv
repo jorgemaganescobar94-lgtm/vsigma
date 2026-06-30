@@ -1,2 +1,2 @@
 target_date,generated_at,mode,command_center_status,daily_classification,action_level,operational_verdict,predictive_failure,evidence_basis,next_action,run_url
-2026-06-30,2026-06-30T13:16:21+01:00,health,ACTION_REQUIRED,TECHNICAL_WARNING,ACTION_REQUIRED,TECHNICAL_WARNING,NO,partial_sources,"Inspect healthcheck, workflow logs, and artifacts before trusting the day.",https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/28443548609
+2026-06-30,2026-06-30T17:25:56+01:00,health,ACTION_REQUIRED,TECHNICAL_WARNING,ACTION_REQUIRED,TECHNICAL_WARNING,NO,partial_sources,"Inspect healthcheck, workflow logs, and artifacts before trusting the day.",https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/28459703120
