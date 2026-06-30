@@ -1,1 +1,11 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
+2026-06-30,1526872,Serie C,Brazil,Caxias,Anápolis,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-30,1526872,Serie C,Brazil,Caxias,Anápolis,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-30,1526872,Serie C,Brazil,Caxias,Anápolis,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-30,1526872,Serie C,Brazil,Caxias,Anápolis,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-30,1526872,Serie C,Brazil,Caxias,Anápolis,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-30,1526872,Serie C,Brazil,Caxias,Anápolis,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-30,1526872,Serie C,Brazil,Caxias,Anápolis,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-30,1526872,Serie C,Brazil,Caxias,Anápolis,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-30,1526872,Serie C,Brazil,Caxias,Anápolis,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-06-30,1526872,Serie C,Brazil,Caxias,Anápolis,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
