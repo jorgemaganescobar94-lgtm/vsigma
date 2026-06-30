@@ -56,7 +56,7 @@ SMALL_N = 30          # below this we DO NOT declare a winner — accumulate, "o
 TIE_LL = 5e-4         # log-loss/Brier closer than this -> empate
 TIE_ACC = 1e-3        # accuracy closer than this -> empate
 RES_IDX = {"H": 0, "D": 1, "A": 2}
-CSV_COLUMNS = ["market", "metric", "l3", "mx", "leader", "diff", "n", "since"]
+CSV_COLUMNS = ["market", "metric", "l3", "mx", "ens", "leader", "diff", "n", "since"]
 
 # Spanish 3-letter month abbreviations for the "desde DD-mmm" tag (display only).
 _ES_MONTH = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
@@ -88,6 +88,43 @@ def _leader(l3, mx, *, lower_better, tie):
     if lower_better:
         return ("mx" if mx < l3 else "L3"), diff
     return ("mx" if mx > l3 else "L3"), diff
+
+
+def _leader3(l3, mx, ens, *, lower_better, tie):
+    """Best of L3 / mx / ENSEMBLE on a metric + the gap to the runner-up. 'empate' when the top two are
+    within the tie band. NaN-safe (skips missing). The ens is now the SHIPPED 1X2, so it joins the race."""
+    cands = [(k, v) for k, v in (("L3", l3), ("mx", mx), ("ens", ens))
+             if v is not None and not (isinstance(v, float) and np.isnan(v))]
+    if not cands:
+        return "n/d", float("nan")
+    cands.sort(key=lambda kv: kv[1], reverse=not lower_better)   # best first
+    if len(cands) == 1:
+        return cands[0][0], float("nan")
+    gap = abs(cands[0][1] - cands[1][1])
+    if gap <= tie:
+        return "empate", gap
+    return cands[0][0], gap
+
+
+def _ens_1x2_metrics(df):
+    """acc/logloss/brier for the ENSEMBLE 1X2 = renormalised 50/50 mean of the logged mx_* and l3_*
+    (EXACTLY the live ficha blend). Over rows where BOTH triples exist. None if columns/usable rows
+    missing. Read-only: re-derives the blend from frozen columns, never touches the model."""
+    l3c = ["l3_home", "l3_draw", "l3_away"]
+    mxc = ["mx_home", "mx_draw", "mx_away"]
+    if not all(c in df.columns for c in l3c + mxc):
+        return None
+    L = df[l3c].to_numpy(float)
+    M = df[mxc].to_numpy(float)
+    y = df["result_1x2"].map(RES_IDX).to_numpy(int)
+    mask = ~(np.isnan(L).any(axis=1) | np.isnan(M).any(axis=1))
+    if mask.sum() == 0:
+        return None
+    P = (L[mask] + M[mask]) / 2.0
+    P = P / P.sum(axis=1, keepdims=True)
+    Y = np.eye(3)[y[mask]]
+    m = ll._metrics(P, Y)
+    return {"acc": m["acc"], "logloss": m["logloss"], "brier": m["brier"], "n": int(mask.sum())}
 
 
 def _1x2_metrics(df, prefix):
@@ -169,27 +206,29 @@ def compute_from_log(log_path=LOG):
 
     rows = []
 
-    def add(market, metric, l3v, mxv, lower_better):
-        leader, diff = _leader(l3v, mxv, lower_better=lower_better,
-                               tie=(TIE_ACC if metric == "acc" else TIE_LL))
-        rows.append({"market": market, "metric": metric, "l3": l3v, "mx": mxv,
+    def add(market, metric, l3v, mxv, ensv, lower_better):
+        leader, diff = _leader3(l3v, mxv, ensv, lower_better=lower_better,
+                                tie=(TIE_ACC if metric == "acc" else TIE_LL))
+        rows.append({"market": market, "metric": metric, "l3": l3v, "mx": mxv, "ens": ensv,
                      "leader": leader, "diff": diff})
 
-    # 1X2
+    # 1X2 — L3 vs mx vs ENSEMBLE (the shipped 1X2; 50/50 blend re-derived from the frozen columns)
     mL3 = _1x2_metrics(s, "l3")
     mMX = _1x2_metrics(s, "mx")
-    if mL3 and mMX:
-        add("1X2", "acc", mL3["acc"] * 100, mMX["acc"] * 100, lower_better=False)
-        add("1X2", "logloss", mL3["logloss"], mMX["logloss"], lower_better=True)
-        add("1X2", "brier", mL3["brier"], mMX["brier"], lower_better=True)
+    mENS = _ens_1x2_metrics(s)
+    if mL3 and mMX and mENS:
+        add("1X2", "acc", mL3["acc"] * 100, mMX["acc"] * 100, mENS["acc"] * 100, lower_better=False)
+        add("1X2", "logloss", mL3["logloss"], mMX["logloss"], mENS["logloss"], lower_better=True)
+        add("1X2", "brier", mL3["brier"], mMX["brier"], mENS["brier"], lower_better=True)
 
-    # Over 2.5 + BTTS (Poisson from xG)
+    # Over 2.5 + BTTS (Poisson from xG). GOLES = L3: el ensemble usa el xG del L3 (su mejor mercado),
+    # así que en estos mercados ens == L3 por diseño (columna ens = valor L3, no es coincidencia).
     for market, kind in (("Over 2.5", "over25"), ("BTTS", "btts")):
         L3b, MXb, _nb = _binary_metrics_pair(s, kind)
         if L3b and MXb:
-            add(market, "acc", L3b["acc"] * 100, MXb["acc"] * 100, lower_better=False)
-            add(market, "logloss", L3b["logloss"], MXb["logloss"], lower_better=True)
-            add(market, "brier", L3b["brier"], MXb["brier"], lower_better=True)
+            add(market, "acc", L3b["acc"] * 100, MXb["acc"] * 100, L3b["acc"] * 100, lower_better=False)
+            add(market, "logloss", L3b["logloss"], MXb["logloss"], L3b["logloss"], lower_better=True)
+            add(market, "brier", L3b["brier"], MXb["brier"], L3b["brier"], lower_better=True)
 
     return {"n": n, "since": since, "since_dt": since_dt, "rows": rows}
 
@@ -214,7 +253,7 @@ def briefing_line(res):
     bits = []
     a1 = _get(res, "1X2", "acc")
     if a1:
-        bits.append(f"1X2 {a1['mx']:.0f}% vs {a1['l3']:.0f}%")
+        bits.append(f"1X2 ens {a1['ens']:.0f}% · mx {a1['mx']:.0f}% · L3 {a1['l3']:.0f}%")
     ao = _get(res, "Over 2.5", "acc")
     if ao:
         bits.append(f"O2.5 {ao['mx']:.0f}% vs {ao['l3']:.0f}%")
@@ -222,7 +261,7 @@ def briefing_line(res):
     if ab:
         bits.append(f"BTTS {ab['mx']:.0f}% vs {ab['l3']:.0f}%")
     tail = "  (muestra pequeña, orientativo)" if res["n"] < SMALL_N else ""
-    return f"⚙️ Motor máximo vs L3 (N={res['n']} · desde {res['since']}): " + " · ".join(bits) + tail
+    return f"⚙️ Ensemble vs mx vs L3 (N={res['n']} · desde {res['since']}): " + " · ".join(bits) + tail
 
 
 def render_txt(res):
@@ -240,7 +279,7 @@ def render_txt(res):
 
     L.append(f"N={res['n']} partidos liquidados con predicción mx (lock-at-KO, anti-hindsight) · "
              f"desde {res['since']} · cara a cara vs RESULTADOS REALES, sin mercado")
-    hdr = f"  {'mercado/métrica':22} {'L3':>9} {'mx':>9} {'líder':>8} {'Δ':>9}"
+    hdr = f"  {'mercado/métrica':22} {'L3':>9} {'mx':>9} {'ens':>9} {'líder':>8} {'Δ':>9}"
     L.append(hdr)
     L.append("  " + "-" * (len(hdr) - 2))
     labels = {"acc": "acc%", "logloss": "logloss", "brier": "brier"}
@@ -252,7 +291,10 @@ def render_txt(res):
             name = f"{market} {labels[metric]}"
             dtxt = "-" if r["leader"] in ("empate", "n/d") else _fmt(metric, r["diff"])
             L.append(f"  {name:22} {_fmt(metric, r['l3']):>9} {_fmt(metric, r['mx']):>9} "
-                     f"{r['leader']:>8} {dtxt:>9}")
+                     f"{_fmt(metric, r.get('ens')):>9} {r['leader']:>8} {dtxt:>9}")
+    L.append("")
+    L.append("  ens = ENSEMBLE 1X2 MOSTRADO (media 50/50 mx+L3). En Over2.5/BTTS ens=L3 por diseño "
+             "(los goles se quedan en el L3, su mejor mercado).")
     L.append("")
     # honest verdict — NEVER a winner below SMALL_N
     if res["n"] < SMALL_N:
@@ -261,11 +303,12 @@ def render_txt(res):
     else:
         ll_row = _get(res, "1X2", "logloss")
         who = ll_row["leader"] if ll_row else "n/d"
-        if who in ("mx", "L3"):
+        if who in ("mx", "L3", "ens"):
             L.append(f"VEREDICTO: con N={res['n']}, lidera {who} en log-loss 1X2 (Δ{ll_row['diff']:.4f}). "
-                     "Sigue acumulando; este marcador + el A/B son la base para revertir (MAXMODEL_LIVE).")
+                     "El 1X2 mostrado es el ENSEMBLE; sigue acumulando — este marcador + el A/B son la base "
+                     "para revertir (ENSEMBLE_1X2_LIVE / MAXMODEL_LIVE).")
         else:
-            L.append(f"VEREDICTO: con N={res['n']}, mx y L3 empatados en log-loss 1X2. Sigue acumulando.")
+            L.append(f"VEREDICTO: con N={res['n']}, L3/mx/ens empatados en log-loss 1X2. Sigue acumulando.")
     L.append("")
     L.append(f"generated_at_utc: {now_iso()}")
     return "\n".join(L)
@@ -274,10 +317,13 @@ def render_txt(res):
 def write_csv(res, path=SCORECARD_CSV):
     rows = []
     for r in res["rows"]:
+        ensv = r.get("ens")
         rows.append({
             "market": r["market"], "metric": r["metric"],
             "l3": (round(r["l3"], 1) if r["metric"] == "acc" else round(r["l3"], 4)),
             "mx": (round(r["mx"], 1) if r["metric"] == "acc" else round(r["mx"], 4)),
+            "ens": ("" if ensv is None or (isinstance(ensv, float) and np.isnan(ensv))
+                    else (round(ensv, 1) if r["metric"] == "acc" else round(ensv, 4))),
             "leader": r["leader"],
             "diff": ("" if r["leader"] in ("empate", "n/d")
                      else (round(r["diff"], 1) if r["metric"] == "acc" else round(r["diff"], 4))),

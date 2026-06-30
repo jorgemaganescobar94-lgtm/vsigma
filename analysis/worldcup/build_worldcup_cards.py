@@ -53,6 +53,17 @@ CONTEXT_LIVE = True
 # NOTA: el A/B lo midió IGUAL en 1X2 y PEOR en BTTS — promoción por decisión explícita de Jorge.
 MAXMODEL_LIVE = True
 MX_PREDS_FILE = "worldcup_maxmodel_shadow_predictions.csv"
+
+# 🔴 EN VIVO: 1X2 MOSTRADO = ENSEMBLE (media 50/50 RENORMALIZADA de las probabilidades 1X2 de mx_* y
+# del L3 our_*). El backtest OOS (N=3246, mismo harness walk-forward del bake-off) mostró que el blend
+# simple bate a AMBOS (mx y L3) en log-loss 1X2 con significancia (p<0.01), variante más limpia (sin
+# peso). Se escribe en columnas ens_* = (probs blend) + ens_xg_* = our_xg_* PORQUE LOS GOLES SE QUEDAN
+# EN L3 (su mejor mercado: el ensemble NO lo bate en Over/BTTS). Contexto y bajas SIGUEN encadenando por
+# delta-Poisson sobre ens_* (base de la cadena cuando existe) -> el 1X2 mostrado lleva el blend y el
+# xG/Over/BTTS/marcadores salen del L3. our_*/mx_* NUNCA se sobrescriben (sombra para A/B + rollback).
+# ENSEMBLE_1X2_LIVE=False -> NO se escriben ens_* -> REVERSA EXACTA al estado actual (mx_* como 1X2;
+# Δ=0; la cadena vuelve a basarse en mx). Soft: sin mx_* o sin our_* en un fixture -> sin ens_* -> L3/mx.
+ENSEMBLE_1X2_LIVE = True
 # nota del MULTIPLICADOR (solo aparecen los escenarios que ajustan, mult != 1.0). short_tag honesto.
 SCENARIO_ES = {"qualified": "ya clasificado", "eliminated": "eliminado",
                "debe_ganar": "debe ganar", "le_vale_empate": "le vale el empate"}
@@ -109,6 +120,26 @@ def fetch_injuries(c, fid, injlive=None):
     if injlive is not None:
         injlive.save_injuries_store(fid, by)   # persist FOREVER (store-guard for later runs)
     return by
+
+
+def blend_1x2(ph_a, pd_a, pa_a, ph_b, pd_b, pa_b):
+    """ENSEMBLE: renormalised 50/50 mean of two 1X2 probability triples (mx + L3). Returns
+    (p_home, p_draw, p_away) or None if any input is missing/non-numeric/degenerate. Pure, no model
+    touch: this is exactly mean([mx],[L3]) then /sum (the OOS-validated simple blend)."""
+    vals = [ph_a, pd_a, pa_a, ph_b, pd_b, pa_b]
+    if any(v is None or pd.isna(v) for v in vals):
+        return None
+    try:
+        p = np.array([(float(ph_a) + float(ph_b)) / 2.0,
+                      (float(pd_a) + float(pd_b)) / 2.0,
+                      (float(pa_a) + float(pa_b)) / 2.0])
+    except (TypeError, ValueError):
+        return None
+    s = float(p.sum())
+    if not (s > 0) or not np.isfinite(s):
+        return None
+    p = p / s
+    return float(p[0]), float(p[1]), float(p[2])
 
 
 def compute_context_adjustment(ctxmod, ctx_groups, ctx_team_group, rnd, home, away,
@@ -508,12 +539,29 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
                 f"{home} {float(mxr['mx_home'])*100:4.1f}%  Draw {float(mxr['mx_draw'])*100:4.1f}%  "
                 f"{away} {float(mxr['mx_away'])*100:4.1f}%   | exp goals {mxr['mx_xg_home']}-{mxr['mx_xg_away']}")
 
-        # ---- CONTEXTO EN VIVO encadenado SOBRE el motor mostrado (mx_* si existe, si no L3 our_*).
+        # ---- ENSEMBLE 1X2 (media 50/50 de mx_* y L3 our_*) = BASE 1X2 MOSTRADA. Los GOLES SE QUEDAN en
+        # L3: ens_xg_* = our_xg_* -> contexto/bajas encadenan el blend en 1X2 y el xG de L3 en goles.
+        # our_*/mx_* nunca se sobrescriben. Flag off / falta mx_* o our_* -> sin ens_* -> reversa exacta a mx.
+        if ENSEMBLE_1X2_LIVE and pd.notna(rec.get("mx_home")) and pd.notna(rec.get("our_home")):
+            eb = blend_1x2(rec.get("mx_home"), rec.get("mx_draw"), rec.get("mx_away"),
+                           rec.get("our_home"), rec.get("our_draw"), rec.get("our_away"))
+            if eb is not None:
+                rec.update({
+                    "ens_home": round(eb[0], 4), "ens_draw": round(eb[1], 4), "ens_away": round(eb[2], 4),
+                    # GOLES = L3: el xG del ensemble es el del L3 (su mejor mercado) -> Over/BTTS/marcadores L3
+                    "ens_xg_home": rec.get("our_xg_home"), "ens_xg_away": rec.get("our_xg_away")})
+                out(f"    [ENSEMBLE 1X2] (media 50/50 mx+L3; goles=L3): "
+                    f"{home} {eb[0]*100:4.1f}%  Draw {eb[1]*100:4.1f}%  {away} {eb[2]*100:4.1f}%")
+
+        # ---- CONTEXTO EN VIVO encadenado SOBRE el motor mostrado (ens_* si existe, si no mx_*, si no L3).
         # El escenario de grupo mueve el xG/1X2 MOSTRADO por delta-Poisson (misma mecánica que las
-        # bajas). Multiplicador 1.0 (trivial/knockout) -> None -> reversa exacta al motor. our_*/mx_*
-        # NO se tocan (sombra para A/B + rollback). CONTEXT_LIVE=False -> no ctx_* -> cae a mx exacto.
+        # bajas). Multiplicador 1.0 (trivial/knockout) -> None -> reversa exacta al motor. our_*/mx_*/ens_*
+        # NO se tocan. CONTEXT_LIVE=False -> no ctx_* -> cae al motor base exacto.
         if CONTEXT_LIVE:
-            if pd.notna(rec.get("mx_home")):
+            if pd.notna(rec.get("ens_home")):
+                cb = (rec.get("ens_home"), rec.get("ens_draw"), rec.get("ens_away"))
+                cbxh, cbxa = rec.get("ens_xg_home"), rec.get("ens_xg_away")
+            elif pd.notna(rec.get("mx_home")):
                 cb = (rec.get("mx_home"), rec.get("mx_draw"), rec.get("mx_away"))
                 cbxh, cbxa = rec.get("mx_xg_home"), rec.get("mx_xg_away")
             else:
@@ -562,14 +610,17 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
                 out(f"    [POR QUÉ] {why}")
                 rec["why"] = why
 
-        # ---- INJURIES_LIVE: ajuste EN VIVO por bajas, ÚLTIMO eslabón de la cadena mx -> contexto ->
-        # lesiones. Base = misma prioridad que la ficha: ctx_* (motor+contexto) si existe, si no mx_*,
-        # si no our_*. Recalcula 1X2 por delta-Poisson del cambio de xG; OU/BTTS se recalculan solos en
-        # la ficha (leen inj_xg_*). Sin bajas clave / flag off -> None -> NO inj_* -> reversa exacta. SOFT.
+        # ---- INJURIES_LIVE: ajuste EN VIVO por bajas, ÚLTIMO eslabón de la cadena ens -> contexto ->
+        # lesiones. Base = misma prioridad que la ficha: ctx_* (motor+contexto) si existe, si no ens_*
+        # (blend), si no mx_*, si no our_*. Recalcula 1X2 por delta-Poisson del cambio de xG; OU/BTTS se
+        # recalculan solos en la ficha (leen inj_xg_*). Sin bajas clave / flag off -> None -> reversa exacta.
         if injlive is not None:
             if pd.notna(rec.get("ctx_home")):
                 bph = (rec.get("ctx_home"), rec.get("ctx_draw"), rec.get("ctx_away"))
                 bxh, bxa = rec.get("ctx_xg_home"), rec.get("ctx_xg_away")
+            elif pd.notna(rec.get("ens_home")):
+                bph = (rec.get("ens_home"), rec.get("ens_draw"), rec.get("ens_away"))
+                bxh, bxa = rec.get("ens_xg_home"), rec.get("ens_xg_away")
             elif pd.notna(rec.get("mx_home")):
                 bph = (rec.get("mx_home"), rec.get("mx_draw"), rec.get("mx_away"))
                 bxh, bxa = rec.get("mx_xg_home"), rec.get("mx_xg_away")

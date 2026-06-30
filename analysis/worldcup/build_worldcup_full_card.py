@@ -275,6 +275,9 @@ def props_block(fid):
 # Honest framing for the live engine (NO claim of being more accurate; probabilistic, no market).
 MX_NOTE = ("Predicción: modelo amplio (núcleo L3 + forma/H2H/descanso) — probabilístico, "
            "sin certeza ni mercado")
+# ENSEMBLE 1X2 framing: the shown 1X2 is the 50/50 blend of the broad engine (mx) and L3; goals stay L3.
+ENS_NOTE = ("Predicción 1X2: ENSEMBLE (media de modelo amplio + L3) — probabilístico, sin mercado; "
+            "goles/Over/BTTS desde L3")
 
 
 def _safe_num(v):
@@ -296,19 +299,23 @@ def _safe_prob(v):
 
 
 def pred_1x2(r):
-    """Prediction to DISPLAY/SEND. CHAIN mx -> contexto -> lesiones, so priority is:
-    inj_* (LIVE injuries, last link) > ctx_* (group context CHAINED on the shown engine) > mx_* (the
-    live MAX engine) > pure L3 our_*. ctx_* is now computed ON TOP of mx_* (base = mx if present, else
-    L3) by delta-Poisson, so it already carries the max engine; that is why ctx_* outranks mx_* here.
-    our_*/mx_* are NEVER overwritten (shadow for A/B + exact rollback): CONTEXT_LIVE off -> no ctx_* ->
-    falls back to mx_* exactly; MAXMODEL_LIVE off too -> L3; INJURIES_LIVE off -> no inj_*.
+    """Prediction to DISPLAY/SEND. CHAIN ens -> contexto -> lesiones, so priority is:
+    inj_* (LIVE injuries, last link) > ctx_* (group context CHAINED on the shown engine) > ens_* (the
+    ENSEMBLE 1X2 = 50/50 blend of mx + L3) > mx_* (broad engine, fallback if no ens) > pure L3 our_*.
+    ctx_* is computed ON TOP of the base (ens if present, else mx, else L3) by delta-Poisson, so it
+    already carries the blend; that is why ctx_* outranks ens_* here. our_*/mx_*/ens_* are NEVER
+    overwritten (shadow for A/B + exact rollback): ENSEMBLE_1X2_LIVE off -> no ens_* -> falls back to
+    mx_* exactly (current state); CONTEXT_LIVE off -> no ctx_*; INJURIES_LIVE off -> no inj_*.
+    GOALS stay L3: ens_xg_* = our_xg_*, so the xG/Over/BTTS returned for ens_*/ctx_*/inj_* derive from
+    the L3 xG chain even though the 1X2 carries the blend.
     Returns (ph,pd,pa,xg_home,xg_away,note). inj_* keeps the engine framing (its label is its OWN ℹ️
     line); ctx_* returns the context_note so the 'por qué' annotates the scenario.
 
     DEFENSIVE: every probability candidate is validated with _safe_prob — a source is used only when its
     full 1X2 triple is numeric in [0,1]. A malformed value (e.g. a stray names-string in inj_home) is
     ignored and the next source is tried; a string is NEVER returned as a probability."""
-    for prefix, base_note in (("inj", MX_NOTE), ("ctx", None), ("mx", MX_NOTE), ("our", None)):
+    for prefix, base_note in (("inj", MX_NOTE), ("ctx", None), ("ens", ENS_NOTE),
+                              ("mx", MX_NOTE), ("our", None)):
         ph = _safe_prob(r.get(f"{prefix}_home"))
         pdr = _safe_prob(r.get(f"{prefix}_draw"))
         pa = _safe_prob(r.get(f"{prefix}_away"))

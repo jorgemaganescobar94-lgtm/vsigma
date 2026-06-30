@@ -323,8 +323,9 @@ def _to_f(x):
 
 
 def section_mx_vs_l3(csv_text):
-    """A/B EN VIVO invertido: motor máximo (mx) vs L3, leído del CSV del scorer (read-only).
-    El CSV trae una fila por (market,metric) con columnas market,metric,l3,mx,leader,diff,n,since."""
+    """A/B EN VIVO: ENSEMBLE (1X2 mostrado) vs motor máximo (mx) vs L3, leído del CSV del scorer
+    (read-only). El CSV trae una fila por (market,metric) con columnas market,metric,l3,mx,ens,leader,
+    diff,n,since. Compat: si falta la columna ens (CSV viejo), se degrada a '—' sin romper."""
     rows = []
     n, since = None, None
     for i, raw in enumerate(csv_text.splitlines()):
@@ -332,26 +333,32 @@ def section_mx_vs_l3(csv_text):
         if not raw or (i == 0 and raw.lower().startswith("market,")):
             continue
         parts = raw.split(",")
-        if len(parts) < 8:
+        if len(parts) >= 9:                       # new schema with ens column
+            market, metric, l3, mx, ens, leader, diff, nn, since = parts[:9]
+        elif len(parts) >= 8:                     # legacy schema (no ens) -> blank ens, stays soft
+            market, metric, l3, mx, leader, diff, nn, since = parts[:8]
+            ens = "—"
+        else:
             continue
-        market, metric, l3, mx, leader, diff, nn, since = parts[:8]
         n = nn
-        rows.append((market, metric, l3, mx, leader, diff))
+        rows.append((market, metric, l3, mx, ens, leader, diff))
     since_tag = f" (en vivo, desde {since})" if since and since != "?" else " (en vivo)"
-    lines = [f"## L3 vs Motor máximo{since_tag}"]
+    lines = [f"## L3 vs Motor máximo vs Ensemble{since_tag}"]
     if not rows:
         lines.append("_— sin datos aún: aún no hay partidos liquidados con predicción del motor máximo "
                      "(mx entró en vivo el 27-jun; solo se mide desde entonces, anti-hindsight) —_")
         return lines
-    led = {"mx": "**mx**", "L3": "L3", "empate": "empate", "n/d": "—"}
+    led = {"mx": "**mx**", "L3": "L3", "ens": "**ens**", "empate": "empate", "n/d": "—"}
     lines.append(f"**N = {n or '?'}** partidos liquidados con predicción mx · cara a cara congelado al "
-                 "saque (lock-at-KO, anti-hindsight) vs resultado real · sin mercado.")
+                 "saque (lock-at-KO, anti-hindsight) vs resultado real · sin mercado. "
+                 "ens = ENSEMBLE 1X2 mostrado (media 50/50 mx+L3); en Over2.5/BTTS ens=L3 por diseño.")
     lines.append("")
-    lines.append("| métrica | L3 | mx | líder |")
-    lines.append("|---|---:|---:|---|")
+    lines.append("| métrica | L3 | mx | ens | líder |")
+    lines.append("|---|---:|---:|---:|---|")
     label = {"acc": "acc%", "logloss": "logloss", "brier": "brier"}
-    for market, metric, l3, mx, leader, _diff in rows:
-        lines.append(f"| {market} {label.get(metric, metric)} | {l3} | {mx} | {led.get(leader, leader)} |")
+    for market, metric, l3, mx, ens, leader, _diff in rows:
+        lines.append(f"| {market} {label.get(metric, metric)} | {l3} | {mx} | {ens} | "
+                     f"{led.get(leader, leader)} |")
     n_int = _to_f(n)
     if n_int is not None and n_int < 30:
         lines.append(f"> ⚠️ muestra pequeña (N={n} < 30): **NO se declara ganador**, el acumulado crece "

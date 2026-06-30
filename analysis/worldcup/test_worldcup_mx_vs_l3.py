@@ -88,9 +88,10 @@ def test_six_games_1x2_both_four_of_six(six_log):
 
 def test_six_games_leaders(six_log):
     res = mx.compute_from_log(six_log)
-    # L3 leads 1X2 log-loss/Brier; mx leads the Poisson Over2.5/BTTS log-loss/Brier (real numbers)
+    # L3 leads 1X2 log-loss; the ENSEMBLE leads 1X2 Brier (variance reduction shows even at N=6);
+    # mx leads the Poisson Over2.5/BTTS log-loss/Brier (real numbers).
     assert mx._get(res, "1X2", "logloss")["leader"] == "L3"
-    assert mx._get(res, "1X2", "brier")["leader"] == "L3"
+    assert mx._get(res, "1X2", "brier")["leader"] == "ens"
     assert mx._get(res, "Over 2.5", "logloss")["leader"] == "mx"
     assert mx._get(res, "BTTS", "logloss")["leader"] == "mx"
     # all three markets present with the three metrics each
@@ -98,6 +99,22 @@ def test_six_games_leaders(six_log):
     for m in ("1X2", "Over 2.5", "BTTS"):
         for k in ("acc", "logloss", "brier"):
             assert (m, k) in keys
+
+
+def test_ensemble_third_column(six_log):
+    """The ENSEMBLE is now a third column. 1X2 ens = blend (between/around the bases); in goals
+    ens == L3 by design (goals stay on L3, its best market)."""
+    res = mx.compute_from_log(six_log)
+    # ens present on every row
+    assert all(r.get("ens") is not None for r in res["rows"])
+    # 1X2 ens is the 50/50 blend metric (distinct from both bases, here strictly between on logloss)
+    r = mx._get(res, "1X2", "logloss")
+    assert r["l3"] <= r["ens"] <= r["mx"] or r["mx"] <= r["ens"] <= r["l3"]
+    # goals: ens == L3 exactly (the ensemble keeps L3 xG)
+    for market in ("Over 2.5", "BTTS"):
+        for metric in ("acc", "logloss", "brier"):
+            rr = mx._get(res, market, metric)
+            assert rr["ens"] == pytest.approx(rr["l3"], abs=1e-12)
 
 
 def test_metrics_match_learning_loop_helpers(six_log):
@@ -152,8 +169,8 @@ def test_leader_tie_band_and_direction():
 # ----------------------------------------------------------------- briefing line + verdict honesty
 def test_briefing_line_format_and_small_sample(six_log):
     line = mx.briefing_line(mx.compute_from_log(six_log))
-    assert line.startswith("⚙️ Motor máximo vs L3 (N=6 · desde 27-jun):")
-    assert "1X2 67% vs 67%" in line              # mx% vs L3% (motor máximo primero)
+    assert line.startswith("⚙️ Ensemble vs mx vs L3 (N=6 · desde 27-jun):")
+    assert "1X2 ens 67% · mx 67% · L3 67%" in line   # ensemble (shown) · mx · L3
     assert "muestra pequeña, orientativo" in line
 
 
@@ -183,9 +200,9 @@ def test_csv_roundtrip_and_panel_section(tmp_path, six_log):
     text = csv_path.read_text(encoding="utf-8")
     lines = panel.section_mx_vs_l3(text)
     body = "\n".join(lines)
-    assert lines[0].startswith("## L3 vs Motor máximo (en vivo, desde 27-jun)")
+    assert lines[0].startswith("## L3 vs Motor máximo vs Ensemble (en vivo, desde 27-jun)")
     assert "**N = 6**" in body
-    assert "| 1X2 acc% | 66.7 | 66.7 | empate |" in body
+    assert "| 1X2 acc% | 66.7 | 66.7 | 66.7 | empate |" in body
     assert "**mx**" in body                       # mx leads at least one binary metric -> bolded
     assert "NO se declara ganador" in body        # small-sample honesty carried into the panel
 
