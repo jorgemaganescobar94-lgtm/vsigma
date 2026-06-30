@@ -20,21 +20,21 @@
 ==============================================================================
 PLAYER PROPS — track record (SOMBRA · heurístico · NO validado · sin mercado)
 ==============================================================================
-generated_at_utc: 2026-06-29T17:28:38+00:00
-partidos liquidados=19 | filas jugador-prop=418 | umbral graduación N>=30
+generated_at_utc: 2026-06-30T11:01:40+00:00
+partidos liquidados=22 | filas jugador-prop=484 | umbral graduación N>=30
 MUESTRA INSUFICIENTE para graduar (N<30). Métricas mostradas son orientativas.
 
   prop          n  base%  logloss   brier    ECE  ll_base br_base  mejora?
   ------------------------------------------------------------------------
-  goal        418     8%   0.2520  0.0680  0.037   0.2703  0.0707       sí
-  card        418     9%   0.3336  0.0931  0.078   0.3101  0.0846       no
-  shot_on     418    19%   0.5191  0.1468  0.099   0.4848  0.1533       no
-  assist      418     6%   0.2304  0.0591  0.027   0.2264  0.0562       no
+  goal        484     8%   0.2571  0.0697  0.035   0.2751  0.0723       sí
+  card        484    10%   0.3446  0.0961  0.082   0.3140  0.0860       no
+  shot_on     484    20%   0.5305  0.1549  0.092   0.4981  0.1590       no
+  assist      484     6%   0.2233  0.0570  0.027   0.2210  0.0545       no
 
   (baseline = tasa base del prop; 'mejora?'=sí solo si bate logloss Y brier Y ECE<=0.08.)
   (muestra pequeña -> orientativo; la graduación exige N>=30 partidos.)
 
   TARJETA — sesgo CRUDO vs CORREGIDO (deflación de p_card; gol/asistencia NO se tocan):
-    crudo:     media pred 16.40%  vs real  9.33%  -> sesgo +7.07pp
-    corregido: media pred 13.35%  vs real  9.33%  -> sesgo +4.02pp  (factor 0.8139; |sesgo| baja ✓)
+    crudo:     media pred 16.30%  vs real  9.50%  -> sesgo +6.79pp
+    corregido: media pred 13.12%  vs real  9.50%  -> sesgo +3.61pp  (factor 0.8049; |sesgo| baja ✓)
     (la corrección solo afecta el VALOR MOSTRADO; el log queda en CRUDO. Muestra pequeña -> orientativo, NO es victoria.)

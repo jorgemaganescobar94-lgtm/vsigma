@@ -43,3 +43,6 @@ fixture_id,home,away,lambda_home,lambda_away,source_lambda,actual_score,in_top1,
 1489418,Algeria,Austria,1.67,0.82,mx,3-3,0,0,0,0.0059,21,1-0,D,H,media,media
 1489421,Jordan,Argentina,0.57,2.71,mx,1-3,0,0,0,0.0712,6,0-2,A,A,media,media
 1561329,South Africa,Canada,1.1,1.27,mx,0-1,0,1,1,0.1187,2,1-1,A,A,media,media
+1562344,Brazil,Japan,1.51,0.93,mx,2-1,0,0,1,0.0924,4,1-0,H,H,media,media
+1565176,Germany,Paraguay,1.96,0.71,mx,1-1,0,1,1,0.0964,3,1-0,D,H,media,media
+1562345,Netherlands,Morocco,1.43,1.03,mx,1-1,1,1,1,0.1258,1,1-1,D,H,media,media

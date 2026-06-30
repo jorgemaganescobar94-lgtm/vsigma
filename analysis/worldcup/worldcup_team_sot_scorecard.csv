@@ -87,3 +87,9 @@ fixture_id,kickoff_utc,team_id,team_name,opponent_id,opponent_name,side,predicte
 1539074,2026-06-26 19:00,1567,Iraq,13,Senegal,away,2.063,1.0,1.0631,1.0631,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1561329,2026-06-28 19:00,1531,South Africa,5529,Canada,home,3.439,1.0,2.4388,2.4388,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1561329,2026-06-28 19:00,5529,Canada,1531,South Africa,away,3.803,7.0,-3.1969,3.1969,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1562344,2026-06-29 17:00,6,Brazil,12,Japan,home,3.737,7.0,-3.2634,3.2634,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1562344,2026-06-29 17:00,12,Japan,6,Brazil,away,5.215,2.0,3.2148,3.2148,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1562345,2026-06-30 01:00,31,Morocco,1118,Netherlands,away,4.923,5.0,-0.077,0.077,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1562345,2026-06-30 01:00,1118,Netherlands,31,Morocco,home,3.828,2.0,1.8281,1.8281,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1565176,2026-06-29 20:30,25,Germany,2380,Paraguay,home,6.423,6.0,0.4232,0.4232,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1565176,2026-06-29 20:30,2380,Paraguay,25,Germany,away,3.521,3.0,0.5208,0.5208,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics

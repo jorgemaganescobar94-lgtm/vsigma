@@ -1,227 +1,228 @@
 player_id,player_name,goals,assists,goals_per90,pens_taken,pens_scored,pens_missed,yellows,reds,goal_involvement,set_piece_goals,sample_fixtures,data_quality,confidence,reason
 153,O. Dembele,4,1,5.538,0,0,0,0,0,5,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-278,K. Mbappe,2,2,2.069,0,0,0,0,0,4,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-762,Vinicius Junior,3,1,,0,0,0,0,0,4,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+762,Vinicius Junior,3,1,3.0,0,0,0,0,0,4,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 2218,I. Sarr,3,1,3.333,0,0,0,0,0,4,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-72155,A. Ueda,2,1,2.727,0,0,0,0,0,3,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-247,C. Gakpo,2,1,2.143,0,0,0,0,0,3,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-38750,B. Brobbey,3,0,3.506,0,0,0,0,0,3,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-47323,M. Oyarzabal,2,1,2.368,0,0,0,0,0,3,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-20696,P. Gueye,2,1,,0,0,0,1,0,3,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-635,R. Mahrez,2,1,2.0,0,0,0,0,0,3,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+278,K. Mbappe,2,2,2.069,0,0,0,0,0,4,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+247,C. Gakpo,3,1,1.371,0,0,0,0,0,4,,3,media,baja,muestra pequeña (3 partidos con eventos) — orientativo
+161897,I. Saibari,3,0,2.25,1,1,0,0,0,3,,3,media,baja,muestra pequeña (3 partidos con eventos) — orientativo
 154,Lionel Messi,3,0,9.0,1,0,1,0,0,3,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-1165,M. Cunha,3,0,,0,0,0,0,0,3,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-226,D. Dumfries,0,2,0.0,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-153430,A. Elanga,2,0,2.0,0,0,0,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+635,R. Mahrez,2,1,2.0,0,0,0,0,0,3,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+72155,A. Ueda,2,1,1.154,0,0,0,0,0,3,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+36579,S. Rahimi,2,1,,1,1,0,0,0,3,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+47323,M. Oyarzabal,2,1,2.368,0,0,0,0,0,3,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+38750,B. Brobbey,3,0,3.506,0,0,0,0,0,3,,3,media,baja,muestra pequeña (3 partidos con eventos) — orientativo
+37724,C. Summerville,1,2,,1,0,1,0,0,3,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+10135,Bruno Guimaraes,0,3,0.0,0,0,0,0,0,3,,3,media,baja,muestra pequeña (3 partidos con eventos) — orientativo
+1165,M. Cunha,3,0,4.091,0,0,0,0,0,3,,3,media,baja,muestra pequeña (3 partidos con eventos) — orientativo
+20696,P. Gueye,2,1,,0,0,0,1,0,3,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+305832,M. Galarza,2,1,,1,1,0,2,0,3,,3,media,baja,muestra pequeña (3 partidos con eventos) — orientativo
 18592,I. Ndiaye,1,1,,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-9,A. Hakimi,1,1,,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-1946,L. Trossard,2,0,2.5,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-37724,C. Summerville,1,1,,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-36579,S. Rahimi,1,1,,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-3246,N. Pepe,2,0,,0,0,0,1,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-26475,D. Undav,2,0,,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-201713,S. Berhalter,1,1,,0,0,0,1,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-63274,B. Yilmaz,1,1,1.011,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-406244,J. Manzambi,1,1,,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-907,Romelu Lukaku,1,1,,0,0,0,1,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 306,M. Salah,1,1,1.579,0,0,0,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-1100,E. Haaland,2,0,,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-395075,M. Ziko,1,1,,0,0,0,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+907,Romelu Lukaku,1,1,,0,0,0,1,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+70747,J. Enciso,1,1,0.612,0,0,0,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+3246,N. Pepe,2,0,,0,0,0,1,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+201713,Sebastian Berhalter,1,1,,0,0,0,1,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 129718,J. Bellingham,1,1,1.268,0,0,0,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-15286,M. Tamari,1,1,2.0,0,0,0,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+406244,J. Manzambi,1,1,,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+1100,E. Haaland,2,0,,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 2664,Trezeguet,1,1,1.0,0,0,0,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-874,C. Ronaldo,2,0,2.0,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-51776,M. Araujo,1,1,1.0,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 19617,M. Olise,0,2,0.0,0,0,0,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-10135,Bruno Guimaraes,0,2,,0,0,0,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-161897,I. Saibari,2,0,,0,0,0,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+15286,M. Tamari,1,1,2.0,0,0,0,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+874,C. Ronaldo,2,0,2.0,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 20649,Y. Wissa,2,0,1.818,1,1,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+226,D. Dumfries,0,2,0.0,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+203224,F. Wirtz,0,2,0.0,0,0,0,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+63274,Barış Alper Yılmaz,1,1,1.011,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+33889,K. Sano,1,1,1.0,0,0,0,1,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+9,A. Hakimi,1,1,0.75,1,0,1,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+51776,M. Araujo,1,1,1.0,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+395075,M. Ziko,1,1,,0,0,0,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 658,H. Aouar,0,2,,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-25448,K. Ayhan,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-327631,H. Diarra,1,0,1.579,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+336659,C. Talbi,1,1,,1,1,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+26475,D. Undav,2,0,,0,0,0,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+714,N. Amiri,1,1,,1,1,0,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+1946,Leandro Trossard,2,0,2.5,0,0,0,0,0,2,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+153430,A. Elanga,2,0,2.0,0,0,0,0,0,2,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+1159,M. Sabitzer,1,0,1.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+303362,R. Belghali,1,0,1.268,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+78,H. Vanaken,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+644,L. Sane,1,0,0.506,0,0,0,0,0,1,,3,media,baja,muestra pequeña (3 partidos con eventos) — orientativo
 1642,F. Kessie,1,0,1.169,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 667,M. Depay,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2601,D. Kamada,1,0,0.536,0,0,0,1,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 2864,A. Isak,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-753,M. Llorente,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-343027,D. Doue,1,0,1.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-70747,J. Enciso,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-305832,M. Galarza,1,0,,0,0,0,1,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-644,L. Sane,1,0,1.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+69196,M. Saber,1,0,,0,0,0,1,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 2691,R. Rezaeian,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-53902,E. Haddad,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-1460,B. Saka,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 842,N. Vlasic,1,0,1.023,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 350856,E. Nuamah,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-25341,D. Luckassen,1,0,1.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-78,H. Vanaken,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-53535,E. Shomurodov,1,0,0.909,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 184,H. Kane,1,0,1.071,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+1460,B. Saka,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+25341,D. Luckassen,1,0,1.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+181812,J. Musiala,1,0,0.612,1,1,0,1,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+22149,I. Sangare,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 73522,A. Mozgovoy,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-35570,Stephen Eustaquio,1,0,0.928,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 36902,T. Reijnders,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+1578,G. Lo Celso,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+53902,E. Haddad,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+35570,S. Eustaquio,1,0,0.928,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+7722,S. Kalajdzic,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+53535,E. Shomurodov,1,0,0.909,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+744,B. Diaz,0,1,0.0,0,0,0,0,0,1,,3,media,baja,muestra pequeña (3 partidos con eventos) — orientativo
+1646,Lucas Paqueta,0,1,0.0,0,0,0,0,0,1,,3,media,baja,muestra pequeña (3 partidos con eventos) — orientativo
+18814,Issa Diop,1,0,0.75,0,0,0,2,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+36899,T. Koopmeiners,1,0,,1,1,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+25416,W. Weghorst,1,0,,1,1,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+179699,F. Mayele,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+3034,M. Elia,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+18830,M. Arnautovic,1,0,2.0,0,0,0,1,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 1271,A. Tchouameni,0,1,0.0,0,0,0,1,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-277930,T. Aasgaard,1,0,1.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 301528,A. Schjelderup,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-69196,M. Saber,1,0,,0,0,0,1,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-16369,G. Plata,1,0,,0,0,0,1,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2120,N. Raskin,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+502,J. Kimmich,1,0,0.5,1,1,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 237078,P. Vite,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 311543,N. Angulo,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-203224,F. Wirtz,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-22149,I. Sangare,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-1323,D. Olmo,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-390002,M. Chavez Garcia,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-35532,J. Quinones,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-35970,L. Romo,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-750,A. Fidalgo,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2879,R. Alvarado,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-84087,W. Isidor,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-361966,K. Rodriguez,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-291964,A. Guler,1,0,1.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-37155,O. Kokcu,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-513776,Y. Diomande,0,1,,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-50737,A. Trusty,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-344862,H. Mastouri,1,0,1.011,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-290,V. van Dijk,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-354831,T. Maseko,1,0,,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+291964,Arda Güler,1,0,1.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 180560,H. Mejbri,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-295977,T. Moremi,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2601,D. Kamada,1,0,1.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-33321,K. Nakamura,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-38695,J. P. van Hecke,1,0,1.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+1942,J. Ito,1,0,,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 38114,K. Itakura,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-1942,J. Ito,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2598,R. Doan,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-714,N. Amiri,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-33224,D. Maeda,1,0,1.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+361966,K. Rodriguez,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+33224,D. Maeda,1,0,1.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+750,A. Fidalgo,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 18979,V. Gyokeres,0,1,0.0,0,0,0,1,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-637,F. Nmecha,0,1,,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-8450,A. Seck,0,1,0.0,0,0,0,1,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-313353,P. David,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-421,B. Embolo,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-48471,R. Vargas,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-53517,D. Hadzikadunic,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-340173,E. Mahmic,1,0,,0,0,0,1,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-629,K. De Bruyne,1,0,1.25,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-33889,K. Sano,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-386828,Lamine Yamal,1,0,1.184,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-2120,N. Raskin,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-42075,Edmilson Junior,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2545,H. Al Haydos,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-1417,A. Saelemaekers,1,0,,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-162222,I. Basic,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-369544,G. Yassine,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-407806,Rayan,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-395559,K. Alajbegovic,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2879,R. Alvarado,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2598,R. Doan,0,1,0.0,0,0,0,0,0,1,,3,media,baja,muestra pequeña (3 partidos con eventos) — orientativo
+16369,G. Plata,1,0,,0,0,0,1,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+343027,D. Doue,1,0,1.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+978,K. Havertz,1,0,0.5,1,0,1,1,0,1,,3,media,baja,muestra pequeña (3 partidos con eventos) — orientativo
+1323,D. Olmo,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 622,A. Laporte,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+386828,Lamine Yamal,1,0,1.184,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+344862,H. Mastouri,1,0,1.011,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+513776,Y. Diomande,0,1,,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+290,V. van Dijk,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+637,F. Nmecha,0,1,0.0,0,0,0,0,0,1,,3,media,baja,muestra pequeña (3 partidos con eventos) — orientativo
+50737,Auston Trusty,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+38695,J. P. van Hecke,1,0,0.429,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+25448,Kaan Ayhan,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+37155,Orkun Kökçü,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+8450,A. Seck,0,1,0.0,0,0,0,1,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+277930,T. Aasgaard,1,0,1.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+327631,H. Diarra,1,0,1.579,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+753,M. Llorente,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+1417,A. Saelemaekers,1,0,,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+2654,M. Hany,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+340173,E. Mahmic,1,0,,0,0,0,1,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+53517,D. Hadzikadunic,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 2878,J. Sanchez,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-182219,A. Baena,1,0,1.364,0,0,0,1,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-278898,C. Riad,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-20655,J. Duverne,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-1485,B. Fernandes,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-855,J. Cancelo,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-263482,N. Mendes,1,0,1.011,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-13736,D. Munoz,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-6005,J. Quintero,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-348205,Petar Sučić,1,0,1.0,0,0,0,1,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-294824,N. Saliba,0,1,,0,0,0,1,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-291024,H. Varela,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-210165,F. Surman,1,0,0.938,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-94346,T. Payne,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-754,L. Modric,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-85041,A. Gouiri,1,0,1.268,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-292924,N. Benbouali,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+390002,M. Chavez Garcia,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+35970,L. Romo,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+35532,J. Quinones,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+407806,Rayan,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+369544,G. Yassine,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+295977,T. Moremi,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+747,Casemiro,1,0,1.011,0,0,0,1,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+354831,T. Maseko,1,0,,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 96512,K. Lenini,1,0,1.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 51603,A. Canobbio,1,0,1.0,0,0,0,0,1,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-6231,F. Medina,0,1,,0,0,0,1,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-283058,N. Jackson,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+182219,A. Baena,1,0,1.364,0,0,0,1,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+33321,K. Nakamura,0,1,0.0,0,0,0,0,0,1,,3,media,baja,muestra pequeña (3 partidos con eventos) — orientativo
+1157,Konrad Laimer,0,1,0.0,0,0,0,1,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+505,D. Alaba,0,1,,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+6005,J. Quintero,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+25297,M. Gregoritsch,0,1,,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+629,K. De Bruyne,1,0,1.25,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+84087,W. Isidor,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+20655,J. Duverne,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+162222,I. Basic,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2545,H. Al Haydos,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+42075,Edmilson Junior,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+13736,D. Munoz,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+278898,C. Riad,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+313353,P. David,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+294824,N. Saliba,0,1,,0,0,0,1,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+395559,K. Alajbegovic,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 94333,E. Just,1,0,0.938,0,0,0,1,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-217,Lautaro Martínez,1,0,1.5,1,1,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-22236,R. Leao,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-213980,N. Al Rashdan,1,0,1.184,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+37127,M. Odegaard,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+161904,B. Barcola,0,1,,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+39362,M. Pedersen,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2291,M. Kovacic,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+421,B. Embolo,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 46746,A. Budimir,1,0,1.364,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 125171,J. Stanisic,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2291,M. Kovacic,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-39362,M. Pedersen,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-25297,M. Gregoritsch,0,1,,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-161904,B. Barcola,0,1,,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+210165,F. Surman,1,0,0.938,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+94346,T. Payne,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+291024,H. Varela,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+48471,R. Vargas,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+292924,N. Benbouali,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+22236,R. Leao,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+348205,Petar Sučić,1,0,1.0,0,0,0,1,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+6231,F. Medina,0,1,,0,0,0,1,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+213980,N. Al Rashdan,1,0,1.184,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+283058,N. Jackson,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+85041,A. Gouiri,1,0,1.268,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+217,Lautaro Martínez,1,0,1.5,1,1,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+754,L. Modric,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+1485,B. Fernandes,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+263482,N. Mendes,1,0,1.011,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+855,J. Cancelo,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 374058,L. Camara,0,1,0.0,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 39064,P. Berg,0,1,0.0,0,0,0,1,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 304,S. Mane,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-37127,M. Odegaard,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2654,M. Hany,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-1646,Lucas Paqueta,0,1,,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-505,D. Alaba,0,1,,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-1157,Konrad Laimer,0,1,0.0,0,0,0,1,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-1578,G. Lo Celso,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-7722,S. Kalajdzic,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-3034,M. Elia,0,1,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-179699,F. Mayele,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-18830,M. Arnautovic,1,0,2.0,0,0,0,1,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-303362,R. Belghali,1,0,1.268,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-1159,M. Sabitzer,1,0,1.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-744,B. Diaz,0,1,,0,0,0,0,0,1,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-340573,B. El Khannouss,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-18814,Issa Diop,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-1117,K. Tierney,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-289,Andy Robertson,0,0,,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-1125,R. Christie,0,0,,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-271539,J. Hadjam,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-295026,M. Baturina,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-404172,Kojo Peprah Oppong,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-57910,T. Rodriguez,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-158698,Jarell Quansah,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+106485,Maurício,1,0,,1,1,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2502,G. Gómez,1,0,0.429,1,1,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+70732,J. Canale,1,0,,1,1,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+22224,Gabriel,0,1,0.0,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+127769,G. Martinelli,1,0,,0,0,0,0,0,1,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+47696,A. Bernhardsson,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+48002,B. Nygren,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+48047,J. Karlstrom,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+538,F. de Jong,0,0,0.0,0,0,0,0,0,0,,3,media,baja,muestra pequeña (3 partidos con eventos) — orientativo
+53900,Y. Al Arab,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+323935,G. Simeone,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+6009,J. Alvarez,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+72142,Shararh,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+407017,M. Bombito,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+416901,Niko Sigur,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+351587,T. Oluwaseyi,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+201354,E. Makgopa,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+25915,P. Mwene,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+568556,O. Al Fakhouri,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+575283,A. Azaizeh,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+350037,N. Paz,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+73520,Azizjon Ganiev,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+1864,P. Neto,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+73514,S. Nasrullaev,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+409303,M. Diouf,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2986,E. Mendy,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+314511,A. Nusa,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+318,K. Koulibaly,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+8492,A. Sorloth,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2507,Miguel Almirón,0,0,0.0,0,0,0,0,1,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+142959,K. Akturkoglu,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+70670,I. Pitta,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 454,Y. Akgun,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 214463,I. Yuksek,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-278370,D. Gomez,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-1361,F. Kadioglu,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-50057,Eren Elmalı,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-195992,J. Caceres,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-61837,A. Bardakci,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-249,D. Malen,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-129670,Nathanaël Mbuku,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-365331,Noah Sadiki,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-360114,Abdukodir Khusanov,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-53834,D. Khamdamov,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2499,J. Alonso,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+158054,N. Woltemade,0,0,,1,0,1,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2522,A. Sanabria,0,0,0.0,1,0,1,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+123530,M. Al Mardi,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+310785,M. Abu Taha,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+21138,R. Ait-Nouri,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+542822,H. Abu Dahab,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 164026,A. Olwan,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-24845,J. Ryerson,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-39043,F. Aursnes,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-271,Leandro Paredes,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+39254,T. Heggem,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+129047,Ramiz Zerrouki,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+4399,H. Boudaoui,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+543035,Husam Ali Mohammad Abudahab,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 47792,Amir Al-Ammari,0,0,0.0,0,0,0,2,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 49451,A. Hussein,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 296373,Z. Tahseen,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 626479,Z. Ismaeel,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 140747,I. Bayesh,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 1257,J. Kounde,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-94322,Callum McCowatt,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-16813,H. Fathy,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-409303,M. Diouf,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2986,E. Mendy,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-314511,A. Nusa,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-318,K. Koulibaly,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-39254,T. Heggem,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-129047,Ramiz Zerrouki,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-6931,L. Cacace,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-81573,O. Marmoush,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-17269,E. Ashour,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-711,Stefan Posch,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-30776,C. Romero,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-6067,T. Almada,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-265556,T. Arcanjo,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-47254,Mathías Olivera,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-4399,H. Boudaoui,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-543035,Husam Ali Mohammad Abudahab,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-123530,M. Al Mardi,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-310785,M. Abu Taha,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-21138,R. Ait-Nouri,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-542822,H. Abu Dahab,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-129033,J. Gvardiol,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-66055,P. Musa,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-46855,Yoel Bárcenas,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-260865,M. Pasalic,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 53835,Odiljon Khamrobekov,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-73520,Azizjon Ganiev,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-1864,P. Neto,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-73514,S. Nasrullaev,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+375598,N. Mukau,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+1929,Jhon Lucumí,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 73507,A. Nematov,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 583,Joao Felix,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 336671,Renato Veiga,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
@@ -230,47 +231,46 @@ player_id,player_name,goals,assists,goals_per90,pens_taken,pens_scored,pens_miss
 128384,Vitinha,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 416964,B. Karimov,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 50272,O. Shukurov,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-1929,Jhon Lucumí,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-3033,C. Bakambu,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-47237,L. Suarez,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-517,J. Rodriguez,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-18816,A. Masuaku,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-1424,E. Kayembe,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-13708,J. Arias,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-21101,S. Moutoussamy,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 2937,Declan Rice,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 47294,Iñaki Williams,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 138787,A. Gordon,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 19235,D. Spence,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 3428,J. Ayew,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 138908,E. Anderson,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+2001,Cyle Larin,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 136723,N. Madueke,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 191240,M. Senaya,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+129033,J. Gvardiol,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+66055,P. Musa,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+46855,Yoel Bárcenas,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+260865,M. Pasalic,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+24845,J. Ryerson,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+39043,F. Aursnes,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+17269,E. Ashour,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+711,Stefan Posch,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+30776,C. Romero,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+6067,T. Almada,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 57667,J. Ramos,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 2983,J. Fajardo,0,0,,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 2975,C. Blackman,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-44612,G. Rodrigues,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-309182,Benchimol,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+1424,E. Kayembe,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+13708,J. Arias,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+21101,S. Moutoussamy,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+327895,P. Wanner,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+7562,R. Schmid,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+2472,R. de Paul,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+271,Leandro Paredes,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 51530,F. Vinas,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 51494,M. Ugarte,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 50745,J. Monteiro,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 41608,Diney Borges,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 16841,Mohanad Lasheen,0,0,0.0,0,0,0,2,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 6935,Sarpreet Singh,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-931,Ferran Torres,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-44339,N. Al Dawsari,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-42315,Mehdi Taremi,0,0,0.0,1,0,1,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-19614,Saeid Ezatolahi,0,0,0.0,0,0,0,2,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-375598,N. Mukau,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-1741,N. Katic,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-790,E. Dzeko,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2537,K. Boudiaf,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2539,Ahmed Fathi,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2701,Bono,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 2490,Jefferson Lerma,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 48555,Charles Pickel,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 1464,Granit Xhaka,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2001,Cyle Larin,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+87789,Johny Placide,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+45020,Duckens Nazon,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 50788,M. Choiniere,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 362145,A. Ahmed,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 349344,L. Jaquez,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
@@ -278,10 +278,21 @@ player_id,player_name,goals,assists,goals_per90,pens_taken,pens_scored,pens_miss
 51016,T. Buchanan,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 50816,R. Laryea,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 44798,Liam Millar,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-299,Fabinho,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-343576,B. Gannon-Doak,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 42207,M. Abunada,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-136880,S. Hardani,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+409670,A. Malic,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+1324,I. Sunjic,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+3033,C. Bakambu,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+47237,L. Suarez,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+517,J. Rodriguez,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+18816,A. Masuaku,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+790,E. Dzeko,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2537,K. Boudiaf,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2539,Ahmed Fathi,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2701,Bono,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+94322,Callum McCowatt,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+16813,H. Fathy,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+6931,L. Cacace,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+81573,O. Marmoush,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 264,T. Meunier,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 312964,Nathan Ngoy,0,0,,0,0,0,0,1,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 134217,M. Mohebi,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
@@ -289,30 +300,31 @@ player_id,player_name,goals,assists,goals_per90,pens_taken,pens_scored,pens_miss
 2699,S. Ghoddos,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 308689,Sidny Lopes Cabral,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 863,Rodrigo Bentancur,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-49583,A. Abdi,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-21587,E. Skhiri,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-409670,A. Malic,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-1324,I. Sunjic,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-200981,J. Gaber,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2722,A. El Kaabi,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2909,Paik Seung-Ho,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+237220,Lee Tae-Seok,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+179893,O. Appollis,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2897,Kim Min-Jae,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+46334,Aubrey Modiba,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+162451,A. Salah-Eddine,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+277003,N. El Aynaoui,0,0,0.0,1,0,1,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+21613,L. Joseph,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+618,Danilo,0,0,,0,0,0,2,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+299,Fabinho,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+343576,B. Gannon-Doak,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+45175,L. Shankland,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+290212,D. Visinsky,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 36088,G. Martinez,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2869,Edson Álvarez,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-66019,A. Hlozek,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2252,T. Holes,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+200981,J. Gaber,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+1741,N. Katic,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 482605,G. Mora,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 270774,R. Rangel,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 162194,L. Cerv,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 24888,Hwang Hee-Chan,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2722,A. El Kaabi,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-87789,Johny Placide,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-45020,Duckens Nazon,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-162451,A. Salah-Eddine,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-277003,N. El Aynaoui,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-21613,L. Joseph,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-618,Danilo,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-747,Casemiro,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-35533,E. Valencia,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-45175,L. Shankland,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-290212,D. Visinsky,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+265556,T. Arcanjo,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+47254,Mathías Olivera,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+44612,G. Rodrigues,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+309182,Benchimol,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 44340,Salem Al-Dawsari,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 44315,A. Al Khaibari,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 306380,M. Al Juwayr,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
@@ -321,68 +333,59 @@ player_id,player_name,goals,assists,goals_per90,pens_taken,pens_scored,pens_miss
 44475,A. Al Amri,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 44324,F. Al Buraikan,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 133609,Pedri,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-353808,D. Fonville,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-906,T. Chong,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-16360,A. Franco,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-18981,J. Locadia,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-25414,J. Yeboah,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-237220,Lee Tae-Seok,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-179893,O. Appollis,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-38708,Gervane Kastaneer,0,0,,0,0,0,2,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+127817,Piero Hincapié,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+35533,E. Valencia,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+931,Ferran Torres,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+44339,N. Al Dawsari,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+42315,Mehdi Taremi,0,0,0.0,1,0,1,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+19614,Saeid Ezatolahi,0,0,0.0,0,0,0,2,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+136880,S. Hardani,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 2945,D. Bronn,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 323974,E. Saad,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 57518,S. Tounekti,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 2597,T. Tomiyasu,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-181812,J. Musiala,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-275651,A. Bonny,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-2897,Kim Min-Jae,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-46334,Aubrey Modiba,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-34710,Oh Hyeon-Gyu,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-34211,Gue-sung Cho,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-414149,R. Mofokeng,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-127817,Piero Hincapié,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-502,J. Kimmich,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-1138,T. Weah,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-161921,G. Reyna,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-50739,B. Aaronson,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-50852,J. Scally,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-22222,Z. Celik,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-339883,K. Yildiz,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-415,W. McKennie,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-134590,O. Aydin,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 706,J. Brenet,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 137976,Isak Hien,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2869,Edson Álvarez,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+66019,A. Hlozek,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2252,T. Holes,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+425020,A. Maidana,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+342035,C. Volpato,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+6483,G. Avalos,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+6168,O. Alderete,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+338014,N. Irankunda,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 33165,A. Seko,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 226765,E. Stroud,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-32954,Shogo Taniguchi,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+32954,Shogo Taniguchi,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 889,V. Lindelof,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 25300,R. Khedira,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2909,Paik Seung-Ho,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 199310,A. Slimane,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 135059,M. Ben Hamida,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 310196,I. Gharbi,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-157997,A. Diallo,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-30504,W. Singo,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-978,K. Havertz,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+34710,Oh Hyeon-Gyu,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+34211,Gue-sung Cho,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+414149,R. Mofokeng,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+161921,Giovanni Reyna,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+50852,Joe Scally,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+50739,Brenden Aaronson,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+339883,Kenan Yıldız,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+22222,Zeki Çelik,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+415,Weston McKennie,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+49583,A. Abdi,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+21587,E. Skhiri,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 16470,Jordy Alcivar,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 18997,Leandro Bacuna,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 19047,Juninho Bacuna,0,0,0.0,0,0,0,2,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 309763,Livano Comenencia,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 46731,P. Estupinan,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 36857,Jurien Gaari,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-47969,Gabriel Gudmundsson,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-47696,A. Bernhardsson,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-48002,B. Nygren,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-48047,J. Karlstrom,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-429,F. Muslera,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-162891,J. Sanabria,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-756,F. Valverde,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2749,J. Irvine,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-425020,A. Maidana,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-342035,C. Volpato,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-6483,G. Avalos,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-6168,O. Alderete,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-338014,N. Irankunda,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+134590,Oğuz Aydın,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2749,Jackson Irvine,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+5995,Nicolás de la Cruz,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+44594,Saud Abdulhamid,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+332056,Wagner Pina,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+113580,W. Semedo,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+343287,D. Livramento,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 42261,Rebin Sulaka,0,0,0.0,0,0,0,0,1,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 229112,A. Qasem,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 197933,A. Basil,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
@@ -390,38 +393,58 @@ player_id,player_name,goals,assists,goals_per90,pens_taken,pens_scored,pens_miss
 299813,A. Al Hamadi,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 542644,A. Jasim,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 284295,Z. Iqbal,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-533035,A. Nemati,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 271444,Merchas Doski,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-538,F. de Jong,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-265820,Yasin Ayari,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-347316,Lucas Bergvall,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-26243,N. Schlotterbeck,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-328033,A. Pavlovic,0,0,,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-2507,Miguel Almirón,0,0,,0,0,0,0,1,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-142959,K. Akturkoglu,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-70670,I. Pitta,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 39143,K. Thorstvedt,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 39058,F. Bjorkan,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+1138,Tim Weah,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+26243,N. Schlotterbeck,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+328033,A. Pavlovic,0,0,0.0,0,0,0,1,0,0,,3,media,baja,muestra pequeña (3 partidos con eventos) — orientativo
+29704,Shoja Khalilzadeh,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+179862,Marko Stamenić,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+242,R. Thomas,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+1422,J. Doku,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+94541,J. Bell,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 2032,Jørgen Strand Larsen,0,0,0.0,1,0,1,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 180937,H. Falchener,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 1149,D. Upamecano,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 278133,O. Bobb,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-21010,E. Owusu,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-207,Ivan Perišić,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-199837,K. Sulemana,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-1290,G. Varela,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+429,F. Muslera,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+162891,Juan Sanabria,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+756,F. Valverde,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+1290,Guillermo Varela,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 47311,M. Merino,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-5995,N. de la Cruz,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-44594,S. Abdulhamid,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-332056,W. Pina,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-113580,W. Semedo,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-343287,D. Livramento,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+158698,Jarell Quansah,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 2639,S. Mandash,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 50270,R. Mendes,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 134995,N. Boushal,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 196343,M. Abdelmonem,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2687,H. Kanaani,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-16804,Y. Ibrahim,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2687,Hossein Kanaani,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+16804,Yasser Ibrahim,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+29809,Ali Nemati,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+353808,D. Fonville,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+906,T. Chong,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+16360,A. Franco,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+18981,J. Locadia,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+25414,J. Yeboah,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+38708,Gervane Kastaneer,0,0,,0,0,0,2,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+265820,Yasin Ayari,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+347316,Lucas Bergvall,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+249,D. Malen,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+129670,Nathanaël Mbuku,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+365331,Noah Sadiki,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+360114,Abdukodir Khusanov,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+53834,D. Khamdamov,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+279482,B. Cipenga,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+147859,C. De Ketelaere,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2926,Y. Tielemans,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+369425,J. Adjetey,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+21010,E. Owusu,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+207,Ivan Perišić,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+199837,K. Sulemana,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+3608,K. Sibo,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+295026,M. Baturina,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+404172,Kojo Peprah Oppong,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+57910,T. Rodriguez,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 2979,J. Rodriguez,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 7197,Andrés Andrade,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 57803,J. Gutierrez,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
@@ -430,43 +453,43 @@ player_id,player_name,goals,assists,goals_per90,pens_taken,pens_scored,pens_miss
 24810,J. Cordoba,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 324034,Gustavo Puerta,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 30,S. Arias,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-29704,S. Khalilzadeh,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-179862,M. Stamenic,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-242,R. Thomas,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-1422,J. Doku,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-94541,J. Bell,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-147859,C. De Ketelaere,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-2926,Y. Tielemans,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-369425,J. Adjetey,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-1095,X. Schlager,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-138417,N. Patterson,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-19191,J. McGinn,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-129678,A. Ounahi,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-20850,Carlens Arcus,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-350037,N. Paz,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-53900,Y. Al Arab,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-323935,G. Simeone,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-6009,J. Alvarez,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-72142,Shararh,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-407017,Moise Bombito,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-416901,Niko Sigur,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-351587,Tani Oluwaseyi,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-201354,Evidence Makgopa,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-19524,C. Adams,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-3608,K. Sibo,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-8492,A. Sorloth,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-327895,P. Wanner,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-7562,R. Schmid,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-2472,R. de Paul,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+275651,A. Bonny,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+157997,A. Diallo,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+30504,W. Singo,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+278370,D. Gomez,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+1361,F. Kadioglu,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+50057,Eren Elmalı,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+195992,J. Caceres,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+61837,A. Bardakci,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 1496,Raphinha,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 8601,Frantzdy Pierrot,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+38747,Q. Timber,0,0,,1,0,1,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 174915,J. Casimir,0,0,,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
-24866,Douglas Santos,0,0,,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+24866,Douglas Santos,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 162733,R. Providence,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
 338367,Danley Jean Jacques,0,0,,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+1117,K. Tierney,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 20665,J. Bellegarde,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-25915,P. Mwene,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-568556,O. Al Fakhouri,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-575283,A. Azaizeh,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
-279482,B. Cipenga,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+152849,M. van de Ven,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+542,R. Gravenberch,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+792,J. Kluivert,0,0,,1,0,1,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
 358427,J. Urozov,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+1095,X. Schlager,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+271539,J. Hadjam,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+47969,Gabriel Gudmundsson,0,0,0.0,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+2500,F. Balbuena,0,0,,1,0,1,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+18861,N. Ake,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+438688,A. Bouaddi,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+351014,Junnosuke Suzuki,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+6236,A. Cubas,0,0,0.0,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+195107,D. Bobadilla,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+972,J. Tah,0,0,0.0,1,0,1,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+2285,A. Rüdiger,0,0,0.0,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+20850,Carlens Arcus,0,0,,0,0,0,1,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+129678,A. Ounahi,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+19191,J. McGinn,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+138417,N. Patterson,0,0,,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+340573,B. El Khannouss,0,0,0.0,0,0,0,0,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+19524,C. Adams,0,0,,0,0,0,0,0,0,,1,media,baja,muestra pequeña (1 partidos con eventos) — orientativo
+1125,R. Christie,0,0,,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo
+289,Andy Robertson,0,0,,0,0,0,1,0,0,,2,media,baja,muestra pequeña (2 partidos con eventos) — orientativo

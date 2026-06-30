@@ -10,17 +10,17 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1489410,406303,K. Páez,Ecuador,MID,"Tori Penso, USA",0.2431,0.2504,0.2504,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489410,354027,J. Ordoñez,Ecuador,DEF,"Tori Penso, USA",0.1749,0.1749,0.1749,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489410,280695,A. Minda,Ecuador,FWD,"Tori Penso, USA",0.0803,0.0779,0.0779,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489410,502,J. Kimmich,Germany,DEF,"Tori Penso, USA",0.0667,0.0662,0.0662,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489410,972,J. Tah,Germany,DEF,"Tori Penso, USA",0.3278,0.3253,0.3253,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489410,203224,F. Wirtz,Germany,FWD,"Tori Penso, USA",0.2262,0.2177,0.2177,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489410,2285,A. Rüdiger,Germany,DEF,"Tori Penso, USA",0.3099,0.3076,0.3076,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489410,181812,J. Musiala,Germany,FWD,"Tori Penso, USA",0.0362,0.0343,0.0343,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489410,978,K. Havertz,Germany,FWD,"Tori Penso, USA",0.0413,0.0391,0.0391,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489410,25158,D. Raum,Germany,MID,"Tori Penso, USA",0.2652,0.2712,0.2712,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489410,702,O. Baumann,Germany,GK,"Tori Penso, USA",0.0445,0.0442,0.0442,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
-1489410,26243,N. Schlotterbeck,Germany,DEF,"Tori Penso, USA",0.3622,0.3541,0.3541,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489410,511,L. Goretzka,Germany,MID,"Tori Penso, USA",0.1466,0.1499,0.1499,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489410,644,L. Sané,Germany,MID,"Tori Penso, USA",0.0538,0.0542,0.0542,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489410,502,J. Kimmich,Germany,DEF,"Tori Penso, USA",0.0667,0.0662,0.0669,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489410,972,J. Tah,Germany,DEF,"Tori Penso, USA",0.3278,0.3253,0.3286,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489410,203224,F. Wirtz,Germany,MID,"Tori Penso, USA",0.2262,0.2313,0.2336,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489410,2285,A. Rüdiger,Germany,DEF,"Tori Penso, USA",0.3099,0.3076,0.3107,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489410,181812,J. Musiala,Germany,MID,"Tori Penso, USA",0.0362,0.0365,0.0392,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489410,978,K. Havertz,Germany,FWD,"Tori Penso, USA",0.0413,0.0391,0.0422,0,bajar,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489410,25158,D. Raum,Germany,DEF,"Tori Penso, USA",0.2652,0.2632,0.2698,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489410,702,O. Baumann,Germany,GK,"Tori Penso, USA",0.0445,0.0442,0.0453,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1489410,26243,N. Schlotterbeck,Germany,DEF,"Tori Penso, USA",0.3622,0.3541,0.3631,0,bajar,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489410,511,L. Goretzka,Germany,MID,"Tori Penso, USA",0.1466,0.1499,0.1536,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489410,644,L. Sané,Germany,MID,"Tori Penso, USA",0.0538,0.0542,0.0545,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489409,309763,L. Comenencia,Curaçao,MID,"Glenn Nyberg, Sweden",0.1221,0.1267,0.1267,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489409,163220,J. Antonisse,Curaçao,FWD,"Glenn Nyberg, Sweden",0.4484,0.4383,0.4383,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489409,706,J. Brenet,Curaçao,DEF,"Glenn Nyberg, Sweden",0.0439,0.0442,0.0442,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -65,17 +65,17 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1539012,162037,M. Tillman,USA,MID,M. Ghorbal,0.0389,0.0401,0.0401,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539012,1138,T. Weah,USA,FWD,M. Ghorbal,0.193,0.1872,0.1872,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539012,19549,A. Robinson,USA,DEF,M. Ghorbal,0.3099,0.3099,0.3099,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489411,2507,M. Almirón,Paraguay,MID,C. Turpin,0.1715,0.1779,0.1779,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489411,6168,O. Alderete,Paraguay,DEF,C. Turpin,0.1683,0.1696,0.1696,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489411,35808,G. Velázquez,Paraguay,DEF,C. Turpin,0.1836,0.185,0.185,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489411,70747,J. Enciso,Paraguay,FWD,C. Turpin,0.0604,0.0581,0.0581,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489411,2499,J. Alonso,Paraguay,DEF,C. Turpin,0.1991,0.2006,0.2006,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489411,2500,F. Balbuena,Paraguay,DEF,C. Turpin,0.1998,0.2013,0.2013,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489411,195107,D. Bobadilla,Paraguay,MID,C. Turpin,0.183,0.1899,0.1899,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489411,6236,A. Cubas,Paraguay,MID,C. Turpin,0.3368,0.3494,0.3494,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489411,2502,G. Gómez,Paraguay,DEF,C. Turpin,0.0777,0.0783,0.0783,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489411,278370,D. Gómez,Paraguay,MID,C. Turpin,0.0948,0.0969,0.0969,1,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489411,196298,R. Sosa,Paraguay,FWD,C. Turpin,0.2128,0.208,0.208,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489411,2507,M. Almirón,Paraguay,MID,C. Turpin,0.1715,0.1779,0.1856,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489411,6168,O. Alderete,Paraguay,DEF,C. Turpin,0.1683,0.1696,0.1712,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489411,35808,G. Velázquez,Paraguay,DEF,C. Turpin,0.1836,0.185,0.1868,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489411,70747,J. Enciso,Paraguay,FWD,C. Turpin,0.0604,0.0581,0.0575,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489411,2499,J. Alonso,Paraguay,DEF,C. Turpin,0.1991,0.2006,0.1996,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489411,2500,F. Balbuena,Paraguay,DEF,C. Turpin,0.1998,0.2013,0.2003,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489411,195107,D. Bobadilla,Paraguay,MID,C. Turpin,0.183,0.1899,0.1889,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489411,6236,A. Cubas,Paraguay,MID,C. Turpin,0.3368,0.3494,0.3528,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489411,2502,G. Gómez,Paraguay,DEF,C. Turpin,0.0777,0.0783,0.0779,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489411,278370,D. Gómez,Paraguay,MID,C. Turpin,0.0948,0.0969,0.0979,1,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489411,196298,R. Sosa,Paraguay,FWD,C. Turpin,0.2128,0.208,0.2101,0,bajar,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489411,312459,N. Velupillay,Australia,FWD,C. Turpin,0.0487,0.0472,0.0472,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489411,6904,C. Metcalfe,Australia,FWD,C. Turpin,0.1878,0.1822,0.1822,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489411,20457,C. Burgess,Australia,DEF,C. Turpin,0.0659,0.0659,0.0659,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -87,17 +87,17 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1489411,337587,J. Bos,Australia,MID,C. Turpin,0.0909,0.0936,0.0936,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489411,338014,N. Irankunda,Australia,FWD,C. Turpin,0.3654,0.3544,0.3544,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489411,33847,J. Geria,Australia,DEF,C. Turpin,0.3321,0.3321,0.3321,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1539011,199578,Z. Suzuki,Japan,GK,"Iván Barton, El Salvador",0.0694,0.0687,0.0687,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
-1539011,33165,A. Seko,Japan,DEF,"Iván Barton, El Salvador",0.0805,0.0797,0.0797,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1539011,38114,K. Itakura,Japan,DEF,"Iván Barton, El Salvador",0.2412,0.2388,0.2388,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1539011,32893,H. Ito,Japan,DEF,"Iván Barton, El Salvador",0.1389,0.1375,0.1375,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1539011,32887,Y. Sugawara,Japan,MID,"Iván Barton, El Salvador",0.2833,0.289,0.289,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1539011,2601,D. Kamada,Japan,MID,"Iván Barton, El Salvador",0.0827,0.0831,0.0831,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1539011,32966,A. Tanaka,Japan,MID,"Iván Barton, El Salvador",0.203,0.2071,0.2071,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1539011,33321,Keito Nakamura,Japan,MID,"Iván Barton, El Salvador",0.0778,0.0782,0.0782,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1539011,2598,R. Dōan,Japan,FWD,"Iván Barton, El Salvador",0.1587,0.15,0.15,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1539011,72155,A. Ueda,Japan,FWD,"Iván Barton, El Salvador",0.0805,0.0761,0.0761,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1539011,33224,D. Maeda,Japan,FWD,"Iván Barton, El Salvador",0.1084,0.1041,0.1041,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1539011,199578,Z. Suzuki,Japan,GK,"Iván Barton, El Salvador",0.0694,0.0687,0.0692,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1539011,33165,A. Seko,Japan,DEF,"Iván Barton, El Salvador",0.0805,0.0797,0.0803,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1539011,38114,K. Itakura,Japan,DEF,"Iván Barton, El Salvador",0.2412,0.2388,0.2407,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1539011,32893,H. Ito,Japan,DEF,"Iván Barton, El Salvador",0.1389,0.1375,0.1386,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1539011,32887,Y. Sugawara,Japan,DEF,"Iván Barton, El Salvador",0.2833,0.2805,0.2827,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1539011,2601,D. Kamada,Japan,MID,"Iván Barton, El Salvador",0.0827,0.0831,0.0879,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1539011,32966,A. Tanaka,Japan,MID,"Iván Barton, El Salvador",0.203,0.2071,0.2086,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1539011,33321,Keito Nakamura,Japan,MID,"Iván Barton, El Salvador",0.0778,0.0782,0.0772,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1539011,2598,R. Dōan,Japan,MID,"Iván Barton, El Salvador",0.1587,0.1595,0.1575,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1539011,72155,A. Ueda,Japan,FWD,"Iván Barton, El Salvador",0.0805,0.0761,0.0767,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1539011,33224,D. Maeda,Japan,FWD,"Iván Barton, El Salvador",0.1084,0.1041,0.1033,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539011,48033,J. Widell Zetterström,Sweden,GK,"Iván Barton, El Salvador",0.1502,0.151,0.151,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1539011,137721,G. Lagerbielke,Sweden,DEF,"Iván Barton, El Salvador",0.1776,0.1785,0.1785,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539011,137976,I. Hien,Sweden,DEF,"Iván Barton, El Salvador",0.2699,0.2713,0.2713,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -120,17 +120,17 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1489412,180560,H. Mejbri,Tunisia,MID,"Katia García, Mexico",0.322,0.3292,0.3292,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489412,310196,Ismaël Gharbi,Tunisia,MID,"Katia García, Mexico",0.0912,0.0933,0.0933,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489412,344862,H. Mastouri,Tunisia,FWD,"Katia García, Mexico",0.0561,0.054,0.054,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489412,129058,B. Verbruggen,Netherlands,GK,"Katia García, Mexico",0.0207,0.0205,0.0205,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
-1489412,226,D. Dumfries,Netherlands,DEF,"Katia García, Mexico",0.1922,0.1908,0.1908,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489412,38695,J. van Hecke,Netherlands,DEF,"Katia García, Mexico",0.3969,0.3939,0.3939,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489412,290,V. van Dijk,Netherlands,DEF,"Katia García, Mexico",0.3227,0.3203,0.3203,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489412,18861,N. Aké,Netherlands,DEF,"Katia García, Mexico",0.1545,0.1533,0.1533,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489412,542,R. Gravenberch,Netherlands,MID,"Katia García, Mexico",0.0373,0.0381,0.0381,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489412,538,F. de Jong,Netherlands,MID,"Katia García, Mexico",0.0427,0.043,0.043,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489412,36902,T. Reijnders,Netherlands,MID,"Katia García, Mexico",0.175,0.1763,0.1763,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489412,249,D. Malen,Netherlands,FWD,"Katia García, Mexico",0.166,0.1573,0.1573,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489412,38750,B. Brobbey,Netherlands,FWD,"Katia García, Mexico",0.0767,0.0727,0.0727,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489412,247,C. Gakpo,Netherlands,FWD,"Katia García, Mexico",0.0972,0.0921,0.0921,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489412,129058,B. Verbruggen,Netherlands,GK,"Katia García, Mexico",0.0207,0.0205,0.0203,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1489412,226,D. Dumfries,Netherlands,MID,"Katia García, Mexico",0.1922,0.1965,0.1946,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489412,38695,J. van Hecke,Netherlands,DEF,"Katia García, Mexico",0.3969,0.3939,0.39,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489412,290,V. van Dijk,Netherlands,DEF,"Katia García, Mexico",0.3227,0.3203,0.3171,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489412,18861,N. Aké,Netherlands,DEF,"Katia García, Mexico",0.1545,0.1533,0.1495,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489412,542,R. Gravenberch,Netherlands,MID,"Katia García, Mexico",0.0373,0.0381,0.0372,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489412,538,F. de Jong,Netherlands,MID,"Katia García, Mexico",0.0427,0.043,0.0417,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489412,36902,T. Reijnders,Netherlands,MID,"Katia García, Mexico",0.175,0.1763,0.1746,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489412,249,D. Malen,Netherlands,FWD,"Katia García, Mexico",0.166,0.1573,0.1556,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489412,38750,B. Brobbey,Netherlands,FWD,"Katia García, Mexico",0.0767,0.0727,0.0704,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489412,247,C. Gakpo,Netherlands,FWD,"Katia García, Mexico",0.0972,0.0921,0.0892,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539074,119853,M. Diaw,Senegal,GK,"Anthony Taylor, England",0.1363,0.1353,0.1353,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1539074,81,K. Diatta,Senegal,DEF,"Anthony Taylor, England",0.2115,0.2099,0.2099,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539074,8450,A. Seck,Senegal,DEF,"Anthony Taylor, England",0.1873,0.1859,0.1859,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -417,3 +417,69 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1561329,35570,S. Eustáquio,Canada,MID,"Joao Pedro Pinheiro, Portugal",0.131,0.1359,0.1359,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1561329,327738,L. De Fougerolles,Canada,DEF,"Joao Pedro Pinheiro, Portugal",0.2635,0.2655,0.2655,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1561329,44798,L. Millar,Canada,MID,"Joao Pedro Pinheiro, Portugal",0.171,0.1774,0.1774,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,762,Vinícius Júnior,Brazil,FWD,M. Mariani,0.1613,0.1508,0.1508,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,747,Casemiro,Brazil,MID,M. Mariani,0.1765,0.1791,0.1791,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,10135,Bruno Guimarães,Brazil,MID,M. Mariani,0.1626,0.165,0.165,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,257,Marquinhos,Brazil,DEF,M. Mariani,0.0414,0.0414,0.0414,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,1165,Matheus Cunha,Brazil,FWD,M. Mariani,0.0747,0.0698,0.0698,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,24866,Douglas Santos,Brazil,DEF,M. Mariani,0.1065,0.1102,0.1102,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,1496,Raphinha,Brazil,FWD,M. Mariani,0.0519,0.0496,0.0496,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,280,Alisson Becker,Brazil,GK,M. Mariani,0.0462,0.0462,0.0462,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,1646,Lucas Paquetá,Brazil,MID,M. Mariani,0.306,0.3045,0.3045,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,22224,Gabriel Magalhães,Brazil,DEF,M. Mariani,0.2383,0.2383,0.2383,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,30424,Ibañez,Brazil,DEF,M. Mariani,0.1322,0.1322,0.1322,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,2598,R. Dōan,Japan,MID,M. Mariani,0.2668,0.2608,0.2608,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,199578,Z. Suzuki,Japan,GK,M. Mariani,0.0602,0.0591,0.0591,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,33321,Keito Nakamura,Japan,MID,M. Mariani,0.0676,0.0661,0.0661,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,72155,A. Ueda,Japan,FWD,M. Mariani,0.0699,0.0641,0.0641,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,2601,D. Kamada,Japan,MID,M. Mariani,0.0718,0.0716,0.0716,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,32966,A. Tanaka,Japan,MID,M. Mariani,0.3347,0.3389,0.3389,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,32893,H. Ito,Japan,DEF,M. Mariani,0.1211,0.119,0.119,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,33889,K. Sano,Japan,MID,M. Mariani,0.0565,0.0572,0.0572,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,32858,T. Watanabe,Japan,DEF,M. Mariani,0.2815,0.2766,0.2766,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,32862,T. Kubo,Japan,FWD,M. Mariani,0.0704,0.0671,0.0671,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562344,32954,S. Taniguchi,Japan,DEF,M. Mariani,0.0699,0.0687,0.0687,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,502,J. Kimmich,Germany,DEF,J. Jayed,0.0945,0.0914,0.0914,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,972,J. Tah,Germany,DEF,J. Jayed,0.4739,0.4656,0.4656,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,203224,F. Wirtz,Germany,MID,J. Jayed,0.3344,0.3336,0.3336,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,26243,N. Schlotterbeck,Germany,DEF,J. Jayed,0.5103,0.4937,0.4937,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,978,K. Havertz,Germany,FWD,J. Jayed,0.0405,0.0372,0.0372,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,644,L. Sané,Germany,MID,J. Jayed,0.0528,0.0516,0.0516,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,328033,A. Pavlović,Germany,MID,J. Jayed,0.0627,0.0657,0.0657,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,181812,J. Musiala,Germany,MID,J. Jayed,0.0355,0.0354,0.0354,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,637,F. Nmecha,Germany,MID,J. Jayed,0.0997,0.0995,0.0995,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,280074,N. Brown,Germany,DEF,J. Jayed,0.1617,0.1589,0.1589,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,702,O. Baumann,Germany,GK,J. Jayed,0.0436,0.0428,0.0428,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,278370,D. Gómez,Paraguay,MID,J. Jayed,0.101,0.1076,0.1076,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,2507,M. Almirón,Paraguay,MID,J. Jayed,0.2389,0.2461,0.2461,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,70747,J. Enciso,Paraguay,FWD,J. Jayed,0.0644,0.0615,0.0615,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,2502,G. Gómez,Paraguay,DEF,J. Jayed,0.0828,0.0828,0.0828,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,6168,O. Alderete,Paraguay,DEF,J. Jayed,0.2347,0.2312,0.2312,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,2499,J. Alonso,Paraguay,DEF,J. Jayed,0.2755,0.2755,0.2755,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,70852,O. Gill,Paraguay,GK,J. Jayed,0.0961,0.0961,0.0961,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,195992,J. Cáceres,Paraguay,DEF,J. Jayed,0.1157,0.114,0.114,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,195107,D. Bobadilla,Paraguay,MID,J. Jayed,0.2543,0.2619,0.2619,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,6236,A. Cubas,Paraguay,MID,J. Jayed,0.4652,0.4792,0.4792,1,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565176,2522,A. Sanabria,Paraguay,FWD,J. Jayed,0.1126,0.1092,0.1092,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,290,V. van Dijk,Netherlands,DEF,W. Sampaio,0.3313,0.3255,0.3255,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,247,C. Gakpo,Netherlands,FWD,W. Sampaio,0.1002,0.0919,0.0919,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,249,D. Malen,Netherlands,FWD,W. Sampaio,0.171,0.1569,0.1569,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,129058,B. Verbruggen,Netherlands,GK,W. Sampaio,0.0214,0.021,0.021,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,36902,T. Reijnders,Netherlands,MID,W. Sampaio,0.1802,0.1761,0.1761,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,226,D. Dumfries,Netherlands,MID,W. Sampaio,0.1978,0.2003,0.2003,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,542,R. Gravenberch,Netherlands,MID,W. Sampaio,0.0385,0.039,0.039,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,538,F. de Jong,Netherlands,MID,W. Sampaio,0.0441,0.0431,0.0431,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,38695,J. van Hecke,Netherlands,DEF,W. Sampaio,0.4068,0.3936,0.3936,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,152849,M. van de Ven,Netherlands,MID,W. Sampaio,0.0429,0.0434,0.0434,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,18861,N. Aké,Netherlands,DEF,W. Sampaio,0.1591,0.1563,0.1563,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,2701,Y. Bounou,Morocco,GK,W. Sampaio,0.0221,0.0214,0.0214,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,9,A. Hakimi,Morocco,DEF,W. Sampaio,0.253,0.2448,0.2448,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,161897,I. Saibari,Morocco,FWD,W. Sampaio,0.3044,0.2793,0.2793,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,277003,N. El Aynaoui,Morocco,MID,W. Sampaio,0.0379,0.0378,0.0378,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,18814,I. Diop,Morocco,DEF,W. Sampaio,0.1394,0.137,0.137,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,545,N. Mazraoui,Morocco,DEF,W. Sampaio,0.0298,0.0293,0.0293,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,744,Brahim Díaz,Morocco,MID,W. Sampaio,0.1888,0.1846,0.1846,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,340573,B. El Khannouss,Morocco,MID,W. Sampaio,0.2226,0.222,0.222,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,278898,C. Riad,Morocco,DEF,W. Sampaio,0.1065,0.1046,0.1046,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,129678,A. Ounahi,Morocco,MID,W. Sampaio,0.2885,0.2878,0.2878,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,438688,A. Bouaddi,Morocco,MID,W. Sampaio,0.1394,0.1411,0.1411,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores

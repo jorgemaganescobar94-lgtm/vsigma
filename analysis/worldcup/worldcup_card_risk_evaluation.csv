@@ -10,17 +10,17 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489410,406303,K. Páez,Ecuador,2382,MID,"Tori Penso, USA",0.2431,0.2546,subir,0.0115,0,media-baja,baja
 1489410,354027,J. Ordoñez,Ecuador,2382,DEF,"Tori Penso, USA",0.1749,0.178,neutro,0.0031,0,media-baja,baja
 1489410,280695,A. Minda,Ecuador,2382,FWD,"Tori Penso, USA",0.0803,0.0793,neutro,0.001,0,media-baja,baja
-1489410,502,J. Kimmich,Germany,25,DEF,"Tori Penso, USA",0.0667,0.0645,bajar,0.0022,0,media-baja,baja
-1489410,972,J. Tah,Germany,25,DEF,"Tori Penso, USA",0.3278,0.3221,neutro,0.0057,0,media-baja,baja
-1489410,203224,F. Wirtz,Germany,25,FWD,"Tori Penso, USA",0.2262,0.2121,bajar,0.0141,0,media-baja,baja
-1489410,2285,A. Rüdiger,Germany,25,DEF,"Tori Penso, USA",0.3099,0.3045,neutro,0.0054,0,media-baja,baja
-1489410,181812,J. Musiala,Germany,25,FWD,"Tori Penso, USA",0.0362,0.0339,bajar,0.0023,0,media-baja,baja
-1489410,978,K. Havertz,Germany,25,FWD,"Tori Penso, USA",0.0413,0.0379,bajar,0.0034,0,media-baja,media
-1489410,25158,D. Raum,Germany,25,MID,"Tori Penso, USA",0.2652,0.2685,neutro,0.0033,0,media-baja,baja
-1489410,702,O. Baumann,Germany,25,GK,"Tori Penso, USA",0.0445,0.0437,neutro,0.0008,0,baja,baja
-1489410,26243,N. Schlotterbeck,Germany,25,DEF,"Tori Penso, USA",0.3622,0.3504,bajar,0.0118,0,media-baja,baja
-1489410,511,L. Goretzka,Germany,25,MID,"Tori Penso, USA",0.1466,0.1484,neutro,0.0018,0,media-baja,baja
-1489410,644,L. Sané,Germany,25,MID,"Tori Penso, USA",0.0538,0.0526,bajar,0.0012,0,media-baja,media
+1489410,502,J. Kimmich,Germany,25,DEF,"Tori Penso, USA",0.0667,0.0644,bajar,0.0023,0,media-baja,media
+1489410,972,J. Tah,Germany,25,DEF,"Tori Penso, USA",0.3278,0.3229,neutro,0.0049,0,media-baja,baja
+1489410,203224,F. Wirtz,Germany,25,MID,"Tori Penso, USA",0.2262,0.2251,neutro,0.0011,0,media-baja,media
+1489410,2285,A. Rüdiger,Germany,25,DEF,"Tori Penso, USA",0.3099,0.3053,neutro,0.0046,0,media-baja,baja
+1489410,181812,J. Musiala,Germany,25,MID,"Tori Penso, USA",0.0362,0.0386,subir,0.0024,0,media-baja,media
+1489410,978,K. Havertz,Germany,25,FWD,"Tori Penso, USA",0.0413,0.0401,bajar,0.0012,0,media-baja,media
+1489410,25158,D. Raum,Germany,25,DEF,"Tori Penso, USA",0.2652,0.2652,neutro,0.0,0,media-baja,baja
+1489410,702,O. Baumann,Germany,25,GK,"Tori Penso, USA",0.0445,0.0445,neutro,0.0,0,baja,baja
+1489410,26243,N. Schlotterbeck,Germany,25,DEF,"Tori Penso, USA",0.3622,0.3568,neutro,0.0054,0,media-baja,baja
+1489410,511,L. Goretzka,Germany,25,MID,"Tori Penso, USA",0.1466,0.151,subir,0.0044,0,media-baja,baja
+1489410,644,L. Sané,Germany,25,MID,"Tori Penso, USA",0.0538,0.0535,neutro,0.0003,0,media-baja,media
 1489409,309763,L. Comenencia,Curaçao,5530,MID,"Glenn Nyberg, Sweden",0.1221,0.1319,subir,0.0098,0,media-baja,media
 1489409,163220,J. Antonisse,Curaçao,5530,FWD,"Glenn Nyberg, Sweden",0.4484,0.4418,neutro,0.0066,0,media-baja,baja
 1489409,706,J. Brenet,Curaçao,5530,DEF,"Glenn Nyberg, Sweden",0.0439,0.0439,neutro,0.0,0,media-baja,baja
@@ -65,17 +65,17 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1539012,162037,M. Tillman,USA,2384,MID,M. Ghorbal,0.0389,0.04,subir,0.0011,0,media-baja,baja
 1539012,1138,T. Weah,USA,2384,FWD,M. Ghorbal,0.193,0.1839,bajar,0.0091,0,media-baja,baja
 1539012,19549,A. Robinson,USA,2384,DEF,M. Ghorbal,0.3099,0.3092,neutro,0.0007,0,media-baja,baja
-1489411,2507,M. Almirón,Paraguay,2380,MID,C. Turpin,0.1715,0.1763,subir,0.0048,0,media-baja,baja
-1489411,6168,O. Alderete,Paraguay,2380,DEF,C. Turpin,0.1683,0.1654,neutro,0.0029,0,media-baja,baja
-1489411,35808,G. Velázquez,Paraguay,2380,DEF,C. Turpin,0.1836,0.1832,neutro,0.0004,0,media-baja,baja
-1489411,70747,J. Enciso,Paraguay,2380,FWD,C. Turpin,0.0604,0.0575,bajar,0.0029,0,media-baja,baja
-1489411,2499,J. Alonso,Paraguay,2380,DEF,C. Turpin,0.1991,0.1987,neutro,0.0004,0,media-baja,baja
-1489411,2500,F. Balbuena,Paraguay,2380,DEF,C. Turpin,0.1998,0.1994,neutro,0.0004,0,media-baja,baja
-1489411,195107,D. Bobadilla,Paraguay,2380,MID,C. Turpin,0.183,0.1881,subir,0.0051,0,media-baja,baja
-1489411,6236,A. Cubas,Paraguay,2380,MID,C. Turpin,0.3368,0.3461,subir,0.0093,0,media-baja,baja
-1489411,2502,G. Gómez,Paraguay,2380,DEF,C. Turpin,0.0777,0.0775,neutro,0.0002,0,media-baja,baja
-1489411,278370,D. Gómez,Paraguay,2380,MID,C. Turpin,0.0948,0.1007,subir,0.0059,1,media-baja,media
-1489411,196298,R. Sosa,Paraguay,2380,FWD,C. Turpin,0.2128,0.2059,bajar,0.0069,0,media-baja,baja
+1489411,2507,M. Almirón,Paraguay,2380,MID,C. Turpin,0.1715,0.1853,subir,0.0138,0,media-baja,media
+1489411,6168,O. Alderete,Paraguay,2380,DEF,C. Turpin,0.1683,0.1683,neutro,0.0,0,media-baja,baja
+1489411,35808,G. Velázquez,Paraguay,2380,DEF,C. Turpin,0.1836,0.1864,neutro,0.0028,0,media-baja,baja
+1489411,70747,J. Enciso,Paraguay,2380,FWD,C. Turpin,0.0604,0.0574,bajar,0.003,0,media-baja,media
+1489411,2499,J. Alonso,Paraguay,2380,DEF,C. Turpin,0.1991,0.1991,neutro,0.0,0,media-baja,baja
+1489411,2500,F. Balbuena,Paraguay,2380,DEF,C. Turpin,0.1998,0.1998,neutro,0.0,0,media-baja,baja
+1489411,195107,D. Bobadilla,Paraguay,2380,MID,C. Turpin,0.183,0.1885,subir,0.0055,0,media-baja,baja
+1489411,6236,A. Cubas,Paraguay,2380,MID,C. Turpin,0.3368,0.352,subir,0.0152,0,media-baja,baja
+1489411,2502,G. Gómez,Paraguay,2380,DEF,C. Turpin,0.0777,0.0777,neutro,0.0,0,media-baja,baja
+1489411,278370,D. Gómez,Paraguay,2380,MID,C. Turpin,0.0948,0.1024,subir,0.0076,1,media-baja,media
+1489411,196298,R. Sosa,Paraguay,2380,FWD,C. Turpin,0.2128,0.2097,neutro,0.0031,0,media-baja,baja
 1489411,312459,N. Velupillay,Australia,20,FWD,C. Turpin,0.0487,0.0471,bajar,0.0016,0,media-baja,baja
 1489411,6904,C. Metcalfe,Australia,20,FWD,C. Turpin,0.1878,0.1817,bajar,0.0061,0,media-baja,baja
 1489411,20457,C. Burgess,Australia,20,DEF,C. Turpin,0.0659,0.0658,neutro,0.0001,0,media-baja,baja
@@ -87,17 +87,17 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489411,337587,J. Bos,Australia,20,MID,C. Turpin,0.0909,0.0934,subir,0.0025,0,media-baja,baja
 1489411,338014,N. Irankunda,Australia,20,FWD,C. Turpin,0.3654,0.3481,bajar,0.0173,0,media-baja,baja
 1489411,33847,J. Geria,Australia,20,DEF,C. Turpin,0.3321,0.3314,neutro,0.0007,0,media-baja,baja
-1539011,199578,Z. Suzuki,Japan,12,GK,"Iván Barton, El Salvador",0.0694,0.0667,bajar,0.0027,0,media-baja,baja
-1539011,33165,A. Seko,Japan,12,DEF,"Iván Barton, El Salvador",0.0805,0.0762,bajar,0.0043,0,media-baja,media
-1539011,38114,K. Itakura,Japan,12,DEF,"Iván Barton, El Salvador",0.2412,0.2283,bajar,0.0129,0,media-baja,media
-1539011,32893,H. Ito,Japan,12,DEF,"Iván Barton, El Salvador",0.1389,0.1336,bajar,0.0053,0,media-baja,media
-1539011,32887,Y. Sugawara,Japan,12,MID,"Iván Barton, El Salvador",0.2833,0.2809,neutro,0.0024,0,media-baja,media
-1539011,2601,D. Kamada,Japan,12,MID,"Iván Barton, El Salvador",0.0827,0.0808,bajar,0.0019,0,media-baja,media
-1539011,32966,A. Tanaka,Japan,12,MID,"Iván Barton, El Salvador",0.203,0.2013,neutro,0.0017,0,media-baja,media
-1539011,33321,Keito Nakamura,Japan,12,MID,"Iván Barton, El Salvador",0.0778,0.0744,bajar,0.0034,0,media-baja,media
-1539011,2598,R. Dōan,Japan,12,FWD,"Iván Barton, El Salvador",0.1587,0.1423,bajar,0.0164,0,media-baja,media
-1539011,72155,A. Ueda,Japan,12,FWD,"Iván Barton, El Salvador",0.0805,0.0722,bajar,0.0083,0,media-baja,media
-1539011,33224,D. Maeda,Japan,12,FWD,"Iván Barton, El Salvador",0.1084,0.0993,bajar,0.0091,0,media-baja,media
+1539011,199578,Z. Suzuki,Japan,12,GK,"Iván Barton, El Salvador",0.0694,0.0679,bajar,0.0015,0,media-baja,baja
+1539011,33165,A. Seko,Japan,12,DEF,"Iván Barton, El Salvador",0.0805,0.0776,bajar,0.0029,0,media-baja,media
+1539011,38114,K. Itakura,Japan,12,DEF,"Iván Barton, El Salvador",0.2412,0.2325,bajar,0.0087,0,media-baja,media
+1539011,32893,H. Ito,Japan,12,DEF,"Iván Barton, El Salvador",0.1389,0.136,bajar,0.0029,0,media-baja,media
+1539011,32887,Y. Sugawara,Japan,12,DEF,"Iván Barton, El Salvador",0.2833,0.2774,bajar,0.0059,0,media-baja,media
+1539011,2601,D. Kamada,Japan,12,MID,"Iván Barton, El Salvador",0.0827,0.0863,subir,0.0036,0,media-baja,media
+1539011,32966,A. Tanaka,Japan,12,MID,"Iván Barton, El Salvador",0.203,0.2048,neutro,0.0018,0,media-baja,media
+1539011,33321,Keito Nakamura,Japan,12,MID,"Iván Barton, El Salvador",0.0778,0.0758,bajar,0.002,0,media-baja,media
+1539011,2598,R. Dōan,Japan,12,MID,"Iván Barton, El Salvador",0.1587,0.1546,bajar,0.0041,0,media-baja,media
+1539011,72155,A. Ueda,Japan,12,FWD,"Iván Barton, El Salvador",0.0805,0.0736,bajar,0.0069,0,media-baja,media
+1539011,33224,D. Maeda,Japan,12,FWD,"Iván Barton, El Salvador",0.1084,0.0991,bajar,0.0093,0,media-baja,media
 1539011,48033,J. Widell Zetterström,Sweden,5,GK,"Iván Barton, El Salvador",0.1502,0.1497,neutro,0.0005,0,media-baja,baja
 1539011,137721,G. Lagerbielke,Sweden,5,DEF,"Iván Barton, El Salvador",0.1776,0.177,neutro,0.0006,0,media-baja,media
 1539011,137976,I. Hien,Sweden,5,DEF,"Iván Barton, El Salvador",0.2699,0.269,neutro,0.0009,1,media-baja,media
@@ -121,11 +121,11 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489412,310196,Ismaël Gharbi,Tunisia,28,MID,"Katia García, Mexico",0.0912,0.0908,neutro,0.0004,0,media-baja,baja
 1489412,344862,H. Mastouri,Tunisia,28,FWD,"Katia García, Mexico",0.0561,0.0525,bajar,0.0036,0,media-baja,baja
 1489412,129058,B. Verbruggen,Netherlands,1118,GK,"Katia García, Mexico",0.0207,0.0203,neutro,0.0004,0,baja,baja
-1489412,226,D. Dumfries,Netherlands,1118,DEF,"Katia García, Mexico",0.1922,0.1884,neutro,0.0038,0,media-baja,baja
+1489412,226,D. Dumfries,Netherlands,1118,MID,"Katia García, Mexico",0.1922,0.1942,neutro,0.002,0,media-baja,baja
 1489412,38695,J. van Hecke,Netherlands,1118,DEF,"Katia García, Mexico",0.3969,0.3831,bajar,0.0138,0,media-baja,baja
 1489412,290,V. van Dijk,Netherlands,1118,DEF,"Katia García, Mexico",0.3227,0.3163,neutro,0.0064,0,media-baja,baja
-1489412,18861,N. Aké,Netherlands,1118,DEF,"Katia García, Mexico",0.1545,0.1514,neutro,0.0031,0,media-baja,baja
-1489412,542,R. Gravenberch,Netherlands,1118,MID,"Katia García, Mexico",0.0373,0.0377,neutro,0.0004,0,media-baja,baja
+1489412,18861,N. Aké,Netherlands,1118,DEF,"Katia García, Mexico",0.1545,0.1491,bajar,0.0054,0,media-baja,baja
+1489412,542,R. Gravenberch,Netherlands,1118,MID,"Katia García, Mexico",0.0373,0.0371,neutro,0.0002,0,media-baja,baja
 1489412,538,F. de Jong,Netherlands,1118,MID,"Katia García, Mexico",0.0427,0.0416,bajar,0.0011,0,media-baja,media
 1489412,36902,T. Reijnders,Netherlands,1118,MID,"Katia García, Mexico",0.175,0.1707,bajar,0.0043,0,media-baja,media
 1489412,249,D. Malen,Netherlands,1118,FWD,"Katia García, Mexico",0.166,0.1519,bajar,0.0141,0,media-baja,media
@@ -417,3 +417,69 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1561329,35570,S. Eustáquio,Canada,5529,MID,"Joao Pedro Pinheiro, Portugal",0.131,0.135,subir,0.004,0,media-baja,baja
 1561329,327738,L. De Fougerolles,Canada,5529,DEF,"Joao Pedro Pinheiro, Portugal",0.2635,0.2675,neutro,0.004,0,media-baja,baja
 1561329,44798,L. Millar,Canada,5529,MID,"Joao Pedro Pinheiro, Portugal",0.171,0.1847,subir,0.0137,0,media-baja,media
+1562344,762,Vinícius Júnior,Brazil,6,FWD,M. Mariani,0.1613,0.1508,bajar,0.0105,0,media-baja,media
+1562344,747,Casemiro,Brazil,6,MID,M. Mariani,0.1765,0.188,subir,0.0115,1,media-baja,media
+1562344,10135,Bruno Guimarães,Brazil,6,MID,M. Mariani,0.1626,0.1618,neutro,0.0008,0,media-baja,media
+1562344,257,Marquinhos,Brazil,6,DEF,M. Mariani,0.0414,0.0414,neutro,0.0,0,media-baja,baja
+1562344,1165,Matheus Cunha,Brazil,6,FWD,M. Mariani,0.0747,0.0698,bajar,0.0049,0,media-baja,media
+1562344,24866,Douglas Santos,Brazil,6,DEF,M. Mariani,0.1065,0.1102,subir,0.0037,0,media-baja,media
+1562344,1496,Raphinha,Brazil,6,FWD,M. Mariani,0.0519,0.0496,bajar,0.0023,0,media-baja,baja
+1562344,280,Alisson Becker,Brazil,6,GK,M. Mariani,0.0462,0.0462,neutro,0.0,0,baja,baja
+1562344,1646,Lucas Paquetá,Brazil,6,MID,M. Mariani,0.306,0.3045,neutro,0.0015,0,media-baja,media
+1562344,22224,Gabriel Magalhães,Brazil,6,DEF,M. Mariani,0.2383,0.2383,neutro,0.0,0,media-baja,baja
+1562344,30424,Ibañez,Brazil,6,DEF,M. Mariani,0.1322,0.1322,neutro,0.0,0,media-baja,baja
+1562344,2598,R. Dōan,Japan,12,MID,M. Mariani,0.2668,0.2655,neutro,0.0013,0,media-baja,media
+1562344,199578,Z. Suzuki,Japan,12,GK,M. Mariani,0.0602,0.0602,neutro,0.0,0,baja,baja
+1562344,33321,Keito Nakamura,Japan,12,MID,M. Mariani,0.0676,0.0673,neutro,0.0003,0,media-baja,media
+1562344,72155,A. Ueda,Japan,12,FWD,M. Mariani,0.0699,0.0654,bajar,0.0045,0,media-baja,media
+1562344,2601,D. Kamada,Japan,12,MID,M. Mariani,0.0718,0.0765,subir,0.0047,1,media-baja,media
+1562344,32966,A. Tanaka,Japan,12,MID,M. Mariani,0.3347,0.3447,subir,0.01,0,media-baja,baja
+1562344,32893,H. Ito,Japan,12,DEF,M. Mariani,0.1211,0.1211,neutro,0.0,0,media-baja,baja
+1562344,33889,K. Sano,Japan,12,MID,M. Mariani,0.0565,0.0582,subir,0.0017,1,media-baja,baja
+1562344,32858,T. Watanabe,Japan,12,DEF,M. Mariani,0.2815,0.2815,neutro,0.0,0,media-baja,baja
+1562344,32862,T. Kubo,Japan,12,FWD,M. Mariani,0.0704,0.0683,bajar,0.0021,0,media-baja,baja
+1562344,32954,S. Taniguchi,Japan,12,DEF,M. Mariani,0.0699,0.0699,neutro,0.0,0,media-baja,baja
+1565176,502,J. Kimmich,Germany,25,DEF,J. Jayed,0.0945,0.0914,bajar,0.0031,0,media-baja,media
+1565176,972,J. Tah,Germany,25,DEF,J. Jayed,0.4739,0.4679,neutro,0.006,0,media-baja,baja
+1565176,203224,F. Wirtz,Germany,25,MID,J. Jayed,0.3344,0.3335,neutro,0.0009,0,media-baja,media
+1565176,26243,N. Schlotterbeck,Germany,25,DEF,J. Jayed,0.5103,0.5038,neutro,0.0065,0,media-baja,baja
+1565176,978,K. Havertz,Germany,25,FWD,J. Jayed,0.0405,0.0394,bajar,0.0011,1,media-baja,media
+1565176,644,L. Sané,Germany,25,MID,J. Jayed,0.0528,0.0527,neutro,0.0001,0,media-baja,media
+1565176,328033,A. Pavlović,Germany,25,MID,J. Jayed,0.0627,0.0647,subir,0.002,0,media-baja,media
+1565176,181812,J. Musiala,Germany,25,MID,J. Jayed,0.0355,0.0379,subir,0.0024,1,media-baja,media
+1565176,637,F. Nmecha,Germany,25,MID,J. Jayed,0.0997,0.0994,neutro,0.0003,0,media-baja,media
+1565176,280074,N. Brown,Germany,25,DEF,J. Jayed,0.1617,0.1621,neutro,0.0004,0,media-baja,baja
+1565176,702,O. Baumann,Germany,25,GK,J. Jayed,0.0436,0.0437,neutro,0.0001,0,baja,baja
+1565176,278370,D. Gómez,Paraguay,2380,MID,J. Jayed,0.101,0.1096,subir,0.0086,0,media-baja,media
+1565176,2507,M. Almirón,Paraguay,2380,MID,J. Jayed,0.2389,0.2591,subir,0.0202,0,media-baja,media
+1565176,70747,J. Enciso,Paraguay,2380,FWD,J. Jayed,0.0644,0.0615,bajar,0.0029,0,media-baja,media
+1565176,2502,G. Gómez,Paraguay,2380,DEF,J. Jayed,0.0828,0.0832,neutro,0.0004,0,media-baja,baja
+1565176,6168,O. Alderete,Paraguay,2380,DEF,J. Jayed,0.2347,0.2358,neutro,0.0011,0,media-baja,baja
+1565176,2499,J. Alonso,Paraguay,2380,DEF,J. Jayed,0.2755,0.2768,neutro,0.0013,0,media-baja,baja
+1565176,70852,O. Gill,Paraguay,2380,GK,J. Jayed,0.0961,0.098,neutro,0.0019,0,baja,baja
+1565176,195992,J. Cáceres,Paraguay,2380,DEF,J. Jayed,0.1157,0.1139,neutro,0.0018,0,media-baja,media
+1565176,195107,D. Bobadilla,Paraguay,2380,MID,J. Jayed,0.2543,0.2631,subir,0.0088,0,media-baja,baja
+1565176,6236,A. Cubas,Paraguay,2380,MID,J. Jayed,0.4652,0.4883,subir,0.0231,1,media-baja,baja
+1565176,2522,A. Sanabria,Paraguay,2380,FWD,J. Jayed,0.1126,0.1098,bajar,0.0028,0,media-baja,baja
+1562345,290,V. van Dijk,Netherlands,1118,DEF,W. Sampaio,0.3313,0.3248,neutro,0.0065,0,media-baja,baja
+1562345,247,C. Gakpo,Netherlands,1118,FWD,W. Sampaio,0.1002,0.0917,bajar,0.0085,0,media-baja,media
+1562345,249,D. Malen,Netherlands,1118,FWD,W. Sampaio,0.171,0.1565,bajar,0.0145,0,media-baja,media
+1562345,129058,B. Verbruggen,Netherlands,1118,GK,W. Sampaio,0.0214,0.021,neutro,0.0004,0,baja,baja
+1562345,36902,T. Reijnders,Netherlands,1118,MID,W. Sampaio,0.1802,0.1757,bajar,0.0045,0,media-baja,media
+1562345,226,D. Dumfries,Netherlands,1118,MID,W. Sampaio,0.1978,0.1998,neutro,0.002,0,media-baja,baja
+1562345,542,R. Gravenberch,Netherlands,1118,MID,W. Sampaio,0.0385,0.0383,neutro,0.0002,0,media-baja,baja
+1562345,538,F. de Jong,Netherlands,1118,MID,W. Sampaio,0.0441,0.043,bajar,0.0011,0,media-baja,media
+1562345,38695,J. van Hecke,Netherlands,1118,DEF,W. Sampaio,0.4068,0.3927,bajar,0.0141,0,media-baja,baja
+1562345,152849,M. van de Ven,Netherlands,1118,MID,W. Sampaio,0.0429,0.0427,neutro,0.0002,0,media-baja,baja
+1562345,18861,N. Aké,Netherlands,1118,DEF,W. Sampaio,0.1591,0.1536,bajar,0.0055,0,media-baja,baja
+1562345,2701,Y. Bounou,Morocco,31,GK,W. Sampaio,0.0221,0.0213,bajar,0.0008,0,media-baja,baja
+1562345,9,A. Hakimi,Morocco,31,DEF,W. Sampaio,0.253,0.2391,bajar,0.0139,0,media-baja,media
+1562345,161897,I. Saibari,Morocco,31,FWD,W. Sampaio,0.3044,0.2786,bajar,0.0258,0,media-baja,media
+1562345,277003,N. El Aynaoui,Morocco,31,MID,W. Sampaio,0.0379,0.037,bajar,0.0009,0,media-baja,media
+1562345,18814,I. Diop,Morocco,31,DEF,W. Sampaio,0.1394,0.1415,neutro,0.0021,1,media-baja,media
+1562345,545,N. Mazraoui,Morocco,31,DEF,W. Sampaio,0.0298,0.0292,neutro,0.0006,0,media-baja,baja
+1562345,744,Brahim Díaz,Morocco,31,MID,W. Sampaio,0.1888,0.1841,bajar,0.0047,0,media-baja,media
+1562345,340573,B. El Khannouss,Morocco,31,MID,W. Sampaio,0.2226,0.2171,bajar,0.0055,0,media-baja,media
+1562345,278898,C. Riad,Morocco,31,DEF,W. Sampaio,0.1065,0.1028,bajar,0.0037,0,media-baja,baja
+1562345,129678,A. Ounahi,Morocco,31,MID,W. Sampaio,0.2885,0.2814,bajar,0.0071,0,media-baja,media
+1562345,438688,A. Bouaddi,Morocco,31,MID,W. Sampaio,0.1394,0.1387,neutro,0.0007,0,media-baja,baja
