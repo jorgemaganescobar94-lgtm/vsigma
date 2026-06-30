@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -35,7 +36,12 @@ FORBIDDEN = ["apuesta", "apostar", "cuota", "odds", "edge", "pick", "stake", "ro
 
 def assert_no_betting_language(text: str):
     low = text.lower()
-    hits = [w for w in FORBIDDEN if w in low]
+    # WHOLE-WORD match (\b): un token prohibido DENTRO de una palabra benigna NO dispara. La jerga de
+    # apuestas real aparece como palabra suelta y se sigue cazando; lo que dejamos de bloquear son
+    # falsos positivos por subcadena: apellidos reales (Pickford/Pickel -> 'pick'), 'mistake' ->
+    # 'stake', 'heroico' -> 'roi', 'hedge' -> 'edge'. Las entradas multi-palabra de FORBIDDEN
+    # ('value bet', 'casa de apuestas') también funcionan con \b en los extremos.
+    hits = [w for w in FORBIDDEN if re.search(rf"\b{re.escape(w)}\b", low)]
     if hits:
         raise AssertionError(f"betting language leaked into player-events message: {hits}")
 

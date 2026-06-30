@@ -62,6 +62,41 @@ def test_betting_guard_fires():
         tg.assert_no_betting_language("Mejor pick con cuota 2.0 y edge alto")
 
 
+# ---- whole-word guard (\b): real betting jargon still caught; benign substrings no longer false-positive
+@pytest.mark.parametrize("word", [w for w in tg.FORBIDDEN if " " not in w])
+def test_guard_catches_real_betting_word_standalone(word):
+    """Every single-word FORBIDDEN token still fires when it appears as a STANDALONE word."""
+    with pytest.raises(AssertionError):
+        tg.assert_no_betting_language(f"texto previo {word} texto posterior")
+
+
+@pytest.mark.parametrize("phrase", [w for w in tg.FORBIDDEN if " " in w])
+def test_guard_catches_real_betting_phrase(phrase):
+    """Multi-word FORBIDDEN phrases ('value bet', 'casa de apuestas'…) still fire."""
+    with pytest.raises(AssertionError):
+        tg.assert_no_betting_language(f"esto es un {phrase} claro")
+
+
+@pytest.mark.parametrize("benign", [
+    "J. Pickford",        # 'pick' inside the England GK surname (the real false positive)
+    "Charles Pickel",     # 'pick' inside the Switzerland midfielder surname
+    "una mistake táctica",  # 'stake' inside 'mistake'
+    "un gol heroico",     # 'roi' inside 'heroico'
+    "hizo un hedge",      # 'edge' inside 'hedge'
+])
+def test_guard_does_not_fire_on_benign_substrings(benign):
+    """Benign words that merely CONTAIN a forbidden token (player surnames, common words) must pass."""
+    tg.assert_no_betting_language(benign)            # must NOT raise
+
+
+def test_clean_player_events_message_passes_guard():
+    """A normal rendered player-events fixture (which contains player names) passes the guard."""
+    msg = tg.render_fixture(_fixture_obj())          # render_fixture asserts internally
+    tg.assert_no_betting_language(msg)               # explicit: must NOT raise
+    # and a Pickford-style name embedded in a realistic line is fine
+    tg.assert_no_betting_language("  J. Pickford vs volumen de tiro de Congo DR (portero) [baja]")
+
+
 def test_match_script_from_own_numbers():
     assert "dominio del local" in tg.match_script({"p_home": 0.6, "p_away": 0.2,
                                                    "xg_home": 1.8, "xg_away": 1.6})
