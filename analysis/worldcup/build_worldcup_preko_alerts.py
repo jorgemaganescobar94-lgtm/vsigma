@@ -137,15 +137,25 @@ def render_message(r, mins, props_fn=None):
     lines = [f"⚡ Alineación confirmada — {h} vs {a}",
              f"⏱️ Saque en ~{mins_i} min · {grp} · {F.fmt_ko(r.get('kickoff_utc'))}"]
 
-    # CONTEXTO EN VIVO: misma predicción que la ficha (ctx_* ajustado por escenario de grupo si
-    # existe, si no L3 puro). Evita mostrar números distintos en Telegram. 'our_*' no se toca.
-    lh, ld, la, xgh, xga, ctx_note = F.pred_1x2(r)
+    # Predicción MOSTRADA = EXACTAMENTE la de la ficha del briefing (F.pred_1x2: cadena
+    # inj>ctx>fd>ens>mx>our). El NÚMERO no se recalcula aquí. Encabezado NEUTRO + la NOTA que
+    # devuelve pred_1x2 (FD_NOTE/ENS_NOTE/MX_NOTE/context_note) como ÚNICA fuente de atribución ->
+    # Telegram y briefing dicen lo mismo. '·ctx' SOLO si hay contexto de grupo REAL aplicado.
+    lh, ld, la, xgh, xga, note = F.pred_1x2(r)
     if pd.notna(lh):
-        etiqueta = "Resultado L3·ctx" if ctx_note else "Resultado L3"
+        ctx_txt = r.get("context_note")
+        ctx_applied = bool(pd.notna(r.get("ctx_home")) and isinstance(ctx_txt, str) and ctx_txt.strip())
+        etiqueta = "Resultado 1X2" + (" ·ctx" if ctx_applied else "")
         lines.append(f"{etiqueta}: {h} {lh*100:.0f}% · Empate {ld*100:.0f}% · {a} {la*100:.0f}% "
                      f"(apenas cambia con el XI — es fuerza de selección)")
-        if ctx_note:
-            lines.append(f"   ↳ {ctx_note}")
+        # atribución honesta: la nota de pred_1x2; + el escenario de contexto si se aplicó (y difiere)
+        notes = []
+        if isinstance(note, str) and note.strip():
+            notes.append(note.strip())
+        if ctx_applied and ctx_txt.strip() not in notes:
+            notes.append(ctx_txt.strip())
+        for s in notes:
+            lines.append(f"   ↳ {s}")
         lines += _l3_adj_lines(r, h, a)
 
     if pd.notna(xgh):

@@ -18,6 +18,7 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import build_worldcup_preko_alerts as A  # noqa: E402
+import build_worldcup_full_card as F  # noqa: E402  (pred_1x2 + FD_NOTE for label assertions)
 
 NOW = datetime(2026, 6, 26, 18, 0, tzinfo=timezone.utc)
 
@@ -84,11 +85,39 @@ def test_render_message_confirmed_props_and_honesty():
     txt = "\n".join(body)
     assert "Alineación confirmada" in body[0]
     assert "Saque en ~58 min" in body[1]
-    assert "Resultado L3" in txt and "fuerza de selección" in txt
+    # NEUTRAL header (never the stale "Resultado L3"); attribution comes from the pred_1x2 note
+    assert "Resultado 1X2" in txt and "Resultado L3" not in txt and "fuerza de selección" in txt
     assert "Ajuste por bajas" in txt and "sin Musiala" in txt    # L3-adj line
     assert "(XI confirmado)" in txt                              # confirmed-XI props
     assert "NO mejora" in txt                                    # honesty note
     assert "alineación confirmada" in title.lower()
+
+
+def test_render_label_matches_briefing_note_full_data():
+    # a full-data (fd_*) fixture -> number from pred_1x2, header NEUTRAL, attribution = FD_NOTE,
+    # and NO false '·ctx' (no group context applied). The shown number must equal pred_1x2's.
+    r = pd.Series(_card(1, 58, fd_home=0.60, fd_draw=0.24, fd_away=0.16,
+                        fd_xg_home=1.9, fd_xg_away=0.8))
+    _, body = A.render_message(r, 58.0, props_fn=lambda fid: [])
+    txt = "\n".join(body)
+    lh, ld, la, _xgh, _xga, note = F.pred_1x2(r)
+    assert (lh, ld, la) == (0.60, 0.24, 0.16)                    # number is the full-data one
+    assert note == F.FD_NOTE                                     # pred_1x2 attributes to full-data
+    assert "Resultado 1X2:" in txt and "·ctx" not in txt         # neutral header, NO false ctx
+    assert f"↳ {F.FD_NOTE}" in txt                               # attribution mirrors the briefing
+    assert "60% · Empate 24% · " in txt and "16%" in txt         # exact shown probs (unchanged)
+
+
+def test_render_ctx_flag_only_on_real_context():
+    # real group context applied (ctx_* + context_note) -> '·ctx' + the scenario shown in the note
+    r = pd.Series(_card(1, 58, ctx_home=0.58, ctx_draw=0.25, ctx_away=0.17,
+                        ctx_xg_home=1.7, ctx_xg_away=0.9, context_note="Alemania ya clasificada"))
+    _, body = A.render_message(r, 58.0, props_fn=lambda fid: [])
+    txt = "\n".join(body)
+    lh, ld, la, _x, _y, note = F.pred_1x2(r)
+    assert (lh, ld, la) == (0.58, 0.25, 0.17)                    # number is the ctx one
+    assert "Resultado 1X2 ·ctx:" in txt                          # ctx flag present (real context)
+    assert "↳ Alemania ya clasificada" in txt                   # scenario attribution
 
 
 def test_cmd_select_silent_when_no_candidates():
