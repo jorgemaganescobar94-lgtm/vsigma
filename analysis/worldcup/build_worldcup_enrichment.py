@@ -18,6 +18,15 @@ Two hooks, wired as SEPARATE workflow steps (never inside the briefing render):
             /fixtures/events + /fixtures/players. Cached "forever" (a finished match never
             changes) AND store-guarded (already-enriched fixtures make ZERO API calls).
 
+            The full raw payloads are stored, and the distilled `summary` now captures the
+            ENTIRE non-betting statistics sheet (SOT, shots off/blocked/inside/outside box,
+            fouls, offsides, GK saves, total/accurate passes + pass%, goals_prevented) plus
+            per-match PLAYER RATINGS (MVP + team average) — all from the SAME cached calls, so
+            0 extra API. DATA-CAPTURE + DISPLAY + future re-tests ONLY; these NEVER feed any
+            model/prediction (national-team stat features proved null-signal — see STAT_KEYS).
+            Schema is upgraded on old fixtures for free: the summary is re-derived from the
+            stored raw without re-fetching.
+
 SOFT-FAIL everywhere: any API/parse error -> that section is skipped, NEVER raises, so the
 briefing can never break (same contract as fetch_lineups/fetch_injuries in the card builder).
 
@@ -53,12 +62,36 @@ FINISHED = {"FT", "AET", "PEN"}
 # PURIFICATION: these endpoints are forbidden in the World Cup product. Requesting one is a bug.
 EXCLUDED = {"/odds", "/predictions", "/odds/live"}
 
-# /fixtures/statistics 'type' -> summary key (the few stats shown on the ficha post-FT)
+# /fixtures/statistics 'type' -> summary key.
+#
+# DATA-CAPTURE / DISPLAY ONLY — these fields are NEVER model/prediction inputs. Offline studies
+# proved team-stat features are null-signal for national-team forecasting (see MEMORY: seriebr /
+# feature_study CONCLUSIONs); we persist them for the raw dataset, the [REAL] briefing recap and
+# future re-tests, not for scoring. The prediction chain (mx/L3/ensemble) does not read them.
+#
+# ALL of these arrive inside the SAME /fixtures/statistics call already made post-FT — capturing
+# the full non-betting sheet costs ZERO extra API. NO betting types (no odds/predictions here).
 STAT_KEYS = {
+    # --- already surfaced before this change ---
     "Total Shots": "shots",
     "Ball Possession": "possession",
     "Corner Kicks": "corners",
     "expected_goals": "xg",
+    # --- newly captured (free: same call) ---
+    "Shots on Goal": "sot",
+    "Shots off Goal": "shots_off",
+    "Blocked Shots": "shots_blocked",
+    "Shots insidebox": "shots_inbox",
+    "Shots outsidebox": "shots_outbox",
+    "Fouls": "fouls",
+    "Offsides": "offsides",
+    "Goalkeeper Saves": "gk_saves",
+    "Total passes": "passes_total",
+    "Passes accurate": "passes_acc",
+    "Passes %": "passes_pct",
+    "Yellow Cards": "cards_yellow",   # stat-sheet copy; events remain authoritative for the recap
+    "Red Cards": "cards_red",
+    "goals_prevented": "goals_prevented",
 }
 
 
@@ -169,6 +202,52 @@ def parse_events_summary(events_resp, home_id, away_id) -> dict:
         out["first_goal_minute"] = m
         out["first_goal_side"] = "home" if tid == home_id else ("away" if tid == away_id else "?")
     return out
+
+
+def parse_players_summary(players_resp, home_id, away_id) -> dict:
+    """/fixtures/players response -> {'ratings': {home:{...}, away:{...}}} using the per-match
+    player ratings the API already returns in the SAME call (games.rating). DATA/DISPLAY ONLY;
+    NOT a model input. Per side: MVP (top-rated player who played), team average rating, count,
+    and the full player rating list [{name, rating, pos, minutes}]. Empty {} if no ratings."""
+    sides = {}
+    for tb in players_resp or []:
+        tid = (tb.get("team") or {}).get("id")
+        side = "home" if tid == home_id else ("away" if tid == away_id else None)
+        if side is None:
+            continue
+        plist = []
+        for p in tb.get("players", []) or []:
+            g = ((p.get("statistics") or [{}])[0] or {}).get("games") or {}
+            rating = _num(g.get("rating"))
+            if rating is None:
+                continue
+            plist.append({
+                "name": (p.get("player") or {}).get("name"),
+                "rating": rating,
+                "pos": g.get("position"),
+                "minutes": g.get("minutes"),
+            })
+        if not plist:
+            continue
+        plist.sort(key=lambda x: x["rating"], reverse=True)
+        mvp = plist[0]
+        sides[side] = {
+            "mvp_name": mvp["name"], "mvp_rating": mvp["rating"],
+            "avg_rating": round(sum(x["rating"] for x in plist) / len(plist), 2),
+            "n_rated": len(plist),
+            "players": plist,
+        }
+    return {"ratings": sides} if sides else {}
+
+
+def build_summary(stat, events, players, home_id, away_id) -> dict:
+    """Assemble the full post-FT summary from the three cached FT payloads. Pure/in-memory:
+    re-callable on already-stored raw to upgrade the schema for free (0 API)."""
+    summary = {}
+    summary.update(parse_statistics_summary(stat, home_id, away_id))
+    summary.update(parse_events_summary(events, home_id, away_id))
+    summary.update(parse_players_summary(players, home_id, away_id))
+    return summary
 
 
 # --------------------------------------------------------------------- fixtures index
@@ -343,10 +422,20 @@ def enrich_postft(fixture_ids=None, client=None, force=False) -> dict:
         if fb and fb != store.get("fixture"):
             store["fixture"] = fb
             save_store(fid, store)
-        # store-guard: a finished match never changes -> don't re-fetch (0 API on 2nd pass)
-        if not force and (store.get("postft") or {}).get("summary"):
-            continue
         home_id, away_id = meta.get("home_id"), meta.get("away_id")
+        # store-guard: a finished match never changes -> don't re-fetch (0 API on 2nd pass).
+        # BUT re-derive the summary from the raw we already hold, so newly-captured fields
+        # (extra stats + player ratings) backfill onto old fixtures with ZERO extra API.
+        pf = store.get("postft") or {}
+        if not force and pf.get("summary"):
+            if pf.get("statistics") or pf.get("events") or pf.get("players"):
+                refreshed = build_summary(pf.get("statistics"), pf.get("events"),
+                                          pf.get("players"), home_id, away_id)
+                if refreshed != pf.get("summary"):
+                    pf["summary"] = refreshed
+                    store["postft"] = pf
+                    save_store(fid, store)
+            continue
 
         ftrace = []
         stat = _get(client, "/fixtures/statistics", {"fixture": fid}, TTL_FT, ftrace)
@@ -355,9 +444,7 @@ def enrich_postft(fixture_ids=None, client=None, force=False) -> dict:
         if stat is None and events is None and players is None:
             continue  # all soft-failed -> write nothing, retry next run
 
-        summary = {}
-        summary.update(parse_statistics_summary(stat, home_id, away_id))
-        summary.update(parse_events_summary(events, home_id, away_id))
+        summary = build_summary(stat, events, players, home_id, away_id)
 
         store.setdefault("fixture_id", int(fid))
         if meta.get("home"):
@@ -418,6 +505,37 @@ def real_lines_for_fixture(fid, score=None) -> list[str]:
         seg2.append(f"final {score}")
     if seg2:
         lines.append("[REAL] " + " · ".join(seg2))
+
+    # NEW real stats now captured for free from the same FT calls (shot quality / set-play / passing).
+    # One compact line only, best non-redundant fields, each shown solely when present. Not saturating.
+    seg3 = []
+    st = pair("sot")
+    if st:
+        seg3.append(f"SOT {st[0]:.0f}-{st[1]:.0f}")
+    ib = pair("shots_inbox")
+    if ib:
+        seg3.append(f"área {ib[0]:.0f}-{ib[1]:.0f}")
+    of = pair("offsides")
+    if of:
+        seg3.append(f"fueras {of[0]:.0f}-{of[1]:.0f}")
+    gk = pair("gk_saves")
+    if gk:
+        seg3.append(f"paradas {gk[0]:.0f}-{gk[1]:.0f}")
+    pp = pair("passes_pct")
+    if pp:
+        seg3.append(f"pase {pp[0]:.0f}%-{pp[1]:.0f}%")
+    if seg3:
+        lines.append("[REAL] " + " · ".join(seg3))
+
+    # MVP per side from the per-match player ratings (also newly captured, same /fixtures/players call).
+    ratings = summary.get("ratings") or {}
+    seg4 = []
+    for side, tag in (("home", "local"), ("away", "visit.")):
+        r = ratings.get(side) or {}
+        if r.get("mvp_name") and r.get("mvp_rating") is not None:
+            seg4.append(f"{r['mvp_name']} {r['mvp_rating']:.1f} ({tag})")
+    if seg4:
+        lines.append("[REAL] MVP " + " · ".join(seg4))
     return lines
 
 
