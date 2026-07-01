@@ -52,6 +52,33 @@ def test_artifact_matches_active_feature_list():
     assert len(art["features"]) == len(art["mean"]) == len(art["std"]) == len(art["logit_W"])
 
 
+# ----------------------------------------------------------------- regularization (L1 adoption)
+def test_reg_config_mapping():
+    l1 = ffdm._reg_config("l1c0.1")
+    assert l1["penalty"] == "l1" and l1["C"] == 0.10 and l1["solver"] == "saga"
+    old = ffdm._reg_config("l2c0.3")   # exact revert to the pre-adoption model (lbfgs default)
+    assert old["penalty"] == "l2" and old["C"] == 0.30 and "solver" not in old
+
+
+def test_shipped_artifact_is_l1_and_kills_nulls():
+    import numpy as np
+    path = ffdm.active_artifact_path()
+    if not path.exists():
+        pytest.skip("artifact not trained in this checkout")
+    art = ffdm._load_artifact(path)
+    assert art.get("reg") == "l1c0.1" and art.get("penalty") == "l1"
+    W = np.array(art["logit_W"])                       # (n_feats, 3)
+    norms = np.sqrt((W ** 2).sum(1))
+    n_zero = int((norms < 1e-6).sum())
+    assert n_zero >= 15                                # L1 zeroes the ~21 null features
+    survivors = [art["features"][i] for i in range(len(norms)) if norms[i] >= 1e-6]
+    # the survivors are the genuine-signal features (L3 strength + form/rest/h2h), NOT the nulls
+    assert 5 <= len(survivors) <= 14
+    for k in ("club_form_diff", "possession_diff", "team_rating_diff"):
+        if k in art["features"]:
+            assert norms[art["features"].index(k)] < 1e-6   # null feature -> zeroed
+
+
 # ----------------------------------------------------------------- live predictor
 def test_predict_none_without_artifact(monkeypatch, tmp_path):
     # artifact missing -> None (caller reverts to ensemble). Never raises.

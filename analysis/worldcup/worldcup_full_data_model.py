@@ -70,6 +70,22 @@ CLUB_FORM_MULTISEASON = True
 # artifact: True -> 31-feat artifact; False -> falls back to the club_form/base set EXACTLY (delta 0).
 EXTRA_PLAYER_AGG = True
 EXTRA_FIELDS = ["duels_won", "dribbles_success", "tackles_total", "interceptions"]
+
+# ---- FULL_DATA_REG: regularization of the 1X2 logit. A burn-in-CV sweep (2026-07-01) showed the
+# shipped L2 C=0.30 UNDER-regularized (null features added noise -> ~1% worse than the ensemble).
+# STRONG L1 (C=0.1, saga) zeroes the ~21 null features and recovers ~91% of the gap (OOS 1X2 logloss
+# 0.9281 -> 0.9187 ~= ensemble/L3), keeping all 31 features. ADOPTED by explicit decision. Does NOT
+# beat the ensemble (ceiling); NO precision claim. REVERSIBLE: "l2c0.3" retrains the EXACT old model
+# (lbfgs L2 C=0.30) -> delta 0. Poisson alpha stays 1.0 (the sweep showed Over/BTTS unchanged).
+FULL_DATA_REG = "l1c0.1"
+
+
+def _reg_config(name):
+    """Sklearn LogisticRegression kwargs for the chosen regularization. 'l2c0.3' reproduces the
+    pre-adoption model EXACTLY (default lbfgs, multinomial)."""
+    if name == "l1c0.1":
+        return {"penalty": "l1", "C": 0.10, "solver": "saga", "max_iter": 8000, "tol": 1e-3}
+    return {"penalty": "l2", "C": 0.30, "max_iter": 2000}   # l2c0.3: exact revert (lbfgs default)
 CACHE = ROOT / "data" / "cache" / "api_football_cache.sqlite3"
 IR = HERE / "international_results.csv"
 PM = HERE / "national_elo_layer3_permatch.csv"
@@ -534,12 +550,13 @@ def _l3_recipe(ir_frame, sup, burn):
     return ph, pd_, pa, xh, xa, (a0, a1, tb0, tb1, tb2, TCAP)
 
 
-def train(report=True, feats=None, out_path=None):
+def train(report=True, feats=None, out_path=None, reg=None):
     """Fit the regularized full-data model on the international frame over the feature list `feats`
-    (default = base 26), save to `out_path` (default ARTIFACT), and print an HONEST OOS A/B vs L3.
-    Returns the OOS fd probs + metrics so a driver can compare feature sets. READ-ONLY except artifact."""
+    (default = base 26) with regularization `reg` (default FULL_DATA_REG), save to `out_path`
+    (default ARTIFACT), and print an HONEST OOS A/B vs L3. Returns OOS fd probs + metrics + coefs."""
     feats = list(feats) if feats is not None else list(FEATURES)
     out_path = out_path if out_path is not None else ARTIFACT
+    reg = reg if reg is not None else FULL_DATA_REG
     import pandas as pd
     from sklearn.linear_model import LogisticRegression, PoissonRegressor
     import model_bakeoff_backtest as bo
@@ -592,8 +609,9 @@ def train(report=True, feats=None, out_path=None):
     age = (np.datetime64(OOS_LO) - dates[burn]) / np.timedelta64(1, "D")
     w = imparr[burn] * np.exp(-np.log(2) * age / float(L3.HL_DAYS))
 
-    # 1X2: strongly-regularized multinomial logit
-    clf = LogisticRegression(C=0.30, max_iter=2000, penalty="l2")  # multinomial is the default (lbfgs)
+    # 1X2: multinomial logit with the SELECTED regularization (FULL_DATA_REG). L1 zeroes null feats.
+    rc = _reg_config(reg)
+    clf = LogisticRegression(**rc)
     clf.fit(Z[burn], res[burn], sample_weight=w)
     classes = list(clf.classes_)
     W = np.zeros((len(feats), 3)); b = np.zeros(3)
@@ -624,8 +642,10 @@ def train(report=True, feats=None, out_path=None):
                       "tb2": l3coef[4], "tcap": l3coef[5]},
         "trained_on": {"n_burn": int(burn.sum()), "n_oos": int(oos.sum()),
                        "cal_start": CAL_START, "oos": [OOS_LO, OOS_HI]},
-        "C": 0.30, "poisson_alpha": 1.0, "form_hl": FORM_HL,
-        "note": "Full-data model. KNOWN to measure worse than L3/ensemble. NOT a precision claim.",
+        "reg": reg, "penalty": rc.get("penalty"), "C": rc.get("C"),
+        "n_zero_feats": int((np.sqrt((W ** 2).sum(1)) < 1e-6).sum()),
+        "poisson_alpha": 1.0, "form_hl": FORM_HL,
+        "note": "Full-data model. Matches the ensemble/L3 at best (L1 reg). NOT a precision claim.",
     }
     out_path.write_text(json.dumps(art, indent=1), encoding="utf-8")
     _ARTIFACT_CACHE.pop(str(out_path), None)   # invalidate any cached copy
@@ -640,7 +660,8 @@ def train(report=True, feats=None, out_path=None):
     lo, hi, p = bo.paired_boot(d)
     if report:
         print("=" * 92)
-        print(f"FULL-DATA MODEL trained ({len(feats)} feats). HONEST OOS A/B vs L3 (internacionales 2024-2025)")
+        nz = int((np.sqrt((W ** 2).sum(1)) < 1e-6).sum())
+        print(f"FULL-DATA MODEL trained ({len(feats)} feats, reg={reg}, {nz} feats a peso~0). OOS A/B vs L3")
         print("=" * 92)
         print(f"features ingested: {len(feats)}  |  burn-in {int(burn.sum())}  OOS {int(oos.sum())}")
         print(f"1X2 logloss  full-data={ll_fd.mean():.4f}   L3={ll_l3.mean():.4f}")
