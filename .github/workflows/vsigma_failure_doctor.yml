@@ -87,10 +87,12 @@ jobs:
             --run-id "$VSIGMA_FAILED_RUN_ID" \
             $EXTRA_ARGS
 
-      - name: Telegram notify fallo de production
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      # Telegram POST SILENCIADO (gobernanza 2026-07-01: al canal SOLO predicciones WC + watchdog).
+      # Esto es una alerta del PIPELINE VIEJO de apuestas ("vSIGMA Production"). El diagnóstico +
+      # el GitHub issue (paso anterior, --dispatch) SIGUEN activos; solo se desactiva el POST a Telegram.
+      # Re-activar = quitar `if: false` y re-añadir el env TELEGRAM_*.
+      - name: Telegram notify fallo de production (SILENCIADO)
+        if: false
         shell: bash
         run: |
           python scripts/dispatch_telegram_alert.py \

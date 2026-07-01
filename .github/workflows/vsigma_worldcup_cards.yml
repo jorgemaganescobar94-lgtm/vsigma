@@ -122,11 +122,11 @@ jobs:
       #      -> anti-corruption GATE (finite, team-count, max|Δ|<=0.60, OOS not worse). If PASS,
       #      SWAP national_elo_layer3_ratings.csv + dataset; if FAIL, keep old ratings + Telegram
       #      alert. Calibration invariant (not rebuilt). Offline, NO API, NO leakage, soft-fail.
-      - name: Auto-refit L3 (gate + SWAP; Telegram alert on reject)
+      # Telegram POST SILENCIADO (gobernanza 2026-07-01: al canal SOLO predicciones WC + watchdog).
+      # El auto-refit + su GATE anti-corrupción + reporte SIGUEN corriendo; sin TELEGRAM_* env el
+      # dispatcher compartido fail-softea (no postea). Re-activar = re-añadir las 2 líneas env.
+      - name: Auto-refit L3 (gate + SWAP; report only — Telegram silenciado)
         continue-on-error: true
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python analysis/worldcup/auto_refit_shadow.py --apply
           echo "----- auto-refit report -----"
@@ -218,11 +218,10 @@ jobs:
       #      1X2 calibration of the production L3 and alert on Telegram if it drifts. Monitor ONLY:
       #      does NOT touch the model/ratings/calibration/briefing — just reads the log + alerts.
       #      Soft-fail: a failure NEVER blocks the briefing. NO betting endpoints.
-      - name: Calibration monitor (alert-only; soft-fail)
+      # Telegram POST SILENCIADO (gobernanza 2026-07-01). El monitor SIGUE corriendo + escribe
+      # worldcup_calibration_monitor.txt (+ su estado); sin TELEGRAM_* env el dispatcher fail-softea.
+      - name: Calibration monitor (report only — Telegram silenciado; soft-fail)
         continue-on-error: true
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python analysis/worldcup/worldcup_calibration_monitor.py
           echo "----- calibration monitor -----"

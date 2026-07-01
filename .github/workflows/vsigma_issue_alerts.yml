@@ -86,12 +86,12 @@ jobs:
           fi
           gh issue create --title "$TITLE" --body-file "$BODY_FILE" --label vsigma-alert
 
-      - name: Telegram notify (solo BROKEN nuevo)
-        if: always()
+      # Telegram POST SILENCIADO (gobernanza 2026-07-01: al canal SOLO predicciones WC + watchdog).
+      # Alerta de salud del PIPELINE VIEJO. El GitHub issue (pasos anteriores) SIGUE creándose;
+      # solo se desactiva el POST a Telegram. Re-activar = quitar `if: false` y re-añadir el env.
+      - name: Telegram notify (solo BROKEN nuevo) (SILENCIADO)
+        if: false
         shell: bash
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           F="data/processed/today/${VSIGMA_DATE}"
           NOTIFY="$(cat "$F/vsigma_issue_alert_notify_required.txt" 2>/dev/null || echo false)"

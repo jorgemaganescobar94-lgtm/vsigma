@@ -2,7 +2,7 @@
 
 **Fecha:** 2026-07-01 · **Contexto:** decisión EXPLÍCITA de Jorge de shippar un modelo *full-data*
 que ingiere TODAS las features disponibles en la predicción 1X2/goles mostrada, wire vivo
-**reversible**, sabiendo que **MIDE PEOR**. Este documento deja constancia, por predicción, de
+**reversible**. Empezó ~1% peor; con L1 (2026-07-01) **iguala al ensemble/L3**. Este documento deja constancia, por predicción, de
 exactamente qué datos la alimentan hoy, y marca honestamente qué features son nulas/redundantes.
 **No se afirma mayor precisión.** Read-only / aislado / cero mercado.
 

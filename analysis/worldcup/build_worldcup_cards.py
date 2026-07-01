@@ -329,7 +329,7 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
         ctxmod = None
 
     # FULL_DATA_LIVE: modelo full-data (ingiere TODAS las features point-in-time) como BASE 1X2/goles
-    # mostrada, ENCADENANDO contexto/bajas sobre él. Decisión EXPLÍCITA de Jorge (sabe que MIDE PEOR).
+    # mostrada, ENCADENANDO contexto/bajas sobre él. Decisión EXPLÍCITA de Jorge (con L1 IGUALA al ensemble).
     # our_*/mx_*/ens_* se preservan (sombra + rollback). SOFT: sin módulo/artefacto o fd None -> sin
     # fd_* -> reversa EXACTA al ensemble (Δ=0). NO afirma mayor precisión.
     ffdm = None
@@ -582,7 +582,7 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
                 rec.update({"fd_home": fdp["fd_home"], "fd_draw": fdp["fd_draw"], "fd_away": fdp["fd_away"],
                             "fd_xg_home": fdp["fd_xg_home"], "fd_xg_away": fdp["fd_xg_away"]})
                 out(f"    [FULL-DATA] (ingiere {fdp['n_features']} features; {fdp['n_missing']} imputadas; "
-                    f"MIDE PEOR que L3/ensemble — decisión explícita, sin claim de precisión): "
+                    f"iguala al ensemble; NO más preciso (decisión de usar todo el dato)): "
                     f"{home} {fdp['fd_home']*100:4.1f}%  Draw {fdp['fd_draw']*100:4.1f}%  "
                     f"{away} {fdp['fd_away']*100:4.1f}%   | exp goals {fdp['fd_xg_home']}-{fdp['fd_xg_away']}")
                 # A/B aislado: full-data vs ensemble (base mostrada si el flag estuviera off). Soft.
