@@ -328,6 +328,18 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
         print(f"context_shadow unavailable: {type(e).__name__}: {e}")
         ctxmod = None
 
+    # FULL_DATA_LIVE: modelo full-data (ingiere TODAS las features point-in-time) como BASE 1X2/goles
+    # mostrada, ENCADENANDO contexto/bajas sobre él. Decisión EXPLÍCITA de Jorge (sabe que MIDE PEOR).
+    # our_*/mx_*/ens_* se preservan (sombra + rollback). SOFT: sin módulo/artefacto o fd None -> sin
+    # fd_* -> reversa EXACTA al ensemble (Δ=0). NO afirma mayor precisión.
+    ffdm = None
+    try:
+        import worldcup_full_data_model as ffdm  # noqa: E402
+    except Exception as e:  # noqa: BLE001
+        print(f"full_data_model unavailable: {type(e).__name__}: {e}")
+        ffdm = None
+    fd_ab_rows = []   # A/B aislado full-data vs ensemble (log dedicado; NO toca el log de producción)
+
     # standings -> team context
     ctx = {}
     st = []
@@ -553,12 +565,44 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
                 out(f"    [ENSEMBLE 1X2] (media 50/50 mx+L3; goles=L3): "
                     f"{home} {eb[0]*100:4.1f}%  Draw {eb[1]*100:4.1f}%  {away} {eb[2]*100:4.1f}%")
 
+        # ---- FULL-DATA (fd_*): modelo que ingiere TODAS las features point-in-time como BASE 1X2/goles.
+        # Solo predicciones frescas NS pre-KO (mismo lock-at-KO que mx/ens). Necesita la salida L3 (our_*)
+        # como feature de fuerza. our_*/mx_*/ens_* NO se tocan. SOFT: fd None / flag off -> sin fd_* ->
+        # el picker de contexto/lesiones cae a ens_* EXACTO (Δ=0). KNOWN WORSE, sin claim de precisión.
+        if (ffdm is not None and getattr(ffdm, "FULL_DATA_LIVE", False)
+                and (pre_ko_pred or cached is None) and pd.notna(rec.get("our_home"))):
+            hid = (f.get("teams", {}).get("home") or {}).get("id")
+            aid = (f.get("teams", {}).get("away") or {}).get("id")
+            fdp = None
+            if hid is not None and aid is not None:
+                fdp = ffdm.predict(int(hid), int(aid), (ko or "")[:10], 1,
+                                   rec.get("our_home"), rec.get("our_draw"), rec.get("our_away"),
+                                   rec.get("our_xg_home"), rec.get("our_xg_away"))
+            if fdp is not None:
+                rec.update({"fd_home": fdp["fd_home"], "fd_draw": fdp["fd_draw"], "fd_away": fdp["fd_away"],
+                            "fd_xg_home": fdp["fd_xg_home"], "fd_xg_away": fdp["fd_xg_away"]})
+                out(f"    [FULL-DATA] (ingiere {fdp['n_features']} features; {fdp['n_missing']} imputadas; "
+                    f"MIDE PEOR que L3/ensemble — decisión explícita, sin claim de precisión): "
+                    f"{home} {fdp['fd_home']*100:4.1f}%  Draw {fdp['fd_draw']*100:4.1f}%  "
+                    f"{away} {fdp['fd_away']*100:4.1f}%   | exp goals {fdp['fd_xg_home']}-{fdp['fd_xg_away']}")
+                # A/B aislado: full-data vs ensemble (base mostrada si el flag estuviera off). Soft.
+                if pd.notna(rec.get("ens_home")):
+                    fd_ab_rows.append({
+                        "fixture_id": int(fid), "kickoff_utc": ko, "home": home, "away": away,
+                        "fd_home": fdp["fd_home"], "fd_draw": fdp["fd_draw"], "fd_away": fdp["fd_away"],
+                        "ens_home": rec.get("ens_home"), "ens_draw": rec.get("ens_draw"),
+                        "ens_away": rec.get("ens_away"),
+                        "n_features": fdp["n_features"], "n_missing": fdp["n_missing"]})
+
         # ---- CONTEXTO EN VIVO encadenado SOBRE el motor mostrado (ens_* si existe, si no mx_*, si no L3).
         # El escenario de grupo mueve el xG/1X2 MOSTRADO por delta-Poisson (misma mecánica que las
         # bajas). Multiplicador 1.0 (trivial/knockout) -> None -> reversa exacta al motor. our_*/mx_*/ens_*
         # NO se tocan. CONTEXT_LIVE=False -> no ctx_* -> cae al motor base exacto.
         if CONTEXT_LIVE:
-            if pd.notna(rec.get("ens_home")):
+            if pd.notna(rec.get("fd_home")):                 # full-data base (si FULL_DATA_LIVE)
+                cb = (rec.get("fd_home"), rec.get("fd_draw"), rec.get("fd_away"))
+                cbxh, cbxa = rec.get("fd_xg_home"), rec.get("fd_xg_away")
+            elif pd.notna(rec.get("ens_home")):
                 cb = (rec.get("ens_home"), rec.get("ens_draw"), rec.get("ens_away"))
                 cbxh, cbxa = rec.get("ens_xg_home"), rec.get("ens_xg_away")
             elif pd.notna(rec.get("mx_home")):
@@ -618,6 +662,9 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
             if pd.notna(rec.get("ctx_home")):
                 bph = (rec.get("ctx_home"), rec.get("ctx_draw"), rec.get("ctx_away"))
                 bxh, bxa = rec.get("ctx_xg_home"), rec.get("ctx_xg_away")
+            elif pd.notna(rec.get("fd_home")):               # full-data base (si FULL_DATA_LIVE)
+                bph = (rec.get("fd_home"), rec.get("fd_draw"), rec.get("fd_away"))
+                bxh, bxa = rec.get("fd_xg_home"), rec.get("fd_xg_away")
             elif pd.notna(rec.get("ens_home")):
                 bph = (rec.get("ens_home"), rec.get("ens_draw"), rec.get("ens_away"))
                 bxh, bxa = rec.get("ens_xg_home"), rec.get("ens_xg_away")
@@ -684,6 +731,27 @@ def main(date_from, date_to, max_fixtures, within_hours=None, lineups_hours=4.0)
             out(f"INJURIES_LIVE: {len(inj_log_rows)} fixture(s) ajustados por bajas -> {inj_log_path.name}")
         except Exception as e:  # noqa: BLE001
             print(f"injuries_live log soft-fail: {type(e).__name__}: {e}")
+
+    # FULL_DATA A/B (aislado): full-data vs ensemble por fixture. Log dedicado; el scorer read-only
+    # lo liquida contra el resultado. NO toca el log de producción. Soft.
+    if fd_ab_rows:
+        try:
+            fd_ab_path = OUT_DIR / "worldcup_full_data_ab_log.csv"
+            merged = {}
+            if fd_ab_path.exists():
+                old = pd.read_csv(fd_ab_path)
+                for _, rr in old.iterrows():
+                    merged[int(rr["fixture_id"])] = rr.to_dict()
+            for row in fd_ab_rows:
+                merged[int(row["fixture_id"])] = row
+            cols = list(fd_ab_rows[0].keys())
+            fd_df = pd.DataFrame([merged[k] for k in merged])
+            ordered = cols + [c for c in fd_df.columns if c not in cols]
+            fd_df[ordered].to_csv(fd_ab_path, index=False)
+            out(f"FULL_DATA A/B: {len(fd_ab_rows)} fixture(s) logueados (full-data vs ensemble) "
+                f"-> {fd_ab_path.name}")
+        except Exception as e:  # noqa: BLE001
+            print(f"full_data A/B log soft-fail: {type(e).__name__}: {e}")
 
     api1 = true_quota()
     spend = (api1 - api0) if (api0 is not None and api1 is not None) else "n/a"
