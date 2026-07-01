@@ -1,2 +1,2 @@
 target_date,generated_at,rows_reviewed,promoted_rows,blocked_rows,quarantine_rows,promotion_status_counts,next_action,auto_apply,production_change
-2026-07-01,2026-07-01T11:54:01+01:00,0,0,0,0,none,No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.,NO,NO
+2026-07-01,2026-07-01T20:16:03+01:00,152,0,0,0,NOT_TRUSTED_NO_PROMOTION=152,No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.,NO,NO

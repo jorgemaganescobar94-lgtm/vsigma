@@ -1,2 +1,2 @@
 target_date,generated_at,queue_rows,priority_counts,scoring_needed_counts,source_gap_status,next_action,auto_apply,production_change
-2026-07-01,2026-07-01T11:54:01+01:00,0,none,none,MISSING_SCORED_ROW,Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.,NO,NO
+2026-07-01,2026-07-01T20:16:03+01:00,0,none,none,MISSING_SCORED_ROW,Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.,NO,NO
