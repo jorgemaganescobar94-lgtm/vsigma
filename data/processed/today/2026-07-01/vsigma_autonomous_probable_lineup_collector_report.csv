@@ -1,2 +1,2 @@
 target_date,generated_at,fixtures_reviewed,search_provider,urls_discovered,rows_extracted,status_counts,source_counts,auto_apply,production_change
-2026-07-01,2026-07-01T22:06:03+01:00,1,SERPAPI;SERPAPI_ERROR,1,0,IRRELEVANT_FIXTURE_PAGE=1,rotowire=1,NO,NO
+2026-07-01,2026-07-01T23:46:55+01:00,1,SERPAPI;SERPAPI_ERROR;SERPAPI_SEARCH_FAILED,1,0,IRRELEVANT_FIXTURE_PAGE=1,rotowire=1,NO,NO

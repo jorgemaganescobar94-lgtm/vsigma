@@ -1,2 +1,2 @@
 target_date,generated_at,overall_status,board_status,mismatch_count,missing_core_count,trigger_date_counts,next_action,auto_apply,production_change
-2026-07-01,2026-07-01T22:06:03+01:00,OK,daily_board_md=OK; daily_board_csv=OK,0,0,2026-07-01=2,All dated artifacts/triggers reviewed by guard are coherent.,NO,NO
+2026-07-01,2026-07-01T23:46:55+01:00,OK,daily_board_md=OK; daily_board_csv=OK,0,0,2026-07-01=2,All dated artifacts/triggers reviewed by guard are coherent.,NO,NO

@@ -1,7 +1,7 @@
 # vSIGMA Autonomous Probable Lineup Collector - 2026-07-01
 
 ## Summary
-- search_provider: SERPAPI;SERPAPI_ERROR
+- search_provider: SERPAPI;SERPAPI_ERROR;SERPAPI_SEARCH_FAILED
 - rows_seen: 1
 - urls_discovered: 1
 - rows_extracted: 0
