@@ -51,9 +51,17 @@ CLUB_FORM_FEATURE = True
 ARTIFACT = HERE / "worldcup_full_data_artifact.json"                 # base (26 feats)
 ARTIFACT_CF = HERE / "worldcup_full_data_artifact_clubform.json"     # +club_form (27 feats)
 ARTIFACT_EXTRA = HERE / "worldcup_full_data_artifact_extra.json"     # +intl-player-agg (31 feats)
-CLUB_FORM_CSV = HERE / "worldcup_club_form.csv"                      # per-team club_form (0 API)
+CLUB_FORM_CSV = HERE / "worldcup_club_form.csv"                      # single-season 2025 club_form
+CLUB_FORM_MULTI_CSV = HERE / "worldcup_club_form_multiseason.csv"    # 2025/2024/2023 recency-weighted
 INTL_AGG_CSV = HERE / "worldcup_intl_player_agg.csv"                # per-team-match player aggregates
 CLUB_FORM_DIFF = "club_form_diff"
+
+# ---- CLUB_FORM_MULTISEASON: club_form_diff uses the MULTI-season (2025/2024/2023, recency-weighted)
+# table instead of the single 2025 snapshot. 2023 falls in burn-in (<2024) -> the feature is now
+# TRAINABLE (unlike the inert player aggregates). Data-source flag: shipped True; flip to False (single
+# season) requires a retrain to be exact. The EXACT runtime revert of the whole feature stays
+# CLUB_FORM_FEATURE (off -> 26-feat base, delta 0).
+CLUB_FORM_MULTISEASON = True
 
 # ---- EXTRA_PLAYER_AGG: Jorge's maximalist decision — ingest the per-match international player
 # aggregates (duels/dribbles/tackles/interceptions rolled to team level) as extra features, NO gate.
@@ -335,9 +343,11 @@ class Sources:
 
     def _load_club_form(self):
         import pandas as pd
-        if not CLUB_FORM_CSV.exists():
+        # prefer the multi-season table when enabled and present; else the single 2025 snapshot
+        path = CLUB_FORM_MULTI_CSV if (CLUB_FORM_MULTISEASON and CLUB_FORM_MULTI_CSV.exists()) else CLUB_FORM_CSV
+        if not path.exists():
             return {}
-        cf = pd.read_csv(CLUB_FORM_CSV)
+        cf = pd.read_csv(path)
         out = {}
         for r in cf.itertuples(index=False):
             v = getattr(r, "club_form", None)
@@ -669,7 +679,7 @@ def train_all():
         print(f"VERDICT: {verdict}")
 
     ab(base, cf, "base(26)", "+club_form(27)",
-       "club_form vs base (INDICATIVE, favourable to club_form: 2025-snapshot look-ahead)")
+       "club_form(multi-season 25/24/23) vs base (INDICATIVE: static per-team value -> mild look-ahead on OOS)")
     ab(cf, ex, "+club_form(27)", "+player-agg(31)",
        "intl player-agg vs club_form — 0 burn-in coverage so EXPECTED INERT")
     print("\nReal validation is LIVE only (worldcup_full_data_ab_scorer). NO precision claim.")

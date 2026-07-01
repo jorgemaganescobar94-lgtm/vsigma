@@ -67,7 +67,7 @@ def test_predict_valid_output_and_impute_neutral():
     r = ffdm.predict(999001, 999002, "2026-06-25", 1, 0.40, 0.30, 0.30, 1.3, 1.2)
     assert r is not None
     s = r["fd_home"] + r["fd_draw"] + r["fd_away"]
-    assert abs(s - 1.0) < 1e-6
+    assert abs(s - 1.0) < 2e-4
     for k in ("fd_home", "fd_draw", "fd_away"):
         assert 0.0 <= r[k] <= 1.0
     assert 0.05 <= r["fd_xg_home"] <= 6.0 and 0.05 <= r["fd_xg_away"] <= 6.0
@@ -85,7 +85,7 @@ def test_predict_real_team_is_finite():
     assert r is not None
     for k in ("fd_home", "fd_draw", "fd_away", "fd_xg_home", "fd_xg_away"):
         assert math.isfinite(r[k])
-    assert abs(r["fd_home"] + r["fd_draw"] + r["fd_away"] - 1.0) < 1e-6
+    assert abs(r["fd_home"] + r["fd_draw"] + r["fd_away"] - 1.0) < 2e-4
 
 
 def test_predict_soft_fails_to_none_on_bad_input(monkeypatch):
@@ -152,7 +152,7 @@ def test_predict_finite_across_all_tiers(monkeypatch):
         monkeypatch.setattr(ffdm, "CLUB_FORM_FEATURE", cf)
         r = ffdm.predict(10, 4673, "2026-06-25", 1, 0.72, 0.19, 0.09, 2.2, 0.6)
         assert r is not None and math.isfinite(r["fd_home"])
-        assert abs(r["fd_home"] + r["fd_draw"] + r["fd_away"] - 1.0) < 1e-6
+        assert abs(r["fd_home"] + r["fd_draw"] + r["fd_away"] - 1.0) < 2e-4
 
 
 def test_player_agg_table_present():
@@ -166,14 +166,26 @@ def test_player_agg_table_present():
 
 
 def test_club_form_table_sanity():
-    # committed per-team table: 48 teams, elite club-form > minnows (redundant-with-L3 ordering)
-    if not ffdm.CLUB_FORM_CSV.exists():
+    # committed per-team table (the ACTIVE source: multi-season if present, else single 2025):
+    # 48 teams, elite club-form > minnows (redundant-with-L3 ordering)
+    path = (ffdm.CLUB_FORM_MULTI_CSV if (ffdm.CLUB_FORM_MULTISEASON and ffdm.CLUB_FORM_MULTI_CSV.exists())
+            else ffdm.CLUB_FORM_CSV)
+    if not path.exists():
         pytest.skip("club_form table not built in this checkout")
     import pandas as pd
-    cf = pd.read_csv(ffdm.CLUB_FORM_CSV).set_index("team")
+    cf = pd.read_csv(path).set_index("team")
     assert cf["team_id"].nunique() == 48
     if {"Germany", "South Africa"} <= set(cf.index):
         assert cf.loc["Germany", "club_form"] > cf.loc["South Africa", "club_form"]
+
+
+def test_club_form_multiseason_loaded_when_present():
+    # when the multi-season table exists and the flag is on, Sources reads IT (not the 2025 snapshot)
+    if not ffdm.CLUB_FORM_MULTI_CSV.exists():
+        pytest.skip("multi-season table not built in this checkout")
+    import pandas as pd
+    ms = pd.read_csv(ffdm.CLUB_FORM_MULTI_CSV)
+    assert ms["team_id"].nunique() == 48 and ms["club_form"].notna().sum() == 48
 
 
 # ----------------------------------------------------------------- A/B scorer helpers

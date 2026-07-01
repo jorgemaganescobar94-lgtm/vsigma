@@ -78,7 +78,7 @@ feature studies, new-fields backtest 2026-07-01):
 | 24 | `fouls_diff` | caché stats | **NULA** |
 | 25 | `possession_diff` | caché stats + stats_raw | **NULA** (estilo, ya probado) |
 | 26 | `corners_diff` | caché stats + stats_raw | **NULA** para 1X2 |
-| 27 | `club_form_diff` (opcional, flag `CLUB_FORM_FEATURE`) | `worldcup_club_form.csv` (forma de club 2025 de los jugadores, normalizada por tier de liga) | **REDUNDANTE con L3** — empeora ~0.0008 aun en test favorable (ver abajo) |
+| 27 | `club_form_diff` (opcional, flag `CLUB_FORM_FEATURE`) | `worldcup_club_form_multiseason.csv` (forma de club **2025/2024/2023** ponderada por recencia, tier de liga) | **REDUNDANTE con L3** — empeora ~0.0009 aun en test favorable (ver abajo) |
 
 | 28 | `duels_won_diff` (opcional, flag `EXTRA_PLAYER_AGG`) | agregado por partido de `/fixtures/players` (rolling) | **INERTE** — 0 cobertura en burn-in → peso 0 |
 | 29 | `dribbles_success_diff` | idem | **INERTE** (0 burn-in) |
@@ -106,7 +106,7 @@ constancia de qué aporta cada una.
 ## A/B honesto (OOS internacionales 2024-2025, N=2680)
 
 - **1X2 logloss:** full-data-26 **0.9273** vs L3 **0.9178** → Δ(L3−fd) = **−0.0095** IC95 [−0.0172,−0.0018], p(fd mejor)=0.01.
-- **club_form (marginal 26 vs 27):** base(26) **0.9273** vs +club_form(27) **0.9281** → Δ(base−clubform) = **−0.0008** IC95 [−0.0015,−0.0001], p=0.01 → **club_form REDUNDANTE/peor** aun en el test *favorable* (usa el snapshot 2025 con look-ahead leve; no es backtesteable limpio → validación real solo EN VIVO). Confirma el patrón del squad-quality.
+- **club_form MULTI-temporada (marginal 26 vs 27):** base(26) **0.9273** vs +club_form(27) **0.9282** → Δ = **−0.0009** IC95 [−0.0016,−0.0002], p=0.01 → **REDUNDANTE/peor** aun con las 3 temporadas (2025/2024/2023, 2645 calls reales, 48/48 selecciones). 2023 cae en burn-in → entrenable, pero **no aporta señal** sobre el L3. Anti-leakage EN VIVO (todas < Mundial 2026); el A/B OOS es indicativo (valor estático por equipo → look-ahead leve). Confirma el patrón del squad-quality.
 - **intl player-agg (marginal 27 vs 31):** +club_form(27) **0.9281** vs +player-agg(31) **0.9281** → Δ = **−0.0000** IC95 [−0.0000, +0.0000] → **INERTE** (0 cobertura burn-in → peso 0; entran pero no cambian nada). Coste honesto de la ingestión maximalista sin gate.
 - **Veredicto:** full-data **PEOR** de forma significativa (~1%), como se esperaba; club_form redundante; player-agg inerte. **NUNCA se afirma mayor precisión.** Regularización fuerte
   evita que las features nulas lo revienten, pero no puede crear señal donde no la hay.
