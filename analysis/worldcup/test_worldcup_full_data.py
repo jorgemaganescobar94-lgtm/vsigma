@@ -22,15 +22,23 @@ import build_worldcup_full_card as fc  # noqa: E402
 def test_feature_list_count_and_uniqueness():
     assert len(ffdm.FEATURES) == 26
     assert len(ffdm.FEATURES_CF) == 27 and ffdm.FEATURES_CF[-1] == "club_form_diff"
-    assert len(set(ffdm.FEATURES_CF)) == len(ffdm.FEATURES_CF)   # no dups
+    assert len(ffdm.FEATURES_EXTRA) == 31                       # +4 intl player-agg
+    assert ffdm.FEATURES_EXTRA[:27] == ffdm.FEATURES_CF          # extra is a superset
+    assert len(set(ffdm.FEATURES_EXTRA)) == len(ffdm.FEATURES_EXTRA)   # no dups
     for k in ("l3_logit_h", "l3_xg_h", "neutral", "team_rating_diff"):
         assert k in ffdm.FEATURES
     for s in ffdm.STAT_FIELDS:
         assert f"{s}_diff" in ffdm.FEATURES
+    for x in ffdm.EXTRA_FIELDS:
+        assert f"{x}_diff" in ffdm.FEATURES_EXTRA
 
 
-def test_active_features_follow_flag(monkeypatch):
+def test_active_features_follow_flags(monkeypatch):
+    # 3-tier: extra(31) > club_form(27) > base(26); each flag reverts EXACTLY down a tier
+    monkeypatch.setattr(ffdm, "EXTRA_PLAYER_AGG", True)
     monkeypatch.setattr(ffdm, "CLUB_FORM_FEATURE", True)
+    assert ffdm.active_features() == ffdm.FEATURES_EXTRA and len(ffdm.active_features()) == 31
+    monkeypatch.setattr(ffdm, "EXTRA_PLAYER_AGG", False)
     assert ffdm.active_features() == ffdm.FEATURES_CF and len(ffdm.active_features()) == 27
     monkeypatch.setattr(ffdm, "CLUB_FORM_FEATURE", False)
     assert ffdm.active_features() == list(ffdm.FEATURES) and len(ffdm.active_features()) == 26
@@ -124,24 +132,37 @@ def test_ctx_and_inj_still_outrank_fd():
 
 
 # ----------------------------------------------------------------- club_form feature
-def test_club_form_flag_selects_artifact(monkeypatch):
+def test_flags_select_artifact_tiers(monkeypatch):
+    monkeypatch.setattr(ffdm, "EXTRA_PLAYER_AGG", False)
     monkeypatch.setattr(ffdm, "CLUB_FORM_FEATURE", False)
     assert ffdm.active_artifact_path() == ffdm.ARTIFACT
     monkeypatch.setattr(ffdm, "CLUB_FORM_FEATURE", True)
-    # with the flag on, the club_form artifact is used IF it exists (else safe fallback to base)
-    expected = ffdm.ARTIFACT_CF if ffdm.ARTIFACT_CF.exists() else ffdm.ARTIFACT
-    assert ffdm.active_artifact_path() == expected
+    assert ffdm.active_artifact_path() == (ffdm.ARTIFACT_CF if ffdm.ARTIFACT_CF.exists() else ffdm.ARTIFACT)
+    monkeypatch.setattr(ffdm, "EXTRA_PLAYER_AGG", True)
+    assert ffdm.active_artifact_path() == (ffdm.ARTIFACT_EXTRA if ffdm.ARTIFACT_EXTRA.exists()
+                                           else ffdm.ARTIFACT_CF if ffdm.ARTIFACT_CF.exists() else ffdm.ARTIFACT)
 
 
-def test_club_form_predict_finite_both_flag_states(monkeypatch):
+def test_predict_finite_across_all_tiers(monkeypatch):
     if not ffdm.ARTIFACT.exists():
         pytest.skip("artifact not trained in this checkout")
     import math
-    for flag in (True, False):
-        monkeypatch.setattr(ffdm, "CLUB_FORM_FEATURE", flag)
+    for extra, cf in ((True, True), (False, True), (False, False)):
+        monkeypatch.setattr(ffdm, "EXTRA_PLAYER_AGG", extra)
+        monkeypatch.setattr(ffdm, "CLUB_FORM_FEATURE", cf)
         r = ffdm.predict(10, 4673, "2026-06-25", 1, 0.72, 0.19, 0.09, 2.2, 0.6)
         assert r is not None and math.isfinite(r["fd_home"])
         assert abs(r["fd_home"] + r["fd_draw"] + r["fd_away"] - 1.0) < 1e-6
+
+
+def test_player_agg_table_present():
+    # committed per-team-match aggregates: the populated fields exist for downstream rolling
+    if not ffdm.INTL_AGG_CSV.exists():
+        pytest.skip("intl player-agg table not built in this checkout")
+    import pandas as pd
+    df = pd.read_csv(ffdm.INTL_AGG_CSV)
+    for x in ffdm.EXTRA_FIELDS:
+        assert x in df.columns
 
 
 def test_club_form_table_sanity():

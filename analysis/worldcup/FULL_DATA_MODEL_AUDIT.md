@@ -80,6 +80,17 @@ feature studies, new-fields backtest 2026-07-01):
 | 26 | `corners_diff` | caché stats + stats_raw | **NULA** para 1X2 |
 | 27 | `club_form_diff` (opcional, flag `CLUB_FORM_FEATURE`) | `worldcup_club_form.csv` (forma de club 2025 de los jugadores, normalizada por tier de liga) | **REDUNDANTE con L3** — empeora ~0.0008 aun en test favorable (ver abajo) |
 
+| 28 | `duels_won_diff` (opcional, flag `EXTRA_PLAYER_AGG`) | agregado por partido de `/fixtures/players` (rolling) | **INERTE** — 0 cobertura en burn-in → peso 0 |
+| 29 | `dribbles_success_diff` | idem | **INERTE** (0 burn-in) |
+| 30 | `tackles_total_diff` | idem | **INERTE** (0 burn-in) |
+| 31 | `interceptions_diff` | idem | **INERTE** (0 burn-in) |
+
+**intl player-agg (features 28-31):** agregados por partido internacional (duelos/regates/entradas/
+intercepciones) sumados a total por equipo, rolling point-in-time. Coste API 0 (re-parseo caché, 152
+fixtures). **Honesto: TODOS los datos son 2024+ (0 en burn-in <2024)** → el modelo no puede aprender
+un peso → entran **inertes (peso ≈0, sin efecto)**. Añadidos por decisión maximalista SIN gate.
+Reversible: `EXTRA_PLAYER_AGG=False` → vuelve al set de 27 EXACTAMENTE.
+
 **club_form (feature 27):** fuerza de selección desde la forma de club 2025 de sus jugadores
 (goles+asistencias/90 + rating, ponderado por minutos, normalizado por tier de liga). Coste API 0
 (re-parseo del caché, 100% cobertura de las 48 plantillas). Anti-leakage EN VIVO (temporada 2025 <
@@ -96,7 +107,8 @@ constancia de qué aporta cada una.
 
 - **1X2 logloss:** full-data-26 **0.9273** vs L3 **0.9178** → Δ(L3−fd) = **−0.0095** IC95 [−0.0172,−0.0018], p(fd mejor)=0.01.
 - **club_form (marginal 26 vs 27):** base(26) **0.9273** vs +club_form(27) **0.9281** → Δ(base−clubform) = **−0.0008** IC95 [−0.0015,−0.0001], p=0.01 → **club_form REDUNDANTE/peor** aun en el test *favorable* (usa el snapshot 2025 con look-ahead leve; no es backtesteable limpio → validación real solo EN VIVO). Confirma el patrón del squad-quality.
-- **Veredicto:** full-data **PEOR** de forma significativa (~1%), como se esperaba; club_form no aporta. Regularización fuerte
+- **intl player-agg (marginal 27 vs 31):** +club_form(27) **0.9281** vs +player-agg(31) **0.9281** → Δ = **−0.0000** IC95 [−0.0000, +0.0000] → **INERTE** (0 cobertura burn-in → peso 0; entran pero no cambian nada). Coste honesto de la ingestión maximalista sin gate.
+- **Veredicto:** full-data **PEOR** de forma significativa (~1%), como se esperaba; club_form redundante; player-agg inerte. **NUNCA se afirma mayor precisión.** Regularización fuerte
   evita que las features nulas lo revienten, pero no puede crear señal donde no la hay.
 - El marcador vivo `worldcup_full_data_ab_scorer.py` sigue el A/B fd vs ensemble sobre los partidos WC
   liquidados; si full-data queda por detrás (esperado), es la base para revertir `FULL_DATA_LIVE=False`.

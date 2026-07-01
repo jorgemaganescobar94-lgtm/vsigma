@@ -50,8 +50,18 @@ CLUB_FORM_FEATURE = True
 
 ARTIFACT = HERE / "worldcup_full_data_artifact.json"                 # base (26 feats)
 ARTIFACT_CF = HERE / "worldcup_full_data_artifact_clubform.json"     # +club_form (27 feats)
+ARTIFACT_EXTRA = HERE / "worldcup_full_data_artifact_extra.json"     # +intl-player-agg (31 feats)
 CLUB_FORM_CSV = HERE / "worldcup_club_form.csv"                      # per-team club_form (0 API)
+INTL_AGG_CSV = HERE / "worldcup_intl_player_agg.csv"                # per-team-match player aggregates
 CLUB_FORM_DIFF = "club_form_diff"
+
+# ---- EXTRA_PLAYER_AGG: Jorge's maximalist decision — ingest the per-match international player
+# aggregates (duels/dribbles/tackles/interceptions rolled to team level) as extra features, NO gate.
+# HONEST: these have ZERO burn-in (<2024) coverage in the cache, so the model cannot learn a weight
+# for them (they enter ~inert, weight ~0). Kept anyway by explicit decision. REVERSIBLE via a third
+# artifact: True -> 31-feat artifact; False -> falls back to the club_form/base set EXACTLY (delta 0).
+EXTRA_PLAYER_AGG = True
+EXTRA_FIELDS = ["duels_won", "dribbles_success", "tackles_total", "interceptions"]
 CACHE = ROOT / "data" / "cache" / "api_football_cache.sqlite3"
 IR = HERE / "international_results.csv"
 PM = HERE / "national_elo_layer3_permatch.csv"
@@ -87,14 +97,23 @@ FEATURES = (
 # club_form_diff is the OPTIONAL 27th feature (behind CLUB_FORM_FEATURE). Its own artifact is trained
 # on FEATURES + [CLUB_FORM_DIFF]; when the flag is off the model uses the base 26-feature artifact.
 FEATURES_CF = FEATURES + [CLUB_FORM_DIFF]
+# +4 international per-match player aggregates (behind EXTRA_PLAYER_AGG). Reversible via a 3rd artifact.
+FEATURES_EXTRA = FEATURES_CF + [f"{x}_diff" for x in EXTRA_FIELDS]
 
 
 def active_features():
+    if EXTRA_PLAYER_AGG:
+        return list(FEATURES_EXTRA)
     return FEATURES_CF if CLUB_FORM_FEATURE else list(FEATURES)
 
 
 def active_artifact_path():
-    return ARTIFACT_CF if (CLUB_FORM_FEATURE and ARTIFACT_CF.exists()) else ARTIFACT
+    """Most-inclusive ENABLED artifact that exists on disk; falls back down so predict never breaks."""
+    if EXTRA_PLAYER_AGG and ARTIFACT_EXTRA.exists():
+        return ARTIFACT_EXTRA
+    if CLUB_FORM_FEATURE and ARTIFACT_CF.exists():
+        return ARTIFACT_CF
+    return ARTIFACT
 
 
 def _num(v):
@@ -156,6 +175,8 @@ class Sources:
         self.squad = self._load_squad()
         # club_form per team_id (from players' 2025 club season, league-tier normalized; 0 API)
         self.club_form = self._load_club_form()
+        # per-team-match international player aggregates (duels/dribbles/tackles/interc.) -> series
+        self.agg_series = self._load_intl_agg()
 
     # -------- stats --------
     def _load_stats(self):
@@ -331,6 +352,37 @@ class Sources:
         h = self.club_form.get(int(home_id)); a = self.club_form.get(int(away_id))
         return (h - a) if (h is not None and a is not None) else None
 
+    def _load_intl_agg(self):
+        """{field: {tid: (dates, vals)}} from worldcup_intl_player_agg.csv (per team-match totals)."""
+        import pandas as pd
+        series = {f: defaultdict(list) for f in EXTRA_FIELDS}
+        if not INTL_AGG_CSV.exists():
+            return {f: {} for f in EXTRA_FIELDS}
+        df = pd.read_csv(INTL_AGG_CSV)
+        df["date"] = pd.to_datetime(df["date"], errors="coerce")
+        for r in df.dropna(subset=["date", "team_id"]).itertuples(index=False):
+            when = np.datetime64(r.date)
+            for f in EXTRA_FIELDS:
+                v = getattr(r, f, None)
+                if v is not None and str(v) != "nan":
+                    try:
+                        series[f][int(r.team_id)].append((when, float(v)))
+                    except Exception:
+                        pass
+        out = {}
+        for f, by in series.items():
+            out[f] = {}
+            for tid, lst in by.items():
+                lst.sort(key=lambda x: x[0])
+                out[f][tid] = (np.array([x[0] for x in lst], "datetime64[ns]"),
+                               np.array([x[1] for x in lst], float))
+        return out
+
+    def intl_agg_diff(self, field, home_id, away_id, when):
+        h = self._decayed_past_mean(self.agg_series.get(field, {}), home_id, when)
+        a = self._decayed_past_mean(self.agg_series.get(field, {}), away_id, when)
+        return (h - a) if (h is not None and a is not None) else None
+
 
 # ============================================================ feature vector (raw, pre-standardise)
 def build_feature_vector(src, home_id, away_id, when, neutral,
@@ -368,6 +420,9 @@ def build_feature_vector(src, home_id, away_id, when, neutral,
         feat[f"{s}_diff"] = src.stat_diff(s, home_id, away_id, when)
     # club_form (optional 27th feature; always computed, only USED when the active artifact lists it)
     feat[CLUB_FORM_DIFF] = src.club_form_diff(home_id, away_id)
+    # international per-match player aggregates (optional extra features; 0 burn-in -> ~inert)
+    for x in EXTRA_FIELDS:
+        feat[f"{x}_diff"] = src.intl_agg_diff(x, home_id, away_id, when)
     missing = [k for k in active_features() if feat.get(k) is None]
     return feat, missing
 
@@ -511,9 +566,14 @@ def train(report=True, feats=None, out_path=None):
             v = feat.get(k)
             if v is not None:
                 raw[i, j] = v
-    # standardisation stats from BURN-IN only (no leakage from OOS)
-    mean = np.nanmean(raw[burn], axis=0)
-    std = np.nanstd(raw[burn], axis=0)
+    # standardisation stats from BURN-IN only (no target leakage). For features with NO burn-in
+    # coverage (e.g. the intl player aggregates, all 2024+), burn-in mean/std are degenerate; fall
+    # back to FULL-SAMPLE mean/std for SCALING ONLY (keeps live z in a sane range; not target info).
+    mean_b = np.nanmean(raw[burn], axis=0); std_b = np.nanstd(raw[burn], axis=0)
+    mean_f = np.nanmean(raw, axis=0); std_f = np.nanstd(raw, axis=0)
+    degen = ~(np.isfinite(std_b) & (std_b > 1e-9))
+    mean = np.where(degen, mean_f, mean_b)
+    std = np.where(degen, std_f, std_b)
     mean = np.where(np.isfinite(mean), mean, 0.0)
     std = np.where(np.isfinite(std) & (std > 1e-9), std, 1.0)
     Z = (np.where(np.isfinite(raw), raw, mean) - mean) / std   # impute-neutral then standardise
@@ -594,28 +654,39 @@ def train_all():
     import model_bakeoff_backtest as bo
     base = train(report=True, feats=list(FEATURES), out_path=ARTIFACT)
     cf = train(report=True, feats=list(FEATURES_CF), out_path=ARTIFACT_CF)
-    d = bo.ll_multi(base["fd_oos"], base["Yo"]) - bo.ll_multi(cf["fd_oos"], cf["Yo"])
-    lo, hi, p = bo.paired_boot(d)  # >0 => club_form model better than base
-    print("\n" + "=" * 92)
-    print("MARGINAL A/B — club_form (27 feats) vs base full-data (26 feats), OOS 1X2 logloss")
-    print("=" * 92)
-    print(f"base(26)={base['ll_fd']:.4f}   +club_form(27)={cf['ll_fd']:.4f}")
-    print(f"Delta(base - clubform)={d.mean():+.4f}  CI95[{lo:+.4f},{hi:+.4f}]  p(clubform better)={p:.2f}")
-    verdict = ("club_form ADDS signal (CI>0)" if lo > 0 else
-               "club_form WORSE (CI<0)" if hi < 0 else "NULL/redundant (CI cruza 0)")
-    print(f"VERDICT (INDICATIVE, favourable-to-clubform due to 2025-snapshot look-ahead): {verdict}")
-    print("Real validation is LIVE only (worldcup_full_data_ab_scorer). NO precision claim.")
+    ex = train(report=True, feats=list(FEATURES_EXTRA), out_path=ARTIFACT_EXTRA)
+
+    def ab(a, b, la, lb, note):
+        d = bo.ll_multi(a["fd_oos"], a["Yo"]) - bo.ll_multi(b["fd_oos"], b["Yo"])
+        lo, hi, p = bo.paired_boot(d)   # >0 => model b better than a
+        verdict = ("b ADDS signal (CI>0)" if lo > 0 else "b WORSE (CI<0)" if hi < 0
+                   else "NULL/redundant (CI cruza 0)")
+        print("\n" + "=" * 92)
+        print(f"MARGINAL A/B — {note}, OOS 1X2 logloss")
+        print("=" * 92)
+        print(f"{la}={a['ll_fd']:.4f}   {lb}={b['ll_fd']:.4f}")
+        print(f"Delta({la} - {lb})={d.mean():+.4f}  CI95[{lo:+.4f},{hi:+.4f}]  p({lb} better)={p:.2f}")
+        print(f"VERDICT: {verdict}")
+
+    ab(base, cf, "base(26)", "+club_form(27)",
+       "club_form vs base (INDICATIVE, favourable to club_form: 2025-snapshot look-ahead)")
+    ab(cf, ex, "+club_form(27)", "+player-agg(31)",
+       "intl player-agg vs club_form — 0 burn-in coverage so EXPECTED INERT")
+    print("\nReal validation is LIVE only (worldcup_full_data_ab_scorer). NO precision claim.")
 
 
 if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["train", "train-clubform", "train-all", "features", "predict-demo"])
+    ap.add_argument("cmd", choices=["train", "train-clubform", "train-extra", "train-all",
+                                    "features", "predict-demo"])
     a = ap.parse_args()
     if a.cmd == "train":
         train(feats=list(FEATURES), out_path=ARTIFACT)
     elif a.cmd == "train-clubform":
         train(feats=list(FEATURES_CF), out_path=ARTIFACT_CF)
+    elif a.cmd == "train-extra":
+        train(feats=list(FEATURES_EXTRA), out_path=ARTIFACT_EXTRA)
     elif a.cmd == "train-all":
         train_all()
     elif a.cmd == "features":
