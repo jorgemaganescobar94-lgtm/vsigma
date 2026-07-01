@@ -14,3 +14,6 @@ fixture_id,venue,kickoff_time,temperature,humidity,wind_speed,rain_probability,p
 1567306,Estadio Azteca,2026-07-01 01:00,,,,,,plantilla_kickoff,pendiente,pendiente
 1567307,Mercedes-Benz Stadium,2026-07-01 16:00,,,,,,plantilla_kickoff,pendiente,pendiente
 1567308,Lumen Field,2026-07-01 20:00,,,,,,plantilla_kickoff,pendiente,pendiente
+1562586,Levi's Stadium,2026-07-02 00:00,,,,,,plantilla_kickoff,pendiente,pendiente
+1567311,SoFi Stadium,2026-07-02 19:00,,,,,,plantilla_kickoff,pendiente,pendiente
+1567309,BMO Field,2026-07-02 23:00,,,,,,plantilla_kickoff,pendiente,pendiente

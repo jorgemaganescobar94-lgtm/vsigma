@@ -290,7 +290,7 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 135068,Emmanuel Agbadou,1501,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 22002,Ghislain Konan,1501,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 22149,Ibrahim Sangaré,1501,MID,,,,,,,,,,api_football_lineup_position,media,baja
-157997,Amad Diallo,1501,MID,,,,,,,,,,api_football_lineup_position,media,baja
+157997,Amad Diallo,1501,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 1642,Franck Kessié,1501,MID,,,,,,,,,,api_football_lineup_position,media,baja
 474591,Christ Inao Oulaï,1501,MID,,,,,,,,,,api_football_lineup_position,media,baja
 513776,Yan Diomande,1501,MID,,,,,,,,,,api_football_lineup_position,media,baja
@@ -674,15 +674,15 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 265782,David Møller Wolfe,1090,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 37127,Martin Ødegaard,1090,MID,,,,,,,,,,api_football_lineup_position,media,baja
 1934,Sander Berge,1090,MID,,,,,,,,,,api_football_lineup_position,media,baja
-39043,Fredrik Aursnes,1090,DEF,,,,,,,,,,api_football_lineup_position,media,baja
+39043,Fredrik Aursnes,1090,MID,,,,,,,,,,api_football_lineup_position,media,baja
 8492,Alexander Sørloth,1090,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 1100,Erling Haaland,1090,FWD,,,,,,,,,,api_football_lineup_position,media,baja
-314511,Antonio Nusa,1090,MID,,,,,,,,,,api_football_lineup_position,media,baja
+314511,Antonio Nusa,1090,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 39362,Marcus Pedersen,1090,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 39064,Patrick Berg,1090,MID,,,,,,,,,,api_football_lineup_position,media,baja
 301528,Andreas Schjelderup,1090,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 18967,Leo Østigård,1090,DEF,,,,,,,,,,api_football_lineup_position,media,baja
-278133,Oscar Bobb,1090,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+278133,Oscar Bobb,1090,MID,,,,,,,,,,api_football_lineup_position,media,baja
 264378,Sander Tangvik,1090,GK,,,,,,,,,,api_football_lineup_position,media,baja
 39082,Egil Selvik,1090,GK,,,,,,,,,,api_football_lineup_position,media,baja
 39058,Fredrik André Bjørkan,1090,DEF,,,,,,,,,,api_football_lineup_position,media,baja
@@ -1031,15 +1031,15 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 2851,Kristoffer Nordfeldt,5,GK,,,,,,,,,,api_football_lineup_position,media,baja
 137721,Gustaf Lagerbielke,5,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 137976,Isak Hien,5,DEF,,,,,,,,,,api_football_lineup_position,media,baja
-889,Victor Lindelöf,5,MID,,,,,,,,,,api_football_lineup_position,media,baja
+889,Victor Lindelöf,5,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 48047,Jesper Karlström,5,MID,,,,,,,,,,api_football_lineup_position,media,baja
-47696,Alexander Bernhardsson,5,MID,,,,,,,,,,api_football_lineup_position,media,baja
+47696,Alexander Bernhardsson,5,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 48002,Benjamin Nygren,5,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 265820,Yasin Ayari,5,MID,,,,,,,,,,api_football_lineup_position,media,baja
 47969,Gabriel Gudmundsson,5,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 18979,Viktor Gyökeres,5,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 2864,Alexander Isak,5,FWD,,,,,,,,,,api_football_lineup_position,media,baja
-153430,Anthony Elanga,5,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+153430,Anthony Elanga,5,MID,,,,,,,,,,api_football_lineup_position,media,baja
 350850,Besfort Zeneli,5,MID,,,,,,,,,,api_football_lineup_position,media,baja
 347316,Lucas Bergvall,5,MID,,,,,,,,,,api_football_lineup_position,media,baja
 160925,Taha Abdi Ali,5,MID,,,,,,,,,,api_football_lineup_position,media,baja
