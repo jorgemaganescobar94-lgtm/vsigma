@@ -41,7 +41,17 @@ sys.path.insert(0, str(ROOT / "scripts"))
 # ---- master flag: True -> shown 1X2/goals = full-data model; False -> EXACT revert to ensemble.
 FULL_DATA_LIVE = True
 
-ARTIFACT = HERE / "worldcup_full_data_artifact.json"
+# ---- CLUB_FORM_FEATURE: add `club_form_diff` (national strength from players' 2025 CLUB form,
+# league-tier normalized) as a 27th feature. REVERSIBLE via a SEPARATE artifact: True -> the model
+# uses worldcup_full_data_artifact_clubform.json (27 feats); False -> the base 26-feat artifact,
+# EXACTLY as before this feature. Honest: NO precision claim until the live A/B validates it (offline
+# it can only be an INDICATIVE test — see train(): we hold a single 2025 club snapshot).
+CLUB_FORM_FEATURE = True
+
+ARTIFACT = HERE / "worldcup_full_data_artifact.json"                 # base (26 feats)
+ARTIFACT_CF = HERE / "worldcup_full_data_artifact_clubform.json"     # +club_form (27 feats)
+CLUB_FORM_CSV = HERE / "worldcup_club_form.csv"                      # per-team club_form (0 API)
+CLUB_FORM_DIFF = "club_form_diff"
 CACHE = ROOT / "data" / "cache" / "api_football_cache.sqlite3"
 IR = HERE / "international_results.csv"
 PM = HERE / "national_elo_layer3_permatch.csv"
@@ -74,6 +84,17 @@ FEATURES = (
     + ["rest_diff", "h2h_gd", "squad_diff", "team_rating_diff"]              # rest / h2h / squad / ratings
     + [f"{s}_diff" for s in STAT_FIELDS]                                     # 13 rolling real stats
 )
+# club_form_diff is the OPTIONAL 27th feature (behind CLUB_FORM_FEATURE). Its own artifact is trained
+# on FEATURES + [CLUB_FORM_DIFF]; when the flag is off the model uses the base 26-feature artifact.
+FEATURES_CF = FEATURES + [CLUB_FORM_DIFF]
+
+
+def active_features():
+    return FEATURES_CF if CLUB_FORM_FEATURE else list(FEATURES)
+
+
+def active_artifact_path():
+    return ARTIFACT_CF if (CLUB_FORM_FEATURE and ARTIFACT_CF.exists()) else ARTIFACT
 
 
 def _num(v):
@@ -133,6 +154,8 @@ class Sources:
         self.rating_series = self._rating_series()
         # squad quality per team_id (minutes-weighted mean player rating)
         self.squad = self._load_squad()
+        # club_form per team_id (from players' 2025 club season, league-tier normalized; 0 API)
+        self.club_form = self._load_club_form()
 
     # -------- stats --------
     def _load_stats(self):
@@ -289,6 +312,25 @@ class Sources:
         h = self.squad.get(int(home_id)); a = self.squad.get(int(away_id))
         return (h - a) if (h is not None and a is not None) else None
 
+    def _load_club_form(self):
+        import pandas as pd
+        if not CLUB_FORM_CSV.exists():
+            return {}
+        cf = pd.read_csv(CLUB_FORM_CSV)
+        out = {}
+        for r in cf.itertuples(index=False):
+            v = getattr(r, "club_form", None)
+            if v is not None and str(v) != "nan":
+                try:
+                    out[int(r.team_id)] = float(v)
+                except Exception:
+                    pass
+        return out
+
+    def club_form_diff(self, home_id, away_id):
+        h = self.club_form.get(int(home_id)); a = self.club_form.get(int(away_id))
+        return (h - a) if (h is not None and a is not None) else None
+
 
 # ============================================================ feature vector (raw, pre-standardise)
 def build_feature_vector(src, home_id, away_id, when, neutral,
@@ -324,19 +366,22 @@ def build_feature_vector(src, home_id, away_id, when, neutral,
     # rolling real stats
     for s in STAT_FIELDS:
         feat[f"{s}_diff"] = src.stat_diff(s, home_id, away_id, when)
-    missing = [k for k in FEATURES if feat.get(k) is None]
+    # club_form (optional 27th feature; always computed, only USED when the active artifact lists it)
+    feat[CLUB_FORM_DIFF] = src.club_form_diff(home_id, away_id)
+    missing = [k for k in active_features() if feat.get(k) is None]
     return feat, missing
 
 
 # ============================================================ live predictor (pure numpy over JSON)
-_ARTIFACT_CACHE = None
+_ARTIFACT_CACHE = {}   # path(str) -> parsed artifact
 
 
-def _load_artifact():
-    global _ARTIFACT_CACHE
-    if _ARTIFACT_CACHE is None:
-        _ARTIFACT_CACHE = json.loads(ARTIFACT.read_text(encoding="utf-8"))
-    return _ARTIFACT_CACHE
+def _load_artifact(path=None):
+    p = Path(path) if path is not None else active_artifact_path()
+    key = str(p)
+    if key not in _ARTIFACT_CACHE:
+        _ARTIFACT_CACHE[key] = json.loads(p.read_text(encoding="utf-8"))
+    return _ARTIFACT_CACHE[key]
 
 
 _SRC_CACHE = None
@@ -350,10 +395,13 @@ def _sources():
 
 
 def _standardise(feat, art):
+    """Standardise over the ARTIFACT'S OWN feature list (26 or 27) — the artifact is the source of
+    truth for dimensionality, so predict works for either the base or the club_form model."""
+    feats = art.get("features", list(FEATURES))
     mean = art["mean"]; std = art["std"]
-    z = np.zeros(len(FEATURES))
+    z = np.zeros(len(feats))
     nmiss = 0
-    for i, k in enumerate(FEATURES):
+    for i, k in enumerate(feats):
         v = feat.get(k)
         if v is None or not math.isfinite(float(v)):     # None OR non-finite -> impute-neutral (z=0)
             z[i] = 0.0; nmiss += 1
@@ -368,9 +416,10 @@ def predict(home_id, away_id, when, neutral, our_home, our_draw, our_away, our_x
     {fd_home,fd_draw,fd_away,fd_xg_home,fd_xg_away,n_features,n_missing} or None on ANY problem
     (caller then reverts to the ensemble -> delta 0). NEVER raises."""
     try:
-        if not ARTIFACT.exists():
+        path = active_artifact_path()
+        if not path.exists():
             return None
-        art = _load_artifact()
+        art = _load_artifact(path)
         src = _sources()
         feat, _missing = build_feature_vector(src, home_id, away_id, when, neutral,
                                               our_home, our_draw, our_away, our_xg_home, our_xg_away)
@@ -390,7 +439,7 @@ def predict(home_id, away_id, when, neutral, our_home, our_draw, our_away, our_x
         return {"fd_home": round(float(p[0]), 4), "fd_draw": round(float(p[1]), 4),
                 "fd_away": round(float(p[2]), 4),
                 "fd_xg_home": round(lh, 2), "fd_xg_away": round(la, 2),
-                "n_features": len(FEATURES), "n_missing": int(nmiss)}
+                "n_features": len(art.get("features", FEATURES)), "n_missing": int(nmiss)}
     except Exception:
         return None
 
@@ -420,9 +469,12 @@ def _l3_recipe(ir_frame, sup, burn):
     return ph, pd_, pa, xh, xa, (a0, a1, tb0, tb1, tb2, TCAP)
 
 
-def train(report=True):
-    """Fit the regularized full-data model on the international frame, save the JSON artifact, and
-    print an HONEST OOS A/B vs the L3 baseline (expected: WORSE). READ-ONLY except the artifact."""
+def train(report=True, feats=None, out_path=None):
+    """Fit the regularized full-data model on the international frame over the feature list `feats`
+    (default = base 26), save to `out_path` (default ARTIFACT), and print an HONEST OOS A/B vs L3.
+    Returns the OOS fd probs + metrics so a driver can compare feature sets. READ-ONLY except artifact."""
+    feats = list(feats) if feats is not None else list(FEATURES)
+    out_path = out_path if out_path is not None else ARTIFACT
     import pandas as pd
     from sklearn.linear_model import LogisticRegression, PoissonRegressor
     import model_bakeoff_backtest as bo
@@ -448,14 +500,14 @@ def train(report=True):
 
     l3ph, l3pd, l3pa, l3xh, l3xa, l3coef = _l3_recipe(ir, sup, burn)
 
-    # build raw feature matrix
+    # build raw feature matrix over `feats`
     n = len(ir)
-    raw = np.full((n, len(FEATURES)), np.nan)
+    raw = np.full((n, len(feats)), np.nan)
     for i in range(n):
         feat, _m = build_feature_vector(
             src, int(ir.home_id[i]), int(ir.away_id[i]), dates[i], int(ir.neutral[i]),
             l3ph[i], l3pd[i], l3pa[i], l3xh[i], l3xa[i])
-        for j, k in enumerate(FEATURES):
+        for j, k in enumerate(feats):
             v = feat.get(k)
             if v is not None:
                 raw[i, j] = v
@@ -474,7 +526,7 @@ def train(report=True):
     clf = LogisticRegression(C=0.30, max_iter=2000, penalty="l2")  # multinomial is the default (lbfgs)
     clf.fit(Z[burn], res[burn], sample_weight=w)
     classes = list(clf.classes_)
-    W = np.zeros((len(FEATURES), 3)); b = np.zeros(3)
+    W = np.zeros((len(feats), 3)); b = np.zeros(3)
     for j, c in enumerate(classes):
         W[:, c] = clf.coef_[j]; b[c] = clf.intercept_[j]
 
@@ -494,7 +546,7 @@ def train(report=True):
     pga = PoissonRegressor(alpha=1.0, max_iter=1000).fit(Z[burn], gaf[burn], sample_weight=w)
 
     art = {
-        "features": FEATURES, "mean": mean.tolist(), "std": std.tolist(),
+        "features": feats, "mean": mean.tolist(), "std": std.tolist(),
         "logit_W": W.tolist(), "logit_b": b.tolist(), "temp": float(best_T),
         "pois_gh_w": pgh.coef_.tolist(), "pois_gh_b": float(pgh.intercept_),
         "pois_ga_w": pga.coef_.tolist(), "pois_ga_b": float(pga.intercept_),
@@ -505,11 +557,10 @@ def train(report=True):
         "C": 0.30, "poisson_alpha": 1.0, "form_hl": FORM_HL,
         "note": "Full-data model. KNOWN to measure worse than L3/ensemble. NOT a precision claim.",
     }
-    ARTIFACT.write_text(json.dumps(art, indent=1), encoding="utf-8")
+    out_path.write_text(json.dumps(art, indent=1), encoding="utf-8")
+    _ARTIFACT_CACHE.pop(str(out_path), None)   # invalidate any cached copy
 
-    # ---- HONEST OOS A/B: full-data vs L3 baseline (ensemble ~= L3 for internationals: no live mx) ----
-    global _ARTIFACT_CACHE
-    _ARTIFACT_CACHE = art
+    # ---- HONEST OOS A/B: this model vs L3 baseline (ensemble ~= L3 for internationals: no live mx) ----
     fd = np.array([[*(_softmax((Z[i] @ W + b) / best_T))] for i in range(n)])
     fd = np.clip(fd, EPS, None); fd = fd / fd.sum(1, keepdims=True)
     l3 = np.column_stack([l3ph, l3pd, l3pa]); l3 = np.clip(l3, EPS, None); l3 /= l3.sum(1, keepdims=True)
@@ -519,30 +570,58 @@ def train(report=True):
     lo, hi, p = bo.paired_boot(d)
     if report:
         print("=" * 92)
-        print("FULL-DATA MODEL trained. HONEST OOS A/B vs L3 (internationals 2024-2025)")
+        print(f"FULL-DATA MODEL trained ({len(feats)} feats). HONEST OOS A/B vs L3 (internacionales 2024-2025)")
         print("=" * 92)
-        print(f"features ingested: {len(FEATURES)}  |  burn-in {int(burn.sum())}  OOS {int(oos.sum())}")
+        print(f"features ingested: {len(feats)}  |  burn-in {int(burn.sum())}  OOS {int(oos.sum())}")
         print(f"1X2 logloss  full-data={ll_fd.mean():.4f}   L3={ll_l3.mean():.4f}")
         print(f"Delta(L3 - full-data)={d.mean():+.4f}  CI95[{lo:+.4f},{hi:+.4f}]  p(fd better)={p:.2f}")
         verdict = ("full-data WORSE (as expected)" if hi < 0 else
                    "full-data better" if lo > 0 else "no clear difference")
-        print(f"VERDICT: {verdict}. Full-data ships ON by explicit decision; NO precision claim.")
-        print(f"artifact -> {ARTIFACT}")
+        print(f"VERDICT: {verdict}. NO precision claim.")
+        print(f"artifact -> {out_path}")
     return {"ll_fd": float(ll_fd.mean()), "ll_l3": float(ll_l3.mean()),
             "delta": float(d.mean()), "ci": [lo, hi], "p": p, "n_oos": int(oos.sum()),
-            "n_features": len(FEATURES)}
+            "n_features": len(feats), "fd_oos": fd[oos], "Yo": Yo}
+
+
+def train_all():
+    """Train BOTH artifacts (base 26 + club_form 27) and report the honest 26-vs-27 marginal A/B.
+
+    CAVEAT (leakage): we hold a SINGLE 2025 club-form snapshot, so applying it to 2024/2025 OOS
+    internationals is mild look-ahead (a near-static per-team strength constant). This offline number
+    is therefore INDICATIVE and FAVOURABLE to club_form; if it STILL fails to help, that is strong
+    evidence of redundancy with L3. The real, leak-free test is the LIVE A/B on the World Cup."""
+    import model_bakeoff_backtest as bo
+    base = train(report=True, feats=list(FEATURES), out_path=ARTIFACT)
+    cf = train(report=True, feats=list(FEATURES_CF), out_path=ARTIFACT_CF)
+    d = bo.ll_multi(base["fd_oos"], base["Yo"]) - bo.ll_multi(cf["fd_oos"], cf["Yo"])
+    lo, hi, p = bo.paired_boot(d)  # >0 => club_form model better than base
+    print("\n" + "=" * 92)
+    print("MARGINAL A/B — club_form (27 feats) vs base full-data (26 feats), OOS 1X2 logloss")
+    print("=" * 92)
+    print(f"base(26)={base['ll_fd']:.4f}   +club_form(27)={cf['ll_fd']:.4f}")
+    print(f"Delta(base - clubform)={d.mean():+.4f}  CI95[{lo:+.4f},{hi:+.4f}]  p(clubform better)={p:.2f}")
+    verdict = ("club_form ADDS signal (CI>0)" if lo > 0 else
+               "club_form WORSE (CI<0)" if hi < 0 else "NULL/redundant (CI cruza 0)")
+    print(f"VERDICT (INDICATIVE, favourable-to-clubform due to 2025-snapshot look-ahead): {verdict}")
+    print("Real validation is LIVE only (worldcup_full_data_ab_scorer). NO precision claim.")
 
 
 if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["train", "features", "predict-demo"])
+    ap.add_argument("cmd", choices=["train", "train-clubform", "train-all", "features", "predict-demo"])
     a = ap.parse_args()
     if a.cmd == "train":
-        train()
+        train(feats=list(FEATURES), out_path=ARTIFACT)
+    elif a.cmd == "train-clubform":
+        train(feats=list(FEATURES_CF), out_path=ARTIFACT_CF)
+    elif a.cmd == "train-all":
+        train_all()
     elif a.cmd == "features":
-        print("\n".join(f"{i+1:2d}. {f}" for i, f in enumerate(FEATURES)))
-        print(f"TOTAL features ingested by the full-data model: {len(FEATURES)}")
+        fs = active_features()
+        print("\n".join(f"{i+1:2d}. {f}" for i, f in enumerate(fs)))
+        print(f"TOTAL active features (CLUB_FORM_FEATURE={CLUB_FORM_FEATURE}): {len(fs)}")
     elif a.cmd == "predict-demo":
         r = predict(10, 8, "2026-06-25", 1, 0.45, 0.28, 0.27, 1.4, 1.1)
         print(json.dumps(r, indent=1))

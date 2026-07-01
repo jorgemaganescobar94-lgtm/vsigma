@@ -1,0 +1,1249 @@
+team,team_id,player_id,player_name,has_club,club,league_country,league_name,apps,minutes,rating,goals,assists,ga90,tier
+Mexico,16,35769,C. Acevedo,True,Santos Laguna,Mexico,Liga MX,32.0,2856.0,6.92,0.0,0.0,0.0,0.6
+Mexico,16,2098,G. Ochoa,True,AEL,Cyprus,1. Division,22.0,720.0,6.71,0.0,0.0,0.0,0.5
+Mexico,16,270774,J. Rangel,True,Guadalajara Chivas,Mexico,Liga MX,33.0,3099.0,6.89,0.0,0.0,0.0,0.6
+Mexico,16,2881,J. Gallardo,True,Toluca,Mexico,Liga MX,30.0,2733.0,6.94,5.0,5.0,0.329,0.6
+Mexico,16,2873,C. Montes,True,Lokomotiv,Russia,Premier League,26.0,2208.0,7.25,4.0,0.0,0.163,0.8
+Mexico,16,127227,I. Reyes,True,Club America,Mexico,Liga MX,32.0,2857.0,7.07,0.0,2.0,0.063,0.6
+Mexico,16,2878,J. Sánchez,True,Cruz Azul,Mexico,Liga MX,17.0,1451.0,6.56,0.0,1.0,0.062,0.6
+Mexico,16,35544,J. Vásquez,True,Genoa,Italy,Serie A,36.0,3217.0,6.8,1.0,0.0,0.028,1.0
+Mexico,16,2869,E. Álvarez,True,Fenerbahçe,Turkey,Süper Lig,12.0,768.0,6.9,0.0,1.0,0.117,0.8
+Mexico,16,390002,M. Chávez,True,AZ Alkmaar,Netherlands,Eredivisie,20.0,839.0,6.88,1.0,2.0,0.322,0.8
+Mexico,16,313383,O. Vargas,True,Seattle Sounders,USA,Major League Soccer,28.0,2546.0,7.24,5.0,1.0,0.212,0.6
+Mexico,16,35690,L. Chávez,True,Dynamo,Russia,Premier League,4.0,164.0,6.8,0.0,0.0,,0.8
+Mexico,16,750,Álvaro Fidalgo,True,Club America,Mexico,Liga MX,20.0,1537.0,7.16,1.0,0.0,0.059,0.6
+Mexico,16,212233,B. Gutiérrez,True,Chicago Fire,USA,Major League Soccer,31.0,2252.0,7.28,10.0,3.0,0.52,0.6
+Mexico,16,266345,É. Lira,True,Cruz Azul,Mexico,Liga MX,35.0,3023.0,6.84,0.0,0.0,0.0,0.6
+Mexico,16,482605,G. Mora,True,Club Tijuana,Mexico,Liga MX,19.0,1396.0,7.15,6.0,1.0,0.451,0.6
+Mexico,16,35576,O. Pineda,True,AEK Athens FC,Greece,Super League 1,30.0,2487.0,7.33,5.0,2.0,0.253,0.8
+Mexico,16,35970,L. Romo,True,Guadalajara Chivas,Mexico,Liga MX,27.0,2466.0,7.06,1.0,2.0,0.109,0.6
+Mexico,16,2879,R. Alvarado,True,Guadalajara Chivas,Mexico,Liga MX,30.0,2385.0,7.17,4.0,5.0,0.34,0.6
+Mexico,16,94562,S. Giménez,True,AC Milan,Italy,Serie A,16.0,896.0,6.49,0.0,1.0,0.1,1.0
+Mexico,16,291713,A. González,True,Guadalajara Chivas,Mexico,Liga MX,34.0,2459.0,6.93,24.0,2.0,0.952,0.6
+Mexico,16,36111,C. Huerta,True,Anderlecht,Belgium,Jupiler Pro League,11.0,544.0,6.54,1.0,0.0,0.165,0.8
+Mexico,16,2887,R. Jiménez,True,Fulham,England,Premier League,36.0,2216.0,6.68,9.0,3.0,0.487,1.0
+Mexico,16,36088,G. Martínez,True,U.N.A.M. - Pumas,Mexico,Liga MX,26.0,1374.0,6.89,9.0,0.0,0.59,0.6
+Mexico,16,35532,J. Quiñones,True,Al-Qadisiyah FC,Saudi-Arabia,Pro League,31.0,2724.0,7.63,33.0,4.0,1.222,0.8
+Mexico,16,2889,A. Vega,True,Toluca,Mexico,Liga MX,22.0,1528.0,7.57,4.0,11.0,0.884,0.6
+South Africa,1531,46417,S. Chaine,True,Orlando Pirates,South-Africa,Premier Soccer League,30.0,2700.0,7.05,0.0,0.0,0.0,0.5
+South Africa,1531,46245,R. Goss,True,Siwelele,South-Africa,Premier Soccer League,29.0,2610.0,7.13,0.0,0.0,0.0,0.5
+South Africa,1531,3275,R. Williams,True,Mamelodi Sundowns,South-Africa,Premier Soccer League,28.0,2610.0,7.14,0.0,0.0,0.0,0.5
+South Africa,1531,163041,B. Cross,True,Kaizer Chiefs,South-Africa,Premier Soccer League,21.0,1729.0,7.15,0.0,1.0,0.052,0.5
+South Africa,1531,430078,S. Kabini,True,Molde,Norway,Eliteserien,18.0,1505.0,7.33,0.0,3.0,0.179,0.6
+South Africa,1531,392387,O. Makhanya,True,Philadelphia Union,USA,Major League Soccer,31.0,2448.0,7.0,1.0,0.0,0.037,0.6
+South Africa,1531,510799,M. Mbokazi,True,Orlando Pirates,South-Africa,Premier Soccer League,11.0,909.0,7.25,0.0,0.0,0.0,0.5
+South Africa,1531,46334,A. Modiba,True,Mamelodi Sundowns,South-Africa,Premier Soccer League,26.0,2018.0,6.98,0.0,3.0,0.134,0.5
+South Africa,1531,46601,K. Mudau,True,Mamelodi Sundowns,South-Africa,Premier Soccer League,21.0,1527.0,7.05,0.0,1.0,0.059,0.5
+South Africa,1531,474630,K. Ndamane,True,TS Galaxy,South-Africa,Premier Soccer League,13.0,1170.0,7.12,0.0,1.0,0.077,0.5
+South Africa,1531,406752,I. Okon,True,Hannover 96,Germany,2. Bundesliga,25.0,1716.0,6.71,2.0,0.0,0.105,0.45
+South Africa,1531,46458,N. Sibisi,True,Orlando Pirates,South-Africa,Premier Soccer League,23.0,1962.0,7.15,0.0,0.0,0.0,0.5
+South Africa,1531,330174,T. Matuludi,True,Polokwane City,South-Africa,Premier Soccer League,23.0,1950.0,7.32,2.0,0.0,0.092,0.5
+South Africa,1531,268710,J. Adams,True,Mamelodi Sundowns,South-Africa,Premier Soccer League,22.0,1422.0,6.92,1.0,0.0,0.063,0.5
+South Africa,1531,194430,T. Mbatha,True,Orlando Pirates,South-Africa,Premier Soccer League,22.0,1607.0,7.26,0.0,1.0,0.056,0.5
+South Africa,1531,3287,T. Mokoena,True,Mamelodi Sundowns,South-Africa,Premier Soccer League,22.0,1622.0,7.27,4.0,2.0,0.333,0.5
+South Africa,1531,158433,S. Sithole,True,Tondela,Portugal,Primeira Liga,26.0,1560.0,6.62,1.0,0.0,0.058,0.8
+South Africa,1531,3289,T. Zwane,True,Mamelodi Sundowns,South-Africa,Premier Soccer League,15.0,533.0,6.66,0.0,1.0,0.169,0.5
+South Africa,1531,179893,O. Appollis,True,Orlando Pirates,South-Africa,Premier Soccer League,30.0,2170.0,7.18,9.0,6.0,0.622,0.5
+South Africa,1531,98936,L. Foster,True,Burnley,England,Premier League,26.0,1372.0,6.47,3.0,2.0,0.328,1.0
+South Africa,1531,201354,E. Makgopa,True,Orlando Pirates,South-Africa,Premier Soccer League,24.0,1068.0,6.71,6.0,4.0,0.843,0.5
+South Africa,1531,354831,T. Maseko,True,AEL,Cyprus,1. Division,12.0,401.0,6.49,0.0,1.0,0.224,0.5
+South Africa,1531,414149,R. Mofokeng,True,Orlando Pirates,South-Africa,Premier Soccer League,27.0,2132.0,7.53,10.0,8.0,0.76,0.5
+South Africa,1531,295977,T. Moremi,True,Orlando Pirates,South-Africa,Premier Soccer League,28.0,1546.0,6.89,5.0,4.0,0.524,0.5
+South Africa,1531,127429,I. Rayners,True,Mamelodi Sundowns,South-Africa,Premier Soccer League,25.0,1439.0,6.65,12.0,3.0,0.938,0.5
+South Africa,1531,359561,K. Sebelebele,True,Orlando Pirates,South-Africa,Premier Soccer League,24.0,1783.0,7.26,4.0,1.0,0.252,0.5
+South Korea,17,2890,Jo Hyeon-Woo,True,Ulsan Hyundai FC,South-Korea,K League 1,33.0,1530.0,6.98,0.0,0.0,0.0,0.6
+South Korea,17,2892,Kim Seung-Gyu,True,FC Tokyo,Japan,J1 League,14.0,1260.0,6.97,0.0,0.0,0.0,0.6
+South Korea,17,34374,Song Bum-Keun,True,Jeonbuk Motors,South-Korea,K League 1,38.0,1440.0,7.46,0.0,0.0,0.0,0.6
+South Korea,17,547307,Cho Wi-Je,False,,,,,,,,,,
+South Korea,17,2897,Kim Min-Jae,True,Bayern München,Germany,Bundesliga,25.0,1621.0,7.23,1.0,1.0,0.111,1.0
+South Korea,17,2912,Kim Moon-Hwan,True,Daejeon Citizen,South-Korea,K League 1,24.0,1014.0,6.85,0.0,1.0,0.089,0.6
+South Korea,17,34418,Kim Tae-Hyeon,True,Kashima,Japan,J1 League,30.0,2183.0,6.97,0.0,1.0,0.041,0.6
+South Korea,17,237218,Lee Han-Beom,True,FC Midtjylland,Denmark,Superliga,29.0,2347.0,6.99,0.0,1.0,0.038,0.6
+South Korea,17,99211,Park Jin-Seop,True,Jeonbuk Motors,South-Korea,K League 1,35.0,1260.0,7.38,1.0,1.0,0.143,0.6
+South Korea,17,237220,Lee Tae-Seok,True,Austria Vienna,Austria,Bundesliga,30.0,2577.0,7.05,3.0,4.0,0.244,0.8
+South Korea,17,197985,Seol Young-Woo,True,FK Crvena Zvezda,Serbia,Super Liga,31.0,2675.0,7.16,2.0,5.0,0.236,0.6
+South Korea,17,280358,J. Castrop,True,Borussia Mönchengladbach,Germany,Bundesliga,26.0,1599.0,6.69,3.0,1.0,0.225,1.0
+South Korea,17,304951,Lee Gi-Hyuk,True,Gangwon FC,South-Korea,K League 1,31.0,792.0,6.87,0.0,0.0,0.0,0.6
+South Korea,17,357286,Bae Jun-Ho,True,Stoke City,England,Championship,42.0,2943.0,6.67,2.0,3.0,0.153,0.8
+South Korea,17,237050,Eom Ji-Sung,True,Swansea,England,Championship,44.0,2457.0,6.8,2.0,2.0,0.147,0.8
+South Korea,17,2901,Hwang In-Beom,True,Feyenoord,Netherlands,Eredivisie,17.0,991.0,6.91,1.0,3.0,0.363,0.8
+South Korea,17,34168,Kim Jin-Gyu,True,Jeonbuk Motors,South-Korea,K League 1,35.0,1151.0,6.99,2.0,2.0,0.313,0.6
+South Korea,17,34431,Lee Dong-Gyeong,True,Gimcheon Sangmu FC,South-Korea,K League 1,34.0,1206.0,7.86,8.0,5.0,0.97,0.6
+South Korea,17,2906,Lee Jae-Sung,True,FSV Mainz 05,Germany,Bundesliga,28.0,2198.0,6.68,4.0,2.0,0.246,1.0
+South Korea,17,927,Lee Kang-In,True,Paris Saint Germain,France,Ligue 1,27.0,1522.0,7.04,3.0,4.0,0.414,1.0
+South Korea,17,2909,Paik Seung-Ho,True,Birmingham,England,Championship,43.0,3374.0,6.96,4.0,1.0,0.133,0.8
+South Korea,17,304958,Yang Hyun-Jun,True,Celtic,Scotland,Premiership,31.0,2078.0,6.92,8.0,1.0,0.39,0.8
+South Korea,17,24888,Hwang Hee-Chan,True,Wolves,England,Premier League,26.0,1461.0,6.61,2.0,2.0,0.246,1.0
+South Korea,17,34211,Cho Gue-Sung,True,FC Midtjylland,Denmark,Superliga,26.0,1351.0,6.43,3.0,1.0,0.266,0.6
+South Korea,17,34710,Oh Hyeon-Gyu,True,Genk,Belgium,Jupiler Pro League,20.0,1116.0,6.75,6.0,3.0,0.726,0.8
+South Korea,17,186,Son Heung-Min,True,Los Angeles FC,USA,Major League Soccer,11.0,1103.0,8.18,12.0,3.0,1.224,0.6
+Czechia,770,269349,L. Hornícek,True,SC Braga,Portugal,Primeira Liga,33.0,2960.0,6.96,0.0,0.0,0.0,0.8
+Czechia,770,138804,M. Kovár,True,PSV Eindhoven,Netherlands,Eredivisie,31.0,2790.0,7.1,0.0,0.0,0.0,0.8
+Czechia,770,66347,J. Stanek,True,Slavia Praha,Czech-Republic,Czech Liga,19.0,1710.0,6.85,0.0,0.0,0.0,0.6
+Czechia,770,337740,S. Chaloupek,True,Slavia Praha,Czech-Republic,Czech Liga,28.0,1836.0,7.21,9.0,2.0,0.539,0.6
+Czechia,770,1231,V. Coufal,True,1899 Hoffenheim,Germany,Bundesliga,34.0,3017.0,7.16,1.0,8.0,0.268,1.0
+Czechia,770,2252,T. Holes,True,Slavia Praha,Czech-Republic,Czech Liga,25.0,2094.0,7.41,2.0,2.0,0.172,0.6
+Czechia,770,162964,R. Hranác,True,1899 Hoffenheim,Germany,Bundesliga,29.0,2251.0,6.74,1.0,0.0,0.04,1.0
+Czechia,770,128793,D. Jurásek,True,Slavia Praha,Czech-Republic,Czech Liga,16.0,1346.0,7.38,1.0,6.0,0.468,0.6
+Czechia,770,66407,L. Krejcí,True,Wolves,England,Premier League,28.0,2361.0,6.71,2.0,1.0,0.114,1.0
+Czechia,770,1237,J. Zelený,True,Sparta Praha,Czech-Republic,Czech Liga,25.0,1761.0,6.9,1.0,3.0,0.204,0.6
+Czechia,770,128772,D. Zima,True,Slavia Praha,Czech-Republic,Czech Liga,24.0,1823.0,6.94,1.0,3.0,0.197,0.6
+Czechia,770,66214,D. Doudera,True,Slavia Praha,Czech-Republic,Czech Liga,22.0,1506.0,7.03,1.0,4.0,0.299,0.6
+Czechia,770,162194,L. Cerv,True,Plzen,Czech-Republic,Czech Liga,32.0,2656.0,7.01,1.0,3.0,0.136,0.6
+Czechia,770,25348,V. Darida,True,Hradec Králové,Czech-Republic,Czech Liga,32.0,2775.0,7.44,10.0,3.0,0.422,0.6
+Czechia,770,66353,L. Provod,True,Slavia Praha,Czech-Republic,Czech Liga,30.0,2480.0,7.44,7.0,10.0,0.617,0.6
+Czechia,770,241,M. Sadílek,True,Slavia Praha,Czech-Republic,Czech Liga,29.0,2057.0,7.02,1.0,4.0,0.219,0.6
+Czechia,770,555437,H. Sochurek,True,Sparta Praha,Czech-Republic,Czech Liga,8.0,516.0,6.96,0.0,2.0,0.349,0.6
+Czechia,770,386837,A. Sojka,True,Hradec Králové,Czech-Republic,Czech Liga,18.0,1093.0,6.65,1.0,0.0,0.082,0.6
+Czechia,770,1243,T. Soucek,True,West Ham,England,Premier League,35.0,2220.0,6.77,5.0,0.0,0.203,1.0
+Czechia,770,66387,P. Sulc,True,Lyon,France,Ligue 1,27.0,1568.0,6.91,11.0,3.0,0.804,1.0
+Czechia,770,818,T. Chorý,True,Slavia Praha,Czech-Republic,Czech Liga,24.0,1891.0,7.28,17.0,4.0,0.999,0.6
+Czechia,770,66275,M. Chytil,True,Slavia Praha,Czech-Republic,Czech Liga,29.0,1486.0,6.88,13.0,1.0,0.848,0.6
+Czechia,770,66019,A. Hlozek,True,1899 Hoffenheim,Germany,Bundesliga,5.0,36.0,6.43,0.0,0.0,,1.0
+Czechia,770,66340,J. Kuchta,True,Sparta Praha,Czech-Republic,Czech Liga,30.0,1703.0,6.91,12.0,6.0,0.951,0.6
+Czechia,770,794,P. Schick,True,Bayer Leverkusen,Germany,Bundesliga,28.0,1995.0,6.95,16.0,3.0,0.857,1.0
+Czechia,770,290212,D. Visinský,True,Plzen,Czech-Republic,Czech Liga,27.0,1671.0,7.05,8.0,1.0,0.485,0.6
+Canada,5529,51274,M. Crépeau,True,Portland Timbers,USA,Major League Soccer,15.0,1350.0,6.99,0.0,0.0,0.0,0.6
+Canada,5529,284554,O. Goodman,True,Barnsley,England,League One,22.0,1980.0,6.73,0.0,0.0,0.0,0.5
+Canada,5529,51148,D. St. Clair,True,Minnesota United FC,USA,Major League Soccer,33.0,3066.0,7.19,0.0,0.0,0.0,0.6
+Canada,5529,51295,D. Cornelius,True,Rangers,Scotland,Premiership,7.0,559.0,7.36,1.0,1.0,0.322,0.8
+Canada,5529,327738,L. De Fougerolles,True,Dender,Belgium,Jupiler Pro League,28.0,1717.0,6.78,0.0,1.0,0.052,0.8
+Canada,5529,50816,R. Laryea,True,Toronto FC,USA,Major League Soccer,17.0,1265.0,6.84,1.0,1.0,0.142,0.6
+Canada,5529,78494,J. Waterman,True,CF Montreal,USA,Major League Soccer,18.0,1438.0,6.85,0.0,1.0,0.063,0.6
+Canada,5529,78547,A. Johnston,True,Celtic,Scotland,Premiership,7.0,501.0,7.06,0.0,1.0,0.18,0.8
+Canada,5529,18938,A. Jones,True,Middlesbrough,England,Championship,22.0,1886.0,6.92,1.0,1.0,0.095,0.8
+Canada,5529,407017,M. Bombito,True,Nice,France,Ligue 1,2.0,146.0,6.55,0.0,0.0,,1.0
+Canada,5529,509,A. Davies,True,Bayern München,Germany,Bundesliga,13.0,534.0,6.84,1.0,3.0,0.674,1.0
+Canada,5529,416901,N. Sigur,True,HNK Hajduk Split,Croatia,HNL,29.0,2235.0,7.12,1.0,2.0,0.121,0.6
+Canada,5529,50826,J. Shaffelburg,True,Nashville SC,USA,Major League Soccer,25.0,1297.0,6.85,4.0,2.0,0.416,0.6
+Canada,5529,44798,L. Millar,True,Hull City,England,Championship,36.0,2063.0,6.82,3.0,5.0,0.349,0.8
+Canada,5529,50788,M. Choinière,True,Los Angeles FC,USA,Major League Soccer,11.0,728.0,7.0,1.0,0.0,0.124,0.6
+Canada,5529,35570,S. Eustáquio,True,FC Porto,Portugal,Primeira Liga,8.0,184.0,6.68,0.0,0.0,0.0,0.8
+Canada,5529,328046,I. Koné,True,Sassuolo,Italy,Serie A,35.0,2756.0,7.03,6.0,0.0,0.196,1.0
+Canada,5529,50817,J. Osorio,True,Toronto FC,USA,Major League Soccer,24.0,1937.0,7.03,4.0,1.0,0.232,0.6
+Canada,5529,294824,N. Saliba,True,Anderlecht,Belgium,Jupiler Pro League,34.0,2319.0,6.88,3.0,1.0,0.155,0.8
+Canada,5529,193279,J. Nelson,True,Vancouver Whitecaps,USA,Major League Soccer,25.0,1405.0,6.85,2.0,5.0,0.448,0.6
+Canada,5529,51016,T. Buchanan,True,Villarreal,Spain,La Liga,34.0,1835.0,6.81,7.0,1.0,0.392,1.0
+Canada,5529,8489,J. David,True,Juventus,Italy,Serie A,35.0,1801.0,6.43,6.0,4.0,0.5,1.0
+Canada,5529,313353,P. David,True,Union St. Gilloise,Belgium,Jupiler Pro League,24.0,1493.0,6.73,9.0,1.0,0.603,0.8
+Canada,5529,2001,C. Larin,True,Southampton,England,Championship,18.0,949.0,6.72,8.0,1.0,0.854,0.8
+Canada,5529,362145,A. Ahmed,True,Vancouver Whitecaps,USA,Major League Soccer,24.0,1694.0,7.3,1.0,10.0,0.584,0.6
+Canada,5529,351587,T. Oluwaseyi,True,Villarreal,Spain,La Liga,27.0,922.0,6.49,2.0,2.0,0.39,1.0
+Bosnia & Herzegovina,1113,446130,M. Jurkas,False,,,,,,,,,,
+Bosnia & Herzegovina,1113,9026,N. Vasilj,True,FC St. Pauli,Germany,Bundesliga,34.0,3060.0,7.12,0.0,0.0,0.0,1.0
+Bosnia & Herzegovina,1113,108370,M. Zlomislic,True,HNK Rijeka,Croatia,HNL,33.0,2894.0,6.83,0.0,0.0,0.0,0.6
+Bosnia & Herzegovina,1113,409670,A. Malic,True,Sturm Graz,Austria,Bundesliga,18.0,1046.0,6.77,1.0,0.0,0.086,0.8
+Bosnia & Herzegovina,1113,7318,A. Dedic,True,Benfica,Portugal,Primeira Liga,24.0,1911.0,6.8,1.0,4.0,0.235,0.8
+Bosnia & Herzegovina,1113,53517,D. Hadzikadunic,True,Sampdoria,Italy,Serie B,28.0,2220.0,6.88,0.0,1.0,0.041,0.45
+Bosnia & Herzegovina,1113,1741,N. Katic,True,FC Schalke 04,Germany,2. Bundesliga,26.0,2268.0,6.97,1.0,1.0,0.079,0.45
+Bosnia & Herzegovina,1113,1442,S. Kolasinac,True,Atalanta,Italy,Serie A,19.0,1224.0,6.66,0.0,0.0,0.0,1.0
+Bosnia & Herzegovina,1113,271350,T. Muharemovic,True,Sassuolo,Italy,Serie A,32.0,2835.0,6.86,2.0,2.0,0.127,1.0
+Bosnia & Herzegovina,1113,76867,N. Mujakic,True,Eyüpspor,Turkey,Süper Lig,16.0,1356.0,6.64,0.0,1.0,0.066,0.8
+Bosnia & Herzegovina,1113,14301,S. Radeljic,True,HNK Rijeka,Croatia,HNL,25.0,2001.0,7.2,2.0,1.0,0.135,0.6
+Bosnia & Herzegovina,1113,162222,I. Basic,True,FC Astana,Kazakhstan,Premier League,3.0,89.0,6.61,0.0,0.0,,0.5
+Bosnia & Herzegovina,1113,70514,A. Gigovic,True,BSC Young Boys,Switzerland,Super League,31.0,2117.0,6.76,1.0,5.0,0.255,0.8
+Bosnia & Herzegovina,1113,50006,A. Hadziahmetovic,True,Hull City,England,Championship,37.0,2153.0,6.78,0.0,2.0,0.084,0.8
+Bosnia & Herzegovina,1113,340173,Ermin Mahmic,True,Slovan Liberec,Czech-Republic,Czech Liga,28.0,1559.0,6.91,7.0,3.0,0.577,0.6
+Bosnia & Herzegovina,1113,1324,I. Sunjic,True,Pafos,Cyprus,1. Division,29.0,1104.0,6.79,2.0,1.0,0.245,0.5
+Bosnia & Herzegovina,1113,264094,B. Tahirovic,True,Brondby,Denmark,Superliga,25.0,1199.0,6.75,1.0,1.0,0.15,0.6
+Bosnia & Herzegovina,1113,322101,A. Memic,True,Plzen,Czech-Republic,Czech Liga,30.0,2344.0,6.98,3.0,8.0,0.422,0.6
+Bosnia & Herzegovina,1113,25129,D. Burnic,True,Karlsruher SC,Germany,2. Bundesliga,32.0,2097.0,6.55,1.0,1.0,0.086,0.45
+Bosnia & Herzegovina,1113,395559,Kerim-Sam Alajbegovic,True,Red Bull Salzburg,Austria,Bundesliga,28.0,1913.0,7.3,9.0,3.0,0.565,0.8
+Bosnia & Herzegovina,1113,329409,E. Bajraktarevic,True,PSV Eindhoven,Netherlands,Eredivisie,28.0,1062.0,6.99,4.0,4.0,0.678,0.8
+Bosnia & Herzegovina,1113,314377,S. Bazdar,True,Jagiellonia,Poland,Ekstraklasa,15.0,408.0,6.67,3.0,0.0,0.662,0.6
+Bosnia & Herzegovina,1113,46930,E. Demirovic,True,VfB Stuttgart,Germany,Bundesliga,25.0,1506.0,6.9,12.0,3.0,0.896,1.0
+Bosnia & Herzegovina,1113,790,E. Dzeko,True,FC Schalke 04,Germany,2. Bundesliga,11.0,599.0,7.38,6.0,3.0,1.352,0.45
+Bosnia & Herzegovina,1113,77037,J. Lukic,True,Universitatea Cluj,Romania,Liga I,32.0,2504.0,7.18,18.0,2.0,0.719,0.5
+Bosnia & Herzegovina,1113,28382,H. Tabakovic,True,Borussia Mönchengladbach,Germany,Bundesliga,32.0,2394.0,6.71,13.0,2.0,0.564,1.0
+USA,2384,266606,C. Brady,True,Chicago Fire,USA,Major League Soccer,30.0,2655.0,6.94,0.0,0.0,0.0,0.6
+USA,2384,50728,M. Freese,True,New York City FC,USA,Major League Soccer,34.0,3236.0,7.04,0.0,0.0,0.0,0.6
+USA,2384,50999,M. Turner,True,New England Revolution,USA,Major League Soccer,10.0,900.0,7.14,0.0,0.0,0.0,0.6
+USA,2384,38735,S. Dest,True,PSV Eindhoven,Netherlands,Eredivisie,27.0,2204.0,7.04,1.0,5.0,0.245,0.8
+USA,2384,355994,A. Freeman,True,Orlando City SC,USA,Major League Soccer,30.0,2550.0,7.32,6.0,3.0,0.318,0.6
+USA,2384,50735,M. McKenzie,True,Toulouse,France,Ligue 1,30.0,2422.0,6.81,0.0,2.0,0.074,1.0
+USA,2384,19023,T. Ream,True,Charlotte,USA,Major League Soccer,29.0,2482.0,6.93,0.0,0.0,0.0,0.6
+USA,2384,126949,C. Richards,True,Crystal Palace,England,Premier League,33.0,2826.0,6.9,1.0,0.0,0.032,1.0
+USA,2384,19549,A. Robinson,True,Fulham,England,Premier League,22.0,1502.0,6.83,1.0,0.0,0.06,1.0
+USA,2384,50879,M. Robinson,True,FC Cincinnati,USA,Major League Soccer,28.0,2601.0,7.09,1.0,0.0,0.035,0.6
+USA,2384,50852,J. Scally,True,Borussia Mönchengladbach,Germany,Bundesliga,32.0,2611.0,6.63,2.0,3.0,0.172,1.0
+USA,2384,50737,A. Trusty,True,Celtic,Scotland,Premiership,26.0,2162.0,7.2,0.0,0.0,0.0,0.8
+USA,2384,362400,M. Arfsten,True,Columbus Crew,USA,Major League Soccer,31.0,2862.0,7.41,5.0,6.0,0.346,0.6
+USA,2384,201713,S. Berhalter,True,Vancouver Whitecaps,USA,Major League Soccer,31.0,2792.0,7.61,4.0,10.0,0.451,0.6
+USA,2384,415,W. McKennie,True,Juventus,Italy,Serie A,36.0,2847.0,6.87,5.0,5.0,0.316,1.0
+USA,2384,161921,G. Reyna,True,Borussia Mönchengladbach,Germany,Bundesliga,19.0,526.0,6.78,1.0,0.0,0.171,1.0
+USA,2384,51114,C. Roldan,True,Seattle Sounders,USA,Major League Soccer,33.0,2915.0,7.52,1.0,3.0,0.123,0.6
+USA,2384,162037,M. Tillman,True,Bayer Leverkusen,Germany,Bundesliga,29.0,1689.0,6.92,6.0,0.0,0.32,1.0
+USA,2384,1150,T. Adams,True,Bournemouth,England,Premier League,25.0,1778.0,6.85,2.0,2.0,0.202,1.0
+USA,2384,1138,T. Weah,True,Marseille,France,Ligue 1,29.0,2263.0,6.76,2.0,2.0,0.159,1.0
+USA,2384,35885,A. Zendejas,True,Club America,Mexico,Liga MX,27.0,2117.0,7.31,12.0,7.0,0.808,0.6
+USA,2384,50739,B. Aaronson,True,Leeds,England,Premier League,37.0,2475.0,6.76,4.0,5.0,0.327,1.0
+USA,2384,138835,F. Balogun,True,Monaco,France,Ligue 1,30.0,2245.0,6.77,13.0,4.0,0.682,1.0
+USA,2384,73868,R. Pepi,True,PSV Eindhoven,Netherlands,Eredivisie,26.0,1433.0,7.04,16.0,1.0,1.068,0.8
+USA,2384,17,C. Pulisic,True,AC Milan,Italy,Serie A,30.0,1619.0,6.99,8.0,4.0,0.667,1.0
+USA,2384,427,H. Wright,True,Coventry,England,Championship,40.0,2593.0,6.84,17.0,1.0,0.625,0.8
+Paraguay,2380,535737,R. Fernandez,False,,,,,,,,,,
+Paraguay,2380,70852,O. Gill,True,San Lorenzo,Argentina,Liga Profesional Argentina,34.0,3105.0,6.94,0.0,0.0,0.0,0.6
+Paraguay,2380,51733,G. Olveira,True,Olimpia,Paraguay,Division Profesional - Apertura,8.0,648.0,7.09,0.0,0.0,0.0,0.5
+Paraguay,2380,6168,O. Alderete,True,Sunderland,England,Premier League,33.0,2802.0,6.83,1.0,1.0,0.064,1.0
+Paraguay,2380,2499,J. Alonso,True,Atletico-MG,Brazil,Serie A,31.0,2684.0,7.02,1.0,1.0,0.067,0.6
+Paraguay,2380,195992,J. Cáceres,True,Dynamo,Russia,Premier League,24.0,2065.0,7.02,1.0,6.0,0.305,0.8
+Paraguay,2380,2500,F. Balbuena,True,Gremio,Brazil,Serie A,3.0,234.0,7.13,1.0,0.0,0.385,0.6
+Paraguay,2380,2502,G. Gómez,True,Palmeiras,Brazil,Serie A,27.0,2337.0,7.23,2.0,1.0,0.116,0.6
+Paraguay,2380,425020,A. Maidana,True,Club Guarani,Paraguay,Division Profesional - Apertura,13.0,1116.0,7.0,3.0,0.0,0.242,0.5
+Paraguay,2380,35808,G. Velázquez,True,Cerro Porteno,Paraguay,Division Profesional - Apertura,18.0,1546.0,7.23,1.0,0.0,0.058,0.5
+Paraguay,2380,70732,J. Canale,True,Lanus,Argentina,Liga Profesional Argentina,11.0,1010.0,7.35,4.0,0.0,0.356,0.6
+Paraguay,2380,195107,D. Bobadilla,True,Sao Paulo,Brazil,Serie A,31.0,2166.0,7.04,4.0,2.0,0.249,0.6
+Paraguay,2380,119128,G. Caballero,True,Nacional Asuncion,Paraguay,Division Profesional - Apertura,18.0,1384.0,,5.0,0.0,0.325,0.5
+Paraguay,2380,6236,A. Cubas,True,Vancouver Whitecaps,USA,Major League Soccer,28.0,2441.0,6.99,0.0,1.0,0.037,0.6
+Paraguay,2380,305832,M. Galarza,True,Talleres Cordoba,Argentina,Liga Profesional Argentina,13.0,846.0,6.6,0.0,0.0,0.0,0.6
+Paraguay,2380,278370,D. Gómez,True,Brighton,England,Premier League,32.0,2137.0,6.74,5.0,1.0,0.253,1.0
+Paraguay,2380,106485,Maurício,True,Palmeiras,Brazil,Serie A,29.0,1634.0,6.92,3.0,7.0,0.551,0.6
+Paraguay,2380,70767,B. Ojeda,True,Real Salt Lake,USA,Major League Soccer,31.0,2192.0,6.96,2.0,0.0,0.082,0.6
+Paraguay,2380,196298,R. Sosa,True,Palmeiras,Brazil,Serie A,23.0,883.0,6.89,3.0,3.0,0.612,0.6
+Paraguay,2380,2507,M. Almirón,True,Atlanta United FC,USA,Major League Soccer,31.0,2713.0,7.22,6.0,4.0,0.332,0.6
+Paraguay,2380,2514,A. Romero,True,Al Ain,United-Arab-Emirates,Pro League,21.0,1119.0,7.06,1.0,3.0,0.322,0.6
+Paraguay,2380,95460,A. Arce,True,LDU de Quito,Ecuador,Liga Pro,12.0,982.0,6.97,2.0,3.0,0.458,0.5
+Paraguay,2380,6483,G. Ávalos,True,Independiente,Argentina,Liga Profesional Argentina,30.0,1871.0,6.93,12.0,2.0,0.673,0.6
+Paraguay,2380,70747,J. Enciso,True,Strasbourg,France,Ligue 1,27.0,1892.0,7.06,3.0,6.0,0.428,1.0
+Paraguay,2380,70670,I. Pitta,True,RB Bragantino,Brazil,Serie A,24.0,1113.0,6.96,7.0,2.0,0.728,0.6
+Paraguay,2380,2522,A. Sanabria,True,Cremonese,Italy,Serie A,25.0,940.0,6.5,1.0,1.0,0.191,1.0
+Qatar,1569,42207,Mahmud Abunada,True,Al-Rayyan SC,Qatar,Stars League,20.0,990.0,6.81,0.0,0.0,0.0,0.6
+Qatar,1569,42021,Meshaal Barsham,True,Al Sadd,Qatar,Stars League,20.0,900.0,6.82,0.0,0.0,0.0,0.6
+Qatar,1569,136503,Salah Zakaria,True,Al-Duhail SC,Qatar,Stars League,14.0,810.0,6.94,0.0,1.0,0.111,0.6
+Qatar,1569,175439,Homam Ahmed,True,Cultural Leonesa,Spain,Segunda División,14.0,697.0,6.56,0.0,0.0,0.0,0.45
+Qatar,1569,42060,Sultan Al Braik,True,Al-Duhail SC,Qatar,Stars League,18.0,720.0,6.86,0.0,0.0,0.0,0.6
+Qatar,1569,542542,A. Al Hussain,False,,,,,,,,,,
+Qatar,1569,542548,A. Al Oui,False,,,,,,,,,,
+Qatar,1569,200981,Jassem Gaber,True,Al-Rayyan SC,Qatar,Stars League,15.0,418.0,6.91,0.0,0.0,0.0,0.6
+Qatar,1569,2532,Boualem Khoukhi,True,Al Sadd,Qatar,Stars League,18.0,810.0,6.87,0.0,0.0,0.0,0.6
+Qatar,1569,42288,Lucas Mendes,True,Al Wakrah,Qatar,Stars League,17.0,954.0,7.09,1.0,1.0,0.189,0.6
+Qatar,1569,366516,G. Laye,True,Al-Arabi SC,Qatar,Stars League,0.0,419.0,6.7,0.0,0.0,0.0,0.6
+Qatar,1569,2530,Pedro Miguel,True,Al Sadd,Qatar,Stars League,18.0,656.0,6.98,1.0,2.0,0.412,0.6
+Qatar,1569,2535,Assim Madibo,True,Al Wakrah,Qatar,Stars League,13.0,485.0,6.88,0.0,0.0,0.0,0.6
+Qatar,1569,42286,Ahmed Al Ganehi,True,Al-Gharafa,Qatar,Stars League,11.0,320.0,6.45,0.0,2.0,0.562,0.6
+Qatar,1569,2533,Abdulaziz Hatem,True,Al-Rayyan SC,Qatar,Stars League,18.0,431.0,6.8,0.0,1.0,0.209,0.6
+Qatar,1569,2537,Karim Boudiaf,True,Al-Duhail SC,Qatar,Stars League,12.0,163.0,7.27,0.0,0.0,,0.6
+Qatar,1569,2539,Ahmed Fathi,True,Al-Arabi SC,Qatar,Stars League,19.0,876.0,7.15,0.0,1.0,0.103,0.6
+Qatar,1569,2545,Hassan Al Haydos,True,Al Sadd,Qatar,Stars League,12.0,83.0,6.85,0.0,2.0,,0.6
+Qatar,1569,283174,Mohamed Al Manai,True,Al Shamal,Qatar,Stars League,19.0,851.0,6.96,2.0,0.0,0.212,0.6
+Qatar,1569,542541,Y. Abdurisag,True,Al Wakrah,Qatar,Stars League,18.0,611.0,6.6,2.0,2.0,0.589,0.6
+Qatar,1569,2544,Akram Afif,True,Al Sadd,Qatar,Stars League,22.0,948.0,8.18,11.0,6.0,1.614,0.6
+Qatar,1569,2542,Ahmed Alaa,True,Al-Rayyan SC,Qatar,Stars League,20.0,442.0,6.66,1.0,2.0,0.611,0.6
+Qatar,1569,2543,Almoez Ali,True,Al-Duhail SC,Qatar,Stars League,4.0,152.0,6.8,1.0,0.0,,0.6
+Qatar,1569,42075,Edmilson Junior,True,Al-Duhail SC,Qatar,Stars League,19.0,780.0,7.19,4.0,1.0,0.577,0.6
+Qatar,1569,423737,Tahsin Jamshid,True,Al-Duhail SC,Qatar,Stars League,14.0,214.0,6.59,0.0,0.0,0.0,0.6
+Qatar,1569,42089,Mohammed Muntari,True,Al-Gharafa,Qatar,Stars League,7.0,70.0,6.3,0.0,0.0,,0.6
+Switzerland,15,123468,M. Keller,True,BSC Young Boys,Switzerland,Super League,38.0,3420.0,7.2,0.0,0.0,0.0,0.8
+Switzerland,15,25282,G. Kobel,True,Borussia Dortmund,Germany,Bundesliga,34.0,3060.0,7.18,0.0,0.0,0.0,1.0
+Switzerland,15,1142,Y. Mvogo,True,Lorient,France,Ligue 1,31.0,2790.0,7.01,0.0,0.0,0.0,1.0
+Switzerland,15,5,M. Akanji,True,Inter,Italy,Serie A,33.0,2820.0,7.15,2.0,0.0,0.064,1.0
+Switzerland,15,162414,A. Amenda,True,Eintracht Frankfurt,Germany,Bundesliga,24.0,1685.0,6.67,0.0,0.0,0.0,1.0
+Switzerland,15,48372,E. Cömert,True,Valencia,Spain,La Liga,17.0,1339.0,6.77,2.0,1.0,0.202,1.0
+Switzerland,15,2803,N. Elvedi,True,Borussia Mönchengladbach,Germany,Bundesliga,33.0,2967.0,7.03,0.0,2.0,0.061,1.0
+Switzerland,15,349344,L. Jaquez,True,VfB Stuttgart,Germany,Bundesliga,14.0,899.0,6.82,0.0,1.0,0.1,1.0
+Switzerland,15,48489,M. Muheim,True,Hamburger SV,Germany,Bundesliga,29.0,2437.0,6.96,0.0,4.0,0.148,1.0
+Switzerland,15,1631,R. Rodríguez,True,Real Betis,Spain,La Liga,23.0,1561.0,6.67,0.0,1.0,0.058,1.0
+Switzerland,15,48378,S. Widmer,True,FSV Mainz 05,Germany,Bundesliga,27.0,1819.0,6.81,2.0,1.0,0.148,1.0
+Switzerland,15,951,M. Aebischer,True,Pisa,Italy,Serie A,35.0,2900.0,6.91,1.0,2.0,0.093,1.0
+Switzerland,15,2807,R. Freuler,True,Bologna,Italy,Serie A,29.0,2217.0,6.92,1.0,2.0,0.122,1.0
+Switzerland,15,264705,A. Jashari,True,AC Milan,Italy,Serie A,14.0,706.0,6.72,0.0,1.0,0.127,1.0
+Switzerland,15,957,D. Sow,True,Sevilla,Spain,La Liga,33.0,2195.0,6.77,5.0,4.0,0.369,1.0
+Switzerland,15,1464,G. Xhaka,True,Sunderland,England,Premier League,34.0,2916.0,7.32,1.0,6.0,0.216,1.0
+Switzerland,15,2810,D. Zakaria,True,Monaco,France,Ligue 1,24.0,2033.0,6.86,2.0,1.0,0.133,1.0
+Switzerland,15,952,C. Fassnacht,True,BSC Young Boys,Switzerland,Super League,33.0,2361.0,7.04,18.0,7.0,0.953,0.8
+Switzerland,15,48497,C. Itten,True,Fortuna Düsseldorf,Germany,2. Bundesliga,30.0,2625.0,7.01,15.0,3.0,0.617,0.45
+Switzerland,15,163032,F. Rieder,True,FC Augsburg,Germany,Bundesliga,32.0,2359.0,6.88,6.0,3.0,0.343,1.0
+Switzerland,15,48471,R. Vargas,True,Sevilla,Spain,La Liga,24.0,1608.0,6.74,3.0,6.0,0.504,1.0
+Switzerland,15,123469,Z. Amdouni,True,Burnley,England,Premier League,4.0,69.0,6.43,0.0,0.0,,1.0
+Switzerland,15,421,B. Embolo,True,Rennes,France,Ligue 1,31.0,1872.0,6.71,9.0,3.0,0.577,1.0
+Switzerland,15,406244,J. Manzambi,True,SC Freiburg,Germany,Bundesliga,27.0,2094.0,7.21,5.0,4.0,0.387,1.0
+Switzerland,15,48389,N. Okafor,True,Leeds,England,Premier League,28.0,1573.0,6.93,8.0,1.0,0.515,1.0
+Switzerland,15,48648,D. Ndoye,True,Nottingham Forest,England,Premier League,24.0,1176.0,6.63,1.0,1.0,0.153,1.0
+Brazil,6,280,Alisson Becker,True,Liverpool,England,Premier League,26.0,2351.0,6.78,0.0,0.0,0.0,1.0
+Brazil,6,617,Ederson,True,Fenerbahçe,Turkey,Süper Lig,24.0,2132.0,6.94,0.0,0.0,0.0,0.8
+Brazil,6,2410,Weverton,True,Palmeiras,Brazil,Serie A,26.0,2355.0,6.87,0.0,0.0,0.0,0.6
+Brazil,6,860,Alex Sandro,True,Flamengo,Brazil,Serie A,20.0,1565.0,7.06,0.0,0.0,0.0,0.6
+Brazil,6,30497,Bremer,True,Juventus,Italy,Serie A,26.0,2175.0,7.13,4.0,3.0,0.29,1.0
+Brazil,6,22224,Gabriel Magalhães,True,Arsenal,England,Premier League,32.0,2751.0,7.36,3.0,4.0,0.229,1.0
+Brazil,6,30424,Ibañez,True,Al-Ahli Jeddah,Saudi-Arabia,Pro League,28.0,2336.0,7.31,2.0,2.0,0.154,0.8
+Brazil,6,10124,Léo Pereira,True,Flamengo,Brazil,Serie A,34.0,2993.0,7.23,4.0,0.0,0.12,0.6
+Brazil,6,257,Marquinhos,True,Paris Saint Germain,France,Ligue 1,14.0,1049.0,7.27,0.0,0.0,0.0,1.0
+Brazil,6,24866,Douglas Santos,True,Zenit,Russia,Premier League,23.0,1921.0,7.18,1.0,0.0,0.047,0.8
+Brazil,6,10097,Éderson Silva,True,Atalanta,Italy,Serie A,30.0,2235.0,7.0,2.0,1.0,0.121,1.0
+Brazil,6,618,Danilo,True,Flamengo,Brazil,Serie A,20.0,1417.0,6.91,1.0,1.0,0.127,0.6
+Brazil,6,10135,Bruno Guimarães,True,Newcastle,England,Premier League,29.0,2455.0,7.47,9.0,5.0,0.513,1.0
+Brazil,6,747,Casemiro,True,Manchester United,England,Premier League,34.0,2593.0,7.19,9.0,2.0,0.382,1.0
+Brazil,6,299,Fabinho,True,Al-Ittihad FC,Saudi-Arabia,Pro League,30.0,2648.0,7.13,1.0,3.0,0.136,0.8
+Brazil,6,1646,Lucas Paquetá,True,West Ham,England,Premier League,18.0,1521.0,6.89,4.0,1.0,0.296,1.0
+Brazil,6,275170,Danilo Santos,True,Botafogo,Brazil,Serie A,12.0,741.0,7.008333,0.0,3.0,0.364,0.6
+Brazil,6,1165,Matheus Cunha,True,Manchester United,England,Premier League,33.0,2503.0,7.13,10.0,2.0,0.431,1.0
+Brazil,6,377122,Endrick,True,Lyon,France,Ligue 1,16.0,1222.0,7.09,5.0,7.0,0.884,1.0
+Brazil,6,265785,Luiz Henrique,True,Zenit,Russia,Premier League,28.0,2035.0,6.99,6.0,3.0,0.398,0.8
+Brazil,6,127769,Gabriel Martinelli,True,Arsenal,England,Premier League,30.0,1079.0,6.6,1.0,4.0,0.417,1.0
+Brazil,6,276,Neymar,True,Santos,Brazil,Serie A,20.0,1535.0,7.37,8.0,1.0,0.528,0.6
+Brazil,6,1496,Raphinha,True,Barcelona,Spain,La Liga,22.0,1388.0,7.55,13.0,3.0,1.037,1.0
+Brazil,6,407806,Rayan,True,Vasco DA Gama,Brazil,Serie A,34.0,2875.0,7.17,14.0,1.0,0.47,0.6
+Brazil,6,196156,Thiago,True,Brentford,England,Premier League,38.0,3295.0,6.94,22.0,1.0,0.628,1.0
+Brazil,6,762,Vinícius Júnior,True,Real Madrid,Spain,La Liga,36.0,2825.0,7.51,16.0,5.0,0.669,1.0
+Morocco,31,2701,Y. Bounou,True,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,26.0,2346.0,6.93,0.0,0.0,0.0,0.8
+Morocco,31,2702,M. Mohamedi,True,Renaissance Berkane,Morocco,Botola Pro,3.0,0.0,,0.0,0.0,,0.5
+Morocco,31,2703,A. Tagnaouti,False,,,,,,,,,,
+Morocco,31,50042,M. Saâdane,True,Al-Fateh,Saudi-Arabia,Pro League,29.0,2496.0,7.06,0.0,1.0,0.036,0.8
+Morocco,31,18814,I. Diop,True,Fulham,England,Premier League,13.0,827.0,6.64,1.0,0.0,0.109,1.0
+Morocco,31,283252,Z. El Ouahdi,True,Genk,Belgium,Jupiler Pro League,34.0,2996.0,7.09,8.0,4.0,0.36,0.8
+Morocco,31,9,A. Hakimi,True,Paris Saint Germain,France,Ligue 1,18.0,1374.0,6.79,2.0,2.0,0.262,1.0
+Morocco,31,326183,R. Halhal,True,KV Mechelen,Belgium,Jupiler Pro League,33.0,2849.0,6.84,1.0,2.0,0.095,0.8
+Morocco,31,545,N. Mazraoui,True,Manchester United,England,Premier League,20.0,1022.0,6.89,0.0,0.0,0.0,1.0
+Morocco,31,278898,C. Riad,True,Crystal Palace,England,Premier League,9.0,554.0,6.57,0.0,1.0,0.162,1.0
+Morocco,31,162451,A. Salah-Eddine,True,PSV Eindhoven,Netherlands,Eredivisie,17.0,1092.0,6.74,0.0,0.0,0.0,0.8
+Morocco,31,146772,Y. Belammari,True,Al Ahly,Egypt,Premier League,9.0,715.0,6.94,0.0,0.0,0.0,0.6
+Morocco,31,74,S. Amrabat,True,Real Betis,Spain,La Liga,17.0,1296.0,6.98,0.0,0.0,0.0,1.0
+Morocco,31,438688,A. Bouaddi,True,Lille,France,Ligue 1,30.0,2338.0,6.78,0.0,1.0,0.038,1.0
+Morocco,31,277003,N. El Aynaoui,True,AS Roma,Italy,Serie A,25.0,1003.0,6.7,1.0,2.0,0.269,1.0
+Morocco,31,340573,B. El Khannouss,True,VfB Stuttgart,Germany,Bundesliga,25.0,1634.0,6.98,4.0,5.0,0.496,1.0
+Morocco,31,415431,S. El Mourabet,True,Strasbourg,France,Ligue 1,33.0,2141.0,6.95,1.0,2.0,0.126,1.0
+Morocco,31,129678,A. Ounahi,True,Girona,Spain,La Liga,24.0,1766.0,7.27,5.0,2.0,0.357,1.0
+Morocco,31,161897,I. Saibari,True,PSV Eindhoven,Netherlands,Eredivisie,27.0,2145.0,7.21,15.0,8.0,0.965,0.8
+Morocco,31,336659,C. Talbi,True,Sunderland,England,Premier League,28.0,1561.0,6.63,4.0,1.0,0.288,1.0
+Morocco,31,369544,Gessime Yassine,True,Dunkerque,France,Ligue 2,13.0,803.0,7.08,2.0,6.0,0.897,0.45
+Morocco,31,744,Brahim Díaz,True,Real Madrid,Spain,La Liga,30.0,1284.0,6.68,1.0,6.0,0.491,1.0
+Morocco,31,535046,A. Amaimouni,True,Hoffenheim II,Germany,3. Liga,18.0,884.0,7.68,3.0,4.0,0.713,0.5
+Morocco,31,2722,A. El Kaabi,True,Olympiakos Piraeus,Greece,Super League 1,27.0,2108.0,6.8,18.0,2.0,0.854,0.8
+Morocco,31,191289,A. Sbaï,True,Angers,France,Ligue 1,25.0,1834.0,6.73,3.0,1.0,0.196,1.0
+Morocco,31,36579,S. Rahimi,True,Al Ain,United-Arab-Emirates,Pro League,15.0,885.0,6.98,2.0,0.0,0.203,0.6
+Haiti,2386,123742,J. Duverger,False,,,,,,,,,,
+Haiti,2386,174768,A. Pierre,True,Sochaux,France,National 1,0.0,0.0,,0.0,0.0,,0.5
+Haiti,2386,87789,J. Placide,True,Bastia,France,Ligue 2,24.0,2128.0,6.83,0.0,1.0,0.042,0.45
+Haiti,2386,20850,C. Arcus,True,Angers,France,Ligue 1,26.0,2051.0,6.71,0.0,3.0,0.132,1.0
+Haiti,2386,573613,K. Thermoncy,True,BSC Young Boys,Switzerland,Super League,0.0,0.0,,0.0,0.0,,0.8
+Haiti,2386,12303,Ricardo Ade,True,LDU de Quito,Ecuador,Liga Pro,30.0,2625.0,7.09,1.0,0.0,0.034,0.5
+Haiti,2386,1411,H. Delcroix,True,FC Lugano,Switzerland,Super League,14.0,1155.0,7.07,1.0,0.0,0.078,0.8
+Haiti,2386,20655,J. Duverne,True,Gent,Belgium,Jupiler Pro League,22.0,1174.0,6.65,1.0,1.0,0.153,0.8
+Haiti,2386,190747,M. Expérience,True,Nancy,France,Ligue 2,20.0,1272.0,6.75,1.0,1.0,0.142,0.45
+Haiti,2386,102505,D. Lacroix,True,Colorado Springs,USA,USL Championship,8.0,658.0,,0.0,0.0,0.0,0.6
+Haiti,2386,275367,W. Paugain,True,Zulte Waregem,Belgium,Jupiler Pro League,24.0,1298.0,6.82,1.0,0.0,0.069,0.8
+Haiti,2386,20665,J. Bellegarde,True,Wolves,England,Premier League,26.0,1251.0,6.78,1.0,1.0,0.144,1.0
+Haiti,2386,338367,D. Jean-Jacques,True,Philadelphia Union,USA,Major League Soccer,33.0,2597.0,6.95,3.0,2.0,0.173,0.6
+Haiti,2386,318930,G. Métusala,True,Colorado Springs,USA,USL Championship,7.0,588.0,,0.0,0.0,0.0,0.6
+Haiti,2386,371050,W. Pierre,True,Real du Cap,Haiti,Ligue Haïtienne,0.0,0.0,,0.0,0.0,,0.5
+Haiti,2386,540857,C. F. Sainte,False,,,,,,,,,,
+Haiti,2386,194242,D. Simon,True,Tatran Prešov,Slovakia,Super Liga,20.0,576.0,6.71,0.0,0.0,0.0,0.5
+Haiti,2386,174915,J. Casimir,True,Auxerre,France,Ligue 1,31.0,1532.0,6.61,1.0,0.0,0.059,1.0
+Haiti,2386,128766,L. Deedson,True,FC Dallas,USA,Major League Soccer,2.0,22.0,6.3,0.0,0.0,,0.6
+Haiti,2386,50958,D. Etienne,True,Toronto FC,USA,Major League Soccer,25.0,1007.0,6.72,0.0,3.0,0.268,0.6
+Haiti,2386,48535,Y. Fortuné,True,Vizela,Portugal,Segunda Liga,23.0,414.0,6.53,1.0,1.0,0.435,0.8
+Haiti,2386,84087,W. Isidor,True,Sunderland,England,Premier League,32.0,1186.0,6.65,6.0,0.0,0.455,1.0
+Haiti,2386,21613,L. Joseph,True,Ferencvarosi TC,Hungary,NB I,25.0,882.0,6.96,7.0,1.0,0.816,0.5
+Haiti,2386,45020,D. Nazon,True,Esteghlal FC,Iran,Persian Gulf Pro League,9.0,0.0,,0.0,1.0,,0.5
+Haiti,2386,8601,F. Pierrot,True,Rizespor,Turkey,Süper Lig,10.0,127.0,6.36,0.0,0.0,,0.8
+Haiti,2386,162733,R. Providence,True,Almere City FC,Netherlands,Eerste Divisie,28.0,1039.0,6.47,1.0,2.0,0.26,0.8
+Scotland,1108,1106,C. Gordon,True,Heart Of Midlothian,Scotland,Premiership,3.0,226.0,6.8,0.0,0.0,0.0,0.8
+Scotland,1108,18933,A. Gunn,True,Nottingham Forest,England,Premier League,1.0,45.0,6.3,0.0,0.0,,1.0
+Scotland,1108,44937,L. Kelly,True,Rangers,Scotland,Premiership,0.0,0.0,,0.0,0.0,,0.8
+Scotland,1108,19066,G. Hanley,True,Hibernian,Scotland,Premiership,24.0,1932.0,6.71,0.0,0.0,0.0,0.8
+Scotland,1108,1111,J. Hendry,True,Al-Ettifaq,Saudi-Arabia,Pro League,30.0,2571.0,6.75,1.0,0.0,0.035,0.8
+Scotland,1108,44871,A. Hickey,True,Brentford,England,Premier League,21.0,727.0,6.65,0.0,0.0,0.0,1.0
+Scotland,1108,19987,D. Hyam,True,Wrexham,England,Championship,40.0,3590.0,6.77,0.0,0.0,0.0,0.8
+Scotland,1108,44811,S. McKenna,True,Dinamo Zagreb,Croatia,HNL,30.0,2639.0,7.25,2.0,3.0,0.171,0.6
+Scotland,1108,138417,N. Patterson,True,Everton,England,Premier League,7.0,266.0,6.87,0.0,0.0,0.0,1.0
+Scotland,1108,1115,A. Ralston,True,Celtic,Scotland,Premiership,24.0,1300.0,6.89,0.0,0.0,0.0,0.8
+Scotland,1108,289,A. Robertson,True,Liverpool,England,Premier League,24.0,1188.0,6.74,1.0,0.0,0.076,1.0
+Scotland,1108,44865,J. Souttar,True,Rangers,Scotland,Premiership,24.0,2020.0,7.3,0.0,0.0,0.0,0.8
+Scotland,1108,1117,K. Tierney,True,Celtic,Scotland,Premiership,35.0,2515.0,7.28,6.0,8.0,0.501,0.8
+Scotland,1108,1125,R. Christie,True,Bournemouth,England,Premier League,26.0,986.0,6.72,2.0,0.0,0.183,1.0
+Scotland,1108,44814,L. Ferguson,True,Bologna,Italy,Serie A,27.0,1608.0,6.74,1.0,0.0,0.056,1.0
+Scotland,1108,557460,T. Fletcher,True,Manchester United,England,Premier League,2.0,17.0,6.7,0.0,0.0,,1.0
+Scotland,1108,19191,J.  McGinn,True,Aston Villa,England,Premier League,30.0,2169.0,6.95,5.0,4.0,0.373,1.0
+Scotland,1108,19077,K. McLean,True,Norwich,England,Championship,42.0,3620.0,7.23,3.0,3.0,0.149,0.8
+Scotland,1108,903,S. McTominay,True,Napoli,Italy,Serie A,33.0,2793.0,7.06,10.0,3.0,0.419,1.0
+Scotland,1108,19524,C. Adams,True,Torino,Italy,Serie A,33.0,1902.0,6.71,6.0,2.0,0.379,1.0
+Scotland,1108,45307,L. Dykes,True,Birmingham,England,Championship,21.0,467.0,6.6,2.0,0.0,0.385,0.8
+Scotland,1108,343576,B. Doak,True,Bournemouth,England,Premier League,8.0,122.0,6.43,0.0,1.0,,1.0
+Scotland,1108,8794,G. Hirst,True,Ipswich,England,Championship,42.0,2111.0,6.61,11.0,3.0,0.597,0.8
+Scotland,1108,45175,L. Shankland,True,Heart Of Midlothian,Scotland,Premiership,29.0,2495.0,6.98,16.0,3.0,0.685,0.8
+Scotland,1108,45078,R. Stewart,True,Southampton,England,Championship,27.0,1105.0,6.83,9.0,2.0,0.896,0.8
+Scotland,1108,433272,Findlay Curtis,True,Kilmarnock,Scotland,Premiership,14.0,1076.0,7.32,5.0,1.0,0.502,0.8
+Australia,20,353883,P. Beach,True,Melbourne City,Australia,A-League,25.0,2280.0,7.0,0.0,0.0,0.0,0.5
+Australia,20,6870,P. Izzo,True,Randers FC,Denmark,Superliga,26.0,2340.0,7.14,0.0,0.0,0.0,0.6
+Australia,20,2741,M. Ryan,True,Levante,Spain,La Liga,36.0,3240.0,7.24,0.0,0.0,0.0,1.0
+Australia,20,225,A. Behich,True,Melbourne City,Australia,A-League,25.0,2280.0,7.13,3.0,2.0,0.197,0.5
+Australia,20,337587,J. Bos,True,Feyenoord,Netherlands,Eredivisie,28.0,2058.0,7.19,4.0,7.0,0.481,0.8
+Australia,20,20457,C. Burgess,True,Swansea,England,Championship,46.0,4140.0,7.0,0.0,0.0,0.0,0.8
+Australia,20,348568,A. Circati,True,Parma,Italy,Serie A,31.0,2673.0,6.99,1.0,0.0,0.034,1.0
+Australia,20,33847,J. Geria,True,Albirex Niigata,Japan,J1 League,22.0,1456.0,6.73,0.0,0.0,0.0,0.6
+Australia,20,426480,L. Herrington,True,Brisbane Roar,Australia,A-League,11.0,930.0,7.12,1.0,0.0,0.097,0.5
+Australia,20,20079,H. Souttar,True,Leicester,England,Championship,2.0,178.0,8.2,1.0,0.0,,0.8
+Australia,20,2742,M. Degenek,True,TSC Backa Topola,Serbia,Super Liga,13.0,1052.0,6.86,1.0,0.0,0.086,0.6
+Australia,20,6808,J. Italiano,True,Grazer AK,Austria,Bundesliga,24.0,2065.0,7.12,4.0,0.0,0.174,0.8
+Australia,20,153622,K. Trewin,True,Melbourne City,Australia,A-League,13.0,1104.0,7.22,0.0,0.0,0.0,0.5
+Australia,20,2749,J. Irvine,True,FC St. Pauli,Germany,Bundesliga,24.0,1632.0,6.7,0.0,1.0,0.055,1.0
+Australia,20,6832,C. Devlin,True,Heart Of Midlothian,Scotland,Premiership,28.0,2400.0,7.16,2.0,0.0,0.075,0.8
+Australia,20,7050,A. O Neill,True,New York City FC,USA,Major League Soccer,22.0,1884.0,6.89,0.0,0.0,0.0,0.6
+Australia,20,441269,Paul Okon-Engstler,True,Sydney,Australia,A-League,27.0,2325.0,7.21,0.0,2.0,0.077,0.5
+Australia,20,6904,C. Metcalfe,True,FC St. Pauli,Germany,Bundesliga,25.0,600.0,6.56,0.0,2.0,0.3,1.0
+Australia,20,38123,A. Hrustic,True,Heracles,Netherlands,Eredivisie,27.0,2222.0,6.83,1.0,6.0,0.284,0.8
+Australia,20,342035,C. Volpato,True,Sassuolo,Italy,Serie A,24.0,1090.0,6.75,2.0,4.0,0.495,1.0
+Australia,20,338014,N. Irankunda,True,Watford,England,Championship,40.0,2041.0,6.85,4.0,4.0,0.353,0.8
+Australia,20,2751,M. Leckie,True,Melbourne City,Australia,A-League,7.0,362.0,6.89,0.0,1.0,0.249,0.5
+Australia,20,2755,A. Mabil,True,Castellón,Spain,Segunda División,30.0,1721.0,6.69,3.0,6.0,0.471,0.45
+Australia,20,296645,T. Yengi,True,Livingston,Scotland,Premiership,19.0,1065.0,6.76,2.0,0.0,0.169,0.8
+Australia,20,198352,M. Touré,True,Randers FC,Denmark,Superliga,17.0,1117.0,6.79,4.0,3.0,0.564,0.6
+Australia,20,312459,N. Velupillay,True,Melbourne Victory,Australia,A-League,22.0,1467.0,6.78,4.0,1.0,0.307,0.5
+Türkiye,777,50132,A. Bayindir,True,Manchester United,England,Premier League,6.0,540.0,6.58,0.0,0.0,0.0,1.0
+Türkiye,777,49866,U. Çakir,True,Galatasaray,Turkey,Süper Lig,25.0,2250.0,7.05,0.0,0.0,0.0,0.8
+Türkiye,777,49837,M. Günok,True,Beşiktaş,Turkey,Süper Lig,8.0,720.0,6.63,0.0,0.0,0.0,0.8
+Türkiye,777,62490,S. Akaydin,True,Rizespor,Turkey,Süper Lig,29.0,2571.0,6.96,3.0,1.0,0.14,0.8
+Türkiye,777,61837,A. Bardakci,True,Galatasaray,Turkey,Süper Lig,30.0,2546.0,7.14,0.0,1.0,0.035,0.8
+Türkiye,777,22222,Z. Çelik,True,AS Roma,Italy,Serie A,34.0,2737.0,6.84,1.0,2.0,0.099,1.0
+Türkiye,777,30521,M. Demiral,True,Al-Ahli Jeddah,Saudi-Arabia,Pro League,20.0,1556.0,7.01,2.0,0.0,0.116,0.8
+Türkiye,777,50057,E. Elmali,True,Galatasaray,Turkey,Süper Lig,25.0,1530.0,6.93,3.0,0.0,0.176,0.8
+Türkiye,777,26300,O. Kabak,True,1899 Hoffenheim,Germany,Bundesliga,25.0,1763.0,6.92,4.0,0.0,0.204,1.0
+Türkiye,777,1361,F. Kadioglu,True,Brighton,England,Premier League,37.0,3135.0,6.83,1.0,0.0,0.029,1.0
+Türkiye,777,1719,M. Müldür,True,Fenerbahçe,Turkey,Süper Lig,24.0,1222.0,6.73,1.0,2.0,0.221,0.8
+Türkiye,777,18776,Ç. Söyüncü,True,Fenerbahçe,Turkey,Süper Lig,11.0,772.0,7.08,0.0,1.0,0.117,0.8
+Türkiye,777,1640,H. Çalhanoglu,True,Inter,Italy,Serie A,22.0,1650.0,7.51,9.0,4.0,0.709,1.0
+Türkiye,777,25448,K. Ayhan,True,Galatasaray,Turkey,Süper Lig,19.0,419.0,6.89,1.0,0.0,0.215,0.8
+Türkiye,777,37155,O. Kokçu,True,Beşiktaş,Turkey,Süper Lig,30.0,2487.0,7.57,8.0,8.0,0.579,0.8
+Türkiye,777,24807,S. Özcan,True,Borussia Dortmund,Germany,Bundesliga,11.0,93.0,6.62,0.0,0.0,,1.0
+Türkiye,777,214463,I. Yüksek,True,Fenerbahçe,Turkey,Süper Lig,30.0,1768.0,6.93,1.0,2.0,0.153,0.8
+Türkiye,777,339887,C. Uzun,True,Eintracht Frankfurt,Germany,Bundesliga,21.0,1172.0,7.18,8.0,4.0,0.922,1.0
+Türkiye,777,134590,O. Aydin,True,Fenerbahçe,Turkey,Süper Lig,21.0,647.0,6.69,0.0,2.0,0.278,0.8
+Türkiye,777,291964,A. Güler,True,Real Madrid,Spain,La Liga,33.0,2026.0,7.18,4.0,9.0,0.577,1.0
+Türkiye,777,454,Y. Akgün,True,Galatasaray,Turkey,Süper Lig,28.0,1833.0,7.23,7.0,9.0,0.786,0.8
+Türkiye,777,142959,K. Aktürkoglu,True,Fenerbahçe,Turkey,Süper Lig,29.0,1959.0,7.08,8.0,7.0,0.689,0.8
+Türkiye,777,388570,D. Gül,True,FC Porto,Portugal,Primeira Liga,29.0,1179.0,6.5,5.0,1.0,0.458,0.8
+Türkiye,777,49857,I. Kahveci,True,Kasımpaşa,Turkey,Süper Lig,16.0,1371.0,7.11,2.0,3.0,0.328,0.8
+Türkiye,777,339883,K. Yildiz,True,Juventus,Italy,Serie A,36.0,2838.0,7.39,10.0,6.0,0.507,1.0
+Türkiye,777,63274,B. Yilmaz,True,Galatasaray,Turkey,Süper Lig,30.0,2318.0,7.08,8.0,11.0,0.738,0.8
+Germany,25,702,O. Baumann,True,1899 Hoffenheim,Germany,Bundesliga,34.0,3060.0,6.81,0.0,0.0,0.0,1.0
+Germany,25,497,M. Neuer,True,Bayern München,Germany,Bundesliga,22.0,1860.0,6.9,0.0,0.0,0.0,1.0
+Germany,25,399,A. Nübel,True,VfB Stuttgart,Germany,Bundesliga,34.0,3060.0,7.2,0.0,1.0,0.029,1.0
+Germany,25,25368,W. Anton,True,Borussia Dortmund,Germany,Bundesliga,32.0,2880.0,7.26,2.0,0.0,0.062,1.0
+Germany,25,280074,N. Brown,True,Eintracht Frankfurt,Germany,Bundesliga,33.0,2658.0,6.77,4.0,4.0,0.271,1.0
+Germany,25,25158,D. Raum,True,RB Leipzig,Germany,Bundesliga,30.0,2556.0,7.37,3.0,7.0,0.352,1.0
+Germany,25,2285,A. Rüdiger,True,Real Madrid,Spain,La Liga,18.0,1492.0,6.91,1.0,0.0,0.06,1.0
+Germany,25,26243,N. Schlotterbeck,True,Borussia Dortmund,Germany,Bundesliga,28.0,2520.0,7.7,5.0,1.0,0.214,1.0
+Germany,25,972,J. Tah,True,Bayern München,Germany,Bundesliga,28.0,2024.0,7.27,2.0,1.0,0.133,1.0
+Germany,25,163189,M. Thiaw,True,Newcastle,England,Premier League,35.0,2973.0,7.04,4.0,0.0,0.121,1.0
+Germany,25,502,J. Kimmich,True,Bayern München,Germany,Bundesliga,29.0,2280.0,7.74,2.0,8.0,0.395,1.0
+Germany,25,714,N. Amiri,True,FSV Mainz 05,Germany,Bundesliga,26.0,2090.0,7.45,12.0,2.0,0.603,1.0
+Germany,25,511,L. Goretzka,True,Bayern München,Germany,Bundesliga,31.0,1954.0,7.13,5.0,3.0,0.368,1.0
+Germany,25,18970,P. Groß,True,Brighton,England,Premier League,19.0,1636.0,7.05,1.0,3.0,0.22,1.0
+Germany,25,380978,A. Ouédraogo,True,RB Leipzig,Germany,Bundesliga,19.0,974.0,6.92,4.0,3.0,0.647,1.0
+Germany,25,128533,J. Leweling,True,VfB Stuttgart,Germany,Bundesliga,32.0,2375.0,7.03,7.0,9.0,0.606,1.0
+Germany,25,181812,J. Musiala,True,Bayern München,Germany,Bundesliga,15.0,685.0,6.68,3.0,4.0,0.92,1.0
+Germany,25,637,F. Nmecha,True,Borussia Dortmund,Germany,Bundesliga,29.0,2184.0,6.93,2.0,3.0,0.206,1.0
+Germany,25,328033,A. Pavlovic,True,Bayern München,Germany,Bundesliga,24.0,1460.0,7.19,3.0,1.0,0.247,1.0
+Germany,25,644,L. Sané,True,Galatasaray,Turkey,Süper Lig,28.0,2291.0,7.17,7.0,5.0,0.471,0.8
+Germany,25,137210,A. Stiller,True,VfB Stuttgart,Germany,Bundesliga,34.0,2750.0,7.26,2.0,5.0,0.229,1.0
+Germany,25,203224,F. Wirtz,True,Liverpool,England,Premier League,33.0,2399.0,6.81,5.0,3.0,0.3,1.0
+Germany,25,978,K. Havertz,True,Arsenal,England,Premier League,12.0,583.0,6.68,2.0,3.0,0.772,1.0
+Germany,25,158644,M. Beier,True,Borussia Dortmund,Germany,Bundesliga,32.0,2036.0,6.8,9.0,6.0,0.663,1.0
+Germany,25,26475,D. Undav,True,VfB Stuttgart,Germany,Bundesliga,29.0,2247.0,7.18,19.0,7.0,1.041,1.0
+Germany,25,158054,N. Woltemade,True,Newcastle,England,Premier League,33.0,1939.0,6.66,8.0,3.0,0.511,1.0
+Curaçao,5530,214129,T. Bodak,True,Telstar,Netherlands,KNVB Beker,0.0,0.0,,0.0,0.0,,0.8
+Curaçao,5530,36967,T. Doornbusch,True,VVV Venlo,Netherlands,KNVB Beker,1.0,56.0,6.2,0.0,0.0,,0.8
+Curaçao,5530,221,E. Room,True,Cercle Brugge,Belgium,Jupiler Pro League,0.0,0.0,,0.0,0.0,,0.8
+Curaçao,5530,37175,R. Bazoer,True,Konyaspor,Turkey,Süper Lig,15.0,935.0,6.48,0.0,0.0,0.0,0.8
+Curaçao,5530,706,J. Brenet,True,Livingston,Scotland,Premiership,14.0,884.0,6.59,0.0,1.0,0.102,0.8
+Curaçao,5530,36970,S. Floranus,True,PEC Zwolle,Netherlands,Eredivisie,32.0,2801.0,6.38,1.0,3.0,0.129,0.8
+Curaçao,5530,353808,Deveron Fonville,True,NEC Nijmegen,Netherlands,Eredivisie,29.0,1478.0,6.85,0.0,2.0,0.122,0.8
+Curaçao,5530,36857,J. Gaari,False,,,,,,,,,,
+Curaçao,5530,194645,S. Sambo,True,Sparta Rotterdam,Netherlands,Eredivisie,25.0,1626.0,6.63,0.0,1.0,0.055,0.8
+Curaçao,5530,37066,R. van Eijma,True,Waalwijk,Netherlands,Eerste Divisie,30.0,2047.0,6.79,0.0,0.0,0.0,0.8
+Curaçao,5530,228,A. Obispo,True,PSV Eindhoven,Netherlands,Eredivisie,17.0,821.0,6.84,2.0,0.0,0.219,0.8
+Curaçao,5530,18997,L. Bacuna,True,Bandırmaspor,Turkey,1. Lig,19.0,1704.0,7.1,6.0,2.0,0.423,0.8
+Curaçao,5530,162199,A. Martha,True,Rotherham,England,League One,41.0,2578.0,6.58,1.0,2.0,0.105,0.5
+Curaçao,5530,406846,T. Noslin,True,Telstar,Netherlands,Eredivisie,34.0,2306.0,6.81,2.0,3.0,0.195,0.8
+Curaçao,5530,309763,L. Comenencia,True,FC Zurich,Switzerland,Super League,24.0,1522.0,6.66,0.0,0.0,0.0,0.8
+Curaçao,5530,37461,K. Felida,True,Den Bosch,Netherlands,Eerste Divisie,36.0,2928.0,7.3,4.0,3.0,0.215,0.8
+Curaçao,5530,906,T. Chong,True,Sheffield Utd,England,Championship,21.0,697.0,6.66,0.0,1.0,0.129,0.8
+Curaçao,5530,36842,G. Roemeratoe,True,Waalwijk,Netherlands,Eerste Divisie,35.0,2290.0,6.74,0.0,1.0,0.039,0.8
+Curaçao,5530,19047,J. Bacuna,True,FC Volendam,Netherlands,Eredivisie,13.0,717.0,7.01,0.0,2.0,0.251,0.8
+Curaçao,5530,163220,J. Antonisse,True,Kifisia,Greece,Super League 1,28.0,2006.0,6.8,1.0,2.0,0.135,0.8
+Curaçao,5530,37272,B. Kuwas,True,FC Volendam,Netherlands,Eredivisie,32.0,2030.0,6.73,5.0,4.0,0.399,0.8
+Curaçao,5530,41627,K. Gorré,True,Maccabi Haifa,Israel,Ligat Ha'al,25.0,1122.0,6.87,3.0,4.0,0.561,0.5
+Curaçao,5530,161884,S. Hansen,True,Middlesbrough,England,Championship,19.0,530.0,6.55,1.0,0.0,0.17,0.8
+Curaçao,5530,38708,G. Kastaneer,False,,,,,,,,,,
+Curaçao,5530,18981,J. Locadia,False,,,,,,,,,,
+Curaçao,5530,195067,J. Margaritha,True,SK Beveren,Belgium,Challenger Pro League,31.0,1604.0,7.24,5.0,11.0,0.898,0.8
+Netherlands,1118,26232,M. Flekken,True,Bayer Leverkusen,Germany,Bundesliga,24.0,2130.0,6.92,0.0,0.0,0.0,1.0
+Netherlands,1118,194536,R. Roefs,True,Sunderland,England,Premier League,35.0,3163.0,6.98,0.0,0.0,0.0,1.0
+Netherlands,1118,129058,B. Verbruggen,True,Brighton,England,Premier League,38.0,3420.0,7.05,0.0,0.0,0.0,1.0
+Netherlands,1118,18861,N. Aké,True,Manchester City,England,Premier League,18.0,703.0,6.81,0.0,0.0,0.0,1.0
+Netherlands,1118,226,D. Dumfries,True,Inter,Italy,Serie A,20.0,1327.0,6.62,3.0,1.0,0.271,1.0
+Netherlands,1118,341642,J. Hato,True,Chelsea,England,Premier League,22.0,1160.0,6.54,0.0,0.0,0.0,1.0
+Netherlands,1118,37143,L. Geertruida,True,Sunderland,England,Premier League,28.0,1715.0,6.83,0.0,0.0,0.0,1.0
+Netherlands,1118,290,V. van Dijk,True,Liverpool,England,Premier League,38.0,3431.0,7.28,6.0,0.0,0.157,1.0
+Netherlands,1118,38695,J. van Hecke,True,Brighton,England,Premier League,36.0,3211.0,7.26,3.0,3.0,0.168,1.0
+Netherlands,1118,152849,M. van de Ven,True,Tottenham,England,Premier League,35.0,3055.0,6.73,4.0,1.0,0.147,1.0
+Netherlands,1118,92993,M. Wieffer,True,Brighton,England,Premier League,26.0,1914.0,6.74,2.0,3.0,0.235,1.0
+Netherlands,1118,542,R. Gravenberch,True,Liverpool,England,Premier League,36.0,2996.0,7.06,5.0,3.0,0.24,1.0
+Netherlands,1118,36899,T. Koopmeiners,True,Juventus,Italy,Serie A,33.0,1835.0,6.71,0.0,0.0,0.0,1.0
+Netherlands,1118,36902,T. Reijnders,True,Manchester City,England,Premier League,28.0,1640.0,6.85,5.0,2.0,0.384,1.0
+Netherlands,1118,36905,G. Til,True,PSV Eindhoven,Netherlands,Eredivisie,29.0,2247.0,6.9,14.0,4.0,0.721,0.8
+Netherlands,1118,38747,Q. Timber,True,Feyenoord,Netherlands,Eredivisie,17.0,1316.0,6.91,2.0,4.0,0.41,0.8
+Netherlands,1118,538,F. de Jong,True,Barcelona,Spain,La Liga,25.0,1637.0,7.29,1.0,5.0,0.33,1.0
+Netherlands,1118,30432,M. de Roon,True,Atalanta,Italy,Serie A,34.0,2704.0,7.04,1.0,2.0,0.1,1.0
+Netherlands,1118,792,J. Kluivert,True,Bournemouth,England,Premier League,20.0,951.0,6.54,2.0,0.0,0.189,1.0
+Netherlands,1118,38750,B. Brobbey,True,Sunderland,England,Premier League,31.0,1944.0,6.63,7.0,1.0,0.37,1.0
+Netherlands,1118,667,M. Depay,True,Corinthians,Brazil,Serie A,23.0,1571.0,6.97,6.0,3.0,0.516,0.6
+Netherlands,1118,247,C. Gakpo,True,Liverpool,England,Premier League,36.0,2765.0,6.89,7.0,5.0,0.391,1.0
+Netherlands,1118,544,N. Lang,True,Napoli,Italy,Serie A,18.0,668.0,6.96,1.0,2.0,0.404,1.0
+Netherlands,1118,249,D. Malen,True,Aston Villa,England,Premier League,21.0,680.0,6.6,4.0,1.0,0.662,1.0
+Netherlands,1118,37724,C. Summerville,True,West Ham,England,Premier League,31.0,2485.0,7.05,5.0,2.0,0.254,1.0
+Netherlands,1118,25416,W. Weghorst,True,Ajax,Netherlands,Eredivisie,29.0,1903.0,6.83,8.0,4.0,0.568,0.8
+Japan,12,304782,T. Hayakawa,True,Kashima,Japan,J1 League,38.0,3420.0,7.15,0.0,1.0,0.026,0.6
+Japan,12,33034,K. Osako,True,Sanfrecce Hiroshima,Japan,J1 League,38.0,3420.0,6.98,0.0,0.0,0.0,0.6
+Japan,12,199578,Z. Suzuki,True,Parma,Italy,Serie A,20.0,1800.0,7.06,0.0,0.0,0.0,1.0
+Japan,12,38114,K. Itakura,True,Ajax,Netherlands,Eredivisie,19.0,1379.0,6.99,1.0,0.0,0.065,0.8
+Japan,12,32893,H. Ito,True,Bayern München,Germany,Bundesliga,16.0,932.0,6.81,1.0,2.0,0.29,1.0
+Japan,12,440,Y. Nagatomo,True,FC Tokyo,Japan,J1 League,26.0,1759.0,6.692307,0.0,2.0,0.102,0.6
+Japan,12,33165,A. Seko,True,Le Havre,France,Ligue 1,30.0,2625.0,6.8,0.0,0.0,0.0,1.0
+Japan,12,32887,Y. Sugawara,True,Werder Bremen,Germany,Bundesliga,31.0,2432.0,6.53,0.0,6.0,0.222,1.0
+Japan,12,351014,J. Suzuki,True,FC Copenhagen,Denmark,Superliga,22.0,1898.0,6.96,2.0,0.0,0.095,0.6
+Japan,12,32954,S. Taniguchi,True,St. Truiden,Belgium,Jupiler Pro League,38.0,2962.0,7.1,1.0,1.0,0.061,0.8
+Japan,12,2597,T. Tomiyasu,True,Ajax,Netherlands,Eredivisie,9.0,247.0,6.61,0.0,1.0,0.364,0.8
+Japan,12,32858,T. Watanabe,True,Feyenoord,Netherlands,Eredivisie,30.0,2637.0,7.12,2.0,0.0,0.068,0.8
+Japan,12,2598,R. Doan,True,Eintracht Frankfurt,Germany,Bundesliga,31.0,2379.0,6.82,5.0,5.0,0.378,1.0
+Japan,12,2601,D. Kamada,True,Crystal Palace,England,Premier League,28.0,1908.0,6.86,0.0,0.0,0.0,1.0
+Japan,12,33889,K. Sano,True,FSV Mainz 05,Germany,Bundesliga,34.0,3059.0,7.05,1.0,2.0,0.088,1.0
+Japan,12,32966,A. Tanaka,True,Leeds,England,Premier League,28.0,1326.0,6.74,2.0,0.0,0.136,1.0
+Japan,12,1942,J. Ito,True,Genk,Belgium,Jupiler Pro League,28.0,1785.0,7.1,6.0,5.0,0.555,0.8
+Japan,12,32862,T. Kubo,True,Real Sociedad,Spain,La Liga,24.0,1508.0,7.05,2.0,4.0,0.358,1.0
+Japan,12,33224,D. Maeda,True,Celtic,Scotland,Premiership,36.0,2837.0,6.77,14.0,6.0,0.634,0.8
+Japan,12,33321,Keito Nakamura,True,Reims,France,Ligue 2,29.0,2357.0,7.18,14.0,2.0,0.611,0.45
+Japan,12,199143,Y. Suzuki,True,SC Freiburg,Germany,Bundesliga,25.0,1636.0,6.77,4.0,2.0,0.33,1.0
+Japan,12,375930,K. Goto,True,St. Truiden,Belgium,Jupiler Pro League,38.0,2885.0,6.79,11.0,7.0,0.562,0.8
+Japan,12,33289,Koki Ogawa,True,NEC Nijmegen,Netherlands,Eredivisie,26.0,1274.0,6.82,8.0,3.0,0.777,0.8
+Japan,12,422572,K. Shiogai,True,VfL Wolfsburg,Germany,Bundesliga,13.0,344.0,6.52,1.0,0.0,0.262,1.0
+Japan,12,72155,A. Ueda,True,Feyenoord,Netherlands,Eredivisie,31.0,2533.0,7.17,25.0,1.0,0.924,0.8
+Japan,12,106851,S. Machino,True,Borussia Mönchengladbach,Germany,Bundesliga,32.0,1084.0,6.63,3.0,1.0,0.332,1.0
+Ivory Coast,1501,64190,Y. Fofana,True,Rizespor,Turkey,Süper Lig,27.0,2430.0,6.78,0.0,1.0,0.037,0.8
+Ivory Coast,1501,277046,M. Koné,True,Charleroi,Belgium,Jupiler Pro League,19.0,1710.0,7.18,0.0,0.0,0.0,0.8
+Ivory Coast,1501,30393,A. Lafont,True,Panathinaikos,Greece,Super League 1,22.0,1943.0,6.83,0.0,0.0,0.0,0.8
+Ivory Coast,1501,135068,E. Agbadou,True,Wolves,England,Premier League,14.0,1101.0,6.85,0.0,0.0,0.0,1.0
+Ivory Coast,1501,354753,O. Diomande,True,Sporting CP,Portugal,Primeira Liga,17.0,1296.0,7.06,0.0,1.0,0.069,0.8
+Ivory Coast,1501,161747,G. Doué,True,Strasbourg,France,Ligue 1,24.0,2063.0,6.92,2.0,6.0,0.349,1.0
+Ivory Coast,1501,22002,G. Konan,True,GIL Vicente,Portugal,Primeira Liga,30.0,2661.0,6.74,0.0,0.0,0.0,0.8
+Ivory Coast,1501,48119,O. Kossounou,True,Atalanta,Italy,Serie A,19.0,994.0,6.65,1.0,0.0,0.091,1.0
+Ivory Coast,1501,1807,E. Ndicka,True,AS Roma,Italy,Serie A,31.0,2683.0,6.97,3.0,0.0,0.101,1.0
+Ivory Coast,1501,20836,C. Operi,True,Başakşehir,Turkey,Süper Lig,22.0,1824.0,6.97,0.0,4.0,0.197,0.8
+Ivory Coast,1501,30504,W. Singo,True,Galatasaray,Turkey,Süper Lig,19.0,955.0,6.88,2.0,1.0,0.283,0.8
+Ivory Coast,1501,30807,S. Fofana,True,Rennes,France,Ligue 1,12.0,668.0,6.85,1.0,0.0,0.135,1.0
+Ivory Coast,1501,474591,C. Inao Oulai,True,Trabzonspor,Turkey,Süper Lig,25.0,2078.0,7.06,2.0,4.0,0.26,0.8
+Ivory Coast,1501,1642,F. Kessié,True,Al-Ahli Jeddah,Saudi-Arabia,Pro League,26.0,2083.0,7.0,5.0,3.0,0.346,0.8
+Ivory Coast,1501,22149,I. Sangaré,True,Nottingham Forest,England,Premier League,28.0,2080.0,6.97,2.0,2.0,0.173,1.0
+Ivory Coast,1501,3243,J. Seri,True,Maribor,Slovenia,1. SNL,4.0,0.0,,0.0,0.0,,0.5
+Ivory Coast,1501,263228,P. Guiagon,True,Charleroi,Belgium,Jupiler Pro League,33.0,2555.0,7.07,9.0,5.0,0.493,0.8
+Ivory Coast,1501,387643,B. Touré,True,1899 Hoffenheim,Germany,Bundesliga,30.0,2325.0,6.9,5.0,9.0,0.542,1.0
+Ivory Coast,1501,301771,S. Adingra,True,Monaco,France,Ligue 1,14.0,868.0,6.71,3.0,2.0,0.518,1.0
+Ivory Coast,1501,275651,A. Bonny,True,Inter,Italy,Serie A,33.0,1156.0,6.76,5.0,4.0,0.701,1.0
+Ivory Coast,1501,334429,O. Diakité,True,Cercle Brugge,Belgium,Jupiler Pro League,25.0,1429.0,6.6,7.0,0.0,0.441,0.8
+Ivory Coast,1501,157997,A. Diallo,True,Manchester United,England,Premier League,32.0,2344.0,6.89,2.0,3.0,0.192,1.0
+Ivory Coast,1501,513776,Y. Diomande,True,RB Leipzig,Germany,Bundesliga,33.0,2476.0,7.72,12.0,8.0,0.727,1.0
+Ivory Coast,1501,137303,E. Guessand,True,Aston Villa,England,Premier League,13.0,597.0,6.41,0.0,1.0,0.151,1.0
+Ivory Coast,1501,3246,N. Pépé,True,Villarreal,Spain,La Liga,36.0,2397.0,7.25,8.0,8.0,0.601,1.0
+Ivory Coast,1501,162707,E. Wahi,True,Nice,France,Ligue 1,15.0,1015.0,6.81,7.0,1.0,0.709,1.0
+Ecuador,2382,16380,H. Galíndez,True,Huracan,Argentina,Liga Profesional Argentina,30.0,2840.0,7.04,0.0,0.0,0.0,0.6
+Ecuador,2382,81224,M. Ramírez,True,Kifisia,Greece,Super League 1,27.0,2520.0,7.06,0.0,0.0,0.0,0.8
+Ecuador,2382,16642,G. Valle,True,LDU de Quito,Ecuador,Liga Pro,14.0,860.0,6.86,0.0,0.0,0.0,0.5
+Ecuador,2382,46731,P. Estupiñán,True,AC Milan,Italy,Serie A,19.0,1046.0,6.72,1.0,1.0,0.172,1.0
+Ecuador,2382,127817,P. Hincapié,True,Arsenal,England,Premier League,25.0,1792.0,6.92,1.0,2.0,0.151,1.0
+Ecuador,2382,306940,Y. Medina,True,Genk,Belgium,Jupiler Pro League,27.0,1534.0,6.73,0.0,3.0,0.176,0.8
+Ecuador,2382,354027,J. Ordoñez,True,Club Brugge KV,Belgium,Jupiler Pro League,33.0,2675.0,6.96,3.0,0.0,0.101,0.8
+Ecuador,2382,16367,W. Pacho,True,Paris Saint Germain,France,Ligue 1,23.0,1915.0,6.98,0.0,0.0,0.0,1.0
+Ecuador,2382,2575,J. Porozo,True,Club Tijuana,Mexico,Liga MX,34.0,3126.0,6.97,2.0,0.0,0.058,0.6
+Ecuador,2382,2583,A. Preciado,True,Sparta Praha,Czech-Republic,Czech Liga,14.0,970.0,6.89,0.0,1.0,0.093,0.6
+Ecuador,2382,63964,F. Torres,True,Corinthians,Brazil,Serie A,10.0,673.0,6.86,0.0,0.0,0.0,0.6
+Ecuador,2382,16470,J. Alcívar,True,Independiente del Valle,Ecuador,Liga Pro,31.0,1894.0,7.04,2.0,2.0,0.19,0.5
+Ecuador,2382,116117,M. Caicedo,True,Chelsea,England,Premier League,33.0,2802.0,7.17,3.0,1.0,0.128,1.0
+Ecuador,2382,338045,D. Castillo,True,FC Midtjylland,Denmark,Superliga,26.0,1725.0,6.87,4.0,4.0,0.417,0.6
+Ecuador,2382,16360,A. Franco,True,Atletico-MG,Brazil,Serie A,30.0,2701.0,6.9,1.0,0.0,0.033,0.6
+Ecuador,2382,406303,K. Páez,True,Strasbourg,France,Ligue 1,15.0,431.0,6.5,1.0,0.0,0.209,1.0
+Ecuador,2382,280695,A. Minda,True,Cercle Brugge,Belgium,Jupiler Pro League,17.0,974.0,6.85,3.0,2.0,0.462,0.8
+Ecuador,2382,198347,A. Valencia,True,Antwerp,Belgium,Jupiler Pro League,23.0,1331.0,6.94,4.0,2.0,0.406,0.8
+Ecuador,2382,237078,P. Vite,True,U.N.A.M. - Pumas,Mexico,Liga MX,38.0,2904.0,6.9,3.0,1.0,0.124,0.6
+Ecuador,2382,361966,K. Rodríguez,True,Union St. Gilloise,Belgium,Jupiler Pro League,31.0,1825.0,6.71,10.0,2.0,0.592,0.8
+Ecuador,2382,25414,J. Yeboah,True,Venezia,Italy,Serie B,34.0,2614.0,7.31,10.0,9.0,0.654,0.45
+Ecuador,2382,311543,N. Angulo,True,Anderlecht,Belgium,Jupiler Pro League,22.0,1902.0,7.26,6.0,5.0,0.521,0.8
+Ecuador,2382,16590,J. Caicedo,True,Sporting Gijon,Spain,Segunda División,10.0,155.0,6.45,0.0,0.0,,0.45
+Ecuador,2382,350799,Jeremy Arévalo,True,Racing Santander,Spain,Segunda División,18.0,890.0,7.03,8.0,0.0,0.809,0.45
+Ecuador,2382,16369,G. Plata,True,Flamengo,Brazil,Serie A,28.0,1360.0,6.89,4.0,1.0,0.331,0.6
+Ecuador,2382,35533,E. Valencia,True,CF Pachuca,Mexico,Liga MX,22.0,1376.0,6.85,8.0,1.0,0.589,0.6
+Sweden,5,158700,V. Johansson,True,Stoke City,England,Championship,25.0,2250.0,7.2,0.0,1.0,0.04,0.8
+Sweden,5,2851,K. Nordfeldt,True,AIK Stockholm,Sweden,Allsvenskan,28.0,2520.0,6.803571,0.0,0.0,0.0,0.6
+Sweden,5,48033,J. Widell Zetterström,True,Derby,England,Championship,32.0,2880.0,7.14,0.0,0.0,0.0,0.8
+Sweden,5,47903,H. Ekdal,True,Burnley,England,Premier League,19.0,1539.0,6.67,0.0,0.0,0.0,1.0
+Sweden,5,47969,G. Gudmundsson,True,Leeds,England,Premier League,32.0,2642.0,6.67,0.0,0.0,0.0,1.0
+Sweden,5,137976,I. Hien,True,Atalanta,Italy,Serie A,28.0,1965.0,6.87,1.0,0.0,0.046,1.0
+Sweden,5,137721,G. Lagerbielke,True,SC Braga,Portugal,Primeira Liga,28.0,2392.0,7.03,2.0,0.0,0.075,0.8
+Sweden,5,889,V. Lindelöf,True,Aston Villa,England,Premier League,17.0,985.0,6.67,0.0,1.0,0.091,1.0
+Sweden,5,47988,C. Starfelt,True,Celta Vigo,Spain,La Liga,19.0,1493.0,6.86,0.0,0.0,0.0,1.0
+Sweden,5,161504,H. Johansson,True,Mjallby AIF,Sweden,Allsvenskan,30.0,2290.0,7.24,7.0,8.0,0.59,0.6
+Sweden,5,8486,E. Smith,True,FC St. Pauli,Germany,Bundesliga,27.0,2314.0,6.88,2.0,2.0,0.156,1.0
+Sweden,5,226765,E. Stroud,True,Mjallby AIF,Sweden,Allsvenskan,28.0,2449.0,7.41,9.0,5.0,0.514,0.6
+Sweden,5,198654,D. Svensson,True,Borussia Dortmund,Germany,Bundesliga,33.0,2452.0,6.76,2.0,2.0,0.147,1.0
+Sweden,5,47696,A. Bernhardsson,True,Holstein Kiel,Germany,2. Bundesliga,20.0,1405.0,7.2,2.0,9.0,0.705,0.45
+Sweden,5,265820,Y. Ayari,True,Brighton,England,Premier League,29.0,1941.0,6.76,3.0,3.0,0.278,1.0
+Sweden,5,347316,L. Bergvall,True,Tottenham,England,Premier League,23.0,979.0,6.57,1.0,3.0,0.368,1.0
+Sweden,5,48002,B. Nygren,True,Celtic,Scotland,Premiership,38.0,2545.0,7.16,16.0,5.0,0.743,0.8
+Sweden,5,48047,J. Karlström,True,Udinese,Italy,Serie A,36.0,3152.0,6.78,1.0,0.0,0.029,1.0
+Sweden,5,2860,K. Sema,True,Pafos,Cyprus,1. Division,23.0,637.0,6.68,0.0,1.0,0.141,0.5
+Sweden,5,30484,M. Svanberg,True,VfL Wolfsburg,Germany,Bundesliga,26.0,1028.0,6.61,3.0,1.0,0.35,1.0
+Sweden,5,350850,B. Zeneli,True,IF Elfsborg,Sweden,Allsvenskan,27.0,2398.0,7.45,2.0,8.0,0.375,0.6
+Sweden,5,160925,T. Ali,True,Malmo FF,Sweden,Allsvenskan,26.0,1505.0,7.01,2.0,2.0,0.239,0.6
+Sweden,5,153430,A. Elanga,True,Newcastle,England,Premier League,32.0,1347.0,6.57,0.0,1.0,0.067,1.0
+Sweden,5,18979,V. Gyökeres,True,Arsenal,England,Premier League,36.0,2254.0,6.62,14.0,1.0,0.599,1.0
+Sweden,5,2864,A. Isak,True,Liverpool,England,Premier League,14.0,714.0,6.51,3.0,1.0,0.504,1.0
+Sweden,5,15683,G. Nilsson,True,Club Brugge KV,Belgium,Jupiler Pro League,7.0,64.0,6.36,0.0,0.0,,0.8
+Tunisia,28,49423,S. Ben Hsan,False,,,,,,,,,,
+Tunisia,28,533394,C. Abdelmouhib,False,,,,,,,,,,
+Tunisia,28,49424,A. Dahmen,False,,,,,,,,,,
+Tunisia,28,49583,A. Abdi,True,Nice,France,Ligue 1,23.0,1210.0,6.62,3.0,0.0,0.223,1.0
+Tunisia,28,393977,A. Arous,True,Kasımpaşa,Turkey,Süper Lig,21.0,1672.0,6.82,1.0,0.0,0.054,0.8
+Tunisia,28,135059,A. Ben Hmida,False,,,,,,,,,,
+Tunisia,28,2945,D. Bronn,True,Servette FC,Switzerland,Super League,14.0,1215.0,6.67,0.0,1.0,0.074,0.8
+Tunisia,28,533360,R. Chikhaoui,False,,,,,,,,,,
+Tunisia,28,375608,M. Neffati,True,IFK Norrkoping,Sweden,Allsvenskan,28.0,2395.0,7.02,1.0,4.0,0.188,0.6
+Tunisia,28,163068,O. Rekik,False,,,,,,,,,,
+Tunisia,28,50030,M. Talbi,True,Lorient,France,Ligue 1,29.0,2610.0,6.9,0.0,1.0,0.034,1.0
+Tunisia,28,18942,Y. Valery,True,Sheffield Wednesday,England,Championship,23.0,2050.0,6.64,0.0,1.0,0.044,0.8
+Tunisia,28,49469,M. Ben Ouanes,True,Kasımpaşa,Turkey,Süper Lig,28.0,2285.0,6.78,2.0,6.0,0.315,0.8
+Tunisia,28,533295,K. Ayari,False,,,,,,,,,,
+Tunisia,28,310196,Ismaël Gharbi,True,FC Augsburg,Germany,Bundesliga,6.0,92.0,6.58,0.0,0.0,,1.0
+Tunisia,28,25300,R. Khedira,True,Union Berlin,Germany,Bundesliga,32.0,2835.0,6.67,5.0,1.0,0.19,1.0
+Tunisia,28,180560,H. Mejbri,True,Burnley,England,Premier League,27.0,1253.0,6.72,1.0,4.0,0.359,1.0
+Tunisia,28,21587,E. Skhiri,True,Eintracht Frankfurt,Germany,Bundesliga,25.0,1450.0,6.71,0.0,0.0,0.0,1.0
+Tunisia,28,199310,A. Ben Slimane,True,Norwich,England,Championship,22.0,1235.0,6.75,5.0,2.0,0.51,0.8
+Tunisia,28,67195,H. Mahmoud,True,FC Lugano,Switzerland,Super League,28.0,1532.0,6.74,2.0,1.0,0.176,0.8
+Tunisia,28,57518,S. Tounekti,True,Celtic,Scotland,Premiership,27.0,1515.0,6.89,2.0,2.0,0.238,0.8
+Tunisia,28,42012,E. Achouri,True,FC Copenhagen,Denmark,Superliga,21.0,1387.0,6.9,3.0,4.0,0.454,0.6
+Tunisia,28,2962,F. Chaouat,False,,,,,,,,,,
+Tunisia,28,566059,R. Elloumi,True,Vancouver Whitecaps,USA,Major League Soccer,8.0,241.0,7.01,2.0,0.0,0.747,0.6
+Tunisia,28,344862,H. Mastouri,True,Dinamo Makhachkala,Russia,Premier League,22.0,1123.0,6.56,2.0,0.0,0.16,0.8
+Tunisia,28,323974,E. Saad,True,Hannover 96,Germany,2. Bundesliga,13.0,716.0,6.9,0.0,3.0,0.377,0.45
+Spain,9,182718,Joan García,True,Barcelona,Spain,La Liga,30.0,2700.0,7.35,0.0,0.0,0.0,1.0
+Spain,9,19465,David Raya,True,Arsenal,England,Premier League,37.0,3330.0,6.95,0.0,0.0,0.0,1.0
+Spain,9,47270,Unai Simón,True,Athletic Club,Spain,La Liga,37.0,3330.0,6.88,0.0,0.0,0.0,1.0
+Spain,9,396623,Pau Cubarsí Paredes,True,Barcelona,Spain,La Liga,31.0,2708.0,7.21,1.0,0.0,0.033,1.0
+Spain,9,47380,Marc Cucurella,True,Chelsea,England,Premier League,34.0,2723.0,6.68,1.0,4.0,0.165,1.0
+Spain,9,619,Eric García,True,Barcelona,Spain,La Liga,34.0,2730.0,7.06,1.0,2.0,0.099,1.0
+Spain,9,563,Álex Grimaldo,True,Bayer Leverkusen,Germany,Bundesliga,29.0,2524.0,7.32,8.0,8.0,0.571,1.0
+Spain,9,622,Aymeric Laporte,True,Athletic Club,Spain,La Liga,25.0,2060.0,6.85,0.0,1.0,0.044,1.0
+Spain,9,753,Marcos Llorente,True,Atletico Madrid,Spain,La Liga,29.0,2185.0,6.93,0.0,4.0,0.165,1.0
+Spain,9,47519,Pedro Porro,True,Tottenham,England,Premier League,34.0,2810.0,6.89,1.0,2.0,0.096,1.0
+Spain,9,295793,Marc Pubill,True,Atletico Madrid,Spain,La Liga,19.0,1382.0,7.11,1.0,1.0,0.13,1.0
+Spain,9,296667,Gavi,True,Barcelona,Spain,La Liga,11.0,574.0,6.87,0.0,1.0,0.157,1.0
+Spain,9,47311,Mikel Merino,True,Arsenal,England,Premier League,22.0,1035.0,6.86,4.0,3.0,0.609,1.0
+Spain,9,133609,Pedri,True,Barcelona,Spain,La Liga,29.0,2107.0,7.54,2.0,9.0,0.47,1.0
+Spain,9,44,Rodri,True,Manchester City,England,Premier League,21.0,1513.0,7.46,1.0,0.0,0.059,1.0
+Spain,9,328,Fabián Ruiz,True,Paris Saint Germain,France,Ligue 1,20.0,1129.0,7.11,1.0,4.0,0.399,1.0
+Spain,9,47315,Martín Zubimendi,True,Arsenal,England,Premier League,38.0,3001.0,7.06,5.0,1.0,0.18,1.0
+Spain,9,182219,Álex Baena,True,Atletico Madrid,Spain,La Liga,27.0,1572.0,6.95,2.0,3.0,0.286,1.0
+Spain,9,1323,Dani Olmo,True,Barcelona,Spain,La Liga,33.0,2077.0,7.03,7.0,8.0,0.65,1.0
+Spain,9,47348,Borja Iglesias,True,Celta Vigo,Spain,La Liga,35.0,1903.0,6.75,14.0,2.0,0.757,1.0
+Spain,9,386828,Lamine Yamal,True,Barcelona,Spain,La Liga,28.0,2268.0,7.95,16.0,11.0,1.071,1.0
+Spain,9,338751,Víctor Muñoz,True,Osasuna,Spain,La Liga,34.0,2668.0,6.89,6.0,2.0,0.27,1.0
+Spain,9,47323,Mikel Oyarzabal,True,Real Sociedad,Spain,La Liga,34.0,2714.0,7.08,15.0,4.0,0.63,1.0
+Spain,9,184226,Yeremy Pino,True,Crystal Palace,England,Premier League,34.0,2100.0,6.86,2.0,2.0,0.171,1.0
+Spain,9,931,Ferran Torres,True,Barcelona,Spain,La Liga,33.0,1984.0,6.83,16.0,2.0,0.817,1.0
+Spain,9,183799,Nico Williams,True,Athletic Club,Spain,La Liga,25.0,1687.0,6.97,6.0,3.0,0.48,1.0
+Cape Verde Islands,1533,41764,Márcio Rosa,True,Montana,Bulgaria,First League,19.0,1170.0,7.04,0.0,0.0,0.0,0.5
+Cape Verde Islands,1533,15304,Vózinha,True,Chaves,Portugal,Segunda Liga,19.0,630.0,6.46,0.0,0.0,0.0,0.8
+Cape Verde Islands,1533,163200,C. dos Santos,True,San Diego,USA,Major League Soccer,31.0,2838.0,7.0,0.0,0.0,0.0,0.6
+Cape Verde Islands,1533,41608,Diney Borges,True,Al Bataeh,United-Arab-Emirates,Pro League,24.0,990.0,6.88,0.0,0.0,0.0,0.6
+Cape Verde Islands,1533,21997,Logan Costa,True,Villarreal,Spain,La Liga,2.0,29.0,6.9,0.0,0.0,,1.0
+Cape Verde Islands,1533,308689,S. Lopes Cabral,True,,Portugal,Primeira Liga,15.0,1324.0,7.3,5.0,3.0,0.544,0.8
+Cape Verde Islands,1533,69260,Pico,True,Shamrock Rovers,Ireland,Premier Division,34.0,2708.0,7.27,1.0,0.0,0.033,0.5
+Cape Verde Islands,1533,22139,S. Moreira,True,Columbus Crew,USA,Major League Soccer,32.0,2747.0,6.9,1.0,2.0,0.098,0.6
+Cape Verde Islands,1533,332056,Wagner Pina,True,Trabzonspor,Turkey,Süper Lig,31.0,2444.0,6.96,0.0,7.0,0.258,0.8
+Cape Verde Islands,1533,268806,Kelvin Pires,True,SJK,Finland,Veikkausliiga,19.0,727.0,6.64,0.0,0.0,0.0,0.5
+Cape Verde Islands,1533,2331,Stopira,True,Torreense,Portugal,Segunda Liga,31.0,450.0,6.92,0.0,0.0,0.0,0.8
+Cape Verde Islands,1533,265556,Telmo Arcanjo,True,Guimaraes,Portugal,Primeira Liga,29.0,1258.0,6.8,1.0,0.0,0.072,0.8
+Cape Verde Islands,1533,37435,Deroy Duarte,True,Ludogorets,Bulgaria,First League,34.0,1641.0,7.11,1.0,1.0,0.11,0.5
+Cape Verde Islands,1533,37436,L. Duarte,True,Puskas Academy,Hungary,NB I,29.0,1964.0,6.88,0.0,5.0,0.229,0.5
+Cape Verde Islands,1533,142016,João Paulo,True,Oţelul,Romania,Liga I,20.0,1635.0,7.16,1.0,3.0,0.22,0.5
+Cape Verde Islands,1533,96512,Kevin Pina,True,FC Krasnodar,Russia,Premier League,27.0,1211.0,6.94,1.0,0.0,0.074,0.8
+Cape Verde Islands,1533,50745,Jamiro Monteiro,True,PEC Zwolle,Netherlands,Eredivisie,21.0,1276.0,6.73,2.0,3.0,0.353,0.8
+Cape Verde Islands,1533,128007,Yannick Semedo,True,Farense,Portugal,Segunda Liga,31.0,608.0,7.13,0.0,0.0,0.0,0.8
+Cape Verde Islands,1533,44612,Garry Rodrigues,True,Apollon Limassol,Cyprus,1. Division,31.0,795.0,6.98,2.0,2.0,0.453,0.5
+Cape Verde Islands,1533,22265,Nuno da Costa,True,Başakşehir,Turkey,Süper Lig,26.0,930.0,6.65,3.0,1.0,0.387,0.8
+Cape Verde Islands,1533,1494,Jovane Cabral,True,,Portugal,Primeira Liga,27.0,1679.0,7.04,7.0,1.0,0.429,0.8
+Cape Verde Islands,1533,113580,Willy Semedo,True,Omonia Nicosia,Cyprus,1. Division,28.0,682.0,7.84,5.0,3.0,1.056,0.5
+Cape Verde Islands,1533,291024,Hélio Varela,True,Maccabi Tel Aviv,Israel,Ligat Ha'al,30.0,1557.0,6.88,3.0,2.0,0.289,0.5
+Cape Verde Islands,1533,50270,Ryan Mendes,True,Iğdır FK,Turkey,1. Lig,28.0,1871.0,6.73,5.0,2.0,0.337,0.8
+Cape Verde Islands,1533,309182,Gilson Benchimol,True,Akron,Russia,Premier League,22.0,1182.0,6.74,8.0,0.0,0.609,0.8
+Cape Verde Islands,1533,343287,D. Livramento,True,Casa Pia,Portugal,Primeira Liga,26.0,1060.0,6.44,0.0,1.0,0.085,0.8
+Belgium,1,730,T. Courtois,True,Real Madrid,Spain,La Liga,32.0,2880.0,6.93,0.0,0.0,0.0,1.0
+Belgium,1,162511,S. Lammens,True,Manchester United,England,Premier League,32.0,2880.0,7.01,0.0,0.0,0.0,1.0
+Belgium,1,340151,M. Penders,True,Strasbourg,France,Ligue 1,33.0,2970.0,6.95,0.0,0.0,0.0,1.0
+Belgium,1,2920,T. Castagne,True,Fulham,England,Premier League,30.0,1881.0,6.75,0.0,0.0,0.0,1.0
+Belgium,1,162007,M. De Cuyper,True,Brighton,England,Premier League,30.0,1443.0,6.86,2.0,3.0,0.312,1.0
+Belgium,1,162141,K. De Winter,True,AC Milan,Italy,Serie A,26.0,1805.0,6.88,1.0,1.0,0.1,1.0
+Belgium,1,304228,Z. Debast,True,Sporting CP,Portugal,Primeira Liga,17.0,1183.0,7.12,0.0,2.0,0.152,0.8
+Belgium,1,69,B. Mechele,True,Club Brugge KV,Belgium,Jupiler Pro League,39.0,3442.0,7.3,5.0,2.0,0.183,0.8
+Belgium,1,264,T. Meunier,True,Lille,France,Ligue 1,25.0,1915.0,6.87,2.0,2.0,0.188,1.0
+Belgium,1,312964,N. Ngoy,True,Lille,France,Ligue 1,29.0,2412.0,6.85,1.0,2.0,0.112,1.0
+Belgium,1,375974,J. Seys,True,Club Brugge KV,Belgium,Jupiler Pro League,39.0,2977.0,6.81,2.0,5.0,0.212,0.8
+Belgium,1,204043,A. Theate,True,Eintracht Frankfurt,Germany,Bundesliga,24.0,2143.0,6.8,1.0,0.0,0.042,1.0
+Belgium,1,629,K. De Bruyne,True,Napoli,Italy,Serie A,18.0,1169.0,7.04,5.0,2.0,0.539,1.0
+Belgium,1,162714,A. Onana,True,Aston Villa,England,Premier League,25.0,1788.0,7.03,2.0,0.0,0.101,1.0
+Belgium,1,2120,N. Raskin,True,Rangers,Scotland,Premiership,33.0,2785.0,7.46,6.0,7.0,0.42,0.8
+Belgium,1,1417,A. Saelemaekers,True,AC Milan,Italy,Serie A,35.0,2805.0,7.17,3.0,3.0,0.193,1.0
+Belgium,1,2926,Y. Tielemans,True,Aston Villa,England,Premier League,25.0,1874.0,7.21,0.0,4.0,0.192,1.0
+Belgium,1,335056,D. Moreira,True,Strasbourg,France,Ligue 1,27.0,2041.0,7.02,4.0,6.0,0.441,1.0
+Belgium,1,78,H. Vanaken,True,Club Brugge KV,Belgium,Jupiler Pro League,39.0,3373.0,7.45,7.0,3.0,0.267,0.8
+Belgium,1,20,A. Witsel,True,Girona,Spain,La Liga,32.0,2533.0,6.85,1.0,2.0,0.107,1.0
+Belgium,1,1422,J. Doku,True,Manchester City,England,Premier League,30.0,1796.0,7.39,5.0,5.0,0.501,1.0
+Belgium,1,340077,M. Fernandez-Pardo,True,Lille,France,Ligue 1,29.0,2379.0,7.0,8.0,5.0,0.492,1.0
+Belgium,1,907,R. Lukaku,True,Napoli,Italy,Serie A,5.0,50.0,6.63,1.0,0.0,,1.0
+Belgium,1,25458,D. Lukebakio,True,Benfica,Portugal,Primeira Liga,17.0,745.0,7.04,0.0,3.0,0.362,0.8
+Belgium,1,147859,C. De Ketelaere,True,Atalanta,Italy,Serie A,31.0,2188.0,7.25,3.0,5.0,0.329,1.0
+Belgium,1,1946,L. Trossard,True,Arsenal,England,Premier League,31.0,2006.0,6.96,6.0,6.0,0.538,1.0
+Egypt,32,550469,M. Alaa,False,,,,,,,,,,
+Egypt,32,16797,Mohamed El Shenawy,True,Al Ahly,Egypt,Premier League,15.0,1350.0,6.82,0.0,0.0,0.0,0.6
+Egypt,32,269174,Mostafa Shobeir,True,Al Ahly,Egypt,Premier League,11.0,990.0,7.03,0.0,0.0,0.0,0.6
+Egypt,32,16831,Al Mahdi Soliman,True,Zamalek SC,Egypt,Premier League,11.0,926.0,6.95,0.0,0.0,0.0,0.6
+Egypt,32,269621,Hossam Abdelmaguid,True,Zamalek SC,Egypt,Premier League,25.0,2233.0,7.31,4.0,0.0,0.161,0.6
+Egypt,32,196343,Mohamed Abdelmonem,True,Nice,France,Ligue 1,0.0,0.0,,0.0,0.0,,1.0
+Egypt,32,2649,Ahmed Fatouh,True,Zamalek SC,Egypt,Premier League,17.0,910.0,7.01,1.0,3.0,0.396,0.6
+Egypt,32,2656,Karim Hafez,True,Pyramids FC,Egypt,Premier League,18.0,1174.0,6.96,2.0,1.0,0.23,0.6
+Egypt,32,2654,Mohamed Hany,True,Al Ahly,Egypt,Premier League,23.0,1963.0,7.06,0.0,5.0,0.229,0.6
+Egypt,32,16804,Yasser Ibrahim,True,Al Ahly,Egypt,Premier League,18.0,1566.0,7.11,2.0,0.0,0.115,0.6
+Egypt,32,16805,Rami Rabia,True,Al Ain,United-Arab-Emirates,Pro League,17.0,810.0,7.19,1.0,0.0,0.111,0.6
+Egypt,32,550371,T. Alaa,True,Masr,Egypt,Premier League,12.0,860.0,6.73,0.0,1.0,0.105,0.6
+Egypt,32,17269,Emam Ashour,True,Al Ahly,Egypt,Premier League,13.0,962.0,7.46,2.0,4.0,0.561,0.6
+Egypt,32,190575,Marwan Attia,True,Al Ahly,Egypt,Premier League,21.0,1638.0,7.3,0.0,0.0,0.0,0.6
+Egypt,32,2660,Nabil Emad Dunga,True,Al Najma,Saudi-Arabia,Pro League,12.0,914.0,6.81,0.0,0.0,0.0,0.8
+Egypt,32,16813,Hamdi Fathy,True,Al Wakrah,Qatar,Stars League,18.0,772.0,7.26,1.0,0.0,0.117,0.6
+Egypt,32,16841,Mohanad Lasheen,True,Pyramids FC,Egypt,Premier League,24.0,2009.0,7.21,0.0,2.0,0.09,0.6
+Egypt,32,69196,Mahmoud Saber,True,Masr,Egypt,Premier League,26.0,1851.0,7.13,5.0,6.0,0.535,0.6
+Egypt,32,395075,Mostafa Zico,True,Pyramids FC,Egypt,Premier League,22.0,1191.0,6.59,6.0,2.0,0.605,0.6
+Egypt,32,2664,Trézéguet,True,Al Ahly,Egypt,Premier League,21.0,1688.0,7.04,11.0,0.0,0.586,0.6
+Egypt,32,20844,H. Hassan,True,Oviedo,Spain,La Liga,37.0,1943.0,6.81,0.0,3.0,0.139,1.0
+Egypt,32,16871,Ahmed Zizo,True,Al Ahly,Egypt,Premier League,20.0,1270.0,7.08,5.0,6.0,0.78,0.6
+Egypt,32,550547,H. Abdelkarim,False,,,,,,,,,,
+Egypt,32,70535,Ibrahim Adel,True,FC Nordsjaelland,Denmark,Superliga,11.0,629.0,6.83,3.0,1.0,0.572,0.6
+Egypt,32,81573,Omar Marmoush,True,Manchester City,England,Premier League,21.0,734.0,6.7,3.0,3.0,0.736,1.0
+Egypt,32,306,Mohamed Salah,True,Liverpool,England,Premier League,27.0,2148.0,6.93,7.0,7.0,0.587,1.0
+Saudi Arabia,23,193288,Nawaf Al Aqidi,True,Al-Nassr,Saudi-Arabia,Pro League,11.0,960.0,6.86,0.0,1.0,0.094,0.8
+Saudi Arabia,23,44449,Ahmed Al Kassar,True,Al-Qadisiyah FC,Saudi-Arabia,Pro League,3.0,205.0,6.9,0.0,0.0,0.0,0.8
+Saudi Arabia,23,44411,Mohammed Al Owais,False,,,,,,,,,,
+Saudi Arabia,23,44594,Saud Abdulhamid,True,Lens,France,Ligue 1,25.0,1356.0,6.99,2.0,4.0,0.398,1.0
+Saudi Arabia,23,403087,Mohammed Abu Al Shamat,True,Al-Qadisiyah FC,Saudi-Arabia,Pro League,31.0,2497.0,7.3,3.0,8.0,0.396,0.8
+Saudi Arabia,23,134995,Nawaf Boushal,True,Al-Nassr,Saudi-Arabia,Pro League,32.0,1895.0,6.96,0.0,6.0,0.285,0.8
+Saudi Arabia,23,44475,Abdulelah Al Amri,True,Al-Nassr,Saudi-Arabia,Pro League,25.0,1802.0,7.08,2.0,2.0,0.2,0.8
+Saudi Arabia,23,202381,Moteb Al Harbi,True,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,30.0,1846.0,6.81,2.0,2.0,0.195,0.8
+Saudi Arabia,23,44335,Hassan Kadesh,True,Al-Ittihad FC,Saudi-Arabia,Pro League,27.0,2275.0,6.76,1.0,0.0,0.04,0.8
+Saudi Arabia,23,44507,Ali Lajami,True,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,25.0,654.0,6.67,0.0,0.0,0.0,0.8
+Saudi Arabia,23,44367,Ali Majrashi,True,Al-Ahli Jeddah,Saudi-Arabia,Pro League,27.0,2079.0,6.93,1.0,3.0,0.173,0.8
+Saudi Arabia,23,44362,Hassan Tambakti,True,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,29.0,2364.0,7.09,1.0,0.0,0.038,0.8
+Saudi Arabia,23,543059,J. Thakri,False,,,,,,,,,,
+Saudi Arabia,23,44339,Nasser Al Dawsari,True,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,27.0,1638.0,6.87,0.0,1.0,0.055,0.8
+Saudi Arabia,23,44349,Mohamed Kanno,True,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,32.0,2095.0,7.17,5.0,3.0,0.344,0.8
+Saudi Arabia,23,269172,Ziyad Al Johani,True,Al-Ahli Jeddah,Saudi-Arabia,Pro League,26.0,1532.0,6.68,0.0,1.0,0.059,0.8
+Saudi Arabia,23,306380,Musab Al Juwayr,True,Al-Qadisiyah FC,Saudi-Arabia,Pro League,31.0,2540.0,7.39,6.0,11.0,0.602,0.8
+Saudi Arabia,23,44315,Abdullah Al Khaibari,True,Al-Nassr,Saudi-Arabia,Pro League,32.0,1688.0,6.74,0.0,1.0,0.053,0.8
+Saudi Arabia,23,593759,Ala Al Haji,False,,,,,,,,,,
+Saudi Arabia,23,44701,Khalid Al Ghannam,True,Al-Ettifaq,Saudi-Arabia,Pro League,32.0,2191.0,7.27,13.0,6.0,0.78,0.8
+Saudi Arabia,23,2639,Sultan Mandash,True,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,15.0,466.0,7.1,4.0,2.0,1.159,0.8
+Saudi Arabia,23,147812,Ayman Yahya,True,Al-Nassr,Saudi-Arabia,Pro League,27.0,1277.0,6.79,2.0,2.0,0.282,0.8
+Saudi Arabia,23,44324,Feras Al Brikan,True,Al-Ahli Jeddah,Saudi-Arabia,Pro League,34.0,1673.0,6.71,5.0,1.0,0.323,0.8
+Saudi Arabia,23,44382,Abdullah Al Hamdan,True,Al-Nassr,Saudi-Arabia,Pro League,15.0,312.0,6.83,3.0,1.0,1.154,0.8
+Saudi Arabia,23,44551,Saleh Al Shehri,True,Al-Ittihad FC,Saudi-Arabia,Pro League,18.0,458.0,6.56,3.0,2.0,0.983,0.8
+Saudi Arabia,23,44340,Salem Al Dawsari,True,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,26.0,1900.0,7.3,8.0,8.0,0.758,0.8
+Uruguay,7,61895,S. Mele,True,Junior,Colombia,Primera A,18.0,1553.0,6.96,0.0,0.0,0.0,0.6
+Uruguay,7,429,F. Muslera,True,Estudiantes L.P.,Argentina,Liga Profesional Argentina,19.0,1740.0,7.152631,0.0,0.0,0.0,0.6
+Uruguay,7,50077,S. Rochet,True,Internacional,Brazil,Serie A,14.0,1215.0,6.878571,0.0,0.0,0.0,0.6
+Uruguay,7,101814,R. Araújo,True,Barcelona,Spain,La Liga,24.0,1072.0,6.9,3.0,0.0,0.252,1.0
+Uruguay,7,135334,S. Bueno,True,Wolves,England,Premier League,29.0,2553.0,6.77,3.0,1.0,0.141,1.0
+Uruguay,7,51535,S. Cáceres,True,Club America,Mexico,Liga MX,27.0,2413.0,6.74,0.0,0.0,0.0,0.6
+Uruguay,7,31,J. Giménez,True,Atletico Madrid,Spain,La Liga,16.0,1177.0,6.99,0.0,1.0,0.076,1.0
+Uruguay,7,47254,M. Olivera,True,Napoli,Italy,Serie A,25.0,1368.0,6.79,0.0,0.0,0.0,1.0
+Uruguay,7,1290,G. Varela,True,Flamengo,Brazil,Serie A,20.0,1372.0,7.1,0.0,4.0,0.262,0.6
+Uruguay,7,51572,M. Viña,True,Flamengo,Brazil,Serie A,8.0,286.0,6.64,0.0,0.0,0.0,0.6
+Uruguay,7,863,R. Bentancur,True,Tottenham,England,Premier League,26.0,1892.0,6.76,1.0,1.0,0.095,1.0
+Uruguay,7,153083,E. Martínez,True,Palmeiras,Brazil,Serie A,25.0,1535.0,6.85,1.0,0.0,0.059,0.6
+Uruguay,7,162891,J. Sanabria,True,Atletico San Luis,Mexico,Liga MX,19.0,1710.0,7.08,2.0,5.0,0.368,0.6
+Uruguay,7,51494,M. Ugarte,True,Manchester United,England,Premier League,22.0,901.0,6.68,0.0,0.0,0.0,1.0
+Uruguay,7,756,F. Valverde,True,Real Madrid,Spain,La Liga,33.0,2746.0,7.33,5.0,8.0,0.426,1.0
+Uruguay,7,108563,R. Zalazar,True,SC Braga,Portugal,Primeira Liga,28.0,1944.0,7.31,16.0,5.0,0.972,0.8
+Uruguay,7,2612,G. de Arrascaeta,True,Flamengo,Brazil,Serie A,33.0,2383.0,7.73,18.0,14.0,1.209,0.6
+Uruguay,7,5995,N. de la Cruz,True,Flamengo,Brazil,Serie A,19.0,1035.0,7.03,0.0,0.0,0.0,0.6
+Uruguay,7,51776,M. Araújo,True,Sporting CP,Portugal,Primeira Liga,29.0,2214.0,6.84,5.0,4.0,0.366,0.8
+Uruguay,7,51603,A. Canobbio,True,Fluminense,Brazil,Serie A,30.0,2130.0,6.91,4.0,2.0,0.254,0.6
+Uruguay,7,16482,R. Aguirre,True,Club America,Mexico,Liga MX,19.0,1167.0,6.57,4.0,0.0,0.308,0.6
+Uruguay,7,51466,J. Piquerez,True,Palmeiras,Brazil,Serie A,30.0,2481.0,7.06,3.0,1.0,0.145,0.6
+Uruguay,7,51617,D. Núñez,True,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,16.0,1251.0,6.91,6.0,4.0,0.719,0.8
+Uruguay,7,70078,F. Pellistri,True,Panathinaikos,Greece,Super League 1,8.0,326.0,6.55,0.0,2.0,0.552,0.8
+Uruguay,7,51618,B. Rodríguez,True,Club America,Mexico,Liga MX,36.0,2406.0,7.28,13.0,7.0,0.748,0.6
+Uruguay,7,51530,F. Viñas,True,Oviedo,Spain,La Liga,33.0,2451.0,6.95,9.0,1.0,0.367,1.0
+Iran,22,2682,A. Beiranvand,True,Tractor Sazi,World,AFC Champions League Elite,9.0,772.0,7.34,0.0,0.0,0.0,0.5
+Iran,22,29755,H. Hosseini,True,Sepahan FC,World,AFC Champions League Two,4.0,360.0,6.73,0.0,0.0,0.0,0.5
+Iran,22,2681,P. Niazmand,True,Persepolis FC,Iran,Persian Gulf Pro League,0.0,0.0,,0.0,0.0,,0.5
+Iran,22,532950,D. Eiri,False,,,,,,,,,,
+Iran,22,2691,R. Rezaeian,True,Esteghlal FC,Iran,Persian Gulf Pro League,7.0,0.0,,1.0,1.0,,0.5
+Iran,22,2685,E. Hajisafi,True,Sepahan FC,World,AFC Champions League Two,5.0,291.0,7.4,0.0,2.0,0.619,0.5
+Iran,22,136880,Saleh Hardani,True,Esteghlal FC,World,AFC Champions League Two,5.0,448.0,7.32,0.0,1.0,0.201,0.5
+Iran,22,2687,H. Kanani,False,,,,,,,,,,
+Iran,22,29704,S. Khalilzadeh,True,Tractor Sazi,World,AFC Champions League Elite,9.0,805.0,7.14,1.0,1.0,0.224,0.5
+Iran,22,2688,M. Mohammadi,True,Persepolis FC,Iran,Persian Gulf Pro League,18.0,0.0,,0.0,3.0,,0.5
+Iran,22,533035,A. Nemati,False,,,,,,,,,,
+Iran,22,343405,A. Yousefi,True,Sepahan FC,World,AFC Champions League Two,5.0,315.0,7.88,1.0,2.0,0.857,0.5
+Iran,22,2700,A. Jahanbakhsh,True,Dender,Belgium,Jupiler Pro League,21.0,907.0,6.62,1.0,1.0,0.198,0.8
+Iran,22,2683,R. Cheshmi,True,Esteghlal FC,World,AFC Champions League Two,2.0,90.0,6.9,0.0,0.0,,0.5
+Iran,22,19614,S. Ezatolahi,True,Shabab Al Ahli Dubai,United-Arab-Emirates,Pro League,21.0,740.0,7.1,2.0,1.0,0.365,0.6
+Iran,22,2699,S. Ghoddos,True,Al-Ittihad Kalba,United-Arab-Emirates,Pro League,25.0,1053.0,7.15,3.0,2.0,0.427,0.6
+Iran,22,423753,A. Razzaghinia,True,Esteghlal FC,World,AFC Champions League Two,6.0,443.0,6.43,0.0,0.0,0.0,0.5
+Iran,22,341844,M. Ghorbani,True,Al Wahda FC,United-Arab-Emirates,Pro League,21.0,352.0,6.59,0.0,0.0,0.0,0.6
+Iran,22,134217,M. Mohebi,True,FC Rostov,Russia,Premier League,28.0,1619.0,6.57,3.0,2.0,0.278,0.8
+Iran,22,2697,M. Torabi,True,Tractor Sazi,World,AFC Champions League Elite,6.0,314.0,7.1,1.0,0.0,0.287,0.5
+Iran,22,643918,M. Ghaedi,False,,,,,,,,,,
+Iran,22,29937,A. Hosseinzadeh,True,Tractor Sazi,Iran,Persian Gulf Pro League,26.0,1104.0,6.795454,2.0,2.0,0.326,0.5
+Iran,22,29720,A. Alipour,False,,,,,,,,,,
+Iran,22,89982,S. Moghanlou,True,Al-Ittihad Kalba,United-Arab-Emirates,Pro League,25.0,1101.0,7.05,7.0,1.0,0.654,0.6
+Iran,22,37892,D. Eckert Ayensa,True,Standard Liege,Belgium,Jupiler Pro League,35.0,1987.0,6.63,5.0,0.0,0.226,0.8
+Iran,22,42315,M. Taremi,True,Olympiakos Piraeus,Greece,Super League 1,24.0,1261.0,7.07,10.0,2.0,0.856,0.8
+New Zealand,4673,18110,M. Crocombe,True,Millwall,England,Championship,23.0,2070.0,7.02,0.0,0.0,0.0,0.8
+New Zealand,4673,94360,A. Paulsen,True,Lechia Gdansk,Poland,Ekstraklasa,24.0,2160.0,6.69,0.0,0.0,0.0,0.6
+New Zealand,4673,36777,M. Woud,True,Auckland,Australia,A-League,28.0,2481.0,7.16,0.0,0.0,0.0,0.5
+New Zealand,4673,430835,Tyler Bindon,True,Sheffield Utd,England,Championship,25.0,2029.0,6.92,1.0,0.0,0.044,0.8
+New Zealand,4673,51149,M. Boxall,True,Minnesota United FC,USA,Major League Soccer,34.0,3022.0,7.03,1.0,1.0,0.06,0.6
+New Zealand,4673,6931,L. Cacace,True,Wrexham,England,Championship,12.0,727.0,6.62,0.0,0.0,0.0,0.8
+New Zealand,4673,94405,F. de Vries,True,Auckland,Australia,A-League,25.0,2022.0,7.32,1.0,7.0,0.356,0.5
+New Zealand,4673,6932,C. Elliot,True,Auckland,Australia,A-League,27.0,1762.0,6.84,0.0,1.0,0.051,0.5
+New Zealand,4673,94346,T. Payne,True,Wellington Phoenix,Australia,A-League,14.0,868.0,6.59,0.0,5.0,0.518,0.5
+New Zealand,4673,94344,N. Pijnaker,True,Auckland,Australia,A-League,17.0,968.0,6.8,0.0,0.0,0.0,0.5
+New Zealand,4673,51307,T. Smith,False,,,,,,,,,,
+New Zealand,4673,210165,F. Surman,True,Portland Timbers,USA,Major League Soccer,34.0,3096.0,7.03,0.0,0.0,0.0,0.6
+New Zealand,4673,405957,L. Bayliss,True,Newcastle Jets,Australia,A-League,27.0,1850.0,7.03,5.0,3.0,0.389,0.5
+New Zealand,4673,94541,J. Bell,True,Viking,Norway,Eliteserien,29.0,2542.0,7.34,3.0,4.0,0.248,0.6
+New Zealand,4673,180455,M. Garbett,True,Peterborough,England,League One,30.0,2124.0,6.89,3.0,2.0,0.212,0.5
+New Zealand,4673,94322,C. McCowatt,True,Silkeborg,Denmark,Superliga,32.0,2499.0,7.23,11.0,5.0,0.576,0.6
+New Zealand,4673,6934,A. Rufer,True,Wellington Phoenix,Australia,A-League,23.0,2044.0,7.18,2.0,1.0,0.132,0.5
+New Zealand,4673,6935,S. Singh,True,TSC Backa Topola,Serbia,Super Liga,15.0,886.0,6.82,2.0,1.0,0.305,0.6
+New Zealand,4673,179862,M. Stamenic,True,Swansea,England,Championship,36.0,2500.0,6.75,3.0,2.0,0.18,0.8
+New Zealand,4673,242,R. Thomas,True,PEC Zwolle,Netherlands,Eredivisie,27.0,2157.0,7.13,1.0,1.0,0.083,0.8
+New Zealand,4673,94333,E. Just,True,Motherwell,Scotland,Premiership,35.0,2698.0,7.11,7.0,7.0,0.467,0.8
+New Zealand,4673,179856,B. Old,True,Saint Etienne,France,Ligue 2,30.0,1905.0,6.65,1.0,2.0,0.142,0.45
+New Zealand,4673,6865,K. Barbarouses,True,Western Sydney Wanderers,Australia,A-League,22.0,1340.0,6.6,4.0,1.0,0.336,0.5
+New Zealand,4673,158688,J. Randall,True,Auckland,Australia,A-League,30.0,2475.0,7.18,9.0,8.0,0.618,0.5
+New Zealand,4673,6938,B. Waine,True,Port Vale,England,League One,27.0,1140.0,6.65,3.0,1.0,0.316,0.5
+New Zealand,4673,18931,C. Wood,True,Nottingham Forest,England,Premier League,15.0,906.0,6.61,3.0,0.0,0.298,1.0
+France,2,22221,M. Maignan,True,AC Milan,Italy,Serie A,37.0,3303.0,7.23,0.0,0.0,0.0,1.0
+France,2,347211,R. Risser,True,Lens,France,Ligue 1,33.0,2970.0,7.08,0.0,1.0,0.03,1.0
+France,2,21628,B. Samba,True,Rennes,France,Ligue 1,32.0,2880.0,6.96,0.0,0.0,0.0,1.0
+France,2,2724,L. Digne,True,Aston Villa,England,Premier League,31.0,1866.0,6.78,0.0,6.0,0.289,1.0
+France,2,161907,M. Gusto,True,Chelsea,England,Premier League,34.0,2267.0,6.66,2.0,3.0,0.199,1.0
+France,2,33,L. Hernández,True,Paris Saint Germain,France,Ligue 1,25.0,1751.0,7.07,0.0,3.0,0.154,1.0
+France,2,47300,T. Hernández,True,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,31.0,2749.0,7.08,5.0,1.0,0.196,0.8
+France,2,1145,I. Konaté,True,Liverpool,England,Premier League,36.0,3100.0,7.07,1.0,0.0,0.029,1.0
+France,2,1257,J. Koundé,True,Barcelona,Spain,La Liga,30.0,2269.0,6.92,1.0,3.0,0.159,1.0
+France,2,20995,M. Lacroix,True,Crystal Palace,England,Premier League,35.0,3087.0,6.9,1.0,2.0,0.087,1.0
+France,2,22090,W. Saliba,True,Arsenal,England,Premier League,31.0,2615.0,7.04,1.0,0.0,0.034,1.0
+France,2,1149,D. Upamecano,True,Bayern München,Germany,Bundesliga,24.0,1797.0,7.22,1.0,1.0,0.1,1.0
+France,2,156477,R. Cherki,True,Manchester City,England,Premier League,33.0,1806.0,7.2,4.0,12.0,0.797,1.0
+France,2,2290,N. Kanté,True,Al-Ittihad FC,Saudi-Arabia,Pro League,18.0,1573.0,7.06,2.0,1.0,0.172,0.8
+France,2,22147,M. Koné,True,AS Roma,Italy,Serie A,29.0,2466.0,7.04,2.0,3.0,0.182,1.0
+France,2,272,A. Rabiot,True,AC Milan,Italy,Serie A,29.0,2557.0,7.24,6.0,4.0,0.352,1.0
+France,2,1271,A. Tchouaméni,True,Real Madrid,Spain,La Liga,33.0,2622.0,7.23,1.0,0.0,0.034,1.0
+France,2,336657,W. Zaïre-Emery,True,Paris Saint Germain,France,Ligue 1,32.0,2453.0,7.0,3.0,4.0,0.257,1.0
+France,2,274300,M. Akliouche,True,Monaco,France,Ligue 1,31.0,2410.0,7.04,6.0,6.0,0.448,1.0
+France,2,161904,B. Barcola,True,Paris Saint Germain,France,Ligue 1,29.0,1750.0,7.21,11.0,1.0,0.617,1.0
+France,2,25927,J. Mateta,True,Crystal Palace,England,Premier League,32.0,2222.0,6.73,12.0,0.0,0.486,1.0
+France,2,153,O. Dembélé,True,Paris Saint Germain,France,Ligue 1,22.0,1062.0,7.41,10.0,7.0,1.441,1.0
+France,2,343027,D. Doué,True,Paris Saint Germain,France,Ligue 1,23.0,1356.0,7.14,7.0,4.0,0.73,1.0
+France,2,278,Kylian Mbappé,True,Real Madrid,Spain,La Liga,31.0,2604.0,7.53,25.0,5.0,1.037,1.0
+France,2,21509,M. Thuram,True,Inter,Italy,Serie A,29.0,1913.0,7.04,13.0,6.0,0.894,1.0
+France,2,19617,M. Olise,True,Bayern München,Germany,Bundesliga,32.0,2317.0,7.89,15.0,19.0,1.321,1.0
+Senegal,13,119853,M. Diaw,True,Le Havre,France,Ligue 1,30.0,2655.0,7.02,0.0,1.0,0.034,1.0
+Senegal,13,20566,Y. Diouf,True,Nice,France,Ligue 1,28.0,2520.0,6.99,0.0,0.0,0.0,1.0
+Senegal,13,2986,É. Mendy,True,Al-Ahli Jeddah,Saudi-Arabia,Pro League,26.0,2250.0,6.97,0.0,0.0,0.0,0.8
+Senegal,13,409303,E. Diouf,True,West Ham,England,Premier League,32.0,2716.0,6.74,0.0,5.0,0.166,1.0
+Senegal,13,158121,I. Jakobs,True,Galatasaray,Turkey,Süper Lig,25.0,1310.0,6.73,0.0,1.0,0.069,0.8
+Senegal,13,318,K. Koulibaly,True,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,18.0,1601.0,7.4,1.0,2.0,0.169,0.8
+Senegal,13,313937,A. Mendy,True,Nice,France,Ligue 1,27.0,2278.0,6.8,1.0,0.0,0.04,1.0
+Senegal,13,25916,M. Niakhaté,True,Lyon,France,Ligue 1,32.0,2758.0,7.22,0.0,2.0,0.065,1.0
+Senegal,13,276184,M. Sarr,True,Strasbourg,France,Ligue 1,15.0,1305.0,6.79,0.0,0.0,0.0,1.0
+Senegal,13,8450,A. Seck,True,Maccabi Haifa,Israel,Ligat Ha'al,26.0,1404.0,6.82,2.0,0.0,0.128,0.5
+Senegal,13,81,K. Diatta,True,Monaco,France,Ligue 1,18.0,1026.0,6.9,0.0,1.0,0.088,1.0
+Senegal,13,374058,L. Camara,True,Monaco,France,Ligue 1,24.0,1851.0,7.16,3.0,4.0,0.34,1.0
+Senegal,13,41552,P. Ciss,True,Rayo Vallecano,Spain,La Liga,29.0,2003.0,7.01,2.0,1.0,0.135,1.0
+Senegal,13,327631,H. Diarra,True,Sunderland,England,Premier League,20.0,1420.0,6.72,2.0,2.0,0.254,1.0
+Senegal,13,2990,I. Gueye,True,Everton,England,Premier League,25.0,2101.0,6.79,2.0,3.0,0.214,1.0
+Senegal,13,20696,P. Gueye,True,Villarreal,Spain,La Liga,30.0,2143.0,7.12,5.0,2.0,0.294,1.0
+Senegal,13,630895,Bara Ndiaye,True,Bayern München,Germany,Bundesliga,4.0,148.0,6.68,0.0,0.0,,1.0
+Senegal,13,237129,P. Sarr,True,Tottenham,England,Premier League,26.0,1410.0,6.82,2.0,4.0,0.383,1.0
+Senegal,13,400948,Assane Diao,True,Como,Italy,Serie A,17.0,1089.0,6.74,2.0,1.0,0.248,1.0
+Senegal,13,284072,B. Dieng,True,Lorient,France,Ligue 1,22.0,1220.0,6.81,10.0,1.0,0.811,1.0
+Senegal,13,283058,N. Jackson,True,Bayern München,Germany,Bundesliga,23.0,1037.0,6.77,8.0,1.0,0.781,1.0
+Senegal,13,304,S. Mané,True,Al-Nassr,Saudi-Arabia,Pro League,25.0,2138.0,7.28,10.0,6.0,0.674,0.8
+Senegal,13,446249,I. Mbaye,True,Paris Saint Germain,France,Ligue 1,24.0,997.0,6.77,3.0,2.0,0.451,1.0
+Senegal,13,14379,C. Ndiaye,True,Samsunspor,Turkey,Süper Lig,23.0,1433.0,6.72,7.0,1.0,0.502,0.8
+Senegal,13,18592,I. Ndiaye,True,Everton,England,Premier League,32.0,2798.0,6.88,6.0,3.0,0.289,1.0
+Senegal,13,2218,I. Sarr,True,Crystal Palace,England,Premier League,28.0,2176.0,6.83,9.0,1.0,0.414,1.0
+Iraq,1567,197933,Ahmed Basil,True,Al Shorta,World,AFC Champions League Elite,5.0,450.0,6.4,0.0,0.0,0.0,0.5
+Iraq,1567,53886,Jalal Hassan Hachim,True,Al Zawra'a,World,AFC Champions League Two,7.0,660.0,6.39,0.0,0.0,0.0,0.5
+Iraq,1567,123802,Fahad Talib,False,,,,,,,,,,
+Iraq,1567,145465,Hussein Ali,True,Pogon Szczecin,Poland,Ekstraklasa,16.0,526.0,6.43,2.0,0.0,0.342,0.6
+Iraq,1567,271444,Merchas Doski,True,Plzen,Czech-Republic,Czech Liga,30.0,2047.0,6.95,1.0,0.0,0.044,0.6
+Iraq,1567,15769,Frans Putros,True,Persib Bandung,World,AFC Champions League Two,6.0,424.0,6.84,1.0,0.0,0.212,0.5
+Iraq,1567,427187,Mustafa Saadoun,True,Al Shorta,World,AFC Champions League Elite,0.0,365.0,6.33,0.0,0.0,0.0,0.5
+Iraq,1567,42261,Rebin Solaka,True,Port FC,Thailand,Thai League 1,23.0,1003.0,6.82,0.0,0.0,0.0,0.5
+Iraq,1567,296373,Zayed Tahseen,False,,,,,,,,,,
+Iraq,1567,292253,Ahmed Hasan Al Reeshawee,False,,,,,,,,,,
+Iraq,1567,295394,Munaf Younus,True,Al Shorta,World,AFC Champions League Elite,6.0,492.0,6.1,0.0,0.0,0.0,0.5
+Iraq,1567,453073,Akam Rahman,True,Al Zawra'a,World,AFC Champions League Two,7.0,651.0,6.628571,0.0,0.0,0.0,0.5
+Iraq,1567,47792,Amir Al Ammari,True,Cracovia Krakow,Poland,Ekstraklasa,33.0,2505.0,6.93,1.0,4.0,0.18,0.6
+Iraq,1567,282065,Youssef Amyn,True,AEK Larnaca,Cyprus,1. Division,14.0,129.0,6.8,0.0,0.0,,0.5
+Iraq,1567,140747,Ibraheem Bayesh,True,Al Riyadh,Saudi-Arabia,Pro League,12.0,1036.0,6.57,1.0,0.0,0.087,0.8
+Iraq,1567,284295,Zidane Iqbal,True,Jong Utrecht,Netherlands,Eerste Divisie,11.0,506.0,6.96,0.0,1.0,0.178,0.8
+Iraq,1567,626479,Z. Ismaeel,False,,,,,,,,,,
+Iraq,1567,48129,A. Sher,True,Sarpsborg 08 FF,Norway,Eliteserien,19.0,1612.0,7.14,0.0,1.0,0.056,0.6
+Iraq,1567,48025,Kevin Yakob,True,Aarhus,Denmark,Superliga,26.0,1460.0,6.82,4.0,2.0,0.37,0.6
+Iraq,1567,542644,A. Jasim,True,Al Najma,Saudi-Arabia,Pro League,23.0,1183.0,6.79,2.0,1.0,0.228,0.8
+Iraq,1567,299813,Ali Al Hamadi,True,Luton,England,League One,13.0,427.0,6.34,1.0,1.0,0.422,0.5
+Iraq,1567,265448,M. Farji,True,Stromsgodset,Norway,Eliteserien,29.0,2336.0,7.04,9.0,4.0,0.501,0.6
+Iraq,1567,49451,Aymen Hussein,False,,,,,,,,,,
+Iraq,1567,53894,Meme,True,Dibba Al-Fujairah,United-Arab-Emirates,Pro League,0.0,0.0,,0.0,0.0,,0.6
+Iraq,1567,229112,A. Qasem,True,Nashville SC,USA,Major League Soccer,28.0,1241.0,6.64,2.0,1.0,0.218,0.6
+Iraq,1567,163854,A. Y. Hashim,False,,,,,,,,,,
+Norway,1090,19172,Ø. Nyland,True,Sevilla,Spain,La Liga,5.0,450.0,6.6,0.0,0.0,0.0,1.0
+Norway,1090,39082,E. Selvik,True,Watford,England,Championship,40.0,3555.0,6.94,0.0,0.0,0.0,0.8
+Norway,1090,264378,S. Tangvik,True,Rosenborg,Norway,Eliteserien,30.0,2700.0,7.13,0.0,0.0,0.0,0.6
+Norway,1090,1119,K. Ajer,True,Brentford,England,Premier League,27.0,1820.0,6.66,0.0,1.0,0.049,1.0
+Norway,1090,39058,F. Bjørkan,True,Bodo/Glimt,Norway,Eliteserien,29.0,2382.0,7.43,3.0,2.0,0.189,0.6
+Norway,1090,180937,H. Falchener,True,Viking,Norway,Eliteserien,29.0,2578.0,7.41,6.0,0.0,0.209,0.6
+Norway,1090,265444,S. Langås,True,Derby,England,Championship,24.0,1968.0,6.75,3.0,1.0,0.183,0.8
+Norway,1090,39254,T. Heggem,True,Bologna,Italy,Serie A,27.0,2113.0,6.69,0.0,0.0,0.0,1.0
+Norway,1090,18967,L. Østigård,True,Genoa,Italy,Serie A,30.0,2623.0,7.23,5.0,1.0,0.206,1.0
+Norway,1090,39362,M. Pedersen,True,Torino,Italy,Serie A,29.0,2138.0,6.56,1.0,2.0,0.126,1.0
+Norway,1090,265782,D. Møller Wolfe,True,Wolves,England,Premier League,22.0,1061.0,6.57,0.0,2.0,0.17,1.0
+Norway,1090,277930,T. Aasgaard,True,Rangers,Scotland,Premiership,33.0,1828.0,7.02,7.0,4.0,0.542,0.8
+Norway,1090,39043,F. Aursnes,True,Benfica,Portugal,Primeira Liga,28.0,2294.0,7.16,3.0,2.0,0.196,0.8
+Norway,1090,39064,P. Berg,True,Bodo/Glimt,Norway,Eliteserien,28.0,2211.0,7.89,5.0,12.0,0.692,0.6
+Norway,1090,1934,S. Berge,True,Fulham,England,Premier League,35.0,2920.0,6.89,0.0,1.0,0.031,1.0
+Norway,1090,278133,Oscar Bobb,True,Fulham,England,Premier League,14.0,578.0,6.75,0.0,0.0,0.0,1.0
+Norway,1090,37127,M. Ødegaard,True,Arsenal,England,Premier League,24.0,1370.0,7.01,1.0,6.0,0.46,1.0
+Norway,1090,36980,M. Thorsby,True,Genoa,Italy,Serie A,13.0,736.0,6.62,2.0,1.0,0.367,1.0
+Norway,1090,39143,K. Thorstvedt,True,Sassuolo,Italy,Serie A,32.0,2459.0,6.88,4.0,4.0,0.293,1.0
+Norway,1090,301528,A. Schjelderup,True,Benfica,Portugal,Primeira Liga,28.0,1732.0,7.33,7.0,5.0,0.624,0.8
+Norway,1090,39073,J. Hauge,True,Bodo/Glimt,Norway,Eliteserien,28.0,2230.0,7.64,8.0,4.0,0.484,0.6
+Norway,1090,1100,E. Haaland,True,Manchester City,England,Premier League,35.0,2958.0,7.31,27.0,8.0,1.065,1.0
+Norway,1090,2032,J. Strand Larsen,True,Wolves,England,Premier League,22.0,1405.0,6.37,1.0,1.0,0.128,1.0
+Norway,1090,314511,A. Nusa,True,RB Leipzig,Germany,Bundesliga,31.0,2035.0,7.1,4.0,3.0,0.31,1.0
+Norway,1090,8492,A. Sørloth,True,Atletico Madrid,Spain,La Liga,35.0,1982.0,6.81,13.0,0.0,0.59,1.0
+Norway,1090,24845,J. Ryerson,True,Borussia Dortmund,Germany,Bundesliga,31.0,2272.0,7.11,0.0,15.0,0.594,1.0
+Argentina,26,19599,E. Martínez,True,Aston Villa,England,Premier League,32.0,2835.0,6.98,0.0,1.0,0.032,1.0
+Argentina,26,2465,J. Musso,True,Atletico Madrid,Spain,La Liga,8.0,721.0,6.84,0.0,0.0,0.0,1.0
+Argentina,26,47296,G. Rulli,True,Marseille,France,Ligue 1,29.0,2610.0,7.07,0.0,0.0,0.0,1.0
+Argentina,26,2467,Lisandro Martínez,True,Manchester United,England,Premier League,18.0,1237.0,7.1,0.0,0.0,0.0,1.0
+Argentina,26,6231,F. Medina,True,Marseille,France,Ligue 1,17.0,1376.0,6.81,0.0,1.0,0.065,1.0
+Argentina,26,6503,N. Molina,True,Atletico Madrid,Spain,La Liga,26.0,1332.0,6.79,2.0,2.0,0.27,1.0
+Argentina,26,2468,G. Montiel,True,River Plate,Argentina,Liga Profesional Argentina,22.0,1788.0,7.22,3.0,4.0,0.352,0.6
+Argentina,26,624,N. Otamendi,True,Benfica,Portugal,Primeira Liga,30.0,2605.0,7.41,2.0,0.0,0.069,0.8
+Argentina,26,30776,C. Romero,True,Tottenham,England,Premier League,23.0,1872.0,7.13,4.0,1.0,0.24,1.0
+Argentina,26,529,N. Tagliafico,True,Lyon,France,Ligue 1,20.0,1320.0,6.68,0.0,3.0,0.205,1.0
+Argentina,26,319572,V. Barco,True,Strasbourg,France,Ligue 1,27.0,2170.0,7.14,2.0,4.0,0.249,1.0
+Argentina,26,5996,E. Fernández,True,Chelsea,England,Premier League,36.0,3134.0,7.18,10.0,4.0,0.402,1.0
+Argentina,26,1578,G. Lo Celso,True,Real Betis,Spain,La Liga,24.0,1396.0,7.01,2.0,3.0,0.322,1.0
+Argentina,26,6716,A. Mac Allister,True,Liverpool,England,Premier League,37.0,2686.0,6.71,2.0,4.0,0.201,1.0
+Argentina,26,6002,E. Palacios,True,Bayer Leverkusen,Germany,Bundesliga,18.0,1097.0,7.09,0.0,1.0,0.082,1.0
+Argentina,26,271,L. Paredes,True,Boca Juniors,Argentina,Liga Profesional Argentina,17.0,1489.0,7.76,1.0,4.0,0.302,0.6
+Argentina,26,26315,N. González,True,Atletico Madrid,Spain,La Liga,24.0,1460.0,6.91,5.0,0.0,0.308,1.0
+Argentina,26,2472,R. De Paul,True,Inter Miami,USA,Major League Soccer,14.0,1447.0,7.12,1.0,4.0,0.311,0.6
+Argentina,26,6067,T. Almada,True,Atletico Madrid,Spain,La Liga,27.0,1312.0,6.83,3.0,1.0,0.274,1.0
+Argentina,26,6009,J. Álvarez,True,Atletico Madrid,Spain,La Liga,29.0,1902.0,6.97,8.0,4.0,0.568,1.0
+Argentina,26,350037,N. Paz,True,Como,Italy,Serie A,35.0,2884.0,7.31,12.0,6.0,0.562,1.0
+Argentina,26,295513,J. López,True,Palmeiras,Brazil,Serie A,33.0,2011.0,7.21,12.0,2.0,0.627,0.6
+Argentina,26,217,Lautaro Martínez,True,Inter,Italy,Serie A,30.0,2178.0,7.08,17.0,6.0,0.95,1.0
+Argentina,26,154,L. Messi,True,Inter Miami,USA,Major League Soccer,31.0,2978.0,8.6,35.0,23.0,1.753,0.6
+Argentina,26,323935,G. Simeone,True,Atletico Madrid,Spain,La Liga,31.0,2109.0,6.93,4.0,6.0,0.427,1.0
+Argentina,26,6610,M. Senesi,True,Bournemouth,England,Premier League,37.0,3290.0,7.24,0.0,5.0,0.137,1.0
+Algeria,1532,4414,O. Benbot,True,USM Alger,Algeria,Ligue 1,14.0,0.0,,0.0,0.0,,0.5
+Algeria,1532,304229,M. Mastil,False,,,,,,,,,,
+Algeria,1532,732,L. Zidane,True,Granada CF,Spain,Segunda División,26.0,2339.0,7.02,0.0,0.0,0.0,0.45
+Algeria,1532,342740,A. Abada,True,ASO Chlef,Algeria,Ligue 1,13.0,0.0,,0.0,0.0,,0.5
+Algeria,1532,21138,R. Aït-Nouri,True,Manchester City,England,Premier League,17.0,988.0,6.92,0.0,2.0,0.182,1.0
+Algeria,1532,4561,Z. Belaïd,True,JS Kabylie,Algeria,Ligue 1,19.0,0.0,,1.0,0.0,,0.5
+Algeria,1532,303362,R. Belghali,True,Hellas Verona,Italy,Serie A,26.0,1926.0,6.72,2.0,0.0,0.093,1.0
+Algeria,1532,2194,R. Bensebaïni,True,Borussia Dortmund,Germany,Bundesliga,21.0,1529.0,7.44,5.0,2.0,0.412,1.0
+Algeria,1532,20869,S. Chergui,True,Paris FC,France,Ligue 1,15.0,1155.0,6.53,1.0,0.0,0.078,1.0
+Algeria,1532,271539,J. Hadjam,True,BSC Young Boys,Switzerland,Super League,20.0,1236.0,7.17,2.0,4.0,0.437,0.8
+Algeria,1532,1567,A. Mandi,True,Lille,France,Ligue 1,29.0,2435.0,7.25,1.0,0.0,0.037,1.0
+Algeria,1532,4569,M. Tougai,True,ES Tunis,Tunisia,Ligue 1,11.0,0.0,,2.0,0.0,,0.5
+Algeria,1532,658,H. Aouar,True,Al-Ittihad FC,Saudi-Arabia,Pro League,23.0,1905.0,7.08,8.0,3.0,0.52,0.8
+Algeria,1532,409,N. Bentaleb,True,Lille,France,Ligue 1,26.0,1287.0,7.04,2.0,2.0,0.28,1.0
+Algeria,1532,4399,H. Boudaoui,True,Nice,France,Ligue 1,26.0,1705.0,6.8,1.0,2.0,0.158,1.0
+Algeria,1532,380587,I. Maza,True,Bayer Leverkusen,Germany,Bundesliga,28.0,1859.0,7.11,3.0,4.0,0.339,1.0
+Algeria,1532,327599,Y. Titraoui,True,Charleroi,Belgium,Jupiler Pro League,35.0,2904.0,7.26,5.0,1.0,0.186,0.8
+Algeria,1532,129047,R. Zerrouki,True,Twente,Netherlands,Eredivisie,32.0,2667.0,7.22,3.0,1.0,0.135,0.8
+Algeria,1532,276670,F. Chaïbi,True,Eintracht Frankfurt,Germany,Bundesliga,28.0,1797.0,6.83,2.0,9.0,0.551,1.0
+Algeria,1532,200139,M. Amoura,True,VfL Wolfsburg,Germany,Bundesliga,32.0,1975.0,6.72,8.0,3.0,0.501,1.0
+Algeria,1532,292924,A. Benbouali,True,Gyori ETO FC,Hungary,NB I,31.0,1060.0,6.99,5.0,4.0,0.764,0.5
+Algeria,1532,329163,A. Boulbina,True,Al-Duhail SC,World,AFC Champions League Elite,8.0,703.0,7.4,6.0,1.0,0.896,0.5
+Algeria,1532,334915,F. Ghedjemis,True,Frosinone,Italy,Serie B,37.0,3023.0,7.27,15.0,3.0,0.536,0.45
+Algeria,1532,85041,A. Gouiri,True,Marseille,France,Ligue 1,22.0,1328.0,6.96,8.0,3.0,0.745,1.0
+Algeria,1532,326067,A. Hadj-Moussa,True,Feyenoord,Netherlands,Eredivisie,30.0,2553.0,7.47,11.0,6.0,0.599,0.8
+Algeria,1532,635,R. Mahrez,True,Al-Ahli Jeddah,Saudi-Arabia,Pro League,27.0,2221.0,7.53,4.0,8.0,0.486,0.8
+Austria,775,7598,P. Pentz,True,Brondby,Denmark,Superliga,31.0,2805.0,7.25,0.0,0.0,0.0,0.6
+Austria,775,7525,A. Schlager,True,Red Bull Salzburg,Austria,Bundesliga,31.0,2790.0,7.07,0.0,0.0,0.0,0.8
+Austria,775,221605,F. Wiegele,True,Plzen,Czech-Republic,Czech Liga,20.0,1786.0,7.18,0.0,0.0,0.0,0.6
+Austria,775,126640,D. Affengruber,True,Elche,Spain,La Liga,36.0,2953.0,6.93,1.0,1.0,0.061,1.0
+Austria,775,505,D. Alaba,True,Real Madrid,Spain,La Liga,11.0,428.0,6.84,0.0,0.0,0.0,1.0
+Austria,775,25287,K. Danso,True,Tottenham,England,Premier League,24.0,1519.0,6.86,0.0,0.0,0.0,1.0
+Austria,775,25314,M. Friedl,True,Werder Bremen,Germany,Bundesliga,30.0,2549.0,6.88,1.0,0.0,0.035,1.0
+Austria,775,26240,P. Lienhart,True,SC Freiburg,Germany,Bundesliga,20.0,1305.0,6.98,1.0,0.0,0.069,1.0
+Austria,775,25915,P. Mwene,True,FSV Mainz 05,Germany,Bundesliga,29.0,2072.0,6.82,1.0,2.0,0.13,1.0
+Austria,775,711,S. Posch,True,FSV Mainz 05,Germany,Bundesliga,16.0,1395.0,6.96,0.0,0.0,0.0,1.0
+Austria,775,7090,M. Svoboda,True,Venezia,Italy,Serie B,29.0,2532.0,7.33,3.0,2.0,0.178,0.45
+Austria,775,1725,D. Ljubičić,True,FC Schalke 04,Germany,2. Bundesliga,15.0,1182.0,6.93,4.0,3.0,0.533,0.45
+Austria,775,138935,C. Chukwuemeka,True,Borussia Dortmund,Germany,Bundesliga,28.0,939.0,6.68,2.0,0.0,0.192,1.0
+Austria,775,719,F. Grillitsch,True,SC Braga,Portugal,Primeira Liga,20.0,1129.0,6.89,1.0,1.0,0.159,0.8
+Austria,775,1157,K. Laimer,True,Bayern München,Germany,Bundesliga,29.0,1997.0,6.82,3.0,9.0,0.541,1.0
+Austria,775,7327,A. Prass,True,1899 Hoffenheim,Germany,Bundesliga,32.0,1318.0,6.82,3.0,2.0,0.341,1.0
+Austria,775,1159,M. Sabitzer,True,Borussia Dortmund,Germany,Bundesliga,26.0,1822.0,6.92,1.0,2.0,0.148,1.0
+Austria,775,1095,X. Schlager,True,RB Leipzig,Germany,Bundesliga,26.0,1837.0,6.93,3.0,1.0,0.196,1.0
+Austria,775,7562,R. Schmid,True,Werder Bremen,Germany,Bundesliga,34.0,2988.0,6.94,4.0,8.0,0.361,1.0
+Austria,775,417,A. Schöpf,True,Wolfsberger AC,Austria,Bundesliga,25.0,1825.0,6.82,5.0,5.0,0.493,0.8
+Austria,775,7328,N. Seiwald,True,RB Leipzig,Germany,Bundesliga,33.0,2703.0,6.88,0.0,2.0,0.067,1.0
+Austria,775,327895,P. Wanner,True,PSV Eindhoven,Netherlands,Eredivisie,22.0,1649.0,7.01,3.0,3.0,0.327,0.8
+Austria,775,126642,P. Wimmer,True,VfL Wolfsburg,Germany,Bundesliga,25.0,1634.0,6.92,4.0,3.0,0.386,1.0
+Austria,775,18830,M. Arnautovic,True,FK Crvena Zvezda,Serbia,Super Liga,16.0,993.0,7.05,7.0,8.0,1.36,0.6
+Austria,775,25297,M. Gregoritsch,True,FC Augsburg,Germany,Bundesliga,17.0,927.0,6.75,6.0,2.0,0.777,1.0
+Austria,775,7722,S. Kalajdzic,True,Lask Linz,Austria,Bundesliga,23.0,1323.0,7.07,6.0,5.0,0.748,0.8
+Jordan,1548,140607,Yazid Abu Layla,True,Al Hussein,World,AFC Champions League Two,4.0,90.0,7.3,0.0,0.0,,0.5
+Jordan,1548,163884,Abdallah Al Fakhouri,True,Al Wihdat,World,AFC Champions League Two,5.0,209.0,7.1,0.0,0.0,0.0,0.5
+Jordan,1548,163908,Noureddin Zaid,False,,,,,,,,,,
+Jordan,1548,542822,H. Abu Al Dahab,False,,,,,,,,,,
+Jordan,1548,542710,M. Abu Hasheesh,False,,,,,,,,,,
+Jordan,1548,102538,M. Abualnadi,True,Selangor,World,AFC Champions League Two,6.0,385.0,6.8,0.0,0.0,0.0,0.5
+Jordan,1548,53900,Yazan Al Arab,True,FC Seoul,South-Korea,K League 1,34.0,1528.0,6.88,0.0,1.0,0.059,0.6
+Jordan,1548,213978,Saed Al Rosan,True,Al Hussein,World,AFC Champions League Two,6.0,180.0,6.95,0.0,0.0,0.0,0.5
+Jordan,1548,664028,A. Badawi,False,,,,,,,,,,
+Jordan,1548,310835,Abdallah Naseeb,True,Al Zawra'a,World,AFC Champions League Two,4.0,480.0,6.64,0.0,0.0,0.0,0.5
+Jordan,1548,72140,Saleem Obaid,True,Al Hussein,World,AFC Champions League Two,5.0,168.0,6.65,0.0,0.0,,0.5
+Jordan,1548,53902,Ehsan Haddad,False,,,,,,,,,,
+Jordan,1548,310785,Mohannad Abu Taha,False,,,,,,,,,,
+Jordan,1548,651096,M. Al Daoud,False,,,,,,,,,,
+Jordan,1548,542768,Ibrahim Sa'deh,False,,,,,,,,,,
+Jordan,1548,213980,Nizar Al Rashdan,True,Qatar SC,Qatar,Stars League,11.0,785.0,6.99,0.0,1.0,0.115,0.6
+Jordan,1548,140609,Noor Al Rawabdeh,True,Selangor,World,AFC Champions League Two,5.0,315.0,6.75,0.0,0.0,0.0,0.5
+Jordan,1548,104242,Rajaei Ayed,True,Al Hussein,World,AFC Champions League Two,6.0,180.0,6.95,0.0,0.0,0.0,0.5
+Jordan,1548,198211,Amer Jamous,True,Al Wihdat,World,AFC Champions League Two,5.0,270.0,6.73,0.0,0.0,0.0,0.5
+Jordan,1548,123530,Mahmoud Al Mardi,True,Dibba Al-Fujairah,United-Arab-Emirates,Pro League,8.0,77.0,6.25,0.0,0.0,,0.6
+Jordan,1548,72142,Mohammed Abu Zurayq,False,,,,,,,,,,
+Jordan,1548,568556,O. Al Fakhouri,False,,,,,,,,,,
+Jordan,1548,575283,A. Azaizeh,True,Al Shabab,Saudi-Arabia,Pro League,15.0,638.0,6.73,2.0,1.0,0.423,0.8
+Jordan,1548,164026,Ali Olwan,True,Al-Sailiya,Qatar,Stars League,2.0,126.0,6.35,0.0,0.0,,0.6
+Jordan,1548,601853,M. Abu Ghoush,True,Shabab Al Ordon,Jordan,League,4.0,0.0,,3.0,0.0,,0.5
+Jordan,1548,15286,Mousa Tamari,True,Rennes,France,Ligue 1,33.0,2224.0,6.9,6.0,6.0,0.486,1.0
+Portugal,27,369,Diogo Costa,True,FC Porto,Portugal,Primeira Liga,33.0,2907.0,7.07,0.0,0.0,0.0,0.8
+Portugal,27,1590,José Sá,True,Wolves,England,Premier League,23.0,2070.0,6.85,0.0,0.0,0.0,1.0
+Portugal,27,46672,Rui Silva,True,Sporting CP,Portugal,Primeira Liga,32.0,2879.0,7.12,0.0,0.0,0.0,0.8
+Portugal,27,161939,Tomás Araújo,True,Benfica,Portugal,Primeira Liga,23.0,1685.0,7.09,1.0,2.0,0.16,0.8
+Portugal,27,855,João Cancelo,True,Barcelona,Spain,La Liga,16.0,962.0,7.19,2.0,2.0,0.374,1.0
+Portugal,27,886,Diogo Dalot,True,Manchester United,England,Premier League,34.0,2617.0,6.86,1.0,3.0,0.138,1.0
+Portugal,27,567,Rúben Dias,True,Manchester City,England,Premier League,26.0,2161.0,7.17,2.0,0.0,0.083,1.0
+Portugal,27,265595,Gonçalo Inácio,True,Sporting CP,Portugal,Primeira Liga,29.0,2505.0,7.59,2.0,3.0,0.18,0.8
+Portugal,27,263482,Nuno Mendes,True,Paris Saint Germain,France,Ligue 1,20.0,1251.0,7.3,4.0,5.0,0.647,1.0
+Portugal,27,130,Nélson Semedo,True,Fenerbahçe,Turkey,Süper Lig,26.0,1942.0,6.89,1.0,3.0,0.185,0.8
+Portugal,27,336671,Renato Veiga,True,Villarreal,Spain,La Liga,32.0,2485.0,6.76,0.0,0.0,0.0,1.0
+Portugal,27,190485,Samú Costa,True,Mallorca,Spain,La Liga,34.0,2705.0,6.99,7.0,2.0,0.299,1.0
+Portugal,27,1485,Bruno Fernandes,True,Manchester United,England,Premier League,35.0,3066.0,7.63,9.0,21.0,0.881,1.0
+Portugal,27,335051,João Neves,True,Paris Saint Germain,France,Ligue 1,21.0,1287.0,7.16,5.0,1.0,0.42,1.0
+Portugal,27,2676,Rúben Neves,True,Al-Hilal Saudi FC,Saudi-Arabia,Pro League,31.0,2755.0,7.82,11.0,7.0,0.588,0.8
+Portugal,27,41621,Matheus Nunes,True,Manchester City,England,Premier League,34.0,2865.0,6.97,1.0,5.0,0.188,1.0
+Portugal,27,636,Bernardo Silva,True,Manchester City,England,Premier League,38.0,2890.0,6.85,2.0,4.0,0.187,1.0
+Portugal,27,128384,Vitinha,True,Paris Saint Germain,France,Ligue 1,29.0,2121.0,7.58,1.0,7.0,0.339,1.0
+Portugal,27,161585,Francisco Conceição,True,Juventus,Italy,Serie A,31.0,2098.0,6.99,3.0,5.0,0.343,1.0
+Portugal,27,925,Gonçalo Guedes,True,Real Sociedad,Spain,La Liga,32.0,1839.0,6.88,8.0,4.0,0.587,1.0
+Portugal,27,583,João Félix,True,Al-Nassr,Saudi-Arabia,Pro League,33.0,2914.0,7.75,20.0,13.0,1.019,0.8
+Portugal,27,22236,Rafael Leão,True,AC Milan,Italy,Serie A,29.0,1866.0,6.92,9.0,3.0,0.579,1.0
+Portugal,27,1864,Pedro Neto,True,Chelsea,England,Premier League,34.0,2643.0,6.97,5.0,6.0,0.375,1.0
+Portugal,27,41585,Gonçalo Ramos,True,Paris Saint Germain,France,Ligue 1,30.0,1320.0,6.61,6.0,1.0,0.477,1.0
+Portugal,27,874,Cristiano Ronaldo,True,Al-Nassr,Saudi-Arabia,Pro League,30.0,2616.0,7.16,28.0,2.0,1.032,0.8
+Portugal,27,41112,Trincão,True,Sporting CP,Portugal,Primeira Liga,34.0,2850.0,7.16,7.0,11.0,0.568,0.8
+Congo DR,1508,314509,M. Epolo,True,Standard Liege,Belgium,Jupiler Pro League,29.0,2610.0,7.28,0.0,0.0,0.0,0.8
+Congo DR,1508,48501,T. Fayulu,True,FC Sion,Switzerland,Super League,0.0,0.0,,0.0,0.0,,0.8
+Congo DR,1508,24012,L. Mpasi,True,Le Havre,France,Ligue 1,4.0,315.0,7.8,0.0,0.0,0.0,1.0
+Congo DR,1508,8445,D. Batubinsika,True,Larisa,Greece,Super League 1,16.0,1412.0,6.76,0.0,0.0,0.0,0.8
+Congo DR,1508,24245,G. Kalulu,True,Aris,Cyprus,1. Division,17.0,276.0,6.5,0.0,0.0,0.0,0.5
+Congo DR,1508,199767,S. Kapuadi,True,Legia Warszawa,Poland,Ekstraklasa,16.0,1400.0,6.68,0.0,0.0,0.0,0.6
+Congo DR,1508,21098,J. Kayembe,True,Genk,Belgium,Jupiler Pro League,28.0,2111.0,7.0,0.0,1.0,0.043,0.8
+Congo DR,1508,18816,A. Masuaku,True,Lens,France,Ligue 1,4.0,229.0,6.3,0.0,0.0,0.0,1.0
+Congo DR,1508,375,C. Mbemba,True,Lille,France,Ligue 1,13.0,953.0,6.78,0.0,0.0,0.0,1.0
+Congo DR,1508,19182,A. Tuanzebe,True,Burnley,England,Premier League,14.0,1202.0,6.53,1.0,0.0,0.075,1.0
+Congo DR,1508,18846,A. Wan-Bissaka,True,West Ham,England,Premier League,25.0,2084.0,6.64,0.0,2.0,0.086,1.0
+Congo DR,1508,1424,E. Kayembe,True,Watford,England,Championship,37.0,2503.0,6.83,4.0,1.0,0.18,0.8
+Congo DR,1508,21101,S. Moutoussamy,True,Atromitos,Greece,Super League 1,27.0,2337.0,6.94,3.0,0.0,0.116,0.8
+Congo DR,1508,375598,N. Mukau,True,Lille,France,Ligue 1,30.0,1566.0,6.61,1.0,0.0,0.057,1.0
+Congo DR,1508,48555,C. Pickel,True,Espanyol,Spain,La Liga,24.0,712.0,6.53,1.0,0.0,0.126,1.0
+Congo DR,1508,365331,N. Sadiki,True,Sunderland,England,Premier League,33.0,2907.0,6.76,0.0,1.0,0.031,1.0
+Congo DR,1508,44791,A. Tshibola,True,Kilmarnock,Scotland,Premiership,14.0,886.0,7.01,0.0,0.0,0.0,0.8
+Congo DR,1508,129670,N. Mbuku,True,Montpellier,France,Ligue 2,30.0,2191.0,6.95,4.0,5.0,0.37,0.45
+Congo DR,1508,8627,T. Bongonda,True,Spartak Moscow,Russia,Premier League,4.0,47.0,6.63,0.0,0.0,,0.8
+Congo DR,1508,3033,C. Bakambu,True,Real Betis,Spain,La Liga,18.0,593.0,6.65,3.0,1.0,0.607,1.0
+Congo DR,1508,20674,S. Banza,True,Al-Jazira,United-Arab-Emirates,Pro League,15.0,516.0,6.91,3.0,1.0,0.698,0.6
+Congo DR,1508,279482,B. Cipenga,True,Castellón,Spain,Segunda División,30.0,2250.0,7.15,6.0,9.0,0.6,0.45
+Congo DR,1508,3034,M. Elia,True,Alanyaspor,Turkey,Süper Lig,22.0,842.0,6.64,3.0,0.0,0.321,0.8
+Congo DR,1508,47545,G. Kakuta,True,Sakaryaspor,Turkey,1. Lig,20.0,1615.0,7.1,8.0,3.0,0.613,0.8
+Congo DR,1508,179699,F. Mayele,True,Pyramids FC,Egypt,Premier League,24.0,1527.0,6.62,5.0,2.0,0.413,0.6
+Congo DR,1508,20649,Y. Wissa,True,Newcastle,England,Premier League,19.0,548.0,6.47,1.0,0.0,0.164,1.0
+England,10,19088,D. Henderson,True,Crystal Palace,England,Premier League,37.0,3330.0,6.94,0.0,0.0,0.0,1.0
+England,10,2932,J. Pickford,True,Everton,England,Premier League,38.0,3432.0,7.02,0.0,0.0,0.0,1.0
+England,10,162489,J. Trafford,True,Manchester City,England,Premier League,4.0,372.0,7.08,0.0,0.0,0.0,1.0
+England,10,18961,D. Burn,True,Newcastle,England,Premier League,29.0,2209.0,6.59,1.0,2.0,0.122,1.0
+England,10,67971,M. Guéhi,True,Crystal Palace,England,Premier League,20.0,1800.0,7.22,2.0,2.0,0.2,1.0
+England,10,19545,R. James,True,Chelsea,England,Premier League,29.0,1973.0,7.19,2.0,4.0,0.274,1.0
+England,10,19354,E. Konsa,True,Aston Villa,England,Premier League,34.0,3036.0,7.0,0.0,0.0,0.0,1.0
+England,10,158694,T. Livramento,True,Newcastle,England,Premier League,17.0,1328.0,6.8,0.0,1.0,0.068,1.0
+England,10,307123,N. Oreilly,True,Manchester City,England,Premier League,34.0,2648.0,6.88,5.0,3.0,0.272,1.0
+England,10,158698,J. Quansah,True,Bayer Leverkusen,Germany,Bundesliga,28.0,2308.0,6.9,4.0,0.0,0.156,1.0
+England,10,19235,D. Spence,True,Tottenham,England,Premier League,30.0,2090.0,6.56,0.0,0.0,0.0,1.0
+England,10,626,J. Stones,True,Manchester City,England,Premier League,9.0,449.0,6.5,0.0,0.0,0.0,1.0
+England,10,138908,E. Anderson,True,Nottingham Forest,England,Premier League,38.0,3334.0,7.35,4.0,4.0,0.216,1.0
+England,10,129718,J. Bellingham,True,Real Madrid,Spain,La Liga,28.0,1917.0,7.28,6.0,4.0,0.469,1.0
+England,10,19586,E. Eze,True,Arsenal,England,Premier League,32.0,1816.0,6.96,7.0,2.0,0.446,1.0
+England,10,292,J. Henderson,True,Brentford,England,Premier League,32.0,1929.0,6.8,1.0,3.0,0.187,1.0
+England,10,284322,K. Mainoo,True,Manchester United,England,Premier League,28.0,1670.0,6.87,1.0,2.0,0.162,1.0
+England,10,2937,D. Rice,True,Arsenal,England,Premier League,36.0,3099.0,7.46,4.0,5.0,0.261,1.0
+England,10,19170,M. Rogers,True,Aston Villa,England,Premier League,37.0,3285.0,6.84,10.0,6.0,0.438,1.0
+England,10,138787,A. Gordon,True,Newcastle,England,Premier League,26.0,1817.0,7.08,6.0,2.0,0.396,1.0
+England,10,184,H. Kane,True,Bayern München,Germany,Bundesliga,31.0,2382.0,7.87,36.0,5.0,1.549,1.0
+England,10,136723,N. Madueke,True,Arsenal,England,Premier League,26.0,1226.0,6.79,2.0,1.0,0.22,1.0
+England,10,909,M. Rashford,True,Barcelona,Spain,La Liga,32.0,1761.0,6.82,8.0,7.0,0.767,1.0
+England,10,1460,B. Saka,True,Arsenal,England,Premier League,31.0,2225.0,7.24,7.0,5.0,0.485,1.0
+England,10,19974,I. Toney,True,Al-Ahli Jeddah,Saudi-Arabia,Pro League,32.0,2659.0,7.37,31.0,7.0,1.286,0.8
+England,10,19366,O. Watkins,True,Aston Villa,England,Premier League,37.0,2864.0,6.87,16.0,3.0,0.597,1.0
+Croatia,3,524,D. Kotarski,True,FC Copenhagen,Denmark,Superliga,31.0,2820.0,6.86,0.0,1.0,0.032,0.6
+Croatia,3,1305,D. Livakovic,True,Dinamo Zagreb,Croatia,HNL,14.0,1260.0,6.99,0.0,0.0,0.0,0.6
+Croatia,3,14268,I. Pandur,True,Hull City,England,Championship,48.0,4320.0,6.96,0.0,0.0,0.0,0.8
+Croatia,3,1902,D. Caleta-Car,True,Real Sociedad,Spain,La Liga,27.0,2152.0,6.81,1.0,0.0,0.042,1.0
+Croatia,3,30827,M. Erlic,True,FC Midtjylland,Denmark,Superliga,18.0,1422.0,6.82,2.0,0.0,0.127,0.6
+Croatia,3,129033,J. Gvardiol,True,Manchester City,England,Premier League,18.0,1386.0,7.01,2.0,2.0,0.26,1.0
+Croatia,3,1084,M. Pongracic,True,Fiorentina,Italy,Serie A,35.0,2917.0,6.77,0.0,0.0,0.0,1.0
+Croatia,3,125171,J. Stanisic,True,Bayern München,Germany,Bundesliga,26.0,1855.0,6.92,2.0,3.0,0.243,1.0
+Croatia,3,14701,J. Sutalo,True,Ajax,Netherlands,Eredivisie,24.0,1797.0,6.86,0.0,0.0,0.0,0.8
+Croatia,3,387521,L. Vuskovic,True,Hamburger SV,Germany,Bundesliga,28.0,2441.0,7.26,6.0,0.0,0.221,1.0
+Croatia,3,295026,M. Baturina,True,Como,Italy,Serie A,29.0,1591.0,7.14,6.0,3.0,0.509,1.0
+Croatia,3,284869,T. Fruk,True,HNK Rijeka,Croatia,HNL,31.0,2054.0,7.09,11.0,2.0,0.57,0.6
+Croatia,3,14395,K. Jakic,True,FC Augsburg,Germany,Bundesliga,26.0,1653.0,6.77,2.0,1.0,0.163,1.0
+Croatia,3,2291,M. Kovacic,True,Manchester City,England,Premier League,6.0,146.0,6.8,0.0,1.0,,1.0
+Croatia,3,754,L. Modric,True,AC Milan,Italy,Serie A,34.0,2828.0,7.55,2.0,3.0,0.159,1.0
+Croatia,3,1322,N. Moro,True,Bologna,Italy,Serie A,30.0,1797.0,7.14,1.0,0.0,0.05,1.0
+Croatia,3,2763,M. Pasalic,True,Atalanta,Italy,Serie A,33.0,1932.0,6.88,3.0,4.0,0.326,1.0
+Croatia,3,7332,L. Sucic,True,Real Sociedad,Spain,La Liga,22.0,1018.0,6.77,3.0,1.0,0.354,1.0
+Croatia,3,348205,P. Sucic,True,Inter,Italy,Serie A,34.0,1783.0,6.88,2.0,2.0,0.202,1.0
+Croatia,3,842,N. Vlasic,True,Torino,Italy,Serie A,37.0,3059.0,6.92,8.0,3.0,0.324,1.0
+Croatia,3,46746,A. Budimir,True,Osasuna,Spain,La Liga,37.0,2953.0,6.84,17.0,0.0,0.518,1.0
+Croatia,3,726,A. Kramaric,True,1899 Hoffenheim,Germany,Bundesliga,34.0,2222.0,7.07,14.0,6.0,0.81,1.0
+Croatia,3,202696,I. Matanovic,True,SC Freiburg,Germany,Bundesliga,31.0,1570.0,6.81,11.0,2.0,0.745,1.0
+Croatia,3,66055,P. Musa,True,FC Dallas,USA,Major League Soccer,31.0,2488.0,7.38,19.0,6.0,0.904,0.6
+Croatia,3,260865,M. Pasalic,True,Orlando City SC,USA,Major League Soccer,34.0,2671.0,7.21,12.0,5.0,0.573,0.6
+Croatia,3,207,I. Perisic,True,PSV Eindhoven,Netherlands,Eredivisie,30.0,2218.0,7.23,7.0,12.0,0.771,0.8
+Ghana,1504,480108,B. Asare,False,,,,,,,,,,
+Ghana,1504,144709,J. Anang,True,St Patrick's Athl.,Ireland,Premier Division,36.0,3133.0,7.05,0.0,0.0,0.0,0.5
+Ghana,1504,3412,L. Zigi,True,FC ST. Gallen,Switzerland,Super League,35.0,3150.0,7.42,0.0,0.0,0.0,0.8
+Ghana,1504,369425,J. Adjetey,True,FC Basel 1893,Switzerland,Super League,15.0,1255.0,7.05,0.0,0.0,0.0,0.8
+Ghana,1504,25341,D. Luckassen,True,,Cyprus,1. Division,28.0,1048.0,6.83,0.0,0.0,0.0,0.5
+Ghana,1504,7578,G. Mensah,True,Auxerre,France,Ligue 1,30.0,2333.0,6.84,0.0,2.0,0.077,1.0
+Ghana,1504,196187,A. Seidu,True,Rennes,France,Ligue 1,21.0,1185.0,6.88,0.0,1.0,0.076,1.0
+Ghana,1504,137223,J. Opoku,True,Başakşehir,Turkey,Süper Lig,32.0,2741.0,6.85,0.0,1.0,0.033,0.8
+Ghana,1504,404172,K. Peprah Oppong,True,Nice,France,Ligue 1,31.0,2608.0,6.82,1.0,0.0,0.035,1.0
+Ghana,1504,15900,A. Mumin,True,Rayo Vallecano,Spain,La Liga,3.0,78.0,6.47,0.0,0.0,,1.0
+Ghana,1504,191240,M. Senaya,True,Auxerre,France,Ligue 1,25.0,1784.0,6.86,1.0,0.0,0.05,1.0
+Ghana,1504,21996,A. Baba,True,PAOK,Greece,Super League 1,25.0,1915.0,6.85,2.0,2.0,0.188,0.8
+Ghana,1504,21010,E. Owusu,True,Auxerre,France,Ligue 1,29.0,2353.0,6.79,0.0,0.0,0.0,1.0
+Ghana,1504,49,T. Partey,True,Villarreal,Spain,La Liga,25.0,930.0,6.58,0.0,0.0,0.0,1.0
+Ghana,1504,3608,K. Sibo,True,Oviedo,Spain,La Liga,26.0,1689.0,6.59,0.0,0.0,0.0,1.0
+Ghana,1504,475575,Caleb Marfo Yirenkyi,True,FC Nordsjaelland,Denmark,Superliga,30.0,2614.0,7.08,2.0,6.0,0.275,0.6
+Ghana,1504,19281,A. Semenyo,True,Bournemouth,England,Premier League,20.0,1798.0,7.13,10.0,3.0,0.651,1.0
+Ghana,1504,337426,A. Boakye,True,Saint Etienne,France,Ligue 2,31.0,2476.0,7.13,5.0,9.0,0.509,0.45
+Ghana,1504,303467,A. Fatawu,True,Leicester,England,Championship,44.0,3726.0,6.86,9.0,7.0,0.386,0.8
+Ghana,1504,410016,P. Adu,True,Plzen,Czech-Republic,Czech Liga,29.0,1561.0,6.83,7.0,1.0,0.461,0.6
+Ghana,1504,82090,B. Thomas-Asante,True,Coventry,England,Championship,32.0,1880.0,6.88,13.0,4.0,0.814,0.8
+Ghana,1504,3428,J. Ayew,True,Leicester,England,Championship,42.0,2280.0,6.58,6.0,3.0,0.355,0.8
+Ghana,1504,411800,C. Bonsu Baah,True,Al-Qadisiyah FC,Saudi-Arabia,Pro League,32.0,2679.0,7.26,3.0,12.0,0.504,0.8
+Ghana,1504,47294,I. Williams,True,Athletic Club,Spain,La Liga,30.0,2168.0,6.6,3.0,6.0,0.374,1.0
+Ghana,1504,350856,E. Nuamah,True,Lyon,France,Ligue 1,3.0,47.0,6.6,0.0,0.0,,1.0
+Ghana,1504,199837,K. Sulemana,True,Atalanta,Italy,Serie A,25.0,1008.0,6.74,2.0,1.0,0.268,1.0
+Panama,11,2967,L. Mejía,True,Club Nacional,Uruguay,Primera División - Clausura,14.0,1247.0,,0.0,0.0,0.0,0.5
+Panama,11,2968,O. Mosquera,True,Al-Fayha,Saudi-Arabia,Pro League,32.0,2880.0,7.02,0.0,0.0,0.0,0.8
+Panama,11,57861,C. Samudio,True,CD Marathon,Honduras,Liga Nacional,1.0,90.0,7.1,0.0,0.0,,0.5
+Panama,11,7197,A. Andrade,True,Lask Linz,Austria,Bundesliga,30.0,2697.0,7.3,1.0,3.0,0.133,0.8
+Panama,11,2975,C. Blackman,True,Slovan Bratislava,Slovakia,Super Liga,27.0,1408.0,7.0,1.0,4.0,0.32,0.5
+Panama,11,57739,J. Córdoba,True,Norwich,England,Championship,28.0,2255.0,6.93,1.0,1.0,0.08,0.8
+Panama,11,2970,É. Davis,True,Vila Nova,Brazil,Goiano - 1,0.0,0.0,,0.0,0.0,,0.6
+Panama,11,2971,F. Escobar,True,Deportivo Saprissa,Costa-Rica,Primera División,1.0,90.0,8.11,0.0,0.0,,0.5
+Panama,11,328148,E. Fariña,True,Nizhny Novgorod,Russia,Premier League,14.0,1084.0,6.82,0.0,0.0,0.0,0.8
+Panama,11,57803,J. Gutiérrez,True,Deportivo La Guaira,Venezuela,Primera División,15.0,1350.0,,2.0,0.0,0.133,0.5
+Panama,11,71230,C. Harvey,True,Minnesota United FC,USA,Major League Soccer,27.0,1637.0,7.0,2.0,1.0,0.165,0.6
+Panama,11,81659,R. Miller,False,,,,,,,,,,
+Panama,11,2973,A. Murillo,True,Marseille,France,Ligue 1,16.0,988.0,6.71,2.0,1.0,0.273,1.0
+Panama,11,57667,J. Ramos,True,Independiente de La Chorrera,Panama,Liga Panameña de Fútbol,10.0,900.0,,0.0,0.0,0.0,0.5
+Panama,11,57807,A. Carrasquilla,True,U.N.A.M. - Pumas,Mexico,Liga MX,38.0,2860.0,6.92,2.0,6.0,0.252,0.6
+Panama,11,2977,A. Godoy,True,San Diego,USA,Major League Soccer,28.0,2106.0,7.13,1.0,1.0,0.085,0.6
+Panama,11,554208,C. Martinez,False,,,,,,,,,,
+Panama,11,2979,J. Rodríguez,True,FC Juarez,Mexico,Liga MX,36.0,2949.0,6.92,4.0,9.0,0.397,0.6
+Panama,11,46855,Y. Bárcenas,True,Mazatlán,Mexico,Liga MX,30.0,2276.0,6.83,3.0,1.0,0.158,0.6
+Panama,11,96615,I. Díaz,True,Leon,Mexico,Liga MX,27.0,1942.0,6.92,10.0,6.0,0.742,0.6
+Panama,11,2978,A. Quintero,True,Plaza Amador,Panama,Liga Panameña de Fútbol,14.0,647.0,,1.0,0.0,0.139,0.5
+Panama,11,57875,C. Yanis,True,Cobresal,Chile,Primera División,26.0,1674.0,7.12,1.0,4.0,0.269,0.5
+Panama,11,2983,J. Fajardo,True,Universidad Catolica,Ecuador,Liga Pro,27.0,1072.0,6.79,10.0,1.0,0.924,0.5
+Panama,11,292396,A. Londoño,True,Universidad Catolica,Ecuador,Liga Pro,34.0,2331.0,7.2,7.0,10.0,0.656,0.5
+Panama,11,57910,T. Rodríguez,True,Monagas SC,Venezuela,Primera División,0.0,0.0,,0.0,0.0,,0.5
+Panama,11,51648,C. Waterman,True,Coquimbo Unido,Chile,Primera División,27.0,1892.0,6.99,10.0,1.0,0.523,0.5
+Uzbekistan,1568,72120,B. Ergashev,True,Neftchi,Uzbekistan,Super League,5.0,404.0,,0.0,0.0,0.0,0.5
+Uzbekistan,1568,73507,A. Nematov,True,Nasaf,Uzbekistan,Super League,9.0,810.0,,0.0,0.0,0.0,0.5
+Uzbekistan,1568,73534,U. Yusupov,True,Foolad FC,Iran,Persian Gulf Pro League,0.0,0.0,,0.0,0.0,,0.5
+Uzbekistan,1568,72122,K. Alijonov,True,Pakhtakor,Uzbekistan,Super League,9.0,729.0,,0.0,0.0,0.0,0.5
+Uzbekistan,1568,34121,R. Ashurmatov,True,Esteghlal FC,Iran,Persian Gulf Pro League,29.0,742.0,6.8,1.0,0.0,0.121,0.5
+Uzbekistan,1568,73510,U. Eshmurodov,True,Nasaf,Uzbekistan,Super League,9.0,810.0,,0.0,0.0,0.0,0.5
+Uzbekistan,1568,416964,B. Karimov,True,Surkhon,Uzbekistan,Super League,3.0,165.0,,0.0,0.0,,0.5
+Uzbekistan,1568,360114,A. Khusanov,True,Manchester City,England,Premier League,21.0,1429.0,6.91,0.0,0.0,0.0,1.0
+Uzbekistan,1568,73514,S. Nasrullayev,True,Nasaf,World,AFC Champions League Elite,6.0,540.0,5.87,0.0,0.0,0.0,0.5
+Uzbekistan,1568,532759,F. Sayfiev,False,,,,,,,,,,
+Uzbekistan,1568,358427,J. Urozov,True,Dinamo Samarqand,Uzbekistan,Super League,28.0,0.0,,0.0,1.0,,0.5
+Uzbekistan,1568,73418,A. Abdullaev,True,Dibba Al-Fujairah,United-Arab-Emirates,Pro League,9.0,570.0,6.57,0.0,0.0,0.0,0.6
+Uzbekistan,1568,65571,A. Ulmasaliev,True,Olmaliq,Uzbekistan,Super League,14.0,1105.0,7.36,2.0,0.0,0.163,0.5
+Uzbekistan,1568,53836,J. Masharipov,True,Esteghlal FC,Iran,Persian Gulf Pro League,0.0,0.0,,0.0,0.0,,0.5
+Uzbekistan,1568,73520,A. Ganiyev,True,Al Bataeh,United-Arab-Emirates,Pro League,24.0,922.0,6.82,1.0,1.0,0.195,0.6
+Uzbekistan,1568,65576,J. Iskanderov,True,Neftchi,Uzbekistan,Super League,8.0,603.0,,2.0,0.0,0.299,0.5
+Uzbekistan,1568,53835,O. Hamrobekov,True,Bunyodkor,Uzbekistan,Super League,9.0,810.0,,0.0,0.0,0.0,0.5
+Uzbekistan,1568,73522,A. Mozgovoy,True,Baniyas SC,United-Arab-Emirates,Pro League,11.0,174.0,6.68,0.0,0.0,,0.6
+Uzbekistan,1568,50272,O. Shukurov,True,Baniyas SC,United-Arab-Emirates,Pro League,18.0,953.0,6.67,0.0,2.0,0.189,0.6
+Uzbekistan,1568,263676,A. Fayzullaev,True,Başakşehir,Turkey,Süper Lig,20.0,1117.0,6.94,3.0,3.0,0.483,0.8
+Uzbekistan,1568,363723,S. Esanov,False,,,,,,,,,,
+Uzbekistan,1568,72127,O. Orunov,True,Persepolis FC,Iran,Persian Gulf Pro League,4.0,52.0,6.5,0.0,0.0,,0.5
+Uzbekistan,1568,53834,D. Khamdamov,True,Pakhtakor,Uzbekistan,Super League,6.0,304.0,,0.0,0.0,0.0,0.5
+Uzbekistan,1568,65584,A. Amonov,True,Bunyodkor,Uzbekistan,Super League,9.0,357.0,,0.0,0.0,0.0,0.5
+Uzbekistan,1568,72128,I. Sergeev,True,Pakhtakor,Uzbekistan,Super League,9.0,772.0,,7.0,0.0,0.816,0.5
+Uzbekistan,1568,53535,E. Shomurodov,True,Başakşehir,Turkey,Süper Lig,34.0,2928.0,7.18,22.0,5.0,0.83,0.8
+Colombia,8,2481,Á. Montero,True,Millonarios,Colombia,Primera A,23.0,2081.0,7.15,0.0,1.0,0.043,0.6
+Colombia,8,313,D. Ospina,True,Atletico Nacional,Colombia,Primera A,33.0,2887.0,6.93,0.0,0.0,0.0,0.6
+Colombia,8,2482,C. Vargas,True,Atlas,Mexico,Liga MX,33.0,2995.0,6.91,0.0,1.0,0.03,0.6
+Colombia,8,30,S. Arias,True,Bahia,Brazil,Serie A,21.0,1450.0,6.78,0.0,0.0,0.0,0.6
+Colombia,8,13571,W. Ditta,True,Cruz Azul,Mexico,Liga MX,41.0,3825.0,7.01,0.0,2.0,0.047,0.6
+Colombia,8,1929,J. Lucumí,True,Bologna,Italy,Serie A,29.0,2300.0,7.0,1.0,0.0,0.039,1.0
+Colombia,8,2483,D. Machado,True,Nantes,France,Ligue 1,14.0,911.0,6.64,0.0,1.0,0.099,1.0
+Colombia,8,2484,Y. Mina,True,Cagliari,Italy,Serie A,26.0,2160.0,6.96,2.0,0.0,0.083,1.0
+Colombia,8,64268,J. Mojica,True,Mallorca,Spain,La Liga,35.0,2737.0,6.68,0.0,4.0,0.132,1.0
+Colombia,8,13736,D. Muñoz,True,Crystal Palace,England,Premier League,29.0,2403.0,6.91,4.0,3.0,0.262,1.0
+Colombia,8,324034,G. Puerta,True,Racing Santander,Spain,Segunda División,32.0,2678.0,7.07,3.0,1.0,0.134,0.45
+Colombia,8,168,D. Sánchez,True,Galatasaray,Turkey,Süper Lig,30.0,2424.0,7.1,1.0,0.0,0.037,0.8
+Colombia,8,289592,K. Castaño,True,River Plate,Argentina,Liga Profesional Argentina,22.0,1713.0,6.91,0.0,1.0,0.053,0.6
+Colombia,8,2490,J. Lerma,True,Crystal Palace,England,Premier League,31.0,1731.0,6.72,0.0,2.0,0.104,1.0
+Colombia,8,13151,J. Portilla,True,Talleres Cordoba,Argentina,Liga Profesional Argentina,23.0,1663.0,6.9,0.0,1.0,0.054,0.6
+Colombia,8,13708,J. Arias,True,Wolves,England,Premier League,23.0,1121.0,6.63,1.0,0.0,0.08,1.0
+Colombia,8,5994,J. Carrascal,True,Flamengo,Brazil,Serie A,16.0,829.0,7.15,2.0,5.0,0.76,0.6
+Colombia,8,6005,J. Quintero,True,America de Cali,Colombia,Primera A,14.0,1077.0,7.46,3.0,3.0,0.501,0.6
+Colombia,8,195104,R. Rios,True,Benfica,Portugal,Primeira Liga,27.0,2279.0,7.09,5.0,4.0,0.355,0.8
+Colombia,8,517,J. Rodríguez,True,Leon,Mexico,Liga MX,14.0,982.0,7.31,3.0,2.0,0.458,0.6
+Colombia,8,13376,J. Campaz,True,Rosario Central,Argentina,Liga Profesional Argentina,28.0,2103.0,6.96,5.0,0.0,0.214,0.6
+Colombia,8,24810,J. Córdoba,True,FC Krasnodar,Russia,Premier League,28.0,2484.0,7.19,17.0,6.0,0.833,0.8
+Colombia,8,47582,C. Hernández,True,Real Betis,Spain,La Liga,32.0,2592.0,6.89,11.0,3.0,0.486,1.0
+Colombia,8,2489,L. Díaz,True,Bayern München,Germany,Bundesliga,32.0,2450.0,7.28,15.0,14.0,1.065,1.0
+Colombia,8,345748,A. Gómez,True,Vasco DA Gama,Brazil,Serie A,16.0,1041.0,6.91,1.0,5.0,0.519,0.6
+Colombia,8,47237,L. Suárez,True,Sporting CP,Portugal,Primeira Liga,32.0,2697.0,7.42,28.0,6.0,1.135,0.8

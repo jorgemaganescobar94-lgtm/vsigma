@@ -21,20 +21,27 @@ import build_worldcup_full_card as fc  # noqa: E402
 # ----------------------------------------------------------------- feature list
 def test_feature_list_count_and_uniqueness():
     assert len(ffdm.FEATURES) == 26
-    assert len(set(ffdm.FEATURES)) == len(ffdm.FEATURES)   # no dups
-    # strength block present + all rolling stat diffs present
+    assert len(ffdm.FEATURES_CF) == 27 and ffdm.FEATURES_CF[-1] == "club_form_diff"
+    assert len(set(ffdm.FEATURES_CF)) == len(ffdm.FEATURES_CF)   # no dups
     for k in ("l3_logit_h", "l3_xg_h", "neutral", "team_rating_diff"):
         assert k in ffdm.FEATURES
     for s in ffdm.STAT_FIELDS:
         assert f"{s}_diff" in ffdm.FEATURES
 
 
-def test_artifact_matches_feature_list():
-    if not ffdm.ARTIFACT.exists():
+def test_active_features_follow_flag(monkeypatch):
+    monkeypatch.setattr(ffdm, "CLUB_FORM_FEATURE", True)
+    assert ffdm.active_features() == ffdm.FEATURES_CF and len(ffdm.active_features()) == 27
+    monkeypatch.setattr(ffdm, "CLUB_FORM_FEATURE", False)
+    assert ffdm.active_features() == list(ffdm.FEATURES) and len(ffdm.active_features()) == 26
+
+
+def test_artifact_matches_active_feature_list():
+    path = ffdm.active_artifact_path()
+    if not path.exists():
         pytest.skip("artifact not trained in this checkout")
-    art = ffdm._load_artifact()
-    assert art["features"] == list(ffdm.FEATURES)
-    assert len(art["mean"]) == len(ffdm.FEATURES) == len(art["std"])
+    art = ffdm._load_artifact(path)
+    assert len(art["features"]) == len(art["mean"]) == len(art["std"]) == len(art["logit_W"])
 
 
 # ----------------------------------------------------------------- live predictor
@@ -56,7 +63,7 @@ def test_predict_valid_output_and_impute_neutral():
     for k in ("fd_home", "fd_draw", "fd_away"):
         assert 0.0 <= r[k] <= 1.0
     assert 0.05 <= r["fd_xg_home"] <= 6.0 and 0.05 <= r["fd_xg_away"] <= 6.0
-    assert r["n_features"] == 26
+    assert r["n_features"] == len(ffdm.active_features())   # 26 or 27 per the flag
     assert r["n_missing"] >= 20   # unknown teams -> the point-in-time features are all missing
 
 
@@ -76,8 +83,10 @@ def test_predict_real_team_is_finite():
 def test_predict_soft_fails_to_none_on_bad_input(monkeypatch):
     if not ffdm.ARTIFACT.exists():
         pytest.skip("artifact not trained in this checkout")
-    # a corrupt artifact must NOT raise from predict() -> returns None
-    monkeypatch.setattr(ffdm, "_ARTIFACT_CACHE", {"features": ffdm.FEATURES})  # missing keys
+    # a corrupt artifact (missing logit_W/etc.) must NOT raise from predict() -> returns None.
+    # Corrupt the cache under the ACTIVE artifact's path key so _load_artifact serves it.
+    key = str(ffdm.active_artifact_path())
+    monkeypatch.setattr(ffdm, "_ARTIFACT_CACHE", {key: {"features": list(ffdm.active_features())}})
     assert ffdm.predict(10, 8, "2026-06-25", 1, 0.45, 0.28, 0.27, 1.4, 1.1) is None
 
 
@@ -112,6 +121,38 @@ def test_ctx_and_inj_still_outrank_fd():
           "inj_xg_home": 1.35, "inj_xg_away": 1.25}
     ph2, pdr2, pa2, *_ = fc.pred_1x2(r2)
     assert (ph2, pdr2, pa2) == (0.40, 0.33, 0.27)
+
+
+# ----------------------------------------------------------------- club_form feature
+def test_club_form_flag_selects_artifact(monkeypatch):
+    monkeypatch.setattr(ffdm, "CLUB_FORM_FEATURE", False)
+    assert ffdm.active_artifact_path() == ffdm.ARTIFACT
+    monkeypatch.setattr(ffdm, "CLUB_FORM_FEATURE", True)
+    # with the flag on, the club_form artifact is used IF it exists (else safe fallback to base)
+    expected = ffdm.ARTIFACT_CF if ffdm.ARTIFACT_CF.exists() else ffdm.ARTIFACT
+    assert ffdm.active_artifact_path() == expected
+
+
+def test_club_form_predict_finite_both_flag_states(monkeypatch):
+    if not ffdm.ARTIFACT.exists():
+        pytest.skip("artifact not trained in this checkout")
+    import math
+    for flag in (True, False):
+        monkeypatch.setattr(ffdm, "CLUB_FORM_FEATURE", flag)
+        r = ffdm.predict(10, 4673, "2026-06-25", 1, 0.72, 0.19, 0.09, 2.2, 0.6)
+        assert r is not None and math.isfinite(r["fd_home"])
+        assert abs(r["fd_home"] + r["fd_draw"] + r["fd_away"] - 1.0) < 1e-6
+
+
+def test_club_form_table_sanity():
+    # committed per-team table: 48 teams, elite club-form > minnows (redundant-with-L3 ordering)
+    if not ffdm.CLUB_FORM_CSV.exists():
+        pytest.skip("club_form table not built in this checkout")
+    import pandas as pd
+    cf = pd.read_csv(ffdm.CLUB_FORM_CSV).set_index("team")
+    assert cf["team_id"].nunique() == 48
+    if {"Germany", "South Africa"} <= set(cf.index):
+        assert cf.loc["Germany", "club_form"] > cf.loc["South Africa", "club_form"]
 
 
 # ----------------------------------------------------------------- A/B scorer helpers

@@ -78,6 +78,14 @@ feature studies, new-fields backtest 2026-07-01):
 | 24 | `fouls_diff` | caché stats | **NULA** |
 | 25 | `possession_diff` | caché stats + stats_raw | **NULA** (estilo, ya probado) |
 | 26 | `corners_diff` | caché stats + stats_raw | **NULA** para 1X2 |
+| 27 | `club_form_diff` (opcional, flag `CLUB_FORM_FEATURE`) | `worldcup_club_form.csv` (forma de club 2025 de los jugadores, normalizada por tier de liga) | **REDUNDANTE con L3** — empeora ~0.0008 aun en test favorable (ver abajo) |
+
+**club_form (feature 27):** fuerza de selección desde la forma de club 2025 de sus jugadores
+(goles+asistencias/90 + rating, ponderado por minutos, normalizado por tier de liga). Coste API 0
+(re-parseo del caché, 100% cobertura de las 48 plantillas). Anti-leakage EN VIVO (temporada 2025 <
+Mundial 2026). **Reversible**: `CLUB_FORM_FEATURE=True` usa el artifact de 27 feats; `False` vuelve al
+de 26 EXACTAMENTE. Orden resultante (Alemania/Francia/España arriba, Sudáfrica/Qatar abajo) ≈ L3 →
+señal de fuerza ya capturada por el L3.
 
 **Resumen honesto:** de 26 features, la señal real la aportan las 4 de L3 (y algo forma/squad). Las
 ~13 de stats rolling + rating son **nulas o redundantes** para 1X2 — meten ruido. Por eso el modelo,
@@ -86,8 +94,9 @@ constancia de qué aporta cada una.
 
 ## A/B honesto (OOS internacionales 2024-2025, N=2680)
 
-- **1X2 logloss:** full-data **0.9273** vs L3 **0.9178** → Δ(L3−fd) = **−0.0095** IC95 [−0.0172,−0.0018], p(fd mejor)=0.01.
-- **Veredicto:** full-data **PEOR** de forma significativa (~1%), como se esperaba. Regularización fuerte
+- **1X2 logloss:** full-data-26 **0.9273** vs L3 **0.9178** → Δ(L3−fd) = **−0.0095** IC95 [−0.0172,−0.0018], p(fd mejor)=0.01.
+- **club_form (marginal 26 vs 27):** base(26) **0.9273** vs +club_form(27) **0.9281** → Δ(base−clubform) = **−0.0008** IC95 [−0.0015,−0.0001], p=0.01 → **club_form REDUNDANTE/peor** aun en el test *favorable* (usa el snapshot 2025 con look-ahead leve; no es backtesteable limpio → validación real solo EN VIVO). Confirma el patrón del squad-quality.
+- **Veredicto:** full-data **PEOR** de forma significativa (~1%), como se esperaba; club_form no aporta. Regularización fuerte
   evita que las features nulas lo revienten, pero no puede crear señal donde no la hay.
 - El marcador vivo `worldcup_full_data_ab_scorer.py` sigue el A/B fd vs ensemble sobre los partidos WC
   liquidados; si full-data queda por detrás (esperado), es la base para revertir `FULL_DATA_LIVE=False`.
