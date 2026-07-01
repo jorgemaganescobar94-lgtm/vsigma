@@ -63,6 +63,12 @@ MANIFEST = OUT_DIR / "worldcup_messages_manifest.txt"  # paginated send list: "p
 MXVSL3 = OUT_DIR / "worldcup_mx_vs_l3_scorecard.txt"  # read-only mx-vs-L3 marker (compact line in header)
 KMAX = 10
 
+# CLEAN_FORMAT: reorganiza la PRESENTACIÓN de cada partido (secciones etiquetadas + espaciadas,
+# predicción destacada, "por qué" en lenguaje natural, honestidad/atribución UNA vez al final).
+# NO cambia el modelo ni los números (todo sale de los MISMOS campos/pred_1x2). Reversible:
+# False -> formato clásico EXACTO. La paginación (nunca parte un bloque) se respeta igual.
+CLEAN_FORMAT = True
+
 
 def pmf(lam, k=KMAX):
     ks = np.arange(k + 1)
@@ -415,7 +421,15 @@ def firmest_predictions_block(df, top_n=3):
 
 
 def match_block(r, show_lineups=False):
-    """Readable, labelled per-match card (list of lines). Data model only, ZERO odds."""
+    """Per-match card (list of lines). CLEAN_FORMAT -> the redesigned layout; else the classic one.
+    BOTH read the SAME stored fields / pred_1x2 -> identical numbers. Data model only, ZERO odds."""
+    if CLEAN_FORMAT:
+        return _match_block_clean(r, show_lineups)
+    return _match_block_legacy(r, show_lineups)
+
+
+def _match_block_legacy(r, show_lineups=False):
+    """Classic labelled per-match card (list of lines). Data model only, ZERO odds."""
     h, a = es_name(r["home"]), es_name(r["away"])
     ko_round = is_knockout(r.get("round"))   # knockout -> round chip + advance line + draw relabel
     lines = [f"🏆 {h} vs {a} — {chip_es(r)} · {fmt_ko(r.get('kickoff_utc'))}"]
@@ -526,6 +540,142 @@ def match_block(r, show_lineups=False):
     # (already logged pre-KO -> lock-at-KO coherent; NOT recomputed). Soft: no props -> no block.
     lines += props_block(r.get("fixture_id"))
     return lines
+
+
+def _model_note(r):
+    """Honest attribution of the SHOWN 1X2 engine (base of the chain): full-data > ensemble > mx.
+    None = pure L3. Used ONCE in the clean footer (never per line)."""
+    if pd.notna(r.get("fd_home")):
+        return FD_NOTE
+    if pd.notna(r.get("ens_home")):
+        return ENS_NOTE
+    if pd.notna(r.get("mx_home")):
+        return MX_NOTE
+    return None
+
+
+def _match_block_clean(r, show_lineups=False):
+    """Redesigned per-match card: headline prediction, natural-language why, spaced labelled
+    sections, single honesty+attribution footer. Reads the SAME fields / pred_1x2 as the classic
+    layout -> IDENTICAL numbers. Blocks stay whole (pagination never splits them). ZERO odds."""
+    h, a = es_name(r["home"]), es_name(r["away"])
+    ko_round = is_knockout(r.get("round"))
+    out = [f"🏆 {h} vs {a} · {chip_es(r)} · {fmt_ko(r.get('kickoff_utc'))}"]
+
+    lh, ld, la, xgh, xga, _note = pred_1x2(r)   # 6th value = model note (footer); ctx uses the field
+
+    # ---- 1) PREDICCIÓN DESTACADA ----
+    if pd.notna(lh):
+        out.append("")
+        if ko_round:
+            fav, fp, oth, op = (h, lh, a, la) if lh >= la else (a, la, h, lh)
+            out.append(f"✅ Favorito {fav} — {fp*100:.0f}% (a 90')")
+            out.append(f"   (empate→prórroga {ld*100:.0f}% · {oth} {op*100:.0f}%)")
+            pa_h, pa_a = lh + ld*0.5, la + ld*0.5
+            out.append(f"   🏅 Avanza: {h} {pa_h*100:.0f}% · {a} {pa_a*100:.0f}% "
+                       f"(prórroga/penaltis ≈ moneda al aire)")
+        elif ld >= lh and ld >= la:
+            out.append(f"✅ Muy igualado — empate {ld*100:.0f}% (lo más probable)")
+            out.append(f"   ({h} {lh*100:.0f}% · {a} {la*100:.0f}%)")
+        else:
+            fav, fp, oth, op = (h, lh, a, la) if lh >= la else (a, la, h, lh)
+            out.append(f"✅ Gana {fav} — {fp*100:.0f}%")
+            out.append(f"   (empate {ld*100:.0f}% · {oth} {op*100:.0f}%)")
+        inj_note = r.get("inj_note")
+        if pd.notna(r.get("inj_home")) and isinstance(inj_note, str) and inj_note.strip():
+            out.append(f"   ℹ️ Ajuste por bajas aplicado: {inj_note}")
+        else:
+            ah, ad, aa = r.get("adj_home"), r.get("adj_draw"), r.get("adj_away")
+            if pd.notna(ah):
+                motivo = []
+                absh, absa = r.get("adj_absent_home"), r.get("adj_absent_away")
+                if isinstance(absh, str) and absh.strip():
+                    motivo.append(f"{h} sin {absh}")
+                if isinstance(absa, str) and absa.strip():
+                    motivo.append(f"{a} sin {absa}")
+                extra = f" — {' · '.join(motivo)}" if motivo else ""
+                out.append(f"   ⚠️ Ajuste por bajas (heurístico, orientativo, sin validar): "
+                           f"{h} {ah*100:.0f}% · empate {ad*100:.0f}% · {a} {aa*100:.0f}%{extra}")
+
+    # ---- 2) POR QUÉ (lenguaje natural, sin jerga) ----
+    try:
+        import worldcup_explain
+        why = worldcup_explain.explain_l3_clean(
+            h, a, r.get("our_elo_home"), r.get("our_elo_away"), neutral=1,
+            adj_absent_home=r.get("adj_absent_home"), adj_absent_away=r.get("adj_absent_away"),
+            adj_delta_home=r.get("adj_delta_home"), adj_delta_away=r.get("adj_delta_away"))
+    except Exception:
+        why = ""
+    # context scenario: ONLY when real group context was applied (ctx_* present + its text field),
+    # NOT the pred_1x2 model note (that is the footer attribution). Avoids the FD_NOTE leak.
+    ctx_txt = r.get("context_note")
+    if pd.notna(r.get("ctx_home")) and isinstance(ctx_txt, str) and ctx_txt.strip():
+        why = f"{why} Contexto de grupo: {ctx_txt.strip()}." if why else f"Contexto de grupo: {ctx_txt.strip()}."
+    if why:
+        out.append("")
+        out.append(f"💬 Por qué: {why}")
+
+    # ---- 3) GOLES ----
+    if pd.notna(xgh):
+        M = score_matrix(xgh, xga)
+        gh = np.arange(KMAX + 1)[:, None]; ga = np.arange(KMAX + 1)[None, :]
+        o25 = min(max(float(M[(gh + ga) >= 3].sum()), 0.01), 0.99)
+        btts = min(max(float(M[(gh >= 1) & (ga >= 1)].sum()), 0.01), 0.99)
+        out.append("")
+        out.append(f"⚽ Goles: esperados {xgh:.1f}–{xga:.1f} (total {xgh + xga:.1f}) · "
+                   f"Over 2.5 {o25*100:.0f}% · BTTS {btts*100:.0f}%")
+        flat = sorted(((i, j, M[i, j]) for i in range(KMAX + 1) for j in range(KMAX + 1)),
+                      key=lambda t: -t[2])[:3]
+        out.append("   Marcador más probable: " + " · ".join(f"{i}-{j} ({p*100:.0f}%)" for i, j, p in flat))
+
+    # ---- 4) JUGADORES (props validados/orientativos, XI provisional) ----
+    props = props_block(r.get("fixture_id"))
+    if props:
+        out.append("")
+        out.append("👥 Jugadores (XI probable, se confirma ~1h antes del saque):")
+        out += props
+
+    # ---- 5) CÓRNERS / TIROS (con su confianza por stat) ----
+    shown_here = []
+
+    def side(nm, c, s):
+        seg = []
+        if "corners" in SHOW_STATS and pd.notna(c):
+            seg.append(f"córners ~{c:.0f}")
+            if "corners" not in shown_here:
+                shown_here.append("corners")
+        if "shots" in SHOW_STATS and pd.notna(s):
+            seg.append(f"tiros ~{s:.0f}")
+            if "shots" not in shown_here:
+                shown_here.append("shots")
+        return f"{nm}: " + ", ".join(seg) if seg else None
+    sh_ = side(h, r.get("st_corners_home"), r.get("st_shots_home"))
+    sa_ = side(a, r.get("st_corners_away"), r.get("st_shots_away"))
+    if sh_ and sa_:
+        legend = _conf_legend(shown_here)
+        tag = f" (confianza: {legend})" if legend else ""
+        out.append("")
+        out.append(f"📈 Córners/tiros — {sh_} | {sa_}{tag}")
+
+    if show_lineups:
+        LU = {"conf": "confirmado", "prob": "probable", "pend": "pendiente"}
+        lhs, las = r.get("lineup_home"), r.get("lineup_away")
+        if pd.notna(lhs) and str(lhs) in LU:
+            out.append(f"   Alineaciones — {h}: {LU[str(lhs)]} · {a}: {LU.get(str(las), 'pendiente')}")
+
+    # ---- 6) CONTEXTO DE GRUPO (información, no es la predicción) ----
+    gi = r.get("group_info")
+    if not ko_round and isinstance(gi, str) and gi.strip():
+        out.append("")
+        out.append(f"📋 Contexto de grupo (información, no es la predicción): {gi}")
+
+    # ---- 7) HONESTIDAD + ATRIBUCIÓN (UNA sola vez, al final) ----
+    out.append("")
+    out.append("ℹ️ Modelo propio de selecciones (sin cuotas), probabilístico — nunca certezas.")
+    mn = _model_note(r)
+    if mn:
+        out.append(f"   Atribución: {mn}")
+    return out
 
 
 def read_scorecard_block(path, max_lines=4):

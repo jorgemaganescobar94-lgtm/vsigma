@@ -72,3 +72,32 @@ def explain_l3(home, away, s_home, s_away, neutral,
         parts.append(f"Es probabilístico → xG {xh:.1f}-{xa:.1f}, "
                      f"prob {ph * 100:.0f}/{pd_ * 100:.0f}/{pa * 100:.0f}%.")
     return " ".join(parts)
+
+
+def explain_l3_clean(home, away, s_home, s_away, neutral,
+                     adj_absent_home=None, adj_absent_away=None,
+                     adj_delta_home=None, adj_delta_away=None) -> str:
+    """Natural-language 'por qué' for the CLEAN format: WHY the model favours a side, in words,
+    WITHOUT jargon (no 'rating'/'xG') and WITHOUT the honesty tail or the prob/xG restatement
+    (those live in the headline, the Goles section and the single footer note). Pure rendering; ''
+    if strength missing. 'rating' is explained as 'plantilla histórica más fuerte'."""
+    sh, sa = _num(s_home), _num(s_away)
+    if sh is None or sa is None:
+        return ""
+    sup = sh - sa
+    if abs(sup) < 0.15:
+        parts = [f"{home} y {away} están muy parejos (fuerza de plantilla casi igual)"]
+    else:
+        fav, oth, margin = (home, away, sup) if sup > 0 else (away, home, -sup)
+        parts = [f"{fav} es {_level(margin)}: su plantilla histórica es más fuerte "
+                 f"(ventaja de {margin:.2f} sobre {oth})"]
+    is_neutral = True if neutral is None else bool(int(neutral)) if str(neutral).strip() not in ("", "nan") else True
+    parts.append("campo neutral, sin ventaja local" if is_neutral else f"{home} juega en casa (leve ventaja)")
+    bits = []
+    for team, delta, absent in ((home, adj_delta_home, adj_absent_home),
+                                (away, adj_delta_away, adj_absent_away)):
+        has_abs = isinstance(absent, str) and absent.strip() and absent.strip().lower() != "nan"
+        if has_abs:
+            bits.append(f"{team} sin {absent.strip()}")
+    tail = f". Bajas clave: {' · '.join(bits)}." if bits else "."
+    return parts[0] + " — " + parts[1] + tail

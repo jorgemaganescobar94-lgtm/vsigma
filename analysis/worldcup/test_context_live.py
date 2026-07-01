@@ -230,13 +230,13 @@ def test_match_block_shows_adjusted_and_note():
     r = _row(ctx_home=0.40, ctx_draw=0.30, ctx_away=0.30, ctx_xg_home=1.5, ctx_xg_away=1.1,
              context_note="ajustado por contexto de grupo: A debe ganar")
     txt = "\n".join(F.match_block(r))
-    assert "A 40%" in txt and "B 30%" in txt                  # adjusted percentages shown
+    assert "A — 40%" in txt and "B 30%" in txt                # adjusted percentages (clean headline)
     assert "ajustado por contexto de grupo: A debe ganar" in txt   # nota presente
 
 
 def test_match_block_pure_l3_has_no_context_note():
     txt = "\n".join(F.match_block(_row()))
-    assert "A 50%" in txt and "ajustado por contexto" not in txt   # pure L3, sin nota
+    assert "A — 50%" in txt and "ajustado por contexto" not in txt   # pure L3, sin nota
 
 
 def _run():

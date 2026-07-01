@@ -69,7 +69,7 @@ def test_framing_is_honest_no_accuracy_claim():
         assert banned not in note
     # the live block in the ficha shows the MAX prediction + the honest note
     block = F.match_block(_row(with_mx=True), show_lineups=False)
-    assert any("Resultado: A 61%" in ln for ln in block)
+    assert any("Gana A — 61%" in ln for ln in block)           # CLEAN_FORMAT headline
     assert any(F.MX_NOTE in ln for ln in block)
 
 

@@ -93,9 +93,9 @@ def test_goals_stay_l3():
     assert (xgh, xga) == (r["our_xg_home"], r["our_xg_away"]) == (1.6, 1.1)
     # Over2.5/BTTS in the ficha derive from that L3 xG
     block = F.match_block(r, show_lineups=False)
-    assert any("Goles esperados: 1.6" in ln for ln in block)
-    # the shown 1X2 line carries the blended probabilities
-    assert any("Resultado: A 55%" in ln for ln in block)
+    assert any("esperados 1.6" in ln for ln in block)          # CLEAN_FORMAT goals wording
+    # the shown 1X2 line carries the blended probabilities (clean headline)
+    assert any("Gana A — 55%" in ln for ln in block)
     # honest ensemble framing present
     assert any(F.ENS_NOTE in ln for ln in block)
 

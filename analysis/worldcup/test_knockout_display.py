@@ -50,17 +50,17 @@ def test_chip_group_unchanged():
 
 # ---------------------------------------------------------------- FIX 3 advance line
 def test_advance_line_only_in_knockout_and_sums():
-    txt = "\n".join(F.match_block(_row(round="Round of 16")))
-    assert "Empate a 90' (→ prórroga)" in txt
-    assert "Avance" in txt and "moneda al aire" in txt
+    txt = "\n".join(F.match_block(_row(round="Round of 16")))     # CLEAN_FORMAT wording
+    assert "(a 90')" in txt and "empate→prórroga" in txt
+    assert "Avanza" in txt and "moneda al aire" in txt
     # P(advance): home 0.56 + 0.24*0.5 = 0.68 -> 68% ; away 0.20 + 0.12 = 0.32 -> 32% (sum 100)
     assert "68%" in txt and "32%" in txt
 
 
 def test_group_match_has_no_advance_line():
     txt = "\n".join(F.match_block(_row(round="Group Stage - 1")))
-    assert "Avance" not in txt and "→ prórroga" not in txt
-    assert "Empate 24%" in txt   # normal draw label in groups
+    assert "Avanza" not in txt and "prórroga" not in txt
+    assert "empate 24%" in txt   # normal draw label in groups (clean headline)
 
 
 # ---------------------------------------------------------------- FIX 2 AET/PEN annotation

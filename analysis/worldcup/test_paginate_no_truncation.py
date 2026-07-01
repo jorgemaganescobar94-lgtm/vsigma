@@ -80,7 +80,7 @@ def _is_contiguous_sub(block, body):
 
 
 def test_no_match_block_is_ever_truncated():
-    max_lines = 12   # small budget so 2 full blocks would NOT fit -> exercises the packer
+    max_lines = 24   # real dispatcher budget: 1 clean block fits, 2 don't -> exercises the packer
     F.render_paginated(SLATE, "2026-06-27", None, None, False, None,
                        show_lineups=False, per_page=2, max_lines=max_lines)
     msgs = _read_messages()
@@ -157,8 +157,8 @@ def test_por_equipo_shows_per_stat_confidence():
     # and it actually renders in a real block (Croatia row carries st_corners/st_shots)
     r = SLATE.iloc[0]
     block = F.match_block(r, show_lineups=False)
-    pe = [ln for ln in block if ln.startswith("Por equipo")]
-    assert pe, "expected a 'Por equipo' line"
+    pe = [ln for ln in block if "Córners/tiros —" in ln]   # CLEAN_FORMAT per-team stats line
+    assert pe, "expected a 'Córners/tiros' line"
     assert "tiros: conf media" in pe[0] and "córners: baja conf" in pe[0]
     assert "BAJA CONF" not in pe[0], "no stale single global label"
 

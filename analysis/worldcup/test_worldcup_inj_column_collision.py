@@ -82,7 +82,7 @@ def test_match_block_no_crash_on_knockout_names_string():
              mx_home=0.45, mx_draw=0.27, mx_away=0.28,
              our_home=0.44, our_draw=0.28, our_away=0.28)
     lines = fc.match_block(r)                            # would raise ValueError before the fix
-    assert any("Resultado a 90'" in ln for ln in lines)
+    assert any("(a 90')" in ln for ln in lines)   # CLEAN_FORMAT knockout headline
     assert any("45%" in ln for ln in lines)             # rendered the numeric fallback
 
 
@@ -95,7 +95,7 @@ def test_inj_names_column_does_not_pollute_probability():
     lh = fc.pred_1x2(r)[0]
     assert lh == 0.50 and not isinstance(lh, str)        # inj_home probability, NOT the names
     lines = fc.match_block(r)
-    assert any("Resultado a 90'" in ln for ln in lines)
+    assert any("(a 90')" in ln for ln in lines)   # CLEAN_FORMAT knockout headline
 
 
 def test_compact_render_reads_names_from_inj_names(tmp_path, monkeypatch, capsys):
