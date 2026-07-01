@@ -861,6 +861,17 @@ def render_paginated(df, date_from, within_hours, scorecard, show_yesterday,
     if firmest:
         messages.append(("Mundial 2026 — predicciones más firmes", firmest[:max_lines]))
 
+    # ----- TOURNAMENT SIM: Monte Carlo del cuadro (odds de ganar/final/semis) como mensaje PROPIO.
+    # Read-only sobre el modelo, NO toca predicciones por partido. Behind TOURNAMENT_SIM + GUARDA de
+    # validación del cuadro (si no reproduce los octavos conocidos -> [] -> no aparece). Soft-fail. -----
+    try:
+        import worldcup_tournament_sim as tsim
+        tblock = tsim.tournament_block()
+        if tblock:
+            messages.append(("Mundial 2026 — quién gana el torneo (simulación)", tblock[:max_lines]))
+    except Exception:
+        pass
+
     # ----- match pages: pack COMPLETE match blocks per message by a LINE BUDGET (max_lines, the
     # dispatcher cut). A block is NEVER split: if adding the next block would overflow the budget it
     # goes to the NEXT message; a lone block that alone exceeds the budget still gets its OWN message
