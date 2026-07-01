@@ -1,21 +1,21 @@
-⚙️ Ensemble vs mx vs L3 (N=10 · desde 27-jun): 1X2 ens 60% · mx 60% · L3 60% · O2.5 50% vs 50% · BTTS 30% vs 30%  (muestra pequeña, orientativo)
+⚙️ Ensemble vs mx vs L3 (N=13 · desde 27-jun): 1X2 ens 62% · mx 62% · L3 69% · O2.5 46% vs 46% · BTTS 38% vs 38%  (muestra pequeña, orientativo)
 
 ===== detalle mx vs L3 =====
-N=10 partidos liquidados con predicción mx (lock-at-KO, anti-hindsight) · desde 27-jun · cara a cara vs RESULTADOS REALES, sin mercado
+N=13 partidos liquidados con predicción mx (lock-at-KO, anti-hindsight) · desde 27-jun · cara a cara vs RESULTADOS REALES, sin mercado
   mercado/métrica               L3        mx       ens    líder         Δ
   -----------------------------------------------------------------------
-  1X2 acc%                    60.0      60.0      60.0   empate         -
-  1X2 logloss               0.8545    0.8867    0.8682       L3    0.0137
-  1X2 brier                 0.5045    0.5322    0.5155       L3    0.0110
-  Over 2.5 acc%               50.0      50.0      50.0   empate         -
-  Over 2.5 logloss          0.6758    0.6697    0.6758       mx    0.0061
-  Over 2.5 brier            0.2416    0.2386    0.2416       mx    0.0029
-  BTTS acc%                   30.0      30.0      30.0   empate         -
-  BTTS logloss              0.7584    0.7542    0.7584       mx    0.0042
-  BTTS brier                0.2806    0.2803    0.2806   empate         -
+  1X2 acc%                    69.2      61.5      61.5       L3       7.7
+  1X2 logloss               0.8546    0.8652    0.8569       L3    0.0023
+  1X2 brier                 0.5020    0.5132    0.5047       L3    0.0026
+  Over 2.5 acc%               46.2      46.2      46.2   empate         -
+  Over 2.5 logloss          0.6838    0.6808    0.6838       mx    0.0031
+  Over 2.5 brier            0.2455    0.2440    0.2455       mx    0.0015
+  BTTS acc%                   38.5      38.5      38.5   empate         -
+  BTTS logloss              0.7370    0.7306    0.7370       mx    0.0064
+  BTTS brier                0.2704    0.2686    0.2704       mx    0.0018
 
   ens = ENSEMBLE 1X2 MOSTRADO (media 50/50 mx+L3). En Over2.5/BTTS ens=L3 por diseño (los goles se quedan en el L3, su mejor mercado).
 
-VEREDICTO: muestra pequeña (N=10 < 30) — NO se declara ganador; el acumulado crece hasta el final del Mundial. Orientativo.
+VEREDICTO: muestra pequeña (N=13 < 30) — NO se declara ganador; el acumulado crece hasta el final del Mundial. Orientativo.
 
-generated_at_utc: 2026-06-30T16:48:34+00:00
+generated_at_utc: 2026-07-01T08:59:25+00:00

@@ -46,3 +46,6 @@ fixture_id,home,away,lambda_home,lambda_away,source_lambda,actual_score,in_top1,
 1562344,Brazil,Japan,1.51,0.93,mx,2-1,0,0,1,0.0924,4,1-0,H,H,media,media
 1565176,Germany,Paraguay,1.96,0.71,mx,1-1,0,1,1,0.0964,3,1-0,D,H,media,media
 1562345,Netherlands,Morocco,1.43,1.03,mx,1-1,1,1,1,0.1258,1,1-1,D,H,media,media
+1564789,Ivory Coast,Norway,1.29,1.03,mx,1-2,0,0,0,0.0672,7,1-1,A,H,media,media
+1565177,France,Sweden,1.97,0.67,mx,3-0,0,0,1,0.0909,5,1-0,H,H,media,media
+1567306,Mexico,Ecuador,1.32,1.05,mx,2-0,0,0,0,0.0814,6,1-1,H,H,media,media

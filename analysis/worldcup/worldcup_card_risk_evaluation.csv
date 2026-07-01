@@ -2,13 +2,13 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489410,16367,W. Pacho,Ecuador,2382,DEF,"Tori Penso, USA",0.1163,0.1183,neutro,0.002,0,media-baja,baja
 1489410,16360,A. Franco,Ecuador,2382,DEF,"Tori Penso, USA",0.1242,0.1307,subir,0.0065,1,media-baja,media
 1489410,25414,J. Yeboah,Ecuador,2382,MID,"Tori Penso, USA",0.1682,0.1703,neutro,0.0021,0,media-baja,media
-1489410,127817,P. Hincapié,Ecuador,2382,DEF,"Tori Penso, USA",0.1345,0.1369,neutro,0.0024,1,media-baja,baja
+1489410,127817,P. Hincapié,Ecuador,2382,DEF,"Tori Penso, USA",0.1345,0.1416,subir,0.0071,1,media-baja,media
 1489410,2583,A. Preciado,Ecuador,2382,DEF,"Tori Penso, USA",0.0507,0.0516,neutro,0.0009,0,media-baja,baja
 1489410,116117,M. Caicedo,Ecuador,2382,MID,"Tori Penso, USA",0.4552,0.4768,subir,0.0216,0,media-baja,baja
-1489410,35533,E. Valencia,Ecuador,2382,FWD,"Tori Penso, USA",0.2825,0.2747,bajar,0.0078,0,media-baja,baja
+1489410,35533,E. Valencia,Ecuador,2382,FWD,"Tori Penso, USA",0.2825,0.2691,bajar,0.0134,0,media-baja,media
 1489410,63964,F. Torres,Ecuador,2382,DEF,"Tori Penso, USA",0.0574,0.0584,neutro,0.001,0,media-baja,baja
 1489410,406303,K. Páez,Ecuador,2382,MID,"Tori Penso, USA",0.2431,0.2546,subir,0.0115,0,media-baja,baja
-1489410,354027,J. Ordoñez,Ecuador,2382,DEF,"Tori Penso, USA",0.1749,0.178,neutro,0.0031,0,media-baja,baja
+1489410,354027,J. Ordoñez,Ecuador,2382,DEF,"Tori Penso, USA",0.1749,0.1753,neutro,0.0004,0,media-baja,baja
 1489410,280695,A. Minda,Ecuador,2382,FWD,"Tori Penso, USA",0.0803,0.0793,neutro,0.001,0,media-baja,baja
 1489410,502,J. Kimmich,Germany,25,DEF,"Tori Penso, USA",0.0667,0.0644,bajar,0.0023,0,media-baja,media
 1489410,972,J. Tah,Germany,25,DEF,"Tori Penso, USA",0.3278,0.3229,neutro,0.0049,0,media-baja,baja
@@ -36,7 +36,7 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489409,1642,F. Kessié,Ivory Coast,1501,MID,"Glenn Nyberg, Sweden",0.1261,0.123,bajar,0.0031,0,media-baja,media
 1489409,354753,O. Diomande,Ivory Coast,1501,DEF,"Glenn Nyberg, Sweden",0.1398,0.137,neutro,0.0028,0,media-baja,baja
 1489409,135068,E. Agbadou,Ivory Coast,1501,DEF,"Glenn Nyberg, Sweden",0.1634,0.1602,neutro,0.0032,0,media-baja,baja
-1489409,22002,G. Konan,Ivory Coast,1501,DEF,"Glenn Nyberg, Sweden",0.0548,0.0537,neutro,0.0011,0,media-baja,baja
+1489409,22002,G. Konan,Ivory Coast,1501,DEF,"Glenn Nyberg, Sweden",0.0548,0.0529,bajar,0.0019,0,media-baja,baja
 1489409,334429,O. Diakité,Ivory Coast,1501,FWD,"Glenn Nyberg, Sweden",0.3959,0.3762,bajar,0.0197,0,media-baja,baja
 1489409,64190,Y. Fofana,Ivory Coast,1501,GK,"Glenn Nyberg, Sweden",0.0485,0.0475,neutro,0.001,0,baja,baja
 1489409,30807,S. Fofana,Ivory Coast,1501,MID,"Glenn Nyberg, Sweden",0.0573,0.0579,neutro,0.0006,0,media-baja,baja
@@ -98,17 +98,17 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1539011,2598,R. Dōan,Japan,12,MID,"Iván Barton, El Salvador",0.1587,0.1546,bajar,0.0041,0,media-baja,media
 1539011,72155,A. Ueda,Japan,12,FWD,"Iván Barton, El Salvador",0.0805,0.0736,bajar,0.0069,0,media-baja,media
 1539011,33224,D. Maeda,Japan,12,FWD,"Iván Barton, El Salvador",0.1084,0.0991,bajar,0.0093,0,media-baja,media
-1539011,48033,J. Widell Zetterström,Sweden,5,GK,"Iván Barton, El Salvador",0.1502,0.1497,neutro,0.0005,0,media-baja,baja
-1539011,137721,G. Lagerbielke,Sweden,5,DEF,"Iván Barton, El Salvador",0.1776,0.177,neutro,0.0006,0,media-baja,media
-1539011,137976,I. Hien,Sweden,5,DEF,"Iván Barton, El Salvador",0.2699,0.269,neutro,0.0009,1,media-baja,media
-1539011,889,V. Lindelöf,Sweden,5,MID,"Iván Barton, El Salvador",0.0353,0.0357,neutro,0.0004,0,media-baja,media
-1539011,47696,A. Bernhardsson,Sweden,5,MID,"Iván Barton, El Salvador",0.1805,0.179,neutro,0.0015,0,media-baja,media
-1539011,226765,E. Stroud,Sweden,5,MID,"Iván Barton, El Salvador",0.1336,0.1351,neutro,0.0015,0,media-baja,media
-1539011,265820,Y. Ayari,Sweden,5,MID,"Iván Barton, El Salvador",0.1537,0.1578,subir,0.0041,0,media-baja,media
-1539011,47969,G. Gudmundsson,Sweden,5,DEF,"Iván Barton, El Salvador",0.1466,0.1512,subir,0.0046,0,media-baja,media
-1539011,153430,A. Elanga,Sweden,5,FWD,"Iván Barton, El Salvador",0.0333,0.031,bajar,0.0023,0,media-baja,media
-1539011,18979,V. Gyökeres,Sweden,5,FWD,"Iván Barton, El Salvador",0.07,0.0677,bajar,0.0023,1,media-baja,media
-1539011,2864,A. Isak,Sweden,5,FWD,"Iván Barton, El Salvador",0.1789,0.1729,bajar,0.006,0,media-baja,media
+1539011,48033,J. Widell Zetterström,Sweden,5,GK,"Iván Barton, El Salvador",0.1502,0.147,bajar,0.0032,0,media-baja,baja
+1539011,137721,G. Lagerbielke,Sweden,5,DEF,"Iván Barton, El Salvador",0.1776,0.1739,bajar,0.0037,0,media-baja,media
+1539011,137976,I. Hien,Sweden,5,DEF,"Iván Barton, El Salvador",0.2699,0.2642,bajar,0.0057,1,media-baja,media
+1539011,889,V. Lindelöf,Sweden,5,DEF,"Iván Barton, El Salvador",0.0353,0.034,bajar,0.0013,0,media-baja,media
+1539011,47696,A. Bernhardsson,Sweden,5,FWD,"Iván Barton, El Salvador",0.1805,0.165,bajar,0.0155,0,media-baja,media
+1539011,226765,E. Stroud,Sweden,5,MID,"Iván Barton, El Salvador",0.1336,0.1301,bajar,0.0035,0,media-baja,media
+1539011,265820,Y. Ayari,Sweden,5,MID,"Iván Barton, El Salvador",0.1537,0.1605,subir,0.0068,0,media-baja,media
+1539011,47969,G. Gudmundsson,Sweden,5,DEF,"Iván Barton, El Salvador",0.1466,0.1487,neutro,0.0021,0,media-baja,media
+1539011,153430,A. Elanga,Sweden,5,MID,"Iván Barton, El Salvador",0.0333,0.0324,bajar,0.0009,0,media-baja,media
+1539011,18979,V. Gyökeres,Sweden,5,FWD,"Iván Barton, El Salvador",0.07,0.0664,bajar,0.0036,1,media-baja,media
+1539011,2864,A. Isak,Sweden,5,FWD,"Iván Barton, El Salvador",0.1789,0.1671,bajar,0.0118,0,media-baja,media
 1489412,49424,A. Dahmen,Tunisia,28,GK,"Katia García, Mexico",0.0448,0.0439,neutro,0.0009,0,baja,baja
 1489412,18942,Y. Valery,Tunisia,28,DEF,"Katia García, Mexico",0.2156,0.2113,neutro,0.0043,0,media-baja,baja
 1489412,50030,M. Talbi,Tunisia,28,DEF,"Katia García, Mexico",0.0446,0.0437,neutro,0.0009,0,media-baja,baja
@@ -154,13 +154,13 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1539074,229112,A. Qasem,Iraq,1567,MID,"Anthony Taylor, England",0.1443,0.149,subir,0.0047,0,media-baja,baja
 1539074,299813,Ali Al Hamadi,Iraq,1567,FWD,"Anthony Taylor, England",0.1443,0.1403,bajar,0.004,0,media-baja,baja
 1489416,39082,E. Selvik,Norway,1090,GK,"Michael Oliver, England",0.0638,0.0613,bajar,0.0025,0,media-baja,baja
-1489416,39043,F. Aursnes,Norway,1090,DEF,"Michael Oliver, England",0.124,0.1174,bajar,0.0066,0,media-baja,media
+1489416,39043,F. Aursnes,Norway,1090,MID,"Michael Oliver, England",0.124,0.1211,bajar,0.0029,0,media-baja,media
 1489416,180937,H. Falchener,Norway,1090,DEF,"Michael Oliver, England",0.124,0.1174,bajar,0.0066,0,media-baja,media
 1489416,18967,L. Østigård,Norway,1090,DEF,"Michael Oliver, England",0.2047,0.1968,bajar,0.0079,0,media-baja,media
 1489416,39058,F. Bjørkan,Norway,1090,DEF,"Michael Oliver, England",0.0751,0.0711,bajar,0.004,0,media-baja,media
 1489416,39143,K. Thorstvedt,Norway,1090,MID,"Michael Oliver, England",0.3074,0.3002,bajar,0.0072,0,media-baja,media
 1489416,39064,P. Berg,Norway,1090,MID,"Michael Oliver, England",0.2442,0.2421,neutro,0.0021,1,media-baja,media
-1489416,278133,Oscar Bobb,Norway,1090,FWD,"Michael Oliver, England",0.0357,0.0327,bajar,0.003,0,media-baja,media
+1489416,278133,Oscar Bobb,Norway,1090,MID,"Michael Oliver, England",0.0357,0.0349,bajar,0.0008,0,media-baja,media
 1489416,277930,T. Aasgaard,Norway,1090,MID,"Michael Oliver, England",0.0691,0.0675,bajar,0.0016,0,media-baja,media
 1489416,301528,A. Schjelderup,Norway,1090,FWD,"Michael Oliver, England",0.0596,0.0546,bajar,0.005,0,media-baja,media
 1489416,2032,J. Strand Larsen,Norway,1090,FWD,"Michael Oliver, England",0.2522,0.2311,bajar,0.0211,0,media-baja,media
@@ -483,3 +483,69 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1562345,278898,C. Riad,Morocco,31,DEF,W. Sampaio,0.1065,0.1028,bajar,0.0037,0,media-baja,baja
 1562345,129678,A. Ounahi,Morocco,31,MID,W. Sampaio,0.2885,0.2814,bajar,0.0071,0,media-baja,media
 1562345,438688,A. Bouaddi,Morocco,31,MID,W. Sampaio,0.1394,0.1387,neutro,0.0007,0,media-baja,baja
+1564789,64190,Y. Fofana,Ivory Coast,1501,GK,"Jesús Valenzuela, Venezuela",0.0364,0.035,bajar,0.0014,0,media-baja,baja
+1564789,161747,G. Doué,Ivory Coast,1501,DEF,"Jesús Valenzuela, Venezuela",0.0402,0.0387,bajar,0.0015,0,media-baja,media
+1564789,48119,O. Kossounou,Ivory Coast,1501,DEF,"Jesús Valenzuela, Venezuela",0.1312,0.1261,bajar,0.0051,0,media-baja,media
+1564789,135068,E. Agbadou,Ivory Coast,1501,DEF,"Jesús Valenzuela, Venezuela",0.1008,0.0969,bajar,0.0039,0,media-baja,media
+1564789,22002,G. Konan,Ivory Coast,1501,DEF,"Jesús Valenzuela, Venezuela",0.0412,0.039,bajar,0.0022,0,media-baja,media
+1564789,22149,I. Sangaré,Ivory Coast,1501,MID,"Jesús Valenzuela, Venezuela",0.2402,0.2346,bajar,0.0056,0,media-baja,media
+1564789,3246,N. Pépé,Ivory Coast,1501,MID,"Jesús Valenzuela, Venezuela",0.1032,0.1059,subir,0.0027,0,media-baja,media
+1564789,1642,F. Kessié,Ivory Coast,1501,MID,"Jesús Valenzuela, Venezuela",0.0772,0.0738,bajar,0.0034,0,media-baja,media
+1564789,474591,C. Inao OulaÃ¯,Ivory Coast,1501,MID,"Jesús Valenzuela, Venezuela",0.3093,0.302,bajar,0.0073,0,media-baja,media
+1564789,513776,Y. Diomande,Ivory Coast,1501,MID,"Jesús Valenzuela, Venezuela",0.1756,0.168,bajar,0.0076,0,media-baja,media
+1564789,275651,A. Bonny,Ivory Coast,1501,FWD,"Jesús Valenzuela, Venezuela",0.1271,0.1139,bajar,0.0132,0,media-baja,media
+1564789,19172,Ø. Nyland,Norway,1090,GK,"Jesús Valenzuela, Venezuela",0.0208,0.02,bajar,0.0008,0,media-baja,baja
+1564789,39362,M. Pedersen,Norway,1090,DEF,"Jesús Valenzuela, Venezuela",0.0504,0.0467,bajar,0.0037,0,media-baja,media
+1564789,1119,K. Ajer,Norway,1090,DEF,"Jesús Valenzuela, Venezuela",0.1636,0.1573,bajar,0.0063,0,media-baja,media
+1564789,39254,T. Heggem,Norway,1090,DEF,"Jesús Valenzuela, Venezuela",0.2369,0.2242,bajar,0.0127,0,media-baja,media
+1564789,265782,D. Møller Wolfe,Norway,1090,DEF,"Jesús Valenzuela, Venezuela",0.1626,0.1563,bajar,0.0063,0,media-baja,media
+1564789,37127,M. Ødegaard,Norway,1090,MID,"Jesús Valenzuela, Venezuela",0.0294,0.0292,neutro,0.0002,0,media-baja,media
+1564789,1934,S. Berge,Norway,1090,MID,"Jesús Valenzuela, Venezuela",0.0815,0.0808,neutro,0.0007,0,media-baja,media
+1564789,39064,P. Berg,Norway,1090,MID,"Jesús Valenzuela, Venezuela",0.2533,0.2511,neutro,0.0022,0,media-baja,media
+1564789,8492,A. Sørloth,Norway,1090,FWD,"Jesús Valenzuela, Venezuela",0.2656,0.2381,bajar,0.0275,0,media-baja,media
+1564789,1100,E. Haaland,Norway,1090,FWD,"Jesús Valenzuela, Venezuela",0.0831,0.0745,bajar,0.0086,0,media-baja,media
+1564789,314511,A. Nusa,Norway,1090,FWD,"Jesús Valenzuela, Venezuela",0.0278,0.0269,bajar,0.0009,1,media-baja,media
+1567306,270774,J. Rangel,Mexico,16,GK,S. Vincic,0.0577,0.0558,bajar,0.0019,0,media-baja,baja
+1567306,35544,J. Vásquez,Mexico,16,DEF,S. Vincic,0.1929,0.1895,neutro,0.0034,0,media-baja,baja
+1567306,2879,R. Alvarado,Mexico,16,FWD,S. Vincic,0.0377,0.0353,bajar,0.0024,0,media-baja,baja
+1567306,2881,J. Gallardo,Mexico,16,DEF,S. Vincic,0.1946,0.1912,neutro,0.0034,0,media-baja,baja
+1567306,266345,É. Lira,Mexico,16,MID,S. Vincic,0.2173,0.22,neutro,0.0027,0,media-baja,baja
+1567306,212233,B. Gutiérrez,Mexico,16,MID,S. Vincic,0.1634,0.1654,neutro,0.002,0,media-baja,baja
+1567306,2873,C. Montes,Mexico,16,DEF,S. Vincic,0.4236,0.4162,neutro,0.0074,0,media-baja,baja
+1567306,2887,R. Jiménez,Mexico,16,FWD,S. Vincic,0.1951,0.1829,bajar,0.0122,0,media-baja,baja
+1567306,2878,J. Sánchez,Mexico,16,DEF,S. Vincic,0.2106,0.2069,neutro,0.0037,0,media-baja,baja
+1567306,35532,J. Quiñones,Mexico,16,FWD,S. Vincic,0.1393,0.1278,bajar,0.0115,0,media-baja,media
+1567306,750,Álvaro Fidalgo,Mexico,16,MID,S. Vincic,0.1634,0.163,neutro,0.0004,0,media-baja,baja
+1567306,16360,A. Franco,Ecuador,2382,DEF,S. Vincic,0.1267,0.1334,subir,0.0067,1,media-baja,media
+1567306,25414,J. Yeboah,Ecuador,2382,MID,S. Vincic,0.1714,0.1735,neutro,0.0021,0,media-baja,media
+1567306,16367,W. Pacho,Ecuador,2382,DEF,S. Vincic,0.1185,0.1206,neutro,0.0021,0,media-baja,baja
+1567306,116117,M. Caicedo,Ecuador,2382,MID,S. Vincic,0.4579,0.4797,subir,0.0218,1,media-baja,baja
+1567306,16380,H. Galíndez,Ecuador,2382,GK,S. Vincic,0.0737,0.075,neutro,0.0013,0,baja,baja
+1567306,237078,P. Vite,Ecuador,2382,MID,S. Vincic,0.0903,0.0946,subir,0.0043,0,media-baja,baja
+1567306,16369,G. Plata,Ecuador,2382,FWD,S. Vincic,0.2658,0.2625,neutro,0.0033,0,media-baja,baja
+1567306,127817,P. Hincapié,Ecuador,2382,DEF,S. Vincic,0.1372,0.1444,subir,0.0072,1,media-baja,media
+1567306,35533,E. Valencia,Ecuador,2382,FWD,S. Vincic,0.2859,0.2723,bajar,0.0136,0,media-baja,media
+1567306,354027,J. Ordoñez,Ecuador,2382,DEF,S. Vincic,0.1782,0.1786,neutro,0.0004,0,media-baja,baja
+1567306,63964,F. Torres,Ecuador,2382,DEF,S. Vincic,0.0603,0.0614,neutro,0.0011,0,media-baja,baja
+1565177,22221,M. Maignan,France,2,GK,"Danny Makkelie, Netherlands",0.0613,0.0589,bajar,0.0024,0,media-baja,baja
+1565177,1257,J. Koundé,France,2,DEF,"Danny Makkelie, Netherlands",0.0235,0.0218,bajar,0.0017,0,media-baja,media
+1565177,1149,D. Upamecano,France,2,DEF,"Danny Makkelie, Netherlands",0.0825,0.0781,bajar,0.0044,0,media-baja,media
+1565177,22090,W. Saliba,France,2,DEF,"Danny Makkelie, Netherlands",0.1244,0.1196,bajar,0.0048,0,media-baja,media
+1565177,2724,L. Digne,France,2,DEF,"Danny Makkelie, Netherlands",0.3131,0.2963,bajar,0.0168,0,media-baja,media
+1565177,1271,A. Tchouaméni,France,2,MID,"Danny Makkelie, Netherlands",0.3224,0.3197,neutro,0.0027,0,media-baja,media
+1565177,272,A. Rabiot,France,2,MID,"Danny Makkelie, Netherlands",0.3873,0.384,neutro,0.0033,0,media-baja,media
+1565177,153,O. Dembélé,France,2,MID,"Danny Makkelie, Netherlands",0.109,0.1043,bajar,0.0047,0,media-baja,media
+1565177,19617,M. Olise,France,2,MID,"Danny Makkelie, Netherlands",0.0448,0.0429,bajar,0.0019,0,media-baja,media
+1565177,161904,B. Barcola,France,2,MID,"Danny Makkelie, Netherlands",0.0474,0.0453,bajar,0.0021,0,media-baja,media
+1565177,278,Kylian Mbappé,France,2,FWD,"Danny Makkelie, Netherlands",0.2248,0.2015,bajar,0.0233,0,media-baja,media
+1565177,48033,J. Widell Zetterström,Sweden,5,GK,"Danny Makkelie, Netherlands",0.1865,0.1826,bajar,0.0039,0,media-baja,baja
+1565177,137721,G. Lagerbielke,Sweden,5,DEF,"Danny Makkelie, Netherlands",0.2197,0.2151,bajar,0.0046,0,media-baja,media
+1565177,889,V. Lindelöf,Sweden,5,DEF,"Danny Makkelie, Netherlands",0.0424,0.0409,bajar,0.0015,0,media-baja,media
+1565177,47969,G. Gudmundsson,Sweden,5,DEF,"Danny Makkelie, Netherlands",0.1833,0.1859,neutro,0.0026,0,media-baja,media
+1565177,198654,D. Svensson,Sweden,5,DEF,"Danny Makkelie, Netherlands",0.1823,0.1757,bajar,0.0066,0,media-baja,media
+1565177,265820,Y. Ayari,Sweden,5,MID,"Danny Makkelie, Netherlands",0.1919,0.2003,subir,0.0084,0,media-baja,media
+1565177,347316,L. Bergvall,Sweden,5,MID,"Danny Makkelie, Netherlands",0.2972,0.3103,subir,0.0131,0,media-baja,media
+1565177,226765,E. Stroud,Sweden,5,MID,"Danny Makkelie, Netherlands",0.159,0.1549,bajar,0.0041,0,media-baja,media
+1565177,153430,A. Elanga,Sweden,5,MID,"Danny Makkelie, Netherlands",0.04,0.039,bajar,0.001,0,media-baja,media
+1565177,2864,A. Isak,Sweden,5,FWD,"Danny Makkelie, Netherlands",0.2226,0.2079,bajar,0.0147,0,media-baja,media
+1565177,18979,V. Gyökeres,Sweden,5,FWD,"Danny Makkelie, Netherlands",0.0879,0.0834,bajar,0.0045,0,media-baja,media

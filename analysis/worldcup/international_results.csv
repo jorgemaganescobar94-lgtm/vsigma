@@ -9206,3 +9206,6 @@ fixture_id,date,league_id,league_tag,season,neutral,home_id,home,away_id,away,gh
 1562344,2026-06-29T17:00:00+00:00,1,WC,2026,1,6,Brazil,12,Japan,2,1,
 1565176,2026-06-29T20:30:00+00:00,1,WC,2026,1,25,Germany,2380,Paraguay,1,1,
 1562345,2026-06-30T01:00:00+00:00,1,WC,2026,1,1118,Netherlands,31,Morocco,1,1,
+1564789,2026-06-30T17:00:00+00:00,1,WC,2026,1,1501,Ivory Coast,1090,Norway,1,2,
+1565177,2026-06-30T21:00:00+00:00,1,WC,2026,1,2,France,5,Sweden,3,0,
+1567306,2026-07-01T01:00:00+00:00,1,WC,2026,1,16,Mexico,2382,Ecuador,2,0,

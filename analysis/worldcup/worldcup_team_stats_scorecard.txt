@@ -1,19 +1,19 @@
-📐 Stats modelo vs real (N=42): córners MAE 2.9 (infraestima) · tiros MAE 7.2 (infraestima) · tarjetas MAE 1.9 (sobrestima)
+📐 Stats modelo vs real (N=45): córners MAE 3.0 (infraestima) · tiros MAE 7.1 (infraestima) · tarjetas MAE 1.9 (sobrestima)
 
 ===== detalle stats por equipo (predicho vs real) =====
 total por partido (suma de ambos equipos) · predicción congelada al saque (anti-hindsight) vs real liquidado · sin mercado
   stat         N    MAE   RMSE sesgo_crudo sesgo_corr  μpred  μreal       lectura
   -------------------------------------------------------------------------------
-  córners     42   2.87   3.75       -1.81      -0.68    7.0    8.8   infraestima
-  tiros       42   7.25   8.71       -5.90      -2.20   18.3   24.2   infraestima
-  tarjetas    42   1.90   2.19       +1.50          —    4.2    2.7    sobrestima
+  córners     45   3.04   3.97       -2.05      -0.73    7.0    9.1   infraestima
+  tiros       45   7.12   8.57       -5.87      -2.10   18.5   24.3   infraestima
+  tarjetas    45   1.92   2.23       +1.55          —    4.1    2.6    sobrestima
 
   corrección de nivel (córners/tiros MOSTRADOS): |sesgo| crudo -> corregido
-    córners    |1.81| -> |0.68| (corr +1.14) baja ✓
-    tiros      |5.90| -> |2.20| (corr +3.70) baja ✓
+    córners    |2.05| -> |0.73| (corr +1.32) baja ✓
+    tiros      |5.87| -> |2.10| (corr +3.77) baja ✓
     (tarjetas EXCLUIDAS de la corrección; muestra pequeña -> orientativo, no es victoria)
-  córners O/U (línea modelo): acc 48% sobre n=42 (real Over=62%)
+  córners O/U (línea modelo): acc 47% sobre n=45 (real Over=64%)
 
 HONESTIDAD: córners = BAJA confianza · tarjetas = RUIDO -> error alto ESPERABLE, no se maquilla. tiros = orientativo. NO se declara nada 'bueno/malo'; solo se acumula.
 
-generated_at_utc: 2026-06-30T16:48:34+00:00
+generated_at_utc: 2026-07-01T08:59:26+00:00
