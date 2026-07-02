@@ -9209,3 +9209,6 @@ fixture_id,date,league_id,league_tag,season,neutral,home_id,home,away_id,away,gh
 1564789,2026-06-30T17:00:00+00:00,1,WC,2026,1,1501,Ivory Coast,1090,Norway,1,2,
 1565177,2026-06-30T21:00:00+00:00,1,WC,2026,1,2,France,5,Sweden,3,0,
 1567306,2026-07-01T01:00:00+00:00,1,WC,2026,1,16,Mexico,2382,Ecuador,2,0,
+1567307,2026-07-01T16:00:00+00:00,1,WC,2026,1,10,England,1508,Congo DR,2,1,
+1567308,2026-07-01T20:00:00+00:00,1,WC,2026,1,1,Belgium,13,Senegal,2,2,
+1562586,2026-07-02T00:00:00+00:00,1,WC,2026,1,2384,USA,1113,Bosnia & Herzegovina,2,0,

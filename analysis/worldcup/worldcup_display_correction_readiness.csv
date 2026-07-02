@@ -1,4 +1,4 @@
 module,n,rows_to_min_sample,metric_original_mae,metric_corrected_mae_pre_fixture,delta_mae_pre_fixture,delta_rmse_pre_fixture,original_bias,corrected_bias_pre_fixture,bias_reduction,direction_stable,sample_gate,improvement_gate,bias_gate,no_strong_bias_inversion_gate,anti_lookahead_available,data_quality,confidence,readiness_status,reason
-team_sot_display_correction,50,0,1.8759,1.9022,0.063,-0.0145,0.4434,0.0804,0.363,True,True,False,True,True,True,evaluable,baja,NOT_READY_NO_SIGNAL,n>= 50 pero ΔMAE pre_fixture < 0.15: sin señal material.
-team_shots_display_correction,45,5,7.1238,4.7572,2.1056,2.0731,-5.8709,0.7436,5.1273,True,False,True,True,True,True,evaluable,baja,NOT_READY_SAMPLE,n=45 < 50 (faltan 5 filas); señal aparte.
-team_corners_display_correction,45,5,3.036,2.7282,0.4562,0.5593,-2.0498,-0.6054,1.4444,True,False,True,True,True,True,evaluable,baja,NOT_READY_SAMPLE,n=45 < 50 (faltan 5 filas); señal aparte.
+team_sot_display_correction,56,0,1.8355,1.816,0.0932,0.0127,0.5256,0.1537,0.3719,True,True,False,True,True,True,evaluable,baja,NOT_READY_NO_SIGNAL,n>= 50 pero ΔMAE pre_fixture < 0.15: sin señal material.
+team_shots_display_correction,48,2,7.156,4.9262,1.9921,2.0907,-5.9069,0.6849,5.222,True,False,True,True,True,True,evaluable,baja,NOT_READY_SAMPLE,n=48 < 50 (faltan 2 filas); señal aparte.
+team_corners_display_correction,48,2,2.9263,2.77,0.2783,0.4221,-1.8567,-0.3255,1.5312,True,False,True,True,True,True,evaluable,baja,NOT_READY_SAMPLE,n=48 < 50 (faltan 2 filas); señal aparte.

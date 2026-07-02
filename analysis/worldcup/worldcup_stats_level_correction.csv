@@ -1,3 +1,3 @@
 stat,n,raw_bias,target,shrink,correction_total,k,cap,capped
-corners,45,-2.0498,2.0498,0.6429,1.3177,25.0,4.0,False
-shots,45,-5.8709,5.8709,0.6429,3.7741,25.0,8.0,False
+corners,48,-1.8567,1.8567,0.6575,1.2208,25.0,4.0,False
+shots,48,-5.9069,5.9069,0.6575,3.884,25.0,8.0,False

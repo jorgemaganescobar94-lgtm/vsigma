@@ -1,7 +1,7 @@
 WORLD CUP — MONITOR DE CALIBRACIÓN L3 (1X2 producción)  [solo monitor + alerta; NO toca el modelo]
-generated_at_utc: 2026-07-01T13:29:04+00:00
+generated_at_utc: 2026-07-02T10:44:16+00:00
 UMBRAL ADAPTATIVO AL RUIDO (a priori): N>=15 · ALERTA si ECE_obs > nulo p95 (sim. 5000x, seed fijo) O logloss_L3 >= logloss_base
 ESTADO: OK
-N=50 | ECE_observado=0.141 | nulo p95(N=50)=0.199 -> ECE dentro del ruido
-logloss_L3=0.8263 vs baseline=1.0737 -> bate la tasa base | brier_L3=0.4782 (base 0.6504)
+N=53 | ECE_observado=0.108 | nulo p95(N=53)=0.190 -> ECE dentro del ruido
+logloss_L3=0.8258 vs baseline=1.0717 -> bate la tasa base | brier_L3=0.4774 (base 0.6486)
 alerta Telegram enviada: no (sin cambio / OK / anti-spam)

@@ -91,6 +91,8 @@ fixture_id,kickoff_utc,team_id,team_name,opponent_id,opponent_name,side,predicte
 1562344,2026-06-29 17:00,12,Japan,6,Brazil,away,5.215,2.0,3.2148,3.2148,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1562345,2026-06-30 01:00,31,Morocco,1118,Netherlands,away,4.923,5.0,-0.077,0.077,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1562345,2026-06-30 01:00,1118,Netherlands,31,Morocco,home,3.828,2.0,1.8281,1.8281,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1562586,2026-07-02 00:00,1113,Bosnia & Herzegovina,2384,USA,away,3.795,3.0,0.7953,0.7953,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1562586,2026-07-02 00:00,2384,USA,1113,Bosnia & Herzegovina,home,6.161,2.0,4.1612,4.1612,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1564789,2026-06-30 17:00,1090,Norway,1501,Ivory Coast,away,5.082,4.0,1.0821,1.0821,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1564789,2026-06-30 17:00,1501,Ivory Coast,1090,Norway,home,3.761,5.0,-1.2392,1.2392,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1565176,2026-06-29 20:30,25,Germany,2380,Paraguay,home,6.423,6.0,0.4232,0.4232,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
@@ -99,3 +101,7 @@ fixture_id,kickoff_utc,team_id,team_name,opponent_id,opponent_name,side,predicte
 1565177,2026-06-30 21:00,5,Sweden,2,France,away,3.282,3.0,0.2821,0.2821,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1567306,2026-07-01 01:00,16,Mexico,2382,Ecuador,home,3.879,3.0,0.8786,0.8786,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1567306,2026-07-01 01:00,2382,Ecuador,16,Mexico,away,3.332,1.0,2.332,2.332,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1567307,2026-07-01 16:00,10,England,1508,Congo DR,home,6.137,7.0,-0.8633,0.8633,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1567307,2026-07-01 16:00,1508,Congo DR,10,England,away,3.406,2.0,1.4056,1.4056,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1567308,2026-07-01 20:00,1,Belgium,13,Senegal,home,5.952,5.0,0.9523,0.9523,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1567308,2026-07-01 20:00,13,Senegal,1,Belgium,away,5.815,5.0,0.8153,0.8153,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
