@@ -1,0 +1,5 @@
+vSIGMA API league coverage matrix
+
+Source: official API-Football /leagues coverage metadata. Historical runs use current retrieved metadata for the requested season and do not claim exact coverage drift.
+
+No accepted leagues were available for coverage classification.
