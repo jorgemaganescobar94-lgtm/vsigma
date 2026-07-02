@@ -1,17 +1,80 @@
 # vSIGMA Local Raw Fixture Discovery - 2026-07-02
 
 ## Summary
-- overall_status: NO_LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 2502
-- accepted_rows: 0
-- rejected_rows: 0
-- source_status_counts: NO_SAME_DAY_ROWS=1460; EMPTY_OR_UNREADABLE=1042
-- next_action: No local source can build raw candidates; upstream fetch/filter producer is still required.
+- overall_status: LOCAL_RAW_CANDIDATES_FOUND
+- files_scanned: 2545
+- accepted_rows: 64
+- rejected_rows: 168
+- source_status_counts: NO_SAME_DAY_ROWS=1452; EMPTY_OR_UNREADABLE=1086; NO_ACCEPTED_ROWS=6; HAS_ACCEPTED_ROWS=1
+- next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO
 
 ## Accepted Rows
-- none. No local raw source row passed identity/block gates.
+- BFA vs Ekranas | fixture_id=1530595 | league=1 Lyga | source=data/processed/matches_league_rejected.csv
+- Žalgiris II vs Hegelmann II | fixture_id=1530597 | league=1 Lyga | source=data/processed/matches_league_rejected.csv
+- Akademiya Ontustik vs Shakhter Karagandy | fixture_id=1534779 | league=1. Division | source=data/processed/matches_league_rejected.csv
+- Astana II vs Kaspij Aktau 2 | fixture_id=1534781 | league=1. Division | source=data/processed/matches_league_rejected.csv
+- Khan Tengri vs Ekibastuz | fixture_id=1534783 | league=1. Division | source=data/processed/matches_league_rejected.csv
+- Lyn vs Asane | fixture_id=1495883 | league=1. Division | source=data/processed/matches_league_rejected.csv
+- Tobol 2 vs Aktobe Jas | fixture_id=1534784 | league=1. Division | source=data/processed/matches_league_rejected.csv
+- Niroye Zamini vs Pars Jonoubi JAM | fixture_id=1554069 | league=Azadegan League | source=data/processed/matches_league_rejected.csv
+- Saipa vs Shahrdari Noshahr | fixture_id=1554070 | league=Azadegan League | source=data/processed/matches_league_rejected.csv
+- CODM Meknès vs FAR Rabat | fixture_id=1567785 | league=Botola Pro | source=data/processed/matches_league_rejected.csv
+- CR Khemis Zemamra vs FUS Rabat | fixture_id=1567789 | league=Botola Pro | source=data/processed/matches_league_rejected.csv
+- Kawkab Marrakech vs Maghreb Fès | fixture_id=1567787 | league=Botola Pro | source=data/processed/matches_league_rejected.csv
+- Olympique Dcheïra vs Olympique Safi | fixture_id=1567786 | league=Botola Pro | source=data/processed/matches_league_rejected.csv
+- Raja Casablanca vs Hassania Agadir | fixture_id=1567788 | league=Botola Pro | source=data/processed/matches_league_rejected.csv
+- Renaissance Berkane vs Wydad AC | fixture_id=1567784 | league=Botola Pro | source=data/processed/matches_league_rejected.csv
+- UTS Rabat vs Ittihad Tanger | fixture_id=1567790 | league=Botola Pro | source=data/processed/matches_league_rejected.csv
+- Yacoub El Mansour vs Difaa EL Jadida | fixture_id=1567791 | league=Botola Pro | source=data/processed/matches_league_rejected.csv
+- Huachipato vs Concepción | fixture_id=1544436 | league=Copa Chile | source=data/processed/matches_league_rejected.csv
+- Tallinna Wolves vs JK Tabasalu | fixture_id=1551263 | league=Cup | source=data/processed/matches_league_rejected.csv
+- Tartu Welco vs Viimsi | fixture_id=1519587 | league=Esiliiga A | source=data/processed/matches_league_rejected.csv
+- PPJ vs Kiffen | fixture_id=1541630 | league=Kakkonen - Lohko A | source=data/processed/matches_league_rejected.csv
+- EBK vs ÅIFK | fixture_id=1541516 | league=Kakkonen - Lohko B | source=data/processed/matches_league_rejected.csv
+- Delfin SC vs Emelec | fixture_id=1519386 | league=Liga Pro | source=data/processed/matches_league_rejected.csv
+- Atletico FC vs El Nacional | fixture_id=1526559 | league=Liga Pro Serie B | source=data/processed/matches_league_rejected.csv
+- Cumbayá vs 22 de Julio | fixture_id=1526561 | league=Liga Pro Serie B | source=data/processed/matches_league_rejected.csv
+- Sao Luis vs Americano Bacabal | fixture_id=1544797 | league=Maranhense - 2 | source=data/processed/matches_league_rejected.csv
+- Kuressaare vs Flora Tallinn | fixture_id=1513579 | league=Meistriliiga | source=data/processed/matches_league_rejected.csv
+- Awassa Kenema vs Adama Kenema | fixture_id=1541121 | league=Premier League | source=data/processed/matches_league_rejected.csv
+- Bars vs Asia Talas | fixture_id=1527629 | league=Premier League | source=data/processed/matches_league_rejected.csv
+- Bate Borisov vs FC Gomel | fixture_id=1525911 | league=Premier League | source=data/processed/matches_league_rejected.csv
+- FC Minsk vs Dinamo Minsk | fixture_id=1525913 | league=Premier League | source=data/processed/matches_league_rejected.csv
+- Jwaaya FC vs Shabab Al Sahel | fixture_id=1508074 | league=Premier League | source=data/processed/matches_league_rejected.csv
+- Kara-Balta vs Dordoi Bishkek | fixture_id=1527624 | league=Premier League | source=data/processed/matches_league_rejected.csv
+- Reyady Abaseya vs Racing | fixture_id=1508075 | league=Premier League | source=data/processed/matches_league_rejected.csv
+- Suhul Shire vs Sheger Ketema | fixture_id=1541124 | league=Premier League | source=data/processed/matches_league_rejected.csv
+- Transport United vs Drukpa | fixture_id=1543590 | league=Premier League | source=data/processed/matches_league_rejected.csv
+- Welwalo Adigrat Uni vs Kedus Giorgis | fixture_id=1541118 | league=Premier League | source=data/processed/matches_league_rejected.csv
+- Albion Colorado vs Unión Villa Krause | fixture_id=1525199 | league=USL League Two | source=data/processed/matches_league_rejected.csv
+- Birmingham Legion II vs Columbus United | fixture_id=1525185 | league=USL League Two | source=data/processed/matches_league_rejected.csv
+- Spain vs Austria | fixture_id=1567311 | league=World Cup | source=data/processed/matches_league_rejected.csv
+- FC jazz vs KPV-j | fixture_id=1517202 | league=Ykkönen | source=data/processed/matches_league_rejected.csv
+- Thor Akureyri vs KR Reykjavik | fixture_id=1508799 | league=Úrvalsdeild | source=data/processed/matches_league_rejected.csv
+- Vikingur Reykjavik vs KA Akureyri | fixture_id=1508796 | league=Úrvalsdeild | source=data/processed/matches_league_rejected.csv
+- 1. FC Nürnberg vs Legia Warszawa | fixture_id=1547895 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Aluminij vs FK Partizan | fixture_id=1567509 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Beşiktaş vs Gyirmot SE | fixture_id=1567512 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Brinje-Grosuplje vs Dinamo Zagreb | fixture_id=1560494 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Chojniczanka Chojnice vs Petrolul Ploiesti | fixture_id=1567510 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Cove Rangers vs Turriff United | fixture_id=1550503 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Dekani vs Arges Pitesti | fixture_id=1567514 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Dundee vs Paks | fixture_id=1547894 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Dundee II vs Peterhead | fixture_id=1548745 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Dynamo Kyiv vs Rapid | fixture_id=1567513 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Erlangen vs Ansbach | fixture_id=1554631 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Koper vs Corvinul Hunedoara | fixture_id=1560495 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- NK Varazdin vs FC Voluntari | fixture_id=1567515 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Peckeloh vs Arminia Bielefeld | fixture_id=1554632 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Polessya vs Sabah FA | fixture_id=1567511 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Rodina Moskva vs Akron | fixture_id=1554628 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Spartak Moscow vs Spartak Kostroma | fixture_id=1548744 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Tus Dassendorf vs St. Pauli II | fixture_id=1567516 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Wieczysta Kraków vs Artis | fixture_id=1554630 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Croatia U19 vs Italy U19 | fixture_id=1543336 | league=UEFA U19 Championship | source=data/processed/matches_league_rejected.csv
+- Serbia U19 vs Ukraine U19 | fixture_id=1543337 | league=UEFA U19 Championship | source=data/processed/matches_league_rejected.csv
 
 ## Source Diagnostics
 - data/processed/batch_inputs/vsigma_api_board_candidates_2026-06-15.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
@@ -34,13 +97,13 @@
 - data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-06-15.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-06-18.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-06-28.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_api_calibration_rule_candidates.csv | status=NO_SAME_DAY_ROWS | rows=84 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_api_calibration_rule_candidates.csv | status=NO_ACCEPTED_ROWS | rows=84 | same_day=84 | accepted=0 | rejected=84 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_candidate_provenance_ceiling.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_dated_post_match_results_refresh.csv | status=NO_SAME_DAY_ROWS | rows=356 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_forced_api_board_fixture_lineups.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_SAME_DAY_ROWS | rows=152 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecast_backtest.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecast_calibration_details.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecasts.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
@@ -53,11 +116,11 @@
 - data/processed/governance/vsigma_prematch_prediction_calibration_advisor.csv | status=NO_SAME_DAY_ROWS | rows=12 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=NO_SAME_DAY_ROWS | rows=152 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_rolling_prematch_accuracy_dashboard.csv | status=NO_SAME_DAY_ROWS | rows=6 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_shadow_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_SAME_DAY_ROWS | rows=152 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_SAME_DAY_ROWS | rows=132 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/historical/2026-04-23/matches.csv | status=NO_SAME_DAY_ROWS | rows=182 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
