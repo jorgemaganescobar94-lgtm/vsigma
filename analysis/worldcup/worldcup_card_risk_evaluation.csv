@@ -187,16 +187,16 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489417,51776,M. Araújo,Uruguay,7,MID,I. Elfath,0.1443,0.149,subir,0.0047,0,media-baja,baja
 1489417,51617,D. Núñez,Uruguay,7,FWD,I. Elfath,0.1576,0.1556,neutro,0.002,0,media-baja,baja
 1489417,47270,Unai Simón,Spain,9,GK,I. Elfath,0.1862,0.1829,neutro,0.0033,0,baja,baja
-1489417,753,Marcos Llorente,Spain,9,DEF,I. Elfath,0.1183,0.1162,neutro,0.0021,0,media-baja,baja
+1489417,753,Marcos Llorente,Spain,9,MID,I. Elfath,0.1183,0.1198,neutro,0.0015,0,media-baja,baja
 1489417,396623,Pau Cubarsí Paredes,Spain,9,DEF,I. Elfath,0.0719,0.0706,neutro,0.0013,0,media-baja,baja
-1489417,622,Aymeric Laporte,Spain,9,DEF,I. Elfath,0.1268,0.1246,neutro,0.0022,0,media-baja,baja
+1489417,622,Aymeric Laporte,Spain,9,DEF,I. Elfath,0.1268,0.1227,bajar,0.0041,0,media-baja,baja
 1489417,47380,Marc Cucurella,Spain,9,DEF,I. Elfath,0.0274,0.0269,neutro,0.0005,0,media-baja,baja
 1489417,133609,Pedri,Spain,9,MID,I. Elfath,0.0427,0.0417,bajar,0.001,0,media-baja,media
 1489417,44,Rodri,Spain,9,MID,I. Elfath,0.4195,0.4247,neutro,0.0052,0,media-baja,baja
 1489417,47311,Mikel Merino,Spain,9,MID,I. Elfath,0.1549,0.1545,neutro,0.0004,0,media-baja,baja
 1489417,386828,Lamine Yamal,Spain,9,MID,I. Elfath,0.2883,0.2818,bajar,0.0065,0,media-baja,media
 1489417,47323,Mikel Oyarzabal,Spain,9,FWD,I. Elfath,0.2234,0.205,bajar,0.0184,0,media-baja,media
-1489417,182219,Álex Baena,Spain,9,MID,I. Elfath,0.3911,0.4097,subir,0.0186,1,media-baja,media
+1489417,182219,Álex Baena,Spain,9,MID,I. Elfath,0.3911,0.396,neutro,0.0049,1,media-baja,media
 1489413,15304,Vózinha,Cape Verde Islands,1533,GK,F. Letexier,0.0575,0.0575,neutro,0.0,0,baja,baja
 1489413,332056,Wagner Pina,Cape Verde Islands,1533,DEF,F. Letexier,0.2495,0.2495,neutro,0.0,1,media-baja,baja
 1489413,41608,Diney Borges,Cape Verde Islands,1533,DEF,F. Letexier,0.2314,0.2314,neutro,0.0,0,media-baja,baja
@@ -263,25 +263,25 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489415,69,B. Mechele,Belgium,1,DEF,A. Makhadmeh,0.0846,0.0828,bajar,0.0018,0,media-baja,media
 1489415,312964,N. Ngoy,Belgium,1,DEF,A. Makhadmeh,0.1396,0.1367,bajar,0.0029,0,media-baja,media
 1489415,1946,L. Trossard,Belgium,1,MID,A. Makhadmeh,0.1407,0.137,bajar,0.0037,0,media-baja,media
-1489418,21138,R. Aït-Nouri,Algeria,1532,DEF,"Ilgiz Tantashev, Uzbekistan",0.2579,0.2441,bajar,0.0138,0,media-baja,media
-1489418,1567,A. Mandi,Algeria,1532,DEF,"Ilgiz Tantashev, Uzbekistan",0.0382,0.0367,bajar,0.0015,0,media-baja,media
-1489418,2194,R. Bensebaïni,Algeria,1532,DEF,"Ilgiz Tantashev, Uzbekistan",0.1487,0.143,bajar,0.0057,0,media-baja,media
-1489418,635,R. Mahrez,Algeria,1532,MID,"Ilgiz Tantashev, Uzbekistan",0.3134,0.2998,bajar,0.0136,0,media-baja,media
-1489418,4399,H. Boudaoui,Algeria,1532,MID,"Ilgiz Tantashev, Uzbekistan",0.24,0.2344,bajar,0.0056,0,media-baja,media
-1489418,380587,I. Maza,Algeria,1532,MID,"Ilgiz Tantashev, Uzbekistan",0.0969,0.0961,neutro,0.0008,0,media-baja,media
-1489418,732,L. Zidane,Algeria,1532,GK,"Ilgiz Tantashev, Uzbekistan",0.0895,0.0861,bajar,0.0034,0,media-baja,baja
-1489418,276670,F. Chaïbi,Algeria,1532,MID,"Ilgiz Tantashev, Uzbekistan",0.0713,0.0707,neutro,0.0006,0,media-baja,media
-1489418,200139,M. Amoura,Algeria,1532,,"Ilgiz Tantashev, Uzbekistan",0.3639,0.3499,bajar,0.014,0,media-baja,baja
-1489418,85041,A. Gouiri,Algeria,1532,FWD,"Ilgiz Tantashev, Uzbekistan",0.2636,0.2363,bajar,0.0273,0,media-baja,media
-1489418,303362,R. Belghali,Algeria,1532,DEF,"Ilgiz Tantashev, Uzbekistan",0.287,0.2716,bajar,0.0154,0,media-baja,media
+1489418,21138,R. Aït-Nouri,Algeria,1532,DEF,"Ilgiz Tantashev, Uzbekistan",0.2579,0.2486,bajar,0.0093,0,media-baja,media
+1489418,1567,A. Mandi,Algeria,1532,DEF,"Ilgiz Tantashev, Uzbekistan",0.0382,0.0374,bajar,0.0008,0,media-baja,media
+1489418,2194,R. Bensebaïni,Algeria,1532,DEF,"Ilgiz Tantashev, Uzbekistan",0.1487,0.1456,bajar,0.0031,0,media-baja,media
+1489418,635,R. Mahrez,Algeria,1532,FWD,"Ilgiz Tantashev, Uzbekistan",0.3134,0.2864,bajar,0.027,0,media-baja,media
+1489418,4399,H. Boudaoui,Algeria,1532,MID,"Ilgiz Tantashev, Uzbekistan",0.24,0.2506,subir,0.0106,0,media-baja,media
+1489418,380587,I. Maza,Algeria,1532,FWD,"Ilgiz Tantashev, Uzbekistan",0.0969,0.092,bajar,0.0049,0,media-baja,media
+1489418,732,L. Zidane,Algeria,1532,GK,"Ilgiz Tantashev, Uzbekistan",0.0895,0.0876,bajar,0.0019,0,media-baja,baja
+1489418,276670,F. Chaïbi,Algeria,1532,MID,"Ilgiz Tantashev, Uzbekistan",0.0713,0.0719,neutro,0.0006,0,media-baja,media
+1489418,200139,M. Amoura,Algeria,1532,,"Ilgiz Tantashev, Uzbekistan",0.3639,0.3563,bajar,0.0076,0,media-baja,baja
+1489418,85041,A. Gouiri,Algeria,1532,FWD,"Ilgiz Tantashev, Uzbekistan",0.2636,0.2409,bajar,0.0227,0,media-baja,media
+1489418,303362,R. Belghali,Algeria,1532,DEF,"Ilgiz Tantashev, Uzbekistan",0.287,0.2709,bajar,0.0161,0,media-baja,media
 1489418,1159,M. Sabitzer,Austria,775,MID,"Ilgiz Tantashev, Uzbekistan",0.1604,0.1594,neutro,0.001,0,media-baja,media
-1489418,7328,N. Seiwald,Austria,775,MID,"Ilgiz Tantashev, Uzbekistan",0.0771,0.0778,neutro,0.0007,0,media-baja,media
-1489418,1157,K. Laimer,Austria,775,MID,"Ilgiz Tantashev, Uzbekistan",0.2988,0.3015,neutro,0.0027,0,media-baja,media
+1489418,7328,N. Seiwald,Austria,775,MID,"Ilgiz Tantashev, Uzbekistan",0.0771,0.0766,neutro,0.0005,0,media-baja,media
+1489418,1157,K. Laimer,Austria,775,DEF,"Ilgiz Tantashev, Uzbekistan",0.2988,0.2925,bajar,0.0063,0,media-baja,media
 1489418,7525,A. Schlager,Austria,775,GK,"Ilgiz Tantashev, Uzbekistan",0.244,0.2389,bajar,0.0051,0,media-baja,baja
-1489418,1095,X. Schlager,Austria,775,MID,"Ilgiz Tantashev, Uzbekistan",0.0845,0.084,neutro,0.0005,0,media-baja,media
+1489418,1095,X. Schlager,Austria,775,MID,"Ilgiz Tantashev, Uzbekistan",0.0845,0.0823,bajar,0.0022,0,media-baja,media
 1489418,7562,R. Schmid,Austria,775,MID,"Ilgiz Tantashev, Uzbekistan",0.1647,0.1604,bajar,0.0043,0,media-baja,media
 1489418,26240,P. Lienhart,Austria,775,DEF,"Ilgiz Tantashev, Uzbekistan",0.1022,0.1001,bajar,0.0021,0,media-baja,media
-1489418,711,S. Posch,Austria,775,DEF,"Ilgiz Tantashev, Uzbekistan",0.3308,0.3239,bajar,0.0069,0,media-baja,media
+1489418,711,S. Posch,Austria,775,DEF,"Ilgiz Tantashev, Uzbekistan",0.3308,0.3354,neutro,0.0046,0,media-baja,media
 1489418,25915,P. Mwene,Austria,775,DEF,"Ilgiz Tantashev, Uzbekistan",0.3642,0.3511,bajar,0.0131,0,media-baja,media
 1489418,18830,M. Arnautović,Austria,775,FWD,"Ilgiz Tantashev, Uzbekistan",0.2039,0.1935,bajar,0.0104,1,media-baja,media
 1489418,25287,K. Danso,Austria,775,DEF,"Ilgiz Tantashev, Uzbekistan",0.1533,0.1501,bajar,0.0032,0,media-baja,media
@@ -311,12 +311,12 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489420,125171,J. Stanišić,Croatia,3,DEF,"Drew Fischer, Canada",0.1673,0.1638,bajar,0.0035,0,media-baja,media
 1489420,14701,J. Šutalo,Croatia,3,DEF,"Drew Fischer, Canada",0.0238,0.0233,bajar,0.0005,0,media-baja,media
 1489420,1084,M. Pongračić,Croatia,3,DEF,"Drew Fischer, Canada",0.1997,0.1955,bajar,0.0042,0,media-baja,media
-1489420,207,I. Perišić,Croatia,3,DEF,"Drew Fischer, Canada",0.086,0.0842,bajar,0.0018,1,media-baja,media
-1489420,754,L. Modrić,Croatia,3,MID,"Drew Fischer, Canada",0.1186,0.1179,neutro,0.0007,0,media-baja,media
+1489420,207,I. Perišić,Croatia,3,DEF,"Drew Fischer, Canada",0.086,0.0872,neutro,0.0012,1,media-baja,media
+1489420,754,L. Modrić,Croatia,3,MID,"Drew Fischer, Canada",0.1186,0.1238,subir,0.0052,0,media-baja,media
 1489420,2291,M. Kovačić,Croatia,3,MID,"Drew Fischer, Canada",0.161,0.1568,bajar,0.0042,0,media-baja,media
-1489420,842,N. Vlašić,Croatia,3,MID,"Drew Fischer, Canada",0.0733,0.0729,neutro,0.0004,0,media-baja,media
-1489420,348205,P. Sučić,Croatia,3,MID,"Drew Fischer, Canada",0.2457,0.2565,subir,0.0108,0,media-baja,media
-1489420,295026,M. Baturina,Croatia,3,MID,"Drew Fischer, Canada",0.1282,0.1274,neutro,0.0008,0,media-baja,media
+1489420,842,N. Vlašić,Croatia,3,MID,"Drew Fischer, Canada",0.0733,0.0714,bajar,0.0019,0,media-baja,media
+1489420,348205,P. Sučić,Croatia,3,MID,"Drew Fischer, Canada",0.2457,0.2479,neutro,0.0022,0,media-baja,media
+1489420,295026,M. Baturina,Croatia,3,MID,"Drew Fischer, Canada",0.1282,0.1249,bajar,0.0033,0,media-baja,media
 1489420,46746,A. Budimir,Croatia,3,FWD,"Drew Fischer, Canada",0.2767,0.2529,bajar,0.0238,0,media-baja,media
 1489420,480108,B. Asare,Ghana,1504,GK,"Drew Fischer, Canada",0.0986,0.0965,bajar,0.0021,0,media-baja,baja
 1489420,191240,M. Senaya,Ghana,1504,DEF,"Drew Fischer, Canada",0.1292,0.1245,bajar,0.0047,0,media-baja,media
@@ -369,10 +369,10 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489419,263482,Nuno Mendes,Portugal,27,DEF,"Alireza Faghani, Australia",0.0718,0.0679,bajar,0.0039,0,media-baja,media
 1489419,2676,Rúben Neves,Portugal,27,MID,"Alireza Faghani, Australia",0.267,0.2657,neutro,0.0013,0,media-baja,baja
 1489419,128384,Vitinha,Portugal,27,MID,"Alireza Faghani, Australia",0.0756,0.0737,bajar,0.0019,0,media-baja,media
-1489419,1864,Pedro Neto,Portugal,27,MID,"Alireza Faghani, Australia",0.2617,0.2605,neutro,0.0012,0,media-baja,baja
-1489419,1485,Bruno Fernandes,Portugal,27,MID,"Alireza Faghani, Australia",0.1964,0.1984,neutro,0.002,0,media-baja,baja
-1489419,583,João Félix,Portugal,27,MID,"Alireza Faghani, Australia",0.1677,0.1635,bajar,0.0042,0,media-baja,media
-1489419,874,Cristiano Ronaldo,Portugal,27,FWD,"Alireza Faghani, Australia",0.1675,0.1567,bajar,0.0108,0,media-baja,baja
+1489419,1864,Pedro Neto,Portugal,27,MID,"Alireza Faghani, Australia",0.2617,0.2552,bajar,0.0065,0,media-baja,media
+1489419,1485,Bruno Fernandes,Portugal,27,MID,"Alireza Faghani, Australia",0.1964,0.1955,neutro,0.0009,0,media-baja,baja
+1489419,583,João Félix,Portugal,27,FWD,"Alireza Faghani, Australia",0.1677,0.1535,bajar,0.0142,0,media-baja,media
+1489419,874,Cristiano Ronaldo,Portugal,27,FWD,"Alireza Faghani, Australia",0.1675,0.1533,bajar,0.0142,0,media-baja,media
 1539013,24012,L. Mpasi,Congo DR,1508,GK,"Felix Zwayer, Germany",0.051,0.051,neutro,0.0,0,baja,baja
 1539013,18846,A. Wan-Bissaka,Congo DR,1508,DEF,"Felix Zwayer, Germany",0.0665,0.0665,neutro,0.0,0,media-baja,baja
 1539013,375,C. Mbemba,Congo DR,1508,DEF,"Felix Zwayer, Germany",0.2655,0.2655,neutro,0.0,0,media-baja,baja
@@ -615,3 +615,69 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1562586,395559,Kerim-Sam Alajbegović,Bosnia & Herzegovina,1113,MID,R. Claus,0.1716,0.1738,neutro,0.0022,0,media-baja,baja
 1562586,790,E. Džeko,Bosnia & Herzegovina,1113,FWD,R. Claus,0.1577,0.1471,bajar,0.0106,0,media-baja,media
 1562586,46930,E. Demirović,Bosnia & Herzegovina,1113,FWD,R. Claus,0.2118,0.205,bajar,0.0068,0,media-baja,baja
+1567312,5,M. Akanji,Switzerland,15,DEF,Y. Perez,0.1874,0.1802,bajar,0.0072,0,media-baja,media
+1567312,2803,N. Elvedi,Switzerland,15,DEF,Y. Perez,0.377,0.3625,bajar,0.0145,0,media-baja,media
+1567312,1464,G. Xhaka,Switzerland,15,MID,Y. Perez,0.269,0.2667,neutro,0.0023,0,media-baja,media
+1567312,2807,R. Freuler,Switzerland,15,MID,Y. Perez,0.1395,0.1383,neutro,0.0012,0,media-baja,media
+1567312,421,B. Embolo,Switzerland,15,FWD,Y. Perez,0.1567,0.1405,bajar,0.0162,0,media-baja,media
+1567312,1631,R. Rodríguez,Switzerland,15,DEF,Y. Perez,0.0861,0.0828,bajar,0.0033,0,media-baja,media
+1567312,48648,D. Ndoye,Switzerland,15,MID,Y. Perez,0.1972,0.1926,bajar,0.0046,0,media-baja,media
+1567312,48471,R. Vargas,Switzerland,15,MID,Y. Perez,0.1828,0.1748,bajar,0.008,0,media-baja,media
+1567312,25282,G. Kobel,Switzerland,15,GK,Y. Perez,0.0396,0.0381,bajar,0.0015,0,media-baja,baja
+1567312,951,M. Aebischer,Switzerland,15,MID,Y. Perez,0.0385,0.0382,neutro,0.0003,0,media-baja,media
+1567312,48378,S. Widmer,Switzerland,15,DEF,Y. Perez,0.4479,0.4307,bajar,0.0172,0,media-baja,media
+1567312,1567,A. Mandi,Algeria,1532,DEF,Y. Perez,0.0376,0.0368,bajar,0.0008,0,media-baja,media
+1567312,21138,R. Aït-Nouri,Algeria,1532,DEF,Y. Perez,0.2499,0.2409,bajar,0.009,0,media-baja,media
+1567312,2194,R. Bensebaïni,Algeria,1532,DEF,Y. Perez,0.1442,0.1412,bajar,0.003,0,media-baja,media
+1567312,635,R. Mahrez,Algeria,1532,FWD,Y. Perez,0.3042,0.278,bajar,0.0262,0,media-baja,media
+1567312,380587,I. Maza,Algeria,1532,FWD,Y. Perez,0.0955,0.0906,bajar,0.0049,0,media-baja,media
+1567312,85041,A. Gouiri,Algeria,1532,FWD,Y. Perez,0.2562,0.2342,bajar,0.022,0,media-baja,media
+1567312,276670,F. Chaïbi,Algeria,1532,MID,Y. Perez,0.0703,0.0709,neutro,0.0006,1,media-baja,media
+1567312,4399,H. Boudaoui,Algeria,1532,MID,Y. Perez,0.2332,0.2435,subir,0.0103,1,media-baja,media
+1567312,303362,R. Belghali,Algeria,1532,DEF,Y. Perez,0.2791,0.2635,bajar,0.0156,0,media-baja,media
+1567312,732,L. Zidane,Algeria,1532,GK,Y. Perez,0.0882,0.0863,bajar,0.0019,0,media-baja,baja
+1567312,129047,R. Zerrouki,Algeria,1532,MID,Y. Perez,0.3943,0.4116,subir,0.0173,0,media-baja,media
+1567311,47270,Unai Simón,Spain,9,GK,G. Nyberg,0.1501,0.1471,neutro,0.003,0,baja,baja
+1567311,47519,Pedro Porro,Spain,9,DEF,G. Nyberg,0.2308,0.2228,bajar,0.008,0,media-baja,baja
+1567311,396623,Pau Cubarsí Paredes,Spain,9,DEF,G. Nyberg,0.0686,0.0672,neutro,0.0014,0,media-baja,baja
+1567311,622,Aymeric Laporte,Spain,9,DEF,G. Nyberg,0.104,0.1004,bajar,0.0036,0,media-baja,baja
+1567311,47380,Marc Cucurella,Spain,9,DEF,G. Nyberg,0.0261,0.0256,neutro,0.0005,0,media-baja,baja
+1567311,44,Rodri,Spain,9,MID,G. Nyberg,0.3461,0.3496,neutro,0.0035,0,media-baja,baja
+1567311,1323,Dani Olmo,Spain,9,MID,G. Nyberg,0.2402,0.2343,bajar,0.0059,0,media-baja,media
+1567311,133609,Pedri,Spain,9,MID,G. Nyberg,0.0407,0.0397,bajar,0.001,0,media-baja,media
+1567311,386828,Lamine Yamal,Spain,9,MID,G. Nyberg,0.2333,0.2275,bajar,0.0058,0,media-baja,media
+1567311,47323,Mikel Oyarzabal,Spain,9,FWD,G. Nyberg,0.1809,0.1656,bajar,0.0153,0,media-baja,media
+1567311,182219,Álex Baena,Spain,9,MID,G. Nyberg,0.324,0.3273,neutro,0.0033,0,media-baja,media
+1567311,7525,A. Schlager,Austria,775,GK,G. Nyberg,0.2154,0.2149,neutro,0.0005,0,baja,baja
+1567311,711,S. Posch,Austria,775,DEF,G. Nyberg,0.2945,0.3041,subir,0.0096,1,media-baja,media
+1567311,25287,K. Danso,Austria,775,DEF,G. Nyberg,0.1341,0.1338,neutro,0.0003,0,media-baja,baja
+1567311,505,D. Alaba,Austria,775,DEF,G. Nyberg,0.3435,0.3307,bajar,0.0128,0,media-baja,media
+1567311,1157,K. Laimer,Austria,775,DEF,G. Nyberg,0.2652,0.2646,neutro,0.0006,0,media-baja,baja
+1567311,7328,N. Seiwald,Austria,775,MID,G. Nyberg,0.0671,0.068,neutro,0.0009,0,media-baja,baja
+1567311,1095,X. Schlager,Austria,775,MID,G. Nyberg,0.0729,0.0724,neutro,0.0005,0,media-baja,media
+1567311,7562,R. Schmid,Austria,775,MID,G. Nyberg,0.1445,0.1435,neutro,0.001,0,media-baja,media
+1567311,327895,P. Wanner,Austria,775,MID,G. Nyberg,0.1748,0.177,neutro,0.0022,0,media-baja,baja
+1567311,1159,M. Sabitzer,Austria,775,MID,G. Nyberg,0.1406,0.1424,neutro,0.0018,0,media-baja,baja
+1567311,25297,M. Gregoritsch,Austria,775,FWD,G. Nyberg,0.1137,0.1061,bajar,0.0076,0,media-baja,media
+1567309,369,Diogo Costa,Portugal,27,GK,E. Eskas,0.0192,0.0188,neutro,0.0004,0,baja,baja
+1567309,855,João Cancelo,Portugal,27,DEF,E. Eskas,0.2872,0.2715,bajar,0.0157,0,media-baja,media
+1567309,567,Rúben Dias,Portugal,27,DEF,E. Eskas,0.1859,0.1822,neutro,0.0037,1,media-baja,baja
+1567309,336671,Renato Veiga,Portugal,27,DEF,E. Eskas,0.1488,0.1459,neutro,0.0029,0,media-baja,baja
+1567309,263482,Nuno Mendes,Portugal,27,DEF,E. Eskas,0.0674,0.0637,bajar,0.0037,0,media-baja,media
+1567309,335051,João Neves,Portugal,27,MID,E. Eskas,0.1796,0.1787,neutro,0.0009,0,media-baja,baja
+1567309,128384,Vitinha,Portugal,27,MID,E. Eskas,0.071,0.0692,bajar,0.0018,0,media-baja,media
+1567309,1864,Pedro Neto,Portugal,27,MID,E. Eskas,0.2497,0.2435,bajar,0.0062,0,media-baja,media
+1567309,1485,Bruno Fernandes,Portugal,27,MID,E. Eskas,0.1873,0.1864,neutro,0.0009,0,media-baja,baja
+1567309,22236,Rafael Leão,Portugal,27,MID,E. Eskas,0.1653,0.1645,neutro,0.0008,0,media-baja,baja
+1567309,874,Cristiano Ronaldo,Portugal,27,FWD,E. Eskas,0.1594,0.1459,bajar,0.0135,0,media-baja,media
+1567309,1305,D. Livaković,Croatia,3,GK,E. Eskas,0.1172,0.1169,neutro,0.0003,0,baja,baja
+1567309,125171,J. Stanišić,Croatia,3,DEF,E. Eskas,0.1811,0.1807,neutro,0.0004,0,media-baja,baja
+1567309,14701,J. Šutalo,Croatia,3,DEF,E. Eskas,0.026,0.0259,neutro,0.0001,0,media-baja,baja
+1567309,1084,M. Pongračić,Croatia,3,DEF,E. Eskas,0.2158,0.2153,neutro,0.0005,0,media-baja,baja
+1567309,207,I. Perišić,Croatia,3,DEF,E. Eskas,0.0934,0.0965,subir,0.0031,1,media-baja,media
+1567309,754,L. Modrić,Croatia,3,MID,E. Eskas,0.1287,0.1368,subir,0.0081,1,media-baja,media
+1567309,2291,M. Kovačić,Croatia,3,MID,E. Eskas,0.1743,0.173,neutro,0.0013,0,media-baja,media
+1567309,842,N. Vlašić,Croatia,3,MID,E. Eskas,0.0797,0.0791,neutro,0.0006,0,media-baja,media
+1567309,348205,P. Sučić,Croatia,3,MID,E. Eskas,0.2649,0.2723,subir,0.0074,0,media-baja,media
+1567309,295026,M. Baturina,Croatia,3,MID,E. Eskas,0.1391,0.1381,neutro,0.001,0,media-baja,media
+1567309,46746,A. Budimir,Croatia,3,FWD,E. Eskas,0.2977,0.2777,bajar,0.02,0,media-baja,media

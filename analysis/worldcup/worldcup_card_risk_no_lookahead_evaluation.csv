@@ -186,17 +186,17 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1489417,756,F. Valverde,Uruguay,MID,I. Elfath,0.0662,0.0687,0.0687,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489417,51776,M. Araújo,Uruguay,MID,I. Elfath,0.1443,0.1475,0.1475,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489417,51617,D. Núñez,Uruguay,FWD,I. Elfath,0.1576,0.1541,0.1541,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489417,47270,Unai Simón,Spain,GK,I. Elfath,0.1862,0.1848,0.1848,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
-1489417,753,Marcos Llorente,Spain,DEF,I. Elfath,0.1183,0.1174,0.1174,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489417,396623,Pau Cubarsí Paredes,Spain,DEF,I. Elfath,0.0719,0.0714,0.0714,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489417,622,Aymeric Laporte,Spain,DEF,I. Elfath,0.1268,0.1258,0.1258,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489417,47380,Marc Cucurella,Spain,DEF,I. Elfath,0.0274,0.0272,0.0272,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489417,133609,Pedri,Spain,MID,I. Elfath,0.0427,0.043,0.043,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489417,44,Rodri,Spain,MID,I. Elfath,0.4195,0.4289,0.4289,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489417,47311,Mikel Merino,Spain,MID,I. Elfath,0.1549,0.1584,0.1584,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489417,386828,Lamine Yamal,Spain,MID,I. Elfath,0.2883,0.2905,0.2905,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489417,47323,Mikel Oyarzabal,Spain,FWD,I. Elfath,0.2234,0.2117,0.2117,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489417,182219,Álex Baena,Spain,MID,I. Elfath,0.3911,0.394,0.394,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489417,47270,Unai Simón,Spain,GK,I. Elfath,0.1862,0.1848,0.1829,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1489417,753,Marcos Llorente,Spain,MID,I. Elfath,0.1183,0.121,0.1198,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489417,396623,Pau Cubarsí Paredes,Spain,DEF,I. Elfath,0.0719,0.0714,0.0706,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489417,622,Aymeric Laporte,Spain,DEF,I. Elfath,0.1268,0.1258,0.1227,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489417,47380,Marc Cucurella,Spain,DEF,I. Elfath,0.0274,0.0272,0.0269,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489417,133609,Pedri,Spain,MID,I. Elfath,0.0427,0.043,0.0417,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489417,44,Rodri,Spain,MID,I. Elfath,0.4195,0.4289,0.4247,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489417,47311,Mikel Merino,Spain,MID,I. Elfath,0.1549,0.1584,0.1568,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489417,386828,Lamine Yamal,Spain,MID,I. Elfath,0.2883,0.2905,0.2818,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489417,47323,Mikel Oyarzabal,Spain,FWD,I. Elfath,0.2234,0.2117,0.205,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489417,182219,Álex Baena,Spain,MID,I. Elfath,0.3911,0.394,0.3823,1,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489413,15304,Vózinha,Cape Verde Islands,GK,F. Letexier,0.0575,0.0579,0.0579,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1489413,332056,Wagner Pina,Cape Verde Islands,DEF,F. Letexier,0.2495,0.2514,0.2514,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489413,41608,Diney Borges,Cape Verde Islands,DEF,F. Letexier,0.2314,0.2331,0.2331,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -266,25 +266,25 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1489418,21138,R. Aït-Nouri,Algeria,DEF,"Ilgiz Tantashev, Uzbekistan",0.2579,0.2535,0.2535,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489418,1567,A. Mandi,Algeria,DEF,"Ilgiz Tantashev, Uzbekistan",0.0382,0.0381,0.0381,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489418,2194,R. Bensebaïni,Algeria,DEF,"Ilgiz Tantashev, Uzbekistan",0.1487,0.1484,0.1484,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489418,635,R. Mahrez,Algeria,MID,"Ilgiz Tantashev, Uzbekistan",0.3134,0.3174,0.3174,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489418,4399,H. Boudaoui,Algeria,MID,"Ilgiz Tantashev, Uzbekistan",0.24,0.2431,0.2431,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489418,380587,I. Maza,Algeria,MID,"Ilgiz Tantashev, Uzbekistan",0.0969,0.0996,0.0996,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489418,635,R. Mahrez,Algeria,FWD,"Ilgiz Tantashev, Uzbekistan",0.3134,0.2986,0.2923,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489418,4399,H. Boudaoui,Algeria,MID,"Ilgiz Tantashev, Uzbekistan",0.24,0.2431,0.2551,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489418,380587,I. Maza,Algeria,FWD,"Ilgiz Tantashev, Uzbekistan",0.0969,0.0938,0.0938,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489418,732,L. Zidane,Algeria,GK,"Ilgiz Tantashev, Uzbekistan",0.0895,0.0893,0.0893,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1489418,276670,F. Chaïbi,Algeria,MID,"Ilgiz Tantashev, Uzbekistan",0.0713,0.0733,0.0733,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489418,200139,M. Amoura,Algeria,,"Ilgiz Tantashev, Uzbekistan",0.3639,0.3631,0.3631,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1489418,85041,A. Gouiri,Algeria,FWD,"Ilgiz Tantashev, Uzbekistan",0.2636,0.2511,0.2511,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489418,303362,R. Belghali,Algeria,DEF,"Ilgiz Tantashev, Uzbekistan",0.287,0.2864,0.2864,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489418,1159,M. Sabitzer,Austria,MID,"Ilgiz Tantashev, Uzbekistan",0.1604,0.1661,0.1661,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489418,7328,N. Seiwald,Austria,MID,"Ilgiz Tantashev, Uzbekistan",0.0771,0.0798,0.0798,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489418,1157,K. Laimer,Austria,MID,"Ilgiz Tantashev, Uzbekistan",0.2988,0.3093,0.3093,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489418,7525,A. Schlager,Austria,GK,"Ilgiz Tantashev, Uzbekistan",0.244,0.2453,0.2453,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
-1489418,1095,X. Schlager,Austria,MID,"Ilgiz Tantashev, Uzbekistan",0.0845,0.0875,0.0875,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489418,7562,R. Schmid,Austria,MID,"Ilgiz Tantashev, Uzbekistan",0.1647,0.168,0.168,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489418,26240,P. Lienhart,Austria,DEF,"Ilgiz Tantashev, Uzbekistan",0.1022,0.1027,0.1027,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489418,711,S. Posch,Austria,DEF,"Ilgiz Tantashev, Uzbekistan",0.3308,0.3325,0.3325,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489418,25915,P. Mwene,Austria,DEF,"Ilgiz Tantashev, Uzbekistan",0.3642,0.3661,0.3661,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489418,18830,M. Arnautović,Austria,FWD,"Ilgiz Tantashev, Uzbekistan",0.2039,0.1989,0.1989,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489418,25287,K. Danso,Austria,DEF,"Ilgiz Tantashev, Uzbekistan",0.1533,0.1541,0.1541,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489418,303362,R. Belghali,Algeria,DEF,"Ilgiz Tantashev, Uzbekistan",0.287,0.2864,0.282,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489418,1159,M. Sabitzer,Austria,MID,"Ilgiz Tantashev, Uzbekistan",0.1604,0.1661,0.1649,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489418,7328,N. Seiwald,Austria,MID,"Ilgiz Tantashev, Uzbekistan",0.0771,0.0798,0.0781,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489418,1157,K. Laimer,Austria,DEF,"Ilgiz Tantashev, Uzbekistan",0.2988,0.3004,0.2981,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489418,7525,A. Schlager,Austria,GK,"Ilgiz Tantashev, Uzbekistan",0.244,0.2453,0.2435,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1489418,1095,X. Schlager,Austria,MID,"Ilgiz Tantashev, Uzbekistan",0.0845,0.0875,0.0856,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489418,7562,R. Schmid,Austria,MID,"Ilgiz Tantashev, Uzbekistan",0.1647,0.168,0.1635,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489418,26240,P. Lienhart,Austria,DEF,"Ilgiz Tantashev, Uzbekistan",0.1022,0.1027,0.102,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489418,711,S. Posch,Austria,DEF,"Ilgiz Tantashev, Uzbekistan",0.3308,0.3325,0.3416,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489418,25915,P. Mwene,Austria,DEF,"Ilgiz Tantashev, Uzbekistan",0.3642,0.3661,0.3634,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489418,18830,M. Arnautović,Austria,FWD,"Ilgiz Tantashev, Uzbekistan",0.2039,0.1989,0.1973,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489418,25287,K. Danso,Austria,DEF,"Ilgiz Tantashev, Uzbekistan",0.1533,0.1541,0.153,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489421,140607,Yazid Abu Layla,Jordan,GK,"Istvan Kovacs, Romania",0.112,0.1117,0.1117,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1489421,310835,Abdallah Naseeb,Jordan,DEF,"Istvan Kovacs, Romania",0.1149,0.1146,0.1146,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489421,213980,Nizar Al Rashdan,Jordan,MID,"Istvan Kovacs, Romania",0.1169,0.1184,0.1184,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -312,12 +312,12 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1489420,14701,J. Šutalo,Croatia,DEF,"Drew Fischer, Canada",0.0238,0.0237,0.0237,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489420,1084,M. Pongračić,Croatia,DEF,"Drew Fischer, Canada",0.1997,0.1993,0.1993,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489420,207,I. Perišić,Croatia,DEF,"Drew Fischer, Canada",0.086,0.0858,0.0858,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489420,754,L. Modrić,Croatia,MID,"Drew Fischer, Canada",0.1186,0.1201,0.1201,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489420,2291,M. Kovačić,Croatia,MID,"Drew Fischer, Canada",0.161,0.1631,0.1631,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489420,842,N. Vlašić,Croatia,MID,"Drew Fischer, Canada",0.0733,0.0753,0.0753,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489420,348205,P. Sučić,Croatia,MID,"Drew Fischer, Canada",0.2457,0.2525,0.2525,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489420,295026,M. Baturina,Croatia,MID,"Drew Fischer, Canada",0.1282,0.1318,0.1318,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489420,46746,A. Budimir,Croatia,FWD,"Drew Fischer, Canada",0.2767,0.2636,0.2636,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489420,754,L. Modrić,Croatia,MID,"Drew Fischer, Canada",0.1186,0.1201,0.126,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489420,2291,M. Kovačić,Croatia,MID,"Drew Fischer, Canada",0.161,0.1631,0.1598,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489420,842,N. Vlašić,Croatia,MID,"Drew Fischer, Canada",0.0733,0.0753,0.0742,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489420,348205,P. Sučić,Croatia,MID,"Drew Fischer, Canada",0.2457,0.2525,0.2611,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489420,295026,M. Baturina,Croatia,MID,"Drew Fischer, Canada",0.1282,0.1318,0.1298,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489420,46746,A. Budimir,Croatia,FWD,"Drew Fischer, Canada",0.2767,0.2636,0.2581,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489420,480108,B. Asare,Ghana,GK,"Drew Fischer, Canada",0.0986,0.0984,0.0984,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1489420,191240,M. Senaya,Ghana,DEF,"Drew Fischer, Canada",0.1292,0.127,0.127,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489420,369425,J. Adjetey,Ghana,DEF,"Drew Fischer, Canada",0.2734,0.2728,0.2728,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -363,16 +363,16 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1489419,24810,J. Córdoba,Colombia,FWD,"Alireza Faghani, Australia",0.3164,0.3093,0.3093,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489419,2489,L. Díaz,Colombia,FWD,"Alireza Faghani, Australia",0.0462,0.0452,0.0452,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489419,369,Diogo Costa,Portugal,GK,"Alireza Faghani, Australia",0.0212,0.0212,0.0212,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
-1489419,855,João Cancelo,Portugal,DEF,"Alireza Faghani, Australia",0.3002,0.2957,0.2957,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489419,855,João Cancelo,Portugal,DEF,"Alireza Faghani, Australia",0.3002,0.2957,0.2897,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489419,567,Rúben Dias,Portugal,DEF,"Alireza Faghani, Australia",0.195,0.195,0.195,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489419,336671,Renato Veiga,Portugal,DEF,"Alireza Faghani, Australia",0.158,0.158,0.158,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489419,263482,Nuno Mendes,Portugal,DEF,"Alireza Faghani, Australia",0.0718,0.0707,0.0707,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489419,2676,Rúben Neves,Portugal,MID,"Alireza Faghani, Australia",0.267,0.275,0.275,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489419,128384,Vitinha,Portugal,MID,"Alireza Faghani, Australia",0.0756,0.0767,0.0767,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489419,1864,Pedro Neto,Portugal,MID,"Alireza Faghani, Australia",0.2617,0.2656,0.2656,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489419,1485,Bruno Fernandes,Portugal,MID,"Alireza Faghani, Australia",0.1964,0.2023,0.2023,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489419,583,João Félix,Portugal,MID,"Alireza Faghani, Australia",0.1677,0.1702,0.1702,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489419,874,Cristiano Ronaldo,Portugal,FWD,"Alireza Faghani, Australia",0.1675,0.16,0.16,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489419,128384,Vitinha,Portugal,MID,"Alireza Faghani, Australia",0.0756,0.0767,0.0752,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489419,1864,Pedro Neto,Portugal,MID,"Alireza Faghani, Australia",0.2617,0.2656,0.2604,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489419,1485,Bruno Fernandes,Portugal,MID,"Alireza Faghani, Australia",0.1964,0.2023,0.1993,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489419,583,João Félix,Portugal,FWD,"Alireza Faghani, Australia",0.1677,0.1602,0.1602,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489419,874,Cristiano Ronaldo,Portugal,FWD,"Alireza Faghani, Australia",0.1675,0.16,0.1566,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539013,24012,L. Mpasi,Congo DR,GK,"Felix Zwayer, Germany",0.051,0.051,0.051,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1539013,18846,A. Wan-Bissaka,Congo DR,DEF,"Felix Zwayer, Germany",0.0665,0.0665,0.0665,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539013,375,C. Mbemba,Congo DR,DEF,"Felix Zwayer, Germany",0.2655,0.2655,0.2655,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -615,3 +615,69 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1562586,395559,Kerim-Sam Alajbegović,Bosnia & Herzegovina,MID,R. Claus,0.1716,0.1742,0.1742,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1562586,790,E. Džeko,Bosnia & Herzegovina,FWD,R. Claus,0.1577,0.1506,0.1506,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1562586,46930,E. Demirović,Bosnia & Herzegovina,FWD,R. Claus,0.2118,0.2054,0.2054,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,5,M. Akanji,Switzerland,DEF,Y. Perez,0.1874,0.187,0.187,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,2803,N. Elvedi,Switzerland,DEF,Y. Perez,0.377,0.3762,0.3762,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,1464,G. Xhaka,Switzerland,MID,Y. Perez,0.269,0.2765,0.2765,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,2807,R. Freuler,Switzerland,MID,Y. Perez,0.1395,0.1434,0.1434,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,421,B. Embolo,Switzerland,FWD,Y. Perez,0.1567,0.1493,0.1493,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,1631,R. Rodríguez,Switzerland,DEF,Y. Perez,0.0861,0.0859,0.0859,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,48648,D. Ndoye,Switzerland,MID,Y. Perez,0.1972,0.2027,0.2027,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,48471,R. Vargas,Switzerland,MID,Y. Perez,0.1828,0.1851,0.1851,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,25282,G. Kobel,Switzerland,GK,Y. Perez,0.0396,0.0395,0.0395,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,951,M. Aebischer,Switzerland,MID,Y. Perez,0.0385,0.0396,0.0396,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,48378,S. Widmer,Switzerland,DEF,Y. Perez,0.4479,0.4469,0.4469,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,1567,A. Mandi,Algeria,DEF,Y. Perez,0.0376,0.0369,0.0369,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,21138,R. Aït-Nouri,Algeria,DEF,Y. Perez,0.2499,0.2412,0.2412,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,2194,R. Bensebaïni,Algeria,DEF,Y. Perez,0.1442,0.1414,0.1414,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,635,R. Mahrez,Algeria,FWD,Y. Perez,0.3042,0.2784,0.2784,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,380587,I. Maza,Algeria,FWD,Y. Perez,0.0955,0.0907,0.0907,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,85041,A. Gouiri,Algeria,FWD,Y. Perez,0.2562,0.2345,0.2345,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,276670,F. Chaïbi,Algeria,MID,Y. Perez,0.0703,0.071,0.071,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,4399,H. Boudaoui,Algeria,MID,Y. Perez,0.2332,0.2321,0.2321,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,303362,R. Belghali,Algeria,DEF,Y. Perez,0.2791,0.2694,0.2694,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,732,L. Zidane,Algeria,GK,Y. Perez,0.0882,0.0865,0.0865,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1567312,129047,R. Zerrouki,Algeria,MID,Y. Perez,0.3943,0.3983,0.3983,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,47270,Unai Simón,Spain,GK,G. Nyberg,0.1501,0.1475,0.1475,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,47519,Pedro Porro,Spain,DEF,G. Nyberg,0.2308,0.2268,0.2268,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,396623,Pau Cubarsí Paredes,Spain,DEF,G. Nyberg,0.0686,0.0674,0.0674,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,622,Aymeric Laporte,Spain,DEF,G. Nyberg,0.104,0.1022,0.1022,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,47380,Marc Cucurella,Spain,DEF,G. Nyberg,0.0261,0.0256,0.0256,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,44,Rodri,Spain,MID,G. Nyberg,0.3461,0.3504,0.3504,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,1323,Dani Olmo,Spain,MID,G. Nyberg,0.2402,0.2396,0.2396,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,133609,Pedri,Spain,MID,G. Nyberg,0.0407,0.0398,0.0398,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,386828,Lamine Yamal,Spain,MID,G. Nyberg,0.2333,0.2281,0.2281,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,47323,Mikel Oyarzabal,Spain,FWD,G. Nyberg,0.1809,0.166,0.166,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,182219,Álex Baena,Spain,MID,G. Nyberg,0.324,0.3394,0.3394,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,7525,A. Schlager,Austria,GK,G. Nyberg,0.2154,0.2154,0.2154,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,711,S. Posch,Austria,DEF,G. Nyberg,0.2945,0.2945,0.2945,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,25287,K. Danso,Austria,DEF,G. Nyberg,0.1341,0.1341,0.1341,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,505,D. Alaba,Austria,DEF,G. Nyberg,0.3435,0.3315,0.3315,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,1157,K. Laimer,Austria,DEF,G. Nyberg,0.2652,0.2652,0.2652,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,7328,N. Seiwald,Austria,MID,G. Nyberg,0.0671,0.0691,0.0691,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,1095,X. Schlager,Austria,MID,G. Nyberg,0.0729,0.074,0.074,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,7562,R. Schmid,Austria,MID,G. Nyberg,0.1445,0.1438,0.1438,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,327895,P. Wanner,Austria,MID,G. Nyberg,0.1748,0.1774,0.1774,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,1159,M. Sabitzer,Austria,MID,G. Nyberg,0.1406,0.1427,0.1427,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,25297,M. Gregoritsch,Austria,FWD,G. Nyberg,0.1137,0.1086,0.1086,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,369,Diogo Costa,Portugal,GK,E. Eskas,0.0192,0.0189,0.0189,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,855,João Cancelo,Portugal,DEF,E. Eskas,0.2872,0.2721,0.2721,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,567,Rúben Dias,Portugal,DEF,E. Eskas,0.1859,0.1826,0.1826,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,336671,Renato Veiga,Portugal,DEF,E. Eskas,0.1488,0.1462,0.1462,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,263482,Nuno Mendes,Portugal,DEF,E. Eskas,0.0674,0.0639,0.0639,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,335051,João Neves,Portugal,MID,E. Eskas,0.1796,0.1792,0.1792,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,128384,Vitinha,Portugal,MID,E. Eskas,0.071,0.0694,0.0694,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,1864,Pedro Neto,Portugal,MID,E. Eskas,0.2497,0.2491,0.2491,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,1485,Bruno Fernandes,Portugal,MID,E. Eskas,0.1873,0.1896,0.1896,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,22236,Rafael Leão,Portugal,MID,E. Eskas,0.1653,0.1649,0.1649,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,874,Cristiano Ronaldo,Portugal,FWD,E. Eskas,0.1594,0.1494,0.1494,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,1305,D. Livaković,Croatia,GK,E. Eskas,0.1172,0.1172,0.1172,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,125171,J. Stanišić,Croatia,DEF,E. Eskas,0.1811,0.1811,0.1811,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,14701,J. Šutalo,Croatia,DEF,E. Eskas,0.026,0.026,0.026,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,1084,M. Pongračić,Croatia,DEF,E. Eskas,0.2158,0.2158,0.2158,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,207,I. Perišić,Croatia,DEF,E. Eskas,0.0934,0.0934,0.0934,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,754,L. Modrić,Croatia,MID,E. Eskas,0.1287,0.1306,0.1306,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,2291,M. Kovačić,Croatia,MID,E. Eskas,0.1743,0.1734,0.1734,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,842,N. Vlašić,Croatia,MID,E. Eskas,0.0797,0.0809,0.0809,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,348205,P. Sučić,Croatia,MID,E. Eskas,0.2649,0.2821,0.2821,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,295026,M. Baturina,Croatia,MID,E. Eskas,0.1391,0.1412,0.1412,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567309,46746,A. Budimir,Croatia,FWD,E. Eskas,0.2977,0.2783,0.2783,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores

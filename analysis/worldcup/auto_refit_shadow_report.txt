@@ -1,21 +1,21 @@
 ========================================================================================
 AUTO-REFIT L3 — mode=APPLY (swap)
 ========================================================================================
-generated_at_utc: 2026-07-02T10:41:43+00:00
-base rows=9210 | settled-in-log=53 | NEW rows=3 (2026-07-01..2026-07-02) | unmapped=0 | enriched=9213
+generated_at_utc: 2026-07-03T10:36:53+00:00
+base rows=9213 | settled-in-log=56 | NEW rows=3 (2026-07-02..2026-07-03) | unmapped=0 | enriched=9216
 
-OOS 1X2 — ventana común [2024-01-01 .. 2026-07-01)  (leakage-safe)
-  base     n=3295  ll=0.92960  ECE=0.0179  acc=55.9%
-  enriched n=3295  ll=0.92960  ECE=0.0179  acc=55.9%
+OOS 1X2 — ventana común [2024-01-01 .. 2026-07-02)  (leakage-safe)
+  base     n=3298  ll=0.92961  ECE=0.0174  acc=55.9%
+  enriched n=3298  ll=0.92961  ECE=0.0174  acc=55.9%
 repro (refit base vs committed): max|Δ|=0.0005
 
 MOVIMIENTOS DE RATING destacados (candidato vs commiteado; cap 0.6):
-    Bosnia & Herzegovina     +0.64 -> +0.48  (-0.16)
-    USA                      +1.13 -> +1.21  (+0.08)
-    Belgium                  +1.73 -> +1.71  (-0.02)
-    Senegal                  +1.43 -> +1.45  (+0.02)
-    England                  +1.71 -> +1.72  (+0.02)
-    Congo DR                 +0.88 -> +0.87  (-0.01)
+    Switzerland              +1.42 -> +1.60  (+0.18)
+    Algeria                  +1.53 -> +1.39  (-0.15)
+    Austria                  +1.10 -> +1.02  (-0.08)
+    Spain                    +2.14 -> +2.19  (+0.06)
+    Portugal                 +1.92 -> +1.94  (+0.02)
+    Croatia                  +1.46 -> +1.45  (-0.01)
 
 GATE (anti-corrupción):
     PASS  finite
@@ -23,7 +23,7 @@ GATE (anti-corrupción):
     PASS  max_move<=cap
     PASS  oos_not_worse
     PASS  repro<tol
-  max|Δ| = 0.159 (Bosnia & Herzegovina: +0.64->+0.48)
+  max|Δ| = 0.180 (Switzerland: +1.42->+1.60)
   -> GATE: PASS
 
 SWAP APLICADO ✅  ratings -> national_elo_layer3_ratings.csv | dataset -> international_results.csv (+3 FT). Calibración intacta (invariante).

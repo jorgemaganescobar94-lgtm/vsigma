@@ -1,66 +1,66 @@
 fixture_id,home,away,category,player,team,probability_goal,expected_goals,reason,source_used,goal_source,confidence,data_quality,probability_1_sot,expected_sot,expected_shots,shots_source,probability_assist,expected_assists,expected_key_passes,assist_source,player_id,probability_card,probability_card_original,probability_card_adjusted,adjustment_direction,adjustment_reason
-1567311,Spain,Austria,scorer,Mikel Oyarzabal,Spain,0.4007,0.512,"xG 0.51, P(gol) 40% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1567311,Spain,Austria,scorer,Ferran Torres,Spain,0.2918,0.345,"xG 0.34, P(gol) 29% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1567311,Spain,Austria,scorer,Pedri,Spain,0.2032,0.2271,"xG 0.23, P(gol) 20% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1567311,Spain,Austria,sot,Mikel Oyarzabal,Spain,,,"tiros esp. 2.7, SOT esp. 1.9 (media)",proxy,,media,media,0.852,1.9105,2.69,proxy,,,,,,,,,,
-1567311,Spain,Austria,sot,Lamine Yamal,Spain,,,"tiros esp. 2.8, SOT esp. 1.7 (media)",proxy,,media,media,0.8175,1.7009,2.83,proxy,,,,,,,,,,
-1567311,Spain,Austria,sot,Álex Baena,Spain,,,"tiros esp. 1.7, SOT esp. 1.3 (media)",proxy,,media,media,0.7201,1.2732,1.7,proxy,,,,,,,,,,
-1567311,Spain,Austria,assist,Lamine Yamal,Spain,,,xA-proxy 0.35 (media),proxy,,media,media,,,,,0.2962,0.3512,,proxy,,,,,,
-1567311,Spain,Austria,assist,Mikel Oyarzabal,Spain,,,xA-proxy 0.33 (media),proxy,,media,media,,,,,0.2801,0.3287,,proxy,,,,,,
-1567311,Spain,Austria,assist,Ferran Torres,Spain,,,xA-proxy 0.20 (media),proxy,,media,media,,,,,0.1791,0.1973,,proxy,,,,,,
-1567311,Spain,Austria,card_risk,Rodri,Spain,,,P(tarjeta) 36% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,44.0,0.355,0.355,0.3594,neutro,ajuste neutro: posición alto ↑; equipo bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
-1567311,Spain,Austria,card_risk,Álex Baena,Spain,,,P(tarjeta) 33% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,182219.0,0.3317,0.3317,0.3475,subir,ajuste sube: historial jugador alto ↑; posición alto ↑; equipo bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
-1567311,Spain,Austria,card_risk,D. Alaba,Austria,,,P(tarjeta) 32% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,505.0,0.318,0.318,0.3069,bajar,ajuste baja: historial jugador bajo ↓ · árbitro con muestra baja (peso reducido)
-1567311,Spain,Austria,card_risk,Ferran Torres,Spain,,,P(tarjeta) 31% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,931.0,0.3135,0.3135,0.2939,bajar,ajuste baja: historial jugador bajo ↓; posición bajo ↓; equipo bajo ↓ · árbitro con muestra baja (peso reducido)
-1567309,Portugal,Croatia,scorer,Cristiano Ronaldo,Portugal,0.3464,0.4252,"xG 0.43, P(gol) 35% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1567309,Portugal,Croatia,scorer,I. Perišić,Croatia,0.2225,0.2517,"xG 0.25, P(gol) 22% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1567309,Portugal,Croatia,scorer,Bruno Fernandes,Portugal,0.2152,0.2423,"xG 0.24, P(gol) 22% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1567309,Portugal,Croatia,sot,Cristiano Ronaldo,Portugal,,,"tiros esp. 4.0, SOT esp. 2.0 (media)",proxy,,media,media,0.8665,2.0134,4.03,proxy,,,,,,,,,,
-1567309,Portugal,Croatia,sot,I. Perišić,Croatia,,,"tiros esp. 2.2, SOT esp. 1.3 (media)",proxy,,media,media,0.7163,1.2597,2.25,proxy,,,,,,,,,,
-1567309,Portugal,Croatia,sot,Bruno Fernandes,Portugal,,,"tiros esp. 1.7, SOT esp. 0.9 (media)",proxy,,media,media,0.6131,0.9495,1.74,proxy,,,,,,,,,,
-1567309,Portugal,Croatia,assist,Nuno Mendes,Portugal,,,xA-proxy 0.24 (media),proxy,,media,media,,,,,0.2099,0.2356,,proxy,,,,,,
-1567309,Portugal,Croatia,assist,I. Perišić,Croatia,,,xA-proxy 0.19 (media),proxy,,media,media,,,,,0.1719,0.1886,,proxy,,,,,,
-1567309,Portugal,Croatia,assist,Pedro Neto,Portugal,,,xA-proxy 0.15 (media),proxy,,media,media,,,,,0.1389,0.1495,,proxy,,,,,,
-1567309,Portugal,Croatia,card_risk,João Cancelo,Portugal,,,P(tarjeta) 29% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,855.0,0.2939,0.2939,0.2785,bajar,ajuste baja: historial jugador bajo ↓; equipo bajo ↓ · árbitro con muestra baja (peso reducido)
-1567309,Portugal,Croatia,card_risk,P. Sučić,Croatia,,,P(tarjeta) 29% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,348205.0,0.293,0.293,0.312,subir,ajuste sube: historial jugador alto ↑; posición alto ↑ · árbitro con muestra baja (peso reducido)
-1567309,Portugal,Croatia,card_risk,Pedro Neto,Portugal,,,P(tarjeta) 26% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,1864.0,0.2555,0.2555,0.2549,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
-1567309,Portugal,Croatia,card_risk,M. Pongračić,Croatia,,,P(tarjeta) 24% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,1084.0,0.2377,0.2377,0.2377,neutro,ajuste neutro: sin sesgo neto de las fuentes · árbitro con muestra baja (peso reducido)
-1567312,Switzerland,Algeria,scorer,A. Gouiri,Algeria,0.2829,0.3325,"xG 0.33, P(gol) 28% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1567312,Switzerland,Algeria,scorer,B. Embolo,Switzerland,0.2242,0.2539,"xG 0.25, P(gol) 22% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1567312,Switzerland,Algeria,scorer,R. Mahrez,Algeria,0.2119,0.2381,"xG 0.24, P(gol) 21% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1567312,Switzerland,Algeria,sot,B. Embolo,Switzerland,,,"tiros esp. 1.9, SOT esp. 1.3 (media)",proxy,,media,media,0.7296,1.3077,1.86,proxy,,,,,,,,,,
-1567312,Switzerland,Algeria,sot,D. Ndoye,Switzerland,,,"tiros esp. 1.5, SOT esp. 0.9 (media)",proxy,,media,media,0.592,0.8966,1.54,proxy,,,,,,,,,,
-1567312,Switzerland,Algeria,sot,R. Vargas,Switzerland,,,"tiros esp. 1.3, SOT esp. 0.9 (media)",proxy,,media,media,0.5768,0.8598,1.29,proxy,,,,,,,,,,
-1567312,Switzerland,Algeria,assist,R. Vargas,Switzerland,,,xA-proxy 0.22 (media),proxy,,media,media,,,,,0.2,0.2232,,proxy,,,,,,
-1567312,Switzerland,Algeria,assist,R. Zerrouki,Algeria,,,xA-proxy 0.18 (media),proxy,,media,media,,,,,0.1673,0.1831,,proxy,,,,,,
-1567312,Switzerland,Algeria,assist,I. Maza,Algeria,,,xA-proxy 0.17 (media),proxy,,media,media,,,,,0.1578,0.1717,,proxy,,,,,,
-1567312,Switzerland,Algeria,card_risk,S. Widmer,Switzerland,,,P(tarjeta) 45% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,48378.0,0.4479,0.4479,0.4469,neutro,ajuste neutro: árbitro bajo ↓ · árbitro con muestra baja (peso reducido)
-1567312,Switzerland,Algeria,card_risk,R. Zerrouki,Algeria,,,P(tarjeta) 39% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,129047.0,0.3943,0.3943,0.3983,neutro,ajuste neutro: posición alto ↑; equipo bajo ↓; árbitro bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
-1567312,Switzerland,Algeria,card_risk,N. Elvedi,Switzerland,,,P(tarjeta) 38% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,2803.0,0.377,0.377,0.3762,neutro,ajuste neutro: árbitro bajo ↓ · árbitro con muestra baja (peso reducido)
-1567312,Switzerland,Algeria,card_risk,R. Mahrez,Algeria,,,P(tarjeta) 30% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,635.0,0.3042,0.3042,0.2967,bajar,ajuste baja: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓; árbitro bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
-1565178,Australia,Egypt,scorer,N. Irankunda,Australia,0.2339,0.2665,"xG 0.27, P(gol) 23% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1565178,Australia,Egypt,scorer,Mohamed Salah,Egypt,0.2282,0.259,"xG 0.26, P(gol) 23% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1565178,Australia,Egypt,scorer,M. Touré,Australia,0.2211,0.2499,"xG 0.25, P(gol) 22% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1565178,Australia,Egypt,sot,Mohamed Salah,Egypt,,,"tiros esp. 1.3, SOT esp. 1.2 (media)",proxy,,media,media,0.6955,1.1891,1.31,proxy,,,,,,,,,,
-1565178,Australia,Egypt,sot,Omar Marmoush,Egypt,,,"tiros esp. 1.4, SOT esp. 1.1 (media)",proxy,,media,media,0.6577,1.0721,1.39,proxy,,,,,,,,,,
-1565178,Australia,Egypt,sot,Trézéguet,Egypt,,,"tiros esp. 1.7, SOT esp. 0.8 (media)",proxy,,media,media,0.5689,0.8413,1.68,proxy,,,,,,,,,,
-1565178,Australia,Egypt,assist,C. Metcalfe,Australia,,,xA-proxy 0.29 (media),proxy,,media,media,,,,,0.2508,0.2888,,proxy,,,,,,
-1565178,Australia,Egypt,assist,Emam Ashour,Egypt,,,xA-proxy 0.21 (media),proxy,,media,media,,,,,0.1912,0.2122,,proxy,,,,,,
-1565178,Australia,Egypt,assist,M. Touré,Australia,,,xA-proxy 0.19 (media),proxy,,media,media,,,,,0.1758,0.1934,,proxy,,,,,,
+1565178,Australia,Egypt,scorer,N. Irankunda,Australia,0.2356,0.2686,"xG 0.27, P(gol) 24% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1565178,Australia,Egypt,scorer,Mohamed Salah,Egypt,0.2265,0.2568,"xG 0.26, P(gol) 23% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1565178,Australia,Egypt,scorer,M. Touré,Australia,0.2227,0.2519,"xG 0.25, P(gol) 22% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1565178,Australia,Egypt,sot,Mohamed Salah,Egypt,,,"tiros esp. 1.3, SOT esp. 1.2 (media)",proxy,,media,media,0.6943,1.1851,1.3,proxy,,,,,,,,,,
+1565178,Australia,Egypt,sot,Omar Marmoush,Egypt,,,"tiros esp. 1.4, SOT esp. 1.1 (media)",proxy,,media,media,0.6565,1.0685,1.39,proxy,,,,,,,,,,
+1565178,Australia,Egypt,sot,Trézéguet,Egypt,,,"tiros esp. 1.7, SOT esp. 0.8 (media)",proxy,,media,media,0.5676,0.8385,1.68,proxy,,,,,,,,,,
+1565178,Australia,Egypt,assist,C. Metcalfe,Australia,,,xA-proxy 0.29 (media),proxy,,media,media,,,,,0.2526,0.2911,,proxy,,,,,,
+1565178,Australia,Egypt,assist,Emam Ashour,Egypt,,,xA-proxy 0.21 (media),proxy,,media,media,,,,,0.1897,0.2104,,proxy,,,,,,
+1565178,Australia,Egypt,assist,M. Touré,Australia,,,xA-proxy 0.19 (media),proxy,,media,media,,,,,0.1771,0.1949,,proxy,,,,,,
 1565178,Australia,Egypt,card_risk,N. Irankunda,Australia,,,P(tarjeta) 36% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,338014.0,0.3631,0.3631,0.3468,bajar,ajuste baja: historial jugador bajo ↓; posición bajo ↓ · árbitro con muestra baja (peso reducido)
 1565178,Australia,Egypt,card_risk,Trézéguet,Egypt,,,P(tarjeta) 34% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,2664.0,0.3395,0.3395,0.3505,subir,ajuste sube: historial jugador bajo ↓; posición alto ↑; equipo alto ↑ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
 1565178,Australia,Egypt,card_risk,Marwan Attia,Egypt,,,P(tarjeta) 28% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,190575.0,0.2776,0.2776,0.2908,subir,ajuste sube: posición alto ↑; equipo alto ↑ · árbitro con muestra baja (peso reducido)
 1565178,Australia,Egypt,card_risk,A. O&apos;Neill,Australia,,,P(tarjeta) 27% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,7050.0,0.27,0.27,0.2781,subir,ajuste sube: posición alto ↑ · árbitro con muestra baja (peso reducido)
-1565179,Argentina,Cape Verde Islands,scorer,Lautaro Martínez,Argentina,0.5325,0.7604,"xG 0.76, P(gol) 53% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1565179,Argentina,Cape Verde Islands,scorer,L. Messi,Argentina,0.2509,0.2889,"xG 0.29, P(gol) 25% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1565179,Argentina,Cape Verde Islands,scorer,A. Mac Allister,Argentina,0.1967,0.219,"xG 0.22, P(gol) 20% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1565179,Argentina,Cape Verde Islands,sot,Lautaro Martínez,Argentina,,,"tiros esp. 3.1, SOT esp. 2.5 (media)",proxy,,media,media,0.9144,2.4582,3.11,proxy,,,,,,,,,,
-1565179,Argentina,Cape Verde Islands,sot,L. Messi,Argentina,,,"tiros esp. 2.6, SOT esp. 1.2 (media)",proxy,,media,media,0.7059,1.2237,2.57,proxy,,,,,,,,,,
-1565179,Argentina,Cape Verde Islands,sot,G. Lo Celso,Argentina,,,"tiros esp. 1.3, SOT esp. 1.1 (media)",proxy,,media,media,0.673,1.1178,1.28,proxy,,,,,,,,,,
-1565179,Argentina,Cape Verde Islands,assist,L. Messi,Argentina,,,xA-proxy 0.36 (media),proxy,,media,media,,,,,0.304,0.3624,,proxy,,,,,,
-1565179,Argentina,Cape Verde Islands,assist,Lautaro Martínez,Argentina,,,xA-proxy 0.30 (media),proxy,,media,media,,,,,0.2604,0.3016,,proxy,,,,,,
-1565179,Argentina,Cape Verde Islands,assist,E. Fernández,Argentina,,,xA-proxy 0.21 (media),proxy,,media,media,,,,,0.1917,0.2128,,proxy,,,,,,
+1565179,Argentina,Cape Verde Islands,scorer,Lautaro Martínez,Argentina,0.5311,0.7573,"xG 0.76, P(gol) 53% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1565179,Argentina,Cape Verde Islands,scorer,L. Messi,Argentina,0.25,0.2877,"xG 0.29, P(gol) 25% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1565179,Argentina,Cape Verde Islands,scorer,A. Mac Allister,Argentina,0.196,0.2181,"xG 0.22, P(gol) 20% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1565179,Argentina,Cape Verde Islands,sot,Lautaro Martínez,Argentina,,,"tiros esp. 3.1, SOT esp. 2.5 (media)",proxy,,media,media,0.9139,2.4525,3.1,proxy,,,,,,,,,,
+1565179,Argentina,Cape Verde Islands,sot,L. Messi,Argentina,,,"tiros esp. 2.6, SOT esp. 1.2 (media)",proxy,,media,media,0.705,1.2208,2.56,proxy,,,,,,,,,,
+1565179,Argentina,Cape Verde Islands,sot,G. Lo Celso,Argentina,,,"tiros esp. 1.3, SOT esp. 1.1 (media)",proxy,,media,media,0.6722,1.1152,1.27,proxy,,,,,,,,,,
+1565179,Argentina,Cape Verde Islands,assist,L. Messi,Argentina,,,xA-proxy 0.36 (media),proxy,,media,media,,,,,0.303,0.361,,proxy,,,,,,
+1565179,Argentina,Cape Verde Islands,assist,Lautaro Martínez,Argentina,,,xA-proxy 0.30 (media),proxy,,media,media,,,,,0.2594,0.3003,,proxy,,,,,,
+1565179,Argentina,Cape Verde Islands,assist,E. Fernández,Argentina,,,xA-proxy 0.21 (media),proxy,,media,media,,,,,0.191,0.2119,,proxy,,,,,,
 1565179,Argentina,Cape Verde Islands,card_risk,G. Lo Celso,Argentina,,,P(tarjeta) 39% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,1578.0,0.3863,0.3863,0.3921,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
 1565179,Argentina,Cape Verde Islands,card_risk,A. Mac Allister,Argentina,,,P(tarjeta) 35% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,6716.0,0.3477,0.3477,0.3581,subir,ajuste sube: posición alto ↑ · árbitro con muestra baja (peso reducido)
 1565179,Argentina,Cape Verde Islands,card_risk,N. Otamendi,Argentina,,,P(tarjeta) 31% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,624.0,0.3085,0.3085,0.3085,neutro,ajuste neutro: sin sesgo neto de las fuentes · árbitro con muestra baja (peso reducido)
 1565179,Argentina,Cape Verde Islands,card_risk,Ryan Mendes,Cape Verde Islands,,,P(tarjeta) 30% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,50270.0,0.3041,0.3041,0.3087,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
+1567310,Colombia,Ghana,scorer,G. Puerta,Colombia,0.2937,0.3477,"xG 0.35, P(gol) 29% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1567310,Colombia,Ghana,scorer,L. Díaz,Colombia,0.257,0.297,"xG 0.30, P(gol) 26% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1567310,Colombia,Ghana,scorer,J. Lerma,Colombia,0.2393,0.2735,"xG 0.27, P(gol) 24% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1567310,Colombia,Ghana,sot,J. Rodríguez,Colombia,,,"tiros esp. 2.1, SOT esp. 1.2 (media)",proxy,,media,media,0.6956,1.1895,2.08,proxy,,,,,,,,,,
+1567310,Colombia,Ghana,sot,L. Díaz,Colombia,,,"tiros esp. 1.8, SOT esp. 1.1 (media)",proxy,,media,media,0.675,1.1238,1.83,proxy,,,,,,,,,,
+1567310,Colombia,Ghana,sot,J. Lerma,Colombia,,,"tiros esp. 1.9, SOT esp. 1.1 (media)",proxy,,media,media,0.6697,1.1078,1.9,proxy,,,,,,,,,,
+1567310,Colombia,Ghana,assist,J. Rodríguez,Colombia,,,xA-proxy 0.72 (media),proxy,,media,media,,,,,0.5117,0.7169,,proxy,,,,,,
+1567310,Colombia,Ghana,assist,D. Sánchez,Colombia,,,xA-proxy 0.14 (media),proxy,,media,media,,,,,0.1328,0.1425,,proxy,,,,,,
+1567310,Colombia,Ghana,assist,D. Muñoz,Colombia,,,xA-proxy 0.14 (media),proxy,,media,media,,,,,0.1302,0.1395,,proxy,,,,,,
+1567310,Colombia,Ghana,card_risk,G. Puerta,Colombia,,,P(tarjeta) 33% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,324034.0,0.329,0.329,0.3381,subir,ajuste sube: posición alto ↑; árbitro bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
+1567310,Colombia,Ghana,card_risk,J. Lerma,Colombia,,,P(tarjeta) 32% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,2490.0,0.3222,0.3222,0.3424,subir,ajuste sube: historial jugador alto ↑; posición alto ↑; árbitro bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
+1567310,Colombia,Ghana,card_risk,D. Muñoz,Colombia,,,P(tarjeta) 32% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,13736.0,0.3162,0.3162,0.3107,neutro,ajuste neutro: historial jugador bajo ↓; árbitro bajo ↓ · árbitro con muestra baja (peso reducido)
+1567310,Colombia,Ghana,card_risk,J. Adjetey,Ghana,,,P(tarjeta) 31% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,369425.0,0.3081,0.3081,0.3028,neutro,ajuste neutro: historial jugador bajo ↓; árbitro bajo ↓ · árbitro con muestra baja (peso reducido)
+1567824,Canada,Morocco,scorer,Brahim Díaz,Morocco,0.4656,0.6267,"xG 0.63, P(gol) 47% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1567824,Canada,Morocco,scorer,J. David,Canada,0.2134,0.24,"xG 0.24, P(gol) 21% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1567824,Canada,Morocco,scorer,I. Saibari,Morocco,0.1938,0.2154,"xG 0.22, P(gol) 19% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1567824,Canada,Morocco,sot,Brahim Díaz,Morocco,,,"tiros esp. 2.6, SOT esp. 1.6 (media)",proxy,,media,media,0.7989,1.6039,2.58,proxy,,,,,,,,,,
+1567824,Canada,Morocco,sot,I. Saibari,Morocco,,,"tiros esp. 1.5, SOT esp. 0.9 (media)",proxy,,media,media,0.5865,0.8831,1.5,proxy,,,,,,,,,,
+1567824,Canada,Morocco,sot,J. David,Canada,,,"tiros esp. 0.9, SOT esp. 0.6 (media)",proxy,,media,media,0.4686,0.6323,0.95,proxy,,,,,,,,,,
+1567824,Canada,Morocco,assist,A. Ounahi,Morocco,,,xA-proxy 0.36 (media),proxy,,media,media,,,,,0.3047,0.3634,,proxy,,,,,,
+1567824,Canada,Morocco,assist,N. Mazraoui,Morocco,,,xA-proxy 0.22 (media),proxy,,media,media,,,,,0.1996,0.2226,,proxy,,,,,,
+1567824,Canada,Morocco,assist,A. Hakimi,Morocco,,,xA-proxy 0.19 (media),proxy,,media,media,,,,,0.1757,0.1932,,proxy,,,,,,
+1567824,Canada,Morocco,card_risk,I. Saibari,Morocco,,,P(tarjeta) 37% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,161897.0,0.3659,0.3659,0.3357,bajar,ajuste baja: historial jugador bajo ↓; posición bajo ↓; equipo bajo ↓
+1567824,Canada,Morocco,card_risk,A. Ounahi,Morocco,,,P(tarjeta) 35% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,129678.0,0.3477,0.3477,0.3399,bajar,ajuste baja: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+1567824,Canada,Morocco,card_risk,I. Koné,Canada,,,P(tarjeta) 32% — mercado de tarjeta es baja confianza (media),,,baja,baja,,,,,,,,,328046.0,0.3218,0.3218,0.3274,neutro,ajuste neutro: equipo alto ↑
+1567824,Canada,Morocco,card_risk,D. Cornelius,Canada,,,P(tarjeta) 31% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,51295.0,0.3105,0.3105,0.3159,neutro,ajuste neutro: equipo alto ↑
+1569870,Paraguay,France,scorer,Kylian Mbappé,France,0.4659,0.6272,"xG 0.63, P(gol) 47% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1569870,Paraguay,France,scorer,M. Olise,France,0.3927,0.4988,"xG 0.50, P(gol) 39% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1569870,Paraguay,France,scorer,A. Rabiot,France,0.299,0.3553,"xG 0.36, P(gol) 30% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1569870,Paraguay,France,sot,Kylian Mbappé,France,,,"tiros esp. 3.4, SOT esp. 1.9 (media)",proxy,,media,media,0.8551,1.9314,3.37,proxy,,,,,,,,,,
+1569870,Paraguay,France,sot,D. Doué,France,,,"tiros esp. 2.1, SOT esp. 1.8 (media)",proxy,,media,media,0.8392,1.8274,2.13,proxy,,,,,,,,,,
+1569870,Paraguay,France,sot,O. Dembélé,France,,,"tiros esp. 1.9, SOT esp. 0.8 (media)",proxy,,media,media,0.5581,0.8167,1.93,proxy,,,,,,,,,,
+1569870,Paraguay,France,assist,Kylian Mbappé,France,,,xA-proxy 0.59 (media),proxy,,media,media,,,,,0.4474,0.5932,,proxy,,,,,,
+1569870,Paraguay,France,assist,A. Tchouaméni,France,,,xA-proxy 0.26 (media),proxy,,media,media,,,,,0.2307,0.2623,,proxy,,,,,,
+1569870,Paraguay,France,assist,T. Hernández,France,,,xA-proxy 0.22 (media),proxy,,media,media,,,,,0.1965,0.2188,,proxy,,,,,,
+1569870,Paraguay,France,card_risk,A. Rabiot,France,,,P(tarjeta) 46% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,272.0,0.4631,0.4631,0.4689,neutro,ajuste neutro: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+1569870,Paraguay,France,card_risk,A. Cubas,Paraguay,,,P(tarjeta) 45% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,6236.0,0.4545,0.4545,0.4681,subir,ajuste sube: posición alto ↑
+1569870,Paraguay,France,card_risk,A. Tchouaméni,France,,,P(tarjeta) 39% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,1271.0,0.3898,0.3898,0.3947,neutro,ajuste neutro: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+1569870,Paraguay,France,card_risk,Kylian Mbappé,France,,,P(tarjeta) 28% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,278.0,0.2755,0.2755,0.2528,bajar,ajuste baja: historial jugador bajo ↓; posición bajo ↓; equipo bajo ↓

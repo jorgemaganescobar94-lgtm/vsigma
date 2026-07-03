@@ -52,3 +52,6 @@ fixture_id,home,away,lambda_home,lambda_away,source_lambda,actual_score,in_top1,
 1567307,England,Congo DR,1.97,0.7,mx,2-1,0,0,1,0.0941,4,1-0,H,H,media,media
 1567308,Belgium,Senegal,1.6,0.88,mx,3-2,0,0,0,0.0221,13,1-0,D,H,media,media
 1562586,USA,Bosnia & Herzegovina,1.55,0.91,mx,2-0,0,1,1,0.1026,3,1-0,H,H,media,media
+1567311,Spain,Austria,2.11,0.65,mx,3-0,0,1,1,0.0991,3,2-0,H,H,media,media
+1567309,Portugal,Croatia,1.68,0.84,mx,2-1,0,0,1,0.0954,4,1-0,H,H,media,media
+1567312,Switzerland,Algeria,1.23,1.17,mx,2-0,0,0,0,0.0686,7,1-1,H,H,media,media
