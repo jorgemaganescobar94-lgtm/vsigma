@@ -482,7 +482,7 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 182718,Joan García,9,GK,,,,,,,,,,api_football_lineup_position,media,baja
 295793,Marc Pubill,9,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 619,Eric García,9,DEF,,,,,,,,,,api_football_lineup_position,media,baja
-753,Marcos Llorente,9,DEF,,,,,,,,,,api_football_lineup_position,media,baja
+753,Marcos Llorente,9,MID,,,,,,,,,,api_football_lineup_position,media,baja
 563,Alejandro Grimaldo,9,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 296667,Pablo Gavi,9,MID,,,,,,,,,,api_football_lineup_position,media,baja
 47315,Martín Zubimendi,9,MID,,,,,,,,,,api_football_lineup_position,media,baja
@@ -594,7 +594,7 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 711,Stefan Posch,775,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 25287,Kevin Danso,775,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 505,David Alaba,775,DEF,,,,,,,,,,api_football_lineup_position,media,baja
-1157,Konrad Laimer,775,MID,,,,,,,,,,api_football_lineup_position,media,baja
+1157,Konrad Laimer,775,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 7328,Nicolas Seiwald,775,MID,,,,,,,,,,api_football_lineup_position,media,baja
 1095,Xaver Schlager,775,MID,,,,,,,,,,api_football_lineup_position,media,baja
 7562,Romano Schmid,775,MID,,,,,,,,,,api_football_lineup_position,media,baja
@@ -649,8 +649,8 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 21138,Rayan Aït-Nouri,1532,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 4399,Hicham Boudaoui,1532,MID,,,,,,,,,,api_football_lineup_position,media,baja
 129047,Ramiz Zerrouki,1532,MID,,,,,,,,,,api_football_lineup_position,media,baja
-635,Riyad Mahrez,1532,MID,,,,,,,,,,api_football_lineup_position,media,baja
-380587,Ibrahim Maza,1532,MID,,,,,,,,,,api_football_lineup_position,media,baja
+635,Riyad Mahrez,1532,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+380587,Ibrahim Maza,1532,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 276670,Farès Chaïbi,1532,MID,,,,,,,,,,api_football_lineup_position,media,baja
 85041,Amine Gouiri,1532,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 409,Nabil Bentaleb,1532,MID,,,,,,,,,,api_football_lineup_position,media,baja
@@ -663,7 +663,7 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 342740,Achref Abada,1532,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 4569,Mohamed Tougai,1532,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 20869,Samir Sophian Chergui,1532,DEF,,,,,,,,,,api_football_lineup_position,media,baja
-658,Houssem Aouar,1532,MID,,,,,,,,,,api_football_lineup_position,media,baja
+658,Houssem Aouar,1532,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 327599,Yassine Titraoui,1532,MID,,,,,,,,,,api_football_lineup_position,media,baja
 329163,Adil Boulbina,1532,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 334915,Farès Ghedjemis,1532,FWD,,,,,,,,,,api_football_lineup_position,media,baja
@@ -728,13 +728,13 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 128384,Vitinha,27,MID,,,,,,,,,,api_football_lineup_position,media,baja
 1864,Pedro Neto,27,MID,,,,,,,,,,api_football_lineup_position,media,baja
 1485,Bruno Fernandes,27,MID,,,,,,,,,,api_football_lineup_position,media,baja
-583,João Félix,27,MID,,,,,,,,,,api_football_lineup_position,media,baja
+583,João Félix,27,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 874,Cristiano Ronaldo,27,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 130,Nélson Semedo,27,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 161585,Francisco Conceição,27,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 41112,Francisco Trincão,27,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 636,Bernardo Silva,27,MID,,,,,,,,,,api_football_lineup_position,media,baja
-22236,Rafael Leão,27,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+22236,Rafael Leão,27,MID,,,,,,,,,,api_football_lineup_position,media,baja
 1590,José Sá,27,GK,,,,,,,,,,api_football_lineup_position,media,baja
 46672,Rui Silva,27,GK,,,,,,,,,,api_football_lineup_position,media,baja
 161939,Tomás Araújo,27,DEF,,,,,,,,,,api_football_lineup_position,media,baja
@@ -835,14 +835,14 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 421,Breel Embolo,15,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 48378,Silvan Widmer,15,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 951,Michel Aebischer,15,MID,,,,,,,,,,api_football_lineup_position,media,baja
-48648,Dan Ndoye,15,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+48648,Dan Ndoye,15,MID,,,,,,,,,,api_football_lineup_position,media,baja
 952,Christian Fassnacht,15,MID,,,,,,,,,,api_football_lineup_position,media,baja
 48497,Cédric Itten,15,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 123468,Marvin Keller,15,GK,,,,,,,,,,api_football_lineup_position,media,baja
 1142,Yvon Mvogo,15,GK,,,,,,,,,,api_football_lineup_position,media,baja
 48372,Eray Cömert,15,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 162414,Aurèle Amenda,15,DEF,,,,,,,,,,api_football_lineup_position,media,baja
-2810,Denis Zakaria,15,MID,,,,,,,,,,api_football_lineup_position,media,baja
+2810,Denis Zakaria,15,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 264705,Ardon Jashari,15,MID,,,,,,,,,,api_football_lineup_position,media,baja
 163032,Fabian Rieder,15,MID,,,,,,,,,,api_football_lineup_position,media,baja
 48389,Noah Okafor,15,FWD,,,,,,,,,,api_football_lineup_position,media,baja
@@ -1236,3 +1236,4 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 18938,Alfie Jones,5529,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 32862,Takefusa Kubo,12,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 271350,Tarik Muharemović,1113,DEF,,,,,,,,,,api_football_lineup_position,media,baja
+48489,Miro Muheim,15,DEF,,,,,,,,,,api_football_lineup_position,media,baja
