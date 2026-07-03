@@ -1,37 +1,51 @@
 # vSIGMA Daily Controller Status - 2026-07-03
 
 ## Step State
-- PRE: MISSING
-- Pre-lock: ['NO_CURRENT_PICKS']
+- PRE: DONE
+- Pre-lock: ['PENDING_OUTSIDE_WINDOW']
 - POST: PENDING
-- Ledger: MISSING_FOR_DATE
+- Ledger: PRE_UPDATED
 - Governance: AVAILABLE
 - Stale warnings: NONE
 
 ## Next Operator Command
-- Action: RUN_PRE
-- Command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-03 --timezone Atlantic/Canary --mode pre`
+- Action: WAIT_FOR_PRELOCK
+- Command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-03 --timezone Atlantic/Canary --mode prelock --window-minutes 90`
 
 ## Official Baseline Picks
-_No rows._
+| fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank |
+| --- | --- | --- | --- | --- | --- |
+| 1494200 | Allsvenskan | Sirius | Mjallby AIF | OVER_2_5 | 1 |
 
 ## Candidate v2 Picks
-_No rows._
+| fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank |
+| --- | --- | --- | --- | --- | --- |
+| 1494200 | Allsvenskan | Sirius | Mjallby AIF | OVER_2_5 | 1 |
 
 ## Candidate v7 Decisions
 - Waiting: 0
 - Confirmed: 0
 - Rejected: 0
 - Unavailable: 0
-_No rows._
+| fixture_id | league | home_team | away_team | market_primary | accuracy_mode_rank | candidate_v7_execution_status | price_discipline_decision |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1494200 | Allsvenskan | Sirius | Mjallby AIF | OVER_2_5 | 1 | PRICE_OK | PRICE_OK |
 
 ## Pre-Lock Timing
 | fixture_id | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  | NO_CURRENT_PICKS | RUN_PRE |
+| 1494200 | Sirius | Mjallby AIF | OVER_2_5 | 2026-07-03T17:00:17.800000+00:00 | 381.08 | 2026-07-03T15:30:17.800000+00:00 | PENDING_OUTSIDE_WINDOW | WAIT_FOR_PRELOCK |
 
 ## Ledger State
-_No rows._
+| experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| OFFICIAL_BASELINE | 1494200.0 | Sirius | Mjallby AIF | OVER_2_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1494200.0 | Sirius | Mjallby AIF | OVER_2_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
+| CANDIDATE_V3_ODDS_DEPTH |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
+| CANDIDATE_V4_O25_FIREWALL |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
+| CANDIDATE_V5_PLAYER_IMPACT | 1494200.0 | Sirius | Mjallby AIF | OVER_2_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
+| CANDIDATE_V6_API_PREDICTIONS |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1494200.0 | Sirius | Mjallby AIF | OVER_2_5 | PRE | PRE_REGISTERED | PENDING | PENDING |  |
 
 ## Controller Outputs
 - Plan CSV: /home/runner/work/vsigma/vsigma/data/processed/today/2026-07-03/daily_run_plan.csv
