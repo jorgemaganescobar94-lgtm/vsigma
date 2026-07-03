@@ -1,2 +1,2 @@
 target_date,generated_at,fixtures_reviewed,search_provider,urls_discovered,rows_extracted,status_counts,source_counts,auto_apply,production_change
-2026-07-03,2026-07-03T19:46:18+01:00,2,SERPAPI;SERPAPI_SEARCH_FAILED;SERPAPI_ERROR,2,2,EXTRACTED=2; NO_XI_PATTERN=2; NO_DATA=1,sportsmole=2; sports_gambler=2,NO,NO
+2026-07-03,2026-07-03T21:39:05+01:00,2,SERPAPI;SERPAPI_SEARCH_FAILED;SERPAPI_ERROR,11,2,EXTRACTED=2; NO_XI_PATTERN=10; IRRELEVANT_FIXTURE_PAGE=5,sportsmole=7; sports_gambler=10,NO,NO
