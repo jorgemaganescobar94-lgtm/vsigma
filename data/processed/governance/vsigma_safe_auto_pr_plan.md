@@ -1,7 +1,7 @@
-# [vSIGMA SAFE PR] 2026-07-02 - INFO reporting/ops improvements
+# [vSIGMA SAFE PR] 2026-07-03 - INFO reporting/ops improvements
 
 ## Summary
-- target_date: 2026-07-02
+- target_date: 2026-07-03
 - safe_candidates: 0
 - auto_merge: NO
 - production_change: NO
