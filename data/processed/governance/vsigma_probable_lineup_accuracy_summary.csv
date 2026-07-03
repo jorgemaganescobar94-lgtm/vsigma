@@ -1,2 +1,2 @@
 target_date,generated_at,rows_reviewed,evaluated_rows,pending_rows,learning_only_rows,promoted_rows,grade_counts,source_grade_summary,auto_apply,production_change
-2026-07-03,2026-07-03T11:14:15+01:00,0,0,0,0,0,none,none,NO,NO
+2026-07-03,2026-07-03T19:46:19+01:00,2,0,2,0,2,NO_OFFICIAL_LINEUP=2,none,NO,NO

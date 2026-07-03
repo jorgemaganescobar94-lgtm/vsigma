@@ -1,1 +1,21 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
+2026-07-03,1494200,Allsvenskan,Sweden,Sirius,Mjallby AIF,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1494200,Allsvenskan,Sweden,Sirius,Mjallby AIF,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1494200,Allsvenskan,Sweden,Sirius,Mjallby AIF,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1494200,Allsvenskan,Sweden,Sirius,Mjallby AIF,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1494200,Allsvenskan,Sweden,Sirius,Mjallby AIF,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1494200,Allsvenskan,Sweden,Sirius,Mjallby AIF,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1494200,Allsvenskan,Sweden,Sirius,Mjallby AIF,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1494200,Allsvenskan,Sweden,Sirius,Mjallby AIF,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1494200,Allsvenskan,Sweden,Sirius,Mjallby AIF,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1494200,Allsvenskan,Sweden,Sirius,Mjallby AIF,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1547580,A Lyga,Lithuania,Džiugas Telšiai,Kauno Žalgiris,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1547580,A Lyga,Lithuania,Džiugas Telšiai,Kauno Žalgiris,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1547580,A Lyga,Lithuania,Džiugas Telšiai,Kauno Žalgiris,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1547580,A Lyga,Lithuania,Džiugas Telšiai,Kauno Žalgiris,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1547580,A Lyga,Lithuania,Džiugas Telšiai,Kauno Žalgiris,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1547580,A Lyga,Lithuania,Džiugas Telšiai,Kauno Žalgiris,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1547580,A Lyga,Lithuania,Džiugas Telšiai,Kauno Žalgiris,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1547580,A Lyga,Lithuania,Džiugas Telšiai,Kauno Žalgiris,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1547580,A Lyga,Lithuania,Džiugas Telšiai,Kauno Žalgiris,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-03,1547580,A Lyga,Lithuania,Džiugas Telšiai,Kauno Žalgiris,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.

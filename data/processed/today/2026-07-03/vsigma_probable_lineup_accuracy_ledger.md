@@ -1,18 +1,19 @@
 # vSIGMA Probable XI Accuracy Ledger - 2026-07-03
 
 ## Summary
-- rows_reviewed: 0
+- rows_reviewed: 2
 - evaluated_rows: 0
-- pending_rows: 0
+- pending_rows: 2
 - learning_only_rows: 0
-- promoted_rows: 0
-- grade_counts: none
+- promoted_rows: 2
+- grade_counts: NO_OFFICIAL_LINEUP=2
 - source_grade_summary: none
 - auto_apply: NO
 - production_change: NO
 
 ## Rows
-- none. No accepted or learning-only probable lineup rows after quarantine.
+- Sirius vs Mjallby AIF | side=home | source=sportsmole | probable_status=IMPORTED | status=NO_OFFICIAL_LINEUP | grade=NO_OFFICIAL_LINEUP | match=0/0 | probable=11
+- Sirius vs Mjallby AIF | side=away | source=sportsmole | probable_status=IMPORTED | status=NO_OFFICIAL_LINEUP | grade=NO_OFFICIAL_LINEUP | match=0/0 | probable=11
 
 ## Guardrails
 - Accuracy ledger is learning-only and never applies production changes.

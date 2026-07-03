@@ -1,21 +1,24 @@
 # vSIGMA Probable Lineup Source Import - 2026-07-03
 
 ## Summary
-- rows_seen: 0
-- rows_imported: 0
+- rows_seen: 4
+- rows_imported: 4
 - rows_learning_only: 0
 - rows_rejected: 0
 - rows_quarantined: 0
-- input_files: none
-- import_status_counts: none
+- input_files: data/processed/today/2026-07-03/probable_lineup_sources_autonomous.csv;data/processed/governance/probable_lineup_sources_autonomous.csv
+- import_status_counts: IMPORTED=4
 - quarantine_reason_counts: none
-- sources_seen: none
-- template_rows: 0
+- sources_seen: sportsmole=4
+- template_rows: 20
 - auto_apply: NO
 - production_change: NO
 
 ## Imported Rows
-- none. No probable XI rows passed promotion gate for consensus.
+- Sirius vs Mjallby AIF | side=home | source=sportsmole | status=IMPORTED | reason=OK | q=1.000 | notes=quality_ok
+- Sirius vs Mjallby AIF | side=away | source=sportsmole | status=IMPORTED | reason=OK | q=1.000 | notes=quality_ok
+- Sirius vs Mjallby AIF | side=home | source=sportsmole | status=IMPORTED | reason=OK | q=1.000 | notes=quality_ok
+- Sirius vs Mjallby AIF | side=away | source=sportsmole | status=IMPORTED | reason=OK | q=1.000 | notes=quality_ok
 
 ## Learning Only Rows
 - none.

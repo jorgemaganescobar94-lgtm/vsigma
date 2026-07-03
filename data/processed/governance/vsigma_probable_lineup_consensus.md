@@ -1,14 +1,16 @@
 # vSIGMA Probable Lineup Consensus v2 - 2026-07-03
 
 ## Summary
-- fixtures_reviewed: 0
-- probable_lineup_gates: none
-- home_confidence: none
-- away_confidence: none
+- fixtures_reviewed: 2
+- probable_lineup_gates: PROBABLE_XI_CONSENSUS_LOW=1; NO_PROBABLE_LINEUP_SOURCES=1
+- home_confidence: LOW_WEIGHTED=1; NO_APPROVED_SOURCES=1
+- away_confidence: LOW_WEIGHTED=1; NO_APPROVED_SOURCES=1
 - auto_apply: NO
 - production_change: NO
 
 ## Fixture Consensus
+- Sirius vs Mjallby AIF | gate=PROBABLE_XI_CONSENSUS_LOW | home=LOW_WEIGHTED(1 src/11 consensus/w=1.000) | away=LOW_WEIGHTED(1 src/11 consensus/w=1.000) | accepted=sportsmole / sportsmole | rejected= / 
+- Džiugas Telšiai vs Kauno Žalgiris | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
 
 ## Guardrails
 - Registry-approved probable XI is never treated as official lineup.
