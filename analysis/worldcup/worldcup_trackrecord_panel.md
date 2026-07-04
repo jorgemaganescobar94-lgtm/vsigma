@@ -1,5 +1,5 @@
 # 📊 Panel de Track-Record — Mundial 2026 (vSIGMA)
-_Generado: 2026-07-04T10:14:32+00:00 · consolidado de scorecards existentes · **solo lectura, no recalcula predicciones** · sin mercado/cuotas._
+_Generado: 2026-07-04T14:12:45+00:00 · consolidado de scorecards existentes · **solo lectura, no recalcula predicciones** · sin mercado/cuotas._
 
 > Honestidad: **validado** = superó el baseline en backtest histórico; **sombra** = en observación en vivo; donde la muestra aún no basta se marca explícitamente.
 
@@ -53,8 +53,8 @@ _Generado: 2026-07-04T10:14:32+00:00 · consolidado de scorecards existentes · 
 
 | stat | N | MAE | RMSE | sesgo crudo (pred−real) | sesgo corregido | ¿acierto línea? |
 |---|---:|---:|---:|---|---|---|
-| córners (baja conf.) | 54 | 3.06 | 4.01 | -1.95 (infraestima) | -0.62 (infraestima) | 44.0% (O/U) |
-| tiros (orientativo) | 54 | 7.38 | 8.93 | -6.27 (infraestima) | -1.98 (infraestima) | — |
+| córners (baja conf.) | 54 | 3.06 | 4.01 | -1.95 (infraestima) | -0.30 (infraestima) | 44.0% (O/U) |
+| tiros (orientativo) | 54 | 7.38 | 8.93 | -6.27 (infraestima) | -0.98 (infraestima) | — |
 | tarjetas (ruido · oculto en ficha) | 54 | 1.94 | 2.22 | +1.59 (sobrestima) | — (no corregido) | — |
 > 🔧 **Corrección de nivel auto-aprendida (córners/tiros MOSTRADOS)**: aditiva, encogida por muestra (×N/(N+25)), reversible (flag `STATS_LEVEL_CORRECTION`). El **sesgo corregido** debe acercarse a 0 vs el crudo. **Tarjetas EXCLUIDAS** (ruido).
 > Honestidad: **córners = baja confianza · tarjetas = ruido** → un error alto es ESPERABLE; el marcador lo refleja sin maquillar. **No** se declara nada 'bueno/malo': solo se acumula durante el torneo.

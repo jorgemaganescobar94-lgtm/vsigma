@@ -500,7 +500,7 @@
         "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
       }
     ],
-    "card_profiles_source": "perfiles de tarjetas auto cargados (517 jug / 48 eq / 4 pos)"
+    "card_profiles_source": "perfiles de tarjetas auto cargados (515 jug / 48 eq / 4 pos)"
   },
   {
     "fixture": {
@@ -1001,7 +1001,7 @@
         "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
       }
     ],
-    "card_profiles_source": "perfiles de tarjetas auto cargados (517 jug / 48 eq / 4 pos)"
+    "card_profiles_source": "perfiles de tarjetas auto cargados (515 jug / 48 eq / 4 pos)"
   },
   {
     "fixture": {
@@ -1497,6 +1497,6 @@
         "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
       }
     ],
-    "card_profiles_source": "perfiles de tarjetas auto cargados (517 jug / 48 eq / 4 pos)"
+    "card_profiles_source": "perfiles de tarjetas auto cargados (515 jug / 48 eq / 4 pos)"
   }
 ]
