@@ -65,28 +65,28 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1539012,162037,M. Tillman,USA,2384,MID,M. Ghorbal,0.0389,0.0394,neutro,0.0005,0,media-baja,baja
 1539012,1138,T. Weah,USA,2384,FWD,M. Ghorbal,0.193,0.1839,bajar,0.0091,0,media-baja,baja
 1539012,19549,A. Robinson,USA,2384,DEF,M. Ghorbal,0.3099,0.3092,neutro,0.0007,0,media-baja,baja
-1489411,2507,M. Almirón,Paraguay,2380,MID,C. Turpin,0.1715,0.1823,subir,0.0108,0,media-baja,media
-1489411,6168,O. Alderete,Paraguay,2380,DEF,C. Turpin,0.1683,0.1654,neutro,0.0029,0,media-baja,baja
-1489411,35808,G. Velázquez,Paraguay,2380,DEF,C. Turpin,0.1836,0.1832,neutro,0.0004,0,media-baja,baja
-1489411,70747,J. Enciso,Paraguay,2380,FWD,C. Turpin,0.0604,0.0563,bajar,0.0041,0,media-baja,media
-1489411,2499,J. Alonso,Paraguay,2380,DEF,C. Turpin,0.1991,0.1957,neutro,0.0034,0,media-baja,baja
-1489411,2500,F. Balbuena,Paraguay,2380,DEF,C. Turpin,0.1998,0.1994,neutro,0.0004,0,media-baja,baja
-1489411,195107,D. Bobadilla,Paraguay,2380,MID,C. Turpin,0.183,0.1853,neutro,0.0023,0,media-baja,baja
-1489411,6236,A. Cubas,Paraguay,2380,MID,C. Turpin,0.3368,0.3461,subir,0.0093,0,media-baja,baja
-1489411,2502,G. Gómez,Paraguay,2380,DEF,C. Turpin,0.0777,0.0775,neutro,0.0002,0,media-baja,baja
-1489411,278370,D. Gómez,Paraguay,2380,MID,C. Turpin,0.0948,0.1007,subir,0.0059,1,media-baja,media
-1489411,196298,R. Sosa,Paraguay,2380,FWD,C. Turpin,0.2128,0.2059,bajar,0.0069,0,media-baja,baja
-1489411,312459,N. Velupillay,Australia,20,FWD,C. Turpin,0.0487,0.0471,bajar,0.0016,0,media-baja,baja
-1489411,6904,C. Metcalfe,Australia,20,FWD,C. Turpin,0.1878,0.1817,bajar,0.0061,0,media-baja,baja
-1489411,20457,C. Burgess,Australia,20,DEF,C. Turpin,0.0659,0.0658,neutro,0.0001,0,media-baja,baja
-1489411,7050,A. O&apos;Neill,Australia,20,MID,C. Turpin,0.2718,0.2793,subir,0.0075,0,media-baja,baja
-1489411,2742,M. Degenek,Australia,20,DEF,C. Turpin,0.0755,0.0753,neutro,0.0002,0,media-baja,baja
-1489411,6870,P. Izzo,Australia,20,GK,C. Turpin,0.0862,0.086,neutro,0.0002,0,baja,baja
-1489411,348568,A. Circati,Australia,20,DEF,C. Turpin,0.0866,0.0864,neutro,0.0002,0,media-baja,baja
-1489411,198352,M. Touré,Australia,20,FWD,C. Turpin,0.228,0.2206,bajar,0.0074,0,media-baja,baja
-1489411,337587,J. Bos,Australia,20,MID,C. Turpin,0.0909,0.0934,subir,0.0025,0,media-baja,baja
-1489411,338014,N. Irankunda,Australia,20,FWD,C. Turpin,0.3654,0.3481,bajar,0.0173,0,media-baja,baja
-1489411,33847,J. Geria,Australia,20,DEF,C. Turpin,0.3321,0.3314,neutro,0.0007,0,media-baja,baja
+1489411,2507,M. Almirón,Paraguay,2380,MID,C. Turpin,0.1715,0.1826,subir,0.0111,0,media-baja,media
+1489411,6168,O. Alderete,Paraguay,2380,DEF,C. Turpin,0.1683,0.1658,neutro,0.0025,0,media-baja,media
+1489411,35808,G. Velázquez,Paraguay,2380,DEF,C. Turpin,0.1836,0.1836,neutro,0.0,0,media-baja,media
+1489411,70747,J. Enciso,Paraguay,2380,FWD,C. Turpin,0.0604,0.0565,bajar,0.0039,0,media-baja,media
+1489411,2499,J. Alonso,Paraguay,2380,DEF,C. Turpin,0.1991,0.1961,neutro,0.003,0,media-baja,media
+1489411,2500,F. Balbuena,Paraguay,2380,DEF,C. Turpin,0.1998,0.1998,neutro,0.0,0,media-baja,media
+1489411,195107,D. Bobadilla,Paraguay,2380,MID,C. Turpin,0.183,0.1857,neutro,0.0027,0,media-baja,media
+1489411,6236,A. Cubas,Paraguay,2380,MID,C. Turpin,0.3368,0.3469,subir,0.0101,0,media-baja,media
+1489411,2502,G. Gómez,Paraguay,2380,DEF,C. Turpin,0.0777,0.0777,neutro,0.0,0,media-baja,media
+1489411,278370,D. Gómez,Paraguay,2380,MID,C. Turpin,0.0948,0.101,subir,0.0062,1,media-baja,media
+1489411,196298,R. Sosa,Paraguay,2380,FWD,C. Turpin,0.2128,0.2064,bajar,0.0064,0,media-baja,media
+1489411,312459,N. Velupillay,Australia,20,FWD,C. Turpin,0.0487,0.0464,bajar,0.0023,0,media-baja,media
+1489411,6904,C. Metcalfe,Australia,20,FWD,C. Turpin,0.1878,0.1761,bajar,0.0117,0,media-baja,media
+1489411,20457,C. Burgess,Australia,20,DEF,C. Turpin,0.0659,0.0647,neutro,0.0012,0,media-baja,media
+1489411,7050,A. O&apos;Neill,Australia,20,MID,C. Turpin,0.2718,0.2711,neutro,0.0007,0,media-baja,media
+1489411,2742,M. Degenek,Australia,20,DEF,C. Turpin,0.0755,0.0742,neutro,0.0013,0,media-baja,media
+1489411,6870,P. Izzo,Australia,20,GK,C. Turpin,0.0862,0.0847,neutro,0.0015,0,media-baja,baja
+1489411,348568,A. Circati,Australia,20,DEF,C. Turpin,0.0866,0.0851,neutro,0.0015,0,media-baja,media
+1489411,198352,M. Touré,Australia,20,FWD,C. Turpin,0.228,0.2172,bajar,0.0108,0,media-baja,media
+1489411,337587,J. Bos,Australia,20,MID,C. Turpin,0.0909,0.0907,neutro,0.0002,0,media-baja,media
+1489411,338014,N. Irankunda,Australia,20,FWD,C. Turpin,0.3654,0.3353,bajar,0.0301,0,media-baja,media
+1489411,33847,J. Geria,Australia,20,DEF,C. Turpin,0.3321,0.3263,neutro,0.0058,0,media-baja,media
 1539011,199578,Z. Suzuki,Japan,12,GK,"Iván Barton, El Salvador",0.0694,0.0679,bajar,0.0015,0,media-baja,baja
 1539011,33165,A. Seko,Japan,12,DEF,"Iván Barton, El Salvador",0.0805,0.0776,bajar,0.0029,0,media-baja,media
 1539011,38114,K. Itakura,Japan,12,DEF,"Iván Barton, El Salvador",0.2412,0.2325,bajar,0.0087,0,media-baja,media
@@ -199,14 +199,14 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489417,182219,Álex Baena,Spain,9,MID,I. Elfath,0.3911,0.396,neutro,0.0049,1,media-baja,media
 1489413,15304,Vózinha,Cape Verde Islands,1533,GK,F. Letexier,0.0575,0.0575,neutro,0.0,0,baja,baja
 1489413,332056,Wagner Pina,Cape Verde Islands,1533,DEF,F. Letexier,0.2495,0.2495,neutro,0.0,1,media-baja,baja
-1489413,41608,Diney Borges,Cape Verde Islands,1533,DEF,F. Letexier,0.2314,0.2314,neutro,0.0,0,media-baja,baja
+1489413,41608,Diney Borges,Cape Verde Islands,1533,DEF,F. Letexier,0.2314,0.2395,subir,0.0081,0,media-baja,media
 1489413,69260,Pico,Cape Verde Islands,1533,DEF,F. Letexier,0.1144,0.1144,neutro,0.0,0,media-baja,baja
-1489413,142016,João Paulo,Cape Verde Islands,1533,DEF,F. Letexier,0.066,0.066,neutro,0.0,0,media-baja,baja
-1489413,96512,Kevin Pina,Cape Verde Islands,1533,MID,F. Letexier,0.2362,0.2397,neutro,0.0035,0,media-baja,baja
-1489413,37435,Deroy Duarte,Cape Verde Islands,1533,MID,F. Letexier,0.0629,0.0648,subir,0.0019,0,media-baja,baja
-1489413,50270,Ryan Mendes,Cape Verde Islands,1533,MID,F. Letexier,0.2978,0.3023,neutro,0.0045,0,media-baja,baja
+1489413,142016,João Paulo,Cape Verde Islands,1533,MID,F. Letexier,0.066,0.068,subir,0.002,0,media-baja,baja
+1489413,96512,Kevin Pina,Cape Verde Islands,1533,MID,F. Letexier,0.2362,0.2516,subir,0.0154,0,media-baja,media
+1489413,37435,Deroy Duarte,Cape Verde Islands,1533,MID,F. Letexier,0.0629,0.0638,neutro,0.0009,0,media-baja,baja
+1489413,50270,Ryan Mendes,Cape Verde Islands,1533,MID,F. Letexier,0.2978,0.2963,neutro,0.0015,0,media-baja,media
 1489413,50745,Jamiro Monteiro,Cape Verde Islands,1533,MID,F. Letexier,0.1056,0.1051,neutro,0.0005,0,media-baja,media
-1489413,113580,Willy Semedo,Cape Verde Islands,1533,MID,F. Letexier,0.1793,0.182,neutro,0.0027,0,media-baja,baja
+1489413,113580,Willy Semedo,Cape Verde Islands,1533,FWD,F. Letexier,0.1793,0.1712,bajar,0.0081,0,media-baja,baja
 1489413,343287,D. Livramento,Cape Verde Islands,1533,FWD,F. Letexier,0.2545,0.243,bajar,0.0115,0,media-baja,baja
 1489413,44411,Mohammed Al Owais,Saudi Arabia,23,GK,F. Letexier,0.0787,0.0801,neutro,0.0014,0,baja,baja
 1489413,134995,Nawaf Boushal,Saudi Arabia,23,DEF,F. Letexier,0.1012,0.1015,neutro,0.0003,0,media-baja,baja
@@ -219,17 +219,17 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489413,44340,Salem Al Dawsari,Saudi Arabia,23,MID,F. Letexier,0.3381,0.366,subir,0.0279,0,media-baja,media
 1489413,44324,Feras Al Brikan,Saudi Arabia,23,FWD,F. Letexier,0.0804,0.0822,subir,0.0018,1,media-baja,media
 1489413,2639,Sultan Mandash,Saudi Arabia,23,MID,F. Letexier,0.176,0.1817,subir,0.0057,0,media-baja,baja
-1489414,2654,Mohamed Hany,Egypt,32,DEF,S. Marciniak,0.1393,0.1421,neutro,0.0028,0,media-baja,baja
-1489414,190575,Marwan Attia,Egypt,32,MID,S. Marciniak,0.32,0.3359,subir,0.0159,0,media-baja,baja
-1489414,81573,Omar Marmoush,Egypt,32,FWD,S. Marciniak,0.0395,0.0385,bajar,0.001,0,media-baja,baja
-1489414,16813,Hamdi Fathy,Egypt,32,DEF,S. Marciniak,0.2646,0.2659,neutro,0.0013,0,media-baja,baja
+1489414,2654,Mohamed Hany,Egypt,32,DEF,S. Marciniak,0.1393,0.14,neutro,0.0007,0,media-baja,baja
+1489414,190575,Marwan Attia,Egypt,32,MID,S. Marciniak,0.32,0.3311,subir,0.0111,0,media-baja,baja
+1489414,81573,Omar Marmoush,Egypt,32,MID,S. Marciniak,0.0395,0.0401,neutro,0.0006,0,media-baja,media
+1489414,16813,Hamdi Fathy,Egypt,32,MID,S. Marciniak,0.2646,0.2685,neutro,0.0039,0,media-baja,media
 1489414,17269,Emam Ashour,Egypt,32,MID,S. Marciniak,0.067,0.068,neutro,0.001,0,media-baja,media
-1489414,16804,Yasser Ibrahim,Egypt,32,DEF,S. Marciniak,0.1962,0.2001,neutro,0.0039,1,media-baja,baja
+1489414,16804,Yasser Ibrahim,Egypt,32,DEF,S. Marciniak,0.1962,0.2069,subir,0.0107,1,media-baja,media
 1489414,269174,Mostafa Shobeir,Egypt,32,GK,S. Marciniak,0.0915,0.0933,neutro,0.0018,0,baja,baja
 1489414,2649,Ahmed Abou El Fotouh,Egypt,32,DEF,S. Marciniak,0.2425,0.2473,neutro,0.0048,0,media-baja,baja
 1489414,16841,Mohanad Lasheen,Egypt,32,MID,S. Marciniak,0.1126,0.1221,subir,0.0095,1,media-baja,media
-1489414,306,Mohamed Salah,Egypt,32,MID,S. Marciniak,0.0428,0.0434,neutro,0.0006,0,media-baja,media
-1489414,2664,Trézéguet,Egypt,32,MID,S. Marciniak,0.3885,0.402,subir,0.0135,0,media-baja,baja
+1489414,306,Mohamed Salah,Egypt,32,FWD,S. Marciniak,0.0428,0.0409,bajar,0.0019,0,media-baja,media
+1489414,2664,Trézéguet,Egypt,32,FWD,S. Marciniak,0.3885,0.3787,bajar,0.0098,0,media-baja,baja
 1489414,42315,M. Taremi,Iran,22,FWD,S. Marciniak,0.121,0.1155,bajar,0.0055,0,media-baja,media
 1489414,2699,S. Ghoddos,Iran,22,MID,S. Marciniak,0.1001,0.1016,neutro,0.0015,0,media-baja,media
 1489414,29704,S. Khalilzadeh,Iran,22,DEF,S. Marciniak,0.5768,0.5882,neutro,0.0114,1,media-baja,baja
@@ -296,17 +296,17 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489421,123530,Mahmoud Al Mardi,Jordan,1548,FWD,"Istvan Kovacs, Romania",0.1359,0.1293,bajar,0.0066,0,media-baja,media
 1489421,53902,Ehsan Haddad,Jordan,1548,MID,"Istvan Kovacs, Romania",0.138,0.1417,subir,0.0037,0,media-baja,media
 1489421,102538,M. Abualnadi,Jordan,1548,DEF,"Istvan Kovacs, Romania",0.138,0.1375,neutro,0.0005,0,media-baja,media
-1489421,6067,T. Almada,Argentina,26,MID,"Istvan Kovacs, Romania",0.1278,0.127,neutro,0.0008,0,media-baja,media
+1489421,6067,T. Almada,Argentina,26,MID,"Istvan Kovacs, Romania",0.1278,0.1245,bajar,0.0033,0,media-baja,media
 1489421,19599,E. Martínez,Argentina,26,GK,"Istvan Kovacs, Romania",0.0358,0.035,bajar,0.0008,0,media-baja,baja
 1489421,30776,C. Romero,Argentina,26,DEF,"Istvan Kovacs, Romania",0.0384,0.037,bajar,0.0014,0,media-baja,media
 1489421,6716,A. Mac Allister,Argentina,26,MID,"Istvan Kovacs, Romania",0.3386,0.3416,neutro,0.003,0,media-baja,media
 1489421,5996,E. Fernández,Argentina,26,MID,"Istvan Kovacs, Romania",0.0486,0.049,neutro,0.0004,0,media-baja,media
-1489421,2467,Lisandro Martínez,Argentina,26,DEF,"Istvan Kovacs, Romania",0.2288,0.224,bajar,0.0048,0,media-baja,media
+1489421,2467,Lisandro Martínez,Argentina,26,DEF,"Istvan Kovacs, Romania",0.2288,0.2206,bajar,0.0082,0,media-baja,media
 1489421,154,L. Messi,Argentina,26,FWD,"Istvan Kovacs, Romania",0.0456,0.0417,bajar,0.0039,0,media-baja,media
 1489421,217,Lautaro Martínez,Argentina,26,FWD,"Istvan Kovacs, Romania",0.0489,0.0447,bajar,0.0042,0,media-baja,media
-1489421,6503,N. Molina,Argentina,26,DEF,"Istvan Kovacs, Romania",0.3858,0.3777,bajar,0.0081,0,media-baja,media
+1489421,6503,N. Molina,Argentina,26,DEF,"Istvan Kovacs, Romania",0.3858,0.3719,bajar,0.0139,0,media-baja,media
 1489421,624,N. Otamendi,Argentina,26,DEF,"Istvan Kovacs, Romania",0.2976,0.2914,bajar,0.0062,0,media-baja,media
-1489421,6231,F. Medina,Argentina,26,DEF,"Istvan Kovacs, Romania",0.1582,0.1549,bajar,0.0033,0,media-baja,media
+1489421,6231,F. Medina,Argentina,26,DEF,"Istvan Kovacs, Romania",0.1582,0.1604,neutro,0.0022,0,media-baja,media
 1489420,1305,D. Livaković,Croatia,3,GK,"Drew Fischer, Canada",0.1079,0.1056,bajar,0.0023,0,media-baja,baja
 1489420,125171,J. Stanišić,Croatia,3,DEF,"Drew Fischer, Canada",0.1673,0.1638,bajar,0.0035,0,media-baja,media
 1489420,14701,J. Šutalo,Croatia,3,DEF,"Drew Fischer, Canada",0.0238,0.0233,bajar,0.0005,0,media-baja,media
@@ -315,18 +315,18 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489420,754,L. Modrić,Croatia,3,MID,"Drew Fischer, Canada",0.1186,0.1238,subir,0.0052,0,media-baja,media
 1489420,2291,M. Kovačić,Croatia,3,MID,"Drew Fischer, Canada",0.161,0.1568,bajar,0.0042,0,media-baja,media
 1489420,842,N. Vlašić,Croatia,3,MID,"Drew Fischer, Canada",0.0733,0.0714,bajar,0.0019,0,media-baja,media
-1489420,348205,P. Sučić,Croatia,3,MID,"Drew Fischer, Canada",0.2457,0.2479,neutro,0.0022,0,media-baja,media
+1489420,348205,P. Sučić,Croatia,3,MID,"Drew Fischer, Canada",0.2457,0.2565,subir,0.0108,0,media-baja,media
 1489420,295026,M. Baturina,Croatia,3,MID,"Drew Fischer, Canada",0.1282,0.1249,bajar,0.0033,0,media-baja,media
 1489420,46746,A. Budimir,Croatia,3,FWD,"Drew Fischer, Canada",0.2767,0.2529,bajar,0.0238,0,media-baja,media
 1489420,480108,B. Asare,Ghana,1504,GK,"Drew Fischer, Canada",0.0986,0.0965,bajar,0.0021,0,media-baja,baja
-1489420,191240,M. Senaya,Ghana,1504,DEF,"Drew Fischer, Canada",0.1292,0.1245,bajar,0.0047,0,media-baja,media
+1489420,191240,M. Senaya,Ghana,1504,DEF,"Drew Fischer, Canada",0.1292,0.122,bajar,0.0072,0,media-baja,media
 1489420,369425,J. Adjetey,Ghana,1504,DEF,"Drew Fischer, Canada",0.2734,0.2636,bajar,0.0098,0,media-baja,media
 1489420,25341,D. Luckassen,Ghana,1504,DEF,"Drew Fischer, Canada",0.1292,0.1245,bajar,0.0047,0,media-baja,media
 1489420,7578,G. Mensah,Ghana,1504,DEF,"Drew Fischer, Canada",0.1836,0.1797,bajar,0.0039,0,media-baja,media
 1489420,49,T. Partey,Ghana,1504,MID,"Drew Fischer, Canada",0.2414,0.2436,neutro,0.0022,0,media-baja,media
 1489420,21010,E. Owusu,Ghana,1504,MID,"Drew Fischer, Canada",0.0465,0.0462,neutro,0.0003,0,media-baja,media
-1489420,3608,K. Sibo,Ghana,1504,MID,"Drew Fischer, Canada",0.0797,0.0792,neutro,0.0005,0,media-baja,media
-1489420,199837,K. Sulemana,Ghana,1504,MID,"Drew Fischer, Canada",0.08,0.0795,neutro,0.0005,0,media-baja,media
+1489420,3608,K. Sibo,Ghana,1504,MID,"Drew Fischer, Canada",0.0797,0.0776,bajar,0.0021,0,media-baja,media
+1489420,199837,K. Sulemana,Ghana,1504,FWD,"Drew Fischer, Canada",0.08,0.0747,bajar,0.0053,0,media-baja,media
 1489420,3428,J. Ayew,Ghana,1504,FWD,"Drew Fischer, Canada",0.1672,0.1528,bajar,0.0144,0,media-baja,media
 1489420,19281,A. Semenyo,Ghana,1504,MID,"Drew Fischer, Canada",0.1639,0.1654,neutro,0.0015,0,media-baja,media
 1489422,2968,O. Mosquera,Panama,11,GK,"Abdulrahman Al-Jassim, Qatar",0.1425,0.1422,neutro,0.0003,0,baja,baja
@@ -358,14 +358,14 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489419,2483,D. Machado,Colombia,8,DEF,"Alireza Faghani, Australia",0.3184,0.3177,neutro,0.0007,0,media-baja,baja
 1489419,324034,G. Puerta,Colombia,8,MID,"Alireza Faghani, Australia",0.3494,0.3591,subir,0.0097,1,media-baja,baja
 1489419,2490,J. Lerma,Colombia,8,MID,"Alireza Faghani, Australia",0.3427,0.3642,subir,0.0215,0,media-baja,media
-1489419,13708,J. Arias,Colombia,8,MID,"Alireza Faghani, Australia",0.0576,0.0572,neutro,0.0004,0,media-baja,media
+1489419,13708,J. Arias,Colombia,8,MID,"Alireza Faghani, Australia",0.0576,0.0592,subir,0.0016,0,media-baja,media
 1489419,517,J. Rodríguez,Colombia,8,FWD,"Alireza Faghani, Australia",0.114,0.1063,bajar,0.0077,0,media-baja,media
-1489419,24810,J. Córdoba,Colombia,8,FWD,"Alireza Faghani, Australia",0.3164,0.3015,bajar,0.0149,0,media-baja,baja
-1489419,2489,L. Díaz,Colombia,8,FWD,"Alireza Faghani, Australia",0.0462,0.0447,bajar,0.0015,0,media-baja,baja
+1489419,24810,J. Córdoba,Colombia,8,FWD,"Alireza Faghani, Australia",0.3164,0.2951,bajar,0.0213,0,media-baja,media
+1489419,2489,L. Díaz,Colombia,8,FWD,"Alireza Faghani, Australia",0.0462,0.044,bajar,0.0022,0,media-baja,baja
 1489419,369,Diogo Costa,Portugal,27,GK,"Alireza Faghani, Australia",0.0212,0.0208,neutro,0.0004,0,baja,baja
 1489419,855,João Cancelo,Portugal,27,DEF,"Alireza Faghani, Australia",0.3002,0.2838,bajar,0.0164,0,media-baja,media
 1489419,567,Rúben Dias,Portugal,27,DEF,"Alireza Faghani, Australia",0.195,0.1911,neutro,0.0039,0,media-baja,baja
-1489419,336671,Renato Veiga,Portugal,27,DEF,"Alireza Faghani, Australia",0.158,0.1549,neutro,0.0031,0,media-baja,baja
+1489419,336671,Renato Veiga,Portugal,27,DEF,"Alireza Faghani, Australia",0.158,0.1604,neutro,0.0024,0,media-baja,media
 1489419,263482,Nuno Mendes,Portugal,27,DEF,"Alireza Faghani, Australia",0.0718,0.0679,bajar,0.0039,0,media-baja,media
 1489419,2676,Rúben Neves,Portugal,27,MID,"Alireza Faghani, Australia",0.267,0.2657,neutro,0.0013,0,media-baja,baja
 1489419,128384,Vitinha,Portugal,27,MID,"Alireza Faghani, Australia",0.0756,0.0737,bajar,0.0019,0,media-baja,media
@@ -662,7 +662,7 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1567309,369,Diogo Costa,Portugal,27,GK,E. Eskas,0.0192,0.0188,neutro,0.0004,0,baja,baja
 1567309,855,João Cancelo,Portugal,27,DEF,E. Eskas,0.2872,0.2715,bajar,0.0157,0,media-baja,media
 1567309,567,Rúben Dias,Portugal,27,DEF,E. Eskas,0.1859,0.1822,neutro,0.0037,1,media-baja,baja
-1567309,336671,Renato Veiga,Portugal,27,DEF,E. Eskas,0.1488,0.1459,neutro,0.0029,0,media-baja,baja
+1567309,336671,Renato Veiga,Portugal,27,DEF,E. Eskas,0.1488,0.1511,neutro,0.0023,0,media-baja,media
 1567309,263482,Nuno Mendes,Portugal,27,DEF,E. Eskas,0.0674,0.0637,bajar,0.0037,0,media-baja,media
 1567309,335051,João Neves,Portugal,27,MID,E. Eskas,0.1796,0.1787,neutro,0.0009,0,media-baja,baja
 1567309,128384,Vitinha,Portugal,27,MID,E. Eskas,0.071,0.0692,bajar,0.0018,0,media-baja,media
@@ -678,6 +678,72 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1567309,754,L. Modrić,Croatia,3,MID,E. Eskas,0.1287,0.1368,subir,0.0081,1,media-baja,media
 1567309,2291,M. Kovačić,Croatia,3,MID,E. Eskas,0.1743,0.173,neutro,0.0013,0,media-baja,media
 1567309,842,N. Vlašić,Croatia,3,MID,E. Eskas,0.0797,0.0791,neutro,0.0006,0,media-baja,media
-1567309,348205,P. Sučić,Croatia,3,MID,E. Eskas,0.2649,0.2723,subir,0.0074,0,media-baja,media
+1567309,348205,P. Sučić,Croatia,3,MID,E. Eskas,0.2649,0.2815,subir,0.0166,0,media-baja,media
 1567309,295026,M. Baturina,Croatia,3,MID,E. Eskas,0.1391,0.1381,neutro,0.001,0,media-baja,media
 1567309,46746,A. Budimir,Croatia,3,FWD,E. Eskas,0.2977,0.2777,bajar,0.02,0,media-baja,media
+1565178,7050,A. O&apos;Neill,Australia,20,MID,G. Tejera,0.27,0.2687,neutro,0.0013,0,media-baja,baja
+1565178,348568,A. Circati,Australia,20,DEF,G. Tejera,0.0618,0.0606,neutro,0.0012,0,media-baja,baja
+1565178,6904,C. Metcalfe,Australia,20,FWD,G. Tejera,0.1778,0.1663,bajar,0.0115,0,media-baja,baja
+1565178,337587,J. Bos,Australia,20,MID,G. Tejera,0.0649,0.0646,neutro,0.0003,0,media-baja,baja
+1565178,20079,H. Souttar,Australia,20,DEF,G. Tejera,0.1056,0.1035,neutro,0.0021,0,media-baja,baja
+1565178,426480,L. Herrington,Australia,20,DEF,G. Tejera,0.1382,0.1355,neutro,0.0027,0,media-baja,baja
+1565178,198352,M. Touré,Australia,20,FWD,G. Tejera,0.2162,0.2054,bajar,0.0108,0,media-baja,baja
+1565178,6808,J. Italiano,Australia,20,,G. Tejera,0.0944,0.0925,neutro,0.0019,0,baja,baja
+1565178,353883,P. Beach,Australia,20,GK,G. Tejera,0.1056,0.1019,bajar,0.0037,0,media-baja,baja
+1565178,20457,C. Burgess,Australia,20,DEF,G. Tejera,0.0469,0.046,neutro,0.0009,0,media-baja,baja
+1565178,338014,N. Irankunda,Australia,20,FWD,G. Tejera,0.3631,0.3323,bajar,0.0308,0,media-baja,media
+1565178,2654,Mohamed Hany,Egypt,32,DEF,G. Tejera,0.1188,0.1188,neutro,0.0,0,media-baja,baja
+1565178,269174,Mostafa Shobeir,Egypt,32,GK,G. Tejera,0.0778,0.079,neutro,0.0012,0,baja,baja
+1565178,17269,Emam Ashour,Egypt,32,MID,G. Tejera,0.0568,0.0574,neutro,0.0006,0,media-baja,media
+1565178,16841,Mohanad Lasheen,Egypt,32,MID,G. Tejera,0.0958,0.1035,subir,0.0077,0,media-baja,media
+1565178,190575,Marwan Attia,Egypt,32,MID,G. Tejera,0.2776,0.286,subir,0.0084,0,media-baja,baja
+1565178,81573,Omar Marmoush,Egypt,32,MID,G. Tejera,0.0334,0.0337,neutro,0.0003,0,media-baja,media
+1565178,16813,Hamdi Fathy,Egypt,32,MID,G. Tejera,0.2283,0.2306,neutro,0.0023,0,media-baja,media
+1565178,16804,Yasser Ibrahim,Egypt,32,DEF,G. Tejera,0.1682,0.1767,subir,0.0085,1,media-baja,media
+1565178,2649,Ahmed Abou El Fotouh,Egypt,32,DEF,G. Tejera,0.2088,0.212,neutro,0.0032,0,media-baja,baja
+1565178,2664,Trézéguet,Egypt,32,FWD,G. Tejera,0.3395,0.3294,bajar,0.0101,0,media-baja,baja
+1565178,306,Mohamed Salah,Egypt,32,FWD,G. Tejera,0.0362,0.0344,bajar,0.0018,0,media-baja,media
+1565179,19599,E. Martínez,Argentina,26,GK,D. Fischer,0.0409,0.0408,neutro,0.0001,0,baja,baja
+1565179,6067,T. Almada,Argentina,26,MID,D. Fischer,0.145,0.1439,neutro,0.0011,0,media-baja,media
+1565179,30776,C. Romero,Argentina,26,DEF,D. Fischer,0.0439,0.0431,neutro,0.0008,0,media-baja,baja
+1565179,6716,A. Mac Allister,Argentina,26,MID,D. Fischer,0.3477,0.3573,subir,0.0096,0,media-baja,baja
+1565179,5996,E. Fernández,Argentina,26,MID,D. Fischer,0.0554,0.0569,subir,0.0015,0,media-baja,baja
+1565179,217,Lautaro Martínez,Argentina,26,FWD,D. Fischer,0.0558,0.052,bajar,0.0038,0,media-baja,media
+1565179,2467,Lisandro Martínez,Argentina,26,DEF,D. Fischer,0.2376,0.2335,neutro,0.0041,0,media-baja,baja
+1565179,624,N. Otamendi,Argentina,26,DEF,D. Fischer,0.3085,0.3078,neutro,0.0007,0,media-baja,baja
+1565179,529,N. Tagliafico,Argentina,26,DEF,D. Fischer,0.2197,0.2192,neutro,0.0005,0,media-baja,baja
+1565179,1578,G. Lo Celso,Argentina,26,MID,D. Fischer,0.3863,0.3912,neutro,0.0049,0,media-baja,baja
+1565179,154,L. Messi,Argentina,26,FWD,D. Fischer,0.0521,0.0486,bajar,0.0035,0,media-baja,media
+1565179,96512,Kevin Pina,Cape Verde Islands,1533,MID,D. Fischer,0.2405,0.2556,subir,0.0151,1,media-baja,media
+1565179,69260,Pico,Cape Verde Islands,1533,DEF,D. Fischer,0.1171,0.1168,neutro,0.0003,0,media-baja,baja
+1565179,41608,Diney Borges,Cape Verde Islands,1533,DEF,D. Fischer,0.2366,0.2443,subir,0.0077,0,media-baja,media
+1565179,50270,Ryan Mendes,Cape Verde Islands,1533,MID,D. Fischer,0.3041,0.3019,neutro,0.0022,0,media-baja,media
+1565179,15304,Vózinha,Cape Verde Islands,1533,GK,D. Fischer,0.0599,0.0598,neutro,0.0001,0,baja,baja
+1565179,265556,Telmo Arcanjo,Cape Verde Islands,1533,MID,D. Fischer,0.1872,0.1896,neutro,0.0024,0,media-baja,baja
+1565179,22139,S. Moreira,Cape Verde Islands,1533,DEF,D. Fischer,0.0625,0.0624,neutro,0.0001,0,media-baja,baja
+1565179,343287,D. Livramento,Cape Verde Islands,1533,FWD,D. Fischer,0.2595,0.2472,bajar,0.0123,0,media-baja,baja
+1565179,308689,S. Lopes Cabral,Cape Verde Islands,1533,DEF,D. Fischer,0.2946,0.3042,subir,0.0096,0,media-baja,media
+1565179,50745,Jamiro Monteiro,Cape Verde Islands,1533,MID,D. Fischer,0.11,0.1092,neutro,0.0008,0,media-baja,media
+1565179,37436,L. Duarte,Cape Verde Islands,1533,MID,D. Fischer,0.08,0.081,neutro,0.001,0,media-baja,baja
+1567310,2489,L. Díaz,Colombia,8,FWD,C. Turpin,0.0431,0.0412,bajar,0.0019,0,media-baja,media
+1567310,168,D. Sánchez,Colombia,8,DEF,C. Turpin,0.0576,0.0576,neutro,0.0,0,media-baja,media
+1567310,517,J. Rodríguez,Colombia,8,FWD,C. Turpin,0.1063,0.0994,bajar,0.0069,0,media-baja,media
+1567310,2482,C. Vargas,Colombia,8,GK,C. Turpin,0.0456,0.0456,neutro,0.0,0,media-baja,baja
+1567310,64268,J. Mojica,Colombia,8,DEF,C. Turpin,0.0472,0.0472,neutro,0.0,0,media-baja,media
+1567310,2490,J. Lerma,Colombia,8,MID,C. Turpin,0.3222,0.3431,subir,0.0209,0,media-baja,media
+1567310,13708,J. Arias,Colombia,8,MID,C. Turpin,0.0537,0.0553,subir,0.0016,1,media-baja,media
+1567310,1929,J. Lucumí,Colombia,8,DEF,C. Turpin,0.0655,0.0655,neutro,0.0,0,media-baja,media
+1567310,47237,L. Suárez,Colombia,8,FWD,C. Turpin,0.2975,0.2841,bajar,0.0134,0,media-baja,media
+1567310,13736,D. Muñoz,Colombia,8,DEF,C. Turpin,0.3162,0.3115,neutro,0.0047,0,media-baja,media
+1567310,324034,G. Puerta,Colombia,8,MID,C. Turpin,0.329,0.3389,subir,0.0099,0,media-baja,media
+1567310,369425,J. Adjetey,Ghana,1504,DEF,C. Turpin,0.3081,0.3035,neutro,0.0046,0,media-baja,media
+1567310,3428,J. Ayew,Ghana,1504,FWD,C. Turpin,0.1903,0.1779,bajar,0.0124,0,media-baja,media
+1567310,49,T. Partey,Ghana,1504,MID,C. Turpin,0.2729,0.2811,subir,0.0082,0,media-baja,media
+1567310,19281,A. Semenyo,Ghana,1504,MID,C. Turpin,0.1866,0.1922,subir,0.0056,0,media-baja,media
+1567310,7578,G. Mensah,Ghana,1504,DEF,C. Turpin,0.2087,0.2087,neutro,0.0,0,media-baja,media
+1567310,475575,Caleb Marfo Yirenkyi,Ghana,1504,MID,C. Turpin,0.0913,0.094,subir,0.0027,1,media-baja,media
+1567310,3608,K. Sibo,Ghana,1504,MID,C. Turpin,0.0913,0.0908,neutro,0.0005,0,media-baja,media
+1567310,199837,K. Sulemana,Ghana,1504,FWD,C. Turpin,0.0917,0.0876,bajar,0.0041,0,media-baja,media
+1567310,410016,P. Adu,Ghana,1504,FWD,C. Turpin,0.1078,0.1046,bajar,0.0032,0,media-baja,media
+1567310,191240,M. Senaya,Ghana,1504,DEF,C. Turpin,0.1475,0.1423,bajar,0.0052,0,media-baja,media
+1567310,21010,E. Owusu,Ghana,1504,MID,C. Turpin,0.0534,0.0542,neutro,0.0008,0,media-baja,media

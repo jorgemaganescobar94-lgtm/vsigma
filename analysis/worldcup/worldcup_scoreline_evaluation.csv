@@ -55,3 +55,6 @@ fixture_id,home,away,lambda_home,lambda_away,source_lambda,actual_score,in_top1,
 1567311,Spain,Austria,2.11,0.65,mx,3-0,0,1,1,0.0991,3,2-0,H,H,media,media
 1567309,Portugal,Croatia,1.68,0.84,mx,2-1,0,0,1,0.0954,4,1-0,H,H,media,media
 1567312,Switzerland,Algeria,1.23,1.17,mx,2-0,0,0,0,0.0686,7,1-1,H,H,media,media
+1565178,Australia,Egypt,1.39,1.02,mx,1-1,1,1,1,0.1273,1,1-1,D,H,media,media
+1565179,Argentina,Cape Verde Islands,2.44,0.55,mx,3-2,0,0,0,0.0184,15,2-0,D,H,media,media
+1567310,Colombia,Ghana,2.47,0.53,mx,1-0,0,1,1,0.123,3,2-0,H,H,media,media

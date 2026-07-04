@@ -20,20 +20,20 @@
 ==============================================================================
 PLAYER PROPS — track record (SOMBRA · heurístico · NO validado · sin mercado)
 ==============================================================================
-generated_at_utc: 2026-07-03T10:40:41+00:00
-partidos liquidados=31 | filas jugador-prop=682 | umbral graduación N>=30
+generated_at_utc: 2026-07-04T10:14:06+00:00
+partidos liquidados=34 | filas jugador-prop=748 | umbral graduación N>=30
 
   prop          n  base%  logloss   brier    ECE  ll_base br_base  mejora?
   ------------------------------------------------------------------------
-  goal        682     8%   0.2476  0.0679  0.021   0.2839  0.0754       sí
-  card        682     9%   0.3361  0.0926  0.085   0.3012  0.0814       no
-  shot_on     682    20%   0.5431  0.1498  0.094   0.5036  0.1614       no
-  assist      682     6%   0.2417  0.0609  0.032   0.2313  0.0578       no
+  goal        748     8%   0.2513  0.0685  0.020   0.2825  0.0749       sí
+  card        748     9%   0.3332  0.0915  0.087   0.2953  0.0793       no
+  shot_on     748    20%   0.5408  0.1523  0.094   0.5030  0.1611       no
+  assist      748     6%   0.2427  0.0612  0.033   0.2311  0.0577       no
 
   (baseline = tasa base del prop; 'mejora?'=sí solo si bate logloss Y brier Y ECE<=0.08.)
   (muestra pequeña -> orientativo; la graduación exige N>=30 partidos.)
 
   TARJETA — sesgo CRUDO vs CORREGIDO (deflación de p_card; gol/asistencia NO se tocan):
-    crudo:     media pred 16.32%  vs real  8.94%  -> sesgo +7.37pp
-    corregido: media pred 12.24%  vs real  8.94%  -> sesgo +3.29pp  (factor 0.7498; |sesgo| baja ✓)
+    crudo:     media pred 16.29%  vs real  8.69%  -> sesgo +7.60pp
+    corregido: media pred 11.91%  vs real  8.69%  -> sesgo +3.22pp  (factor 0.7311; |sesgo| baja ✓)
     (la corrección solo afecta el VALOR MOSTRADO; el log queda en CRUDO. Muestra pequeña -> orientativo, NO es victoria.)
