@@ -190,6 +190,18 @@ jobs:
           echo "----- mx-vs-L3 marker -----"
           cat analysis/worldcup/worldcup_mx_vs_l3_scorecard.txt || true
 
+      # ---- MARCADOR FULL-DATA vs ENSEMBLE (read-only): liquida el A/B aislado (fd_* vs ens_*
+      #      congelados por build_worldcup_cards en worldcup_full_data_ab_log.csv) contra el resultado
+      #      real del predictions_log. Solo partidos settled con fd_*/ens_* no nulos. NO recalcula
+      #      predicciones, NO toca el modelo, NO mercado. Es la base honesta para decidir si revertir
+      #      FULL_DATA_LIVE. SOFT: un fallo NUNCA bloquea el briefing.
+      - name: Marcador full-data vs ensemble (read-only; A/B de FULL_DATA_LIVE)
+        continue-on-error: true
+        run: |
+          python analysis/worldcup/worldcup_full_data_ab_scorer.py
+          echo "----- full-data vs ensemble marker -----"
+          cat analysis/worldcup/worldcup_full_data_ab_scorecard.txt || true
+
       # ---- CORRECCIÓN DE NIVEL auto-aprendida (córners/tiros MOSTRADOS): estima el sesgo desde los
       #      partidos liquidados (encogido ×N/(N+25), cap) y guarda el estado. Se re-estima sola cada
       #      día = auto-aprendizaje. SOLO afecta el valor MOSTRADO de la ficha (display, en memoria);
@@ -666,6 +678,9 @@ jobs:
                    analysis/worldcup/worldcup_prediction_accuracy.csv \
                    analysis/worldcup/worldcup_scoreline_distribution.csv \
                    analysis/worldcup/worldcup_scoreline_evaluation.csv \
+                   analysis/worldcup/worldcup_full_data_ab_log.csv \
+                   analysis/worldcup/worldcup_full_data_ab_scorecard.txt \
+                   analysis/worldcup/worldcup_full_data_ab_scorecard.csv \
                    analysis/worldcup/worldcup_trackrecord_panel.md; do
             [ -f "$p" ] && git add "$p" || true
           done
