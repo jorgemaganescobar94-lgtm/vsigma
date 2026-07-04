@@ -3,7 +3,7 @@
 ## Summary
 - sources_reviewed: 1
 - quarantine_rows: 0
-- accepted_rows: 10
+- accepted_rows: 1
 - queue_items: 0
 - priority_counts: none
 - failure_class_counts: none
@@ -11,7 +11,7 @@
 - production_change: NO
 
 ## Source / Reason Rows
-- sportsmole | reason=OK | class=ACCEPTED_SIGNAL | priority=NONE | rows=10 | accepted=10 | quarantined=0 | q=0.982
+- sportsmole | reason=OK | class=ACCEPTED_SIGNAL | priority=NONE | rows=1 | accepted=1 | quarantined=0 | q=1.000
 
 ## Guardrails
 - This ledger is diagnostic only.

@@ -41,19 +41,25 @@
 - missing_data_counts: unknown=1
 
 ## Official / Probable Lineups
-- data/processed/today/2026-07-04/vsigma_probable_lineup_consensus.csv: rows=1
-- data/processed/today/2026-07-04/vsigma_probable_lineup_accuracy_ledger.csv: rows=10; probable_status=IMPORTED=10
+- data/processed/today/2026-07-04/official_lineup_sources.csv: rows=72
+- data/processed/today/2026-07-04/probable_lineup_sources_autonomous.csv: rows=1
+- data/processed/today/2026-07-04/vsigma_probable_lineup_consensus.csv: rows=17
+- data/processed/today/2026-07-04/vsigma_probable_lineup_accuracy_ledger.csv: rows=1; probable_status=IMPORTED=1
 - data/processed/today/2026-07-04/vsigma_probable_lineup_extraction_quality_ledger.csv: rows=1
 - data/processed/governance/official_lineup_sources.csv: rows=72
-- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=12; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=10
+- data/processed/governance/probable_lineup_sources_autonomous.csv: rows=1
+- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=13; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=11
 - data/processed/governance/vsigma_probable_lineup_extraction_quality_ledger.csv: rows=1
 
 ## Quarantine / Learning-Only / Import Status
-- data/processed/today/2026-07-04/vsigma_probable_lineup_consensus.csv: rows=1
-- data/processed/today/2026-07-04/vsigma_probable_lineup_accuracy_ledger.csv: rows=10; probable_status=IMPORTED=10
+- data/processed/today/2026-07-04/official_lineup_sources.csv: rows=72
+- data/processed/today/2026-07-04/probable_lineup_sources_autonomous.csv: rows=1
+- data/processed/today/2026-07-04/vsigma_probable_lineup_consensus.csv: rows=17
+- data/processed/today/2026-07-04/vsigma_probable_lineup_accuracy_ledger.csv: rows=1; probable_status=IMPORTED=1
 - data/processed/today/2026-07-04/vsigma_probable_lineup_extraction_quality_ledger.csv: rows=1
 - data/processed/governance/official_lineup_sources.csv: rows=72
-- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=12; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=10
+- data/processed/governance/probable_lineup_sources_autonomous.csv: rows=1
+- data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=13; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=11
 - data/processed/governance/vsigma_probable_lineup_extraction_quality_ledger.csv: rows=1
 
 ## Source Reliability Governor
