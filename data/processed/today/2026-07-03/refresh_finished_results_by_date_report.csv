@@ -1,0 +1,3 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-07-03,OK,API-SPORTS_DIRECT,204.0,,,,,,
+2026-07-03T18:00:00+01:00,MATCHED,,,1494200.0,FT,Sirius,Mjallby AIF,4.0,4.0

@@ -1,0 +1,16 @@
+vSIGMA TODAY BASELINE VS CANDIDATE V2 VS CANDIDATE V4 RESULTS
+
+CANDIDATE_V4_NO_BET
+reason: candidate v4 top empty
+
+Mode summary
+                                           mode  pick_count  settled_rows  pending_rows  unmatched_rows  wins  losses  pushes  voids  profit_units roi_percent
+                              BASELINE_OFFICIAL           1             1             0               0     1       0       0      0           0.7        70.0
+                            SHADOW_CANDIDATE_V2           1             1             0               0     1       0       0      0           0.7        70.0
+SHADOW_CANDIDATE_V4_O25_LOW_CONVERSION_FIREWALL           0             0             0               0     0       0       0      0           0.0        <NA>
+
+Candidate v4 adjusted/downgraded top picks: 0
+
+Pick result comparison
+    comparison_status  fixture_id               fixture      league  baseline_rank  candidate_v2_rank candidate_v4_rank baseline_market candidate_v2_market candidate_v4_market candidate_v4_original_market candidate_v4_firewall_decision baseline_result candidate_v2_result candidate_v4_result  baseline_profit_units  candidate_v2_profit_units candidate_v4_profit_units
+BASELINE+CANDIDATE_V2     1494200 Sirius vs Mjallby AIF Allsvenskan              1                  1              <NA>        OVER_2_5            OVER_2_5                <NA>                         <NA>                           <NA>             WIN                 WIN                <NA>                    0.7                        0.7                      <NA>
