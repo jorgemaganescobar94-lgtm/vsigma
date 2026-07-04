@@ -57,7 +57,7 @@ def test_clean_group_all_sections_and_headline():
     assert "⚽ Goles: esperados 1.9–0.8" in txt and "Over 2.5" in txt and "BTTS" in txt
     assert "Marcador más probable:" in txt
     assert "👥 Jugadores" in txt and "se confirma ~1h antes" in txt
-    assert "Gol: H. Kane 38%" in txt
+    assert "confirmado en vivo): H. Kane 38%" in txt   # gol PROMOVIDO (histórico + en vivo)
     assert "📈 Córners/tiros —" in txt and "confianza:" in txt
     assert "📋 Contexto de grupo (información, no es la predicción):" in txt
     # honesty + attribution ONCE at the end

@@ -4,16 +4,16 @@
 total por partido (suma de ambos equipos) · predicción congelada al saque (anti-hindsight) vs real liquidado · sin mercado
   stat         N    MAE   RMSE sesgo_crudo sesgo_corr  μpred  μreal       lectura
   -------------------------------------------------------------------------------
-  córners     54   3.06   4.01       -1.95      -0.62    7.1    9.1   infraestima
-  tiros       54   7.38   8.93       -6.27      -1.98   18.6   24.9   infraestima
+  córners     54   3.06   4.01       -1.95      -0.30    7.1    9.1   infraestima
+  tiros       54   7.38   8.93       -6.27      -0.98   18.6   24.9   infraestima
   tarjetas    54   1.94   2.22       +1.59          —    4.1    2.6    sobrestima
 
   corrección de nivel (córners/tiros MOSTRADOS): |sesgo| crudo -> corregido
-    córners    |1.95| -> |0.62| (corr +1.33) baja ✓
-    tiros      |6.27| -> |1.98| (corr +4.28) baja ✓
+    córners    |1.95| -> |0.30| (corr +1.64) baja ✓
+    tiros      |6.27| -> |0.98| (corr +5.29) baja ✓
     (tarjetas EXCLUIDAS de la corrección; muestra pequeña -> orientativo, no es victoria)
   córners O/U (línea modelo): acc 44% sobre n=54 (real Over=63%)
 
 HONESTIDAD: córners = BAJA confianza · tarjetas = RUIDO -> error alto ESPERABLE, no se maquilla. tiros = orientativo. NO se declara nada 'bueno/malo'; solo se acumula.
 
-generated_at_utc: 2026-07-04T10:13:21+00:00
+generated_at_utc: 2026-07-04T13:39:48+00:00

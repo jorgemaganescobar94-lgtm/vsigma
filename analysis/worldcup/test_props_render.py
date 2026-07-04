@@ -45,8 +45,9 @@ def test_validados_goal_assist_no_disclaimer():
     txt = "\n".join(lines)
     assert "Validado en backtest" in txt
     assert "no fiarse" not in txt and "SIN VALIDAR" not in txt          # validados: sin descargo
-    # gol top by p_goal: Mbappe 30 · Dembele 12 · Kante 3 (exact logged numbers)
-    assert "Gol: Mbappe 30%" in txt and "Dembele 12%" in txt
+    # gol top by p_goal: Mbappe 30 · Dembele 12 · Kante 3 (exact logged numbers) — carried on the
+    # PROMOTED label (doble confirmación: histórico + en vivo)
+    assert "confirmado en vivo): Mbappe 30%" in txt and "Dembele 12%" in txt
     # asistencia top by p_assist: Dembele 22 · Mbappe 18 · Kante 5  (NEW line)
     assert "Asistencia: Dembele 22%" in txt and "Mbappe 18%" in txt
     assert "se sigue confirmando en vivo" in txt                        # WC neutral/knockout note
@@ -107,6 +108,31 @@ def test_validados_header_marks_provisional_xi():
     head = F.props_lines(df, name_fn=str)[0]
     assert F.VALID_LABEL in head and "provisional" in head and "alineación oficial" in head
     assert "confirmado" not in head
+
+
+def test_goal_label_promoted_double_confirmation():
+    """GOL: etiqueta promovida a doble confirmación (histórico + en vivo); asistencia/tarjeta/tiros
+    NO tocados (no confirman en vivo aún)."""
+    lines = F.props_lines(_df3(), name_fn=str)
+    gol = next(l for l in lines if "Mbappe 30%" in l)
+    assert "validado histórico + confirmado en vivo" in gol      # doble confirmación en la línea de gol
+    # el resto de props NO llevan el marcador de confirmación en vivo
+    asst = next(l for l in lines if l.strip().startswith("Asistencia:"))
+    card = next(l for l in lines if l.strip().startswith("Tarjeta:"))
+    tiros = next(l for l in lines if "Tiros (orden" in l)
+    for other in (asst, card, tiros):
+        assert "confirmado en vivo" not in other
+
+
+def test_goal_label_reversible(monkeypatch):
+    """GOAL_LIVE_CONFIRMED=False (via GOAL_LABEL plano) -> etiqueta llana 'Gol:', Δ0 para el resto."""
+    monkeypatch.setattr(F, "GOAL_LABEL", "  Gol: ")
+    lines = F.props_lines(_df3(), name_fn=str)
+    txt = "\n".join(lines)
+    assert "Gol: Mbappe 30%" in txt
+    assert "confirmado en vivo): Mbappe" not in txt
+    # asistencia/tarjeta intactas
+    assert "Asistencia: Dembele 22%" in txt and "Tarjeta: Kante 35%" in txt
 
 
 def test_validados_header_marks_confirmed_xi():

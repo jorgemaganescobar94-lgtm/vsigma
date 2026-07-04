@@ -157,6 +157,14 @@ PROPS_LOG = OUT_DIR / "worldcup_player_props_log.csv"
 # experimental: todo lo que se muestra está validado, los tiros solo como ORDEN (no probabilidad).
 VALID_LABEL = "📊 Validado en backtest histórico (probabilístico):"
 VALID_NOTE = "  (Mundial neutral/eliminatoria: se sigue confirmando en vivo.)"
+# GOL — DOBLE CONFIRMACIÓN (2026-07-04): graduó en el backtest histórico Y confirma EN VIVO (N=34
+# partidos liquidados: bate la tasa base en logloss+brier con ECE<=0.08, el umbral pre-registrado).
+# Su etiqueta refleja la doble confirmación y suelta la cautela "se sigue confirmando". Probabilístico,
+# sin certeza. Asistencia/tarjeta/tiros NO confirman en vivo aún -> NO se tocan. REVERSIBLE:
+# GOAL_LIVE_CONFIRMED=False restaura la etiqueta llana "Gol:" (Δ0 para el resto de props).
+GOAL_LIVE_CONFIRMED = True
+GOAL_LABEL = ("  Gol ✓ (validado histórico + confirmado en vivo): " if GOAL_LIVE_CONFIRMED
+              else "  Gol: ")
 CARD_CAP_P = 0.45                # display cap: card % above this is shown as "45%+"
 CARD_CAP_LABEL = "45%+"
 CARD_NOTE = ("  (Tarjeta: los % por encima de 45% se muestran como \"45%+\" — calibración "
@@ -229,7 +237,7 @@ def props_lines(sub, name_fn=str):
         valid = []
         gl = _top("p_goal", 3)
         if gl:
-            valid.append("  Gol: " + " · ".join(
+            valid.append(GOAL_LABEL + " · ".join(
                 f"{name_fn(rr['player'])} {float(rr['p_goal']) * 100:.0f}%" for _, rr in gl))
         asst = _top("p_assist", 3)
         if asst:

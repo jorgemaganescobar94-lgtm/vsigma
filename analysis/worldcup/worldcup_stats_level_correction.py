@@ -51,7 +51,12 @@ except Exception:
 # ----- governance flag: True -> correction applied; False -> exact revert (Δ=0) -----
 STATS_LEVEL_CORRECTION = True
 
-K_SHRINK = 25.0                       # partial-pooling constant: corr = bias × N/(N+K)
+# partial-pooling constant: corr = bias × N/(N+K). Lowered 25->10 on 2026-07-04 (N=54, sesgo estable
+# y significativo confirmado por el backfill): K=25 dejaba residual (tiros ~-2, córners ~-0.6). K=10 lo
+# elige validate_stats_shrink_k.py por walk-forward anti-look-ahead: mínimo |residual| SIN overshoot
+# (μ_corr no sobrepasa μ_real out-of-sample) con suelo de regularización K>=10 (shrink<=~0.85, robusto a
+# un cambio de régimen en octavos). REVERSIBLE: K_SHRINK=25.0 restaura el estado previo. Tarjetas EXCLUIDAS.
+K_SHRINK = 10.0
 STATS = ("corners", "shots")          # ONLY shown stats; cards EXCLUDED (noise/hidden)
 CAP_TOTAL = {"corners": 4.0, "shots": 8.0}   # cap on the additive TOTAL correction (sanity bound)
 STATE_CSV = HERE / "worldcup_stats_level_correction.csv"
