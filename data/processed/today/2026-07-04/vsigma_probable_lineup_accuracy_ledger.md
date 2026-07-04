@@ -1,18 +1,18 @@
 # vSIGMA Probable XI Accuracy Ledger - 2026-07-04
 
 ## Summary
-- rows_reviewed: 1
+- rows_reviewed: 0
 - evaluated_rows: 0
-- pending_rows: 1
+- pending_rows: 0
 - learning_only_rows: 0
-- promoted_rows: 1
-- grade_counts: NO_OFFICIAL_LINEUP=1
+- promoted_rows: 0
+- grade_counts: none
 - source_grade_summary: none
 - auto_apply: NO
 - production_change: NO
 
 ## Rows
-- Halmstad vs Vasteras SK FK | side=home | source=sportsmole | probable_status=IMPORTED | status=NO_OFFICIAL_LINEUP | grade=NO_OFFICIAL_LINEUP | match=0/0 | probable=11
+- none. No accepted or learning-only probable lineup rows after quarantine.
 
 ## Guardrails
 - Accuracy ledger is learning-only and never applies production changes.

@@ -2,9 +2,9 @@
 
 ## Summary
 - fixtures_reviewed: 17
-- api_readiness_gates: LOW_COVERAGE_NO_BET=12; WAIT_LINEUPS_OR_LIVE_ONLY=4; EARLY_WATCH_MORE_DATA_REQUIRED=1
-- lineup_coverage: NONE=16; PROBABLE_LOW=1
-- probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=16; PROBABLE_XI_CONSENSUS_LOW=1
+- api_readiness_gates: LOW_COVERAGE_NO_BET=12; WAIT_LINEUPS_OR_LIVE_ONLY=5
+- lineup_coverage: NONE=17
+- probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=17
 - recent_stats_coverage: NONE=12; FULL=5
 - injuries_coverage: NONE=15; FULL=2
 - standings_coverage: NONE=12; FULL=5
@@ -13,7 +13,7 @@
 - production_change: NO
 
 ## Fixture Coverage
-- Halmstad vs Vasteras SK FK | gate=EARLY_WATCH_MORE_DATA_REQUIRED | score=88.0 | lineups=PROBABLE_LOW | probable=PROBABLE_XI_CONSENSUS_LOW | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=PROBABLE_LOW
+- Halmstad vs Vasteras SK FK | gate=WAIT_LINEUPS_OR_LIVE_ONLY | score=80.0 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=NONE
 - Degerfors IF vs Malmo FF | gate=WAIT_LINEUPS_OR_LIVE_ONLY | score=80.0 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=FULL | odds=FULL | missing=lineup_coverage=NONE
 - Jeonbuk Motors vs Gangwon FC | gate=WAIT_LINEUPS_OR_LIVE_ONLY | score=65.0 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=NONE; injuries_coverage=NONE
 - Daejeon Citizen vs Bucheon FC 1995 | gate=WAIT_LINEUPS_OR_LIVE_ONLY | score=65.0 | lineups=NONE | probable=NO_PROBABLE_LINEUP_SOURCES | stats=FULL | injuries=NONE | odds=FULL | missing=lineup_coverage=NONE; injuries_coverage=NONE

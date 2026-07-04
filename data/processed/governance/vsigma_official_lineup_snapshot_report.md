@@ -2,15 +2,15 @@
 
 ## Summary
 - rows_processed: 17
-- eligible_fixtures: 16
-- api_calls_made: 16
+- eligible_fixtures: 17
+- api_calls_made: 17
 - cache_hits: 0
-- lineup_rows_written: 72
-- full_lineup_rows: 61
+- lineup_rows_written: 82
+- full_lineup_rows: 65
 - no_lineup_rows: 0
 - api_errors: 0
 - key_status: API_SPORTS
-- api_status_counts: NO_LINEUPS_RETURNED=16
+- api_status_counts: OK=5; NO_LINEUPS_RETURNED=12
 - auto_apply: NO
 - production_change: NO
 
@@ -87,6 +87,14 @@
 - HJK Helsinki vs KuPS | side=away | players=9 | formation=4-4-2 | status=OK
 - Mariehamn vs Inter Turku | side=home | players=10 | formation=4-3-3 | status=OK
 - Mariehamn vs Inter Turku | side=away | players=8 | formation=4-3-3 | status=OK
+- Halmstad vs Vasteras SK FK | side=home | players=11 | formation=4-2-3-1 | status=OK
+- Halmstad vs Vasteras SK FK | side=away | players=11 | formation=5-4-1 | status=OK
+- Degerfors IF vs Malmo FF | side=home | players=10 | formation=4-4-2 | status=OK
+- Degerfors IF vs Malmo FF | side=away | players=11 | formation=3-4-2-1 | status=OK
+- Criciuma vs Sport Recife | side=home | players=8 | formation=3-4-3 | status=OK
+- Criciuma vs Sport Recife | side=away | players=9 | formation=3-4-3 | status=OK
+- Londrina vs CRB | side=home | players=5 | formation=4-2-3-1 | status=OK
+- Londrina vs CRB | side=away | players=11 | formation=4-1-4-1 | status=OK
 
 ## Guardrails
 - Official lineup importer only reads API/player snapshots; it never fabricates players.
