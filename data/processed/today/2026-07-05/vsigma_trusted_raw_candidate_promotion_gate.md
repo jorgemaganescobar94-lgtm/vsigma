@@ -1,18 +1,239 @@
 # vSIGMA Trusted Raw Candidate Promotion Gate - 2026-07-05
 
 ## Summary
-- rows_reviewed: 2
+- rows_reviewed: 223
 - promoted_rows: 0
 - blocked_rows: 0
-- quarantine_rows: 2
-- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=2
+- quarantine_rows: 207
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=207; NOT_TRUSTED_NO_PROMOTION=16
 - next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 - auto_apply: NO
 - production_change: NO
 
 ## Rows
-- Degerfors IF vs Malmo FF | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_match_stat_forecasts.csv
-- Jeonbuk Motors vs Gangwon FC | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_match_stat_forecasts.csv
+- Degerfors IF vs Malmo FF | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Jeonbuk Motors vs Gangwon FC | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- FC Tulsa vs Sacramento Republic | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Koper vs LNZ Cherkasy | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Gimcheon Sangmu FC vs Jeju United FC | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Gwangju FC vs Ulsan Hyundai FC | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- FC Seoul vs Incheon United | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Gimhae City vs Seoul E-Land FC | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Gimpo Citizen vs Asan Mugunghwa | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Gyeongnam FC vs Cheonan City | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Jeonnam Dragons vs Busan I Park | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Qingdao Jonoon vs Chengdu Better City | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Dalian Yingbo B vs Qingdao Red Lions | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Tai'an Tiankuang vs Changchun Xidu | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Smorgon vs Volna | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Ilves II vs EPS | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- FC WIL 1900 vs Grasshoppers | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Union St. Gilloise vs FCSB | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Bergisch Gladbach vs SSVg Velbert | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Guangxi Hengchen vs Dalian Huayi | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Meizhou Kejia vs Changchun Yatai | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Nanjing City vs Dongguan United | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Guizhou Zhucheng vs Jiangxi Liansheng | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Langfang Glory City vs Yichun Grand Tiger | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Bayreuth vs SpVgg Greuther Fürth | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Shanghai Shenhua vs Hangzhou Greentown | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- IFK Goteborg vs AIK Stockholm | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Kalmar FF vs Orgryte IS | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- TPV vs JJK | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Nõmme Kalju II vs Elva | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Flora II vs FCI Levadia II | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Narva U21 vs Tulevik | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/today/2026-07-05/matches.csv
+- JK Tabasalu vs Parnu JK Vaprus U21 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/today/2026-07-05/matches.csv
+- Rīgas FS II vs Super Nova 2 | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Valmiera / BSS vs Leevon / PPK | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Osipovichy vs Molodechno-DYuSSh 4 | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Nosta vs Orenburg II | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Aarhus vs Motherwell | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Kästorf vs Germania Halberstadt | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Masters FC vs Kamuzu Barracks | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Chitipa United vs Silver Strikers | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Be Forward Wanderers vs MAFCO | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Mitundu Baptist vs Ekhaya | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Red Lions vs CIVO United | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- RKAV Volendam vs FC Volendam | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Grobiņa vs Tukums | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Rops vs PKKU | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Legion vs Tallinna Kalev II | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Luki-Energiya vs Cherepovets | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Pobeda Nizhniy Novgorod vs Khimik Dzerzhinsk | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- VIFK W vs IF Gnistan | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Sidama Bunna vs Mebrat Hayl | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Brazlândia FC SAF U20 vs Planaltina U20 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/today/2026-07-05/matches.csv
+- Novorizontino U20 vs Velo Clube U20 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/today/2026-07-05/matches.csv
+- Porto Football U20 vs Palmeiras U20 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/today/2026-07-05/matches.csv
+- Referencia U20 vs RB Bragantino U20 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/today/2026-07-05/matches.csv
+- União Suzano U20 vs Mirassol U20 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/today/2026-07-05/matches.csv
+- Coimbra vs Valeriodoce | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Rapid Vienna vs Pardubice | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Independente SP vs Tupa | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- José Bonifácio vs Manthiqueira | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Sporting Paulinense vs Sao Carlos | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Deportivo Santani vs General Caballero | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Dynamos vs Agama | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Hardrock vs CAPS United | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Highlanders vs Simba Bhora | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Manica Diamonds vs Kariba | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Triangle United vs Herentals | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Polisi Tanzania vs Mbeya Kwanza | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Tanzania Prisons vs Mbeya City | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Dynamo Makhachkala II vs Shahter Taganrog | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Uberaba vs Mamoré | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- BOA vs Caldense | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Rosenborg vs Molde | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- ODD Ballklubb vs Haugesund | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Berazategui vs Puerto Nuevo | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- 07 Vestur vs HB Torshavn | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Ypiranga-RS vs Paysandu | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Aktobe vs Zhetysu | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Atyrau vs Kaspiy | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Lida vs Uni Minsk | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Tubarao vs Nação | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Metropolitano vs Caravaggio | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Corinthians U20 vs Sertãozinho U20 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/today/2026-07-05/matches.csv
+- Metalist 1925 Kharkiv vs BSC Young Boys | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- TSV Berg vs SSV Ulm 1846 | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Vélez Sársfield Res. vs Racing Club Res. | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/today/2026-07-05/matches.csv
+- IF Elfsborg vs Hammarby FF | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- New England II vs Philadelphia Union II | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Belshina vs Baranovichi | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Kaisar vs Irtysh | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Ordabasy vs Ulytau | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Spartak Moscow 2 vs Murom | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Torpedo Vladimir vs Kosmos Dolgoprudny | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Rubin Kazan 2 vs Krylya Sovetov II | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- VPS II vs Huima / Urho | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Serbia U19 vs Croatia U19 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/today/2026-07-05/matches.csv
+- Ukraine U19 vs Italy U19 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/today/2026-07-05/matches.csv
+- Wieczysta Kraków vs Slavia Praha | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- FT Braunschweig vs Eintracht Braunschweig | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Dacia-Buiucani vs Sireți | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Widzew Łódź vs New England Revolution | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- MTE 1904 vs Beşiktaş | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Chabab Atl. Khenifra vs Amal Tiznit | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Chabab Mohammédia vs KAC Kenitra | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- El Massira vs Raja Beni Mellal | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Riadi Salmi vs Chabab Ben Guerir | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Moghreb Tetouan vs Stade Marocain | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Mouloudia Oujda vs Wydad Fès | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Union Sportive Boujaad vs Racing de Casablanca | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Widad Témara vs USM Oujda | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Rapid Vienna vs Rapid | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- MP vs Haka | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Šiauliai vs FK Zalgiris Vilnius | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Argentino Quilmes vs Talleres Remedios | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Sportivo Italiano vs Real Pilar | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Sacachispas vs Juventud Unida | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Victoriano Arenas vs Deportivo Paraguayo | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Boston Legacy W vs Bay FC W | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/today/2026-07-05/matches.csv
+- Tammeka vs Laagri | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Municipal Salamanca vs Concón National | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Dinamo Vologda vs Yenisey II | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Beltinci vs Mura | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Sint-Denijs Sport vs Lokeren-Temse | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Zenit vs Gimnasia L.P. | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Omonia Nicosia vs Hapoel Beer Sheva | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Santiago Wanderers vs Universidad de Chile | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- D. La Serena vs Antofagasta | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Supra du Quebec vs Forge | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Alvarado vs Germinal de Rawson | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Gramadense vs Bagé | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Zimbru vs CSF Bălți | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Fenix vs Sportivo Huracan | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Boca Juniors Res. vs River Plate Res. | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/today/2026-07-05/matches.csv
+- Danubio vs Juventud | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Difaa EL Jadida vs Renaissance Berkane | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- FAR Rabat vs CR Khemis Zemamra | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- FUS Rabat vs Yacoub El Mansour | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Hassania Agadir vs Kawkab Marrakech | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Ittihad Tanger vs CODM Meknès | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Maghreb Fès vs Olympique Dcheïra | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Olympique Safi vs Raja Casablanca | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Wydad AC vs UTS Rabat | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Torpedo Zhodino vs FC Isloch Minsk R. | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- CA Estudiantes vs Racing Cordoba | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Deportivo Madryn vs Colon Santa Fe | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Defensores Unidos vs Argentino de Merlo | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- San Martín Burzaco vs Liniers | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Atletico Atlas vs Claypole | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Canuelas vs Central Cordoba | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Lujan vs Fénix | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- General Lamadrid vs El Porvenir | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Macara vs LDU de Quito | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Atenas vs Fundacion Amigos | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Douglas Haig vs Sportivo Las Parejas | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Gimnasia Concepción vs 9 de Julio Rafaela | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Guillermo Brown vs Circulo Deportivo | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Olimpo Bahia Blanca vs Villa Mitre | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Sol de Mayo vs Kimberley Mar del Plata | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Ottawa Rapid W vs Calgary Wild W | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Vitoria Da Conquista vs Fluminense De Feira | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Grapiuna Itabuna vs Leonico | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Jacobina vs Feira FC | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- SSA vs Barreiras FC | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Redenção FC vs Camaçari | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Provincial vs Nautico Hacoaj | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Everton La Plata vs Belgrano Zarate | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Macva vs Mladost Lucani | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Sportivo Carapeguá vs SOL DE America | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- 12 de Junio VH vs Resistencia | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Chaco For Ever vs Acassuso | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Ferro Carril Oeste vs San Telmo | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Patronato vs San Martin Tucuman | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Boca Unidos vs Sarmiento Resistencia | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Cipolletti vs Argentino Monte Maíz | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Defensores de Belgrano VR vs Atletico Escobar | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Atletico Mitre vs All Boys | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Midland vs Gimnasia Jujuy | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- San Martin S.J. vs Chacarita Juniors | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- St. Croix vs Edgewater Castle | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Real San Joaquín vs Trasandino | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Gimnasia Chivilcoy vs El Linqueño | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- San Martin Formosa vs Juventud Antoniana | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- San Martín Mendoza vs Deportivo Rincon | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Sportivo Belgrano vs Independiente De Chivilcoy | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Tucuman Central vs Sol de América | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Cobresal vs Cobreloa | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- D. Puerto Montt vs Huachipato | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Nublense vs Curico Unido | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Universidad de Concepcion vs Rangers de Talca | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Central Norte vs San Miguel | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Deportivo Maipu vs Agropecuario | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Project 51O vs Davis Legacy | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Eagle FC vs West Chester United | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Colchagua vs Lota Schwager | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Deportes Santa Cruz vs A. Italiano | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Ceres vs Brescia Clube | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Academia Anzoátegui vs Petare FC | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/today/2026-07-05/matches.csv
+- Club Atletico Barinas vs Atletico el Vigia FC | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Atletico Avila FC vs Marítimo | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Fundación Lara Deportiva vs Caracas FC | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Dinamo de Puerto La Cruz vs Mineros de Guyana | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Real Frontera vs Zamora FC | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Deportivo Lara vs Trujillanos FC | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Monagas SC vs Bolívar | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Urena SC vs Rayo Zuliano | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Yaracuyanos FC vs Aragua FC | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Tacuarembo vs Cerrito | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Brazil vs Norway | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Houston Dynamo FC II vs Minnesota United II | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Chicago Red Stars W vs Utah Royals W | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/today/2026-07-05/matches.csv
+- Virginia Marauders vs Bethesda SC | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Ballard vs Tacoma Stars | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- West Seattle Junction vs Oly Town | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Halifax Tides W vs AFC Toronto W | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- City SC vs Redlands | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Union Espanola vs O'Higgins | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- FC Cincinnati II vs New York RB II | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Connecticut FC vs Carolina Core | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Pacific FC vs HFX Wanderers FC | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- Delfin SC vs Emelec | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
+- San Francisco City vs Academica | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/today/2026-07-05/matches.csv
+- North Carolina II vs Asheville City | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/today/2026-07-05/matches.csv
 
 ## Guardrails
 - Promotion gate can only restrict or route to normal scoring; it never creates picks or stake permission.

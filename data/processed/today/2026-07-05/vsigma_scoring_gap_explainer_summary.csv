@@ -1,2 +1,2 @@
 target_date,generated_at,rows_reviewed,missing_scored_rows,no_data_blocked_rows,not_trusted_rows,promoted_rows,gap_status_counts,next_action,auto_apply,production_change
-2026-07-05,2026-07-05T10:55:03+01:00,2,2,0,0,0,MISSING_SCORED_ROW=2,Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.,NO,NO
+2026-07-05,2026-07-05T19:34:14+01:00,223,207,0,16,0,MISSING_SCORED_ROW=207; NOT_TRUSTED_SKIPPED=16,Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.,NO,NO

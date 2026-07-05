@@ -42,13 +42,15 @@
 - missing_data_counts: unknown=2
 
 ## Official / Probable Lineups
-- data/processed/today/2026-07-05/vsigma_probable_lineup_consensus.csv: rows=2
-- data/processed/governance/official_lineup_sources.csv: rows=82
+- data/processed/today/2026-07-05/official_lineup_sources.csv: rows=88
+- data/processed/today/2026-07-05/vsigma_probable_lineup_consensus.csv: rows=8
+- data/processed/governance/official_lineup_sources.csv: rows=88
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=13; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=11
 
 ## Quarantine / Learning-Only / Import Status
-- data/processed/today/2026-07-05/vsigma_probable_lineup_consensus.csv: rows=2
-- data/processed/governance/official_lineup_sources.csv: rows=82
+- data/processed/today/2026-07-05/official_lineup_sources.csv: rows=88
+- data/processed/today/2026-07-05/vsigma_probable_lineup_consensus.csv: rows=8
+- data/processed/governance/official_lineup_sources.csv: rows=88
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=13; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=11
 
 ## Source Reliability Governor
@@ -107,64 +109,64 @@
 - overall_status: REAL_CANDIDATES_AVAILABLE
 - root_cause: real shortlist or bets rows exist
 - root_scored_same_day_rows: 0
-- real_shortlist_rows: 2
-- real_bet_rows: 0
-- proxy_rows: 6
+- real_shortlist_rows: 4
+- real_bet_rows: 2
+- proxy_rows: 4
 - next_action: Use normal gates; do not rely on proxy bridge unless real rows fail downstream.
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 2661
-- accepted_rows: 2
-- rejected_rows: 184
+- files_scanned: 2700
+- accepted_rows: 223
+- rejected_rows: 274
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
-- rows_reviewed: 2
-- trusted_rows: 2
-- quarantine_rows: 0
+- rows_reviewed: 223
+- trusted_rows: 207
+- quarantine_rows: 16
 - blocked_rows: 0
-- trust_status_counts: TRUSTED_RAW_SOURCE=2
+- trust_status_counts: TRUSTED_RAW_SOURCE=207; QUARANTINE_REVIEW=16
 - next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
 
 ## Trusted Raw Candidate Promotion Gate
-- rows_reviewed: 2
+- rows_reviewed: 223
 - promoted_rows: 0
 - blocked_rows: 0
-- quarantine_rows: 2
-- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=2
+- quarantine_rows: 207
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=207; NOT_TRUSTED_NO_PROMOTION=16
 - next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 
 ## Scoring Gap Explainer
-- rows_reviewed: 2
-- missing_scored_rows: 2
+- rows_reviewed: 223
+- missing_scored_rows: 207
 - no_data_blocked_rows: 0
-- not_trusted_rows: 0
+- not_trusted_rows: 16
 - promoted_rows: 0
-- gap_status_counts: MISSING_SCORED_ROW=2
+- gap_status_counts: MISSING_SCORED_ROW=207; NOT_TRUSTED_SKIPPED=16
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 
 ## Trusted Raw Scoring Queue
-- queue_rows: 2
-- priority_counts: P1_TRUSTED_MISSING_SCORING=2
-- scoring_needed_counts: YES=2
+- queue_rows: 207
+- priority_counts: P1_TRUSTED_MISSING_SCORING=177; P2_LOW_COVERAGE_SCORING=30
+- scoring_needed_counts: YES=207
 - source_gap_status: MISSING_SCORED_ROW
 - next_action: Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.
 
 ## Queue-to-Enrichment Dry Run Planner
-- rows_planned: 2
-- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=2
-- risk_label_counts: MEDIUM=2
-- priority_counts: P1_TRUSTED_MISSING_SCORING=2
-- total_estimated_call_units: 10
+- rows_planned: 207
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=207
+- risk_label_counts: MEDIUM=176; HIGH_LOW_COVERAGE=30; HIGH_CONTEXT_VOLATILITY=1
+- priority_counts: P1_TRUSTED_MISSING_SCORING=177; P2_LOW_COVERAGE_SCORING=30
+- total_estimated_call_units: 1028
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
 
 ## Enrichment Cost & Approval Gate
 - approval_gate_status: WAIT_FOR_MANUAL_APPROVAL
-- rows_planned: 2
-- estimated_call_units: 10
+- rows_planned: 207
+- estimated_call_units: 1028
 - approval_required: YES
 - max_allowed_without_manual_approval: 0
 - api_calls_allowed: NO
