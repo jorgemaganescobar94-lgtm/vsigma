@@ -101,3 +101,93 @@ def explain_l3_clean(home, away, s_home, s_away, neutral,
             bits.append(f"{team} sin {absent.strip()}")
     tail = f". Bajas clave: {' · '.join(bits)}." if bits else "."
     return parts[0] + " — " + parts[1] + tail
+
+
+# --------------------------------------------------------------------------------------------------
+# PER-METRIC "PORQUÉ" HELPERS (clean card). Each verbalises the REAL driver of ONE shown number, as
+# the code computes it (verified against national_elo_layer3.probs / build_worldcup_full_card /
+# worldcup_player_props.predict_fixture / stats_model.Predictor.predict). Pure rendering, no recompute,
+# no market, no invented football narrative. Any bad/missing input -> "" (soft-fail: the card drops
+# the sub-line, never breaks). Probabilistic language only, never certainty.
+# --------------------------------------------------------------------------------------------------
+def explain_goals_clean(home, away, xg_home, xg_away) -> str:
+    """WHY these expected goals. REAL mechanism (national_elo_layer3.probs): the L3 model turns the
+    rating SUPREMACY into the margin s=a0+a1·sup (which fixes the GAP xgh−xga) and a match-dependent
+    TOTAL t (which fixes the SUM xgh+xga), then splits lh=(t+s)/2, la=(t−s)/2. It is NOT a per-team
+    attack-vs-defence matchup (that would be Dixon-Coles) — so we say 'diferencia de fuerza' + 'total',
+    faithfully."""
+    xh, xa = _num(xg_home), _num(xg_away)
+    if xh is None or xa is None:
+        return ""
+    total = xh + xa
+    head = (f"Esos esperados salen del modelo de selecciones: la diferencia de fuerza fija la brecha "
+            f"entre ambos y un total esperado ({total:.1f}) reparte los goles")
+    if abs(xh - xa) < 0.25:
+        return f"{head} — van muy parejos ({xh:.1f} y {xa:.1f})."
+    fav, hi, lo = (home, xh, xa) if xh > xa else (away, xa, xh)
+    return f"{head} — {fav} genera más ({hi:.1f} vs {lo:.1f})."
+
+
+def explain_over25_clean(o25, xg_home, xg_away) -> str:
+    """WHY this Over 2.5 %. REAL mechanism: o25 is the tail M[(gh+ga)>=3] of the independent-Poisson
+    score_matrix(xgh,xga); the total esperado is exactly xgh+xga. So Over 2.5 tracks where that total
+    sits relative to 2.5. o25 is the ALREADY-SHOWN probability (clamped)."""
+    p, xh, xa = _num(o25), _num(xg_home), _num(xg_away)
+    if p is None or xh is None or xa is None:
+        return ""
+    total = xh + xa
+    if abs(total - 2.5) < 0.15:
+        band = "pegado a 2.5 (muy repartido)"
+    elif total >= 3.0:
+        band = "bastante por encima de 2.5"
+    elif total > 2.5:
+        band = "justo por encima de 2.5"
+    elif total > 2.0:
+        band = "justo por debajo de 2.5"
+    else:
+        band = "bastante por debajo de 2.5"
+    return f"Over 2.5 ≈ {p * 100:.0f}% porque el total esperado ({total:.1f}) cae {band}."
+
+
+def explain_btts_clean(btts, home, away, xg_home, xg_away) -> str:
+    """WHY this BTTS %. REAL mechanism: btts = M[(gh>=1)&(ga>=1)] = (1−e^−λh)(1−e^−λa) for the two
+    independent Poissons; the BINDING term is the team with the LOWER expected goals (easier to keep
+    scoreless). btts is the ALREADY-SHOWN probability."""
+    p, xh, xa = _num(btts), _num(xg_home), _num(xg_away)
+    if p is None or xh is None or xa is None:
+        return ""
+    if abs(xh - xa) < 0.25:
+        return (f"BTTS {p * 100:.0f}% porque los dos generan parecido ({xh:.1f} y {xa:.1f}) "
+                f"y pide que ambos marquen.")
+    lo_team, lo_val = (home, xh) if xh < xa else (away, xa)
+    return (f"BTTS {p * 100:.0f}% porque depende de que marque {lo_team}, "
+            f"que solo genera {lo_val:.1f} esperados.")
+
+
+def explain_scorelines_clean() -> str:
+    """WHY these scorelines. REAL mechanism: they are the highest-probability cells of the same
+    independent-Poisson score_matrix(xgh,xga). No recompute, no certainty."""
+    return "Son los más probables según esa distribución de goles (Poisson por equipo con esos esperados)."
+
+
+def explain_players_clean(card_deflated=False) -> str:
+    """WHY the player props. REAL mechanism (worldcup_player_props.predict_fixture): per player
+    λ = (goles/tiros/tarjetas esperados del equipo) × su cuota histórica /90 (encogida hacia la media
+    del XI) ; el % = P(≥1) Poisson. Los tiros se muestran como ORDEN (exp_shots), sin %, porque su
+    logloss no bate la tasa base. Si la deflación de tarjeta está activa, se dice con honestidad."""
+    base = ("Cada % = ritmo histórico del jugador (por 90') repartiendo los goles/tarjetas esperados "
+            "de su equipo, vía Poisson; los tiros son orden por volumen, no probabilidad.")
+    if card_deflated:
+        base += " La tarjeta va con corrección a la baja (el modelo la sobreestimaba)."
+    return base
+
+
+def explain_stats_clean(level_corrected=False) -> str:
+    """WHY these córners/tiros. REAL mechanism (stats_model.Predictor.predict): per team
+    λ = exp(mu + att[equipo] + conc[rival] + β·fuerza), i.e. la propensión propia cruzada con lo que
+    concede el rival. Los córners/tiros MOSTRADOS llevan además una corrección de nivel ADITIVA AL
+    ALZA cuando está activa (el modelo los subestimaba); se menciona solo si de verdad se aplica."""
+    base = "Estimados cruzando la propensión de cada equipo con lo que concede el rival (modelo de datos)."
+    if level_corrected:
+        base += " Con corrección de nivel al alza en córners/tiros (el modelo los subestimaba)."
+    return base

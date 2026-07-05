@@ -55,6 +55,39 @@ try:
 except Exception:
     card_correction = None
 
+
+def _stats_level_active():
+    """True iff the SHOWN córners/tiros carry the upward level correction right now (flag on + state).
+    Read-only, soft-fail -> False. Used ONLY to word the córners/tiros porqué honestly."""
+    try:
+        return bool(stats_correction is not None and stats_correction.load_corrections())
+    except Exception:
+        return False
+
+
+def _card_deflation_active():
+    """True iff the SHOWN player p_card is being deflated right now (CARD_PROP_CORRECTION on + factor<1).
+    Read-only, soft-fail -> False. Used ONLY to word the players porqué honestly."""
+    try:
+        f = card_correction.load_factor() if card_correction is not None else None
+        return f is not None and f < 0.999
+    except Exception:
+        return False
+
+
+def _explain_subline(out, thunk):
+    """Append a '   ↳ …' per-metric porqué produced by `thunk`, GATED by EXPLAIN_PER_METRIC. Soft-fail:
+    any exception or empty string -> nothing is appended (the card renders without that sub-line, never
+    breaks). Display-only: adds explanatory text, never a number."""
+    if not EXPLAIN_PER_METRIC:
+        return
+    try:
+        txt = thunk()
+    except Exception:
+        return
+    if txt:
+        out.append(f"   ↳ {txt}")
+
 OUT_DIR = Path(__file__).resolve().parent
 CARDS = OUT_DIR / "worldcup_cards.csv"
 LOG = OUT_DIR / "worldcup_predictions_log.csv"
@@ -68,6 +101,16 @@ KMAX = 10
 # NO cambia el modelo ni los números (todo sale de los MISMOS campos/pred_1x2). Reversible:
 # False -> formato clásico EXACTO. La paginación (nunca parte un bloque) se respeta igual.
 CLEAN_FORMAT = True
+
+# DISPLAY-ONLY extras del bloque limpio (NO tocan modelo/números/endpoints):
+# N_SCORELINES: nº de marcadores probables en ⚽ GOLES (antes fijo 3). Con N_SCORELINES==3 se emite la
+#   línea legacy EXACTA de hoy ("Marcador más probable: …"); con >3 se añade una cabecera de COBERTURA
+#   real (suma exacta de esas celdas de la matriz) y la lista. Reversión: N_SCORELINES=3.
+# EXPLAIN_PER_METRIC: añade sub-líneas "   ↳ …" con el PORQUÉ honesto de cada métrica (helpers en
+#   worldcup_explain). False -> no aparece ninguna sub-línea (ficha idéntica a hoy, Δ0). Soft-fail: si
+#   un helper falla, esa sub-línea se omite sin romper la ficha.
+N_SCORELINES = 6
+EXPLAIN_PER_METRIC = True
 
 
 def pmf(lam, k=KMAX):
@@ -569,6 +612,10 @@ def _match_block_clean(r, show_lineups=False):
     h, a = es_name(r["home"]), es_name(r["away"])
     ko_round = is_knockout(r.get("round"))
     out = [f"🏆 {h} vs {a} · {chip_es(r)} · {fmt_ko(r.get('kickoff_utc'))}"]
+    try:
+        import worldcup_explain as EX          # per-metric porqué helpers (soft-fail if unavailable)
+    except Exception:
+        EX = None
 
     lh, ld, la, xgh, xga, _note = pred_1x2(r)   # 6th value = model note (footer); ctx uses the field
 
@@ -632,15 +679,32 @@ def _match_block_clean(r, show_lineups=False):
         out.append("")
         out.append(f"⚽ Goles: esperados {xgh:.1f}–{xga:.1f} (total {xgh + xga:.1f}) · "
                    f"Over 2.5 {o25*100:.0f}% · BTTS {btts*100:.0f}%")
+        if EX is not None:
+            _explain_subline(out, lambda: EX.explain_goals_clean(h, a, xgh, xga))
+            _explain_subline(out, lambda: EX.explain_over25_clean(o25, xgh, xga))
+            _explain_subline(out, lambda: EX.explain_btts_clean(btts, h, a, xgh, xga))
+        # CAMBIO 1 — más marcadores + COBERTURA real (suma exacta de esas celdas de M, no inventada).
+        # N_SCORELINES==3 -> línea legacy EXACTA de hoy (reversión byte-idéntica); >3 -> cabecera + lista.
+        n_sl = max(1, int(N_SCORELINES))
         flat = sorted(((i, j, M[i, j]) for i in range(KMAX + 1) for j in range(KMAX + 1)),
-                      key=lambda t: -t[2])[:3]
-        out.append("   Marcador más probable: " + " · ".join(f"{i}-{j} ({p*100:.0f}%)" for i, j, p in flat))
+                      key=lambda t: -t[2])[:n_sl]
+        scores = " · ".join(f"{i}-{j} ({p*100:.0f}%)" for i, j, p in flat)
+        if n_sl == 3:
+            out.append("   Marcador más probable: " + scores)
+        else:
+            cover = sum(p for _, _, p in flat)
+            out.append(f"   Marcadores más probables (estos {len(flat)} cubren el {cover*100:.0f}%):")
+            out.append("   " + scores)
+        if EX is not None:
+            _explain_subline(out, EX.explain_scorelines_clean)
 
     # ---- 4) JUGADORES (props validados/orientativos, XI provisional) ----
     props = props_block(r.get("fixture_id"))
     if props:
         out.append("")
         out.append("👥 Jugadores (XI probable, se confirma ~1h antes del saque):")
+        if EX is not None:
+            _explain_subline(out, lambda: EX.explain_players_clean(_card_deflation_active()))
         out += props
 
     # ---- 5) CÓRNERS / TIROS (con su confianza por stat) ----
@@ -664,6 +728,8 @@ def _match_block_clean(r, show_lineups=False):
         tag = f" (confianza: {legend})" if legend else ""
         out.append("")
         out.append(f"📈 Córners/tiros — {sh_} | {sa_}{tag}")
+        if EX is not None:
+            _explain_subline(out, lambda: EX.explain_stats_clean(_stats_level_active()))
 
     if show_lineups:
         LU = {"conf": "confirmado", "prob": "probable", "pend": "pendiente"}

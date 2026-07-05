@@ -55,7 +55,7 @@ def test_clean_group_all_sections_and_headline():
     # every content section present with its label
     assert "💬 Por qué:" in txt
     assert "⚽ Goles: esperados 1.9–0.8" in txt and "Over 2.5" in txt and "BTTS" in txt
-    assert "Marcador más probable:" in txt
+    assert "Marcadores más probables (estos 6 cubren el" in txt   # CAMBIO 1: default 6 + cobertura
     assert "👥 Jugadores" in txt and "se confirma ~1h antes" in txt
     assert "confirmado en vivo): H. Kane 38%" in txt   # gol PROMOVIDO (histórico + en vivo)
     assert "📈 Córners/tiros —" in txt and "confianza:" in txt
@@ -109,3 +109,103 @@ def test_reversible_flag_off_is_classic_format():
     assert "Resultado:" in classic and "✅ Gana" not in classic
     # SAME number in both formats (presentation only)
     assert "Inglaterra 67%" in classic
+
+
+# ----------------------------------------------------------------- CAMBIO 1 + 2 (display-only)
+def test_more_scorelines_and_coverage_line():
+    """N_SCORELINES=6 -> coverage header with an HONEST % = sum of exactly those 6 matrix cells,
+    then 6 'i-j (p%)' scorelines."""
+    _props()
+    F.CLEAN_FORMAT = True
+    F.N_SCORELINES = 6
+    F.EXPLAIN_PER_METRIC = True
+    try:
+        r = _group_row()
+        lines = F.match_block(r)
+        txt = "\n".join(lines)
+        assert "Marcadores más probables (estos 6 cubren el" in txt
+        # 6 scoreline tokens on the list line
+        listln = next(ln for ln in lines if ln.strip().startswith("1-") or " · " in ln and "(" in ln
+                      and "cubren" not in ln and "↳" not in ln)
+        # recompute the coverage the same way the card does and assert the shown % matches exactly
+        import numpy as np
+        lh, ld, la, xgh, xga, _ = F.pred_1x2(r)
+        M = F.score_matrix(xgh, xga)
+        flat = sorted((M[i, j] for i in range(F.KMAX + 1) for j in range(F.KMAX + 1)), reverse=True)[:6]
+        cover = sum(flat)
+        assert f"cubren el {cover*100:.0f}%" in txt
+        assert len([ln for ln in lines if ") · " in ln and "-" in ln]) >= 1
+        # exactly 6 "i-j (p%)" tokens
+        import re
+        tokens = re.findall(r"\d+-\d+ \(\d+%\)", txt)
+        assert len(tokens) == 6
+    finally:
+        F.N_SCORELINES = 6
+        F.EXPLAIN_PER_METRIC = True
+
+
+def test_per_metric_why_sublines_present():
+    """Each section carries its honest ↳ porqué sub-line when EXPLAIN_PER_METRIC is on."""
+    _props()
+    F.CLEAN_FORMAT = True
+    F.EXPLAIN_PER_METRIC = True
+    F.N_SCORELINES = 6
+    r = _group_row()
+    txt = "\n".join(F.match_block(r))
+    assert "   ↳ Esos esperados salen" in txt
+    assert "   ↳ Over 2.5 ≈" in txt
+    assert "   ↳ BTTS " in txt
+    assert "   ↳ Son los más probables" in txt            # scorelines
+    assert "   ↳ Cada % = ritmo histórico" in txt         # players
+    assert "   ↳ Estimados cruzando la propensión" in txt  # córners/tiros
+
+
+def test_reversible_display_extras_off_is_byte_identical():
+    """INVARIANTE: EXPLAIN_PER_METRIC=False + N_SCORELINES=3 -> ficha byte-idéntica a la de hoy
+    (sin ninguna ↳, marcador en la línea legacy única)."""
+    _props()
+    F.CLEAN_FORMAT = True
+    try:
+        F.EXPLAIN_PER_METRIC = False
+        F.N_SCORELINES = 3
+        legacy = F.match_block(_group_row())
+        txt = "\n".join(legacy)
+        assert "↳" not in txt                              # no per-metric sub-line at all
+        assert "Marcador más probable: " in txt            # legacy single line
+        assert "Marcadores más probables" not in txt       # no coverage header
+        assert "cubren el" not in txt
+        # exactly 3 scoreline tokens
+        import re
+        assert len(re.findall(r"\d+-\d+ \(\d+%\)", txt)) == 3
+    finally:
+        F.EXPLAIN_PER_METRIC = True
+        F.N_SCORELINES = 6
+
+
+def test_explain_helpers_report_the_real_driver():
+    """Helpers verbalise the REAL driver, robust to ties. Goals: gap driven by supremacy, total by the
+    match total. Over2.5: total vs 2.5. BTTS: the lower-λ team binds."""
+    # xgh > xga -> home ('A') generates more; total 2.7 -> Over just above 2.5
+    g = WE.explain_goals_clean("A", "B", 1.9, 0.8)
+    assert "A genera más (1.9 vs 0.8)" in g and "total esperado (2.7)" in g
+    assert "ataque" not in g.lower()                       # NOT the Dixon-Coles framing
+    o = WE.explain_over25_clean(0.52, 1.9, 0.8)
+    assert "total esperado (2.7)" in o and "por encima de 2.5" in o
+    # xgh ≈ xga -> parejos wording (tie-robust)
+    g2 = WE.explain_goals_clean("A", "B", 1.3, 1.2)
+    assert "parejos" in g2
+    b2 = WE.explain_btts_clean(0.55, "A", "B", 1.3, 1.2)
+    assert "parecido" in b2
+    # total < 2.5 -> below; and BTTS binds on the lower-λ team ('B')
+    o2 = WE.explain_over25_clean(0.30, 1.0, 0.9)
+    assert "por debajo de 2.5" in o2
+    b = WE.explain_btts_clean(0.40, "A", "B", 1.6, 0.7)
+    assert "depende de que marque B" in b and "0.7 esperados" in b
+    # total > 3 -> clearly above
+    o3 = WE.explain_over25_clean(0.70, 2.0, 1.6)
+    assert "bastante por encima de 2.5" in o3
+    # players/stats honesty tails toggle with the correction flags
+    assert "corrección a la baja" in WE.explain_players_clean(card_deflated=True)
+    assert "corrección a la baja" not in WE.explain_players_clean(card_deflated=False)
+    assert "al alza" in WE.explain_stats_clean(level_corrected=True)
+    assert "al alza" not in WE.explain_stats_clean(level_corrected=False)
