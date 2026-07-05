@@ -461,29 +461,37 @@ jobs:
           echo "----- player history (head) -----"
           head -10 analysis/worldcup/worldcup_player_event_history.csv || true
 
-      # PLAYER-EVENTS Telegram report (§13): PURE football prediction per fixture (NO betting language,
-      # asserted at build time). One message per fixture via the shared dispatcher (NOT modified).
-      - name: Player-events Telegram report (build + send; pure football, no betting)
+      # PLAYER-EVENTS report (§13): PURE football prediction per fixture (NO betting language, asserted
+      # at build time). ENVÍO A TELEGRAM SILENCIADO (2026-07-05, mismo patrón "Telegram silenciado" de
+      # auto-refit/calibración): este mensaje "Predicción jugadores — X vs Y" DUPLICA los props que el
+      # briefing limpio ya trae (sección 👥 Jugadores, alimentada por el LOG de sombra
+      # worldcup_player_props_log.csv) y además manda un 1X2/goles de OTRO motor (team_context) que
+      # CONTRADICE al full-data del briefing. Se mantiene el BUILD (manifest + txt) y toda la COMPUTACIÓN
+      # de player-events (paso anterior) y de props (predict/settle/scorecard) INTACTA; solo se corta el
+      # SEND. REACTIVAR: (1) reponer el bloque `env: TELEGRAM_*` de abajo y (2) descomentar el bucle de
+      # dispatch. Sin ese env, scripts/dispatch_telegram_alert.py es fail-soft (no envía nada, exit 0).
+      - name: Player-events report (build only — Telegram SILENCIADO; duplica props del briefing limpio)
         continue-on-error: true
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        # env:  # SILENCIADO — reponer estas 3 líneas para reactivar el envío a Telegram:
+        #   TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        #   TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python analysis/worldcup/build_worldcup_player_events_telegram.py
           MAN="analysis/worldcup/worldcup_player_events_messages_manifest.txt"
           N="$(grep -c . "$MAN" 2>/dev/null || echo 0)"
-          echo "player-events messages: ${N:-0}"
-          if [ "${N:-0}" -gt 0 ]; then
-            while IFS='|' read -r f t; do
-              [ -z "$f" ] && continue
-              echo "-> $t"
-              python scripts/dispatch_telegram_alert.py \
-                --title "$t" \
-                --date "${{ steps.win.outputs.from }}" \
-                --body-file "$f"
-              sleep 1
-            done < "$MAN"
-          fi
+          echo "player-events messages BUILT (NO enviados — Telegram silenciado): ${N:-0}"
+          # ENVÍO SILENCIADO — para REACTIVAR: reponer el `env:` de arriba y descomentar este bucle.
+          # if [ "${N:-0}" -gt 0 ]; then
+          #   while IFS='|' read -r f t; do
+          #     [ -z "$f" ] && continue
+          #     echo "-> $t"
+          #     python scripts/dispatch_telegram_alert.py \
+          #       --title "$t" \
+          #       --date "${{ steps.win.outputs.from }}" \
+          #       --body-file "$f"
+          #     sleep 1
+          #   done < "$MAN"
+          # fi
 
       # Fase 4G: EVALUATE the Fase-4F card-risk adjustment (original vs adjusted) against REAL settled
       #      outcomes. MEASURE ONLY — does NOT change any weight. Reads the props log (settled p_card +
