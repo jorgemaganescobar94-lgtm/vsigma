@@ -1,0 +1,7 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-07-04,OK,API-SPORTS_DIRECT,588.0,,,,,,
+2026-07-04T11:30:00+01:00,MATCHED,,,1506986.0,FT,FC Anyang,Pohang Steelers,2.0,3.0
+2026-07-04T11:30:00+01:00,MATCHED,,,1506987.0,FT,Daejeon Citizen,Bucheon FC 1995,2.0,2.0
+2026-07-04T11:30:00+01:00,MATCHED,,,1506988.0,FT,Jeonbuk Motors,Gangwon FC,1.0,2.0
+2026-07-04T14:00:00+01:00,MATCHED,,,1494194.0,FT,Degerfors IF,Malmo FF,0.0,1.0
+2026-07-04T14:00:00+01:00,MATCHED,,,1494198.0,FT,Halmstad,Vasteras SK FK,1.0,3.0

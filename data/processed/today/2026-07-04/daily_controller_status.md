@@ -3,7 +3,7 @@
 ## Step State
 - PRE: DONE
 - Pre-lock: ['NO_CURRENT_PICKS']
-- POST: PENDING
+- POST: SETTLED
 - Ledger: PRE_UPDATED
 - Governance: AVAILABLE
 - Stale warnings: NONE
