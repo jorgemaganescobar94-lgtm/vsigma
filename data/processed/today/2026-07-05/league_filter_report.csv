@@ -1,0 +1,64 @@
+country,league,league_tier,league_filter_reason,matches
+World,Friendlies Clubs,REJECT,hard_reject_noise_league,22
+Argentina,Torneo Federal A,REJECT,country_league_not_allowlisted,15
+Argentina,Primera Nacional,REJECT,country_league_not_allowlisted,10
+Venezuela,Copa Venezuela,REJECT,country_league_not_allowlisted,10
+USA,USL League Two,REJECT,country_league_not_allowlisted,9
+Chile,Copa Chile,REJECT,country_league_not_allowlisted,8
+Morocco,Botola 2,REJECT,country_league_not_allowlisted,8
+Morocco,Botola Pro,REJECT,country_league_not_allowlisted,8
+Argentina,Primera C,REJECT,country_league_not_allowlisted,7
+Brazil,Baiano - 2,REJECT,country_league_not_allowlisted,5
+Brazil,Paulista - U20,REJECT,hard_reject_noise_league,5
+Malawi,Super League,REJECT,country_league_not_allowlisted,5
+Zimbabwe,Premier Soccer League,REJECT,country_league_not_allowlisted,5
+Argentina,Primera B Metropolitana,REJECT,country_league_not_allowlisted,4
+China,League Two,REJECT,country_league_not_allowlisted,4
+Kazakhstan,Premier League,REJECT,country_league_not_allowlisted,4
+Russia,Second League - Group 2,REJECT,country_league_not_allowlisted,4
+South-Korea,K League 2,REJECT,country_league_not_allowlisted,4
+USA,MLS Next Pro,REJECT,hard_reject_noise_league,4
+Belarus,1. Division,REJECT,country_league_not_allowlisted,3
+Brazil,Mineiro - 2,REJECT,country_league_not_allowlisted,3
+Brazil,Paulista Série B,REJECT,country_league_not_allowlisted,3
+Chile,Segunda División,REJECT,country_league_not_allowlisted,3
+China,League One,REJECT,country_league_not_allowlisted,3
+Estonia,Esiliiga B,REJECT,country_league_not_allowlisted,3
+Paraguay,Division Intermedia,REJECT,country_league_not_allowlisted,3
+Russia,Second League - Group 4,REJECT,country_league_not_allowlisted,3
+Argentina,Reserve League,REJECT,hard_reject_noise_league,2
+Argentina,Torneo Promocional Amateur,REJECT,hard_reject_noise_league,2
+Belarus,Premier League,REJECT,country_league_not_allowlisted,2
+Brazil,Catarinense - 2,REJECT,country_league_not_allowlisted,2
+Canada,Canadian Premier League,REJECT,country_league_not_allowlisted,2
+Canada,Northern Super League,REJECT,country_league_not_allowlisted,2
+China,Super League,REJECT,country_league_not_allowlisted,2
+Ecuador,Liga Pro,REJECT,country_league_not_allowlisted,2
+Estonia,Esiliiga A,REJECT,country_league_not_allowlisted,2
+Finland,Ykkönen,REJECT,country_league_not_allowlisted,2
+Latvia,1. Liga,REJECT,country_league_not_allowlisted,2
+Moldova,Super Liga,REJECT,country_league_not_allowlisted,2
+Tanzania,Ligi kuu Bara,REJECT,country_league_not_allowlisted,2
+USA,NWSL Women,REJECT,hard_reject_noise_league,2
+Uruguay,Segunda División,REJECT,country_league_not_allowlisted,2
+World,UEFA U19 Championship,REJECT,hard_reject_noise_league,2
+Brazil,Brasiliense U20,REJECT,hard_reject_noise_league,1
+Brazil,Carioca C,REJECT,country_league_not_allowlisted,1
+Brazil,Copa Gaúcha,REJECT,country_league_not_allowlisted,1
+Estonia,Meistriliiga,REJECT,country_league_not_allowlisted,1
+Ethiopia,Premier League,REJECT,country_league_not_allowlisted,1
+Faroe-Islands,Meistaradeildin,REJECT,country_league_not_allowlisted,1
+Finland,Kakkonen - Lohko B,REJECT,country_league_not_allowlisted,1
+Finland,Kakkonen - Lohko C,REJECT,country_league_not_allowlisted,1
+Finland,Kansallinen Liiga,REJECT,country_league_not_allowlisted,1
+Finland,Ykkösliiga,REJECT,country_league_not_allowlisted,1
+Latvia,Virsliga,REJECT,country_league_not_allowlisted,1
+Norway,1. Division,REJECT,country_league_not_allowlisted,1
+Russia,Second League - Group 1,REJECT,country_league_not_allowlisted,1
+USA,USL Championship,REJECT,country_league_not_allowlisted,1
+Uruguay,Primera División - Apertura,REJECT,country_league_not_allowlisted,1
+World,World Cup,REJECT,country_league_not_allowlisted,1
+South-Korea,K League 1,TIER_2,korea_k1,3
+Sweden,Allsvenskan,TIER_2,sweden_allsvenskan,3
+Brazil,Serie C,TIER_3,brazil_serie_c_noisy,1
+Lithuania,A Lyga,TIER_3,lithuania_a_lyga_noisy,1

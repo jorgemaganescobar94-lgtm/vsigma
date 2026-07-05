@@ -1,0 +1,2 @@
+rows_processed,clean_rows,mixed_rows,polluted_rows,unknown_event_rows,home_anomalies,away_anomalies,event_fixture_requests,event_api_calls,event_cache_hits,event_errors,event_coverage_unknown,event_coverage_unsupported,generated_at_utc
+6,1,4,1,0,4,5,60,60,0,0,0,0,2026-07-05T10:26:55.156936+00:00

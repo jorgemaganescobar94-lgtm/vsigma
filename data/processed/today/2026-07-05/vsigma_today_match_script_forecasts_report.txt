@@ -1,0 +1,15 @@
+vSIGMA MATCH SCRIPT + STATS FORECASTS
+
+Source: official competition top
+Role: explanation layer only; this file does not select, remove, or promote picks.
+Forecast style: deterministic bands and modal scripts, not exact-stat certainty.
+
+Forecast rows: 1
+
+#1 IF Elfsborg vs Hammarby FF | Allsvenskan | OVER_2_5
+Script: Open, active match with both penalty boxes reached often; shot volume is expected, but finishing drag is the main volatility point. Total-goal lean: 4.4; stats=FULL.
+Scores: main 2-2 | alt 2-1
+xG: home 1.7-2.4 | away 2.0-2.7 | total 3.9-5.0
+Stats: shots 7-11 vs 16-20; SOT 2-4 vs 5-7; corners 6-10; possession home 35-43% / away 57-65%
+Path: Pick wins if the projected chance volume turns into three goals, usually via early tempo or both teams contributing.
+Breaker: Good territory without conversion: shots arrive but finish quality or goalkeeper variance drags the score under the market.
