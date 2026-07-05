@@ -71,4 +71,4 @@ v2          43   0.8501  0.4884   67.4  0.138       +25.0
 PROPUESTA de recalibración (calibración, informativa, NO aplicada):
   Ningún encogimiento hacia base-rate mejora el log-loss (0.8219); L3 bien calibrado.
 
-generated_at_utc: 2026-07-05T10:01:31+00:00
+generated_at_utc: 2026-07-05T10:15:55+00:00
