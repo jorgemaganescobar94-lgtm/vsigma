@@ -270,10 +270,15 @@ jobs:
           while IFS='|' read -r f t; do
             [ -z "$f" ] && continue
             echo "-> $t"
+            # --max-lines 60: las fichas WC con props superan las 25 líneas por defecto del dispatcher
+            # (peor en eliminatoria por la línea "🏅 Avanza") y perdían la cola (📈 córners/tiros + pie
+            # ℹ️/Atribución). 60 cubre el bloque más grande (~32 líneas) con margen y sigue muy por
+            # debajo de los 4096 chars de Telegram. SOLO afecta a este envío de fichas WC.
             python scripts/dispatch_telegram_alert.py \
               --title "$t" \
               --date "${{ steps.win.outputs.from }}" \
-              --body-file "$f"
+              --body-file "$f" \
+              --max-lines 60
             sleep 1   # gentle pacing so Telegram doesn't rate-limit the burst
           done < "$MAN"
 

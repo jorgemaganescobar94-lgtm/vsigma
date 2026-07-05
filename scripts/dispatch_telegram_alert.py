@@ -23,6 +23,13 @@ def log(msg: str) -> None:
     print(f"[telegram-alert] {msg}")
 
 
+def clip_body(text: str, max_lines: int = 25) -> str:
+    """Corta el cuerpo a max_lines lineas. DEFAULT=25 = 'corto para movil' (comportamiento historico
+    para quien no pasa --max-lines). max_lines<=0 -> sin recorte. Pura, testeable."""
+    lines = text.splitlines()
+    return "\n".join(lines if max_lines <= 0 else lines[:max_lines])
+
+
 def build_message(title: str, summary: str, day: str, link: str) -> str:
     parts = [f"🚨 {title}"]
     if day:
@@ -41,6 +48,12 @@ def main() -> int:
     ap.add_argument("--date", default="")
     ap.add_argument("--link", default="")
     ap.add_argument("--body-file", default="")
+    # Tope de lineas del cuerpo. DEFAULT=25 preserva EXACTAMENTE el "corto para movil" historico:
+    # cualquier llamador que NO pase --max-lines se comporta igual que antes (apuestas, watchdog,
+    # auto-refit/calibracion, player-events, etc. sin cambios). --max-lines 0 -> sin recorte. Se sube
+    # solo donde hace falta (fichas WC con props, que superan 25 lineas y perdian la cola).
+    ap.add_argument("--max-lines", type=int, default=25,
+                    help="max lineas del cuerpo (default 25, corto para movil; 0 = sin recorte)")
     args = ap.parse_args()
 
     token = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
@@ -56,7 +69,8 @@ def main() -> int:
                 summary = fh.read()
         except Exception as exc:  # noqa: BLE001
             log(f"no pude leer body-file: {type(exc).__name__}")
-    summary = "\n".join(summary.splitlines()[:25])  # corto para movil
+    # corto para movil: default 25 (comportamiento historico); --max-lines 0 -> sin recorte
+    summary = clip_body(summary, args.max_lines)
 
     text = build_message(args.title, summary, args.date, args.link)
     payload = json.dumps(
