@@ -9218,3 +9218,5 @@ fixture_id,date,league_id,league_tag,season,neutral,home_id,home,away_id,away,gh
 1565178,2026-07-03T18:00:00+00:00,1,WC,2026,1,20,Australia,32,Egypt,1,1,
 1565179,2026-07-03T22:00:00+00:00,1,WC,2026,1,26,Argentina,1533,Cape Verde Islands,1,1,
 1567310,2026-07-04T01:30:00+00:00,1,WC,2026,1,8,Colombia,1504,Ghana,1,0,
+1567824,2026-07-04T17:00:00+00:00,1,WC,2026,1,5529,Canada,31,Morocco,0,3,
+1569870,2026-07-04T21:00:00+00:00,1,WC,2026,1,2380,Paraguay,2,France,0,1,

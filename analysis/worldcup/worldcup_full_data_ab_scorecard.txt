@@ -1,9 +1,9 @@
 ====================================================================================
 MARCADOR FULL-DATA vs ENSEMBLE (1X2) — acumulado, read-only, HONESTO (se espera PEOR)
 ====================================================================================
-  logloss   full-data=0.8535   ensemble=0.8628   lider=full-data   dif=0.0093  (N<30, orientativo)
-  brier     full-data=0.5029   ensemble=0.5093   lider=full-data   dif=0.0064  (N<30, orientativo)
-  acc       full-data=0.6364   ensemble=0.6364   lider=empate   dif=0.0000  (N<30, orientativo)
+  logloss   full-data=0.8213   ensemble=0.8280   lider=full-data   dif=0.0067  (N<30, orientativo)
+  brier     full-data=0.4787   ensemble=0.4836   lider=full-data   dif=0.0049  (N<30, orientativo)
+  acc       full-data=0.6667   ensemble=0.6667   lider=empate   dif=0.0000  (N<30, orientativo)
 
-N liquidados con fd = 22. Lectura honesta: si full-data queda por detrás (esperado), este
+N liquidados con fd = 24. Lectura honesta: si full-data queda por detrás (esperado), este
 marcador + el A/B offline son la base para revertir FULL_DATA_LIVE=False. NO se afirma precisión.

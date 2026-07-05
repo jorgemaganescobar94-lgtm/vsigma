@@ -554,24 +554,25 @@ fixture_id,date,competition,team_id,team_name,opponent_id,opponent_name,player_i
 1489414,2026-06-27,World Cup 2026,22,Iran,32,Egypt,29704.0,Shoja Khalilzadeh,,,Var,Goal cancelled,90,6.0,0,0,0,0,0,0,,0,alta,media,api_football_events
 1489414,2026-06-27,World Cup 2026,22,Iran,32,Egypt,134217.0,M. Mohebi,,,subst,Substitution 3,90,1.0,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,1946.0,Leandro Trossard,,,Var,Penalty cancelled,21,,0,0,0,0,0,0,,0,alta,media,api_football_events
-1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,1946.0,Leandro Trossard,,,Goal,Normal Goal,28,,1,0,0,0,0,0,,0,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,,,,,Goal,Normal Goal,21,,1,0,0,0,0,0,,0,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,1946.0,L. Trossard,,,Goal,Normal Goal,28,,1,0,0,0,0,0,,0,alta,alta,api_football_events
 1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,179862.0,Marko Stamenić,,,Card,Yellow Card,46,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,6935.0,Sarpreet Singh,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,242.0,Ryan Thomas,,,subst,Substitution 2,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,1946.0,Leandro Trossard,78.0,Hans Vanaken,Goal,Normal Goal,50,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,242.0,R. Thomas,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,6935.0,S. Singh,,,subst,Substitution 2,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,1946.0,L. Trossard,78.0,H. Vanaken,Goal,Normal Goal,50,,1,1,0,0,0,0,,0,alta,alta,api_football_events
 1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,94333.0,Elijah Just,,,Card,Yellow Card,56,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,1422.0,Jérémy Doku,,,subst,Substitution 1,56,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,94541.0,Joe Bell,,,subst,Substitution 3,64,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,94346.0,Tim Payne,,,subst,Substitution 4,64,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,629.0,Kevin De Bruyne,,,Goal,Normal Goal,66,,1,0,0,0,0,0,,0,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,629.0,Kevin De Bruyne,,,subst,Substitution 2,72,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,1946.0,Leandro Trossard,,,subst,Substitution 3,72,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,6931.0,Liberato Cacace,,,subst,Substitution 5,79,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,94333.0,Elijah Just,,,Goal,Normal Goal,84,,1,0,0,0,0,0,,0,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,2926.0,Youri Tielemans,,,subst,Substitution 4,85,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,147859.0,Charles De Ketelaere,,,subst,Substitution 5,85,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,907.0,Romelu Lukaku,2120.0,Nicolas Raskin,Goal,Normal Goal,86,,1,1,0,0,0,0,,0,alta,alta,api_football_events
-1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,1417.0,Alexis Saelemaekers,907.0,Romelu Lukaku,Goal,Normal Goal,90,4.0,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,1422.0,J. Doku,,,subst,Substitution 1,56,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,94346.0,T. Payne,,,subst,Substitution 3,64,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,94541.0,J. Bell,,,subst,Substitution 4,64,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,629.0,K. De Bruyne,,,Goal,Normal Goal,66,,1,0,0,0,0,0,,0,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,1946.0,L. Trossard,,,subst,Substitution 2,72,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,629.0,K. De Bruyne,,,subst,Substitution 3,72,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,6931.0,L. Cacace,,,subst,Substitution 5,79,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,4673,New Zealand,1,Belgium,94333.0,E. Just,,,Goal,Normal Goal,84,,1,0,0,0,0,0,,0,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,147859.0,C. De Ketelaere,,,subst,Substitution 4,85,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,2926.0,Y. Tielemans,,,subst,Substitution 5,85,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,907.0,R. Lukaku,2120.0,N. Raskin,Goal,Normal Goal,86,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1489415,2026-06-27,World Cup 2026,1,Belgium,4673,New Zealand,1417.0,A. Saelemaekers,907.0,R. Lukaku,Goal,Normal Goal,90,,1,1,0,0,0,0,,0,alta,alta,api_football_events
 1489420,2026-06-27,World Cup 2026,3,Croatia,1504,Ghana,348205.0,P. Sucic,2291.0,M. Kovacic,Goal,Normal Goal,31,,1,1,0,0,0,0,,0,alta,alta,api_football_events
 1489420,2026-06-27,World Cup 2026,1504,Ghana,3,Croatia,369425.0,J. Adjetey,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489420,2026-06-27,World Cup 2026,1504,Ghana,3,Croatia,21010.0,E. Owusu,,,subst,Substitution 2,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
@@ -872,38 +873,38 @@ fixture_id,date,competition,team_id,team_name,opponent_id,opponent_name,player_i
 1567312,2026-07-03,World Cup 2026,15,Switzerland,1532,Algeria,421.0,B. Embolo,,,subst,Substitution 3,83,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1567312,2026-07-03,World Cup 2026,15,Switzerland,1532,Algeria,2810.0,D. Zakaria,,,subst,Substitution 4,87,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1567312,2026-07-03,World Cup 2026,15,Switzerland,1532,Algeria,48648.0,D. Ndoye,,,subst,Substitution 5,87,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565178,2026-07-03,World Cup 2026,32,Egypt,20,Australia,17269.0,Emam Ashour,2656.0,Karim Hafez,Goal,Normal Goal,13,,1,1,0,0,0,0,,0,alta,alta,api_football_events
-1565178,2026-07-03,World Cup 2026,20,Australia,32,Egypt,337587.0,Jordan Bos,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565178,2026-07-03,World Cup 2026,20,Australia,32,Egypt,2654.0,Mohamed Hany,,,Goal,Own Goal,55,,0,0,0,0,1,0,,0,alta,alta,api_football_events
-1565178,2026-07-03,World Cup 2026,32,Egypt,20,Australia,16813.0,Hamdy Fathy,,,subst,Substitution 1,67,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565178,2026-07-03,World Cup 2026,32,Egypt,20,Australia,395075.0,Mostafa Ziko,,,subst,Substitution 2,67,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565178,2026-07-03,World Cup 2026,20,Australia,32,Egypt,338014.0,Nestory Irankunda,,,subst,Substitution 2,74,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565178,2026-07-03,World Cup 2026,20,Australia,32,Egypt,342035.0,Cristian Volpato,,,subst,Substitution 3,74,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565178,2026-07-03,World Cup 2026,32,Egypt,20,Australia,2656.0,Karim Hafez,,,subst,Substitution 3,80,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565178,2026-07-03,World Cup 2026,20,Australia,32,Egypt,6904.0,Connor Metcalfe,,,subst,Substitution 4,91,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565178,2026-07-03,World Cup 2026,20,Australia,32,Egypt,7050.0,Aiden O'Neill,,,subst,Substitution 5,91,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565178,2026-07-03,World Cup 2026,32,Egypt,20,Australia,17269.0,E. Ashour,2656.0,K. Hafez,Goal,Normal Goal,13,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1565178,2026-07-03,World Cup 2026,20,Australia,32,Egypt,337587.0,J. Bos,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565178,2026-07-03,World Cup 2026,20,Australia,32,Egypt,2654.0,M. Hany,,,Goal,Own Goal,55,,0,0,0,0,1,0,,0,alta,alta,api_football_events
+1565178,2026-07-03,World Cup 2026,32,Egypt,20,Australia,395075.0,M. Ziko,,,subst,Substitution 1,67,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565178,2026-07-03,World Cup 2026,32,Egypt,20,Australia,16813.0,H. Fathy,,,subst,Substitution 2,67,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565178,2026-07-03,World Cup 2026,20,Australia,32,Egypt,342035.0,C. Volpato,,,subst,Substitution 2,74,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565178,2026-07-03,World Cup 2026,20,Australia,32,Egypt,338014.0,N. Irankunda,,,subst,Substitution 3,74,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565178,2026-07-03,World Cup 2026,32,Egypt,20,Australia,2656.0,K. Hafez,,,subst,Substitution 3,80,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565178,2026-07-03,World Cup 2026,20,Australia,32,Egypt,6904.0,C. Metcalfe,,,subst,Substitution 4,91,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565178,2026-07-03,World Cup 2026,20,Australia,32,Egypt,7050.0,A. O'Neill,,,subst,Substitution 5,91,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1565178,2026-07-03,World Cup 2026,32,Egypt,20,Australia,20844.0,Haissem Hassan,,,Card,Yellow Card,105,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
-1565178,2026-07-03,World Cup 2026,32,Egypt,20,Australia,81573.0,Omar Marmoush,,,subst,Substitution 4,106,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565178,2026-07-03,World Cup 2026,20,Australia,32,Egypt,353883.0,Patrick Beach,,,subst,Substitution 6,119,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565178,2026-07-03,World Cup 2026,32,Egypt,20,Australia,81573.0,O. Marmoush,,,subst,Substitution 4,106,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565178,2026-07-03,World Cup 2026,20,Australia,32,Egypt,353883.0,P. Beach,,,subst,Substitution 6,119,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1565178,2026-07-03,World Cup 2026,32,Egypt,20,Australia,16804.0,Yasser Ibrahim,,,Card,Yellow Card,120,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
-1565178,2026-07-03,World Cup 2026,32,Egypt,20,Australia,190575.0,Marwan Attia,,,subst,Substitution 5,120,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,154.0,Lionel Messi,2467.0,Lisandro Martínez,Goal,Normal Goal,29,,1,1,0,0,0,0,,0,alta,alta,api_football_events
-1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,37435.0,Deroy Duarte,50270.0,Ryan Mendes,Goal,Normal Goal,59,,1,1,0,0,0,0,,0,alta,alta,api_football_events
-1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,6067.0,Thiago Almada,,,subst,Substitution 1,63,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,217.0,Lautaro Martínez,,,subst,Substitution 2,63,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,22265.0,Nuno Da Costa,,,subst,Substitution 1,67,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,37436.0,Laros Duarte,,,subst,Substitution 2,67,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565178,2026-07-03,World Cup 2026,32,Egypt,20,Australia,190575.0,M. Attia,,,subst,Substitution 5,120,1.0,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,154.0,L. Messi,2467.0,L. Martinez,Goal,Normal Goal,29,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,37435.0,D. Duarte,50270.0,R. Mendes,Goal,Normal Goal,59,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,217.0,L. Martinez,,,subst,Substitution 1,63,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,6067.0,T. Almada,,,subst,Substitution 2,64,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,37436.0,L. Duarte,,,subst,Substitution 1,67,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,22265.0,N. Da Costa,,,subst,Substitution 2,67,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,96512.0,Kevin Lenini,,,Card,Yellow Card,68,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
-1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,1494.0,Jovane Cabral,,,subst,Substitution 3,80,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,50270.0,Ryan Mendes,,,subst,Substitution 4,80,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,2472.0,Rodrigo De Paul,,,subst,Substitution 3,84,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,6231.0,Facundo Medina,,,subst,Substitution 4,86,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,2467.0,Lisandro Martínez,6716.0,Alexis Mac Allister,Goal,Normal Goal,93,,1,1,0,0,0,0,,0,alta,alta,api_football_events
-1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,96512.0,Kevin Lenini,,,subst,Substitution 5,100,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,37435.0,Deroy Duarte,,,subst,Substitution 6,100,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,308689.0,Sidny Lopes Cabral,,,Goal,Normal Goal,103,,1,0,0,0,0,0,,0,alta,alta,api_football_events
-1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,6503.0,Nahuel Molina,,,subst,Substitution 5,104,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,41608.0,Diney Borges,,,Goal,Own Goal,111,,0,0,0,0,1,0,,0,alta,alta,api_football_events
+1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,1494.0,J. Cabral,,,subst,Substitution 3,80,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,50270.0,R. Mendes,,,subst,Substitution 4,80,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,2472.0,R. de Paul,,,subst,Substitution 3,84,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,6231.0,F. Medina,,,subst,Substitution 4,86,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,2467.0,L. Martinez,6716.0,A. Mac Allister,Goal,Normal Goal,92,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,37435.0,D. Duarte,,,subst,Substitution 5,100,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,96512.0,K. Lenini,,,subst,Substitution 6,100,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565179,2026-07-03,World Cup 2026,1533,Cape Verde Islands,26,Argentina,308689.0,S. Lopes Cabral,128007.0,Y. Semedo,Goal,Normal Goal,103,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,6503.0,N. Molina,,,subst,Substitution 5,104,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,41608.0,D. Borges,,,Goal,Own Goal,111,,0,0,0,0,1,0,,0,alta,alta,api_football_events
 1565179,2026-07-03,World Cup 2026,26,Argentina,1533,Cape Verde Islands,2468.0,Gonzalo Montiel,,,Card,Yellow Card,115,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1567310,2026-07-04,World Cup 2026,8,Colombia,1504,Ghana,24810.0,J. Cordoba,,,subst,Substitution 1,8,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1567310,2026-07-04,World Cup 2026,8,Colombia,1504,Ghana,13708.0,J. Arias,,,Card,Yellow Card,12,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
@@ -912,12 +913,44 @@ fixture_id,date,competition,team_id,team_name,opponent_id,opponent_name,player_i
 1567310,2026-07-04,World Cup 2026,8,Colombia,1504,Ghana,517.0,J. Rodriguez,,,subst,Substitution 2,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1567310,2026-07-04,World Cup 2026,1504,Ghana,8,Colombia,475575.0,C. Yirenkyi,,,Card,Yellow Card,49,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1567310,2026-07-04,World Cup 2026,8,Colombia,1504,Ghana,2489.0,L. Diaz,,,Var,Goal Disallowed - offside,56,,0,0,0,0,0,0,,0,alta,media,api_football_events
-1567310,2026-07-04,World Cup 2026,1504,Ghana,8,Colombia,47294.0,I. Williams,,,subst,Substitution 2,62,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1567310,2026-07-04,World Cup 2026,1504,Ghana,8,Colombia,3608.0,K. Sibo,,,subst,Substitution 3,62,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1567310,2026-07-04,World Cup 2026,1504,Ghana,8,Colombia,3608.0,K. Sibo,,,subst,Substitution 2,62,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1567310,2026-07-04,World Cup 2026,1504,Ghana,8,Colombia,47294.0,I. Williams,,,subst,Substitution 3,62,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1567310,2026-07-04,World Cup 2026,1504,Ghana,8,Colombia,303467.0,I. Fatawu,,,Card,Yellow Card,66,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1567310,2026-07-04,World Cup 2026,8,Colombia,1504,Ghana,13708.0,J. Arias,,,subst,Substitution 3,73,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1567310,2026-07-04,World Cup 2026,1504,Ghana,8,Colombia,196187.0,A. Seidu,,,Card,Yellow Card,76,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1567310,2026-07-04,World Cup 2026,8,Colombia,1504,Ghana,195104.0,R. Rios,,,Card,Yellow Card,78,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
-1567310,2026-07-04,World Cup 2026,1504,Ghana,8,Colombia,3428.0,J. Ayew,,,subst,Substitution 4,79,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1567310,2026-07-04,World Cup 2026,1504,Ghana,8,Colombia,475575.0,C. Yirenkyi,,,subst,Substitution 5,79,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1567310,2026-07-04,World Cup 2026,1504,Ghana,8,Colombia,475575.0,C. Yirenkyi,,,subst,Substitution 4,79,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1567310,2026-07-04,World Cup 2026,1504,Ghana,8,Colombia,3428.0,J. Ayew,,,subst,Substitution 5,79,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1567310,2026-07-04,World Cup 2026,8,Colombia,1504,Ghana,2489.0,L. Diaz,,,subst,Substitution 4,90,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,31,Morocco,5529,Canada,326183.0,Redouane Halhal,,,Card,Yellow Card,20,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,31,Morocco,5529,Canada,161897.0,Ismael Saibari,,,subst,Substitution 1,22,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,5529,Canada,31,Morocco,50816.0,Richie Laryea,,,Card,Yellow Card,40,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,31,Morocco,5529,Canada,9.0,Achraf Hakimi,,,Card,Yellow Card,40,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,5529,Canada,31,Morocco,8489.0,Jonathan David,,,Card,Yellow Card,43,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,31,Morocco,5529,Canada,340573.0,Bilal El Khannouss,,,Card,Yellow Card,45,6.0,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,31,Morocco,5529,Canada,129678.0,Azzedine Ounahi,,,Card,Yellow Card,45,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,5529,Canada,31,Morocco,327738.0,Luc De Fougerolles,,,Card,Yellow Card,49,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,31,Morocco,5529,Canada,129678.0,Azzedine Ounahi,9.0,Achraf Hakimi,Goal,Normal Goal,50,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,5529,Canada,31,Morocco,351587.0,Tani Oluwaseyi,,,subst,Substitution 1,63,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,31,Morocco,5529,Canada,438688.0,Ayyoub Bouaddi,,,subst,Substitution 2,63,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,31,Morocco,5529,Canada,340573.0,Bilal El Khannouss,,,subst,Substitution 3,63,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,5529,Canada,31,Morocco,2001.0,Cyle Larin,,,Card,Yellow Card,67,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,5529,Canada,31,Morocco,50816.0,Richie Laryea,,,subst,Substitution 2,78,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,5529,Canada,31,Morocco,362145.0,Ali Ahmed,,,subst,Substitution 3,78,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,31,Morocco,5529,Canada,129678.0,Azzedine Ounahi,744.0,Brahim Díaz,Goal,Normal Goal,82,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,5529,Canada,31,Morocco,51016.0,Tajon Buchanan,,,subst,Substitution 4,87,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,5529,Canada,31,Morocco,416901.0,Niko Sigur,,,subst,Substitution 5,87,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,31,Morocco,5529,Canada,129678.0,Azzedine Ounahi,,,subst,Substitution 4,87,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,31,Morocco,5529,Canada,18814.0,Issa Diop,,,subst,Substitution 5,87,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1567824,2026-07-04,World Cup 2026,31,Morocco,5529,Canada,36579.0,Soufiane Rahimi,744.0,Brahim Díaz,Goal,Normal Goal,90,8.0,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1569870,2026-07-04,World Cup 2026,2,France,2380,Paraguay,161904.0,Bradley Barcola,,,Card,Yellow Card,19,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1569870,2026-07-04,World Cup 2026,2380,Paraguay,2,France,6168.0,Omar Alderete,,,subst,Substitution 1,58,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1569870,2026-07-04,World Cup 2026,2380,Paraguay,2,France,70747.0,Julio Enciso,,,subst,Substitution 2,61,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1569870,2026-07-04,World Cup 2026,2,France,2380,Paraguay,161904.0,Bradley Barcola,,,subst,Substitution 1,61,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1569870,2026-07-04,World Cup 2026,2,France,2380,Paraguay,343027.0,Désiré Doué,,,Var,Penalty confirmed,68,,0,0,0,0,0,0,,0,alta,media,api_football_events
+1569870,2026-07-04,World Cup 2026,2,France,2380,Paraguay,278.0,Kylian Mbappé,,,Goal,Penalty,70,,1,0,1,0,0,0,,0,alta,alta,api_football_events
+1569870,2026-07-04,World Cup 2026,2380,Paraguay,2,France,2507.0,Miguel Almirón,,,subst,Substitution 3,71,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1569870,2026-07-04,World Cup 2026,2380,Paraguay,2,France,2502.0,Gustavo Gómez,,,subst,Substitution 4,71,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1569870,2026-07-04,World Cup 2026,2,France,2380,Paraguay,22147.0,Manu Koné,,,Card,Yellow Card,81,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1569870,2026-07-04,World Cup 2026,2,France,2380,Paraguay,153.0,Ousmane Dembélé,,,subst,Substitution 2,84,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1569870,2026-07-04,World Cup 2026,2,France,2380,Paraguay,19617.0,Michael Olise,,,Card,Yellow Card,90,7.0,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events

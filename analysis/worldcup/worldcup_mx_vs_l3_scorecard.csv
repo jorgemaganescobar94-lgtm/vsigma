@@ -1,10 +1,10 @@
 market,metric,l3,mx,ens,leader,diff,n,since
-1X2,acc,63.6,63.6,63.6,empate,,22,27-jun
-1X2,logloss,0.8729,0.8575,0.8628,mx,0.0052,22,27-jun
-1X2,brier,0.5131,0.5108,0.5093,ens,0.0015,22,27-jun
-Over 2.5,acc,45.5,45.5,45.5,empate,,22,27-jun
-Over 2.5,logloss,0.695,0.691,0.695,mx,0.004,22,27-jun
-Over 2.5,brier,0.251,0.249,0.251,mx,0.002,22,27-jun
-BTTS,acc,40.9,40.9,40.9,empate,,22,27-jun
-BTTS,logloss,0.7218,0.7216,0.7218,empate,,22,27-jun
-BTTS,brier,0.2634,0.2641,0.2634,empate,,22,27-jun
+1X2,acc,66.7,66.7,66.7,empate,,24,27-jun
+1X2,logloss,0.8303,0.8309,0.828,ens,0.0023,24,27-jun
+1X2,brier,0.4825,0.4903,0.4836,L3,0.001,24,27-jun
+Over 2.5,acc,41.7,45.8,41.7,mx,4.2,24,27-jun
+Over 2.5,logloss,0.6997,0.6946,0.6997,mx,0.0051,24,27-jun
+Over 2.5,brier,0.2533,0.2508,0.2533,mx,0.0025,24,27-jun
+BTTS,acc,45.8,45.8,45.8,empate,,24,27-jun
+BTTS,logloss,0.7039,0.7136,0.7039,empate,,24,27-jun
+BTTS,brier,0.2546,0.2602,0.2546,empate,,24,27-jun

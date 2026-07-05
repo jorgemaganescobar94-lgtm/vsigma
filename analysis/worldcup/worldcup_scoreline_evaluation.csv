@@ -58,3 +58,5 @@ fixture_id,home,away,lambda_home,lambda_away,source_lambda,actual_score,in_top1,
 1565178,Australia,Egypt,1.39,1.02,mx,1-1,1,1,1,0.1273,1,1-1,D,H,media,media
 1565179,Argentina,Cape Verde Islands,2.44,0.55,mx,3-2,0,0,0,0.0184,15,2-0,D,H,media,media
 1567310,Colombia,Ghana,2.47,0.53,mx,1-0,0,1,1,0.123,3,2-0,H,H,media,media
+1567824,Canada,Morocco,0.93,1.55,mx,0-3,0,0,0,0.052,8,0-1,A,A,media,media
+1569870,Paraguay,France,0.77,1.86,mx,0-1,1,1,1,0.1341,1,0-1,A,A,media,media

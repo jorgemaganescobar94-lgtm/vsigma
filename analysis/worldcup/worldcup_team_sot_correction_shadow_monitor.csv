@@ -1,2 +1,2 @@
 n_team_rows,n_fixtures,original_mae,original_rmse,original_bias,pre_fixture_mae,pre_fixture_rmse,pre_fixture_bias,delta_mae_pre_fixture,delta_rmse_pre_fixture,bias_reduction,n_corrected,n_kept_original,recommendation,should_activate_display_correction
-68,34,1.8455,2.2322,0.5111,1.8485,2.3028,0.0947,0.0574,-0.0053,0.4164,62,6,NO_CHANGE,False
+72,36,1.7885,2.1823,0.5187,1.775,2.2413,0.1021,0.065,-0.0007,0.4166,66,6,SHADOW_ONLY,False

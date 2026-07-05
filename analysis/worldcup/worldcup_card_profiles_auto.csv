@@ -1,20 +1,20 @@
 player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_total,red_cards_total,second_yellow_total,cards_total,yellow_cards_pg,red_cards_pg,cards_pg,card_risk_player_history,data_quality,confidence,reason,source
-9,A. Hakimi,31,Morocco,DEF,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+9,A. Hakimi,31,Morocco,DEF,3,1,0,0,1,0.333,0.0,0.333,medio,baja,media-baja,"3 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 17,C. Pulisic,2384,USA,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 30,S. Arias,8,Colombia,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 69,Brandon Mechele,1,Belgium,DEF,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 78,H. Vanaken,1,Belgium,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-153,O. Dembele,2,France,MID,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+153,O. Dembele,2,France,MID,4,0,0,0,0,0.0,0.0,0.0,bajo,media,media,"4 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 154,Lionel Messi,26,Argentina,FWD,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 184,H. Kane,10,England,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 207,Ivan Perišić,3,Croatia,DEF,2,2,0,0,2,1.0,0.0,1.0,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 217,Lautaro Martínez,26,Argentina,FWD,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-242,Ryan Thomas,4673,New Zealand,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+242,R. Thomas,4673,New Zealand,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 247,C. Gakpo,1118,Netherlands,FWD,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 249,D. Malen,1118,Netherlands,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 264,T. Meunier,1,Belgium,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 271,Leandro Paredes,26,Argentina,MID,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
-278,K. Mbappe,2,France,FWD,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+278,K. Mbappe,2,France,FWD,4,0,0,0,0,0.0,0.0,0.0,bajo,media,media,"4 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 289,Andy Robertson,1108,Scotland,DEF,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 299,Fabinho,6,Brazil,MID,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 304,S. Mane,13,Senegal,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
@@ -77,13 +77,13 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 1324,I. Sunjic,1113,Bosnia & Herzegovina,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 1361,F. Kadioglu,777,Türkiye,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 1417,A. Saelemaekers,1,Belgium,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-1422,Jérémy Doku,1,Belgium,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+1422,J. Doku,1,Belgium,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 1424,E. Kayembe,1508,Congo DR,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 1442,S. Kolasinac,1113,Bosnia & Herzegovina,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 1460,B. Saka,10,England,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 1464,Granit Xhaka,15,Switzerland,MID,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 1485,B. Fernandes,27,Portugal,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-1494,Jovane Cabral,1533,Cape Verde Islands,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+1494,J. Cabral,1533,Cape Verde Islands,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 1496,Raphinha,6,Brazil,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 1578,G. Lo Celso,26,Argentina,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 1642,F. Kessie,1501,Ivory Coast,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
@@ -93,20 +93,21 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 1929,Jhon Lucumí,8,Colombia,DEF,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 1942,J. Ito,12,Japan,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 1946,Leandro Trossard,1,Belgium,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-2001,Cyle Larin,5529,Canada,FWD,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
+2001,Cyle Larin,5529,Canada,FWD,2,2,0,0,2,1.0,0.0,1.0,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 2032,Jørgen Strand Larsen,1090,Norway,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2120,N. Raskin,1,Belgium,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2218,I. Sarr,13,Senegal,FWD,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2252,T. Holes,770,Czechia,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2285,A. Rudiger,25,Germany,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2291,M. Kovacic,3,Croatia,MID,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-2467,Lisandro Martínez,26,Argentina,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+2467,L. Martinez,26,Argentina,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2468,Gonzalo Montiel,26,Argentina,DEF,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 2472,R. de Paul,26,Argentina,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2489,L. Diaz,8,Colombia,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2490,Jefferson Lerma,8,Colombia,MID,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 2499,J. Alonso,2380,Paraguay,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-2507,Miguel Almirón,2380,Paraguay,MID,2,0,1,0,1,0.0,0.5,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
+2502,Gustavo Gómez,2380,Paraguay,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+2507,Miguel Almirón,2380,Paraguay,MID,3,0,1,0,1,0.0,0.333,0.333,medio,baja,media-baja,"3 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 2537,K. Boudiaf,1569,Qatar,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2539,Ahmed Fathi,1569,Qatar,MID,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 2545,H. Al Haydos,1569,Qatar,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
@@ -114,8 +115,8 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 2598,R. Doan,12,Japan,MID,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2601,D. Kamada,12,Japan,MID,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 2639,S. Mandash,23,Saudi Arabia,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-2654,Mohamed Hany,20,Australia,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-2656,Karim Hafez,32,Egypt,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+2654,M. Hany,20,Australia,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+2656,K. Hafez,32,Egypt,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2664,Trezeguet,32,Egypt,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2676,R. Neves,27,Portugal,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2685,E. Hajsafi,22,Iran,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
@@ -133,7 +134,7 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 2887,R. Jimenez,16,Mexico,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2897,Kim Min-Jae,17,South Korea,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2909,Paik Seung-Ho,17,South Korea,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-2926,Youri Tielemans,1,Belgium,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+2926,Y. Tielemans,1,Belgium,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2937,Declan Rice,10,England,MID,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 2945,D. Bronn,28,Tunisia,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 2975,C. Blackman,11,Panama,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
@@ -149,20 +150,21 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 5995,Nicolás de la Cruz,7,Uruguay,MID,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 6009,J. Alvarez,26,Argentina,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 6067,T. Almada,26,Argentina,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-6168,O. Alderete,2380,Paraguay,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+6168,O. Alderete,2380,Paraguay,DEF,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 6231,Facundo Medina,26,Argentina,DEF,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 6236,Andrés Cubas,2380,Paraguay,MID,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 6483,G. Avalos,2380,Paraguay,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-6503,Nahuel Molina,26,Argentina,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-6904,Connor Metcalfe,20,Australia,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+6503,N. Molina,26,Argentina,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+6904,C. Metcalfe,20,Australia,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 6931,L. Cacace,4673,New Zealand,DEF,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 6935,Sarpreet Singh,4673,New Zealand,MID,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
-7050,Aiden O'Neill,20,Australia,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+7050,A. O'Neill,20,Australia,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 7197,Andrés Andrade,11,Panama,DEF,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 7328,N. Seiwald,775,Austria,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 7562,R. Schmid,775,Austria,MID,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 7722,S. Kalajdzic,775,Austria,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 8450,Abdoulaye Seck,13,Senegal,DEF,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
+8489,Jonathan David,5529,Canada,FWD,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 8492,A. Sorloth,1090,Norway,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 8601,Frantzdy Pierrot,2386,Haiti,FWD,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 10135,Bruno Guimaraes,6,Brazil,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
@@ -178,7 +180,7 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 16841,Mohanad Lasheen,32,Egypt,MID,2,2,0,0,2,1.0,0.0,1.0,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 17269,E. Ashour,32,Egypt,MID,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 18592,I. Ndiaye,13,Senegal,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-18814,Issa Diop,31,Morocco,DEF,2,2,0,0,2,1.0,0.0,1.0,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
+18814,Issa Diop,31,Morocco,DEF,3,2,0,0,2,0.667,0.0,0.667,alto,baja,media-baja,"3 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 18816,A. Masuaku,1508,Congo DR,DEF,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 18830,M. Arnautovic,775,Austria,FWD,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 18861,N. Ake,1118,Netherlands,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
@@ -190,7 +192,7 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 19235,D. Spence,10,England,DEF,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 19524,C. Adams,1108,Scotland,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 19614,Saeid Ezatolahi,22,Iran,MID,2,2,0,0,2,1.0,0.0,1.0,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
-19617,M. Olise,2,France,MID,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+19617,M. Olise,2,France,MID,4,1,0,0,1,0.25,0.0,0.25,medio,media,media,4 partidos con eventos reales — muestra media,worldcup_events_auto
 20649,Y. Wissa,1508,Congo DR,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 20655,J. Duverne,2386,Haiti,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 20665,J. Bellegarde,2386,Haiti,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
@@ -203,10 +205,11 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 21587,E. Skhiri,28,Tunisia,DEF,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 21613,L. Joseph,2386,Haiti,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 22002,G. Konan,1501,Ivory Coast,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+22147,Manu Koné,2,France,MID,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 22149,I. Sangare,1501,Ivory Coast,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 22222,Z. Celik,777,Türkiye,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 22236,R. Leao,27,Portugal,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-22265,Nuno Da Costa,1533,Cape Verde Islands,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+22265,N. Da Costa,1533,Cape Verde Islands,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 24810,J. Cordoba,8,Colombia,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 24845,J. Ryerson,1090,Norway,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 24866,Douglas Santos,6,Brazil,DEF,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
@@ -236,13 +239,13 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 35570,S. Eustaquio,5529,Canada,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 35970,L. Romo,16,Mexico,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 36088,G. Martinez,16,Mexico,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-36579,S. Rahimi,31,Morocco,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+36579,S. Rahimi,31,Morocco,FWD,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 36857,Jurien Gaari,5530,Curaçao,DEF,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 36899,T. Koopmeiners,1118,Netherlands,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 36902,T. Reijnders,1118,Netherlands,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 37155,O. Kokcu,777,Türkiye,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-37435,Deroy Duarte,1533,Cape Verde Islands,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-37436,Laros Duarte,1533,Cape Verde Islands,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+37435,D. Duarte,1533,Cape Verde Islands,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+37436,L. Duarte,1533,Cape Verde Islands,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 37724,C. Summerville,1118,Netherlands,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 38114,K. Itakura,12,Japan,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 38695,J. P. van Hecke,1118,Netherlands,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
@@ -271,7 +274,7 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 44475,A. Al Amri,23,Saudi Arabia,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 44594,Saud Abdulhamid,23,Saudi Arabia,DEF,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 44612,G. Rodrigues,1533,Cape Verde Islands,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-44798,Liam Millar,5529,Canada,MID,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
+44798,Liam Millar,5529,Canada,FWD,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 45020,Duckens Nazon,2386,Haiti,FWD,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 45175,L. Shankland,1108,Scotland,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 46334,Aubrey Modiba,1531,South Africa,DEF,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
@@ -301,9 +304,9 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 50739,B. Aaronson,2384,USA,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 50745,J. Monteiro,1533,Cape Verde Islands,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 50788,M. Choiniere,5529,Canada,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-50816,R. Laryea,5529,Canada,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+50816,R. Laryea,5529,Canada,DEF,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 50852,J. Scally,2384,USA,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-51016,T. Buchanan,5529,Canada,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+51016,T. Buchanan,5529,Canada,MID,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 51494,M. Ugarte,7,Uruguay,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 51530,F. Vinas,7,Uruguay,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 51603,A. Canobbio,7,Uruguay,MID,2,0,1,0,1,0.0,0.5,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
@@ -323,7 +326,7 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 69196,M. Saber,32,Egypt,MID,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 70514,A. Gigovic,1113,Bosnia & Herzegovina,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 70670,I. Pitta,2380,Paraguay,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-70747,J. Enciso,2380,Paraguay,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+70747,J. Enciso,2380,Paraguay,FWD,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 71230,C. Harvey,11,Panama,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 72142,Shararh,1548,Jordan,FWD,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 72155,A. Ueda,12,Japan,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
@@ -338,7 +341,7 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 94322,Callum McCowatt,4673,New Zealand,MID,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 94333,E. Just,4673,New Zealand,MID,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 94346,T. Payne,4673,New Zealand,DEF,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-94541,Joe Bell,4673,New Zealand,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+94541,J. Bell,4673,New Zealand,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 96512,K. Lenini,1533,Cape Verde Islands,MID,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 113580,W. Semedo,1533,Cape Verde Islands,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 116117,M. Caicedo,2382,Ecuador,MID,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
@@ -349,7 +352,7 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 129033,J. Gvardiol,3,Croatia,DEF,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 129047,Ramiz Zerrouki,1532,Algeria,MID,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 129670,Nathanaël Mbuku,1508,Congo DR,FWD,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
-129678,A. Ounahi,31,Morocco,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+129678,A. Ounahi,31,Morocco,MID,3,1,0,0,1,0.333,0.0,0.333,medio,baja,media-baja,"3 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 129718,J. Bellingham,10,England,MID,3,1,0,0,1,0.333,0.0,0.333,medio,baja,media-baja,"3 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 133609,Pedri,9,Spain,MID,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 134217,M. Mohebi,22,Iran,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
@@ -365,14 +368,14 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 138908,E. Anderson,10,England,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 140747,I. Bayesh,1567,Iraq,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 142959,K. Akturkoglu,777,Türkiye,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-147859,Charles De Ketelaere,1,Belgium,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+147859,C. De Ketelaere,1,Belgium,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 152849,M. van de Ven,1118,Netherlands,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 153430,A. Elanga,5,Sweden,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 157997,A. Diallo,1501,Ivory Coast,FWD,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 158121,I. Jakobs,13,Senegal,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 158698,Jarell Quansah,10,England,DEF,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
-161897,I. Saibari,31,Morocco,FWD,3,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"3 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-161904,B. Barcola,2,France,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+161897,I. Saibari,31,Morocco,FWD,4,0,0,0,0,0.0,0.0,0.0,bajo,media,media,"4 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+161904,B. Barcola,2,France,MID,3,1,0,0,1,0.333,0.0,0.333,medio,baja,media-baja,"3 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 161921,G. Reyna,2384,USA,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 162007,M. De Cuyper,1,Belgium,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 162037,M. Tillman,2384,USA,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
@@ -388,7 +391,7 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 180937,H. Falchener,1090,Norway,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 181812,J. Musiala,25,Germany,MID,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 182219,A. Baena,9,Spain,MID,3,1,0,0,1,0.333,0.0,0.333,medio,baja,media-baja,"3 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
-190575,Marwan Attia,32,Egypt,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+190575,M. Attia,32,Egypt,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 191240,M. Senaya,1504,Ghana,DEF,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 195104,R. Rios,8,Colombia,MID,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 195107,D. Bobadilla,2380,Paraguay,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
@@ -451,21 +454,23 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 323935,G. Simeone,26,Argentina,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 323974,E. Saad,28,Tunisia,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 324034,Gustavo Puerta,8,Colombia,MID,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
+326183,Redouane Halhal,31,Morocco,DEF,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 327631,H. Diarra,13,Senegal,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+327738,Luc De Fougerolles,5529,Canada,DEF,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 327895,P. Wanner,775,Austria,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 328033,A. Pavlovic,25,Germany,MID,3,1,0,0,1,0.333,0.0,0.333,medio,baja,media-baja,"3 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 332056,Wagner Pina,1533,Cape Verde Islands,DEF,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
 335051,J. Neves,27,Portugal,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 336659,C. Talbi,31,Morocco,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 336671,Renato Veiga,27,Portugal,DEF,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
-337587,Jordan Bos,20,Australia,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+337587,J. Bos,20,Australia,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 338014,N. Irankunda,20,Australia,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 338367,Danley Jean Jacques,2386,Haiti,MID,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 339883,K. Yildiz,777,Türkiye,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 340173,E. Mahmic,1113,Bosnia & Herzegovina,MID,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
-340573,B. El Khannouss,31,Morocco,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+340573,B. El Khannouss,31,Morocco,MID,3,1,0,0,1,0.333,0.0,0.333,medio,baja,media-baja,"3 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 342035,C. Volpato,20,Australia,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-343027,D. Doue,2,France,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+343027,D. Doue,2,France,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 343287,D. Livramento,1533,Cape Verde Islands,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 343576,B. Gannon-Doak,1108,Scotland,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 344862,H. Mastouri,28,Tunisia,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
@@ -474,14 +479,14 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 349344,L. Jaquez,15,Switzerland,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 350037,N. Paz,26,Argentina,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 351014,Junnosuke Suzuki,12,Japan,DEF,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
-351587,T. Oluwaseyi,5529,Canada,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+351587,T. Oluwaseyi,5529,Canada,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 353808,D. Fonville,5530,Curaçao,DEF,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-353883,Patrick Beach,20,Australia,GK,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+353883,P. Beach,20,Australia,GK,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 354027,J. Ordonez,2382,Ecuador,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 354831,T. Maseko,1531,South Africa,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 358427,J. Urozov,1568,Uzbekistan,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 360114,Abdukodir Khusanov,1568,Uzbekistan,DEF,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
-362145,A. Ahmed,5529,Canada,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+362145,A. Ahmed,5529,Canada,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 365331,Noah Sadiki,1508,Congo DR,MID,2,2,0,0,2,1.0,0.0,1.0,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 369425,J. Adjetey,1504,Ghana,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 369544,G. Yassine,31,Morocco,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
@@ -499,10 +504,10 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 409303,M. Diouf,13,Senegal,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 409670,A. Malic,1113,Bosnia & Herzegovina,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 414149,R. Mofokeng,1531,South Africa,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-416901,Niko Sigur,5529,Canada,MID,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
+416901,Niko Sigur,5529,Canada,MID,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 416964,B. Karimov,1568,Uzbekistan,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 425020,A. Maidana,2380,Paraguay,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-438688,A. Bouaddi,31,Morocco,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+438688,A. Bouaddi,31,Morocco,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 446249,I. Mbaye,13,Senegal,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 474591,C. Inao Oulai,1501,Ivory Coast,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 475575,C. Yirenkyi,1504,Ghana,MID,1,1,0,0,1,1.0,0.0,1.0,medio,baja,baja,"solo 1 partido con eventos, no extrapolar fuerte",worldcup_events_auto
