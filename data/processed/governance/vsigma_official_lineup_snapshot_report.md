@@ -10,7 +10,7 @@
 - no_lineup_rows: 0
 - api_errors: 0
 - key_status: API_SPORTS
-- api_status_counts: NO_LINEUPS_RETURNED=4
+- api_status_counts: NO_LINEUPS_RETURNED=2; OK=2
 - auto_apply: NO
 - production_change: NO
 
