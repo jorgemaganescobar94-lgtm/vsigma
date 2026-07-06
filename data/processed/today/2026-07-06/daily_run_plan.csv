@@ -1,0 +1,2 @@
+fixture_id,league,home_team,away_team,market_primary,kickoff_time,minutes_to_kickoff,prelock_window_start,prelock_status,recommended_next_action,recommended_command
+1494197,Allsvenskan,BK Hacken,Djurgardens IF,OVER_2_5,2026-07-06T17:00:25.400000+00:00,292.83,2026-07-06T15:30:25.400000+00:00,PENDING_OUTSIDE_WINDOW,WAIT_FOR_PRELOCK,.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-06 --timezone Atlantic/Canary --mode prelock --window-minutes 90
