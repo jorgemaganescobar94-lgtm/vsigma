@@ -1,36 +1,10 @@
 fixture_id,home,away,category,player,team,probability_goal,expected_goals,reason,source_used,goal_source,confidence,data_quality,probability_1_sot,expected_sot,expected_shots,shots_source,probability_assist,expected_assists,expected_key_passes,assist_source,player_id,probability_card,probability_card_original,probability_card_adjusted,adjustment_direction,adjustment_reason
-1568100,Brazil,Norway,scorer,Vinícius Júnior,Brazil,0.2877,0.3393,"xG 0.34, P(gol) 29% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1568100,Brazil,Norway,scorer,E. Haaland,Norway,0.2562,0.296,"xG 0.30, P(gol) 26% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1568100,Brazil,Norway,scorer,Lucas Paquetá,Brazil,0.2381,0.272,"xG 0.27, P(gol) 24% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1568100,Brazil,Norway,sot,E. Haaland,Norway,,,"tiros esp. 2.4, SOT esp. 1.6 (media)",proxy,,media,media,0.8016,1.6176,2.41,proxy,,,,,,,,,,
-1568100,Brazil,Norway,sot,Vinícius Júnior,Brazil,,,"tiros esp. 2.1, SOT esp. 1.4 (media)",proxy,,media,media,0.7572,1.4157,2.12,proxy,,,,,,,,,,
-1568100,Brazil,Norway,sot,Raphinha,Brazil,,,"tiros esp. 2.0, SOT esp. 1.0 (media)",proxy,,media,media,0.631,0.9969,1.99,proxy,,,,,,,,,,
-1568100,Brazil,Norway,assist,Matheus Cunha,Brazil,,,xA-proxy 0.18 (media),proxy,,media,media,,,,,0.1606,0.1751,,proxy,,,,,,
-1568100,Brazil,Norway,assist,Lucas Paquetá,Brazil,,,xA-proxy 0.15 (media),proxy,,media,media,,,,,0.1416,0.1527,,proxy,,,,,,
-1568100,Brazil,Norway,assist,Casemiro,Brazil,,,xA-proxy 0.14 (media),proxy,,media,media,,,,,0.134,0.1439,,proxy,,,,,,
-1568100,Brazil,Norway,card_risk,A. Sørloth,Norway,,,P(tarjeta) 34% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,8492.0,0.3352,0.3352,0.3075,bajar,ajuste baja: historial jugador bajo ↓; posición bajo ↓; equipo bajo ↓
-1568100,Brazil,Norway,card_risk,Lucas Paquetá,Brazil,,,P(tarjeta) 33% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,1646.0,0.3283,0.3283,0.3267,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑ · fuentes en conflicto -> ajuste conservador
-1568100,Brazil,Norway,card_risk,T. Heggem,Norway,,,P(tarjeta) 30% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,39254.0,0.2983,0.2983,0.2886,bajar,ajuste baja: historial jugador bajo ↓; equipo bajo ↓
-1568100,Brazil,Norway,card_risk,Gabriel Magalhães,Brazil,,,P(tarjeta) 26% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,22224.0,0.2566,0.2566,0.2566,neutro,ajuste neutro: sin sesgo neto de las fuentes
-1570714,Mexico,England,scorer,H. Kane,England,0.3547,0.438,"xG 0.44, P(gol) 35% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1570714,Mexico,England,scorer,R. Jiménez,Mexico,0.3304,0.4011,"xG 0.40, P(gol) 33% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1570714,Mexico,England,scorer,A. Gordon,England,0.1537,0.1669,"xG 0.17, P(gol) 15% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1570714,Mexico,England,sot,H. Kane,England,,,"tiros esp. 1.9, SOT esp. 1.2 (media)",proxy,,media,media,0.7059,1.2239,1.91,proxy,,,,,,,,,,
-1570714,Mexico,England,sot,A. Gordon,England,,,"tiros esp. 1.6, SOT esp. 1.1 (media)",proxy,,media,media,0.6686,1.1045,1.59,proxy,,,,,,,,,,
-1570714,Mexico,England,sot,R. Jiménez,Mexico,,,"tiros esp. 1.8, SOT esp. 1.0 (media)",proxy,,media,media,0.6391,1.0192,1.82,proxy,,,,,,,,,,
-1570714,Mexico,England,assist,N. Madueke,England,,,xA-proxy 0.23 (media),proxy,,media,media,,,,,0.2066,0.2314,,proxy,,,,,,
-1570714,Mexico,England,assist,M. Guéhi,England,,,xA-proxy 0.17 (media),proxy,,media,media,,,,,0.1534,0.1665,,proxy,,,,,,
-1570714,Mexico,England,assist,D. Rice,England,,,xA-proxy 0.15 (media),proxy,,media,media,,,,,0.1396,0.1504,,proxy,,,,,,
-1570714,Mexico,England,card_risk,J. Bellingham,England,,,P(tarjeta) 46% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,129718.0,0.4592,0.4592,0.473,subir,ajuste sube: posición alto ↑
-1570714,Mexico,England,card_risk,C. Montes,Mexico,,,P(tarjeta) 43% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,2873.0,0.4261,0.4261,0.4186,neutro,ajuste neutro: equipo bajo ↓
-1570714,Mexico,England,card_risk,M. Guéhi,England,,,P(tarjeta) 32% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,67971.0,0.3224,0.3224,0.3224,neutro,ajuste neutro: sin sesgo neto de las fuentes
-1570714,Mexico,England,card_risk,N. Madueke,England,,,P(tarjeta) 23% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,136723.0,0.232,0.232,0.2308,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑ · fuentes en conflicto -> ajuste conservador
 1576756,Portugal,Spain,scorer,Mikel Oyarzabal,Spain,0.3217,0.3882,"xG 0.39, P(gol) 32% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
 1576756,Portugal,Spain,scorer,Cristiano Ronaldo,Portugal,0.2044,0.2286,"xG 0.23, P(gol) 20% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
 1576756,Portugal,Spain,scorer,Dani Olmo,Spain,0.1773,0.1952,"xG 0.20, P(gol) 18% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1576756,Portugal,Spain,sot,Mikel Oyarzabal,Spain,,,"tiros esp. 2.3, SOT esp. 1.6 (media)",proxy,,media,media,0.8068,1.644,2.32,proxy,,,,,,,,,,
-1576756,Portugal,Spain,sot,Lamine Yamal,Spain,,,"tiros esp. 2.4, SOT esp. 1.5 (media)",proxy,,media,media,0.7686,1.4635,2.44,proxy,,,,,,,,,,
-1576756,Portugal,Spain,sot,Cristiano Ronaldo,Portugal,,,"tiros esp. 2.5, SOT esp. 1.2 (media)",proxy,,media,media,0.7076,1.2297,2.46,proxy,,,,,,,,,,
+1576756,Portugal,Spain,sot,Mikel Oyarzabal,Spain,,,"tiros esp. 2.3, SOT esp. 1.6 (media)",proxy,,media,media,0.807,1.6453,2.32,proxy,,,,,,,,,,
+1576756,Portugal,Spain,sot,Lamine Yamal,Spain,,,"tiros esp. 2.4, SOT esp. 1.5 (media)",proxy,,media,media,0.7688,1.4646,2.44,proxy,,,,,,,,,,
+1576756,Portugal,Spain,sot,Cristiano Ronaldo,Portugal,,,"tiros esp. 2.5, SOT esp. 1.2 (media)",proxy,,media,media,0.7072,1.2283,2.46,proxy,,,,,,,,,,
 1576756,Portugal,Spain,assist,Lamine Yamal,Spain,,,xA-proxy 0.22 (media),proxy,,media,media,,,,,0.2005,0.2238,,proxy,,,,,,
 1576756,Portugal,Spain,assist,Mikel Oyarzabal,Spain,,,xA-proxy 0.21 (media),proxy,,media,media,,,,,0.1891,0.2096,,proxy,,,,,,
 1576756,Portugal,Spain,assist,Nuno Mendes,Portugal,,,xA-proxy 0.14 (media),proxy,,media,media,,,,,0.1286,0.1377,,proxy,,,,,,
@@ -38,3 +12,42 @@ fixture_id,home,away,category,player,team,probability_goal,expected_goals,reason
 1576756,Portugal,Spain,card_risk,João Cancelo,Portugal,,,P(tarjeta) 32% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,855.0,0.3242,0.3242,0.3072,bajar,ajuste baja: historial jugador bajo ↓; equipo bajo ↓
 1576756,Portugal,Spain,card_risk,Álex Baena,Spain,,,P(tarjeta) 32% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,182219.0,0.321,0.321,0.325,neutro,ajuste neutro: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
 1576756,Portugal,Spain,card_risk,Pedro Neto,Portugal,,,P(tarjeta) 28% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,1864.0,0.2827,0.2827,0.2763,bajar,ajuste baja: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+1570715,USA,Belgium,scorer,K. De Bruyne,Belgium,0.2444,0.2803,"xG 0.28, P(gol) 24% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1570715,USA,Belgium,scorer,Y. Tielemans,Belgium,0.2125,0.2389,"xG 0.24, P(gol) 21% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1570715,USA,Belgium,scorer,F. Balogun,USA,0.1722,0.189,"xG 0.19, P(gol) 17% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1570715,USA,Belgium,sot,F. Balogun,USA,,,"tiros esp. 2.1, SOT esp. 1.6 (media)",proxy,,media,media,0.7984,1.6016,2.09,proxy,,,,,,,,,,
+1570715,USA,Belgium,sot,K. De Bruyne,Belgium,,,"tiros esp. 2.2, SOT esp. 1.2 (media)",proxy,,media,media,0.7117,1.2436,2.25,proxy,,,,,,,,,,
+1570715,USA,Belgium,sot,Y. Tielemans,Belgium,,,"tiros esp. 1.4, SOT esp. 0.8 (media)",proxy,,media,media,0.5635,0.8289,1.36,proxy,,,,,,,,,,
+1570715,USA,Belgium,assist,C. De Ketelaere,Belgium,,,xA-proxy 0.24 (media),proxy,,media,media,,,,,0.213,0.2395,,proxy,,,,,,
+1570715,USA,Belgium,assist,J. Doku,Belgium,,,xA-proxy 0.14 (media),proxy,,media,media,,,,,0.1339,0.1438,,proxy,,,,,,
+1570715,USA,Belgium,assist,K. De Bruyne,Belgium,,,xA-proxy 0.14 (media),proxy,,media,media,,,,,0.1272,0.1361,,proxy,,,,,,
+1570715,USA,Belgium,card_risk,C. Richards,USA,,,P(tarjeta) 34% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,126949.0,0.3412,0.3412,0.3412,neutro,ajuste neutro: sin sesgo neto de las fuentes
+1570715,USA,Belgium,card_risk,Y. Tielemans,Belgium,,,P(tarjeta) 31% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,2926.0,0.3138,0.3138,0.3122,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑ · fuentes en conflicto -> ajuste conservador
+1570715,USA,Belgium,card_risk,T. Adams,USA,,,P(tarjeta) 28% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,1150.0,0.2849,0.2849,0.2934,subir,ajuste sube: posición alto ↑
+1570715,USA,Belgium,card_risk,F. Balogun,USA,,,P(tarjeta) 26% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,138835.0,0.2559,0.2559,0.2482,bajar,ajuste baja: posición bajo ↓
+1576804,Argentina,Egypt,scorer,Lautaro Martínez,Argentina,0.4936,0.6805,"xG 0.68, P(gol) 49% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1576804,Argentina,Egypt,scorer,L. Messi,Argentina,0.2259,0.2561,"xG 0.26, P(gol) 23% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1576804,Argentina,Egypt,scorer,Mohamed Salah,Egypt,0.187,0.207,"xG 0.21, P(gol) 19% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1576804,Argentina,Egypt,sot,Lautaro Martínez,Argentina,,,"tiros esp. 2.7, SOT esp. 2.1 (media)",proxy,,media,media,0.8815,2.1332,2.69,proxy,,,,,,,,,,
+1576804,Argentina,Egypt,sot,L. Messi,Argentina,,,"tiros esp. 2.2, SOT esp. 1.1 (media)",proxy,,media,media,0.6538,1.0606,2.23,proxy,,,,,,,,,,
+1576804,Argentina,Egypt,sot,Mohamed Salah,Egypt,,,"tiros esp. 1.0, SOT esp. 0.9 (media)",proxy,,media,media,0.5874,0.8852,0.97,proxy,,,,,,,,,,
+1576804,Argentina,Egypt,assist,L. Messi,Argentina,,,xA-proxy 0.30 (media),proxy,,media,media,,,,,0.2602,0.3014,,proxy,,,,,,
+1576804,Argentina,Egypt,assist,Lautaro Martínez,Argentina,,,xA-proxy 0.25 (media),proxy,,media,media,,,,,0.2217,0.2507,,proxy,,,,,,
+1576804,Argentina,Egypt,assist,E. Fernández,Argentina,,,xA-proxy 0.18 (media),proxy,,media,media,,,,,0.1619,0.1766,,proxy,,,,,,
+1576804,Argentina,Egypt,card_risk,A. Mac Allister,Argentina,,,P(tarjeta) 43% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,6716.0,0.4274,0.4274,0.4402,subir,ajuste sube: posición alto ↑
+1576804,Argentina,Egypt,card_risk,Marwan Attia,Egypt,,,P(tarjeta) 40% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,190575.0,0.3955,0.3955,0.4084,subir,ajuste sube: historial jugador bajo ↓; posición alto ↑; equipo alto ↑ · fuentes en conflicto -> ajuste conservador
+1576804,Argentina,Egypt,card_risk,N. Otamendi,Argentina,,,P(tarjeta) 37% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,624.0,0.3733,0.3733,0.3733,neutro,ajuste neutro: sin sesgo neto de las fuentes
+1576804,Argentina,Egypt,card_risk,Hamdi Fathy,Egypt,,,P(tarjeta) 33% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,16813.0,0.3281,0.3281,0.3322,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑; equipo alto ↑ · fuentes en conflicto -> ajuste conservador
+1576805,Switzerland,Colombia,scorer,B. Embolo,Switzerland,0.2188,0.2469,"xG 0.25, P(gol) 22% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1576805,Switzerland,Colombia,scorer,G. Puerta,Colombia,0.1881,0.2084,"xG 0.21, P(gol) 19% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1576805,Switzerland,Colombia,scorer,L. Díaz,Colombia,0.163,0.1779,"xG 0.18, P(gol) 16% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1576805,Switzerland,Colombia,sot,B. Embolo,Switzerland,,,"tiros esp. 1.9, SOT esp. 1.3 (media)",proxy,,media,media,0.7319,1.3164,1.87,proxy,,,,,,,,,,
+1576805,Switzerland,Colombia,sot,D. Ndoye,Switzerland,,,"tiros esp. 1.6, SOT esp. 0.9 (media)",proxy,,media,media,0.5943,0.9021,1.55,proxy,,,,,,,,,,
+1576805,Switzerland,Colombia,sot,R. Vargas,Switzerland,,,"tiros esp. 1.3, SOT esp. 0.9 (media)",proxy,,media,media,0.5779,0.8625,1.29,proxy,,,,,,,,,,
+1576805,Switzerland,Colombia,assist,J. Rodríguez,Colombia,,,xA-proxy 0.43 (media),proxy,,media,media,,,,,0.3492,0.4296,,proxy,,,,,,
+1576805,Switzerland,Colombia,assist,R. Vargas,Switzerland,,,xA-proxy 0.20 (media),proxy,,media,media,,,,,0.1814,0.2001,,proxy,,,,,,
+1576805,Switzerland,Colombia,assist,R. Freuler,Switzerland,,,xA-proxy 0.13 (media),proxy,,media,media,,,,,0.1178,0.1253,,proxy,,,,,,
+1576805,Switzerland,Colombia,card_risk,N. Elvedi,Switzerland,,,P(tarjeta) 37% — mercado de tarjeta es baja confianza (media),,,media-baja,baja,,,,,,,,,2803.0,0.3733,0.3733,0.3668,neutro,ajuste neutro: equipo bajo ↓
+1576805,Switzerland,Colombia,card_risk,G. Puerta,Colombia,,,P(tarjeta) 35% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,324034.0,0.3519,0.3519,0.3625,subir,ajuste sube: posición alto ↑
+1576805,Switzerland,Colombia,card_risk,J. Lerma,Colombia,,,P(tarjeta) 34% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,2490.0,0.3447,0.3447,0.3671,subir,ajuste sube: historial jugador alto ↑; posición alto ↑
+1576805,Switzerland,Colombia,card_risk,D. Muñoz,Colombia,,,P(tarjeta) 34% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,13736.0,0.3384,0.3384,0.3333,neutro,ajuste neutro: historial jugador bajo ↓

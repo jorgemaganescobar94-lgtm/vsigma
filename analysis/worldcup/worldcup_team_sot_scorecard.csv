@@ -119,5 +119,9 @@ fixture_id,kickoff_utc,team_id,team_name,opponent_id,opponent_name,side,predicte
 1567312,2026-07-03 03:00,1532,Algeria,15,Switzerland,away,3.775,2.0,1.775,1.775,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1567824,2026-07-04 17:00,31,Morocco,5529,Canada,away,4.726,4.0,0.7255,0.7255,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1567824,2026-07-04 17:00,5529,Canada,31,Morocco,home,2.658,3.0,-0.3417,0.3417,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1568100,2026-07-05 20:00,6,Brazil,1090,Norway,home,4.688,4.0,0.6883,0.6883,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1568100,2026-07-05 20:00,1090,Norway,6,Brazil,away,4.296,5.0,-0.7042,0.7042,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1569870,2026-07-04 21:00,2,France,2380,Paraguay,away,5.392,5.0,0.3921,0.3921,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1569870,2026-07-04 21:00,2380,Paraguay,2,France,home,2.814,1.0,1.8143,1.8143,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1570714,2026-07-06 00:00,10,England,16,Mexico,away,5.084,5.0,0.0837,0.0837,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1570714,2026-07-06 00:00,16,Mexico,10,England,home,3.616,5.0,-1.3841,1.3841,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics

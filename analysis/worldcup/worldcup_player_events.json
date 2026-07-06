@@ -1,998 +1,6 @@
 [
   {
     "fixture": {
-      "fixture_id": 1568100,
-      "kickoff_utc": "2026-07-05 20:00",
-      "home": "Brazil",
-      "away": "Norway",
-      "round": "Round of 16"
-    },
-    "data_quality": "media",
-    "confidence": "media",
-    "player_predictions": {
-      "likely_scorers": [
-        {
-          "player": "Vinícius Júnior",
-          "team": "Brazil",
-          "probability_goal": 0.2877,
-          "expected_goals": 0.3393,
-          "reason": "xG 0.34, P(gol) 29% (media)",
-          "source_used": "proxy",
-          "goal_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        },
-        {
-          "player": "E. Haaland",
-          "team": "Norway",
-          "probability_goal": 0.2562,
-          "expected_goals": 0.296,
-          "reason": "xG 0.30, P(gol) 26% (media)",
-          "source_used": "proxy",
-          "goal_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        },
-        {
-          "player": "Lucas Paquetá",
-          "team": "Brazil",
-          "probability_goal": 0.2381,
-          "expected_goals": 0.272,
-          "reason": "xG 0.27, P(gol) 24% (media)",
-          "source_used": "proxy",
-          "goal_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        }
-      ],
-      "likely_shots_on_target": [
-        {
-          "player": "E. Haaland",
-          "team": "Norway",
-          "probability_1_sot": 0.8016,
-          "expected_sot": 1.6176,
-          "expected_shots": 2.41,
-          "reason": "tiros esp. 2.4, SOT esp. 1.6 (media)",
-          "source_used": "proxy",
-          "shots_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        },
-        {
-          "player": "Vinícius Júnior",
-          "team": "Brazil",
-          "probability_1_sot": 0.7572,
-          "expected_sot": 1.4157,
-          "expected_shots": 2.12,
-          "reason": "tiros esp. 2.1, SOT esp. 1.4 (media)",
-          "source_used": "proxy",
-          "shots_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        },
-        {
-          "player": "Raphinha",
-          "team": "Brazil",
-          "probability_1_sot": 0.631,
-          "expected_sot": 0.9969,
-          "expected_shots": 1.99,
-          "reason": "tiros esp. 2.0, SOT esp. 1.0 (media)",
-          "source_used": "proxy",
-          "shots_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        }
-      ],
-      "likely_assisters": [
-        {
-          "player": "Matheus Cunha",
-          "team": "Brazil",
-          "probability_assist": 0.1606,
-          "expected_assists": 0.1751,
-          "expected_key_passes": null,
-          "reason": "xA-proxy 0.18 (media)",
-          "source_used": "proxy",
-          "assist_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        },
-        {
-          "player": "Lucas Paquetá",
-          "team": "Brazil",
-          "probability_assist": 0.1416,
-          "expected_assists": 0.1527,
-          "expected_key_passes": null,
-          "reason": "xA-proxy 0.15 (media)",
-          "source_used": "proxy",
-          "assist_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        },
-        {
-          "player": "Casemiro",
-          "team": "Brazil",
-          "probability_assist": 0.134,
-          "expected_assists": 0.1439,
-          "expected_key_passes": null,
-          "reason": "xA-proxy 0.14 (media)",
-          "source_used": "proxy",
-          "assist_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        }
-      ],
-      "set_piece_takers": {
-        "home": {
-          "penalties": {
-            "primary": null,
-            "secondary": null,
-            "confidence": "baja",
-            "reason": "lanzador habitual ausente del XI probable (no determinado para este XI)",
-            "source_priority_used": "no_determinado"
-          },
-          "direct_free_kicks": {
-            "primary": null,
-            "secondary": null,
-            "confidence": "baja",
-            "reason": "sin historial de eventos (no determinado)",
-            "source_priority_used": "no_determinado"
-          },
-          "corners_left": {
-            "primary": null,
-            "secondary": null,
-            "confidence": "baja",
-            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
-            "source_priority_used": "no_determinado"
-          },
-          "corners_right": {
-            "primary": null,
-            "secondary": null,
-            "confidence": "baja",
-            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
-            "source_priority_used": "no_determinado"
-          },
-          "source_priority_used": "penaltis:no_determinado; faltas:no_determinado; corner_izq:no_determinado; corner_der:no_determinado",
-          "confidence": "baja",
-          "reason": "prioridad de fuentes §4: eventos reales del Mundial > set_piece_takers.csv > historial de jugador > no determinado"
-        },
-        "away": {
-          "penalties": {
-            "primary": null,
-            "secondary": null,
-            "confidence": "baja",
-            "reason": "lanzador habitual ausente del XI probable (no determinado para este XI)",
-            "source_priority_used": "no_determinado"
-          },
-          "direct_free_kicks": {
-            "primary": null,
-            "secondary": null,
-            "confidence": "baja",
-            "reason": "sin historial de eventos (no determinado)",
-            "source_priority_used": "no_determinado"
-          },
-          "corners_left": {
-            "primary": null,
-            "secondary": null,
-            "confidence": "baja",
-            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
-            "source_priority_used": "no_determinado"
-          },
-          "corners_right": {
-            "primary": null,
-            "secondary": null,
-            "confidence": "baja",
-            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
-            "source_priority_used": "no_determinado"
-          },
-          "source_priority_used": "penaltis:no_determinado; faltas:no_determinado; corner_izq:no_determinado; corner_der:no_determinado",
-          "confidence": "baja",
-          "reason": "prioridad de fuentes §4: eventos reales del Mundial > set_piece_takers.csv > historial de jugador > no determinado"
-        }
-      },
-      "card_risk": [
-        {
-          "player": "A. Sørloth",
-          "team": "Norway",
-          "player_id": 8492,
-          "probability_card": 0.3352,
-          "reason": "P(tarjeta) 34% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "media-baja",
-          "data_quality": "media",
-          "probability_card_original": 0.3352,
-          "probability_card_adjusted": 0.3075,
-          "adjustment_direction": "bajar",
-          "adjustment_reason": "ajuste baja: historial jugador bajo ↓; posición bajo ↓; equipo bajo ↓",
-          "card_risk_components": {
-            "player_history": {
-              "label": "bajo",
-              "direction": "bajar",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": -0.035
-            },
-            "position_profile": {
-              "label": "bajo",
-              "direction": "bajar",
-              "confidence": "media",
-              "weight": 0.6,
-              "step": -0.03
-            },
-            "team_profile": {
-              "label": "bajo",
-              "direction": "bajar",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": -0.0175
-            },
-            "referee_profile": {
-              "label": "no determinado",
-              "direction": "neutro",
-              "confidence": "baja",
-              "weight": 0.15,
-              "step": 0.0
-            }
-          }
-        },
-        {
-          "player": "Lucas Paquetá",
-          "team": "Brazil",
-          "player_id": 1646,
-          "probability_card": 0.3283,
-          "reason": "P(tarjeta) 33% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "media-baja",
-          "data_quality": "media",
-          "probability_card_original": 0.3283,
-          "probability_card_adjusted": 0.3267,
-          "adjustment_direction": "neutro",
-          "adjustment_reason": "ajuste neutro: historial jugador bajo ↓; posición alto ↑ · fuentes en conflicto -> ajuste conservador",
-          "card_risk_components": {
-            "player_history": {
-              "label": "bajo",
-              "direction": "bajar",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": -0.035
-            },
-            "position_profile": {
-              "label": "alto",
-              "direction": "subir",
-              "confidence": "media",
-              "weight": 0.6,
-              "step": 0.03
-            },
-            "team_profile": {
-              "label": "medio",
-              "direction": "neutro",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": 0.0
-            },
-            "referee_profile": {
-              "label": "no determinado",
-              "direction": "neutro",
-              "confidence": "baja",
-              "weight": 0.15,
-              "step": 0.0
-            }
-          }
-        },
-        {
-          "player": "T. Heggem",
-          "team": "Norway",
-          "player_id": 39254,
-          "probability_card": 0.2983,
-          "reason": "P(tarjeta) 30% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "media-baja",
-          "data_quality": "media",
-          "probability_card_original": 0.2983,
-          "probability_card_adjusted": 0.2886,
-          "adjustment_direction": "bajar",
-          "adjustment_reason": "ajuste baja: historial jugador bajo ↓; equipo bajo ↓",
-          "card_risk_components": {
-            "player_history": {
-              "label": "bajo",
-              "direction": "bajar",
-              "confidence": "baja",
-              "weight": 0.15,
-              "step": -0.015
-            },
-            "position_profile": {
-              "label": "medio",
-              "direction": "neutro",
-              "confidence": "media",
-              "weight": 0.6,
-              "step": 0.0
-            },
-            "team_profile": {
-              "label": "bajo",
-              "direction": "bajar",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": -0.0175
-            },
-            "referee_profile": {
-              "label": "no determinado",
-              "direction": "neutro",
-              "confidence": "baja",
-              "weight": 0.15,
-              "step": 0.0
-            }
-          }
-        },
-        {
-          "player": "Gabriel Magalhães",
-          "team": "Brazil",
-          "player_id": 22224,
-          "probability_card": 0.2566,
-          "reason": "P(tarjeta) 26% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "media-baja",
-          "data_quality": "baja",
-          "probability_card_original": 0.2566,
-          "probability_card_adjusted": 0.2566,
-          "adjustment_direction": "neutro",
-          "adjustment_reason": "ajuste neutro: sin sesgo neto de las fuentes",
-          "card_risk_components": {
-            "player_history": {
-              "label": "no determinado",
-              "direction": "neutro",
-              "confidence": "no determinado",
-              "weight": 0.0,
-              "step": 0.0
-            },
-            "position_profile": {
-              "label": "medio",
-              "direction": "neutro",
-              "confidence": "media",
-              "weight": 0.6,
-              "step": 0.0
-            },
-            "team_profile": {
-              "label": "medio",
-              "direction": "neutro",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": 0.0
-            },
-            "referee_profile": {
-              "label": "no determinado",
-              "direction": "neutro",
-              "confidence": "baja",
-              "weight": 0.15,
-              "step": 0.0
-            }
-          }
-        }
-      ],
-      "key_matchups": [
-        {
-          "player_a": "Alisson Becker",
-          "player_b": "volumen de tiro de Norway",
-          "zone": "portero vs volumen de tiros",
-          "advantage": "no determinado",
-          "confidence": "baja",
-          "reason": "se esperan ~21.0 tiros a puerta del rival; el portero tendrá trabajo",
-          "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
-        },
-        {
-          "player_a": "Ø. Nyland",
-          "player_b": "volumen de tiro de Brazil",
-          "zone": "portero vs volumen de tiros",
-          "advantage": "no determinado",
-          "confidence": "baja",
-          "reason": "se esperan ~21.0 tiros a puerta del rival; el portero tendrá trabajo",
-          "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
-        }
-      ]
-    },
-    "scenarios": {
-      "available": false,
-      "reason": "XI alternativo no disponible (se usa solo XI probable)"
-    },
-    "team_context": {
-      "p_home": 0.5708,
-      "p_draw": 0.2455,
-      "p_away": 0.1837,
-      "xg_home": 1.7,
-      "xg_away": 0.85,
-      "top_score": "1-0",
-      "exp_corners_total": 7.07,
-      "exp_cards_total": 3.4,
-      "exp_sot_home": 12.28,
-      "exp_sot_away": 8.69
-    },
-    "external_data_status": {
-      "xg_xa_available": false,
-      "set_piece_available": true,
-      "referee_available": true,
-      "weather_available": true,
-      "coach_profile_available": false,
-      "positional_profile_available": true
-    },
-    "adapters_status": {
-      "xa90": false,
-      "referee_card_rates": false,
-      "weather": true,
-      "openweather_key_present": false,
-      "xg_xa": true,
-      "set_piece_takers": true,
-      "referee_profiles": true,
-      "coach_profiles": true,
-      "positional_profiles": true
-    },
-    "xa_source": "fuente xA/xG por jugador no configurada (data/external/player_xa90.csv) — Fase 3",
-    "xg_xa_source": "xG/xA real por jugador no configurado (data/external/player_xg_xa.csv) — Fase 3",
-    "set_piece_source": "lanzadores de balón parado cargados para 11 equipos (fuente externa)",
-    "events_source": "eventos reales (/fixtures/events)",
-    "referee_context": {
-      "referee_name": null,
-      "profile_source": null,
-      "matches_sample": null,
-      "card_environment": "no determinado",
-      "expected_card_environment": "no determinado",
-      "possible_penalty_environment": "no determinado",
-      "confidence": "baja",
-      "data_quality": "baja",
-      "sample": null,
-      "yellow_cards_pg": null,
-      "red_cards_pg": null,
-      "penalties_pg": null,
-      "reason": "árbitro no asignado al fixture (sin nombre de árbitro disponible)"
-    },
-    "weather_context": {
-      "weather_summary": "no determinado",
-      "impact_on_tempo": "neutro",
-      "impact_on_shots": "neutro",
-      "impact_on_crosses": "neutro",
-      "impact_on_possession": "neutro",
-      "impact_on_fatigue": "neutro",
-      "extreme": false,
-      "confidence": "baja",
-      "data_quality": "baja",
-      "reason": "fila de clima sin mediciones (solo kickoff/venue) — pendiente de rellenar"
-    },
-    "tactical_context": {
-      "home_style": {
-        "team": "Brazil",
-        "style": "estilo no determinado (sin perfil táctico externo)",
-        "coach_name": null,
-        "confidence": "baja",
-        "source": null,
-        "reason": "perfil táctico no configurado para este equipo — Fase 3"
-      },
-      "away_style": {
-        "team": "Norway",
-        "style": "estilo no determinado (sin perfil táctico externo)",
-        "coach_name": null,
-        "confidence": "baja",
-        "source": null,
-        "reason": "perfil táctico no configurado para este equipo — Fase 3"
-      },
-      "expected_match_script": "sin guion táctico (perfiles no disponibles)",
-      "confidence": "baja",
-      "data_quality": "baja",
-      "source": "manual/externo (coach_tactical_profiles.csv)",
-      "reason": "perfiles tácticos del seleccionador no configurados (data/external/coach_tactical_profiles.csv) — Fase 3"
-    },
-    "key_matchups": [
-      {
-        "player_a": "Alisson Becker",
-        "player_b": "volumen de tiro de Norway",
-        "zone": "portero vs volumen de tiros",
-        "advantage": "no determinado",
-        "confidence": "baja",
-        "reason": "se esperan ~21.0 tiros a puerta del rival; el portero tendrá trabajo",
-        "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
-      },
-      {
-        "player_a": "Ø. Nyland",
-        "player_b": "volumen de tiro de Brazil",
-        "zone": "portero vs volumen de tiros",
-        "advantage": "no determinado",
-        "confidence": "baja",
-        "reason": "se esperan ~21.0 tiros a puerta del rival; el portero tendrá trabajo",
-        "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
-      }
-    ],
-    "card_profiles_source": "perfiles de tarjetas auto cargados (520 jug / 48 eq / 4 pos)"
-  },
-  {
-    "fixture": {
-      "fixture_id": 1570714,
-      "kickoff_utc": "2026-07-06 00:00",
-      "home": "Mexico",
-      "away": "England",
-      "round": "Round of 16"
-    },
-    "data_quality": "media",
-    "confidence": "media",
-    "player_predictions": {
-      "likely_scorers": [
-        {
-          "player": "H. Kane",
-          "team": "England",
-          "probability_goal": 0.3547,
-          "expected_goals": 0.438,
-          "reason": "xG 0.44, P(gol) 35% (media)",
-          "source_used": "proxy",
-          "goal_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        },
-        {
-          "player": "R. Jiménez",
-          "team": "Mexico",
-          "probability_goal": 0.3304,
-          "expected_goals": 0.4011,
-          "reason": "xG 0.40, P(gol) 33% (media)",
-          "source_used": "proxy",
-          "goal_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        },
-        {
-          "player": "A. Gordon",
-          "team": "England",
-          "probability_goal": 0.1537,
-          "expected_goals": 0.1669,
-          "reason": "xG 0.17, P(gol) 15% (media)",
-          "source_used": "proxy",
-          "goal_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        }
-      ],
-      "likely_shots_on_target": [
-        {
-          "player": "H. Kane",
-          "team": "England",
-          "probability_1_sot": 0.7059,
-          "expected_sot": 1.2239,
-          "expected_shots": 1.91,
-          "reason": "tiros esp. 1.9, SOT esp. 1.2 (media)",
-          "source_used": "proxy",
-          "shots_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        },
-        {
-          "player": "A. Gordon",
-          "team": "England",
-          "probability_1_sot": 0.6686,
-          "expected_sot": 1.1045,
-          "expected_shots": 1.59,
-          "reason": "tiros esp. 1.6, SOT esp. 1.1 (media)",
-          "source_used": "proxy",
-          "shots_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        },
-        {
-          "player": "R. Jiménez",
-          "team": "Mexico",
-          "probability_1_sot": 0.6391,
-          "expected_sot": 1.0192,
-          "expected_shots": 1.82,
-          "reason": "tiros esp. 1.8, SOT esp. 1.0 (media)",
-          "source_used": "proxy",
-          "shots_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        }
-      ],
-      "likely_assisters": [
-        {
-          "player": "N. Madueke",
-          "team": "England",
-          "probability_assist": 0.2066,
-          "expected_assists": 0.2314,
-          "expected_key_passes": null,
-          "reason": "xA-proxy 0.23 (media)",
-          "source_used": "proxy",
-          "assist_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        },
-        {
-          "player": "M. Guéhi",
-          "team": "England",
-          "probability_assist": 0.1534,
-          "expected_assists": 0.1665,
-          "expected_key_passes": null,
-          "reason": "xA-proxy 0.17 (media)",
-          "source_used": "proxy",
-          "assist_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        },
-        {
-          "player": "D. Rice",
-          "team": "England",
-          "probability_assist": 0.1396,
-          "expected_assists": 0.1504,
-          "expected_key_passes": null,
-          "reason": "xA-proxy 0.15 (media)",
-          "source_used": "proxy",
-          "assist_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        }
-      ],
-      "set_piece_takers": {
-        "home": {
-          "penalties": {
-            "primary": null,
-            "secondary": null,
-            "confidence": "baja",
-            "reason": "lanzador habitual ausente del XI probable (no determinado para este XI)",
-            "source_priority_used": "no_determinado"
-          },
-          "direct_free_kicks": {
-            "primary": null,
-            "secondary": null,
-            "confidence": "baja",
-            "reason": "sin historial de eventos (no determinado)",
-            "source_priority_used": "no_determinado"
-          },
-          "corners_left": {
-            "primary": null,
-            "secondary": null,
-            "confidence": "baja",
-            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
-            "source_priority_used": "no_determinado"
-          },
-          "corners_right": {
-            "primary": null,
-            "secondary": null,
-            "confidence": "baja",
-            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
-            "source_priority_used": "no_determinado"
-          },
-          "source_priority_used": "penaltis:no_determinado; faltas:no_determinado; corner_izq:no_determinado; corner_der:no_determinado",
-          "confidence": "baja",
-          "reason": "prioridad de fuentes §4: eventos reales del Mundial > set_piece_takers.csv > historial de jugador > no determinado"
-        },
-        "away": {
-          "penalties": {
-            "primary": null,
-            "secondary": null,
-            "confidence": "baja",
-            "reason": "lanzador habitual ausente del XI probable (no determinado para este XI)",
-            "source_priority_used": "no_determinado"
-          },
-          "direct_free_kicks": {
-            "primary": null,
-            "secondary": null,
-            "confidence": "baja",
-            "reason": "sin historial de eventos (no determinado)",
-            "source_priority_used": "no_determinado"
-          },
-          "corners_left": {
-            "primary": null,
-            "secondary": null,
-            "confidence": "baja",
-            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
-            "source_priority_used": "no_determinado"
-          },
-          "corners_right": {
-            "primary": null,
-            "secondary": null,
-            "confidence": "baja",
-            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
-            "source_priority_used": "no_determinado"
-          },
-          "source_priority_used": "penaltis:no_determinado; faltas:no_determinado; corner_izq:no_determinado; corner_der:no_determinado",
-          "confidence": "baja",
-          "reason": "prioridad de fuentes §4: eventos reales del Mundial > set_piece_takers.csv > historial de jugador > no determinado"
-        }
-      },
-      "card_risk": [
-        {
-          "player": "J. Bellingham",
-          "team": "England",
-          "player_id": 129718,
-          "probability_card": 0.4592,
-          "reason": "P(tarjeta) 46% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "media-baja",
-          "data_quality": "media",
-          "probability_card_original": 0.4592,
-          "probability_card_adjusted": 0.473,
-          "adjustment_direction": "subir",
-          "adjustment_reason": "ajuste sube: posición alto ↑",
-          "card_risk_components": {
-            "player_history": {
-              "label": "medio",
-              "direction": "neutro",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": 0.0
-            },
-            "position_profile": {
-              "label": "alto",
-              "direction": "subir",
-              "confidence": "media",
-              "weight": 0.6,
-              "step": 0.03
-            },
-            "team_profile": {
-              "label": "medio",
-              "direction": "neutro",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": 0.0
-            },
-            "referee_profile": {
-              "label": "no determinado",
-              "direction": "neutro",
-              "confidence": "baja",
-              "weight": 0.15,
-              "step": 0.0
-            }
-          }
-        },
-        {
-          "player": "C. Montes",
-          "team": "Mexico",
-          "player_id": 2873,
-          "probability_card": 0.4261,
-          "reason": "P(tarjeta) 43% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "media-baja",
-          "data_quality": "baja",
-          "probability_card_original": 0.4261,
-          "probability_card_adjusted": 0.4186,
-          "adjustment_direction": "neutro",
-          "adjustment_reason": "ajuste neutro: equipo bajo ↓",
-          "card_risk_components": {
-            "player_history": {
-              "label": "no determinado",
-              "direction": "neutro",
-              "confidence": "no determinado",
-              "weight": 0.0,
-              "step": 0.0
-            },
-            "position_profile": {
-              "label": "medio",
-              "direction": "neutro",
-              "confidence": "media",
-              "weight": 0.6,
-              "step": 0.0
-            },
-            "team_profile": {
-              "label": "bajo",
-              "direction": "bajar",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": -0.0175
-            },
-            "referee_profile": {
-              "label": "no determinado",
-              "direction": "neutro",
-              "confidence": "baja",
-              "weight": 0.15,
-              "step": 0.0
-            }
-          }
-        },
-        {
-          "player": "M. Guéhi",
-          "team": "England",
-          "player_id": 67971,
-          "probability_card": 0.3224,
-          "reason": "P(tarjeta) 32% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "media-baja",
-          "data_quality": "baja",
-          "probability_card_original": 0.3224,
-          "probability_card_adjusted": 0.3224,
-          "adjustment_direction": "neutro",
-          "adjustment_reason": "ajuste neutro: sin sesgo neto de las fuentes",
-          "card_risk_components": {
-            "player_history": {
-              "label": "no determinado",
-              "direction": "neutro",
-              "confidence": "no determinado",
-              "weight": 0.0,
-              "step": 0.0
-            },
-            "position_profile": {
-              "label": "medio",
-              "direction": "neutro",
-              "confidence": "media",
-              "weight": 0.6,
-              "step": 0.0
-            },
-            "team_profile": {
-              "label": "medio",
-              "direction": "neutro",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": 0.0
-            },
-            "referee_profile": {
-              "label": "no determinado",
-              "direction": "neutro",
-              "confidence": "baja",
-              "weight": 0.15,
-              "step": 0.0
-            }
-          }
-        },
-        {
-          "player": "N. Madueke",
-          "team": "England",
-          "player_id": 136723,
-          "probability_card": 0.232,
-          "reason": "P(tarjeta) 23% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "media-baja",
-          "data_quality": "media",
-          "probability_card_original": 0.232,
-          "probability_card_adjusted": 0.2308,
-          "adjustment_direction": "neutro",
-          "adjustment_reason": "ajuste neutro: historial jugador bajo ↓; posición alto ↑ · fuentes en conflicto -> ajuste conservador",
-          "card_risk_components": {
-            "player_history": {
-              "label": "bajo",
-              "direction": "bajar",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": -0.035
-            },
-            "position_profile": {
-              "label": "alto",
-              "direction": "subir",
-              "confidence": "media",
-              "weight": 0.6,
-              "step": 0.03
-            },
-            "team_profile": {
-              "label": "medio",
-              "direction": "neutro",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": 0.0
-            },
-            "referee_profile": {
-              "label": "no determinado",
-              "direction": "neutro",
-              "confidence": "baja",
-              "weight": 0.15,
-              "step": 0.0
-            }
-          }
-        }
-      ],
-      "key_matchups": [
-        {
-          "player_a": "R. Rangel",
-          "player_b": "volumen de tiro de England",
-          "zone": "portero vs volumen de tiros",
-          "advantage": "no determinado",
-          "confidence": "baja",
-          "reason": "se esperan ~17.5 tiros a puerta del rival; el portero tendrá trabajo",
-          "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
-        },
-        {
-          "player_a": "J. Pickford",
-          "player_b": "volumen de tiro de Mexico",
-          "zone": "portero vs volumen de tiros",
-          "advantage": "no determinado",
-          "confidence": "baja",
-          "reason": "se esperan ~17.5 tiros a puerta del rival; el portero tendrá trabajo",
-          "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
-        }
-      ]
-    },
-    "scenarios": {
-      "available": false,
-      "reason": "XI alternativo no disponible (se usa solo XI probable)"
-    },
-    "team_context": {
-      "p_home": 0.2642,
-      "p_draw": 0.2392,
-      "p_away": 0.4965,
-      "xg_home": 0.93,
-      "xg_away": 1.52,
-      "top_score": "0-1",
-      "exp_corners_total": 7.0,
-      "exp_cards_total": 4.57,
-      "exp_sot_home": 7.59,
-      "exp_sot_away": 9.87
-    },
-    "external_data_status": {
-      "xg_xa_available": false,
-      "set_piece_available": true,
-      "referee_available": true,
-      "weather_available": true,
-      "coach_profile_available": false,
-      "positional_profile_available": true
-    },
-    "adapters_status": {
-      "xa90": false,
-      "referee_card_rates": false,
-      "weather": true,
-      "openweather_key_present": false,
-      "xg_xa": true,
-      "set_piece_takers": true,
-      "referee_profiles": true,
-      "coach_profiles": true,
-      "positional_profiles": true
-    },
-    "xa_source": "fuente xA/xG por jugador no configurada (data/external/player_xa90.csv) — Fase 3",
-    "xg_xa_source": "xG/xA real por jugador no configurado (data/external/player_xg_xa.csv) — Fase 3",
-    "set_piece_source": "lanzadores de balón parado cargados para 11 equipos (fuente externa)",
-    "events_source": "eventos reales (/fixtures/events)",
-    "referee_context": {
-      "referee_name": null,
-      "profile_source": null,
-      "matches_sample": null,
-      "card_environment": "no determinado",
-      "expected_card_environment": "no determinado",
-      "possible_penalty_environment": "no determinado",
-      "confidence": "baja",
-      "data_quality": "baja",
-      "sample": null,
-      "yellow_cards_pg": null,
-      "red_cards_pg": null,
-      "penalties_pg": null,
-      "reason": "árbitro no asignado al fixture (sin nombre de árbitro disponible)"
-    },
-    "weather_context": {
-      "weather_summary": "no determinado",
-      "impact_on_tempo": "neutro",
-      "impact_on_shots": "neutro",
-      "impact_on_crosses": "neutro",
-      "impact_on_possession": "neutro",
-      "impact_on_fatigue": "neutro",
-      "extreme": false,
-      "confidence": "baja",
-      "data_quality": "baja",
-      "reason": "fila de clima sin mediciones (solo kickoff/venue) — pendiente de rellenar"
-    },
-    "tactical_context": {
-      "home_style": {
-        "team": "Mexico",
-        "style": "estilo no determinado (sin perfil táctico externo)",
-        "coach_name": null,
-        "confidence": "baja",
-        "source": null,
-        "reason": "perfil táctico no configurado para este equipo — Fase 3"
-      },
-      "away_style": {
-        "team": "England",
-        "style": "estilo no determinado (sin perfil táctico externo)",
-        "coach_name": null,
-        "confidence": "baja",
-        "source": null,
-        "reason": "perfil táctico no configurado para este equipo — Fase 3"
-      },
-      "expected_match_script": "sin guion táctico (perfiles no disponibles)",
-      "confidence": "baja",
-      "data_quality": "baja",
-      "source": "manual/externo (coach_tactical_profiles.csv)",
-      "reason": "perfiles tácticos del seleccionador no configurados (data/external/coach_tactical_profiles.csv) — Fase 3"
-    },
-    "key_matchups": [
-      {
-        "player_a": "R. Rangel",
-        "player_b": "volumen de tiro de England",
-        "zone": "portero vs volumen de tiros",
-        "advantage": "no determinado",
-        "confidence": "baja",
-        "reason": "se esperan ~17.5 tiros a puerta del rival; el portero tendrá trabajo",
-        "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
-      },
-      {
-        "player_a": "J. Pickford",
-        "player_b": "volumen de tiro de Mexico",
-        "zone": "portero vs volumen de tiros",
-        "advantage": "no determinado",
-        "confidence": "baja",
-        "reason": "se esperan ~17.5 tiros a puerta del rival; el portero tendrá trabajo",
-        "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
-      }
-    ],
-    "card_profiles_source": "perfiles de tarjetas auto cargados (520 jug / 48 eq / 4 pos)"
-  },
-  {
-    "fixture": {
       "fixture_id": 1576756,
       "kickoff_utc": "2026-07-06 19:00",
       "home": "Portugal",
@@ -1041,8 +49,8 @@
         {
           "player": "Mikel Oyarzabal",
           "team": "Spain",
-          "probability_1_sot": 0.8068,
-          "expected_sot": 1.644,
+          "probability_1_sot": 0.807,
+          "expected_sot": 1.6453,
           "expected_shots": 2.32,
           "reason": "tiros esp. 2.3, SOT esp. 1.6 (media)",
           "source_used": "proxy",
@@ -1053,8 +61,8 @@
         {
           "player": "Lamine Yamal",
           "team": "Spain",
-          "probability_1_sot": 0.7686,
-          "expected_sot": 1.4635,
+          "probability_1_sot": 0.7688,
+          "expected_sot": 1.4646,
           "expected_shots": 2.44,
           "reason": "tiros esp. 2.4, SOT esp. 1.5 (media)",
           "source_used": "proxy",
@@ -1065,8 +73,8 @@
         {
           "player": "Cristiano Ronaldo",
           "team": "Portugal",
-          "probability_1_sot": 0.7076,
-          "expected_sot": 1.2297,
+          "probability_1_sot": 0.7072,
+          "expected_sot": 1.2283,
           "expected_shots": 2.46,
           "reason": "tiros esp. 2.5, SOT esp. 1.2 (media)",
           "source_used": "proxy",
@@ -1396,8 +404,8 @@
       "top_score": "0-1",
       "exp_corners_total": 7.33,
       "exp_cards_total": 4.41,
-      "exp_sot_home": 9.05,
-      "exp_sot_away": 13.12
+      "exp_sot_home": 9.04,
+      "exp_sot_away": 13.13
     },
     "external_data_status": {
       "xg_xa_available": false,
@@ -1420,7 +428,7 @@
     },
     "xa_source": "fuente xA/xG por jugador no configurada (data/external/player_xa90.csv) — Fase 3",
     "xg_xa_source": "xG/xA real por jugador no configurado (data/external/player_xg_xa.csv) — Fase 3",
-    "set_piece_source": "lanzadores de balón parado cargados para 11 equipos (fuente externa)",
+    "set_piece_source": "lanzadores de balón parado cargados para 14 equipos (fuente externa)",
     "events_source": "eventos reales (/fixtures/events)",
     "referee_context": {
       "referee_name": null,
@@ -1492,6 +500,1508 @@
         "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
       }
     ],
-    "card_profiles_source": "perfiles de tarjetas auto cargados (520 jug / 48 eq / 4 pos)"
+    "card_profiles_source": "perfiles de tarjetas auto cargados (528 jug / 48 eq / 4 pos)"
+  },
+  {
+    "fixture": {
+      "fixture_id": 1570715,
+      "kickoff_utc": "2026-07-07 00:00",
+      "home": "USA",
+      "away": "Belgium",
+      "round": "Round of 16"
+    },
+    "data_quality": "media",
+    "confidence": "media",
+    "player_predictions": {
+      "likely_scorers": [
+        {
+          "player": "K. De Bruyne",
+          "team": "Belgium",
+          "probability_goal": 0.2444,
+          "expected_goals": 0.2803,
+          "reason": "xG 0.28, P(gol) 24% (media)",
+          "source_used": "proxy",
+          "goal_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "Y. Tielemans",
+          "team": "Belgium",
+          "probability_goal": 0.2125,
+          "expected_goals": 0.2389,
+          "reason": "xG 0.24, P(gol) 21% (media)",
+          "source_used": "proxy",
+          "goal_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "F. Balogun",
+          "team": "USA",
+          "probability_goal": 0.1722,
+          "expected_goals": 0.189,
+          "reason": "xG 0.19, P(gol) 17% (media)",
+          "source_used": "proxy",
+          "goal_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        }
+      ],
+      "likely_shots_on_target": [
+        {
+          "player": "F. Balogun",
+          "team": "USA",
+          "probability_1_sot": 0.7984,
+          "expected_sot": 1.6016,
+          "expected_shots": 2.09,
+          "reason": "tiros esp. 2.1, SOT esp. 1.6 (media)",
+          "source_used": "proxy",
+          "shots_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "K. De Bruyne",
+          "team": "Belgium",
+          "probability_1_sot": 0.7117,
+          "expected_sot": 1.2436,
+          "expected_shots": 2.25,
+          "reason": "tiros esp. 2.2, SOT esp. 1.2 (media)",
+          "source_used": "proxy",
+          "shots_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "Y. Tielemans",
+          "team": "Belgium",
+          "probability_1_sot": 0.5635,
+          "expected_sot": 0.8289,
+          "expected_shots": 1.36,
+          "reason": "tiros esp. 1.4, SOT esp. 0.8 (media)",
+          "source_used": "proxy",
+          "shots_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        }
+      ],
+      "likely_assisters": [
+        {
+          "player": "C. De Ketelaere",
+          "team": "Belgium",
+          "probability_assist": 0.213,
+          "expected_assists": 0.2395,
+          "expected_key_passes": null,
+          "reason": "xA-proxy 0.24 (media)",
+          "source_used": "proxy",
+          "assist_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "J. Doku",
+          "team": "Belgium",
+          "probability_assist": 0.1339,
+          "expected_assists": 0.1438,
+          "expected_key_passes": null,
+          "reason": "xA-proxy 0.14 (media)",
+          "source_used": "proxy",
+          "assist_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "K. De Bruyne",
+          "team": "Belgium",
+          "probability_assist": 0.1272,
+          "expected_assists": 0.1361,
+          "expected_key_passes": null,
+          "reason": "xA-proxy 0.14 (media)",
+          "source_used": "proxy",
+          "assist_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        }
+      ],
+      "set_piece_takers": {
+        "home": {
+          "penalties": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "lanzador habitual ausente del XI probable (no determinado para este XI)",
+            "source_priority_used": "no_determinado"
+          },
+          "direct_free_kicks": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado)",
+            "source_priority_used": "no_determinado"
+          },
+          "corners_left": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
+            "source_priority_used": "no_determinado"
+          },
+          "corners_right": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
+            "source_priority_used": "no_determinado"
+          },
+          "source_priority_used": "penaltis:no_determinado; faltas:no_determinado; corner_izq:no_determinado; corner_der:no_determinado",
+          "confidence": "baja",
+          "reason": "prioridad de fuentes §4: eventos reales del Mundial > set_piece_takers.csv > historial de jugador > no determinado"
+        },
+        "away": {
+          "penalties": {
+            "primary": "Y. Tielemans",
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "más lanzamientos registrados (1); 100% del XI disponible",
+            "primary_count": 1,
+            "primary_last": {
+              "fixture_id": 1567308,
+              "date": "2026-07-01",
+              "scored": true
+            },
+            "if_primary_absent": "el lanzador habitual no está en el XI probable; asumiría Y. Tielemans",
+            "source_priority_used": "eventos_reales_mundial"
+          },
+          "direct_free_kicks": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado)",
+            "source_priority_used": "no_determinado"
+          },
+          "corners_left": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
+            "source_priority_used": "no_determinado"
+          },
+          "corners_right": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
+            "source_priority_used": "no_determinado"
+          },
+          "source_priority_used": "penaltis:eventos_reales; faltas:no_determinado; corner_izq:no_determinado; corner_der:no_determinado",
+          "confidence": "baja",
+          "reason": "prioridad de fuentes §4: eventos reales del Mundial > set_piece_takers.csv > historial de jugador > no determinado"
+        }
+      },
+      "card_risk": [
+        {
+          "player": "C. Richards",
+          "team": "USA",
+          "player_id": 126949,
+          "probability_card": 0.3412,
+          "reason": "P(tarjeta) 34% — mercado de tarjeta es baja confianza (media)",
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.3412,
+          "probability_card_adjusted": 0.3412,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: sin sesgo neto de las fuentes",
+          "card_risk_components": {
+            "player_history": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            },
+            "position_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.0
+            },
+            "team_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.0
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
+        },
+        {
+          "player": "Y. Tielemans",
+          "team": "Belgium",
+          "player_id": 2926,
+          "probability_card": 0.3138,
+          "reason": "P(tarjeta) 31% — mercado de tarjeta es baja confianza (media)",
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.3138,
+          "probability_card_adjusted": 0.3122,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: historial jugador bajo ↓; posición alto ↑ · fuentes en conflicto -> ajuste conservador",
+          "card_risk_components": {
+            "player_history": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.035
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.0
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
+        },
+        {
+          "player": "T. Adams",
+          "team": "USA",
+          "player_id": 1150,
+          "probability_card": 0.2849,
+          "reason": "P(tarjeta) 28% — mercado de tarjeta es baja confianza (media)",
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.2849,
+          "probability_card_adjusted": 0.2934,
+          "adjustment_direction": "subir",
+          "adjustment_reason": "ajuste sube: posición alto ↑",
+          "card_risk_components": {
+            "player_history": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.0
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
+        },
+        {
+          "player": "F. Balogun",
+          "team": "USA",
+          "player_id": 138835,
+          "probability_card": 0.2559,
+          "reason": "P(tarjeta) 26% — mercado de tarjeta es baja confianza (media)",
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.2559,
+          "probability_card_adjusted": 0.2482,
+          "adjustment_direction": "bajar",
+          "adjustment_reason": "ajuste baja: posición bajo ↓",
+          "card_risk_components": {
+            "player_history": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            },
+            "position_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": -0.03
+            },
+            "team_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.0
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
+        }
+      ],
+      "key_matchups": [
+        {
+          "player_a": "M. Freese",
+          "player_b": "volumen de tiro de Belgium",
+          "zone": "portero vs volumen de tiros",
+          "advantage": "no determinado",
+          "confidence": "baja",
+          "reason": "se esperan ~20.2 tiros a puerta del rival; el portero tendrá trabajo",
+          "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
+        },
+        {
+          "player_a": "T. Courtois",
+          "player_b": "volumen de tiro de USA",
+          "zone": "portero vs volumen de tiros",
+          "advantage": "no determinado",
+          "confidence": "baja",
+          "reason": "se esperan ~20.2 tiros a puerta del rival; el portero tendrá trabajo",
+          "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
+        }
+      ]
+    },
+    "scenarios": {
+      "available": false,
+      "reason": "XI alternativo no disponible (se usa solo XI probable)"
+    },
+    "team_context": {
+      "p_home": 0.198,
+      "p_draw": 0.2515,
+      "p_away": 0.5505,
+      "xg_home": 0.82,
+      "xg_away": 1.68,
+      "top_score": "0-1",
+      "exp_corners_total": 8.06,
+      "exp_cards_total": 3.96,
+      "exp_sot_home": 8.94,
+      "exp_sot_away": 11.25
+    },
+    "external_data_status": {
+      "xg_xa_available": false,
+      "set_piece_available": true,
+      "referee_available": true,
+      "weather_available": true,
+      "coach_profile_available": false,
+      "positional_profile_available": true
+    },
+    "adapters_status": {
+      "xa90": false,
+      "referee_card_rates": false,
+      "weather": true,
+      "openweather_key_present": false,
+      "xg_xa": true,
+      "set_piece_takers": true,
+      "referee_profiles": true,
+      "coach_profiles": true,
+      "positional_profiles": true
+    },
+    "xa_source": "fuente xA/xG por jugador no configurada (data/external/player_xa90.csv) — Fase 3",
+    "xg_xa_source": "xG/xA real por jugador no configurado (data/external/player_xg_xa.csv) — Fase 3",
+    "set_piece_source": "lanzadores de balón parado cargados para 14 equipos (fuente externa)",
+    "events_source": "eventos reales (/fixtures/events)",
+    "referee_context": {
+      "referee_name": null,
+      "profile_source": null,
+      "matches_sample": null,
+      "card_environment": "no determinado",
+      "expected_card_environment": "no determinado",
+      "possible_penalty_environment": "no determinado",
+      "confidence": "baja",
+      "data_quality": "baja",
+      "sample": null,
+      "yellow_cards_pg": null,
+      "red_cards_pg": null,
+      "penalties_pg": null,
+      "reason": "árbitro no asignado al fixture (sin nombre de árbitro disponible)"
+    },
+    "weather_context": {
+      "weather_summary": "no determinado",
+      "impact_on_tempo": "neutro",
+      "impact_on_shots": "neutro",
+      "impact_on_crosses": "neutro",
+      "impact_on_possession": "neutro",
+      "impact_on_fatigue": "neutro",
+      "extreme": false,
+      "confidence": "baja",
+      "data_quality": "baja",
+      "reason": "fila de clima sin mediciones (solo kickoff/venue) — pendiente de rellenar"
+    },
+    "tactical_context": {
+      "home_style": {
+        "team": "USA",
+        "style": "estilo no determinado (sin perfil táctico externo)",
+        "coach_name": null,
+        "confidence": "baja",
+        "source": null,
+        "reason": "perfil táctico no configurado para este equipo — Fase 3"
+      },
+      "away_style": {
+        "team": "Belgium",
+        "style": "estilo no determinado (sin perfil táctico externo)",
+        "coach_name": null,
+        "confidence": "baja",
+        "source": null,
+        "reason": "perfil táctico no configurado para este equipo — Fase 3"
+      },
+      "expected_match_script": "sin guion táctico (perfiles no disponibles)",
+      "confidence": "baja",
+      "data_quality": "baja",
+      "source": "manual/externo (coach_tactical_profiles.csv)",
+      "reason": "perfiles tácticos del seleccionador no configurados (data/external/coach_tactical_profiles.csv) — Fase 3"
+    },
+    "key_matchups": [
+      {
+        "player_a": "M. Freese",
+        "player_b": "volumen de tiro de Belgium",
+        "zone": "portero vs volumen de tiros",
+        "advantage": "no determinado",
+        "confidence": "baja",
+        "reason": "se esperan ~20.2 tiros a puerta del rival; el portero tendrá trabajo",
+        "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
+      },
+      {
+        "player_a": "T. Courtois",
+        "player_b": "volumen de tiro de USA",
+        "zone": "portero vs volumen de tiros",
+        "advantage": "no determinado",
+        "confidence": "baja",
+        "reason": "se esperan ~20.2 tiros a puerta del rival; el portero tendrá trabajo",
+        "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
+      }
+    ],
+    "card_profiles_source": "perfiles de tarjetas auto cargados (528 jug / 48 eq / 4 pos)"
+  },
+  {
+    "fixture": {
+      "fixture_id": 1576804,
+      "kickoff_utc": "2026-07-07 16:00",
+      "home": "Argentina",
+      "away": "Egypt",
+      "round": "Round of 16"
+    },
+    "data_quality": "media",
+    "confidence": "media",
+    "player_predictions": {
+      "likely_scorers": [
+        {
+          "player": "Lautaro Martínez",
+          "team": "Argentina",
+          "probability_goal": 0.4936,
+          "expected_goals": 0.6805,
+          "reason": "xG 0.68, P(gol) 49% (media)",
+          "source_used": "proxy",
+          "goal_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "L. Messi",
+          "team": "Argentina",
+          "probability_goal": 0.2259,
+          "expected_goals": 0.2561,
+          "reason": "xG 0.26, P(gol) 23% (media)",
+          "source_used": "proxy",
+          "goal_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "Mohamed Salah",
+          "team": "Egypt",
+          "probability_goal": 0.187,
+          "expected_goals": 0.207,
+          "reason": "xG 0.21, P(gol) 19% (media)",
+          "source_used": "proxy",
+          "goal_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        }
+      ],
+      "likely_shots_on_target": [
+        {
+          "player": "Lautaro Martínez",
+          "team": "Argentina",
+          "probability_1_sot": 0.8815,
+          "expected_sot": 2.1332,
+          "expected_shots": 2.69,
+          "reason": "tiros esp. 2.7, SOT esp. 2.1 (media)",
+          "source_used": "proxy",
+          "shots_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "L. Messi",
+          "team": "Argentina",
+          "probability_1_sot": 0.6538,
+          "expected_sot": 1.0606,
+          "expected_shots": 2.23,
+          "reason": "tiros esp. 2.2, SOT esp. 1.1 (media)",
+          "source_used": "proxy",
+          "shots_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "Mohamed Salah",
+          "team": "Egypt",
+          "probability_1_sot": 0.5874,
+          "expected_sot": 0.8852,
+          "expected_shots": 0.97,
+          "reason": "tiros esp. 1.0, SOT esp. 0.9 (media)",
+          "source_used": "proxy",
+          "shots_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        }
+      ],
+      "likely_assisters": [
+        {
+          "player": "L. Messi",
+          "team": "Argentina",
+          "probability_assist": 0.2602,
+          "expected_assists": 0.3014,
+          "expected_key_passes": null,
+          "reason": "xA-proxy 0.30 (media)",
+          "source_used": "proxy",
+          "assist_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "team": "Argentina",
+          "probability_assist": 0.2217,
+          "expected_assists": 0.2507,
+          "expected_key_passes": null,
+          "reason": "xA-proxy 0.25 (media)",
+          "source_used": "proxy",
+          "assist_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "E. Fernández",
+          "team": "Argentina",
+          "probability_assist": 0.1619,
+          "expected_assists": 0.1766,
+          "expected_key_passes": null,
+          "reason": "xA-proxy 0.18 (media)",
+          "source_used": "proxy",
+          "assist_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        }
+      ],
+      "set_piece_takers": {
+        "home": {
+          "penalties": {
+            "primary": "L. Martinez",
+            "secondary": "L. Messi",
+            "confidence": "baja",
+            "reason": "más lanzamientos registrados (1); 50% del XI disponible",
+            "primary_count": 1,
+            "primary_last": {
+              "fixture_id": 1489421,
+              "date": "2026-06-28",
+              "scored": true
+            },
+            "if_primary_absent": "el lanzador habitual no está en el XI probable; asumiría L. Martinez",
+            "source_priority_used": "eventos_reales_mundial"
+          },
+          "direct_free_kicks": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado)",
+            "source_priority_used": "no_determinado"
+          },
+          "corners_left": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
+            "source_priority_used": "no_determinado"
+          },
+          "corners_right": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
+            "source_priority_used": "no_determinado"
+          },
+          "source_priority_used": "penaltis:eventos_reales; faltas:no_determinado; corner_izq:no_determinado; corner_der:no_determinado",
+          "confidence": "baja",
+          "reason": "prioridad de fuentes §4: eventos reales del Mundial > set_piece_takers.csv > historial de jugador > no determinado"
+        },
+        "away": {
+          "penalties": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "lanzador habitual ausente del XI probable (no determinado para este XI)",
+            "source_priority_used": "no_determinado"
+          },
+          "direct_free_kicks": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado)",
+            "source_priority_used": "no_determinado"
+          },
+          "corners_left": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
+            "source_priority_used": "no_determinado"
+          },
+          "corners_right": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
+            "source_priority_used": "no_determinado"
+          },
+          "source_priority_used": "penaltis:no_determinado; faltas:no_determinado; corner_izq:no_determinado; corner_der:no_determinado",
+          "confidence": "baja",
+          "reason": "prioridad de fuentes §4: eventos reales del Mundial > set_piece_takers.csv > historial de jugador > no determinado"
+        }
+      },
+      "card_risk": [
+        {
+          "player": "A. Mac Allister",
+          "team": "Argentina",
+          "player_id": 6716,
+          "probability_card": 0.4274,
+          "reason": "P(tarjeta) 43% — mercado de tarjeta es baja confianza (media)",
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.4274,
+          "probability_card_adjusted": 0.4402,
+          "adjustment_direction": "subir",
+          "adjustment_reason": "ajuste sube: posición alto ↑",
+          "card_risk_components": {
+            "player_history": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.0
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
+        },
+        {
+          "player": "Marwan Attia",
+          "team": "Egypt",
+          "player_id": 190575,
+          "probability_card": 0.3955,
+          "reason": "P(tarjeta) 40% — mercado de tarjeta es baja confianza (media)",
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.3955,
+          "probability_card_adjusted": 0.4084,
+          "adjustment_direction": "subir",
+          "adjustment_reason": "ajuste sube: historial jugador bajo ↓; posición alto ↑; equipo alto ↑ · fuentes en conflicto -> ajuste conservador",
+          "card_risk_components": {
+            "player_history": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": -0.015
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
+        },
+        {
+          "player": "N. Otamendi",
+          "team": "Argentina",
+          "player_id": 624,
+          "probability_card": 0.3733,
+          "reason": "P(tarjeta) 37% — mercado de tarjeta es baja confianza (media)",
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.3733,
+          "probability_card_adjusted": 0.3733,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: sin sesgo neto de las fuentes",
+          "card_risk_components": {
+            "player_history": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            },
+            "position_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.0
+            },
+            "team_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.0
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
+        },
+        {
+          "player": "Hamdi Fathy",
+          "team": "Egypt",
+          "player_id": 16813,
+          "probability_card": 0.3281,
+          "reason": "P(tarjeta) 33% — mercado de tarjeta es baja confianza (media)",
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.3281,
+          "probability_card_adjusted": 0.3322,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: historial jugador bajo ↓; posición alto ↑; equipo alto ↑ · fuentes en conflicto -> ajuste conservador",
+          "card_risk_components": {
+            "player_history": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.035
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
+        }
+      ],
+      "key_matchups": [
+        {
+          "player_a": "E. Martínez",
+          "player_b": "volumen de tiro de Egypt",
+          "zone": "portero vs volumen de tiros",
+          "advantage": "no determinado",
+          "confidence": "baja",
+          "reason": "se esperan ~16.5 tiros a puerta del rival; el portero tendrá trabajo",
+          "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
+        },
+        {
+          "player_a": "Mostafa Shobeir",
+          "player_b": "volumen de tiro de Argentina",
+          "zone": "portero vs volumen de tiros",
+          "advantage": "no determinado",
+          "confidence": "baja",
+          "reason": "se esperan ~16.5 tiros a puerta del rival; el portero tendrá trabajo",
+          "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
+        }
+      ]
+    },
+    "scenarios": {
+      "available": false,
+      "reason": "XI alternativo no disponible (se usa solo XI probable)"
+    },
+    "team_context": {
+      "p_home": 0.7095,
+      "p_draw": 0.1928,
+      "p_away": 0.0977,
+      "xg_home": 2.12,
+      "xg_away": 0.65,
+      "top_score": "2-0",
+      "exp_corners_total": 6.93,
+      "exp_cards_total": 4.44,
+      "exp_sot_home": 10.93,
+      "exp_sot_away": 5.54
+    },
+    "external_data_status": {
+      "xg_xa_available": false,
+      "set_piece_available": true,
+      "referee_available": true,
+      "weather_available": true,
+      "coach_profile_available": false,
+      "positional_profile_available": true
+    },
+    "adapters_status": {
+      "xa90": false,
+      "referee_card_rates": false,
+      "weather": true,
+      "openweather_key_present": false,
+      "xg_xa": true,
+      "set_piece_takers": true,
+      "referee_profiles": true,
+      "coach_profiles": true,
+      "positional_profiles": true
+    },
+    "xa_source": "fuente xA/xG por jugador no configurada (data/external/player_xa90.csv) — Fase 3",
+    "xg_xa_source": "xG/xA real por jugador no configurado (data/external/player_xg_xa.csv) — Fase 3",
+    "set_piece_source": "lanzadores de balón parado cargados para 14 equipos (fuente externa)",
+    "events_source": "eventos reales (/fixtures/events)",
+    "referee_context": {
+      "referee_name": null,
+      "profile_source": null,
+      "matches_sample": null,
+      "card_environment": "no determinado",
+      "expected_card_environment": "no determinado",
+      "possible_penalty_environment": "no determinado",
+      "confidence": "baja",
+      "data_quality": "baja",
+      "sample": null,
+      "yellow_cards_pg": null,
+      "red_cards_pg": null,
+      "penalties_pg": null,
+      "reason": "árbitro no asignado al fixture (sin nombre de árbitro disponible)"
+    },
+    "weather_context": {
+      "weather_summary": "no determinado",
+      "impact_on_tempo": "neutro",
+      "impact_on_shots": "neutro",
+      "impact_on_crosses": "neutro",
+      "impact_on_possession": "neutro",
+      "impact_on_fatigue": "neutro",
+      "extreme": false,
+      "confidence": "baja",
+      "data_quality": "baja",
+      "reason": "fila de clima sin mediciones (solo kickoff/venue) — pendiente de rellenar"
+    },
+    "tactical_context": {
+      "home_style": {
+        "team": "Argentina",
+        "style": "estilo no determinado (sin perfil táctico externo)",
+        "coach_name": null,
+        "confidence": "baja",
+        "source": null,
+        "reason": "perfil táctico no configurado para este equipo — Fase 3"
+      },
+      "away_style": {
+        "team": "Egypt",
+        "style": "estilo no determinado (sin perfil táctico externo)",
+        "coach_name": null,
+        "confidence": "baja",
+        "source": null,
+        "reason": "perfil táctico no configurado para este equipo — Fase 3"
+      },
+      "expected_match_script": "sin guion táctico (perfiles no disponibles)",
+      "confidence": "baja",
+      "data_quality": "baja",
+      "source": "manual/externo (coach_tactical_profiles.csv)",
+      "reason": "perfiles tácticos del seleccionador no configurados (data/external/coach_tactical_profiles.csv) — Fase 3"
+    },
+    "key_matchups": [
+      {
+        "player_a": "E. Martínez",
+        "player_b": "volumen de tiro de Egypt",
+        "zone": "portero vs volumen de tiros",
+        "advantage": "no determinado",
+        "confidence": "baja",
+        "reason": "se esperan ~16.5 tiros a puerta del rival; el portero tendrá trabajo",
+        "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
+      },
+      {
+        "player_a": "Mostafa Shobeir",
+        "player_b": "volumen de tiro de Argentina",
+        "zone": "portero vs volumen de tiros",
+        "advantage": "no determinado",
+        "confidence": "baja",
+        "reason": "se esperan ~16.5 tiros a puerta del rival; el portero tendrá trabajo",
+        "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
+      }
+    ],
+    "card_profiles_source": "perfiles de tarjetas auto cargados (528 jug / 48 eq / 4 pos)"
+  },
+  {
+    "fixture": {
+      "fixture_id": 1576805,
+      "kickoff_utc": "2026-07-07 20:00",
+      "home": "Switzerland",
+      "away": "Colombia",
+      "round": "Round of 16"
+    },
+    "data_quality": "media",
+    "confidence": "media",
+    "player_predictions": {
+      "likely_scorers": [
+        {
+          "player": "B. Embolo",
+          "team": "Switzerland",
+          "probability_goal": 0.2188,
+          "expected_goals": 0.2469,
+          "reason": "xG 0.25, P(gol) 22% (media)",
+          "source_used": "proxy",
+          "goal_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "G. Puerta",
+          "team": "Colombia",
+          "probability_goal": 0.1881,
+          "expected_goals": 0.2084,
+          "reason": "xG 0.21, P(gol) 19% (media)",
+          "source_used": "proxy",
+          "goal_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "L. Díaz",
+          "team": "Colombia",
+          "probability_goal": 0.163,
+          "expected_goals": 0.1779,
+          "reason": "xG 0.18, P(gol) 16% (media)",
+          "source_used": "proxy",
+          "goal_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        }
+      ],
+      "likely_shots_on_target": [
+        {
+          "player": "B. Embolo",
+          "team": "Switzerland",
+          "probability_1_sot": 0.7319,
+          "expected_sot": 1.3164,
+          "expected_shots": 1.87,
+          "reason": "tiros esp. 1.9, SOT esp. 1.3 (media)",
+          "source_used": "proxy",
+          "shots_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "D. Ndoye",
+          "team": "Switzerland",
+          "probability_1_sot": 0.5943,
+          "expected_sot": 0.9021,
+          "expected_shots": 1.55,
+          "reason": "tiros esp. 1.6, SOT esp. 0.9 (media)",
+          "source_used": "proxy",
+          "shots_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "R. Vargas",
+          "team": "Switzerland",
+          "probability_1_sot": 0.5779,
+          "expected_sot": 0.8625,
+          "expected_shots": 1.29,
+          "reason": "tiros esp. 1.3, SOT esp. 0.9 (media)",
+          "source_used": "proxy",
+          "shots_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        }
+      ],
+      "likely_assisters": [
+        {
+          "player": "J. Rodríguez",
+          "team": "Colombia",
+          "probability_assist": 0.3492,
+          "expected_assists": 0.4296,
+          "expected_key_passes": null,
+          "reason": "xA-proxy 0.43 (media)",
+          "source_used": "proxy",
+          "assist_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "R. Vargas",
+          "team": "Switzerland",
+          "probability_assist": 0.1814,
+          "expected_assists": 0.2001,
+          "expected_key_passes": null,
+          "reason": "xA-proxy 0.20 (media)",
+          "source_used": "proxy",
+          "assist_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
+          "player": "R. Freuler",
+          "team": "Switzerland",
+          "probability_assist": 0.1178,
+          "expected_assists": 0.1253,
+          "expected_key_passes": null,
+          "reason": "xA-proxy 0.13 (media)",
+          "source_used": "proxy",
+          "assist_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        }
+      ],
+      "set_piece_takers": {
+        "home": {
+          "penalties": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "lanzador habitual ausente del XI probable (no determinado para este XI)",
+            "source_priority_used": "no_determinado"
+          },
+          "direct_free_kicks": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado)",
+            "source_priority_used": "no_determinado"
+          },
+          "corners_left": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
+            "source_priority_used": "no_determinado"
+          },
+          "corners_right": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
+            "source_priority_used": "no_determinado"
+          },
+          "source_priority_used": "penaltis:no_determinado; faltas:no_determinado; corner_izq:no_determinado; corner_der:no_determinado",
+          "confidence": "baja",
+          "reason": "prioridad de fuentes §4: eventos reales del Mundial > set_piece_takers.csv > historial de jugador > no determinado"
+        },
+        "away": {
+          "penalties": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "lanzador habitual ausente del XI probable (no determinado para este XI)",
+            "source_priority_used": "no_determinado"
+          },
+          "direct_free_kicks": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado)",
+            "source_priority_used": "no_determinado"
+          },
+          "corners_left": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
+            "source_priority_used": "no_determinado"
+          },
+          "corners_right": {
+            "primary": null,
+            "secondary": null,
+            "confidence": "baja",
+            "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
+            "source_priority_used": "no_determinado"
+          },
+          "source_priority_used": "penaltis:no_determinado; faltas:no_determinado; corner_izq:no_determinado; corner_der:no_determinado",
+          "confidence": "baja",
+          "reason": "prioridad de fuentes §4: eventos reales del Mundial > set_piece_takers.csv > historial de jugador > no determinado"
+        }
+      },
+      "card_risk": [
+        {
+          "player": "N. Elvedi",
+          "team": "Switzerland",
+          "player_id": 2803,
+          "probability_card": 0.3733,
+          "reason": "P(tarjeta) 37% — mercado de tarjeta es baja confianza (media)",
+          "confidence": "media-baja",
+          "data_quality": "baja",
+          "probability_card_original": 0.3733,
+          "probability_card_adjusted": 0.3668,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: equipo bajo ↓",
+          "card_risk_components": {
+            "player_history": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            },
+            "position_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.0
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.0175
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
+        },
+        {
+          "player": "G. Puerta",
+          "team": "Colombia",
+          "player_id": 324034,
+          "probability_card": 0.3519,
+          "reason": "P(tarjeta) 35% — mercado de tarjeta es baja confianza (media)",
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.3519,
+          "probability_card_adjusted": 0.3625,
+          "adjustment_direction": "subir",
+          "adjustment_reason": "ajuste sube: posición alto ↑",
+          "card_risk_components": {
+            "player_history": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.0
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
+        },
+        {
+          "player": "J. Lerma",
+          "team": "Colombia",
+          "player_id": 2490,
+          "probability_card": 0.3447,
+          "reason": "P(tarjeta) 34% — mercado de tarjeta es baja confianza (media)",
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.3447,
+          "probability_card_adjusted": 0.3671,
+          "adjustment_direction": "subir",
+          "adjustment_reason": "ajuste sube: historial jugador alto ↑; posición alto ↑",
+          "card_risk_components": {
+            "player_history": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.035
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.0
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
+        },
+        {
+          "player": "D. Muñoz",
+          "team": "Colombia",
+          "player_id": 13736,
+          "probability_card": 0.3384,
+          "reason": "P(tarjeta) 34% — mercado de tarjeta es baja confianza (media)",
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.3384,
+          "probability_card_adjusted": 0.3333,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: historial jugador bajo ↓",
+          "card_risk_components": {
+            "player_history": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": -0.015
+            },
+            "position_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.0
+            },
+            "team_profile": {
+              "label": "medio",
+              "direction": "neutro",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.0
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
+        }
+      ],
+      "key_matchups": [
+        {
+          "player_a": "G. Kobel",
+          "player_b": "volumen de tiro de Colombia",
+          "zone": "portero vs volumen de tiros",
+          "advantage": "no determinado",
+          "confidence": "baja",
+          "reason": "se esperan ~18.2 tiros a puerta del rival; el portero tendrá trabajo",
+          "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
+        },
+        {
+          "player_a": "C. Vargas",
+          "player_b": "volumen de tiro de Switzerland",
+          "zone": "portero vs volumen de tiros",
+          "advantage": "no determinado",
+          "confidence": "baja",
+          "reason": "se esperan ~18.2 tiros a puerta del rival; el portero tendrá trabajo",
+          "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
+        }
+      ]
+    },
+    "scenarios": {
+      "available": false,
+      "reason": "XI alternativo no disponible (se usa solo XI probable)"
+    },
+    "team_context": {
+      "p_home": 0.2706,
+      "p_draw": 0.2741,
+      "p_away": 0.4553,
+      "xg_home": 0.98,
+      "xg_away": 1.45,
+      "top_score": "0-1",
+      "exp_corners_total": 7.15,
+      "exp_cards_total": 4.25,
+      "exp_sot_home": 8.75,
+      "exp_sot_away": 9.43
+    },
+    "external_data_status": {
+      "xg_xa_available": false,
+      "set_piece_available": true,
+      "referee_available": true,
+      "weather_available": true,
+      "coach_profile_available": false,
+      "positional_profile_available": true
+    },
+    "adapters_status": {
+      "xa90": false,
+      "referee_card_rates": false,
+      "weather": true,
+      "openweather_key_present": false,
+      "xg_xa": true,
+      "set_piece_takers": true,
+      "referee_profiles": true,
+      "coach_profiles": true,
+      "positional_profiles": true
+    },
+    "xa_source": "fuente xA/xG por jugador no configurada (data/external/player_xa90.csv) — Fase 3",
+    "xg_xa_source": "xG/xA real por jugador no configurado (data/external/player_xg_xa.csv) — Fase 3",
+    "set_piece_source": "lanzadores de balón parado cargados para 14 equipos (fuente externa)",
+    "events_source": "eventos reales (/fixtures/events)",
+    "referee_context": {
+      "referee_name": null,
+      "profile_source": null,
+      "matches_sample": null,
+      "card_environment": "no determinado",
+      "expected_card_environment": "no determinado",
+      "possible_penalty_environment": "no determinado",
+      "confidence": "baja",
+      "data_quality": "baja",
+      "sample": null,
+      "yellow_cards_pg": null,
+      "red_cards_pg": null,
+      "penalties_pg": null,
+      "reason": "árbitro no asignado al fixture (sin nombre de árbitro disponible)"
+    },
+    "weather_context": {
+      "weather_summary": "no determinado",
+      "impact_on_tempo": "neutro",
+      "impact_on_shots": "neutro",
+      "impact_on_crosses": "neutro",
+      "impact_on_possession": "neutro",
+      "impact_on_fatigue": "neutro",
+      "extreme": false,
+      "confidence": "baja",
+      "data_quality": "baja",
+      "reason": "fila de clima sin mediciones (solo kickoff/venue) — pendiente de rellenar"
+    },
+    "tactical_context": {
+      "home_style": {
+        "team": "Switzerland",
+        "style": "estilo no determinado (sin perfil táctico externo)",
+        "coach_name": null,
+        "confidence": "baja",
+        "source": null,
+        "reason": "perfil táctico no configurado para este equipo — Fase 3"
+      },
+      "away_style": {
+        "team": "Colombia",
+        "style": "estilo no determinado (sin perfil táctico externo)",
+        "coach_name": null,
+        "confidence": "baja",
+        "source": null,
+        "reason": "perfil táctico no configurado para este equipo — Fase 3"
+      },
+      "expected_match_script": "sin guion táctico (perfiles no disponibles)",
+      "confidence": "baja",
+      "data_quality": "baja",
+      "source": "manual/externo (coach_tactical_profiles.csv)",
+      "reason": "perfiles tácticos del seleccionador no configurados (data/external/coach_tactical_profiles.csv) — Fase 3"
+    },
+    "key_matchups": [
+      {
+        "player_a": "G. Kobel",
+        "player_b": "volumen de tiro de Colombia",
+        "zone": "portero vs volumen de tiros",
+        "advantage": "no determinado",
+        "confidence": "baja",
+        "reason": "se esperan ~18.2 tiros a puerta del rival; el portero tendrá trabajo",
+        "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
+      },
+      {
+        "player_a": "C. Vargas",
+        "player_b": "volumen de tiro de Switzerland",
+        "zone": "portero vs volumen de tiros",
+        "advantage": "no determinado",
+        "confidence": "baja",
+        "reason": "se esperan ~18.2 tiros a puerta del rival; el portero tendrá trabajo",
+        "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
+      }
+    ],
+    "card_profiles_source": "perfiles de tarjetas auto cargados (528 jug / 48 eq / 4 pos)"
   }
 ]

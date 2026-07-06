@@ -60,3 +60,5 @@ fixture_id,home,away,lambda_home,lambda_away,source_lambda,actual_score,in_top1,
 1567310,Colombia,Ghana,2.47,0.53,mx,1-0,0,1,1,0.123,3,2-0,H,H,media,media
 1567824,Canada,Morocco,0.93,1.55,mx,0-3,0,0,0,0.052,8,0-1,A,A,media,media
 1569870,Paraguay,France,0.77,1.86,mx,0-1,1,1,1,0.1341,1,0-1,A,A,media,media
+1568100,Brazil,Norway,1.82,0.74,mx,1-2,0,0,0,0.0385,9,1-0,A,H,media,media
+1570714,Mexico,England,1.12,1.25,mx,2-3,0,0,0,0.0191,14,1-1,A,A,media,media
