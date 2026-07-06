@@ -55,6 +55,7 @@
 ## Daily Winners
 | target_date | daily_winner | winner_reason |
 | --- | --- | --- |
+| 2026-06-18 | NO_BET_DAY | No model registered a pick. |
 | 2026-06-19 | NO_BET_DAY | No model registered a pick. |
 | 2026-06-20 | NO_BET_DAY | No model registered a pick. |
 | 2026-06-21 | NO_BET_DAY | No model registered a pick. |
@@ -69,7 +70,6 @@
 | 2026-07-02 | NO_BET_DAY | No model registered a pick. |
 | 2026-07-03 | TIE | Top experiments tied on profit and hit rate. |
 | 2026-07-04 | NO_BET_DAY | No model registered a pick. |
-| 2026-07-05 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
 
 ## CLV Data Sufficiency
 INSUFFICIENT_CLV_DATA: usable=0, available_direction_rows=0; do not change thresholds from CLV yet.

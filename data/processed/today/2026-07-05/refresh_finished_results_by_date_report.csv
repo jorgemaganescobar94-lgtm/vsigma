@@ -1,0 +1,8 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-07-05,OK,API-SPORTS_DIRECT,285.0,,,,,,
+2026-07-05T11:30:00+01:00,MATCHED,,,1506989.0,FT,Gimcheon Sangmu FC,Jeju United FC,1.0,1.0
+2026-07-05T11:30:00+01:00,MATCHED,,,1506990.0,FT,Gwangju FC,Ulsan Hyundai FC,1.0,1.0
+2026-07-05T11:30:00+01:00,MATCHED,,,1506991.0,FT,FC Seoul,Incheon United,1.0,0.0
+2026-07-05T13:00:00+01:00,MATCHED,,,1494196.0,FT,IFK Goteborg,AIK Stockholm,1.0,2.0
+2026-07-05T13:00:00+01:00,MATCHED,,,1494199.0,FT,Kalmar FF,Orgryte IS,3.0,0.0
+2026-07-05T15:30:00+01:00,MATCHED,,,1494195.0,FT,IF Elfsborg,Hammarby FF,1.0,2.0
