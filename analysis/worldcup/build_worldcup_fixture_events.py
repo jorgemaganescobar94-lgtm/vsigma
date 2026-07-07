@@ -19,6 +19,7 @@ Run:  python analysis/worldcup/build_worldcup_fixture_events.py
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -37,8 +38,16 @@ except Exception:
     pass
 
 LOG = HERE / "worldcup_predictions_log.csv"
+INTL = HERE / "international_results.csv"
 OUT_CSV = HERE / "worldcup_fixture_events.csv"
 COMPETITION = "World Cup 2026"
+
+# 🔴 FLAG REVERSIBLE de la FUENTE de fixtures del extractor. El log de predicciones arrancó ~19-jun
+# (cold start), así que la jornada 1 del Mundial (11–16 jun) nunca se logueó y el extractor —que tomaba
+# su lista SOLO de _settled_fixtures(worldcup_predictions_log.csv)— no la veía (16 fixtures sin eventos).
+# True (default): UNE los WC settled de international_results.csv (que sí tiene la jornada 1) con el log.
+# False: comportamiento ANTERIOR EXACTO (solo el log) -> Δ0. Override por entorno WC_EVENTS_SRC_INTL=0.
+EVENTS_SOURCE_INTL_RESULTS = os.environ.get("WC_EVENTS_SRC_INTL", "1") != "0"
 
 COLUMNS = [
     "fixture_id", "date", "competition", "team_id", "team_name", "opponent_id", "opponent_name",
@@ -154,14 +163,81 @@ def _settled_fixtures(log_path=LOG):
     return out
 
 
+def _wc_settled_from_intl(path=INTL):
+    """(fixture_id, date) for settled WC fixtures from international_results.csv (league 1, season 2026,
+    with a final score). Covers the matchday-1 fixtures that predate the predictions log (cold start)."""
+    p = Path(path)
+    if not p.exists():
+        return []
+    try:
+        df = pd.read_csv(p)
+    except Exception:
+        return []
+    need = {"fixture_id", "date", "league_id", "season", "gh", "ga"}
+    if not need.issubset(df.columns):
+        return []
+    df = df[(df["league_id"] == 1) & (df["season"] == 2026)].dropna(subset=["gh", "ga"])
+    out = []
+    for _, r in df.iterrows():
+        try:
+            out.append({"fixture_id": int(r["fixture_id"]), "date": str(r.get("date") or "")[:10]})
+        except Exception:
+            continue
+    return out
+
+
+def _existing_rows_by_fid(out_csv=OUT_CSV):
+    """Rows already in the committed events CSV, grouped by fixture_id (values read as EXACT strings so
+    preserved rows round-trip byte-identically). Lets a re-run reuse prior rows for fixtures whose
+    enrichment isn't in the (gitignored, CI-warm/locally-cold) store, instead of dropping them — and
+    bounds fetching to genuinely-new fixtures (the CSV itself is the durable cache -> one-off fetch)."""
+    p = Path(out_csv)
+    if not p.exists():
+        return {}
+    try:
+        df = pd.read_csv(p, dtype=str, keep_default_na=False)
+    except Exception:
+        return {}
+    if "fixture_id" not in df.columns:
+        return {}
+    by = {}
+    for _, r in df.iterrows():
+        try:
+            fid = int(r["fixture_id"])
+        except (TypeError, ValueError):
+            continue
+        by.setdefault(fid, []).append({c: r.get(c, "") for c in COLUMNS})
+    return by
+
+
 def extract(log_path=LOG, out_csv=OUT_CSV, fetch_missing=False):
     """Build the clean events table for all settled WC fixtures. Reads cached events from the post-FT
-    store; if fetch_missing and a fixture is absent, fetches once via the client (store-guarded)."""
+    store; if fetch_missing and a fixture is absent, fetches once via the client (store-guarded).
+
+    With EVENTS_SOURCE_INTL_RESULTS (default) the fixture universe is the UNION of the predictions log
+    and the WC settled fixtures in international_results.csv (so matchday-1 cold-start fixtures are
+    covered); already-extracted rows are preserved when the store lacks a fixture, and fetching is
+    bounded to fixtures not yet in the CSV. With the flag OFF the behaviour is exactly the old one (Δ0)."""
     fixtures = _settled_fixtures(log_path)
+    existing_by_fid = {}
+    if EVENTS_SOURCE_INTL_RESULTS:
+        seen = {m["fixture_id"] for m in fixtures}
+        for m in sorted(_wc_settled_from_intl(), key=lambda x: x["date"]):
+            if m["fixture_id"] not in seen:
+                fixtures.append(m)
+                seen.add(m["fixture_id"])
+        existing_by_fid = _existing_rows_by_fid(out_csv)
     all_rows, n_with, n_without = [], 0, 0
     client = None
     for meta in fixtures:
         fid = meta["fixture_id"]
+        # A finished match's events are IMMUTABLE, so for a fixture already in the committed CSV keep its
+        # exact rows (deterministic output, no reformatting churn); only NEW fixtures hit the store/fetch.
+        # This is what makes a re-run a clean "add only" and bounds the fetch to genuinely-new fixtures.
+        if fid in existing_by_fid:
+            all_rows.extend(existing_by_fid[fid])
+            n_with += 1
+            continue
         events = (enr.load_store(fid).get("postft") or {}).get("events")
         if not events and fetch_missing:
             try:

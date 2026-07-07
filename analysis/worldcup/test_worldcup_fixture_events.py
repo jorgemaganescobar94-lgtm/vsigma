@@ -87,3 +87,38 @@ def test_no_betting_or_odds_endpoint_in_module():
     for bad in ('request("/odds"', "request('/odds'", 'request("/predictions"',
                 "request('/predictions'", ".odds(", ".predictions(", "stake", "expected_roi", "edge="):
         assert bad not in src
+
+
+# --- Fix #1: fixture-source UNION with international_results (covers the matchday-1 cold-start gap) ---
+def test_intl_source_covers_matchday1_absent_from_log():
+    """The new fixture source (international_results WC settled) includes the matchday-1 fixtures that
+    the predictions log lacks (cold start), and it covers everything the events CSV already holds."""
+    import pandas as pd
+    intl = {m["fixture_id"] for m in ev._wc_settled_from_intl()}
+    log = {m["fixture_id"] for m in ev._settled_fixtures()}
+    assert 1489369 in intl                 # a matchday-1 fixture (Mexico–South Africa, 2026-06-11)
+    assert 1489369 not in log              # ...which the predictions log never logged (pipeline cold start)
+    assert len(intl) >= 81                 # int_results has the full settled WC universe
+    evdf = pd.read_csv(ev.OUT_CSV)
+    assert set(evdf["fixture_id"].astype(int)) <= intl   # source ⊇ current output (nothing orphaned)
+
+
+def test_flag_off_source_is_log_only_delta0():
+    """With EVENTS_SOURCE_INTL_RESULTS off the fixture universe is EXACTLY the predictions log (Δ0):
+    the union with international_results is skipped, so matchday-1 stays out — identical to the old code."""
+    assert ev.EVENTS_SOURCE_INTL_RESULTS is True          # default (env WC_EVENTS_SRC_INTL unset)
+    log = {m["fixture_id"] for m in ev._settled_fixtures()}
+    assert 1489369 not in log                              # flag-off universe never adds matchday-1
+    # the flag literally gates the union in extract() -> off == pre-change behaviour
+    src = (HERE / "build_worldcup_fixture_events.py").read_text(encoding="utf-8")
+    assert "if EVENTS_SOURCE_INTL_RESULTS:" in src
+
+
+def test_existing_rows_loader_preserves_and_handles_absence():
+    """_existing_rows_by_fid groups committed rows by fixture_id (durable cache for immutable events)
+    and returns {} for a missing file (no crash)."""
+    from pathlib import Path as _P
+    by = ev._existing_rows_by_fid()
+    assert isinstance(by, dict) and len(by) >= 1
+    assert 1489390 in by and len(by[1489390]) >= 1         # a fixture in the committed 65
+    assert ev._existing_rows_by_fid(_P("does_not_exist_xyz.csv")) == {}
