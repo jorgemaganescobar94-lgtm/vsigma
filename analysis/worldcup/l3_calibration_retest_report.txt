@@ -1,0 +1,71 @@
+==============================================================================================================
+L3 1X2 CALIBRATION RE-TEST · producción(C0) vs temperature(C1/C3) vs isotónica rolling(C2) · READ-ONLY · sin API · sin prod
+==============================================================================================================
+burn-in (fit isotónica/T/coefs): fecha < 2024-01-01   |   PRIMARY OOS: [2024-01-01, 2026-06-11)   |   WC-2026: >= 2026-06-11
+matches=9225  refits walk-forward=93  con rating=8925  burn-in=5614  matchup_total=True
+L3 margin a0=-0.0918 a1=1.5085  |  total forma-b tb0=2.393 tb1=0.075 tb2=0.273 (cap 5.5)
+TEMPERATURE ajustada en burn-in:  C1 (sobre isotónica) T=1.0000   C3 (sin isotónica) T=1.1075   [T<1 = sharpening]
+  C1 estabilidad train/val interno (burn-in por fecha): T_train=1.0267  T_val=0.9758  (deben coincidir ~)
+  slice OOS_PRIMARY_2024_preWC     n= 3228  (WC dentro: 0)
+  slice OOS_SECONDARY_WC2026       n=   81  (WC dentro: 81)
+  slice OOS_ALL                    n= 3311  (WC dentro: 81)
+GATE estricto (idéntico a DC): ADOPTAR sólo si Δlogloss(C0-Cx)>0, TODAS las semillas lo>0, y min_lo>=0.005 (no rozar 0).
+semillas bootstrap (10): [20260707, 1, 7, 42, 101, 2718, 31337, 99991, 424242, 20260705]
+
+--------------------------------------------------------------------------------------------------------------
+[OOS_PRIMARY_2024_preWC]  n=3228   base 1X2 real: H=46.3% D=23.5% A=30.2%
+--------------------------------------------------------------------------------------------------------------
+  variante           logloss    brier     ECE   acc%   Δlogloss(C0-Cx) media    IC95 [min_lo..max_hi] semillas      p  veredicto
+  C0_prod            0.93095  0.55033  0.0216   55.4              (baseline)                                           —
+  C1_temp            0.93095  0.55033  0.0216   55.4                +0.00000  [-0.00000..+0.00000]     0.700  NO adoptar (IC incluye 0)
+  C2_rolliso         0.92973  0.54979  0.0142   55.9                +0.00123  [+0.00004..+0.00244]     0.980  FRÁGIL — IC roza 0 (min_lo=+0.0000 < margen +0.005) -> NO adoptar
+  C3_temp_noiso      0.92590  0.54898  0.0198   56.2                +0.00505  [+0.00021..+0.01279]     0.984  FRÁGIL — IC roza 0 (min_lo=+0.0002 < margen +0.005) -> NO adoptar
+
+  RELIABILITY (H/D/A aplanado, n_pred=9684) — predicho vs real por banda:
+      banda     |         C0 n/pred/real |     C1 pred/real |     C2 pred/real
+      0-20%     | n=2616 pred=  13% real=  13% |   13% /   13%      |   12% /   12%
+      20-40%    | n=4489 pred=  29% real=  29% |   29% /   29%      |   29% /   29%
+      40-60%    | n=1536 pred=  51% real=  51% |   51% /   51%      |   50% /   50%
+      60-80%    | n= 616 pred=  70% real=  66% |   70% /   66%      |   68% /   66%
+      80-100%   | n= 427 pred=  86% real=  88% |   86% /   88%      |   86% /   87%
+
+--------------------------------------------------------------------------------------------------------------
+[OOS_SECONDARY_WC2026]  n=81   base 1X2 real: H=42.0% D=28.4% A=29.6%
+--------------------------------------------------------------------------------------------------------------
+  variante           logloss    brier     ECE   acc%   Δlogloss(C0-Cx) media    IC95 [min_lo..max_hi] semillas      p  veredicto
+  C0_prod            0.89206  0.52733  0.0912   60.5              (baseline)                                           —
+  C1_temp            0.89206  0.52733  0.0912   60.5                +0.00000  [-0.00000..+0.00000]     0.771  NO adoptar (IC incluye 0)
+  C2_rolliso         0.89527  0.53121  0.1022   59.3                -0.00321  [-0.01215..+0.00582]     0.238  NO adoptar (IC incluye 0)
+  C3_temp_noiso      0.88996  0.52859  0.0982   59.3                +0.00211  [-0.01511..+0.02069]     0.584  NO adoptar (IC incluye 0)
+
+  RELIABILITY (H/D/A aplanado, n_pred=243) — predicho vs real por banda:
+      banda     |         C0 n/pred/real |     C1 pred/real |     C2 pred/real
+      0-20%     | n=  66 pred=  14% real=  12% |   14% /   12%      |   13% /    9%
+      20-40%    | n= 115 pred=  29% real=  26% |   29% /   26%      |   29% /   27%
+      40-60%    | n=  33 pred=  51% real=  64% |   51% /   64%      |   50% /   61%
+      60-80%    | n=  22 pred=  70% real=  77% |   70% /   77%      |   68% /   77%
+      80-100%   | n=   7 pred=  82% real=  71% |   82% /   71%      |   84% /   67%
+
+--------------------------------------------------------------------------------------------------------------
+[OOS_ALL]  n=3311   base 1X2 real: H=46.2% D=23.6% A=30.2%
+--------------------------------------------------------------------------------------------------------------
+  variante           logloss    brier     ECE   acc%   Δlogloss(C0-Cx) media    IC95 [min_lo..max_hi] semillas      p  veredicto
+  C0_prod            0.92977  0.54961  0.0208   55.5              (baseline)                                           —
+  C1_temp            0.92977  0.54961  0.0208   55.5                +0.00000  [-0.00000..+0.00000]     0.747  NO adoptar (IC incluye 0)
+  C2_rolliso         0.92866  0.54917  0.0124   56.0                +0.00111  [-0.00007..+0.00230]     0.969  NO adoptar (IC incluye 0)
+  C3_temp_noiso      0.92480  0.54832  0.0180   56.3                +0.00497  [+0.00022..+0.01254]     0.984  FRÁGIL — IC roza 0 (min_lo=+0.0002 < margen +0.005) -> NO adoptar
+
+  RELIABILITY (H/D/A aplanado, n_pred=9933) — predicho vs real por banda:
+      banda     |         C0 n/pred/real |     C1 pred/real |     C2 pred/real
+      0-20%     | n=2684 pred=  13% real=  13% |   13% /   13%      |   12% /   12%
+      20-40%    | n=4606 pred=  29% real=  29% |   29% /   29%      |   29% /   29%
+      40-60%    | n=1570 pred=  51% real=  51% |   51% /   51%      |   50% /   50%
+      60-80%    | n= 639 pred=  70% real=  67% |   70% /   67%      |   68% /   67%
+      80-100%   | n= 434 pred=  86% real=  88% |   86% /   88%      |   86% /   87%
+
+==============================================================================================================
+LECTURA: Δlogloss(C0-Cx)>0 => la variante Cx mejora sobre producción. El JUEZ es OOS_PRIMARY (histórico grande).
+ADOPTAR exige IC95 que excluye 0 con claridad en TODAS las semillas (min_lo>=0.005). WC-2026 = confirmación,
+no validador: si sólo mejora en WC pero no en el histórico => sospechoso (overfit a la pista) => NO adoptar.
+Si el efecto roza/incluye 0 en el histórico => FRÁGIL/ruido => cerrar (no corregible con muestra fiable).
+==============================================================================================================
