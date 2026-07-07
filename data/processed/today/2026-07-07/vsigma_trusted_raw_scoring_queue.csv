@@ -1,2 +1,2 @@
 target_date,generated_at,queue_rank,fixture_id,home_team,away_team,league,gap_status,scoring_needed,priority,reason,recommended_fix,auto_apply,production_change
-2026-07-07,2026-07-07T11:38:13+01:00,1,1494197,BK Hacken,Djurgardens IF,Allsvenskan,MISSING_SCORED_ROW,YES,P1_TRUSTED_MISSING_SCORING,trusted raw candidate has no matching scored row,Run/repair scoring enrichment over trusted raw fixture candidates before market translation.,NO,NO
+2026-07-07,2026-07-07T20:18:25+01:00,1,1494197,BK Hacken,Djurgardens IF,Allsvenskan,MISSING_SCORED_ROW,YES,P1_TRUSTED_MISSING_SCORING,trusted raw candidate has no matching scored row,Run/repair scoring enrichment over trusted raw fixture candidates before market translation.,NO,NO

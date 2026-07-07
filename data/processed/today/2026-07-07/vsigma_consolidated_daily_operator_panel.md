@@ -41,13 +41,15 @@
 - missing_data_counts: unknown=1
 
 ## Official / Probable Lineups
-- data/processed/today/2026-07-07/vsigma_probable_lineup_consensus.csv: rows=1
-- data/processed/governance/official_lineup_sources.csv: rows=92
+- data/processed/today/2026-07-07/official_lineup_sources.csv: rows=112
+- data/processed/today/2026-07-07/vsigma_probable_lineup_consensus.csv: rows=12
+- data/processed/governance/official_lineup_sources.csv: rows=112
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=13; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=11
 
 ## Quarantine / Learning-Only / Import Status
-- data/processed/today/2026-07-07/vsigma_probable_lineup_consensus.csv: rows=1
-- data/processed/governance/official_lineup_sources.csv: rows=92
+- data/processed/today/2026-07-07/official_lineup_sources.csv: rows=112
+- data/processed/today/2026-07-07/vsigma_probable_lineup_consensus.csv: rows=12
+- data/processed/governance/official_lineup_sources.csv: rows=112
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=13; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=11
 
 ## Source Reliability Governor
