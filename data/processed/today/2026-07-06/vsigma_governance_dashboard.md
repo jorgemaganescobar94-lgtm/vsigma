@@ -8,26 +8,29 @@
 ## Promotion Status
 | experiment_id | settled_picks | roi_percent | brier_score | promotion_recommendation | required_next_evidence |
 | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 9 | 0.444444 | 0.254025 | KEEP_OFFICIAL_BASELINE | Continue accumulating official settled outcomes and compare challengers against it. |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 8 | -6.0 | 0.274136 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
+| OFFICIAL_BASELINE | 10 | 6.1 | 0.230559 | KEEP_OFFICIAL_BASELINE | Continue accumulating official settled outcomes and compare challengers against it. |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 9 | 1.0 | 0.246588 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
 | CANDIDATE_V3_ODDS_DEPTH | 0 |  |  | AUDIT_ONLY | Keep as an audit comparator unless registry governance explicitly changes its role. |
-| CANDIDATE_V4_O25_FIREWALL | 7 | 1.0 | 0.218245 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
-| CANDIDATE_V5_PLAYER_IMPACT | 8 | 9.625 | 0.198004 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
+| CANDIDATE_V4_O25_FIREWALL | 8 | 3.125 | 0.193111 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
+| CANDIDATE_V5_PLAYER_IMPACT | 9 | 14.888889 | 0.178915 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
 | CANDIDATE_V6_API_PREDICTIONS | 6 | -3.0 | 0.251104 | AUDIT_ONLY | Keep as an audit comparator unless registry governance explicitly changes its role. |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 2 | -15.0 | 0.34323 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 9.0 | 0.237555 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
 
 ## Threshold Alerts
 | market_family | failure_mode | experiment_id | settled_rows | roi_percent | clv_direction | threshold_recommendation |
 | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V4_O25_FIREWALL | 7 | 1.0 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V4_O25_FIREWALL | 8 | 3.125 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 7 | 1.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 6 | -3.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 6 | -3.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 6 | -3.0 |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 3 | 7.333333 |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 2 | -15.0 |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 2 | -15.0 |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 1 | 70.0 |  | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 4 | 19.75 |  | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 3 | 9.0 |  | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 9.0 |  | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 2 | 63.5 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V2_SCHEDULE_ANOMALY | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V4_O25_FIREWALL | 0 |  |  | SAMPLE_TOO_SMALL |
@@ -69,10 +72,10 @@
 | 2026-07-02 | NO_BET_DAY | No model registered a pick. |
 | 2026-07-03 | TIE | Top experiments tied on profit and hit rate. |
 | 2026-07-04 | NO_BET_DAY | No model registered a pick. |
-| 2026-07-06 | NO_SETTLED_RESULTS | Picks exist but no settled results are available. |
+| 2026-07-06 | TIE | Top experiments tied on profit and hit rate. |
 
 ## CLV Data Sufficiency
-INSUFFICIENT_CLV_DATA: usable=0, available_direction_rows=0; do not change thresholds from CLV yet.
+INSUFFICIENT_CLV_DATA: usable=3, available_direction_rows=3; do not change thresholds from CLV yet.
 
 ## Evidence Status
 - All primary governance inputs available.

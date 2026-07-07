@@ -6,9 +6,9 @@
 - Official picks registered: 1
 - Shadow picks registered: 4
 - No-bet records: 2
-- Pending records: 5
-- Settled records: 0
-- Daily winner: NO_SETTLED_RESULTS
+- Pending records: 0
+- Settled records: 5
+- Daily winner: TIE
 
 ## Experiment Registry
 | experiment_id | status | selection_role | allowed_to_select_officially | current_verdict |
@@ -24,26 +24,26 @@
 ## Daily Summary By Experiment
 | experiment_id | records | picks | no_bet_records | pending | settled | profit_units |
 | --- | --- | --- | --- | --- | --- | --- |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1 | 0 | 1 | 0 | 0.0 |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1 | 0 | 0 | 1 | 0.57 |
 | CANDIDATE_V3_ODDS_DEPTH | 1 | 0 | 1 | 0 | 0 | 0.0 |
-| CANDIDATE_V4_O25_FIREWALL | 1 | 1 | 0 | 1 | 0 | 0.0 |
-| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1 | 0 | 1 | 0 | 0.0 |
+| CANDIDATE_V4_O25_FIREWALL | 1 | 1 | 0 | 0 | 1 | 0.18 |
+| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1 | 0 | 0 | 1 | 0.57 |
 | CANDIDATE_V6_API_PREDICTIONS | 1 | 0 | 1 | 0 | 0 | 0.0 |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1 | 0 | 1 | 0 | 0.0 |
-| OFFICIAL_BASELINE | 1 | 1 | 0 | 1 | 0 | 0.0 |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1 | 0 | 0 | 1 | 0.57 |
+| OFFICIAL_BASELINE | 1 | 1 | 0 | 0 | 1 | 0.57 |
 
 ## Official Picks
 | experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1 | 1494197 | BK Hacken | Djurgardens IF | OVER_2_5 | 0.860825 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.207; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1 | 1494197 | BK Hacken | Djurgardens IF | OVER_2_5 | 0.860825 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.207; market_fit=SAFE_OK; LOW_CONVERSION | SETTLED |
 
 ## Shadow Picks
 | experiment_id | rank | fixture_id | home_team | away_team | market_primary | calibrated_probability | risk_tags | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1494197 | BK Hacken | Djurgardens IF | OVER_2_5 | 0.838125 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.184; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
-| CANDIDATE_V4_O25_FIREWALL | 1 | 1494197 | BK Hacken | Djurgardens IF | OVER_1_5 | 0.86896 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.184; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1494197 | BK Hacken | Djurgardens IF | OVER_2_5 | 0.838125 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.184; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1494197 | BK Hacken | Djurgardens IF | OVER_2_5 | 0.838125 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.184; market_fit=SAFE_OK; LOW_CONVERSION | PRE_REGISTERED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1 | 1494197 | BK Hacken | Djurgardens IF | OVER_2_5 | 0.838125 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.184; market_fit=SAFE_OK; LOW_CONVERSION | SETTLED |
+| CANDIDATE_V4_O25_FIREWALL | 1 | 1494197 | BK Hacken | Djurgardens IF | OVER_1_5 | 0.86896 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.184; market_fit=SAFE_OK; LOW_CONVERSION | SETTLED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1 | 1494197 | BK Hacken | Djurgardens IF | OVER_2_5 | 0.838125 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.184; market_fit=SAFE_OK; LOW_CONVERSION | SETTLED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1 | 1494197 | BK Hacken | Djurgardens IF | OVER_2_5 | 0.838125 | FAILURE_MODE_LOW_CONVERSION; FAILURE_MODE_LOW_CONVERSION; market=OVER_2_5; edge=0.184; market_fit=SAFE_OK; LOW_CONVERSION | SETTLED |
 
 ## No-Bet Modes
 | experiment_id | record_status | reason_tags | source_file |
@@ -57,11 +57,17 @@ _No rows._
 ## Result State
 | experiment_id | fixture_id | market_primary | result_status | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1494197 | OVER_2_5 | PENDING | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1494197 | OVER_2_5 | PENDING | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V4_O25_FIREWALL | 1494197 | OVER_1_5 | PENDING | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1494197 | OVER_2_5 | PENDING | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1494197 | OVER_2_5 | PENDING | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1494197 | OVER_2_5 | RESULT_AVAILABLE | WIN | 0.57 | SETTLED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1494197 | OVER_2_5 | RESULT_AVAILABLE | WIN | 0.57 | SETTLED |
+| CANDIDATE_V4_O25_FIREWALL | 1494197 | OVER_1_5 | RESULT_AVAILABLE | WIN | 0.18 | SETTLED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1494197 | OVER_2_5 | RESULT_AVAILABLE | WIN | 0.57 | SETTLED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1494197 | OVER_2_5 | RESULT_AVAILABLE | WIN | 0.57 | SETTLED |
 
 ## Freshness Warnings
-_No rows._
+| file_name | status | detail |
+| --- | --- | --- |
+| vsigma_today_candidate_v6_competition_shortlist.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_candidate_v6_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_prelock_competition_top.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| vsigma_today_prelock_comparison.csv | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day |
+| today_post_results_report.csv | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet |

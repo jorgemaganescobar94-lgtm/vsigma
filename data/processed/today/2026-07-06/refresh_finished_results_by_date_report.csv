@@ -1,0 +1,4 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-07-06,OK,API-SPORTS_DIRECT,56.0,,,,,,
+2026-07-06T18:00:00+01:00,MATCHED,,,1494193.0,FT,IF Brommapojkarna,Gais,1.0,1.0
+2026-07-06T18:00:00+01:00,MATCHED,,,1494197.0,FT,BK Hacken,Djurgardens IF,2.0,4.0

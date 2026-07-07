@@ -1252,10 +1252,10 @@ vSIGMA Competition Accuracy Mode + Probability Calibration
 <!-- VSIGMA_SCOREBOARD_START 2026-07-06 -->
 ## 2026-07-06
 
-- Winner: NO_SETTLED_RESULTS
-- Governance daily winner: NO_SETTLED_RESULTS
+- Winner: TIE
+- Governance daily winner: TIE
 - Promotion status: SAMPLE_TOO_SMALL:4; AUDIT_ONLY:2; KEEP_OFFICIAL_BASELINE:1
-- Threshold alerts: SAMPLE_TOO_SMALL:19
+- Threshold alerts: SAMPLE_TOO_SMALL:22
 - Major drift/threshold alerts: none
 - NO BET modes: CANDIDATE_V6
 - Pre-lock: PRE_LOCK_PENDING
@@ -1264,9 +1264,9 @@ vSIGMA Competition Accuracy Mode + Probability Calibration
 
 | mode | status | picks | wins | losses | profit | roi | pending | top_file |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BASELINE | PICKS_AVAILABLE | 1 | 0 | 0 | 0.0 |  | 1 | vsigma_today_competition_top.csv |
-| CANDIDATE_V2 | PICKS_AVAILABLE | 1 | 0 | 0 | 0.0 |  | 1 | vsigma_today_candidate_v2_competition_top.csv |
-| CANDIDATE_V4 | PICKS_AVAILABLE | 1 | 0 | 0 | 0.0 |  | 1 | vsigma_today_candidate_v4_competition_top.csv |
-| CANDIDATE_V5 | PICKS_AVAILABLE | 1 | 0 | 0 | 0.0 |  | 1 | vsigma_today_candidate_v5_competition_top.csv |
+| BASELINE | PICKS_AVAILABLE | 1 | 1 | 0 | 0.57 | 57.0 | 0 | vsigma_today_competition_top.csv |
+| CANDIDATE_V2 | PICKS_AVAILABLE | 1 | 1 | 0 | 0.57 | 57.0 | 0 | vsigma_today_candidate_v2_competition_top.csv |
+| CANDIDATE_V4 | PICKS_AVAILABLE | 1 | 1 | 0 | 0.18 | 18.0 | 0 | vsigma_today_candidate_v4_competition_top.csv |
+| CANDIDATE_V5 | PICKS_AVAILABLE | 1 | 1 | 0 | 0.57 | 57.0 | 0 | vsigma_today_candidate_v5_competition_top.csv |
 | CANDIDATE_V6 | NO_BET | 0 | 0 | 0 | 0.0 |  | 0 | vsigma_today_candidate_v6_competition_top.csv |
 <!-- VSIGMA_SCOREBOARD_END 2026-07-06 -->
