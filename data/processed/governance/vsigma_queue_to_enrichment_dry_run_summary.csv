@@ -1,2 +1,2 @@
 target_date,generated_at,rows_planned,dry_run_decision_counts,risk_label_counts,priority_counts,total_estimated_call_units,api_calls_planned,api_calls_executed,next_action,auto_apply,production_change
-2026-07-07,2026-07-07T20:18:25+01:00,1,DRY_RUN_ONLY_NO_API_CALLS=1,MEDIUM=1,P1_TRUSTED_MISSING_SCORING=1,5,NO,NO,Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.,NO,NO
+2026-07-07,2026-07-07T22:05:43+01:00,66,DRY_RUN_ONLY_NO_API_CALLS=66,HIGH_LOW_COVERAGE=55; MEDIUM=9; HIGH_CONTEXT_VOLATILITY=2,P2_LOW_COVERAGE_SCORING=55; P1_TRUSTED_MISSING_SCORING=11,331,NO,NO,Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.,NO,NO
