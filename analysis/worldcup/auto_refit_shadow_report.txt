@@ -1,8 +1,8 @@
 ========================================================================================
 AUTO-REFIT L3 — mode=APPLY (swap)
 ========================================================================================
-generated_at_utc: 2026-07-07T13:29:03+00:00
-base rows=9225 | settled-in-log=65 | NEW rows=0 (-..-) | unmapped=0 | enriched=9225
+generated_at_utc: 2026-07-07T15:56:16+00:00
+base rows=9238 | settled-in-log=65 | NEW rows=0 (-..-) | unmapped=0 | enriched=9238
 
 NO hay partidos liquidados nuevos fuera del dataset -> refit NO-OP.
 (El dataset ya está al día con el log; nada que aprender hasta nuevos FT.)

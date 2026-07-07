@@ -124,18 +124,16 @@
       "set_piece_takers": {
         "home": {
           "penalties": {
-            "primary": "L. Martinez",
-            "secondary": "L. Messi",
+            "primary": "Lionel Messi",
+            "secondary": "L. Martinez",
             "confidence": "baja",
-            "reason": "más lanzamientos registrados (1); 50% del XI disponible",
+            "reason": "lanzador declarado en set_piece_takers.csv (XI probable) · 1 intentos",
             "primary_count": 1,
             "primary_last": {
-              "fixture_id": 1489421,
-              "date": "2026-06-28",
-              "scored": true
+              "date": "2026-06-22",
+              "scored": null
             },
-            "if_primary_absent": "el lanzador habitual no está en el XI probable; asumiría L. Martinez",
-            "source_priority_used": "eventos_reales_mundial"
+            "source_priority_used": "set_piece_takers_csv"
           },
           "direct_free_kicks": {
             "primary": null,
@@ -158,7 +156,7 @@
             "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
             "source_priority_used": "no_determinado"
           },
-          "source_priority_used": "penaltis:eventos_reales; faltas:no_determinado; corner_izq:no_determinado; corner_der:no_determinado",
+          "source_priority_used": "penaltis:set_piece_takers_csv; faltas:no_determinado; corner_izq:no_determinado; corner_der:no_determinado",
           "confidence": "baja",
           "reason": "prioridad de fuentes §4: eventos reales del Mundial > set_piece_takers.csv > historial de jugador > no determinado"
         },
@@ -204,11 +202,11 @@
           "probability_card": 0.4274,
           "reason": "P(tarjeta) 43% — mercado de tarjeta es baja confianza (media)",
           "confidence": "media-baja",
-          "data_quality": "baja",
+          "data_quality": "media",
           "probability_card_original": 0.4274,
-          "probability_card_adjusted": 0.4402,
-          "adjustment_direction": "subir",
-          "adjustment_reason": "ajuste sube: posición alto ↑ · árbitro con muestra baja (peso reducido)",
+          "probability_card_adjusted": 0.4274,
+          "adjustment_direction": "neutro",
+          "adjustment_reason": "ajuste neutro: posición alto ↑; equipo bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador",
           "card_risk_components": {
             "player_history": {
               "label": "no determinado",
@@ -225,11 +223,11 @@
               "step": 0.03
             },
             "team_profile": {
-              "label": "medio",
-              "direction": "neutro",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": 0.0
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": -0.03
             },
             "referee_profile": {
               "label": "medio",
@@ -247,18 +245,18 @@
           "probability_card": 0.3955,
           "reason": "P(tarjeta) 40% — mercado de tarjeta es baja confianza (media)",
           "confidence": "media-baja",
-          "data_quality": "baja",
+          "data_quality": "media",
           "probability_card_original": 0.3955,
-          "probability_card_adjusted": 0.4084,
+          "probability_card_adjusted": 0.4331,
           "adjustment_direction": "subir",
-          "adjustment_reason": "ajuste sube: historial jugador bajo ↓; posición alto ↑; equipo alto ↑ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador",
+          "adjustment_reason": "ajuste sube: historial jugador alto ↑; posición alto ↑; equipo alto ↑ · árbitro con muestra baja (peso reducido)",
           "card_risk_components": {
             "player_history": {
-              "label": "bajo",
-              "direction": "bajar",
-              "confidence": "baja",
-              "weight": 0.15,
-              "step": -0.015
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.035
             },
             "position_profile": {
               "label": "alto",
@@ -270,9 +268,9 @@
             "team_profile": {
               "label": "alto",
               "direction": "subir",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": 0.0175
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
             },
             "referee_profile": {
               "label": "medio",
@@ -290,11 +288,11 @@
           "probability_card": 0.3733,
           "reason": "P(tarjeta) 37% — mercado de tarjeta es baja confianza (media)",
           "confidence": "media-baja",
-          "data_quality": "baja",
+          "data_quality": "media",
           "probability_card_original": 0.3733,
-          "probability_card_adjusted": 0.3733,
-          "adjustment_direction": "neutro",
-          "adjustment_reason": "ajuste neutro: sin sesgo neto de las fuentes · árbitro con muestra baja (peso reducido)",
+          "probability_card_adjusted": 0.3621,
+          "adjustment_direction": "bajar",
+          "adjustment_reason": "ajuste baja: equipo bajo ↓ · árbitro con muestra baja (peso reducido)",
           "card_risk_components": {
             "player_history": {
               "label": "no determinado",
@@ -311,11 +309,11 @@
               "step": 0.0
             },
             "team_profile": {
-              "label": "medio",
-              "direction": "neutro",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": 0.0
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": -0.03
             },
             "referee_profile": {
               "label": "medio",
@@ -335,9 +333,9 @@
           "confidence": "media-baja",
           "data_quality": "media",
           "probability_card_original": 0.3281,
-          "probability_card_adjusted": 0.3322,
-          "adjustment_direction": "neutro",
-          "adjustment_reason": "ajuste neutro: historial jugador bajo ↓; posición alto ↑; equipo alto ↑ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador",
+          "probability_card_adjusted": 0.3363,
+          "adjustment_direction": "subir",
+          "adjustment_reason": "ajuste sube: historial jugador bajo ↓; posición alto ↑; equipo alto ↑ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador",
           "card_risk_components": {
             "player_history": {
               "label": "bajo",
@@ -356,9 +354,9 @@
             "team_profile": {
               "label": "alto",
               "direction": "subir",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": 0.0175
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
             },
             "referee_profile": {
               "label": "medio",
@@ -428,7 +426,7 @@
     },
     "xa_source": "fuente xA/xG por jugador no configurada (data/external/player_xa90.csv) — Fase 3",
     "xg_xa_source": "xG/xA real por jugador no configurado (data/external/player_xg_xa.csv) — Fase 3",
-    "set_piece_source": "lanzadores de balón parado cargados para 14 equipos (fuente externa)",
+    "set_piece_source": "lanzadores de balón parado cargados para 17 equipos (fuente externa)",
     "events_source": "eventos reales (/fixtures/events)",
     "referee_context": {
       "referee_name": "F. Letexier",
@@ -500,7 +498,7 @@
         "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
       }
     ],
-    "card_profiles_source": "perfiles de tarjetas auto cargados (533 jug / 48 eq / 4 pos)"
+    "card_profiles_source": "perfiles de tarjetas auto cargados (652 jug / 48 eq / 4 pos)"
   },
   {
     "fixture": {
@@ -627,11 +625,18 @@
       "set_piece_takers": {
         "home": {
           "penalties": {
-            "primary": null,
-            "secondary": null,
+            "primary": "B. Embolo",
+            "secondary": "G. Xhaka",
             "confidence": "baja",
-            "reason": "lanzador habitual ausente del XI probable (no determinado para este XI)",
-            "source_priority_used": "no_determinado"
+            "reason": "más lanzamientos registrados (1); 50% del XI disponible",
+            "primary_count": 1,
+            "primary_last": {
+              "fixture_id": "1489373",
+              "date": "2026-06-13",
+              "scored": true
+            },
+            "if_primary_absent": "el lanzador habitual no está en el XI probable; asumiría B. Embolo",
+            "source_priority_used": "eventos_reales_mundial"
           },
           "direct_free_kicks": {
             "primary": null,
@@ -654,7 +659,7 @@
             "reason": "sin historial de eventos (no determinado) · sin split izq/der (requiere dato de lado · Fase 3)",
             "source_priority_used": "no_determinado"
           },
-          "source_priority_used": "penaltis:no_determinado; faltas:no_determinado; corner_izq:no_determinado; corner_der:no_determinado",
+          "source_priority_used": "penaltis:eventos_reales; faltas:no_determinado; corner_izq:no_determinado; corner_der:no_determinado",
           "confidence": "baja",
           "reason": "prioridad de fuentes §4: eventos reales del Mundial > set_piece_takers.csv > historial de jugador > no determinado"
         },
@@ -700,17 +705,17 @@
           "probability_card": 0.3733,
           "reason": "P(tarjeta) 37% — mercado de tarjeta es baja confianza (media)",
           "confidence": "media-baja",
-          "data_quality": "baja",
+          "data_quality": "media",
           "probability_card_original": 0.3733,
-          "probability_card_adjusted": 0.3668,
-          "adjustment_direction": "neutro",
-          "adjustment_reason": "ajuste neutro: equipo bajo ↓ · árbitro con muestra baja (peso reducido)",
+          "probability_card_adjusted": 0.3621,
+          "adjustment_direction": "bajar",
+          "adjustment_reason": "ajuste baja: equipo bajo ↓ · árbitro con muestra baja (peso reducido)",
           "card_risk_components": {
             "player_history": {
-              "label": "no determinado",
+              "label": "medio",
               "direction": "neutro",
-              "confidence": "no determinado",
-              "weight": 0.0,
+              "confidence": "baja",
+              "weight": 0.15,
               "step": 0.0
             },
             "position_profile": {
@@ -723,9 +728,9 @@
             "team_profile": {
               "label": "bajo",
               "direction": "bajar",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": -0.0175
+              "confidence": "media",
+              "weight": 0.6,
+              "step": -0.03
             },
             "referee_profile": {
               "label": "no determinado",
@@ -743,18 +748,18 @@
           "probability_card": 0.3519,
           "reason": "P(tarjeta) 35% — mercado de tarjeta es baja confianza (media)",
           "confidence": "media-baja",
-          "data_quality": "baja",
+          "data_quality": "media",
           "probability_card_original": 0.3519,
-          "probability_card_adjusted": 0.3625,
+          "probability_card_adjusted": 0.3748,
           "adjustment_direction": "subir",
-          "adjustment_reason": "ajuste sube: posición alto ↑ · árbitro con muestra baja (peso reducido)",
+          "adjustment_reason": "ajuste sube: historial jugador alto ↑; posición alto ↑ · árbitro con muestra baja (peso reducido)",
           "card_risk_components": {
             "player_history": {
-              "label": "medio",
-              "direction": "neutro",
-              "confidence": "baja",
-              "weight": 0.15,
-              "step": 0.0
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": 0.035
             },
             "position_profile": {
               "label": "alto",
@@ -766,8 +771,8 @@
             "team_profile": {
               "label": "medio",
               "direction": "neutro",
-              "confidence": "media-baja",
-              "weight": 0.35,
+              "confidence": "media",
+              "weight": 0.6,
               "step": 0.0
             },
             "referee_profile": {
@@ -809,8 +814,8 @@
             "team_profile": {
               "label": "medio",
               "direction": "neutro",
-              "confidence": "media-baja",
-              "weight": 0.35,
+              "confidence": "media",
+              "weight": 0.6,
               "step": 0.0
             },
             "referee_profile": {
@@ -829,18 +834,18 @@
           "probability_card": 0.3384,
           "reason": "P(tarjeta) 34% — mercado de tarjeta es baja confianza (media)",
           "confidence": "media-baja",
-          "data_quality": "baja",
+          "data_quality": "media",
           "probability_card_original": 0.3384,
-          "probability_card_adjusted": 0.3333,
-          "adjustment_direction": "neutro",
-          "adjustment_reason": "ajuste neutro: historial jugador bajo ↓ · árbitro con muestra baja (peso reducido)",
+          "probability_card_adjusted": 0.3266,
+          "adjustment_direction": "bajar",
+          "adjustment_reason": "ajuste baja: historial jugador bajo ↓ · árbitro con muestra baja (peso reducido)",
           "card_risk_components": {
             "player_history": {
               "label": "bajo",
               "direction": "bajar",
-              "confidence": "baja",
-              "weight": 0.15,
-              "step": -0.015
+              "confidence": "media-baja",
+              "weight": 0.35,
+              "step": -0.035
             },
             "position_profile": {
               "label": "medio",
@@ -852,8 +857,8 @@
             "team_profile": {
               "label": "medio",
               "direction": "neutro",
-              "confidence": "media-baja",
-              "weight": 0.35,
+              "confidence": "media",
+              "weight": 0.6,
               "step": 0.0
             },
             "referee_profile": {
@@ -924,7 +929,7 @@
     },
     "xa_source": "fuente xA/xG por jugador no configurada (data/external/player_xa90.csv) — Fase 3",
     "xg_xa_source": "xG/xA real por jugador no configurado (data/external/player_xg_xa.csv) — Fase 3",
-    "set_piece_source": "lanzadores de balón parado cargados para 14 equipos (fuente externa)",
+    "set_piece_source": "lanzadores de balón parado cargados para 17 equipos (fuente externa)",
     "events_source": "eventos reales (/fixtures/events)",
     "referee_context": {
       "referee_name": "I. Barton",
@@ -996,6 +1001,6 @@
         "possible_effect_on_prediction": "más paradas esperadas; depende del estado del portero"
       }
     ],
-    "card_profiles_source": "perfiles de tarjetas auto cargados (533 jug / 48 eq / 4 pos)"
+    "card_profiles_source": "perfiles de tarjetas auto cargados (652 jug / 48 eq / 4 pos)"
   }
 ]
