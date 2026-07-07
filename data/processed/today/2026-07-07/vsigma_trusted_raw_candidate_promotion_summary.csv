@@ -1,2 +1,2 @@
 target_date,generated_at,rows_reviewed,promoted_rows,blocked_rows,quarantine_rows,promotion_status_counts,next_action,auto_apply,production_change
-2026-07-07,2026-07-07T22:05:43+01:00,88,12,0,66,TRUSTED_SOURCE_BUT_NO_SCORED_ROW=66; PROMOTED_TO_SCORING_INPUT=12; NOT_TRUSTED_NO_PROMOTION=10,Promoted rows may feed normal scoring gates only.,NO,NO
+2026-07-07,2026-07-07T23:37:06+01:00,88,12,0,66,TRUSTED_SOURCE_BUT_NO_SCORED_ROW=66; PROMOTED_TO_SCORING_INPUT=12; NOT_TRUSTED_NO_PROMOTION=10,Promoted rows may feed normal scoring gates only.,NO,NO
