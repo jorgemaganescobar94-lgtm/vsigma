@@ -1,0 +1,35 @@
+========================================================================================================
+PROPS DE GOL · RECENCIA / FORMA DE TORNEO — walk-forward anti-leakage · READ-ONLY · sin API · sin prod
+========================================================================================================
+partidos usados=150 | filas jugador-gol=3062 | base rate gol=8.1%
+filas con FORMA intra-ventana (treated, window_min>0)=2026 (66.2%)  ·  positivos treated=167
+split temporal: train<2024-01-28<=test | train=1638 filas · test(OOS)=1424 filas
+K probados (V2, min): [90, 180, 270, 450, 720, 1080, 2160]  ·  semillas bootstrap=10  ·  margen gate=0.002
+
+--- ajuste de K (V2) SOLO en train (logloss train por K) ---
+    K=   90min  logloss_train=0.216918
+    K=  180min  logloss_train=0.211377
+    K=  270min  logloss_train=0.208934
+    K=  450min  logloss_train=0.206640
+    K=  720min  logloss_train=0.205173
+    K= 1080min  logloss_train=0.204289
+    K= 2160min  logloss_train=0.203349  <- K* óptimo
+  K* (recencia óptima, tuneada en train) = 2160 min  (w=win_min/(win_min+K*))
+
+--------------------------------------------------------------------------------------------------------
+[OOS = test] n=1424  (base rate gol=8.6%)  · Δlogloss(V0−Vx)>0 => Vx mejor
+--------------------------------------------------------------------------------------------------------
+  variante               logloss    brier  Δlogloss medio       IC95[min_lo..max_hi] veredicto
+  V0 (producción)        0.24580  0.07054      (baseline)                            —
+  V1 (pool minutos)      0.24368  0.06978        +0.00212 [-0.00114..+0.00567] NO adoptar (IC incluye 0)
+  V2 (K*=2160)           0.24393  0.07030        +0.00187 [-0.00016..+0.00429] NO adoptar (IC incluye 0)
+
+  [subconjunto TREATED del test] n=1021 (solo filas con forma intra-ventana; aquí vive el efecto):
+     V0 (producción)      logloss=0.25050 (ref)
+     V1 (pool minutos)    logloss=0.24822  Δ=+0.00228 IC95[-0.00209..+0.00707] (IC∋0)
+     V2 (K*=2160)         logloss=0.24799  Δ=+0.00251 IC95[-0.00029..+0.00583] (IC∋0)
+
+========================================================================================================
+GATE: ADOPTAR sólo si Δlogloss(V0−Vx)>0 en OOS con IC95 que excluye 0 con margen (>=+0.002) y robusto.
+HONESTIDAD: si la ventana fija empata/gana o el efecto roza 0 => cerrar, NO tocar producción.
+========================================================================================================
