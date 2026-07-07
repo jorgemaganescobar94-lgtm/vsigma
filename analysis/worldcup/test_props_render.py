@@ -170,6 +170,37 @@ def test_props_block_reads_log_for_fixture():
     F._props_cache = None
 
 
+def _row_pid(player, pid, **kw):
+    r = _row(player, **kw); r["player_id"] = pid; return r
+
+
+def test_tournament_goals_context_shown_with_legend():
+    """A goalscorer with >=1 real WC goal gets '(N en el Mundial)' appended and the honest legend
+    is added under the goal line; a player with 0 WC goals gets NO annotation (no noise)."""
+    F._wc_goals_cache = {700: 5, 701: 0}          # inject counts (no CSV/API)
+    F.SHOW_TOURNAMENT_GOALS = True
+    df = pd.DataFrame([_row_pid("Star", 700, p_goal=0.40), _row_pid("Cold", 701, p_goal=0.20)])
+    lines = F.props_lines(df, name_fn=str)
+    goal = next(l for l in lines if "Gol" in l and "%" in l)
+    assert "Star 40% (5 en el Mundial)" in goal    # prop % unchanged, WC count appended
+    assert "Cold 20%" in goal and "Cold 20% (" not in goal   # 0 WC goals -> no parenthesis
+    assert any("goles reales en el Mundial hasta ahora" in l for l in lines)   # legend present
+    F._wc_goals_cache = None
+
+
+def test_tournament_goals_flag_off_is_delta0():
+    """SHOW_TOURNAMENT_GOALS=False -> goal line byte-identical to pre-feature (no annotation, no legend)."""
+    F._wc_goals_cache = {700: 5}
+    F.SHOW_TOURNAMENT_GOALS = False
+    df = pd.DataFrame([_row_pid("Star", 700, p_goal=0.40)])
+    lines = F.props_lines(df, name_fn=str)
+    assert "en el Mundial" not in "\n".join(lines)               # neither annotation nor legend
+    goal = next(l for l in lines if "Gol" in l and "%" in l)
+    assert goal.endswith("Star 40%")                             # exactly the old line
+    F.SHOW_TOURNAMENT_GOALS = True                               # restore module default
+    F._wc_goals_cache = None
+
+
 def _run():
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     for fn in fns:

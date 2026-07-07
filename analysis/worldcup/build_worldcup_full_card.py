@@ -212,7 +212,50 @@ CARD_CAP_P = 0.45                # display cap: card % above this is shown as "4
 CARD_CAP_LABEL = "45%+"
 CARD_NOTE = ("  (Tarjeta: los % por encima de 45% se muestran como \"45%+\" — calibración "
              "conservadora en la cola alta, muestra pequeña.)")
+
+# CONTEXTO de forma del torneo junto a la prop de gol (DISPLAY-ONLY). NO cambia el número de la prop
+# (sigue siendo el ritmo histórico validado): solo AÑADE, entre paréntesis, los goles REALES del jugador
+# en el Mundial en curso, leídos de worldcup_fixture_events.csv (sin API). El backtest cerró que meter la
+# forma del torneo en el RATE no mejora OOS (props_recency_backtest); esto es solo para que el % no
+# parezca ciego. Reversible: SHOW_TOURNAMENT_GOALS=False -> ficha byte-idéntica a hoy (Δ0).
+SHOW_TOURNAMENT_GOALS = True
+WC_EVENTS = OUT_DIR / "worldcup_fixture_events.csv"
+TOURN_GOALS_NOTE = ("  (el % es ritmo histórico, que suaviza rachas; entre paréntesis, "
+                    "goles reales en el Mundial hasta ahora)")
+_wc_goals_cache = None
 _props_cache = None
+
+
+def _wc_goal_counts():
+    """Lazy {player_id: goals scored in the CURRENT World Cup} from the real fixture-events table
+    (is_goal, own goals EXCLUDED, WC fixtures only). {} on any problem (soft-fail). Read-only, no API."""
+    global _wc_goals_cache
+    if _wc_goals_cache is None:
+        try:
+            df = pd.read_csv(WC_EVENTS) if WC_EVENTS.exists() else pd.DataFrame()
+            if len(df) and {"player_id", "is_goal"}.issubset(df.columns):
+                g = df[pd.to_numeric(df["is_goal"], errors="coerce") == 1].copy()
+                if "is_own_goal" in g.columns:
+                    g = g[pd.to_numeric(g["is_own_goal"], errors="coerce").fillna(0) == 0]
+                g["_pid"] = pd.to_numeric(g["player_id"], errors="coerce")
+                g = g.dropna(subset=["_pid"])
+                _wc_goals_cache = {int(k): int(v) for k, v in g.groupby(g["_pid"].astype(int)).size().items()}
+            else:
+                _wc_goals_cache = {}
+        except Exception:
+            _wc_goals_cache = {}
+    return _wc_goals_cache
+
+
+def _wc_goal_suffix(pid):
+    """' (N en el Mundial)' when the flag is on and the player has >=1 real WC goal; else '' (Δ0)."""
+    if not SHOW_TOURNAMENT_GOALS:
+        return ""
+    try:
+        n = _wc_goal_counts().get(int(pid), 0)
+    except (TypeError, ValueError):
+        return ""
+    return f" ({n} en el Mundial)" if n >= 1 else ""
 
 
 def _card_pct(p):
@@ -280,8 +323,14 @@ def props_lines(sub, name_fn=str):
         valid = []
         gl = _top("p_goal", 3)
         if gl:
-            valid.append(GOAL_LABEL + " · ".join(
-                f"{name_fn(rr['player'])} {float(rr['p_goal']) * 100:.0f}%" for _, rr in gl))
+            parts, tourn = [], False
+            for _, rr in gl:
+                suf = _wc_goal_suffix(rr.get("player_id"))   # '' unless flag on AND real WC goals
+                tourn = tourn or bool(suf)
+                parts.append(f"{name_fn(rr['player'])} {float(rr['p_goal']) * 100:.0f}%{suf}")
+            valid.append(GOAL_LABEL + " · ".join(parts))
+            if tourn:                                        # legend only when a (N en el Mundial) was shown
+                valid.append(TOURN_GOALS_NOTE)
         asst = _top("p_assist", 3)
         if asst:
             valid.append("  Asistencia: " + " · ".join(
