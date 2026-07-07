@@ -20,7 +20,7 @@
 ==============================================================================
 PLAYER PROPS — track record (SOMBRA · heurístico · NO validado · sin mercado)
 ==============================================================================
-generated_at_utc: 2026-07-07T11:00:47+00:00
+generated_at_utc: 2026-07-07T13:32:09+00:00
 partidos liquidados=40 | filas jugador-prop=880 | umbral graduación N>=30
 
   prop          n  base%  logloss   brier    ECE  ll_base br_base  mejora?
