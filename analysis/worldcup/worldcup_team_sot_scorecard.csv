@@ -125,3 +125,7 @@ fixture_id,kickoff_utc,team_id,team_name,opponent_id,opponent_name,side,predicte
 1569870,2026-07-04 21:00,2380,Paraguay,2,France,home,2.814,1.0,1.8143,1.8143,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1570714,2026-07-06 00:00,10,England,16,Mexico,away,5.084,5.0,0.0837,0.0837,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1570714,2026-07-06 00:00,16,Mexico,10,England,home,3.616,5.0,-1.3841,1.3841,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1570715,2026-07-07 00:00,1,Belgium,2384,USA,away,5.794,7.0,-1.2063,1.2063,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1570715,2026-07-07 00:00,2384,USA,1,Belgium,home,4.781,2.0,2.7813,2.7813,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1576756,2026-07-06 19:00,9,Spain,27,Portugal,away,7.788,6.0,1.7879,1.7879,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1576756,2026-07-06 19:00,27,Portugal,9,Spain,home,4.226,2.0,2.2261,2.2261,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics

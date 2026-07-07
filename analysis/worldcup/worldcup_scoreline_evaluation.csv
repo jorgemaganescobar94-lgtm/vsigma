@@ -62,3 +62,5 @@ fixture_id,home,away,lambda_home,lambda_away,source_lambda,actual_score,in_top1,
 1569870,Paraguay,France,0.77,1.86,mx,0-1,1,1,1,0.1341,1,0-1,A,A,media,media
 1568100,Brazil,Norway,1.82,0.74,mx,1-2,0,0,0,0.0385,9,1-0,A,H,media,media
 1570714,Mexico,England,1.12,1.25,mx,2-3,0,0,0,0.0191,14,1-1,A,A,media,media
+1576756,Portugal,Spain,1.16,1.21,mx,0-1,0,1,1,0.1131,2,1-1,A,A,media,media
+1570715,USA,Belgium,0.96,1.48,mx,1-4,0,0,0,0.0167,15,0-1,A,A,media,media

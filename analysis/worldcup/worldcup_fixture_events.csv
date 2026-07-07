@@ -956,18 +956,18 @@ fixture_id,date,competition,team_id,team_name,opponent_id,opponent_name,player_i
 1569870,2026-07-04,World Cup 2026,2,France,2380,Paraguay,19617.0,Michael Olise,,,Card,Yellow Card,90,7.0,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1568100,2026-07-05,World Cup 2026,6,Brazil,1090,Norway,1165.0,Matheus Cunha,,,Var,Penalty confirmed,12,,0,0,0,0,0,0,,0,alta,media,api_football_events
 1568100,2026-07-05,World Cup 2026,6,Brazil,1090,Norway,10135.0,Bruno Guimarães,,,Goal,Missed Penalty,14,,0,0,0,1,0,0,,0,alta,alta,api_football_events
-1568100,2026-07-05,World Cup 2026,1090,Norway,6,Brazil,314511.0,Antonio Nusa,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1568100,2026-07-05,World Cup 2026,1090,Norway,6,Brazil,8492.0,Alexander Sørloth,,,subst,Substitution 2,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1568100,2026-07-05,World Cup 2026,6,Brazil,1090,Norway,1165.0,Matheus Cunha,,,subst,Substitution 1,58,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1568100,2026-07-05,World Cup 2026,1090,Norway,6,Brazil,24845.0,Julian Ryerson,,,subst,Substitution 3,63,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1568100,2026-07-05,World Cup 2026,6,Brazil,1090,Norway,407806.0,Rayan,,,subst,Substitution 2,68,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1568100,2026-07-05,World Cup 2026,6,Brazil,1090,Norway,127769.0,Gabriel Martinelli,,,subst,Substitution 3,68,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1568100,2026-07-05,World Cup 2026,6,Brazil,1090,Norway,10135.0,Bruno Guimarães,,,subst,Substitution 4,79,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1568100,2026-07-05,World Cup 2026,1090,Norway,6,Brazil,1100.0,Erling Haaland,301528.0,Andreas Schjelderup,Goal,Normal Goal,80,,1,1,0,0,0,0,,0,alta,alta,api_football_events
-1568100,2026-07-05,World Cup 2026,6,Brazil,1090,Norway,276.0,Neymar,,,Goal,Penalty,90,9.0,1,0,1,0,0,0,,0,alta,alta,api_football_events
+1568100,2026-07-05,World Cup 2026,1090,Norway,6,Brazil,8492.0,A. Sorloth,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1568100,2026-07-05,World Cup 2026,1090,Norway,6,Brazil,314511.0,A. Nusa,,,subst,Substitution 2,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1568100,2026-07-05,World Cup 2026,6,Brazil,1090,Norway,1165.0,M. Cunha,,,subst,Substitution 1,58,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1568100,2026-07-05,World Cup 2026,1090,Norway,6,Brazil,24845.0,J. Ryerson,,,subst,Substitution 3,63,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1568100,2026-07-05,World Cup 2026,6,Brazil,1090,Norway,127769.0,G. Martinelli,,,subst,Substitution 2,67,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1568100,2026-07-05,World Cup 2026,6,Brazil,1090,Norway,407806.0,Rayan,,,subst,Substitution 3,67,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1568100,2026-07-05,World Cup 2026,6,Brazil,1090,Norway,10135.0,Bruno Guimaraes,,,subst,Substitution 4,79,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1568100,2026-07-05,World Cup 2026,1090,Norway,6,Brazil,1100.0,E. Haaland,301528.0,A. Schjelderup,Goal,Normal Goal,79,,1,1,0,0,0,0,,0,alta,alta,api_football_events
 1568100,2026-07-05,World Cup 2026,6,Brazil,1090,Norway,276.0,Neymar,,,Card,Yellow Card,90,6.0,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
-1568100,2026-07-05,World Cup 2026,1090,Norway,6,Brazil,1100.0,Erling Haaland,301528.0,Andreas Schjelderup,Goal,Normal Goal,90,,1,1,0,0,0,0,,0,alta,alta,api_football_events
-1568100,2026-07-05,World Cup 2026,1090,Norway,6,Brazil,265782.0,David Møller Wolfe,,,subst,Substitution 4,90,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1568100,2026-07-05,World Cup 2026,1090,Norway,6,Brazil,265782.0,D. Wolfe,,,subst,Substitution 4,90,5.0,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1568100,2026-07-05,World Cup 2026,1090,Norway,6,Brazil,1100.0,E. Haaland,301528.0,A. Schjelderup,Goal,Normal Goal,90,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1568100,2026-07-05,World Cup 2026,6,Brazil,1090,Norway,276.0,Neymar,,,Goal,Penalty,90,,1,0,1,0,0,0,,0,alta,alta,api_football_events
 1570714,2026-07-06,World Cup 2026,10,England,16,Mexico,2937.0,D. Rice,,,Card,Yellow Card,1,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1570714,2026-07-06,World Cup 2026,10,England,16,Mexico,129718.0,J. Bellingham,1460.0,B. Saka,Goal,Normal Goal,36,,1,1,0,0,0,0,,0,alta,alta,api_football_events
 1570714,2026-07-06,World Cup 2026,10,England,16,Mexico,129718.0,J. Bellingham,184.0,H. Kane,Goal,Normal Goal,38,,1,1,0,0,0,0,,0,alta,alta,api_football_events
@@ -986,6 +986,36 @@ fixture_id,date,competition,team_id,team_name,opponent_id,opponent_name,player_i
 1570714,2026-07-06,World Cup 2026,10,England,16,Mexico,138908.0,E. Anderson,,,subst,Substitution 3,75,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1570714,2026-07-06,World Cup 2026,16,Mexico,10,England,2878.0,J. Sanchez,,,subst,Substitution 4,79,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1570714,2026-07-06,World Cup 2026,16,Mexico,10,England,35532.0,J. Quinones,,,subst,Substitution 5,81,,0,0,0,0,0,0,,1,alta,alta,api_football_events
-1570714,2026-07-06,World Cup 2026,10,England,16,Mexico,184.0,H. Kane,,,subst,Substitution 4,90,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1570714,2026-07-06,World Cup 2026,16,Mexico,10,England,35544.0,J. Vasquez,,,Card,Yellow Card,90,8.0,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1570714,2026-07-06,World Cup 2026,10,England,16,Mexico,292.0,J. Henderson,,,Card,Yellow Card,90,8.0,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1570714,2026-07-06,World Cup 2026,10,England,16,Mexico,184.0,H. Kane,,,subst,Substitution 4,90,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576756,2026-07-06,World Cup 2026,27,Portugal,9,Spain,263482.0,Nuno Mendes,,,subst,Substitution 1,56,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576756,2026-07-06,World Cup 2026,27,Portugal,9,Spain,855.0,João Cancelo,,,subst,Substitution 2,71,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576756,2026-07-06,World Cup 2026,27,Portugal,9,Spain,583.0,João Félix,,,subst,Substitution 3,71,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576756,2026-07-06,World Cup 2026,9,Spain,27,Portugal,182219.0,Alex Baena,,,subst,Substitution 1,75,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576756,2026-07-06,World Cup 2026,27,Portugal,9,Spain,128384.0,Vitinha,,,subst,Substitution 4,83,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576756,2026-07-06,World Cup 2026,27,Portugal,9,Spain,1864.0,Pedro Neto,,,subst,Substitution 5,83,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576756,2026-07-06,World Cup 2026,9,Spain,27,Portugal,1323.0,Dani Olmo,,,subst,Substitution 2,85,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576756,2026-07-06,World Cup 2026,9,Spain,27,Portugal,133609.0,Pedri,,,subst,Substitution 3,85,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576756,2026-07-06,World Cup 2026,27,Portugal,9,Spain,636.0,Bernardo Silva,,,Card,Yellow Card,89,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1576756,2026-07-06,World Cup 2026,27,Portugal,9,Spain,336671.0,Renato Veiga,,,Card,Yellow Card,90,4.0,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1576756,2026-07-06,World Cup 2026,9,Spain,27,Portugal,47311.0,Mikel Merino,931.0,Ferran Torres,Goal,Normal Goal,90,1.0,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1576756,2026-07-06,World Cup 2026,9,Spain,27,Portugal,931.0,Ferran Torres,,,Card,Yellow Card,90,9.0,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1576756,2026-07-06,World Cup 2026,9,Spain,27,Portugal,47323.0,Mikel Oyarzabal,,,subst,Substitution 4,90,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,1,Belgium,2384,USA,147859.0,C. De Ketelaere,2120.0,N. Raskin,Goal,Normal Goal,9,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,1,Belgium,2384,USA,162714.0,A. Onana,,,subst,Substitution 1,21,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,2384,USA,1,Belgium,162037.0,M. Tillman,,,Goal,Normal Goal,31,,1,0,0,0,0,0,,0,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,1,Belgium,2384,USA,147859.0,C. De Ketelaere,1946.0,L. Trossard,Goal,Normal Goal,33,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,2384,USA,1,Belgium,415.0,W. McKennie,,,Card,Yellow Card,35,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,2384,USA,1,Belgium,38735.0,S. Dest,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,1,Belgium,2384,USA,78.0,H. Vanaken,147859.0,C. De Ketelaere,Goal,Normal Goal,57,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,2384,USA,1,Belgium,17.0,C. Pulisic,,,subst,Substitution 2,59,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,1,Belgium,2384,USA,25458.0,D. Lukebakio,,,subst,Substitution 2,67,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,1,Belgium,2384,USA,147859.0,C. De Ketelaere,,,subst,Substitution 3,67,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,2384,USA,1,Belgium,162037.0,M. Tillman,,,Card,Yellow Card,69,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,2384,USA,1,Belgium,1150.0,T. Adams,,,subst,Substitution 3,72,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,1,Belgium,2384,USA,1946.0,L. Trossard,,,subst,Substitution 4,89,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,1,Belgium,2384,USA,2120.0,N. Raskin,,,subst,Substitution 5,89,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,2384,USA,1,Belgium,138835.0,F. Balogun,,,subst,Substitution 4,90,2.0,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,2384,USA,1,Belgium,19549.0,A. Robinson,,,subst,Substitution 5,90,2.0,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1570715,2026-07-07,World Cup 2026,1,Belgium,2384,USA,907.0,R. Lukaku,78.0,H. Vanaken,Goal,Normal Goal,90,3.0,1,1,0,0,0,0,,0,alta,alta,api_football_events

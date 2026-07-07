@@ -1,9 +1,9 @@
 stat,n,original_mae,original_rmse,original_bias,correction_type,corrected_mae,corrected_rmse,corrected_bias,delta_mae,recommendation,data_quality,confidence,reason
-shots,58,7.0557,8.6948,-6.0091,global_ratio,4.8553,6.2464,-0.0,2.2004,CONSIDER_DISPLAY_CORRECTION_LATER,per_fixture_total,baja,"cumulative ratio=1.3223 (optimista, ajustado sobre toda la muestra)"
-shots,58,7.0557,8.6948,-6.0091,global_bias,4.9274,6.284,0.0,2.1283,CONSIDER_DISPLAY_CORRECTION_LATER,per_fixture_total,baja,cumulative bias_subtracted=-6.0091 (optimista)
-shots,58,7.0557,8.6948,-6.0091,pre_fixture,4.8962,6.2709,0.4898,1.9559,CONSIDER_DISPLAY_CORRECTION_LATER,per_fixture_total,media,anti-look-ahead online sobre 52 filas corregidas (decisivo)
-shots,58,7.0557,8.6948,-6.0091,leave_one_out,4.9418,6.359,-0.0001,2.1139,CONSIDER_DISPLAY_CORRECTION_LATER,per_fixture_total,baja,diagnóstico (menos estricto: excluye el propio fixture pero ve futuros)
-corners,58,3.2314,4.1467,-2.1931,global_ratio,2.7946,3.5267,-0.0,0.4368,CONSIDER_DISPLAY_CORRECTION_LATER,per_fixture_total,baja,"cumulative ratio=1.3081 (optimista, ajustado sobre toda la muestra)"
-corners,58,3.2314,4.1467,-2.1931,global_bias,2.7672,3.5193,-0.0,0.4642,CONSIDER_DISPLAY_CORRECTION_LATER,per_fixture_total,baja,cumulative bias_subtracted=-2.1931 (optimista)
-corners,58,3.2314,4.1467,-2.1931,pre_fixture,2.9372,3.6803,-0.6096,0.428,CONSIDER_DISPLAY_CORRECTION_LATER,per_fixture_total,media,anti-look-ahead online sobre 52 filas corregidas (decisivo)
-corners,58,3.2314,4.1467,-2.1931,leave_one_out,2.8446,3.5915,0.0004,0.3868,CONSIDER_DISPLAY_CORRECTION_LATER,per_fixture_total,baja,diagnóstico (menos estricto: excluye el propio fixture pero ve futuros)
+shots,60,6.8977,8.5596,-5.886,global_ratio,4.8319,6.1944,0.0,2.0658,CONSIDER_DISPLAY_CORRECTION_LATER,per_fixture_total,baja,"cumulative ratio=1.3142 (optimista, ajustado sobre toda la muestra)"
+shots,60,6.8977,8.5596,-5.886,global_bias,4.8741,6.2146,-0.0,2.0236,CONSIDER_DISPLAY_CORRECTION_LATER,per_fixture_total,baja,cumulative bias_subtracted=-5.886 (optimista)
+shots,60,6.8977,8.5596,-5.886,pre_fixture,4.8805,6.2137,0.6374,1.8036,CONSIDER_DISPLAY_CORRECTION_LATER,per_fixture_total,media,anti-look-ahead online sobre 54 filas corregidas (decisivo)
+shots,60,6.8977,8.5596,-5.886,leave_one_out,4.915,6.3019,0.0002,1.9827,CONSIDER_DISPLAY_CORRECTION_LATER,per_fixture_total,baja,diagnóstico (menos estricto: excluye el propio fixture pero ve futuros)
+corners,60,3.1692,4.0915,-2.1635,global_ratio,2.7489,3.4829,0.0,0.4203,CONSIDER_DISPLAY_CORRECTION_LATER,per_fixture_total,baja,"cumulative ratio=1.3032 (optimista, ajustado sobre toda la muestra)"
+corners,60,3.1692,4.0915,-2.1635,global_bias,2.7205,3.4727,-0.0,0.4487,CONSIDER_DISPLAY_CORRECTION_LATER,per_fixture_total,baja,cumulative bias_subtracted=-2.1635 (optimista)
+corners,60,3.1692,4.0915,-2.1635,pre_fixture,2.8833,3.6286,-0.5474,0.4078,CONSIDER_DISPLAY_CORRECTION_LATER,per_fixture_total,media,anti-look-ahead online sobre 54 filas corregidas (decisivo)
+corners,60,3.1692,4.0915,-2.1635,leave_one_out,2.7964,3.5445,0.0005,0.3728,CONSIDER_DISPLAY_CORRECTION_LATER,per_fixture_total,baja,diagnóstico (menos estricto: excluye el propio fixture pero ve futuros)
