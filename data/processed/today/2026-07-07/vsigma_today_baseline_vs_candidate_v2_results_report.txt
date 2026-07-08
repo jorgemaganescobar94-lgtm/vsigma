@@ -1,0 +1,13 @@
+vSIGMA TODAY BASELINE VS CANDIDATE V2 RESULTS
+
+Baseline pick count: 0
+Candidate pick count: 0
+Overlap picks: 0
+
+Mode summary
+               mode  pick_count  settled_rows  pending_rows  unmatched_rows  wins  losses  pushes  voids  profit_units roi_percent
+  BASELINE_OFFICIAL           0             0             0               0     0       0       0      0           0.0        <NA>
+SHADOW_CANDIDATE_V2           0             0             0               0     0       0       0      0           0.0        <NA>
+
+Pick result comparison
+No compared picks.

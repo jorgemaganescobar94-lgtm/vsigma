@@ -78,15 +78,22 @@ _No stale pre-lock rows excluded._
 | fixture_id | home_team | away_team | market_primary | experiment_id | pre_price | prelock_price | close_proxy_price | clv_delta | clv_direction | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1554368 | Lincoln Red Imps FC | Inter Club d'Escaldes | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.91 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1554368 | Lincoln Red Imps FC | Inter Club d'Escaldes | OVER_2_5 | OFFICIAL_BASELINE | 1.91 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1554368 | Lincoln Red Imps FC | Inter Club d'Escaldes | OVER_2_5 | OFFICIAL_BASELINE | 1.91 |  | 1.91 | 0.0 | CLV_FLAT | WIN | 0.91 |
 | 1554374 | Vikingur Reykjavik | Gyori ETO FC | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.67 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1554374 | Vikingur Reykjavik | Gyori ETO FC | OVER_2_5 | OFFICIAL_BASELINE | 1.67 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1554374 | Vikingur Reykjavik | Gyori ETO FC | OVER_2_5 | OFFICIAL_BASELINE | 1.67 |  | 1.67 | 0.0 | CLV_FLAT | LOSS | -1.0 |
 
 ### Candidate v7 Calibration Advice
 _No rows._
 
 ## Post-Results Summary
-_No rows._
+| mode | pick_count | wins | losses | profit_units | roi_percent | pending_rows | candidate_version |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| OFFICIAL_EXECUTION_SHORTLIST | 2.0 | 1.0 | 1.0 | -0.09 | -4.5 | 0.0 | OFFICIAL_RESULTS |
+| SHADOW_CANDIDATE_V2 | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V2_RESULTS |
+| SHADOW_CANDIDATE_V4_O25_LOW_CONVERSION_FIREWALL | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V4_RESULTS |
+| SHADOW_CANDIDATE_V5_PLAYER_IMPACT | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V5_RESULTS |
+| SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V6_RESULTS |
+| SHADOW_CANDIDATE_V7_PRICE_DISCIPLINE_CLV_DRIFT_GUARD | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V7_RESULTS |
 
 ## Pre-Lock Status
 _No rows._
@@ -135,8 +142,8 @@ _No rows._
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: official_baseline_output: WARNING - only stale rows found for 2026-07-06
-- Recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-07 --timezone Atlantic/Canary --mode pre`
+- Critical warnings: daily_master_report: WARNING - daily master report missing
+- Recovery command: `.\.venv\Scripts\python.exe scripts\build_daily_competition_master_report.py --date 2026-07-08`
 - Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-07-07/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
@@ -230,8 +237,14 @@ _No rows._
 | vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| today_pipeline_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
-| today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet | 0 |
+| vsigma_execution_shortlist_results_ledger.csv | OFFICIAL_RESULTS | PASS | output is fresh for requested target date | 2 |
+| vsigma_execution_shortlist_results_summary.csv | OFFICIAL_RESULTS | PASS | output is fresh for requested target date | 96 |
+| vsigma_today_candidate_v2_results_ledger.csv | CANDIDATE_V2_RESULTS | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
+| vsigma_today_candidate_v2_results_summary.csv | CANDIDATE_V2_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v4_results_ledger.csv | CANDIDATE_V4_RESULTS | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
+| vsigma_today_candidate_v4_results_summary.csv | CANDIDATE_V4_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v5_results_ledger.csv | CANDIDATE_V5_RESULTS | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
+| vsigma_today_candidate_v5_results_summary.csv | CANDIDATE_V5_RESULTS | PASS | output is fresh for requested target date | 1 |
 
 ## Candidate Isolation
 | check_name | file_name | status | detail |
