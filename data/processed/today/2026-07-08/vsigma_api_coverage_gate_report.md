@@ -7,8 +7,8 @@
 - production_change: NO
 
 ## Gate Rows
-- Vikingur Reykjavik vs Gyori ETO FC | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=unknown
-- Lincoln Red Imps FC vs Inter Club d'Escaldes | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=unknown
+- Vikingur Reykjavik vs Gyori ETO FC | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO->NO | missing=unknown
+- Lincoln Red Imps FC vs Inter Club d'Escaldes | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO->NO | missing=unknown
 
 ## Guardrails
 - Probable XI can support early planning, never final lock by itself.
