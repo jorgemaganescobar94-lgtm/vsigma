@@ -1019,6 +1019,53 @@ fixture_id,date,competition,team_id,team_name,opponent_id,opponent_name,player_i
 1570715,2026-07-07,World Cup 2026,2384,USA,1,Belgium,138835.0,F. Balogun,,,subst,Substitution 4,90,2.0,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1570715,2026-07-07,World Cup 2026,2384,USA,1,Belgium,19549.0,A. Robinson,,,subst,Substitution 5,90,2.0,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1570715,2026-07-07,World Cup 2026,1,Belgium,2384,USA,907.0,R. Lukaku,78.0,H. Vanaken,Goal,Normal Goal,90,3.0,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,32,Egypt,26,Argentina,16804,Yasser Ibrahim,190575,Marwan Attia,Goal,Normal Goal,15,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,26,Argentina,32,Egypt,154,Lionel Messi,,,Goal,Missed Penalty,21,,0,0,0,1,0,0,,0,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,32,Egypt,26,Argentina,17269,Emam Ashour,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,32,Egypt,26,Argentina,395075,Mostafa Ziko,,,Var,Goal cancelled,60,,0,0,0,0,0,0,,0,alta,media,api_football_events
+1576804,2026-07-07,World Cup 2026,26,Argentina,32,Egypt,529,Nicolás Tagliafico,,,subst,Substitution 1,66,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,26,Argentina,32,Egypt,2472,Rodrigo De Paul,,,subst,Substitution 2,66,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,32,Egypt,26,Argentina,395075,Mostafa Ziko,20844,Haissem Hassan,Goal,Normal Goal,67,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,26,Argentina,32,Egypt,6503,Nahuel Molina,,,subst,Substitution 3,73,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,32,Egypt,26,Argentina,20844,Haissem Hassan,,,subst,Substitution 2,73,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,26,Argentina,32,Egypt,30776,Cristian Romero,154,Lionel Messi,Goal,Normal Goal,79,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,32,Egypt,26,Argentina,395075,Mostafa Ziko,,,subst,Substitution 3,80,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,26,Argentina,32,Egypt,154,Lionel Messi,2468,Gonzalo Montiel,Goal,Normal Goal,83,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,26,Argentina,32,Egypt,5996,Enzo Fernández,217,Lautaro Martínez,Goal,Normal Goal,90,2,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,32,Egypt,26,Argentina,190575,Marwan Attia,,,Card,Yellow Card,90,8,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,32,Egypt,26,Argentina,16813,Hamdy Fathy,,,Card,Yellow Card,90,4,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,32,Egypt,26,Argentina,269174,Mostafa Shobeir,,,Card,Yellow Card,90,3,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,26,Argentina,32,Egypt,6009,Julián Alvarez,,,subst,Substitution 4,90,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,26,Argentina,32,Egypt,30776,Cristian Romero,,,subst,Substitution 5,90,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576804,2026-07-07,World Cup 2026,32,Egypt,26,Argentina,16841,Mohanad Lasheen,,,subst,Substitution 4,90,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,8,Colombia,15,Switzerland,13708,J. Arias,,,Var,Corner cancelled,40,,0,0,0,0,0,0,,0,alta,media,api_football_events
+1576805,2026-07-07,World Cup 2026,15,Switzerland,8,Colombia,264705,A. Jashari,,,subst,Substitution 1,45,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,15,Switzerland,8,Colombia,1464,G. Xhaka,,,Card,Yellow Card,51,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,15,Switzerland,8,Colombia,2810,D. Zakaria,,,Card,Yellow Card,59,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,8,Colombia,15,Switzerland,47237,L. Suárez,,,Card,Yellow Card,60,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,8,Colombia,15,Switzerland,517,J. Rodríguez,,,subst,Substitution 1,66,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,8,Colombia,15,Switzerland,13708,J. Arias,,,subst,Substitution 2,66,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,15,Switzerland,8,Colombia,1631,R. Rodríguez,,,subst,Substitution 2,71,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,8,Colombia,15,Switzerland,2490,J. Lerma,,,subst,Substitution 3,82,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,8,Colombia,15,Switzerland,47237,L. Suárez,,,subst,Substitution 4,82,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,15,Switzerland,8,Colombia,2810,D. Zakaria,,,subst,Substitution 3,87,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,15,Switzerland,8,Colombia,421,B. Embolo,,,subst,Substitution 4,87,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,15,Switzerland,8,Colombia,48648,D. Ndoye,,,subst,Substitution 5,90,2,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,8,Colombia,15,Switzerland,168,D. Sánchez,,,Card,Yellow Card,95,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,8,Colombia,15,Switzerland,,Luis Amaranto Perea,,,Card,Yellow Card,95,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,15,Switzerland,8,Colombia,163032,F. Rieder,,,subst,Substitution 6,103,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,15,Switzerland,8,Colombia,48489,M. Muheim,,,Card,Yellow Card,105,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,8,Colombia,15,Switzerland,1929,J. Lucumí,,,subst,Substitution 5,119,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,8,Colombia,15,Switzerland,6005,J. Quintero,,,Goal,Penalty,122,,1,0,1,0,0,0,,0,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,15,Switzerland,8,Colombia,1464,G. Xhaka,,,Goal,Penalty,123,,1,0,1,0,0,0,,0,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,8,Colombia,15,Switzerland,168,D. Sánchez,,,Goal,Missed Penalty,124,,0,0,0,1,0,0,,0,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,15,Switzerland,8,Colombia,123469,Z. Amdouni,,,Goal,Penalty,125,,1,0,1,0,0,0,,0,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,8,Colombia,15,Switzerland,13376,J. Campaz,,,Goal,Penalty,126,,1,0,1,0,0,0,,0,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,15,Switzerland,8,Colombia,5,M. Akanji,,,Goal,Missed Penalty,127,,0,0,0,1,0,0,,0,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,8,Colombia,15,Switzerland,47582,C. Hernández,,,Goal,Missed Penalty,128,,0,0,0,1,0,0,,0,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,15,Switzerland,8,Colombia,48497,C. Itten,,,Goal,Penalty,129,,1,0,1,0,0,0,,0,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,8,Colombia,15,Switzerland,2489,L. Díaz,,,Goal,Penalty,130,,1,0,1,0,0,0,,0,alta,alta,api_football_events
+1576805,2026-07-07,World Cup 2026,15,Switzerland,8,Colombia,48471,R. Vargas,,,Goal,Penalty,131,,1,0,1,0,0,0,,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,16,Mexico,1531,South Africa,35532,J. Quinones,266345,E. Lira,Goal,Normal Goal,9,,1,1,0,0,0,0,,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,1531,South Africa,16,Mexico,3287,Teboho Mokoena,,,Card,Yellow Card,17,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,16,Mexico,1531,South Africa,212233,Brian Gutiérrez,,,Card,Yellow Card,23,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events

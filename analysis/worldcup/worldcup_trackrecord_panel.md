@@ -1,15 +1,15 @@
 # 📊 Panel de Track-Record — Mundial 2026 (vSIGMA)
-_Generado: 2026-07-07T15:59:34+00:00 · consolidado de scorecards existentes · **solo lectura, no recalcula predicciones** · sin mercado/cuotas._
+_Generado: 2026-07-08T10:23:03+00:00 · consolidado de scorecards existentes · **solo lectura, no recalcula predicciones** · sin mercado/cuotas._
 
 > Honestidad: **validado** = superó el baseline en backtest histórico; **sombra** = en observación en vivo; donde la muestra aún no basta se marca explícitamente.
 
 ## 1X2 — modelo L3 (oficial)
-**N = 65** partidos liquidados · 1X2 a 90' vs resultado real (sin mercado).
+**N = 67** partidos liquidados · 1X2 a 90' vs resultado real (sin mercado).
 
 | predictor | N | logloss | brier | acc% | ECE | skill vs base |
 |---|---:|---:|---:|---:|---:|---:|
-| base-rate (baseline) | 65 | 1.0709 | 0.6490 | 41.5 | 0.000 | 0.0% |
-| L3 (oficial) | 65 | 0.8294 | 0.4792 | 67.7 | 0.107 | +26.2% |
+| base-rate (baseline) | 67 | 1.0737 | 0.6505 | 41.8 | 0.000 | 0.0% |
+| L3 (oficial) | 67 | 0.8297 | 0.4793 | 67.2 | 0.102 | +26.3% |
 | v2 | 43 | 0.8501 | 0.4884 | 67.4 | 0.138 | +24.8% |
 > ⚠️ semántica mixta: parte de las filas son 'primera predicción (mañana)' y parte 'última pre-saque' (cambio lock-at-KO a mitad de torneo) — interpretar la mejora con cautela.
 
@@ -17,35 +17,34 @@ _Generado: 2026-07-07T15:59:34+00:00 · consolidado de scorecards existentes · 
 
 | mercado | modelo | N | acc% | brier | logloss |
 |---|---|---:|---:|---:|---:|
-| Over 2.5 (real 57%) | L3 (Poisson) | 65 | 42 | 0.252 | 0.697 |
-| Over 2.5 | base-rate | 65 | 57 | 0.245 | 0.684 |
-| BTTS (real 49%) | L3 (Poisson) | 65 | 58 | 0.238 | 0.671 |
-| BTTS | base-rate | 65 | 51 | 0.250 | 0.693 |
+| Over 2.5 (real 57%) | L3 (Poisson) | 67 | 43 | 0.251 | 0.695 |
+| Over 2.5 | base-rate | 67 | 57 | 0.245 | 0.684 |
+| BTTS (real 49%) | L3 (Poisson) | 67 | 58 | 0.239 | 0.674 |
+| BTTS | base-rate | 67 | 51 | 0.250 | 0.693 |
 
 ### A/B total de goles — matchup vs constante
 - Over 2.5 (real Over=53%):
-- matchup (EN VIVO)  n= 34  acc   44%  Brier 0.253  logloss 0.698
-- constante (viejo)  n= 34  acc   47%  Brier 0.250  logloss 0.694
+- matchup (EN VIVO)  n= 36  acc   47%  Brier 0.250  logloss 0.694
+- constante (viejo)  n= 36  acc   47%  Brier 0.250  logloss 0.694
 - BTTS     (real Yes=56%):
-- matchup (EN VIVO)  n= 34  acc   44%  Brier 0.257  logloss 0.708
-- constante (viejo)  n= 34  acc   56%  Brier 0.261  logloss 0.740
+- matchup (EN VIVO)  n= 36  acc   44%  Brier 0.258  logloss 0.710
+- constante (viejo)  n= 36  acc   53%  Brier 0.264  logloss 0.745
 - (si 'constante' bate sostenidamente a 'matchup' -> revisar / poner TOTAL_MATCHUP_LIVE=False)
 
 ## L3 vs Motor máximo vs Ensemble (en vivo, desde 27-jun)
-**N = 28** partidos liquidados con predicción mx · cara a cara congelado al saque (lock-at-KO, anti-hindsight) vs resultado real · sin mercado. ens = ENSEMBLE 1X2 mostrado (media 50/50 mx+L3); en Over2.5/BTTS ens=L3 por diseño.
+**N = 30** partidos liquidados con predicción mx · cara a cara congelado al saque (lock-at-KO, anti-hindsight) vs resultado real · sin mercado. ens = ENSEMBLE 1X2 mostrado (media 50/50 mx+L3); en Over2.5/BTTS ens=L3 por diseño.
 
 | métrica | L3 | mx | ens | líder |
 |---|---:|---:|---:|---|
-| 1X2 acc% | 67.9 | 67.9 | 67.9 | empate |
-| 1X2 logloss | 0.8465 | 0.8786 | 0.8594 | L3 |
-| 1X2 brier | 0.4915 | 0.5185 | 0.5022 | L3 |
-| Over 2.5 acc% | 39.3 | 42.9 | 39.3 | **mx** |
-| Over 2.5 logloss | 0.7044 | 0.7018 | 0.7044 | **mx** |
-| Over 2.5 brier | 0.2557 | 0.2544 | 0.2557 | **mx** |
-| BTTS acc% | 42.9 | 42.9 | 42.9 | empate |
-| BTTS logloss | 0.7084 | 0.7173 | 0.7084 | empate |
-| BTTS brier | 0.257 | 0.262 | 0.257 | empate |
-> ⚠️ muestra pequeña (N=28 < 30): **NO se declara ganador**, el acumulado crece hasta el final del Mundial. Si el mx queda por detrás, este marcador + el A/B son la base para revertir (MAXMODEL_LIVE=False).
+| 1X2 acc% | 66.7 | 66.7 | 66.7 | empate |
+| 1X2 logloss | 0.8462 | 0.8731 | 0.8567 | L3 |
+| 1X2 brier | 0.4909 | 0.5138 | 0.4996 | L3 |
+| Over 2.5 acc% | 43.3 | 46.7 | 43.3 | **mx** |
+| Over 2.5 logloss | 0.6984 | 0.6951 | 0.6984 | **mx** |
+| Over 2.5 brier | 0.2527 | 0.251 | 0.2527 | **mx** |
+| BTTS acc% | 43.3 | 43.3 | 43.3 | empate |
+| BTTS logloss | 0.7115 | 0.7212 | 0.7115 | empate |
+| BTTS brier | 0.2585 | 0.2639 | 0.2585 | empate |
 > _Solo mide; NO toca el modelo ni las predicciones (mx_*/l3_* congelados en el log)._
 
 ## Stats por equipo — predicho vs real (en vivo)
@@ -53,37 +52,37 @@ _Generado: 2026-07-07T15:59:34+00:00 · consolidado de scorecards existentes · 
 
 | stat | N | MAE | RMSE | sesgo crudo (pred−real) | sesgo corregido | ¿acierto línea? |
 |---|---:|---:|---:|---|---|---|
-| córners (baja conf.) | 60 | 3.17 | 4.09 | -2.16 (infraestima) | -0.31 (infraestima) | 42.0% (O/U) |
-| tiros (orientativo) | 60 | 6.9 | 8.56 | -5.89 (infraestima) | -0.84 (infraestima) | — |
-| tarjetas (ruido · oculto en ficha) | 60 | 1.96 | 2.22 | +1.46 (sobrestima) | — (no corregido) | — |
+| córners (baja conf.) | 62 | 3.11 | 4.04 | -2.14 (infraestima) | -0.30 (infraestima) | 42.0% (O/U) |
+| tiros (orientativo) | 62 | 6.86 | 8.49 | -5.88 (infraestima) | -0.82 (infraestima) | — |
+| tarjetas (ruido · oculto en ficha) | 62 | 1.93 | 2.2 | +1.43 (sobrestima) | — (no corregido) | — |
 > 🔧 **Corrección de nivel auto-aprendida (córners/tiros MOSTRADOS)**: aditiva, encogida por muestra (×N/(N+25)), reversible (flag `STATS_LEVEL_CORRECTION`). El **sesgo corregido** debe acercarse a 0 vs el crudo. **Tarjetas EXCLUIDAS** (ruido).
 > Honestidad: **córners = baja confianza · tarjetas = ruido** → un error alto es ESPERABLE; el marcador lo refleja sin maquillar. **No** se declara nada 'bueno/malo': solo se acumula durante el torneo.
 > _Solo mide / corrige el valor MOSTRADO; el modelo y el log (st_*/result_*) quedan en CRUDO._
 
 ## Props de jugador (SOMBRA · heurístico)
-**Liquidados = 40** partidos (880 filas jugador-prop) · umbral graduación N≥30.
+**Liquidados = 42** partidos (924 filas jugador-prop) · umbral graduación N≥30.
 
 | prop | N | base% | logloss | brier | ECE | ¿mejora vivo? | estado backtest |
 |---|---:|---:|---:|---:|---:|---|---|
-| gol | 880 | 8% | 0.2447 | 0.0666 | 0.018 | sí | validado (backtest) |
-| asistencia | 880 | 6% | 0.2367 | 0.0589 | 0.033 | no | validado (backtest) |
-| tarjeta | 880 | 9% | 0.3467 | 0.0967 | 0.085 | no | validado (backtest · tope en cola) |
-| tiros a puerta | 880 | 20% | 0.5221 | 0.1498 | 0.098 | no | ranking solo (no %) |
+| gol | 924 | 8% | 0.2506 | 0.0685 | 0.020 | sí | validado (backtest) |
+| asistencia | 924 | 6% | 0.2343 | 0.0586 | 0.030 | no | validado (backtest) |
+| tarjeta | 924 | 10% | 0.3496 | 0.0981 | 0.084 | no | validado (backtest · tope en cola) |
+| tiros a puerta | 924 | 20% | 0.5223 | 0.1512 | 0.094 | no | ranking solo (no %) |
 
 **Tarjeta — sesgo crudo vs corregido** (deflación reversible de `p_card`; gol/asistencia NO se tocan):
-- crudo: pred 16.41% vs real 9.43% → sesgo **+6.98pp**
-- corregido: pred 12.12% vs real 9.43% → sesgo **+2.68pp** (factor 0.7383, flag `CARD_PROP_CORRECTION`)
+- crudo: pred 16.44% vs real 9.74% → sesgo **+6.70pp**
+- corregido: pred 12.24% vs real 9.74% → sesgo **+2.50pp** (factor 0.7446, flag `CARD_PROP_CORRECTION`)
 > _Validado (backtest) = graduó en el backtest histórico (N=3062 jugador-partido). El estado EN VIVO sigue en sombra hasta liquidar N≥umbral en partidos del Mundial._
 
 ## A/B de contexto — L3 puro vs ajuste de grupo (SOMBRA)
-**No triviales liquidados = 9** (de 34 liquidados) · umbral N≥20.
+**No triviales liquidados = 9** (de 36 liquidados) · umbral N≥20.
 > Estado: **sigue en SOMBRA** — muestra insuficiente para graduar; los multiplicadores son hipótesis (signo ambiguo), el scorecard es el juez.
 >  ⚠️ muestra pequeña (N=9 < umbral 20): métricas orientativas, aún no concluyentes.
 
 ## Monitor de calibración L3 (1X2)
-**Estado: 🟢 OK** · N=65
-- ECE observado = **0.107** vs nulo p95 = 0.173 → dentro del ruido.
-- logloss L3 = **0.8294** vs baseline 1.0709 (bate la tasa base).
+**Estado: 🟢 OK** · N=67
+- ECE observado = **0.102** vs nulo p95 = 0.170 → dentro del ruido.
+- logloss L3 = **0.8297** vs baseline 1.0737 (bate la tasa base).
 > _Monitor solo alerta; NO toca el modelo._
 
 ---

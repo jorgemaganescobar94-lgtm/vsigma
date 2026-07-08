@@ -1,27 +1,14 @@
 fixture_id,home,away,category,player,team,probability_goal,expected_goals,reason,source_used,goal_source,confidence,data_quality,probability_1_sot,expected_sot,expected_shots,shots_source,probability_assist,expected_assists,expected_key_passes,assist_source,player_id,probability_card,probability_card_original,probability_card_adjusted,adjustment_direction,adjustment_reason
-1576804,Argentina,Egypt,scorer,Lautaro Martínez,Argentina,0.4904,0.6741,"xG 0.67, P(gol) 49% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1576804,Argentina,Egypt,scorer,L. Messi,Argentina,0.2241,0.2537,"xG 0.25, P(gol) 22% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1576804,Argentina,Egypt,scorer,Mohamed Salah,Egypt,0.1896,0.2102,"xG 0.21, P(gol) 19% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1576804,Argentina,Egypt,sot,Lautaro Martínez,Argentina,,,"tiros esp. 2.7, SOT esp. 2.1 (media)",proxy,,media,media,0.8801,2.1215,2.68,proxy,,,,,,,,,,
-1576804,Argentina,Egypt,sot,L. Messi,Argentina,,,"tiros esp. 2.2, SOT esp. 1.1 (media)",proxy,,media,media,0.6517,1.0548,2.22,proxy,,,,,,,,,,
-1576804,Argentina,Egypt,sot,Mohamed Salah,Egypt,,,"tiros esp. 1.0, SOT esp. 0.9 (media)",proxy,,media,media,0.59,0.8915,0.98,proxy,,,,,,,,,,
-1576804,Argentina,Egypt,assist,L. Messi,Argentina,,,xA-proxy 0.30 (media),proxy,,media,media,,,,,0.2581,0.2986,,proxy,,,,,,
-1576804,Argentina,Egypt,assist,Lautaro Martínez,Argentina,,,xA-proxy 0.25 (media),proxy,,media,media,,,,,0.2199,0.2483,,proxy,,,,,,
-1576804,Argentina,Egypt,assist,E. Fernández,Argentina,,,xA-proxy 0.17 (media),proxy,,media,media,,,,,0.1605,0.175,,proxy,,,,,,
-1576804,Argentina,Egypt,card_risk,A. Mac Allister,Argentina,,,P(tarjeta) 43% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,6716.0,0.4274,0.4274,0.4274,neutro,ajuste neutro: posición alto ↑; equipo bajo ↓ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
-1576804,Argentina,Egypt,card_risk,Marwan Attia,Egypt,,,P(tarjeta) 40% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,190575.0,0.3955,0.3955,0.4331,subir,ajuste sube: historial jugador alto ↑; posición alto ↑; equipo alto ↑ · árbitro con muestra baja (peso reducido)
-1576804,Argentina,Egypt,card_risk,N. Otamendi,Argentina,,,P(tarjeta) 37% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,624.0,0.3733,0.3733,0.3621,bajar,ajuste baja: equipo bajo ↓ · árbitro con muestra baja (peso reducido)
-1576804,Argentina,Egypt,card_risk,Hamdi Fathy,Egypt,,,P(tarjeta) 33% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,16813.0,0.3281,0.3281,0.3363,subir,ajuste sube: historial jugador bajo ↓; posición alto ↑; equipo alto ↑ · árbitro con muestra baja (peso reducido); fuentes en conflicto -> ajuste conservador
-1576805,Switzerland,Colombia,scorer,B. Embolo,Switzerland,0.2188,0.2469,"xG 0.25, P(gol) 22% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1576805,Switzerland,Colombia,scorer,G. Puerta,Colombia,0.1881,0.2084,"xG 0.21, P(gol) 19% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1576805,Switzerland,Colombia,scorer,L. Díaz,Colombia,0.163,0.1779,"xG 0.18, P(gol) 16% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1576805,Switzerland,Colombia,sot,B. Embolo,Switzerland,,,"tiros esp. 1.9, SOT esp. 1.3 (media)",proxy,,media,media,0.7323,1.3179,1.87,proxy,,,,,,,,,,
-1576805,Switzerland,Colombia,sot,D. Ndoye,Switzerland,,,"tiros esp. 1.6, SOT esp. 0.9 (media)",proxy,,media,media,0.5947,0.9032,1.55,proxy,,,,,,,,,,
-1576805,Switzerland,Colombia,sot,R. Vargas,Switzerland,,,"tiros esp. 1.3, SOT esp. 0.9 (media)",proxy,,media,media,0.5783,0.8635,1.3,proxy,,,,,,,,,,
-1576805,Switzerland,Colombia,assist,J. Rodríguez,Colombia,,,xA-proxy 0.43 (media),proxy,,media,media,,,,,0.3492,0.4296,,proxy,,,,,,
-1576805,Switzerland,Colombia,assist,R. Vargas,Switzerland,,,xA-proxy 0.20 (media),proxy,,media,media,,,,,0.1814,0.2001,,proxy,,,,,,
-1576805,Switzerland,Colombia,assist,R. Freuler,Switzerland,,,xA-proxy 0.13 (media),proxy,,media,media,,,,,0.1178,0.1253,,proxy,,,,,,
-1576805,Switzerland,Colombia,card_risk,N. Elvedi,Switzerland,,,P(tarjeta) 37% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,2803.0,0.3733,0.3733,0.3621,bajar,ajuste baja: equipo bajo ↓ · árbitro con muestra baja (peso reducido)
-1576805,Switzerland,Colombia,card_risk,G. Puerta,Colombia,,,P(tarjeta) 35% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,324034.0,0.3519,0.3519,0.3748,subir,ajuste sube: historial jugador alto ↑; posición alto ↑ · árbitro con muestra baja (peso reducido)
-1576805,Switzerland,Colombia,card_risk,J. Lerma,Colombia,,,P(tarjeta) 34% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,2490.0,0.3447,0.3447,0.3671,subir,ajuste sube: historial jugador alto ↑; posición alto ↑ · árbitro con muestra baja (peso reducido)
-1576805,Switzerland,Colombia,card_risk,D. Muñoz,Colombia,,,P(tarjeta) 34% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,13736.0,0.3384,0.3384,0.3266,bajar,ajuste baja: historial jugador bajo ↓ · árbitro con muestra baja (peso reducido)
+1578539,France,Morocco,scorer,Kylian Mbappé,France,0.3176,0.3821,"xG 0.38, P(gol) 32% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1578539,France,Morocco,scorer,Brahim Díaz,Morocco,0.2987,0.3548,"xG 0.35, P(gol) 30% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1578539,France,Morocco,scorer,M. Olise,France,0.262,0.3038,"xG 0.30, P(gol) 26% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1578539,France,Morocco,sot,Kylian Mbappé,France,,,"tiros esp. 2.9, SOT esp. 1.7 (media)",proxy,,media,media,0.813,1.6768,2.92,proxy,,,,,,,,,,
+1578539,France,Morocco,sot,Brahim Díaz,Morocco,,,"tiros esp. 2.1, SOT esp. 1.3 (media)",proxy,,media,media,0.7318,1.316,2.12,proxy,,,,,,,,,,
+1578539,France,Morocco,sot,I. Saibari,Morocco,,,"tiros esp. 1.2, SOT esp. 0.7 (media)",proxy,,media,media,0.5155,0.7246,1.23,proxy,,,,,,,,,,
+1578539,France,Morocco,assist,L. Digne,France,,,xA-proxy 0.29 (media),proxy,,media,media,,,,,0.2542,0.2933,,proxy,,,,,,
+1578539,France,Morocco,assist,Kylian Mbappé,France,,,xA-proxy 0.23 (media),proxy,,media,media,,,,,0.2021,0.2258,,proxy,,,,,,
+1578539,France,Morocco,assist,A. Ounahi,Morocco,,,xA-proxy 0.21 (media),proxy,,media,media,,,,,0.1859,0.2057,,proxy,,,,,,
+1578539,France,Morocco,card_risk,A. Rabiot,France,,,P(tarjeta) 38% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,272.0,0.3831,0.3831,0.3831,neutro,ajuste neutro: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+1578539,France,Morocco,card_risk,I. Saibari,Morocco,,,P(tarjeta) 32% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,161897.0,0.3228,0.3228,0.2937,bajar,ajuste baja: historial jugador bajo ↓; posición bajo ↓
+1578539,France,Morocco,card_risk,A. Tchouaméni,France,,,P(tarjeta) 32% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,1271.0,0.3186,0.3186,0.3186,neutro,ajuste neutro: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+1578539,France,Morocco,card_risk,L. Digne,France,,,P(tarjeta) 31% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,2724.0,0.3103,0.3103,0.2963,bajar,ajuste baja: historial jugador bajo ↓; equipo bajo ↓
