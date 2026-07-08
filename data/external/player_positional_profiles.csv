@@ -446,7 +446,7 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 395075,Mostafa Ziko,32,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 306,Mohamed Salah,32,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 17269,Emam Ashour,32,MID,,,,,,,,,,api_football_lineup_position,media,baja
-81573,Omar Marmoush,32,MID,,,,,,,,,,api_football_lineup_position,media,baja
+81573,Omar Marmoush,32,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 16805,Rami Rabia,32,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 2664,Mahmoud Trézéguet,32,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 550547,Hamza Abdelkarim,32,FWD,,,,,,,,,,api_football_lineup_position,media,baja
@@ -460,7 +460,7 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 2656,Karim Hafez,32,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 69196,Mahmoud Saber,32,MID,,,,,,,,,,api_football_lineup_position,media,baja
 70535,Ibrahim Adel,32,FWD,,,,,,,,,,api_football_lineup_position,media,baja
-20844,Haissem Hassan,32,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+20844,Haissem Hassan,32,MID,,,,,,,,,,api_football_lineup_position,media,baja
 2660,Nabil Donga,32,MID,,,,,,,,,,api_football_lineup_position,media,baja
 47270,Unai Simón,9,GK,,,,,,,,,,api_football_lineup_position,media,baja
 47519,Pedro Porro,9,DEF,,,,,,,,,,api_football_lineup_position,media,baja
@@ -985,7 +985,7 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 324034,Gustavo Puerta,8,MID,,,,,,,,,,api_football_lineup_position,media,baja
 517,James Rodríguez,8,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 24810,Jhon Córdoba,8,FWD,,,,,,,,,,api_football_lineup_position,media,baja
-2489,Luis Díaz,8,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+2489,Luis Díaz,8,MID,,,,,,,,,,api_football_lineup_position,media,baja
 195104,Richard Ríos,8,MID,,,,,,,,,,api_football_lineup_position,media,baja
 47237,Luis Javier Suárez,8,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 6005,Juan Fernando Quintero,8,MID,,,,,,,,,,api_football_lineup_position,media,baja

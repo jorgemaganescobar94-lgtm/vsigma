@@ -1,5 +1,5 @@
 team_id,team_name,player_id,player_name,role,rank,attempts,last_taken_date,source,data_quality,confidence
-26,Argentina,154,Lionel Messi,penalty,1,1,2026-06-22,api_football_events,alta,baja
+26,Argentina,154,Lionel Messi,penalty,1,2,2026-07-07,api_football_events,alta,media
 26,Argentina,217,L. Martinez,penalty,2,1,2026-06-28,api_football_events,alta,baja
 1090,Norway,2032,Jørgen Strand Larsen,penalty,1,1,2026-06-26,api_football_events,alta,baja
 22,Iran,42315,M. Taremi,penalty,1,1,2026-06-27,api_football_events,alta,baja
@@ -33,7 +33,16 @@ team_id,team_name,player_id,player_name,role,rank,attempts,last_taken_date,sourc
 6,Brazil,276,Neymar,penalty,2,1,2026-07-05,api_football_events,alta,baja
 10,England,184,H. Kane,penalty,1,2,2026-07-06,api_football_events,alta,media
 16,Mexico,2887,R. Jimenez,penalty,1,1,2026-07-06,api_football_events,alta,baja
-15,Switzerland,421,B. Embolo,penalty,1,1,2026-06-13,api_football_events,alta,baja
-15,Switzerland,1464,G. Xhaka,penalty,2,1,2026-06-18,api_football_events,alta,baja
+15,Switzerland,421,B. Embolo,penalty,6,1,2026-06-13,api_football_events,alta,baja
+15,Switzerland,1464,G. Xhaka,penalty,1,2,2026-07-07,api_football_events,alta,media
 775,Austria,18830,M. Arnautovic,penalty,1,1,2026-06-17,api_football_events,alta,baja
 1531,South Africa,3287,T. Mokoena,penalty,1,1,2026-06-18,api_football_events,alta,baja
+8,Colombia,6005,J. Quintero,penalty,1,1,2026-07-07,api_football_events,alta,baja
+8,Colombia,168,D. Sánchez,penalty,2,1,2026-07-07,api_football_events,alta,baja
+8,Colombia,13376,J. Campaz,penalty,3,1,2026-07-07,api_football_events,alta,baja
+8,Colombia,47582,C. Hernández,penalty,4,1,2026-07-07,api_football_events,alta,baja
+8,Colombia,2489,L. Díaz,penalty,5,1,2026-07-07,api_football_events,alta,baja
+15,Switzerland,123469,Z. Amdouni,penalty,2,1,2026-07-07,api_football_events,alta,baja
+15,Switzerland,5,M. Akanji,penalty,3,1,2026-07-07,api_football_events,alta,baja
+15,Switzerland,48497,C. Itten,penalty,4,1,2026-07-07,api_football_events,alta,baja
+15,Switzerland,48471,R. Vargas,penalty,5,1,2026-07-07,api_football_events,alta,baja
