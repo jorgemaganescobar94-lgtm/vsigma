@@ -1,0 +1,16 @@
+vSIGMA SHADOW CANDIDATE V4
+
+CANDIDATE_V4_NO_BET
+reason: candidate v2 shortlist empty
+
+Layer: candidate v2 signals + O2.5 Low Conversion Firewall.
+Status: experimental shadow; official baseline and candidate v2 outputs are not replaced.
+
+Baseline official picks: 0
+Candidate v2 shadow picks: 0
+Candidate v4 competition shortlist rows: 0
+Candidate v4 competition top rows: 0
+
+## O2.5 Low Conversion Firewall
+
+No OVER_2_5 + LOW_CONVERSION rows were checked because candidate v2 produced no competition shortlist.

@@ -1,14 +1,14 @@
-# vSIGMA Shadow Candidates - 2026-07-07
+# vSIGMA Shadow Candidates - 2026-07-08
 
 ## Executive Shadow Candidate Summary
-- generated_at: 2026-07-08T10:39:00+01:00
+- generated_at: 2026-07-08T11:22:05+01:00
 - shadow_candidates: 2
 - shadow_decision_counts: SHADOW_DOWNGRADE_REVIEW=2
-- experiment_type_counts: LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW=2
+- experiment_type_counts: LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=2
 
 ## Shadow Candidate Decisions
-- SHADOW_DOWNGRADE_REVIEW | Vikingur Reykjavik vs Gyori ETO FC | market=OVER_2_5 | experiment=LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW | production_impact=NONE
-- SHADOW_DOWNGRADE_REVIEW | Lincoln Red Imps FC vs Inter Club d'Escaldes | market=OVER_2_5 | experiment=LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW | production_impact=NONE
+- SHADOW_DOWNGRADE_REVIEW | Zira vs Torpedo Kutaisi | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
+- SHADOW_DOWNGRADE_REVIEW | Petrocub vs Egnatia Rrogozhinë | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
 
 ## Guardrails
 - official picks changed: NO
