@@ -1,0 +1,29 @@
+========================================================================================================
+PROPS DE GOL · FORMA DE CLUB (HISTÓRICO potente) — walk-forward anti-leakage · READ-ONLY · sin prod
+========================================================================================================
+jugadores con club-2022: 1115 | filas jugador-gol=3062 | base rate=8.1% | positivos=248 | filas con club(has_club)=2780 (91%)
+split temporal: train<2024-01-28<=test | train=1638 · test(OOS)=1424
+K probados (min club): [500, 1000, 2000, 4000, 8000, 16000, 40000] · semillas=10 · margen gate=0.002
+--- ajuste K (V1) SOLO en train ---
+    K=   500  logloss_train=0.224276
+    K=  1000  logloss_train=0.216709
+    K=  2000  logloss_train=0.209508
+    K=  4000  logloss_train=0.203556
+    K=  8000  logloss_train=0.199285
+    K= 16000  logloss_train=0.196580
+    K= 40000  logloss_train=0.194692   <- K*
+  K* = 40000 min
+
+--------------------------------------------------------------------------------------------------------
+[OOS = test] n=1424 (base rate=8.6%) · Δlogloss(V0−Vx)>0 => Vx mejor · GATE
+--------------------------------------------------------------------------------------------------------
+  variante                     logloss    brier    Δlogloss       IC95[min_lo..max_hi] veredicto
+  V0 (nacional prior=prod)     0.24580  0.07054  (baseline)                            —
+  V1 (blend K*=40000)          0.24418  0.07197    +0.00163 [-0.00622..+0.00873] NO adoptar (IC incluye 0)
+  V2 (club-2022-only)          0.26398  0.07406    -0.01818 [-0.03452..-0.00241] PEOR que V0 (IC excluye 0 por debajo)
+
+  [subconjunto HAS_CLUB del test] n=1277: V1 Δlogloss=+0.00137 IC95[-0.00741..+0.00925] (IC∋0)
+
+========================================================================================================
+GATE: ADOPTAR sólo si Δlogloss(V0−Vx)>0 en OOS con IC95 excluyendo 0 con margen (>=+0.002) y robusto.
+========================================================================================================
