@@ -1,14 +1,13 @@
 # vSIGMA Shadow Candidates - 2026-07-09
 
 ## Executive Shadow Candidate Summary
-- generated_at: 2026-07-09T00:15:06+01:00
-- shadow_candidates: 2
-- shadow_decision_counts: SHADOW_DOWNGRADE_REVIEW=2
-- experiment_type_counts: LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=2
+- generated_at: 2026-07-09T12:01:06+01:00
+- shadow_candidates: 0
+- shadow_decision_counts: none
+- experiment_type_counts: none
 
 ## Shadow Candidate Decisions
-- SHADOW_DOWNGRADE_REVIEW | Zira vs Torpedo Kutaisi | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
-- SHADOW_DOWNGRADE_REVIEW | Petrocub vs Egnatia Rrogozhinë | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
+- none
 
 ## Guardrails
 - official picks changed: NO
