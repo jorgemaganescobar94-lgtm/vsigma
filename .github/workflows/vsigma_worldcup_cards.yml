@@ -648,6 +648,12 @@ jobs:
           cat analysis/worldcup/worldcup_trackrecord_panel.md || true
 
       - name: Persist learning-loop outputs (log + scorecard + ratings + dataset + cache + report)
+        # P1 resiliencia: corre SIEMPRE, aunque un paso previo (p.ej. build_worldcup_cards en 9/11)
+        # crashee por la API. Así el swap del auto-refit (paso 7, ya escrito a disco) NO se pierde.
+        # El git add es explícito+guarded ([ -f ] por archivo) y el commit es empty-safe, así que
+        # solo commitea lo que exista. NO tocamos build_cards/render: un crash de API aborta el
+        # briefing (no se envía nada stale) y el run sigue en failure (fallo de API visible).
+        if: ${{ always() }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
