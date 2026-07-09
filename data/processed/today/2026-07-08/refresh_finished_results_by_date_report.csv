@@ -1,0 +1,9 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-07-08,OK,API-SPORTS_DIRECT,154.0,,,,,,
+2026-07-08T16:00:00+01:00,MATCHED,,,1554365.0,FT,Kairat Almaty,Sutjeska,2.0,1.0
+2026-07-08T17:00:00+01:00,MATCHED,,,1554363.0,FT,Flora Tallinn,Saburtalo,2.0,3.0
+2026-07-08T17:00:00+01:00,MATCHED,,,1554414.0,FT,Zira,Torpedo Kutaisi,3.0,0.0
+2026-07-08T18:00:00+01:00,MATCHED,,,1554369.0,FT,ML Vitebsk,Universitatea Craiova,1.0,4.0
+2026-07-08T18:00:00+01:00,MATCHED,,,1554370.0,FT,Petrocub,Egnatia Rrogozhinë,1.0,1.0
+2026-07-08T18:30:00+01:00,MATCHED,,,1554393.0,FT,GAP Connah S Quay FC,Ballkani,0.0,0.0
+2026-07-08T18:30:00+01:00,MATCHED,,,1554395.0,FT,FC Differdange 03,Ilves,0.0,0.0
