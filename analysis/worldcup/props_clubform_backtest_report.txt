@@ -1,0 +1,32 @@
+========================================================================================================
+PROPS DE GOL · FORMA DE CLUB — walk-forward anti-leakage · WC-2026 liquidado · READ-ONLY · sin API · sin prod
+========================================================================================================
+filas jugador-gol (WC liquidado)=924 | base rate gol=8.1% | positivos=75
+FIDELIDAD baseline: logloss V0_log(producción)=0.25065 vs V0_recomp(rates EXACTOS 2024-2025)=0.25065 · corr(p)=1.000  (esperado ~1.0)
+
+split temporal: train<2026-06-30<=test | train=462 · test(OOS)=462
+K probados (min club): [500, 1000, 2000, 4000, 8000, 16000, 40000]  ·  semillas=10  ·  margen gate=0.002
+--- ajuste de K (V1) SOLO en train ---
+    K=   500  logloss_train=0.241107   <- K*
+    K=  1000  logloss_train=0.242175
+    K=  2000  logloss_train=0.244567
+    K=  4000  logloss_train=0.248756
+    K=  8000  logloss_train=0.254577
+    K= 16000  logloss_train=0.261259
+    K= 40000  logloss_train=0.269807
+  K* = 500 min  (w=min_club/(min_club+K*))
+
+--------------------------------------------------------------------------------------------------------
+[OOS = test] n=462 (base rate=8.4%) · Δlogloss(V0−Vx)>0 => Vx mejor · juez del GATE
+--------------------------------------------------------------------------------------------------------
+  variante                     logloss    brier    Δlogloss       IC95[min_lo..max_hi] veredicto
+  V0 (nat-only, baseline)      0.24499  0.06789  (baseline)                            —
+  V1 (blend K*=500)            0.23004  0.06635    +0.01495 [-0.00622..+0.03927] NO adoptar (IC incluye 0)
+  V2 (club-only)               0.23299  0.06683    +0.01200 [-0.01278..+0.03941] NO adoptar (IC incluye 0)
+
+  [contexto] V1(K*) vs V0_PRODUCCIÓN(log): Δlogloss=+0.01495 IC95[-0.00622..+0.03926] (IC∋0)
+
+========================================================================================================
+GATE: ADOPTAR sólo si Δlogloss(V0−Vx)>0 en OOS con IC95 excluyendo 0 con margen (>=+0.002) y robusto.
+HONESTIDAD: si roza 0 o empata => cerrar / L1-zero, NO tocar worldcup_player_props.py.
+========================================================================================================
