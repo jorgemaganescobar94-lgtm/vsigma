@@ -1,4 +1,4 @@
 target_date,generated_at,fixture_id,home_team,away_team,api_readiness_gate,coverage_score,original_final_decision,final_decision,original_execution_permission,execution_permission,gate_action,gate_reason,missing_blocks,auto_apply,production_change
-2026-07-09,2026-07-09T11:37:44+01:00,1554369,ML Vitebsk,Universitatea Craiova,UNKNOWN,,NO_BET,NO_BET,NO_BET,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
-2026-07-09,2026-07-09T11:37:44+01:00,1554370,Petrocub,Egnatia Rrogozhinë,UNKNOWN,,NO_BET,NO_BET,NO_BET,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
-2026-07-09,2026-07-09T11:37:44+01:00,1554414,Zira,Torpedo Kutaisi,UNKNOWN,,NO_BET,NO_BET,NO_BET,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
+2026-07-09,2026-07-09T20:03:14+01:00,1554369,ML Vitebsk,Universitatea Craiova,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
+2026-07-09,2026-07-09T20:03:14+01:00,1554370,Petrocub,Egnatia Rrogozhinë,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
+2026-07-09,2026-07-09T20:03:14+01:00,1554414,Zira,Torpedo Kutaisi,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
