@@ -119,55 +119,55 @@
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
 - files_scanned: 2908
 - accepted_rows: 61
-- rejected_rows: 292
+- rejected_rows: 462
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
 - rows_reviewed: 61
-- trusted_rows: 30
-- quarantine_rows: 0
-- blocked_rows: 31
-- trust_status_counts: REJECTED_SOURCE_BLOCK=31; TRUSTED_RAW_SOURCE=30
+- trusted_rows: 56
+- quarantine_rows: 5
+- blocked_rows: 0
+- trust_status_counts: TRUSTED_RAW_SOURCE=56; QUARANTINE_REVIEW=5
 - next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
 
 ## Trusted Raw Candidate Promotion Gate
 - rows_reviewed: 61
 - promoted_rows: 0
 - blocked_rows: 27
-- quarantine_rows: 3
-- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=31; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=27; TRUSTED_SOURCE_BUT_NO_SCORED_ROW=3
+- quarantine_rows: 29
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=29; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=27; NOT_TRUSTED_NO_PROMOTION=5
 - next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
 
 ## Scoring Gap Explainer
 - rows_reviewed: 61
-- missing_scored_rows: 3
+- missing_scored_rows: 29
 - no_data_blocked_rows: 27
-- not_trusted_rows: 31
+- not_trusted_rows: 5
 - promoted_rows: 0
-- gap_status_counts: NOT_TRUSTED_SKIPPED=31; SCORED_ROW_NO_DATA_BLOCKED=27; MISSING_SCORED_ROW=3
+- gap_status_counts: MISSING_SCORED_ROW=29; SCORED_ROW_NO_DATA_BLOCKED=27; NOT_TRUSTED_SKIPPED=5
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 
 ## Trusted Raw Scoring Queue
-- queue_rows: 3
-- priority_counts: P1_TRUSTED_MISSING_SCORING=3
-- scoring_needed_counts: YES=3
+- queue_rows: 29
+- priority_counts: P2_LOW_COVERAGE_SCORING=16; P1_TRUSTED_MISSING_SCORING=13
+- scoring_needed_counts: YES=29
 - source_gap_status: MISSING_SCORED_ROW
 - next_action: Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.
 
 ## Queue-to-Enrichment Dry Run Planner
-- rows_planned: 3
-- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=3
-- risk_label_counts: MEDIUM=3
-- priority_counts: P1_TRUSTED_MISSING_SCORING=3
-- total_estimated_call_units: 15
+- rows_planned: 29
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=29
+- risk_label_counts: HIGH_LOW_COVERAGE=16; MEDIUM=12; HIGH_CONTEXT_VOLATILITY=1
+- priority_counts: P2_LOW_COVERAGE_SCORING=16; P1_TRUSTED_MISSING_SCORING=13
+- total_estimated_call_units: 145
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
 
 ## Enrichment Cost & Approval Gate
 - approval_gate_status: WAIT_FOR_MANUAL_APPROVAL
-- rows_planned: 3
-- estimated_call_units: 15
+- rows_planned: 29
+- estimated_call_units: 145
 - approval_required: YES
 - max_allowed_without_manual_approval: 0
 - api_calls_allowed: NO
