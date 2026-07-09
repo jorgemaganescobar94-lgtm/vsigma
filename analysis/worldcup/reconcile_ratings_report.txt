@@ -1,0 +1,28 @@
+========================================================================================
+RECONCILIACIÓN L3 — DRY-RUN (sin API · sin swap · producción intacta)
+========================================================================================
+generated_at_utc: 2026-07-09T17:49:50+00:00
+base rows=9238 | committed teams=606 | candidate teams=606
+referencia oos: pre-backfill @ fb8ad220 (9225 filas, 13 fixtures nuevos) · ventana común [.. 2026-06-16) · pre-backfill n=3246 ll=0.93157 vs reconciliado n=3246 ll=0.93157
+
+TOP-5 MOVIMIENTOS |Δ| (reconciliado vs committeado):
+    Qatar                    +0.065 -> -0.128  (-0.193)
+    Canada                   +0.814 -> +0.995  (+0.181)
+    Austria                  +1.015 -> +1.161  (+0.146)
+    Argentina                +2.146 -> +2.289  (+0.143)
+    Algeria                  +1.387 -> +1.248  (-0.139)
+
+GUARDAS (gate del auto-refit MENOS repro):
+    PASS  finite
+    PASS  team_count_non_decreasing
+    PASS  max_move<=cap(0.6)
+    PASS  oos_not_worse
+  max_move = 0.193 (Qatar: +0.065->-0.128)
+  -> GUARDAS: PASS
+
+ESCRITO (dry-run) -> national_elo_layer3_ratings.RECONCILED.csv  (606 equipos). Producción (national_elo_layer3_ratings.csv) INTACTA.
+
+PRUEBA repro (con los reconciliados como 'committed'):
+    repro' = max|Δ|(run(base·94WC).s_final, reconciliados) = 0.000498
+    tol del gate = 0.05  ·  objetivo (redondeo 3dp) <= 0.0005
+    -> PASS: 0.000498 <= 0.0005 « 0.05. Con estos ratings el próximo auto-refit reproduce el base -> gate repro<tol PASA -> SWAPS REANUDADOS.
