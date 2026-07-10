@@ -1066,6 +1066,19 @@ fixture_id,date,competition,team_id,team_name,opponent_id,opponent_name,player_i
 1576805,2026-07-07,World Cup 2026,15,Switzerland,8,Colombia,48497,C. Itten,,,Goal,Penalty,129,,1,0,1,0,0,0,,0,alta,alta,api_football_events
 1576805,2026-07-07,World Cup 2026,8,Colombia,15,Switzerland,2489,L. Díaz,,,Goal,Penalty,130,,1,0,1,0,0,0,,0,alta,alta,api_football_events
 1576805,2026-07-07,World Cup 2026,15,Switzerland,8,Colombia,48471,R. Vargas,,,Goal,Penalty,131,,1,0,1,0,0,0,,0,alta,alta,api_football_events
+1578539,2026-07-09,World Cup 2026,2,France,31,Morocco,278,Kylian Mbappé,,,Goal,Missed Penalty,28,,0,0,0,1,0,0,,0,alta,alta,api_football_events
+1578539,2026-07-09,World Cup 2026,2,France,31,Morocco,278,Kylian Mbappé,343027,Désiré Doué,Goal,Normal Goal,60,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1578539,2026-07-09,World Cup 2026,31,Morocco,2,France,340573,Bilal El Khannouss,,,subst,Substitution 1,62,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1578539,2026-07-09,World Cup 2026,31,Morocco,2,France,438688,Ayyoub Bouaddi,,,subst,Substitution 2,62,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1578539,2026-07-09,World Cup 2026,31,Morocco,2,France,18814,Issa Diop,,,Card,Yellow Card,63,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1578539,2026-07-09,World Cup 2026,2,France,31,Morocco,153,Ousmane Dembélé,278,Kylian Mbappé,Goal,Normal Goal,66,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1578539,2026-07-09,World Cup 2026,2,France,31,Morocco,22147,Manu Koné,,,subst,Substitution 1,70,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1578539,2026-07-09,World Cup 2026,31,Morocco,2,France,162451,Anass Salah-Eddine,,,subst,Substitution 3,74,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1578539,2026-07-09,World Cup 2026,31,Morocco,2,France,744,Brahim Díaz,,,subst,Substitution 4,74,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1578539,2026-07-09,World Cup 2026,2,France,31,Morocco,343027,Désiré Doué,,,subst,Substitution 2,77,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1578539,2026-07-09,World Cup 2026,2,France,31,Morocco,278,Kylian Mbappé,,,subst,Substitution 3,77,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1578539,2026-07-09,World Cup 2026,31,Morocco,2,France,336659,Chemsdine Talbi,,,subst,Substitution 5,85,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1578539,2026-07-09,World Cup 2026,2,France,31,Morocco,1257,Jules Koundé,,,subst,Substitution 4,87,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,16,Mexico,1531,South Africa,35532,J. Quinones,266345,E. Lira,Goal,Normal Goal,9,,1,1,0,0,0,0,,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,1531,South Africa,16,Mexico,3287,Teboho Mokoena,,,Card,Yellow Card,17,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,16,Mexico,1531,South Africa,212233,Brian Gutiérrez,,,Card,Yellow Card,23,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events

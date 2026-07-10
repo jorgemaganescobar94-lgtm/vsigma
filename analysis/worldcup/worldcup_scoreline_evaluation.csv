@@ -66,3 +66,4 @@ fixture_id,home,away,lambda_home,lambda_away,source_lambda,actual_score,in_top1,
 1570715,USA,Belgium,0.96,1.48,mx,1-4,0,0,0,0.0167,15,0-1,A,A,media,media
 1576804,Argentina,Egypt,2.16,0.63,mx,3-2,0,0,0,0.0205,14,2-0,H,H,media,media
 1576805,Switzerland,Colombia,1.17,1.23,mx,0-0,0,0,1,0.0907,4,1-1,D,A,media,media
+1578539,France,Morocco,1.47,0.96,mx,2-0,0,1,1,0.0951,3,1-0,H,H,media,media

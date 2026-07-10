@@ -170,10 +170,10 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1489416,20995,M. Lacroix,France,DEF,"Michael Oliver, England",0.1344,0.1317,0.1332,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489416,47300,T. Hernández,France,DEF,"Michael Oliver, England",0.1344,0.1317,0.1332,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489416,1271,A. Tchouaméni,France,MID,"Michael Oliver, England",0.3254,0.3287,0.3322,1,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,22147,M. Koné,France,MID,"Michael Oliver, England",0.34,0.3435,0.3471,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,22147,M. Koné,France,MID,"Michael Oliver, England",0.34,0.3435,0.359,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489416,153,O. Dembélé,France,MID,"Michael Oliver, England",0.1038,0.1012,0.0998,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489416,19617,M. Olise,France,MID,"Michael Oliver, England",0.0346,0.0344,0.0353,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,343027,D. Doué,France,FWD,"Michael Oliver, England",0.0824,0.0771,0.0763,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,343027,D. Doué,France,MID,"Michael Oliver, England",0.0824,0.082,0.0812,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489416,278,Kylian Mbappé,France,FWD,"Michael Oliver, England",0.2261,0.2069,0.2037,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489417,429,F. Muslera,Uruguay,GK,I. Elfath,0.2023,0.2023,0.2023,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1489417,1290,G. Varela,Uruguay,DEF,I. Elfath,0.501,0.501,0.501,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -474,15 +474,15 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1562345,18861,N. Aké,Netherlands,DEF,W. Sampaio,0.1591,0.1591,0.1591,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1562345,2701,Y. Bounou,Morocco,GK,W. Sampaio,0.0221,0.0214,0.0218,0,bajar,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1562345,9,A. Hakimi,Morocco,DEF,W. Sampaio,0.253,0.2448,0.2619,0,bajar,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1562345,161897,I. Saibari,Morocco,FWD,W. Sampaio,0.3044,0.2793,0.277,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,161897,I. Saibari,Morocco,MID,W. Sampaio,0.3044,0.2976,0.2953,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1562345,277003,N. El Aynaoui,Morocco,MID,W. Sampaio,0.0379,0.0378,0.0385,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1562345,18814,I. Diop,Morocco,DEF,W. Sampaio,0.1394,0.137,0.1443,1,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1562345,545,N. Mazraoui,Morocco,DEF,W. Sampaio,0.0298,0.0288,0.0294,0,bajar,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1562345,744,Brahim Díaz,Morocco,MID,W. Sampaio,0.1888,0.1846,0.1879,0,bajar,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1562345,340573,B. El Khannouss,Morocco,MID,W. Sampaio,0.2226,0.2176,0.2293,0,bajar,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,744,Brahim Díaz,Morocco,MID,W. Sampaio,0.1888,0.1846,0.1831,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,340573,B. El Khannouss,Morocco,FWD,W. Sampaio,0.2226,0.2042,0.2159,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1562345,278898,C. Riad,Morocco,DEF,W. Sampaio,0.1065,0.1046,0.1065,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1562345,129678,A. Ounahi,Morocco,MID,W. Sampaio,0.2885,0.282,0.2972,0,bajar,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1562345,438688,A. Bouaddi,Morocco,MID,W. Sampaio,0.1394,0.1411,0.1415,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1562345,438688,A. Bouaddi,Morocco,MID,W. Sampaio,0.1394,0.1411,0.1387,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1564789,64190,Y. Fofana,Ivory Coast,GK,"Jesús Valenzuela, Venezuela",0.0364,0.0363,0.0363,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1564789,161747,G. Doué,Ivory Coast,DEF,"Jesús Valenzuela, Venezuela",0.0402,0.0401,0.0401,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1564789,48119,O. Kossounou,Ivory Coast,DEF,"Jesús Valenzuela, Venezuela",0.1312,0.1309,0.1309,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -527,17 +527,17 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1567306,35533,E. Valencia,Ecuador,FWD,S. Vincic,0.2859,0.2673,0.2673,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567306,354027,J. Ordoñez,Ecuador,DEF,S. Vincic,0.1782,0.1782,0.1782,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567306,63964,F. Torres,Ecuador,DEF,S. Vincic,0.0603,0.0603,0.0603,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1565177,22221,M. Maignan,France,GK,"Danny Makkelie, Netherlands",0.0613,0.0601,0.0612,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
-1565177,1257,J. Koundé,France,DEF,"Danny Makkelie, Netherlands",0.0235,0.0222,0.0226,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1565177,1149,D. Upamecano,France,DEF,"Danny Makkelie, Netherlands",0.0825,0.0796,0.0811,0,bajar,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1565177,22090,W. Saliba,France,DEF,"Danny Makkelie, Netherlands",0.1244,0.1219,0.1241,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1565177,2724,L. Digne,France,DEF,"Danny Makkelie, Netherlands",0.3131,0.3069,0.3124,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1565177,1271,A. Tchouaméni,France,MID,"Danny Makkelie, Netherlands",0.3224,0.3257,0.3313,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1565177,272,A. Rabiot,France,MID,"Danny Makkelie, Netherlands",0.3873,0.3913,0.398,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1565177,153,O. Dembélé,France,MID,"Danny Makkelie, Netherlands",0.109,0.1063,0.1055,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1565177,19617,M. Olise,France,MID,"Danny Makkelie, Netherlands",0.0448,0.0437,0.046,0,bajar,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1565177,161904,B. Barcola,France,MID,"Danny Makkelie, Netherlands",0.0474,0.0462,0.0487,0,bajar,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1565177,278,Kylian Mbappé,France,FWD,"Danny Makkelie, Netherlands",0.2248,0.2057,0.2041,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565177,22221,M. Maignan,France,GK,"Danny Makkelie, Netherlands",0.0613,0.0601,0.0593,0,neutro,bajar,baja,perfiles reconstruidos solo con jornadas anteriores
+1565177,1257,J. Koundé,France,DEF,"Danny Makkelie, Netherlands",0.0235,0.0222,0.0219,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565177,1149,D. Upamecano,France,DEF,"Danny Makkelie, Netherlands",0.0825,0.0796,0.0786,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565177,22090,W. Saliba,France,DEF,"Danny Makkelie, Netherlands",0.1244,0.1219,0.1204,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565177,2724,L. Digne,France,DEF,"Danny Makkelie, Netherlands",0.3131,0.3069,0.303,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565177,1271,A. Tchouaméni,France,MID,"Danny Makkelie, Netherlands",0.3224,0.3257,0.3217,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565177,272,A. Rabiot,France,MID,"Danny Makkelie, Netherlands",0.3873,0.3913,0.3864,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565177,153,O. Dembélé,France,MID,"Danny Makkelie, Netherlands",0.109,0.1063,0.1022,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565177,19617,M. Olise,France,MID,"Danny Makkelie, Netherlands",0.0448,0.0437,0.0447,0,bajar,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565177,161904,B. Barcola,France,FWD,"Danny Makkelie, Netherlands",0.0474,0.0434,0.0444,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1565177,278,Kylian Mbappé,France,FWD,"Danny Makkelie, Netherlands",0.2248,0.2057,0.1973,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1565177,48033,J. Widell Zetterström,Sweden,GK,"Danny Makkelie, Netherlands",0.1865,0.1861,0.1861,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1565177,137721,G. Lagerbielke,Sweden,DEF,"Danny Makkelie, Netherlands",0.2197,0.2192,0.2192,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1565177,889,V. Lindelöf,Sweden,DEF,"Danny Makkelie, Netherlands",0.0424,0.0417,0.0417,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -760,14 +760,14 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1567824,327738,L. De Fougerolles,Canada,DEF,"Michael Oliver, England",0.2639,0.2676,0.2676,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567824,2701,Y. Bounou,Morocco,GK,"Michael Oliver, England",0.0277,0.0259,0.0259,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567824,9,A. Hakimi,Morocco,DEF,"Michael Oliver, England",0.3066,0.2802,0.2802,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567824,161897,I. Saibari,Morocco,FWD,"Michael Oliver, England",0.3659,0.3143,0.3143,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567824,161897,I. Saibari,Morocco,MID,"Michael Oliver, England",0.3659,0.3363,0.3363,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567824,277003,N. El Aynaoui,Morocco,MID,"Michael Oliver, England",0.0473,0.0447,0.0447,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567824,340573,B. El Khannouss,Morocco,MID,"Michael Oliver, England",0.2709,0.2557,0.2557,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567824,340573,B. El Khannouss,Morocco,FWD,"Michael Oliver, England",0.2709,0.2395,0.2327,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567824,18814,I. Diop,Morocco,DEF,"Michael Oliver, England",0.1717,0.169,0.169,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567824,545,N. Mazraoui,Morocco,DEF,"Michael Oliver, England",0.0372,0.0347,0.0347,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567824,744,Brahim Díaz,Morocco,MID,"Michael Oliver, England",0.231,0.2123,0.2123,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567824,278898,C. Riad,Morocco,DEF,"Michael Oliver, England",0.1317,0.123,0.123,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567824,438688,A. Bouaddi,Morocco,MID,"Michael Oliver, England",0.1717,0.1655,0.1655,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567824,438688,A. Bouaddi,Morocco,MID,"Michael Oliver, England",0.1717,0.1655,0.1621,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567824,129678,A. Ounahi,Morocco,MID,"Michael Oliver, England",0.3477,0.3282,0.3282,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1569870,70852,O. Gill,Paraguay,GK,"Ilgiz Tantashev, Uzbekistan",0.0928,0.0936,0.0936,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1569870,195992,J. Cáceres,Paraguay,DEF,"Ilgiz Tantashev, Uzbekistan",0.1117,0.1127,0.1127,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -781,15 +781,15 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1569870,2507,M. Almirón,Paraguay,MID,"Ilgiz Tantashev, Uzbekistan",0.2312,0.2483,0.2483,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1569870,70747,J. Enciso,Paraguay,FWD,"Ilgiz Tantashev, Uzbekistan",0.0622,0.0587,0.0587,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1569870,22221,M. Maignan,France,GK,"Ilgiz Tantashev, Uzbekistan",0.069,0.0655,0.0655,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1569870,1257,J. Koundé,France,DEF,"Ilgiz Tantashev, Uzbekistan",0.0269,0.0246,0.0246,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1569870,1257,J. Koundé,France,DEF,"Ilgiz Tantashev, Uzbekistan",0.0269,0.0246,0.0239,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1569870,1149,D. Upamecano,France,DEF,"Ilgiz Tantashev, Uzbekistan",0.0928,0.0867,0.0867,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1569870,22090,W. Saliba,France,DEF,"Ilgiz Tantashev, Uzbekistan",0.1391,0.132,0.132,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1569870,2724,L. Digne,France,DEF,"Ilgiz Tantashev, Uzbekistan",0.3448,0.322,0.322,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1569870,22147,M. Koné,France,MID,"Ilgiz Tantashev, Uzbekistan",0.3716,0.3638,0.3638,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1569870,22147,M. Koné,France,MID,"Ilgiz Tantashev, Uzbekistan",0.3716,0.3638,0.3582,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1569870,272,A. Rabiot,France,MID,"Ilgiz Tantashev, Uzbekistan",0.4237,0.4148,0.4148,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1569870,153,O. Dembélé,France,MID,"Ilgiz Tantashev, Uzbekistan",0.1224,0.1125,0.1125,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1569870,19617,M. Olise,France,MID,"Ilgiz Tantashev, Uzbekistan",0.0512,0.0483,0.0483,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1569870,161904,B. Barcola,France,MID,"Ilgiz Tantashev, Uzbekistan",0.0543,0.0513,0.0513,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1569870,161904,B. Barcola,France,FWD,"Ilgiz Tantashev, Uzbekistan",0.0543,0.048,0.048,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1569870,278,Kylian Mbappé,France,FWD,"Ilgiz Tantashev, Uzbekistan",0.2492,0.2141,0.2141,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1568100,762,Vinícius Júnior,Brazil,FWD,"Ismail Elfath, USA",0.1744,0.1631,0.1631,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1568100,747,Casemiro,Brazil,MID,"Ismail Elfath, USA",0.1906,0.203,0.203,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -923,3 +923,25 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1576805,517,J. Rodríguez,Colombia,FWD,I. Barton,0.115,0.1047,0.1047,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1576805,47237,L. Suárez,Colombia,FWD,I. Barton,0.3188,0.2981,0.2981,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1576805,2489,L. Díaz,Colombia,MID,I. Barton,0.0468,0.0466,0.0466,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,22221,M. Maignan,France,GK,"Facundo Raul Tello Figueroa, Argentina",0.0613,0.0595,0.0595,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,1257,J. Koundé,France,DEF,"Facundo Raul Tello Figueroa, Argentina",0.0246,0.023,0.023,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,1149,D. Upamecano,France,DEF,"Facundo Raul Tello Figueroa, Argentina",0.0826,0.0789,0.0789,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,278,Kylian Mbappé,France,FWD,"Facundo Raul Tello Figueroa, Argentina",0.2223,0.1956,0.1956,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,19617,M. Olise,France,MID,"Facundo Raul Tello Figueroa, Argentina",0.0468,0.0468,0.0468,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,153,O. Dembélé,France,MID,"Facundo Raul Tello Figueroa, Argentina",0.1092,0.1026,0.1026,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,272,A. Rabiot,France,MID,"Facundo Raul Tello Figueroa, Argentina",0.3831,0.3831,0.3831,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,22090,W. Saliba,France,DEF,"Facundo Raul Tello Figueroa, Argentina",0.1236,0.1199,0.1199,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,1271,A. Tchouaméni,France,MID,"Facundo Raul Tello Figueroa, Argentina",0.3186,0.3186,0.3186,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,47300,T. Hernández,France,DEF,"Facundo Raul Tello Figueroa, Argentina",0.1355,0.1314,0.1314,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,2724,L. Digne,France,DEF,"Facundo Raul Tello Figueroa, Argentina",0.3103,0.2963,0.2963,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,161897,I. Saibari,Morocco,MID,"Facundo Raul Tello Figueroa, Argentina",0.3228,0.3131,0.3131,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,2701,Y. Bounou,Morocco,GK,"Facundo Raul Tello Figueroa, Argentina",0.0237,0.0233,0.0233,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,9,A. Hakimi,Morocco,DEF,"Facundo Raul Tello Figueroa, Argentina",0.269,0.269,0.269,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,545,N. Mazraoui,Morocco,DEF,"Facundo Raul Tello Figueroa, Argentina",0.032,0.0315,0.0315,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,744,Brahim Díaz,Morocco,MID,"Facundo Raul Tello Figueroa, Argentina",0.2013,0.1953,0.1953,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,277003,N. El Aynaoui,Morocco,MID,"Facundo Raul Tello Figueroa, Argentina",0.0406,0.0404,0.0404,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,340573,B. El Khannouss,Morocco,FWD,"Facundo Raul Tello Figueroa, Argentina",0.2369,0.2298,0.2298,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,18814,I. Diop,Morocco,DEF,"Facundo Raul Tello Figueroa, Argentina",0.1489,0.1541,0.1541,1,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,438688,A. Bouaddi,Morocco,MID,"Facundo Raul Tello Figueroa, Argentina",0.1489,0.1482,0.1482,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,129678,A. Ounahi,Morocco,MID,"Facundo Raul Tello Figueroa, Argentina",0.3062,0.3154,0.3154,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1578539,278898,C. Riad,Morocco,DEF,"Facundo Raul Tello Figueroa, Argentina",0.1139,0.1122,0.1122,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores

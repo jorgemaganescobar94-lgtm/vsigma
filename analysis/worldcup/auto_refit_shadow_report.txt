@@ -1,19 +1,17 @@
 ========================================================================================
 AUTO-REFIT L3 — mode=APPLY (swap)
 ========================================================================================
-generated_at_utc: 2026-07-09T18:24:06+00:00
-base rows=9238 | settled-in-log=67 | NEW rows=2 (2026-07-07..2026-07-07) | unmapped=0 | enriched=9240
+generated_at_utc: 2026-07-10T10:55:24+00:00
+base rows=9240 | settled-in-log=68 | NEW rows=1 (2026-07-09..2026-07-09) | unmapped=0 | enriched=9241
 
-OOS 1X2 — ventana común [2024-01-01 .. 2026-07-07)  (leakage-safe)
-  base     n=3323  ll=0.92878  ECE=0.0170  acc=56.0%
-  enriched n=3323  ll=0.92878  ECE=0.0170  acc=56.0%
+OOS 1X2 — ventana común [2024-01-01 .. 2026-07-09)  (leakage-safe)
+  base     n=3326  ll=0.92862  ECE=0.0169  acc=56.0%
+  enriched n=3326  ll=0.92862  ECE=0.0169  acc=56.0%
 repro (refit base vs committed): max|Δ|=0.0005
 
 MOVIMIENTOS DE RATING destacados (candidato vs commiteado; cap 0.6):
-    Switzerland              +1.62 -> +1.64  (+0.02)
-    Colombia                 +1.87 -> +1.86  (-0.02)
-    Argentina                +2.29 -> +2.28  (-0.01)
-    Egypt                    +1.11 -> +1.12  (+0.01)
+    France                   +2.16 -> +2.27  (+0.11)
+    Morocco                  +1.81 -> +1.73  (-0.08)
 
 GATE (anti-corrupción):
     PASS  finite
@@ -21,7 +19,7 @@ GATE (anti-corrupción):
     PASS  max_move<=cap
     PASS  oos_not_worse
     PASS  repro<tol
-  max|Δ| = 0.018 (Switzerland: +1.62->+1.64)
+  max|Δ| = 0.110 (France: +2.16->+2.27)
   -> GATE: PASS
 
-SWAP APLICADO ✅  ratings -> national_elo_layer3_ratings.csv | dataset -> international_results.csv (+2 FT). Calibración intacta (invariante).
+SWAP APLICADO ✅  ratings -> national_elo_layer3_ratings.csv | dataset -> international_results.csv (+1 FT). Calibración intacta (invariante).

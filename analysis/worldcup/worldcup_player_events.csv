@@ -1,14 +1,27 @@
 fixture_id,home,away,category,player,team,probability_goal,expected_goals,reason,source_used,goal_source,confidence,data_quality,probability_1_sot,expected_sot,expected_shots,shots_source,probability_assist,expected_assists,expected_key_passes,assist_source,player_id,probability_card,probability_card_original,probability_card_adjusted,adjustment_direction,adjustment_reason
-1578539,France,Morocco,scorer,Kylian Mbappé,France,0.3176,0.3821,"xG 0.38, P(gol) 32% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1578539,France,Morocco,scorer,Brahim Díaz,Morocco,0.2987,0.3548,"xG 0.35, P(gol) 30% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1578539,France,Morocco,scorer,M. Olise,France,0.262,0.3038,"xG 0.30, P(gol) 26% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1578539,France,Morocco,sot,Kylian Mbappé,France,,,"tiros esp. 2.9, SOT esp. 1.7 (media)",proxy,,media,media,0.813,1.6768,2.92,proxy,,,,,,,,,,
-1578539,France,Morocco,sot,Brahim Díaz,Morocco,,,"tiros esp. 2.1, SOT esp. 1.3 (media)",proxy,,media,media,0.7318,1.316,2.12,proxy,,,,,,,,,,
-1578539,France,Morocco,sot,I. Saibari,Morocco,,,"tiros esp. 1.2, SOT esp. 0.7 (media)",proxy,,media,media,0.5155,0.7246,1.23,proxy,,,,,,,,,,
-1578539,France,Morocco,assist,L. Digne,France,,,xA-proxy 0.29 (media),proxy,,media,media,,,,,0.2542,0.2933,,proxy,,,,,,
-1578539,France,Morocco,assist,Kylian Mbappé,France,,,xA-proxy 0.23 (media),proxy,,media,media,,,,,0.2021,0.2258,,proxy,,,,,,
-1578539,France,Morocco,assist,A. Ounahi,Morocco,,,xA-proxy 0.21 (media),proxy,,media,media,,,,,0.1859,0.2057,,proxy,,,,,,
-1578539,France,Morocco,card_risk,A. Rabiot,France,,,P(tarjeta) 38% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,272.0,0.3831,0.3831,0.3831,neutro,ajuste neutro: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
-1578539,France,Morocco,card_risk,I. Saibari,Morocco,,,P(tarjeta) 32% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,161897.0,0.3228,0.3228,0.2937,bajar,ajuste baja: historial jugador bajo ↓; posición bajo ↓
-1578539,France,Morocco,card_risk,A. Tchouaméni,France,,,P(tarjeta) 32% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,1271.0,0.3186,0.3186,0.3186,neutro,ajuste neutro: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
-1578539,France,Morocco,card_risk,L. Digne,France,,,P(tarjeta) 31% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,2724.0,0.3103,0.3103,0.2963,bajar,ajuste baja: historial jugador bajo ↓; equipo bajo ↓
+1581821,Spain,Belgium,scorer,Mikel Oyarzabal,Spain,0.3145,0.3776,"xG 0.38, P(gol) 31% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1581821,Spain,Belgium,scorer,Dani Olmo,Spain,0.173,0.1899,"xG 0.19, P(gol) 17% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1581821,Spain,Belgium,scorer,K. De Bruyne,Belgium,0.1565,0.1702,"xG 0.17, P(gol) 16% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1581821,Spain,Belgium,sot,Mikel Oyarzabal,Spain,,,"tiros esp. 2.4, SOT esp. 1.7 (media)",proxy,,media,media,0.813,1.6766,2.36,proxy,,,,,,,,,,
+1581821,Spain,Belgium,sot,Lamine Yamal,Spain,,,"tiros esp. 2.5, SOT esp. 1.5 (media)",proxy,,media,media,0.7752,1.4925,2.49,proxy,,,,,,,,,,
+1581821,Spain,Belgium,sot,Dani Olmo,Spain,,,"tiros esp. 1.8, SOT esp. 1.1 (media)",proxy,,media,media,0.6781,1.1334,1.81,proxy,,,,,,,,,,
+1581821,Spain,Belgium,assist,Lamine Yamal,Spain,,,xA-proxy 0.22 (media),proxy,,media,media,,,,,0.1956,0.2176,,proxy,,,,,,
+1581821,Spain,Belgium,assist,Mikel Oyarzabal,Spain,,,xA-proxy 0.20 (media),proxy,,media,media,,,,,0.1845,0.2039,,proxy,,,,,,
+1581821,Spain,Belgium,assist,C. De Ketelaere,Belgium,,,xA-proxy 0.15 (media),proxy,,media,media,,,,,0.1353,0.1454,,proxy,,,,,,
+1581821,Spain,Belgium,card_risk,Rodri,Spain,,,P(tarjeta) 35% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,44.0,0.3467,0.3467,0.3415,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+1581821,Spain,Belgium,card_risk,Y. Tielemans,Belgium,,,P(tarjeta) 35% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,2926.0,0.3463,0.3463,0.3446,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑ · fuentes en conflicto -> ajuste conservador
+1581821,Spain,Belgium,card_risk,Álex Baena,Spain,,,P(tarjeta) 32% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,182219.0,0.3246,0.3246,0.3246,neutro,ajuste neutro: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+1581821,Spain,Belgium,card_risk,A. Onana,Belgium,,,P(tarjeta) 24% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,162714.0,0.2414,0.2414,0.2402,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑ · fuentes en conflicto -> ajuste conservador
+1581037,Norway,England,scorer,E. Haaland,Norway,0.3323,0.4039,"xG 0.40, P(gol) 33% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1581037,Norway,England,scorer,H. Kane,England,0.3271,0.3962,"xG 0.40, P(gol) 33% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1581037,Norway,England,scorer,A. Sørloth,Norway,0.1762,0.1938,"xG 0.19, P(gol) 18% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1581037,Norway,England,sot,E. Haaland,Norway,,,"tiros esp. 2.4, SOT esp. 1.6 (media)",proxy,,media,media,0.7968,1.5934,2.37,proxy,,,,,,,,,,
+1581037,Norway,England,sot,H. Kane,England,,,"tiros esp. 2.4, SOT esp. 1.6 (media)",proxy,,media,media,0.7893,1.5571,2.43,proxy,,,,,,,,,,
+1581037,Norway,England,sot,A. Gordon,England,,,"tiros esp. 2.0, SOT esp. 1.4 (media)",proxy,,media,media,0.7515,1.3922,2.0,proxy,,,,,,,,,,
+1581037,Norway,England,assist,N. Madueke,England,,,xA-proxy 0.20 (media),proxy,,media,media,,,,,0.1845,0.204,,proxy,,,,,,
+1581037,Norway,England,assist,M. Ødegaard,Norway,,,xA-proxy 0.17 (media),proxy,,media,media,,,,,0.1554,0.1689,,proxy,,,,,,
+1581037,Norway,England,assist,M. Guéhi,England,,,xA-proxy 0.15 (media),proxy,,media,media,,,,,0.1371,0.1475,,proxy,,,,,,
+1581037,Norway,England,card_risk,J. Bellingham,England,,,P(tarjeta) 35% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,129718.0,0.3527,0.3527,0.3421,bajar,ajuste baja: historial jugador bajo ↓; posición alto ↑ · fuentes en conflicto -> ajuste conservador
+1581037,Norway,England,card_risk,A. Sørloth,Norway,,,P(tarjeta) 33% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,8492.0,0.3288,0.3288,0.2893,bajar,ajuste baja: historial jugador bajo ↓; posición bajo ↓; equipo bajo ↓
+1581037,Norway,England,card_risk,T. Heggem,Norway,,,P(tarjeta) 29% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,39254.0,0.2924,0.2924,0.2792,bajar,ajuste baja: historial jugador bajo ↓; equipo bajo ↓
+1581037,Norway,England,card_risk,M. Guéhi,England,,,P(tarjeta) 24% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,67971.0,0.2411,0.2411,0.2411,neutro,ajuste neutro: sin sesgo neto de las fuentes

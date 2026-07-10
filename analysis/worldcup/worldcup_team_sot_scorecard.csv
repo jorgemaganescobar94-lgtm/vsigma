@@ -133,3 +133,5 @@ fixture_id,kickoff_utc,team_id,team_name,opponent_id,opponent_name,side,predicte
 1576804,2026-07-07 16:00,32,Egypt,26,Argentina,away,3.113,2.0,1.1134,1.1134,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1576805,2026-07-07 20:00,8,Colombia,15,Switzerland,away,4.472,3.0,1.4724,1.4724,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1576805,2026-07-07 20:00,15,Switzerland,8,Colombia,home,4.232,2.0,2.232,2.232,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1578539,2026-07-09 20:00,2,France,31,Morocco,home,3.886,8.0,-4.1144,4.1144,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1578539,2026-07-09 20:00,31,Morocco,2,France,away,3.87,1.0,2.8696,2.8696,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics

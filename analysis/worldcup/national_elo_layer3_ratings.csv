@@ -1,155 +1,155 @@
 team_id,team,strength
-26,Argentina,2.278
-9,Spain,2.226
-2,France,2.159
-6,Brazil,2.085
-1,Belgium,1.898
-8,Colombia,1.857
+26,Argentina,2.279
+2,France,2.269
+9,Spain,2.227
+6,Brazil,2.082
+1,Belgium,1.901
+8,Colombia,1.859
 27,Portugal,1.843
-1090,Norway,1.831
-1118,Netherlands,1.828
-10,England,1.821
-31,Morocco,1.809
+1090,Norway,1.834
+1118,Netherlands,1.824
+10,England,1.822
 12,Japan,1.759
-25,Germany,1.673
-15,Switzerland,1.637
+31,Morocco,1.731
+25,Germany,1.676
+15,Switzerland,1.638
 3,Croatia,1.414
-13,Senegal,1.386
-16,Mexico,1.386
-4,Russia,1.364
-768,Italy,1.334
+13,Senegal,1.391
+16,Mexico,1.385
+4,Russia,1.363
+768,Italy,1.338
 7,Uruguay,1.313
-21,Denmark,1.297
-1501,Ivory Coast,1.281
-1532,Algeria,1.248
-5,Sweden,1.195
+21,Denmark,1.3
+1501,Ivory Coast,1.283
+1532,Algeria,1.247
+5,Sweden,1.201
 2384,USA,1.18
-22,Iran,1.167
-2382,Ecuador,1.16
-775,Austria,1.16
-32,Egypt,1.12
-20,Australia,1.102
-19,Nigeria,1.081
-1533,Cape Verde Islands,1.043
-2383,Chile,0.995
-5529,Canada,0.994
-1508,Congo DR,0.938
-2380,Paraguay,0.936
-777,Türkiye,0.92
+22,Iran,1.166
+775,Austria,1.162
+2382,Ecuador,1.159
+32,Egypt,1.119
+20,Australia,1.105
+19,Nigeria,1.078
+1533,Cape Verde Islands,1.041
+2383,Chile,0.996
+5529,Canada,0.99
+2380,Paraguay,0.942
+1508,Congo DR,0.936
+777,Türkiye,0.922
 17,South Korea,0.904
-12520,Spain U17,0.894
+12520,Spain U17,0.893
 2379,Venezuela,0.836
-1530,Cameroon,0.812
-1500,Mali,0.801
-24,Poland,0.795
+1530,Cameroon,0.808
+24,Poland,0.798
+1500,Mali,0.797
 10306,United States U20,0.745
-1117,Greece,0.744
+1117,Greece,0.745
 30,Peru,0.713
-10349,Spain U19,0.709
-1108,Scotland,0.692
-1504,Ghana,0.655
-25282,USA U19,0.649
+10349,Spain U19,0.708
+1108,Scotland,0.684
+1504,Ghana,0.654
+25282,USA U19,0.648
 14,Serbia,0.636
-1111,Kosovo,0.58
-776,Rep. Of Ireland,0.576
-1091,Slovenia,0.571
-772,Ukraine,0.563
-19073,Portugal U18,0.561
-21466,England U18,0.56
+1111,Kosovo,0.581
+776,Rep. Of Ireland,0.577
+1091,Slovenia,0.572
+772,Ukraine,0.571
+19073,Portugal U18,0.56
+21466,England U18,0.559
 1104,Georgia,0.557
 21061,Uzbekistan U20,0.536
-12502,Brazil U17,0.535
+12502,Brazil U17,0.534
 21480,Slovenia U18,0.521
-1502,Burkina Faso,0.518
-8219,Russia U21,0.517
-1531,South Africa,0.515
-10332,England U19,0.509
-767,Wales,0.506
-774,Romania,0.493
-769,Hungary,0.481
-27064,Morocco B,0.47
-10344,Russia U19,0.468
-1529,Angola,0.466
-1548,Jordan,0.463
-773,Slovakia,0.455
+8219,Russia U21,0.516
+1502,Burkina Faso,0.516
+1531,South Africa,0.512
+10332,England U19,0.508
+767,Wales,0.507
+774,Romania,0.494
+769,Hungary,0.482
+27064,Morocco B,0.469
+10344,Russia U19,0.467
+1529,Angola,0.463
+1548,Jordan,0.461
+773,Slovakia,0.457
 10333,Finland U19,0.454
-771,Northern Ireland,0.438
+771,Northern Ireland,0.441
 29,Costa Rica,0.436
-23,Saudi Arabia,0.433
-12500,Argentina U17,0.431
+1116,Israel,0.431
+23,Saudi Arabia,0.431
+12500,Argentina U17,0.43
 11,Panama,0.427
-1116,Israel,0.425
-1563,United Arab Emirates,0.419
+1563,United Arab Emirates,0.415
 770,Czechia,0.409
-1113,Bosnia & Herzegovina,0.405
-10955,Saudi Arabia U23,0.403
+1113,Bosnia & Herzegovina,0.406
+10955,Saudi Arabia U23,0.402
 22428,Denmark U18,0.398
-22340,Croatia U18,0.398
-1509,Guinea,0.365
-8182,Belarus U21,0.361
+22340,Croatia U18,0.397
+1509,Guinea,0.363
+8182,Belarus U21,0.36
 10938,Jordan U23,0.358
 21476,Poland U18,0.35
 10334,France U19,0.343
 27061,Kosovo U20,0.342
-17970,Poland U17,0.341
+17970,Poland U17,0.34
 8193,Finland U21,0.336
-21467,Finland U18,0.322
+21467,Finland U18,0.321
 27258,Guatemala U19,0.319
 27072,USA U21,0.317
-10376,Poland U19,0.317
+10376,Poland U19,0.316
 28,Tunisia,0.311
-10330,Czech Republic U19,0.307
+10330,Czech Republic U19,0.306
 16200,Brazil U20,0.302
-16197,Lesotho U20,0.302
-11004,Jamaica U20,0.299
+16197,Lesotho U20,0.301
+11004,Jamaica U20,0.298
 27259,Panama U19,0.29
-8216,Portugal U21,0.29
-20551,Mali U23,0.29
+20551,Mali U23,0.289
+8216,Portugal U21,0.289
 25280,Russia U18,0.288
-1552,Oman,0.282
 17963,Luxembourg U17,0.282
 11049,Tunisia U20,0.281
 10328,Bulgaria U19,0.28
+1552,Oman,0.278
 22439,United Arab Emirates U19,0.274
-1503,Gabon,0.273
 10336,Germany U19,0.272
-17980,Sweden U17,0.271
-1565,Syria,0.268
+17980,Sweden U17,0.27
+1503,Gabon,0.267
 12501,Australia U17,0.266
 17947,Czech Republic U17,0.265
-1568,Uzbekistan,0.265
+1568,Uzbekistan,0.264
+1565,Syria,0.263
 17946,Cyprus U17,0.261
-23263,Basque Country,0.258
+23263,Basque Country,0.257
 17949,England U17,0.251
 22254,England U16,0.25
-27260,North Macedonia U20,0.247
-1526,Libya,0.244
+27260,North Macedonia U20,0.246
 22430,Germany U16,0.243
+1526,Libya,0.242
 21302,Morocco U17,0.24
-4672,Honduras,0.239
-10348,Slovenia U19,0.238
-2386,Haiti,0.236
+4672,Honduras,0.238
+10348,Slovenia U19,0.237
 27262,Honduras U19,0.234
-10329,Croatia U19,0.232
 21058,Kyrgyz Republic U20,0.232
-778,Albania,0.228
-11012,Trinidad and Tobago U20,0.227
+10329,Croatia U19,0.232
+778,Albania,0.231
+2386,Haiti,0.228
 4673,New Zealand,0.227
-21300,South Africa U17,0.226
-27253,Costa Rica U19,0.225
+11012,Trinidad and Tobago U20,0.227
+21300,South Africa U17,0.225
+27253,Costa Rica U19,0.224
+18,Iceland,0.221
 17954,Germany U17,0.221
 8196,Germany U21,0.218
 1564,Thailand,0.215
-18,Iceland,0.215
 2385,Jamaica,0.21
 27055,Egypt B,0.208
 22437,Serbia U18,0.207
-23259,Hungary U20,0.205
+23259,Hungary U20,0.204
 10350,Switzerland U19,0.203
 10342,Norway U19,0.202
 22435,Netherlands U18,0.201
 10184,UAE U23,0.201
-8227,Turkey U21,0.201
+8227,Turkey U21,0.2
 19074,Spain U18,0.2
 10331,Denmark U19,0.197
 23258,Germany U18,0.197
@@ -157,15 +157,15 @@ team_id,team,strength
 10346,Serbia U19,0.189
 8222,Serbia U21,0.187
 12517,Paraguay U17,0.185
-1492,Gambia,0.18
+1492,Gambia,0.178
 11026,Côte d'Ivoire U20,0.178
 10361,Estonia U19,0.175
 11017,Algeria U20,0.17
-10312,Iran U20,0.169
-1105,FYR Macedonia,0.167
+10312,Iran U20,0.168
+1105,FYR Macedonia,0.168
 27067,Uzbekistan U18,0.165
 21298,Mali U17,0.164
-8223,Slovakia U21,0.162
+8223,Slovakia U21,0.161
 10364,Greece U19,0.161
 10301,Saudi Arabia U20,0.161
 10295,Nigeria U20,0.16
@@ -186,41 +186,41 @@ team_id,team,strength
 17883,United States U23,0.12
 20785,Kosovo U19,0.119
 10285,Colombia U20,0.114
-1519,Uganda,0.114
+1519,Uganda,0.111
 10963,Uzbekistan U23,0.109
 20527,Colombia U17,0.108
-21459,Austria U16,0.108
+21459,Austria U16,0.107
 8194,France U21,0.104
 12512,Korea Republic U17,0.102
 8171,Suriname,0.1
-1511,Kenya,0.099
 3998,Las Vegas Lights,0.098
 1542,Vietnam,0.098
+1511,Kenya,0.097
 21295,Algeria U17,0.097
-11037,Malawi U20,0.094
+11037,Malawi U20,0.093
 17977,Serbia U17,0.093
-1534,Togo,0.093
 1536,Tajikistan,0.092
-17969,Norway U17,0.091
-10310,Germany U20,0.088
-8224,Spain U21,0.087
+1534,Togo,0.091
+17969,Norway U17,0.09
+10310,Germany U20,0.087
+8224,Spain U21,0.086
 8211,Netherlands U21,0.086
 8209,Moldova U21,0.086
-27054,Algeria B,0.085
 25281,Switzerland U20,0.085
+27054,Algeria B,0.085
 1100,Belarus,0.084
 5532,Dominican Republic,0.082
 17979,Slovenia U17,0.079
-27791,Tunisia U18,0.076
 19626,Iraq U20,0.076
+27791,Tunisia U18,0.076
 27071,South Korea U22,0.073
 10343,Portugal U19,0.073
-1521,Equatorial Guinea,0.072
-23539,Japan U21,0.072
+23539,Japan U21,0.071
 21446,Uzbekistan U17,0.071
 21475,Poland U16,0.071
 8201,Italy U21,0.071
-1498,Eritrea,0.071
+1521,Equatorial Guinea,0.071
+1498,Eritrea,0.07
 22724,Japan U16,0.07
 12511,Japan U17,0.067
 8186,Croatia U21,0.067
@@ -228,30 +228,30 @@ team_id,team,strength
 17936,Albania U17,0.064
 20552,Mauritania U23,0.06
 10287,France U20,0.058
-1516,Benin,0.057
-10358,Belarus U19,0.056
+10358,Belarus U19,0.055
+1516,Benin,0.054
 21477,Romania U18,0.053
 17968,Northern Ireland U17,0.053
-27058,Catalonia Selection,0.052
+27058,Catalonia Selection,0.051
 8180,Austria U21,0.051
 20562,Tunisia U23,0.047
-22343,Ukraine U18,0.047
-8200,Israel U21,0.047
+22343,Ukraine U18,0.046
+8200,Israel U21,0.046
 12509,Hungary U17,0.044
 22498,Hungary U18,0.043
-1490,Madagascar,0.043
 27551,Egypt U19,0.043
 25112,Turkmenistan U20,0.041
 18982,Japan U19,0.04
 10289,Italy U20,0.04
 8215,Poland U21,0.04
 385,Torpedo Zhodino,0.04
+1567,Iraq,0.04
 10284,Argentina U20,0.039
+1490,Madagascar,0.039
 10186,Algeria U23,0.038
 10950,Oman U23,0.037
 10327,Belgium U19,0.035
-1567,Iraq,0.032
-1522,Zimbabwe,0.03
+1522,Zimbabwe,0.028
 10339,Latvia U19,0.027
 11034,Kenya U20,0.026
 12506,Ecuador U17,0.025
@@ -261,19 +261,19 @@ team_id,team,strength
 26531,Uzbekistan U19,0.023
 8207,Luxembourg U21,0.023
 22592,South Korea U18,0.023
-19071,Italy U18,0.023
+19071,Italy U18,0.022
 11001,Guatemala U20,0.022
 22502,Indonesia U17,0.022
 21504,Lithuania U18,0.022
 10290,Japan U20,0.02
-1505,Niger,0.02
-1562,Palestine,0.019
 16621,France U23,0.018
 11027,Egypt U20,0.018
+1562,Palestine,0.017
 21213,Venezuela U17,0.016
 8231,Slovenia U21,0.014
 10178,Mexico U23,0.014
 21468,Japan U22,0.014
+1505,Niger,0.013
 27431,PSG U17,0.011
 8188,Czech Republic U21,0.011
 10945,Malaysia U23,0.011
@@ -281,27 +281,27 @@ team_id,team,strength
 21470,Kyrgyzstan U21,0.01
 8226,Switzerland U21,0.009
 10338,Italy U19,0.009
-10952,Palestine U23,0.009
+10952,Palestine U23,0.008
 8179,Armenia U21,0.008
 19633,Yemen U20,0.006
-22925,Paraguay U23,0.006
 26530,United Arab Emirates U18,0.006
+22925,Paraguay U23,0.006
 5161,Guatemala,0.003
-1538,Malaysia,0.001
 8185,Bulgaria U21,0.001
+1538,Malaysia,0.001
 22425,Belgium U18,-0.0
 21471,Latvia U18,-0.0
 10179,Morocco U23,-0.001
-1489,Tanzania,-0.001
 27069,Peru U18,-0.005
 8199,Iceland U21,-0.005
-8225,Sweden U21,-0.005
+8225,Sweden U21,-0.006
 26529,Canada U18,-0.008
+1489,Tanzania,-0.009
+1099,Finland,-0.009
 10172,Egypt U23,-0.01
 21460,Austria U18,-0.012
 27257,Ghana B,-0.012
-1566,China,-0.012
-1099,Finland,-0.012
+1566,China,-0.013
 10187,Argentina U23,-0.014
 10326,Austria U19,-0.014
 996,Alanyaspor,-0.016
@@ -314,7 +314,7 @@ team_id,team,strength
 21463,Bulgaria U18,-0.022
 21503,Estonia U18,-0.022
 25818,Côte d'Ivoire U17,-0.022
-17953,Georgia U17,-0.025
+17953,Georgia U17,-0.024
 17869,Cuba U23,-0.025
 18914,Israel U17,-0.025
 8181,Azerbaijan U21,-0.025
@@ -330,39 +330,38 @@ team_id,team,strength
 10373,Moldova U19,-0.042
 10937,Iran U23,-0.042
 10958,Syria U23,-0.043
-5530,Curaçao,-0.043
-17939,Austria U17,-0.046
-17942,Belgium U17,-0.046
-21461,Bosnia & Herzegovina U18,-0.046
+5530,Curaçao,-0.044
+17939,Austria U17,-0.045
 10935,India U23,-0.046
+21461,Bosnia & Herzegovina U18,-0.046
+17942,Belgium U17,-0.046
 27066,Uzbekistan U22,-0.047
 21229,Vietnam U22,-0.048
-17945,Croatia U17,-0.049
+17945,Croatia U17,-0.048
 10378,Romania U19,-0.051
 10291,Korea Republic U20,-0.053
 64,Hull City,-0.059
 12510,Italy U17,-0.059
 19629,Oman U20,-0.06
-17948,Denmark U17,-0.062
+17948,Denmark U17,-0.061
 1488,Swaziland,-0.062
 8203,Kosovo U21,-0.063
 27059,Indonesia U18,-0.065
-10965,Yemen U23,-0.066
-10943,Lebanon U23,-0.066
-1491,Mauritania,-0.066
+10965,Yemen U23,-0.065
+10943,Lebanon U23,-0.065
 27409,Rangers U17,-0.068
 27056,Azerbaijan U18,-0.069
+1491,Mauritania,-0.069
 22580,Czech Republic U16,-0.07
 21473,Norway U16,-0.071
 8229,Wales U21,-0.073
 8120,Northern Mariana Islands,-0.074
 17972,Republic of Ireland U17,-0.074
-8212,North Macedonia U21,-0.076
+8212,North Macedonia U21,-0.075
 1551,Lebanon,-0.076
-1514,Rwanda,-0.076
-8189,Denmark U21,-0.079
+1514,Rwanda,-0.078
 17978,Slovakia U17,-0.079
-1524,Comoros,-0.079
+8189,Denmark U21,-0.079
 27060,Ireland U18,-0.079
 12513,Mexico W U17,-0.079
 21481,Wales U18,-0.08
@@ -370,12 +369,13 @@ team_id,team,strength
 10362,Faroe Islands U19,-0.083
 8184,Bosnia-Herzegovina U21,-0.083
 19627,Jordan U20,-0.084
-16201,Chile U20,-0.085
 8198,Greece U21,-0.085
-1528,Burundi,-0.085
+16201,Chile U20,-0.085
+1524,Comoros,-0.086
+21469,Kuwait U22,-0.087
 1561,North Korea,-0.088
-21469,Kuwait U22,-0.088
 10367,Kazakhstan U19,-0.089
+1528,Burundi,-0.089
 21464,China U22,-0.09
 11010,St. Vincent / Gren. U20,-0.091
 10351,Turkey U19,-0.092
@@ -384,224 +384,224 @@ team_id,team,strength
 11039,Morocco U20,-0.098
 17973,Romania U17,-0.101
 27755,Oman U19,-0.101
-8210,Montenegro U21,-0.102
+8210,Montenegro U21,-0.101
 20563,Zambia U23,-0.102
 20528,India U17,-0.102
-10305,Ukraine U20,-0.104
+10305,Ukraine U20,-0.103
 17871,Dominican Republic U23,-0.104
 27263,Montenegro U18,-0.107
-21462,Bulgaria U16,-0.108
+21462,Bulgaria U16,-0.107
 20547,Guinea U23,-0.11
 21478,Russia U20,-0.111
 8220,San Marino U21,-0.111
 2276,FC Urartu,-0.112
 23257,Georgia U18,-0.114
-8206,Lithuania U21,-0.115
-1507,Zambia,-0.117
+8206,Lithuania U21,-0.114
 21059,Syria U20,-0.119
 10370,Lithuania U19,-0.119
 16198,Zimbabwe U20,-0.119
 10954,Qatar U23,-0.119
 21479,Slovakia U18,-0.121
 21060,Tajikistan U20,-0.123
+1507,Zambia,-0.126
 10983,Guadeloupe,-0.126
-1569,Qatar,-0.127
-1547,Bahrain,-0.127
+1569,Qatar,-0.128
 10337,Iceland U19,-0.129
-10964,Vietnam U23,-0.135
+1547,Bahrain,-0.13
+10964,Vietnam U23,-0.134
 10999,Grenada U20,-0.136
 17965,Moldova U17,-0.136
-10959,Tajikistan U23,-0.137
+10959,Tajikistan U23,-0.136
 10299,Portugal U20,-0.138
-10309,England U20,-0.139
-2381,Bolivia,-0.139
+10309,England U20,-0.138
+2381,Bolivia,-0.138
 21056,Australia U20,-0.143
 26086,Spain U20,-0.145
 10293,Mexico U20,-0.148
 19072,Morocco U18,-0.149
 27070,Saudi Arabia U18,-0.149
 27256,Puerto Rico U19,-0.15
+14007,Primorje,-0.154
 1571,Indonesia,-0.154
-14007,Primorje,-0.155
 5162,Guyana,-0.155
 5164,Nicaragua,-0.156
-21212,Uruguay U17,-0.156
 10357,Azerbaijan U19,-0.156
-17956,Greece U17,-0.157
+21212,Uruguay U17,-0.156
+17956,Greece U17,-0.156
 8214,Norway U21,-0.159
-10347,Slovakia U19,-0.161
 24054,Fiji U19,-0.161
+10347,Slovakia U19,-0.161
 21296,Burkina Faso U17,-0.164
-22434,Moldova U18,-0.166
+22434,Moldova U18,-0.165
 10375,Northern Ireland U19,-0.167
-1499,Sierra Leone,-0.169
-10356,Armenia U19,-0.17
+10356,Armenia U19,-0.169
+1499,Sierra Leone,-0.171
 22341,Switzerland U18,-0.176
 10960,Thailand U23,-0.176
 27261,Nicaragua U19,-0.179
 22930,Tunisia U17,-0.179
-10192,Iraq U23,-0.18
+10192,Iraq U23,-0.179
 10341,North Macedonia U19,-0.183
-21443,Qatar U17,-0.186
+21443,Qatar U17,-0.185
 8192,Faroe Islands U21,-0.188
-10352,Ukraine U19,-0.19
+10352,Ukraine U19,-0.189
 8202,Kazakhstan U21,-0.191
-10929,Bangladesh U23,-0.196
+10929,Bangladesh U23,-0.195
 27065,Papua New Guinea U20,-0.196
-8187,Cyprus U21,-0.198
-1102,Luxembourg,-0.202
-23260,Iceland U20,-0.205
-1512,Mozambique,-0.205
+8187,Cyprus U21,-0.197
+1102,Luxembourg,-0.199
+23260,Iceland U20,-0.204
 10377,Republic of Ireland U19,-0.205
 5167,Tahiti,-0.205
+1512,Mozambique,-0.208
 16202,Paraguay U20,-0.214
 5163,New Caledonia,-0.214
 27068,Uruguay U18,-0.216
 22342,USA U18,-0.216
-12505,Chile U17,-0.218
 1555,Philippines,-0.218
-1109,Montenegro,-0.22
-1550,Yemen,-0.223
-1513,Guinea-Bissau,-0.223
-10928,Bahrain U23,-0.225
-27063,Malawi U17,-0.226
+12505,Chile U17,-0.218
+1109,Montenegro,-0.218
+1550,Yemen,-0.224
+10928,Bahrain U23,-0.224
+27063,Malawi U17,-0.225
+1513,Guinea-Bissau,-0.226
 17981,Switzerland U17,-0.229
 8173,American Samoa,-0.234
-17962,Lithuania U17,-0.238
-1570,Kuwait,-0.238
-1506,Ethiopia,-0.239
+17962,Lithuania U17,-0.237
+1570,Kuwait,-0.239
+1506,Ethiopia,-0.241
 27062,Luxembourg U18,-0.243
 22255,Italy U16,-0.243
+1098,Faroe Islands,-0.244
 5159,El Salvador,-0.244
-5542,Tonga,-0.245
-1098,Faroe Islands,-0.245
-10177,Korea Republic U23,-0.246
-25102,Maldives U20,-0.246
-8205,Liechtenstein U21,-0.247
-21472,North Macedonia U18,-0.25
+5542,Tonga,-0.244
+10177,Korea Republic U23,-0.245
+25102,Maldives U20,-0.245
+8205,Liechtenstein U21,-0.246
 25283,Wales U16,-0.25
+21472,North Macedonia U18,-0.25
 17960,Latvia U17,-0.258
-11040,Mozambique U20,-0.26
-10354,Albania U19,-0.264
+11040,Mozambique U20,-0.259
+10354,Albania U19,-0.263
 17976,Scotland U17,-0.266
 10340,Netherlands U19,-0.267
 17982,Turkey U17,-0.27
-27254,Cuba U19,-0.275
-10359,Bosnia-Herzegovina U19,-0.277
-10941,Kyrgyz Republic U23,-0.278
-17983,Ukraine U17,-0.28
+27254,Cuba U19,-0.274
+10359,Bosnia-Herzegovina U19,-0.276
+10941,Kyrgyz Republic U23,-0.277
+17983,Ukraine U17,-0.279
 8118,French Guyana,-0.282
 17964,Malta U17,-0.282
-25108,Singapore U20,-0.284
+25108,Singapore U20,-0.283
 17952,Finland U17,-0.289
 10936,Indonesia U23,-0.289
-1510,Sudan,-0.296
-11003,Haiti U20,-0.299
+1510,Sudan,-0.298
+11003,Haiti U20,-0.298
 19075,Turkey U18,-0.303
-1493,Namibia,-0.304
-1103,Bulgaria,-0.335
+1493,Namibia,-0.306
+1103,Bulgaria,-0.333
 11038,Mauritania U20,-0.337
-17967,North Macedonia U17,-0.34
+17967,North Macedonia U17,-0.339
 21474,Norway U18,-0.34
-12522,United States U17,-0.341
+12522,United States U17,-0.34
 10365,Hungary U19,-0.344
-1525,Liberia,-0.344
-1095,Kazakhstan,-0.347
+1095,Kazakhstan,-0.345
+1525,Liberia,-0.347
 27057,Canada U19,-0.348
-10380,Sweden U19,-0.35
-1495,Malawi,-0.351
-1101,Estonia,-0.359
+10380,Sweden U19,-0.349
+1495,Malawi,-0.354
+1101,Estonia,-0.356
 8228,Ukraine U21,-0.36
-10956,Singapore U23,-0.368
-1520,Botswana,-0.371
-24059,Solomon Islands U19,-0.373
-1554,Kyrgyzstan,-0.382
+10956,Singapore U23,-0.367
+24059,Solomon Islands U19,-0.372
+1520,Botswana,-0.373
+1554,Kyrgyzstan,-0.383
 8117,Martinique,-0.383
 10308,Costa Rica U20,-0.385
-20990,Costa Rica U17,-0.389
+20990,Costa Rica U17,-0.388
 8213,Northern Ireland U21,-0.392
-19632,UAE U20,-0.394
-5160,Fiji,-0.397
-26079,Bhutan U23,-0.398
+19632,UAE U20,-0.393
+5160,Fiji,-0.396
+26079,Bhutan U23,-0.397
 5539,Puerto Rico,-0.401
-1527,Central African Republic,-0.417
-5541,St. Vincent / Grenadines,-0.424
-1106,Cyprus,-0.427
+1527,Central African Republic,-0.423
+5541,St. Vincent / Grenadines,-0.423
+1106,Cyprus,-0.425
 1539,Turkmenistan,-0.43
-19154,Singapore U19,-0.445
+19154,Singapore U19,-0.444
 27255,El Salvador U19,-0.464
-8208,Malta U21,-0.465
-8174,Cook Islands,-0.481
-10374,Montenegro U19,-0.482
-1517,Congo,-0.485
-5168,Trinidad and Tobago,-0.485
-1092,Latvia,-0.491
-2388,Cuba,-0.526
+8208,Malta U21,-0.464
+8174,Cook Islands,-0.48
+10374,Montenegro U19,-0.481
+5168,Trinidad and Tobago,-0.486
+1092,Latvia,-0.49
+1517,Congo,-0.492
 10353,Wales U19,-0.526
+2388,Cuba,-0.526
 10360,Cyprus U19,-0.532
 17950,Estonia U17,-0.533
-10369,Liechtenstein U19,-0.539
-2995,Eswatini,-0.543
+10369,Liechtenstein U19,-0.538
+2995,Eswatini,-0.545
 25089,Afghanistan U20,-0.547
-10984,Saint Martin,-0.566
+10984,Saint Martin,-0.565
 1546,Singapore,-0.569
-8050,Somalia,-0.572
+8050,Somalia,-0.573
 5528,Belize,-0.588
 1537,India,-0.594
-1097,Lithuania,-0.618
-19624,Bahrain U20,-0.62
-1094,Armenia,-0.633
-8176,Samoa,-0.638
+1097,Lithuania,-0.617
+19624,Bahrain U20,-0.619
+1094,Armenia,-0.632
+8176,Samoa,-0.637
 4460,Hong Kong,-0.638
-10300,Qatar U20,-0.673
-1497,Mauritius,-0.678
-1112,Malta,-0.7
-1096,Azerbaijan,-0.706
-10372,Malta U19,-0.707
-1518,Lesotho,-0.711
-5165,Solomon Islands,-0.713
+10300,Qatar U20,-0.672
+1497,Mauritius,-0.679
+1096,Azerbaijan,-0.697
+1112,Malta,-0.699
+10372,Malta U19,-0.706
+5165,Solomon Islands,-0.712
+1518,Lesotho,-0.716
 10985,Sint Maarten,-0.729
-10982,Bonaire,-0.731
-5540,St. Lucia,-0.75
-1496,South Sudan,-0.754
-1114,Moldova,-0.785
-5170,Vanuatu,-0.799
-8175,Papua New Guinea,-0.801
+10982,Bonaire,-0.73
+5540,St. Lucia,-0.749
+1496,South Sudan,-0.756
+1114,Moldova,-0.782
+5170,Vanuatu,-0.798
+8175,Papua New Guinea,-0.8
 8170,Montserrat,-0.855
-5166,Sri Lanka,-0.881
+5166,Sri Lanka,-0.88
 5533,Grenada,-0.881
-1110,Andorra,-0.9
-1543,Cambodia,-0.91
-5527,Barbados,-0.916
-5536,St. Kitts and Nevis,-0.929
-5531,Dominica,-0.968
+1110,Andorra,-0.897
+1543,Cambodia,-0.909
+5527,Barbados,-0.915
+5536,St. Kitts and Nevis,-0.928
+5531,Dominica,-0.967
 8167,Aruba,-0.997
 5158,Bermuda,-1.003
-1523,Chad,-1.024
+1523,Chad,-1.026
 1560,Bangladesh,-1.051
+8119,Guam,-1.1
 1553,Afghanistan,-1.101
-8119,Guam,-1.101
 1556,Myanmar,-1.112
-5534,Mongolia,-1.131
-1549,Maldives,-1.168
-1093,Gibraltar,-1.174
-4767,Mação,-1.219
-5526,Antigua and Barbuda,-1.226
-1494,Sao Tome and Principe,-1.239
-1545,Nepal,-1.244
-1535,Djibouti,-1.258
-1557,Chinese Taipei,-1.29
+5534,Mongolia,-1.13
+1549,Maldives,-1.167
+1093,Gibraltar,-1.173
+4767,Mação,-1.217
+5526,Antigua and Barbuda,-1.225
+1494,Sao Tome and Principe,-1.24
+1545,Nepal,-1.243
+1535,Djibouti,-1.259
+1557,Chinese Taipei,-1.289
 5535,Pakistan,-1.31
-1558,Laos,-1.331
-5537,Timor-Leste,-1.377
-5169,Turks and Caicos Islands,-1.426
-5538,Brunei,-1.61
-8172,US Virgin Islands,-1.62
-5157,Bahamas,-1.629
-8150,Anguilla,-1.664
-1107,Liechtenstein,-1.696
-1515,Seychelles,-1.704
-1540,Bhutan,-1.708
-8168,British Virgin Islands,-1.775
-8169,Cayman Islands,-1.788
-1115,San Marino,-1.858
+1558,Laos,-1.33
+5537,Timor-Leste,-1.375
+5169,Turks and Caicos Islands,-1.424
+5538,Brunei,-1.609
+8172,US Virgin Islands,-1.618
+5157,Bahamas,-1.628
+8150,Anguilla,-1.663
+1107,Liechtenstein,-1.694
+1515,Seychelles,-1.705
+1540,Bhutan,-1.707
+8168,British Virgin Islands,-1.774
+8169,Cayman Islands,-1.787
+1115,San Marino,-1.856
