@@ -28,7 +28,7 @@ team_id,team_name,player_id,player_name,role,rank,attempts,last_taken_date,sourc
 31,Morocco,161897,I. Saibari,penalty,5,1,2026-06-30,api_football_events,alta,baja
 1,Belgium,2926,Youri Tielemans,penalty,1,1,2026-07-01,api_football_events,alta,baja
 27,Portugal,874,C. Ronaldo,penalty,1,1,2026-07-02,api_football_events,alta,baja
-2,France,278,Kylian Mbappé,penalty,1,1,2026-07-04,api_football_events,alta,baja
+2,France,278,Kylian Mbappé,penalty,1,2,2026-07-09,api_football_events,alta,media
 6,Brazil,10135,Bruno Guimarães,penalty,1,1,2026-07-05,api_football_events,alta,baja
 6,Brazil,276,Neymar,penalty,2,1,2026-07-05,api_football_events,alta,baja
 10,England,184,H. Kane,penalty,1,2,2026-07-06,api_football_events,alta,media

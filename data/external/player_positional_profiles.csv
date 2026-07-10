@@ -189,9 +189,9 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 277003,Neil El Aynaoui,31,MID,,,,,,,,,,api_football_lineup_position,media,baja
 744,Brahim Díaz,31,MID,,,,,,,,,,api_football_lineup_position,media,baja
 129678,Azzedine Ounahi,31,MID,,,,,,,,,,api_football_lineup_position,media,baja
-340573,Bilal El Khannouss,31,MID,,,,,,,,,,api_football_lineup_position,media,baja
-161897,Ismael Saibari,31,FWD,,,,,,,,,,api_football_lineup_position,media,baja
-336659,Chemsdine Talbi,31,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+340573,Bilal El Khannouss,31,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+161897,Ismael Saibari,31,MID,,,,,,,,,,api_football_lineup_position,media,baja
+336659,Chemsdine Talbi,31,MID,,,,,,,,,,api_football_lineup_position,media,baja
 535046,Ayoube Amaimouni Echghouyab,31,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 36579,Soufiane Rahimi,31,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 415431,Samir El Mourabet,31,MID,,,,,,,,,,api_football_lineup_position,media,baja
@@ -956,10 +956,10 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 22147,Manu Koné,2,MID,,,,,,,,,,api_football_lineup_position,media,baja
 153,Ousmane Dembélé,2,MID,,,,,,,,,,api_football_lineup_position,media,baja
 19617,Michael Olise,2,MID,,,,,,,,,,api_football_lineup_position,media,baja
-343027,Désiré Doué,2,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+343027,Désiré Doué,2,MID,,,,,,,,,,api_football_lineup_position,media,baja
 278,Kylian Mbappé,2,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 156477,Rayan Cherki,2,MID,,,,,,,,,,api_football_lineup_position,media,baja
-161904,Bradley Barcola,2,MID,,,,,,,,,,api_football_lineup_position,media,baja
+161904,Bradley Barcola,2,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 1145,Ibrahima Konaté,2,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 161907,Malo Gusto,2,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 25927,Jean-Philippe Mateta,2,FWD,,,,,,,,,,api_football_lineup_position,media,baja
