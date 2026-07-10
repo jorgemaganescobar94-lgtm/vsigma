@@ -1,0 +1,9 @@
+summary_scope,pick_mode,metric,rows_total
+input,ALL,input_shortlist_rows,0
+input,ALL,bets_only_rows,0
+mode,SAFE_TOP5,safe_top5_rows,0
+mode,BALANCED_TOP5,balanced_top5_rows,0
+mode,AGGRESSIVE_TOP5,aggressive_top5_rows,0
+SAFE_TOP5,SAFE_TOP5,rows_total,0
+BALANCED_TOP5,BALANCED_TOP5,rows_total,0
+AGGRESSIVE_TOP5,AGGRESSIVE_TOP5,rows_total,0
