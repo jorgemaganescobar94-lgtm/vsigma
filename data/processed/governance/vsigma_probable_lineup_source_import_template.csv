@@ -1,1 +1,21 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
+2026-07-10,1520765,Serie B,Brazil,Juventude,Vila Nova,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1520765,Serie B,Brazil,Juventude,Vila Nova,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1520765,Serie B,Brazil,Juventude,Vila Nova,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1520765,Serie B,Brazil,Juventude,Vila Nova,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1520765,Serie B,Brazil,Juventude,Vila Nova,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1520765,Serie B,Brazil,Juventude,Vila Nova,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1520765,Serie B,Brazil,Juventude,Vila Nova,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1520765,Serie B,Brazil,Juventude,Vila Nova,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1520765,Serie B,Brazil,Juventude,Vila Nova,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1520765,Serie B,Brazil,Juventude,Vila Nova,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1495729,Veikkausliiga,Finland,VPS,SJK,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1495729,Veikkausliiga,Finland,VPS,SJK,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1495729,Veikkausliiga,Finland,VPS,SJK,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1495729,Veikkausliiga,Finland,VPS,SJK,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1495729,Veikkausliiga,Finland,VPS,SJK,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1495729,Veikkausliiga,Finland,VPS,SJK,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1495729,Veikkausliiga,Finland,VPS,SJK,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1495729,Veikkausliiga,Finland,VPS,SJK,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1495729,Veikkausliiga,Finland,VPS,SJK,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-10,1495729,Veikkausliiga,Finland,VPS,SJK,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
