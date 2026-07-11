@@ -373,7 +373,7 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 907,Romelu Lukaku,1,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 2920,Timothy Castagne,1,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 78,Hans Vanaken,1,MID,,,,,,,,,,api_football_lineup_position,media,baja
-25458,Dodi Lukebakio,1,MID,,,,,,,,,,api_football_lineup_position,media,baja
+25458,Dodi Lukebakio,1,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 204043,Arthur Theate,1,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 340077,Matías Fernández-Pardo,1,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 162511,Senne Lammens,1,GK,,,,,,,,,,api_football_lineup_position,media,baja
@@ -946,7 +946,7 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 36905,Guus Til,1118,MID,,,,,,,,,,api_football_lineup_position,media,baja
 30432,Marten de Roon,1118,MID,,,,,,,,,,api_football_lineup_position,media,baja
 25416,Wout Weghorst,1118,FWD,,,,,,,,,,api_football_lineup_position,media,baja
-1422,Jérémy Doku,1,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+1422,Jérémy Doku,1,MID,,,,,,,,,,api_football_lineup_position,media,baja
 22221,Mike Maignan,2,GK,,,,,,,,,,api_football_lineup_position,media,baja
 1257,Jules Koundé,2,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 1149,Dayot Upamecano,2,DEF,,,,,,,,,,api_football_lineup_position,media,baja
