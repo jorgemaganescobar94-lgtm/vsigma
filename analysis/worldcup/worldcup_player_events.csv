@@ -1,17 +1,4 @@
 fixture_id,home,away,category,player,team,probability_goal,expected_goals,reason,source_used,goal_source,confidence,data_quality,probability_1_sot,expected_sot,expected_shots,shots_source,probability_assist,expected_assists,expected_key_passes,assist_source,player_id,probability_card,probability_card_original,probability_card_adjusted,adjustment_direction,adjustment_reason
-1581821,Spain,Belgium,scorer,Mikel Oyarzabal,Spain,0.3145,0.3776,"xG 0.38, P(gol) 31% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1581821,Spain,Belgium,scorer,Dani Olmo,Spain,0.173,0.1899,"xG 0.19, P(gol) 17% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1581821,Spain,Belgium,scorer,K. De Bruyne,Belgium,0.1565,0.1702,"xG 0.17, P(gol) 16% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1581821,Spain,Belgium,sot,Mikel Oyarzabal,Spain,,,"tiros esp. 2.4, SOT esp. 1.7 (media)",proxy,,media,media,0.813,1.6766,2.36,proxy,,,,,,,,,,
-1581821,Spain,Belgium,sot,Lamine Yamal,Spain,,,"tiros esp. 2.5, SOT esp. 1.5 (media)",proxy,,media,media,0.7752,1.4925,2.49,proxy,,,,,,,,,,
-1581821,Spain,Belgium,sot,Dani Olmo,Spain,,,"tiros esp. 1.8, SOT esp. 1.1 (media)",proxy,,media,media,0.6781,1.1334,1.81,proxy,,,,,,,,,,
-1581821,Spain,Belgium,assist,Lamine Yamal,Spain,,,xA-proxy 0.22 (media),proxy,,media,media,,,,,0.1956,0.2176,,proxy,,,,,,
-1581821,Spain,Belgium,assist,Mikel Oyarzabal,Spain,,,xA-proxy 0.20 (media),proxy,,media,media,,,,,0.1845,0.2039,,proxy,,,,,,
-1581821,Spain,Belgium,assist,C. De Ketelaere,Belgium,,,xA-proxy 0.15 (media),proxy,,media,media,,,,,0.1353,0.1454,,proxy,,,,,,
-1581821,Spain,Belgium,card_risk,Rodri,Spain,,,P(tarjeta) 35% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,44.0,0.3467,0.3467,0.3415,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
-1581821,Spain,Belgium,card_risk,Y. Tielemans,Belgium,,,P(tarjeta) 35% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,2926.0,0.3463,0.3463,0.3446,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑ · fuentes en conflicto -> ajuste conservador
-1581821,Spain,Belgium,card_risk,Álex Baena,Spain,,,P(tarjeta) 32% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,182219.0,0.3246,0.3246,0.3246,neutro,ajuste neutro: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
-1581821,Spain,Belgium,card_risk,A. Onana,Belgium,,,P(tarjeta) 24% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,162714.0,0.2414,0.2414,0.2402,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑ · fuentes en conflicto -> ajuste conservador
 1581037,Norway,England,scorer,E. Haaland,Norway,0.3323,0.4039,"xG 0.40, P(gol) 33% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
 1581037,Norway,England,scorer,H. Kane,England,0.3271,0.3962,"xG 0.40, P(gol) 33% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
 1581037,Norway,England,scorer,A. Sørloth,Norway,0.1762,0.1938,"xG 0.19, P(gol) 18% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
@@ -25,3 +12,16 @@ fixture_id,home,away,category,player,team,probability_goal,expected_goals,reason
 1581037,Norway,England,card_risk,A. Sørloth,Norway,,,P(tarjeta) 33% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,8492.0,0.3288,0.3288,0.2893,bajar,ajuste baja: historial jugador bajo ↓; posición bajo ↓; equipo bajo ↓
 1581037,Norway,England,card_risk,T. Heggem,Norway,,,P(tarjeta) 29% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,39254.0,0.2924,0.2924,0.2792,bajar,ajuste baja: historial jugador bajo ↓; equipo bajo ↓
 1581037,Norway,England,card_risk,M. Guéhi,England,,,P(tarjeta) 24% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,67971.0,0.2411,0.2411,0.2411,neutro,ajuste neutro: sin sesgo neto de las fuentes
+1582681,Argentina,Switzerland,scorer,Lautaro Martínez,Argentina,0.445,0.5888,"xG 0.59, P(gol) 44% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1582681,Argentina,Switzerland,scorer,L. Messi,Argentina,0.1988,0.2216,"xG 0.22, P(gol) 20% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1582681,Argentina,Switzerland,scorer,B. Embolo,Switzerland,0.1907,0.2116,"xG 0.21, P(gol) 19% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1582681,Argentina,Switzerland,sot,Lautaro Martínez,Argentina,,,"tiros esp. 2.5, SOT esp. 1.9 (media)",proxy,,media,media,0.856,1.9382,2.45,proxy,,,,,,,,,,
+1582681,Argentina,Switzerland,sot,B. Embolo,Switzerland,,,"tiros esp. 1.5, SOT esp. 1.0 (media)",proxy,,media,media,0.6437,1.0321,1.47,proxy,,,,,,,,,,
+1582681,Argentina,Switzerland,sot,L. Messi,Argentina,,,"tiros esp. 2.0, SOT esp. 1.0 (media)",proxy,,media,media,0.6184,0.9635,2.02,proxy,,,,,,,,,,
+1582681,Argentina,Switzerland,assist,L. Messi,Argentina,,,xA-proxy 0.26 (media),proxy,,media,media,,,,,0.2295,0.2607,,proxy,,,,,,
+1582681,Argentina,Switzerland,assist,Lautaro Martínez,Argentina,,,xA-proxy 0.22 (media),proxy,,media,media,,,,,0.1948,0.2167,,proxy,,,,,,
+1582681,Argentina,Switzerland,assist,R. Vargas,Switzerland,,,xA-proxy 0.17 (media),proxy,,media,media,,,,,0.1576,0.1715,,proxy,,,,,,
+1582681,Argentina,Switzerland,card_risk,N. Molina,Argentina,,,P(tarjeta) 43% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,6503.0,0.426,0.426,0.3983,bajar,ajuste baja: historial jugador bajo ↓; equipo bajo ↓
+1582681,Argentina,Switzerland,card_risk,N. Elvedi,Switzerland,,,P(tarjeta) 39% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,2803.0,0.389,0.389,0.389,neutro,ajuste neutro: sin sesgo neto de las fuentes
+1582681,Argentina,Switzerland,card_risk,A. Mac Allister,Argentina,,,P(tarjeta) 38% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,6716.0,0.3755,0.3755,0.3755,neutro,ajuste neutro: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+1582681,Argentina,Switzerland,card_risk,G. Xhaka,Switzerland,,,P(tarjeta) 28% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,1464.0,0.2783,0.2783,0.2964,subir,ajuste sube: historial jugador alto ↑; posición alto ↑

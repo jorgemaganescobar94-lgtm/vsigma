@@ -153,7 +153,7 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1539074,284295,Zidane Iqbal,Iraq,1567,MID,"Anthony Taylor, England",0.102,0.1035,neutro,0.0015,0,media-baja,media
 1539074,229112,A. Qasem,Iraq,1567,MID,"Anthony Taylor, England",0.1443,0.1465,neutro,0.0022,0,media-baja,media
 1539074,299813,Ali Al Hamadi,Iraq,1567,FWD,"Anthony Taylor, England",0.1443,0.1349,bajar,0.0094,0,media-baja,media
-1489416,39082,E. Selvik,Norway,1090,GK,"Michael Oliver, England",0.0638,0.0619,bajar,0.0019,0,media-baja,baja
+1489416,39082,E. Selvik,Norway,1090,GK,"Michael Oliver, England",0.0638,0.0619,bajar,0.0019,0,media-baja,media
 1489416,39043,F. Aursnes,Norway,1090,MID,"Michael Oliver, England",0.124,0.1197,bajar,0.0043,0,media-baja,media
 1489416,180937,H. Falchener,Norway,1090,DEF,"Michael Oliver, England",0.124,0.1184,bajar,0.0056,0,media-baja,media
 1489416,18967,L. Østigård,Norway,1090,DEF,"Michael Oliver, England",0.2047,0.1955,bajar,0.0092,0,media-baja,media
@@ -186,17 +186,17 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489417,756,F. Valverde,Uruguay,7,MID,I. Elfath,0.0662,0.0684,subir,0.0022,0,media-baja,baja
 1489417,51776,M. Araújo,Uruguay,7,MID,I. Elfath,0.1443,0.1461,neutro,0.0018,0,media-baja,media
 1489417,51617,D. Núñez,Uruguay,7,FWD,I. Elfath,0.1576,0.1533,bajar,0.0043,0,media-baja,baja
-1489417,47270,Unai Simón,Spain,9,GK,I. Elfath,0.1862,0.1806,bajar,0.0056,0,media-baja,baja
-1489417,753,Marcos Llorente,Spain,9,MID,I. Elfath,0.1183,0.1183,neutro,0.0,0,media-baja,media
-1489417,396623,Pau Cubarsí Paredes,Spain,9,DEF,I. Elfath,0.0719,0.0697,bajar,0.0022,0,media-baja,media
-1489417,622,Aymeric Laporte,Spain,9,DEF,I. Elfath,0.1268,0.1211,bajar,0.0057,0,media-baja,media
-1489417,47380,Marc Cucurella,Spain,9,DEF,I. Elfath,0.0274,0.0266,bajar,0.0008,0,media-baja,media
-1489417,133609,Pedri,Spain,9,MID,I. Elfath,0.0427,0.0401,bajar,0.0026,0,media-baja,media
-1489417,44,Rodri,Spain,9,MID,I. Elfath,0.4195,0.4132,neutro,0.0063,0,media-baja,media
-1489417,47311,Mikel Merino,Spain,9,MID,I. Elfath,0.1549,0.1495,bajar,0.0054,0,media-baja,media
-1489417,386828,Lamine Yamal,Spain,9,MID,I. Elfath,0.2883,0.2782,bajar,0.0101,0,media-baja,media
-1489417,47323,Mikel Oyarzabal,Spain,9,FWD,I. Elfath,0.2234,0.1966,bajar,0.0268,0,media-baja,media
-1489417,182219,Álex Baena,Spain,9,MID,I. Elfath,0.3911,0.3911,neutro,0.0,1,media-baja,media
+1489417,47270,Unai Simón,Spain,9,GK,I. Elfath,0.1862,0.1769,bajar,0.0093,0,media-baja,baja
+1489417,753,Marcos Llorente,Spain,9,MID,I. Elfath,0.1183,0.1159,bajar,0.0024,0,media-baja,media
+1489417,396623,Pau Cubarsí Paredes,Spain,9,DEF,I. Elfath,0.0719,0.0683,bajar,0.0036,0,media-baja,media
+1489417,622,Aymeric Laporte,Spain,9,DEF,I. Elfath,0.1268,0.1249,neutro,0.0019,0,media-baja,media
+1489417,47380,Marc Cucurella,Spain,9,DEF,I. Elfath,0.0274,0.026,bajar,0.0014,0,media-baja,media
+1489417,133609,Pedri,Spain,9,MID,I. Elfath,0.0427,0.0393,bajar,0.0034,0,media-baja,media
+1489417,44,Rodri,Spain,9,MID,I. Elfath,0.4195,0.4048,bajar,0.0147,0,media-baja,media
+1489417,47311,Mikel Merino,Spain,9,MID,I. Elfath,0.1549,0.1464,bajar,0.0085,0,media-baja,media
+1489417,386828,Lamine Yamal,Spain,9,MID,I. Elfath,0.2883,0.2724,bajar,0.0159,0,media-baja,media
+1489417,47323,Mikel Oyarzabal,Spain,9,FWD,I. Elfath,0.2234,0.1921,bajar,0.0313,0,media-baja,media
+1489417,182219,Álex Baena,Spain,9,MID,I. Elfath,0.3911,0.3598,bajar,0.0313,1,media-baja,media
 1489413,15304,Vózinha,Cape Verde Islands,1533,GK,F. Letexier,0.0575,0.0575,neutro,0.0,0,media-baja,baja
 1489413,332056,Wagner Pina,Cape Verde Islands,1533,DEF,F. Letexier,0.2495,0.2495,neutro,0.0,1,media-baja,media
 1489413,41608,Diney Borges,Cape Verde Islands,1533,DEF,F. Letexier,0.2314,0.2395,subir,0.0081,0,media-baja,media
@@ -252,7 +252,7 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489415,430835,Tyler Bindon,New Zealand,4673,DEF,A. Makhadmeh,0.354,0.3466,bajar,0.0074,0,media-baja,media
 1489415,51149,M. Boxall,New Zealand,4673,DEF,A. Makhadmeh,0.1629,0.1595,bajar,0.0034,0,media-baja,media
 1489415,18931,C. Wood,New Zealand,4673,FWD,A. Makhadmeh,0.066,0.0626,bajar,0.0034,0,media-baja,media
-1489415,1422,J. Doku,Belgium,1,FWD,A. Makhadmeh,0.021,0.0192,bajar,0.0018,0,media-baja,media
+1489415,1422,J. Doku,Belgium,1,MID,A. Makhadmeh,0.021,0.0205,bajar,0.0005,0,media-baja,media
 1489415,629,K. De Bruyne,Belgium,1,MID,A. Makhadmeh,0.1384,0.1313,bajar,0.0071,0,media-baja,media
 1489415,2926,Y. Tielemans,Belgium,1,MID,A. Makhadmeh,0.2198,0.2141,bajar,0.0057,0,media-baja,media
 1489415,147859,C. De Ketelaere,Belgium,1,FWD,A. Makhadmeh,0.1427,0.1269,bajar,0.0158,0,media-baja,media
@@ -262,7 +262,7 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489415,2120,N. Raskin,Belgium,1,MID,A. Makhadmeh,0.2251,0.2192,bajar,0.0059,0,media-baja,media
 1489415,69,B. Mechele,Belgium,1,DEF,A. Makhadmeh,0.0846,0.0828,bajar,0.0018,0,media-baja,media
 1489415,312964,N. Ngoy,Belgium,1,DEF,A. Makhadmeh,0.1396,0.1367,bajar,0.0029,0,media-baja,media
-1489415,1946,L. Trossard,Belgium,1,MID,A. Makhadmeh,0.1407,0.137,bajar,0.0037,0,media-baja,media
+1489415,1946,L. Trossard,Belgium,1,MID,A. Makhadmeh,0.1407,0.1335,bajar,0.0072,0,media-baja,media
 1489418,21138,R. Aït-Nouri,Algeria,1532,DEF,"Ilgiz Tantashev, Uzbekistan",0.2579,0.2409,bajar,0.017,0,media-baja,media
 1489418,1567,A. Mandi,Algeria,1532,DEF,"Ilgiz Tantashev, Uzbekistan",0.0382,0.0363,bajar,0.0019,0,media-baja,media
 1489418,2194,R. Bensebaïni,Algeria,1532,DEF,"Ilgiz Tantashev, Uzbekistan",0.1487,0.1411,bajar,0.0076,0,media-baja,media
@@ -571,16 +571,16 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1567307,375598,N. Mukau,Congo DR,1508,MID,A. Makhadmeh,0.0613,0.0597,bajar,0.0016,0,media-baja,media
 1567307,365331,N. Sadiki,Congo DR,1508,MID,A. Makhadmeh,0.0575,0.06,subir,0.0025,1,media-baja,media
 1567307,1424,E. Kayembe,Congo DR,1508,MID,A. Makhadmeh,0.3042,0.2963,bajar,0.0079,0,media-baja,media
-1567308,730,T. Courtois,Belgium,1,GK,S. Martinez,0.0676,0.0674,neutro,0.0002,0,media-baja,baja
+1567308,730,T. Courtois,Belgium,1,GK,S. Martinez,0.0676,0.0664,neutro,0.0012,0,media-baja,media
 1567308,2920,T. Castagne,Belgium,1,DEF,S. Martinez,0.1876,0.1872,neutro,0.0004,0,media-baja,media
 1567308,69,B. Mechele,Belgium,1,DEF,S. Martinez,0.104,0.1038,neutro,0.0002,1,media-baja,media
 1567308,204043,A. Theate,Belgium,1,DEF,S. Martinez,0.1247,0.1244,neutro,0.0003,0,media-baja,media
-1567308,162007,M. De Cuyper,Belgium,1,DEF,S. Martinez,0.1608,0.1661,subir,0.0053,0,media-baja,media
+1567308,162007,M. De Cuyper,Belgium,1,DEF,S. Martinez,0.1608,0.1604,neutro,0.0004,0,media-baja,media
 1567308,2926,Y. Tielemans,Belgium,1,MID,S. Martinez,0.3353,0.3329,neutro,0.0024,0,media-baja,media
 1567308,78,H. Vanaken,Belgium,1,MID,S. Martinez,0.2333,0.2316,neutro,0.0017,0,media-baja,media
-1567308,1946,L. Trossard,Belgium,1,MID,S. Martinez,0.218,0.2164,neutro,0.0016,0,media-baja,media
+1567308,1946,L. Trossard,Belgium,1,MID,S. Martinez,0.218,0.211,bajar,0.007,0,media-baja,media
 1567308,629,K. De Bruyne,Belgium,1,MID,S. Martinez,0.2147,0.2078,bajar,0.0069,0,media-baja,media
-1567308,1422,J. Doku,Belgium,1,FWD,S. Martinez,0.026,0.0243,bajar,0.0017,0,media-baja,media
+1567308,1422,J. Doku,Belgium,1,MID,S. Martinez,0.026,0.0258,neutro,0.0002,0,media-baja,media
 1567308,147859,C. De Ketelaere,Belgium,1,FWD,S. Martinez,0.2142,0.1944,bajar,0.0198,0,media-baja,media
 1567308,119853,M. Diaw,Senegal,13,GK,S. Martinez,0.132,0.1277,bajar,0.0043,0,media-baja,baja
 1567308,81,K. Diatta,Senegal,13,DEF,S. Martinez,0.1818,0.1759,bajar,0.0059,0,media-baja,media
@@ -637,17 +637,17 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1567312,303362,R. Belghali,Algeria,1532,DEF,Y. Perez,0.2791,0.2551,bajar,0.024,0,media-baja,media
 1567312,732,L. Zidane,Algeria,1532,GK,Y. Perez,0.0882,0.0837,bajar,0.0045,0,media-baja,baja
 1567312,129047,R. Zerrouki,Algeria,1532,MID,Y. Perez,0.3943,0.3998,neutro,0.0055,0,media-baja,media
-1567311,47270,Unai Simón,Spain,9,GK,G. Nyberg,0.1501,0.1453,bajar,0.0048,0,media-baja,baja
-1567311,47519,Pedro Porro,Spain,9,DEF,G. Nyberg,0.2308,0.2199,bajar,0.0109,0,media-baja,media
-1567311,396623,Pau Cubarsí Paredes,Spain,9,DEF,G. Nyberg,0.0686,0.0664,bajar,0.0022,0,media-baja,media
-1567311,622,Aymeric Laporte,Spain,9,DEF,G. Nyberg,0.104,0.0991,bajar,0.0049,0,media-baja,media
-1567311,47380,Marc Cucurella,Spain,9,DEF,G. Nyberg,0.0261,0.0253,bajar,0.0008,0,media-baja,media
-1567311,44,Rodri,Spain,9,MID,G. Nyberg,0.3461,0.3401,neutro,0.006,0,media-baja,media
-1567311,1323,Dani Olmo,Spain,9,MID,G. Nyberg,0.2402,0.2313,bajar,0.0089,0,media-baja,media
-1567311,133609,Pedri,Spain,9,MID,G. Nyberg,0.0407,0.0382,bajar,0.0025,0,media-baja,media
-1567311,386828,Lamine Yamal,Spain,9,MID,G. Nyberg,0.2333,0.2246,bajar,0.0087,0,media-baja,media
-1567311,47323,Mikel Oyarzabal,Spain,9,FWD,G. Nyberg,0.1809,0.1588,bajar,0.0221,0,media-baja,media
-1567311,182219,Álex Baena,Spain,9,MID,G. Nyberg,0.324,0.3233,neutro,0.0007,0,media-baja,media
+1567311,47270,Unai Simón,Spain,9,GK,G. Nyberg,0.1501,0.1423,bajar,0.0078,0,media-baja,baja
+1567311,47519,Pedro Porro,Spain,9,DEF,G. Nyberg,0.2308,0.2153,bajar,0.0155,0,media-baja,media
+1567311,396623,Pau Cubarsí Paredes,Spain,9,DEF,G. Nyberg,0.0686,0.065,bajar,0.0036,0,media-baja,media
+1567311,622,Aymeric Laporte,Spain,9,DEF,G. Nyberg,0.104,0.1022,neutro,0.0018,0,media-baja,media
+1567311,47380,Marc Cucurella,Spain,9,DEF,G. Nyberg,0.0261,0.0247,bajar,0.0014,0,media-baja,media
+1567311,44,Rodri,Spain,9,MID,G. Nyberg,0.3461,0.3332,bajar,0.0129,0,media-baja,media
+1567311,1323,Dani Olmo,Spain,9,MID,G. Nyberg,0.2402,0.2204,bajar,0.0198,0,media-baja,media
+1567311,133609,Pedri,Spain,9,MID,G. Nyberg,0.0407,0.0374,bajar,0.0033,0,media-baja,media
+1567311,386828,Lamine Yamal,Spain,9,MID,G. Nyberg,0.2333,0.2199,bajar,0.0134,0,media-baja,media
+1567311,47323,Mikel Oyarzabal,Spain,9,FWD,G. Nyberg,0.1809,0.1552,bajar,0.0257,0,media-baja,media
+1567311,182219,Álex Baena,Spain,9,MID,G. Nyberg,0.324,0.2974,bajar,0.0266,0,media-baja,media
 1567311,7525,A. Schlager,Austria,775,GK,G. Nyberg,0.2154,0.2149,neutro,0.0005,0,media-baja,baja
 1567311,711,S. Posch,Austria,775,DEF,G. Nyberg,0.2945,0.3041,subir,0.0096,1,media-baja,media
 1567311,25287,K. Danso,Austria,775,DEF,G. Nyberg,0.1341,0.1338,neutro,0.0003,0,media-baja,media
@@ -750,11 +750,11 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1567824,8489,J. David,Canada,5529,FWD,"Michael Oliver, England",0.0686,0.0686,neutro,0.0,1,media-baja,media
 1567824,50816,R. Laryea,Canada,5529,DEF,"Michael Oliver, England",0.2632,0.2803,subir,0.0171,1,media-baja,media
 1567824,51016,T. Buchanan,Canada,5529,MID,"Michael Oliver, England",0.1807,0.1807,neutro,0.0,0,media-baja,media
-1567824,51274,M. Crépeau,Canada,5529,GK,"Michael Oliver, England",0.0469,0.0483,subir,0.0014,0,media-baja,baja
+1567824,51274,M. Crépeau,Canada,5529,GK,"Michael Oliver, England",0.0469,0.0483,subir,0.0014,0,media-baja,media
 1567824,51295,D. Cornelius,Canada,5529,DEF,"Michael Oliver, England",0.3105,0.3198,subir,0.0093,0,media-baja,media
 1567824,78547,A. Johnston,Canada,5529,DEF,"Michael Oliver, England",0.2804,0.2888,subir,0.0084,0,media-baja,media
 1567824,35570,S. Eustáquio,Canada,5529,MID,"Michael Oliver, England",0.1312,0.1345,subir,0.0033,0,media-baja,media
-1567824,328046,I. Koné,Canada,5529,,"Michael Oliver, England",0.3218,0.3266,neutro,0.0048,0,media-baja,baja
+1567824,328046,I. Koné,Canada,5529,,"Michael Oliver, England",0.3218,0.3266,neutro,0.0048,0,media-baja,media
 1567824,2001,C. Larin,Canada,5529,FWD,"Michael Oliver, England",0.106,0.1124,subir,0.0064,1,media-baja,media
 1567824,44798,L. Millar,Canada,5529,FWD,"Michael Oliver, England",0.1713,0.1713,neutro,0.0,0,media-baja,media
 1567824,327738,L. De Fougerolles,Canada,5529,DEF,"Michael Oliver, England",0.2639,0.2811,subir,0.0172,1,media-baja,media
@@ -846,17 +846,17 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1576756,1485,Bruno Fernandes,Portugal,27,MID,"Anthony Taylor, England",0.2133,0.2165,neutro,0.0032,0,media-baja,media
 1576756,583,João Félix,Portugal,27,MID,"Anthony Taylor, England",0.1803,0.1794,neutro,0.0009,0,media-baja,media
 1576756,874,Cristiano Ronaldo,Portugal,27,FWD,"Anthony Taylor, England",0.182,0.1702,bajar,0.0118,0,media-baja,media
-1576756,47270,Unai Simón,Spain,9,GK,"Anthony Taylor, England",0.1486,0.1441,bajar,0.0045,0,media-baja,baja
-1576756,47519,Pedro Porro,Spain,9,DEF,"Anthony Taylor, England",0.2285,0.2182,bajar,0.0103,0,media-baja,media
-1576756,396623,Pau Cubarsí Paredes,Spain,9,DEF,"Anthony Taylor, England",0.0678,0.0658,bajar,0.002,0,media-baja,media
-1576756,622,Aymeric Laporte,Spain,9,DEF,"Anthony Taylor, England",0.1029,0.0983,bajar,0.0046,0,media-baja,media
-1576756,47380,Marc Cucurella,Spain,9,DEF,"Anthony Taylor, England",0.0258,0.025,bajar,0.0008,0,media-baja,media
-1576756,133609,Pedri,Spain,9,MID,"Anthony Taylor, England",0.0403,0.0379,bajar,0.0024,0,media-baja,media
-1576756,44,Rodri,Spain,9,MID,"Anthony Taylor, England",0.3429,0.3378,neutro,0.0051,0,media-baja,media
-1576756,386828,Lamine Yamal,Spain,9,MID,"Anthony Taylor, England",0.231,0.2229,bajar,0.0081,0,media-baja,media
-1576756,1323,Dani Olmo,Spain,9,MID,"Anthony Taylor, England",0.2378,0.2295,bajar,0.0083,0,media-baja,media
-1576756,182219,Álex Baena,Spain,9,MID,"Anthony Taylor, England",0.321,0.321,neutro,0.0,0,media-baja,media
-1576756,47323,Mikel Oyarzabal,Spain,9,FWD,"Anthony Taylor, England",0.179,0.1575,bajar,0.0215,0,media-baja,media
+1576756,47270,Unai Simón,Spain,9,GK,"Anthony Taylor, England",0.1486,0.1412,bajar,0.0074,0,media-baja,media
+1576756,47519,Pedro Porro,Spain,9,DEF,"Anthony Taylor, England",0.2285,0.2136,bajar,0.0149,0,media-baja,media
+1576756,396623,Pau Cubarsí Paredes,Spain,9,DEF,"Anthony Taylor, England",0.0678,0.0644,bajar,0.0034,0,media-baja,media
+1576756,622,Aymeric Laporte,Spain,9,DEF,"Anthony Taylor, England",0.1029,0.1014,neutro,0.0015,0,media-baja,media
+1576756,47380,Marc Cucurella,Spain,9,DEF,"Anthony Taylor, England",0.0258,0.0245,bajar,0.0013,0,media-baja,media
+1576756,133609,Pedri,Spain,9,MID,"Anthony Taylor, England",0.0403,0.0371,bajar,0.0032,0,media-baja,media
+1576756,44,Rodri,Spain,9,MID,"Anthony Taylor, England",0.3429,0.3309,bajar,0.012,0,media-baja,media
+1576756,386828,Lamine Yamal,Spain,9,MID,"Anthony Taylor, England",0.231,0.2183,bajar,0.0127,0,media-baja,media
+1576756,1323,Dani Olmo,Spain,9,MID,"Anthony Taylor, England",0.2378,0.2188,bajar,0.019,0,media-baja,media
+1576756,182219,Álex Baena,Spain,9,MID,"Anthony Taylor, England",0.321,0.2953,bajar,0.0257,0,media-baja,media
+1576756,47323,Mikel Oyarzabal,Spain,9,FWD,"Anthony Taylor, England",0.179,0.1539,bajar,0.0251,0,media-baja,media
 1570715,50728,M. Freese,USA,2384,GK,"Adham Mohammad, Jordan",0.042,0.0419,neutro,0.0001,0,media-baja,baja
 1570715,355994,A. Freeman,USA,2384,DEF,"Adham Mohammad, Jordan",0.0506,0.0497,neutro,0.0009,0,media-baja,media
 1570715,126949,C. Richards,USA,2384,DEF,"Adham Mohammad, Jordan",0.3412,0.3404,neutro,0.0008,0,media-baja,media
@@ -868,16 +868,16 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1570715,38735,S. Dest,USA,2384,FWD,"Adham Mohammad, Jordan",0.0983,0.0892,bajar,0.0091,0,media-baja,media
 1570715,138835,F. Balogun,USA,2384,FWD,"Adham Mohammad, Jordan",0.2559,0.263,subir,0.0071,0,media-baja,media
 1570715,17,C. Pulišić,USA,2384,FWD,"Adham Mohammad, Jordan",0.1178,0.1099,bajar,0.0079,0,media-baja,media
-1570715,730,T. Courtois,Belgium,1,GK,"Adham Mohammad, Jordan",0.0598,0.0597,neutro,0.0001,0,media-baja,baja
+1570715,730,T. Courtois,Belgium,1,GK,"Adham Mohammad, Jordan",0.0598,0.0588,neutro,0.001,0,media-baja,media
 1570715,2920,T. Castagne,Belgium,1,DEF,"Adham Mohammad, Jordan",0.1311,0.1308,neutro,0.0003,0,media-baja,media
 1570715,312964,N. Ngoy,Belgium,1,DEF,"Adham Mohammad, Jordan",0.1517,0.1514,neutro,0.0003,0,media-baja,media
 1570715,69,B. Mechele,Belgium,1,DEF,"Adham Mohammad, Jordan",0.0922,0.092,neutro,0.0002,0,media-baja,media
-1570715,162007,M. De Cuyper,Belgium,1,DEF,"Adham Mohammad, Jordan",0.1156,0.1194,subir,0.0038,0,media-baja,media
+1570715,162007,M. De Cuyper,Belgium,1,DEF,"Adham Mohammad, Jordan",0.1156,0.1153,neutro,0.0003,0,media-baja,media
 1570715,2120,N. Raskin,Belgium,1,MID,"Adham Mohammad, Jordan",0.244,0.2422,neutro,0.0018,0,media-baja,media
 1570715,162714,A. Onana,Belgium,1,MID,"Adham Mohammad, Jordan",0.1648,0.1636,neutro,0.0012,0,media-baja,media
-1570715,25458,D. Lukebakio,Belgium,1,MID,"Adham Mohammad, Jordan",0.2787,0.2823,neutro,0.0036,0,media-baja,media
+1570715,25458,D. Lukebakio,Belgium,1,FWD,"Adham Mohammad, Jordan",0.2787,0.2655,bajar,0.0132,0,media-baja,media
 1570715,2926,Y. Tielemans,Belgium,1,MID,"Adham Mohammad, Jordan",0.2384,0.2367,neutro,0.0017,0,media-baja,media
-1570715,1946,L. Trossard,Belgium,1,MID,"Adham Mohammad, Jordan",0.1532,0.1521,neutro,0.0011,0,media-baja,media
+1570715,1946,L. Trossard,Belgium,1,MID,"Adham Mohammad, Jordan",0.1532,0.1483,bajar,0.0049,0,media-baja,media
 1570715,147859,C. De Ketelaere,Belgium,1,FWD,"Adham Mohammad, Jordan",0.1554,0.1411,bajar,0.0143,0,media-baja,media
 1576804,19599,E. Martínez,Argentina,26,GK,F. Letexier,0.0387,0.0375,bajar,0.0012,0,media-baja,baja
 1576804,217,Lautaro Martínez,Argentina,26,FWD,F. Letexier,0.0529,0.0466,bajar,0.0063,0,media-baja,media
@@ -945,3 +945,25 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1578539,438688,A. Bouaddi,Morocco,31,MID,"Facundo Raul Tello Figueroa, Argentina",0.1489,0.1478,neutro,0.0011,0,media-baja,media
 1578539,129678,A. Ounahi,Morocco,31,MID,"Facundo Raul Tello Figueroa, Argentina",0.3062,0.3147,subir,0.0085,0,media-baja,media
 1578539,278898,C. Riad,Morocco,31,DEF,"Facundo Raul Tello Figueroa, Argentina",0.1139,0.1119,neutro,0.002,0,media-baja,media
+1581821,47270,Unai Simón,Spain,9,GK,"Michael Oliver, England",0.1424,0.1353,bajar,0.0071,0,media-baja,media
+1581821,47519,Pedro Porro,Spain,9,DEF,"Michael Oliver, England",0.2195,0.2052,bajar,0.0143,0,media-baja,media
+1581821,396623,Pau Cubarsí Paredes,Spain,9,DEF,"Michael Oliver, England",0.0687,0.0653,bajar,0.0034,1,media-baja,media
+1581821,622,Aymeric Laporte,Spain,9,DEF,"Michael Oliver, England",0.0993,0.0978,neutro,0.0015,1,media-baja,media
+1581821,47380,Marc Cucurella,Spain,9,DEF,"Michael Oliver, England",0.0262,0.0249,bajar,0.0013,0,media-baja,media
+1581821,44,Rodri,Spain,9,MID,"Michael Oliver, England",0.3295,0.318,bajar,0.0115,0,media-baja,media
+1581821,328,Fabián Ruiz,Spain,9,MID,"Michael Oliver, England",0.1513,0.143,bajar,0.0083,0,media-baja,media
+1581821,386828,Lamine Yamal,Spain,9,MID,"Michael Oliver, England",0.2211,0.2089,bajar,0.0122,0,media-baja,media
+1581821,1323,Dani Olmo,Spain,9,MID,"Michael Oliver, England",0.2285,0.2102,bajar,0.0183,0,media-baja,media
+1581821,182219,Álex Baena,Spain,9,MID,"Michael Oliver, England",0.3091,0.2844,bajar,0.0247,0,media-baja,media
+1581821,47323,Mikel Oyarzabal,Spain,9,FWD,"Michael Oliver, England",0.1717,0.1477,bajar,0.024,0,media-baja,media
+1581821,730,T. Courtois,Belgium,1,GK,"Michael Oliver, England",0.0668,0.0658,neutro,0.001,0,media-baja,media
+1581821,2920,T. Castagne,Belgium,1,DEF,"Michael Oliver, England",0.18,0.18,neutro,0.0,0,media-baja,media
+1581821,312964,N. Ngoy,Belgium,1,DEF,"Michael Oliver, England",0.1683,0.1683,neutro,0.0,0,media-baja,media
+1581821,69,B. Mechele,Belgium,1,DEF,"Michael Oliver, England",0.1027,0.1027,neutro,0.0,0,media-baja,media
+1581821,162007,M. De Cuyper,Belgium,1,DEF,"Michael Oliver, England",0.1547,0.1547,neutro,0.0,0,media-baja,media
+1581821,2926,Y. Tielemans,Belgium,1,MID,"Michael Oliver, England",0.3225,0.3209,neutro,0.0016,0,media-baja,media
+1581821,2120,N. Raskin,Belgium,1,MID,"Michael Oliver, England",0.3262,0.3246,neutro,0.0016,0,media-baja,media
+1581821,1946,L. Trossard,Belgium,1,MID,"Michael Oliver, England",0.2093,0.203,bajar,0.0063,0,media-baja,media
+1581821,629,K. De Bruyne,Belgium,1,MID,"Michael Oliver, England",0.206,0.1998,bajar,0.0062,1,media-baja,media
+1581821,1422,J. Doku,Belgium,1,MID,"Michael Oliver, England",0.0257,0.0256,neutro,0.0001,0,media-baja,media
+1581821,147859,C. De Ketelaere,Belgium,1,FWD,"Michael Oliver, England",0.2063,0.1877,bajar,0.0186,0,media-baja,media

@@ -1079,6 +1079,22 @@ fixture_id,date,competition,team_id,team_name,opponent_id,opponent_name,player_i
 1578539,2026-07-09,World Cup 2026,2,France,31,Morocco,278,Kylian Mbappé,,,subst,Substitution 3,77,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1578539,2026-07-09,World Cup 2026,31,Morocco,2,France,336659,Chemsdine Talbi,,,subst,Substitution 5,85,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1578539,2026-07-09,World Cup 2026,2,France,31,Morocco,1257,Jules Koundé,,,subst,Substitution 4,87,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581821,2026-07-10,World Cup 2026,9,Spain,1,Belgium,328,Fabián Ruiz,,,Goal,Normal Goal,30,,1,0,0,0,0,0,,0,alta,alta,api_football_events
+1581821,2026-07-10,World Cup 2026,1,Belgium,9,Spain,147859,Charles De Ketelaere,2920,Timothy Castagne,Goal,Normal Goal,41,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1581821,2026-07-10,World Cup 2026,9,Spain,1,Belgium,396623,Pau Cubarsí,,,Card,Yellow Card,43,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1581821,2026-07-10,World Cup 2026,9,Spain,1,Belgium,328,Fabián Ruiz,,,subst,Substitution 1,55,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581821,2026-07-10,World Cup 2026,9,Spain,1,Belgium,182219,Alex Baena,,,subst,Substitution 2,55,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581821,2026-07-10,World Cup 2026,1,Belgium,9,Spain,78,Hans Vanaken,,,subst,Substitution 1,60,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581821,2026-07-10,World Cup 2026,1,Belgium,9,Spain,1946,Leandro Trossard,,,subst,Substitution 2,60,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581821,2026-07-10,World Cup 2026,1,Belgium,9,Spain,162007,Maxim De Cuyper,,,subst,Substitution 3,61,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581821,2026-07-10,World Cup 2026,1,Belgium,9,Spain,730,Thibaut Courtois,,,subst,Substitution 4,71,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581821,2026-07-10,World Cup 2026,9,Spain,1,Belgium,47323,Mikel Oyarzabal,,,subst,Substitution 3,79,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581821,2026-07-10,World Cup 2026,1,Belgium,9,Spain,629,Kevin De Bruyne,,,Card,Yellow Card,85,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1581821,2026-07-10,World Cup 2026,9,Spain,1,Belgium,1323,Dani Olmo,,,subst,Substitution 4,86,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581821,2026-07-10,World Cup 2026,1,Belgium,9,Spain,629,Kevin De Bruyne,,,subst,Substitution 5,86,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581821,2026-07-10,World Cup 2026,9,Spain,1,Belgium,47311,Mikel Merino,,,Goal,Normal Goal,88,,1,0,0,0,0,0,,0,alta,alta,api_football_events
+1581821,2026-07-10,World Cup 2026,9,Spain,1,Belgium,622,Aymeric Laporte,,,Card,Yellow Card,90,3,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1581821,2026-07-10,World Cup 2026,1,Belgium,9,Spain,20,Axel Witsel,,,Card,Yellow Card,90,5,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,16,Mexico,1531,South Africa,35532,J. Quinones,266345,E. Lira,Goal,Normal Goal,9,,1,1,0,0,0,0,,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,1531,South Africa,16,Mexico,3287,Teboho Mokoena,,,Card,Yellow Card,17,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,16,Mexico,1531,South Africa,212233,Brian Gutiérrez,,,Card,Yellow Card,23,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events

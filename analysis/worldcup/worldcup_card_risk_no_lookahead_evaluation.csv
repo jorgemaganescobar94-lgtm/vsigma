@@ -153,28 +153,28 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1539074,284295,Zidane Iqbal,Iraq,MID,"Anthony Taylor, England",0.102,0.1051,0.1048,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539074,229112,A. Qasem,Iraq,MID,"Anthony Taylor, England",0.1443,0.1486,0.1483,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539074,299813,Ali Al Hamadi,Iraq,FWD,"Anthony Taylor, England",0.1443,0.1378,0.1375,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,39082,E. Selvik,Norway,GK,"Michael Oliver, England",0.0638,0.0625,0.0632,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,39043,F. Aursnes,Norway,MID,"Michael Oliver, England",0.124,0.1209,0.1223,0,bajar,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,180937,H. Falchener,Norway,DEF,"Michael Oliver, England",0.124,0.1216,0.1229,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,18967,L. Østigård,Norway,DEF,"Michael Oliver, England",0.2047,0.1976,0.1998,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,39058,F. Bjørkan,Norway,DEF,"Michael Oliver, England",0.0751,0.0736,0.0744,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,39143,K. Thorstvedt,Norway,MID,"Michael Oliver, England",0.3074,0.3106,0.3139,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,39064,P. Berg,Norway,MID,"Michael Oliver, England",0.2442,0.2467,0.2493,1,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,278133,Oscar Bobb,Norway,MID,"Michael Oliver, England",0.0357,0.0361,0.0364,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,277930,T. Aasgaard,Norway,MID,"Michael Oliver, England",0.0691,0.0698,0.0706,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,301528,A. Schjelderup,Norway,FWD,"Michael Oliver, England",0.0596,0.0566,0.0573,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,2032,J. Strand Larsen,Norway,FWD,"Michael Oliver, England",0.2522,0.2397,0.2424,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,22221,M. Maignan,France,GK,"Michael Oliver, England",0.0583,0.0571,0.0578,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,1257,J. Koundé,France,DEF,"Michael Oliver, England",0.0181,0.0175,0.0173,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,1149,D. Upamecano,France,DEF,"Michael Oliver, England",0.0785,0.0769,0.0778,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,20995,M. Lacroix,France,DEF,"Michael Oliver, England",0.1344,0.1317,0.1332,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,47300,T. Hernández,France,DEF,"Michael Oliver, England",0.1344,0.1317,0.1332,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,1271,A. Tchouaméni,France,MID,"Michael Oliver, England",0.3254,0.3287,0.3322,1,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,22147,M. Koné,France,MID,"Michael Oliver, England",0.34,0.3435,0.359,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,153,O. Dembélé,France,MID,"Michael Oliver, England",0.1038,0.1012,0.0998,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,19617,M. Olise,France,MID,"Michael Oliver, England",0.0346,0.0344,0.0353,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,343027,D. Doué,France,MID,"Michael Oliver, England",0.0824,0.082,0.0812,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489416,278,Kylian Mbappé,France,FWD,"Michael Oliver, England",0.2261,0.2069,0.2037,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,39082,E. Selvik,Norway,GK,"Michael Oliver, England",0.0638,0.0625,0.0619,0,neutro,bajar,baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,39043,F. Aursnes,Norway,MID,"Michael Oliver, England",0.124,0.1209,0.1197,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,180937,H. Falchener,Norway,DEF,"Michael Oliver, England",0.124,0.1216,0.1203,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,18967,L. Østigård,Norway,DEF,"Michael Oliver, England",0.2047,0.1976,0.1955,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,39058,F. Bjørkan,Norway,DEF,"Michael Oliver, England",0.0751,0.0736,0.0728,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,39143,K. Thorstvedt,Norway,MID,"Michael Oliver, England",0.3074,0.3106,0.3074,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,39064,P. Berg,Norway,MID,"Michael Oliver, England",0.2442,0.2467,0.2442,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,278133,Oscar Bobb,Norway,MID,"Michael Oliver, England",0.0357,0.0361,0.0357,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,277930,T. Aasgaard,Norway,MID,"Michael Oliver, England",0.0691,0.0698,0.0691,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,301528,A. Schjelderup,Norway,FWD,"Michael Oliver, England",0.0596,0.0566,0.056,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,2032,J. Strand Larsen,Norway,FWD,"Michael Oliver, England",0.2522,0.2397,0.2371,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,22221,M. Maignan,France,GK,"Michael Oliver, England",0.0583,0.0571,0.0566,0,neutro,bajar,baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,1257,J. Koundé,France,DEF,"Michael Oliver, England",0.0181,0.0175,0.0169,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,1149,D. Upamecano,France,DEF,"Michael Oliver, England",0.0785,0.0769,0.0761,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,20995,M. Lacroix,France,DEF,"Michael Oliver, England",0.1344,0.1317,0.1304,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,47300,T. Hernández,France,DEF,"Michael Oliver, England",0.1344,0.1317,0.1304,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,1271,A. Tchouaméni,France,MID,"Michael Oliver, England",0.3254,0.3287,0.3254,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,22147,M. Koné,France,MID,"Michael Oliver, England",0.34,0.3435,0.3519,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,153,O. Dembélé,France,MID,"Michael Oliver, England",0.1038,0.1012,0.0976,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,19617,M. Olise,France,MID,"Michael Oliver, England",0.0346,0.0344,0.0346,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,343027,D. Doué,France,MID,"Michael Oliver, England",0.0824,0.082,0.0795,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489416,278,Kylian Mbappé,France,FWD,"Michael Oliver, England",0.2261,0.2069,0.199,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489417,429,F. Muslera,Uruguay,GK,I. Elfath,0.2023,0.2023,0.2023,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1489417,1290,G. Varela,Uruguay,DEF,I. Elfath,0.501,0.501,0.501,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489417,51535,S. Cáceres,Uruguay,DEF,I. Elfath,0.0912,0.0912,0.0912,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -189,14 +189,14 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1489417,47270,Unai Simón,Spain,GK,I. Elfath,0.1862,0.1829,0.1806,0,neutro,bajar,baja,perfiles reconstruidos solo con jornadas anteriores
 1489417,753,Marcos Llorente,Spain,MID,I. Elfath,0.1183,0.1198,0.1183,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489417,396623,Pau Cubarsí Paredes,Spain,DEF,I. Elfath,0.0719,0.0706,0.0697,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489417,622,Aymeric Laporte,Spain,DEF,I. Elfath,0.1268,0.1246,0.1211,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489417,622,Aymeric Laporte,Spain,DEF,I. Elfath,0.1268,0.1246,0.1274,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489417,47380,Marc Cucurella,Spain,DEF,I. Elfath,0.0274,0.0269,0.0266,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489417,133609,Pedri,Spain,MID,I. Elfath,0.0427,0.0447,0.0427,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489417,44,Rodri,Spain,MID,I. Elfath,0.4195,0.4185,0.4132,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489417,47311,Mikel Merino,Spain,MID,I. Elfath,0.1549,0.1568,0.1526,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489417,47311,Mikel Merino,Spain,MID,I. Elfath,0.1549,0.1568,0.1495,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489417,386828,Lamine Yamal,Spain,MID,I. Elfath,0.2883,0.2876,0.2782,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489417,47323,Mikel Oyarzabal,Spain,FWD,I. Elfath,0.2234,0.2094,0.2022,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489417,182219,Álex Baena,Spain,MID,I. Elfath,0.3911,0.3901,0.3774,1,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489417,47323,Mikel Oyarzabal,Spain,FWD,I. Elfath,0.2234,0.2094,0.1966,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489417,182219,Álex Baena,Spain,MID,I. Elfath,0.3911,0.3901,0.3676,1,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489413,15304,Vózinha,Cape Verde Islands,GK,F. Letexier,0.0575,0.0575,0.0574,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1489413,332056,Wagner Pina,Cape Verde Islands,DEF,F. Letexier,0.2495,0.2495,0.2489,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489413,41608,Diney Borges,Cape Verde Islands,DEF,F. Letexier,0.2314,0.2314,0.239,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -252,10 +252,10 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1489415,430835,Tyler Bindon,New Zealand,DEF,A. Makhadmeh,0.354,0.354,0.3532,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489415,51149,M. Boxall,New Zealand,DEF,A. Makhadmeh,0.1629,0.1629,0.1625,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489415,18931,C. Wood,New Zealand,FWD,A. Makhadmeh,0.066,0.064,0.0639,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489415,1422,J. Doku,Belgium,FWD,A. Makhadmeh,0.021,0.0204,0.0196,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489415,629,K. De Bruyne,Belgium,MID,A. Makhadmeh,0.1384,0.1401,0.1374,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489415,1422,J. Doku,Belgium,MID,A. Makhadmeh,0.021,0.0217,0.0208,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489415,629,K. De Bruyne,Belgium,MID,A. Makhadmeh,0.1384,0.1401,0.1422,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489415,2926,Y. Tielemans,Belgium,MID,A. Makhadmeh,0.2198,0.2302,0.2226,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1489415,147859,C. De Ketelaere,Belgium,FWD,A. Makhadmeh,0.1427,0.1388,0.1331,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1489415,147859,C. De Ketelaere,Belgium,FWD,A. Makhadmeh,0.1427,0.1388,0.1295,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489415,2920,T. Castagne,Belgium,DEF,A. Makhadmeh,0.1203,0.1224,0.12,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489415,162714,A. Onana,Belgium,MID,A. Makhadmeh,0.1514,0.1563,0.1503,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1489415,264,T. Meunier,Belgium,DEF,A. Makhadmeh,0.2404,0.241,0.2363,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -571,17 +571,17 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1567307,375598,N. Mukau,Congo DR,MID,A. Makhadmeh,0.0613,0.0609,0.0609,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567307,365331,N. Sadiki,Congo DR,MID,A. Makhadmeh,0.0575,0.0591,0.0591,1,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567307,1424,E. Kayembe,Congo DR,MID,A. Makhadmeh,0.3042,0.302,0.302,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567308,730,T. Courtois,Belgium,GK,S. Martinez,0.0676,0.0676,0.0676,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1567308,730,T. Courtois,Belgium,GK,S. Martinez,0.0676,0.0676,0.0666,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1567308,2920,T. Castagne,Belgium,DEF,S. Martinez,0.1876,0.1876,0.1876,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567308,69,B. Mechele,Belgium,DEF,S. Martinez,0.104,0.104,0.104,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567308,204043,A. Theate,Belgium,DEF,S. Martinez,0.1247,0.1247,0.1247,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567308,162007,M. De Cuyper,Belgium,DEF,S. Martinez,0.1608,0.1608,0.1608,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567308,162007,M. De Cuyper,Belgium,DEF,S. Martinez,0.1608,0.1608,0.1664,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567308,2926,Y. Tielemans,Belgium,MID,S. Martinez,0.3353,0.3403,0.3403,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567308,78,H. Vanaken,Belgium,MID,S. Martinez,0.2333,0.2403,0.2368,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567308,78,H. Vanaken,Belgium,MID,S. Martinez,0.2333,0.2403,0.2321,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567308,1946,L. Trossard,Belgium,MID,S. Martinez,0.218,0.2213,0.2169,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567308,629,K. De Bruyne,Belgium,MID,S. Martinez,0.2147,0.2136,0.2136,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567308,1422,J. Doku,Belgium,FWD,S. Martinez,0.026,0.0243,0.0243,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567308,147859,C. De Ketelaere,Belgium,FWD,S. Martinez,0.2142,0.2003,0.2003,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567308,629,K. De Bruyne,Belgium,MID,S. Martinez,0.2147,0.2136,0.2211,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567308,1422,J. Doku,Belgium,MID,S. Martinez,0.026,0.0259,0.0259,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567308,147859,C. De Ketelaere,Belgium,FWD,S. Martinez,0.2142,0.2003,0.1949,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567308,119853,M. Diaw,Senegal,GK,S. Martinez,0.132,0.1297,0.1297,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1567308,81,K. Diatta,Senegal,DEF,S. Martinez,0.1818,0.1786,0.1786,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567308,41552,P. Ciss,Senegal,DEF,S. Martinez,0.4036,0.3965,0.3965,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -637,17 +637,17 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1567312,303362,R. Belghali,Algeria,DEF,Y. Perez,0.2791,0.2694,0.2694,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567312,732,L. Zidane,Algeria,GK,Y. Perez,0.0882,0.0865,0.0865,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1567312,129047,R. Zerrouki,Algeria,MID,Y. Perez,0.3943,0.3983,0.3983,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567311,47270,Unai Simón,Spain,GK,G. Nyberg,0.1501,0.1475,0.1456,0,neutro,bajar,baja,perfiles reconstruidos solo con jornadas anteriores
-1567311,47519,Pedro Porro,Spain,DEF,G. Nyberg,0.2308,0.2268,0.2239,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567311,396623,Pau Cubarsí Paredes,Spain,DEF,G. Nyberg,0.0686,0.0674,0.0665,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567311,622,Aymeric Laporte,Spain,DEF,G. Nyberg,0.104,0.1022,0.1009,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567311,47380,Marc Cucurella,Spain,DEF,G. Nyberg,0.0261,0.0256,0.0253,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567311,44,Rodri,Spain,MID,G. Nyberg,0.3461,0.3452,0.3409,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567311,1323,Dani Olmo,Spain,MID,G. Nyberg,0.2402,0.2396,0.2318,0,neutro,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567311,133609,Pedri,Spain,MID,G. Nyberg,0.0407,0.0412,0.0407,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567311,386828,Lamine Yamal,Spain,MID,G. Nyberg,0.2333,0.2281,0.2251,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567311,47323,Mikel Oyarzabal,Spain,FWD,G. Nyberg,0.1809,0.166,0.1637,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1567311,182219,Álex Baena,Spain,MID,G. Nyberg,0.324,0.3394,0.324,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,47270,Unai Simón,Spain,GK,G. Nyberg,0.1501,0.1475,0.1501,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,47519,Pedro Porro,Spain,DEF,G. Nyberg,0.2308,0.2268,0.2308,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,396623,Pau Cubarsí Paredes,Spain,DEF,G. Nyberg,0.0686,0.0674,0.0686,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,622,Aymeric Laporte,Spain,DEF,G. Nyberg,0.104,0.1022,0.104,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,47380,Marc Cucurella,Spain,DEF,G. Nyberg,0.0261,0.0256,0.0261,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,44,Rodri,Spain,MID,G. Nyberg,0.3461,0.3452,0.3513,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,1323,Dani Olmo,Spain,MID,G. Nyberg,0.2402,0.2396,0.239,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,133609,Pedri,Spain,MID,G. Nyberg,0.0407,0.0412,0.0419,0,neutro,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,386828,Lamine Yamal,Spain,MID,G. Nyberg,0.2333,0.2281,0.2321,0,bajar,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,47323,Mikel Oyarzabal,Spain,FWD,G. Nyberg,0.1809,0.166,0.1646,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1567311,182219,Álex Baena,Spain,MID,G. Nyberg,0.324,0.3394,0.3337,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567311,7525,A. Schlager,Austria,GK,G. Nyberg,0.2154,0.2154,0.2154,0,neutro,neutro,baja,perfiles reconstruidos solo con jornadas anteriores
 1567311,711,S. Posch,Austria,DEF,G. Nyberg,0.2945,0.2945,0.2945,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1567311,25287,K. Danso,Austria,DEF,G. Nyberg,0.1341,0.1341,0.1341,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -849,14 +849,14 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1576756,47270,Unai Simón,Spain,GK,"Anthony Taylor, England",0.1486,0.1441,0.1441,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1576756,47519,Pedro Porro,Spain,DEF,"Anthony Taylor, England",0.2285,0.2182,0.2182,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1576756,396623,Pau Cubarsí Paredes,Spain,DEF,"Anthony Taylor, England",0.0678,0.0658,0.0658,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1576756,622,Aymeric Laporte,Spain,DEF,"Anthony Taylor, England",0.1029,0.0983,0.0983,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1576756,622,Aymeric Laporte,Spain,DEF,"Anthony Taylor, England",0.1029,0.0983,0.1034,0,bajar,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1576756,47380,Marc Cucurella,Spain,DEF,"Anthony Taylor, England",0.0258,0.025,0.025,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1576756,133609,Pedri,Spain,MID,"Anthony Taylor, England",0.0403,0.0403,0.0403,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1576756,44,Rodri,Spain,MID,"Anthony Taylor, England",0.3429,0.3378,0.3378,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1576756,386828,Lamine Yamal,Spain,MID,"Anthony Taylor, England",0.231,0.2229,0.2229,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1576756,1323,Dani Olmo,Spain,MID,"Anthony Taylor, England",0.2378,0.2295,0.2295,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1576756,182219,Álex Baena,Spain,MID,"Anthony Taylor, England",0.321,0.321,0.321,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1576756,47323,Mikel Oyarzabal,Spain,FWD,"Anthony Taylor, England",0.179,0.162,0.162,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1576756,47323,Mikel Oyarzabal,Spain,FWD,"Anthony Taylor, England",0.179,0.162,0.1575,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1570715,50728,M. Freese,USA,GK,"Adham Mohammad, Jordan",0.042,0.042,0.042,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1570715,355994,A. Freeman,USA,DEF,"Adham Mohammad, Jordan",0.0506,0.0498,0.0498,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1570715,126949,C. Richards,USA,DEF,"Adham Mohammad, Jordan",0.3412,0.3412,0.3412,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -868,17 +868,17 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1570715,38735,S. Dest,USA,FWD,"Adham Mohammad, Jordan",0.0983,0.0919,0.0919,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1570715,138835,F. Balogun,USA,FWD,"Adham Mohammad, Jordan",0.2559,0.2572,0.2572,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1570715,17,C. Pulišić,USA,FWD,"Adham Mohammad, Jordan",0.1178,0.1101,0.1101,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1570715,730,T. Courtois,Belgium,GK,"Adham Mohammad, Jordan",0.0598,0.0598,0.0598,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1570715,730,T. Courtois,Belgium,GK,"Adham Mohammad, Jordan",0.0598,0.0598,0.0589,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1570715,2920,T. Castagne,Belgium,DEF,"Adham Mohammad, Jordan",0.1311,0.1311,0.1311,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1570715,312964,N. Ngoy,Belgium,DEF,"Adham Mohammad, Jordan",0.1517,0.1517,0.1517,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1570715,69,B. Mechele,Belgium,DEF,"Adham Mohammad, Jordan",0.0922,0.0922,0.0922,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1570715,162007,M. De Cuyper,Belgium,DEF,"Adham Mohammad, Jordan",0.1156,0.1196,0.1196,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1570715,162007,M. De Cuyper,Belgium,DEF,"Adham Mohammad, Jordan",0.1156,0.1196,0.1156,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1570715,2120,N. Raskin,Belgium,MID,"Adham Mohammad, Jordan",0.244,0.2477,0.2477,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1570715,162714,A. Onana,Belgium,MID,"Adham Mohammad, Jordan",0.1648,0.1673,0.1673,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1570715,25458,D. Lukebakio,Belgium,MID,"Adham Mohammad, Jordan",0.2787,0.2871,0.2871,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1570715,25458,D. Lukebakio,Belgium,FWD,"Adham Mohammad, Jordan",0.2787,0.2703,0.2703,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1570715,2926,Y. Tielemans,Belgium,MID,"Adham Mohammad, Jordan",0.2384,0.2372,0.2372,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1570715,1946,L. Trossard,Belgium,MID,"Adham Mohammad, Jordan",0.1532,0.1524,0.1524,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1570715,147859,C. De Ketelaere,Belgium,FWD,"Adham Mohammad, Jordan",0.1554,0.1453,0.1453,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1570715,147859,C. De Ketelaere,Belgium,FWD,"Adham Mohammad, Jordan",0.1554,0.1453,0.1414,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1576804,19599,E. Martínez,Argentina,GK,F. Letexier,0.0387,0.0375,0.0375,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1576804,217,Lautaro Martínez,Argentina,FWD,F. Letexier,0.0529,0.0466,0.0466,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1576804,2467,Lisandro Martínez,Argentina,DEF,F. Letexier,0.2908,0.2777,0.2777,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
@@ -945,3 +945,25 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1578539,438688,A. Bouaddi,Morocco,MID,"Facundo Raul Tello Figueroa, Argentina",0.1489,0.1482,0.1482,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1578539,129678,A. Ounahi,Morocco,MID,"Facundo Raul Tello Figueroa, Argentina",0.3062,0.3154,0.3154,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1578539,278898,C. Riad,Morocco,DEF,"Facundo Raul Tello Figueroa, Argentina",0.1139,0.1122,0.1122,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,47270,Unai Simón,Spain,GK,"Michael Oliver, England",0.1424,0.1381,0.1381,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,47519,Pedro Porro,Spain,DEF,"Michael Oliver, England",0.2195,0.2096,0.2096,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,396623,Pau Cubarsí Paredes,Spain,DEF,"Michael Oliver, England",0.0687,0.0666,0.0666,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,622,Aymeric Laporte,Spain,DEF,"Michael Oliver, England",0.0993,0.0948,0.0948,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,47380,Marc Cucurella,Spain,DEF,"Michael Oliver, England",0.0262,0.0254,0.0254,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,44,Rodri,Spain,MID,"Michael Oliver, England",0.3295,0.3246,0.3246,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,328,Fabián Ruiz,Spain,MID,"Michael Oliver, England",0.1513,0.149,0.149,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,386828,Lamine Yamal,Spain,MID,"Michael Oliver, England",0.2211,0.2134,0.2134,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,1323,Dani Olmo,Spain,MID,"Michael Oliver, England",0.2285,0.2205,0.2205,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,182219,Álex Baena,Spain,MID,"Michael Oliver, England",0.3091,0.3091,0.3091,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,47323,Mikel Oyarzabal,Spain,FWD,"Michael Oliver, England",0.1717,0.1511,0.1511,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,730,T. Courtois,Belgium,GK,"Michael Oliver, England",0.0668,0.0668,0.0668,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,2920,T. Castagne,Belgium,DEF,"Michael Oliver, England",0.18,0.18,0.18,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,312964,N. Ngoy,Belgium,DEF,"Michael Oliver, England",0.1683,0.1683,0.1683,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,69,B. Mechele,Belgium,DEF,"Michael Oliver, England",0.1027,0.1027,0.1027,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,162007,M. De Cuyper,Belgium,DEF,"Michael Oliver, England",0.1547,0.1601,0.1601,0,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,2926,Y. Tielemans,Belgium,MID,"Michael Oliver, England",0.3225,0.3209,0.3209,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,2120,N. Raskin,Belgium,MID,"Michael Oliver, England",0.3262,0.3246,0.3246,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,1946,L. Trossard,Belgium,MID,"Michael Oliver, England",0.2093,0.2083,0.2083,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,629,K. De Bruyne,Belgium,MID,"Michael Oliver, England",0.206,0.1998,0.1998,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,1422,J. Doku,Belgium,MID,"Michael Oliver, England",0.0257,0.0256,0.0256,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1581821,147859,C. De Ketelaere,Belgium,FWD,"Michael Oliver, England",0.2063,0.1877,0.1877,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
