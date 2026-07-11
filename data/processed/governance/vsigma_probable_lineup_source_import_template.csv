@@ -1,1 +1,131 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
+2026-07-11,1494207,Allsvenskan,Sweden,Orgryte IS,BK Hacken,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494207,Allsvenskan,Sweden,Orgryte IS,BK Hacken,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494207,Allsvenskan,Sweden,Orgryte IS,BK Hacken,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494207,Allsvenskan,Sweden,Orgryte IS,BK Hacken,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494207,Allsvenskan,Sweden,Orgryte IS,BK Hacken,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494207,Allsvenskan,Sweden,Orgryte IS,BK Hacken,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494207,Allsvenskan,Sweden,Orgryte IS,BK Hacken,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494207,Allsvenskan,Sweden,Orgryte IS,BK Hacken,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494207,Allsvenskan,Sweden,Orgryte IS,BK Hacken,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494207,Allsvenskan,Sweden,Orgryte IS,BK Hacken,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494692,Eliteserien,Norway,Aalesund,Molde,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494692,Eliteserien,Norway,Aalesund,Molde,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494692,Eliteserien,Norway,Aalesund,Molde,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494692,Eliteserien,Norway,Aalesund,Molde,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494692,Eliteserien,Norway,Aalesund,Molde,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494692,Eliteserien,Norway,Aalesund,Molde,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494692,Eliteserien,Norway,Aalesund,Molde,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494692,Eliteserien,Norway,Aalesund,Molde,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494692,Eliteserien,Norway,Aalesund,Molde,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494692,Eliteserien,Norway,Aalesund,Molde,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494699,Eliteserien,Norway,Tromso,Valerenga,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494699,Eliteserien,Norway,Tromso,Valerenga,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494699,Eliteserien,Norway,Tromso,Valerenga,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494699,Eliteserien,Norway,Tromso,Valerenga,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494699,Eliteserien,Norway,Tromso,Valerenga,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494699,Eliteserien,Norway,Tromso,Valerenga,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494699,Eliteserien,Norway,Tromso,Valerenga,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494699,Eliteserien,Norway,Tromso,Valerenga,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494699,Eliteserien,Norway,Tromso,Valerenga,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494699,Eliteserien,Norway,Tromso,Valerenga,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494694,Eliteserien,Norway,Fredrikstad,Lillestrom,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494694,Eliteserien,Norway,Fredrikstad,Lillestrom,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494694,Eliteserien,Norway,Fredrikstad,Lillestrom,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494694,Eliteserien,Norway,Fredrikstad,Lillestrom,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494694,Eliteserien,Norway,Fredrikstad,Lillestrom,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494694,Eliteserien,Norway,Fredrikstad,Lillestrom,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494694,Eliteserien,Norway,Fredrikstad,Lillestrom,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494694,Eliteserien,Norway,Fredrikstad,Lillestrom,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494694,Eliteserien,Norway,Fredrikstad,Lillestrom,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494694,Eliteserien,Norway,Fredrikstad,Lillestrom,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506993,K League 1,South-Korea,Gwangju FC,Pohang Steelers,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506993,K League 1,South-Korea,Gwangju FC,Pohang Steelers,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506993,K League 1,South-Korea,Gwangju FC,Pohang Steelers,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506993,K League 1,South-Korea,Gwangju FC,Pohang Steelers,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506993,K League 1,South-Korea,Gwangju FC,Pohang Steelers,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506993,K League 1,South-Korea,Gwangju FC,Pohang Steelers,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506993,K League 1,South-Korea,Gwangju FC,Pohang Steelers,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506993,K League 1,South-Korea,Gwangju FC,Pohang Steelers,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506993,K League 1,South-Korea,Gwangju FC,Pohang Steelers,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506993,K League 1,South-Korea,Gwangju FC,Pohang Steelers,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506994,K League 1,South-Korea,Ulsan Hyundai FC,Jeonbuk Motors,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506994,K League 1,South-Korea,Ulsan Hyundai FC,Jeonbuk Motors,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506994,K League 1,South-Korea,Ulsan Hyundai FC,Jeonbuk Motors,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506994,K League 1,South-Korea,Ulsan Hyundai FC,Jeonbuk Motors,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506994,K League 1,South-Korea,Ulsan Hyundai FC,Jeonbuk Motors,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506994,K League 1,South-Korea,Ulsan Hyundai FC,Jeonbuk Motors,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506994,K League 1,South-Korea,Ulsan Hyundai FC,Jeonbuk Motors,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506994,K League 1,South-Korea,Ulsan Hyundai FC,Jeonbuk Motors,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506994,K League 1,South-Korea,Ulsan Hyundai FC,Jeonbuk Motors,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506994,K League 1,South-Korea,Ulsan Hyundai FC,Jeonbuk Motors,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494206,Allsvenskan,Sweden,Mjallby AIF,AIK Stockholm,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494206,Allsvenskan,Sweden,Mjallby AIF,AIK Stockholm,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494206,Allsvenskan,Sweden,Mjallby AIF,AIK Stockholm,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494206,Allsvenskan,Sweden,Mjallby AIF,AIK Stockholm,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494206,Allsvenskan,Sweden,Mjallby AIF,AIK Stockholm,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494206,Allsvenskan,Sweden,Mjallby AIF,AIK Stockholm,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494206,Allsvenskan,Sweden,Mjallby AIF,AIK Stockholm,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494206,Allsvenskan,Sweden,Mjallby AIF,AIK Stockholm,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494206,Allsvenskan,Sweden,Mjallby AIF,AIK Stockholm,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1494206,Allsvenskan,Sweden,Mjallby AIF,AIK Stockholm,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506992,K League 1,South-Korea,Gimcheon Sangmu FC,Bucheon FC 1995,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506992,K League 1,South-Korea,Gimcheon Sangmu FC,Bucheon FC 1995,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506992,K League 1,South-Korea,Gimcheon Sangmu FC,Bucheon FC 1995,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506992,K League 1,South-Korea,Gimcheon Sangmu FC,Bucheon FC 1995,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506992,K League 1,South-Korea,Gimcheon Sangmu FC,Bucheon FC 1995,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506992,K League 1,South-Korea,Gimcheon Sangmu FC,Bucheon FC 1995,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506992,K League 1,South-Korea,Gimcheon Sangmu FC,Bucheon FC 1995,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506992,K League 1,South-Korea,Gimcheon Sangmu FC,Bucheon FC 1995,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506992,K League 1,South-Korea,Gimcheon Sangmu FC,Bucheon FC 1995,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1506992,K League 1,South-Korea,Gimcheon Sangmu FC,Bucheon FC 1995,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1547585,A Lyga,Lithuania,Kauno Žalgiris,Panevėžys,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1547585,A Lyga,Lithuania,Kauno Žalgiris,Panevėžys,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1547585,A Lyga,Lithuania,Kauno Žalgiris,Panevėžys,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1547585,A Lyga,Lithuania,Kauno Žalgiris,Panevėžys,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1547585,A Lyga,Lithuania,Kauno Žalgiris,Panevėžys,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1547585,A Lyga,Lithuania,Kauno Žalgiris,Panevėžys,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1547585,A Lyga,Lithuania,Kauno Žalgiris,Panevėžys,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1547585,A Lyga,Lithuania,Kauno Žalgiris,Panevėžys,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1547585,A Lyga,Lithuania,Kauno Žalgiris,Panevėžys,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1547585,A Lyga,Lithuania,Kauno Žalgiris,Panevėžys,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1526894,Serie C,Brazil,Caxias,Floresta,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1526894,Serie C,Brazil,Caxias,Floresta,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1526894,Serie C,Brazil,Caxias,Floresta,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1526894,Serie C,Brazil,Caxias,Floresta,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1526894,Serie C,Brazil,Caxias,Floresta,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1526894,Serie C,Brazil,Caxias,Floresta,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1526894,Serie C,Brazil,Caxias,Floresta,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1526894,Serie C,Brazil,Caxias,Floresta,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1526894,Serie C,Brazil,Caxias,Floresta,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1526894,Serie C,Brazil,Caxias,Floresta,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495731,Veikkausliiga,Finland,Gnistan,Mariehamn,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495731,Veikkausliiga,Finland,Gnistan,Mariehamn,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495731,Veikkausliiga,Finland,Gnistan,Mariehamn,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495731,Veikkausliiga,Finland,Gnistan,Mariehamn,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495731,Veikkausliiga,Finland,Gnistan,Mariehamn,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495731,Veikkausliiga,Finland,Gnistan,Mariehamn,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495731,Veikkausliiga,Finland,Gnistan,Mariehamn,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495731,Veikkausliiga,Finland,Gnistan,Mariehamn,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495731,Veikkausliiga,Finland,Gnistan,Mariehamn,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495731,Veikkausliiga,Finland,Gnistan,Mariehamn,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495730,Veikkausliiga,Finland,Lahti,HJK Helsinki,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495730,Veikkausliiga,Finland,Lahti,HJK Helsinki,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495730,Veikkausliiga,Finland,Lahti,HJK Helsinki,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495730,Veikkausliiga,Finland,Lahti,HJK Helsinki,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495730,Veikkausliiga,Finland,Lahti,HJK Helsinki,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495730,Veikkausliiga,Finland,Lahti,HJK Helsinki,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495730,Veikkausliiga,Finland,Lahti,HJK Helsinki,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495730,Veikkausliiga,Finland,Lahti,HJK Helsinki,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495730,Veikkausliiga,Finland,Lahti,HJK Helsinki,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495730,Veikkausliiga,Finland,Lahti,HJK Helsinki,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495732,Veikkausliiga,Finland,Turku PS,AC Oulu,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495732,Veikkausliiga,Finland,Turku PS,AC Oulu,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495732,Veikkausliiga,Finland,Turku PS,AC Oulu,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495732,Veikkausliiga,Finland,Turku PS,AC Oulu,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495732,Veikkausliiga,Finland,Turku PS,AC Oulu,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495732,Veikkausliiga,Finland,Turku PS,AC Oulu,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495732,Veikkausliiga,Finland,Turku PS,AC Oulu,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495732,Veikkausliiga,Finland,Turku PS,AC Oulu,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495732,Veikkausliiga,Finland,Turku PS,AC Oulu,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-11,1495732,Veikkausliiga,Finland,Turku PS,AC Oulu,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
