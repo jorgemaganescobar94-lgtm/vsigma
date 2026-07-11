@@ -1,2 +1,2 @@
 target_date,generated_at,rows_seen,rows_imported,rows_learning_only,rows_rejected,rows_quarantined,input_files,import_status_counts,quarantine_reason_counts,sources_seen,template_rows,auto_apply,production_change
-2026-07-11,2026-07-11T21:22:12+01:00,0,0,0,0,0,none,none,none,none,130,NO,NO
+2026-07-11,2026-07-11T23:21:14+01:00,0,0,0,0,0,none,none,none,none,130,NO,NO
