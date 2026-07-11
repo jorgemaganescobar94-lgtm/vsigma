@@ -40,3 +40,5 @@ jobs:
           fingerprint = hashlib.sha256(secret.encode()).hexdigest()[:12]
           print(f"CI_API_KEY_SHA256_12={fingerprint}")
           print("SAFE_DIAGNOSTIC=key_not_printed")
+
+# Temporary diagnostic authorized by Jorge on 2026-07-11.
