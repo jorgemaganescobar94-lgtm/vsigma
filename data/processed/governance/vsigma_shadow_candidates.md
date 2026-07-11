@@ -1,13 +1,13 @@
-# vSIGMA Shadow Candidates - 2026-07-10
+# vSIGMA Shadow Candidates - 2026-07-11
 
 ## Executive Shadow Candidate Summary
-- generated_at: 2026-07-11T09:59:39+01:00
-- shadow_candidates: 0
-- shadow_decision_counts: none
-- experiment_type_counts: none
+- generated_at: 2026-07-11T10:41:05+01:00
+- shadow_candidates: 1
+- shadow_decision_counts: SHADOW_DOWNGRADE_REVIEW=1
+- experiment_type_counts: LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=1
 
 ## Shadow Candidate Decisions
-- none
+- SHADOW_DOWNGRADE_REVIEW | Ulsan Hyundai FC vs Jeonbuk Motors | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
 
 ## Guardrails
 - official picks changed: NO
