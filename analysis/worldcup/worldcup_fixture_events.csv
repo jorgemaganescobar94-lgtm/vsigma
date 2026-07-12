@@ -1095,6 +1095,46 @@ fixture_id,date,competition,team_id,team_name,opponent_id,opponent_name,player_i
 1581821,2026-07-10,World Cup 2026,9,Spain,1,Belgium,47311,Mikel Merino,,,Goal,Normal Goal,88,,1,0,0,0,0,0,,0,alta,alta,api_football_events
 1581821,2026-07-10,World Cup 2026,9,Spain,1,Belgium,622,Aymeric Laporte,,,Card,Yellow Card,90,3,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1581821,2026-07-10,World Cup 2026,1,Belgium,9,Spain,20,Axel Witsel,,,Card,Yellow Card,90,5,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1581037,2026-07-11,World Cup 2026,1090,Norway,10,England,301528,Andreas Schjelderup,37127,Martin Ødegaard,Goal,Normal Goal,36,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1581037,2026-07-11,World Cup 2026,10,England,1090,Norway,129718,Jude Bellingham,138787,Anthony Gordon,Goal,Normal Goal,45,2,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1581037,2026-07-11,World Cup 2026,10,England,1090,Norway,136723,Noni Madueke,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581037,2026-07-11,World Cup 2026,10,England,1090,Norway,2937,Declan Rice,,,subst,Substitution 2,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581037,2026-07-11,World Cup 2026,1090,Norway,10,England,39254,Torbjørn Heggem,,,Var,Goal cancelled,56,,0,0,0,0,0,0,,0,alta,media,api_football_events
+1581037,2026-07-11,World Cup 2026,1090,Norway,10,England,24845,Julian Ryerson,,,subst,Substitution 1,60,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581037,2026-07-11,World Cup 2026,1090,Norway,10,England,301528,Andreas Schjelderup,,,subst,Substitution 2,68,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581037,2026-07-11,World Cup 2026,1090,Norway,10,England,8492,Alexander Sørloth,,,subst,Substitution 3,68,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581037,2026-07-11,World Cup 2026,10,England,1090,Norway,138787,Anthony Gordon,,,subst,Substitution 3,71,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581037,2026-07-11,World Cup 2026,10,England,1090,Norway,307123,Nico O'Reilly,,,subst,Substitution 4,86,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581037,2026-07-11,World Cup 2026,10,England,1090,Norway,19354,Ezri Konsa,,,subst,Substitution 5,89,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581037,2026-07-11,World Cup 2026,1090,Norway,10,England,265782,David Møller Wolfe,,,subst,Substitution 4,90,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581037,2026-07-11,World Cup 2026,1090,Norway,10,England,39254,Torbjørn Heggem,,,subst,Substitution 5,91,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581037,2026-07-11,World Cup 2026,10,England,1090,Norway,129718,Jude Bellingham,,,Goal,Normal Goal,93,,1,0,0,0,0,0,,0,alta,alta,api_football_events
+1581037,2026-07-11,World Cup 2026,10,England,1090,Norway,19235,Djed Spence,,,Var,Penalty cancelled,101,,0,0,0,0,0,0,,0,alta,media,api_football_events
+1581037,2026-07-11,World Cup 2026,1090,Norway,10,England,1100,Erling Haaland,,,subst,Substitution 6,106,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581037,2026-07-11,World Cup 2026,10,England,1090,Norway,129718,Jude Bellingham,,,subst,Substitution 6,111,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1581037,2026-07-11,World Cup 2026,1090,Norway,10,England,1119,Kristoffer Ajer,,,Card,Yellow Card,117,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,26,Argentina,15,Switzerland,6716,A. Mac Allister,154,L. Messi,Goal,Normal Goal,10,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,15,Switzerland,26,Argentina,421,B. Embolo,,,Card,Yellow Card,44,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,15,Switzerland,26,Argentina,48648,D. Ndoye,1631,R. Rodriguez,Goal,Normal Goal,67,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,15,Switzerland,26,Argentina,421,B. Embolo,,,Card,Yellow Card,72,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,15,Switzerland,26,Argentina,421,B. Embolo,,,Card,Red Card,72,,0,0,0,0,0,1,Red Card,0,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,26,Argentina,15,Switzerland,529,N. Tagliafico,,,subst,Substitution 1,78,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,26,Argentina,15,Switzerland,2472,R. de Paul,,,subst,Substitution 2,85,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,26,Argentina,15,Switzerland,6503,N. Molina,,,subst,Substitution 3,85,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,15,Switzerland,26,Argentina,957,D. Sow,,,subst,Substitution 1,86,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,15,Switzerland,26,Argentina,48648,D. Ndoye,,,subst,Substitution 2,86,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,15,Switzerland,26,Argentina,163032,F. Rieder,,,subst,Substitution 3,86,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,15,Switzerland,26,Argentina,1631,R. Rodriguez,,,subst,Substitution 4,90,5,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,26,Argentina,15,Switzerland,5996,E. Fernandez,,,subst,Substitution 4,91,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,15,Switzerland,26,Argentina,2810,D. Zakaria,,,subst,Substitution 5,96,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,26,Argentina,15,Switzerland,6067,T. Almada,,,Card,Yellow Card,97,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,26,Argentina,15,Switzerland,217,L. Martinez,,,Card,Yellow Card,98,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,26,Argentina,15,Switzerland,30776,C. Romero,,,subst,Substitution 5,106,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,26,Argentina,15,Switzerland,271,L. Paredes,,,subst,Substitution 6,110,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,26,Argentina,15,Switzerland,6009,J. Alvarez,295513,J. Lopez,Goal,Normal Goal,112,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,26,Argentina,15,Switzerland,295513,J. Lopez,,,Card,Yellow Card,114,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,15,Switzerland,26,Argentina,2807,R. Freuler,,,subst,Substitution 6,115,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1582681,2026-07-12,World Cup 2026,26,Argentina,15,Switzerland,217,L. Martinez,,,Goal,Normal Goal,120,1,1,0,0,0,0,0,,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,16,Mexico,1531,South Africa,35532,J. Quinones,266345,E. Lira,Goal,Normal Goal,9,,1,1,0,0,0,0,,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,1531,South Africa,16,Mexico,3287,Teboho Mokoena,,,Card,Yellow Card,17,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,16,Mexico,1531,South Africa,212233,Brian Gutiérrez,,,Card,Yellow Card,23,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events

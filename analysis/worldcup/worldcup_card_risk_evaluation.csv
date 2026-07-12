@@ -153,17 +153,17 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1539074,284295,Zidane Iqbal,Iraq,1567,MID,"Anthony Taylor, England",0.102,0.1035,neutro,0.0015,0,media-baja,media
 1539074,229112,A. Qasem,Iraq,1567,MID,"Anthony Taylor, England",0.1443,0.1465,neutro,0.0022,0,media-baja,media
 1539074,299813,Ali Al Hamadi,Iraq,1567,FWD,"Anthony Taylor, England",0.1443,0.1349,bajar,0.0094,0,media-baja,media
-1489416,39082,E. Selvik,Norway,1090,GK,"Michael Oliver, England",0.0638,0.0619,bajar,0.0019,0,media-baja,media
-1489416,39043,F. Aursnes,Norway,1090,MID,"Michael Oliver, England",0.124,0.1197,bajar,0.0043,0,media-baja,media
-1489416,180937,H. Falchener,Norway,1090,DEF,"Michael Oliver, England",0.124,0.1184,bajar,0.0056,0,media-baja,media
-1489416,18967,L. Østigård,Norway,1090,DEF,"Michael Oliver, England",0.2047,0.1955,bajar,0.0092,0,media-baja,media
-1489416,39058,F. Bjørkan,Norway,1090,DEF,"Michael Oliver, England",0.0751,0.0717,bajar,0.0034,0,media-baja,media
-1489416,39143,K. Thorstvedt,Norway,1090,MID,"Michael Oliver, England",0.3074,0.3028,neutro,0.0046,0,media-baja,media
-1489416,39064,P. Berg,Norway,1090,MID,"Michael Oliver, England",0.2442,0.2442,neutro,0.0,1,media-baja,media
-1489416,278133,Oscar Bobb,Norway,1090,MID,"Michael Oliver, England",0.0357,0.0352,neutro,0.0005,0,media-baja,media
-1489416,277930,T. Aasgaard,Norway,1090,MID,"Michael Oliver, England",0.0691,0.0681,neutro,0.001,0,media-baja,media
-1489416,301528,A. Schjelderup,Norway,1090,FWD,"Michael Oliver, England",0.0596,0.0551,bajar,0.0045,0,media-baja,media
-1489416,2032,J. Strand Larsen,Norway,1090,FWD,"Michael Oliver, England",0.2522,0.2333,bajar,0.0189,0,media-baja,media
+1489416,39082,E. Selvik,Norway,1090,GK,"Michael Oliver, England",0.0638,0.0606,bajar,0.0032,0,media-baja,media
+1489416,39043,F. Aursnes,Norway,1090,MID,"Michael Oliver, England",0.124,0.1172,bajar,0.0068,0,media-baja,media
+1489416,180937,H. Falchener,Norway,1090,DEF,"Michael Oliver, England",0.124,0.1159,bajar,0.0081,0,media-baja,media
+1489416,18967,L. Østigård,Norway,1090,DEF,"Michael Oliver, England",0.2047,0.1914,bajar,0.0133,0,media-baja,media
+1489416,39058,F. Bjørkan,Norway,1090,DEF,"Michael Oliver, England",0.0751,0.0702,bajar,0.0049,0,media-baja,media
+1489416,39143,K. Thorstvedt,Norway,1090,MID,"Michael Oliver, England",0.3074,0.2966,bajar,0.0108,0,media-baja,media
+1489416,39064,P. Berg,Norway,1090,MID,"Michael Oliver, England",0.2442,0.2393,bajar,0.0049,1,media-baja,media
+1489416,278133,Oscar Bobb,Norway,1090,MID,"Michael Oliver, England",0.0357,0.0345,bajar,0.0012,0,media-baja,media
+1489416,277930,T. Aasgaard,Norway,1090,MID,"Michael Oliver, England",0.0691,0.0667,bajar,0.0024,0,media-baja,media
+1489416,301528,A. Schjelderup,Norway,1090,FWD,"Michael Oliver, England",0.0596,0.0527,bajar,0.0069,0,media-baja,media
+1489416,2032,J. Strand Larsen,Norway,1090,FWD,"Michael Oliver, England",0.2522,0.2282,bajar,0.024,0,media-baja,media
 1489416,22221,M. Maignan,France,2,GK,"Michael Oliver, England",0.0583,0.0554,bajar,0.0029,0,media-baja,media
 1489416,1257,J. Koundé,France,2,DEF,"Michael Oliver, England",0.0181,0.0161,bajar,0.002,0,media-baja,media
 1489416,1149,D. Upamecano,France,2,DEF,"Michael Oliver, England",0.0785,0.0734,bajar,0.0051,0,media-baja,media
@@ -296,17 +296,17 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489421,123530,Mahmoud Al Mardi,Jordan,1548,FWD,"Istvan Kovacs, Romania",0.1359,0.1269,bajar,0.009,0,media-baja,media
 1489421,53902,Ehsan Haddad,Jordan,1548,MID,"Istvan Kovacs, Romania",0.138,0.1372,neutro,0.0008,0,media-baja,media
 1489421,102538,M. Abualnadi,Jordan,1548,DEF,"Istvan Kovacs, Romania",0.138,0.133,bajar,0.005,0,media-baja,media
-1489421,6067,T. Almada,Argentina,26,MID,"Istvan Kovacs, Romania",0.1278,0.1206,bajar,0.0072,0,media-baja,media
-1489421,19599,E. Martínez,Argentina,26,GK,"Istvan Kovacs, Romania",0.0358,0.034,bajar,0.0018,0,media-baja,baja
-1489421,30776,C. Romero,Argentina,26,DEF,"Istvan Kovacs, Romania",0.0384,0.0351,bajar,0.0033,0,media-baja,media
-1489421,6716,A. Mac Allister,Argentina,26,MID,"Istvan Kovacs, Romania",0.3386,0.3315,bajar,0.0071,0,media-baja,media
-1489421,5996,E. Fernández,Argentina,26,MID,"Istvan Kovacs, Romania",0.0486,0.0469,bajar,0.0017,0,media-baja,media
-1489421,2467,Lisandro Martínez,Argentina,26,DEF,"Istvan Kovacs, Romania",0.2288,0.2137,bajar,0.0151,0,media-baja,media
-1489421,154,L. Messi,Argentina,26,FWD,"Istvan Kovacs, Romania",0.0456,0.0392,bajar,0.0064,0,media-baja,media
-1489421,217,Lautaro Martínez,Argentina,26,FWD,"Istvan Kovacs, Romania",0.0489,0.042,bajar,0.0069,0,media-baja,media
-1489421,6503,N. Molina,Argentina,26,DEF,"Istvan Kovacs, Romania",0.3858,0.3526,bajar,0.0332,0,media-baja,media
-1489421,624,N. Otamendi,Argentina,26,DEF,"Istvan Kovacs, Romania",0.2976,0.2824,bajar,0.0152,0,media-baja,media
-1489421,6231,F. Medina,Argentina,26,DEF,"Istvan Kovacs, Romania",0.1582,0.1557,neutro,0.0025,0,media-baja,media
+1489421,6067,T. Almada,Argentina,26,MID,"Istvan Kovacs, Romania",0.1278,0.129,neutro,0.0012,0,media-baja,media
+1489421,19599,E. Martínez,Argentina,26,GK,"Istvan Kovacs, Romania",0.0358,0.035,bajar,0.0008,0,media-baja,media
+1489421,30776,C. Romero,Argentina,26,DEF,"Istvan Kovacs, Romania",0.0384,0.0353,bajar,0.0031,0,media-baja,media
+1489421,6716,A. Mac Allister,Argentina,26,MID,"Istvan Kovacs, Romania",0.3386,0.3366,neutro,0.002,0,media-baja,media
+1489421,5996,E. Fernández,Argentina,26,MID,"Istvan Kovacs, Romania",0.0486,0.0473,bajar,0.0013,0,media-baja,media
+1489421,2467,Lisandro Martínez,Argentina,26,DEF,"Istvan Kovacs, Romania",0.2288,0.2206,bajar,0.0082,0,media-baja,media
+1489421,154,L. Messi,Argentina,26,FWD,"Istvan Kovacs, Romania",0.0456,0.0405,bajar,0.0051,0,media-baja,media
+1489421,217,Lautaro Martínez,Argentina,26,FWD,"Istvan Kovacs, Romania",0.0489,0.0435,bajar,0.0054,0,media-baja,media
+1489421,6503,N. Molina,Argentina,26,DEF,"Istvan Kovacs, Romania",0.3858,0.3642,bajar,0.0216,0,media-baja,media
+1489421,624,N. Otamendi,Argentina,26,DEF,"Istvan Kovacs, Romania",0.2976,0.2914,bajar,0.0062,0,media-baja,media
+1489421,6231,F. Medina,Argentina,26,DEF,"Istvan Kovacs, Romania",0.1582,0.1604,neutro,0.0022,0,media-baja,media
 1489420,1305,D. Livaković,Croatia,3,GK,"Drew Fischer, Canada",0.1079,0.1056,bajar,0.0023,0,media-baja,baja
 1489420,125171,J. Stanišić,Croatia,3,DEF,"Drew Fischer, Canada",0.1673,0.1638,bajar,0.0035,0,media-baja,media
 1489420,14701,J. Šutalo,Croatia,3,DEF,"Drew Fischer, Canada",0.0238,0.0233,bajar,0.0005,0,media-baja,media
@@ -342,12 +342,12 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489422,57910,T. Rodríguez,Panama,11,FWD,"Abdulrahman Al-Jassim, Qatar",0.1334,0.1271,bajar,0.0063,0,media-baja,baja
 1489422,2932,J. Pickford,England,10,GK,"Abdulrahman Al-Jassim, Qatar",0.0767,0.0765,neutro,0.0002,0,media-baja,baja
 1489422,158698,J. Quansah,England,10,DEF,"Abdulrahman Al-Jassim, Qatar",0.1142,0.1179,subir,0.0037,1,media-baja,media
-1489422,19354,E. Konsa,England,10,DEF,"Abdulrahman Al-Jassim, Qatar",0.1275,0.1272,neutro,0.0003,0,media-baja,media
+1489422,19354,E. Konsa,England,10,DEF,"Abdulrahman Al-Jassim, Qatar",0.1275,0.1253,neutro,0.0022,0,media-baja,media
 1489422,67971,M. Guéhi,England,10,DEF,"Abdulrahman Al-Jassim, Qatar",0.3115,0.3108,neutro,0.0007,0,media-baja,media
-1489422,307123,N. O&apos;Reilly,England,10,DEF,"Abdulrahman Al-Jassim, Qatar",0.0925,0.0923,neutro,0.0002,0,media-baja,media
+1489422,307123,N. O&apos;Reilly,England,10,DEF,"Abdulrahman Al-Jassim, Qatar",0.0925,0.0955,subir,0.003,0,media-baja,media
 1489422,138908,E. Anderson,England,10,MID,"Abdulrahman Al-Jassim, Qatar",0.0597,0.0593,neutro,0.0004,0,media-baja,media
-1489422,129718,J. Bellingham,England,10,MID,"Abdulrahman Al-Jassim, Qatar",0.4468,0.4324,bajar,0.0144,0,media-baja,media
-1489422,1460,B. Saka,England,10,MID,"Abdulrahman Al-Jassim, Qatar",0.2086,0.2071,neutro,0.0015,0,media-baja,media
+1489422,129718,J. Bellingham,England,10,MID,"Abdulrahman Al-Jassim, Qatar",0.4468,0.4145,bajar,0.0323,0,media-baja,media
+1489422,1460,B. Saka,England,10,FWD,"Abdulrahman Al-Jassim, Qatar",0.2086,0.1946,bajar,0.014,0,media-baja,media
 1489422,19170,M. Rogers,England,10,MID,"Abdulrahman Al-Jassim, Qatar",0.0503,0.0517,subir,0.0014,0,media-baja,media
 1489422,909,M. Rashford,England,10,FWD,"Abdulrahman Al-Jassim, Qatar",0.0631,0.0589,bajar,0.0042,0,media-baja,media
 1489422,184,H. Kane,England,10,FWD,"Abdulrahman Al-Jassim, Qatar",0.2117,0.1922,bajar,0.0195,0,media-baja,media
@@ -395,28 +395,28 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1539013,53834,D. Khamdamov,Uzbekistan,1568,FWD,"Felix Zwayer, Germany",0.1301,0.1242,bajar,0.0059,0,media-baja,baja
 1539013,263676,A. Fayzullaev,Uzbekistan,1568,FWD,"Felix Zwayer, Germany",0.1301,0.1216,bajar,0.0085,0,media-baja,media
 1539013,53535,E. Shomurodov,Uzbekistan,1568,FWD,"Felix Zwayer, Germany",0.1009,0.0943,bajar,0.0066,0,media-baja,media
-1561329,46601,K. Mudau,South Africa,1531,DEF,"Joao Pedro Pinheiro, Portugal",0.1947,0.1943,neutro,0.0004,0,media-baja,media
-1561329,3275,R. Williams,South Africa,1531,GK,"Joao Pedro Pinheiro, Portugal",0.0595,0.0594,neutro,0.0001,0,media-baja,baja
-1561329,406752,I. Okon,South Africa,1531,DEF,"Joao Pedro Pinheiro, Portugal",0.3635,0.3627,neutro,0.0008,0,media-baja,media
-1561329,3287,T. Mokoena,South Africa,1531,MID,"Joao Pedro Pinheiro, Portugal",0.2473,0.2628,subir,0.0155,0,media-baja,media
-1561329,46334,A. Modiba,South Africa,1531,DEF,"Joao Pedro Pinheiro, Portugal",0.2134,0.2204,subir,0.007,0,media-baja,media
-1561329,98936,L. Foster,South Africa,1531,FWD,"Joao Pedro Pinheiro, Portugal",0.3292,0.3136,bajar,0.0156,0,media-baja,media
-1561329,510799,M. Mbokazi,South Africa,1531,DEF,"Joao Pedro Pinheiro, Portugal",0.0851,0.0849,neutro,0.0002,0,media-baja,media
-1561329,179893,O. Appollis,South Africa,1531,MID,"Joao Pedro Pinheiro, Portugal",0.0545,0.0552,neutro,0.0007,0,media-baja,media
-1561329,158433,S. Sithole,South Africa,1531,MID,"Joao Pedro Pinheiro, Portugal",0.3098,0.3184,subir,0.0086,0,media-baja,media
-1561329,268710,J. Adams,South Africa,1531,MID,"Joao Pedro Pinheiro, Portugal",0.1681,0.1669,neutro,0.0012,0,media-baja,media
-1561329,295977,T. Moremi,South Africa,1531,FWD,"Joao Pedro Pinheiro, Portugal",0.097,0.0939,bajar,0.0031,0,media-baja,media
-1561329,50816,R. Laryea,Canada,5529,DEF,"Joao Pedro Pinheiro, Portugal",0.2627,0.2792,subir,0.0165,0,media-baja,media
-1561329,8489,J. David,Canada,5529,FWD,"Joao Pedro Pinheiro, Portugal",0.0685,0.0683,neutro,0.0002,0,media-baja,media
-1561329,51016,T. Buchanan,Canada,5529,MID,"Joao Pedro Pinheiro, Portugal",0.1804,0.18,neutro,0.0004,0,media-baja,media
-1561329,51274,M. Crépeau,Canada,5529,GK,"Joao Pedro Pinheiro, Portugal",0.0468,0.0481,subir,0.0013,0,media-baja,baja
-1561329,51295,D. Cornelius,Canada,5529,DEF,"Joao Pedro Pinheiro, Portugal",0.31,0.3186,subir,0.0086,0,media-baja,media
-1561329,328046,I. Koné,Canada,5529,,"Joao Pedro Pinheiro, Portugal",0.3212,0.3253,neutro,0.0041,0,media-baja,baja
-1561329,2001,C. Larin,Canada,5529,FWD,"Joao Pedro Pinheiro, Portugal",0.1058,0.1119,subir,0.0061,0,media-baja,media
-1561329,78547,A. Johnston,Canada,5529,DEF,"Joao Pedro Pinheiro, Portugal",0.2799,0.2877,subir,0.0078,0,media-baja,media
-1561329,35570,S. Eustáquio,Canada,5529,MID,"Joao Pedro Pinheiro, Portugal",0.131,0.134,subir,0.003,0,media-baja,media
-1561329,327738,L. De Fougerolles,Canada,5529,DEF,"Joao Pedro Pinheiro, Portugal",0.2635,0.28,subir,0.0165,0,media-baja,media
-1561329,44798,L. Millar,Canada,5529,FWD,"Joao Pedro Pinheiro, Portugal",0.171,0.1706,neutro,0.0004,0,media-baja,media
+1561329,46601,K. Mudau,South Africa,1531,DEF,"Joao Pedro Pinheiro, Portugal",0.1947,0.1947,neutro,0.0,0,media-baja,media
+1561329,3275,R. Williams,South Africa,1531,GK,"Joao Pedro Pinheiro, Portugal",0.0595,0.0595,neutro,0.0,0,media-baja,baja
+1561329,406752,I. Okon,South Africa,1531,DEF,"Joao Pedro Pinheiro, Portugal",0.3635,0.3635,neutro,0.0,0,media-baja,media
+1561329,3287,T. Mokoena,South Africa,1531,MID,"Joao Pedro Pinheiro, Portugal",0.2473,0.2634,subir,0.0161,0,media-baja,media
+1561329,46334,A. Modiba,South Africa,1531,DEF,"Joao Pedro Pinheiro, Portugal",0.2134,0.2209,subir,0.0075,0,media-baja,media
+1561329,98936,L. Foster,South Africa,1531,FWD,"Joao Pedro Pinheiro, Portugal",0.3292,0.3144,bajar,0.0148,0,media-baja,media
+1561329,510799,M. Mbokazi,South Africa,1531,DEF,"Joao Pedro Pinheiro, Portugal",0.0851,0.0851,neutro,0.0,0,media-baja,media
+1561329,179893,O. Appollis,South Africa,1531,MID,"Joao Pedro Pinheiro, Portugal",0.0545,0.0553,neutro,0.0008,0,media-baja,media
+1561329,158433,S. Sithole,South Africa,1531,MID,"Joao Pedro Pinheiro, Portugal",0.3098,0.3191,subir,0.0093,0,media-baja,media
+1561329,268710,J. Adams,South Africa,1531,MID,"Joao Pedro Pinheiro, Portugal",0.1681,0.1673,neutro,0.0008,0,media-baja,media
+1561329,295977,T. Moremi,South Africa,1531,FWD,"Joao Pedro Pinheiro, Portugal",0.097,0.0941,bajar,0.0029,0,media-baja,media
+1561329,50816,R. Laryea,Canada,5529,DEF,"Joao Pedro Pinheiro, Portugal",0.2627,0.2798,subir,0.0171,0,media-baja,media
+1561329,8489,J. David,Canada,5529,FWD,"Joao Pedro Pinheiro, Portugal",0.0685,0.0685,neutro,0.0,0,media-baja,media
+1561329,51016,T. Buchanan,Canada,5529,MID,"Joao Pedro Pinheiro, Portugal",0.1804,0.1804,neutro,0.0,0,media-baja,media
+1561329,51274,M. Crépeau,Canada,5529,GK,"Joao Pedro Pinheiro, Portugal",0.0468,0.0482,subir,0.0014,0,media-baja,baja
+1561329,51295,D. Cornelius,Canada,5529,DEF,"Joao Pedro Pinheiro, Portugal",0.31,0.3193,subir,0.0093,0,media-baja,media
+1561329,328046,I. Koné,Canada,5529,,"Joao Pedro Pinheiro, Portugal",0.3212,0.326,neutro,0.0048,0,media-baja,baja
+1561329,2001,C. Larin,Canada,5529,FWD,"Joao Pedro Pinheiro, Portugal",0.1058,0.1121,subir,0.0063,0,media-baja,media
+1561329,78547,A. Johnston,Canada,5529,DEF,"Joao Pedro Pinheiro, Portugal",0.2799,0.2883,subir,0.0084,0,media-baja,media
+1561329,35570,S. Eustáquio,Canada,5529,MID,"Joao Pedro Pinheiro, Portugal",0.131,0.1343,subir,0.0033,0,media-baja,media
+1561329,327738,L. De Fougerolles,Canada,5529,DEF,"Joao Pedro Pinheiro, Portugal",0.2635,0.2806,subir,0.0171,0,media-baja,media
+1561329,44798,L. Millar,Canada,5529,FWD,"Joao Pedro Pinheiro, Portugal",0.171,0.171,neutro,0.0,0,media-baja,media
 1562344,762,Vinícius Júnior,Brazil,6,FWD,M. Mariani,0.1613,0.1508,bajar,0.0105,0,media-baja,media
 1562344,747,Casemiro,Brazil,6,MID,M. Mariani,0.1765,0.188,subir,0.0115,1,media-baja,media
 1562344,10135,Bruno Guimarães,Brazil,6,MID,M. Mariani,0.1626,0.1577,bajar,0.0049,0,media-baja,media
@@ -494,17 +494,17 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1564789,474591,C. Inao OulaÃ¯,Ivory Coast,1501,MID,"Jesús Valenzuela, Venezuela",0.3093,0.3074,neutro,0.0019,0,media-baja,media
 1564789,513776,Y. Diomande,Ivory Coast,1501,MID,"Jesús Valenzuela, Venezuela",0.1756,0.171,bajar,0.0046,0,media-baja,media
 1564789,275651,A. Bonny,Ivory Coast,1501,FWD,"Jesús Valenzuela, Venezuela",0.1271,0.1162,bajar,0.0109,0,media-baja,media
-1564789,19172,Ø. Nyland,Norway,1090,GK,"Jesús Valenzuela, Venezuela",0.0208,0.0197,bajar,0.0011,0,media-baja,baja
-1564789,39362,M. Pedersen,Norway,1090,DEF,"Jesús Valenzuela, Venezuela",0.0504,0.0461,bajar,0.0043,0,media-baja,media
-1564789,1119,K. Ajer,Norway,1090,DEF,"Jesús Valenzuela, Venezuela",0.1636,0.1553,bajar,0.0083,0,media-baja,media
-1564789,39254,T. Heggem,Norway,1090,DEF,"Jesús Valenzuela, Venezuela",0.2369,0.2213,bajar,0.0156,0,media-baja,media
-1564789,265782,D. Møller Wolfe,Norway,1090,DEF,"Jesús Valenzuela, Venezuela",0.1626,0.1486,bajar,0.014,0,media-baja,media
-1564789,37127,M. Ødegaard,Norway,1090,MID,"Jesús Valenzuela, Venezuela",0.0294,0.0283,bajar,0.0011,0,media-baja,media
-1564789,1934,S. Berge,Norway,1090,MID,"Jesús Valenzuela, Venezuela",0.0815,0.0798,bajar,0.0017,0,media-baja,media
-1564789,39064,P. Berg,Norway,1090,MID,"Jesús Valenzuela, Venezuela",0.2533,0.248,bajar,0.0053,0,media-baja,media
-1564789,8492,A. Sørloth,Norway,1090,FWD,"Jesús Valenzuela, Venezuela",0.2656,0.2282,bajar,0.0374,0,media-baja,media
-1564789,1100,E. Haaland,Norway,1090,FWD,"Jesús Valenzuela, Venezuela",0.0831,0.0714,bajar,0.0117,0,media-baja,media
-1564789,314511,A. Nusa,Norway,1090,FWD,"Jesús Valenzuela, Venezuela",0.0278,0.0255,bajar,0.0023,1,media-baja,media
+1564789,19172,Ø. Nyland,Norway,1090,GK,"Jesús Valenzuela, Venezuela",0.0208,0.0193,bajar,0.0015,0,media-baja,media
+1564789,39362,M. Pedersen,Norway,1090,DEF,"Jesús Valenzuela, Venezuela",0.0504,0.0451,bajar,0.0053,0,media-baja,media
+1564789,1119,K. Ajer,Norway,1090,DEF,"Jesús Valenzuela, Venezuela",0.1636,0.152,bajar,0.0116,0,media-baja,media
+1564789,39254,T. Heggem,Norway,1090,DEF,"Jesús Valenzuela, Venezuela",0.2369,0.2118,bajar,0.0251,0,media-baja,media
+1564789,265782,D. Møller Wolfe,Norway,1090,DEF,"Jesús Valenzuela, Venezuela",0.1626,0.1454,bajar,0.0172,0,media-baja,media
+1564789,37127,M. Ødegaard,Norway,1090,MID,"Jesús Valenzuela, Venezuela",0.0294,0.0278,bajar,0.0016,0,media-baja,media
+1564789,1934,S. Berge,Norway,1090,MID,"Jesús Valenzuela, Venezuela",0.0815,0.0782,bajar,0.0033,0,media-baja,media
+1564789,39064,P. Berg,Norway,1090,MID,"Jesús Valenzuela, Venezuela",0.2533,0.2429,bajar,0.0104,0,media-baja,media
+1564789,8492,A. Sørloth,Norway,1090,FWD,"Jesús Valenzuela, Venezuela",0.2656,0.2228,bajar,0.0428,0,media-baja,media
+1564789,1100,E. Haaland,Norway,1090,FWD,"Jesús Valenzuela, Venezuela",0.0831,0.0697,bajar,0.0134,0,media-baja,media
+1564789,314511,A. Nusa,Norway,1090,MID,"Jesús Valenzuela, Venezuela",0.0278,0.0267,bajar,0.0011,1,media-baja,media
 1567306,270774,J. Rangel,Mexico,16,GK,S. Vincic,0.0577,0.0568,neutro,0.0009,0,media-baja,baja
 1567306,35544,J. Vásquez,Mexico,16,DEF,S. Vincic,0.1929,0.1929,neutro,0.0,0,media-baja,media
 1567306,2879,R. Alvarado,Mexico,16,FWD,S. Vincic,0.0377,0.0352,bajar,0.0025,0,media-baja,media
@@ -549,17 +549,17 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1565177,153430,A. Elanga,Sweden,5,MID,"Danny Makkelie, Netherlands",0.04,0.039,bajar,0.001,0,media-baja,media
 1565177,2864,A. Isak,Sweden,5,FWD,"Danny Makkelie, Netherlands",0.2226,0.2035,bajar,0.0191,0,media-baja,media
 1565177,18979,V. Gyökeres,Sweden,5,FWD,"Danny Makkelie, Netherlands",0.0879,0.0865,neutro,0.0014,0,media-baja,media
-1567307,2932,J. Pickford,England,10,GK,A. Makhadmeh,0.0612,0.0599,bajar,0.0013,0,media-baja,baja
+1567307,2932,J. Pickford,England,10,GK,A. Makhadmeh,0.0612,0.0599,bajar,0.0013,0,media-baja,media
 1567307,184,H. Kane,England,10,FWD,A. Makhadmeh,0.1672,0.1486,bajar,0.0186,0,media-baja,media
-1567307,129718,J. Bellingham,England,10,MID,A. Makhadmeh,0.3628,0.3443,bajar,0.0185,1,media-baja,media
-1567307,19354,E. Konsa,England,10,DEF,A. Makhadmeh,0.1024,0.1002,bajar,0.0022,0,media-baja,media
+1567307,129718,J. Bellingham,England,10,MID,A. Makhadmeh,0.3628,0.3298,bajar,0.033,1,media-baja,media
+1567307,19354,E. Konsa,England,10,DEF,A. Makhadmeh,0.1024,0.0987,bajar,0.0037,0,media-baja,media
 1567307,138908,E. Anderson,England,10,MID,A. Makhadmeh,0.055,0.0536,bajar,0.0014,0,media-baja,media
-1567307,307123,N. O&apos;Reilly,England,10,DEF,A. Makhadmeh,0.0853,0.0835,bajar,0.0018,0,media-baja,media
-1567307,2937,D. Rice,England,10,MID,A. Makhadmeh,0.0657,0.0702,subir,0.0045,0,media-baja,media
+1567307,307123,N. O&apos;Reilly,England,10,DEF,A. Makhadmeh,0.0853,0.0865,neutro,0.0012,0,media-baja,media
+1567307,2937,D. Rice,England,10,MID,A. Makhadmeh,0.0657,0.0663,neutro,0.0006,0,media-baja,media
 1567307,626,J. Stones,England,10,DEF,A. Makhadmeh,0.0849,0.0818,bajar,0.0031,0,media-baja,media
 1567307,67971,M. Guéhi,England,10,DEF,A. Makhadmeh,0.2486,0.2434,bajar,0.0052,0,media-baja,media
 1567307,138787,A. Gordon,England,10,MID,A. Makhadmeh,0.1231,0.1199,bajar,0.0032,0,media-baja,media
-1567307,136723,N. Madueke,England,10,FWD,A. Makhadmeh,0.1776,0.1623,bajar,0.0153,0,media-baja,media
+1567307,136723,N. Madueke,England,10,MID,A. Makhadmeh,0.1776,0.1685,bajar,0.0091,0,media-baja,media
 1567307,375,C. Mbemba,Congo DR,1508,DEF,A. Makhadmeh,0.2174,0.2128,bajar,0.0046,0,media-baja,media
 1567307,21101,S. Moutoussamy,Congo DR,1508,MID,A. Makhadmeh,0.1567,0.1581,neutro,0.0014,0,media-baja,media
 1567307,24012,L. Mpasi,Congo DR,1508,GK,A. Makhadmeh,0.0539,0.0528,bajar,0.0011,0,media-baja,baja
@@ -618,12 +618,12 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1567312,5,M. Akanji,Switzerland,15,DEF,Y. Perez,0.1874,0.1807,bajar,0.0067,0,media-baja,media
 1567312,2803,N. Elvedi,Switzerland,15,DEF,Y. Perez,0.377,0.3691,bajar,0.0079,0,media-baja,media
 1567312,1464,G. Xhaka,Switzerland,15,MID,Y. Perez,0.269,0.2808,subir,0.0118,0,media-baja,media
-1567312,2807,R. Freuler,Switzerland,15,MID,Y. Perez,0.1395,0.1387,neutro,0.0008,0,media-baja,media
-1567312,421,B. Embolo,Switzerland,15,FWD,Y. Perez,0.1567,0.1393,bajar,0.0174,0,media-baja,media
+1567312,2807,R. Freuler,Switzerland,15,MID,Y. Perez,0.1395,0.1359,bajar,0.0036,0,media-baja,media
+1567312,421,B. Embolo,Switzerland,15,FWD,Y. Perez,0.1567,0.1644,subir,0.0077,0,media-baja,media
 1567312,1631,R. Rodríguez,Switzerland,15,DEF,Y. Perez,0.0861,0.0813,bajar,0.0048,0,media-baja,media
 1567312,48648,D. Ndoye,Switzerland,15,MID,Y. Perez,0.1972,0.1871,bajar,0.0101,0,media-baja,media
 1567312,48471,R. Vargas,Switzerland,15,MID,Y. Perez,0.1828,0.1735,bajar,0.0093,0,media-baja,media
-1567312,25282,G. Kobel,Switzerland,15,GK,Y. Perez,0.0396,0.0388,bajar,0.0008,0,media-baja,baja
+1567312,25282,G. Kobel,Switzerland,15,GK,Y. Perez,0.0396,0.0388,bajar,0.0008,0,media-baja,media
 1567312,951,M. Aebischer,Switzerland,15,MID,Y. Perez,0.0385,0.0375,bajar,0.001,0,media-baja,media
 1567312,48378,S. Widmer,Switzerland,15,DEF,Y. Perez,0.4479,0.4318,bajar,0.0161,0,media-baja,media
 1567312,1567,A. Mandi,Algeria,1532,DEF,Y. Perez,0.0376,0.0357,bajar,0.0019,0,media-baja,media
@@ -703,17 +703,17 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1565178,2649,Ahmed Abou El Fotouh,Egypt,32,DEF,G. Tejera,0.2088,0.2146,subir,0.0058,0,media-baja,media
 1565178,2664,Trézéguet,Egypt,32,FWD,G. Tejera,0.3395,0.3336,neutro,0.0059,0,media-baja,media
 1565178,306,Mohamed Salah,Egypt,32,FWD,G. Tejera,0.0362,0.0349,bajar,0.0013,0,media-baja,media
-1565179,19599,E. Martínez,Argentina,26,GK,D. Fischer,0.0409,0.0396,bajar,0.0013,0,media-baja,baja
-1565179,6067,T. Almada,Argentina,26,MID,D. Fischer,0.145,0.1396,bajar,0.0054,0,media-baja,media
-1565179,30776,C. Romero,Argentina,26,DEF,D. Fischer,0.0439,0.0409,bajar,0.003,0,media-baja,media
-1565179,6716,A. Mac Allister,Argentina,26,MID,D. Fischer,0.3477,0.3469,neutro,0.0008,0,media-baja,media
-1565179,5996,E. Fernández,Argentina,26,MID,D. Fischer,0.0554,0.0544,neutro,0.001,0,media-baja,media
-1565179,217,Lautaro Martínez,Argentina,26,FWD,D. Fischer,0.0558,0.049,bajar,0.0068,0,media-baja,media
-1565179,2467,Lisandro Martínez,Argentina,26,DEF,D. Fischer,0.2376,0.2264,bajar,0.0112,0,media-baja,media
-1565179,624,N. Otamendi,Argentina,26,DEF,D. Fischer,0.3085,0.2986,bajar,0.0099,0,media-baja,media
-1565179,529,N. Tagliafico,Argentina,26,DEF,D. Fischer,0.2197,0.2093,bajar,0.0104,0,media-baja,media
-1565179,1578,G. Lo Celso,Argentina,26,MID,D. Fischer,0.3863,0.3796,neutro,0.0067,0,media-baja,media
-1565179,154,L. Messi,Argentina,26,FWD,D. Fischer,0.0521,0.0457,bajar,0.0064,0,media-baja,media
+1565179,19599,E. Martínez,Argentina,26,GK,D. Fischer,0.0409,0.0408,neutro,0.0001,0,media-baja,baja
+1565179,6067,T. Almada,Argentina,26,MID,D. Fischer,0.145,0.149,subir,0.004,0,media-baja,media
+1565179,30776,C. Romero,Argentina,26,DEF,D. Fischer,0.0439,0.0412,bajar,0.0027,0,media-baja,media
+1565179,6716,A. Mac Allister,Argentina,26,MID,D. Fischer,0.3477,0.3521,neutro,0.0044,0,media-baja,media
+1565179,5996,E. Fernández,Argentina,26,MID,D. Fischer,0.0554,0.055,neutro,0.0004,0,media-baja,media
+1565179,217,Lautaro Martínez,Argentina,26,FWD,D. Fischer,0.0558,0.0507,bajar,0.0051,0,media-baja,media
+1565179,2467,Lisandro Martínez,Argentina,26,DEF,D. Fischer,0.2376,0.2335,neutro,0.0041,0,media-baja,media
+1565179,624,N. Otamendi,Argentina,26,DEF,D. Fischer,0.3085,0.3078,neutro,0.0007,0,media-baja,media
+1565179,529,N. Tagliafico,Argentina,26,DEF,D. Fischer,0.2197,0.2115,bajar,0.0082,0,media-baja,media
+1565179,1578,G. Lo Celso,Argentina,26,MID,D. Fischer,0.3863,0.3912,neutro,0.0049,0,media-baja,media
+1565179,154,L. Messi,Argentina,26,FWD,D. Fischer,0.0521,0.0473,bajar,0.0048,0,media-baja,media
 1565179,96512,Kevin Pina,Cape Verde Islands,1533,MID,D. Fischer,0.2405,0.2556,subir,0.0151,1,media-baja,media
 1565179,69260,Pico,Cape Verde Islands,1533,DEF,D. Fischer,0.1171,0.1168,neutro,0.0003,0,media-baja,media
 1565179,41608,Diney Borges,Cape Verde Islands,1533,DEF,D. Fischer,0.2366,0.2443,subir,0.0077,0,media-baja,media
@@ -802,17 +802,17 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1568100,1496,Raphinha,Brazil,6,FWD,"Ismail Elfath, USA",0.0564,0.0537,bajar,0.0027,0,media-baja,media
 1568100,22224,Gabriel Magalhães,Brazil,6,DEF,"Ismail Elfath, USA",0.2566,0.256,neutro,0.0006,0,media-baja,media
 1568100,618,Danilo,Brazil,6,DEF,"Ismail Elfath, USA",0.045,0.0465,subir,0.0015,0,media-baja,media
-1568100,1934,S. Berge,Norway,1090,MID,"Ismail Elfath, USA",0.1031,0.1029,neutro,0.0002,0,media-baja,media
-1568100,19172,Ø. Nyland,Norway,1090,GK,"Ismail Elfath, USA",0.0217,0.021,bajar,0.0007,0,media-baja,baja
-1568100,1119,K. Ajer,Norway,1090,DEF,"Ismail Elfath, USA",0.2086,0.2019,bajar,0.0067,0,media-baja,media
-1568100,8492,A. Sørloth,Norway,1090,FWD,"Ismail Elfath, USA",0.3352,0.2942,bajar,0.041,0,media-baja,media
-1568100,265782,D. Møller Wolfe,Norway,1090,DEF,"Ismail Elfath, USA",0.2075,0.1935,bajar,0.014,0,media-baja,media
-1568100,314511,A. Nusa,Norway,1090,FWD,"Ismail Elfath, USA",0.029,0.0272,bajar,0.0018,0,media-baja,media
-1568100,39254,T. Heggem,Norway,1090,DEF,"Ismail Elfath, USA",0.2983,0.2842,bajar,0.0141,0,media-baja,media
-1568100,1100,E. Haaland,Norway,1090,FWD,"Ismail Elfath, USA",0.105,0.0922,bajar,0.0128,0,media-baja,media
-1568100,24845,J. Ryerson,Norway,1090,DEF,"Ismail Elfath, USA",0.0223,0.0208,bajar,0.0015,0,media-baja,media
-1568100,39043,F. Aursnes,Norway,1090,MID,"Ismail Elfath, USA",0.1361,0.131,bajar,0.0051,0,media-baja,media
-1568100,37127,M. Ødegaard,Norway,1090,MID,"Ismail Elfath, USA",0.0307,0.0302,neutro,0.0005,0,media-baja,media
+1568100,1934,S. Berge,Norway,1090,MID,"Ismail Elfath, USA",0.1031,0.1008,bajar,0.0023,0,media-baja,media
+1568100,19172,Ø. Nyland,Norway,1090,GK,"Ismail Elfath, USA",0.0217,0.0206,bajar,0.0011,0,media-baja,baja
+1568100,1119,K. Ajer,Norway,1090,DEF,"Ismail Elfath, USA",0.2086,0.1977,bajar,0.0109,0,media-baja,media
+1568100,8492,A. Sørloth,Norway,1090,FWD,"Ismail Elfath, USA",0.3352,0.2875,bajar,0.0477,0,media-baja,media
+1568100,265782,D. Møller Wolfe,Norway,1090,DEF,"Ismail Elfath, USA",0.2075,0.1894,bajar,0.0181,0,media-baja,media
+1568100,314511,A. Nusa,Norway,1090,MID,"Ismail Elfath, USA",0.029,0.0284,bajar,0.0006,0,media-baja,media
+1568100,39254,T. Heggem,Norway,1090,DEF,"Ismail Elfath, USA",0.2983,0.2723,bajar,0.026,0,media-baja,media
+1568100,1100,E. Haaland,Norway,1090,FWD,"Ismail Elfath, USA",0.105,0.0901,bajar,0.0149,0,media-baja,media
+1568100,24845,J. Ryerson,Norway,1090,DEF,"Ismail Elfath, USA",0.0223,0.0204,bajar,0.0019,0,media-baja,media
+1568100,39043,F. Aursnes,Norway,1090,MID,"Ismail Elfath, USA",0.1361,0.1283,bajar,0.0078,0,media-baja,media
+1568100,37127,M. Ødegaard,Norway,1090,MID,"Ismail Elfath, USA",0.0307,0.0296,bajar,0.0011,0,media-baja,media
 1570714,270774,J. Rangel,Mexico,16,GK,"Alireza Faghani, Australia",0.0614,0.0605,neutro,0.0009,0,media-baja,media
 1570714,35544,J. Vásquez,Mexico,16,DEF,"Alireza Faghani, Australia",0.1951,0.1951,neutro,0.0,1,media-baja,media
 1570714,2879,R. Alvarado,Mexico,16,FWD,"Alireza Faghani, Australia",0.0401,0.0375,bajar,0.0026,0,media-baja,media
@@ -824,15 +824,15 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1570714,2887,R. Jiménez,Mexico,16,FWD,"Alireza Faghani, Australia",0.1978,0.18,bajar,0.0178,0,media-baja,media
 1570714,35970,L. Romo,Mexico,16,MID,"Alireza Faghani, Australia",0.1268,0.123,bajar,0.0038,0,media-baja,media
 1570714,212233,B. Gutiérrez,Mexico,16,MID,"Alireza Faghani, Australia",0.1731,0.1844,subir,0.0113,0,media-baja,media
-1570714,2932,J. Pickford,England,10,GK,"Alireza Faghani, Australia",0.0818,0.0818,neutro,0.0,0,media-baja,baja
+1570714,2932,J. Pickford,England,10,GK,"Alireza Faghani, Australia",0.0818,0.0818,neutro,0.0,0,media-baja,media
 1570714,184,H. Kane,England,10,FWD,"Alireza Faghani, Australia",0.2203,0.2005,bajar,0.0198,1,media-baja,media
-1570714,19354,E. Konsa,England,10,DEF,"Alireza Faghani, Australia",0.1357,0.1357,neutro,0.0,0,media-baja,media
+1570714,19354,E. Konsa,England,10,DEF,"Alireza Faghani, Australia",0.1357,0.1337,neutro,0.002,0,media-baja,media
 1570714,138908,E. Anderson,England,10,MID,"Alireza Faghani, Australia",0.0711,0.0707,neutro,0.0004,0,media-baja,media
-1570714,129718,J. Bellingham,England,10,MID,"Alireza Faghani, Australia",0.4592,0.4454,bajar,0.0138,0,media-baja,media
+1570714,129718,J. Bellingham,England,10,MID,"Alireza Faghani, Australia",0.4592,0.4271,bajar,0.0321,0,media-baja,media
 1570714,67971,M. Guéhi,England,10,DEF,"Alireza Faghani, Australia",0.3224,0.3224,neutro,0.0,0,media-baja,media
-1570714,136723,N. Madueke,England,10,FWD,"Alireza Faghani, Australia",0.232,0.2169,bajar,0.0151,0,media-baja,media
-1570714,307123,N. O&apos;Reilly,England,10,DEF,"Alireza Faghani, Australia",0.1096,0.1096,neutro,0.0,1,media-baja,media
-1570714,2937,D. Rice,England,10,MID,"Alireza Faghani, Australia",0.0877,0.0956,subir,0.0079,1,media-baja,media
+1570714,136723,N. Madueke,England,10,MID,"Alireza Faghani, Australia",0.232,0.225,bajar,0.007,0,media-baja,media
+1570714,307123,N. O&apos;Reilly,England,10,DEF,"Alireza Faghani, Australia",0.1096,0.1134,subir,0.0038,1,media-baja,media
+1570714,2937,D. Rice,England,10,MID,"Alireza Faghani, Australia",0.0877,0.0903,subir,0.0026,1,media-baja,media
 1570714,138787,A. Gordon,England,10,MID,"Alireza Faghani, Australia",0.1625,0.1617,neutro,0.0008,0,media-baja,media
 1570714,909,M. Rashford,England,10,FWD,"Alireza Faghani, Australia",0.075,0.0701,bajar,0.0049,0,media-baja,media
 1576756,369,Diogo Costa,Portugal,27,GK,"Anthony Taylor, England",0.022,0.022,neutro,0.0,0,media-baja,baja
@@ -879,17 +879,17 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1570715,2926,Y. Tielemans,Belgium,1,MID,"Adham Mohammad, Jordan",0.2384,0.2367,neutro,0.0017,0,media-baja,media
 1570715,1946,L. Trossard,Belgium,1,MID,"Adham Mohammad, Jordan",0.1532,0.1483,bajar,0.0049,0,media-baja,media
 1570715,147859,C. De Ketelaere,Belgium,1,FWD,"Adham Mohammad, Jordan",0.1554,0.1411,bajar,0.0143,0,media-baja,media
-1576804,19599,E. Martínez,Argentina,26,GK,F. Letexier,0.0387,0.0375,bajar,0.0012,0,media-baja,baja
-1576804,217,Lautaro Martínez,Argentina,26,FWD,F. Letexier,0.0529,0.0466,bajar,0.0063,0,media-baja,media
-1576804,2467,Lisandro Martínez,Argentina,26,DEF,F. Letexier,0.2908,0.2777,bajar,0.0131,0,media-baja,media
-1576804,6067,T. Almada,Argentina,26,MID,F. Letexier,0.1378,0.133,bajar,0.0048,0,media-baja,media
-1576804,30776,C. Romero,Argentina,26,DEF,F. Letexier,0.0415,0.0388,bajar,0.0027,0,media-baja,media
-1576804,6716,A. Mac Allister,Argentina,26,MID,F. Letexier,0.4274,0.4274,neutro,0.0,0,media-baja,media
-1576804,154,L. Messi,Argentina,26,FWD,F. Letexier,0.0494,0.0435,bajar,0.0059,0,media-baja,media
-1576804,5996,E. Fernández,Argentina,26,MID,F. Letexier,0.0525,0.0517,neutro,0.0008,0,media-baja,media
-1576804,624,N. Otamendi,Argentina,26,DEF,F. Letexier,0.3733,0.3621,bajar,0.0112,0,media-baja,media
-1576804,6231,F. Medina,Argentina,26,DEF,F. Letexier,0.1703,0.1712,neutro,0.0009,0,media-baja,media
-1576804,2472,R. De Paul,Argentina,26,MID,F. Letexier,0.241,0.2326,bajar,0.0084,0,media-baja,media
+1576804,19599,E. Martínez,Argentina,26,GK,F. Letexier,0.0387,0.0387,neutro,0.0,0,media-baja,media
+1576804,217,Lautaro Martínez,Argentina,26,FWD,F. Letexier,0.0529,0.0481,bajar,0.0048,0,media-baja,media
+1576804,2467,Lisandro Martínez,Argentina,26,DEF,F. Letexier,0.2908,0.2864,neutro,0.0044,0,media-baja,media
+1576804,6067,T. Almada,Argentina,26,MID,F. Letexier,0.1378,0.1419,subir,0.0041,0,media-baja,media
+1576804,30776,C. Romero,Argentina,26,DEF,F. Letexier,0.0415,0.039,bajar,0.0025,0,media-baja,media
+1576804,6716,A. Mac Allister,Argentina,26,MID,F. Letexier,0.4274,0.4338,neutro,0.0064,0,media-baja,media
+1576804,154,L. Messi,Argentina,26,FWD,F. Letexier,0.0494,0.045,bajar,0.0044,0,media-baja,media
+1576804,5996,E. Fernández,Argentina,26,MID,F. Letexier,0.0525,0.0522,neutro,0.0003,0,media-baja,media
+1576804,624,N. Otamendi,Argentina,26,DEF,F. Letexier,0.3733,0.3733,neutro,0.0,0,media-baja,media
+1576804,6231,F. Medina,Argentina,26,DEF,F. Letexier,0.1703,0.1763,subir,0.006,0,media-baja,media
+1576804,2472,R. De Paul,Argentina,26,MID,F. Letexier,0.241,0.2338,bajar,0.0072,0,media-baja,media
 1576804,2654,Mohamed Hany,Egypt,32,DEF,F. Letexier,0.1677,0.1669,neutro,0.0008,0,media-baja,media
 1576804,269174,Mostafa Shobeir,Egypt,32,GK,F. Letexier,0.0864,0.089,subir,0.0026,1,media-baja,media
 1576804,190575,Marwan Attia,Egypt,32,MID,F. Letexier,0.3955,0.4331,subir,0.0376,1,media-baja,media
@@ -902,16 +902,16 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1576804,395075,Mostafa Zico,Egypt,32,FWD,F. Letexier,0.1654,0.1555,bajar,0.0099,0,media-baja,media
 1576804,306,Mohamed Salah,Egypt,32,FWD,F. Letexier,0.0404,0.039,bajar,0.0014,0,media-baja,media
 1576805,25282,G. Kobel,Switzerland,15,GK,I. Barton,0.0326,0.0327,neutro,0.0001,0,media-baja,baja
-1576805,2810,D. Zakaria,Switzerland,15,DEF,I. Barton,0.2305,0.2391,subir,0.0086,1,media-baja,media
+1576805,2810,D. Zakaria,Switzerland,15,DEF,I. Barton,0.2305,0.2448,subir,0.0143,1,media-baja,media
 1576805,2803,N. Elvedi,Switzerland,15,DEF,I. Barton,0.3694,0.3702,neutro,0.0008,0,media-baja,media
 1576805,5,M. Akanji,Switzerland,15,DEF,I. Barton,0.1815,0.1792,neutro,0.0023,0,media-baja,media
 1576805,1631,R. Rodríguez,Switzerland,15,DEF,I. Barton,0.0805,0.0779,bajar,0.0026,0,media-baja,media
-1576805,2807,R. Freuler,Switzerland,15,MID,I. Barton,0.1337,0.136,neutro,0.0023,0,media-baja,media
+1576805,2807,R. Freuler,Switzerland,15,MID,I. Barton,0.1337,0.1333,neutro,0.0004,0,media-baja,media
 1576805,1464,G. Xhaka,Switzerland,15,MID,I. Barton,0.2631,0.2808,subir,0.0177,1,media-baja,media
 1576805,163032,F. Rieder,Switzerland,15,MID,I. Barton,0.1252,0.1249,neutro,0.0003,0,media-baja,media
 1576805,264705,A. Jashari,Switzerland,15,MID,I. Barton,0.1193,0.1214,neutro,0.0021,0,media-baja,media
 1576805,48648,D. Ndoye,Switzerland,15,MID,I. Barton,0.1911,0.1858,bajar,0.0053,0,media-baja,media
-1576805,421,B. Embolo,Switzerland,15,FWD,I. Barton,0.1503,0.1371,bajar,0.0132,0,media-baja,media
+1576805,421,B. Embolo,Switzerland,15,FWD,I. Barton,0.1503,0.1612,subir,0.0109,0,media-baja,media
 1576805,2482,C. Vargas,Colombia,8,GK,I. Barton,0.0495,0.0511,subir,0.0016,0,media-baja,baja
 1576805,13736,D. Muñoz,Colombia,8,DEF,I. Barton,0.3384,0.3375,neutro,0.0009,0,media-baja,media
 1576805,168,D. Sánchez,Colombia,8,DEF,I. Barton,0.0625,0.0645,subir,0.002,1,media-baja,media
@@ -967,3 +967,47 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1581821,629,K. De Bruyne,Belgium,1,MID,"Michael Oliver, England",0.206,0.1998,bajar,0.0062,1,media-baja,media
 1581821,1422,J. Doku,Belgium,1,MID,"Michael Oliver, England",0.0257,0.0256,neutro,0.0001,0,media-baja,media
 1581821,147859,C. De Ketelaere,Belgium,1,FWD,"Michael Oliver, England",0.2063,0.1877,bajar,0.0186,0,media-baja,media
+1582681,19599,E. Martínez,Argentina,26,GK,"Joao Pedro Pinheiro, Portugal",0.0408,0.0408,neutro,0.0,0,media-baja,media
+1582681,2467,Lisandro Martínez,Argentina,26,DEF,"Joao Pedro Pinheiro, Portugal",0.2561,0.2523,neutro,0.0038,0,media-baja,media
+1582681,30776,C. Romero,Argentina,26,DEF,"Joao Pedro Pinheiro, Portugal",0.0437,0.0411,bajar,0.0026,0,media-baja,media
+1582681,6716,A. Mac Allister,Argentina,26,MID,"Joao Pedro Pinheiro, Portugal",0.3755,0.3811,neutro,0.0056,0,media-baja,media
+1582681,154,L. Messi,Argentina,26,FWD,"Joao Pedro Pinheiro, Portugal",0.0519,0.0472,bajar,0.0047,0,media-baja,media
+1582681,5996,E. Fernández,Argentina,26,MID,"Joao Pedro Pinheiro, Portugal",0.0553,0.055,neutro,0.0003,0,media-baja,media
+1582681,217,Lautaro Martínez,Argentina,26,FWD,"Joao Pedro Pinheiro, Portugal",0.0556,0.0506,bajar,0.005,1,media-baja,media
+1582681,6067,T. Almada,Argentina,26,MID,"Joao Pedro Pinheiro, Portugal",0.1447,0.149,subir,0.0043,1,media-baja,media
+1582681,2472,R. De Paul,Argentina,26,MID,"Joao Pedro Pinheiro, Portugal",0.2114,0.2051,bajar,0.0063,0,media-baja,media
+1582681,529,N. Tagliafico,Argentina,26,DEF,"Joao Pedro Pinheiro, Portugal",0.237,0.2287,bajar,0.0083,0,media-baja,media
+1582681,6503,N. Molina,Argentina,26,DEF,"Joao Pedro Pinheiro, Portugal",0.426,0.4111,bajar,0.0149,0,media-baja,media
+1582681,5,M. Akanji,Switzerland,15,DEF,"Joao Pedro Pinheiro, Portugal",0.1929,0.19,neutro,0.0029,0,media-baja,media
+1582681,2807,R. Freuler,Switzerland,15,MID,"Joao Pedro Pinheiro, Portugal",0.1426,0.1419,neutro,0.0007,0,media-baja,media
+1582681,2803,N. Elvedi,Switzerland,15,DEF,"Joao Pedro Pinheiro, Portugal",0.389,0.389,neutro,0.0,0,media-baja,media
+1582681,1464,G. Xhaka,Switzerland,15,MID,"Joao Pedro Pinheiro, Portugal",0.2783,0.2964,subir,0.0181,0,media-baja,media
+1582681,48648,D. Ndoye,Switzerland,15,MID,"Joao Pedro Pinheiro, Portugal",0.203,0.1969,bajar,0.0061,0,media-baja,media
+1582681,421,B. Embolo,Switzerland,15,FWD,"Joao Pedro Pinheiro, Portugal",0.1602,0.1714,subir,0.0112,1,media-baja,media
+1582681,1631,R. Rodríguez,Switzerland,15,DEF,"Joao Pedro Pinheiro, Portugal",0.0864,0.0834,bajar,0.003,0,media-baja,media
+1582681,25282,G. Kobel,Switzerland,15,GK,"Joao Pedro Pinheiro, Portugal",0.0359,0.0359,neutro,0.0,0,media-baja,media
+1582681,48471,R. Vargas,Switzerland,15,MID,"Joao Pedro Pinheiro, Portugal",0.1868,0.1812,bajar,0.0056,0,media-baja,media
+1582681,951,M. Aebischer,Switzerland,15,MID,"Joao Pedro Pinheiro, Portugal",0.035,0.0348,neutro,0.0002,0,media-baja,media
+1582681,2810,D. Zakaria,Switzerland,15,DEF,"Joao Pedro Pinheiro, Portugal",0.2458,0.2605,subir,0.0147,0,media-baja,media
+1581037,19172,Ø. Nyland,Norway,1090,GK,"Clement Turpin, France",0.0224,0.0212,bajar,0.0012,0,media-baja,baja
+1581037,24845,J. Ryerson,Norway,1090,DEF,"Clement Turpin, France",0.0231,0.0211,bajar,0.002,0,media-baja,media
+1581037,1119,K. Ajer,Norway,1090,DEF,"Clement Turpin, France",0.1755,0.1663,bajar,0.0092,1,media-baja,media
+1581037,39254,T. Heggem,Norway,1090,DEF,"Clement Turpin, France",0.2533,0.2312,bajar,0.0221,0,media-baja,media
+1581037,265782,D. Møller Wolfe,Norway,1090,DEF,"Clement Turpin, France",0.1745,0.1593,bajar,0.0152,0,media-baja,media
+1581037,37127,M. Ødegaard,Norway,1090,MID,"Clement Turpin, France",0.0318,0.0306,bajar,0.0012,0,media-baja,media
+1581037,1934,S. Berge,Norway,1090,MID,"Clement Turpin, France",0.0878,0.0858,bajar,0.002,0,media-baja,media
+1581037,39064,P. Berg,Norway,1090,MID,"Clement Turpin, France",0.2706,0.2646,bajar,0.006,0,media-baja,media
+1581037,8492,A. Sørloth,Norway,1090,FWD,"Clement Turpin, France",0.2836,0.2433,bajar,0.0403,0,media-baja,media
+1581037,1100,E. Haaland,Norway,1090,FWD,"Clement Turpin, France",0.0894,0.0767,bajar,0.0127,0,media-baja,media
+1581037,301528,A. Schjelderup,Norway,1090,FWD,"Clement Turpin, France",0.0679,0.0599,bajar,0.008,0,media-baja,media
+1581037,2932,J. Pickford,England,10,GK,"Clement Turpin, France",0.0592,0.0591,neutro,0.0001,0,media-baja,baja
+1581037,19354,E. Konsa,England,10,DEF,"Clement Turpin, France",0.099,0.0973,neutro,0.0017,0,media-baja,media
+1581037,626,J. Stones,England,10,DEF,"Clement Turpin, France",0.0821,0.0807,neutro,0.0014,0,media-baja,media
+1581037,67971,M. Guéhi,England,10,DEF,"Clement Turpin, France",0.2411,0.2406,neutro,0.0005,0,media-baja,media
+1581037,307123,N. O&apos;Reilly,England,10,DEF,"Clement Turpin, France",0.0824,0.0851,subir,0.0027,0,media-baja,media
+1581037,138908,E. Anderson,England,10,MID,"Clement Turpin, France",0.0531,0.0527,neutro,0.0004,0,media-baja,media
+1581037,2937,D. Rice,England,10,MID,"Clement Turpin, France",0.0635,0.0653,subir,0.0018,0,media-baja,media
+1581037,136723,N. Madueke,England,10,MID,"Clement Turpin, France",0.172,0.1665,bajar,0.0055,0,media-baja,media
+1581037,129718,J. Bellingham,England,10,MID,"Clement Turpin, France",0.3527,0.3272,bajar,0.0255,0,media-baja,media
+1581037,138787,A. Gordon,England,10,MID,"Clement Turpin, France",0.1191,0.1182,neutro,0.0009,0,media-baja,media
+1581037,184,H. Kane,England,10,FWD,"Clement Turpin, France",0.1619,0.147,bajar,0.0149,0,media-baja,media

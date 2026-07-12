@@ -135,5 +135,9 @@ fixture_id,kickoff_utc,team_id,team_name,opponent_id,opponent_name,side,predicte
 1576805,2026-07-07 20:00,15,Switzerland,8,Colombia,home,4.232,2.0,2.232,2.232,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1578539,2026-07-09 20:00,2,France,31,Morocco,home,3.886,8.0,-4.1144,4.1144,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1578539,2026-07-09 20:00,31,Morocco,2,France,away,3.87,1.0,2.8696,2.8696,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1581037,2026-07-11 21:00,10,England,1090,Norway,away,5.566,8.0,-2.4335,2.4335,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1581037,2026-07-11 21:00,1090,Norway,10,England,home,4.288,4.0,0.2876,0.2876,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1581821,2026-07-10 19:00,1,Belgium,9,Spain,away,4.811,2.0,2.8111,2.8111,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1581821,2026-07-10 19:00,9,Spain,1,Belgium,home,7.759,8.0,-0.2407,0.2407,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1582681,2026-07-12 01:00,15,Switzerland,26,Argentina,away,3.844,5.0,-1.1557,1.1557,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1582681,2026-07-12 01:00,26,Argentina,15,Switzerland,home,5.307,7.0,-1.6931,1.6931,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
