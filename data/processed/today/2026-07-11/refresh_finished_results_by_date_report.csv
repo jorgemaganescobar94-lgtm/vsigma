@@ -1,0 +1,10 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-07-11,OK,API-SPORTS_DIRECT,643.0,,,,,,
+2026-07-11T11:30:00+01:00,MATCHED,,,1506992.0,FT,Gimcheon Sangmu FC,Bucheon FC 1995,1.0,1.0
+2026-07-11T11:30:00+01:00,MATCHED,,,1506993.0,FT,Gwangju FC,Pohang Steelers,0.0,3.0
+2026-07-11T11:30:00+01:00,MATCHED,,,1506994.0,FT,Ulsan Hyundai FC,Jeonbuk Motors,1.0,3.0
+2026-07-11T13:00:00+01:00,MATCHED,,,1494694.0,FT,Fredrikstad,Lillestrom,0.0,2.0
+2026-07-11T14:00:00+01:00,MATCHED,,,1494206.0,FT,Mjallby AIF,AIK Stockholm,1.0,2.0
+2026-07-11T15:00:00+01:00,MATCHED,,,1494692.0,FT,Aalesund,Molde,2.0,2.0
+2026-07-11T16:30:00+01:00,MATCHED,,,1494207.0,FT,Orgryte IS,BK Hacken,4.0,3.0
+2026-07-11T17:00:00+01:00,MATCHED,,,1494699.0,FT,Tromso,Valerenga,4.0,0.0

@@ -1,13 +1,13 @@
 # vSIGMA Shadow Performance - 2026-07-11
 
 ## Executive Shadow Performance Summary
-- generated_at: 2026-07-11T23:57:00+01:00
+- generated_at: 2026-07-12T10:17:02+01:00
 - experiments tracked: 1
 - performance_status_counts: TRACKING_ACTIVE_INSUFFICIENT_SAMPLE=1
 - promotion_readiness_counts: NOT_READY_SAMPLE_TOO_SMALL=1
 
 ## Experiment Tracking
-- TRACKING_ACTIVE_INSUFFICIENT_SAMPLE | LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | closed=1 | wins=1 | losses=0 | promotion=NOT_READY_SAMPLE_TOO_SMALL | production_impact=NONE
+- TRACKING_ACTIVE_INSUFFICIENT_SAMPLE | LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | closed=2 | wins=2 | losses=0 | promotion=NOT_READY_SAMPLE_TOO_SMALL | production_impact=NONE
 
 ## Guardrails
 - production logic changed: NO
