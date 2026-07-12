@@ -1,7 +1,7 @@
 # vSIGMA Promotion Gate - 2026-07-12
 
 ## Executive Gate Summary
-- generated_at: 2026-07-12T21:58:37+01:00
+- generated_at: 2026-07-12T23:56:34+01:00
 - experiments reviewed: 1
 - promotion_decision_counts: NOT_READY_SAMPLE_TOO_SMALL=1
 - auto_promote_counts: NO=1
