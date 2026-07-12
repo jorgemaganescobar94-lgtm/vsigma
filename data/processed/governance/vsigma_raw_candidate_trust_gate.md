@@ -11,8 +11,8 @@
 - production_change: NO
 
 ## Rows
-- Ulsan Hyundai FC vs Jeonbuk Motors | league=K League 1 | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_match_stat_forecasts.csv
-- Gwangju FC vs Pohang Steelers | league=K League 1 | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_match_stat_forecasts.csv
+- Ulsan Hyundai FC vs Jeonbuk Motors | league=K League 1 | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Gwangju FC vs Pohang Steelers | league=K League 1 | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
 
 ## Guardrails
 - Trust gate is defensive and can only restrict downstream use.
