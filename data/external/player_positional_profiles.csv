@@ -6,11 +6,11 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 19235,Djed Spence,10,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 138908,Elliot Anderson,10,MID,,,,,,,,,,api_football_lineup_position,media,baja
 2937,Declan Rice,10,MID,,,,,,,,,,api_football_lineup_position,media,baja
-136723,Noni Madueke,10,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+136723,Noni Madueke,10,MID,,,,,,,,,,api_football_lineup_position,media,baja
 129718,Jude Bellingham,10,MID,,,,,,,,,,api_football_lineup_position,media,baja
 138787,Anthony Gordon,10,MID,,,,,,,,,,api_football_lineup_position,media,baja
 184,Harry Kane,10,FWD,,,,,,,,,,api_football_lineup_position,media,baja
-1460,Bukayo Saka,10,MID,,,,,,,,,,api_football_lineup_position,media,baja
+1460,Bukayo Saka,10,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 307123,Nico O'Reilly,10,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 19170,Morgan Rogers,10,MID,,,,,,,,,,api_football_lineup_position,media,baja
 19586,Eberechi Eze,10,MID,,,,,,,,,,api_football_lineup_position,media,baja
@@ -677,7 +677,7 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 39043,Fredrik Aursnes,1090,MID,,,,,,,,,,api_football_lineup_position,media,baja
 8492,Alexander Sørloth,1090,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 1100,Erling Haaland,1090,FWD,,,,,,,,,,api_football_lineup_position,media,baja
-314511,Antonio Nusa,1090,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+314511,Antonio Nusa,1090,MID,,,,,,,,,,api_football_lineup_position,media,baja
 39362,Marcus Pedersen,1090,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 39064,Patrick Berg,1090,MID,,,,,,,,,,api_football_lineup_position,media,baja
 301528,Andreas Schjelderup,1090,FWD,,,,,,,,,,api_football_lineup_position,media,baja
