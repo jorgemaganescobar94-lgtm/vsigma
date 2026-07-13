@@ -1,21 +1,31 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
-2026-07-13,1506993,,,Gwangju FC,Pohang Steelers,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506993,,,Gwangju FC,Pohang Steelers,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506993,,,Gwangju FC,Pohang Steelers,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506993,,,Gwangju FC,Pohang Steelers,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506993,,,Gwangju FC,Pohang Steelers,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506993,,,Gwangju FC,Pohang Steelers,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506993,,,Gwangju FC,Pohang Steelers,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506993,,,Gwangju FC,Pohang Steelers,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506993,,,Gwangju FC,Pohang Steelers,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506993,,,Gwangju FC,Pohang Steelers,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506994,,,Ulsan Hyundai FC,Jeonbuk Motors,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506994,,,Ulsan Hyundai FC,Jeonbuk Motors,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506994,,,Ulsan Hyundai FC,Jeonbuk Motors,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506994,,,Ulsan Hyundai FC,Jeonbuk Motors,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506994,,,Ulsan Hyundai FC,Jeonbuk Motors,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506994,,,Ulsan Hyundai FC,Jeonbuk Motors,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506994,,,Ulsan Hyundai FC,Jeonbuk Motors,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506994,,,Ulsan Hyundai FC,Jeonbuk Motors,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506994,,,Ulsan Hyundai FC,Jeonbuk Motors,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-13,1506994,,,Ulsan Hyundai FC,Jeonbuk Motors,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1494202,Allsvenskan,Sweden,Djurgardens IF,Halmstad,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1494202,Allsvenskan,Sweden,Djurgardens IF,Halmstad,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1494202,Allsvenskan,Sweden,Djurgardens IF,Halmstad,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1494202,Allsvenskan,Sweden,Djurgardens IF,Halmstad,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1494202,Allsvenskan,Sweden,Djurgardens IF,Halmstad,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1494202,Allsvenskan,Sweden,Djurgardens IF,Halmstad,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1494202,Allsvenskan,Sweden,Djurgardens IF,Halmstad,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1494202,Allsvenskan,Sweden,Djurgardens IF,Halmstad,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1494202,Allsvenskan,Sweden,Djurgardens IF,Halmstad,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1494202,Allsvenskan,Sweden,Djurgardens IF,Halmstad,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1520760,Serie B,Brazil,America Mineiro,Londrina,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1520760,Serie B,Brazil,America Mineiro,Londrina,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1520760,Serie B,Brazil,America Mineiro,Londrina,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1520760,Serie B,Brazil,America Mineiro,Londrina,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1520760,Serie B,Brazil,America Mineiro,Londrina,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1520760,Serie B,Brazil,America Mineiro,Londrina,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1520760,Serie B,Brazil,America Mineiro,Londrina,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1520760,Serie B,Brazil,America Mineiro,Londrina,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1520760,Serie B,Brazil,America Mineiro,Londrina,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1520760,Serie B,Brazil,America Mineiro,Londrina,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1526890,Serie C,Brazil,AO Itabaiana,Brusque,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1526890,Serie C,Brazil,AO Itabaiana,Brusque,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1526890,Serie C,Brazil,AO Itabaiana,Brusque,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1526890,Serie C,Brazil,AO Itabaiana,Brusque,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1526890,Serie C,Brazil,AO Itabaiana,Brusque,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1526890,Serie C,Brazil,AO Itabaiana,Brusque,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1526890,Serie C,Brazil,AO Itabaiana,Brusque,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1526890,Serie C,Brazil,AO Itabaiana,Brusque,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1526890,Serie C,Brazil,AO Itabaiana,Brusque,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-13,1526890,Serie C,Brazil,AO Itabaiana,Brusque,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.

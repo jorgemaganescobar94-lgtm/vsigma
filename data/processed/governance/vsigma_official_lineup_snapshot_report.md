@@ -1,16 +1,16 @@
 # vSIGMA Official Lineup Snapshot Import - 2026-07-13
 
 ## Summary
-- rows_processed: 2
-- eligible_fixtures: 0
-- api_calls_made: 0
+- rows_processed: 3
+- eligible_fixtures: 2
+- api_calls_made: 2
 - cache_hits: 0
-- lineup_rows_written: 148
-- full_lineup_rows: 131
+- lineup_rows_written: 150
+- full_lineup_rows: 133
 - no_lineup_rows: 0
 - api_errors: 0
 - key_status: API_SPORTS
-- api_status_counts: none
+- api_status_counts: OK=1; NO_LINEUPS_RETURNED=1
 - auto_apply: NO
 - production_change: NO
 
