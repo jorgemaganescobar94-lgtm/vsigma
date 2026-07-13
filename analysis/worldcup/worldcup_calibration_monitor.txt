@@ -1,9 +1,5 @@
 WORLD CUP — MONITOR DE CALIBRACIÓN L3 (1X2 producción)  [solo monitor + alerta; NO toca el modelo]
-<<<<<<< Updated upstream
-generated_at_utc: 2026-07-13T11:14:55+00:00
-=======
 generated_at_utc: 2026-07-13T14:44:43+00:00
->>>>>>> Stashed changes
 UMBRAL ADAPTATIVO AL RUIDO (a priori): N>=15 · ALERTA si ECE_obs > nulo p95 (sim. 5000x, seed fijo) O logloss_L3 >= logloss_base
 ESTADO: OK
 N=71 | ECE_observado=0.116 | nulo p95(N=71)=0.166 -> ECE dentro del ruido
