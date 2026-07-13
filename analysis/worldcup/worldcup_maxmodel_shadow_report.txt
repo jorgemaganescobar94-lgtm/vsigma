@@ -23,4 +23,4 @@ A/B OOS — GOALS (Over 2.5 & BTTS, binary logloss/brier)
 ----------------------------------------------------------------------------------------------------
 WC SHADOW PREDICTIONS (max model refit on ALL data; L3 side-by-side; squad = WC-only adj)
 ----------------------------------------------------------------------------------------------------
-  WC shadow fixtures written: 62 (mx_* = shadow; l3_* = shipped; squad_adj_diff = WC-only)
+  WC shadow fixtures written: 86 (mx_* = shadow; l3_* = shipped; squad_adj_diff = WC-only)

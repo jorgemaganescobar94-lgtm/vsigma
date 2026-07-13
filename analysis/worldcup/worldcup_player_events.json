@@ -23,6 +23,17 @@
           "data_quality": "media"
         },
         {
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "probability_goal": 0.281,
+          "expected_goals": 0.3299,
+          "reason": "xG 0.33, P(gol) 28% (media)",
+          "source_used": "proxy",
+          "goal_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
+        {
           "player": "Mikel Oyarzabal",
           "team": "Spain",
           "probability_goal": 0.2789,
@@ -32,20 +43,21 @@
           "goal_source": "proxy",
           "confidence": "media",
           "data_quality": "media"
-        },
-        {
-          "player": "M. Olise",
-          "team": "France",
-          "probability_goal": 0.2307,
-          "expected_goals": 0.2623,
-          "reason": "xG 0.26, P(gol) 23% (media)",
-          "source_used": "proxy",
-          "goal_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
         }
       ],
       "likely_shots_on_target": [
+        {
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "probability_1_sot": 0.83,
+          "expected_sot": 1.7718,
+          "expected_shots": 3.09,
+          "reason": "tiros esp. 3.1, SOT esp. 1.8 (media)",
+          "source_used": "proxy",
+          "shots_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
         {
           "player": "Kylian Mbappé",
           "team": "France",
@@ -69,21 +81,21 @@
           "shots_source": "proxy",
           "confidence": "media",
           "data_quality": "media"
-        },
-        {
-          "player": "Lamine Yamal",
-          "team": "Spain",
-          "probability_1_sot": 0.6737,
-          "expected_sot": 1.12,
-          "expected_shots": 1.87,
-          "reason": "tiros esp. 1.9, SOT esp. 1.1 (media)",
-          "source_used": "proxy",
-          "shots_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
         }
       ],
       "likely_assisters": [
+        {
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "probability_assist": 0.2678,
+          "expected_assists": 0.3117,
+          "expected_key_passes": null,
+          "reason": "xA-proxy 0.31 (media)",
+          "source_used": "proxy",
+          "assist_source": "proxy",
+          "confidence": "media",
+          "data_quality": "media"
+        },
         {
           "player": "Kylian Mbappé",
           "team": "France",
@@ -103,18 +115,6 @@
           "expected_assists": 0.1885,
           "expected_key_passes": null,
           "reason": "xA-proxy 0.19 (media)",
-          "source_used": "proxy",
-          "assist_source": "proxy",
-          "confidence": "media",
-          "data_quality": "media"
-        },
-        {
-          "player": "Mikel Oyarzabal",
-          "team": "Spain",
-          "probability_assist": 0.1619,
-          "expected_assists": 0.1766,
-          "expected_key_passes": null,
-          "reason": "xA-proxy 0.18 (media)",
           "source_used": "proxy",
           "assist_source": "proxy",
           "confidence": "media",
@@ -200,7 +200,50 @@
         {
           "player": "A. Rabiot",
           "team": "France",
-          "player_id": 272,
+          "player_id": 272.0,
+          "probability_card": 0.3853,
+          "reason": "P(tarjeta) 39% — mercado de tarjeta es baja confianza (media)",
+          "confidence": "media-baja",
+          "data_quality": "media",
+          "probability_card_original": 0.3853,
+          "probability_card_adjusted": 0.3776,
+          "adjustment_direction": "bajar",
+          "adjustment_reason": "ajuste baja: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador",
+          "card_risk_components": {
+            "player_history": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "no determinado",
+              "weight": 0.0,
+              "step": 0.0
+            },
+            "position_profile": {
+              "label": "alto",
+              "direction": "subir",
+              "confidence": "media",
+              "weight": 0.6,
+              "step": 0.03
+            },
+            "team_profile": {
+              "label": "bajo",
+              "direction": "bajar",
+              "confidence": "alta",
+              "weight": 1.0,
+              "step": -0.05
+            },
+            "referee_profile": {
+              "label": "no determinado",
+              "direction": "neutro",
+              "confidence": "baja",
+              "weight": 0.15,
+              "step": 0.0
+            }
+          }
+        },
+        {
+          "player": "A. Rabiot",
+          "team": "France",
+          "player_id": 272.0,
           "probability_card": 0.3853,
           "reason": "P(tarjeta) 39% — mercado de tarjeta es baja confianza (media)",
           "confidence": "media-baja",
@@ -243,7 +286,7 @@
         {
           "player": "Rodri",
           "team": "Spain",
-          "player_id": 44,
+          "player_id": 44.0,
           "probability_card": 0.3373,
           "reason": "P(tarjeta) 34% — mercado de tarjeta es baja confianza (media)",
           "confidence": "media-baja",
@@ -284,67 +327,24 @@
           }
         },
         {
-          "player": "M. Koné",
-          "team": "France",
-          "player_id": 22147,
-          "probability_card": 0.3368,
+          "player": "Rodri",
+          "team": "Spain",
+          "player_id": 44.0,
+          "probability_card": 0.3373,
           "reason": "P(tarjeta) 34% — mercado de tarjeta es baja confianza (media)",
           "confidence": "media-baja",
           "data_quality": "media",
-          "probability_card_original": 0.3368,
-          "probability_card_adjusted": 0.3419,
-          "adjustment_direction": "neutro",
-          "adjustment_reason": "ajuste neutro: historial jugador alto ↑; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador",
+          "probability_card_original": 0.3373,
+          "probability_card_adjusted": 0.3255,
+          "adjustment_direction": "bajar",
+          "adjustment_reason": "ajuste baja: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador",
           "card_risk_components": {
             "player_history": {
-              "label": "alto",
-              "direction": "subir",
-              "confidence": "media-baja",
-              "weight": 0.35,
-              "step": 0.035
-            },
-            "position_profile": {
-              "label": "alto",
-              "direction": "subir",
-              "confidence": "media",
-              "weight": 0.6,
-              "step": 0.03
-            },
-            "team_profile": {
               "label": "bajo",
               "direction": "bajar",
-              "confidence": "alta",
-              "weight": 1.0,
-              "step": -0.05
-            },
-            "referee_profile": {
-              "label": "no determinado",
-              "direction": "neutro",
               "confidence": "baja",
               "weight": 0.15,
-              "step": 0.0
-            }
-          }
-        },
-        {
-          "player": "A. Tchouaméni",
-          "team": "France",
-          "player_id": 1271,
-          "probability_card": 0.3206,
-          "reason": "P(tarjeta) 32% — mercado de tarjeta es baja confianza (media)",
-          "confidence": "media-baja",
-          "data_quality": "media",
-          "probability_card_original": 0.3206,
-          "probability_card_adjusted": 0.3142,
-          "adjustment_direction": "bajar",
-          "adjustment_reason": "ajuste baja: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador",
-          "card_risk_components": {
-            "player_history": {
-              "label": "medio",
-              "direction": "neutro",
-              "confidence": "baja",
-              "weight": 0.15,
-              "step": 0.0
+              "step": -0.015
             },
             "position_profile": {
               "label": "alto",
