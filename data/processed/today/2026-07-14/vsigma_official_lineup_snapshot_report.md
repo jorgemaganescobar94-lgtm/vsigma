@@ -6,7 +6,7 @@
 - api_calls_made: 3
 - cache_hits: 8
 - lineup_rows_written: 174
-- full_lineup_rows: 150
+- full_lineup_rows: 155
 - no_lineup_rows: 0
 - api_errors: 0
 - key_status: API_SPORTS
