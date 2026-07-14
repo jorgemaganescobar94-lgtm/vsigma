@@ -1,14 +1,27 @@
 fixture_id,home,away,category,player,team,probability_goal,expected_goals,reason,source_used,goal_source,confidence,data_quality,probability_1_sot,expected_sot,expected_shots,shots_source,probability_assist,expected_assists,expected_key_passes,assist_source,player_id,probability_card,probability_card_original,probability_card_adjusted,adjustment_direction,adjustment_reason
 1585131,France,Spain,scorer,Kylian Mbappé,France,0.281,0.3299,"xG 0.33, P(gol) 28% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1585131,France,Spain,scorer,Kylian Mbappé,France,0.281,0.3299,"xG 0.33, P(gol) 28% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
 1585131,France,Spain,scorer,Mikel Oyarzabal,Spain,0.2789,0.327,"xG 0.33, P(gol) 28% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1585131,France,Spain,sot,Kylian Mbappé,France,,,"tiros esp. 3.1, SOT esp. 1.8 (media)",proxy,,media,media,0.83,1.7718,3.09,proxy,,,,,,,,,,
+1585131,France,Spain,scorer,M. Olise,France,0.2307,0.2623,"xG 0.26, P(gol) 23% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
 1585131,France,Spain,sot,Kylian Mbappé,France,,,"tiros esp. 3.1, SOT esp. 1.8 (media)",proxy,,media,media,0.83,1.7718,3.09,proxy,,,,,,,,,,
 1585131,France,Spain,sot,Mikel Oyarzabal,Spain,,,"tiros esp. 1.8, SOT esp. 1.3 (media)",proxy,,media,media,0.7158,1.2581,1.77,proxy,,,,,,,,,,
-1585131,France,Spain,assist,Kylian Mbappé,France,,,xA-proxy 0.31 (media),proxy,,media,media,,,,,0.2678,0.3117,,proxy,,,,,,
+1585131,France,Spain,sot,Lamine Yamal,Spain,,,"tiros esp. 1.9, SOT esp. 1.1 (media)",proxy,,media,media,0.6737,1.12,1.87,proxy,,,,,,,,,,
 1585131,France,Spain,assist,Kylian Mbappé,France,,,xA-proxy 0.31 (media),proxy,,media,media,,,,,0.2678,0.3117,,proxy,,,,,,
 1585131,France,Spain,assist,Lamine Yamal,Spain,,,xA-proxy 0.19 (media),proxy,,media,media,,,,,0.1718,0.1885,,proxy,,,,,,
-1585131,France,Spain,card_risk,A. Rabiot,France,,,P(tarjeta) 39% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,272.0,0.3853,0.3853,0.3776,bajar,ajuste baja: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+1585131,France,Spain,assist,Mikel Oyarzabal,Spain,,,xA-proxy 0.18 (media),proxy,,media,media,,,,,0.1619,0.1766,,proxy,,,,,,
 1585131,France,Spain,card_risk,A. Rabiot,France,,,P(tarjeta) 39% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,272.0,0.3853,0.3853,0.3776,bajar,ajuste baja: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
 1585131,France,Spain,card_risk,Rodri,Spain,,,P(tarjeta) 34% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,44.0,0.3373,0.3373,0.3255,bajar,ajuste baja: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
-1585131,France,Spain,card_risk,Rodri,Spain,,,P(tarjeta) 34% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,44.0,0.3373,0.3373,0.3255,bajar,ajuste baja: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+1585131,France,Spain,card_risk,M. Koné,France,,,P(tarjeta) 34% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,22147.0,0.3368,0.3368,0.3419,neutro,ajuste neutro: historial jugador alto ↑; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+1585131,France,Spain,card_risk,A. Tchouaméni,France,,,P(tarjeta) 32% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,1271.0,0.3206,0.3206,0.3142,bajar,ajuste baja: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+1586077,England,Argentina,scorer,Lautaro Martínez,Argentina,0.4236,0.5509,"xG 0.55, P(gol) 42% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1586077,England,Argentina,scorer,H. Kane,England,0.2444,0.2802,"xG 0.28, P(gol) 24% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1586077,England,Argentina,scorer,L. Messi,Argentina,0.1872,0.2073,"xG 0.21, P(gol) 19% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1586077,England,Argentina,sot,Lautaro Martínez,Argentina,,,"tiros esp. 2.0, SOT esp. 1.6 (media)",proxy,,media,media,0.7983,1.6012,2.02,proxy,,,,,,,,,,
+1586077,England,Argentina,sot,H. Kane,England,,,"tiros esp. 1.8, SOT esp. 1.1 (media)",proxy,,media,media,0.6817,1.1449,1.78,proxy,,,,,,,,,,
+1586077,England,Argentina,sot,A. Gordon,England,,,"tiros esp. 1.5, SOT esp. 1.0 (media)",proxy,,media,media,0.6407,1.0236,1.47,proxy,,,,,,,,,,
+1586077,England,Argentina,assist,L. Messi,Argentina,,,xA-proxy 0.24 (media),proxy,,media,media,,,,,0.2164,0.2439,,proxy,,,,,,
+1586077,England,Argentina,assist,Lautaro Martínez,Argentina,,,xA-proxy 0.20 (media),proxy,,media,media,,,,,0.1836,0.2028,,proxy,,,,,,
+1586077,England,Argentina,assist,N. Madueke,England,,,xA-proxy 0.14 (media),proxy,,media,media,,,,,0.1344,0.1443,,proxy,,,,,,
+1586077,England,Argentina,card_risk,J. Bellingham,England,,,P(tarjeta) 43% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,129718.0,0.4284,0.4284,0.3984,bajar,ajuste baja: historial jugador bajo ↓; posición alto ↑ · fuentes en conflicto -> ajuste conservador
+1586077,England,Argentina,card_risk,N. Molina,Argentina,,,P(tarjeta) 41% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,6503.0,0.4109,0.4109,0.3965,bajar,ajuste baja: historial jugador bajo ↓
+1586077,England,Argentina,card_risk,A. Mac Allister,Argentina,,,P(tarjeta) 36% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,6716.0,0.3616,0.3616,0.367,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑ · fuentes en conflicto -> ajuste conservador
+1586077,England,Argentina,card_risk,M. Guéhi,England,,,P(tarjeta) 30% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,67971.0,0.2987,0.2987,0.2987,neutro,ajuste neutro: sin sesgo neto de las fuentes
