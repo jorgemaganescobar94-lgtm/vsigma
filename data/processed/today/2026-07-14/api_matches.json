@@ -510,7 +510,7 @@
         "timestamp": 1784019600,
         "periods": {
           "first": 1784019600,
-          "second": null
+          "second": 1784023200
         },
         "venue": {
           "id": null,
@@ -518,10 +518,10 @@
           "city": null
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
-          "extra": 1
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 50,
+          "extra": null
         }
       },
       "league": {
@@ -720,7 +720,7 @@
         "timestamp": 1784019600,
         "periods": {
           "first": 1784019600,
-          "second": null
+          "second": 1784023200
         },
         "venue": {
           "id": null,
@@ -728,9 +728,9 @@
           "city": null
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 48,
           "extra": null
         }
       },
@@ -870,7 +870,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 30,
+          "elapsed": 37,
           "extra": null
         }
       },
@@ -940,7 +940,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 30,
+          "elapsed": 37,
           "extra": null
         }
       },
@@ -959,23 +959,23 @@
           "id": 11182,
           "name": "Rochedale Rovers",
           "logo": "https://media.api-sports.io/football/teams/11182.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 16777,
           "name": "SD Raiders",
           "logo": "https://media.api-sports.io/football/teams/16777.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -1069,7 +1069,7 @@
         "date": "2026-07-14T11:00:00+01:00",
         "timestamp": 1784023200,
         "periods": {
-          "first": null,
+          "first": 1784023200,
           "second": null
         },
         "venue": {
@@ -1078,9 +1078,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 6,
           "extra": null
         }
       },
@@ -1109,13 +1109,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,

@@ -1,5 +1,5 @@
 country,league,league_tier,league_filter_reason,matches
-World,Friendlies Clubs,REJECT,hard_reject_noise_league,94
+World,Friendlies Clubs,REJECT,hard_reject_noise_league,93
 Scotland,League Cup,REJECT,country_league_not_allowlisted,16
 Argentina,Primera B Metropolitana,REJECT,country_league_not_allowlisted,11
 Brazil,Brasileiro U17,REJECT,hard_reject_noise_league,9
