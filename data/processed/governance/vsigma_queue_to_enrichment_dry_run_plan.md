@@ -1,11 +1,11 @@
 # vSIGMA Queue-to-Enrichment Dry Run Planner - 2026-07-14
 
 ## Summary
-- rows_planned: 0
-- dry_run_decision_counts: none
-- risk_label_counts: none
-- priority_counts: none
-- total_estimated_call_units: 0
+- rows_planned: 127
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=127
+- risk_label_counts: HIGH_LOW_COVERAGE=90; MEDIUM=20; HIGH_CONTEXT_VOLATILITY=17
+- priority_counts: P2_LOW_COVERAGE_SCORING=90; P1_TRUSTED_MISSING_SCORING=37
+- total_estimated_call_units: 652
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
@@ -13,7 +13,126 @@
 - production_change: NO
 
 ## Dry Run Rows
-- none. Trusted raw scoring queue is empty or missing.
+- Grotta vs Grindavik | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- HK Kopavogur vs IR Reykjavik | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Ilves II vs GrIFK | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Annan Athletic vs Dundee | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Brechin vs Livingston | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Brora Rangers vs Aberdeen | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Clyde vs Airdrie United | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Cove Rangers vs East Kilbride | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Dunfermline vs Dumbarton | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- East Fife vs Morton | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Edinburgh City vs Alloa Athletic | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Elgin City vs Peterhead | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Falkirk vs Ayr Utd | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Forfar Athletic vs Partick | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Kelty Hearts vs Queen's Park | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Kilmarnock vs Raith Rovers | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Linlithgow Rose vs ST Johnstone | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Montrose vs Dundee Utd | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Spartans vs Stirling Albion | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Macara vs Mushuc Runa SC | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Muras United vs Bars | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Argentino Quilmes vs Arsenal Sarandi | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Brown DE Adrogue vs Deportivo Laferrere | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Comunicaciones vs Villa Dalmine | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Defensores Unidos vs Excursionistas | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Deportivo Armenio vs Talleres Remedios | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Deportivo Camioneros vs Liniers | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Deportivo Merlo vs Real Pilar | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Dock Sud vs UAI Urquiza | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Flandria vs Argentino de Merlo | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Ituzaingó vs San Martín Burzaco | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Sportivo Italiano vs Villa San Carlos | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Real Oruro vs Always Ready | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Hangzhou Greentown vs Qingdao Jonoon | priority=P1_TRUSTED_MISSING_SCORING | risk=MEDIUM | units=5 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional | decision=DRY_RUN_ONLY_NO_API_CALLS
+- France vs Spain | priority=P1_TRUSTED_MISSING_SCORING | risk=HIGH_CONTEXT_VOLATILITY | units=6 | blocks=recent_stats; standings; odds; injuries_optional; lineups_prelock_optional; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- AB Copenhagen vs Helsingborg | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- AFC Emley vs Rotherham | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Alfreton Town vs Boston United | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Alton Town vs Ashford Town (Middlesex) | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Aveley vs Ebbsfleet United | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Barnet vs Watford | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Barry Town vs Trethomas Bluebirds | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Bedfont Sports vs St Albans City | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Bedford Town vs Biggleswade | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Bristol Rovers vs Leicester | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Buchbach vs Al Wahda FC | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Bukovyna vs Metal Kharkiv | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Chester vs Fleetwood Town | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Cliftonville FC vs Moyola Park | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Cork City vs Cardiff | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Cray Wanderers vs Folkestone Invicta | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Deutschlandsberger SC vs Lebring | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Dinamo Zagreb vs LNZ Cherkasy | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Doncaster vs St Patrick's Athl. | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Dover vs Gillingham | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Dukla Banská Bystrica vs Hapoel Tel Aviv | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Eintracht Braunschweig vs Havelse | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Eintracht Mahlsdorf vs Luckenwalde | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Eintracht Rheine vs Sportfreunde Lotte | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Evesham United vs Worcester City | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- FC Andorra vs Millwall | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- FC Halifax Town vs Chesterfield | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- FC Winterthur vs Brühl | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Fach-Donaufeld vs Rapid Wien II | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Fortuna Düsseldorf vs Ružomberok | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- HIK vs Vanløse | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Hallam vs Sheffield Wednesday | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Hapoel Petah Tikva vs Spartak Pleven | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Harlow Town vs Woodford Town | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Hebburn Town vs Gateshead | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Heeslinger SC vs VfB Oldenburg | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Holyport vs Maidenhead | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Hyde United vs AFC Fylde | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Imst vs Arminia Bielefeld | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Kilia Kiel vs Todesfelde | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Korona Kielce vs Stal Rzeszów | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Lask Linz vs Fenerbahçe | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Leek Town vs Macclesfield | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Legia Warszawa vs Radomiak Radom | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Legia Warszawa II vs Barycz Sułów | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Livyi Bereh vs Viktoriya Mykolaivka | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Llandudno vs Rhyl | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Lokomotiv vs CSKA Moscow | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Malženice vs Beşiktaş | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Marine vs Colwyn Bay | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Maritimo vs AVS | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Merthyr Town vs Yeovil Town | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Meshakhte vs FC Urartu | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- NEC Nijmegen vs V-varen Nagasaki | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- NK Slaven Belupo vs Sanfrecce Hiroshima | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Nairn County vs Ross County | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Oleksandria vs Oleksandria II | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Parndorf vs Austria Vienna (Am) | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Pickering Town vs York | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Plauen vs FSV Zwickau | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Plzen vs Polessya | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Poole Town vs Eastleigh | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Port Vale vs Tamworth | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Prescot Cables vs Crewe | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Preston vs Bamber Bridge | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Randers FC vs Notts County | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Real Bedford vs Boreham Wood | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Redcar Athletic vs Hartlepool | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- SC Braga vs Vizela | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- SSV Ulm 1846 vs Augsburg II | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- SV Darmstadt 98 vs FC 08 Homburg | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- SV Wehen vs Fagiano Okayama | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Sardarapat vs Van | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Seraing United vs MVV | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Sligo Rovers vs Coleraine FC | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Slough Town vs Basingstoke Town | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- South Normanton Athletic vs Worksop Town | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Southend vs Cambridge United | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Sparta Lichtenberg vs Mariendorf | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Spartak Trnava vs Beşiktaş | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Sporting CP vs Celtic | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Stafford Rangers vs Shrewsbury | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Sutton Athletic vs Dartford | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Swindon Town vs Chippenham Town | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
+- Tonbridge Angels vs Sutton Utd | priority=P2_LOW_COVERAGE_SCORING | risk=HIGH_LOW_COVERAGE | units=5 | blocks=recent_stats; standings; odds; coverage_probe; context_manual_review | decision=DRY_RUN_ONLY_NO_API_CALLS
 
 ## Guardrails
 - This planner is dry-run only.
