@@ -70,3 +70,4 @@ fixture_id,home,away,lambda_home,lambda_away,source_lambda,actual_score,in_top1,
 1581821,Spain,Belgium,1.46,0.93,mx,2-1,0,0,1,0.0908,5,1-0,H,H,media,media
 1581037,Norway,England,1.27,1.15,mx,1-2,0,0,0,0.0747,6,1-1,D,H,media,media
 1582681,Argentina,Switzerland,1.75,0.77,mx,3-1,0,0,0,0.0553,8,1-0,D,H,media,media
+1585131,France,Spain,1.31,1.06,mx,0-2,0,0,0,0.0525,8,1-1,A,H,media,media

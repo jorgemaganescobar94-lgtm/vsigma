@@ -1135,6 +1135,21 @@ fixture_id,date,competition,team_id,team_name,opponent_id,opponent_name,player_i
 1582681,2026-07-12,World Cup 2026,26,Argentina,15,Switzerland,295513,J. Lopez,,,Card,Yellow Card,114,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1582681,2026-07-12,World Cup 2026,15,Switzerland,26,Argentina,2807,R. Freuler,,,subst,Substitution 6,115,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1582681,2026-07-12,World Cup 2026,26,Argentina,15,Switzerland,217,L. Martinez,,,Goal,Normal Goal,120,1,1,0,0,0,0,0,,0,alta,alta,api_football_events
+1585131,2026-07-14,World Cup 2026,2,France,9,Spain,272,Adrien Rabiot,,,Card,Yellow Card,9,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1585131,2026-07-14,World Cup 2026,9,Spain,2,France,47323,Mikel Oyarzabal,,,Goal,Penalty,22,,1,0,1,0,0,0,,0,alta,alta,api_football_events
+1585131,2026-07-14,World Cup 2026,2,France,9,Spain,22090,William Saliba,,,subst,Substitution 1,30,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1585131,2026-07-14,World Cup 2026,9,Spain,2,France,47380,Marc Cucurella,,,Card,Yellow Card,31,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1585131,2026-07-14,World Cup 2026,2,France,9,Spain,272,Adrien Rabiot,,,subst,Substitution 2,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1585131,2026-07-14,World Cup 2026,2,France,9,Spain,161904,Bradley Barcola,,,subst,Substitution 3,57,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1585131,2026-07-14,World Cup 2026,9,Spain,2,France,47519,Pedro Porro,1323,Dani Olmo,Goal,Normal Goal,58,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1585131,2026-07-14,World Cup 2026,2,France,9,Spain,2724,Lucas Digne,,,subst,Substitution 4,72,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1585131,2026-07-14,World Cup 2026,2,France,9,Spain,19617,Michael Olise,,,subst,Substitution 5,72,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1585131,2026-07-14,World Cup 2026,9,Spain,2,France,47323,Mikel Oyarzabal,,,subst,Substitution 1,74,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1585131,2026-07-14,World Cup 2026,9,Spain,2,France,328,Fabián Ruiz,,,subst,Substitution 2,78,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1585131,2026-07-14,World Cup 2026,9,Spain,2,France,1323,Dani Olmo,,,subst,Substitution 3,78,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1585131,2026-07-14,World Cup 2026,9,Spain,2,France,47519,Pedro Porro,,,subst,Substitution 4,84,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1585131,2026-07-14,World Cup 2026,9,Spain,2,France,182219,Alex Baena,,,subst,Substitution 5,84,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1585131,2026-07-14,World Cup 2026,2,France,9,Spain,278,Kylian Mbappé,,,Card,Yellow Card,86,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,16,Mexico,1531,South Africa,35532,J. Quinones,266345,E. Lira,Goal,Normal Goal,9,,1,1,0,0,0,0,,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,1531,South Africa,16,Mexico,3287,Teboho Mokoena,,,Card,Yellow Card,17,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,16,Mexico,1531,South Africa,212233,Brian Gutiérrez,,,Card,Yellow Card,23,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events

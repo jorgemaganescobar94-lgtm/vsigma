@@ -1,4 +1,4 @@
 market,metric,full_data,ensemble,leader,diff,n
-1x2,logloss,0.8701,0.8782,full-data,0.0081,34
-1x2,brier,0.5095,0.5157,full-data,0.0062,34
-1x2,acc,0.6471,0.6471,empate,0.0,34
+1x2,logloss,0.8783,0.8868,full-data,0.0086,35
+1x2,brier,0.5153,0.5216,full-data,0.0063,35
+1x2,acc,0.6286,0.6286,empate,0.0,35

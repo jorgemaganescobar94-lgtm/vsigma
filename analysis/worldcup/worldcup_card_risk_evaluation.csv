@@ -172,8 +172,8 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489416,1271,A. Tchouaméni,France,2,MID,"Michael Oliver, England",0.3254,0.3189,bajar,0.0065,1,media-baja,media
 1489416,22147,M. Koné,France,2,MID,"Michael Oliver, England",0.34,0.3451,neutro,0.0051,0,media-baja,media
 1489416,153,O. Dembélé,France,2,MID,"Michael Oliver, England",0.1038,0.0913,bajar,0.0125,0,media-baja,media
-1489416,19617,M. Olise,France,2,MID,"Michael Oliver, England",0.0346,0.0339,bajar,0.0007,0,media-baja,media
-1489416,343027,D. Doué,France,2,MID,"Michael Oliver, England",0.0824,0.0758,bajar,0.0066,0,media-baja,media
+1489416,19617,M. Olise,France,2,MID,"Michael Oliver, England",0.0346,0.0318,bajar,0.0028,0,media-baja,media
+1489416,343027,D. Doué,France,2,FWD,"Michael Oliver, England",0.0824,0.0709,bajar,0.0115,0,media-baja,media
 1489416,278,Kylian Mbappé,France,2,FWD,"Michael Oliver, England",0.2261,0.1854,bajar,0.0407,0,media-baja,media
 1489417,429,F. Muslera,Uruguay,7,GK,I. Elfath,0.2023,0.2028,neutro,0.0005,0,media-baja,baja
 1489417,1290,G. Varela,Uruguay,7,DEF,I. Elfath,0.501,0.5098,neutro,0.0088,1,media-baja,baja
@@ -195,8 +195,8 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489417,44,Rodri,Spain,9,MID,I. Elfath,0.4195,0.4048,bajar,0.0147,0,media-baja,media
 1489417,47311,Mikel Merino,Spain,9,MID,I. Elfath,0.1549,0.1464,bajar,0.0085,0,media-baja,media
 1489417,386828,Lamine Yamal,Spain,9,MID,I. Elfath,0.2883,0.2724,bajar,0.0159,0,media-baja,media
-1489417,47323,Mikel Oyarzabal,Spain,9,FWD,I. Elfath,0.2234,0.1921,bajar,0.0313,0,media-baja,media
-1489417,182219,Álex Baena,Spain,9,MID,I. Elfath,0.3911,0.3598,bajar,0.0313,1,media-baja,media
+1489417,47323,Mikel Oyarzabal,Spain,9,FWD,I. Elfath,0.2234,0.1832,bajar,0.0402,0,media-baja,media
+1489417,182219,Álex Baena,Spain,9,MID,I. Elfath,0.3911,0.3442,bajar,0.0469,1,media-baja,media
 1489413,15304,Vózinha,Cape Verde Islands,1533,GK,F. Letexier,0.0575,0.0575,neutro,0.0,0,media-baja,baja
 1489413,332056,Wagner Pina,Cape Verde Islands,1533,DEF,F. Letexier,0.2495,0.2495,neutro,0.0,1,media-baja,media
 1489413,41608,Diney Borges,Cape Verde Islands,1533,DEF,F. Letexier,0.2314,0.2395,subir,0.0081,0,media-baja,media
@@ -530,13 +530,13 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1565177,22221,M. Maignan,France,2,GK,"Danny Makkelie, Netherlands",0.0613,0.0569,bajar,0.0044,0,media-baja,media
 1565177,1257,J. Koundé,France,2,DEF,"Danny Makkelie, Netherlands",0.0235,0.0204,bajar,0.0031,0,media-baja,media
 1565177,1149,D. Upamecano,France,2,DEF,"Danny Makkelie, Netherlands",0.0825,0.0754,bajar,0.0071,0,media-baja,media
-1565177,22090,W. Saliba,France,2,DEF,"Danny Makkelie, Netherlands",0.1244,0.1156,bajar,0.0088,0,media-baja,media
-1565177,2724,L. Digne,France,2,DEF,"Danny Makkelie, Netherlands",0.3131,0.2862,bajar,0.0269,0,media-baja,media
+1565177,22090,W. Saliba,France,2,DEF,"Danny Makkelie, Netherlands",0.1244,0.1137,bajar,0.0107,0,media-baja,media
+1565177,2724,L. Digne,France,2,DEF,"Danny Makkelie, Netherlands",0.3131,0.2799,bajar,0.0332,0,media-baja,media
 1565177,1271,A. Tchouaméni,France,2,MID,"Danny Makkelie, Netherlands",0.3224,0.3092,bajar,0.0132,0,media-baja,media
 1565177,272,A. Rabiot,France,2,MID,"Danny Makkelie, Netherlands",0.3873,0.3714,bajar,0.0159,0,media-baja,media
 1565177,153,O. Dembélé,France,2,MID,"Danny Makkelie, Netherlands",0.109,0.0936,bajar,0.0154,0,media-baja,media
-1565177,19617,M. Olise,France,2,MID,"Danny Makkelie, Netherlands",0.0448,0.043,bajar,0.0018,0,media-baja,media
-1565177,161904,B. Barcola,France,2,FWD,"Danny Makkelie, Netherlands",0.0474,0.0426,bajar,0.0048,0,media-baja,media
+1565177,19617,M. Olise,France,2,MID,"Danny Makkelie, Netherlands",0.0448,0.0403,bajar,0.0045,0,media-baja,media
+1565177,161904,B. Barcola,France,2,MID,"Danny Makkelie, Netherlands",0.0474,0.0426,bajar,0.0048,0,media-baja,media
 1565177,278,Kylian Mbappé,France,2,FWD,"Danny Makkelie, Netherlands",0.2248,0.1796,bajar,0.0452,0,media-baja,media
 1565177,48033,J. Widell Zetterström,Sweden,5,GK,"Danny Makkelie, Netherlands",0.1865,0.1826,bajar,0.0039,0,media-baja,baja
 1565177,137721,G. Lagerbielke,Sweden,5,DEF,"Danny Makkelie, Netherlands",0.2197,0.2151,bajar,0.0046,0,media-baja,media
@@ -638,7 +638,7 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1567312,732,L. Zidane,Algeria,1532,GK,Y. Perez,0.0882,0.0837,bajar,0.0045,0,media-baja,baja
 1567312,129047,R. Zerrouki,Algeria,1532,MID,Y. Perez,0.3943,0.3998,neutro,0.0055,0,media-baja,media
 1567311,47270,Unai Simón,Spain,9,GK,G. Nyberg,0.1501,0.1423,bajar,0.0078,0,media-baja,baja
-1567311,47519,Pedro Porro,Spain,9,DEF,G. Nyberg,0.2308,0.2153,bajar,0.0155,0,media-baja,media
+1567311,47519,Pedro Porro,Spain,9,DEF,G. Nyberg,0.2308,0.2107,bajar,0.0201,0,media-baja,media
 1567311,396623,Pau Cubarsí Paredes,Spain,9,DEF,G. Nyberg,0.0686,0.065,bajar,0.0036,0,media-baja,media
 1567311,622,Aymeric Laporte,Spain,9,DEF,G. Nyberg,0.104,0.1022,neutro,0.0018,0,media-baja,media
 1567311,47380,Marc Cucurella,Spain,9,DEF,G. Nyberg,0.0261,0.0247,bajar,0.0014,0,media-baja,media
@@ -646,8 +646,8 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1567311,1323,Dani Olmo,Spain,9,MID,G. Nyberg,0.2402,0.2204,bajar,0.0198,0,media-baja,media
 1567311,133609,Pedri,Spain,9,MID,G. Nyberg,0.0407,0.0374,bajar,0.0033,0,media-baja,media
 1567311,386828,Lamine Yamal,Spain,9,MID,G. Nyberg,0.2333,0.2199,bajar,0.0134,0,media-baja,media
-1567311,47323,Mikel Oyarzabal,Spain,9,FWD,G. Nyberg,0.1809,0.1552,bajar,0.0257,0,media-baja,media
-1567311,182219,Álex Baena,Spain,9,MID,G. Nyberg,0.324,0.2974,bajar,0.0266,0,media-baja,media
+1567311,47323,Mikel Oyarzabal,Spain,9,FWD,G. Nyberg,0.1809,0.1479,bajar,0.033,0,media-baja,media
+1567311,182219,Álex Baena,Spain,9,MID,G. Nyberg,0.324,0.2844,bajar,0.0396,0,media-baja,media
 1567311,7525,A. Schlager,Austria,775,GK,G. Nyberg,0.2154,0.2149,neutro,0.0005,0,media-baja,baja
 1567311,711,S. Posch,Austria,775,DEF,G. Nyberg,0.2945,0.3041,subir,0.0096,1,media-baja,media
 1567311,25287,K. Danso,Austria,775,DEF,G. Nyberg,0.1341,0.1338,neutro,0.0003,0,media-baja,media
@@ -783,13 +783,13 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1569870,22221,M. Maignan,France,2,GK,"Ilgiz Tantashev, Uzbekistan",0.069,0.0641,bajar,0.0049,0,media-baja,media
 1569870,1257,J. Koundé,France,2,DEF,"Ilgiz Tantashev, Uzbekistan",0.0269,0.0234,bajar,0.0035,0,media-baja,media
 1569870,1149,D. Upamecano,France,2,DEF,"Ilgiz Tantashev, Uzbekistan",0.0928,0.0848,bajar,0.008,0,media-baja,media
-1569870,22090,W. Saliba,France,2,DEF,"Ilgiz Tantashev, Uzbekistan",0.1391,0.1292,bajar,0.0099,0,media-baja,media
-1569870,2724,L. Digne,France,2,DEF,"Ilgiz Tantashev, Uzbekistan",0.3448,0.3151,bajar,0.0297,0,media-baja,media
+1569870,22090,W. Saliba,France,2,DEF,"Ilgiz Tantashev, Uzbekistan",0.1391,0.1271,bajar,0.012,0,media-baja,media
+1569870,2724,L. Digne,France,2,DEF,"Ilgiz Tantashev, Uzbekistan",0.3448,0.3083,bajar,0.0365,0,media-baja,media
 1569870,22147,M. Koné,France,2,MID,"Ilgiz Tantashev, Uzbekistan",0.3716,0.3694,neutro,0.0022,1,media-baja,media
 1569870,272,A. Rabiot,France,2,MID,"Ilgiz Tantashev, Uzbekistan",0.4237,0.4063,bajar,0.0174,0,media-baja,media
 1569870,153,O. Dembélé,France,2,MID,"Ilgiz Tantashev, Uzbekistan",0.1224,0.1051,bajar,0.0173,0,media-baja,media
-1569870,19617,M. Olise,France,2,MID,"Ilgiz Tantashev, Uzbekistan",0.0512,0.0491,bajar,0.0021,1,media-baja,media
-1569870,161904,B. Barcola,France,2,FWD,"Ilgiz Tantashev, Uzbekistan",0.0543,0.0488,bajar,0.0055,1,media-baja,media
+1569870,19617,M. Olise,France,2,MID,"Ilgiz Tantashev, Uzbekistan",0.0512,0.046,bajar,0.0052,1,media-baja,media
+1569870,161904,B. Barcola,France,2,MID,"Ilgiz Tantashev, Uzbekistan",0.0543,0.0488,bajar,0.0055,1,media-baja,media
 1569870,278,Kylian Mbappé,France,2,FWD,"Ilgiz Tantashev, Uzbekistan",0.2492,0.1991,bajar,0.0501,0,media-baja,media
 1568100,762,Vinícius Júnior,Brazil,6,FWD,"Ismail Elfath, USA",0.1744,0.1627,bajar,0.0117,0,media-baja,media
 1568100,747,Casemiro,Brazil,6,MID,"Ismail Elfath, USA",0.1906,0.2026,subir,0.012,0,media-baja,media
@@ -847,7 +847,7 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1576756,583,João Félix,Portugal,27,MID,"Anthony Taylor, England",0.1803,0.1794,neutro,0.0009,0,media-baja,media
 1576756,874,Cristiano Ronaldo,Portugal,27,FWD,"Anthony Taylor, England",0.182,0.1702,bajar,0.0118,0,media-baja,media
 1576756,47270,Unai Simón,Spain,9,GK,"Anthony Taylor, England",0.1486,0.1412,bajar,0.0074,0,media-baja,media
-1576756,47519,Pedro Porro,Spain,9,DEF,"Anthony Taylor, England",0.2285,0.2136,bajar,0.0149,0,media-baja,media
+1576756,47519,Pedro Porro,Spain,9,DEF,"Anthony Taylor, England",0.2285,0.2091,bajar,0.0194,0,media-baja,media
 1576756,396623,Pau Cubarsí Paredes,Spain,9,DEF,"Anthony Taylor, England",0.0678,0.0644,bajar,0.0034,0,media-baja,media
 1576756,622,Aymeric Laporte,Spain,9,DEF,"Anthony Taylor, England",0.1029,0.1014,neutro,0.0015,0,media-baja,media
 1576756,47380,Marc Cucurella,Spain,9,DEF,"Anthony Taylor, England",0.0258,0.0245,bajar,0.0013,0,media-baja,media
@@ -855,8 +855,8 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1576756,44,Rodri,Spain,9,MID,"Anthony Taylor, England",0.3429,0.3309,bajar,0.012,0,media-baja,media
 1576756,386828,Lamine Yamal,Spain,9,MID,"Anthony Taylor, England",0.231,0.2183,bajar,0.0127,0,media-baja,media
 1576756,1323,Dani Olmo,Spain,9,MID,"Anthony Taylor, England",0.2378,0.2188,bajar,0.019,0,media-baja,media
-1576756,182219,Álex Baena,Spain,9,MID,"Anthony Taylor, England",0.321,0.2953,bajar,0.0257,0,media-baja,media
-1576756,47323,Mikel Oyarzabal,Spain,9,FWD,"Anthony Taylor, England",0.179,0.1539,bajar,0.0251,0,media-baja,media
+1576756,182219,Álex Baena,Spain,9,MID,"Anthony Taylor, England",0.321,0.2825,bajar,0.0385,0,media-baja,media
+1576756,47323,Mikel Oyarzabal,Spain,9,FWD,"Anthony Taylor, England",0.179,0.1468,bajar,0.0322,0,media-baja,media
 1570715,50728,M. Freese,USA,2384,GK,"Adham Mohammad, Jordan",0.042,0.0419,neutro,0.0001,0,media-baja,baja
 1570715,355994,A. Freeman,USA,2384,DEF,"Adham Mohammad, Jordan",0.0506,0.0497,neutro,0.0009,0,media-baja,media
 1570715,126949,C. Richards,USA,2384,DEF,"Adham Mohammad, Jordan",0.3412,0.3404,neutro,0.0008,0,media-baja,media
@@ -927,13 +927,13 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1578539,1257,J. Koundé,France,2,DEF,"Facundo Raul Tello Figueroa, Argentina",0.0246,0.0218,bajar,0.0028,0,media-baja,media
 1578539,1149,D. Upamecano,France,2,DEF,"Facundo Raul Tello Figueroa, Argentina",0.0826,0.077,bajar,0.0056,0,media-baja,media
 1578539,278,Kylian Mbappé,France,2,FWD,"Facundo Raul Tello Figueroa, Argentina",0.2223,0.1818,bajar,0.0405,0,media-baja,media
-1578539,19617,M. Olise,France,2,MID,"Facundo Raul Tello Figueroa, Argentina",0.0468,0.0458,bajar,0.001,0,media-baja,media
+1578539,19617,M. Olise,France,2,MID,"Facundo Raul Tello Figueroa, Argentina",0.0468,0.043,bajar,0.0038,0,media-baja,media
 1578539,153,O. Dembélé,France,2,MID,"Facundo Raul Tello Figueroa, Argentina",0.1092,0.0959,bajar,0.0133,0,media-baja,media
 1578539,272,A. Rabiot,France,2,MID,"Facundo Raul Tello Figueroa, Argentina",0.3831,0.3746,bajar,0.0085,0,media-baja,media
-1578539,22090,W. Saliba,France,2,DEF,"Facundo Raul Tello Figueroa, Argentina",0.1236,0.1171,bajar,0.0065,0,media-baja,media
+1578539,22090,W. Saliba,France,2,DEF,"Facundo Raul Tello Figueroa, Argentina",0.1236,0.1153,bajar,0.0083,0,media-baja,media
 1578539,1271,A. Tchouaméni,France,2,MID,"Facundo Raul Tello Figueroa, Argentina",0.3186,0.3115,bajar,0.0071,0,media-baja,media
 1578539,47300,T. Hernández,France,2,DEF,"Facundo Raul Tello Figueroa, Argentina",0.1355,0.1284,bajar,0.0071,0,media-baja,media
-1578539,2724,L. Digne,France,2,DEF,"Facundo Raul Tello Figueroa, Argentina",0.3103,0.2894,bajar,0.0209,0,media-baja,media
+1578539,2724,L. Digne,France,2,DEF,"Facundo Raul Tello Figueroa, Argentina",0.3103,0.2832,bajar,0.0271,0,media-baja,media
 1578539,161897,I. Saibari,Morocco,31,MID,"Facundo Raul Tello Figueroa, Argentina",0.3228,0.3124,bajar,0.0104,0,media-baja,media
 1578539,2701,Y. Bounou,Morocco,31,GK,"Facundo Raul Tello Figueroa, Argentina",0.0237,0.0233,neutro,0.0004,0,media-baja,media
 1578539,9,A. Hakimi,Morocco,31,DEF,"Facundo Raul Tello Figueroa, Argentina",0.269,0.2684,neutro,0.0006,0,media-baja,media
@@ -946,7 +946,7 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1578539,129678,A. Ounahi,Morocco,31,MID,"Facundo Raul Tello Figueroa, Argentina",0.3062,0.3147,subir,0.0085,0,media-baja,media
 1578539,278898,C. Riad,Morocco,31,DEF,"Facundo Raul Tello Figueroa, Argentina",0.1139,0.1119,neutro,0.002,0,media-baja,media
 1581821,47270,Unai Simón,Spain,9,GK,"Michael Oliver, England",0.1424,0.1353,bajar,0.0071,0,media-baja,media
-1581821,47519,Pedro Porro,Spain,9,DEF,"Michael Oliver, England",0.2195,0.2052,bajar,0.0143,0,media-baja,media
+1581821,47519,Pedro Porro,Spain,9,DEF,"Michael Oliver, England",0.2195,0.2008,bajar,0.0187,0,media-baja,media
 1581821,396623,Pau Cubarsí Paredes,Spain,9,DEF,"Michael Oliver, England",0.0687,0.0653,bajar,0.0034,1,media-baja,media
 1581821,622,Aymeric Laporte,Spain,9,DEF,"Michael Oliver, England",0.0993,0.0978,neutro,0.0015,1,media-baja,media
 1581821,47380,Marc Cucurella,Spain,9,DEF,"Michael Oliver, England",0.0262,0.0249,bajar,0.0013,0,media-baja,media
@@ -954,8 +954,8 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1581821,328,Fabián Ruiz,Spain,9,MID,"Michael Oliver, England",0.1513,0.143,bajar,0.0083,0,media-baja,media
 1581821,386828,Lamine Yamal,Spain,9,MID,"Michael Oliver, England",0.2211,0.2089,bajar,0.0122,0,media-baja,media
 1581821,1323,Dani Olmo,Spain,9,MID,"Michael Oliver, England",0.2285,0.2102,bajar,0.0183,0,media-baja,media
-1581821,182219,Álex Baena,Spain,9,MID,"Michael Oliver, England",0.3091,0.2844,bajar,0.0247,0,media-baja,media
-1581821,47323,Mikel Oyarzabal,Spain,9,FWD,"Michael Oliver, England",0.1717,0.1477,bajar,0.024,0,media-baja,media
+1581821,182219,Álex Baena,Spain,9,MID,"Michael Oliver, England",0.3091,0.272,bajar,0.0371,0,media-baja,media
+1581821,47323,Mikel Oyarzabal,Spain,9,FWD,"Michael Oliver, England",0.1717,0.1408,bajar,0.0309,0,media-baja,media
 1581821,730,T. Courtois,Belgium,1,GK,"Michael Oliver, England",0.0668,0.0658,neutro,0.001,0,media-baja,media
 1581821,2920,T. Castagne,Belgium,1,DEF,"Michael Oliver, England",0.18,0.18,neutro,0.0,0,media-baja,media
 1581821,312964,N. Ngoy,Belgium,1,DEF,"Michael Oliver, England",0.1683,0.1683,neutro,0.0,0,media-baja,media
@@ -1011,3 +1011,25 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1581037,129718,J. Bellingham,England,10,MID,"Clement Turpin, France",0.3527,0.3272,bajar,0.0255,0,media-baja,media
 1581037,138787,A. Gordon,England,10,MID,"Clement Turpin, France",0.1191,0.1182,neutro,0.0009,0,media-baja,media
 1581037,184,H. Kane,England,10,FWD,"Clement Turpin, France",0.1619,0.147,bajar,0.0149,0,media-baja,media
+1585131,22221,M. Maignan,France,2,GK,"Iván Barton, El Salvador",0.0652,0.0606,bajar,0.0046,0,media-baja,media
+1585131,1257,J. Koundé,France,2,DEF,"Iván Barton, El Salvador",0.025,0.0217,bajar,0.0033,0,media-baja,media
+1585131,1149,D. Upamecano,France,2,DEF,"Iván Barton, El Salvador",0.0877,0.0802,bajar,0.0075,0,media-baja,media
+1585131,22090,W. Saliba,France,2,DEF,"Iván Barton, El Salvador",0.1321,0.1207,bajar,0.0114,0,media-baja,media
+1585131,2724,L. Digne,France,2,DEF,"Iván Barton, El Salvador",0.33,0.295,bajar,0.035,0,media-baja,media
+1585131,1271,A. Tchouaméni,France,2,MID,"Iván Barton, El Salvador",0.3397,0.3258,bajar,0.0139,0,media-baja,media
+1585131,272,A. Rabiot,France,2,MID,"Iván Barton, El Salvador",0.407,0.3903,bajar,0.0167,1,media-baja,media
+1585131,153,O. Dembélé,France,2,MID,"Iván Barton, El Salvador",0.1158,0.0995,bajar,0.0163,0,media-baja,media
+1585131,19617,M. Olise,France,2,MID,"Iván Barton, El Salvador",0.0477,0.0429,bajar,0.0048,0,media-baja,media
+1585131,161904,B. Barcola,France,2,MID,"Iván Barton, El Salvador",0.0505,0.0454,bajar,0.0051,0,media-baja,media
+1585131,278,Kylian Mbappé,France,2,FWD,"Iván Barton, El Salvador",0.2379,0.1901,bajar,0.0478,1,media-baja,media
+1585131,47270,Unai Simón,Spain,9,GK,"Iván Barton, El Salvador",0.138,0.1282,bajar,0.0098,0,media-baja,media
+1585131,47519,Pedro Porro,Spain,9,DEF,"Iván Barton, El Salvador",0.213,0.1904,bajar,0.0226,0,media-baja,media
+1585131,396623,Pau Cubarsí Paredes,Spain,9,DEF,"Iván Barton, El Salvador",0.0664,0.0617,bajar,0.0047,0,media-baja,media
+1585131,622,Aymeric Laporte,Spain,9,DEF,"Iván Barton, El Salvador",0.0962,0.0927,bajar,0.0035,0,media-baja,media
+1585131,47380,Marc Cucurella,Spain,9,DEF,"Iván Barton, El Salvador",0.0253,0.0235,bajar,0.0018,1,media-baja,media
+1585131,44,Rodri,Spain,9,MID,"Iván Barton, El Salvador",0.3204,0.3025,bajar,0.0179,0,media-baja,media
+1585131,328,Fabián Ruiz,Spain,9,MID,"Iván Barton, El Salvador",0.1467,0.1356,bajar,0.0111,0,media-baja,media
+1585131,386828,Lamine Yamal,Spain,9,MID,"Iván Barton, El Salvador",0.2146,0.1983,bajar,0.0163,0,media-baja,media
+1585131,1323,Dani Olmo,Spain,9,MID,"Iván Barton, El Salvador",0.2217,0.1993,bajar,0.0224,0,media-baja,media
+1585131,182219,Álex Baena,Spain,9,MID,"Iván Barton, El Salvador",0.3005,0.2581,bajar,0.0424,0,media-baja,media
+1585131,47323,Mikel Oyarzabal,Spain,9,FWD,"Iván Barton, El Salvador",0.1665,0.133,bajar,0.0335,0,media-baja,media

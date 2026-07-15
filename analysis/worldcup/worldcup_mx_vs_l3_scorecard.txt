@@ -1,21 +1,21 @@
-⚙️ Ensemble vs mx vs L3 (N=34 · desde 27-jun): 1X2 ens 65% · mx 65% · L3 65% · O2.5 50% vs 47% · BTTS 41% vs 41%
+⚙️ Ensemble vs mx vs L3 (N=35 · desde 27-jun): 1X2 ens 63% · mx 63% · L3 63% · O2.5 51% vs 49% · BTTS 43% vs 43%
 
 ===== detalle mx vs L3 =====
-N=34 partidos liquidados con predicción mx (lock-at-KO, anti-hindsight) · desde 27-jun · cara a cara vs RESULTADOS REALES, sin mercado
+N=35 partidos liquidados con predicción mx (lock-at-KO, anti-hindsight) · desde 27-jun · cara a cara vs RESULTADOS REALES, sin mercado
   mercado/métrica               L3        mx       ens    líder         Δ
   -----------------------------------------------------------------------
-  1X2 acc%                    64.7      64.7      64.7   empate         -
-  1X2 logloss               0.8704    0.8918    0.8782       L3    0.0077
-  1X2 brier                 0.5089    0.5277    0.5157       L3    0.0067
-  Over 2.5 acc%               47.1      50.0      47.1       mx       2.9
-  Over 2.5 logloss          0.6923    0.6903    0.6923       mx    0.0021
-  Over 2.5 brier            0.2497    0.2486    0.2497       mx    0.0010
-  BTTS acc%                   41.2      41.2      41.2   empate         -
-  BTTS logloss              0.7125    0.7226    0.7125   empate         -
-  BTTS brier                0.2591    0.2646    0.2591   empate         -
+  1X2 acc%                    62.9      62.9      62.9   empate         -
+  1X2 logloss               0.8778    0.9016    0.8868       L3    0.0090
+  1X2 brier                 0.5140    0.5346    0.5216       L3    0.0076
+  Over 2.5 acc%               48.6      51.4      48.6       mx       2.9
+  Over 2.5 logloss          0.6886    0.6862    0.6886       mx    0.0024
+  Over 2.5 brier            0.2478    0.2466    0.2478       mx    0.0012
+  BTTS acc%                   42.9      42.9      42.9   empate         -
+  BTTS logloss              0.7113    0.7205    0.7113   empate         -
+  BTTS brier                0.2585    0.2636    0.2585   empate         -
 
   ens = ENSEMBLE 1X2 MOSTRADO (media 50/50 mx+L3). En Over2.5/BTTS ens=L3 por diseño (los goles se quedan en el L3, su mejor mercado).
 
-VEREDICTO: con N=34, lidera L3 en log-loss 1X2 (Δ0.0077). El 1X2 mostrado es el ENSEMBLE; sigue acumulando — este marcador + el A/B son la base para revertir (ENSEMBLE_1X2_LIVE / MAXMODEL_LIVE).
+VEREDICTO: con N=35, lidera L3 en log-loss 1X2 (Δ0.0090). El 1X2 mostrado es el ENSEMBLE; sigue acumulando — este marcador + el A/B son la base para revertir (ENSEMBLE_1X2_LIVE / MAXMODEL_LIVE).
 
-generated_at_utc: 2026-07-14T10:01:48+00:00
+generated_at_utc: 2026-07-15T10:06:06+00:00
