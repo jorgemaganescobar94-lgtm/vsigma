@@ -1,0 +1,12 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-07-14,OK,API-SPORTS_DIRECT,175.0,,,,,,
+2026-07-14T16:00:00+01:00,MATCHED,,,1554381.0,AET,KuPS,Vardar Skopje,0.0,2.0
+2026-07-14T17:00:00+01:00,MATCHED,,,1554379.0,FT,Saburtalo,Flora Tallinn,2.0,2.0
+2026-07-14T17:00:00+01:00,MATCHED,,,1554380.0,FT,Inter Club d'Escaldes,Lincoln Red Imps FC,1.0,1.0
+2026-07-14T18:00:00+01:00,MATCHED,,,1554378.0,FT,Gyori ETO FC,Vikingur Reykjavik,2.0,2.0
+2026-07-14T18:00:00+01:00,MATCHED,,,1554384.0,FT,Riga,Ararat-Armenia,3.0,2.0
+2026-07-14T18:30:00+01:00,MATCHED,,,1554383.0,FT,Levski Sofia,Borac Banja Luka,4.0,0.0
+2026-07-14T18:30:00+01:00,MATCHED,,,1554387.0,FT,The New Saints,Sabah FA,1.0,2.0
+2026-07-14T19:00:00+01:00,MATCHED,,,1554376.0,FT,Drita,Kauno Žalgiris,2.0,3.0
+2026-07-14T20:00:00+01:00,MATCHED,,,1554385.0,FT,Shamrock Rovers,Floriana,5.0,1.0
+2026-07-14T20:00:00+01:00,MATCHED,,,1554425.0,FT,La Fiorita,UNA Strassen,0.0,2.0
