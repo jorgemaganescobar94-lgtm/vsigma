@@ -617983,5 +617983,1903 @@
         }
       }
     }
+  ],
+  "3745|2026": [
+    {
+      "fixture": {
+        "id": 1554394,
+        "referee": "B. McMaster",
+        "timezone": "UTC",
+        "date": "2026-07-09T16:00:00+00:00",
+        "timestamp": 1783612800,
+        "periods": {
+          "first": 1783612800,
+          "second": 1783616400
+        },
+        "venue": {
+          "id": null,
+          "name": "Daugavas stadions",
+          "city": "Tuzi"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 848,
+        "name": "UEFA Europa Conference League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/848.png",
+        "flag": null,
+        "season": 2026,
+        "round": "1st Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3745,
+          "name": "Dečić",
+          "logo": "https://media.api-sports.io/football/teams/3745.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1583194,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-04T18:30:00+00:00",
+        "timestamp": 1783189800,
+        "periods": {
+          "first": 1783189800,
+          "second": 1783193400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 3745,
+          "name": "Dečić",
+          "logo": "https://media.api-sports.io/football/teams/3745.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3742,
+          "name": "Arsenal Tivat",
+          "logo": "https://media.api-sports.io/football/teams/3742.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554464,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-17T16:00:00+00:00",
+        "timestamp": 1781712000,
+        "periods": {
+          "first": 1781712000,
+          "second": 1781715600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 3339,
+          "name": "Vllaznia Shkodër",
+          "logo": "https://media.api-sports.io/football/teams/3339.png",
+          "winner": null
+        },
+        "away": {
+          "id": 3745,
+          "name": "Dečić",
+          "logo": "https://media.api-sports.io/football/teams/3745.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "661|2026": [
+    {
+      "fixture": {
+        "id": 1567365,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-11T15:00:00+00:00",
+        "timestamp": 1783782000,
+        "periods": {
+          "first": 1783782000,
+          "second": 1783785600
+        },
+        "venue": {
+          "id": null,
+          "name": "Skonto stadions",
+          "city": "Riga"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
+        }
+      },
+      "league": {
+        "id": 658,
+        "name": "Cup",
+        "country": "Latvia",
+        "logo": "https://media.api-sports.io/football/leagues/658.png",
+        "flag": "https://media.api-sports.io/flags/lv.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 4135,
+          "name": "Auda",
+          "logo": "https://media.api-sports.io/football/teams/4135.png",
+          "winner": true
+        },
+        "away": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554394,
+        "referee": "B. McMaster",
+        "timezone": "UTC",
+        "date": "2026-07-09T16:00:00+00:00",
+        "timestamp": 1783612800,
+        "periods": {
+          "first": 1783612800,
+          "second": 1783616400
+        },
+        "venue": {
+          "id": null,
+          "name": "Daugavas stadions",
+          "city": "Tuzi"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 848,
+        "name": "UEFA Europa Conference League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/848.png",
+        "flag": null,
+        "season": 2026,
+        "round": "1st Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3745,
+          "name": "Dečić",
+          "logo": "https://media.api-sports.io/football/teams/3745.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1515880,
+        "referee": "A. Anufrijevs",
+        "timezone": "UTC",
+        "date": "2026-07-04T13:00:00+00:00",
+        "timestamp": 1783170000,
+        "periods": {
+          "first": 1783170000,
+          "second": 1783173600
+        },
+        "venue": {
+          "id": 3169,
+          "name": "Stadions Celtnieks",
+          "city": "Daugavpils"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 365,
+        "name": "Virsliga",
+        "country": "Latvia",
+        "logo": "https://media.api-sports.io/football/leagues/365.png",
+        "flag": "https://media.api-sports.io/flags/lv.svg",
+        "season": 2026,
+        "round": "Regular Season - 22",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 4149,
+          "name": "BFC Daugavpils",
+          "logo": "https://media.api-sports.io/football/teams/4149.png",
+          "winner": true
+        },
+        "away": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1515877,
+        "referee": "A. Treimanis",
+        "timezone": "UTC",
+        "date": "2026-06-30T16:00:00+00:00",
+        "timestamp": 1782835200,
+        "periods": {
+          "first": 1782835200,
+          "second": 1782838800
+        },
+        "venue": {
+          "id": null,
+          "name": "Daugavas stadions",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 365,
+        "name": "Virsliga",
+        "country": "Latvia",
+        "logo": "https://media.api-sports.io/football/leagues/365.png",
+        "flag": "https://media.api-sports.io/flags/lv.svg",
+        "season": 2026,
+        "round": "Regular Season - 21",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": true
+        },
+        "away": {
+          "id": 18936,
+          "name": "Ogre United",
+          "logo": "https://media.api-sports.io/football/teams/18936.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 3,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1515873,
+        "referee": "A. Griscenko",
+        "timezone": "UTC",
+        "date": "2026-06-26T16:00:00+00:00",
+        "timestamp": 1782489600,
+        "periods": {
+          "first": 1782489600,
+          "second": 1782493200
+        },
+        "venue": {
+          "id": null,
+          "name": "Daugavas stadions",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
+        }
+      },
+      "league": {
+        "id": 365,
+        "name": "Virsliga",
+        "country": "Latvia",
+        "logo": "https://media.api-sports.io/football/leagues/365.png",
+        "flag": "https://media.api-sports.io/flags/lv.svg",
+        "season": 2026,
+        "round": "Regular Season - 20",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": false
+        },
+        "away": {
+          "id": 4160,
+          "name": "Rīgas FS",
+          "logo": "https://media.api-sports.io/football/teams/4160.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1515867,
+        "referee": "K. Ratnieks",
+        "timezone": "UTC",
+        "date": "2026-06-21T15:00:00+00:00",
+        "timestamp": 1782054000,
+        "periods": {
+          "first": 1782054000,
+          "second": 1782057600
+        },
+        "venue": {
+          "id": null,
+          "name": "Skonto stadions",
+          "city": "Riga"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 365,
+        "name": "Virsliga",
+        "country": "Latvia",
+        "logo": "https://media.api-sports.io/football/leagues/365.png",
+        "flag": "https://media.api-sports.io/flags/lv.svg",
+        "season": 2026,
+        "round": "Regular Season - 19",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 10124,
+          "name": "Riga",
+          "logo": "https://media.api-sports.io/football/teams/10124.png",
+          "winner": true
+        },
+        "away": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 3,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1515860,
+        "referee": "A. Treimanis",
+        "timezone": "UTC",
+        "date": "2026-06-16T16:00:00+00:00",
+        "timestamp": 1781625600,
+        "periods": {
+          "first": 1781625600,
+          "second": 1781629200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": "Grobina"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 365,
+        "name": "Virsliga",
+        "country": "Latvia",
+        "logo": "https://media.api-sports.io/football/leagues/365.png",
+        "flag": "https://media.api-sports.io/flags/lv.svg",
+        "season": 2026,
+        "round": "Regular Season - 18",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 4138,
+          "name": "Grobiņa",
+          "logo": "https://media.api-sports.io/football/teams/4138.png",
+          "winner": true
+        },
+        "away": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1515855,
+        "referee": "A. Griscenko",
+        "timezone": "UTC",
+        "date": "2026-06-12T16:00:00+00:00",
+        "timestamp": 1781280000,
+        "periods": {
+          "first": 1781280000,
+          "second": 1781283600
+        },
+        "venue": {
+          "id": null,
+          "name": "Daugavas stadions",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 365,
+        "name": "Virsliga",
+        "country": "Latvia",
+        "logo": "https://media.api-sports.io/football/leagues/365.png",
+        "flag": "https://media.api-sports.io/flags/lv.svg",
+        "season": 2026,
+        "round": "Regular Season - 17",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": true
+        },
+        "away": {
+          "id": 4143,
+          "name": "Super Nova",
+          "logo": "https://media.api-sports.io/football/teams/4143.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1515851,
+        "referee": "J. Keziks",
+        "timezone": "UTC",
+        "date": "2026-05-30T12:00:00+00:00",
+        "timestamp": 1780142400,
+        "periods": {
+          "first": 1780142400,
+          "second": 1780146000
+        },
+        "venue": {
+          "id": null,
+          "name": "Daugavas stadions",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 365,
+        "name": "Virsliga",
+        "country": "Latvia",
+        "logo": "https://media.api-sports.io/football/leagues/365.png",
+        "flag": "https://media.api-sports.io/flags/lv.svg",
+        "season": 2026,
+        "round": "Regular Season - 16",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": true
+        },
+        "away": {
+          "id": 4144,
+          "name": "Tukums",
+          "logo": "https://media.api-sports.io/football/teams/4144.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1515847,
+        "referee": "K. Ratnieks",
+        "timezone": "UTC",
+        "date": "2026-05-26T15:00:00+00:00",
+        "timestamp": 1779807600,
+        "periods": {
+          "first": 1779807600,
+          "second": 1779811200
+        },
+        "venue": {
+          "id": null,
+          "name": "Zemgales Olimpiskais centrs",
+          "city": "Jelgava"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 365,
+        "name": "Virsliga",
+        "country": "Latvia",
+        "logo": "https://media.api-sports.io/football/leagues/365.png",
+        "flag": "https://media.api-sports.io/flags/lv.svg",
+        "season": 2026,
+        "round": "Regular Season - 15",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 18834,
+          "name": "FS Jelgava",
+          "logo": "https://media.api-sports.io/football/teams/18834.png",
+          "winner": null
+        },
+        "away": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1515843,
+        "referee": "A. Anufrijevs",
+        "timezone": "UTC",
+        "date": "2026-05-22T15:00:00+00:00",
+        "timestamp": 1779462000,
+        "periods": {
+          "first": 1779462000,
+          "second": 1779465600
+        },
+        "venue": {
+          "id": null,
+          "name": "Skonto stadions",
+          "city": "Riga"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 365,
+        "name": "Virsliga",
+        "country": "Latvia",
+        "logo": "https://media.api-sports.io/football/leagues/365.png",
+        "flag": "https://media.api-sports.io/flags/lv.svg",
+        "season": 2026,
+        "round": "Regular Season - 14",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 4135,
+          "name": "Auda",
+          "logo": "https://media.api-sports.io/football/teams/4135.png",
+          "winner": true
+        },
+        "away": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1515837,
+        "referee": "S. Vasjkovs",
+        "timezone": "UTC",
+        "date": "2026-05-17T16:00:00+00:00",
+        "timestamp": 1779033600,
+        "periods": {
+          "first": 1779033600,
+          "second": 1779037200
+        },
+        "venue": {
+          "id": null,
+          "name": "Daugavas stadions",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 365,
+        "name": "Virsliga",
+        "country": "Latvia",
+        "logo": "https://media.api-sports.io/football/leagues/365.png",
+        "flag": "https://media.api-sports.io/flags/lv.svg",
+        "season": 2026,
+        "round": "Regular Season - 13",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": true
+        },
+        "away": {
+          "id": 4149,
+          "name": "BFC Daugavpils",
+          "logo": "https://media.api-sports.io/football/teams/4149.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1515831,
+        "referee": "V. Spasjonnikovs",
+        "timezone": "UTC",
+        "date": "2026-05-12T15:00:00+00:00",
+        "timestamp": 1778598000,
+        "periods": {
+          "first": 1778598000,
+          "second": 1778601600
+        },
+        "venue": {
+          "id": null,
+          "name": "Daugavas stadions",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 365,
+        "name": "Virsliga",
+        "country": "Latvia",
+        "logo": "https://media.api-sports.io/football/leagues/365.png",
+        "flag": "https://media.api-sports.io/flags/lv.svg",
+        "season": 2026,
+        "round": "Regular Season - 12",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": true
+        },
+        "away": {
+          "id": 18936,
+          "name": "Ogre United",
+          "logo": "https://media.api-sports.io/football/teams/18936.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1515828,
+        "referee": "A. Kenins",
+        "timezone": "UTC",
+        "date": "2026-05-08T16:00:00+00:00",
+        "timestamp": 1778256000,
+        "periods": {
+          "first": 1778256000,
+          "second": 1778259600
+        },
+        "venue": {
+          "id": null,
+          "name": "LNK Sporta Parks - artificial grass",
+          "city": "Riga"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 365,
+        "name": "Virsliga",
+        "country": "Latvia",
+        "logo": "https://media.api-sports.io/football/leagues/365.png",
+        "flag": "https://media.api-sports.io/flags/lv.svg",
+        "season": 2026,
+        "round": "Regular Season - 11",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 4160,
+          "name": "Rīgas FS",
+          "logo": "https://media.api-sports.io/football/teams/4160.png",
+          "winner": true
+        },
+        "away": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 5,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 3,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 5,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1515823,
+        "referee": "A. Golubevs",
+        "timezone": "UTC",
+        "date": "2026-05-03T13:00:00+00:00",
+        "timestamp": 1777813200,
+        "periods": {
+          "first": 1777813200,
+          "second": 1777816800
+        },
+        "venue": {
+          "id": null,
+          "name": "Skonto stadions",
+          "city": "Riga"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 365,
+        "name": "Virsliga",
+        "country": "Latvia",
+        "logo": "https://media.api-sports.io/football/leagues/365.png",
+        "flag": "https://media.api-sports.io/flags/lv.svg",
+        "season": 2026,
+        "round": "Regular Season - 10",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 10124,
+          "name": "Riga",
+          "logo": "https://media.api-sports.io/football/teams/10124.png",
+          "winner": true
+        },
+        "away": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "15576|2026": [
+    {
+      "fixture": {
+        "id": 1554413,
+        "referee": "G. Avazashvili",
+        "timezone": "UTC",
+        "date": "2026-07-09T18:00:00+00:00",
+        "timestamp": 1783620000,
+        "periods": {
+          "first": 1783620000,
+          "second": 1783623600
+        },
+        "venue": {
+          "id": null,
+          "name": "Loro Borici Stadium",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
+        }
+      },
+      "league": {
+        "id": 848,
+        "name": "UEFA Europa Conference League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/848.png",
+        "flag": null,
+        "season": 2026,
+        "round": "1st Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 3339,
+          "name": "Vllaznia Shkodër",
+          "logo": "https://media.api-sports.io/football/teams/3339.png",
+          "winner": true
+        },
+        "away": {
+          "id": 15576,
+          "name": "Malisheva",
+          "logo": "https://media.api-sports.io/football/teams/15576.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1509435,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-25T14:00:00+00:00",
+        "timestamp": 1769349600,
+        "periods": {
+          "first": 1769349600,
+          "second": 1769353200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 572,
+          "name": "Dynamo Kyiv",
+          "logo": "https://media.api-sports.io/football/teams/572.png",
+          "winner": true
+        },
+        "away": {
+          "id": 15576,
+          "name": "Malisheva",
+          "logo": "https://media.api-sports.io/football/teams/15576.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 8,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 3,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 8,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1505788,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-16T13:00:00+00:00",
+        "timestamp": 1768568400,
+        "periods": {
+          "first": 1768568400,
+          "second": 1768572000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 21953,
+          "name": "Kudrivka",
+          "logo": "https://media.api-sports.io/football/teams/21953.png",
+          "winner": false
+        },
+        "away": {
+          "id": 15576,
+          "name": "Malisheva",
+          "logo": "https://media.api-sports.io/football/teams/15576.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "3339|2026": [
+    {
+      "fixture": {
+        "id": 1554413,
+        "referee": "G. Avazashvili",
+        "timezone": "UTC",
+        "date": "2026-07-09T18:00:00+00:00",
+        "timestamp": 1783620000,
+        "periods": {
+          "first": 1783620000,
+          "second": 1783623600
+        },
+        "venue": {
+          "id": null,
+          "name": "Loro Borici Stadium",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
+        }
+      },
+      "league": {
+        "id": 848,
+        "name": "UEFA Europa Conference League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/848.png",
+        "flag": null,
+        "season": 2026,
+        "round": "1st Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 3339,
+          "name": "Vllaznia Shkodër",
+          "logo": "https://media.api-sports.io/football/teams/3339.png",
+          "winner": true
+        },
+        "away": {
+          "id": 15576,
+          "name": "Malisheva",
+          "logo": "https://media.api-sports.io/football/teams/15576.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1562852,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-01T16:00:00+00:00",
+        "timestamp": 1782921600,
+        "periods": {
+          "first": 1782921600,
+          "second": 1782925200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1017,
+          "name": "NK Lokomotiva Zagreb",
+          "logo": "https://media.api-sports.io/football/teams/1017.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3339,
+          "name": "Vllaznia Shkodër",
+          "logo": "https://media.api-sports.io/football/teams/3339.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1567489,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T16:00:00+00:00",
+        "timestamp": 1782748800,
+        "periods": {
+          "first": 1782748800,
+          "second": 1782752400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 2592,
+          "name": "Arges Pitesti",
+          "logo": "https://media.api-sports.io/football/teams/2592.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3339,
+          "name": "Vllaznia Shkodër",
+          "logo": "https://media.api-sports.io/football/teams/3339.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 5,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 5,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1560457,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-27T16:00:00+00:00",
+        "timestamp": 1782576000,
+        "periods": {
+          "first": 1782576000,
+          "second": 1782579600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 4374,
+          "name": "Koper",
+          "logo": "https://media.api-sports.io/football/teams/4374.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3339,
+          "name": "Vllaznia Shkodër",
+          "logo": "https://media.api-sports.io/football/teams/3339.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554501,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-23T16:00:00+00:00",
+        "timestamp": 1782230400,
+        "periods": {
+          "first": 1782230400,
+          "second": 1782234000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 677,
+          "name": "Olimpija Ljubljana",
+          "logo": "https://media.api-sports.io/football/teams/677.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3339,
+          "name": "Vllaznia Shkodër",
+          "logo": "https://media.api-sports.io/football/teams/3339.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554464,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-17T16:00:00+00:00",
+        "timestamp": 1781712000,
+        "periods": {
+          "first": 1781712000,
+          "second": 1781715600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 3339,
+          "name": "Vllaznia Shkodër",
+          "logo": "https://media.api-sports.io/football/teams/3339.png",
+          "winner": null
+        },
+        "away": {
+          "id": 3745,
+          "name": "Dečić",
+          "logo": "https://media.api-sports.io/football/teams/3745.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
   ]
 }

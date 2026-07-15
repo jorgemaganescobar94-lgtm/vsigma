@@ -13803,5 +13803,149 @@
   "2271-3327": [],
   "684-1163": [],
   "357-12733": [],
-  "648-685": []
+  "648-685": [],
+  "661-3745": [
+    {
+      "fixture": {
+        "id": 1554394,
+        "referee": "B. McMaster",
+        "timezone": "UTC",
+        "date": "2026-07-09T16:00:00+00:00",
+        "timestamp": 1783612800,
+        "periods": {
+          "first": 1783612800,
+          "second": 1783616400
+        },
+        "venue": {
+          "id": null,
+          "name": "Daugavas stadions",
+          "city": "Tuzi"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 848,
+        "name": "UEFA Europa Conference League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/848.png",
+        "flag": null,
+        "season": 2026,
+        "round": "1st Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 661,
+          "name": "FK Liepaja",
+          "logo": "https://media.api-sports.io/football/teams/661.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3745,
+          "name": "Dečić",
+          "logo": "https://media.api-sports.io/football/teams/3745.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "3339-15576": [
+    {
+      "fixture": {
+        "id": 1554413,
+        "referee": "G. Avazashvili",
+        "timezone": "UTC",
+        "date": "2026-07-09T18:00:00+00:00",
+        "timestamp": 1783620000,
+        "periods": {
+          "first": 1783620000,
+          "second": 1783623600
+        },
+        "venue": {
+          "id": null,
+          "name": "Loro Borici Stadium",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
+        }
+      },
+      "league": {
+        "id": 848,
+        "name": "UEFA Europa Conference League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/848.png",
+        "flag": null,
+        "season": 2026,
+        "round": "1st Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 3339,
+          "name": "Vllaznia Shkodër",
+          "logo": "https://media.api-sports.io/football/teams/3339.png",
+          "winner": true
+        },
+        "away": {
+          "id": 15576,
+          "name": "Malisheva",
+          "logo": "https://media.api-sports.io/football/teams/15576.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ]
 }
