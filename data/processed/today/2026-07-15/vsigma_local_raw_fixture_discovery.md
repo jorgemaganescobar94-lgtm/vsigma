@@ -4,147 +4,147 @@
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
 - files_scanned: 3169
 - accepted_rows: 134
-- rejected_rows: 176
-- source_status_counts: NO_SAME_DAY_ROWS=1757; EMPTY_OR_UNREADABLE=1365; NO_ACCEPTED_ROWS=44; HAS_ACCEPTED_ROWS=3
+- rejected_rows: 442
+- source_status_counts: NO_SAME_DAY_ROWS=1757; EMPTY_OR_UNREADABLE=1363; NO_ACCEPTED_ROWS=46; HAS_ACCEPTED_ROWS=3
 - next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO
 
 ## Accepted Rows
 - The New Saints vs Sabah FA | fixture_id=1554387 | league=UEFA Champions League | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
-- Atert Bissen vs KI Klaksvik | fixture_id=1554375 | league=UEFA Champions League | source=data/processed/matches_league_filtered.csv
-- Egnatia Rrogozhinë vs Petrocub | fixture_id=1554377 | league=UEFA Champions League | source=data/processed/matches_league_filtered.csv
-- Sutjeska vs Kairat Almaty | fixture_id=1554386 | league=UEFA Champions League | source=data/processed/matches_league_filtered.csv
-- Universitatea Craiova vs ML Vitebsk | fixture_id=1554388 | league=UEFA Champions League | source=data/processed/matches_league_filtered.csv
-- Dečić vs FK Liepaja | fixture_id=1554421 | league=UEFA Europa Conference League | source=data/processed/matches_league_filtered.csv
-- Malisheva vs Vllaznia Shkodër | fixture_id=1554428 | league=UEFA Europa Conference League | source=data/processed/matches_league_filtered.csv
-- Blumenau vs Metropolitano | fixture_id=1542002 | league=Catarinense - 2 | source=data/processed/matches_league_rejected.csv
-- Caravaggio vs Tubarao | fixture_id=1542003 | league=Catarinense - 2 | source=data/processed/matches_league_rejected.csv
-- Fluminense-SC vs Guarani de Palhoça | fixture_id=1542004 | league=Catarinense - 2 | source=data/processed/matches_league_rejected.csv
-- Hercílio Luz vs Juventus SC | fixture_id=1542001 | league=Catarinense - 2 | source=data/processed/matches_league_rejected.csv
-- Jaraguá vs Nação | fixture_id=1542031 | league=Catarinense - 2 | source=data/processed/matches_league_rejected.csv
-- Americano Campos vs Portuguesa RJ | fixture_id=1589160 | league=Copa Rio | source=data/processed/matches_league_rejected.csv
-- América RJ vs Nova Iguaçu | fixture_id=1589157 | league=Copa Rio | source=data/processed/matches_league_rejected.csv
-- Bonsucesso vs Madureira | fixture_id=1589161 | league=Copa Rio | source=data/processed/matches_league_rejected.csv
-- CEAC / Araruama vs Boavista SC | fixture_id=1589162 | league=Copa Rio | source=data/processed/matches_league_rejected.csv
-- Olaria vs Bangu | fixture_id=1589159 | league=Copa Rio | source=data/processed/matches_league_rejected.csv
-- Pérolas Negras vs CFRJ / Maricá | fixture_id=1589158 | league=Copa Rio | source=data/processed/matches_league_rejected.csv
-- Resende vs Sampaio Corrêa RJ | fixture_id=1589163 | league=Copa Rio | source=data/processed/matches_league_rejected.csv
-- Ordabasy vs Altay | fixture_id=1545178 | league=Cup | source=data/processed/matches_league_rejected.csv
-- Cheonan City vs Mokpo City | fixture_id=1581357 | league=FA Cup | source=data/processed/matches_league_rejected.csv
-- Gyeongnam FC vs Yeoju Sejong | fixture_id=1581840 | league=FA Cup | source=data/processed/matches_league_rejected.csv
-- GBK vs Kraft | fixture_id=1541715 | league=Kakkonen - Lohko C | source=data/processed/matches_league_rejected.csv
-- Leones del Norte vs Deportivo Cuenca | fixture_id=1519402 | league=Liga Pro | source=data/processed/matches_league_rejected.csv
-- Libertad vs Tecnico Universitario | fixture_id=1519403 | league=Liga Pro | source=data/processed/matches_league_rejected.csv
-- Universidad Catolica vs LDU de Quito | fixture_id=1519407 | league=Liga Pro | source=data/processed/matches_league_rejected.csv
-- Cuniburo vs El Nacional | fixture_id=1526576 | league=Liga Pro Serie B | source=data/processed/matches_league_rejected.csv
-- Araioses vs Cordino | fixture_id=1582695 | league=Maranhense - 2 | source=data/processed/matches_league_rejected.csv
-- Lago Verde vs Expressinho | fixture_id=1582696 | league=Maranhense - 2 | source=data/processed/matches_league_rejected.csv
-- Sao Luis vs Pinheiro | fixture_id=1582697 | league=Maranhense - 2 | source=data/processed/matches_league_rejected.csv
-- Timon MA vs Tupan | fixture_id=1582698 | league=Maranhense - 2 | source=data/processed/matches_league_rejected.csv
-- Kahibah vs Maitland | fixture_id=1523779 | league=Northern NSW NPL | source=data/processed/matches_league_rejected.csv
-- Real Potosí vs San Antonio Bulo Bulo | fixture_id=1538388 | league=Primera División | source=data/processed/matches_league_rejected.csv
-- One Knoxville vs Fort Wayne | fixture_id=1493898 | league=USL League One | source=data/processed/matches_league_rejected.csv
-- England vs Argentina | fixture_id=1586077 | league=World Cup | source=data/processed/matches_league_rejected.csv
-- JIPPO vs MP | fixture_id=1504261 | league=Ykkösliiga | source=data/processed/matches_league_rejected.csv
-- Vasco U17 vs Corinthians U17 | fixture_id=1543949 | league=Brasileiro U17 | source=data/processed/matches_league_rejected.csv
-- Caucaia U20 vs Fortaleza U20 | fixture_id=1540195 | league=Cearense U20 | source=data/processed/matches_league_rejected.csv
-- Bahrain U20 vs Palestine U20 | fixture_id=1586131 | league=Friendlies | source=data/processed/matches_league_rejected.csv
-- AS Eupen vs La Calamine | fixture_id=1583326 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Aarhus vs AC Horsens | fixture_id=1547969 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Ajax vs VfL Bochum | fixture_id=1567633 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Aldershot Town vs Portsmouth | fixture_id=1546677 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Almere City FC vs FC Volendam | fixture_id=1554953 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Ards Rangers vs Ballymacash Rangers | fixture_id=1584862 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Austin vs Charlotte | fixture_id=1567636 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Barbate vs Cadiz | fixture_id=1567621 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Benfica B vs Lusitano Évora 1911 | fixture_id=1584848 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Beroe vs Maritsa Milevo | fixture_id=1584850 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Borussia M'gladbach II vs TuS Koblenz | fixture_id=1562923 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Broń Radom vs Ceramika Opoczno | fixture_id=1584851 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Brønshøj vs Frem | fixture_id=1583325 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Caen vs Gobelins | fixture_id=1589266 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Cerezo Osaka vs Tochigi City | fixture_id=1589260 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Chaves vs Fafe | fixture_id=1584847 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Chemnitzer FC vs SpVgg Unterhaching | fixture_id=1546676 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Clermont Foot vs Bourges Foot 18 | fixture_id=1583311 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Czarni Połaniec vs Jarosław | fixture_id=1583312 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Derio vs Athletic Club | fixture_id=1554974 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Dijon vs UNFP | fixture_id=1554954 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Dynamo vs Krylia Sovetov | fixture_id=1560612 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Einheit Rudolstadt vs Arnstadt | fixture_id=1562924 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Eintracht Frankfurt II vs Waldhof Mannheim | fixture_id=1567634 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Eintracht Trier vs Fortuna Köln | fixture_id=1554969 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Energie Cottbus vs Mlada Boleslav | fixture_id=1584859 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Estrela vs Naval 1893 | fixture_id=1583313 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- FC Fredericia vs Mafra | fixture_id=1550567 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- FC Rostov vs Fakel | fixture_id=1554955 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- FK Jablonec vs Metalist 1925 Kharkiv | fixture_id=1554958 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Famalicao vs Lusitânia Lourosa | fixture_id=1567629 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Fleury 91 vs Boulogne | fixture_id=1567631 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Freiburg II vs Bochum II | fixture_id=1583309 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Galanta vs Piešťany | fixture_id=1583314 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Germania Ober-Roden vs Kickers Offenbach | fixture_id=1554800 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Grenoble vs Villefranche | fixture_id=1560613 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Hansa Rostock vs Greifswalder FC | fixture_id=1547970 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Heist vs KV Mechelen | fixture_id=1554971 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Hoek vs NAC Breda | fixture_id=1554970 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Holstein Kiel vs Al-Ahli Jeddah | fixture_id=1554957 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Hradec Králové II vs Jablonec II | fixture_id=1583323 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- KRC Genk II vs RWDM | fixture_id=1562920 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Kashima vs Vegalta Sendai | fixture_id=1589261 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Kisvarda FC vs Bukovyna | fixture_id=1560614 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Krieschow vs Altglienicke | fixture_id=1589268 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Kudrivka vs Kolos Kovalivka II | fixture_id=1584852 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Laval vs Quevilly | fixture_id=1562921 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Lechia Zielona Góra vs Carina Gubin | fixture_id=1583320 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Lyon vs Servette FC | fixture_id=1554967 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Malženice vs Zbrojovka Brno | fixture_id=1583315 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Neuchatel Xamax FC vs Coffrane | fixture_id=1584785 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Nordlingen vs 1. FC Heidenheim | fixture_id=1554966 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- OH Leuven vs Lommel United | fixture_id=1567628 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Obolon'-Brovar vs Chernihiv | fixture_id=1567632 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Odra Opole vs Maccabi Netanya | fixture_id=1584857 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Optik Rathenow vs BSC Süd 05 | fixture_id=1562922 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Orlando Pirates vs Cordoba | fixture_id=1584860 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Paderborn II vs Verl | fixture_id=1554962 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Patro Eisden vs St. Truiden | fixture_id=1560618 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Pelikan Łowicz vs Swit | fixture_id=1583316 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Podlasie Biała Podlaska vs Polonia Warszawa U19 | fixture_id=1583310 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Polonia Słubice vs FC Frankfurt | fixture_id=1583317 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Polonia Warszawa vs Zlin | fixture_id=1554959 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Portimonense vs Rio Ave | fixture_id=1583318 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Puszcza Niepołomice vs Podhale Nowy Targ | fixture_id=1554960 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Rapid Vienna vs Panathinaikos | fixture_id=1583324 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Red Bull Salzburg vs Gamba Osaka | fixture_id=1560616 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Red Bull Salzburg vs Başakşehir | fixture_id=1560619 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Reims vs Francs Borains | fixture_id=1560617 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Rilski Sportist vs Marek | fixture_id=1554961 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- SAK Klagenfurt vs Austria Klagenfurt | fixture_id=1554968 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- SC St. Tönis vs Fortuna Düsseldorf II | fixture_id=1567635 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- SSV Jahn Regensburg vs Vilzing | fixture_id=1548851 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- SV Zeilsheim vs Bayern Alzenau | fixture_id=1554963 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Sanjoanense vs Felgueiras 1932 | fixture_id=1584853 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Santa Clara vs Leça | fixture_id=1584849 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Skegness Town vs Scunthorpe | fixture_id=1584861 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Solihull Moors vs Birmingham | fixture_id=1583328 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Spišská Nová Ves vs Ružomberok II | fixture_id=1583321 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Sportfreunde Dorfmerkingen vs VfR Aalen | fixture_id=1583322 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Sturm Graz vs Pogon Szczecin | fixture_id=1554965 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Tasmania Berlin vs Hertha Zehlendorf | fixture_id=1554972 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Tondela vs Varzim | fixture_id=1584855 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Torreense vs Academica | fixture_id=1589264 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Unia Swarzędz vs Lipno Stęszew | fixture_id=1584856 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- União de Leiria vs AD Marco 09 | fixture_id=1589265 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Vitesse vs AEK Athens FC | fixture_id=1583327 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Warta Sieradz vs Polonia Środa | fixture_id=1584858 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Wiedenbrück vs Theesen | fixture_id=1554973 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Wisłoka Dębica vs Widzew II | fixture_id=1560615 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Yokohama F. Marinos vs Tegevajaro Miyazaki | fixture_id=1589262 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Zagłębie Lubin II vs Odra Bytom Odrzański | fixture_id=1583319 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- Zorya Luhansk vs Konyaspor | fixture_id=1567630 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
-- England U20 W vs Colombia U20 W | fixture_id=1583663 | league=Friendlies Women | source=data/processed/matches_league_rejected.csv
-- Ammerthal vs ASV Neumarkt | fixture_id=1566692 | league=Oberliga - Bayern Nord | source=data/processed/matches_league_rejected.csv
+- Atert Bissen vs KI Klaksvik | fixture_id=1554375 | league=UEFA Champions League | source=data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv
+- Egnatia Rrogozhinë vs Petrocub | fixture_id=1554377 | league=UEFA Champions League | source=data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv
+- Sutjeska vs Kairat Almaty | fixture_id=1554386 | league=UEFA Champions League | source=data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv
+- Universitatea Craiova vs ML Vitebsk | fixture_id=1554388 | league=UEFA Champions League | source=data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv
+- Dečić vs FK Liepaja | fixture_id=1554421 | league=UEFA Europa Conference League | source=data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv
+- Malisheva vs Vllaznia Shkodër | fixture_id=1554428 | league=UEFA Europa Conference League | source=data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv
+- Blumenau vs Metropolitano | fixture_id=1542002 | league=Catarinense - 2 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Caravaggio vs Tubarao | fixture_id=1542003 | league=Catarinense - 2 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Fluminense-SC vs Guarani de Palhoça | fixture_id=1542004 | league=Catarinense - 2 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Hercílio Luz vs Juventus SC | fixture_id=1542001 | league=Catarinense - 2 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Jaraguá vs Nação | fixture_id=1542031 | league=Catarinense - 2 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Americano Campos vs Portuguesa RJ | fixture_id=1589160 | league=Copa Rio | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- América RJ vs Nova Iguaçu | fixture_id=1589157 | league=Copa Rio | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Bonsucesso vs Madureira | fixture_id=1589161 | league=Copa Rio | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- CEAC / Araruama vs Boavista SC | fixture_id=1589162 | league=Copa Rio | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Olaria vs Bangu | fixture_id=1589159 | league=Copa Rio | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Pérolas Negras vs CFRJ / Maricá | fixture_id=1589158 | league=Copa Rio | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Resende vs Sampaio Corrêa RJ | fixture_id=1589163 | league=Copa Rio | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ordabasy vs Altay | fixture_id=1545178 | league=Cup | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Cheonan City vs Mokpo City | fixture_id=1581357 | league=FA Cup | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Gyeongnam FC vs Yeoju Sejong | fixture_id=1581840 | league=FA Cup | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- GBK vs Kraft | fixture_id=1541715 | league=Kakkonen - Lohko C | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Leones del Norte vs Deportivo Cuenca | fixture_id=1519402 | league=Liga Pro | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Libertad vs Tecnico Universitario | fixture_id=1519403 | league=Liga Pro | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Universidad Catolica vs LDU de Quito | fixture_id=1519407 | league=Liga Pro | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Cuniburo vs El Nacional | fixture_id=1526576 | league=Liga Pro Serie B | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Araioses vs Cordino | fixture_id=1582695 | league=Maranhense - 2 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Lago Verde vs Expressinho | fixture_id=1582696 | league=Maranhense - 2 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sao Luis vs Pinheiro | fixture_id=1582697 | league=Maranhense - 2 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Timon MA vs Tupan | fixture_id=1582698 | league=Maranhense - 2 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Kahibah vs Maitland | fixture_id=1523779 | league=Northern NSW NPL | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Real Potosí vs San Antonio Bulo Bulo | fixture_id=1538388 | league=Primera División | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- One Knoxville vs Fort Wayne | fixture_id=1493898 | league=USL League One | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- England vs Argentina | fixture_id=1586077 | league=World Cup | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- JIPPO vs MP | fixture_id=1504261 | league=Ykkösliiga | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Vasco U17 vs Corinthians U17 | fixture_id=1543949 | league=Brasileiro U17 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Caucaia U20 vs Fortaleza U20 | fixture_id=1540195 | league=Cearense U20 | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Bahrain U20 vs Palestine U20 | fixture_id=1586131 | league=Friendlies | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- AS Eupen vs La Calamine | fixture_id=1583326 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Aarhus vs AC Horsens | fixture_id=1547969 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ajax vs VfL Bochum | fixture_id=1567633 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Aldershot Town vs Portsmouth | fixture_id=1546677 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Almere City FC vs FC Volendam | fixture_id=1554953 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ards Rangers vs Ballymacash Rangers | fixture_id=1584862 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Austin vs Charlotte | fixture_id=1567636 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Barbate vs Cadiz | fixture_id=1567621 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Benfica B vs Lusitano Évora 1911 | fixture_id=1584848 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Beroe vs Maritsa Milevo | fixture_id=1584850 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Borussia M'gladbach II vs TuS Koblenz | fixture_id=1562923 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Broń Radom vs Ceramika Opoczno | fixture_id=1584851 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Brønshøj vs Frem | fixture_id=1583325 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Caen vs Gobelins | fixture_id=1589266 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Cerezo Osaka vs Tochigi City | fixture_id=1589260 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Chaves vs Fafe | fixture_id=1584847 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Chemnitzer FC vs SpVgg Unterhaching | fixture_id=1546676 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Clermont Foot vs Bourges Foot 18 | fixture_id=1583311 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Czarni Połaniec vs Jarosław | fixture_id=1583312 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Derio vs Athletic Club | fixture_id=1554974 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Dijon vs UNFP | fixture_id=1554954 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Dynamo vs Krylia Sovetov | fixture_id=1560612 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Einheit Rudolstadt vs Arnstadt | fixture_id=1562924 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Eintracht Frankfurt II vs Waldhof Mannheim | fixture_id=1567634 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Eintracht Trier vs Fortuna Köln | fixture_id=1554969 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Energie Cottbus vs Mlada Boleslav | fixture_id=1584859 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Estrela vs Naval 1893 | fixture_id=1583313 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- FC Fredericia vs Mafra | fixture_id=1550567 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- FC Rostov vs Fakel | fixture_id=1554955 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- FK Jablonec vs Metalist 1925 Kharkiv | fixture_id=1554958 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Famalicao vs Lusitânia Lourosa | fixture_id=1567629 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Fleury 91 vs Boulogne | fixture_id=1567631 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Freiburg II vs Bochum II | fixture_id=1583309 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Galanta vs Piešťany | fixture_id=1583314 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Germania Ober-Roden vs Kickers Offenbach | fixture_id=1554800 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Grenoble vs Villefranche | fixture_id=1560613 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Hansa Rostock vs Greifswalder FC | fixture_id=1547970 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Heist vs KV Mechelen | fixture_id=1554971 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Hoek vs NAC Breda | fixture_id=1554970 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Holstein Kiel vs Al-Ahli Jeddah | fixture_id=1554957 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Hradec Králové II vs Jablonec II | fixture_id=1583323 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- KRC Genk II vs RWDM | fixture_id=1562920 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Kashima vs Vegalta Sendai | fixture_id=1589261 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Kisvarda FC vs Bukovyna | fixture_id=1560614 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Krieschow vs Altglienicke | fixture_id=1589268 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Kudrivka vs Kolos Kovalivka II | fixture_id=1584852 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Laval vs Quevilly | fixture_id=1562921 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Lechia Zielona Góra vs Carina Gubin | fixture_id=1583320 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Lyon vs Servette FC | fixture_id=1554967 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Malženice vs Zbrojovka Brno | fixture_id=1583315 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Neuchatel Xamax FC vs Coffrane | fixture_id=1584785 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Nordlingen vs 1. FC Heidenheim | fixture_id=1554966 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- OH Leuven vs Lommel United | fixture_id=1567628 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Obolon'-Brovar vs Chernihiv | fixture_id=1567632 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Odra Opole vs Maccabi Netanya | fixture_id=1584857 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Optik Rathenow vs BSC Süd 05 | fixture_id=1562922 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Orlando Pirates vs Cordoba | fixture_id=1584860 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Paderborn II vs Verl | fixture_id=1554962 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Patro Eisden vs St. Truiden | fixture_id=1560618 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Pelikan Łowicz vs Swit | fixture_id=1583316 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Podlasie Biała Podlaska vs Polonia Warszawa U19 | fixture_id=1583310 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Polonia Słubice vs FC Frankfurt | fixture_id=1583317 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Polonia Warszawa vs Zlin | fixture_id=1554959 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Portimonense vs Rio Ave | fixture_id=1583318 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Puszcza Niepołomice vs Podhale Nowy Targ | fixture_id=1554960 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Rapid Vienna vs Panathinaikos | fixture_id=1583324 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Red Bull Salzburg vs Gamba Osaka | fixture_id=1560616 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Red Bull Salzburg vs Başakşehir | fixture_id=1560619 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Reims vs Francs Borains | fixture_id=1560617 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Rilski Sportist vs Marek | fixture_id=1554961 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- SAK Klagenfurt vs Austria Klagenfurt | fixture_id=1554968 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- SC St. Tönis vs Fortuna Düsseldorf II | fixture_id=1567635 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- SSV Jahn Regensburg vs Vilzing | fixture_id=1548851 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- SV Zeilsheim vs Bayern Alzenau | fixture_id=1554963 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sanjoanense vs Felgueiras 1932 | fixture_id=1584853 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Santa Clara vs Leça | fixture_id=1584849 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Skegness Town vs Scunthorpe | fixture_id=1584861 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Solihull Moors vs Birmingham | fixture_id=1583328 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Spišská Nová Ves vs Ružomberok II | fixture_id=1583321 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sportfreunde Dorfmerkingen vs VfR Aalen | fixture_id=1583322 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Sturm Graz vs Pogon Szczecin | fixture_id=1554965 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Tasmania Berlin vs Hertha Zehlendorf | fixture_id=1554972 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Tondela vs Varzim | fixture_id=1584855 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Torreense vs Academica | fixture_id=1589264 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Unia Swarzędz vs Lipno Stęszew | fixture_id=1584856 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- União de Leiria vs AD Marco 09 | fixture_id=1589265 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Vitesse vs AEK Athens FC | fixture_id=1583327 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Warta Sieradz vs Polonia Środa | fixture_id=1584858 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Wiedenbrück vs Theesen | fixture_id=1554973 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Wisłoka Dębica vs Widzew II | fixture_id=1560615 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Yokohama F. Marinos vs Tegevajaro Miyazaki | fixture_id=1589262 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Zagłębie Lubin II vs Odra Bytom Odrzański | fixture_id=1583319 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Zorya Luhansk vs Konyaspor | fixture_id=1567630 | league=Friendlies Clubs | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- England U20 W vs Colombia U20 W | fixture_id=1583663 | league=Friendlies Women | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
+- Ammerthal vs ASV Neumarkt | fixture_id=1566692 | league=Oberliga - Bayern Nord | source=data/processed/governance/vsigma_raw_candidate_trust_gate.csv
 
 ## Source Diagnostics
 - data/processed/batch_inputs/vsigma_api_board_candidates_2026-06-15.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
@@ -179,7 +179,7 @@
 - data/processed/governance/vsigma_candidate_provenance_ceiling.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_dated_post_match_results_refresh.csv | status=NO_SAME_DAY_ROWS | rows=356 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_forced_api_board_fixture_lineups.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_ACCEPTED_ROWS | rows=134 | same_day=134 | accepted=0 | rejected=134 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_match_stat_forecast_backtest.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecast_calibration_details.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecasts.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
@@ -191,12 +191,12 @@
 - data/processed/governance/vsigma_prematch_match_story_engine.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_prematch_prediction_calibration_advisor.csv | status=NO_SAME_DAY_ROWS | rows=12 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv | status=HAS_ACCEPTED_ROWS | rows=6 | same_day=6 | accepted=6 | rejected=0 | detail=local source contains accepted raw fixture rows
+- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=HAS_ACCEPTED_ROWS | rows=134 | same_day=134 | accepted=127 | rejected=0 | detail=local source contains accepted raw fixture rows
 - data/processed/governance/vsigma_rolling_prematch_accuracy_dashboard.csv | status=NO_SAME_DAY_ROWS | rows=6 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_shadow_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
-- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_ACCEPTED_ROWS | rows=134 | same_day=134 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_ACCEPTED_ROWS | rows=7 | same_day=7 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/historical/2026-04-23/matches.csv | status=NO_SAME_DAY_ROWS | rows=182 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
