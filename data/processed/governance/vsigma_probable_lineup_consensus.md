@@ -1,15 +1,20 @@
 # vSIGMA Probable Lineup Consensus v2 - 2026-07-15
 
 ## Summary
-- fixtures_reviewed: 1
-- probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=1
-- home_confidence: NO_APPROVED_SOURCES=1
-- away_confidence: NO_APPROVED_SOURCES=1
+- fixtures_reviewed: 6
+- probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=6
+- home_confidence: NO_APPROVED_SOURCES=6
+- away_confidence: NO_APPROVED_SOURCES=6
 - auto_apply: NO
 - production_change: NO
 
 ## Fixture Consensus
-- The New Saints vs Sabah FA | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Sutjeska vs Kairat Almaty | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Atert Bissen vs KI Klaksvik | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Universitatea Craiova vs ML Vitebsk | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Egnatia Rrogozhinë vs Petrocub | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Malisheva vs Vllaznia Shkodër | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Dečić vs FK Liepaja | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
 
 ## Guardrails
 - Registry-approved probable XI is never treated as official lineup.
