@@ -1,4 +1,4 @@
 target_date,generated_at,fixture_id,home_team,away_team,api_readiness_gate,coverage_score,original_final_decision,final_decision,original_execution_permission,execution_permission,gate_action,gate_reason,missing_blocks,auto_apply,production_change
-2026-07-16,2026-07-16T10:34:44+01:00,1554428,Malisheva,Vllaznia Shkodër,UNKNOWN,,NO_BET,NO_BET,NO_BET,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
-2026-07-16,2026-07-16T10:34:44+01:00,1554375,Atert Bissen,KI Klaksvik,UNKNOWN,,NO_BET,NO_BET,NO_BET,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
-2026-07-16,2026-07-16T10:34:44+01:00,1554388,Universitatea Craiova,ML Vitebsk,UNKNOWN,,NO_BET,NO_BET,NO_BET,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
+2026-07-16,2026-07-16T19:36:27+01:00,1554428,Malisheva,Vllaznia Shkodër,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
+2026-07-16,2026-07-16T19:36:27+01:00,1554375,Atert Bissen,KI Klaksvik,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
+2026-07-16,2026-07-16T19:36:27+01:00,1554388,Universitatea Craiova,ML Vitebsk,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
