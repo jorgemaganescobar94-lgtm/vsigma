@@ -1,7 +1,7 @@
 # vSIGMA Healthcheck Report - 2026-07-16
 
 - Global health status: WARNING
-- Generated at: 2026-07-16T12:45:32.538351+01:00
+- Generated at: 2026-07-16T15:08:41.016983+01:00
 - Mode: full
 - HEALTHY: 31
 - WARNING: 4
@@ -56,5 +56,5 @@
 | supervisor_latest_report | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/data/processed/daily_supervisor_latest.md |
 | windows_task_registration | NOT_RUN_YET | task registration check unavailable outside Windows | powershell.exe -NoProfile -ExecutionPolicy Bypass -File /home/runner/work/vsigma/vsigma/scripts/register_vsigma_windows_tasks.ps1 |  |
 | recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-16 --timezone Atlantic/Canary --mode status | /home/runner/work/vsigma/vsigma/automation_logs/supervisor |
-| disk_space | HEALTHY | free disk space acceptable: 87.27 GB |  |  |
+| disk_space | HEALTHY | free disk space acceptable: 87.48 GB |  |  |
 | healthcheck_mode | HEALTHY | full mode completed all quick checks plus environment diagnostics |  |  |
