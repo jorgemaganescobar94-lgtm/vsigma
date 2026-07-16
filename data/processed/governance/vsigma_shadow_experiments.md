@@ -1,13 +1,14 @@
-# vSIGMA Shadow Experiments - 2026-07-16
+# vSIGMA Shadow Experiments - 2026-07-15
 
 ## Executive Shadow Summary
-- generated_at: 2026-07-16T00:02:54+01:00
-- shadow_experiments: 1
-- experiment_type_counts: LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=1
-- shadow_status_counts: ACTIVE_SHADOW_ONLY=1
+- generated_at: 2026-07-16T10:30:12+01:00
+- shadow_experiments: 2
+- experiment_type_counts: LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=1; LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW=1
+- shadow_status_counts: ACTIVE_SHADOW_ONLY=2
 
 ## Active Shadow Experiments
 - ACTIVE_SHADOW_ONLY | LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | pattern=OVER_1_5::FAILURE_MODE_LOW_CONVERSION | production_impact=NONE | auto_apply=NO
+- ACTIVE_SHADOW_ONLY | LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW | pattern=OVER_2_5::FAILURE_MODE_LOW_CONVERSION | production_impact=NONE | auto_apply=NO
 
 ## Guardrails
 - production logic changed: NO

@@ -1,0 +1,8 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-07-15,OK,API-SPORTS_DIRECT,164.0,,,,,,
+2026-07-15T15:30:00+01:00,MATCHED,,,1554428.0,FT,Malisheva,Vllaznia Shkodër,5.0,0.0
+2026-07-15T18:30:00+01:00,MATCHED,,,1554388.0,FT,Universitatea Craiova,ML Vitebsk,1.0,0.0
+2026-07-15T19:15:00+01:00,MATCHED,,,1554375.0,FT,Atert Bissen,KI Klaksvik,1.0,2.0
+2026-07-15T19:30:00+01:00,MATCHED,,,1554421.0,FT,Dečić,FK Liepaja,1.0,2.0
+2026-07-15T20:00:00+01:00,MATCHED,,,1554377.0,FT,Egnatia Rrogozhinë,Petrocub,6.0,1.0
+2026-07-15T20:00:00+01:00,MATCHED,,,1554386.0,FT,Sutjeska,Kairat Almaty,0.0,2.0
