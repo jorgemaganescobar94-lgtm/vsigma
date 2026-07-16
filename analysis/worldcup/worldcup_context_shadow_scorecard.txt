@@ -8,8 +8,8 @@
 ==============================================================================
 CONTEXT-ADJUSTMENT — context-adjusted VS pure L3 (SOMBRA · heurístico · NO validado)
 ==============================================================================
-generated_at_utc: 2026-07-15T10:07:04+00:00
-partidos liquidados (total)=41 | con escenario NO trivial=9 | triviales (sin cambio, excluidos)=32 | umbral graduación N>=20
+generated_at_utc: 2026-07-16T10:12:40+00:00
+partidos liquidados (total)=42 | con escenario NO trivial=9 | triviales (sin cambio, excluidos)=33 | umbral graduación N>=20
 MUESTRA INSUFICIENTE para graduar (N<20). Métricas orientativas; sigue en SOMBRA.
 
 --- 1X2 (multiclase H/D/A) sobre escenarios NO triviales ---
