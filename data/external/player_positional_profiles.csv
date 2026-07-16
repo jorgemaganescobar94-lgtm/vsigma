@@ -6,7 +6,7 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 19235,Djed Spence,10,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 138908,Elliot Anderson,10,MID,,,,,,,,,,api_football_lineup_position,media,baja
 2937,Declan Rice,10,MID,,,,,,,,,,api_football_lineup_position,media,baja
-136723,Noni Madueke,10,MID,,,,,,,,,,api_football_lineup_position,media,baja
+136723,Noni Madueke,10,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 129718,Jude Bellingham,10,MID,,,,,,,,,,api_football_lineup_position,media,baja
 138787,Anthony Gordon,10,MID,,,,,,,,,,api_football_lineup_position,media,baja
 184,Harry Kane,10,FWD,,,,,,,,,,api_football_lineup_position,media,baja
@@ -576,7 +576,7 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 154,Lionel Messi,26,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 217,Lautaro Martínez,26,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 624,Nicolás Otamendi,26,DEF,,,,,,,,,,api_football_lineup_position,media,baja
-6009,Julián Alvarez,26,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+6009,Julián Alvarez,26,MID,,,,,,,,,,api_football_lineup_position,media,baja
 26315,Nicolás González,26,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 529,Nicolás Tagliafico,26,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 271,Leandro Paredes,26,MID,,,,,,,,,,api_football_lineup_position,media,baja
@@ -586,7 +586,7 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 2468,Gonzalo Montiel,26,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 319572,Valentín Barco,26,MID,,,,,,,,,,api_football_lineup_position,media,baja
 350037,Nico Paz,26,FWD,,,,,,,,,,api_football_lineup_position,media,baja
-323935,Giuliano Simeone,26,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+323935,Giuliano Simeone,26,MID,,,,,,,,,,api_football_lineup_position,media,baja
 1578,Giovani Lo Celso,26,MID,,,,,,,,,,api_football_lineup_position,media,baja
 6002,Exequiel Palacios,26,MID,,,,,,,,,,api_football_lineup_position,media,baja
 295513,José Manuel López,26,FWD,,,,,,,,,,api_football_lineup_position,media,baja
