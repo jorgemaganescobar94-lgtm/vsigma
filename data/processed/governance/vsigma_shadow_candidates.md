@@ -1,14 +1,13 @@
-# vSIGMA Shadow Candidates - 2026-07-15
+# vSIGMA Shadow Candidates - 2026-07-16
 
 ## Executive Shadow Candidate Summary
-- generated_at: 2026-07-16T10:30:12+01:00
-- shadow_candidates: 2
-- shadow_decision_counts: SHADOW_DOWNGRADE_REVIEW=2
-- experiment_type_counts: LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW=2
+- generated_at: 2026-07-16T11:48:46+01:00
+- shadow_candidates: 0
+- shadow_decision_counts: none
+- experiment_type_counts: none
 
 ## Shadow Candidate Decisions
-- SHADOW_DOWNGRADE_REVIEW | Malisheva vs Vllaznia Shkodër | market=OVER_2_5 | experiment=LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW | production_impact=NONE
-- SHADOW_DOWNGRADE_REVIEW | Atert Bissen vs KI Klaksvik | market=OVER_2_5 | experiment=LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW | production_impact=NONE
+- none
 
 ## Guardrails
 - official picks changed: NO
