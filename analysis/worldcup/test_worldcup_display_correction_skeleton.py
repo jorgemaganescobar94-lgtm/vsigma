@@ -11,6 +11,7 @@ no model, no API, no market/odds/betting. Cover:
   * EXACT reversibility with flags off (display == original byte-for-byte);
   * activation guard BLOCKS the current live state for all three modules;
   * activation guard ALLOWS a synthetic ready state;
+  * activation guard BLOCKS shots/corners while the shipped legacy correction is active;
   * nothing modifies Telegram / writes files in the apply path;
   * the module touches no market/API endpoint.
 """
@@ -64,29 +65,29 @@ def test_module_disabled_no_apply():
 
 
 def test_not_ready_no_apply():
-    cfg = _cfg(global_on=True, module_on=True)
-    rs = _ready_summary(status="NOT_READY_SAMPLE", propose=False)
-    ok, reason = dlc.should_apply_display_correction("team_shots", rs, cfg)
+    cfg = _cfg(global_on=True, module="team_sot", module_on=True)
+    rs = _ready_summary("team_sot", status="NOT_READY_SAMPLE", propose=False)
+    ok, reason = dlc.should_apply_display_correction("team_sot", rs, cfg)
     assert ok is False and "NOT_READY_SAMPLE" in reason
 
 
 def test_ready_plus_flag_applies():
-    cfg = _cfg(global_on=True, module_on=True)
-    ok, _r = dlc.should_apply_display_correction("team_shots", _ready_summary(), cfg)
+    cfg = _cfg(global_on=True, module="team_sot", module_on=True)
+    ok, _r = dlc.should_apply_display_correction("team_sot", _ready_summary("team_sot"), cfg)
     assert ok is True
 
 
 # ------------------------------------------------------------------ apply correction
 def test_apply_ratio_when_ready_and_enabled():
-    cfg = _cfg(global_on=True, module_on=True, mode="global_ratio")
-    res = dlc.apply_shots_display_correction(6.0, {"global_ratio": 0.5}, cfg, _ready_summary())
+    cfg = _cfg(global_on=True, module="team_sot", module_on=True, mode="global_ratio")
+    res = dlc.apply_sot_display_correction(6.0, {"global_ratio": 0.5}, cfg, _ready_summary("team_sot"))
     assert res["correction_applied"] is True and res["display_value"] == pytest.approx(3.0)
     assert res["original_value"] == 6.0 and res["correction_mode"] == "global_ratio"
 
 
 def test_apply_bias_clips_at_zero():
-    cfg = _cfg(global_on=True, module_on=True, mode="global_bias")
-    res = dlc.apply_shots_display_correction(3.0, {"global_bias": 10.0}, cfg, _ready_summary())
+    cfg = _cfg(global_on=True, module="team_sot", module_on=True, mode="global_bias")
+    res = dlc.apply_sot_display_correction(3.0, {"global_bias": 10.0}, cfg, _ready_summary("team_sot"))
     assert res["correction_applied"] is True and res["display_value"] == 0.0   # max(0, 3-10)
 
 
@@ -98,8 +99,8 @@ def test_non_numeric_value_no_apply():
 
 
 def test_no_profile_fallback_original():
-    cfg = _cfg(global_on=True, module_on=True, mode="global_ratio")
-    res = dlc.apply_shots_display_correction(5.0, {}, cfg, _ready_summary())   # empty profile
+    cfg = _cfg(global_on=True, module="team_sot", module_on=True, mode="global_ratio")
+    res = dlc.apply_sot_display_correction(5.0, {}, cfg, _ready_summary("team_sot"))   # empty profile
     assert res["correction_applied"] is False and res["correction_mode"] == "fallback_no_profile"
     assert res["display_value"] == 5.0
 
@@ -119,9 +120,9 @@ def test_exact_reversibility_with_flags_off():
 
 
 def test_corrected_never_below_zero_even_if_applied():
-    cfg = _cfg(global_on=True, module_on=True, mode="global_bias")
+    cfg = _cfg(global_on=True, module="team_sot", module_on=True, mode="global_bias")
     for v in (0.0, 0.5, 2.0):
-        res = dlc.apply_shots_display_correction(v, {"global_bias": 99.0}, cfg, _ready_summary())
+        res = dlc.apply_sot_display_correction(v, {"global_bias": 99.0}, cfg, _ready_summary("team_sot"))
         assert res["display_value"] >= 0.0
 
 
@@ -137,22 +138,35 @@ def test_guard_blocks_current_live_state():
 
 
 def test_guard_allows_synthetic_ready_state():
-    cfg = _cfg(global_on=True, module_on=True)
-    rs = _ready_summary("team_shots", status="READY_FOR_PROPOSAL", n=60, propose=True)
-    allowed, _r = dlc.check_activation_allowed("team_shots", rs, cfg)
+    cfg = _cfg(global_on=True, module="team_sot", module_on=True)
+    rs = _ready_summary("team_sot", status="READY_FOR_PROPOSAL", n=60, propose=True)
+    allowed, _r = dlc.check_activation_allowed("team_sot", rs, cfg)
     assert allowed is True
-    assert dlc.assert_display_correction_activation_allowed("team_shots", rs, cfg) is True
+    assert dlc.assert_display_correction_activation_allowed("team_sot", rs, cfg) is True
+
+
+def test_guard_blocks_second_shots_and_corners_correction(monkeypatch):
+    monkeypatch.setattr(dlc, "_legacy_display_correction_active", lambda m: m in ("team_shots", "team_corners"))
+    for module in ("team_shots", "team_corners"):
+        cfg = _cfg(global_on=True, module=module, module_on=True)
+        rs = _ready_summary(module, status="READY_FOR_PROPOSAL", n=60, propose=True)
+        allowed, reason = dlc.check_activation_allowed(module, rs, cfg)
+        assert allowed is False and "anti-doble-corrección" in reason
+        res = dlc.apply_display_level_correction(10.0, module, {"global_ratio": 0.5}, cfg, rs)
+        assert res["correction_applied"] is False and res["display_value"] == 10.0
 
 
 def test_guard_blocks_when_global_gate_false():
-    rs = _ready_summary(status="READY_FOR_PROPOSAL", propose=False)   # module ready but global gate off
-    allowed, reason = dlc.check_activation_allowed("team_shots", rs, _cfg(True, module_on=True))
+    rs = _ready_summary("team_sot", status="READY_FOR_PROPOSAL", propose=False)
+    cfg = _cfg(True, module="team_sot", module_on=True)
+    allowed, reason = dlc.check_activation_allowed("team_sot", rs, cfg)
     assert allowed is False and "should_propose_activation_any" in reason
 
 
 def test_guard_blocks_on_bias_inversion():
-    rs = _ready_summary(no_inv=False)
-    allowed, reason = dlc.check_activation_allowed("team_shots", rs, _cfg(True, module_on=True))
+    rs = _ready_summary("team_sot", no_inv=False)
+    cfg = _cfg(True, module="team_sot", module_on=True)
+    allowed, reason = dlc.check_activation_allowed("team_sot", rs, cfg)
     assert allowed is False and "inversión" in reason
 
 

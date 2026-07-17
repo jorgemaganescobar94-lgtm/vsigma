@@ -56,6 +56,8 @@ READINESS_KEY = {"team_sot": "team_sot_display_correction",
 SAFE_DEFAULT_CONFIG = {"enabled": False, "modules": {m: {"enabled": False, "mode": "global_ratio",
                                                          "requires_readiness": True} for m in MODULES}}
 
+LEGACY_MODULE_KEY = {"team_shots": "shots", "team_corners": "corners"}
+
 
 class DisplayCorrectionActivationError(RuntimeError):
     """Raised by the fail-closed activation guard when activation is NOT allowed."""
@@ -109,6 +111,24 @@ def _is_ready(readiness_summary, module_name):
     return bool(rec and rec.get("readiness_status") == READY_STATUS)
 
 
+def _legacy_display_correction_active(module_name):
+    """Return True when the shipped legacy layer is enabled for this display statistic.
+
+    The newer Fase-4P skeleton must never stack on top of that layer.  Fail closed for the two
+    overlapping modules: an unreadable legacy state blocks a second activation instead of risking a
+    double correction.  SOT has no legacy overlap.
+    """
+    legacy_key = LEGACY_MODULE_KEY.get(module_name)
+    if legacy_key is None:
+        return False
+    try:
+        import worldcup_stats_level_correction as legacy  # lazy: diagnostic only, no network
+
+        return bool(legacy.STATS_LEVEL_CORRECTION and legacy_key in legacy.STATS)
+    except Exception:
+        return True
+
+
 # ===================================================================== apply gate
 def should_apply_display_correction(module_name, readiness_summary, config):
     """(bool, reason). True only if global enabled AND module enabled AND (readiness not required OR the
@@ -118,6 +138,9 @@ def should_apply_display_correction(module_name, readiness_summary, config):
     mcfg = _module_cfg(config, module_name)
     if not mcfg or not mcfg.get("enabled"):
         return False, f"módulo {module_name} enabled=false -> no se aplica."
+    if _legacy_display_correction_active(module_name):
+        return False, (f"{module_name}: corrección legacy activa -> bloqueada la segunda corrección "
+                       "de display (anti-doble-corrección).")
     if mcfg.get("requires_readiness", True):
         if readiness_summary is None:
             return False, "requires_readiness=true y no hay readiness -> no se aplica."
@@ -212,6 +235,9 @@ def check_activation_allowed(module_name, readiness_summary, config):
     """(allowed: bool, reason). Non-raising. Activation requires the global proposal gate, the module's
     READY_FOR_PROPOSAL status, n>=50, anti-look-ahead, no strong bias inversion, and present delta
     metrics. Fail-closed on anything missing."""
+    if _legacy_display_correction_active(module_name):
+        return False, (f"{module_name}: corrección legacy activa -> bloqueado por guardarraíl "
+                       "anti-doble-corrección.")
     if not isinstance(readiness_summary, dict):
         return False, "sin readiness summary -> bloqueado."
     if not readiness_summary.get("should_propose_activation_any", False):
