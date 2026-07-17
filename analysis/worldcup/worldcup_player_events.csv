@@ -1,1 +1,14 @@
-
+fixture_id,home,away,category,player,team,probability_goal,expected_goals,reason,source_used,goal_source,confidence,data_quality,probability_1_sot,expected_sot,expected_shots,shots_source,probability_assist,expected_assists,expected_key_passes,assist_source,player_id,probability_card,probability_card_original,probability_card_adjusted,adjustment_direction,adjustment_reason
+1591865,France,England,scorer,Kylian Mbappé,France,0.3454,0.4237,"xG 0.42, P(gol) 35% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1591865,France,England,scorer,M. Olise,France,0.286,0.3369,"xG 0.34, P(gol) 29% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1591865,France,England,scorer,H. Kane,England,0.266,0.3092,"xG 0.31, P(gol) 27% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
+1591865,France,England,sot,Kylian Mbappé,France,,,"tiros esp. 3.1, SOT esp. 1.8 (media)",proxy,,media,media,0.834,1.7959,3.13,proxy,,,,,,,,,,
+1591865,France,England,sot,H. Kane,England,,,"tiros esp. 1.8, SOT esp. 1.2 (media)",proxy,,media,media,0.6924,1.1788,1.84,proxy,,,,,,,,,,
+1591865,France,England,sot,A. Gordon,England,,,"tiros esp. 1.5, SOT esp. 1.1 (media)",proxy,,media,media,0.6514,1.0539,1.51,proxy,,,,,,,,,,
+1591865,France,England,assist,L. Digne,France,,,xA-proxy 0.36 (media),proxy,,media,media,,,,,0.3024,0.3601,,proxy,,,,,,
+1591865,France,England,assist,Kylian Mbappé,France,,,xA-proxy 0.28 (media),proxy,,media,media,,,,,0.2426,0.2779,,proxy,,,,,,
+1591865,France,England,assist,N. Madueke,England,,,xA-proxy 0.16 (media),proxy,,media,media,,,,,0.1472,0.1592,,proxy,,,,,,
+1591865,France,England,card_risk,J. Bellingham,England,,,P(tarjeta) 41% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,129718.0,0.4094,0.4094,0.3807,bajar,ajuste baja: historial jugador bajo ↓; posición alto ↑ · fuentes en conflicto -> ajuste conservador
+1591865,France,England,card_risk,A. Rabiot,France,,,P(tarjeta) 33% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,272.0,0.3334,0.3334,0.3267,bajar,ajuste baja: posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+1591865,France,England,card_risk,M. Koné,France,,,P(tarjeta) 29% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,22147.0,0.2905,0.2905,0.2949,neutro,ajuste neutro: historial jugador alto ↑; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+1591865,France,England,card_risk,M. Guéhi,England,,,P(tarjeta) 28% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,67971.0,0.2839,0.2839,0.2839,neutro,ajuste neutro: sin sesgo neto de las fuentes

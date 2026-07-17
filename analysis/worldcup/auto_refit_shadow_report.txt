@@ -1,25 +1,9 @@
 ========================================================================================
 AUTO-REFIT L3 — mode=APPLY (swap)
 ========================================================================================
-generated_at_utc: 2026-07-16T10:09:32+00:00
-base rows=9245 | settled-in-log=73 | NEW rows=1 (2026-07-15..2026-07-15) | unmapped=0 | enriched=9246
+generated_at_utc: 2026-07-17T09:58:10+00:00
+base rows=9246 | settled-in-log=73 | NEW rows=0 (-..-) | unmapped=0 | enriched=9246
 
-OOS 1X2 — ventana común [2024-01-01 .. 2026-07-15)  (leakage-safe)
-  base     n=3331  ll=0.92884  ECE=0.0176  acc=56.0%
-  enriched n=3331  ll=0.92884  ECE=0.0176  acc=56.0%
-repro (refit base vs committed): max|Δ|=0.0005
-
-MOVIMIENTOS DE RATING destacados (candidato vs commiteado; cap 0.6):
-    England                  +1.82 -> +1.78  (-0.04)
-    Argentina                +2.24 -> +2.27  (+0.03)
-
-GATE (anti-corrupción):
-    PASS  finite
-    PASS  team_count_non_decreasing
-    PASS  max_move<=cap
-    PASS  oos_not_worse
-    PASS  repro<tol
-  max|Δ| = 0.037 (England: +1.82->+1.78)
-  -> GATE: PASS
-
-SWAP APLICADO ✅  ratings -> national_elo_layer3_ratings.csv | dataset -> international_results.csv (+1 FT). Calibración intacta (invariante).
+NO hay partidos liquidados nuevos fuera del dataset -> refit NO-OP.
+(El dataset ya está al día con el log; nada que aprender hasta nuevos FT.)
+GATE: N/A (sin cambios) -> ratings de producción intactos.
