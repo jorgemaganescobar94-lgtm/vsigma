@@ -7,9 +7,9 @@
 - production_change: NO
 
 ## Gate Rows
-- Malisheva vs Vllaznia Shkodër | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=unknown
-- Atert Bissen vs KI Klaksvik | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=unknown
-- Universitatea Craiova vs ML Vitebsk | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=unknown
+- Malisheva vs Vllaznia Shkodër | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO->NO | missing=unknown
+- Atert Bissen vs KI Klaksvik | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO->NO | missing=unknown
+- Universitatea Craiova vs ML Vitebsk | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO->NO | missing=unknown
 
 ## Guardrails
 - Probable XI can support early planning, never final lock by itself.
