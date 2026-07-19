@@ -47,3 +47,4 @@ team_id,team_name,player_id,player_name,role,rank,attempts,last_taken_date,sourc
 15,Switzerland,48497,C. Itten,penalty,4,1,2026-07-07,api_football_events,alta,baja
 15,Switzerland,48471,R. Vargas,penalty,5,1,2026-07-07,api_football_events,alta,baja
 9,Spain,47323,Mikel Oyarzabal,penalty,1,1,2026-07-14,api_football_events,alta,baja
+10,England,1460,Bukayo Saka,penalty,2,1,2026-07-18,api_football_events,alta,baja
