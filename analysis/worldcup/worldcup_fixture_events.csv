@@ -1167,6 +1167,26 @@ fixture_id,date,competition,team_id,team_name,opponent_id,opponent_name,player_i
 1586077,2026-07-15,World Cup 2026,26,Argentina,10,England,2472,Rodrigo De Paul,,,Card,Yellow Card,90,4,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1586077,2026-07-15,World Cup 2026,10,England,26,Argentina,626,John Stones,,,subst,Substitution 4,90,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1586077,2026-07-15,World Cup 2026,10,England,26,Argentina,19235,Djed Spence,,,subst,Substitution 5,90,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,10,England,2,France,2937,Declan Rice,,,Goal,Normal Goal,3,,1,0,0,0,0,0,,0,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,10,England,2,France,19354,Ezri Konsa,2937,Declan Rice,Goal,Normal Goal,18,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,10,England,2,France,1460,Bukayo Saka,909,Marcus Rashford,Goal,Normal Goal,37,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,10,England,2,France,1460,Bukayo Saka,19586,Eberechi Eze,Goal,Normal Goal,45,1,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,2,France,10,England,343027,Désiré Doué,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,2,France,10,England,156477,Rayan Cherki,,,subst,Substitution 2,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,2,France,10,England,1145,Ibrahima Konaté,,,subst,Substitution 3,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,2,France,10,England,47300,Theo Hernández,,,subst,Substitution 4,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,10,England,2,France,909,Marcus Rashford,,,subst,Substitution 1,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,2,France,10,England,278,Kylian Mbappé,19617,Michael Olise,Goal,Normal Goal,48,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,2,France,10,England,161904,Bradley Barcola,278,Kylian Mbappé,Goal,Normal Goal,54,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,2,France,10,England,278,Kylian Mbappé,19617,Michael Olise,Goal,Normal Goal,66,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,10,England,2,France,19586,Eberechi Eze,,,subst,Substitution 2,79,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,10,England,2,France,19974,Ivan Toney,,,subst,Substitution 3,79,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,10,England,2,France,158698,Jarell Quansah,,,subst,Substitution 4,83,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,10,England,2,France,1460,Bukayo Saka,,,Goal,Penalty,87,,1,0,1,0,0,0,,0,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,2,France,10,England,153,Ousmane Dembélé,1149,Dayot Upamecano,Goal,Normal Goal,90,6,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,10,England,2,France,129718,Jude Bellingham,,,Goal,Normal Goal,90,8,1,0,0,0,0,0,,0,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,2,France,10,England,161907,Malo Gusto,,,subst,Substitution 5,90,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591865,2026-07-18,World Cup 2026,10,England,2,France,67971,Marc Guéhi,,,subst,Substitution 5,90,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,16,Mexico,1531,South Africa,35532,J. Quinones,266345,E. Lira,Goal,Normal Goal,9,,1,1,0,0,0,0,,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,1531,South Africa,16,Mexico,3287,Teboho Mokoena,,,Card,Yellow Card,17,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,16,Mexico,1531,South Africa,212233,Brian Gutiérrez,,,Card,Yellow Card,23,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events

@@ -168,12 +168,12 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489416,1257,J. Koundé,France,2,DEF,"Michael Oliver, England",0.0181,0.0161,bajar,0.002,0,media-baja,media
 1489416,1149,D. Upamecano,France,2,DEF,"Michael Oliver, England",0.0785,0.0734,bajar,0.0051,0,media-baja,media
 1489416,20995,M. Lacroix,France,2,DEF,"Michael Oliver, England",0.1344,0.1277,bajar,0.0067,0,media-baja,media
-1489416,47300,T. Hernández,France,2,DEF,"Michael Oliver, England",0.1344,0.1277,bajar,0.0067,0,media-baja,media
+1489416,47300,T. Hernández,France,2,DEF,"Michael Oliver, England",0.1344,0.1257,bajar,0.0087,0,media-baja,media
 1489416,1271,A. Tchouaméni,France,2,MID,"Michael Oliver, England",0.3254,0.3189,bajar,0.0065,1,media-baja,media
 1489416,22147,M. Koné,France,2,MID,"Michael Oliver, England",0.34,0.3451,neutro,0.0051,0,media-baja,media
-1489416,153,O. Dembélé,France,2,MID,"Michael Oliver, England",0.1038,0.0913,bajar,0.0125,0,media-baja,media
+1489416,153,O. Dembélé,France,2,FWD,"Michael Oliver, England",0.1038,0.0851,bajar,0.0187,0,media-baja,media
 1489416,19617,M. Olise,France,2,MID,"Michael Oliver, England",0.0346,0.0318,bajar,0.0028,0,media-baja,media
-1489416,343027,D. Doué,France,2,FWD,"Michael Oliver, England",0.0824,0.0709,bajar,0.0115,0,media-baja,media
+1489416,343027,D. Doué,France,2,MID,"Michael Oliver, England",0.0824,0.0758,bajar,0.0066,0,media-baja,media
 1489416,278,Kylian Mbappé,France,2,FWD,"Michael Oliver, England",0.2261,0.1854,bajar,0.0407,0,media-baja,media
 1489417,429,F. Muslera,Uruguay,7,GK,I. Elfath,0.2023,0.2028,neutro,0.0005,0,media-baja,baja
 1489417,1290,G. Varela,Uruguay,7,DEF,I. Elfath,0.501,0.5098,neutro,0.0088,1,media-baja,baja
@@ -342,14 +342,14 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1489422,57910,T. Rodríguez,Panama,11,FWD,"Abdulrahman Al-Jassim, Qatar",0.1334,0.1271,bajar,0.0063,0,media-baja,baja
 1489422,2932,J. Pickford,England,10,GK,"Abdulrahman Al-Jassim, Qatar",0.0767,0.0765,neutro,0.0002,0,media-baja,baja
 1489422,158698,J. Quansah,England,10,DEF,"Abdulrahman Al-Jassim, Qatar",0.1142,0.1179,subir,0.0037,1,media-baja,media
-1489422,19354,E. Konsa,England,10,DEF,"Abdulrahman Al-Jassim, Qatar",0.1275,0.1253,neutro,0.0022,0,media-baja,media
-1489422,67971,M. Guéhi,England,10,DEF,"Abdulrahman Al-Jassim, Qatar",0.3115,0.3108,neutro,0.0007,0,media-baja,media
+1489422,19354,E. Konsa,England,10,DEF,"Abdulrahman Al-Jassim, Qatar",0.1275,0.1228,bajar,0.0047,0,media-baja,media
+1489422,67971,M. Guéhi,England,10,DEF,"Abdulrahman Al-Jassim, Qatar",0.3115,0.3217,subir,0.0102,0,media-baja,media
 1489422,307123,N. O&apos;Reilly,England,10,DEF,"Abdulrahman Al-Jassim, Qatar",0.0925,0.0955,subir,0.003,0,media-baja,media
 1489422,138908,E. Anderson,England,10,MID,"Abdulrahman Al-Jassim, Qatar",0.0597,0.0614,subir,0.0017,0,media-baja,media
 1489422,129718,J. Bellingham,England,10,MID,"Abdulrahman Al-Jassim, Qatar",0.4468,0.4145,bajar,0.0323,0,media-baja,media
-1489422,1460,B. Saka,England,10,FWD,"Abdulrahman Al-Jassim, Qatar",0.2086,0.1946,bajar,0.014,0,media-baja,media
+1489422,1460,B. Saka,England,10,MID,"Abdulrahman Al-Jassim, Qatar",0.2086,0.2071,neutro,0.0015,0,media-baja,media
 1489422,19170,M. Rogers,England,10,MID,"Abdulrahman Al-Jassim, Qatar",0.0503,0.0517,subir,0.0014,0,media-baja,media
-1489422,909,M. Rashford,England,10,FWD,"Abdulrahman Al-Jassim, Qatar",0.0631,0.0589,bajar,0.0042,0,media-baja,media
+1489422,909,M. Rashford,England,10,MID,"Abdulrahman Al-Jassim, Qatar",0.0631,0.0626,neutro,0.0005,0,media-baja,media
 1489422,184,H. Kane,England,10,FWD,"Abdulrahman Al-Jassim, Qatar",0.2117,0.1922,bajar,0.0195,0,media-baja,media
 1489419,2482,C. Vargas,Colombia,8,GK,"Alireza Faghani, Australia",0.0489,0.0504,subir,0.0015,0,media-baja,baja
 1489419,30,S. Arias,Colombia,8,DEF,"Alireza Faghani, Australia",0.0883,0.0896,neutro,0.0013,0,media-baja,media
@@ -534,9 +534,9 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1565177,2724,L. Digne,France,2,DEF,"Danny Makkelie, Netherlands",0.3131,0.2799,bajar,0.0332,0,media-baja,media
 1565177,1271,A. Tchouaméni,France,2,MID,"Danny Makkelie, Netherlands",0.3224,0.3092,bajar,0.0132,0,media-baja,media
 1565177,272,A. Rabiot,France,2,MID,"Danny Makkelie, Netherlands",0.3873,0.3714,bajar,0.0159,0,media-baja,media
-1565177,153,O. Dembélé,France,2,MID,"Danny Makkelie, Netherlands",0.109,0.0936,bajar,0.0154,0,media-baja,media
+1565177,153,O. Dembélé,France,2,FWD,"Danny Makkelie, Netherlands",0.109,0.0871,bajar,0.0219,0,media-baja,media
 1565177,19617,M. Olise,France,2,MID,"Danny Makkelie, Netherlands",0.0448,0.0403,bajar,0.0045,0,media-baja,media
-1565177,161904,B. Barcola,France,2,MID,"Danny Makkelie, Netherlands",0.0474,0.0426,bajar,0.0048,0,media-baja,media
+1565177,161904,B. Barcola,France,2,FWD,"Danny Makkelie, Netherlands",0.0474,0.0379,bajar,0.0095,0,media-baja,media
 1565177,278,Kylian Mbappé,France,2,FWD,"Danny Makkelie, Netherlands",0.2248,0.1796,bajar,0.0452,0,media-baja,media
 1565177,48033,J. Widell Zetterström,Sweden,5,GK,"Danny Makkelie, Netherlands",0.1865,0.1826,bajar,0.0039,0,media-baja,baja
 1565177,137721,G. Lagerbielke,Sweden,5,DEF,"Danny Makkelie, Netherlands",0.2197,0.2151,bajar,0.0046,0,media-baja,media
@@ -552,13 +552,13 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1567307,2932,J. Pickford,England,10,GK,A. Makhadmeh,0.0612,0.0599,bajar,0.0013,0,media-baja,media
 1567307,184,H. Kane,England,10,FWD,A. Makhadmeh,0.1672,0.1486,bajar,0.0186,0,media-baja,media
 1567307,129718,J. Bellingham,England,10,MID,A. Makhadmeh,0.3628,0.3298,bajar,0.033,1,media-baja,media
-1567307,19354,E. Konsa,England,10,DEF,A. Makhadmeh,0.1024,0.0987,bajar,0.0037,0,media-baja,media
+1567307,19354,E. Konsa,England,10,DEF,A. Makhadmeh,0.1024,0.0967,bajar,0.0057,0,media-baja,media
 1567307,138908,E. Anderson,England,10,MID,A. Makhadmeh,0.055,0.0555,neutro,0.0005,0,media-baja,media
 1567307,307123,N. O&apos;Reilly,England,10,DEF,A. Makhadmeh,0.0853,0.0865,neutro,0.0012,0,media-baja,media
 1567307,2937,D. Rice,England,10,MID,A. Makhadmeh,0.0657,0.0663,neutro,0.0006,0,media-baja,media
 1567307,626,J. Stones,England,10,DEF,A. Makhadmeh,0.0849,0.0801,bajar,0.0048,0,media-baja,media
-1567307,67971,M. Guéhi,England,10,DEF,A. Makhadmeh,0.2486,0.2434,bajar,0.0052,0,media-baja,media
-1567307,138787,A. Gordon,England,10,MID,A. Makhadmeh,0.1231,0.1168,bajar,0.0063,0,media-baja,media
+1567307,67971,M. Guéhi,England,10,DEF,A. Makhadmeh,0.2486,0.2521,neutro,0.0035,0,media-baja,media
+1567307,138787,A. Gordon,England,10,FWD,A. Makhadmeh,0.1231,0.1094,bajar,0.0137,0,media-baja,media
 1567307,136723,N. Madueke,England,10,FWD,A. Makhadmeh,0.1776,0.1579,bajar,0.0197,0,media-baja,media
 1567307,375,C. Mbemba,Congo DR,1508,DEF,A. Makhadmeh,0.2174,0.2128,bajar,0.0046,0,media-baja,media
 1567307,21101,S. Moutoussamy,Congo DR,1508,MID,A. Makhadmeh,0.1567,0.1581,neutro,0.0014,0,media-baja,media
@@ -787,9 +787,9 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1569870,2724,L. Digne,France,2,DEF,"Ilgiz Tantashev, Uzbekistan",0.3448,0.3083,bajar,0.0365,0,media-baja,media
 1569870,22147,M. Koné,France,2,MID,"Ilgiz Tantashev, Uzbekistan",0.3716,0.3694,neutro,0.0022,1,media-baja,media
 1569870,272,A. Rabiot,France,2,MID,"Ilgiz Tantashev, Uzbekistan",0.4237,0.4063,bajar,0.0174,0,media-baja,media
-1569870,153,O. Dembélé,France,2,MID,"Ilgiz Tantashev, Uzbekistan",0.1224,0.1051,bajar,0.0173,0,media-baja,media
+1569870,153,O. Dembélé,France,2,FWD,"Ilgiz Tantashev, Uzbekistan",0.1224,0.0978,bajar,0.0246,0,media-baja,media
 1569870,19617,M. Olise,France,2,MID,"Ilgiz Tantashev, Uzbekistan",0.0512,0.046,bajar,0.0052,1,media-baja,media
-1569870,161904,B. Barcola,France,2,MID,"Ilgiz Tantashev, Uzbekistan",0.0543,0.0488,bajar,0.0055,1,media-baja,media
+1569870,161904,B. Barcola,France,2,FWD,"Ilgiz Tantashev, Uzbekistan",0.0543,0.0434,bajar,0.0109,1,media-baja,media
 1569870,278,Kylian Mbappé,France,2,FWD,"Ilgiz Tantashev, Uzbekistan",0.2492,0.1991,bajar,0.0501,0,media-baja,media
 1568100,762,Vinícius Júnior,Brazil,6,FWD,"Ismail Elfath, USA",0.1744,0.1594,bajar,0.015,0,media-baja,media
 1568100,747,Casemiro,Brazil,6,MID,"Ismail Elfath, USA",0.1906,0.199,subir,0.0084,0,media-baja,media
@@ -826,15 +826,15 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1570714,212233,B. Gutiérrez,Mexico,16,MID,"Alireza Faghani, Australia",0.1731,0.1844,subir,0.0113,0,media-baja,media
 1570714,2932,J. Pickford,England,10,GK,"Alireza Faghani, Australia",0.0818,0.0818,neutro,0.0,0,media-baja,media
 1570714,184,H. Kane,England,10,FWD,"Alireza Faghani, Australia",0.2203,0.2005,bajar,0.0198,1,media-baja,media
-1570714,19354,E. Konsa,England,10,DEF,"Alireza Faghani, Australia",0.1357,0.1337,neutro,0.002,0,media-baja,media
+1570714,19354,E. Konsa,England,10,DEF,"Alireza Faghani, Australia",0.1357,0.131,bajar,0.0047,0,media-baja,media
 1570714,138908,E. Anderson,England,10,MID,"Alireza Faghani, Australia",0.0711,0.0732,subir,0.0021,0,media-baja,media
 1570714,129718,J. Bellingham,England,10,MID,"Alireza Faghani, Australia",0.4592,0.4271,bajar,0.0321,0,media-baja,media
-1570714,67971,M. Guéhi,England,10,DEF,"Alireza Faghani, Australia",0.3224,0.3224,neutro,0.0,0,media-baja,media
+1570714,67971,M. Guéhi,England,10,DEF,"Alireza Faghani, Australia",0.3224,0.3337,subir,0.0113,0,media-baja,media
 1570714,136723,N. Madueke,England,10,FWD,"Alireza Faghani, Australia",0.232,0.2111,bajar,0.0209,0,media-baja,media
 1570714,307123,N. O&apos;Reilly,England,10,DEF,"Alireza Faghani, Australia",0.1096,0.1134,subir,0.0038,1,media-baja,media
 1570714,2937,D. Rice,England,10,MID,"Alireza Faghani, Australia",0.0877,0.0903,subir,0.0026,1,media-baja,media
-1570714,138787,A. Gordon,England,10,MID,"Alireza Faghani, Australia",0.1625,0.1576,bajar,0.0049,0,media-baja,media
-1570714,909,M. Rashford,England,10,FWD,"Alireza Faghani, Australia",0.075,0.0701,bajar,0.0049,0,media-baja,media
+1570714,138787,A. Gordon,England,10,FWD,"Alireza Faghani, Australia",0.1625,0.1479,bajar,0.0146,0,media-baja,media
+1570714,909,M. Rashford,England,10,MID,"Alireza Faghani, Australia",0.075,0.0746,neutro,0.0004,0,media-baja,media
 1576756,369,Diogo Costa,Portugal,27,GK,"Anthony Taylor, England",0.022,0.022,neutro,0.0,0,media-baja,baja
 1576756,855,João Cancelo,Portugal,27,DEF,"Anthony Taylor, England",0.3242,0.3047,bajar,0.0195,0,media-baja,media
 1576756,567,Rúben Dias,Portugal,27,DEF,"Anthony Taylor, England",0.2118,0.2118,neutro,0.0,0,media-baja,media
@@ -928,11 +928,11 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1578539,1149,D. Upamecano,France,2,DEF,"Facundo Raul Tello Figueroa, Argentina",0.0826,0.077,bajar,0.0056,0,media-baja,media
 1578539,278,Kylian Mbappé,France,2,FWD,"Facundo Raul Tello Figueroa, Argentina",0.2223,0.1818,bajar,0.0405,0,media-baja,media
 1578539,19617,M. Olise,France,2,MID,"Facundo Raul Tello Figueroa, Argentina",0.0468,0.043,bajar,0.0038,0,media-baja,media
-1578539,153,O. Dembélé,France,2,MID,"Facundo Raul Tello Figueroa, Argentina",0.1092,0.0959,bajar,0.0133,0,media-baja,media
+1578539,153,O. Dembélé,France,2,FWD,"Facundo Raul Tello Figueroa, Argentina",0.1092,0.0893,bajar,0.0199,0,media-baja,media
 1578539,272,A. Rabiot,France,2,MID,"Facundo Raul Tello Figueroa, Argentina",0.3831,0.3746,bajar,0.0085,0,media-baja,media
 1578539,22090,W. Saliba,France,2,DEF,"Facundo Raul Tello Figueroa, Argentina",0.1236,0.1153,bajar,0.0083,0,media-baja,media
 1578539,1271,A. Tchouaméni,France,2,MID,"Facundo Raul Tello Figueroa, Argentina",0.3186,0.3115,bajar,0.0071,0,media-baja,media
-1578539,47300,T. Hernández,France,2,DEF,"Facundo Raul Tello Figueroa, Argentina",0.1355,0.1284,bajar,0.0071,0,media-baja,media
+1578539,47300,T. Hernández,France,2,DEF,"Facundo Raul Tello Figueroa, Argentina",0.1355,0.1264,bajar,0.0091,0,media-baja,media
 1578539,2724,L. Digne,France,2,DEF,"Facundo Raul Tello Figueroa, Argentina",0.3103,0.2832,bajar,0.0271,0,media-baja,media
 1578539,161897,I. Saibari,Morocco,31,MID,"Facundo Raul Tello Figueroa, Argentina",0.3228,0.3124,bajar,0.0104,0,media-baja,media
 1578539,2701,Y. Bounou,Morocco,31,GK,"Facundo Raul Tello Figueroa, Argentina",0.0237,0.0233,neutro,0.0004,0,media-baja,media
@@ -1001,15 +1001,15 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1581037,1100,E. Haaland,Norway,1090,FWD,"Clement Turpin, France",0.0894,0.0767,bajar,0.0127,0,media-baja,media
 1581037,301528,A. Schjelderup,Norway,1090,FWD,"Clement Turpin, France",0.0679,0.0599,bajar,0.008,0,media-baja,media
 1581037,2932,J. Pickford,England,10,GK,"Clement Turpin, France",0.0592,0.0591,neutro,0.0001,0,media-baja,baja
-1581037,19354,E. Konsa,England,10,DEF,"Clement Turpin, France",0.099,0.0973,neutro,0.0017,0,media-baja,media
+1581037,19354,E. Konsa,England,10,DEF,"Clement Turpin, France",0.099,0.0953,bajar,0.0037,0,media-baja,media
 1581037,626,J. Stones,England,10,DEF,"Clement Turpin, France",0.0821,0.079,bajar,0.0031,0,media-baja,media
-1581037,67971,M. Guéhi,England,10,DEF,"Clement Turpin, France",0.2411,0.2406,neutro,0.0005,0,media-baja,media
+1581037,67971,M. Guéhi,England,10,DEF,"Clement Turpin, France",0.2411,0.249,subir,0.0079,0,media-baja,media
 1581037,307123,N. O&apos;Reilly,England,10,DEF,"Clement Turpin, France",0.0824,0.0851,subir,0.0027,0,media-baja,media
 1581037,138908,E. Anderson,England,10,MID,"Clement Turpin, France",0.0531,0.0546,subir,0.0015,0,media-baja,media
 1581037,2937,D. Rice,England,10,MID,"Clement Turpin, France",0.0635,0.0653,subir,0.0018,0,media-baja,media
 1581037,136723,N. Madueke,England,10,FWD,"Clement Turpin, France",0.172,0.1561,bajar,0.0159,0,media-baja,media
 1581037,129718,J. Bellingham,England,10,MID,"Clement Turpin, France",0.3527,0.3272,bajar,0.0255,0,media-baja,media
-1581037,138787,A. Gordon,England,10,MID,"Clement Turpin, France",0.1191,0.1153,bajar,0.0038,0,media-baja,media
+1581037,138787,A. Gordon,England,10,FWD,"Clement Turpin, France",0.1191,0.1081,bajar,0.011,0,media-baja,media
 1581037,184,H. Kane,England,10,FWD,"Clement Turpin, France",0.1619,0.147,bajar,0.0149,0,media-baja,media
 1585131,22221,M. Maignan,France,2,GK,"Iván Barton, El Salvador",0.0652,0.0606,bajar,0.0046,0,media-baja,media
 1585131,1257,J. Koundé,France,2,DEF,"Iván Barton, El Salvador",0.025,0.0217,bajar,0.0033,0,media-baja,media
@@ -1018,9 +1018,9 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1585131,2724,L. Digne,France,2,DEF,"Iván Barton, El Salvador",0.33,0.295,bajar,0.035,0,media-baja,media
 1585131,1271,A. Tchouaméni,France,2,MID,"Iván Barton, El Salvador",0.3397,0.3258,bajar,0.0139,0,media-baja,media
 1585131,272,A. Rabiot,France,2,MID,"Iván Barton, El Salvador",0.407,0.3903,bajar,0.0167,1,media-baja,media
-1585131,153,O. Dembélé,France,2,MID,"Iván Barton, El Salvador",0.1158,0.0995,bajar,0.0163,0,media-baja,media
+1585131,153,O. Dembélé,France,2,FWD,"Iván Barton, El Salvador",0.1158,0.0925,bajar,0.0233,0,media-baja,media
 1585131,19617,M. Olise,France,2,MID,"Iván Barton, El Salvador",0.0477,0.0429,bajar,0.0048,0,media-baja,media
-1585131,161904,B. Barcola,France,2,MID,"Iván Barton, El Salvador",0.0505,0.0454,bajar,0.0051,0,media-baja,media
+1585131,161904,B. Barcola,France,2,FWD,"Iván Barton, El Salvador",0.0505,0.0403,bajar,0.0102,0,media-baja,media
 1585131,278,Kylian Mbappé,France,2,FWD,"Iván Barton, El Salvador",0.2379,0.1901,bajar,0.0478,1,media-baja,media
 1585131,47270,Unai Simón,Spain,9,GK,"Iván Barton, El Salvador",0.138,0.1282,bajar,0.0098,0,media-baja,media
 1585131,47519,Pedro Porro,Spain,9,DEF,"Iván Barton, El Salvador",0.213,0.1904,bajar,0.0226,0,media-baja,media
@@ -1036,13 +1036,13 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1586077,2932,J. Pickford,England,10,GK,"Ismail Elfath, USA",0.0743,0.0727,bajar,0.0016,0,media-baja,media
 1586077,19545,R. James,England,10,DEF,"Ismail Elfath, USA",0.0766,0.0738,bajar,0.0028,0,media-baja,media
 1586077,626,J. Stones,England,10,DEF,"Ismail Elfath, USA",0.1027,0.0969,bajar,0.0058,0,media-baja,media
-1586077,67971,M. Guéhi,England,10,DEF,"Ismail Elfath, USA",0.2882,0.2821,bajar,0.0061,0,media-baja,media
+1586077,67971,M. Guéhi,England,10,DEF,"Ismail Elfath, USA",0.2882,0.2922,neutro,0.004,0,media-baja,media
 1586077,19235,D. Spence,England,10,DEF,"Ismail Elfath, USA",0.3259,0.2995,bajar,0.0264,0,media-baja,media
 1586077,2937,D. Rice,England,10,MID,"Ismail Elfath, USA",0.0796,0.0803,neutro,0.0007,0,media-baja,media
 1586077,138908,E. Anderson,England,10,MID,"Ismail Elfath, USA",0.0734,0.0741,neutro,0.0007,1,media-baja,media
 1586077,19170,M. Rogers,England,10,MID,"Ismail Elfath, USA",0.0619,0.0625,neutro,0.0006,0,media-baja,media
 1586077,129718,J. Bellingham,England,10,MID,"Ismail Elfath, USA",0.4135,0.3759,bajar,0.0376,0,media-baja,media
-1586077,138787,A. Gordon,England,10,MID,"Ismail Elfath, USA",0.1482,0.1406,bajar,0.0076,0,media-baja,media
+1586077,138787,A. Gordon,England,10,FWD,"Ismail Elfath, USA",0.1482,0.1317,bajar,0.0165,0,media-baja,media
 1586077,184,H. Kane,England,10,FWD,"Ismail Elfath, USA",0.1962,0.1744,bajar,0.0218,0,media-baja,media
 1586077,19599,E. Martínez,Argentina,26,GK,"Ismail Elfath, USA",0.0393,0.0385,bajar,0.0008,0,media-baja,media
 1586077,6503,N. Molina,Argentina,26,DEF,"Ismail Elfath, USA",0.3882,0.3568,bajar,0.0314,0,media-baja,media
@@ -1055,3 +1055,25 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1586077,5996,E. Fernández,Argentina,26,MID,"Ismail Elfath, USA",0.0534,0.052,bajar,0.0014,0,media-baja,media
 1586077,154,L. Messi,Argentina,26,FWD,"Ismail Elfath, USA",0.0501,0.0445,bajar,0.0056,0,media-baja,media
 1586077,6009,J. Álvarez,Argentina,26,MID,"Ismail Elfath, USA",0.0561,0.0546,bajar,0.0015,0,media-baja,media
+1591865,22221,M. Maignan,France,2,GK,"Jesús Valenzuela, Venezuela",0.0775,0.072,bajar,0.0055,0,media-baja,media
+1591865,161907,M. Gusto,France,2,DEF,"Jesús Valenzuela, Venezuela",0.0665,0.0608,bajar,0.0057,0,media-baja,media
+1591865,1145,I. Konaté,France,2,DEF,"Jesús Valenzuela, Venezuela",0.1396,0.1276,bajar,0.012,0,media-baja,media
+1591865,20995,M. Lacroix,France,2,DEF,"Jesús Valenzuela, Venezuela",0.1423,0.1322,bajar,0.0101,0,media-baja,media
+1591865,47300,T. Hernández,France,2,DEF,"Jesús Valenzuela, Venezuela",0.1813,0.1657,bajar,0.0156,0,media-baja,media
+1591865,272,A. Rabiot,France,2,MID,"Jesús Valenzuela, Venezuela",0.5047,0.484,bajar,0.0207,0,media-baja,media
+1591865,336657,W. Zaïre-Emery,France,2,MID,"Jesús Valenzuela, Venezuela",0.0716,0.0687,bajar,0.0029,0,media-baja,media
+1591865,19617,M. Olise,France,2,MID,"Jesús Valenzuela, Venezuela",0.0368,0.0331,bajar,0.0037,0,media-baja,media
+1591865,156477,R. Cherki,France,2,MID,"Jesús Valenzuela, Venezuela",0.0848,0.0801,bajar,0.0047,0,media-baja,media
+1591865,343027,D. Doué,France,2,MID,"Jesús Valenzuela, Venezuela",0.0875,0.0787,bajar,0.0088,0,media-baja,media
+1591865,278,Kylian Mbappé,France,2,FWD,"Jesús Valenzuela, Venezuela",0.3037,0.2427,bajar,0.061,0,media-baja,media
+1591865,19088,D. Henderson,England,10,GK,"Jesús Valenzuela, Venezuela",0.0853,0.0835,bajar,0.0018,0,media-baja,media
+1591865,158698,J. Quansah,England,10,DEF,"Jesús Valenzuela, Venezuela",0.1252,0.127,neutro,0.0018,0,media-baja,media
+1591865,67971,M. Guéhi,England,10,DEF,"Jesús Valenzuela, Venezuela",0.3639,0.369,neutro,0.0051,0,media-baja,media
+1591865,19354,E. Konsa,England,10,DEF,"Jesús Valenzuela, Venezuela",0.1503,0.1419,bajar,0.0084,0,media-baja,media
+1591865,19235,D. Spence,England,10,DEF,"Jesús Valenzuela, Venezuela",0.3854,0.3542,bajar,0.0312,0,media-baja,media
+1591865,2937,D. Rice,England,10,MID,"Jesús Valenzuela, Venezuela",0.0974,0.0983,neutro,0.0009,0,media-baja,media
+1591865,19586,E. Eze,England,10,MID,"Jesús Valenzuela, Venezuela",0.057,0.0567,neutro,0.0003,0,media-baja,media
+1591865,19170,M. Rogers,England,10,MID,"Jesús Valenzuela, Venezuela",0.0553,0.0558,neutro,0.0005,0,media-baja,media
+1591865,1460,B. Saka,England,10,MID,"Jesús Valenzuela, Venezuela",0.2457,0.2393,bajar,0.0064,0,media-baja,media
+1591865,19974,I. Toney,England,10,FWD,"Jesús Valenzuela, Venezuela",0.1069,0.0998,bajar,0.0071,0,media-baja,media
+1591865,909,M. Rashford,England,10,MID,"Jesús Valenzuela, Venezuela",0.0694,0.0676,bajar,0.0018,0,media-baja,media

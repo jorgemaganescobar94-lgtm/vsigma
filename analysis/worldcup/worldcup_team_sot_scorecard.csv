@@ -145,3 +145,5 @@ fixture_id,kickoff_utc,team_id,team_name,opponent_id,opponent_name,side,predicte
 1585131,2026-07-14 19:00,9,Spain,2,France,away,5.822,2.0,3.8224,3.8224,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1586077,2026-07-15 19:00,10,England,26,Argentina,home,4.103,2.0,2.103,2.103,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
 1586077,2026-07-15 19:00,26,Argentina,10,England,away,3.694,5.0,-1.3062,1.3062,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1591865,2026-07-18 21:00,2,France,10,England,home,6.116,9.0,-2.8836,2.8836,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
+1591865,2026-07-18 21:00,10,England,2,France,away,4.173,11.0,-6.8273,6.8273,player_sot_sum,fixture_statistics,evaluable,alta,pred=Σλ_sot 11 jugadores (XI 11); real=SOG /fixtures/statistics
