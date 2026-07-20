@@ -576,8 +576,8 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 154,Lionel Messi,26,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 217,Lautaro Martínez,26,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 624,Nicolás Otamendi,26,DEF,,,,,,,,,,api_football_lineup_position,media,baja
-6009,Julián Alvarez,26,MID,,,,,,,,,,api_football_lineup_position,media,baja
-26315,Nicolás González,26,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+6009,Julián Alvarez,26,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+26315,Nicolás González,26,MID,,,,,,,,,,api_football_lineup_position,media,baja
 529,Nicolás Tagliafico,26,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 271,Leandro Paredes,26,MID,,,,,,,,,,api_football_lineup_position,media,baja
 2465,Juan Musso,26,GK,,,,,,,,,,api_football_lineup_position,media,baja
@@ -586,7 +586,7 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 2468,Gonzalo Montiel,26,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 319572,Valentín Barco,26,MID,,,,,,,,,,api_football_lineup_position,media,baja
 350037,Nico Paz,26,FWD,,,,,,,,,,api_football_lineup_position,media,baja
-323935,Giuliano Simeone,26,MID,,,,,,,,,,api_football_lineup_position,media,baja
+323935,Giuliano Simeone,26,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 1578,Giovani Lo Celso,26,MID,,,,,,,,,,api_football_lineup_position,media,baja
 6002,Exequiel Palacios,26,MID,,,,,,,,,,api_football_lineup_position,media,baja
 295513,José Manuel López,26,FWD,,,,,,,,,,api_football_lineup_position,media,baja
@@ -1069,14 +1069,14 @@ player_id,player_name,team_id,position,role,preferred_zone,attacking_weight,defe
 20674,Simon Banza,1508,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 21098,Joris Kayembe,1508,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 48555,Charles Pickel,1508,MID,,,,,,,,,,api_football_lineup_position,media,baja
-129670,Nathanaël Mbuku,1508,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+129670,Nathanaël Mbuku,1508,MID,,,,,,,,,,api_football_lineup_position,media,baja
 314509,Matthieu Epolo,1508,GK,,,,,,,,,,api_football_lineup_position,media,baja
 48501,Timothy Fayulu,1508,GK,,,,,,,,,,api_football_lineup_position,media,baja
 24245,Gedeon Kalulu,1508,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 8445,Dylan Batubinsika,1508,DEF,,,,,,,,,,api_football_lineup_position,media,baja
 44791,Aaron Tshibola,1508,MID,,,,,,,,,,api_football_lineup_position,media,baja
 47545,Gaël Kakuta,1508,MID,,,,,,,,,,api_football_lineup_position,media,baja
-279482,Brian Cipenga,1508,FWD,,,,,,,,,,api_football_lineup_position,media,baja
+279482,Brian Cipenga,1508,MID,,,,,,,,,,api_football_lineup_position,media,baja
 8627,Théo Bongonda,1508,MID,,,,,,,,,,api_football_lineup_position,media,baja
 3034,Meschak Elia,1508,FWD,,,,,,,,,,api_football_lineup_position,media,baja
 179699,Fiston Mayele,1508,FWD,,,,,,,,,,api_football_lineup_position,media,baja
