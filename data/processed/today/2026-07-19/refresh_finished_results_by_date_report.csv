@@ -1,0 +1,7 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-07-19,OK,API-SPORTS_DIRECT,236.0,,,,,,
+2026-07-19T11:30:00+01:00,MATCHED,,,1507002.0,FT,FC Anyang,Gwangju FC,1.0,1.0
+2026-07-19T11:30:00+01:00,MATCHED,,,1507003.0,FT,Bucheon FC 1995,FC Seoul,1.0,3.0
+2026-07-19T15:30:00+01:00,MATCHED,,,1494210.0,FT,IF Elfsborg,Sirius,1.0,3.0
+2026-07-19T15:30:00+01:00,MATCHED,,,1494212.0,FT,Halmstad,BK Hacken,0.0,2.0
+2026-07-19T15:30:00+01:00,MATCHED,,,1494213.0,FT,Hammarby FF,Degerfors IF,4.0,0.0
