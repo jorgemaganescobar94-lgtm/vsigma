@@ -1,2 +1,2 @@
 n_matches,n_rows,mean_pred,real_rate,ratio,shrink,factor,k,capped
-49,1078,0.16433,0.09647,0.58707,0.66216,0.72657,25.0,False
+50,1100,0.16463,0.09818,0.59636,0.66667,0.73091,25.0,False

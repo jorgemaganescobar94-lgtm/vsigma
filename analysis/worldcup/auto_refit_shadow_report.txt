@@ -1,17 +1,17 @@
 ========================================================================================
 AUTO-REFIT L3 — mode=APPLY (swap)
 ========================================================================================
-generated_at_utc: 2026-07-19T09:52:35+00:00
-base rows=9246 | settled-in-log=74 | NEW rows=1 (2026-07-18..2026-07-18) | unmapped=0 | enriched=9247
+generated_at_utc: 2026-07-20T10:53:06+00:00
+base rows=9247 | settled-in-log=75 | NEW rows=1 (2026-07-19..2026-07-19) | unmapped=0 | enriched=9248
 
-OOS 1X2 — ventana común [2024-01-01 .. 2026-07-18)  (leakage-safe)
-  base     n=3332  ll=0.92874  ECE=0.0175  acc=56.0%
-  enriched n=3332  ll=0.92874  ECE=0.0175  acc=56.0%
+OOS 1X2 — ventana común [2024-01-01 .. 2026-07-19)  (leakage-safe)
+  base     n=3333  ll=0.92886  ECE=0.0173  acc=56.0%
+  enriched n=3333  ll=0.92886  ECE=0.0173  acc=56.0%
 repro (refit base vs committed): max|Δ|=0.0005
 
 MOVIMIENTOS DE RATING destacados (candidato vs commiteado; cap 0.6):
-    France                   +2.22 -> +2.16  (-0.06)
-    England                  +1.78 -> +1.83  (+0.05)
+    Spain                    +2.29 -> +2.28  (-0.00)
+    Argentina                +2.27 -> +2.27  (+0.00)
 
 GATE (anti-corrupción):
     PASS  finite
@@ -19,7 +19,7 @@ GATE (anti-corrupción):
     PASS  max_move<=cap
     PASS  oos_not_worse
     PASS  repro<tol
-  max|Δ| = 0.056 (France: +2.22->+2.16)
+  max|Δ| = 0.001 (US Virgin Islands: -1.61->-1.61)
   -> GATE: PASS
 
 SWAP APLICADO ✅  ratings -> national_elo_layer3_ratings.csv | dataset -> international_results.csv (+1 FT). Calibración intacta (invariante).

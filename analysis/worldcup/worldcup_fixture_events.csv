@@ -1187,6 +1187,26 @@ fixture_id,date,competition,team_id,team_name,opponent_id,opponent_name,player_i
 1591865,2026-07-18,World Cup 2026,10,England,2,France,129718,Jude Bellingham,,,Goal,Normal Goal,90,8,1,0,0,0,0,0,,0,alta,alta,api_football_events
 1591865,2026-07-18,World Cup 2026,2,France,10,England,161907,Malo Gusto,,,subst,Substitution 5,90,,0,0,0,0,0,0,,1,alta,alta,api_football_events
 1591865,2026-07-18,World Cup 2026,10,England,2,France,67971,Marc Guéhi,,,subst,Substitution 5,90,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,26,Argentina,9,Spain,30776,Cristian Romero,,,Card,Yellow Card,-5,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,26,Argentina,9,Spain,2467,Lisandro Martínez,,,Card,Yellow Card,41,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,26,Argentina,9,Spain,2467,Lisandro Martínez,,,subst,Substitution 1,44,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,26,Argentina,9,Spain,26315,Nicolás González,,,subst,Substitution 2,46,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,26,Argentina,9,Spain,271,Leandro Paredes,,,Card,Yellow Card,52,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,26,Argentina,9,Spain,2468,Gonzalo Montiel,,,subst,Substitution 3,58,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,9,Spain,26,Argentina,328,Fabián Ruiz,,,subst,Substitution 1,62,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,9,Spain,26,Argentina,47323,Mikel Oyarzabal,,,subst,Substitution 2,62,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,26,Argentina,9,Spain,30776,Cristian Romero,,,subst,Substitution 4,70,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,26,Argentina,9,Spain,2472,Rodrigo De Paul,,,subst,Substitution 5,70,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,9,Spain,26,Argentina,182219,Alex Baena,,,subst,Substitution 3,75,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,9,Spain,26,Argentina,1323,Dani Olmo,,,subst,Substitution 4,75,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,26,Argentina,9,Spain,5996,Enzo Fernández,,,Card,Yellow Card,83,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,26,Argentina,9,Spain,5996,Enzo Fernández,,,Card,Yellow Card,90,3,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,26,Argentina,9,Spain,5996,Enzo Fernández,,,Card,Red Card,90,3,0,0,0,0,0,1,Red Card,0,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,9,Spain,26,Argentina,44,Rodri,,,subst,Substitution 5,99,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,9,Spain,26,Argentina,622,Aymeric Laporte,,,subst,Substitution 6,99,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,26,Argentina,9,Spain,6009,Julián Alvarez,,,subst,Substitution 6,102,,0,0,0,0,0,0,,1,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,9,Spain,26,Argentina,931,Ferran Torres,183799,Nico Williams,Goal,Normal Goal,106,,1,1,0,0,0,0,,0,alta,alta,api_football_events
+1591866,2026-07-19,World Cup 2026,26,Argentina,9,Spain,6716,Alexis Mac Allister,,,Card,Yellow Card,111,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,16,Mexico,1531,South Africa,35532,J. Quinones,266345,E. Lira,Goal,Normal Goal,9,,1,1,0,0,0,0,,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,1531,South Africa,16,Mexico,3287,Teboho Mokoena,,,Card,Yellow Card,17,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events
 1489369,2026-06-11,World Cup 2026,16,Mexico,1531,South Africa,212233,Brian Gutiérrez,,,Card,Yellow Card,23,,0,0,0,0,0,1,Yellow Card,0,alta,alta,api_football_events

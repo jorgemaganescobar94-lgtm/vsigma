@@ -73,3 +73,4 @@ fixture_id,home,away,lambda_home,lambda_away,source_lambda,actual_score,in_top1,
 1585131,France,Spain,1.31,1.06,mx,0-2,0,0,0,0.0525,8,1-1,A,H,media,media
 1586077,England,Argentina,1.07,1.32,mx,1-2,0,0,1,0.0854,5,1-1,A,A,media,media
 1591865,France,England,1.58,0.88,mx,4-6,0,0,0,0.0,54,1-0,A,H,media,media
+1591866,Spain,Argentina,1.32,1.07,mx,1-0,0,1,1,0.121,2,1-1,D,H,media,media

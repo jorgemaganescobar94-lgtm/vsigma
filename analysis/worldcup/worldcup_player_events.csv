@@ -1,14 +1,1 @@
-fixture_id,home,away,category,player,team,probability_goal,expected_goals,reason,source_used,goal_source,confidence,data_quality,probability_1_sot,expected_sot,expected_shots,shots_source,probability_assist,expected_assists,expected_key_passes,assist_source,player_id,probability_card,probability_card_original,probability_card_adjusted,adjustment_direction,adjustment_reason
-1591866,Spain,Argentina,scorer,Lautaro Martínez,Argentina,0.332,0.4034,"xG 0.40, P(gol) 33% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1591866,Spain,Argentina,scorer,Mikel Oyarzabal,Spain,0.2654,0.3084,"xG 0.31, P(gol) 27% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1591866,Spain,Argentina,scorer,Dani Olmo,Spain,0.1437,0.1551,"xG 0.16, P(gol) 14% (media)",proxy,proxy,media,media,,,,,,,,,,,,,,
-1591866,Spain,Argentina,sot,Lautaro Martínez,Argentina,,,"tiros esp. 1.8, SOT esp. 1.4 (media)",proxy,,media,media,0.7582,1.4196,1.79,proxy,,,,,,,,,,
-1591866,Spain,Argentina,sot,Mikel Oyarzabal,Spain,,,"tiros esp. 1.7, SOT esp. 1.2 (media)",proxy,,media,media,0.7079,1.2305,1.73,proxy,,,,,,,,,,
-1591866,Spain,Argentina,sot,Lamine Yamal,Spain,,,"tiros esp. 1.8, SOT esp. 1.1 (media)",proxy,,media,media,0.6656,1.0954,1.83,proxy,,,,,,,,,,
-1591866,Spain,Argentina,assist,L. Messi,Argentina,,,xA-proxy 0.20 (media),proxy,,media,media,,,,,0.1779,0.1959,,proxy,,,,,,
-1591866,Spain,Argentina,assist,Lamine Yamal,Spain,,,xA-proxy 0.18 (media),proxy,,media,media,,,,,0.1629,0.1778,,proxy,,,,,,
-1591866,Spain,Argentina,assist,Mikel Oyarzabal,Spain,,,xA-proxy 0.17 (media),proxy,,media,media,,,,,0.1534,0.1665,,proxy,,,,,,
-1591866,Spain,Argentina,card_risk,N. Molina,Argentina,,,P(tarjeta) 45% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,6503.0,0.4488,0.4488,0.4219,bajar,ajuste baja: historial jugador bajo ↓
-1591866,Spain,Argentina,card_risk,A. Mac Allister,Argentina,,,P(tarjeta) 40% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,6716.0,0.3966,0.3966,0.4025,neutro,ajuste neutro: historial jugador bajo ↓; posición alto ↑ · fuentes en conflicto -> ajuste conservador
-1591866,Spain,Argentina,card_risk,Rodri,Spain,,,P(tarjeta) 35% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,44.0,0.3547,0.3547,0.3423,bajar,ajuste baja: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
-1591866,Spain,Argentina,card_risk,Álex Baena,Spain,,,P(tarjeta) 33% — mercado de tarjeta es baja confianza (media),,,media-baja,media,,,,,,,,,182219.0,0.3322,0.3322,0.2923,bajar,ajuste baja: historial jugador bajo ↓; posición alto ↑; equipo bajo ↓ · fuentes en conflicto -> ajuste conservador
+
