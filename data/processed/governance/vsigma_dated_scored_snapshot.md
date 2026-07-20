@@ -1,20 +1,24 @@
 # vSIGMA Dated Scored Snapshot - 2026-07-20
 
 ## Summary
-- snapshot_status: NO_SAME_DAY_ROWS
-- source_rows: 8
-- same_day_rows: 0
-- rows_written: 0
-- no_data_blocked_rows: 0
-- non_blocked_rows: 0
+- snapshot_status: SNAPSHOT_WRITTEN_WITH_REAL_ROWS
+- source_rows: 5
+- same_day_rows: 5
+- rows_written: 5
+- no_data_blocked_rows: 3
+- non_blocked_rows: 2
 - source_path: data/processed/matches_vsigma_scored_v3.csv
 - output_path: data/processed/today/2026-07-20/matches_vsigma_scored_v3.csv
-- next_action: Repair scoring date coverage; no dated snapshot rows can be written.
+- next_action: Rerun coverage matrix and selector chain; downstream gates still required.
 - auto_apply: NO
 - production_change: NO
 
 ## Snapshot Rows
-- none. No same-day scored rows available.
+- Orgryte IS vs Djurgardens IF | fixture_id=1494216 | league=Allsvenskan | priority=A_ANALIZAR_PRIMERO | market_hint=AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK | data_warning=OK_FULL_STATS
+- Kalmar FF vs Malmo FF | fixture_id=1494214 | league=Allsvenskan | priority=A_ANALIZAR_PRIMERO | market_hint=AWAY_SIDE_OR_AWAY_TEAM_TOTAL_CHECK | data_warning=OK_FULL_STATS
+- Suduva Marijampole vs Hegelmann Litauen | fixture_id=1547593 | league=A Lyga | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | data_warning=OK_FULL
+- Mariehamn vs Lahti | fixture_id=1495738 | league=Veikkausliiga | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | data_warning=OK_FULL
+- Turku PS vs Ilves | fixture_id=1495737 | league=Veikkausliiga | priority=NO_DATA_BLOCKED | market_hint=UNDER_OR_TEAM_TOTAL_UNDER_CHECK | data_warning=OK_FULL
 
 ## Guardrails
 - Snapshot creation does not create picks, stake permission, or live permission.

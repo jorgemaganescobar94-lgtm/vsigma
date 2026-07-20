@@ -1,17 +1,19 @@
 # vSIGMA Probable Lineup Consensus v2 - 2026-07-20
 
 ## Summary
-- fixtures_reviewed: 3
-- probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=3
-- home_confidence: NO_APPROVED_SOURCES=3
-- away_confidence: NO_APPROVED_SOURCES=3
+- fixtures_reviewed: 5
+- probable_lineup_gates: NO_PROBABLE_LINEUP_SOURCES=5
+- home_confidence: NO_APPROVED_SOURCES=5
+- away_confidence: NO_APPROVED_SOURCES=5
 - auto_apply: NO
 - production_change: NO
 
 ## Fixture Consensus
-- Halmstad vs BK Hacken | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
-- FC Anyang vs Gwangju FC | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
-- Hammarby FF vs Degerfors IF | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Orgryte IS vs Djurgardens IF | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Kalmar FF vs Malmo FF | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Suduva Marijampole vs Hegelmann Litauen | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Mariehamn vs Lahti | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
+- Turku PS vs Ilves | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
 
 ## Guardrails
 - Registry-approved probable XI is never treated as official lineup.

@@ -2,18 +2,73 @@
 
 ## Summary
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 3265
-- accepted_rows: 3
-- rejected_rows: 6
-- source_status_counts: NO_SAME_DAY_ROWS=1859; EMPTY_OR_UNREADABLE=1402; NO_ACCEPTED_ROWS=3; HAS_ACCEPTED_ROWS=1
+- files_scanned: 3309
+- accepted_rows: 58
+- rejected_rows: 210
+- source_status_counts: NO_SAME_DAY_ROWS=1836; EMPTY_OR_UNREADABLE=1434; NO_ACCEPTED_ROWS=36; HAS_ACCEPTED_ROWS=3
 - next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO
 
 ## Accepted Rows
-- Hammarby FF vs Degerfors IF | fixture_id=1494213 | league=Allsvenskan | source=data/processed/governance/vsigma_match_stat_forecasts.csv
-- Halmstad vs BK Hacken | fixture_id=1494212 | league=Allsvenskan | source=data/processed/governance/vsigma_match_stat_forecasts.csv
-- FC Anyang vs Gwangju FC | fixture_id=1507002 | league=K League 1 | source=data/processed/governance/vsigma_match_stat_forecasts.csv
+- Hammarby FF vs Degerfors IF | fixture_id=1494213 | league=Allsvenskan | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Halmstad vs BK Hacken | fixture_id=1494212 | league=Allsvenskan | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- FC Anyang vs Gwangju FC | fixture_id=1507002 | league=K League 1 | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Kalmar FF vs Malmo FF | fixture_id=1494214 | league=Allsvenskan | source=data/processed/matches_league_filtered.csv
+- Orgryte IS vs Djurgardens IF | fixture_id=1494216 | league=Allsvenskan | source=data/processed/matches_league_filtered.csv
+- Suduva Marijampole vs Hegelmann Litauen | fixture_id=1547593 | league=A Lyga | source=data/processed/matches_league_filtered.csv
+- Mariehamn vs Lahti | fixture_id=1495738 | league=Veikkausliiga | source=data/processed/matches_league_filtered.csv
+- Turku PS vs Ilves | fixture_id=1495737 | league=Veikkausliiga | source=data/processed/matches_league_filtered.csv
+- Transinvest 2 vs Neptūną Klaipėda | fixture_id=1556385 | league=1 Lyga | source=data/processed/matches_league_rejected.csv
+- HK Kopavogur vs Vestri | fixture_id=1514236 | league=1. Deild | source=data/processed/matches_league_rejected.csv
+- Tukums II vs Rīgas FS II | fixture_id=1529574 | league=1. Liga | source=data/processed/matches_league_rejected.csv
+- Coal India vs Aryan | fixture_id=1595186 | league=Calcutta Premier Division | source=data/processed/matches_league_rejected.csv
+- Measurers vs Peerless | fixture_id=1595183 | league=Calcutta Premier Division | source=data/processed/matches_league_rejected.csv
+- Mohammedan vs Police | fixture_id=1595184 | league=Calcutta Premier Division | source=data/processed/matches_league_rejected.csv
+- São Caetano vs São José EC | fixture_id=1546069 | league=Copa Paulista | source=data/processed/matches_league_rejected.csv
+- Volta Redonda vs São Gonçalo EC RJ | fixture_id=1589165 | league=Copa Rio | source=data/processed/matches_league_rejected.csv
+- Deportivo Santani vs Fernando De La Mora | fixture_id=1586076 | league=Division Intermedia | source=data/processed/matches_league_rejected.csv
+- Tacuary vs Deportivo Capiata | fixture_id=1586075 | league=Division Intermedia | source=data/processed/matches_league_rejected.csv
+- Luunja vs Tallinna Kalev II | fixture_id=1521647 | league=Esiliiga B | source=data/processed/matches_league_rejected.csv
+- Botev Plovdiv vs Lokomotiv Sofia | fixture_id=1551047 | league=First League | source=data/processed/matches_league_rejected.csv
+- Rotor Volgograd vs Ska-khabarovsk | fixture_id=1577449 | league=First League | source=data/processed/matches_league_rejected.csv
+- Slavia Sofia vs CSKA Sofia | fixture_id=1551052 | league=First League | source=data/processed/matches_league_rejected.csv
+- Corvinul Hunedoara vs Csikszereda | fixture_id=1565183 | league=Liga I | source=data/processed/matches_league_rejected.csv
+- Rapid vs Sepsi OSK Sfantu Gheorghe | fixture_id=1565184 | league=Liga I | source=data/processed/matches_league_rejected.csv
+- Mushuc Runa SC vs Orense SC | fixture_id=1519414 | league=Liga Pro | source=data/processed/matches_league_rejected.csv
+- Al Ansar vs Al Nejmeh | fixture_id=1593670 | league=Premier League | source=data/processed/matches_league_rejected.csv
+- Jwaaya FC vs Al Ahed | fixture_id=1593669 | league=Premier League | source=data/processed/matches_league_rejected.csv
+- Deportes Santa Cruz vs San Marcos de Arica | fixture_id=1511610 | league=Primera B | source=data/processed/matches_league_rejected.csv
+- San Luis vs Union Espanola | fixture_id=1511616 | league=Primera B | source=data/processed/matches_league_rejected.csv
+- Atletico Atlas vs Sacachispas | fixture_id=1499993 | league=Primera C | source=data/processed/matches_league_rejected.csv
+- Berazategui vs Central Cordoba | fixture_id=1499994 | league=Primera C | source=data/processed/matches_league_rejected.csv
+- Centro Español vs Leones de Rosario | fixture_id=1500181 | league=Primera C | source=data/processed/matches_league_rejected.csv
+- Deportivo Paraguayo vs Central Ballester | fixture_id=1499999 | league=Primera C | source=data/processed/matches_league_rejected.csv
+- Estrella Del Sur vs Lujan | fixture_id=1500000 | league=Primera C | source=data/processed/matches_league_rejected.csv
+- San Antonio Bulo Bulo vs ABB | fixture_id=1538389 | league=Primera División | source=data/processed/matches_league_rejected.csv
+- Atletico Torque vs Danubio | fixture_id=1576801 | league=Primera División - Apertura | source=data/processed/matches_league_rejected.csv
+- Acassuso vs San Telmo | fixture_id=1498649 | league=Primera Nacional | source=data/processed/matches_league_rejected.csv
+- Chacarita Juniors vs Club Atlético Güemes | fixture_id=1498654 | league=Primera Nacional | source=data/processed/matches_league_rejected.csv
+- Defensores De Belgrano vs Los Andes | fixture_id=1498658 | league=Primera Nacional | source=data/processed/matches_league_rejected.csv
+- San Martin S.J. vs Tristan Suarez | fixture_id=1498665 | league=Primera Nacional | source=data/processed/matches_league_rejected.csv
+- Colón vs Paysandu | fixture_id=1584337 | league=Segunda División | source=data/processed/matches_league_rejected.csv
+- Molinos El Pirata vs U. San Martin | fixture_id=1559524 | league=Segunda División | source=data/processed/matches_league_rejected.csv
+- Norrby IF vs GIF Sundsvall | fixture_id=1497627 | league=Superettan | source=data/processed/matches_league_rejected.csv
+- FS Jelgava vs Rīgas FS | fixture_id=1515885 | league=Virsliga | source=data/processed/matches_league_rejected.csv
+- Super Nova vs Grobiņa | fixture_id=1515888 | league=Virsliga | source=data/processed/matches_league_rejected.csv
+- KPV-j vs Rops | fixture_id=1517219 | league=Ykkönen | source=data/processed/matches_league_rejected.csv
+- FH hafnarfjordur vs Breidablik | fixture_id=1508813 | league=Úrvalsdeild | source=data/processed/matches_league_rejected.csv
+- Keflavik vs IA Akranes | fixture_id=1508810 | league=Úrvalsdeild | source=data/processed/matches_league_rejected.csv
+- Cambridge United vs Braintree | fixture_id=1548887 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Grafičar vs Hatta SC | fixture_id=1598488 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Redbridge vs Welwyn Garden City | fixture_id=1598489 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Sagan Tosu vs Verspah Oita | fixture_id=1598485 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Spaeri vs Samgurali | fixture_id=1598487 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Sporting CP vs Strasbourg | fixture_id=1562949 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Trafford vs United of Manchester | fixture_id=1598490 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Velden vs Wolfsberger AC | fixture_id=1567689 | league=Friendlies Clubs | source=data/processed/matches_league_rejected.csv
+- Barrancas UMET vs Ezeiza | fixture_id=1549981 | league=Torneo Promocional Amateur | source=data/processed/matches_league_rejected.csv
+- Buenos Aires City vs Everton La Plata | fixture_id=1549983 | league=Torneo Promocional Amateur | source=data/processed/matches_league_rejected.csv
 
 ## Source Diagnostics
 - data/processed/batch_inputs/vsigma_api_board_candidates_2026-06-15.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
@@ -42,16 +97,16 @@
 - data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-06-28.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-07-05.csv | status=NO_SAME_DAY_ROWS | rows=2 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-07-14.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_api_calibration_rule_candidates.csv | status=NO_SAME_DAY_ROWS | rows=84 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv | status=NO_SAME_DAY_ROWS | rows=3 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=NO_SAME_DAY_ROWS | rows=3 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_api_calibration_rule_candidates.csv | status=NO_ACCEPTED_ROWS | rows=84 | same_day=84 | accepted=0 | rejected=84 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv | status=HAS_ACCEPTED_ROWS | rows=3 | same_day=3 | accepted=3 | rejected=0 | detail=local source contains accepted raw fixture rows
+- data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=NO_ACCEPTED_ROWS | rows=3 | same_day=3 | accepted=0 | rejected=3 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_candidate_provenance_ceiling.csv | status=NO_ACCEPTED_ROWS | rows=3 | same_day=3 | accepted=0 | rejected=3 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_dated_post_match_results_refresh.csv | status=NO_SAME_DAY_ROWS | rows=356 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_forced_api_board_fixture_lineups.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_SAME_DAY_ROWS | rows=157 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_ACCEPTED_ROWS | rows=3 | same_day=3 | accepted=0 | rejected=3 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_match_stat_forecast_backtest.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecast_calibration_details.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_match_stat_forecasts.csv | status=HAS_ACCEPTED_ROWS | rows=3 | same_day=3 | accepted=3 | rejected=0 | detail=local source contains accepted raw fixture rows
+- data/processed/governance/vsigma_match_stat_forecasts.csv | status=NO_ACCEPTED_ROWS | rows=3 | same_day=3 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_pending_prematch_prediction_finalizer.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_post_match_stat_actuals.csv | status=NO_SAME_DAY_ROWS | rows=71 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_postmatch_pick_audit.csv | status=NO_SAME_DAY_ROWS | rows=24 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
@@ -59,13 +114,13 @@
 - data/processed/governance/vsigma_prematch_calibration_rule_gate.csv | status=NO_SAME_DAY_ROWS | rows=12 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_prematch_match_story_engine.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_prematch_prediction_calibration_advisor.csv | status=NO_SAME_DAY_ROWS | rows=12 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=NO_SAME_DAY_ROWS | rows=3 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv | status=NO_SAME_DAY_ROWS | rows=5 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=NO_SAME_DAY_ROWS | rows=157 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=NO_ACCEPTED_ROWS | rows=3 | same_day=3 | accepted=0 | rejected=3 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=NO_ACCEPTED_ROWS | rows=3 | same_day=3 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_rolling_prematch_accuracy_dashboard.csv | status=NO_SAME_DAY_ROWS | rows=6 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_shadow_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_SAME_DAY_ROWS | rows=157 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_SAME_DAY_ROWS | rows=141 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_ACCEPTED_ROWS | rows=3 | same_day=3 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_ACCEPTED_ROWS | rows=3 | same_day=3 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/historical/2026-04-23/matches.csv | status=NO_SAME_DAY_ROWS | rows=182 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
