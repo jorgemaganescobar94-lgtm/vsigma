@@ -1,14 +1,14 @@
 # vSIGMA Autonomous Monitoring Summary - 2026-07-20
 
 ## Executive Status
-- generated_at: 2026-07-20T16:55:56+01:00
+- generated_at: 2026-07-20T19:11:21+01:00
 - mode: health
 - daily_classification: TECHNICAL_WARNING
 - operational_verdict: TECHNICAL_WARNING
 - action_level: ACTION_REQUIRED
 - predictive_failure: NO
 - evidence_basis: partial_sources
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/29757332284
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/29766648037
 
 ## Operator Action
 - Inspect healthcheck, workflow logs, and artifacts before trusting the day.
