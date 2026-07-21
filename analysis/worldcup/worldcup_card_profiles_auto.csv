@@ -456,7 +456,7 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 128766,L. Deedson,2386,Haiti,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 129033,J. Gvardiol,3,Croatia,DEF,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 129047,Ramiz Zerrouki,1532,Algeria,MID,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
-129670,Nathanaël Mbuku,1508,Congo DR,MID,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
+129670,Nathanaël Mbuku,1508,Congo DR,FWD,2,1,0,0,1,0.5,0.0,0.5,alto,baja,media-baja,"2 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 129678,A. Ounahi,31,Morocco,MID,4,1,0,0,1,0.25,0.0,0.25,medio,media,media,4 partidos con eventos reales — muestra media,worldcup_events_auto
 129718,J. Bellingham,10,England,MID,7,1,0,0,1,0.143,0.0,0.143,bajo,alta,alta,7 partidos con eventos reales — muestra suficiente,worldcup_events_auto
 133609,Pedri,9,Spain,MID,5,1,0,0,1,0.2,0.0,0.2,bajo,media,media,5 partidos con eventos reales — muestra media,worldcup_events_auto
@@ -558,7 +558,7 @@ player_id,player_name,team_id,team_name,position,matches_sample,yellow_cards_tot
 278133,O. Bobb,1090,Norway,MID,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 278370,D. Gomez,2380,Paraguay,MID,3,2,0,0,2,0.667,0.0,0.667,alto,baja,media-baja,"3 partidos con eventos reales — muestra reducida, orientativo",worldcup_events_auto
 278898,C. Riad,31,Morocco,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
-279482,B. Cipenga,1508,Congo DR,MID,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
+279482,B. Cipenga,1508,Congo DR,FWD,2,0,0,0,0,0.0,0.0,0.0,bajo,baja,media-baja,"2 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 280074,N. Brown,25,Germany,DEF,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 280695,A. Minda,2382,Ecuador,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto
 283058,N. Jackson,13,Senegal,FWD,1,0,0,0,0,0.0,0.0,0.0,bajo,baja,baja,"1 partido(s) con eventos, sin tarjetas — muestra insuficiente, no asumir riesgo cero",worldcup_events_auto

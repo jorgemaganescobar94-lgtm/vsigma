@@ -378,10 +378,10 @@ fixture_id,player_id,player_name,team,team_id,position,referee_name,probability_
 1539013,375,C. Mbemba,Congo DR,1508,DEF,"Felix Zwayer, Germany",0.2655,0.2655,neutro,0.0,0,media-baja,media
 1539013,19182,A. Tuanzebe,Congo DR,1508,DEF,"Felix Zwayer, Germany",0.051,0.051,neutro,0.0,0,media-baja,media
 1539013,18816,A. Masuaku,Congo DR,1508,DEF,"Felix Zwayer, Germany",0.2445,0.2298,bajar,0.0147,0,media-baja,media
-1539013,129670,N. Mbuku,Congo DR,1508,MID,"Felix Zwayer, Germany",0.067,0.0714,subir,0.0044,1,media-baja,media
+1539013,129670,N. Mbuku,Congo DR,1508,FWD,"Felix Zwayer, Germany",0.067,0.0673,neutro,0.0003,1,media-baja,media
 1539013,21101,S. Moutoussamy,Congo DR,1508,MID,"Felix Zwayer, Germany",0.1874,0.193,subir,0.0056,1,media-baja,media
 1539013,365331,N. Sadiki,Congo DR,1508,MID,"Felix Zwayer, Germany",0.0543,0.0578,subir,0.0035,1,media-baja,media
-1539013,279482,B. Cipenga,Congo DR,1508,MID,"Felix Zwayer, Germany",0.1249,0.1243,neutro,0.0006,0,media-baja,media
+1539013,279482,B. Cipenga,Congo DR,1508,FWD,"Felix Zwayer, Germany",0.1249,0.1168,bajar,0.0081,0,media-baja,media
 1539013,20649,Y. Wissa,Congo DR,1508,FWD,"Felix Zwayer, Germany",0.0874,0.0817,bajar,0.0057,0,media-baja,media
 1539013,3033,C. Bakambu,Congo DR,1508,FWD,"Felix Zwayer, Germany",0.3127,0.2924,bajar,0.0203,0,media-baja,media
 1539013,73507,A. Ne&apos;matov,Uzbekistan,1568,GK,"Felix Zwayer, Germany",0.0993,0.0978,neutro,0.0015,0,media-baja,baja

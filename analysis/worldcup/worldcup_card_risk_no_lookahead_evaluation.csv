@@ -378,10 +378,10 @@ fixture_id,player_id,player_name,team,position,referee_name,p_original,p_adjuste
 1539013,375,C. Mbemba,Congo DR,DEF,"Felix Zwayer, Germany",0.2655,0.2655,0.2655,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539013,19182,A. Tuanzebe,Congo DR,DEF,"Felix Zwayer, Germany",0.051,0.051,0.051,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539013,18816,A. Masuaku,Congo DR,DEF,"Felix Zwayer, Germany",0.2445,0.2359,0.2359,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1539013,129670,N. Mbuku,Congo DR,MID,"Felix Zwayer, Germany",0.067,0.069,0.068,1,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1539013,129670,N. Mbuku,Congo DR,FWD,"Felix Zwayer, Germany",0.067,0.065,0.064,1,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539013,21101,S. Moutoussamy,Congo DR,MID,"Felix Zwayer, Germany",0.1874,0.1902,0.1865,1,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539013,365331,N. Sadiki,Congo DR,MID,"Felix Zwayer, Germany",0.0543,0.0559,0.0559,1,subir,subir,media-baja,perfiles reconstruidos solo con jornadas anteriores
-1539013,279482,B. Cipenga,Congo DR,MID,"Felix Zwayer, Germany",0.1249,0.1286,0.1268,0,subir,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
+1539013,279482,B. Cipenga,Congo DR,FWD,"Felix Zwayer, Germany",0.1249,0.1212,0.1193,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539013,20649,Y. Wissa,Congo DR,FWD,"Felix Zwayer, Germany",0.0874,0.0835,0.0835,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539013,3033,C. Bakambu,Congo DR,FWD,"Felix Zwayer, Germany",0.3127,0.2924,0.2924,0,bajar,bajar,media-baja,perfiles reconstruidos solo con jornadas anteriores
 1539013,73507,A. Ne&apos;matov,Uzbekistan,GK,"Felix Zwayer, Germany",0.0993,0.0978,0.0978,0,neutro,neutro,media-baja,perfiles reconstruidos solo con jornadas anteriores
