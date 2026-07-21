@@ -1,22 +1,21 @@
 # vSIGMA Healthcheck Report - 2026-07-21
 
 - Global health status: WARNING
-- Generated at: 2026-07-21T00:05:28.413581+01:00
+- Generated at: 2026-07-21T11:55:14.993696+01:00
 - Mode: full
-- HEALTHY: 31
-- WARNING: 4
+- HEALTHY: 32
+- WARNING: 3
 - NEEDS_ATTENTION: 0
 - BROKEN: 0
 - NOT_RUN_YET: 2
-- First recovery command: `.\.venv\Scripts\python.exe scripts\build_daily_competition_master_report.py --date 2026-07-21`
+- First recovery command: `.\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-07-21 --stage PRE`
 
 ## Critical Warnings
 | check_name | status | detail | recovery_command |
 | --- | --- | --- | --- |
-| daily_master_report | WARNING | daily master report missing | .\.venv\Scripts\python.exe scripts\build_daily_competition_master_report.py --date 2026-07-21 |
 | ledger_target_date_rows | WARNING | ledger has no rows for target date | .\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-07-21 --stage PRE |
 | freshness_report | WARNING | validation report contains warning rows | .\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-07-21 |
-| recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-20 --timezone Atlantic/Canary --mode status |
+| recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-21 --timezone Atlantic/Canary --mode status |
 
 ## All Checks
 | check_name | status | detail | recovery_command | evidence_path |
@@ -45,7 +44,7 @@
 | candidate_output:CANDIDATE_V4 | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v4_competition_top.csv |
 | candidate_output:CANDIDATE_V5 | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v5_competition_top.csv |
 | candidate_output:CANDIDATE_V6 | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v6_competition_top.csv |
-| daily_master_report | WARNING | daily master report missing | .\.venv\Scripts\python.exe scripts\build_daily_competition_master_report.py --date 2026-07-21 | /home/runner/work/vsigma/vsigma/data/processed/today/2026-07-21/daily_competition_master_report.md |
+| daily_master_report | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-07-21/daily_competition_master_report.md |
 | immutable_ledger_exists | HEALTHY | ledger present with 381 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | ledger_target_date_rows | WARNING | ledger has no rows for target date | .\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-07-21 --stage PRE | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | ledger_duplicate_ids | HEALTHY | no duplicate ledger_id values for target date |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
@@ -55,6 +54,6 @@
 | post_results_status | NOT_RUN_YET | post not required yet or NO_BET official output |  | /home/runner/work/vsigma/vsigma/data/processed/today_post_results_report.csv |
 | supervisor_latest_report | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/data/processed/daily_supervisor_latest.md |
 | windows_task_registration | NOT_RUN_YET | task registration check unavailable outside Windows | powershell.exe -NoProfile -ExecutionPolicy Bypass -File /home/runner/work/vsigma/vsigma/scripts/register_vsigma_windows_tasks.ps1 |  |
-| recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-20 --timezone Atlantic/Canary --mode status | /home/runner/work/vsigma/vsigma/automation_logs/supervisor |
-| disk_space | HEALTHY | free disk space acceptable: 86.41 GB |  |  |
+| recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-21 --timezone Atlantic/Canary --mode status | /home/runner/work/vsigma/vsigma/automation_logs/supervisor |
+| disk_space | HEALTHY | free disk space acceptable: 86.38 GB |  |  |
 | healthcheck_mode | HEALTHY | full mode completed all quick checks plus environment diagnostics |  |  |
