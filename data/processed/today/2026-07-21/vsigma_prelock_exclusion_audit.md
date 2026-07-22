@@ -1,6 +1,6 @@
 # vSIGMA PRELOCK Exclusion Audit - 2026-07-21
 
-- Generated at: 2026-07-21T22:17:36+01:00
+- Generated at: 2026-07-22T10:39:41+01:00
 - Timezone: Atlantic/Canary
 - Candidates reviewed: 0
 - In current 90-minute window: 0
