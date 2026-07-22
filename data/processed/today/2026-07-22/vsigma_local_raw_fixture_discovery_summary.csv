@@ -1,2 +1,2 @@
 target_date,generated_at,overall_status,files_scanned,accepted_rows,rejected_rows,next_action,auto_apply,production_change
-2026-07-22,2026-07-22T10:59:34+01:00,NO_LOCAL_RAW_CANDIDATES_FOUND,3325,0,0,No local source can build raw candidates; upstream fetch/filter producer is still required.,NO,NO
+2026-07-22,2026-07-22T19:37:44+01:00,NO_LOCAL_RAW_CANDIDATES_FOUND,3334,0,168,No local source can build raw candidates; upstream fetch/filter producer is still required.,NO,NO
