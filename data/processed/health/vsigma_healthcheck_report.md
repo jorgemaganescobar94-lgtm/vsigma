@@ -1,22 +1,21 @@
 # vSIGMA Healthcheck Report - 2026-07-24
 
 - Global health status: WARNING
-- Generated at: 2026-07-24T00:02:46.936491+01:00
+- Generated at: 2026-07-24T11:52:44.606112+01:00
 - Mode: full
-- HEALTHY: 30
-- WARNING: 4
+- HEALTHY: 32
+- WARNING: 3
 - NEEDS_ATTENTION: 0
 - BROKEN: 0
-- NOT_RUN_YET: 3
-- First recovery command: `.\.venv\Scripts\python.exe scripts\build_daily_competition_master_report.py --date 2026-07-24`
+- NOT_RUN_YET: 2
+- First recovery command: `.\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-07-24 --stage PRE`
 
 ## Critical Warnings
 | check_name | status | detail | recovery_command |
 | --- | --- | --- | --- |
-| daily_master_report | WARNING | daily master report missing | .\.venv\Scripts\python.exe scripts\build_daily_competition_master_report.py --date 2026-07-24 |
 | ledger_target_date_rows | WARNING | ledger has no rows for target date | .\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-07-24 --stage PRE |
 | freshness_report | WARNING | validation report contains warning rows | .\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-07-24 |
-| recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-23 --timezone Atlantic/Canary --mode status |
+| recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-24 --timezone Atlantic/Canary --mode status |
 
 ## All Checks
 | check_name | status | detail | recovery_command | evidence_path |
@@ -37,7 +36,7 @@
 | required_script:scripts/register_vsigma_windows_tasks.ps1 | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/scripts/register_vsigma_windows_tasks.ps1 |
 | required_script:scripts/unregister_vsigma_windows_tasks.ps1 | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/scripts/unregister_vsigma_windows_tasks.ps1 |
 | api_config_available | HEALTHY | API configuration detected without exposing secrets | Set API_FOOTBALL_KEY, APISPORTS_KEY, RAPIDAPI_KEY, or X_RAPIDAPI_KEY in .env/environment. | /home/runner/work/vsigma/vsigma/.env |
-| today_snapshot_folder | NOT_RUN_YET | today snapshot folder not created yet | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-24 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/today/2026-07-24 |
+| today_snapshot_folder | HEALTHY | today snapshot folder present | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-24 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/today/2026-07-24 |
 | official_baseline_output | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_competition_top.csv |
 | candidate_output:CANDIDATE_V2 | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v2_competition_top.csv |
 | candidate_output:CANDIDATE_V7 | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v7_competition_top.csv |
@@ -45,7 +44,7 @@
 | candidate_output:CANDIDATE_V4 | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v4_competition_top.csv |
 | candidate_output:CANDIDATE_V5 | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v5_competition_top.csv |
 | candidate_output:CANDIDATE_V6 | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v6_competition_top.csv |
-| daily_master_report | WARNING | daily master report missing | .\.venv\Scripts\python.exe scripts\build_daily_competition_master_report.py --date 2026-07-24 | /home/runner/work/vsigma/vsigma/data/processed/today/2026-07-24/daily_competition_master_report.md |
+| daily_master_report | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/data/processed/today/2026-07-24/daily_competition_master_report.md |
 | immutable_ledger_exists | HEALTHY | ledger present with 381 row(s) |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | ledger_target_date_rows | WARNING | ledger has no rows for target date | .\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-07-24 --stage PRE | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
 | ledger_duplicate_ids | HEALTHY | no duplicate ledger_id values for target date |  | /home/runner/work/vsigma/vsigma/data/processed/ledger/vsigma_immutable_daily_pick_ledger.csv |
@@ -55,6 +54,6 @@
 | post_results_status | NOT_RUN_YET | post not required yet or NO_BET official output |  | /home/runner/work/vsigma/vsigma/data/processed/today_post_results_report.csv |
 | supervisor_latest_report | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/data/processed/daily_supervisor_latest.md |
 | windows_task_registration | NOT_RUN_YET | task registration check unavailable outside Windows | powershell.exe -NoProfile -ExecutionPolicy Bypass -File /home/runner/work/vsigma/vsigma/scripts/register_vsigma_windows_tasks.ps1 |  |
-| recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-23 --timezone Atlantic/Canary --mode status | /home/runner/work/vsigma/vsigma/automation_logs/supervisor |
-| disk_space | HEALTHY | free disk space acceptable: 86.39 GB |  |  |
+| recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-24 --timezone Atlantic/Canary --mode status | /home/runner/work/vsigma/vsigma/automation_logs/supervisor |
+| disk_space | HEALTHY | free disk space acceptable: 87.26 GB |  |  |
 | healthcheck_mode | HEALTHY | full mode completed all quick checks plus environment diagnostics |  |  |
