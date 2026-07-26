@@ -1,20 +1,20 @@
-# vSIGMA Learning Ledger - 2026-07-25
+# vSIGMA Learning Ledger - 2026-07-26
 
 ## Executive Learning Summary
-- generated_at: 2026-07-26T10:25:11+01:00
-- rows reviewed: 0
+- generated_at: 2026-07-26T11:06:08+01:00
+- rows reviewed: 5
 - actionable wins: 0
 - actionable losses: 0
 - no-bet missed wins: 0
 - no-bet avoided losses: 0
 - expired prelock rows: 0
 - data blocked rows: 0
-- top improvement signals: none
+- top improvement signals: UNKNOWN=5
 
 ## Market Family Summary
-- learning_family_counts: none
-- learning_status_counts: none
-- market_counts: none
+- learning_family_counts: UNRESOLVED=5
+- learning_status_counts: COLLECT_MORE_SAMPLE=3; PROMOTION_NOT_ALLOWED=2
+- market_counts: UNKNOWN=3; OVER_2_5=1; OVER_1_5=1
 
 ## Learning Recommendations
 - Treat this ledger as evidence collection only.

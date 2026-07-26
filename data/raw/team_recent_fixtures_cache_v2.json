@@ -619881,5 +619881,7239 @@
         }
       }
     }
+  ],
+  "565|2026": [
+    {
+      "fixture": {
+        "id": 1562946,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-18T13:30:00+00:00",
+        "timestamp": 1784381400,
+        "periods": {
+          "first": 1784381400,
+          "second": 1784385000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 565,
+          "name": "BSC Young Boys",
+          "logo": "https://media.api-sports.io/football/teams/565.png",
+          "winner": true
+        },
+        "away": {
+          "id": 6654,
+          "name": "Étoile Carouge",
+          "logo": "https://media.api-sports.io/football/teams/6654.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 5,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 5,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 5,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1547931,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-10T13:30:00+00:00",
+        "timestamp": 1783690200,
+        "periods": {
+          "first": 1783690200,
+          "second": 1783693800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 567,
+          "name": "Plzen",
+          "logo": "https://media.api-sports.io/football/teams/567.png",
+          "winner": false
+        },
+        "away": {
+          "id": 565,
+          "name": "BSC Young Boys",
+          "logo": "https://media.api-sports.io/football/teams/565.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 5
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 3
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 5
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554752,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-05T14:00:00+00:00",
+        "timestamp": 1783260000,
+        "periods": {
+          "first": 1783260000,
+          "second": 1783263600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 3628,
+          "name": "Metalist 1925 Kharkiv",
+          "logo": "https://media.api-sports.io/football/teams/3628.png",
+          "winner": false
+        },
+        "away": {
+          "id": 565,
+          "name": "BSC Young Boys",
+          "logo": "https://media.api-sports.io/football/teams/565.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1550497,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-01T12:00:00+00:00",
+        "timestamp": 1782907200,
+        "periods": {
+          "first": 1782907200,
+          "second": 1782910800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1399,
+          "name": "Austria Lustenau",
+          "logo": "https://media.api-sports.io/football/teams/1399.png",
+          "winner": null
+        },
+        "away": {
+          "id": 565,
+          "name": "BSC Young Boys",
+          "logo": "https://media.api-sports.io/football/teams/565.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1502906,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-10T12:00:00+00:00",
+        "timestamp": 1768046400,
+        "periods": {
+          "first": 1768046400,
+          "second": 1768050000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1026,
+          "name": "Lask Linz",
+          "logo": "https://media.api-sports.io/football/teams/1026.png",
+          "winner": true
+        },
+        "away": {
+          "id": 565,
+          "name": "BSC Young Boys",
+          "logo": "https://media.api-sports.io/football/teams/565.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1502882,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-07T14:00:00+00:00",
+        "timestamp": 1767794400,
+        "periods": {
+          "first": 1767794400,
+          "second": 1767798000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 565,
+          "name": "BSC Young Boys",
+          "logo": "https://media.api-sports.io/football/teams/565.png",
+          "winner": false
+        },
+        "away": {
+          "id": 635,
+          "name": "Dinamo Bucuresti",
+          "logo": "https://media.api-sports.io/football/teams/635.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "630|2026": [
+    {
+      "fixture": {
+        "id": 1593478,
+        "referee": "Miloš Savović, Montenegro",
+        "timezone": "UTC",
+        "date": "2026-07-23T17:00:00+00:00",
+        "timestamp": 1784826000,
+        "periods": {
+          "first": 1784826000,
+          "second": 1784829600
+        },
+        "venue": {
+          "id": null,
+          "name": "Sumgayit City Stadium",
+          "city": "Sumqayit"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 848,
+        "name": "UEFA Europa Conference League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/848.png",
+        "flag": null,
+        "season": 2026,
+        "round": "2nd Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 388,
+          "name": "Bate Borisov",
+          "logo": "https://media.api-sports.io/football/teams/388.png",
+          "winner": null
+        },
+        "away": {
+          "id": 630,
+          "name": "FC Sion",
+          "logo": "https://media.api-sports.io/football/teams/630.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1548857,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-17T15:00:00+00:00",
+        "timestamp": 1784300400,
+        "periods": {
+          "first": 1784300400,
+          "second": 1784304000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 630,
+          "name": "FC Sion",
+          "logo": "https://media.api-sports.io/football/teams/630.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3012,
+          "name": "Annecy",
+          "logo": "https://media.api-sports.io/football/teams/3012.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1547955,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-12T13:00:00+00:00",
+        "timestamp": 1783861200,
+        "periods": {
+          "first": 1783861200,
+          "second": 1783864800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 6653,
+          "name": "Yverdon Sport",
+          "logo": "https://media.api-sports.io/football/teams/6653.png",
+          "winner": false
+        },
+        "away": {
+          "id": 630,
+          "name": "FC Sion",
+          "logo": "https://media.api-sports.io/football/teams/630.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1550501,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-01T16:00:00+00:00",
+        "timestamp": 1782921600,
+        "periods": {
+          "first": 1782921600,
+          "second": 1782925200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1015,
+          "name": "Neuchatel Xamax FC",
+          "logo": "https://media.api-sports.io/football/teams/1015.png",
+          "winner": false
+        },
+        "away": {
+          "id": 630,
+          "name": "FC Sion",
+          "logo": "https://media.api-sports.io/football/teams/630.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 4
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 4
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1550489,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-27T15:00:00+00:00",
+        "timestamp": 1782572400,
+        "periods": {
+          "first": 1782572400,
+          "second": 1782576000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 630,
+          "name": "FC Sion",
+          "logo": "https://media.api-sports.io/football/teams/630.png",
+          "winner": true
+        },
+        "away": {
+          "id": 6654,
+          "name": "Étoile Carouge",
+          "logo": "https://media.api-sports.io/football/teams/6654.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 7,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 3,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 7,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1503498,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-09T11:00:00+00:00",
+        "timestamp": 1767956400,
+        "periods": {
+          "first": 1767956400,
+          "second": 1767960000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 630,
+          "name": "FC Sion",
+          "logo": "https://media.api-sports.io/football/teams/630.png",
+          "winner": true
+        },
+        "away": {
+          "id": 600,
+          "name": "Zulte Waregem",
+          "logo": "https://media.api-sports.io/football/teams/600.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1503487,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-06T13:30:00+00:00",
+        "timestamp": 1767706200,
+        "periods": {
+          "first": 1767706200,
+          "second": 1767709800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 630,
+          "name": "FC Sion",
+          "logo": "https://media.api-sports.io/football/teams/630.png",
+          "winner": true
+        },
+        "away": {
+          "id": 10625,
+          "name": "Olympique Béja",
+          "logo": "https://media.api-sports.io/football/teams/10625.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 6,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 6,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "606|2026": [
+    {
+      "fixture": {
+        "id": 1556516,
+        "referee": "Viktor Shimusik, Belarus",
+        "timezone": "UTC",
+        "date": "2026-07-23T18:30:00+00:00",
+        "timestamp": 1784831400,
+        "periods": {
+          "first": 1784831400,
+          "second": 1784835000
+        },
+        "venue": {
+          "id": null,
+          "name": "Cornaredo",
+          "city": "Lugano"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 848,
+        "name": "UEFA Europa Conference League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/848.png",
+        "flag": null,
+        "season": 2026,
+        "round": "2nd Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 606,
+          "name": "FC Lugano",
+          "logo": "https://media.api-sports.io/football/teams/606.png",
+          "winner": true
+        },
+        "away": {
+          "id": 14393,
+          "name": "Dukagjini",
+          "logo": "https://media.api-sports.io/football/teams/14393.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1547977,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-17T18:15:00+00:00",
+        "timestamp": 1784312100,
+        "periods": {
+          "first": 1784312100,
+          "second": 1784315700
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 606,
+          "name": "FC Lugano",
+          "logo": "https://media.api-sports.io/football/teams/606.png",
+          "winner": false
+        },
+        "away": {
+          "id": 660,
+          "name": "FC Vaduz",
+          "logo": "https://media.api-sports.io/football/teams/660.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554832,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-10T16:00:00+00:00",
+        "timestamp": 1783699200,
+        "periods": {
+          "first": 1783699200,
+          "second": 1783702800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 180,
+          "name": "1. FC Heidenheim",
+          "logo": "https://media.api-sports.io/football/teams/180.png",
+          "winner": false
+        },
+        "away": {
+          "id": 606,
+          "name": "FC Lugano",
+          "logo": "https://media.api-sports.io/football/teams/606.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554766,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-07T16:00:00+00:00",
+        "timestamp": 1783440000,
+        "periods": {
+          "first": 1783440000,
+          "second": 1783443600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 9331,
+          "name": "Memmingen",
+          "logo": "https://media.api-sports.io/football/teams/9331.png",
+          "winner": false
+        },
+        "away": {
+          "id": 606,
+          "name": "FC Lugano",
+          "logo": "https://media.api-sports.io/football/teams/606.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 4
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 4
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1547901,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-04T08:30:00+00:00",
+        "timestamp": 1783153800,
+        "periods": {
+          "first": 1783153800,
+          "second": 1783157400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 606,
+          "name": "FC Lugano",
+          "logo": "https://media.api-sports.io/football/teams/606.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2185,
+          "name": "Rapperswil",
+          "logo": "https://media.api-sports.io/football/teams/2185.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1550486,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-27T08:30:00+00:00",
+        "timestamp": 1782549000,
+        "periods": {
+          "first": 1782549000,
+          "second": 1782552600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 606,
+          "name": "FC Lugano",
+          "logo": "https://media.api-sports.io/football/teams/606.png",
+          "winner": true
+        },
+        "away": {
+          "id": 1015,
+          "name": "Neuchatel Xamax FC",
+          "logo": "https://media.api-sports.io/football/teams/1015.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1542317,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-03-25T10:00:00+00:00",
+        "timestamp": 1774432800,
+        "periods": {
+          "first": 1774432800,
+          "second": 1774436400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 606,
+          "name": "FC Lugano",
+          "logo": "https://media.api-sports.io/football/teams/606.png",
+          "winner": false
+        },
+        "away": {
+          "id": 6648,
+          "name": "Taverne",
+          "logo": "https://media.api-sports.io/football/teams/6648.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1502307,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-09T09:30:00+00:00",
+        "timestamp": 1767951000,
+        "periods": {
+          "first": 1767951000,
+          "second": 1767954600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 606,
+          "name": "FC Lugano",
+          "logo": "https://media.api-sports.io/football/teams/606.png",
+          "winner": false
+        },
+        "away": {
+          "id": 567,
+          "name": "Plzen",
+          "logo": "https://media.api-sports.io/football/teams/567.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 4
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 4
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1502298,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-05T14:30:00+00:00",
+        "timestamp": 1767623400,
+        "periods": {
+          "first": 1767623400,
+          "second": 1767627000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 606,
+          "name": "FC Lugano",
+          "logo": "https://media.api-sports.io/football/teams/606.png",
+          "winner": false
+        },
+        "away": {
+          "id": 192,
+          "name": "1. FC Köln",
+          "logo": "https://media.api-sports.io/football/teams/192.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "660|2026": [
+    {
+      "fixture": {
+        "id": 1593494,
+        "referee": "Dumitru Muntean, Moldova",
+        "timezone": "UTC",
+        "date": "2026-07-23T17:30:00+00:00",
+        "timestamp": 1784827800,
+        "periods": {
+          "first": 1784827800,
+          "second": 1784831400
+        },
+        "venue": {
+          "id": null,
+          "name": "Rheinpark Stadion",
+          "city": "Vaduz"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 848,
+        "name": "UEFA Europa Conference League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/848.png",
+        "flag": null,
+        "season": 2026,
+        "round": "2nd Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 660,
+          "name": "FC Vaduz",
+          "logo": "https://media.api-sports.io/football/teams/660.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3345,
+          "name": "Atlètic Club d'Escaldes",
+          "logo": "https://media.api-sports.io/football/teams/3345.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1547977,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-17T18:15:00+00:00",
+        "timestamp": 1784312100,
+        "periods": {
+          "first": 1784312100,
+          "second": 1784315700
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 606,
+          "name": "FC Lugano",
+          "logo": "https://media.api-sports.io/football/teams/606.png",
+          "winner": false
+        },
+        "away": {
+          "id": 660,
+          "name": "FC Vaduz",
+          "logo": "https://media.api-sports.io/football/teams/660.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1546634,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-10T16:00:00+00:00",
+        "timestamp": 1783699200,
+        "periods": {
+          "first": 1783699200,
+          "second": 1783702800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 618,
+          "name": "SCR Altach",
+          "logo": "https://media.api-sports.io/football/teams/618.png",
+          "winner": true
+        },
+        "away": {
+          "id": 660,
+          "name": "FC Vaduz",
+          "logo": "https://media.api-sports.io/football/teams/660.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1547910,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-04T11:45:00+00:00",
+        "timestamp": 1783165500,
+        "periods": {
+          "first": 1783165500,
+          "second": 1783169100
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 660,
+          "name": "FC Vaduz",
+          "logo": "https://media.api-sports.io/football/teams/660.png",
+          "winner": true
+        },
+        "away": {
+          "id": 1399,
+          "name": "Austria Lustenau",
+          "logo": "https://media.api-sports.io/football/teams/1399.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1547872,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-27T15:00:00+00:00",
+        "timestamp": 1782572400,
+        "periods": {
+          "first": 1782572400,
+          "second": 1782576000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 2186,
+          "name": "SC Kriens",
+          "logo": "https://media.api-sports.io/football/teams/2186.png",
+          "winner": false
+        },
+        "away": {
+          "id": 660,
+          "name": "FC Vaduz",
+          "logo": "https://media.api-sports.io/football/teams/660.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1542274,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-03-26T12:00:00+00:00",
+        "timestamp": 1774526400,
+        "periods": {
+          "first": 1774526400,
+          "second": 1774530000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 551,
+          "name": "FC Basel 1893",
+          "logo": "https://media.api-sports.io/football/teams/551.png",
+          "winner": false
+        },
+        "away": {
+          "id": 660,
+          "name": "FC Vaduz",
+          "logo": "https://media.api-sports.io/football/teams/660.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 5
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 5
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1503927,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-17T13:30:00+00:00",
+        "timestamp": 1768656600,
+        "periods": {
+          "first": 1768656600,
+          "second": 1768660200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 660,
+          "name": "FC Vaduz",
+          "logo": "https://media.api-sports.io/football/teams/660.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2186,
+          "name": "SC Kriens",
+          "logo": "https://media.api-sports.io/football/teams/2186.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "1011|2026": [
+    {
+      "fixture": {
+        "id": 1556545,
+        "referee": "Luca Pairetto, Italy",
+        "timezone": "UTC",
+        "date": "2026-07-23T18:00:00+00:00",
+        "timestamp": 1784829600,
+        "periods": {
+          "first": 1784829600,
+          "second": 1784833200
+        },
+        "venue": {
+          "id": null,
+          "name": "Kybunpark",
+          "city": "St.Gallen"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 3,
+        "name": "UEFA Europa League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/3.png",
+        "flag": null,
+        "season": 2026,
+        "round": "2nd Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1011,
+          "name": "FC ST. Gallen",
+          "logo": "https://media.api-sports.io/football/teams/1011.png",
+          "winner": true
+        },
+        "away": {
+          "id": 211,
+          "name": "Benfica",
+          "logo": "https://media.api-sports.io/football/teams/211.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1583339,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-17T18:00:00+00:00",
+        "timestamp": 1784311200,
+        "periods": {
+          "first": 1784311200,
+          "second": 1784314800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1011,
+          "name": "FC ST. Gallen",
+          "logo": "https://media.api-sports.io/football/teams/1011.png",
+          "winner": false
+        },
+        "away": {
+          "id": 71,
+          "name": "Norwich",
+          "logo": "https://media.api-sports.io/football/teams/71.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 3
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554840,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-11T08:30:00+00:00",
+        "timestamp": 1783758600,
+        "periods": {
+          "first": 1783758600,
+          "second": 1783762200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 80,
+          "name": "Lyon",
+          "logo": "https://media.api-sports.io/football/teams/80.png",
+          "winner": true
+        },
+        "away": {
+          "id": 1011,
+          "name": "FC ST. Gallen",
+          "logo": "https://media.api-sports.io/football/teams/1011.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 6,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 4,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 6,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554614,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-01T16:00:00+00:00",
+        "timestamp": 1782921600,
+        "periods": {
+          "first": 1782921600,
+          "second": 1782925200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 2180,
+          "name": "FC Winterthur",
+          "logo": "https://media.api-sports.io/football/teams/2180.png",
+          "winner": false
+        },
+        "away": {
+          "id": 1011,
+          "name": "FC ST. Gallen",
+          "logo": "https://media.api-sports.io/football/teams/1011.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1546596,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-27T14:00:00+00:00",
+        "timestamp": 1782568800,
+        "periods": {
+          "first": 1782568800,
+          "second": 1782572400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1011,
+          "name": "FC ST. Gallen",
+          "logo": "https://media.api-sports.io/football/teams/1011.png",
+          "winner": true
+        },
+        "away": {
+          "id": 618,
+          "name": "SCR Altach",
+          "logo": "https://media.api-sports.io/football/teams/618.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1502877,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-07T13:30:00+00:00",
+        "timestamp": 1767792600,
+        "periods": {
+          "first": 1767792600,
+          "second": 1767796200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1011,
+          "name": "FC ST. Gallen",
+          "logo": "https://media.api-sports.io/football/teams/1011.png",
+          "winner": true
+        },
+        "away": {
+          "id": 554,
+          "name": "Anderlecht",
+          "logo": "https://media.api-sports.io/football/teams/554.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "783|2026": [
+    {
+      "fixture": {
+        "id": 1560669,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-18T12:00:00+00:00",
+        "timestamp": 1784376000,
+        "periods": {
+          "first": 1784376000,
+          "second": 1784379600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 783,
+          "name": "FC Zurich",
+          "logo": "https://media.api-sports.io/football/teams/783.png",
+          "winner": false
+        },
+        "away": {
+          "id": 178,
+          "name": "SpVgg Greuther Fürth",
+          "logo": "https://media.api-sports.io/football/teams/178.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554889,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-11T12:00:00+00:00",
+        "timestamp": 1783771200,
+        "periods": {
+          "first": 1783771200,
+          "second": 1783774800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 783,
+          "name": "FC Zurich",
+          "logo": "https://media.api-sports.io/football/teams/783.png",
+          "winner": false
+        },
+        "away": {
+          "id": 4269,
+          "name": "Stade Lausanne-Ouchy",
+          "logo": "https://media.api-sports.io/football/teams/4269.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554830,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-10T15:00:00+00:00",
+        "timestamp": 1783695600,
+        "periods": {
+          "first": 1783695600,
+          "second": 1783699200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 783,
+          "name": "FC Zurich",
+          "logo": "https://media.api-sports.io/football/teams/783.png",
+          "winner": false
+        },
+        "away": {
+          "id": 115,
+          "name": "Sochaux",
+          "logo": "https://media.api-sports.io/football/teams/115.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554709,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-04T13:00:00+00:00",
+        "timestamp": 1783170000,
+        "periods": {
+          "first": 1783170000,
+          "second": 1783173600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 783,
+          "name": "FC Zurich",
+          "logo": "https://media.api-sports.io/football/teams/783.png",
+          "winner": false
+        },
+        "away": {
+          "id": 2186,
+          "name": "SC Kriens",
+          "logo": "https://media.api-sports.io/football/teams/2186.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554570,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-27T14:30:00+00:00",
+        "timestamp": 1782570600,
+        "periods": {
+          "first": 1782570600,
+          "second": 1782574200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 12719,
+          "name": "Thalwil",
+          "logo": "https://media.api-sports.io/football/teams/12719.png",
+          "winner": false
+        },
+        "away": {
+          "id": 783,
+          "name": "FC Zurich",
+          "logo": "https://media.api-sports.io/football/teams/783.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 6
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 6
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554539,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-27T09:30:00+00:00",
+        "timestamp": 1782552600,
+        "periods": {
+          "first": 1782552600,
+          "second": 1782556200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 783,
+          "name": "FC Zurich",
+          "logo": "https://media.api-sports.io/football/teams/783.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2182,
+          "name": "FC Schaffhausen",
+          "logo": "https://media.api-sports.io/football/teams/2182.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1503515,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-10T13:00:00+00:00",
+        "timestamp": 1768050000,
+        "periods": {
+          "first": 1768050000,
+          "second": 1768053600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 745,
+          "name": "1. FC Kaiserslautern",
+          "logo": "https://media.api-sports.io/football/teams/745.png",
+          "winner": true
+        },
+        "away": {
+          "id": 783,
+          "name": "FC Zurich",
+          "logo": "https://media.api-sports.io/football/teams/783.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "404|2026": [
+    {
+      "fixture": {
+        "id": 1583372,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-18T12:00:00+00:00",
+        "timestamp": 1784376000,
+        "periods": {
+          "first": 1784376000,
+          "second": 1784379600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 399,
+          "name": "Vendsyssel FF",
+          "logo": "https://media.api-sports.io/football/teams/399.png",
+          "winner": true
+        },
+        "away": {
+          "id": 404,
+          "name": "AC Horsens",
+          "logo": "https://media.api-sports.io/football/teams/404.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1547969,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-15T12:00:00+00:00",
+        "timestamp": 1784116800,
+        "periods": {
+          "first": 1784116800,
+          "second": 1784120400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 406,
+          "name": "Aarhus",
+          "logo": "https://media.api-sports.io/football/teams/406.png",
+          "winner": true
+        },
+        "away": {
+          "id": 404,
+          "name": "AC Horsens",
+          "logo": "https://media.api-sports.io/football/teams/404.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1560574,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-11T12:00:00+00:00",
+        "timestamp": 1783771200,
+        "periods": {
+          "first": 1783771200,
+          "second": 1783774800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 400,
+          "name": "FC Copenhagen",
+          "logo": "https://media.api-sports.io/football/teams/400.png",
+          "winner": true
+        },
+        "away": {
+          "id": 404,
+          "name": "AC Horsens",
+          "logo": "https://media.api-sports.io/football/teams/404.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 3,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554667,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-04T11:00:00+00:00",
+        "timestamp": 1783162800,
+        "periods": {
+          "first": 1783162800,
+          "second": 1783166400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 404,
+          "name": "AC Horsens",
+          "logo": "https://media.api-sports.io/football/teams/404.png",
+          "winner": true
+        },
+        "away": {
+          "id": 408,
+          "name": "Hobro",
+          "logo": "https://media.api-sports.io/football/teams/408.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554550,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-27T12:00:00+00:00",
+        "timestamp": 1782561600,
+        "periods": {
+          "first": 1782561600,
+          "second": 1782565200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 398,
+          "name": "FC Nordsjaelland",
+          "logo": "https://media.api-sports.io/football/teams/398.png",
+          "winner": null
+        },
+        "away": {
+          "id": 404,
+          "name": "AC Horsens",
+          "logo": "https://media.api-sports.io/football/teams/404.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1523668,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-02-19T11:00:00+00:00",
+        "timestamp": 1771498800,
+        "periods": {
+          "first": 1771498800,
+          "second": 1771502400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 3733,
+          "name": "Zbrojovka Brno",
+          "logo": "https://media.api-sports.io/football/teams/3733.png",
+          "winner": true
+        },
+        "away": {
+          "id": 404,
+          "name": "AC Horsens",
+          "logo": "https://media.api-sports.io/football/teams/404.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1514804,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-02-14T13:00:00+00:00",
+        "timestamp": 1771074000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Cancelled",
+          "short": "CANC",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 6046,
+          "name": "Odder",
+          "logo": "https://media.api-sports.io/football/teams/6046.png",
+          "winner": null
+        },
+        "away": {
+          "id": 404,
+          "name": "AC Horsens",
+          "logo": "https://media.api-sports.io/football/teams/404.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1509536,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-02-06T12:00:00+00:00",
+        "timestamp": 1770379200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Cancelled",
+          "short": "CANC",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 404,
+          "name": "AC Horsens",
+          "logo": "https://media.api-sports.io/football/teams/404.png",
+          "winner": null
+        },
+        "away": {
+          "id": 402,
+          "name": "Aalborg",
+          "logo": "https://media.api-sports.io/football/teams/402.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1504071,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-02-03T12:00:00+00:00",
+        "timestamp": 1770120000,
+        "periods": {
+          "first": 1770120000,
+          "second": 1770123600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 404,
+          "name": "AC Horsens",
+          "logo": "https://media.api-sports.io/football/teams/404.png",
+          "winner": false
+        },
+        "away": {
+          "id": 2061,
+          "name": "FC Fredericia",
+          "logo": "https://media.api-sports.io/football/teams/2061.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1509469,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-30T12:00:00+00:00",
+        "timestamp": 1769774400,
+        "periods": {
+          "first": 1769774400,
+          "second": 1769778000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 408,
+          "name": "Hobro",
+          "logo": "https://media.api-sports.io/football/teams/408.png",
+          "winner": false
+        },
+        "away": {
+          "id": 404,
+          "name": "AC Horsens",
+          "logo": "https://media.api-sports.io/football/teams/404.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1509407,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-24T14:00:00+00:00",
+        "timestamp": 1769263200,
+        "periods": {
+          "first": 1769263200,
+          "second": 1769266800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 9340,
+          "name": "Hamburger SV II",
+          "logo": "https://media.api-sports.io/football/teams/9340.png",
+          "winner": false
+        },
+        "away": {
+          "id": 404,
+          "name": "AC Horsens",
+          "logo": "https://media.api-sports.io/football/teams/404.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 5
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 3
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 5
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "398|2026": [
+    {
+      "fixture": {
+        "id": 1556512,
+        "referee": "Peiman Simani, Finland",
+        "timezone": "UTC",
+        "date": "2026-07-23T17:00:00+00:00",
+        "timestamp": 1784826000,
+        "periods": {
+          "first": 1784826000,
+          "second": 1784829600
+        },
+        "venue": {
+          "id": null,
+          "name": "Gamla Ullevi",
+          "city": "Gothenburg"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 848,
+        "name": "UEFA Europa Conference League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/848.png",
+        "flag": null,
+        "season": 2026,
+        "round": "2nd Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 2170,
+          "name": "Gais",
+          "logo": "https://media.api-sports.io/football/teams/2170.png",
+          "winner": true
+        },
+        "away": {
+          "id": 398,
+          "name": "FC Nordsjaelland",
+          "logo": "https://media.api-sports.io/football/teams/398.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1584913,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-21T16:30:00+00:00",
+        "timestamp": 1784651400,
+        "periods": {
+          "first": 1784651400,
+          "second": 1784655000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 11507,
+          "name": "Hørsholm-Usserød",
+          "logo": "https://media.api-sports.io/football/teams/11507.png",
+          "winner": null
+        },
+        "away": {
+          "id": 398,
+          "name": "FC Nordsjaelland",
+          "logo": "https://media.api-sports.io/football/teams/398.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554978,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-17T13:00:00+00:00",
+        "timestamp": 1784293200,
+        "periods": {
+          "first": 1784293200,
+          "second": 1784296800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 398,
+          "name": "FC Nordsjaelland",
+          "logo": "https://media.api-sports.io/football/teams/398.png",
+          "winner": false
+        },
+        "away": {
+          "id": 336,
+          "name": "Jagiellonia",
+          "logo": "https://media.api-sports.io/football/teams/336.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1547981,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-17T10:00:00+00:00",
+        "timestamp": 1784282400,
+        "periods": {
+          "first": 1784282400,
+          "second": 1784286000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 398,
+          "name": "FC Nordsjaelland",
+          "logo": "https://media.api-sports.io/football/teams/398.png",
+          "winner": true
+        },
+        "away": {
+          "id": 628,
+          "name": "Sparta Praha",
+          "logo": "https://media.api-sports.io/football/teams/628.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 5,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 3,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 5,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554826,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-10T15:00:00+00:00",
+        "timestamp": 1783695600,
+        "periods": {
+          "first": 1783695600,
+          "second": 1783699200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 398,
+          "name": "FC Nordsjaelland",
+          "logo": "https://media.api-sports.io/football/teams/398.png",
+          "winner": false
+        },
+        "away": {
+          "id": 340,
+          "name": "Gornik Zabrze",
+          "logo": "https://media.api-sports.io/football/teams/340.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1548799,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-10T11:00:00+00:00",
+        "timestamp": 1783681200,
+        "periods": {
+          "first": 1783681200,
+          "second": 1783684800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 398,
+          "name": "FC Nordsjaelland",
+          "logo": "https://media.api-sports.io/football/teams/398.png",
+          "winner": false
+        },
+        "away": {
+          "id": 3723,
+          "name": "Hradec Králové",
+          "logo": "https://media.api-sports.io/football/teams/3723.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 3
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554664,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-04T11:00:00+00:00",
+        "timestamp": 1783162800,
+        "periods": {
+          "first": 1783162800,
+          "second": 1783166400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 407,
+          "name": "Brondby",
+          "logo": "https://media.api-sports.io/football/teams/407.png",
+          "winner": null
+        },
+        "away": {
+          "id": 398,
+          "name": "FC Nordsjaelland",
+          "logo": "https://media.api-sports.io/football/teams/398.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554550,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-27T12:00:00+00:00",
+        "timestamp": 1782561600,
+        "periods": {
+          "first": 1782561600,
+          "second": 1782565200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 398,
+          "name": "FC Nordsjaelland",
+          "logo": "https://media.api-sports.io/football/teams/398.png",
+          "winner": null
+        },
+        "away": {
+          "id": 404,
+          "name": "AC Horsens",
+          "logo": "https://media.api-sports.io/football/teams/404.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1514748,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-31T12:00:00+00:00",
+        "timestamp": 1769860800,
+        "periods": {
+          "first": 1769860800,
+          "second": 1769864400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 398,
+          "name": "FC Nordsjaelland",
+          "logo": "https://media.api-sports.io/football/teams/398.png",
+          "winner": false
+        },
+        "away": {
+          "id": 6009,
+          "name": "B 93",
+          "logo": "https://media.api-sports.io/football/teams/6009.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 4
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 4
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1516386,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-30T12:45:00+00:00",
+        "timestamp": 1769777100,
+        "periods": {
+          "first": 1769777100,
+          "second": 1769780700
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 3733,
+          "name": "Zbrojovka Brno",
+          "logo": "https://media.api-sports.io/football/teams/3733.png",
+          "winner": false
+        },
+        "away": {
+          "id": 398,
+          "name": "FC Nordsjaelland",
+          "logo": "https://media.api-sports.io/football/teams/398.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1509473,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-30T10:00:00+00:00",
+        "timestamp": 1769767200,
+        "periods": {
+          "first": 1769767200,
+          "second": 1769770800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 367,
+          "name": "BK Hacken",
+          "logo": "https://media.api-sports.io/football/teams/367.png",
+          "winner": true
+        },
+        "away": {
+          "id": 398,
+          "name": "FC Nordsjaelland",
+          "logo": "https://media.api-sports.io/football/teams/398.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1503979,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-23T13:00:00+00:00",
+        "timestamp": 1769173200,
+        "periods": {
+          "first": 1769173200,
+          "second": 1769176800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 398,
+          "name": "FC Nordsjaelland",
+          "logo": "https://media.api-sports.io/football/teams/398.png",
+          "winner": true
+        },
+        "away": {
+          "id": 1599,
+          "name": "Philadelphia Union",
+          "logo": "https://media.api-sports.io/football/teams/1599.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1502936,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-16T11:00:00+00:00",
+        "timestamp": 1768561200,
+        "periods": {
+          "first": 1768561200,
+          "second": 1768564800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 601,
+          "name": "Austria Vienna",
+          "logo": "https://media.api-sports.io/football/teams/601.png",
+          "winner": false
+        },
+        "away": {
+          "id": 398,
+          "name": "FC Nordsjaelland",
+          "logo": "https://media.api-sports.io/football/teams/398.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 4
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 4
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1503796,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-10T12:00:00+00:00",
+        "timestamp": 1768046400,
+        "periods": {
+          "first": 1768046400,
+          "second": 1768050000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 398,
+          "name": "FC Nordsjaelland",
+          "logo": "https://media.api-sports.io/football/teams/398.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2061,
+          "name": "FC Fredericia",
+          "logo": "https://media.api-sports.io/football/teams/2061.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "400|2026": [
+    {
+      "fixture": {
+        "id": 1556519,
+        "referee": "David Rafael Oliveira da Silva, Portugal",
+        "timezone": "UTC",
+        "date": "2026-07-23T18:00:00+00:00",
+        "timestamp": 1784829600,
+        "periods": {
+          "first": 1784829600,
+          "second": 1784833200
+        },
+        "venue": {
+          "id": null,
+          "name": "Košická futbalová aréna",
+          "city": "Kosice"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 848,
+        "name": "UEFA Europa Conference League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/848.png",
+        "flag": null,
+        "season": 2026,
+        "round": "2nd Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 6496,
+          "name": "Polessya",
+          "logo": "https://media.api-sports.io/football/teams/6496.png",
+          "winner": null
+        },
+        "away": {
+          "id": 400,
+          "name": "FC Copenhagen",
+          "logo": "https://media.api-sports.io/football/teams/400.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1560620,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-16T12:00:00+00:00",
+        "timestamp": 1784203200,
+        "periods": {
+          "first": 1784203200,
+          "second": 1784206800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 400,
+          "name": "FC Copenhagen",
+          "logo": "https://media.api-sports.io/football/teams/400.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2070,
+          "name": "Viborg",
+          "logo": "https://media.api-sports.io/football/teams/2070.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1560574,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-11T12:00:00+00:00",
+        "timestamp": 1783771200,
+        "periods": {
+          "first": 1783771200,
+          "second": 1783774800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 400,
+          "name": "FC Copenhagen",
+          "logo": "https://media.api-sports.io/football/teams/400.png",
+          "winner": true
+        },
+        "away": {
+          "id": 404,
+          "name": "AC Horsens",
+          "logo": "https://media.api-sports.io/football/teams/404.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 3,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1547918,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-07T16:00:00+00:00",
+        "timestamp": 1783440000,
+        "periods": {
+          "first": 1783440000,
+          "second": 1783443600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 567,
+          "name": "Plzen",
+          "logo": "https://media.api-sports.io/football/teams/567.png",
+          "winner": null
+        },
+        "away": {
+          "id": 400,
+          "name": "FC Copenhagen",
+          "logo": "https://media.api-sports.io/football/teams/400.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1547871,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-27T12:00:00+00:00",
+        "timestamp": 1782561600,
+        "periods": {
+          "first": 1782561600,
+          "second": 1782565200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 400,
+          "name": "FC Copenhagen",
+          "logo": "https://media.api-sports.io/football/teams/400.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2240,
+          "name": "Mjallby AIF",
+          "logo": "https://media.api-sports.io/football/teams/2240.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 5,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 3,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 5,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1502989,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-02-01T13:00:00+00:00",
+        "timestamp": 1769950800,
+        "periods": {
+          "first": 1769950800,
+          "second": 1769954400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 406,
+          "name": "Aarhus",
+          "logo": "https://media.api-sports.io/football/teams/406.png",
+          "winner": true
+        },
+        "away": {
+          "id": 400,
+          "name": "FC Copenhagen",
+          "logo": "https://media.api-sports.io/football/teams/400.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1502963,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-23T11:00:00+00:00",
+        "timestamp": 1769166000,
+        "periods": {
+          "first": 1769166000,
+          "second": 1769169600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 400,
+          "name": "FC Copenhagen",
+          "logo": "https://media.api-sports.io/football/teams/400.png",
+          "winner": true
+        },
+        "away": {
+          "id": 6009,
+          "name": "B 93",
+          "logo": "https://media.api-sports.io/football/teams/6009.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1502929,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-14T15:00:00+00:00",
+        "timestamp": 1768402800,
+        "periods": {
+          "first": 1768402800,
+          "second": 1768406400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 637,
+          "name": "Sturm Graz",
+          "logo": "https://media.api-sports.io/football/teams/637.png",
+          "winner": null
+        },
+        "away": {
+          "id": 400,
+          "name": "FC Copenhagen",
+          "logo": "https://media.api-sports.io/football/teams/400.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 4
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 4
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1502917,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-10T15:00:00+00:00",
+        "timestamp": 1768057200,
+        "periods": {
+          "first": 1768057200,
+          "second": 1768060800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 319,
+          "name": "Brann",
+          "logo": "https://media.api-sports.io/football/teams/319.png",
+          "winner": null
+        },
+        "away": {
+          "id": 400,
+          "name": "FC Copenhagen",
+          "logo": "https://media.api-sports.io/football/teams/400.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "625|2026": [
+    {
+      "fixture": {
+        "id": 1560648,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-18T11:00:00+00:00",
+        "timestamp": 1784372400,
+        "periods": {
+          "first": 1784372400,
+          "second": 1784376000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 6026,
+          "name": "Hillerød",
+          "logo": "https://media.api-sports.io/football/teams/6026.png",
+          "winner": false
+        },
+        "away": {
+          "id": 625,
+          "name": "Lyngby",
+          "logo": "https://media.api-sports.io/football/teams/625.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1550545,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-10T11:00:00+00:00",
+        "timestamp": 1783681200,
+        "periods": {
+          "first": 1783681200,
+          "second": 1783684800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 2174,
+          "name": "Osters IF",
+          "logo": "https://media.api-sports.io/football/teams/2174.png",
+          "winner": false
+        },
+        "away": {
+          "id": 625,
+          "name": "Lyngby",
+          "logo": "https://media.api-sports.io/football/teams/625.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554684,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-04T10:00:00+00:00",
+        "timestamp": 1783159200,
+        "periods": {
+          "first": 1783159200,
+          "second": 1783162800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 625,
+          "name": "Lyngby",
+          "logo": "https://media.api-sports.io/football/teams/625.png",
+          "winner": true
+        },
+        "away": {
+          "id": 6009,
+          "name": "B 93",
+          "logo": "https://media.api-sports.io/football/teams/6009.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 6,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 3,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 6,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1509885,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-02-20T12:00:00+00:00",
+        "timestamp": 1771588800,
+        "periods": {
+          "first": 1771588800,
+          "second": 1771592400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 6026,
+          "name": "Hillerød",
+          "logo": "https://media.api-sports.io/football/teams/6026.png",
+          "winner": null
+        },
+        "away": {
+          "id": 625,
+          "name": "Lyngby",
+          "logo": "https://media.api-sports.io/football/teams/625.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1523577,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-02-12T13:15:00+00:00",
+        "timestamp": 1770902100,
+        "periods": {
+          "first": 1770902100,
+          "second": 1770905700
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 20087,
+          "name": "Syunik",
+          "logo": "https://media.api-sports.io/football/teams/20087.png",
+          "winner": false
+        },
+        "away": {
+          "id": 625,
+          "name": "Lyngby",
+          "logo": "https://media.api-sports.io/football/teams/625.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1509587,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-02-12T11:00:00+00:00",
+        "timestamp": 1770894000,
+        "periods": {
+          "first": 1770894000,
+          "second": 1770897600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 685,
+          "name": "Torpedo Kutaisi",
+          "logo": "https://media.api-sports.io/football/teams/685.png",
+          "winner": null
+        },
+        "away": {
+          "id": 625,
+          "name": "Lyngby",
+          "logo": "https://media.api-sports.io/football/teams/625.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1523637,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-02-06T14:00:00+00:00",
+        "timestamp": 1770386400,
+        "periods": {
+          "first": 1770386400,
+          "second": 1770390000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 625,
+          "name": "Lyngby",
+          "logo": "https://media.api-sports.io/football/teams/625.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3683,
+          "name": "Ararat-Armenia",
+          "logo": "https://media.api-sports.io/football/teams/3683.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1505854,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-31T11:00:00+00:00",
+        "timestamp": 1769857200,
+        "periods": {
+          "first": 1769857200,
+          "second": 1769860800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 2063,
+          "name": "HB Koge",
+          "logo": "https://media.api-sports.io/football/teams/2063.png",
+          "winner": false
+        },
+        "away": {
+          "id": 625,
+          "name": "Lyngby",
+          "logo": "https://media.api-sports.io/football/teams/625.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 4
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 4
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1509821,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-24T13:30:00+00:00",
+        "timestamp": 1769261400,
+        "periods": {
+          "first": 1769261400,
+          "second": 1769265000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 625,
+          "name": "Lyngby",
+          "logo": "https://media.api-sports.io/football/teams/625.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2240,
+          "name": "Mjallby AIF",
+          "logo": "https://media.api-sports.io/football/teams/2240.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "396|2026": [
+    {
+      "fixture": {
+        "id": 1554981,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-17T10:00:00+00:00",
+        "timestamp": 1784282400,
+        "periods": {
+          "first": 1784282400,
+          "second": 1784286000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 396,
+          "name": "Sonderjyske",
+          "logo": "https://media.api-sports.io/football/teams/396.png",
+          "winner": true
+        },
+        "away": {
+          "id": 4676,
+          "name": "Kolding IF",
+          "logo": "https://media.api-sports.io/football/teams/4676.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554827,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-10T10:00:00+00:00",
+        "timestamp": 1783677600,
+        "periods": {
+          "first": 1783677600,
+          "second": 1783681200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 191,
+          "name": "Holstein Kiel",
+          "logo": "https://media.api-sports.io/football/teams/191.png",
+          "winner": true
+        },
+        "away": {
+          "id": 396,
+          "name": "Sonderjyske",
+          "logo": "https://media.api-sports.io/football/teams/396.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554639,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-03T12:00:00+00:00",
+        "timestamp": 1783080000,
+        "periods": {
+          "first": 1783080000,
+          "second": 1783083600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 396,
+          "name": "Sonderjyske",
+          "logo": "https://media.api-sports.io/football/teams/396.png",
+          "winner": null
+        },
+        "away": {
+          "id": 759,
+          "name": "Viking",
+          "logo": "https://media.api-sports.io/football/teams/759.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1550476,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-26T09:00:00+00:00",
+        "timestamp": 1782464400,
+        "periods": {
+          "first": 1782464400,
+          "second": 1782468000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 401,
+          "name": "Randers FC",
+          "logo": "https://media.api-sports.io/football/teams/401.png",
+          "winner": false
+        },
+        "away": {
+          "id": 396,
+          "name": "Sonderjyske",
+          "logo": "https://media.api-sports.io/football/teams/396.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 4
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 4
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1502978,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-30T12:00:00+00:00",
+        "timestamp": 1769774400,
+        "periods": {
+          "first": 1769774400,
+          "second": 1769778000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 396,
+          "name": "Sonderjyske",
+          "logo": "https://media.api-sports.io/football/teams/396.png",
+          "winner": null
+        },
+        "away": {
+          "id": 402,
+          "name": "Aalborg",
+          "logo": "https://media.api-sports.io/football/teams/402.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1502322,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-15T14:00:00+00:00",
+        "timestamp": 1768485600,
+        "periods": {
+          "first": 1768485600,
+          "second": 1768489200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 567,
+          "name": "Plzen",
+          "logo": "https://media.api-sports.io/football/teams/567.png",
+          "winner": true
+        },
+        "away": {
+          "id": 396,
+          "name": "Sonderjyske",
+          "logo": "https://media.api-sports.io/football/teams/396.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1502888,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-09T12:00:00+00:00",
+        "timestamp": 1767960000,
+        "periods": {
+          "first": 1767960000,
+          "second": 1767963600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 396,
+          "name": "Sonderjyske",
+          "logo": "https://media.api-sports.io/football/teams/396.png",
+          "winner": false
+        },
+        "away": {
+          "id": 397,
+          "name": "FC Midtjylland",
+          "logo": "https://media.api-sports.io/football/teams/397.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 6
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 6
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "397|2026": [
+    {
+      "fixture": {
+        "id": 1556543,
+        "referee": "Ricardo De Burgos Bengoetxea, Spain",
+        "timezone": "UTC",
+        "date": "2026-07-23T18:00:00+00:00",
+        "timestamp": 1784829600,
+        "periods": {
+          "first": 1784829600,
+          "second": 1784833200
+        },
+        "venue": {
+          "id": null,
+          "name": "Tüpraş Stadyumu",
+          "city": "Istanbul"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 3,
+        "name": "UEFA Europa League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/3.png",
+        "flag": null,
+        "season": 2026,
+        "round": "2nd Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 549,
+          "name": "Beşiktaş",
+          "logo": "https://media.api-sports.io/football/teams/549.png",
+          "winner": true
+        },
+        "away": {
+          "id": 397,
+          "name": "FC Midtjylland",
+          "logo": "https://media.api-sports.io/football/teams/397.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554983,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-17T12:00:00+00:00",
+        "timestamp": 1784289600,
+        "periods": {
+          "first": 1784289600,
+          "second": 1784293200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 397,
+          "name": "FC Midtjylland",
+          "logo": "https://media.api-sports.io/football/teams/397.png",
+          "winner": true
+        },
+        "away": {
+          "id": 405,
+          "name": "Odense",
+          "logo": "https://media.api-sports.io/football/teams/405.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 3,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1546639,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-11T11:30:00+00:00",
+        "timestamp": 1783769400,
+        "periods": {
+          "first": 1783769400,
+          "second": 1783773000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 43,
+          "name": "Cardiff",
+          "logo": "https://media.api-sports.io/football/teams/43.png",
+          "winner": false
+        },
+        "away": {
+          "id": 397,
+          "name": "FC Midtjylland",
+          "logo": "https://media.api-sports.io/football/teams/397.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 6
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 3
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 6
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1546616,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-04T11:00:00+00:00",
+        "timestamp": 1783162800,
+        "periods": {
+          "first": 1783162800,
+          "second": 1783166400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 397,
+          "name": "FC Midtjylland",
+          "logo": "https://media.api-sports.io/football/teams/397.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2073,
+          "name": "Silkeborg",
+          "logo": "https://media.api-sports.io/football/teams/2073.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1546588,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-26T12:00:00+00:00",
+        "timestamp": 1782475200,
+        "periods": {
+          "first": 1782475200,
+          "second": 1782478800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 375,
+          "name": "Malmo FF",
+          "logo": "https://media.api-sports.io/football/teams/375.png",
+          "winner": null
+        },
+        "away": {
+          "id": 397,
+          "name": "FC Midtjylland",
+          "logo": "https://media.api-sports.io/football/teams/397.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1546581,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-20T11:00:00+00:00",
+        "timestamp": 1781953200,
+        "periods": {
+          "first": 1781953200,
+          "second": 1781956800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 397,
+          "name": "FC Midtjylland",
+          "logo": "https://media.api-sports.io/football/teams/397.png",
+          "winner": true
+        },
+        "away": {
+          "id": 321,
+          "name": "Lillestrom",
+          "logo": "https://media.api-sports.io/football/teams/321.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1523670,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-02-19T13:00:00+00:00",
+        "timestamp": 1771506000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Cancelled",
+          "short": "CANC",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 333,
+          "name": "Sarpsborg 08 FF",
+          "logo": "https://media.api-sports.io/football/teams/333.png",
+          "winner": null
+        },
+        "away": {
+          "id": 397,
+          "name": "FC Midtjylland",
+          "logo": "https://media.api-sports.io/football/teams/397.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1517934,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-02-05T18:30:00+00:00",
+        "timestamp": 1770316200,
+        "periods": {
+          "first": 1770316200,
+          "second": 1770319800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 3733,
+          "name": "Zbrojovka Brno",
+          "logo": "https://media.api-sports.io/football/teams/3733.png",
+          "winner": true
+        },
+        "away": {
+          "id": 397,
+          "name": "FC Midtjylland",
+          "logo": "https://media.api-sports.io/football/teams/397.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 7,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 7,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1503865,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-15T17:00:00+00:00",
+        "timestamp": 1768496400,
+        "periods": {
+          "first": 1768496400,
+          "second": 1768500000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 397,
+          "name": "FC Midtjylland",
+          "logo": "https://media.api-sports.io/football/teams/397.png",
+          "winner": true
+        },
+        "away": {
+          "id": 6489,
+          "name": "Kryvbas KR",
+          "logo": "https://media.api-sports.io/football/teams/6489.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1503861,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-15T13:00:00+00:00",
+        "timestamp": 1768482000,
+        "periods": {
+          "first": 1768482000,
+          "second": 1768485600
+        },
+        "venue": {
+          "id": null,
+          "name": "Pinatar Arena",
+          "city": "Murcia"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 397,
+          "name": "FC Midtjylland",
+          "logo": "https://media.api-sports.io/football/teams/397.png",
+          "winner": null
+        },
+        "away": {
+          "id": 651,
+          "name": "Ferencvarosi TC",
+          "logo": "https://media.api-sports.io/football/teams/651.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1502888,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-01-09T12:00:00+00:00",
+        "timestamp": 1767960000,
+        "periods": {
+          "first": 1767960000,
+          "second": 1767963600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendly",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 396,
+          "name": "Sonderjyske",
+          "logo": "https://media.api-sports.io/football/teams/396.png",
+          "winner": false
+        },
+        "away": {
+          "id": 397,
+          "name": "FC Midtjylland",
+          "logo": "https://media.api-sports.io/football/teams/397.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 6
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 6
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
   ]
 }

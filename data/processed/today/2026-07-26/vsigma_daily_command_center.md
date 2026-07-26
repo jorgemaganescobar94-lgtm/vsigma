@@ -1,15 +1,15 @@
 # vSIGMA Daily Command Center - 2026-07-26
 
 ## Executive Command
-- generated_at: 2026-07-26T00:46:16+01:00
-- mode: post
+- generated_at: 2026-07-26T11:06:08+01:00
+- mode: pre
 - command_center_status: ACTION_REQUIRED
 - daily_classification: BROKEN
 - action_level: ACTION_REQUIRED
 - operational_verdict: BROKEN
 - predictive_failure: UNKNOWN
 - evidence_basis: missing_sources
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/30179962754
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/30197532254
 
 ## Next Operator Action
 - Inspect workflow logs and required daily reports; monitoring evidence is incomplete.
