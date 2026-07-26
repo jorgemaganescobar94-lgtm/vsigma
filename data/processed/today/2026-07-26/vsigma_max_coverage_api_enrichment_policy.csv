@@ -1,0 +1,1 @@
+target_date,generated_at,fixture_id,home_team,away_team,league,country,queue_priority,risk_label,estimated_call_units,max_coverage_decision,enrichment_mode,downstream_use,external_calls_allowed,external_calls_executed,policy_reason,auto_apply,production_change
