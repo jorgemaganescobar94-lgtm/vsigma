@@ -41,15 +41,15 @@
 - missing_data_counts: unknown=1
 
 ## Official / Probable Lineups
-- data/processed/today/2026-07-26/official_lineup_sources.csv: rows=246
+- data/processed/today/2026-07-26/official_lineup_sources.csv: rows=264
 - data/processed/today/2026-07-26/vsigma_probable_lineup_consensus.csv: rows=40
-- data/processed/governance/official_lineup_sources.csv: rows=246
+- data/processed/governance/official_lineup_sources.csv: rows=264
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=13; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=11
 
 ## Quarantine / Learning-Only / Import Status
-- data/processed/today/2026-07-26/official_lineup_sources.csv: rows=246
+- data/processed/today/2026-07-26/official_lineup_sources.csv: rows=264
 - data/processed/today/2026-07-26/vsigma_probable_lineup_consensus.csv: rows=40
-- data/processed/governance/official_lineup_sources.csv: rows=246
+- data/processed/governance/official_lineup_sources.csv: rows=264
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=13; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=11
 
 ## Source Reliability Governor
@@ -117,61 +117,61 @@
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
 - files_scanned: 3416
 - accepted_rows: 365
-- rejected_rows: 248
+- rejected_rows: 1006
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
 - rows_reviewed: 365
-- trusted_rows: 40
-- quarantine_rows: 0
-- blocked_rows: 325
-- trust_status_counts: REJECTED_SOURCE_BLOCK=325; TRUSTED_RAW_SOURCE=40
+- trusted_rows: 339
+- quarantine_rows: 26
+- blocked_rows: 0
+- trust_status_counts: TRUSTED_RAW_SOURCE=339; QUARANTINE_REVIEW=26
 - next_action: Only TRUSTED_RAW_SOURCE rows may be considered for scoring; quarantine/rejected rows remain diagnostic only.
 
 ## Trusted Raw Candidate Promotion Gate
 - rows_reviewed: 365
 - promoted_rows: 26
 - blocked_rows: 14
-- quarantine_rows: 0
-- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=325; PROMOTED_TO_SCORING_INPUT=26; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=14
+- quarantine_rows: 299
+- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=299; PROMOTED_TO_SCORING_INPUT=26; NOT_TRUSTED_NO_PROMOTION=26; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=14
 - next_action: Promoted rows may feed normal scoring gates only.
 
 ## Scoring Gap Explainer
 - rows_reviewed: 365
-- missing_scored_rows: 0
+- missing_scored_rows: 299
 - no_data_blocked_rows: 14
-- not_trusted_rows: 325
+- not_trusted_rows: 26
 - promoted_rows: 26
-- gap_status_counts: NOT_TRUSTED_SKIPPED=325; PROMOTED=26; SCORED_ROW_NO_DATA_BLOCKED=14
+- gap_status_counts: MISSING_SCORED_ROW=299; PROMOTED=26; NOT_TRUSTED_SKIPPED=26; SCORED_ROW_NO_DATA_BLOCKED=14
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 
 ## Trusted Raw Scoring Queue
-- queue_rows: 0
-- priority_counts: none
-- scoring_needed_counts: none
+- queue_rows: 299
+- priority_counts: P1_TRUSTED_MISSING_SCORING=265; P2_LOW_COVERAGE_SCORING=34
+- scoring_needed_counts: YES=299
 - source_gap_status: MISSING_SCORED_ROW
 - next_action: Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.
 
 ## Queue-to-Enrichment Dry Run Planner
-- rows_planned: 0
-- dry_run_decision_counts: none
-- risk_label_counts: none
-- priority_counts: none
-- total_estimated_call_units: 0
+- rows_planned: 299
+- dry_run_decision_counts: DRY_RUN_ONLY_NO_API_CALLS=299
+- risk_label_counts: MEDIUM=237; HIGH_LOW_COVERAGE=34; HIGH_CONTEXT_VOLATILITY=28
+- priority_counts: P1_TRUSTED_MISSING_SCORING=265; P2_LOW_COVERAGE_SCORING=34
+- total_estimated_call_units: 1520
 - api_calls_planned: NO
 - api_calls_executed: NO
 - next_action: Review dry-run plan and explicitly approve any future enrichment/API stage. No calls executed here.
 
 ## Enrichment Cost & Approval Gate
-- approval_gate_status: NO_ENRICHMENT_NEEDED
-- rows_planned: 0
-- estimated_call_units: 0
-- approval_required: NO
+- approval_gate_status: WAIT_FOR_MANUAL_APPROVAL
+- rows_planned: 299
+- estimated_call_units: 1520
+- approval_required: YES
 - max_allowed_without_manual_approval: 0
 - api_calls_allowed: NO
 - api_calls_planned: NO
 - api_calls_executed: NO
-- recommended_action: NO_ACTION
+- recommended_action: WAIT_FOR_MANUAL_APPROVAL
 
 ## Daily Board Self-Heal
 - self_heal_status: NO_ACTION

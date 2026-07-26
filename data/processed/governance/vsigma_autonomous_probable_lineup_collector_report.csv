@@ -1,2 +1,2 @@
 target_date,generated_at,fixtures_reviewed,search_provider,urls_discovered,rows_extracted,status_counts,source_counts,auto_apply,production_change
-2026-07-26,2026-07-26T19:30:00+01:00,40,SERPAPI_SEARCH_FAILED,0,0,NO_DATA=40,,NO,NO
+2026-07-26,2026-07-26T21:29:47+01:00,40,SERPAPI_SEARCH_FAILED,0,0,NO_DATA=40,,NO,NO
