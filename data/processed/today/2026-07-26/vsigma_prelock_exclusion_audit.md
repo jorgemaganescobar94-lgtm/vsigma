@@ -1,6 +1,6 @@
 # vSIGMA PRELOCK Exclusion Audit - 2026-07-26
 
-- Generated at: 2026-07-26T16:10:48+01:00
+- Generated at: 2026-07-26T18:09:02+01:00
 - Timezone: Atlantic/Canary
 - Candidates reviewed: 1
 - In current 90-minute window: 0
@@ -10,4 +10,4 @@
 
 | fixture_id | fixture | market | kickoff | min_to_ko | in_window | retained | exclusion_reason | next_action |
 | --- | --- | --- | --- | ---: | --- | --- | --- | --- |
-| 1494217 | IF Brommapojkarna vs Hammarby FF | OVER_2_5 | 2026-07-26T13:00+01:00 | -190.81 | NO | NO | KICKOFF_ALREADY_PASSED | WAIT_FOR_POST_RESULTS |
+| 1494217 | IF Brommapojkarna vs Hammarby FF | OVER_2_5 | 2026-07-26T13:00+01:00 | -309.04 | NO | NO | KICKOFF_ALREADY_PASSED | WAIT_FOR_POST_RESULTS |
