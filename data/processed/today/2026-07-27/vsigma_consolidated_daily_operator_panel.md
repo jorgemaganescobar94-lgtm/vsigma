@@ -44,11 +44,13 @@
 - missing_data_counts: unknown=4
 
 ## Official / Probable Lineups
+- data/processed/today/2026-07-27/official_lineup_sources.csv: rows=278
 - data/processed/today/2026-07-27/vsigma_probable_lineup_consensus.csv: rows=4
 - data/processed/governance/official_lineup_sources.csv: rows=278
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=13; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=11
 
 ## Quarantine / Learning-Only / Import Status
+- data/processed/today/2026-07-27/official_lineup_sources.csv: rows=278
 - data/processed/today/2026-07-27/vsigma_probable_lineup_consensus.csv: rows=4
 - data/processed/governance/official_lineup_sources.csv: rows=278
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=13; probable_status=UNKNOWN=1; LEARNING_ONLY=1; IMPORTED=11
@@ -116,7 +118,7 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 3433
+- files_scanned: 3434
 - accepted_rows: 4
 - rejected_rows: 200
 - next_action: Review accepted rows, then feed normal scoring gates.
