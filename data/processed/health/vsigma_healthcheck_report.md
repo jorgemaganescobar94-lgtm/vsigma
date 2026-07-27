@@ -1,13 +1,13 @@
 # vSIGMA Healthcheck Report - 2026-07-27
 
 - Global health status: WARNING
-- Generated at: 2026-07-27T00:03:43.333655+01:00
+- Generated at: 2026-07-27T13:09:58.206818+01:00
 - Mode: full
-- HEALTHY: 25
+- HEALTHY: 26
 - WARNING: 10
 - NEEDS_ATTENTION: 0
 - BROKEN: 0
-- NOT_RUN_YET: 2
+- NOT_RUN_YET: 1
 - First recovery command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-27 --timezone Atlantic/Canary --mode pre`
 
 ## Critical Warnings
@@ -22,7 +22,7 @@
 | ledger_target_date_rows | WARNING | ledger has no rows for target date | .\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-07-27 --stage PRE |
 | freshness_report | WARNING | validation report contains warning rows | .\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-07-27 |
 | post_results_status | WARNING | post-results report missing while official picks exist | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-27 --timezone Atlantic/Canary --mode post |
-| recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-26 --timezone Atlantic/Canary --mode status |
+| recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-27 --timezone Atlantic/Canary --mode status |
 
 ## All Checks
 | check_name | status | detail | recovery_command | evidence_path |
@@ -43,7 +43,7 @@
 | required_script:scripts/register_vsigma_windows_tasks.ps1 | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/scripts/register_vsigma_windows_tasks.ps1 |
 | required_script:scripts/unregister_vsigma_windows_tasks.ps1 | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/scripts/unregister_vsigma_windows_tasks.ps1 |
 | api_config_available | HEALTHY | API configuration detected without exposing secrets | Set API_FOOTBALL_KEY, APISPORTS_KEY, RAPIDAPI_KEY, or X_RAPIDAPI_KEY in .env/environment. | /home/runner/work/vsigma/vsigma/.env |
-| today_snapshot_folder | NOT_RUN_YET | today snapshot folder not created yet | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-27 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/today/2026-07-27 |
+| today_snapshot_folder | HEALTHY | today snapshot folder present | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-27 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/today/2026-07-27 |
 | official_baseline_output | WARNING | only stale rows found for 2026-07-26 | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-27 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_competition_top.csv |
 | candidate_output:CANDIDATE_V2 | WARNING | only stale rows found for 2026-07-26 | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-27 --timezone Atlantic/Canary --mode pre | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v2_competition_top.csv |
 | candidate_output:CANDIDATE_V7 | HEALTHY | empty output with headers is valid for NO_BET |  | /home/runner/work/vsigma/vsigma/data/processed/vsigma_today_candidate_v7_competition_top.csv |
@@ -61,6 +61,6 @@
 | post_results_status | WARNING | post-results report missing while official picks exist | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-27 --timezone Atlantic/Canary --mode post | /home/runner/work/vsigma/vsigma/data/processed/today_post_results_report.csv |
 | supervisor_latest_report | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/data/processed/daily_supervisor_latest.md |
 | windows_task_registration | NOT_RUN_YET | task registration check unavailable outside Windows | powershell.exe -NoProfile -ExecutionPolicy Bypass -File /home/runner/work/vsigma/vsigma/scripts/register_vsigma_windows_tasks.ps1 |  |
-| recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-26 --timezone Atlantic/Canary --mode status | /home/runner/work/vsigma/vsigma/automation_logs/supervisor |
+| recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-27 --timezone Atlantic/Canary --mode status | /home/runner/work/vsigma/vsigma/automation_logs/supervisor |
 | disk_space | HEALTHY | free disk space acceptable: 86.37 GB |  |  |
 | healthcheck_mode | HEALTHY | full mode completed all quick checks plus environment diagnostics |  |  |

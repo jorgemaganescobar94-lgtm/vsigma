@@ -1,15 +1,13 @@
-# vSIGMA Shadow Candidates - 2026-07-26
+# vSIGMA Shadow Candidates - 2026-07-27
 
 ## Executive Shadow Candidate Summary
-- generated_at: 2026-07-27T11:51:07+01:00
-- shadow_candidates: 3
-- shadow_decision_counts: SHADOW_DOWNGRADE_REVIEW=3
-- experiment_type_counts: LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW=2; LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=1
+- generated_at: 2026-07-27T13:10:01+01:00
+- shadow_candidates: 0
+- shadow_decision_counts: none
+- experiment_type_counts: none
 
 ## Shadow Candidate Decisions
-- SHADOW_DOWNGRADE_REVIEW | KFUM Oslo vs Molde | market=OVER_2_5 | experiment=LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW | production_impact=NONE
-- SHADOW_DOWNGRADE_REVIEW | IF Brommapojkarna vs Hammarby FF | market=OVER_2_5 | experiment=LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW | production_impact=NONE
-- SHADOW_DOWNGRADE_REVIEW | Remo vs Vitoria | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
+- none
 
 ## Guardrails
 - official picks changed: NO
