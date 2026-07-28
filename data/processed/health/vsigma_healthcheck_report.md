@@ -1,7 +1,7 @@
 # vSIGMA Healthcheck Report - 2026-07-28
 
 - Global health status: WARNING
-- Generated at: 2026-07-28T00:10:37.537660+01:00
+- Generated at: 2026-07-28T12:08:34.291846+01:00
 - Mode: full
 - HEALTHY: 26
 - WARNING: 10
@@ -22,7 +22,7 @@
 | ledger_target_date_rows | WARNING | ledger has no rows for target date | .\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-07-28 --stage PRE |
 | freshness_report | WARNING | validation report contains warning rows | .\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-07-28 |
 | post_results_status | WARNING | post-results report missing while official picks exist | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-28 --timezone Atlantic/Canary --mode post |
-| recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-27 --timezone Atlantic/Canary --mode status |
+| recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-28 --timezone Atlantic/Canary --mode status |
 
 ## All Checks
 | check_name | status | detail | recovery_command | evidence_path |
@@ -61,6 +61,6 @@
 | post_results_status | WARNING | post-results report missing while official picks exist | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-28 --timezone Atlantic/Canary --mode post | /home/runner/work/vsigma/vsigma/data/processed/today_post_results_report.csv |
 | supervisor_latest_report | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/data/processed/daily_supervisor_latest.md |
 | windows_task_registration | NOT_RUN_YET | task registration check unavailable outside Windows | powershell.exe -NoProfile -ExecutionPolicy Bypass -File /home/runner/work/vsigma/vsigma/scripts/register_vsigma_windows_tasks.ps1 |  |
-| recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-27 --timezone Atlantic/Canary --mode status | /home/runner/work/vsigma/vsigma/automation_logs/supervisor |
-| disk_space | HEALTHY | free disk space acceptable: 86.37 GB |  |  |
+| recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-07-28 --timezone Atlantic/Canary --mode status | /home/runner/work/vsigma/vsigma/automation_logs/supervisor |
+| disk_space | HEALTHY | free disk space acceptable: 86.58 GB |  |  |
 | healthcheck_mode | HEALTHY | full mode completed all quick checks plus environment diagnostics |  |  |
