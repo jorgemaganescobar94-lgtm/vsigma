@@ -7,10 +7,10 @@
 - production_change: NO
 
 ## Gate Rows
-- IF Brommapojkarna vs Hammarby FF | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=unknown
-- KFUM Oslo vs Molde | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=unknown
-- Remo vs Vitoria | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=unknown
-- Aalesund vs Viking | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO_BET->NO | missing=unknown
+- IF Brommapojkarna vs Hammarby FF | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO->NO | missing=unknown
+- KFUM Oslo vs Molde | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO->NO | missing=unknown
+- Remo vs Vitoria | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO->NO | missing=unknown
+- Aalesund vs Viking | api_gate=UNKNOWN | action=UNKNOWN_COVERAGE_BLOCK | decision=NO_BET->NO_BET | permission=NO->NO | missing=unknown
 
 ## Guardrails
 - Probable XI can support early planning, never final lock by itself.
