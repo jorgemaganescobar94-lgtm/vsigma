@@ -1,5 +1,5 @@
 target_date,generated_at,fixture_id,home_team,away_team,api_readiness_gate,coverage_score,original_final_decision,final_decision,original_execution_permission,execution_permission,gate_action,gate_reason,missing_blocks,auto_apply,production_change
-2026-07-28,2026-07-28T21:42:17+01:00,1494217,IF Brommapojkarna,Hammarby FF,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
-2026-07-28,2026-07-28T21:42:17+01:00,1494711,KFUM Oslo,Molde,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
-2026-07-28,2026-07-28T21:42:17+01:00,1492307,Remo,Vitoria,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
-2026-07-28,2026-07-28T21:42:17+01:00,1494709,Aalesund,Viking,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
+2026-07-28,2026-07-28T23:33:37+01:00,1494217,IF Brommapojkarna,Hammarby FF,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
+2026-07-28,2026-07-28T23:33:37+01:00,1494711,KFUM Oslo,Molde,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
+2026-07-28,2026-07-28T23:33:37+01:00,1492307,Remo,Vitoria,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
+2026-07-28,2026-07-28T23:33:37+01:00,1494709,Aalesund,Viking,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
