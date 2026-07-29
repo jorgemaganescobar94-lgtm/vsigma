@@ -1,2 +1,2 @@
 target_date,generated_at,fixtures_reviewed,search_provider,urls_discovered,rows_extracted,status_counts,source_counts,auto_apply,production_change
-2026-07-29,2026-07-29T21:32:20+01:00,4,SERPAPI;SERPAPI_ERROR,62,16,NO_XI_PATTERN=42; FETCH_FAILED=10; EXTRACTED=16; IRRELEVANT_FIXTURE_PAGE=1,sportsmole=42; sports_gambler=17; whoscored=10,NO,NO
+2026-07-29,2026-07-29T23:30:16+01:00,4,SERPAPI;SERPAPI_SEARCH_FAILED;SERPAPI_ERROR,53,16,NO_XI_PATTERN=38; FETCH_FAILED=12; EXTRACTED=16; IRRELEVANT_FIXTURE_PAGE=1,sportsmole=40; whoscored=12; sports_gambler=15,NO,NO
