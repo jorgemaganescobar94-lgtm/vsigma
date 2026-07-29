@@ -1,5 +1,5 @@
 # 📊 Panel de Track-Record — Mundial 2026 (vSIGMA)
-_Generado: 2026-07-28T10:39:18+00:00 · consolidado de scorecards existentes · **solo lectura, no recalcula predicciones** · sin mercado/cuotas._
+_Generado: 2026-07-29T10:42:53+00:00 · consolidado de scorecards existentes · **solo lectura, no recalcula predicciones** · sin mercado/cuotas._
 
 > Honestidad: **validado** = superó el baseline en backtest histórico; **sombra** = en observación en vivo; donde la muestra aún no basta se marca explícitamente.
 
