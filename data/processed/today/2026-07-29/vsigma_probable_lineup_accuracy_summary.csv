@@ -1,2 +1,2 @@
 target_date,generated_at,rows_reviewed,evaluated_rows,pending_rows,learning_only_rows,promoted_rows,grade_counts,source_grade_summary,auto_apply,production_change
-2026-07-29,2026-07-29T19:32:48+01:00,11,11,0,5,6,B=4; A=2; C=3; D=2,"sportsmole:n=11,avg=0.661",NO,NO
+2026-07-29,2026-07-29T21:32:26+01:00,11,11,0,5,6,B=4; A=2; C=3; D=2,"sportsmole:n=11,avg=0.661",NO,NO
