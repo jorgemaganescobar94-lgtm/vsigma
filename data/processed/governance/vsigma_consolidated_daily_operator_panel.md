@@ -44,18 +44,24 @@
 - missing_data_counts: unknown=4
 
 ## Official / Probable Lineups
+- data/processed/today/2026-07-29/official_lineup_sources.csv: rows=278
+- data/processed/today/2026-07-29/probable_lineup_sources_autonomous.csv: rows=16
 - data/processed/today/2026-07-29/vsigma_probable_lineup_consensus.csv: rows=4
-- data/processed/today/2026-07-29/vsigma_probable_lineup_accuracy_ledger.csv: rows=10; probable_status=IMPORTED=6; LEARNING_ONLY=4
+- data/processed/today/2026-07-29/vsigma_probable_lineup_accuracy_ledger.csv: rows=11; probable_status=IMPORTED=6; LEARNING_ONLY=5
 - data/processed/today/2026-07-29/vsigma_probable_lineup_extraction_quality_ledger.csv: rows=2
 - data/processed/governance/official_lineup_sources.csv: rows=278
+- data/processed/governance/probable_lineup_sources_autonomous.csv: rows=16
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=20; probable_status=UNKNOWN=1; LEARNING_ONLY=4; IMPORTED=15
 - data/processed/governance/vsigma_probable_lineup_extraction_quality_ledger.csv: rows=2
 
 ## Quarantine / Learning-Only / Import Status
+- data/processed/today/2026-07-29/official_lineup_sources.csv: rows=278
+- data/processed/today/2026-07-29/probable_lineup_sources_autonomous.csv: rows=16
 - data/processed/today/2026-07-29/vsigma_probable_lineup_consensus.csv: rows=4
-- data/processed/today/2026-07-29/vsigma_probable_lineup_accuracy_ledger.csv: rows=10; probable_status=IMPORTED=6; LEARNING_ONLY=4
+- data/processed/today/2026-07-29/vsigma_probable_lineup_accuracy_ledger.csv: rows=11; probable_status=IMPORTED=6; LEARNING_ONLY=5
 - data/processed/today/2026-07-29/vsigma_probable_lineup_extraction_quality_ledger.csv: rows=2
 - data/processed/governance/official_lineup_sources.csv: rows=278
+- data/processed/governance/probable_lineup_sources_autonomous.csv: rows=16
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=20; probable_status=UNKNOWN=1; LEARNING_ONLY=4; IMPORTED=15
 - data/processed/governance/vsigma_probable_lineup_extraction_quality_ledger.csv: rows=2
 
@@ -122,7 +128,7 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 3457
+- files_scanned: 3458
 - accepted_rows: 4
 - rejected_rows: 200
 - next_action: Review accepted rows, then feed normal scoring gates.
