@@ -11,10 +11,10 @@
 - production_change: NO
 
 ## Rows
-- IF Brommapojkarna vs Hammarby FF | league=Allsvenskan | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_match_stat_forecasts.csv
-- KFUM Oslo vs Molde | league=Eliteserien | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_match_stat_forecasts.csv
-- Remo vs Vitoria | league=Serie A | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_match_stat_forecasts.csv
-- Aalesund vs Viking | league=Eliteserien | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_match_stat_forecasts.csv
+- IF Brommapojkarna vs Hammarby FF | league=Allsvenskan | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- KFUM Oslo vs Molde | league=Eliteserien | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Remo vs Vitoria | league=Serie A | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Aalesund vs Viking | league=Eliteserien | status=TRUSTED_RAW_SOURCE | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=source is not rejected and competition is not low-trust by token gate | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
 
 ## Guardrails
 - Trust gate is defensive and can only restrict downstream use.

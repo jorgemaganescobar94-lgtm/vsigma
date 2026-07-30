@@ -1,12 +1,12 @@
 # vSIGMA Autonomous Probable Lineup Collector - 2026-07-30
 
 ## Summary
-- search_provider: SERPAPI;SERPAPI_ERROR
-- rows_seen: 65
-- urls_discovered: 54
-- rows_extracted: 17
-- status_counts: NO_XI_PATTERN=33; FETCH_FAILED=13; EXTRACTED=17; IRRELEVANT_FIXTURE_PAGE=2
-- source_counts: sportsmole=34; sports_gambler=17; whoscored=12; guardian_predicted=1; sportskeeda=1
+- search_provider: SERPAPI;SERPAPI_ERROR;SERPAPI_SEARCH_FAILED
+- rows_seen: 69
+- urls_discovered: 56
+- rows_extracted: 16
+- status_counts: NO_XI_PATTERN=42; FETCH_FAILED=10; EXTRACTED=16; IRRELEVANT_FIXTURE_PAGE=1
+- source_counts: sportsmole=42; sports_gambler=17; whoscored=10
 - max_search_queries_per_fixture: 8
 - auto_apply: NO
 - production_change: NO

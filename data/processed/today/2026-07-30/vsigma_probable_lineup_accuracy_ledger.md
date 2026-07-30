@@ -4,10 +4,10 @@
 - rows_reviewed: 11
 - evaluated_rows: 11
 - pending_rows: 0
-- learning_only_rows: 5
-- promoted_rows: 6
-- grade_counts: B=4; A=2; C=3; D=2
-- source_grade_summary: sportsmole:n=11,avg=0.661
+- learning_only_rows: 4
+- promoted_rows: 7
+- grade_counts: B=5; A=2; C=2; D=2
+- source_grade_summary: sportsmole:n=11,avg=0.678
 - auto_apply: NO
 - production_change: NO
 
@@ -18,10 +18,10 @@
 - Remo vs Vitoria | side=away | source=sportsmole | probable_status=IMPORTED | status=EVALUATED | grade=A | match=10/11 | probable=11
 - Remo vs Vitoria | side=home | source=sportsmole | probable_status=IMPORTED | status=EVALUATED | grade=B | match=9/11 | probable=11
 - Aalesund vs Viking | side=away | source=sportsmole | probable_status=IMPORTED | status=EVALUATED | grade=B | match=8/11 | probable=11
+- Aalesund vs Viking | side=away | source=sportsmole | probable_status=IMPORTED | status=EVALUATED | grade=B | match=8/11 | probable=11
 - KFUM Oslo vs Molde | side=away | source=sportsmole | probable_status=LEARNING_ONLY | status=EVALUATED | grade=C | match=7/11 | probable=11
 - KFUM Oslo vs Molde | side=away | source=sportsmole | probable_status=LEARNING_ONLY | status=EVALUATED | grade=D | match=3/11 | probable=11
 - Remo vs Vitoria | side=away | source=sportsmole | probable_status=LEARNING_ONLY | status=EVALUATED | grade=D | match=5/11 | probable=11
-- Aalesund vs Viking | side=home | source=sportsmole | probable_status=LEARNING_ONLY | status=EVALUATED | grade=C | match=6/11 | probable=11
 - Aalesund vs Viking | side=home | source=sportsmole | probable_status=LEARNING_ONLY | status=EVALUATED | grade=C | match=6/11 | probable=11
 
 ## Guardrails

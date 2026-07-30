@@ -12,7 +12,7 @@
 - IF Brommapojkarna vs Hammarby FF | gate=NO_PROBABLE_LINEUP_SOURCES | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted= /  | rejected= / 
 - KFUM Oslo vs Molde | gate=PROBABLE_XI_CONSENSUS_LOW | home=LOW_WEIGHTED(1 src/11 consensus/w=1.000) | away=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | accepted=sportsmole /  | rejected= / 
 - Remo vs Vitoria | gate=PROBABLE_XI_CONSENSUS_LOW | home=LOW_WEIGHTED(1 src/11 consensus/w=1.000) | away=LOW_WEIGHTED(1 src/11 consensus/w=1.000) | accepted=sportsmole (internal_conflict:sportsmole) / sportsmole (internal_conflict:sportsmole) | rejected= / 
-- Aalesund vs Viking | gate=PROBABLE_XI_CONSENSUS_LOW | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=LOW_WEIGHTED(1 src/11 consensus/w=1.000) | accepted= / sportsmole | rejected= / 
+- Aalesund vs Viking | gate=PROBABLE_XI_CONSENSUS_LOW | home=NO_APPROVED_SOURCES(0 src/0 consensus/w=0.000) | away=LOW_WEIGHTED(1 src/11 consensus/w=1.000) | accepted= / sportsmole (internal_conflict:sportsmole) | rejected= / 
 
 ## Guardrails
 - Registry-approved probable XI is never treated as official lineup.
