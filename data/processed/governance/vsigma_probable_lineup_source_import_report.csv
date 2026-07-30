@@ -1,2 +1,2 @@
 target_date,generated_at,rows_seen,rows_imported,rows_learning_only,rows_rejected,rows_quarantined,input_files,import_status_counts,quarantine_reason_counts,sources_seen,template_rows,auto_apply,production_change
-2026-07-30,2026-07-30T21:45:12+01:00,32,14,8,0,10,data/processed/today/2026-07-30/probable_lineup_sources_autonomous.csv;data/processed/governance/probable_lineup_sources_autonomous.csv,IMPORTED=14; LEARNING_ONLY=8; QUARANTINED=10,official_overlap_too_low=10,sportsmole=32,40,NO,NO
+2026-07-30,2026-07-30T23:37:11+01:00,32,14,8,0,10,data/processed/today/2026-07-30/probable_lineup_sources_autonomous.csv;data/processed/governance/probable_lineup_sources_autonomous.csv,IMPORTED=14; LEARNING_ONLY=8; QUARANTINED=10,official_overlap_too_low=10,sportsmole=32,40,NO,NO
