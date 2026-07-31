@@ -1,41 +1,41 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
-2026-07-31,1494217,,,IF Brommapojkarna,Hammarby FF,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494217,,,IF Brommapojkarna,Hammarby FF,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494217,,,IF Brommapojkarna,Hammarby FF,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494217,,,IF Brommapojkarna,Hammarby FF,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494217,,,IF Brommapojkarna,Hammarby FF,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494217,,,IF Brommapojkarna,Hammarby FF,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494217,,,IF Brommapojkarna,Hammarby FF,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494217,,,IF Brommapojkarna,Hammarby FF,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494217,,,IF Brommapojkarna,Hammarby FF,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494217,,,IF Brommapojkarna,Hammarby FF,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494711,,,KFUM Oslo,Molde,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494711,,,KFUM Oslo,Molde,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494711,,,KFUM Oslo,Molde,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494711,,,KFUM Oslo,Molde,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494711,,,KFUM Oslo,Molde,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494711,,,KFUM Oslo,Molde,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494711,,,KFUM Oslo,Molde,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494711,,,KFUM Oslo,Molde,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494711,,,KFUM Oslo,Molde,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494711,,,KFUM Oslo,Molde,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1492307,,,Remo,Vitoria,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1492307,,,Remo,Vitoria,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1492307,,,Remo,Vitoria,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1492307,,,Remo,Vitoria,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1492307,,,Remo,Vitoria,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1492307,,,Remo,Vitoria,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1492307,,,Remo,Vitoria,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1492307,,,Remo,Vitoria,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1492307,,,Remo,Vitoria,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1492307,,,Remo,Vitoria,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494709,,,Aalesund,Viking,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494709,,,Aalesund,Viking,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494709,,,Aalesund,Viking,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494709,,,Aalesund,Viking,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494709,,,Aalesund,Viking,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494709,,,Aalesund,Viking,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494709,,,Aalesund,Viking,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494709,,,Aalesund,Viking,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494709,,,Aalesund,Viking,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-07-31,1494709,,,Aalesund,Viking,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494717,Eliteserien,Norway,Bodo/Glimt,Lillestrom,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494717,Eliteserien,Norway,Bodo/Glimt,Lillestrom,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494717,Eliteserien,Norway,Bodo/Glimt,Lillestrom,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494717,Eliteserien,Norway,Bodo/Glimt,Lillestrom,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494717,Eliteserien,Norway,Bodo/Glimt,Lillestrom,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494717,Eliteserien,Norway,Bodo/Glimt,Lillestrom,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494717,Eliteserien,Norway,Bodo/Glimt,Lillestrom,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494717,Eliteserien,Norway,Bodo/Glimt,Lillestrom,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494717,Eliteserien,Norway,Bodo/Glimt,Lillestrom,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494717,Eliteserien,Norway,Bodo/Glimt,Lillestrom,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1556628,Premiership,Scotland,Dundee Utd,Rangers,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1556628,Premiership,Scotland,Dundee Utd,Rangers,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1556628,Premiership,Scotland,Dundee Utd,Rangers,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1556628,Premiership,Scotland,Dundee Utd,Rangers,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1556628,Premiership,Scotland,Dundee Utd,Rangers,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1556628,Premiership,Scotland,Dundee Utd,Rangers,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1556628,Premiership,Scotland,Dundee Utd,Rangers,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1556628,Premiership,Scotland,Dundee Utd,Rangers,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1556628,Premiership,Scotland,Dundee Utd,Rangers,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1556628,Premiership,Scotland,Dundee Utd,Rangers,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494723,Eliteserien,Norway,Valerenga,Ham-Kam,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494723,Eliteserien,Norway,Valerenga,Ham-Kam,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494723,Eliteserien,Norway,Valerenga,Ham-Kam,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494723,Eliteserien,Norway,Valerenga,Ham-Kam,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494723,Eliteserien,Norway,Valerenga,Ham-Kam,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494723,Eliteserien,Norway,Valerenga,Ham-Kam,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494723,Eliteserien,Norway,Valerenga,Ham-Kam,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494723,Eliteserien,Norway,Valerenga,Ham-Kam,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494723,Eliteserien,Norway,Valerenga,Ham-Kam,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1494723,Eliteserien,Norway,Valerenga,Ham-Kam,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1561894,Bundesliga,Austria,Lask Linz,Grazer AK,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1561894,Bundesliga,Austria,Lask Linz,Grazer AK,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1561894,Bundesliga,Austria,Lask Linz,Grazer AK,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1561894,Bundesliga,Austria,Lask Linz,Grazer AK,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1561894,Bundesliga,Austria,Lask Linz,Grazer AK,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1561894,Bundesliga,Austria,Lask Linz,Grazer AK,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1561894,Bundesliga,Austria,Lask Linz,Grazer AK,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1561894,Bundesliga,Austria,Lask Linz,Grazer AK,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1561894,Bundesliga,Austria,Lask Linz,Grazer AK,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-07-31,1561894,Bundesliga,Austria,Lask Linz,Grazer AK,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
