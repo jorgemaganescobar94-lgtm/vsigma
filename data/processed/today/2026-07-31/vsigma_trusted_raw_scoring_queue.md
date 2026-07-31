@@ -1,9 +1,9 @@
 # vSIGMA Trusted Raw Scoring Queue - 2026-07-31
 
 ## Summary
-- queue_rows: 4
-- priority_counts: P1_TRUSTED_MISSING_SCORING=4
-- scoring_needed_counts: YES=4
+- queue_rows: 257
+- priority_counts: P1_TRUSTED_MISSING_SCORING=176; P2_LOW_COVERAGE_SCORING=81
+- scoring_needed_counts: YES=257
 - source_gap_status: MISSING_SCORED_ROW
 - next_action: Use this queue as the explicit input list for a future scoring/enrichment repair stage. Do not create picks from queue rows.
 - auto_apply: NO
@@ -14,6 +14,259 @@
 - #2 | P1_TRUSTED_MISSING_SCORING | KFUM Oslo vs Molde | league=Eliteserien | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 - #3 | P1_TRUSTED_MISSING_SCORING | Remo vs Vitoria | league=Serie A | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 - #4 | P1_TRUSTED_MISSING_SCORING | Aalesund vs Viking | league=Eliteserien | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #5 | P1_TRUSTED_MISSING_SCORING | Be1 NFA vs Jonava | league=1 Lyga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #6 | P1_TRUSTED_MISSING_SCORING | Hegelmann II vs Minija | league=1 Lyga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #7 | P1_TRUSTED_MISSING_SCORING | AB Copenhagen vs FC Fredericia | league=1. Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #8 | P1_TRUSTED_MISSING_SCORING | Aarhus Fremad vs Aalborg | league=1. Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #9 | P1_TRUSTED_MISSING_SCORING | Astana II vs Arys | league=1. Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #10 | P1_TRUSTED_MISSING_SCORING | Dinamo Minsk II vs Niva | league=1. Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #11 | P1_TRUSTED_MISSING_SCORING | FC Slutsk vs FC Energetik-Bgu Minsk | league=1. Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #12 | P1_TRUSTED_MISSING_SCORING | HB Koge vs Vejle | league=1. Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #13 | P1_TRUSTED_MISSING_SCORING | Orsha vs Shakhter Soligorsk | league=1. Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #14 | P1_TRUSTED_MISSING_SCORING | Tobol 2 vs Shakhter Karagandy | league=1. Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #15 | P1_TRUSTED_MISSING_SCORING | Super Nova 2 vs Riga Mariners | league=1. Liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #16 | P1_TRUSTED_MISSING_SCORING | Brühl vs Young Boys II | league=1. Liga Promotion | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #17 | P1_TRUSTED_MISSING_SCORING | FA 2000 vs B 93 | league=2. Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #18 | P1_TRUSTED_MISSING_SCORING | Nykobing FC vs Fremad Amager | league=2. Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #19 | P1_TRUSTED_MISSING_SCORING | Roskilde vs Naestved | league=2. Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #20 | P1_TRUSTED_MISSING_SCORING | Admira Wacker vs Rapid Wien II | league=2. Liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #21 | P1_TRUSTED_MISSING_SCORING | Austria Vienna (Am) vs FC BW Linz | league=2. Liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #22 | P1_TRUSTED_MISSING_SCORING | Floridsdorfer AC vs SKN ST. Polten | league=2. Liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #23 | P1_TRUSTED_MISSING_SCORING | SV Kapfenberg vs FC Liefering | league=2. Liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #24 | P1_TRUSTED_MISSING_SCORING | Voitsberg vs SKU Amstetten | league=2. Liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #25 | P1_TRUSTED_MISSING_SCORING | Wacker Innsbruck vs Schwarz-Weiß Bregenz | league=2. Liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #26 | P1_TRUSTED_MISSING_SCORING | Liptovský Mikuláš vs Galanta | league=2. liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #27 | P1_TRUSTED_MISSING_SCORING | Pohronie vs Považská Bystrica | league=2. liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #28 | P1_TRUSTED_MISSING_SCORING | Brønshøj vs Ishøj | league=3. Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #29 | P1_TRUSTED_MISSING_SCORING | FC Helsingor vs Vanløse | league=3. Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #30 | P1_TRUSTED_MISSING_SCORING | Gamle Oslo vs Union Carl Berner | league=3. Division - Girone 1 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #31 | P1_TRUSTED_MISSING_SCORING | Herd vs Volda | league=3. Division - Girone 2 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #32 | P1_TRUSTED_MISSING_SCORING | Varhaug vs Hinna | league=3. Division - Girone 4 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #33 | P1_TRUSTED_MISSING_SCORING | Frýdek-Místek vs Hranice | league=3. liga - MSFL | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #34 | P1_TRUSTED_MISSING_SCORING | Unie Hlubina vs Zbrojovka Brno II | league=3. liga - MSFL | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #35 | P1_TRUSTED_MISSING_SCORING | Vietnam vs Singapore | league=ASEAN Championship | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #36 | P1_TRUSTED_MISSING_SCORING | Jamus vs Mogadishu City | league=CECAFA Club Cup | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #37 | P1_TRUSTED_MISSING_SCORING | Singida Black Stars vs Simba | league=CECAFA Club Cup | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #38 | P1_TRUSTED_MISSING_SCORING | Metropolitan vs Delfines Del Este | league=CONCACAF Caribbean Club Shield | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #39 | P1_TRUSTED_MISSING_SCORING | BSS Sporting vs Railway | league=Calcutta Premier Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #40 | P1_TRUSTED_MISSING_SCORING | Puerto Rico W vs Jamaica W | league=Central American and Caribbean Games | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #41 | P1_TRUSTED_MISSING_SCORING | Venezuela W vs El Salvador W | league=Central American and Caribbean Games | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #42 | P1_TRUSTED_MISSING_SCORING | FC WIL 1900 vs Neuchatel Xamax FC | league=Challenge League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #43 | P1_TRUSTED_MISSING_SCORING | SC Kriens vs FC Winterthur | league=Challenge League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #44 | P1_TRUSTED_MISSING_SCORING | Stade Nyonnais vs Rapperswil | league=Challenge League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #45 | P1_TRUSTED_MISSING_SCORING | Yverdon Sport vs Étoile Carouge | league=Challenge League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #46 | P1_TRUSTED_MISSING_SCORING | Crystal Palace vs Al Ula | league=Como Cup | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #47 | P1_TRUSTED_MISSING_SCORING | Famalicao vs Como | league=Como Cup | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #48 | P1_TRUSTED_MISSING_SCORING | Rokycany vs Hořovicko | league=Cup | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #49 | P1_TRUSTED_MISSING_SCORING | Slavoj Vyšehrad vs Sokol Hostouň | league=Cup | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #50 | P1_TRUSTED_MISSING_SCORING | Vestec vs Benešov | league=Cup | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #51 | P1_TRUSTED_MISSING_SCORING | Sparta Praha vs Zlin | league=Czech Liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #52 | P1_TRUSTED_MISSING_SCORING | Hammarby W vs Växjö W | league=Damallsvenskan | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #53 | P1_TRUSTED_MISSING_SCORING | Malmö FF W vs Piteå W | league=Damallsvenskan | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #54 | P1_TRUSTED_MISSING_SCORING | IF Karlstad II vs Grebbestad | league=Division 2 - Norra Götaland | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #55 | P1_TRUSTED_MISSING_SCORING | IFK Skövde vs Ahlafors | league=Division 2 - Norra Götaland | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #56 | P1_TRUSTED_MISSING_SCORING | Stenungsund vs Skara | league=Division 2 - Norra Götaland | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #57 | P1_TRUSTED_MISSING_SCORING | Tord vs Kumla | league=Division 2 - Norra Götaland | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #58 | P1_TRUSTED_MISSING_SCORING | Vänersborgs FK vs Herrestads | league=Division 2 - Norra Götaland | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #59 | P1_TRUSTED_MISSING_SCORING | Karlshamn vs Räppe | league=Division 2 - Södra Götaland | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #60 | P1_TRUSTED_MISSING_SCORING | Farsta vs Rågsved | league=Division 2 - Södra Svealand | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #61 | P1_TRUSTED_MISSING_SCORING | Böljan vs Västra Frölunda | league=Division 2 - Västra Götaland | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #62 | P1_TRUSTED_MISSING_SCORING | Kongahälla vs Onsala | league=Division 2 - Västra Götaland | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #63 | P1_TRUSTED_MISSING_SCORING | Lindome vs Jonsered | league=Division 2 - Västra Götaland | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #64 | P1_TRUSTED_MISSING_SCORING | Fernando De La Mora vs 12 de Junio VH | league=Division Intermedia | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #65 | P1_TRUSTED_MISSING_SCORING | General Caballero vs Benjamín Aceval | league=Division Intermedia | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #66 | P1_TRUSTED_MISSING_SCORING | Motor Lublin vs Jagiellonia | league=Ekstraklasa | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #67 | P1_TRUSTED_MISSING_SCORING | Wisla Plock vs Widzew Łódź | league=Ekstraklasa | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #68 | P1_TRUSTED_MISSING_SCORING | Linköping W vs Örebro SK W | league=Elitettan | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #69 | P1_TRUSTED_MISSING_SCORING | Bangor City 1876 FC vs Bala Town | league=FAW Championship | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #70 | P1_TRUSTED_MISSING_SCORING | Ruthin Town vs Holyhead Hotspur | league=FAW Championship | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #71 | P1_TRUSTED_MISSING_SCORING | Trethomas Bluebirds vs Baglan Dragons | league=FAW Championship | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #72 | P1_TRUSTED_MISSING_SCORING | llanelli AFC vs Newport City | league=FAW Championship | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #73 | P1_TRUSTED_MISSING_SCORING | Karviná vs Vlašim | league=FNL | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #74 | P1_TRUSTED_MISSING_SCORING | Kladno vs Baník Ostrava II | league=FNL | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #75 | P1_TRUSTED_MISSING_SCORING | Příbram vs Opava | league=FNL | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #76 | P1_TRUSTED_MISSING_SCORING | Táborsko vs Dukla Praha | league=FNL | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #77 | P1_TRUSTED_MISSING_SCORING | Viktoria Žižkov vs Prostějov | league=FNL | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #78 | P1_TRUSTED_MISSING_SCORING | Athlone Town vs UCD | league=First Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #79 | P1_TRUSTED_MISSING_SCORING | Bray Wanderers vs Kerry | league=First Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #80 | P1_TRUSTED_MISSING_SCORING | Cobh Ramblers vs Wexford | league=First Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #81 | P1_TRUSTED_MISSING_SCORING | Finn Harps vs Cork City | league=First Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #82 | P1_TRUSTED_MISSING_SCORING | Treaty United vs Longford Town | league=First Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #83 | P1_TRUSTED_MISSING_SCORING | CSKA 1948 vs Arda Kardzhali | league=First League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #84 | P1_TRUSTED_MISSING_SCORING | Slavia Sofia vs Lokomotiv Sofia | league=First League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #85 | P1_TRUSTED_MISSING_SCORING | Dinamo Zagreb vs NK Slaven Belupo | league=HNL | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #86 | P1_TRUSTED_MISSING_SCORING | Lechia Gdansk vs Warta Poznań | league=I Liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #87 | P1_TRUSTED_MISSING_SCORING | ŁKS Łódź vs Polonia Bytom | league=I Liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #88 | P1_TRUSTED_MISSING_SCORING | Stal Stalowa Wola vs Tychy 71 | league=II Liga - East | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #89 | P1_TRUSTED_MISSING_SCORING | Znicz Pruszków vs Legia Warszawa II | league=II Liga - East | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #90 | P1_TRUSTED_MISSING_SCORING | Mazovia Minsk Mazowiecki vs Jagiellonia II | league=III Liga - Group 1 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #91 | P1_TRUSTED_MISSING_SCORING | Olimpia Elbląg vs Wisła Płock II | league=III Liga - Group 1 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #92 | P1_TRUSTED_MISSING_SCORING | Weszlo vs Lechia T. Mazowiecki | league=III Liga - Group 1 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #93 | P1_TRUSTED_MISSING_SCORING | Gedania Gdansk vs Noteć Czarnków | league=III Liga - Group 2 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #94 | P1_TRUSTED_MISSING_SCORING | Górnik Polkowice vs Rakow II | league=III Liga - Group 3 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #95 | P1_TRUSTED_MISSING_SCORING | Stal Brzeg vs Goczałkowice Zdrój | league=III Liga - Group 3 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #96 | P1_TRUSTED_MISSING_SCORING | Union Plaani vs PEPO | league=Kakkonen - Lohko A | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #97 | P1_TRUSTED_MISSING_SCORING | GrIFK vs EBK | league=Kakkonen - Lohko B | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #98 | P1_TRUSTED_MISSING_SCORING | ÅIFK vs HJS Akatemia | league=Kakkonen - Lohko B | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #99 | P1_TRUSTED_MISSING_SCORING | Univer Comrat vs Iskra | league=Liga 1 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #100 | P1_TRUSTED_MISSING_SCORING | Victoria Bardar vs Oguzsport | league=Liga 1 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #101 | P1_TRUSTED_MISSING_SCORING | Zimbru II vs Spartanii Selemet | league=Liga 1 | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #102 | P1_TRUSTED_MISSING_SCORING | Arges Pitesti vs Csikszereda | league=Liga I | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #103 | P1_TRUSTED_MISSING_SCORING | Oţelul vs Dinamo Bucuresti | league=Liga I | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #104 | P1_TRUSTED_MISSING_SCORING | 22 de Julio vs El Nacional | league=Liga Pro Serie B | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #105 | P1_TRUSTED_MISSING_SCORING | Aserri FC vs ADR Jicaral | league=Liga de Ascenso | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #106 | P1_TRUSTED_MISSING_SCORING | Nõmme United vs Trans Narva | league=Meistriliiga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #107 | P1_TRUSTED_MISSING_SCORING | Ahrobiznes Volochysk vs Yarud Mariupol' | league=Persha Liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #108 | P1_TRUSTED_MISSING_SCORING | Persib Bandung vs Tampines Rovers | league=Piala Presiden | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #109 | P1_TRUSTED_MISSING_SCORING | Drogheda United vs Shamrock Rovers | league=Premier Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #110 | P1_TRUSTED_MISSING_SCORING | Dundalk vs Sligo Rovers | league=Premier Division | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #111 | P1_TRUSTED_MISSING_SCORING | Barry Town vs Cambrian & Clydach | league=Premier League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #112 | P1_TRUSTED_MISSING_SCORING | Briton Ferry vs Ammanford AFC | league=Premier League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #113 | P1_TRUSTED_MISSING_SCORING | Colwyn Bay vs Trefelin | league=Premier League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #114 | P1_TRUSTED_MISSING_SCORING | FC Dnepr Mogilev vs Naftan | league=Premier League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #115 | P1_TRUSTED_MISSING_SCORING | Llandudno vs Flint Town United | league=Premier League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #116 | P1_TRUSTED_MISSING_SCORING | Rodina Moskva vs FC Rostov | league=Premier League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #117 | P1_TRUSTED_MISSING_SCORING | Van vs Sardarapat | league=Premier League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #118 | P1_TRUSTED_MISSING_SCORING | Zorya Luhansk vs Kolos Kovalivka | league=Premier League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #119 | P1_TRUSTED_MISSING_SCORING | Herentals vs TelOne | league=Premier Soccer League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #120 | P1_TRUSTED_MISSING_SCORING | Real Santander vs Patriotas | league=Primera B | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #121 | P1_TRUSTED_MISSING_SCORING | San Luis vs Rangers de Talca | league=Primera B | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #122 | P1_TRUSTED_MISSING_SCORING | Arsenal Sarandi vs Brown DE Adrogue | league=Primera B Metropolitana | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #123 | P1_TRUSTED_MISSING_SCORING | Central Ballester vs Sportivo Barracas | league=Primera C | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #124 | P1_TRUSTED_MISSING_SCORING | Central Cordoba vs General Lamadrid | league=Primera C | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #125 | P1_TRUSTED_MISSING_SCORING | Centro Español vs Victoriano Arenas | league=Primera C | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #126 | P1_TRUSTED_MISSING_SCORING | Claypole vs Lujan | league=Primera C | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #127 | P1_TRUSTED_MISSING_SCORING | Defensores de Cambaceres vs Lugano | league=Primera C | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #128 | P1_TRUSTED_MISSING_SCORING | Deportivo Español vs Leones de Rosario | league=Primera C | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #129 | P1_TRUSTED_MISSING_SCORING | Deportivo Paraguayo vs Argentino Rosario | league=Primera C | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #130 | P1_TRUSTED_MISSING_SCORING | JJ Urquiza vs Berazategui | league=Primera C | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #131 | P1_TRUSTED_MISSING_SCORING | Leandro N. Alem vs Juventud Unida | league=Primera C | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #132 | P1_TRUSTED_MISSING_SCORING | Mercedes vs Estrella Del Sur | league=Primera C | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #133 | P1_TRUSTED_MISSING_SCORING | Puerto Nuevo vs Sacachispas | league=Primera C | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #134 | P1_TRUSTED_MISSING_SCORING | Club Deportivo Los Chankas vs Comerciantes Unidos | league=Primera División | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #135 | P1_TRUSTED_MISSING_SCORING | Portuguesa FC vs Carabobo FC | league=Primera División | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #136 | P1_TRUSTED_MISSING_SCORING | The Strongest vs Aurora | league=Primera División | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #137 | P1_TRUSTED_MISSING_SCORING | Universitario de Vinto vs Guabirá | league=Primera División | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #138 | P1_TRUSTED_MISSING_SCORING | Atletico Torque vs Wanderers | league=Primera División - Apertura | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #139 | P1_TRUSTED_MISSING_SCORING | Gazalkent vs Aral | league=Pro League A | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #140 | P1_TRUSTED_MISSING_SCORING | Jayxun vs BuxDu | league=Pro League A | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #141 | P1_TRUSTED_MISSING_SCORING | Metalourg vs Lochin | league=Pro League A | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #142 | P1_TRUSTED_MISSING_SCORING | Yaypan vs FarDu | league=Pro League A | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #143 | P1_TRUSTED_MISSING_SCORING | Loznica vs Naftagas | league=Prva Liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #144 | P1_TRUSTED_MISSING_SCORING | Alianza Universidad vs Sport Huancayo 2 | league=Segunda División | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #145 | P1_TRUSTED_MISSING_SCORING | Club Brugge KV vs Union St. Gilloise | league=Super Cup | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #146 | P1_TRUSTED_MISSING_SCORING | Henan Jianye vs Dalian Zhixing | league=Super League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #147 | P1_TRUSTED_MISSING_SCORING | Oddevold vs Norrby IF | league=Superettan | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #148 | P1_TRUSTED_MISSING_SCORING | Olympia Warriors vs Hobart Utd. | league=Tasmania Southern Championship | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #149 | P1_TRUSTED_MISSING_SCORING | South Hobart II vs Taroona | league=Tasmania Southern Championship | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #150 | P1_TRUSTED_MISSING_SCORING | Barki Tajik vs Ravshan | league=Vysshaya Liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #151 | P1_TRUSTED_MISSING_SCORING | Parvoz vs Sardor Tursunzoda | league=Vysshaya Liga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #152 | P1_TRUSTED_MISSING_SCORING | Inter Turku II vs VJS | league=Ykkönen | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #153 | P1_TRUSTED_MISSING_SCORING | PKKU vs Tampere United | league=Ykkönen | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #154 | P1_TRUSTED_MISSING_SCORING | EIF vs Klubi-04 | league=Ykkösliiga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #155 | P1_TRUSTED_MISSING_SCORING | Kooteepee vs SJK Akatemia | league=Ykkösliiga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #156 | P1_TRUSTED_MISSING_SCORING | PK-35 vs Haka | league=Ykkösliiga | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #157 | P2_LOW_COVERAGE_SCORING | 1. FC Köln vs Hertha BSC | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #158 | P2_LOW_COVERAGE_SCORING | ADO Den Haag vs Asteras Tripolis | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #159 | P2_LOW_COVERAGE_SCORING | AVS vs Trofense | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #160 | P2_LOW_COVERAGE_SCORING | Amiens vs RED Star FC 93 | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #161 | P2_LOW_COVERAGE_SCORING | Aveley vs Tilbury | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #162 | P2_LOW_COVERAGE_SCORING | Baden vs Gossau | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #163 | P2_LOW_COVERAGE_SCORING | Ballinamallard United vs Bangor | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #164 | P2_LOW_COVERAGE_SCORING | Barockstadt Fulda-Lehn. vs Havelse | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #165 | P2_LOW_COVERAGE_SCORING | Birmingham vs Barcelona | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #166 | P2_LOW_COVERAGE_SCORING | Bishop's Stortford vs Enfield Town | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #167 | P2_LOW_COVERAGE_SCORING | Bromley vs QPR | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #168 | P2_LOW_COVERAGE_SCORING | CF Os Belenenses vs Estoril | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #169 | P2_LOW_COVERAGE_SCORING | Chertsey Town vs Westfield (Surrey) | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #170 | P2_LOW_COVERAGE_SCORING | Concarneau vs Pontivy GSI | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #171 | P2_LOW_COVERAGE_SCORING | Crawley Town vs Reading | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #172 | P2_LOW_COVERAGE_SCORING | Den Bosch vs Al-Fayha | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #173 | P2_LOW_COVERAGE_SCORING | Ebbsfleet United vs Gillingham | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #174 | P2_LOW_COVERAGE_SCORING | Estac Troyes vs Chasselay MDA | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #175 | P2_LOW_COVERAGE_SCORING | Evesham United vs Bishop's Cleeve | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #176 | P2_LOW_COVERAGE_SCORING | FSV Mainz 05 vs Shabab Al Ahli Dubai | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #177 | P2_LOW_COVERAGE_SCORING | Fafe vs Maria da Fonte | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #178 | P2_LOW_COVERAGE_SCORING | Fortuna Düsseldorf II vs TSV Steinbach | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #179 | P2_LOW_COVERAGE_SCORING | Fortuna Sittard vs Apoel Nicosia | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #180 | P2_LOW_COVERAGE_SCORING | Johor Darul Takzim FC vs FC Cartagena | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #181 | P2_LOW_COVERAGE_SCORING | Juve Stabia vs Ischia | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #182 | P2_LOW_COVERAGE_SCORING | Juventus vs Nice | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #183 | P2_LOW_COVERAGE_SCORING | Kalsdorf vs Gnas | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #184 | P2_LOW_COVERAGE_SCORING | Kortrijk vs KAA Gent II | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #185 | P2_LOW_COVERAGE_SCORING | Lancy vs Terre Sainte | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #186 | P2_LOW_COVERAGE_SCORING | Le Havre vs Laval | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #187 | P2_LOW_COVERAGE_SCORING | Lebring vs Weiz | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #188 | P2_LOW_COVERAGE_SCORING | Leek Town vs Runcorn Linnets | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #189 | P2_LOW_COVERAGE_SCORING | Mansfield Town vs Derby | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #190 | P2_LOW_COVERAGE_SCORING | Monaco vs Cercle Brugge | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #191 | P2_LOW_COVERAGE_SCORING | NEC Nijmegen vs Sevilla | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #192 | P2_LOW_COVERAGE_SCORING | Nantes vs Al Wakrah | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #193 | P2_LOW_COVERAGE_SCORING | Portimonense vs Nottingham Forest | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #194 | P2_LOW_COVERAGE_SCORING | Potenza vs Manfredonia | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #195 | P2_LOW_COVERAGE_SCORING | Quevilly vs Oissel | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #196 | P2_LOW_COVERAGE_SCORING | Rizespor vs Abha | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #197 | P2_LOW_COVERAGE_SCORING | Robur Siena vs Scandicci | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #198 | P2_LOW_COVERAGE_SCORING | Salisbury vs Havant & Wville | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #199 | P2_LOW_COVERAGE_SCORING | Sassuolo vs Folgore Caratese | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #200 | P2_LOW_COVERAGE_SCORING | Scunthorpe vs Chesterfield | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #201 | P2_LOW_COVERAGE_SCORING | Southport vs Wigan | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #202 | P2_LOW_COVERAGE_SCORING | Sporting CP vs Nottingham Forest | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #203 | P2_LOW_COVERAGE_SCORING | Tillmitsch vs Fürstenfeld | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #204 | P2_LOW_COVERAGE_SCORING | Torquay vs Exeter City | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #205 | P2_LOW_COVERAGE_SCORING | Toulouse vs Real Sociedad | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #206 | P2_LOW_COVERAGE_SCORING | Valenciennes vs Boulogne | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #207 | P2_LOW_COVERAGE_SCORING | VfL Wolfsburg vs Telstar | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #208 | P2_LOW_COVERAGE_SCORING | Vis Pesaro vs Benevento | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #209 | P2_LOW_COVERAGE_SCORING | Weston-super-Mare vs Gloucester City | league=Friendlies Clubs | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #210 | P1_TRUSTED_MISSING_SCORING | ASV Neumarkt vs Kornburg | league=Oberliga - Bayern Nord | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #211 | P1_TRUSTED_MISSING_SCORING | Ammerthal vs Bayern Hof | league=Oberliga - Bayern Nord | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #212 | P1_TRUSTED_MISSING_SCORING | Cham vs Fortuna Regensburg | league=Oberliga - Bayern Nord | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #213 | P1_TRUSTED_MISSING_SCORING | DJK Bamberg vs Weiden | league=Oberliga - Bayern Nord | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #214 | P1_TRUSTED_MISSING_SCORING | Neudrossenfeld vs Gebenbach | league=Oberliga - Bayern Nord | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #215 | P1_TRUSTED_MISSING_SCORING | 1860 München II vs Schalding-Heining | league=Oberliga - Bayern Süd | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #216 | P1_TRUSTED_MISSING_SCORING | 1860 Rosenheim vs Hankofen-Hailing | league=Oberliga - Bayern Süd | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #217 | P1_TRUSTED_MISSING_SCORING | Erlbach vs Deisenhofen | league=Oberliga - Bayern Süd | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #218 | P1_TRUSTED_MISSING_SCORING | Heimstetten vs TuS Geretsried | league=Oberliga - Bayern Süd | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #219 | P1_TRUSTED_MISSING_SCORING | Ismaning vs Landshut | league=Oberliga - Bayern Süd | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #220 | P1_TRUSTED_MISSING_SCORING | Sportfreunde Schwaig vs Gundelfingen | league=Oberliga - Bayern Süd | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #221 | P1_TRUSTED_MISSING_SCORING | Concordia vs HEBC | league=Oberliga - Hamburg | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #222 | P1_TRUSTED_MISSING_SCORING | ETSV Hamburg vs Teutonia Ottensen | league=Oberliga - Hamburg | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #223 | P1_TRUSTED_MISSING_SCORING | Harksheide vs Süderelbe | league=Oberliga - Hamburg | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #224 | P1_TRUSTED_MISSING_SCORING | Norderstedt II vs Pinneberg | league=Oberliga - Hamburg | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #225 | P1_TRUSTED_MISSING_SCORING | Fernwald vs Eintracht Stadtallendorf | league=Oberliga - Hessen | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #226 | P1_TRUSTED_MISSING_SCORING | Hadamar vs Baunatal | league=Oberliga - Hessen | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #227 | P1_TRUSTED_MISSING_SCORING | Cosmos Koblenz vs Mechtersheim | league=Oberliga - Rheinland-Pfalz / Saar | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #228 | P1_TRUSTED_MISSING_SCORING | Union Neumünster vs VfR Neumünster | league=Oberliga - Schleswig-Holstein | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #229 | P2_LOW_COVERAGE_SCORING | Augsburg II vs Landsberg | league=Regionalliga - Bayern | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #230 | P2_LOW_COVERAGE_SCORING | Buchbach vs Eichstätt | league=Regionalliga - Bayern | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #231 | P2_LOW_COVERAGE_SCORING | Eltersdorf vs Vilzing | league=Regionalliga - Bayern | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #232 | P2_LOW_COVERAGE_SCORING | Illertissen vs Schwaben Augsburg | league=Regionalliga - Bayern | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #233 | P2_LOW_COVERAGE_SCORING | Nürnberg II vs SpVgg Unterhaching | league=Regionalliga - Bayern | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #234 | P2_LOW_COVERAGE_SCORING | Wacker Burghausen vs Bayern München II | league=Regionalliga - Bayern | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #235 | P2_LOW_COVERAGE_SCORING | SV Drochtersen/Assel vs Phönix Lübeck | league=Regionalliga - Nord | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #236 | P2_LOW_COVERAGE_SCORING | Werder Bremen II vs VfB Oldenburg | league=Regionalliga - Nord | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #237 | P2_LOW_COVERAGE_SCORING | Chemnitzer FC vs BFC Preussen | league=Regionalliga - Nordost | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #238 | P2_LOW_COVERAGE_SCORING | SV Babelsberg 03 vs FC Carl Zeiss Jena | league=Regionalliga - Nordost | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #239 | P2_LOW_COVERAGE_SCORING | Tasmania Berlin vs Erzgebirge Aue | league=Regionalliga - Nordost | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #240 | P2_LOW_COVERAGE_SCORING | Grödig vs TSV St. Johann | league=Regionalliga - North | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #241 | P2_LOW_COVERAGE_SCORING | Kuchl vs Pinzgau Saalfelden | league=Regionalliga - North | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #242 | P2_LOW_COVERAGE_SCORING | Leonfelden vs Wals-Grünau | league=Regionalliga - North | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #243 | P2_LOW_COVERAGE_SCORING | SK Vorwarts Steyr vs Seekirchen | league=Regionalliga - North | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #244 | P2_LOW_COVERAGE_SCORING | Donau vs Krems / Rehberg | league=Regionalliga - Ost | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #245 | P2_LOW_COVERAGE_SCORING | Fach-Donaufeld vs SV Horn | league=Regionalliga - Ost | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #246 | P2_LOW_COVERAGE_SCORING | Leobendorf vs Parndorf | league=Regionalliga - Ost | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #247 | P2_LOW_COVERAGE_SCORING | Scheiblingkirchen vs Traiskirchen | league=Regionalliga - Ost | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #248 | P2_LOW_COVERAGE_SCORING | Wiener SC vs Favoritner AC | league=Regionalliga - Ost | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #249 | P2_LOW_COVERAGE_SCORING | Donau Klagenfurt vs Austria Klagenfurt | league=Regionalliga - South | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #250 | P2_LOW_COVERAGE_SCORING | Treibach vs Völkermarkt | league=Regionalliga - South | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #251 | P2_LOW_COVERAGE_SCORING | Velden vs Bleiburg | league=Regionalliga - South | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #252 | P2_LOW_COVERAGE_SCORING | Wolfsberg vs Wolfsberger AC II | league=Regionalliga - South | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #253 | P2_LOW_COVERAGE_SCORING | Bonner SC vs Rot-weiss Oberhausen | league=Regionalliga - West | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #254 | P2_LOW_COVERAGE_SCORING | Fügen vs Schwaz | league=Regionalliga - West | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #255 | P2_LOW_COVERAGE_SCORING | Imst vs SVG Reichenau | league=Regionalliga - West | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #256 | P2_LOW_COVERAGE_SCORING | Kitzbühel vs Lustenau | league=Regionalliga - West | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #257 | P1_TRUSTED_MISSING_SCORING | Control Orientado vs Uribelarrea | league=Torneo Promocional Amateur | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 
 ## Guardrails
 - This queue is diagnostic/planning only.
