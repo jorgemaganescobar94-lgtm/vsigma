@@ -2,7 +2,7 @@
 
 This report recommends review actions only. It never edits threshold configuration.
 
-- CLV sufficiency: INSUFFICIENT_CLV_DATA: usable=5, available_direction_rows=5; do not change thresholds from CLV yet.
+- CLV sufficiency: INSUFFICIENT_CLV_DATA: usable=0, available_direction_rows=0; do not change thresholds from CLV yet.
 
 ## Threshold Recommendations
 | market_family | failure_mode | experiment_id | drift_status | clv_direction | settled_rows | hit_rate | profit_units | roi_percent | threshold_recommendation | threshold_reason |
@@ -16,9 +16,6 @@ This report recommends review actions only. It never edits threshold configurati
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | NO_DRIFT |  | 4 | 50.0 | -0.73 | -18.25 | SAMPLE_TOO_SMALL | Only 4 settled rows; minimum threshold-review sample is 10. |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | NO_DRIFT |  | 3 | 66.666667 | 0.27 | 9.0 | SAMPLE_TOO_SMALL | Only 3 settled rows; minimum threshold-review sample is 10. |
 | OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | NO_DRIFT |  | 3 | 66.666667 | 0.27 | 9.0 | SAMPLE_TOO_SMALL | Only 3 settled rows; minimum threshold-review sample is 10. |
-| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | NO_DRIFT | CLV_FLAT | 2 |  | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | WATCH_PATTERN | CLV_UNAVAILABLE | 1 |  | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
-| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | NO_DRIFT | CLV_UNAVAILABLE | 1 |  | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | WATCH_PATTERN |  | 0 |  | 0.0 |  | SAMPLE_TOO_SMALL | Only 0 settled rows; minimum threshold-review sample is 10. |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V2_SCHEDULE_ANOMALY | UNKNOWN |  | 0 |  | 0.0 |  | SAMPLE_TOO_SMALL | Only 0 settled rows; minimum threshold-review sample is 10. |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V4_O25_FIREWALL | UNKNOWN |  | 0 |  | 0.0 |  | SAMPLE_TOO_SMALL | Only 0 settled rows; minimum threshold-review sample is 10. |
