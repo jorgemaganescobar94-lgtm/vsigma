@@ -1,11 +1,11 @@
 # vSIGMA Improvement Proposals - 2026-07-31
 
 ## Executive Proposal Summary
-- generated_at: 2026-07-31T22:13:29+01:00
-- proposals generated: 11
-- proposal_type_counts: DATA_QUALITY_PROPOSAL=7; MODEL_SHADOW_PROPOSAL=2; OPERATIONAL_PROPOSAL=2
-- proposal_status_counts: PROPOSAL_ONLY=8; SHADOW_CANDIDATE_REQUIRED=2; MONITOR_ONLY=1
-- priority_counts: P2=5; P1=3; P3=3
+- generated_at: 2026-08-01T10:22:24+01:00
+- proposals generated: 12
+- proposal_type_counts: DATA_QUALITY_PROPOSAL=7; MODEL_SHADOW_PROPOSAL=3; OPERATIONAL_PROPOSAL=2
+- proposal_status_counts: PROPOSAL_ONLY=8; SHADOW_CANDIDATE_REQUIRED=2; MONITOR_ONLY=2
+- priority_counts: P2=5; P3=4; P1=3
 
 ## Top Proposals
 - P1 | SHADOW_CANDIDATE_REQUIRED | MODEL_SHADOW_PROPOSAL | MARKET_RISK_CLUSTER | n=5 | auto_apply=NO | action=Create a shadow-only candidate for pattern OVER_1_5::FAILURE_MODE_LOW_CONVERSION; do not change production until backtest/forward-test promotion gates pass.
@@ -18,6 +18,7 @@
 - P2 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | SAMPLE_KEY_CLUSTER | n=7 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
 - P3 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | MARKET_RISK_CLUSTER | n=2 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
 - P3 | PROPOSAL_ONLY | DATA_QUALITY_PROPOSAL | SAMPLE_KEY_CLUSTER | n=2 | auto_apply=NO | action=Resolve UNKNOWN/UNRESOLVED/NO_SIGNAL evidence quality before creating any model shadow candidate.
+- P3 | MONITOR_ONLY | MODEL_SHADOW_PROPOSAL | ACTIONABLE_LOSS_CLUSTER | n=1 | auto_apply=NO | action=Create a shadow-only candidate for pattern HOME_WIN; do not change production until backtest/forward-test promotion gates pass.
 - P3 | MONITOR_ONLY | OPERATIONAL_PROPOSAL | EXPIRED_PRELOCK_CLUSTER | n=1 | auto_apply=NO | action=Review execution timing and exclude expired rows from predictive hit-rate metrics.
 
 ## Guardrails

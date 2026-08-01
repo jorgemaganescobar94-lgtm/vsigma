@@ -1,0 +1,6 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-07-31,OK,API-SPORTS_DIRECT,353.0,,,,,,
+2026-07-31T18:00:00+01:00,MATCHED,,,1494723.0,FT,Valerenga,Ham-Kam,0.0,3.0
+2026-07-31T18:30:00+01:00,MATCHED,,,1561894.0,FT,Lask Linz,Grazer AK,3.0,0.0
+2026-07-31T20:00:00+01:00,MATCHED,,,1494717.0,FT,Bodo/Glimt,Lillestrom,4.0,0.0
+2026-07-31T20:00:00+01:00,MATCHED,,,1556628.0,FT,Dundee Utd,Rangers,1.0,1.0
