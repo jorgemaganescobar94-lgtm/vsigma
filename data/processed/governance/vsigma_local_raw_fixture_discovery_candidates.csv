@@ -1,2 +1,2 @@
 target_date,generated_at,fixture_id,league,country,home_team,away_team,fixture_datetime_utc,source_path,source_status,discovery_reason,auto_apply,production_change
-2026-08-01,2026-08-01T21:25:34+01:00,1556628,Premiership,Scotland,Dundee Utd,Rangers,,data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv,LOCAL_RAW_DISCOVERY,existing local row has fixture identity and is not blocked,NO,NO
+2026-08-01,2026-08-01T23:26:38+01:00,1556628,Premiership,Scotland,Dundee Utd,Rangers,,data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv,LOCAL_RAW_DISCOVERY,existing local row has fixture identity and is not blocked,NO,NO
