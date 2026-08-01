@@ -1,15 +1,15 @@
-# vSIGMA Daily Command Center - 2026-07-31
+# vSIGMA Daily Command Center - 2026-08-01
 
 ## Executive Command
-- generated_at: 2026-08-01T10:22:24+01:00
-- mode: post-yesterday
+- generated_at: 2026-08-01T11:25:11+01:00
+- mode: health
 - command_center_status: ACTION_REQUIRED
 - daily_classification: TECHNICAL_WARNING
 - action_level: ACTION_REQUIRED
 - operational_verdict: TECHNICAL_WARNING
 - predictive_failure: NO
 - evidence_basis: partial_sources
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/30693589978
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/30695645849
 
 ## Next Operator Action
 - Inspect healthcheck, workflow logs, and artifacts before trusting the day.
@@ -25,12 +25,12 @@
 - quality_buckets: none
 
 ## Source Coverage
-- monitoring_summary: present — `data/processed/today/2026-07-31/vsigma_autonomous_monitoring_summary.md`
-- decision_quality_review: missing — `data/processed/today/2026-07-31/vsigma_decision_quality_review.md`
-- system_review: missing — `data/processed/today/2026-07-31/vsigma_system_review.md`
-- prelock_resolver: missing — `data/processed/today/2026-07-31/vsigma_prelock_decision_resolver.md`
-- cloud_decision_summary: missing — `data/processed/today/2026-07-31/vsigma_cloud_decision_summary.md`
-- decision_outcome_ledger: missing — `data/processed/today/2026-07-31/vsigma_decision_outcome_ledger.csv`
+- monitoring_summary: present — `data/processed/today/2026-08-01/vsigma_autonomous_monitoring_summary.md`
+- decision_quality_review: missing — `data/processed/today/2026-08-01/vsigma_decision_quality_review.md`
+- system_review: missing — `data/processed/today/2026-08-01/vsigma_system_review.md`
+- prelock_resolver: missing — `data/processed/today/2026-08-01/vsigma_prelock_decision_resolver.md`
+- cloud_decision_summary: missing — `data/processed/today/2026-08-01/vsigma_cloud_decision_summary.md`
+- decision_outcome_ledger: missing — `data/processed/today/2026-08-01/vsigma_decision_outcome_ledger.csv`
 
 ## Operating Rules
 - ACTION_REQUIRED: inspect before trusting the day.
