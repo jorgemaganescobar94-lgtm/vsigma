@@ -1,2 +1,2 @@
 target_date,generated_at,fixture_id,league,country,home_team,away_team,fixture_datetime_utc,source_path,raw_trust_status,trust_reason,allowed_downstream_use,auto_apply,production_change
-2026-08-01,2026-08-01T19:27:01+01:00,1556628,Premiership,Scotland,Dundee Utd,Rangers,,data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv,TRUSTED_RAW_SOURCE,source is not rejected and competition is not low-trust by token gate,SCORING_ALLOWED_WITH_NORMAL_GATES,NO,NO
+2026-08-01,2026-08-01T21:25:36+01:00,1556628,Premiership,Scotland,Dundee Utd,Rangers,,data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv,TRUSTED_RAW_SOURCE,source is not rejected and competition is not low-trust by token gate,SCORING_ALLOWED_WITH_NORMAL_GATES,NO,NO
