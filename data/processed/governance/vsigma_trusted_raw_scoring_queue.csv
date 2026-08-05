@@ -1,2 +1,2 @@
 target_date,generated_at,queue_rank,fixture_id,home_team,away_team,league,gap_status,scoring_needed,priority,reason,recommended_fix,auto_apply,production_change
-2026-08-05,2026-08-05T11:07:45+01:00,1,1556628,Dundee Utd,Rangers,Premiership,MISSING_SCORED_ROW,YES,P1_TRUSTED_MISSING_SCORING,trusted raw candidate has no matching scored row,Run/repair scoring enrichment over trusted raw fixture candidates before market translation.,NO,NO
+2026-08-05,2026-08-05T19:58:20+01:00,1,1556628,Dundee Utd,Rangers,Premiership,MISSING_SCORED_ROW,YES,P1_TRUSTED_MISSING_SCORING,trusted raw candidate has no matching scored row,Run/repair scoring enrichment over trusted raw fixture candidates before market translation.,NO,NO
