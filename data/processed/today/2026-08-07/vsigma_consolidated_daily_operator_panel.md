@@ -41,15 +41,15 @@
 - missing_data_counts: unknown=1
 
 ## Official / Probable Lineups
-- data/processed/today/2026-08-07/official_lineup_sources.csv: rows=312
+- data/processed/today/2026-08-07/official_lineup_sources.csv: rows=320
 - data/processed/today/2026-08-07/vsigma_probable_lineup_consensus.csv: rows=19
-- data/processed/governance/official_lineup_sources.csv: rows=312
+- data/processed/governance/official_lineup_sources.csv: rows=320
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=27; probable_status=UNKNOWN=1; LEARNING_ONLY=7; IMPORTED=19
 
 ## Quarantine / Learning-Only / Import Status
-- data/processed/today/2026-08-07/official_lineup_sources.csv: rows=312
+- data/processed/today/2026-08-07/official_lineup_sources.csv: rows=320
 - data/processed/today/2026-08-07/vsigma_probable_lineup_consensus.csv: rows=19
-- data/processed/governance/official_lineup_sources.csv: rows=312
+- data/processed/governance/official_lineup_sources.csv: rows=320
 - data/processed/governance/vsigma_probable_lineup_accuracy_ledger.csv: rows=27; probable_status=UNKNOWN=1; LEARNING_ONLY=7; IMPORTED=19
 
 ## Source Reliability Governor
@@ -117,7 +117,7 @@
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
 - files_scanned: 3644
 - accepted_rows: 312
-- rejected_rows: 270
+- rejected_rows: 892
 - next_action: Review accepted rows, then feed normal scoring gates.
 
 ## Raw Candidate Trust Gate
