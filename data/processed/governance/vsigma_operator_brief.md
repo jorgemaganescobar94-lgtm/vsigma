@@ -1,4 +1,4 @@
-# vSIGMA Daily Operator Brief - 2026-08-06
+# vSIGMA Daily Operator Brief - 2026-08-07
 
 ## Compact Top Summary
 | Field | Value | Meaning |
@@ -22,8 +22,8 @@
 ## Historical Drift Check
 | Field | Value | Meaning |
 |---|---|---|
-| Previous | date=2026-08-06; action=UNKNOWN; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | data/processed/today/2026-08-06/vsigma_operator_brief.csv |
-| Current | date=2026-08-06; action=NONE; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | current_build |
+| Previous | date=2026-08-07; action=UNKNOWN; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | data/processed/today/2026-08-07/vsigma_operator_brief.csv |
+| Current | date=2026-08-07; action=NONE; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | current_build |
 | Drift | MATERIAL_CHANGE | action_level: UNKNOWN -> NONE |
 | Changed | action_level | Tracked fields: action/final/risk/active |
 | Notify | true | true only on material operator drift |
@@ -48,7 +48,7 @@
 - watch_only: 0
 - no_bet: 1
 - board_decisions: NO_BET=1
-- recheck_decisions: UNKNOWN
+- recheck_decisions: none
 - live_triggers: none
 - alert_notify_required: true
 - auto_apply: NO
@@ -65,7 +65,7 @@
 - DRIFT_NOTIFY_REQUIRED=true
 - SANITY_CHECK=PASS
 - SANITY_DETAIL=no active/live/watch action; no_bet=1; closed=0
-- WINDOWS_READ=UTF8 | Get-Content data/processed/today/2026-08-06/vsigma_operator_brief.md -Encoding UTF8
+- WINDOWS_READ=UTF8 | Get-Content data/processed/today/2026-08-07/vsigma_operator_brief.md -Encoding UTF8
 
 ## Active Review
 - none
@@ -89,11 +89,11 @@
 - no calibration signal
 
 ## Key Files
-- data/processed/today/2026-08-06/vsigma_daily_execution_board.md
-- data/processed/today/2026-08-06/vsigma_prelock_live_recheck.md
-- data/processed/today/2026-08-06/vsigma_live_trigger_validator.md
-- data/processed/today/2026-08-06/vsigma_automation_health.md
-- data/processed/today/2026-08-06/vsigma_issue_alert_status.md
+- data/processed/today/2026-08-07/vsigma_daily_execution_board.md
+- data/processed/today/2026-08-07/vsigma_prelock_live_recheck.md
+- data/processed/today/2026-08-07/vsigma_live_trigger_validator.md
+- data/processed/today/2026-08-07/vsigma_automation_health.md
+- data/processed/today/2026-08-07/vsigma_issue_alert_status.md
 
 ## Guardrails
 - Brief is diagnostic only; it does not execute bets.
