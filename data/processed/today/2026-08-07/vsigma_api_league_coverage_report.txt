@@ -1,0 +1,26 @@
+vSIGMA API league coverage matrix
+
+Source: official API-Football /leagues coverage metadata. Historical runs use current retrieved metadata for the requested season and do not claim exact coverage drift.
+
+Data-rich / good leagues:
+country        league  season league_coverage_class  league_data_reliability_score  league_has_fixture_stats_coverage  league_has_odds_coverage  league_has_injuries_coverage  league_has_lineups_coverage league_coverage_source_status
+Austria    Bundesliga    2026         COVERAGE_RICH                           0.95                                  1                         1                             0                            1                  OFFICIAL_API
+ Brazil       Serie B    2026         COVERAGE_RICH                           0.95                                  1                         1                             0                            1                  OFFICIAL_API
+Denmark     Superliga    2026         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
+Finland Veikkausliiga    2026         COVERAGE_RICH                           0.95                                  1                         1                             0                            1                  OFFICIAL_API
+ Norway   Eliteserien    2026         COVERAGE_RICH                           0.95                                  1                         1                             1                            1                  OFFICIAL_API
+
+Partial leagues:
+    country             league  season league_coverage_class  league_data_reliability_score  league_has_fixture_stats_coverage  league_has_odds_coverage  league_has_injuries_coverage  league_has_lineups_coverage league_coverage_source_status
+    Belgium Jupiler Pro League    2026      COVERAGE_PARTIAL                            0.7                                  0                         1                             0                            0                  OFFICIAL_API
+    Germany      2. Bundesliga    2026      COVERAGE_PARTIAL                            0.7                                  0                         1                             0                            0                  OFFICIAL_API
+    Germany            3. Liga    2026      COVERAGE_PARTIAL                            0.7                                  0                         1                             0                            0                  OFFICIAL_API
+      Japan          J1 League    2027      COVERAGE_PARTIAL                            0.7                                  0                         1                             0                            0                  OFFICIAL_API
+Netherlands     Eerste Divisie    2026      COVERAGE_PARTIAL                            0.7                                  0                         1                             0                            0                  OFFICIAL_API
+Netherlands         Eredivisie    2026      COVERAGE_PARTIAL                            0.7                                  0                         1                             1                            0                  OFFICIAL_API
+   Portugal      Primeira Liga    2026      COVERAGE_PARTIAL                            0.7                                  0                         1                             0                            0                  OFFICIAL_API
+   Scotland       Championship    2026      COVERAGE_PARTIAL                            0.7                                  0                         1                             0                            1                  OFFICIAL_API
+     Turkey             1. Lig    2026      COVERAGE_PARTIAL                            0.7                                  0                         1                             0                            0                  OFFICIAL_API
+
+Thin / minimal leagues:
+None

@@ -1,0 +1,2 @@
+date,timezone,mode,baseline_competition_rows,candidate_v2_competition_rows,overlap_rows,baseline_only_rows,candidate_v2_only_rows,official_baseline_preserved,run_finished_at
+2026-08-07,Atlantic/Canary,SHADOW_CANDIDATE_V2,0,0,0,0,0,1,2026-08-07T09:14:57.958973+00:00
