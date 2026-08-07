@@ -2,16 +2,327 @@
 
 ## Summary
 - overall_status: LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 3596
-- accepted_rows: 1
-- rejected_rows: 2
-- source_status_counts: NO_SAME_DAY_ROWS=2052; EMPTY_OR_UNREADABLE=1540; NO_ACCEPTED_ROWS=3; HAS_ACCEPTED_ROWS=1
+- files_scanned: 3644
+- accepted_rows: 312
+- rejected_rows: 270
+- source_status_counts: NO_SAME_DAY_ROWS=2044; EMPTY_OR_UNREADABLE=1564; NO_ACCEPTED_ROWS=34; HAS_ACCEPTED_ROWS=2
 - next_action: Review accepted rows, then feed normal scoring gates.
 - auto_apply: NO
 - production_change: NO
 
 ## Accepted Rows
-- Dundee Utd vs Rangers | fixture_id=1556628 | league=Premiership | source=data/processed/governance/vsigma_match_stat_forecasts.csv
+- Dundee Utd vs Rangers | fixture_id=1556628 | league=Premiership | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- Tsirang vs Thimphu | fixture_id=1611328 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- Bayside Argonauts vs Box Hill | fixture_id=1541359 | league=Victoria Premier League 2 | source=data/processed/today/2026-08-07/matches.csv
+- Racing Santander vs Sporting Gijon | fixture_id=1585039 | league=Friendlies Clubs | source=data/processed/today/2026-08-07/matches.csv
+- Calcutta Customs vs Railway | fixture_id=1611918 | league=Calcutta Premier Division | source=data/processed/today/2026-08-07/matches.csv
+- Mohun Bagan vs Bhawanipore | fixture_id=1611919 | league=Calcutta Premier Division | source=data/processed/today/2026-08-07/matches.csv
+- United Kolkata vs Kidderpore | fixture_id=1611920 | league=Calcutta Premier Division | source=data/processed/today/2026-08-07/matches.csv
+- Prospect United vs Mt Druitt Town | fixture_id=1517909 | league=New South Wales NPL 2 | source=data/processed/today/2026-08-07/matches.csv
+- Almaz Antey U19 vs Nizhny Novgorod U19 | fixture_id=1519222 | league=Youth Championship | source=data/processed/today/2026-08-07/matches.csv
+- Adelaide City vs Playford City Patriots | fixture_id=1527121 | league=South Australia NPL | source=data/processed/today/2026-08-07/matches.csv
+- Campbelltown City vs FK Beograd | fixture_id=1527124 | league=South Australia NPL | source=data/processed/today/2026-08-07/matches.csv
+- Adelaide Raiders vs The Cove | fixture_id=1527345 | league=South Australia State League 1 | source=data/processed/today/2026-08-07/matches.csv
+- Incheon Red Angels W vs Gumi Sportstoto W | fixture_id=1533758 | league=WK-League | source=data/processed/today/2026-08-07/matches.csv
+- UCSA vs Nyva Ternopil | fixture_id=1581869 | league=Persha Liga | source=data/processed/today/2026-08-07/matches.csv
+- Blacktown Spartans vs Inter Lions | fixture_id=1517833 | league=New South Wales NPL 2 | source=data/processed/today/2026-08-07/matches.csv
+- Olympia Warriors vs Clarence Zebras II | fixture_id=1533059 | league=Tasmania Southern Championship | source=data/processed/today/2026-08-07/matches.csv
+- Glenorchy Knights U21 vs Hobart Utd. | fixture_id=1533060 | league=Tasmania Southern Championship | source=data/processed/today/2026-08-07/matches.csv
+- Yokohama F. Marinos vs Kashima | fixture_id=1553999 | league=J1 League | source=data/processed/today/2026-08-07/matches.csv
+- West Torrens Birkalla vs West Adelaide | fixture_id=1527120 | league=South Australia NPL | source=data/processed/today/2026-08-07/matches.csv
+- Hwacheon KSPO W vs Gyeongju W | fixture_id=1533757 | league=WK-League | source=data/processed/today/2026-08-07/matches.csv
+- Suwon FMC W vs Changnyeong W | fixture_id=1533759 | league=WK-League | source=data/processed/today/2026-08-07/matches.csv
+- Gamba Osaka vs Urawa | fixture_id=1554003 | league=J1 League | source=data/processed/today/2026-08-07/matches.csv
+- Asan Mugunghwa vs Ansan Greeners | fixture_id=1510403 | league=K League 2 | source=data/processed/today/2026-08-07/matches.csv
+- Gimpo Citizen vs Cheongju | fixture_id=1510404 | league=K League 2 | source=data/processed/today/2026-08-07/matches.csv
+- Gyeongnam FC vs Daegu FC | fixture_id=1510405 | league=K League 2 | source=data/processed/today/2026-08-07/matches.csv
+- Hwaseong vs Seoul E-Land FC | fixture_id=1510406 | league=K League 2 | source=data/processed/today/2026-08-07/matches.csv
+- Suwon Bluewings vs Gimhae City | fixture_id=1510407 | league=K League 2 | source=data/processed/today/2026-08-07/matches.csv
+- Yongin City vs Busan I Park | fixture_id=1510408 | league=K League 2 | source=data/processed/today/2026-08-07/matches.csv
+- Akademiya Konoplev U20 vs Krasnodar U19 | fixture_id=1519119 | league=Youth Championship | source=data/processed/today/2026-08-07/matches.csv
+- Melbourne City vs Palermo | fixture_id=1585040 | league=Friendlies Clubs | source=data/processed/today/2026-08-07/matches.csv
+- Dynamo Dresden U19 vs Erzgebirge Aue U19 | fixture_id=1595485 | league=U19 Bundesliga | source=data/processed/today/2026-08-07/matches.csv
+- Beijing Guoan vs Sichuan Jiuniu | fixture_id=1523227 | league=Super League | source=data/processed/today/2026-08-07/matches.csv
+- Arys vs Tobol 2 | fixture_id=1534816 | league=1. Division | source=data/processed/today/2026-08-07/matches.csv
+- Bayern München vs Aston Villa | fixture_id=1542348 | league=Friendlies Clubs | source=data/processed/today/2026-08-07/matches.csv
+- Jaiyq vs Taraz | fixture_id=1534817 | league=1. Division | source=data/processed/today/2026-08-07/matches.csv
+- Singapore vs Indonesia | fixture_id=1548100 | league=ASEAN Championship | source=data/processed/today/2026-08-07/matches.csv
+- Vietnam vs Cambodia | fixture_id=1548101 | league=ASEAN Championship | source=data/processed/today/2026-08-07/matches.csv
+- Boston City U20 vs Atlético Mineiro U20 | fixture_id=1580417 | league=Mineiro U20 | source=data/processed/today/2026-08-07/matches.csv
+- Al Hilal Omdurman vs Jamus | fixture_id=1611283 | league=CECAFA Club Cup | source=data/processed/today/2026-08-07/matches.csv
+- Altyn Asyr vs Aşgabat | fixture_id=1612410 | league=Ýokary Liga | source=data/processed/today/2026-08-07/matches.csv
+- Ahal vs Köpetdag Aşgabat | fixture_id=1612411 | league=Ýokary Liga | source=data/processed/today/2026-08-07/matches.csv
+- Şagadam vs Nebitci | fixture_id=1612412 | league=Ýokary Liga | source=data/processed/today/2026-08-07/matches.csv
+- Surkhon vs Navbahor | fixture_id=1516095 | league=Super League | source=data/processed/today/2026-08-07/matches.csv
+- Chertanovo U20 vs Rubin Kazan U20 | fixture_id=1519114 | league=Youth Championship | source=data/processed/today/2026-08-07/matches.csv
+- CSKA Moskva U19 vs Dynamo Makhachkala U19 | fixture_id=1519115 | league=Youth Championship | source=data/processed/today/2026-08-07/matches.csv
+- Fakel U19 vs Spartak Moskva U19 | fixture_id=1519117 | league=Youth Championship | source=data/processed/today/2026-08-07/matches.csv
+- Rostov U19 vs Zenit U19 | fixture_id=1519118 | league=Youth Championship | source=data/processed/today/2026-08-07/matches.csv
+- Servette Chênois W vs Aktobe W | fixture_id=1611282 | league=UEFA Champions League Women | source=data/processed/today/2026-08-07/matches.csv
+- Bars vs Alga | fixture_id=1611322 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- Toktogul vs Ozgon | fixture_id=1611323 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- Lokomotiv vs Dinamo Samarqand | fixture_id=1516090 | league=Super League | source=data/processed/today/2026-08-07/matches.csv
+- Dordoi Bishkek vs Neftchi | fixture_id=1611324 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- Talant vs Ilbirs | fixture_id=1611325 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- Naftan vs Arsenal | fixture_id=1525939 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- Haka vs JIPPO | fixture_id=1504277 | league=Ykkösliiga | source=data/processed/today/2026-08-07/matches.csv
+- Xorazm vs Mash'al | fixture_id=1516096 | league=Super League | source=data/processed/today/2026-08-07/matches.csv
+- Rodina Moscow U19 vs Ural U20 | fixture_id=1519120 | league=Youth Championship | source=data/processed/today/2026-08-07/matches.csv
+- Turan Turkistan vs Astana II | fixture_id=1534819 | league=1. Division | source=data/processed/today/2026-08-07/matches.csv
+- Shkëndija Haraçinë vs Sileks | fixture_id=1551433 | league=First League | source=data/processed/today/2026-08-07/matches.csv
+- Slavia Praha II vs Třinec | fixture_id=1559742 | league=FNL | source=data/processed/today/2026-08-07/matches.csv
+- Jagiellonia II vs Wigry Suwałki | fixture_id=1569036 | league=III Liga - Group 1 | source=data/processed/today/2026-08-07/matches.csv
+- Olimpia Elbląg vs Polonia Lidzbark Warm. | fixture_id=1569040 | league=III Liga - Group 1 | source=data/processed/today/2026-08-07/matches.csv
+- Iskra vs Vulturii Cutezători | fixture_id=1576878 | league=Liga 1 | source=data/processed/today/2026-08-07/matches.csv
+- FC National Ialoveni vs Oguzsport | fixture_id=1576879 | league=Liga 1 | source=data/processed/today/2026-08-07/matches.csv
+- Univer Comrat vs Zimbru II | fixture_id=1576882 | league=Liga 1 | source=data/processed/today/2026-08-07/matches.csv
+- Ararat-Armenia vs FC Urartu | fixture_id=1581492 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- Ararat vs Sardarapat | fixture_id=1581493 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- Sudtirol vs Virtus Verona | fixture_id=1598589 | league=Friendlies Clubs | source=data/processed/today/2026-08-07/matches.csv
+- Unirea Slobozia vs Gloria Bistriţa | fixture_id=1602430 | league=Liga II | source=data/processed/today/2026-08-07/matches.csv
+- Sayana Haskovo vs Gigant Saedinenie | fixture_id=1603896 | league=Third League - Southeast | source=data/processed/today/2026-08-07/matches.csv
+- JäPS vs MP | fixture_id=1504278 | league=Ykkösliiga | source=data/processed/today/2026-08-07/matches.csv
+- KuPS Akatemia vs Inter Turku II | fixture_id=1517237 | league=Ykkönen | source=data/processed/today/2026-08-07/matches.csv
+- Jaro 2 vs JBK | fixture_id=1541754 | league=Kakkonen - Lohko C | source=data/processed/today/2026-08-07/matches.csv
+- Beltinci vs Rudar | fixture_id=1558887 | league=2. SNL | source=data/processed/today/2026-08-07/matches.csv
+- Dren Vrhnika vs Triglav | fixture_id=1558894 | league=2. SNL | source=data/processed/today/2026-08-07/matches.csv
+- MTK Budapest vs Puskas Academy | fixture_id=1560216 | league=NB I | source=data/processed/today/2026-08-07/matches.csv
+- Rokycany vs Milevsko | fixture_id=1562229 | league=4. liga - Divizie A | source=data/processed/today/2026-08-07/matches.csv
+- Mławianka Mława vs Pelikan Łowicz | fixture_id=1569039 | league=III Liga - Group 1 | source=data/processed/today/2026-08-07/matches.csv
+- Líšeň II vs Vrchovina | fixture_id=1577882 | league=3. liga - MSFL | source=data/processed/today/2026-08-07/matches.csv
+- Velké Meziříčí vs Humpolec | fixture_id=1579072 | league=4. liga - Divizie D | source=data/processed/today/2026-08-07/matches.csv
+- Vysočina Jihlava vs Příbram | fixture_id=1559738 | league=FNL | source=data/processed/today/2026-08-07/matches.csv
+- Etar Veliko Tarnovo vs Marek | fixture_id=1571505 | league=Second League | source=data/processed/today/2026-08-07/matches.csv
+- SJK vs Gnistan | fixture_id=1495751 | league=Veikkausliiga | source=data/processed/today/2026-08-07/matches.csv
+- Rustavi vs Torpedo Kutaisi | fixture_id=1509156 | league=Erovnuli Liga | source=data/processed/today/2026-08-07/matches.csv
+- Kuressaare vs Laagri | fixture_id=1513599 | league=Meistriliiga | source=data/processed/today/2026-08-07/matches.csv
+- Dinamo Moskva U19 vs Lokomotiv Moskva U19 | fixture_id=1519116 | league=Youth Championship | source=data/processed/today/2026-08-07/matches.csv
+- Atlantis vs Reipas | fixture_id=1541655 | league=Kakkonen - Lohko A | source=data/processed/today/2026-08-07/matches.csv
+- Kiffen vs Union Plaani | fixture_id=1541656 | league=Kakkonen - Lohko A | source=data/processed/today/2026-08-07/matches.csv
+- PEPO vs MyPa | fixture_id=1541657 | league=Kakkonen - Lohko A | source=data/processed/today/2026-08-07/matches.csv
+- PPJ vs HPS | fixture_id=1541658 | league=Kakkonen - Lohko A | source=data/processed/today/2026-08-07/matches.csv
+- Hegelmann II vs Garliava | fixture_id=1556405 | league=1 Lyga | source=data/processed/today/2026-08-07/matches.csv
+- Jonava vs Ekranas | fixture_id=1556406 | league=1 Lyga | source=data/processed/today/2026-08-07/matches.csv
+- Polonia Bytom vs Pogoń Siedlce | fixture_id=1558170 | league=I Liga | source=data/processed/today/2026-08-07/matches.csv
+- Krka vs Bistrica | fixture_id=1558893 | league=2. SNL | source=data/processed/today/2026-08-07/matches.csv
+- Dukla Praha vs Hanácká | fixture_id=1559737 | league=FNL | source=data/processed/today/2026-08-07/matches.csv
+- Opava vs Kladno | fixture_id=1559739 | league=FNL | source=data/processed/today/2026-08-07/matches.csv
+- Prostějov vs Karviná | fixture_id=1559741 | league=FNL | source=data/processed/today/2026-08-07/matches.csv
+- Ústí nad Labem vs Arsenal Česká Lípa | fixture_id=1559743 | league=FNL | source=data/processed/today/2026-08-07/matches.csv
+- Vlašim vs Viktoria Žižkov | fixture_id=1559744 | league=FNL | source=data/processed/today/2026-08-07/matches.csv
+- Motorlet Praha vs Bohemians 1905 II | fixture_id=1562592 | league=3. liga - CFL A | source=data/processed/today/2026-08-07/matches.csv
+- Baník Souš vs Teplice II | fixture_id=1562707 | league=3. liga - CFL B | source=data/processed/today/2026-08-07/matches.csv
+- Stal Brzeg vs Ślęza Wrocław | fixture_id=1568429 | league=III Liga - Group 3 | source=data/processed/today/2026-08-07/matches.csv
+- Hohenems vs Lustenau | fixture_id=1573810 | league=Regionalliga - West | source=data/processed/today/2026-08-07/matches.csv
+- LASK W vs Sturm Graz W | fixture_id=1574594 | league=Frauenliga | source=data/processed/today/2026-08-07/matches.csv
+- Hlučín vs Bospor Bohumín | fixture_id=1579309 | league=4. liga - Divizie F | source=data/processed/today/2026-08-07/matches.csv
+- Nürnberg II vs Buchbach | fixture_id=1586158 | league=Regionalliga - Bayern | source=data/processed/today/2026-08-07/matches.csv
+- Schwaben Augsburg vs Eichstätt | fixture_id=1586159 | league=Regionalliga - Bayern | source=data/processed/today/2026-08-07/matches.csv
+- Rot-Weiß Erfurt U19 vs RB Leipzig U19 | fixture_id=1595486 | league=U19 Bundesliga | source=data/processed/today/2026-08-07/matches.csv
+- GOR Mahia vs Rayon Sports | fixture_id=1611284 | league=CECAFA Club Cup | source=data/processed/today/2026-08-07/matches.csv
+- SVG Reichenau vs Swarovski Tirol II | fixture_id=1573814 | league=Regionalliga - West | source=data/processed/today/2026-08-07/matches.csv
+- Österlen vs Sölvesborg | fixture_id=1510981 | league=Division 2 - Södra Götaland | source=data/processed/today/2026-08-07/matches.csv
+- Chomutov vs Rapid Psáry | fixture_id=1562346 | league=4. liga - Divizie B | source=data/processed/today/2026-08-07/matches.csv
+- MŠK Senec vs Častkovce | fixture_id=1566042 | league=3. liga - West | source=data/processed/today/2026-08-07/matches.csv
+- Fortuna Regensburg vs DJK Bamberg | fixture_id=1566719 | league=Oberliga - Bayern Nord | source=data/processed/today/2026-08-07/matches.csv
+- Würzburger FV vs Nordlingen | fixture_id=1566720 | league=Oberliga - Bayern Nord | source=data/processed/today/2026-08-07/matches.csv
+- Stadeln vs Cham | fixture_id=1566726 | league=Oberliga - Bayern Nord | source=data/processed/today/2026-08-07/matches.csv
+- Schalding-Heining vs Pipinsried | fixture_id=1567022 | league=Oberliga - Bayern Süd | source=data/processed/today/2026-08-07/matches.csv
+- Pfaffenhofen vs 1860 München II | fixture_id=1567244 | league=Oberliga - Bayern Süd | source=data/processed/today/2026-08-07/matches.csv
+- FC Liefering vs WSPG Wels | fixture_id=1567872 | league=2. Liga | source=data/processed/today/2026-08-07/matches.csv
+- SKN ST. Polten vs Austria Vienna (Am) | fixture_id=1567874 | league=2. Liga | source=data/processed/today/2026-08-07/matches.csv
+- Middelfart vs Brabrand | fixture_id=1575758 | league=2. Division | source=data/processed/today/2026-08-07/matches.csv
+- Huesca vs FC Andorra | fixture_id=1585043 | league=Friendlies Clubs | source=data/processed/today/2026-08-07/matches.csv
+- Landsberg vs Illertissen | fixture_id=1586160 | league=Regionalliga - Bayern | source=data/processed/today/2026-08-07/matches.csv
+- Hannover 96 II vs HSC Hannover | fixture_id=1586493 | league=Regionalliga - Nord | source=data/processed/today/2026-08-07/matches.csv
+- VfB Oldenburg vs SV Drochtersen/Assel | fixture_id=1586499 | league=Regionalliga - Nord | source=data/processed/today/2026-08-07/matches.csv
+- Girona vs Sabadell | fixture_id=1607279 | league=Friendlies Clubs | source=data/processed/today/2026-08-07/matches.csv
+- Slavia Mozyr vs FC Dnepr Mogilev | fixture_id=1525940 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- Grohn vs Aumund-Vegesack | fixture_id=1604196 | league=Oberliga - Bremen | source=data/processed/today/2026-08-07/matches.csv
+- Sandefjord vs KFUM Oslo | fixture_id=1494728 | league=Eliteserien | source=data/processed/today/2026-08-07/matches.csv
+- AIK W vs Brommapojkarna W | fixture_id=1495516 | league=Damallsvenskan | source=data/processed/today/2026-08-07/matches.csv
+- Växjö W vs Rosengård W | fixture_id=1495521 | league=Damallsvenskan | source=data/processed/today/2026-08-07/matches.csv
+- Åkra vs Varhaug | fixture_id=1497023 | league=3. Division - Girone 4 | source=data/processed/today/2026-08-07/matches.csv
+- Ostersunds FK vs GIF Sundsvall | fixture_id=1497655 | league=Superettan | source=data/processed/today/2026-08-07/matches.csv
+- Jitex W vs Häcken II W | fixture_id=1501438 | league=Elitettan | source=data/processed/today/2026-08-07/matches.csv
+- Kristianstad vs Angelholms FF | fixture_id=1504494 | league=Ettan - Södra | source=data/processed/today/2026-08-07/matches.csv
+- Skara vs Vänersborgs FK | fixture_id=1510634 | league=Division 2 - Norra Götaland | source=data/processed/today/2026-08-07/matches.csv
+- Kungsängen vs Lidingö | fixture_id=1510811 | league=Division 2 - Norra Svealand | source=data/processed/today/2026-08-07/matches.csv
+- Galtabacks vs Qviding FIF | fixture_id=1511361 | league=Division 2 - Västra Götaland | source=data/processed/today/2026-08-07/matches.csv
+- Sonderjyske vs Viborg | fixture_id=1548986 | league=Superliga | source=data/processed/today/2026-08-07/matches.csv
+- Zbrojovka Brno vs Slovan Liberec | fixture_id=1559977 | league=Czech Liga | source=data/processed/today/2026-08-07/matches.csv
+- Karlovy Vary vs Sokol Hostouň | fixture_id=1562348 | league=4. liga - Divizie B | source=data/processed/today/2026-08-07/matches.csv
+- Spartak Myjava vs Dunajská Lužná | fixture_id=1566043 | league=3. liga - West | source=data/processed/today/2026-08-07/matches.csv
+- Gebenbach vs Eintracht Bamberg | fixture_id=1566722 | league=Oberliga - Bayern Nord | source=data/processed/today/2026-08-07/matches.csv
+- Weiden vs Ammerthal | fixture_id=1566723 | league=Oberliga - Bayern Nord | source=data/processed/today/2026-08-07/matches.csv
+- Kornburg vs Großbardorf | fixture_id=1566724 | league=Oberliga - Bayern Nord | source=data/processed/today/2026-08-07/matches.csv
+- 1880 Wasserburg vs Erlbach | fixture_id=1567020 | league=Oberliga - Bayern Süd | source=data/processed/today/2026-08-07/matches.csv
+- Landshut vs 1860 Rosenheim | fixture_id=1567245 | league=Oberliga - Bayern Süd | source=data/processed/today/2026-08-07/matches.csv
+- Polonia Środa vs Victoria Września | fixture_id=1568736 | league=III Liga - Group 2 | source=data/processed/today/2026-08-07/matches.csv
+- Gloggnitz vs Krems / Rehberg | fixture_id=1574050 | league=Regionalliga - Ost | source=data/processed/today/2026-08-07/matches.csv
+- Mannsdorf-Großenzersdorf vs Leobendorf | fixture_id=1574051 | league=Regionalliga - Ost | source=data/processed/today/2026-08-07/matches.csv
+- Parndorf vs Donau | fixture_id=1574052 | league=Regionalliga - Ost | source=data/processed/today/2026-08-07/matches.csv
+- B 93 vs Roskilde | fixture_id=1575759 | league=2. Division | source=data/processed/today/2026-08-07/matches.csv
+- Germania Halberstadt vs Einheit Wernigerode | fixture_id=1577201 | league=Oberliga - Nordost-Süd | source=data/processed/today/2026-08-07/matches.csv
+- Frem vs Hørsholm-Usserød | fixture_id=1577744 | league=3. Division | source=data/processed/today/2026-08-07/matches.csv
+- Hranice vs Uničov | fixture_id=1577879 | league=3. liga - MSFL | source=data/processed/today/2026-08-07/matches.csv
+- Yverdon W vs Zürich W | fixture_id=1581752 | league=AXA Women’s Super League | source=data/processed/today/2026-08-07/matches.csv
+- Balingen vs FC 08 Villingen | fixture_id=1582369 | league=Oberliga - Baden-Württemberg | source=data/processed/today/2026-08-07/matches.csv
+- Reutlingen vs FC Nöttingen | fixture_id=1582372 | league=Oberliga - Baden-Württemberg | source=data/processed/today/2026-08-07/matches.csv
+- Waldhof Mannheim vs Fortuna Düsseldorf | fixture_id=1583944 | league=3. Liga | source=data/processed/today/2026-08-07/matches.csv
+- Leganes vs Mérida AD | fixture_id=1585041 | league=Friendlies Clubs | source=data/processed/today/2026-08-07/matches.csv
+- Albacete vs Eldense | fixture_id=1585044 | league=Friendlies Clubs | source=data/processed/today/2026-08-07/matches.csv
+- Aubstadt vs Wacker Burghausen | fixture_id=1586161 | league=Regionalliga - Bayern | source=data/processed/today/2026-08-07/matches.csv
+- Bayreuth vs Memmingen | fixture_id=1586162 | league=Regionalliga - Bayern | source=data/processed/today/2026-08-07/matches.csv
+- TSV 1860 München vs Augsburg II | fixture_id=1586163 | league=Regionalliga - Bayern | source=data/processed/today/2026-08-07/matches.csv
+- Kickers Emden vs Hamburger SV II | fixture_id=1586492 | league=Regionalliga - Nord | source=data/processed/today/2026-08-07/matches.csv
+- Greifswalder FC vs Altglienicke | fixture_id=1586817 | league=Regionalliga - Nordost | source=data/processed/today/2026-08-07/matches.csv
+- Stuttgarter Kickers vs SSV Ulm 1846 | fixture_id=1587094 | league=Regionalliga - SudWest | source=data/processed/today/2026-08-07/matches.csv
+- Fulham vs Crystal Palace | fixture_id=1604769 | league=Friendlies Clubs | source=data/processed/today/2026-08-07/matches.csv
+- AD Ceuta FC vs Malaga | fixture_id=1604770 | league=Friendlies Clubs | source=data/processed/today/2026-08-07/matches.csv
+- Deutschlandsberger SC vs Allerheiligen | fixture_id=1607905 | league=Regionalliga - South | source=data/processed/today/2026-08-07/matches.csv
+- Gleisdorf 09 vs Hartberg (Am) | fixture_id=1607906 | league=Regionalliga - South | source=data/processed/today/2026-08-07/matches.csv
+- SV Lafnitz vs Weiz | fixture_id=1607907 | league=Regionalliga - South | source=data/processed/today/2026-08-07/matches.csv
+- Tillmitsch vs Kalsdorf | fixture_id=1607908 | league=Regionalliga - South | source=data/processed/today/2026-08-07/matches.csv
+- Völkermarkt vs Velden | fixture_id=1607909 | league=Regionalliga - South | source=data/processed/today/2026-08-07/matches.csv
+- Kuchl vs Wallern / Marienkirchen | fixture_id=1608020 | league=Regionalliga - North | source=data/processed/today/2026-08-07/matches.csv
+- Ried II vs Leonfelden | fixture_id=1608021 | league=Regionalliga - North | source=data/processed/today/2026-08-07/matches.csv
+- Pinzgau Saalfelden vs Wohnbau Dietach | fixture_id=1608022 | league=Regionalliga - North | source=data/processed/today/2026-08-07/matches.csv
+- Seekirchen vs Grödig | fixture_id=1608023 | league=Regionalliga - North | source=data/processed/today/2026-08-07/matches.csv
+- Gurten vs Bad Schallerbach | fixture_id=1608024 | league=Regionalliga - North | source=data/processed/today/2026-08-07/matches.csv
+- Favoritner AC vs Wiener Viktoria | fixture_id=1574054 | league=Regionalliga - Ost | source=data/processed/today/2026-08-07/matches.csv
+- Union Neumünster vs TSB Flensburg | fixture_id=1580177 | league=Oberliga - Schleswig-Holstein | source=data/processed/today/2026-08-07/matches.csv
+- Hünfelder SV vs Vfb Marburg | fixture_id=1581047 | league=Oberliga - Hessen | source=data/processed/today/2026-08-07/matches.csv
+- SpVgg Herne Horsthausen vs Verl II | fixture_id=1592172 | league=Oberliga - Westfalen | source=data/processed/today/2026-08-07/matches.csv
+- Austria Klagenfurt vs Treibach | fixture_id=1607910 | league=Regionalliga - South | source=data/processed/today/2026-08-07/matches.csv
+- Union Carl Berner vs Konnerud | fixture_id=1496483 | league=3. Division - Girone 1 | source=data/processed/today/2026-08-07/matches.csv
+- Enköping vs Karlberg | fixture_id=1505213 | league=Ettan - Norra | source=data/processed/today/2026-08-07/matches.csv
+- 07 Vestur vs EB / Streymur | fixture_id=1506508 | league=Meistaradeildin | source=data/processed/today/2026-08-07/matches.csv
+- Räppe vs Berga | fixture_id=1510982 | league=Division 2 - Södra Götaland | source=data/processed/today/2026-08-07/matches.csv
+- Åstorp vs Lindome | fixture_id=1511356 | league=Division 2 - Västra Götaland | source=data/processed/today/2026-08-07/matches.csv
+- SC Kriens vs Yverdon Sport | fixture_id=1555027 | league=Challenge League | source=data/processed/today/2026-08-07/matches.csv
+- Stade Lausanne-Ouchy vs Rapperswil | fixture_id=1555028 | league=Challenge League | source=data/processed/today/2026-08-07/matches.csv
+- FC Winterthur vs FC WIL 1900 | fixture_id=1555029 | league=Challenge League | source=data/processed/today/2026-08-07/matches.csv
+- SCR Altach vs WSG Wattens | fixture_id=1561900 | league=Bundesliga | source=data/processed/today/2026-08-07/matches.csv
+- Kufstein vs Lochau | fixture_id=1573812 | league=Regionalliga - West | source=data/processed/today/2026-08-07/matches.csv
+- Traiskirchen vs Fach-Donaufeld | fixture_id=1574053 | league=Regionalliga - Ost | source=data/processed/today/2026-08-07/matches.csv
+- SV Horn vs Wienerberg | fixture_id=1574055 | league=Regionalliga - Ost | source=data/processed/today/2026-08-07/matches.csv
+- Oberwart vs Scheiblingkirchen | fixture_id=1574056 | league=Regionalliga - Ost | source=data/processed/today/2026-08-07/matches.csv
+- Tennis Borussia vs FC Lok Stendal | fixture_id=1576967 | league=Oberliga - Nordost-Nord | source=data/processed/today/2026-08-07/matches.csv
+- Oldenburger SV vs Rotenhof | fixture_id=1580178 | league=Oberliga - Schleswig-Holstein | source=data/processed/today/2026-08-07/matches.csv
+- Oberachern vs Karlsruhe II | fixture_id=1582371 | league=Oberliga - Baden-Württemberg | source=data/processed/today/2026-08-07/matches.csv
+- Hércules vs Castellón | fixture_id=1585045 | league=Friendlies Clubs | source=data/processed/today/2026-08-07/matches.csv
+- Racing Santander vs Alaves | fixture_id=1585046 | league=Friendlies Clubs | source=data/processed/today/2026-08-07/matches.csv
+- Borussia Dortmund II vs Köln II | fixture_id=1587409 | league=Regionalliga - West | source=data/processed/today/2026-08-07/matches.csv
+- FC Gutersloh vs Bochum II | fixture_id=1587410 | league=Regionalliga - West | source=data/processed/today/2026-08-07/matches.csv
+- Bersenbrück vs Schwarz-Weiß Rehden | fixture_id=1588917 | league=Oberliga - Niedersachsen | source=data/processed/today/2026-08-07/matches.csv
+- TuS Koblenz vs Auersmacher | fixture_id=1598854 | league=Oberliga - Rheinland-Pfalz / Saar | source=data/processed/today/2026-08-07/matches.csv
+- Diefflen vs Cosmos Koblenz | fixture_id=1598856 | league=Oberliga - Rheinland-Pfalz / Saar | source=data/processed/today/2026-08-07/matches.csv
+- Burgan vs Al Sulaibikhat | fixture_id=1549119 | league=Division 1 | source=data/processed/today/2026-08-07/matches.csv
+- Yarmouk vs Khaitan | fixture_id=1549121 | league=Division 1 | source=data/processed/today/2026-08-07/matches.csv
+- Podlasie Biała Podlaska vs Hetman Zamosc | fixture_id=1568117 | league=III Liga - Group 4 | source=data/processed/today/2026-08-07/matches.csv
+- General Lamadrid vs Deportivo Español | fixture_id=1500040 | league=Primera C | source=data/processed/today/2026-08-07/matches.csv
+- Aguai U20 vs São Paulo U20 | fixture_id=1547394 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- Botafogo SP U20 vs Santo André U20 | fixture_id=1547395 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- EC São Bernardo U20 vs Oeste U20 | fixture_id=1547396 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- Guarani U20 vs Água Santa U20 | fixture_id=1547398 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- Ituano U20 vs RB Bragantino U20 | fixture_id=1547399 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- Mirassol U20 vs Itapirense U20 | fixture_id=1547400 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- Osasco Audax U20 vs Referencia U20 | fixture_id=1547401 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- SC Paulinense SP U20 vs Ibrachina U20 | fixture_id=1547402 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- XV de Piracicaba U20 vs Velo Clube U20 | fixture_id=1547403 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- Ponte Preta U20 vs Jabaquara U20 | fixture_id=1547404 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- Porto Football U20 vs Flamengo SP U20 | fixture_id=1547405 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- Portuguesa Santista U20 vs Sertãozinho U20 | fixture_id=1547406 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- Santos U20 vs São Bento U20 | fixture_id=1547408 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- Sfera U20 vs XV de Jaú U20 | fixture_id=1547410 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- União São João U20 vs Bandeirante U20 | fixture_id=1547412 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- União Suzano U20 vs América-SP U20 | fixture_id=1547413 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- Sport Huancayo vs Club Deportivo Los Chankas | fixture_id=1549444 | league=Primera División | source=data/processed/today/2026-08-07/matches.csv
+- Uribelarrea vs Buenos Aires City | fixture_id=1550007 | league=Torneo Promocional Amateur | source=data/processed/today/2026-08-07/matches.csv
+- Dordrecht vs Jong Ajax | fixture_id=1551737 | league=Eerste Divisie | source=data/processed/today/2026-08-07/matches.csv
+- Emmen vs Roda | fixture_id=1551738 | league=Eerste Divisie | source=data/processed/today/2026-08-07/matches.csv
+- FC OSS vs NAC Breda | fixture_id=1551739 | league=Eerste Divisie | source=data/processed/today/2026-08-07/matches.csv
+- VVV Venlo vs Heracles | fixture_id=1551740 | league=Eerste Divisie | source=data/processed/today/2026-08-07/matches.csv
+- Vitesse vs Waalwijk | fixture_id=1551741 | league=Eerste Divisie | source=data/processed/today/2026-08-07/matches.csv
+- Cambuur vs Excelsior | fixture_id=1552117 | league=Eredivisie | source=data/processed/today/2026-08-07/matches.csv
+- Mornar vs Arsenal Tivat | fixture_id=1558494 | league=First League | source=data/processed/today/2026-08-07/matches.csv
+- Uta Arad vs Rapid | fixture_id=1565214 | league=Liga I | source=data/processed/today/2026-08-07/matches.csv
+- Barracas Central Res. vs Vélez Sársfield Res. | fixture_id=1576866 | league=Reserve League | source=data/processed/today/2026-08-07/matches.csv
+- Platense Res. vs Estudiantes La Plata Res | fixture_id=1576868 | league=Reserve League | source=data/processed/today/2026-08-07/matches.csv
+- Cruzeiro U20 vs Itabirito U20 | fixture_id=1580421 | league=Mineiro U20 | source=data/processed/today/2026-08-07/matches.csv
+- Zeljeznicar Sarajevo vs BSK Banja Luka | fixture_id=1582768 | league=Premijer Liga | source=data/processed/today/2026-08-07/matches.csv
+- Deportivo Binacional vs Minas | fixture_id=1595455 | league=Segunda División | source=data/processed/today/2026-08-07/matches.csv
+- Avaí U20 vs Barra SC U20 | fixture_id=1610956 | league=Catarinense U20 | source=data/processed/today/2026-08-07/matches.csv
+- Levski Sofia vs Lokomotiv Plovdiv | fixture_id=1551072 | league=First League | source=data/processed/today/2026-08-07/matches.csv
+- FC Aarau vs Stade Nyonnais | fixture_id=1555030 | league=Challenge League | source=data/processed/today/2026-08-07/matches.csv
+- Étoile Carouge vs Neuchatel Xamax FC | fixture_id=1555031 | league=Challenge League | source=data/processed/today/2026-08-07/matches.csv
+- Wisla Krakow vs Wisla Plock | fixture_id=1553127 | league=Ekstraklasa | source=data/processed/today/2026-08-07/matches.csv
+- Partick vs Livingston | fixture_id=1556831 | league=Championship | source=data/processed/today/2026-08-07/matches.csv
+- Polonia Warszawa vs Ruch Chorzów | fixture_id=1558171 | league=I Liga | source=data/processed/today/2026-08-07/matches.csv
+- FC BW Linz vs Wacker Innsbruck | fixture_id=1567871 | league=2. Liga | source=data/processed/today/2026-08-07/matches.csv
+- VfL Bochum vs Hertha BSC | fixture_id=1576134 | league=2. Bundesliga | source=data/processed/today/2026-08-07/matches.csv
+- Afan Lido vs Llantwit Major | fixture_id=1580695 | league=FAW Championship | source=data/processed/today/2026-08-07/matches.csv
+- Pontypridd Town vs Pontardawe Town | fixture_id=1580696 | league=FAW Championship | source=data/processed/today/2026-08-07/matches.csv
+- Boluspor vs Manisa F.K. | fixture_id=1585692 | league=1. Lig | source=data/processed/today/2026-08-07/matches.csv
+- Derry City vs Sligo Rovers | fixture_id=1492746 | league=Premier Division | source=data/processed/today/2026-08-07/matches.csv
+- Galway United vs Drogheda United | fixture_id=1492747 | league=Premier Division | source=data/processed/today/2026-08-07/matches.csv
+- Athlone Town vs Longford Town | fixture_id=1492950 | league=First Division | source=data/processed/today/2026-08-07/matches.csv
+- Bray Wanderers vs Finn Harps | fixture_id=1492951 | league=First Division | source=data/processed/today/2026-08-07/matches.csv
+- Cobh Ramblers vs Treaty United | fixture_id=1492952 | league=First Division | source=data/processed/today/2026-08-07/matches.csv
+- Cork City vs Kerry | fixture_id=1492953 | league=First Division | source=data/processed/today/2026-08-07/matches.csv
+- UCD vs Wexford | fixture_id=1492954 | league=First Division | source=data/processed/today/2026-08-07/matches.csv
+- Glentoran BU W vs Crusaders W | fixture_id=1535411 | league=Premiership Women | source=data/processed/today/2026-08-07/matches.csv
+- Larne W vs Cliftonville W | fixture_id=1535412 | league=Premiership Women | source=data/processed/today/2026-08-07/matches.csv
+- Club Brugge KV vs Kortrijk | fixture_id=1558581 | league=Jupiler Pro League | source=data/processed/today/2026-08-07/matches.csv
+- Cliftonville FC vs Crusaders FC | fixture_id=1562026 | league=Premiership | source=data/processed/today/2026-08-07/matches.csv
+- Strabane Athletic vs Institute | fixture_id=1564813 | league=Championship | source=data/processed/today/2026-08-07/matches.csv
+- Wolves vs Port Vale | fixture_id=1567419 | league=League Cup | source=data/processed/today/2026-08-07/matches.csv
+- Wycombe vs Stevenage | fixture_id=1567420 | league=League Cup | source=data/processed/today/2026-08-07/matches.csv
+- Aubagne vs Thionville Lusitanos | fixture_id=1574678 | league=Ligue 3 | source=data/processed/today/2026-08-07/matches.csv
+- Bastia vs Le Puy Foot | fixture_id=1574679 | league=Ligue 3 | source=data/processed/today/2026-08-07/matches.csv
+- Bourg-en-bresse 01 vs Villefranche | fixture_id=1574680 | league=Ligue 3 | source=data/processed/today/2026-08-07/matches.csv
+- Caen vs Valenciennes | fixture_id=1574681 | league=Ligue 3 | source=data/processed/today/2026-08-07/matches.csv
+- Concarneau vs Orleans | fixture_id=1574682 | league=Ligue 3 | source=data/processed/today/2026-08-07/matches.csv
+- Fleury 91 vs Amiens | fixture_id=1574683 | league=Ligue 3 | source=data/processed/today/2026-08-07/matches.csv
+- La Roche VF vs Versailles | fixture_id=1574684 | league=Ligue 3 | source=data/processed/today/2026-08-07/matches.csv
+- Gobelins vs Quevilly | fixture_id=1574685 | league=Ligue 3 | source=data/processed/today/2026-08-07/matches.csv
+- Rouen vs Cannes | fixture_id=1574686 | league=Ligue 3 | source=data/processed/today/2026-08-07/matches.csv
+- Airbus UK vs Cardiff MET | fixture_id=1575892 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- Ammanford AFC vs Colwyn Bay | fixture_id=1575893 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- Caernarfon Town vs Penybont | fixture_id=1575894 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- Cambrian & Clydach vs Briton Ferry | fixture_id=1575895 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- Flint Town United vs Barry Town | fixture_id=1575896 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- Holywell vs GAP Connah S Quay FC | fixture_id=1575897 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- The New Saints vs Haverfordwest County AFC | fixture_id=1575898 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- Trefelin vs Llandudno | fixture_id=1575899 | league=Premier League | source=data/processed/today/2026-08-07/matches.csv
+- Bala Town vs Ruthin Town | fixture_id=1580455 | league=FAW Championship | source=data/processed/today/2026-08-07/matches.csv
+- Caerau (Ely) vs Ynyshir Albions | fixture_id=1580697 | league=FAW Championship | source=data/processed/today/2026-08-07/matches.csv
+- Caerphilly Athletic vs Cardiff Draconians | fixture_id=1580698 | league=FAW Championship | source=data/processed/today/2026-08-07/matches.csv
+- llanelli AFC vs Trethomas Bluebirds | fixture_id=1580699 | league=FAW Championship | source=data/processed/today/2026-08-07/matches.csv
+- Monza vs Padova | fixture_id=1585042 | league=Friendlies Clubs | source=data/processed/today/2026-08-07/matches.csv
+- Shamrock Rovers vs Dundalk | fixture_id=1492750 | league=Premier Division | source=data/processed/today/2026-08-07/matches.csv
+- Lisburn Ladies W vs Linfield W | fixture_id=1535413 | league=Premiership Women | source=data/processed/today/2026-08-07/matches.csv
+- Middlesbrough vs Wrexham | fixture_id=1567407 | league=League Cup | source=data/processed/today/2026-08-07/matches.csv
+- Paredes vs Guimaraes B | fixture_id=1597736 | league=Liga 3 | source=data/processed/today/2026-08-07/matches.csv
+- Afturelding vs Grindavik | fixture_id=1514250 | league=1. Deild | source=data/processed/today/2026-08-07/matches.csv
+- Leiknir R. vs Fylkir | fixture_id=1514251 | league=1. Deild | source=data/processed/today/2026-08-07/matches.csv
+- Estoril vs Famalicao | fixture_id=1575447 | league=Primeira Liga | source=data/processed/today/2026-08-07/matches.csv
+- Independiente F.b.c. vs Resistencia | fixture_id=1612413 | league=Division Intermedia | source=data/processed/today/2026-08-07/matches.csv
+- Panama U21 vs Colombia U21 | fixture_id=1611914 | league=CAC Games | source=data/processed/today/2026-08-07/matches.csv
+- Comerciantes Unidos vs Cusco | fixture_id=1549439 | league=Primera División | source=data/processed/today/2026-08-07/matches.csv
+- Union Comercio vs Academia Cantolao | fixture_id=1595456 | league=Segunda División | source=data/processed/today/2026-08-07/matches.csv
+- Costa Rica U20 vs United States U20 | fixture_id=1611926 | league=CONCACAF U20 | source=data/processed/today/2026-08-07/matches.csv
+- ABB vs Guabirá | fixture_id=1563075 | league=Primera División | source=data/processed/today/2026-08-07/matches.csv
+- Rubio NU vs Deportivo Recoleta | fixture_id=1610930 | league=Division Profesional - Clausura | source=data/processed/today/2026-08-07/matches.csv
+- Comunicaciones vs Villa San Carlos | fixture_id=1499564 | league=Primera B Metropolitana | source=data/processed/today/2026-08-07/matches.csv
+- Ituzaingó vs Deportivo Camioneros | fixture_id=1499570 | league=Primera B Metropolitana | source=data/processed/today/2026-08-07/matches.csv
+- Union Espanola vs Antofagasta | fixture_id=1511640 | league=Primera B | source=data/processed/today/2026-08-07/matches.csv
+- Tanabi SP U20 vs Palmeiras U20 | fixture_id=1547411 | league=Paulista - U20 | source=data/processed/today/2026-08-07/matches.csv
+- Cerro Largo vs Juventud | fixture_id=1611271 | league=Primera División | source=data/processed/today/2026-08-07/matches.csv
+- 12 de Junio VH vs Deportivo Santani | fixture_id=1612414 | league=Division Intermedia | source=data/processed/today/2026-08-07/matches.csv
+- Rosario Central vs Aldosivi | fixture_id=1493057 | league=Liga Profesional Argentina | source=data/processed/today/2026-08-07/matches.csv
+- Operario-PR vs São Bernardo | fixture_id=1520808 | league=Serie B | source=data/processed/today/2026-08-07/matches.csv
 
 ## Source Diagnostics
 - data/processed/batch_inputs/vsigma_api_board_candidates_2026-06-15.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
@@ -19,6 +330,7 @@
 - data/processed/batch_inputs/vsigma_api_board_candidates_2026-06-28.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/batch_inputs/vsigma_api_board_candidates_2026-07-05.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/batch_inputs/vsigma_api_board_candidates_2026-07-14.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
+- data/processed/batch_inputs/vsigma_api_board_candidates_2026-08-07.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/candidate_v4_historical/vsigma_candidate_v4_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/candidate_v4_historical/vsigma_candidate_v4_historical_firewall_decisions.csv | status=NO_SAME_DAY_ROWS | rows=6 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/candidate_v5_historical/vsigma_candidate_v5_historical_by_date.csv | status=NO_SAME_DAY_ROWS | rows=16 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
@@ -35,21 +347,23 @@
 - data/processed/governance/vsigma_api_board_candidate_bridge_2026-06-28.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_board_candidate_bridge_2026-07-05.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_board_candidate_bridge_2026-07-14.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_api_board_candidate_bridge_2026-08-07.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-06-15.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-06-18.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-06-28.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-07-05.csv | status=NO_SAME_DAY_ROWS | rows=2 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-07-14.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_api_calibration_rule_candidates.csv | status=NO_SAME_DAY_ROWS | rows=84 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-08-07.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_api_calibration_rule_candidates.csv | status=NO_ACCEPTED_ROWS | rows=84 | same_day=84 | accepted=0 | rejected=84 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv | status=HAS_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=1 | rejected=0 | detail=local source contains accepted raw fixture rows
+- data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_candidate_provenance_ceiling.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_dated_post_match_results_refresh.csv | status=NO_SAME_DAY_ROWS | rows=356 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_forced_api_board_fixture_lineups.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_forced_api_board_fixture_lineups.csv | status=NO_ACCEPTED_ROWS | rows=40 | same_day=40 | accepted=0 | rejected=40 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_local_raw_fixture_discovery_candidates.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_match_stat_forecast_backtest.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_match_stat_forecast_calibration_details.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_match_stat_forecasts.csv | status=HAS_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=1 | rejected=0 | detail=local source contains accepted raw fixture rows
+- data/processed/governance/vsigma_match_stat_forecasts.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_pending_prematch_prediction_finalizer.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_post_match_stat_actuals.csv | status=NO_SAME_DAY_ROWS | rows=71 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_postmatch_pick_audit.csv | status=NO_SAME_DAY_ROWS | rows=24 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
@@ -57,13 +371,13 @@
 - data/processed/governance/vsigma_prematch_calibration_rule_gate.csv | status=NO_SAME_DAY_ROWS | rows=12 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_prematch_match_story_engine.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_prematch_prediction_calibration_advisor.csv | status=NO_SAME_DAY_ROWS | rows=12 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_promoted_api_enriched_candidates.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=1 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_promoted_raw_fixture_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_raw_candidate_trust_gate.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_rolling_prematch_accuracy_dashboard.csv | status=NO_SAME_DAY_ROWS | rows=6 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_shadow_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_trusted_raw_candidate_promotion_gate.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
+- data/processed/governance/vsigma_trusted_raw_fixture_candidates.csv | status=NO_ACCEPTED_ROWS | rows=1 | same_day=1 | accepted=0 | rejected=0 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/historical/2026-04-23/matches.csv | status=NO_SAME_DAY_ROWS | rows=182 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_league_filtered.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/historical/2026-04-23/matches_vsigma_scored_v3.csv | status=NO_SAME_DAY_ROWS | rows=36 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
@@ -91,9 +405,6 @@
 - data/processed/historical/2026-04-25/vsigma_final_approved_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/historical/2026-04-25/vsigma_final_approved_premium_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/historical/2026-04-25/vsigma_final_approved_standard_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/historical/2026-04-25/vsigma_final_blocked_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/historical/2026-04-25/vsigma_final_downgraded_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
-- data/processed/historical/2026-04-25/vsigma_final_watch_candidates.csv | status=NO_SAME_DAY_ROWS | rows=109 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 
 ## Guardrails
 - Local discovery does not call APIs, touch secrets, increase spend, create picks or bypass No Bet.
