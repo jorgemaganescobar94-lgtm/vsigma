@@ -3,8 +3,8 @@
 ## Step State
 - PRE: DONE
 - Pre-lock: ['NO_CURRENT_PICKS']
-- POST: PENDING
-- Ledger: PRE_UPDATED
+- POST: SETTLED
+- Ledger: MISSING_FOR_DATE
 - Governance: AVAILABLE
 - Stale warnings: NONE
 
@@ -31,15 +31,7 @@ _No rows._
 |  |  |  |  |  |  |  | NO_CURRENT_PICKS | NO_BET_DAY |
 
 ## Ledger State
-| experiment_id | fixture_id | home_team | away_team | market_primary | pipeline_stage | record_status | result_status | result | profit_units |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V2_SCHEDULE_ANOMALY |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V3_ODDS_DEPTH |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V4_O25_FIREWALL |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V5_PLAYER_IMPACT |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V6_API_PREDICTIONS |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
-| CANDIDATE_V7_PRICE_DISCIPLINE |  |  |  |  | PRE | NO_BET_RECORD |  |  |  |
+_No rows._
 
 ## Controller Outputs
 - Plan CSV: /home/runner/work/vsigma/vsigma/data/processed/today/2026-08-07/daily_run_plan.csv

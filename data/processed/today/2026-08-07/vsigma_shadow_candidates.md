@@ -1,13 +1,14 @@
 # vSIGMA Shadow Candidates - 2026-08-07
 
 ## Executive Shadow Candidate Summary
-- generated_at: 2026-08-07T23:43:22+01:00
-- shadow_candidates: 0
-- shadow_decision_counts: none
-- experiment_type_counts: none
+- generated_at: 2026-08-08T09:00:55+01:00
+- shadow_candidates: 2
+- shadow_decision_counts: SHADOW_DOWNGRADE_REVIEW=2
+- experiment_type_counts: LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW=2
 
 ## Shadow Candidate Decisions
-- none
+- SHADOW_DOWNGRADE_REVIEW | SCR Altach vs WSG Wattens | market=OVER_2_5 | experiment=LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW | production_impact=NONE
+- SHADOW_DOWNGRADE_REVIEW | Cambuur vs Excelsior | market=OVER_2_5 | experiment=LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW | production_impact=NONE
 
 ## Guardrails
 - official picks changed: NO

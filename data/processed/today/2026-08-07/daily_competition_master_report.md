@@ -77,22 +77,22 @@ _No stale pre-lock rows excluded._
 ### CLV Summary
 | fixture_id | home_team | away_team | market_primary | experiment_id | pre_price | prelock_price | close_proxy_price | clv_delta | clv_direction | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1548986 | Sonderjyske | Viborg | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.65 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1551738 | Emmen | Roda | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.5 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1551740 | VVV Venlo | Heracles | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.65 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1551741 | Vitesse | Waalwijk | UNDER_3_5 | DEEP_ANALYSIS_CANDIDATES | 1.56 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1551741 | Vitesse | Waalwijk | UNDER_3_5 | OFFICIAL_BASELINE | 1.56 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1552117 | Cambuur | Excelsior | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.65 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1552117 | Cambuur | Excelsior | OVER_2_5 | OFFICIAL_BASELINE | 1.65 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1558581 | Club Brugge KV | Kortrijk | BTTS_YES | DEEP_ANALYSIS_CANDIDATES | 1.91 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1561900 | SCR Altach | WSG Wattens | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 2.21 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1561900 | SCR Altach | WSG Wattens | OVER_2_5 | OFFICIAL_BASELINE | 2.21 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1551741 | Vitesse | Waalwijk | UNDER_3_5 | OFFICIAL_BASELINE |  |  | 1.56 |  | CLV_UNAVAILABLE | WIN | 0.56 |
+| 1552117 | Cambuur | Excelsior | OVER_2_5 | OFFICIAL_BASELINE |  |  | 1.65 |  | CLV_UNAVAILABLE | WIN | 0.65 |
+| 1561900 | SCR Altach | WSG Wattens | OVER_2_5 | OFFICIAL_BASELINE |  |  | 2.21 |  | CLV_UNAVAILABLE | WIN | 1.21 |
 
 ### Candidate v7 Calibration Advice
 _No rows._
 
 ## Post-Results Summary
-_No rows._
+| mode | pick_count | wins | losses | profit_units | roi_percent | pending_rows | candidate_version |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| OFFICIAL_EXECUTION_SHORTLIST | 3.0 | 3.0 | 0.0 | 2.42 | 80.666667 | 0.0 | OFFICIAL_RESULTS |
+| SHADOW_CANDIDATE_V2 | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V2_RESULTS |
+| SHADOW_CANDIDATE_V4_O25_LOW_CONVERSION_FIREWALL | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V4_RESULTS |
+| SHADOW_CANDIDATE_V5_PLAYER_IMPACT | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V5_RESULTS |
+| SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V6_RESULTS |
+| SHADOW_CANDIDATE_V7_PRICE_DISCIPLINE_CLV_DRIFT_GUARD | 0.0 | 0.0 | 0.0 | 0.0 |  | 0.0 | CANDIDATE_V7_RESULTS |
 
 ## Pre-Lock Status
 _No rows._
@@ -120,10 +120,10 @@ _No rows._
 | SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK | 6 | 6 | 4 | 2 | 0.25 | 4.166667 | -1.0 |
 
 ## Immutable Ledger / Experiment Registry
-- Ledger update status: AVAILABLE
+- Ledger update status: NOT_AVAILABLE
 - Official picks registered: 0
 - Shadow picks registered: 0
-- No-bet records: 7
+- No-bet records: 0
 - Ledger report: /home/runner/work/vsigma/vsigma/data/processed/today/2026-08-07/vsigma_ledger_daily_report.md
 
 ## Daily Controller Status
@@ -141,20 +141,12 @@ _No rows._
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: daily_master_report: WARNING - daily master report missing
-- Recovery command: `.\.venv\Scripts\python.exe scripts\build_daily_competition_master_report.py --date 2026-08-06`
-- Report path: /home/runner/work/vsigma/vsigma/data/processed/health/vsigma_healthcheck_report.md
+- Critical warnings: ledger_target_date_rows: WARNING - ledger has no rows for target date
+- Recovery command: `.\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-08-07 --stage PRE`
+- Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-08-07/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
-| experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V2_SCHEDULE_ANOMALY |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V4_O25_FIREWALL |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V5_PLAYER_IMPACT |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V6_API_PREDICTIONS |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V7_PRICE_DISCIPLINE |  |  |  |  |  |  |  | NO_BET_RECORD |
+_No rows._
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
@@ -236,8 +228,14 @@ _No rows._
 | vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| today_pipeline_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
-| today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet | 0 |
+| vsigma_execution_shortlist_results_ledger.csv | OFFICIAL_RESULTS | PASS | output is fresh for requested target date | 3 |
+| vsigma_execution_shortlist_results_summary.csv | OFFICIAL_RESULTS | PASS | output is fresh for requested target date | 160 |
+| vsigma_today_candidate_v2_results_ledger.csv | CANDIDATE_V2_RESULTS | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
+| vsigma_today_candidate_v2_results_summary.csv | CANDIDATE_V2_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v4_results_ledger.csv | CANDIDATE_V4_RESULTS | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
+| vsigma_today_candidate_v4_results_summary.csv | CANDIDATE_V4_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v5_results_ledger.csv | CANDIDATE_V5_RESULTS | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
+| vsigma_today_candidate_v5_results_summary.csv | CANDIDATE_V5_RESULTS | PASS | output is fresh for requested target date | 1 |
 
 ## Candidate Isolation
 | check_name | file_name | status | detail |

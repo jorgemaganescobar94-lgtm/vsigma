@@ -55,6 +55,7 @@
 ## Daily Winners
 | target_date | daily_winner | winner_reason |
 | --- | --- | --- |
+| 2026-07-03 | TIE | Top experiments tied on profit and hit rate. |
 | 2026-07-04 | NO_BET_DAY | No model registered a pick. |
 | 2026-07-06 | TIE | Top experiments tied on profit and hit rate. |
 | 2026-07-07 | NO_BET_DAY | No model registered a pick. |
@@ -69,7 +70,6 @@
 | 2026-07-20 | NO_BET_DAY | No model registered a pick. |
 | 2026-07-26 | OTHER_CANDIDATE | CANDIDATE_V4_O25_FIREWALL led on profit=0.17, hit_rate=100.0, settled=1. |
 | 2026-07-31 | NO_BET_DAY | No model registered a pick. |
-| 2026-08-07 | NO_BET_DAY | No model registered a pick. |
 
 ## CLV Data Sufficiency
 INSUFFICIENT_CLV_DATA: usable=0, available_direction_rows=0; do not change thresholds from CLV yet.
