@@ -1,6 +1,6 @@
-date=2026-08-08
+date=2026-08-09
 include_backtest=false
 requested_by=github-actions
 reason=normalize_daily_chain_self_heal_date
-triggered_at=2026-08-08T09:06:24+01:00
-nonce=self-heal-2026-08-08-31247655540
+triggered_at=2026-08-09T09:08:15+01:00
+nonce=self-heal-2026-08-09-31302771911
