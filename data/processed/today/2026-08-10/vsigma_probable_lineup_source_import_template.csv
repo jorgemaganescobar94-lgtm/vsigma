@@ -1,11 +1,91 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
-2026-08-10,1556628,,,Dundee Utd,Rangers,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-10,1556628,,,Dundee Utd,Rangers,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-10,1556628,,,Dundee Utd,Rangers,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-10,1556628,,,Dundee Utd,Rangers,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-10,1556628,,,Dundee Utd,Rangers,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-10,1556628,,,Dundee Utd,Rangers,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-10,1556628,,,Dundee Utd,Rangers,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-10,1556628,,,Dundee Utd,Rangers,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-10,1556628,,,Dundee Utd,Rangers,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-10,1556628,,,Dundee Utd,Rangers,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494239,Allsvenskan,Sweden,Sirius,IF Brommapojkarna,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494239,Allsvenskan,Sweden,Sirius,IF Brommapojkarna,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494239,Allsvenskan,Sweden,Sirius,IF Brommapojkarna,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494239,Allsvenskan,Sweden,Sirius,IF Brommapojkarna,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494239,Allsvenskan,Sweden,Sirius,IF Brommapojkarna,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494239,Allsvenskan,Sweden,Sirius,IF Brommapojkarna,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494239,Allsvenskan,Sweden,Sirius,IF Brommapojkarna,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494239,Allsvenskan,Sweden,Sirius,IF Brommapojkarna,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494239,Allsvenskan,Sweden,Sirius,IF Brommapojkarna,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494239,Allsvenskan,Sweden,Sirius,IF Brommapojkarna,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494240,Allsvenskan,Sweden,Vasteras SK FK,Djurgardens IF,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494240,Allsvenskan,Sweden,Vasteras SK FK,Djurgardens IF,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494240,Allsvenskan,Sweden,Vasteras SK FK,Djurgardens IF,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494240,Allsvenskan,Sweden,Vasteras SK FK,Djurgardens IF,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494240,Allsvenskan,Sweden,Vasteras SK FK,Djurgardens IF,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494240,Allsvenskan,Sweden,Vasteras SK FK,Djurgardens IF,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494240,Allsvenskan,Sweden,Vasteras SK FK,Djurgardens IF,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494240,Allsvenskan,Sweden,Vasteras SK FK,Djurgardens IF,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494240,Allsvenskan,Sweden,Vasteras SK FK,Djurgardens IF,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1494240,Allsvenskan,Sweden,Vasteras SK FK,Djurgardens IF,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1575453,Primeira Liga,Portugal,Santa Clara,Nacional,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1575453,Primeira Liga,Portugal,Santa Clara,Nacional,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1575453,Primeira Liga,Portugal,Santa Clara,Nacional,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1575453,Primeira Liga,Portugal,Santa Clara,Nacional,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1575453,Primeira Liga,Portugal,Santa Clara,Nacional,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1575453,Primeira Liga,Portugal,Santa Clara,Nacional,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1575453,Primeira Liga,Portugal,Santa Clara,Nacional,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1575453,Primeira Liga,Portugal,Santa Clara,Nacional,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1575453,Primeira Liga,Portugal,Santa Clara,Nacional,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1575453,Primeira Liga,Portugal,Santa Clara,Nacional,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1548989,Superliga,Denmark,Silkeborg,Odense,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1548989,Superliga,Denmark,Silkeborg,Odense,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1548989,Superliga,Denmark,Silkeborg,Odense,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1548989,Superliga,Denmark,Silkeborg,Odense,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1548989,Superliga,Denmark,Silkeborg,Odense,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1548989,Superliga,Denmark,Silkeborg,Odense,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1548989,Superliga,Denmark,Silkeborg,Odense,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1548989,Superliga,Denmark,Silkeborg,Odense,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1548989,Superliga,Denmark,Silkeborg,Odense,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1548989,Superliga,Denmark,Silkeborg,Odense,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551745,Eerste Divisie,Netherlands,Jong AZ,FC Eindhoven,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551745,Eerste Divisie,Netherlands,Jong AZ,FC Eindhoven,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551745,Eerste Divisie,Netherlands,Jong AZ,FC Eindhoven,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551745,Eerste Divisie,Netherlands,Jong AZ,FC Eindhoven,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551745,Eerste Divisie,Netherlands,Jong AZ,FC Eindhoven,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551745,Eerste Divisie,Netherlands,Jong AZ,FC Eindhoven,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551745,Eerste Divisie,Netherlands,Jong AZ,FC Eindhoven,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551745,Eerste Divisie,Netherlands,Jong AZ,FC Eindhoven,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551745,Eerste Divisie,Netherlands,Jong AZ,FC Eindhoven,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551745,Eerste Divisie,Netherlands,Jong AZ,FC Eindhoven,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551746,Eerste Divisie,Netherlands,Jong PSV U21,FC Volendam,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551746,Eerste Divisie,Netherlands,Jong PSV U21,FC Volendam,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551746,Eerste Divisie,Netherlands,Jong PSV U21,FC Volendam,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551746,Eerste Divisie,Netherlands,Jong PSV U21,FC Volendam,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551746,Eerste Divisie,Netherlands,Jong PSV U21,FC Volendam,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551746,Eerste Divisie,Netherlands,Jong PSV U21,FC Volendam,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551746,Eerste Divisie,Netherlands,Jong PSV U21,FC Volendam,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551746,Eerste Divisie,Netherlands,Jong PSV U21,FC Volendam,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551746,Eerste Divisie,Netherlands,Jong PSV U21,FC Volendam,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1551746,Eerste Divisie,Netherlands,Jong PSV U21,FC Volendam,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1585694,1. Lig,Turkey,Pendikspor,Batman Petrolspor,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1585694,1. Lig,Turkey,Pendikspor,Batman Petrolspor,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1585694,1. Lig,Turkey,Pendikspor,Batman Petrolspor,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1585694,1. Lig,Turkey,Pendikspor,Batman Petrolspor,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1585694,1. Lig,Turkey,Pendikspor,Batman Petrolspor,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1585694,1. Lig,Turkey,Pendikspor,Batman Petrolspor,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1585694,1. Lig,Turkey,Pendikspor,Batman Petrolspor,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1585694,1. Lig,Turkey,Pendikspor,Batman Petrolspor,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1585694,1. Lig,Turkey,Pendikspor,Batman Petrolspor,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1585694,1. Lig,Turkey,Pendikspor,Batman Petrolspor,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1547607,A Lyga,Lithuania,TransINVEST Vilnius,Panevėžys,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1547607,A Lyga,Lithuania,TransINVEST Vilnius,Panevėžys,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1547607,A Lyga,Lithuania,TransINVEST Vilnius,Panevėžys,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1547607,A Lyga,Lithuania,TransINVEST Vilnius,Panevėžys,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1547607,A Lyga,Lithuania,TransINVEST Vilnius,Panevėžys,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1547607,A Lyga,Lithuania,TransINVEST Vilnius,Panevėžys,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1547607,A Lyga,Lithuania,TransINVEST Vilnius,Panevėžys,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1547607,A Lyga,Lithuania,TransINVEST Vilnius,Panevėžys,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1547607,A Lyga,Lithuania,TransINVEST Vilnius,Panevėžys,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1547607,A Lyga,Lithuania,TransINVEST Vilnius,Panevėžys,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1520805,Serie B,Brazil,Goias,Londrina,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1520805,Serie B,Brazil,Goias,Londrina,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1520805,Serie B,Brazil,Goias,Londrina,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1520805,Serie B,Brazil,Goias,Londrina,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1520805,Serie B,Brazil,Goias,Londrina,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1520805,Serie B,Brazil,Goias,Londrina,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1520805,Serie B,Brazil,Goias,Londrina,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1520805,Serie B,Brazil,Goias,Londrina,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1520805,Serie B,Brazil,Goias,Londrina,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-10,1520805,Serie B,Brazil,Goias,Londrina,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
