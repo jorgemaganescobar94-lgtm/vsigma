@@ -1,2 +1,2 @@
 target_date,generated_at,rows_reviewed,missing_scored_rows,no_data_blocked_rows,not_trusted_rows,promoted_rows,gap_status_counts,next_action,auto_apply,production_change
-2026-08-10,2026-08-10T21:07:52+01:00,95,78,3,9,5,MISSING_SCORED_ROW=78; NOT_TRUSTED_SKIPPED=9; PROMOTED=5; SCORED_ROW_NO_DATA_BLOCKED=3,Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.,NO,NO
+2026-08-10,2026-08-10T23:06:32+01:00,95,78,3,9,5,MISSING_SCORED_ROW=78; NOT_TRUSTED_SKIPPED=9; PROMOTED=5; SCORED_ROW_NO_DATA_BLOCKED=3,Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.,NO,NO
