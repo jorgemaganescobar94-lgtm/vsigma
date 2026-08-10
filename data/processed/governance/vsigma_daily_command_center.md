@@ -1,18 +1,18 @@
 # vSIGMA Daily Command Center - 2026-08-10
 
 ## Executive Command
-- generated_at: 2026-08-10T10:26:08+01:00
-- mode: pre
+- generated_at: 2026-08-10T11:07:46+01:00
+- mode: health
 - command_center_status: ACTION_REQUIRED
-- daily_classification: BROKEN
+- daily_classification: TECHNICAL_WARNING
 - action_level: ACTION_REQUIRED
-- operational_verdict: BROKEN
-- predictive_failure: UNKNOWN
-- evidence_basis: missing_sources
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/31374440065
+- operational_verdict: TECHNICAL_WARNING
+- predictive_failure: NO
+- evidence_basis: partial_sources
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/31377714334
 
 ## Next Operator Action
-- Inspect workflow logs and required daily reports; monitoring evidence is incomplete.
+- Inspect healthcheck, workflow logs, and artifacts before trusting the day.
 
 ## Decision Snapshot
 - decision_outcome_rows: 0
