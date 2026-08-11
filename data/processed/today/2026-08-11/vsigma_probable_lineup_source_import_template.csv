@@ -1,11 +1,201 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
-2026-08-11,1494240,,,Vasteras SK FK,Djurgardens IF,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-11,1494240,,,Vasteras SK FK,Djurgardens IF,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-11,1494240,,,Vasteras SK FK,Djurgardens IF,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-11,1494240,,,Vasteras SK FK,Djurgardens IF,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-11,1494240,,,Vasteras SK FK,Djurgardens IF,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-11,1494240,,,Vasteras SK FK,Djurgardens IF,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-11,1494240,,,Vasteras SK FK,Djurgardens IF,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-11,1494240,,,Vasteras SK FK,Djurgardens IF,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-11,1494240,,,Vasteras SK FK,Djurgardens IF,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-11,1494240,,,Vasteras SK FK,Djurgardens IF,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1547760,CONMEBOL Libertadores,World,Fluminense,Independ. Rivadavia,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1547760,CONMEBOL Libertadores,World,Fluminense,Independ. Rivadavia,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1547760,CONMEBOL Libertadores,World,Fluminense,Independ. Rivadavia,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1547760,CONMEBOL Libertadores,World,Fluminense,Independ. Rivadavia,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1547760,CONMEBOL Libertadores,World,Fluminense,Independ. Rivadavia,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1547760,CONMEBOL Libertadores,World,Fluminense,Independ. Rivadavia,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1547760,CONMEBOL Libertadores,World,Fluminense,Independ. Rivadavia,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1547760,CONMEBOL Libertadores,World,Fluminense,Independ. Rivadavia,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1547760,CONMEBOL Libertadores,World,Fluminense,Independ. Rivadavia,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1547760,CONMEBOL Libertadores,World,Fluminense,Independ. Rivadavia,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607170,UEFA Champions League,World,Kairat Almaty,Levski Sofia,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607170,UEFA Champions League,World,Kairat Almaty,Levski Sofia,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607170,UEFA Champions League,World,Kairat Almaty,Levski Sofia,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607170,UEFA Champions League,World,Kairat Almaty,Levski Sofia,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607170,UEFA Champions League,World,Kairat Almaty,Levski Sofia,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607170,UEFA Champions League,World,Kairat Almaty,Levski Sofia,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607170,UEFA Champions League,World,Kairat Almaty,Levski Sofia,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607170,UEFA Champions League,World,Kairat Almaty,Levski Sofia,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607170,UEFA Champions League,World,Kairat Almaty,Levski Sofia,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607170,UEFA Champions League,World,Kairat Almaty,Levski Sofia,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607601,UEFA Europa Conference League,World,Apollon Limassol,Brann,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607601,UEFA Europa Conference League,World,Apollon Limassol,Brann,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607601,UEFA Europa Conference League,World,Apollon Limassol,Brann,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607601,UEFA Europa Conference League,World,Apollon Limassol,Brann,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607601,UEFA Europa Conference League,World,Apollon Limassol,Brann,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607601,UEFA Europa Conference League,World,Apollon Limassol,Brann,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607601,UEFA Europa Conference League,World,Apollon Limassol,Brann,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607601,UEFA Europa Conference League,World,Apollon Limassol,Brann,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607601,UEFA Europa Conference League,World,Apollon Limassol,Brann,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607601,UEFA Europa Conference League,World,Apollon Limassol,Brann,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607172,UEFA Champions League,World,Sabah FA,Aarhus,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607172,UEFA Champions League,World,Sabah FA,Aarhus,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607172,UEFA Champions League,World,Sabah FA,Aarhus,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607172,UEFA Champions League,World,Sabah FA,Aarhus,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607172,UEFA Champions League,World,Sabah FA,Aarhus,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607172,UEFA Champions League,World,Sabah FA,Aarhus,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607172,UEFA Champions League,World,Sabah FA,Aarhus,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607172,UEFA Champions League,World,Sabah FA,Aarhus,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607172,UEFA Champions League,World,Sabah FA,Aarhus,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607172,UEFA Champions League,World,Sabah FA,Aarhus,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598829,UEFA Champions League,World,NEC Nijmegen,Olympiakos Piraeus,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598829,UEFA Champions League,World,NEC Nijmegen,Olympiakos Piraeus,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598829,UEFA Champions League,World,NEC Nijmegen,Olympiakos Piraeus,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598829,UEFA Champions League,World,NEC Nijmegen,Olympiakos Piraeus,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598829,UEFA Champions League,World,NEC Nijmegen,Olympiakos Piraeus,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598829,UEFA Champions League,World,NEC Nijmegen,Olympiakos Piraeus,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598829,UEFA Champions League,World,NEC Nijmegen,Olympiakos Piraeus,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598829,UEFA Champions League,World,NEC Nijmegen,Olympiakos Piraeus,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598829,UEFA Champions League,World,NEC Nijmegen,Olympiakos Piraeus,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598829,UEFA Champions League,World,NEC Nijmegen,Olympiakos Piraeus,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598827,UEFA Champions League,World,Bodo/Glimt,Union St. Gilloise,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598827,UEFA Champions League,World,Bodo/Glimt,Union St. Gilloise,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598827,UEFA Champions League,World,Bodo/Glimt,Union St. Gilloise,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598827,UEFA Champions League,World,Bodo/Glimt,Union St. Gilloise,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598827,UEFA Champions League,World,Bodo/Glimt,Union St. Gilloise,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598827,UEFA Champions League,World,Bodo/Glimt,Union St. Gilloise,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598827,UEFA Champions League,World,Bodo/Glimt,Union St. Gilloise,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598827,UEFA Champions League,World,Bodo/Glimt,Union St. Gilloise,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598827,UEFA Champions League,World,Bodo/Glimt,Union St. Gilloise,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598827,UEFA Champions League,World,Bodo/Glimt,Union St. Gilloise,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607173,UEFA Champions League,World,Slovan Bratislava,Mjallby AIF,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607173,UEFA Champions League,World,Slovan Bratislava,Mjallby AIF,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607173,UEFA Champions League,World,Slovan Bratislava,Mjallby AIF,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607173,UEFA Champions League,World,Slovan Bratislava,Mjallby AIF,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607173,UEFA Champions League,World,Slovan Bratislava,Mjallby AIF,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607173,UEFA Champions League,World,Slovan Bratislava,Mjallby AIF,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607173,UEFA Champions League,World,Slovan Bratislava,Mjallby AIF,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607173,UEFA Champions League,World,Slovan Bratislava,Mjallby AIF,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607173,UEFA Champions League,World,Slovan Bratislava,Mjallby AIF,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607173,UEFA Champions League,World,Slovan Bratislava,Mjallby AIF,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607174,UEFA Champions League,World,Sturm Graz,Fenerbahçe,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607174,UEFA Champions League,World,Sturm Graz,Fenerbahçe,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607174,UEFA Champions League,World,Sturm Graz,Fenerbahçe,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607174,UEFA Champions League,World,Sturm Graz,Fenerbahçe,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607174,UEFA Champions League,World,Sturm Graz,Fenerbahçe,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607174,UEFA Champions League,World,Sturm Graz,Fenerbahçe,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607174,UEFA Champions League,World,Sturm Graz,Fenerbahçe,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607174,UEFA Champions League,World,Sturm Graz,Fenerbahçe,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607174,UEFA Champions League,World,Sturm Graz,Fenerbahçe,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607174,UEFA Champions League,World,Sturm Graz,Fenerbahçe,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598828,UEFA Champions League,World,Lyon,Sparta Praha,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598828,UEFA Champions League,World,Lyon,Sparta Praha,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598828,UEFA Champions League,World,Lyon,Sparta Praha,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598828,UEFA Champions League,World,Lyon,Sparta Praha,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598828,UEFA Champions League,World,Lyon,Sparta Praha,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598828,UEFA Champions League,World,Lyon,Sparta Praha,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598828,UEFA Champions League,World,Lyon,Sparta Praha,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598828,UEFA Champions League,World,Lyon,Sparta Praha,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598828,UEFA Champions League,World,Lyon,Sparta Praha,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1598828,UEFA Champions League,World,Lyon,Sparta Praha,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607180,UEFA Europa League,World,Saburtalo,Larne,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607180,UEFA Europa League,World,Saburtalo,Larne,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607180,UEFA Europa League,World,Saburtalo,Larne,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607180,UEFA Europa League,World,Saburtalo,Larne,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607180,UEFA Europa League,World,Saburtalo,Larne,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607180,UEFA Europa League,World,Saburtalo,Larne,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607180,UEFA Europa League,World,Saburtalo,Larne,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607180,UEFA Europa League,World,Saburtalo,Larne,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607180,UEFA Europa League,World,Saburtalo,Larne,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607180,UEFA Europa League,World,Saburtalo,Larne,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607171,UEFA Champions League,World,Kauno Žalgiris,Dinamo Zagreb,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607171,UEFA Champions League,World,Kauno Žalgiris,Dinamo Zagreb,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607171,UEFA Champions League,World,Kauno Žalgiris,Dinamo Zagreb,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607171,UEFA Champions League,World,Kauno Žalgiris,Dinamo Zagreb,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607171,UEFA Champions League,World,Kauno Žalgiris,Dinamo Zagreb,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607171,UEFA Champions League,World,Kauno Žalgiris,Dinamo Zagreb,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607171,UEFA Champions League,World,Kauno Žalgiris,Dinamo Zagreb,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607171,UEFA Champions League,World,Kauno Žalgiris,Dinamo Zagreb,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607171,UEFA Champions League,World,Kauno Žalgiris,Dinamo Zagreb,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607171,UEFA Champions League,World,Kauno Žalgiris,Dinamo Zagreb,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1605371,UEFA Champions League,World,Celje,Ararat-Armenia,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1605371,UEFA Champions League,World,Celje,Ararat-Armenia,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1605371,UEFA Champions League,World,Celje,Ararat-Armenia,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1605371,UEFA Champions League,World,Celje,Ararat-Armenia,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1605371,UEFA Champions League,World,Celje,Ararat-Armenia,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1605371,UEFA Champions League,World,Celje,Ararat-Armenia,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1605371,UEFA Champions League,World,Celje,Ararat-Armenia,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1605371,UEFA Champions League,World,Celje,Ararat-Armenia,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1605371,UEFA Champions League,World,Celje,Ararat-Armenia,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1605371,UEFA Champions League,World,Celje,Ararat-Armenia,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607648,CONMEBOL Sudamericana,World,Boca Juniors,Deportivo Recoleta,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607648,CONMEBOL Sudamericana,World,Boca Juniors,Deportivo Recoleta,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607648,CONMEBOL Sudamericana,World,Boca Juniors,Deportivo Recoleta,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607648,CONMEBOL Sudamericana,World,Boca Juniors,Deportivo Recoleta,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607648,CONMEBOL Sudamericana,World,Boca Juniors,Deportivo Recoleta,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607648,CONMEBOL Sudamericana,World,Boca Juniors,Deportivo Recoleta,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607648,CONMEBOL Sudamericana,World,Boca Juniors,Deportivo Recoleta,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607648,CONMEBOL Sudamericana,World,Boca Juniors,Deportivo Recoleta,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607648,CONMEBOL Sudamericana,World,Boca Juniors,Deportivo Recoleta,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607648,CONMEBOL Sudamericana,World,Boca Juniors,Deportivo Recoleta,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607169,UEFA Champions League,World,FK Crvena Zvezda,Hapoel Beer Sheva,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607169,UEFA Champions League,World,FK Crvena Zvezda,Hapoel Beer Sheva,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607169,UEFA Champions League,World,FK Crvena Zvezda,Hapoel Beer Sheva,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607169,UEFA Champions League,World,FK Crvena Zvezda,Hapoel Beer Sheva,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607169,UEFA Champions League,World,FK Crvena Zvezda,Hapoel Beer Sheva,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607169,UEFA Champions League,World,FK Crvena Zvezda,Hapoel Beer Sheva,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607169,UEFA Champions League,World,FK Crvena Zvezda,Hapoel Beer Sheva,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607169,UEFA Champions League,World,FK Crvena Zvezda,Hapoel Beer Sheva,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607169,UEFA Champions League,World,FK Crvena Zvezda,Hapoel Beer Sheva,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607169,UEFA Champions League,World,FK Crvena Zvezda,Hapoel Beer Sheva,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607603,UEFA Europa Conference League,World,CSKA 1948,Panathinaikos,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607603,UEFA Europa Conference League,World,CSKA 1948,Panathinaikos,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607603,UEFA Europa Conference League,World,CSKA 1948,Panathinaikos,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607603,UEFA Europa Conference League,World,CSKA 1948,Panathinaikos,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607603,UEFA Europa Conference League,World,CSKA 1948,Panathinaikos,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607603,UEFA Europa Conference League,World,CSKA 1948,Panathinaikos,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607603,UEFA Europa Conference League,World,CSKA 1948,Panathinaikos,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607603,UEFA Europa Conference League,World,CSKA 1948,Panathinaikos,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607603,UEFA Europa Conference League,World,CSKA 1948,Panathinaikos,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1607603,UEFA Europa Conference League,World,CSKA 1948,Panathinaikos,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600305,Premier Soccer League,South-Africa,Chippa United,Richards Bay,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600305,Premier Soccer League,South-Africa,Chippa United,Richards Bay,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600305,Premier Soccer League,South-Africa,Chippa United,Richards Bay,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600305,Premier Soccer League,South-Africa,Chippa United,Richards Bay,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600305,Premier Soccer League,South-Africa,Chippa United,Richards Bay,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600305,Premier Soccer League,South-Africa,Chippa United,Richards Bay,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600305,Premier Soccer League,South-Africa,Chippa United,Richards Bay,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600305,Premier Soccer League,South-Africa,Chippa United,Richards Bay,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600305,Premier Soccer League,South-Africa,Chippa United,Richards Bay,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600305,Premier Soccer League,South-Africa,Chippa United,Richards Bay,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600306,Premier Soccer League,South-Africa,Marumo Gallants,Kruger United,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600306,Premier Soccer League,South-Africa,Marumo Gallants,Kruger United,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600306,Premier Soccer League,South-Africa,Marumo Gallants,Kruger United,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600306,Premier Soccer League,South-Africa,Marumo Gallants,Kruger United,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600306,Premier Soccer League,South-Africa,Marumo Gallants,Kruger United,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600306,Premier Soccer League,South-Africa,Marumo Gallants,Kruger United,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600306,Premier Soccer League,South-Africa,Marumo Gallants,Kruger United,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600306,Premier Soccer League,South-Africa,Marumo Gallants,Kruger United,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600306,Premier Soccer League,South-Africa,Marumo Gallants,Kruger United,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600306,Premier Soccer League,South-Africa,Marumo Gallants,Kruger United,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600307,Premier Soccer League,South-Africa,Polokwane City,Stellenbosch,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600307,Premier Soccer League,South-Africa,Polokwane City,Stellenbosch,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600307,Premier Soccer League,South-Africa,Polokwane City,Stellenbosch,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600307,Premier Soccer League,South-Africa,Polokwane City,Stellenbosch,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600307,Premier Soccer League,South-Africa,Polokwane City,Stellenbosch,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600307,Premier Soccer League,South-Africa,Polokwane City,Stellenbosch,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600307,Premier Soccer League,South-Africa,Polokwane City,Stellenbosch,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600307,Premier Soccer League,South-Africa,Polokwane City,Stellenbosch,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600307,Premier Soccer League,South-Africa,Polokwane City,Stellenbosch,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600307,Premier Soccer League,South-Africa,Polokwane City,Stellenbosch,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600308,Premier Soccer League,South-Africa,TS Galaxy,Mamelodi Sundowns,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600308,Premier Soccer League,South-Africa,TS Galaxy,Mamelodi Sundowns,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600308,Premier Soccer League,South-Africa,TS Galaxy,Mamelodi Sundowns,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600308,Premier Soccer League,South-Africa,TS Galaxy,Mamelodi Sundowns,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600308,Premier Soccer League,South-Africa,TS Galaxy,Mamelodi Sundowns,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600308,Premier Soccer League,South-Africa,TS Galaxy,Mamelodi Sundowns,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600308,Premier Soccer League,South-Africa,TS Galaxy,Mamelodi Sundowns,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600308,Premier Soccer League,South-Africa,TS Galaxy,Mamelodi Sundowns,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600308,Premier Soccer League,South-Africa,TS Galaxy,Mamelodi Sundowns,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1600308,Premier Soccer League,South-Africa,TS Galaxy,Mamelodi Sundowns,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1520801,Serie B,Brazil,Avai,CRB,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1520801,Serie B,Brazil,Avai,CRB,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1520801,Serie B,Brazil,Avai,CRB,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1520801,Serie B,Brazil,Avai,CRB,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1520801,Serie B,Brazil,Avai,CRB,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1520801,Serie B,Brazil,Avai,CRB,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1520801,Serie B,Brazil,Avai,CRB,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1520801,Serie B,Brazil,Avai,CRB,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1520801,Serie B,Brazil,Avai,CRB,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-11,1520801,Serie B,Brazil,Avai,CRB,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
