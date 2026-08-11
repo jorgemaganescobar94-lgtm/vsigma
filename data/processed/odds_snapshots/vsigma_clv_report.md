@@ -13,18 +13,19 @@
 | --- | --- |
 | true_pre_rows | 2 |
 | backfilled_rows | 0 |
-| calibration_usable_rows | 0 |
-| audit_only_rows | 2 |
+| calibration_usable_rows | 1 |
+| audit_only_rows | 1 |
 
 ## CLV Direction Mix
 | clv_direction | rows |
 | --- | --- |
-| CLV_UNAVAILABLE | 2 |
+| CLV_UNAVAILABLE | 1 |
+| CLV_FLAT | 1 |
 
 ## CLV Rows
 | target_date | fixture_id | league | home_team | away_team | market_primary | experiment_id | source_candidate_version | pre_price | prelock_price | close_proxy_price | clv_delta | clv_percent | clv_direction | clv_interpretation | result | profit_units | snapshot_rebuild_mode | true_pre_snapshot_available_flag | clv_usable_for_threshold_calibration_flag | source_snapshot_stage | source_snapshot_note |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2026-08-10 | 1494240 | Allsvenskan | Vasteras SK FK | Djurgardens IF | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | DEEP_ANALYSIS_BET | 1.58 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
-| 2026-08-10 | 1494240 | Allsvenskan | Vasteras SK FK | Djurgardens IF | OVER_2_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST | 1.58 |  |  |  |  | CLV_UNAVAILABLE | CLV unavailable: missing close-proxy price. |  |  | CANONICAL_CAPTURED | 1 | 0 | PRE | Captured by odds snapshot pipeline. |
+| 2026-08-10 | 1494240 | Allsvenskan | Vasteras SK FK | Djurgardens IF | OVER_2_5 | OFFICIAL_BASELINE | EXECUTION_SHORTLIST;OFFICIAL_RESULTS | 1.58 |  | 1.58 | 0.0 | 0.0 | CLV_FLAT | Price movement was flat within tolerance. | LOSS | -1.0 | CANONICAL_CAPTURED | 1 | 1 | POST;PRE | Captured by odds snapshot pipeline. |
 
 Interpretation note: close_proxy_price may come from CLOSE_PROXY, POST, or PRELOCK snapshots. It is not treated as true closing odds unless that data exists.

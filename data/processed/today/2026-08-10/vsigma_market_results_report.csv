@@ -1,0 +1,9 @@
+market_primary,n_total,n_settled,wins,losses,pushes,win_rate_no_push,roi_units,avg_primary_edge,report_type,edge_floor_band,execution_verdict
+BTTS_YES,1.0,1.0,1.0,0.0,0.0,1.0,0.67,0.0827,by_market_primary,,
+OVER_2_5,2.0,2.0,0.0,2.0,0.0,0.0,-2.0,0.1131,by_market_primary,,
+UNDER_3_5,2.0,2.0,1.0,1.0,0.0,0.5,-0.27,0.0461,by_market_primary,,
+,1.0,1.0,0.0,1.0,0.0,0.0,-1.0,0.0272,by_edge_floor_band,PLAYABLE,
+,4.0,4.0,2.0,2.0,0.0,0.5,-0.6,0.0935,by_edge_floor_band,STRONG,
+,1.0,1.0,0.0,1.0,0.0,0.0,-1.0,0.1296,by_execution_verdict,,TOP_CORE
+,4.0,4.0,2.0,2.0,0.0,0.5,-0.6,0.0679,by_execution_verdict,,WATCH
+ACTIONABLE_ONLY,1.0,1.0,0.0,1.0,0.0,0.0,-1.0,0.1296,actionable_summary,,

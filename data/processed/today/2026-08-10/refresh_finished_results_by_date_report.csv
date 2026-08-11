@@ -1,0 +1,7 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-08-10,OK,API-SPORTS_DIRECT,121.0,,,,,,
+2026-08-10T18:00:00+01:00,MATCHED,,,1494239.0,FT,Sirius,IF Brommapojkarna,2.0,2.0
+2026-08-10T18:00:00+01:00,MATCHED,,,1494240.0,FT,Vasteras SK FK,Djurgardens IF,1.0,0.0
+2026-08-10T18:00:00+01:00,MATCHED,,,1548989.0,FT,Silkeborg,Odense,1.0,0.0
+2026-08-10T19:00:00+01:00,MATCHED,,,1551745.0,FT,Jong AZ,FC Eindhoven,0.0,1.0
+2026-08-10T20:15:00+01:00,MATCHED,,,1575453.0,FT,Santa Clara,Nacional,2.0,2.0
