@@ -1,2 +1,2 @@
 target_date,generated_at,rows_processed,eligible_fixtures,api_calls_made,cache_hits,lineup_rows_written,full_lineup_rows,no_lineup_rows,api_errors,key_status,api_status_counts,auto_apply,production_change
-2026-08-12,2026-08-12T19:12:54+01:00,15,11,11,0,388,363,0,1,API_SPORTS,OK=7; NO_LINEUPS_RETURNED=3; FETCH_FAILED=1,NO,NO
+2026-08-12,2026-08-12T21:09:29+01:00,15,15,8,7,388,363,0,0,API_SPORTS,NO_LINEUPS_RETURNED=8,NO,NO
