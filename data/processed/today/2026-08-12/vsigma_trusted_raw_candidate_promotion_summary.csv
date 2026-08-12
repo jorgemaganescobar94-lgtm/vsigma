@@ -1,2 +1,2 @@
 target_date,generated_at,rows_reviewed,promoted_rows,blocked_rows,quarantine_rows,promotion_status_counts,next_action,auto_apply,production_change
-2026-08-12,2026-08-12T09:47:54+01:00,1,0,0,1,TRUSTED_SOURCE_BUT_NO_SCORED_ROW=1,No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.,NO,NO
+2026-08-12,2026-08-12T19:12:58+01:00,251,7,8,1,NOT_TRUSTED_NO_PROMOTION=235; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=8; PROMOTED_TO_SCORING_INPUT=7; TRUSTED_SOURCE_BUT_NO_SCORED_ROW=1,Promoted rows may feed normal scoring gates only.,NO,NO

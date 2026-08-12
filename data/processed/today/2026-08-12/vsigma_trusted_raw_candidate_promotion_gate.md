@@ -1,17 +1,267 @@
 # vSIGMA Trusted Raw Candidate Promotion Gate - 2026-08-12
 
 ## Summary
-- rows_reviewed: 1
-- promoted_rows: 0
-- blocked_rows: 0
+- rows_reviewed: 251
+- promoted_rows: 7
+- blocked_rows: 8
 - quarantine_rows: 1
-- promotion_status_counts: TRUSTED_SOURCE_BUT_NO_SCORED_ROW=1
-- next_action: No promotion unless TRUSTED_RAW_SOURCE has non-blocked scored data. Keep No Bet for blocked rows.
+- promotion_status_counts: NOT_TRUSTED_NO_PROMOTION=235; TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED=8; PROMOTED_TO_SCORING_INPUT=7; TRUSTED_SOURCE_BUT_NO_SCORED_ROW=1
+- next_action: Promoted rows may feed normal scoring gates only.
 - auto_apply: NO
 - production_change: NO
 
 ## Rows
-- Kairat Almaty vs Levski Sofia | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_match_stat_forecasts.csv
+- Kairat Almaty vs Levski Sofia | status=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | allowed=WAIT_SCORING | reason=trusted raw candidate has no matching scored row | source=data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv
+- RB Bragantino vs Atletico-MG | status=PROMOTED_TO_SCORING_INPUT | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=trusted source has matching scored row without blocking data warnings | source=data/processed/governance/vsigma_shadow_candidates.csv
+- Deportes Tolima vs Independiente del Valle | status=PROMOTED_TO_SCORING_INPUT | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=trusted source has matching scored row without blocking data warnings | source=data/processed/matches_league_filtered.csv
+- Palmeiras vs Cerro Porteno | status=PROMOTED_TO_SCORING_INPUT | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=trusted source has matching scored row without blocking data warnings | source=data/processed/matches_league_filtered.csv
+- Platense vs Coquimbo Unido | status=PROMOTED_TO_SCORING_INPUT | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=trusted source has matching scored row without blocking data warnings | source=data/processed/matches_league_filtered.csv
+- FC Copenhagen vs Debreceni VSC | status=PROMOTED_TO_SCORING_INPUT | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=trusted source has matching scored row without blocking data warnings | source=data/processed/matches_league_filtered.csv
+- GKS Katowice vs Hapoel Tel Aviv | status=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | allowed=NO_PROMOTION_NO_BET | reason=matching scored row is NO_DATA_BLOCKED | source=data/processed/matches_league_filtered.csv
+- Rapid Vienna vs Paide | status=PROMOTED_TO_SCORING_INPUT | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=trusted source has matching scored row without blocking data warnings | source=data/processed/matches_league_filtered.csv
+- Tigre vs Atletico Torque | status=PROMOTED_TO_SCORING_INPUT | allowed=SCORING_ALLOWED_WITH_NORMAL_GATES | reason=trusted source has matching scored row without blocking data warnings | source=data/processed/matches_league_filtered.csv
+- Arkadag vs Goa | status=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | allowed=NO_PROMOTION_NO_BET | reason=matching scored row is NO_DATA_BLOCKED | source=data/processed/matches_league_filtered.csv
+- East Bengal II vs Al Arabi | status=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | allowed=NO_PROMOTION_NO_BET | reason=matching scored row is NO_DATA_BLOCKED | source=data/processed/matches_league_filtered.csv
+- Amazulu vs Orlando Pirates | status=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | allowed=NO_PROMOTION_NO_BET | reason=matching scored row is NO_DATA_BLOCKED | source=data/processed/matches_league_filtered.csv
+- Durban City vs Golden Arrows | status=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | allowed=NO_PROMOTION_NO_BET | reason=matching scored row is NO_DATA_BLOCKED | source=data/processed/matches_league_filtered.csv
+- Kaizer Chiefs vs Sekhukhune United | status=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | allowed=NO_PROMOTION_NO_BET | reason=matching scored row is NO_DATA_BLOCKED | source=data/processed/matches_league_filtered.csv
+- Milford FC vs Siwelele | status=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | allowed=NO_PROMOTION_NO_BET | reason=matching scored row is NO_DATA_BLOCKED | source=data/processed/matches_league_filtered.csv
+- La Unión vs Aucas | status=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | allowed=NO_PROMOTION_NO_BET | reason=matching scored row is NO_DATA_BLOCKED | source=data/processed/matches_league_filtered.csv
+- Maziya vs Regar-TadAZ | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- APIA Leichhardt Tigers vs Sydney United | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Brunswick Juventus FC vs Preston Lions | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- North Sunshine Eagles vs Heidelberg United | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Measurers vs Rainbow | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Police vs Wari | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- United vs Calcutta Police | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Hamilton Academical vs Celtic II | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Atletico Tucuman vs Independiente | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- 29 de Setiembre vs Club Sp. San Lorenzo | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Sportivo Iteno vs Club Guarani | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Boavista SC vs CFRJ / Maricá | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Madureira vs Portuguesa RJ | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Nova Iguaçu vs Olaria | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Sampaio Corrêa RJ vs São Gonçalo EC RJ | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Amkar vs Pobeda Nizhniy Novgorod | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Angust Nazran vs Druzhba | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Astrakhan vs Mashuk-KMV | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Avangard Kursk vs Kristall MEZ | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Baník Sokolov vs Arsenal Česká Lípa | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Belotin vs Havířov | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Benešov vs Táborsko | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Bospor Bohumín vs Třinec | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Brandýs nad Labem vs Varnsdorf | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Broke Boys vs Dinamo Kirov | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Brumov vs Karviná | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Bzenec vs Hodonín | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Břidličná vs Tatran Všechovice | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Chlumec nad Cidlinou vs Admira Praha | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Chotebor vs Vsetín | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Dinamo Barnaul vs Dinamo Vladivostok | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Doubravka vs Motorlet Praha | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Elva vs Joker | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- FC Levadia Tallinn vs Paide | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- FC Tallinn vs Harju JK Laagri U21 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- FC Tosno vs Cherepovets | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- FK Sokol Saratov vs Ilpar | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- FK Spartak Tambov vs SKA Rostov | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Flora Tallinn vs Tallinna Kalev II | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Frýdlant vs Opava | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Havlíčkův Brod vs Vysočina Jihlava | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Helios vs Viimsi | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Hermanuv Mestec vs Sokol Zápy | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Horní Ředice vs Chrudim | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Humpolec vs Velká Bíteš | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Irtysh Omsk vs Saturn Ramenskoye | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Izhevsk vs Torpedo Miass | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- KDV vs Novosibirsk | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Kaluga vs Iskra Smolensk | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Karlovy Vary vs Ústí nad Labem | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Keila vs Flora III | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Khimik Dzerzhinsk vs Nosta | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Klasterec n. Oh. vs Neratovice-Byškovice | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Komárov vs Jiskra Domažlice | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Kose vs Tartu Welco | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Křimice vs České Budějovice | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Levoča vs Sokol Brezovica | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Meteor Praha vs Sokol Brozany | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Murom vs Metallurg Lipetsk | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Nové Sady vs Vítkovice | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Phoenix vs Vaprus | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Přepeře vs Ústí nad Orlicí | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Rokycany vs Loko Vltavín | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Ráječko vs Zabreh | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- SK Krumvir vs Hanácká | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Shumbrat vs 2Drots | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Slavoj Český Krumlov vs Králův Dvůr | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Sokol Tasovice vs Uherský Brod | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Sparta Brno vs Sokol Lanžhot | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Spartak Police n/Metují vs Viktoria Žižkov | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Spartak Pribram vs Písek | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Strakonice vs Příbram | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Strogino vs Torpedo Vladimir | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Trutnov vs Benátky nad Jizerou | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Turnov vs Baník Souš | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Volgar Astrakhan vs Pobeda | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Volna Nizhegorodskaya vs Tyumen | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Znamya Noginsk vs Dinamo Bryansk | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Zvezda St. Petersburg vs Luki-Energiya | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Šternberk vs Polanka nad Odrou | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Agricola Borcea vs Unirea Slobozia | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Baicoi vs Metalul Buzău | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- CIL Blaj vs Sănătatea Cluj | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- CSM Adjud vs Sporting Lieşti | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- CSM Targu Jiu vs CSM Ramnicu Valcea | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Corona Braşov vs Olimpic Zărneşti | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Crişul Sântandrei vs Bihor Oradea | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Dunarea Calarasi vs CS Afumati | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Dunărea 2020 Giurgiu vs CSA Steaua Bucureşti | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- FC Politehnica Timisoara vs Dumbrăviţa | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Flacăra Moreni vs Chindia Targoviste | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Gheorgheni vs ASA Targu Mures | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Jiul Petroşani vs Minerul Lupeni | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Minaur Baia Mare vs CSM Satu Mare | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Oltul Curtişoara vs Slatina | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Progresul Mogosoaia vs Concordia | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Progresul Spartac vs Metaloglobus | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- SCM Zalău vs Gloria Bistriţa | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Timişul Şag vs CSM Reşiţa | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Tunari vs Ştefăneşti | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- USV Iaşi vs Cetatea Suceava | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Viitorul Onesti vs FC Bacau | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Viitorul Şelimbăr vs AFC Hermannstadt | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Føroyar vs Hørsholm-Usserød | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Gottne vs IFK Östersund | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- IFK Luleå vs Boden | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Lucksta vs Kubikenborg | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Täfteå vs Skellefteå | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Crixás EC vs Bom Jesus EC | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Goiânia vs Trindade | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Grêmio Anápolis vs Tupy FC | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Mineiros vs Rio Verde | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- IF Gnistan vs HJK W | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- WIT Georgia vs Margveti 2006 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Villa Nova vs Democrata SL | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- DEAC vs Tarpa | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Eger vs Tiszafuredi VSE | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Füzesabony vs Nyiregyhaza II | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Hajdúnánás vs Kisvárda II | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Mátészalka vs Gödöllő | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Salgótarjáni BTC vs Tiszaújváros | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Ózd Sajóvölgye vs Cigand SE | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- 1908 SZAC vs Zalaegerszegi TE II | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Balatonalmádi vs MTE 1904 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Haladás VSE vs Sárisápi Bányász | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Király SZE vs Dorogi FC | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Puskás II vs Komárom | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Pápai Perutz vs Veszprém | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- SC Sopron vs Gyori ETO II | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Tatabánya vs Bicskei | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- BKV Előre vs Gyulai Termál | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Bekescsaba 1912 vs Szolnoki MAV FC | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Csepel vs ESMTK | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Hódmezővásárhely vs III. Kerületi TUE | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Monori Se vs Dabas | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Szeged-Csanád II vs Szegedi VSE | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Sándorfalva vs Újpest II | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Budafoki LC vs PTE-PEAC | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Budaörs vs Iváncsa | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Dunaharaszti MTK vs Majosi | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Dunaujvaros FC vs Érdi VSE | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Paksi SE II vs Ferencváros II | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Siofok vs MTK Budapest II | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Szekszárd vs Kaposvar | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Sárbogárd vs Pécsi MFC | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Gosport Borough vs Hanworth Villa | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Charlestown City Blues vs Edgeworth Eagles | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Kahibah vs Maitland | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Weston Bears vs Adamstown Rosebuds | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Independiente Medellin vs Millonarios | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Junior vs Deportivo Pereira | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Magallanes vs Cobreloa | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Patriotas vs Orsomarso | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Popayan vs Union Magdalena | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Recoleta vs Rangers de Talca | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- AEK Athens FC vs OFI | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Alvarado vs Huracan Las Heras | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Atletico Escobar vs Sportivo Las Parejas | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Cipolletti vs Argentino Monte Maíz | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Defensores de Belgrano VR vs Douglas Haig | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Defensores de Vilelas vs Tucuman Central | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Deportivo Rincon vs Circulo Deportivo | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Fundacion Amigos vs Costa Brava | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Germinal de Rawson vs Santamarina | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Guillermo Brown vs Juventud Unida Univ. | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Independiente De Chivilcoy vs Sarmiento Resistencia | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Olimpo Bahia Blanca vs Villa Mitre | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- San Martin Formosa vs Sportivo Belgrano | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Paris Saint Germain vs Aston Villa | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Pardubice U19 vs Teplice U19 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Algeria W vs Malawi W | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Morocco W vs Cameroon W | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Bahia U17 vs Athletico PR U17 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Cruzeiro U17 vs Fortaleza U17 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Quixadá U20 vs Fortaleza U20 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- ASEC Mimosas vs Medeama | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Arsenal vs Como | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Atlético Tordesillas vs Real Ávila | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Deportivo La Coruna vs Real Madrid | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- FK Kukesi vs Besa Kavajë | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- FSV Frankfurt vs Eintracht Frankfurt | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Leeds vs Manchester United | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Malaga vs Fulham | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Manresa vs Vilanova | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Marino de Luanco vs Langreo | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Napoli vs Aris Thessalonikis | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Nea Salamis vs Anorthosis | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Newcastle vs Everton | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Nottingham Forest vs Bayer Leverkusen | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Pro Patria vs Gozzano | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Real Valladolid II vs Leganés II | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- SSVg Velbert vs Borussia Mönchengladbach | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Stade Mouscronnois vs Albert Quévy-Mons | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Valencia U21 vs Teruel | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Estoril U23 vs Gil Vicente U23 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Brann U19 vs Vålerenga U19 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Aumund-Vegesack vs BTS Neustadt | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Eiche Horn vs Grohn | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Hemelingen vs Leher TS | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Vatan Sport vs Geestemünde | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- 1960 Hanau vs Bayern Alzenau | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Eddersheim vs Friedberg | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- FC Gießen vs Hadamar | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Fernwald vs TuBa Pohlheim | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Hummetroth vs Unter-Flockenbach | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Kassel vs Baunatal | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Kassel 2 vs Hünfelder SV | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Rot-Weiß Walldorf vs Darmstadt 98 II | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Vfb Marburg vs Eintracht Stadtallendorf | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Schott Mainz vs Cosmos Koblenz | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- RB Bragantino U20 vs Guarani U20 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Bremer SV vs Phönix Lübeck | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Eimsbütteler TV vs Schöningen | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Eintracht Norderstedt vs Kickers Emden | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- HSC Hannover vs Atlas Delmenhorst | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Hamburger SV II vs Todesfelde | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- SSV Jeddeloh vs St. Pauli II | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- SV Drochtersen/Assel vs Hannover 96 II | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Belgrano Córdoba Res. vs Estudiantes Rio Cuarto 2 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Estudiantes La Plata Res vs Atl. Rafaela 2 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Instituto Res. vs Aldosivi Res. | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Lanús Res. vs Defensa y Justicia Res. | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Rosario Central Res. vs Banfield Res. | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- San Martín San Juan Res. vs Boca Juniors Res. | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Boo W vs Gamla Upsala W | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Rappe GOIF W vs Värnamo W | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Barrancas UMET vs Uribelarrea | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Buenos Aires City vs Belgrano Zarate | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Ezeiza vs Alumni Los Hornos | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Livyi Bereh U19 vs Dynamo Kyiv U19 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Lviv U19 vs Veres Rivne U19 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Obolon' Kyiv U19 vs Karpaty Lviv U19 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Oleksandria U19 vs Metalist 1925 U19 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- Rukh Vynnyky U19 vs Kolos Kovalivka U19 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
+- SK Metalurh U19 vs Zhytomyr U19 | status=NOT_TRUSTED_NO_PROMOTION | allowed=DIAGNOSTIC_ONLY | reason=raw candidate is not TRUSTED_RAW_SOURCE | source=data/processed/matches_league_rejected.csv
 
 ## Guardrails
 - Promotion gate can only restrict or route to normal scoring; it never creates picks or stake permission.

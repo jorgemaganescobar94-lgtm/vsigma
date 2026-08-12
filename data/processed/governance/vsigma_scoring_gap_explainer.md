@@ -1,18 +1,137 @@
 # vSIGMA Scoring Gap Explainer - 2026-08-12
 
 ## Summary
-- rows_reviewed: 1
+- rows_reviewed: 251
 - missing_scored_rows: 1
-- no_data_blocked_rows: 0
-- not_trusted_rows: 0
-- promoted_rows: 0
-- gap_status_counts: MISSING_SCORED_ROW=1
+- no_data_blocked_rows: 8
+- not_trusted_rows: 235
+- promoted_rows: 7
+- gap_status_counts: NOT_TRUSTED_SKIPPED=235; SCORED_ROW_NO_DATA_BLOCKED=8; PROMOTED=7; MISSING_SCORED_ROW=1
 - next_action: Repair scoring/enrichment for trusted raw candidates; no market discussion until rows are scored and non-blocked.
 - auto_apply: NO
 - production_change: NO
 
 ## Gap Rows
 - Kairat Almaty vs Levski Sofia | promotion=TRUSTED_SOURCE_BUT_NO_SCORED_ROW | gap=MISSING_SCORED_ROW | stage=SCORING_NOT_RUN_FOR_TRUSTED_RAW | scored=MISSING | fix=Run/repair scoring enrichment over trusted raw fixture candidates before market translation.
+- RB Bragantino vs Atletico-MG | promotion=PROMOTED_TO_SCORING_INPUT | gap=PROMOTED | stage=SCORING_ALLOWED | scored=SCORED_AVAILABLE | fix=Proceed through normal scoring, translator, board and prelock gates.
+- Deportes Tolima vs Independiente del Valle | promotion=PROMOTED_TO_SCORING_INPUT | gap=PROMOTED | stage=SCORING_ALLOWED | scored=SCORED_AVAILABLE | fix=Proceed through normal scoring, translator, board and prelock gates.
+- Palmeiras vs Cerro Porteno | promotion=PROMOTED_TO_SCORING_INPUT | gap=PROMOTED | stage=SCORING_ALLOWED | scored=SCORED_AVAILABLE | fix=Proceed through normal scoring, translator, board and prelock gates.
+- Platense vs Coquimbo Unido | promotion=PROMOTED_TO_SCORING_INPUT | gap=PROMOTED | stage=SCORING_ALLOWED | scored=SCORED_AVAILABLE | fix=Proceed through normal scoring, translator, board and prelock gates.
+- FC Copenhagen vs Debreceni VSC | promotion=PROMOTED_TO_SCORING_INPUT | gap=PROMOTED | stage=SCORING_ALLOWED | scored=SCORED_AVAILABLE | fix=Proceed through normal scoring, translator, board and prelock gates.
+- GKS Katowice vs Hapoel Tel Aviv | promotion=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | gap=SCORED_ROW_NO_DATA_BLOCKED | stage=SCORING_ENRICHMENT_BLOCKED | scored=NO_DATA_BLOCKED | fix=Repair enrichment inputs for stats/odds/standings/coverage; do not promote until non-blocked.
+- Rapid Vienna vs Paide | promotion=PROMOTED_TO_SCORING_INPUT | gap=PROMOTED | stage=SCORING_ALLOWED | scored=SCORED_AVAILABLE | fix=Proceed through normal scoring, translator, board and prelock gates.
+- Tigre vs Atletico Torque | promotion=PROMOTED_TO_SCORING_INPUT | gap=PROMOTED | stage=SCORING_ALLOWED | scored=SCORED_AVAILABLE | fix=Proceed through normal scoring, translator, board and prelock gates.
+- Arkadag vs Goa | promotion=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | gap=SCORED_ROW_NO_DATA_BLOCKED | stage=SCORING_ENRICHMENT_BLOCKED | scored=NO_DATA_BLOCKED | fix=Repair enrichment inputs for stats/odds/standings/coverage; do not promote until non-blocked.
+- East Bengal II vs Al Arabi | promotion=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | gap=SCORED_ROW_NO_DATA_BLOCKED | stage=SCORING_ENRICHMENT_BLOCKED | scored=NO_DATA_BLOCKED | fix=Repair enrichment inputs for stats/odds/standings/coverage; do not promote until non-blocked.
+- Amazulu vs Orlando Pirates | promotion=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | gap=SCORED_ROW_NO_DATA_BLOCKED | stage=SCORING_ENRICHMENT_BLOCKED | scored=NO_DATA_BLOCKED | fix=Repair enrichment inputs for stats/odds/standings/coverage; do not promote until non-blocked.
+- Durban City vs Golden Arrows | promotion=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | gap=SCORED_ROW_NO_DATA_BLOCKED | stage=SCORING_ENRICHMENT_BLOCKED | scored=NO_DATA_BLOCKED | fix=Repair enrichment inputs for stats/odds/standings/coverage; do not promote until non-blocked.
+- Kaizer Chiefs vs Sekhukhune United | promotion=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | gap=SCORED_ROW_NO_DATA_BLOCKED | stage=SCORING_ENRICHMENT_BLOCKED | scored=NO_DATA_BLOCKED | fix=Repair enrichment inputs for stats/odds/standings/coverage; do not promote until non-blocked.
+- Milford FC vs Siwelele | promotion=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | gap=SCORED_ROW_NO_DATA_BLOCKED | stage=SCORING_ENRICHMENT_BLOCKED | scored=NO_DATA_BLOCKED | fix=Repair enrichment inputs for stats/odds/standings/coverage; do not promote until non-blocked.
+- La Unión vs Aucas | promotion=TRUSTED_SOURCE_BUT_NO_DATA_BLOCKED | gap=SCORED_ROW_NO_DATA_BLOCKED | stage=SCORING_ENRICHMENT_BLOCKED | scored=NO_DATA_BLOCKED | fix=Repair enrichment inputs for stats/odds/standings/coverage; do not promote until non-blocked.
+- Maziya vs Regar-TadAZ | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- APIA Leichhardt Tigers vs Sydney United | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Brunswick Juventus FC vs Preston Lions | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- North Sunshine Eagles vs Heidelberg United | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Measurers vs Rainbow | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Police vs Wari | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- United vs Calcutta Police | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Hamilton Academical vs Celtic II | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Atletico Tucuman vs Independiente | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- 29 de Setiembre vs Club Sp. San Lorenzo | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Sportivo Iteno vs Club Guarani | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Boavista SC vs CFRJ / Maricá | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Madureira vs Portuguesa RJ | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Nova Iguaçu vs Olaria | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Sampaio Corrêa RJ vs São Gonçalo EC RJ | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Amkar vs Pobeda Nizhniy Novgorod | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Angust Nazran vs Druzhba | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Astrakhan vs Mashuk-KMV | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Avangard Kursk vs Kristall MEZ | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Baník Sokolov vs Arsenal Česká Lípa | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Belotin vs Havířov | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Benešov vs Táborsko | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Bospor Bohumín vs Třinec | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Brandýs nad Labem vs Varnsdorf | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Broke Boys vs Dinamo Kirov | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Brumov vs Karviná | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Bzenec vs Hodonín | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Břidličná vs Tatran Všechovice | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Chlumec nad Cidlinou vs Admira Praha | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Chotebor vs Vsetín | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Dinamo Barnaul vs Dinamo Vladivostok | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Doubravka vs Motorlet Praha | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Elva vs Joker | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- FC Levadia Tallinn vs Paide | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- FC Tallinn vs Harju JK Laagri U21 | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- FC Tosno vs Cherepovets | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- FK Sokol Saratov vs Ilpar | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- FK Spartak Tambov vs SKA Rostov | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Flora Tallinn vs Tallinna Kalev II | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Frýdlant vs Opava | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Havlíčkův Brod vs Vysočina Jihlava | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Helios vs Viimsi | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Hermanuv Mestec vs Sokol Zápy | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Horní Ředice vs Chrudim | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Humpolec vs Velká Bíteš | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Irtysh Omsk vs Saturn Ramenskoye | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Izhevsk vs Torpedo Miass | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- KDV vs Novosibirsk | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Kaluga vs Iskra Smolensk | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Karlovy Vary vs Ústí nad Labem | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Keila vs Flora III | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Khimik Dzerzhinsk vs Nosta | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Klasterec n. Oh. vs Neratovice-Byškovice | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Komárov vs Jiskra Domažlice | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Kose vs Tartu Welco | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Křimice vs České Budějovice | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Levoča vs Sokol Brezovica | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Meteor Praha vs Sokol Brozany | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Murom vs Metallurg Lipetsk | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Nové Sady vs Vítkovice | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Phoenix vs Vaprus | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Přepeře vs Ústí nad Orlicí | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Rokycany vs Loko Vltavín | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Ráječko vs Zabreh | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- SK Krumvir vs Hanácká | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Shumbrat vs 2Drots | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Slavoj Český Krumlov vs Králův Dvůr | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Sokol Tasovice vs Uherský Brod | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Sparta Brno vs Sokol Lanžhot | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Spartak Police n/Metují vs Viktoria Žižkov | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Spartak Pribram vs Písek | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Strakonice vs Příbram | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Strogino vs Torpedo Vladimir | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Trutnov vs Benátky nad Jizerou | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Turnov vs Baník Souš | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Volgar Astrakhan vs Pobeda | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Volna Nizhegorodskaya vs Tyumen | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Znamya Noginsk vs Dinamo Bryansk | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Zvezda St. Petersburg vs Luki-Energiya | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Šternberk vs Polanka nad Odrou | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Agricola Borcea vs Unirea Slobozia | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Baicoi vs Metalul Buzău | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- CIL Blaj vs Sănătatea Cluj | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- CSM Adjud vs Sporting Lieşti | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- CSM Targu Jiu vs CSM Ramnicu Valcea | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Corona Braşov vs Olimpic Zărneşti | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Crişul Sântandrei vs Bihor Oradea | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Dunarea Calarasi vs CS Afumati | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Dunărea 2020 Giurgiu vs CSA Steaua Bucureşti | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- FC Politehnica Timisoara vs Dumbrăviţa | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Flacăra Moreni vs Chindia Targoviste | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Gheorgheni vs ASA Targu Mures | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Jiul Petroşani vs Minerul Lupeni | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Minaur Baia Mare vs CSM Satu Mare | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Oltul Curtişoara vs Slatina | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Progresul Mogosoaia vs Concordia | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Progresul Spartac vs Metaloglobus | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- SCM Zalău vs Gloria Bistriţa | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Timişul Şag vs CSM Reşiţa | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Tunari vs Ştefăneşti | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- USV Iaşi vs Cetatea Suceava | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Viitorul Onesti vs FC Bacau | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Viitorul Şelimbăr vs AFC Hermannstadt | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
+- Føroyar vs Hørsholm-Usserød | promotion=NOT_TRUSTED_NO_PROMOTION | gap=NOT_TRUSTED_SKIPPED | stage=RAW_TRUST_GATE_BLOCK | scored=MISSING | fix=Keep diagnostic only unless future whitelist changes source trust.
 
 ## Guardrails
 - Scoring gap explainer is diagnostic only.
