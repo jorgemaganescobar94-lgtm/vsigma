@@ -1,0 +1,9 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-08-11,OK,API-SPORTS_DIRECT,218.0,,,,,,
+2026-08-11T16:00:00+01:00,MATCHED,,,1607170.0,FT,Kairat Almaty,Levski Sofia,0.0,1.0
+2026-08-11T17:00:00+01:00,MATCHED,,,1598827.0,AET,Bodo/Glimt,Union St. Gilloise,2.0,2.0
+2026-08-11T17:00:00+01:00,MATCHED,,,1607172.0,FT,Sabah FA,Aarhus,4.0,0.0
+2026-08-11T17:00:00+01:00,MATCHED,,,1607180.0,AET,Saburtalo,Larne,1.0,1.0
+2026-08-11T19:30:00+01:00,MATCHED,,,1607174.0,FT,Sturm Graz,Fenerbahçe,0.0,1.0
+2026-08-11T23:00:00+01:00,MATCHED,,,1547760.0,FT,Fluminense,Independ. Rivadavia,0.0,0.0
+2026-08-11T23:00:00+01:00,MATCHED,,,1607648.0,FT,Boca Juniors,Deportivo Recoleta,3.0,1.0
