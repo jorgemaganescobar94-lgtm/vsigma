@@ -1,2 +1,2 @@
 target_date,generated_at,queue_rank,fixture_id,home_team,away_team,league,gap_status,scoring_needed,priority,reason,recommended_fix,auto_apply,production_change
-2026-08-13,2026-08-13T09:51:23+01:00,1,1607197,RB Bragantino,Atletico-MG,CONMEBOL Sudamericana,MISSING_SCORED_ROW,YES,P1_TRUSTED_MISSING_SCORING,trusted raw candidate has no matching scored row,Run/repair scoring enrichment over trusted raw fixture candidates before market translation.,NO,NO
+2026-08-13,2026-08-13T19:13:58+01:00,1,1607197,RB Bragantino,Atletico-MG,CONMEBOL Sudamericana,MISSING_SCORED_ROW,YES,P1_TRUSTED_MISSING_SCORING,trusted raw candidate has no matching scored row,Run/repair scoring enrichment over trusted raw fixture candidates before market translation.,NO,NO

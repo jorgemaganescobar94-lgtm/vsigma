@@ -1,11 +1,421 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
-2026-08-13,1607197,,,RB Bragantino,Atletico-MG,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-13,1607197,,,RB Bragantino,Atletico-MG,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-13,1607197,,,RB Bragantino,Atletico-MG,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-13,1607197,,,RB Bragantino,Atletico-MG,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-13,1607197,,,RB Bragantino,Atletico-MG,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-13,1607197,,,RB Bragantino,Atletico-MG,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-13,1607197,,,RB Bragantino,Atletico-MG,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-13,1607197,,,RB Bragantino,Atletico-MG,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-13,1607197,,,RB Bragantino,Atletico-MG,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
-2026-08-13,1607197,,,RB Bragantino,Atletico-MG,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607610,UEFA Europa Conference League,World,Gyori ETO FC,Riga,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607610,UEFA Europa Conference League,World,Gyori ETO FC,Riga,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607610,UEFA Europa Conference League,World,Gyori ETO FC,Riga,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607610,UEFA Europa Conference League,World,Gyori ETO FC,Riga,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607610,UEFA Europa Conference League,World,Gyori ETO FC,Riga,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607610,UEFA Europa Conference League,World,Gyori ETO FC,Riga,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607610,UEFA Europa Conference League,World,Gyori ETO FC,Riga,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607610,UEFA Europa Conference League,World,Gyori ETO FC,Riga,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607610,UEFA Europa Conference League,World,Gyori ETO FC,Riga,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607610,UEFA Europa Conference League,World,Gyori ETO FC,Riga,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607184,UEFA Europa League,World,Vikingur Reykjavik,FC Thun,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607184,UEFA Europa League,World,Vikingur Reykjavik,FC Thun,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607184,UEFA Europa League,World,Vikingur Reykjavik,FC Thun,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607184,UEFA Europa League,World,Vikingur Reykjavik,FC Thun,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607184,UEFA Europa League,World,Vikingur Reykjavik,FC Thun,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607184,UEFA Europa League,World,Vikingur Reykjavik,FC Thun,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607184,UEFA Europa League,World,Vikingur Reykjavik,FC Thun,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607184,UEFA Europa League,World,Vikingur Reykjavik,FC Thun,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607184,UEFA Europa League,World,Vikingur Reykjavik,FC Thun,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607184,UEFA Europa League,World,Vikingur Reykjavik,FC Thun,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1605373,UEFA Europa Conference League,World,Drita,Tre Fiori,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1605373,UEFA Europa Conference League,World,Drita,Tre Fiori,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1605373,UEFA Europa Conference League,World,Drita,Tre Fiori,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1605373,UEFA Europa Conference League,World,Drita,Tre Fiori,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1605373,UEFA Europa Conference League,World,Drita,Tre Fiori,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1605373,UEFA Europa Conference League,World,Drita,Tre Fiori,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1605373,UEFA Europa Conference League,World,Drita,Tre Fiori,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1605373,UEFA Europa Conference League,World,Drita,Tre Fiori,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1605373,UEFA Europa Conference League,World,Drita,Tre Fiori,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1605373,UEFA Europa Conference League,World,Drita,Tre Fiori,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607624,UEFA Europa Conference League,World,FC Sion,FC Noah,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607624,UEFA Europa Conference League,World,FC Sion,FC Noah,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607624,UEFA Europa Conference League,World,FC Sion,FC Noah,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607624,UEFA Europa Conference League,World,FC Sion,FC Noah,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607624,UEFA Europa Conference League,World,FC Sion,FC Noah,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607624,UEFA Europa Conference League,World,FC Sion,FC Noah,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607624,UEFA Europa Conference League,World,FC Sion,FC Noah,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607624,UEFA Europa Conference League,World,FC Sion,FC Noah,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607624,UEFA Europa Conference League,World,FC Sion,FC Noah,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607624,UEFA Europa Conference League,World,FC Sion,FC Noah,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607614,UEFA Europa Conference League,World,Flora Tallinn,Inter Club d'Escaldes,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607614,UEFA Europa Conference League,World,Flora Tallinn,Inter Club d'Escaldes,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607614,UEFA Europa Conference League,World,Flora Tallinn,Inter Club d'Escaldes,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607614,UEFA Europa Conference League,World,Flora Tallinn,Inter Club d'Escaldes,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607614,UEFA Europa Conference League,World,Flora Tallinn,Inter Club d'Escaldes,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607614,UEFA Europa Conference League,World,Flora Tallinn,Inter Club d'Escaldes,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607614,UEFA Europa Conference League,World,Flora Tallinn,Inter Club d'Escaldes,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607614,UEFA Europa Conference League,World,Flora Tallinn,Inter Club d'Escaldes,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607614,UEFA Europa Conference League,World,Flora Tallinn,Inter Club d'Escaldes,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607614,UEFA Europa Conference League,World,Flora Tallinn,Inter Club d'Escaldes,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607616,UEFA Europa Conference League,World,ML Vitebsk,Borac Banja Luka,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607616,UEFA Europa Conference League,World,ML Vitebsk,Borac Banja Luka,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607616,UEFA Europa Conference League,World,ML Vitebsk,Borac Banja Luka,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607616,UEFA Europa Conference League,World,ML Vitebsk,Borac Banja Luka,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607616,UEFA Europa Conference League,World,ML Vitebsk,Borac Banja Luka,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607616,UEFA Europa Conference League,World,ML Vitebsk,Borac Banja Luka,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607616,UEFA Europa Conference League,World,ML Vitebsk,Borac Banja Luka,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607616,UEFA Europa Conference League,World,ML Vitebsk,Borac Banja Luka,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607616,UEFA Europa Conference League,World,ML Vitebsk,Borac Banja Luka,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607616,UEFA Europa Conference League,World,ML Vitebsk,Borac Banja Luka,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607615,UEFA Europa Conference League,World,FC Midtjylland,Bohemians,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607615,UEFA Europa Conference League,World,FC Midtjylland,Bohemians,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607615,UEFA Europa Conference League,World,FC Midtjylland,Bohemians,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607615,UEFA Europa Conference League,World,FC Midtjylland,Bohemians,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607615,UEFA Europa Conference League,World,FC Midtjylland,Bohemians,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607615,UEFA Europa Conference League,World,FC Midtjylland,Bohemians,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607615,UEFA Europa Conference League,World,FC Midtjylland,Bohemians,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607615,UEFA Europa Conference League,World,FC Midtjylland,Bohemians,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607615,UEFA Europa Conference League,World,FC Midtjylland,Bohemians,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607615,UEFA Europa Conference League,World,FC Midtjylland,Bohemians,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1598831,UEFA Europa League,World,Rangers,Jagiellonia,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1598831,UEFA Europa League,World,Rangers,Jagiellonia,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1598831,UEFA Europa League,World,Rangers,Jagiellonia,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1598831,UEFA Europa League,World,Rangers,Jagiellonia,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1598831,UEFA Europa League,World,Rangers,Jagiellonia,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1598831,UEFA Europa League,World,Rangers,Jagiellonia,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1598831,UEFA Europa League,World,Rangers,Jagiellonia,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1598831,UEFA Europa League,World,Rangers,Jagiellonia,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1598831,UEFA Europa League,World,Rangers,Jagiellonia,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1598831,UEFA Europa League,World,Rangers,Jagiellonia,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607612,UEFA Europa Conference League,World,Hammarby FF,Raków Częstochowa,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607612,UEFA Europa Conference League,World,Hammarby FF,Raków Częstochowa,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607612,UEFA Europa Conference League,World,Hammarby FF,Raków Częstochowa,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607612,UEFA Europa Conference League,World,Hammarby FF,Raków Częstochowa,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607612,UEFA Europa Conference League,World,Hammarby FF,Raków Częstochowa,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607612,UEFA Europa Conference League,World,Hammarby FF,Raków Częstochowa,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607612,UEFA Europa Conference League,World,Hammarby FF,Raków Częstochowa,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607612,UEFA Europa Conference League,World,Hammarby FF,Raków Częstochowa,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607612,UEFA Europa Conference League,World,Hammarby FF,Raków Częstochowa,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607612,UEFA Europa Conference League,World,Hammarby FF,Raków Częstochowa,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606353,UEFA Europa League,World,Egnatia Rrogozhinë,Shamrock Rovers,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606353,UEFA Europa League,World,Egnatia Rrogozhinë,Shamrock Rovers,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606353,UEFA Europa League,World,Egnatia Rrogozhinë,Shamrock Rovers,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606353,UEFA Europa League,World,Egnatia Rrogozhinë,Shamrock Rovers,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606353,UEFA Europa League,World,Egnatia Rrogozhinë,Shamrock Rovers,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606353,UEFA Europa League,World,Egnatia Rrogozhinë,Shamrock Rovers,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606353,UEFA Europa League,World,Egnatia Rrogozhinë,Shamrock Rovers,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606353,UEFA Europa League,World,Egnatia Rrogozhinë,Shamrock Rovers,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606353,UEFA Europa League,World,Egnatia Rrogozhinë,Shamrock Rovers,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606353,UEFA Europa League,World,Egnatia Rrogozhinë,Shamrock Rovers,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607183,UEFA Europa League,World,Universitatea Craiova,KuPS,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607183,UEFA Europa League,World,Universitatea Craiova,KuPS,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607183,UEFA Europa League,World,Universitatea Craiova,KuPS,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607183,UEFA Europa League,World,Universitatea Craiova,KuPS,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607183,UEFA Europa League,World,Universitatea Craiova,KuPS,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607183,UEFA Europa League,World,Universitatea Craiova,KuPS,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607183,UEFA Europa League,World,Universitatea Craiova,KuPS,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607183,UEFA Europa League,World,Universitatea Craiova,KuPS,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607183,UEFA Europa League,World,Universitatea Craiova,KuPS,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607183,UEFA Europa League,World,Universitatea Craiova,KuPS,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607629,UEFA Europa Conference League,World,FC Vaduz,Inter Turku,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607629,UEFA Europa Conference League,World,FC Vaduz,Inter Turku,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607629,UEFA Europa Conference League,World,FC Vaduz,Inter Turku,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607629,UEFA Europa Conference League,World,FC Vaduz,Inter Turku,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607629,UEFA Europa Conference League,World,FC Vaduz,Inter Turku,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607629,UEFA Europa Conference League,World,FC Vaduz,Inter Turku,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607629,UEFA Europa Conference League,World,FC Vaduz,Inter Turku,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607629,UEFA Europa Conference League,World,FC Vaduz,Inter Turku,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607629,UEFA Europa Conference League,World,FC Vaduz,Inter Turku,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607629,UEFA Europa Conference League,World,FC Vaduz,Inter Turku,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607182,UEFA Europa League,World,Omonia Nicosia,Lincoln Red Imps FC,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607182,UEFA Europa League,World,Omonia Nicosia,Lincoln Red Imps FC,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607182,UEFA Europa League,World,Omonia Nicosia,Lincoln Red Imps FC,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607182,UEFA Europa League,World,Omonia Nicosia,Lincoln Red Imps FC,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607182,UEFA Europa League,World,Omonia Nicosia,Lincoln Red Imps FC,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607182,UEFA Europa League,World,Omonia Nicosia,Lincoln Red Imps FC,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607182,UEFA Europa League,World,Omonia Nicosia,Lincoln Red Imps FC,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607182,UEFA Europa League,World,Omonia Nicosia,Lincoln Red Imps FC,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607182,UEFA Europa League,World,Omonia Nicosia,Lincoln Red Imps FC,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607182,UEFA Europa League,World,Omonia Nicosia,Lincoln Red Imps FC,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607606,UEFA Europa Conference League,World,Dunajska Streda,Twente,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607606,UEFA Europa Conference League,World,Dunajska Streda,Twente,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607606,UEFA Europa Conference League,World,Dunajska Streda,Twente,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607606,UEFA Europa Conference League,World,Dunajska Streda,Twente,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607606,UEFA Europa Conference League,World,Dunajska Streda,Twente,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607606,UEFA Europa Conference League,World,Dunajska Streda,Twente,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607606,UEFA Europa Conference League,World,Dunajska Streda,Twente,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607606,UEFA Europa Conference League,World,Dunajska Streda,Twente,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607606,UEFA Europa Conference League,World,Dunajska Streda,Twente,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607606,UEFA Europa Conference League,World,Dunajska Streda,Twente,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607570,UEFA Europa League,World,Heart Of Midlothian,Benfica,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607570,UEFA Europa League,World,Heart Of Midlothian,Benfica,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607570,UEFA Europa League,World,Heart Of Midlothian,Benfica,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607570,UEFA Europa League,World,Heart Of Midlothian,Benfica,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607570,UEFA Europa League,World,Heart Of Midlothian,Benfica,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607570,UEFA Europa League,World,Heart Of Midlothian,Benfica,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607570,UEFA Europa League,World,Heart Of Midlothian,Benfica,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607570,UEFA Europa League,World,Heart Of Midlothian,Benfica,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607570,UEFA Europa League,World,Heart Of Midlothian,Benfica,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607570,UEFA Europa League,World,Heart Of Midlothian,Benfica,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607605,UEFA Europa Conference League,World,Dinamo Minsk,SC Braga,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607605,UEFA Europa Conference League,World,Dinamo Minsk,SC Braga,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607605,UEFA Europa Conference League,World,Dinamo Minsk,SC Braga,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607605,UEFA Europa Conference League,World,Dinamo Minsk,SC Braga,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607605,UEFA Europa Conference League,World,Dinamo Minsk,SC Braga,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607605,UEFA Europa Conference League,World,Dinamo Minsk,SC Braga,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607605,UEFA Europa Conference League,World,Dinamo Minsk,SC Braga,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607605,UEFA Europa Conference League,World,Dinamo Minsk,SC Braga,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607605,UEFA Europa Conference League,World,Dinamo Minsk,SC Braga,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607605,UEFA Europa Conference League,World,Dinamo Minsk,SC Braga,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607622,UEFA Europa Conference League,World,Shelbourne,Ajax,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607622,UEFA Europa Conference League,World,Shelbourne,Ajax,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607622,UEFA Europa Conference League,World,Shelbourne,Ajax,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607622,UEFA Europa Conference League,World,Shelbourne,Ajax,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607622,UEFA Europa Conference League,World,Shelbourne,Ajax,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607622,UEFA Europa Conference League,World,Shelbourne,Ajax,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607622,UEFA Europa Conference League,World,Shelbourne,Ajax,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607622,UEFA Europa Conference League,World,Shelbourne,Ajax,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607622,UEFA Europa Conference League,World,Shelbourne,Ajax,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607622,UEFA Europa Conference League,World,Shelbourne,Ajax,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607613,UEFA Europa Conference League,World,Ilves,HNK Rijeka,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607613,UEFA Europa Conference League,World,Ilves,HNK Rijeka,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607613,UEFA Europa Conference League,World,Ilves,HNK Rijeka,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607613,UEFA Europa Conference League,World,Ilves,HNK Rijeka,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607613,UEFA Europa Conference League,World,Ilves,HNK Rijeka,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607613,UEFA Europa Conference League,World,Ilves,HNK Rijeka,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607613,UEFA Europa Conference League,World,Ilves,HNK Rijeka,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607613,UEFA Europa Conference League,World,Ilves,HNK Rijeka,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607613,UEFA Europa Conference League,World,Ilves,HNK Rijeka,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607613,UEFA Europa Conference League,World,Ilves,HNK Rijeka,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607619,UEFA Europa Conference League,World,NSI Runavik,FC Lugano,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607619,UEFA Europa Conference League,World,NSI Runavik,FC Lugano,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607619,UEFA Europa Conference League,World,NSI Runavik,FC Lugano,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607619,UEFA Europa Conference League,World,NSI Runavik,FC Lugano,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607619,UEFA Europa Conference League,World,NSI Runavik,FC Lugano,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607619,UEFA Europa Conference League,World,NSI Runavik,FC Lugano,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607619,UEFA Europa Conference League,World,NSI Runavik,FC Lugano,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607619,UEFA Europa Conference League,World,NSI Runavik,FC Lugano,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607619,UEFA Europa Conference League,World,NSI Runavik,FC Lugano,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607619,UEFA Europa Conference League,World,NSI Runavik,FC Lugano,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607626,UEFA Europa Conference League,World,FC ST. Gallen,Sheriff Tiraspol,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607626,UEFA Europa Conference League,World,FC ST. Gallen,Sheriff Tiraspol,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607626,UEFA Europa Conference League,World,FC ST. Gallen,Sheriff Tiraspol,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607626,UEFA Europa Conference League,World,FC ST. Gallen,Sheriff Tiraspol,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607626,UEFA Europa Conference League,World,FC ST. Gallen,Sheriff Tiraspol,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607626,UEFA Europa Conference League,World,FC ST. Gallen,Sheriff Tiraspol,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607626,UEFA Europa Conference League,World,FC ST. Gallen,Sheriff Tiraspol,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607626,UEFA Europa Conference League,World,FC ST. Gallen,Sheriff Tiraspol,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607626,UEFA Europa Conference League,World,FC ST. Gallen,Sheriff Tiraspol,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607626,UEFA Europa Conference League,World,FC ST. Gallen,Sheriff Tiraspol,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607181,UEFA Europa League,World,KI Klaksvik,Lech Poznan,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607181,UEFA Europa League,World,KI Klaksvik,Lech Poznan,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607181,UEFA Europa League,World,KI Klaksvik,Lech Poznan,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607181,UEFA Europa League,World,KI Klaksvik,Lech Poznan,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607181,UEFA Europa League,World,KI Klaksvik,Lech Poznan,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607181,UEFA Europa League,World,KI Klaksvik,Lech Poznan,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607181,UEFA Europa League,World,KI Klaksvik,Lech Poznan,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607181,UEFA Europa League,World,KI Klaksvik,Lech Poznan,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607181,UEFA Europa League,World,KI Klaksvik,Lech Poznan,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607181,UEFA Europa League,World,KI Klaksvik,Lech Poznan,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607608,UEFA Europa Conference League,World,Gent,IFK Goteborg,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607608,UEFA Europa Conference League,World,Gent,IFK Goteborg,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607608,UEFA Europa Conference League,World,Gent,IFK Goteborg,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607608,UEFA Europa Conference League,World,Gent,IFK Goteborg,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607608,UEFA Europa Conference League,World,Gent,IFK Goteborg,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607608,UEFA Europa Conference League,World,Gent,IFK Goteborg,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607608,UEFA Europa Conference League,World,Gent,IFK Goteborg,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607608,UEFA Europa Conference League,World,Gent,IFK Goteborg,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607608,UEFA Europa Conference League,World,Gent,IFK Goteborg,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607608,UEFA Europa Conference League,World,Gent,IFK Goteborg,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607628,UEFA Europa Conference League,World,Tromso,CFR 1907 Cluj,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607628,UEFA Europa Conference League,World,Tromso,CFR 1907 Cluj,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607628,UEFA Europa Conference League,World,Tromso,CFR 1907 Cluj,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607628,UEFA Europa Conference League,World,Tromso,CFR 1907 Cluj,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607628,UEFA Europa Conference League,World,Tromso,CFR 1907 Cluj,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607628,UEFA Europa Conference League,World,Tromso,CFR 1907 Cluj,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607628,UEFA Europa Conference League,World,Tromso,CFR 1907 Cluj,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607628,UEFA Europa Conference League,World,Tromso,CFR 1907 Cluj,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607628,UEFA Europa Conference League,World,Tromso,CFR 1907 Cluj,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607628,UEFA Europa Conference League,World,Tromso,CFR 1907 Cluj,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607567,UEFA Europa League,World,Beşiktaş,Hradec Králové,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607567,UEFA Europa League,World,Beşiktaş,Hradec Králové,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607567,UEFA Europa League,World,Beşiktaş,Hradec Králové,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607567,UEFA Europa League,World,Beşiktaş,Hradec Králové,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607567,UEFA Europa League,World,Beşiktaş,Hradec Králové,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607567,UEFA Europa League,World,Beşiktaş,Hradec Králové,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607567,UEFA Europa League,World,Beşiktaş,Hradec Králové,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607567,UEFA Europa League,World,Beşiktaş,Hradec Králové,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607567,UEFA Europa League,World,Beşiktaş,Hradec Králové,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607567,UEFA Europa League,World,Beşiktaş,Hradec Králové,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607571,UEFA Europa League,World,Pafos,Red Bull Salzburg,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607571,UEFA Europa League,World,Pafos,Red Bull Salzburg,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607571,UEFA Europa League,World,Pafos,Red Bull Salzburg,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607571,UEFA Europa League,World,Pafos,Red Bull Salzburg,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607571,UEFA Europa League,World,Pafos,Red Bull Salzburg,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607571,UEFA Europa League,World,Pafos,Red Bull Salzburg,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607571,UEFA Europa League,World,Pafos,Red Bull Salzburg,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607571,UEFA Europa League,World,Pafos,Red Bull Salzburg,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607571,UEFA Europa League,World,Pafos,Red Bull Salzburg,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607571,UEFA Europa League,World,Pafos,Red Bull Salzburg,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606076,CONMEBOL Sudamericana,World,Santos,Macara,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606076,CONMEBOL Sudamericana,World,Santos,Macara,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606076,CONMEBOL Sudamericana,World,Santos,Macara,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606076,CONMEBOL Sudamericana,World,Santos,Macara,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606076,CONMEBOL Sudamericana,World,Santos,Macara,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606076,CONMEBOL Sudamericana,World,Santos,Macara,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606076,CONMEBOL Sudamericana,World,Santos,Macara,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606076,CONMEBOL Sudamericana,World,Santos,Macara,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606076,CONMEBOL Sudamericana,World,Santos,Macara,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1606076,CONMEBOL Sudamericana,World,Santos,Macara,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607623,UEFA Europa Conference League,World,Shkendija,Hibernian,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607623,UEFA Europa Conference League,World,Shkendija,Hibernian,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607623,UEFA Europa Conference League,World,Shkendija,Hibernian,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607623,UEFA Europa Conference League,World,Shkendija,Hibernian,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607623,UEFA Europa Conference League,World,Shkendija,Hibernian,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607623,UEFA Europa Conference League,World,Shkendija,Hibernian,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607623,UEFA Europa Conference League,World,Shkendija,Hibernian,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607623,UEFA Europa Conference League,World,Shkendija,Hibernian,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607623,UEFA Europa Conference League,World,Shkendija,Hibernian,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607623,UEFA Europa Conference League,World,Shkendija,Hibernian,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547761,CONMEBOL Libertadores,World,Mirassol,LDU de Quito,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547761,CONMEBOL Libertadores,World,Mirassol,LDU de Quito,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547761,CONMEBOL Libertadores,World,Mirassol,LDU de Quito,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547761,CONMEBOL Libertadores,World,Mirassol,LDU de Quito,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547761,CONMEBOL Libertadores,World,Mirassol,LDU de Quito,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547761,CONMEBOL Libertadores,World,Mirassol,LDU de Quito,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547761,CONMEBOL Libertadores,World,Mirassol,LDU de Quito,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547761,CONMEBOL Libertadores,World,Mirassol,LDU de Quito,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547761,CONMEBOL Libertadores,World,Mirassol,LDU de Quito,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547761,CONMEBOL Libertadores,World,Mirassol,LDU de Quito,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607602,UEFA Europa Conference League,World,Austria Vienna,Beitar Jerusalem,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607602,UEFA Europa Conference League,World,Austria Vienna,Beitar Jerusalem,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607602,UEFA Europa Conference League,World,Austria Vienna,Beitar Jerusalem,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607602,UEFA Europa Conference League,World,Austria Vienna,Beitar Jerusalem,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607602,UEFA Europa Conference League,World,Austria Vienna,Beitar Jerusalem,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607602,UEFA Europa Conference League,World,Austria Vienna,Beitar Jerusalem,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607602,UEFA Europa Conference League,World,Austria Vienna,Beitar Jerusalem,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607602,UEFA Europa Conference League,World,Austria Vienna,Beitar Jerusalem,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607602,UEFA Europa Conference League,World,Austria Vienna,Beitar Jerusalem,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607602,UEFA Europa Conference League,World,Austria Vienna,Beitar Jerusalem,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607617,UEFA Europa Conference League,World,Motherwell,HJK Helsinki,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607617,UEFA Europa Conference League,World,Motherwell,HJK Helsinki,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607617,UEFA Europa Conference League,World,Motherwell,HJK Helsinki,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607617,UEFA Europa Conference League,World,Motherwell,HJK Helsinki,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607617,UEFA Europa Conference League,World,Motherwell,HJK Helsinki,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607617,UEFA Europa Conference League,World,Motherwell,HJK Helsinki,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607617,UEFA Europa Conference League,World,Motherwell,HJK Helsinki,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607617,UEFA Europa Conference League,World,Motherwell,HJK Helsinki,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607617,UEFA Europa Conference League,World,Motherwell,HJK Helsinki,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607617,UEFA Europa Conference League,World,Motherwell,HJK Helsinki,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607618,UEFA Europa Conference League,World,FC Nordsjaelland,Valur Reykjavik,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607618,UEFA Europa Conference League,World,FC Nordsjaelland,Valur Reykjavik,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607618,UEFA Europa Conference League,World,FC Nordsjaelland,Valur Reykjavik,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607618,UEFA Europa Conference League,World,FC Nordsjaelland,Valur Reykjavik,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607618,UEFA Europa Conference League,World,FC Nordsjaelland,Valur Reykjavik,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607618,UEFA Europa Conference League,World,FC Nordsjaelland,Valur Reykjavik,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607618,UEFA Europa Conference League,World,FC Nordsjaelland,Valur Reykjavik,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607618,UEFA Europa Conference League,World,FC Nordsjaelland,Valur Reykjavik,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607618,UEFA Europa Conference League,World,FC Nordsjaelland,Valur Reykjavik,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607618,UEFA Europa Conference League,World,FC Nordsjaelland,Valur Reykjavik,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607199,CONMEBOL Sudamericana,World,Vasco DA Gama,Olimpia,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607199,CONMEBOL Sudamericana,World,Vasco DA Gama,Olimpia,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607199,CONMEBOL Sudamericana,World,Vasco DA Gama,Olimpia,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607199,CONMEBOL Sudamericana,World,Vasco DA Gama,Olimpia,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607199,CONMEBOL Sudamericana,World,Vasco DA Gama,Olimpia,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607199,CONMEBOL Sudamericana,World,Vasco DA Gama,Olimpia,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607199,CONMEBOL Sudamericana,World,Vasco DA Gama,Olimpia,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607199,CONMEBOL Sudamericana,World,Vasco DA Gama,Olimpia,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607199,CONMEBOL Sudamericana,World,Vasco DA Gama,Olimpia,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607199,CONMEBOL Sudamericana,World,Vasco DA Gama,Olimpia,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607650,CONMEBOL Sudamericana,World,Santa Fe,River Plate,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607650,CONMEBOL Sudamericana,World,Santa Fe,River Plate,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607650,CONMEBOL Sudamericana,World,Santa Fe,River Plate,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607650,CONMEBOL Sudamericana,World,Santa Fe,River Plate,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607650,CONMEBOL Sudamericana,World,Santa Fe,River Plate,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607650,CONMEBOL Sudamericana,World,Santa Fe,River Plate,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607650,CONMEBOL Sudamericana,World,Santa Fe,River Plate,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607650,CONMEBOL Sudamericana,World,Santa Fe,River Plate,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607650,CONMEBOL Sudamericana,World,Santa Fe,River Plate,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607650,CONMEBOL Sudamericana,World,Santa Fe,River Plate,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607566,UEFA Europa League,World,Anderlecht,PAOK,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607566,UEFA Europa League,World,Anderlecht,PAOK,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607566,UEFA Europa League,World,Anderlecht,PAOK,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607566,UEFA Europa League,World,Anderlecht,PAOK,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607566,UEFA Europa League,World,Anderlecht,PAOK,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607566,UEFA Europa League,World,Anderlecht,PAOK,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607566,UEFA Europa League,World,Anderlecht,PAOK,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607566,UEFA Europa League,World,Anderlecht,PAOK,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607566,UEFA Europa League,World,Anderlecht,PAOK,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607566,UEFA Europa League,World,Anderlecht,PAOK,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607604,UEFA Europa Conference League,World,Dinamo Tirana,Auda,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607604,UEFA Europa Conference League,World,Dinamo Tirana,Auda,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607604,UEFA Europa Conference League,World,Dinamo Tirana,Auda,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607604,UEFA Europa Conference League,World,Dinamo Tirana,Auda,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607604,UEFA Europa Conference League,World,Dinamo Tirana,Auda,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607604,UEFA Europa Conference League,World,Dinamo Tirana,Auda,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607604,UEFA Europa Conference League,World,Dinamo Tirana,Auda,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607604,UEFA Europa Conference League,World,Dinamo Tirana,Auda,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607604,UEFA Europa Conference League,World,Dinamo Tirana,Auda,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607604,UEFA Europa Conference League,World,Dinamo Tirana,Auda,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607627,UEFA Europa Conference League,World,FK Tobol Kostanay,FK Partizan,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607627,UEFA Europa Conference League,World,FK Tobol Kostanay,FK Partizan,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607627,UEFA Europa Conference League,World,FK Tobol Kostanay,FK Partizan,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607627,UEFA Europa Conference League,World,FK Tobol Kostanay,FK Partizan,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607627,UEFA Europa Conference League,World,FK Tobol Kostanay,FK Partizan,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607627,UEFA Europa Conference League,World,FK Tobol Kostanay,FK Partizan,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607627,UEFA Europa Conference League,World,FK Tobol Kostanay,FK Partizan,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607627,UEFA Europa Conference League,World,FK Tobol Kostanay,FK Partizan,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607627,UEFA Europa Conference League,World,FK Tobol Kostanay,FK Partizan,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607627,UEFA Europa Conference League,World,FK Tobol Kostanay,FK Partizan,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607611,UEFA Europa Conference League,World,HNK Hajduk Split,FK Zalgiris Vilnius,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607611,UEFA Europa Conference League,World,HNK Hajduk Split,FK Zalgiris Vilnius,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607611,UEFA Europa Conference League,World,HNK Hajduk Split,FK Zalgiris Vilnius,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607611,UEFA Europa Conference League,World,HNK Hajduk Split,FK Zalgiris Vilnius,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607611,UEFA Europa Conference League,World,HNK Hajduk Split,FK Zalgiris Vilnius,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607611,UEFA Europa Conference League,World,HNK Hajduk Split,FK Zalgiris Vilnius,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607611,UEFA Europa Conference League,World,HNK Hajduk Split,FK Zalgiris Vilnius,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607611,UEFA Europa Conference League,World,HNK Hajduk Split,FK Zalgiris Vilnius,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607611,UEFA Europa Conference League,World,HNK Hajduk Split,FK Zalgiris Vilnius,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607611,UEFA Europa Conference League,World,HNK Hajduk Split,FK Zalgiris Vilnius,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607620,UEFA Europa Conference League,World,Qarabag,Dynamo Kyiv,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607620,UEFA Europa Conference League,World,Qarabag,Dynamo Kyiv,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607620,UEFA Europa Conference League,World,Qarabag,Dynamo Kyiv,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607620,UEFA Europa Conference League,World,Qarabag,Dynamo Kyiv,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607620,UEFA Europa Conference League,World,Qarabag,Dynamo Kyiv,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607620,UEFA Europa Conference League,World,Qarabag,Dynamo Kyiv,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607620,UEFA Europa Conference League,World,Qarabag,Dynamo Kyiv,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607620,UEFA Europa Conference League,World,Qarabag,Dynamo Kyiv,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607620,UEFA Europa Conference League,World,Qarabag,Dynamo Kyiv,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607620,UEFA Europa Conference League,World,Qarabag,Dynamo Kyiv,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607621,UEFA Europa Conference League,World,Rīgas FS,FK Jablonec,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607621,UEFA Europa Conference League,World,Rīgas FS,FK Jablonec,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607621,UEFA Europa Conference League,World,Rīgas FS,FK Jablonec,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607621,UEFA Europa Conference League,World,Rīgas FS,FK Jablonec,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607621,UEFA Europa Conference League,World,Rīgas FS,FK Jablonec,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607621,UEFA Europa Conference League,World,Rīgas FS,FK Jablonec,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607621,UEFA Europa Conference League,World,Rīgas FS,FK Jablonec,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607621,UEFA Europa Conference League,World,Rīgas FS,FK Jablonec,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607621,UEFA Europa Conference League,World,Rīgas FS,FK Jablonec,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607621,UEFA Europa Conference League,World,Rīgas FS,FK Jablonec,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607568,UEFA Europa League,World,CSKA Sofia,Maccabi Tel Aviv,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607568,UEFA Europa League,World,CSKA Sofia,Maccabi Tel Aviv,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607568,UEFA Europa League,World,CSKA Sofia,Maccabi Tel Aviv,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607568,UEFA Europa League,World,CSKA Sofia,Maccabi Tel Aviv,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607568,UEFA Europa League,World,CSKA Sofia,Maccabi Tel Aviv,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607568,UEFA Europa League,World,CSKA Sofia,Maccabi Tel Aviv,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607568,UEFA Europa League,World,CSKA Sofia,Maccabi Tel Aviv,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607568,UEFA Europa League,World,CSKA Sofia,Maccabi Tel Aviv,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607568,UEFA Europa League,World,CSKA Sofia,Maccabi Tel Aviv,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607568,UEFA Europa League,World,CSKA Sofia,Maccabi Tel Aviv,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607569,UEFA Europa League,World,Gornik Zabrze,Ferencvarosi TC,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607569,UEFA Europa League,World,Gornik Zabrze,Ferencvarosi TC,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607569,UEFA Europa League,World,Gornik Zabrze,Ferencvarosi TC,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607569,UEFA Europa League,World,Gornik Zabrze,Ferencvarosi TC,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607569,UEFA Europa League,World,Gornik Zabrze,Ferencvarosi TC,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607569,UEFA Europa League,World,Gornik Zabrze,Ferencvarosi TC,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607569,UEFA Europa League,World,Gornik Zabrze,Ferencvarosi TC,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607569,UEFA Europa League,World,Gornik Zabrze,Ferencvarosi TC,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607569,UEFA Europa League,World,Gornik Zabrze,Ferencvarosi TC,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1607569,UEFA Europa League,World,Gornik Zabrze,Ferencvarosi TC,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547790,Copa Ecuador,Ecuador,Astillero FC (Ecu),Daquilema FC,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547790,Copa Ecuador,Ecuador,Astillero FC (Ecu),Daquilema FC,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547790,Copa Ecuador,Ecuador,Astillero FC (Ecu),Daquilema FC,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547790,Copa Ecuador,Ecuador,Astillero FC (Ecu),Daquilema FC,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547790,Copa Ecuador,Ecuador,Astillero FC (Ecu),Daquilema FC,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547790,Copa Ecuador,Ecuador,Astillero FC (Ecu),Daquilema FC,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547790,Copa Ecuador,Ecuador,Astillero FC (Ecu),Daquilema FC,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547790,Copa Ecuador,Ecuador,Astillero FC (Ecu),Daquilema FC,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547790,Copa Ecuador,Ecuador,Astillero FC (Ecu),Daquilema FC,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-13,1547790,Copa Ecuador,Ecuador,Astillero FC (Ecu),Daquilema FC,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
