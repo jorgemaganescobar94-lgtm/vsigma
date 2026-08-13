@@ -1,0 +1,7 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-08-12,OK,API-SPORTS_DIRECT,275.0,,,,,,
+2026-08-12T01:30:00+01:00,MATCHED,,,1547758.0,PST,Deportes Tolima,Independiente del Valle,,
+2026-08-12T23:00:00+01:00,MATCHED,,,1547762.0,FT,Palmeiras,Cerro Porteno,1.0,1.0
+2026-08-12T23:00:00+01:00,MATCHED,,,1547763.0,FT,Platense,Coquimbo Unido,1.0,1.0
+2026-08-12T23:00:00+01:00,MATCHED,,,1606077.0,FT,Tigre,Atletico Torque,0.0,1.0
+2026-08-12T23:00:00+01:00,MATCHED,,,1607197.0,FT,RB Bragantino,Atletico-MG,0.0,1.0
