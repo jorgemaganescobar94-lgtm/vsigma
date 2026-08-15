@@ -1,7 +1,7 @@
 # vSIGMA Learning Autopilot Alerts - 2026-08-15
 
 ## Executive Alert Summary
-- generated_at: 2026-08-15T00:08:36+01:00
+- generated_at: 2026-08-15T10:15:21+01:00
 - alerts generated: 2
 - alert_type_counts: OPERATIONAL_REVIEW_REQUIRED=1; DATA_QUALITY_REVIEW_REQUIRED=1
 - severity_counts: P1=1; P2=1
