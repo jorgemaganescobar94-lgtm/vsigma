@@ -130,9 +130,9 @@ _No rows._
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: freshness_report: WARNING - validation report contains warning rows
-- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-08-13`
-- Report path: /home/runner/work/vsigma/vsigma/data/processed/health/vsigma_healthcheck_report.md
+- Critical warnings: ledger_target_date_rows: WARNING - ledger has no rows for target date
+- Recovery command: `.\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-08-14 --stage PRE`
+- Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-08-14/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
 _No rows._
