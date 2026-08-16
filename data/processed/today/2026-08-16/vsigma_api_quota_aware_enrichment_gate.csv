@@ -1,0 +1,1 @@
+target_date,generated_at,fixture_id,home_team,away_team,league,queue_priority,risk_label,estimated_call_units,quota_policy_decision,planned_mode,quota_units_reserved,full_enrichment_allowed,coverage_probe_allowed,api_calls_allowed,api_calls_executed,policy_reason,auto_apply,production_change
