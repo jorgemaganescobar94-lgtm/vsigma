@@ -2,10 +2,10 @@
 
 ## Summary
 - overall_status: NO_LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 3904
+- files_scanned: 3913
 - accepted_rows: 0
-- rejected_rows: 0
-- source_status_counts: NO_SAME_DAY_ROWS=2187; EMPTY_OR_UNREADABLE=1717
+- rejected_rows: 168
+- source_status_counts: NO_SAME_DAY_ROWS=2186; EMPTY_OR_UNREADABLE=1725; NO_ACCEPTED_ROWS=2
 - next_action: No local source can build raw candidates; upstream fetch/filter producer is still required.
 - auto_apply: NO
 - production_change: NO
@@ -43,7 +43,7 @@
 - data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-07-05.csv | status=NO_SAME_DAY_ROWS | rows=2 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-07-14.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
 - data/processed/governance/vsigma_api_board_candidate_bridge_skipped_2026-08-07.csv | status=NO_SAME_DAY_ROWS | rows=1 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
-- data/processed/governance/vsigma_api_calibration_rule_candidates.csv | status=NO_SAME_DAY_ROWS | rows=84 | same_day=0 | accepted=0 | rejected=0 | detail=file has no target-date rows
+- data/processed/governance/vsigma_api_calibration_rule_candidates.csv | status=NO_ACCEPTED_ROWS | rows=84 | same_day=84 | accepted=0 | rejected=84 | detail=target-date rows exist but are blocked or missing identity
 - data/processed/governance/vsigma_api_enriched_fixture_results_refresh.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_api_enriched_scored_candidates.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
 - data/processed/governance/vsigma_candidate_provenance_ceiling.csv | status=EMPTY_OR_UNREADABLE | rows=0 | same_day=0 | accepted=0 | rejected=0 | detail=file has no readable CSV rows
