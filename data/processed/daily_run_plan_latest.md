@@ -1,12 +1,12 @@
-# vSIGMA Daily Run Plan - 2026-08-16
+# vSIGMA Daily Run Plan - 2026-08-15
 
 - Timezone: Atlantic/Canary
-- Generated at: 2026-08-16T00:04:46.240025+01:00
+- Generated at: 2026-08-16T08:46:58.252864+01:00
 - Window minutes: 90
 - Next recommended action: RUN_PRE
-- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-08-16 --timezone Atlantic/Canary --mode pre`
+- Next command: `.\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-08-15 --timezone Atlantic/Canary --mode pre`
 
 ## Fixtures
 | fixture_id | league | home_team | away_team | market_primary | kickoff_time | minutes_to_kickoff | prelock_window_start | prelock_status | recommended_next_action | recommended_command |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  |  | NO_CURRENT_PICKS | RUN_PRE | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-08-16 --timezone Atlantic/Canary --mode pre |
+|  |  |  |  |  |  |  |  | NO_CURRENT_PICKS | RUN_PRE | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-08-15 --timezone Atlantic/Canary --mode pre |

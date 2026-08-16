@@ -1,15 +1,15 @@
 # vSIGMA Daily Command Center - 2026-08-15
 
 ## Executive Command
-- generated_at: 2026-08-15T23:28:10+01:00
-- mode: health
+- generated_at: 2026-08-16T08:47:01+01:00
+- mode: post-yesterday
 - command_center_status: ACTION_REQUIRED
 - daily_classification: TECHNICAL_WARNING
 - action_level: ACTION_REQUIRED
 - operational_verdict: TECHNICAL_WARNING
 - predictive_failure: NO
 - evidence_basis: partial_sources
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/31912179150
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/31934734543
 
 ## Next Operator Action
 - Inspect healthcheck, workflow logs, and artifacts before trusting the day.
