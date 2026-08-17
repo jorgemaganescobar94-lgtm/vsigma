@@ -1,25 +1,25 @@
-# vSIGMA Autonomous Monitoring Summary - 2026-08-17
+# vSIGMA Autonomous Monitoring Summary - 2026-08-16
 
 ## Executive Status
-- generated_at: 2026-08-17T00:01:52+01:00
-- mode: post
-- daily_classification: BROKEN
-- operational_verdict: BROKEN
+- generated_at: 2026-08-17T09:01:51+01:00
+- mode: post-yesterday
+- daily_classification: TECHNICAL_WARNING
+- operational_verdict: TECHNICAL_WARNING
 - action_level: ACTION_REQUIRED
-- predictive_failure: UNKNOWN
-- evidence_basis: missing_sources
-- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/31977947509
+- predictive_failure: NO
+- evidence_basis: partial_sources
+- run_url: https://github.com/jorgemaganescobar94-lgtm/vsigma/actions/runs/32008377539
 
 ## Operator Action
-- Inspect workflow logs and required daily reports; monitoring evidence is incomplete.
+- Inspect healthcheck, workflow logs, and artifacts before trusting the day.
 
 ## Explanation
-- Classification inferred from missing_sources; health_status=UNKNOWN; official_summary=UNKNOWN.
+- Classification inferred from partial_sources; health_status=UNKNOWN; official_summary=UNKNOWN.
 
 ## Source Coverage
 - decision_quality_review: missing
 - system_review: missing
-- healthcheck_report: missing
+- healthcheck_report: present
 - cloud_decision_summary: missing
 - prelock_decision_resolver: missing
 - decision_outcome_ledger_rows: 0
