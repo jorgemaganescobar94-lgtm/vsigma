@@ -115,7 +115,7 @@
 
 ## Local Raw Fixture Discovery
 - overall_status: NO_LOCAL_RAW_CANDIDATES_FOUND
-- files_scanned: 3925
+- files_scanned: 3924
 - accepted_rows: 0
 - rejected_rows: 168
 - next_action: No local source can build raw candidates; upstream fetch/filter producer is still required.
