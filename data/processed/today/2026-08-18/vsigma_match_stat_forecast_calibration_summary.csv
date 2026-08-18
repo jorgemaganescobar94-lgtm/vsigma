@@ -1,0 +1,1 @@
+target_date,generated_at,metric,rows_evaluated,hit_count,miss_count,hit_rate,avg_abs_error_mid,bias_direction,calibration_status,source_guard,auto_apply,production_change

@@ -1,0 +1,1 @@
+target_date,generated_at,fixture_id,home_team,away_team,metric,actual_value,baseline_mid,shadow_mid,baseline_abs_error,shadow_abs_error,error_delta,shadow_result,shadow_rule,source_guard,auto_apply,production_change

@@ -1,0 +1,1 @@
+target_date,generated_at,metric,rows_evaluated,hit_rate,avg_abs_error_mid,bias_direction,calibration_status,queue_decision,shadow_priority,sample_gate,threshold_gate,patch_candidate,shadow_test_plan,promotion_gate,model_area,operator_note,auto_apply_allowed,source_guard,auto_apply,production_change
