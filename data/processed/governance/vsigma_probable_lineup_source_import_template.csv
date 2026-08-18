@@ -1,1 +1,141 @@
 target_date,fixture_id,league,country,home_team,away_team,team_side,source_name,source_url,probable_xi,notes
+2026-08-18,1547770,CONMEBOL Libertadores,World,Independ. Rivadavia,Fluminense,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1547770,CONMEBOL Libertadores,World,Independ. Rivadavia,Fluminense,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1547770,CONMEBOL Libertadores,World,Independ. Rivadavia,Fluminense,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1547770,CONMEBOL Libertadores,World,Independ. Rivadavia,Fluminense,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1547770,CONMEBOL Libertadores,World,Independ. Rivadavia,Fluminense,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1547770,CONMEBOL Libertadores,World,Independ. Rivadavia,Fluminense,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1547770,CONMEBOL Libertadores,World,Independ. Rivadavia,Fluminense,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1547770,CONMEBOL Libertadores,World,Independ. Rivadavia,Fluminense,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1547770,CONMEBOL Libertadores,World,Independ. Rivadavia,Fluminense,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1547770,CONMEBOL Libertadores,World,Independ. Rivadavia,Fluminense,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622621,UEFA Champions League,World,Fenerbahçe,Lyon,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622621,UEFA Champions League,World,Fenerbahçe,Lyon,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622621,UEFA Champions League,World,Fenerbahçe,Lyon,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622621,UEFA Champions League,World,Fenerbahçe,Lyon,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622621,UEFA Champions League,World,Fenerbahçe,Lyon,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622621,UEFA Champions League,World,Fenerbahçe,Lyon,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622621,UEFA Champions League,World,Fenerbahçe,Lyon,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622621,UEFA Champions League,World,Fenerbahçe,Lyon,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622621,UEFA Champions League,World,Fenerbahçe,Lyon,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622621,UEFA Champions League,World,Fenerbahçe,Lyon,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622620,UEFA Champions League,World,Dinamo Zagreb,Viking,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622620,UEFA Champions League,World,Dinamo Zagreb,Viking,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622620,UEFA Champions League,World,Dinamo Zagreb,Viking,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622620,UEFA Champions League,World,Dinamo Zagreb,Viking,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622620,UEFA Champions League,World,Dinamo Zagreb,Viking,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622620,UEFA Champions League,World,Dinamo Zagreb,Viking,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622620,UEFA Champions League,World,Dinamo Zagreb,Viking,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622620,UEFA Champions League,World,Dinamo Zagreb,Viking,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622620,UEFA Champions League,World,Dinamo Zagreb,Viking,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622620,UEFA Champions League,World,Dinamo Zagreb,Viking,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1607651,CONMEBOL Sudamericana,World,Deportivo Recoleta,Boca Juniors,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1607651,CONMEBOL Sudamericana,World,Deportivo Recoleta,Boca Juniors,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1607651,CONMEBOL Sudamericana,World,Deportivo Recoleta,Boca Juniors,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1607651,CONMEBOL Sudamericana,World,Deportivo Recoleta,Boca Juniors,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1607651,CONMEBOL Sudamericana,World,Deportivo Recoleta,Boca Juniors,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1607651,CONMEBOL Sudamericana,World,Deportivo Recoleta,Boca Juniors,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1607651,CONMEBOL Sudamericana,World,Deportivo Recoleta,Boca Juniors,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1607651,CONMEBOL Sudamericana,World,Deportivo Recoleta,Boca Juniors,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1607651,CONMEBOL Sudamericana,World,Deportivo Recoleta,Boca Juniors,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1607651,CONMEBOL Sudamericana,World,Deportivo Recoleta,Boca Juniors,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622622,UEFA Champions League,World,Levski Sofia,AEK Athens FC,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622622,UEFA Champions League,World,Levski Sofia,AEK Athens FC,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622622,UEFA Champions League,World,Levski Sofia,AEK Athens FC,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622622,UEFA Champions League,World,Levski Sofia,AEK Athens FC,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622622,UEFA Champions League,World,Levski Sofia,AEK Athens FC,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622622,UEFA Champions League,World,Levski Sofia,AEK Athens FC,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622622,UEFA Champions League,World,Levski Sofia,AEK Athens FC,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622622,UEFA Champions League,World,Levski Sofia,AEK Athens FC,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622622,UEFA Champions League,World,Levski Sofia,AEK Athens FC,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1622622,UEFA Champions League,World,Levski Sofia,AEK Athens FC,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555107,Liga Leumit,Israel,Hapoel Acre,Maccabi Kiryat Gat,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555107,Liga Leumit,Israel,Hapoel Acre,Maccabi Kiryat Gat,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555107,Liga Leumit,Israel,Hapoel Acre,Maccabi Kiryat Gat,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555107,Liga Leumit,Israel,Hapoel Acre,Maccabi Kiryat Gat,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555107,Liga Leumit,Israel,Hapoel Acre,Maccabi Kiryat Gat,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555107,Liga Leumit,Israel,Hapoel Acre,Maccabi Kiryat Gat,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555107,Liga Leumit,Israel,Hapoel Acre,Maccabi Kiryat Gat,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555107,Liga Leumit,Israel,Hapoel Acre,Maccabi Kiryat Gat,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555107,Liga Leumit,Israel,Hapoel Acre,Maccabi Kiryat Gat,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555107,Liga Leumit,Israel,Hapoel Acre,Maccabi Kiryat Gat,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555108,Liga Leumit,Israel,Hapoel Afula,Ashdod,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555108,Liga Leumit,Israel,Hapoel Afula,Ashdod,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555108,Liga Leumit,Israel,Hapoel Afula,Ashdod,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555108,Liga Leumit,Israel,Hapoel Afula,Ashdod,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555108,Liga Leumit,Israel,Hapoel Afula,Ashdod,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555108,Liga Leumit,Israel,Hapoel Afula,Ashdod,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555108,Liga Leumit,Israel,Hapoel Afula,Ashdod,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555108,Liga Leumit,Israel,Hapoel Afula,Ashdod,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555108,Liga Leumit,Israel,Hapoel Afula,Ashdod,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555108,Liga Leumit,Israel,Hapoel Afula,Ashdod,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555109,Liga Leumit,Israel,Hapoel Kfar Shalem,Kafr Qasim,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555109,Liga Leumit,Israel,Hapoel Kfar Shalem,Kafr Qasim,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555109,Liga Leumit,Israel,Hapoel Kfar Shalem,Kafr Qasim,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555109,Liga Leumit,Israel,Hapoel Kfar Shalem,Kafr Qasim,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555109,Liga Leumit,Israel,Hapoel Kfar Shalem,Kafr Qasim,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555109,Liga Leumit,Israel,Hapoel Kfar Shalem,Kafr Qasim,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555109,Liga Leumit,Israel,Hapoel Kfar Shalem,Kafr Qasim,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555109,Liga Leumit,Israel,Hapoel Kfar Shalem,Kafr Qasim,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555109,Liga Leumit,Israel,Hapoel Kfar Shalem,Kafr Qasim,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555109,Liga Leumit,Israel,Hapoel Kfar Shalem,Kafr Qasim,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555111,Liga Leumit,Israel,Hapoel Ra'anana,Maccabi Ahi Nazareth,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555111,Liga Leumit,Israel,Hapoel Ra'anana,Maccabi Ahi Nazareth,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555111,Liga Leumit,Israel,Hapoel Ra'anana,Maccabi Ahi Nazareth,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555111,Liga Leumit,Israel,Hapoel Ra'anana,Maccabi Ahi Nazareth,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555111,Liga Leumit,Israel,Hapoel Ra'anana,Maccabi Ahi Nazareth,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555111,Liga Leumit,Israel,Hapoel Ra'anana,Maccabi Ahi Nazareth,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555111,Liga Leumit,Israel,Hapoel Ra'anana,Maccabi Ahi Nazareth,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555111,Liga Leumit,Israel,Hapoel Ra'anana,Maccabi Ahi Nazareth,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555111,Liga Leumit,Israel,Hapoel Ra'anana,Maccabi Ahi Nazareth,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555111,Liga Leumit,Israel,Hapoel Ra'anana,Maccabi Ahi Nazareth,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555110,Liga Leumit,Israel,Hapoel Rishon LeZion,Hapoel Kfar Saba,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555110,Liga Leumit,Israel,Hapoel Rishon LeZion,Hapoel Kfar Saba,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555110,Liga Leumit,Israel,Hapoel Rishon LeZion,Hapoel Kfar Saba,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555110,Liga Leumit,Israel,Hapoel Rishon LeZion,Hapoel Kfar Saba,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555110,Liga Leumit,Israel,Hapoel Rishon LeZion,Hapoel Kfar Saba,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555110,Liga Leumit,Israel,Hapoel Rishon LeZion,Hapoel Kfar Saba,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555110,Liga Leumit,Israel,Hapoel Rishon LeZion,Hapoel Kfar Saba,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555110,Liga Leumit,Israel,Hapoel Rishon LeZion,Hapoel Kfar Saba,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555110,Liga Leumit,Israel,Hapoel Rishon LeZion,Hapoel Kfar Saba,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555110,Liga Leumit,Israel,Hapoel Rishon LeZion,Hapoel Kfar Saba,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555112,Liga Leumit,Israel,Ironi Modi'in,Maccabi Herzliya,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555112,Liga Leumit,Israel,Ironi Modi'in,Maccabi Herzliya,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555112,Liga Leumit,Israel,Ironi Modi'in,Maccabi Herzliya,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555112,Liga Leumit,Israel,Ironi Modi'in,Maccabi Herzliya,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555112,Liga Leumit,Israel,Ironi Modi'in,Maccabi Herzliya,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555112,Liga Leumit,Israel,Ironi Modi'in,Maccabi Herzliya,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555112,Liga Leumit,Israel,Ironi Modi'in,Maccabi Herzliya,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555112,Liga Leumit,Israel,Ironi Modi'in,Maccabi Herzliya,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555112,Liga Leumit,Israel,Ironi Modi'in,Maccabi Herzliya,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555112,Liga Leumit,Israel,Ironi Modi'in,Maccabi Herzliya,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555113,Liga Leumit,Israel,Maccabi Bnei Raina,Bnei Yehuda,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555113,Liga Leumit,Israel,Maccabi Bnei Raina,Bnei Yehuda,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555113,Liga Leumit,Israel,Maccabi Bnei Raina,Bnei Yehuda,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555113,Liga Leumit,Israel,Maccabi Bnei Raina,Bnei Yehuda,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555113,Liga Leumit,Israel,Maccabi Bnei Raina,Bnei Yehuda,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555113,Liga Leumit,Israel,Maccabi Bnei Raina,Bnei Yehuda,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555113,Liga Leumit,Israel,Maccabi Bnei Raina,Bnei Yehuda,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555113,Liga Leumit,Israel,Maccabi Bnei Raina,Bnei Yehuda,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555113,Liga Leumit,Israel,Maccabi Bnei Raina,Bnei Yehuda,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555113,Liga Leumit,Israel,Maccabi Bnei Raina,Bnei Yehuda,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555114,Liga Leumit,Israel,Maccabi Kabilio Jaffa,Kiryat Yam SC,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555114,Liga Leumit,Israel,Maccabi Kabilio Jaffa,Kiryat Yam SC,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555114,Liga Leumit,Israel,Maccabi Kabilio Jaffa,Kiryat Yam SC,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555114,Liga Leumit,Israel,Maccabi Kabilio Jaffa,Kiryat Yam SC,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555114,Liga Leumit,Israel,Maccabi Kabilio Jaffa,Kiryat Yam SC,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555114,Liga Leumit,Israel,Maccabi Kabilio Jaffa,Kiryat Yam SC,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555114,Liga Leumit,Israel,Maccabi Kabilio Jaffa,Kiryat Yam SC,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555114,Liga Leumit,Israel,Maccabi Kabilio Jaffa,Kiryat Yam SC,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555114,Liga Leumit,Israel,Maccabi Kabilio Jaffa,Kiryat Yam SC,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1555114,Liga Leumit,Israel,Maccabi Kabilio Jaffa,Kiryat Yam SC,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1520826,Serie B,Brazil,Londrina,Atletico Goianiense,home,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1520826,Serie B,Brazil,Londrina,Atletico Goianiense,home,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1520826,Serie B,Brazil,Londrina,Atletico Goianiense,home,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1520826,Serie B,Brazil,Londrina,Atletico Goianiense,home,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1520826,Serie B,Brazil,Londrina,Atletico Goianiense,home,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1520826,Serie B,Brazil,Londrina,Atletico Goianiense,away,sportsmole,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1520826,Serie B,Brazil,Londrina,Atletico Goianiense,away,whoscored,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1520826,Serie B,Brazil,Londrina,Atletico Goianiense,away,rotowire,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1520826,Serie B,Brazil,Londrina,Atletico Goianiense,away,guardian_predicted,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
+2026-08-18,1520826,Serie B,Brazil,Londrina,Atletico Goianiense,away,sports_gambler,,,Fill probable_xi as semicolon-separated 11 players. Leave blank if unavailable.
