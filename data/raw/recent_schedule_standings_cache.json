@@ -17610,5 +17610,318 @@
   "848|2026": [],
   "3|2026": [],
   "220|2026": [],
-  "185|2026": []
+  "185|2026": [],
+  "210|2026": [
+    {
+      "league_id": 210,
+      "league_name": "HNL",
+      "season": 2026,
+      "team_id": 616,
+      "team_name": "NK Osijek",
+      "rank": 1,
+      "points": 9,
+      "goals_diff": 8,
+      "played": 3
+    },
+    {
+      "league_id": 210,
+      "league_name": "HNL",
+      "season": 2026,
+      "team_id": 1483,
+      "team_name": "NK Varazdin",
+      "rank": 2,
+      "points": 9,
+      "goals_diff": 6,
+      "played": 3
+    },
+    {
+      "league_id": 210,
+      "league_name": "HNL",
+      "season": 2026,
+      "team_id": 620,
+      "team_name": "Dinamo Zagreb",
+      "rank": 3,
+      "points": 6,
+      "goals_diff": 6,
+      "played": 2
+    },
+    {
+      "league_id": 210,
+      "league_name": "HNL",
+      "season": 2026,
+      "team_id": 1017,
+      "team_name": "NK Lokomotiva Zagreb",
+      "rank": 4,
+      "points": 6,
+      "goals_diff": 2,
+      "played": 3
+    },
+    {
+      "league_id": 210,
+      "league_name": "HNL",
+      "season": 2026,
+      "team_id": 1016,
+      "team_name": "Istra 1961",
+      "rank": 5,
+      "points": 4,
+      "goals_diff": 2,
+      "played": 3
+    },
+    {
+      "league_id": 210,
+      "league_name": "HNL",
+      "season": 2026,
+      "team_id": 608,
+      "team_name": "HNK Hajduk Split",
+      "rank": 6,
+      "points": 4,
+      "goals_diff": 0,
+      "played": 3
+    },
+    {
+      "league_id": 210,
+      "league_name": "HNL",
+      "season": 2026,
+      "team_id": 561,
+      "team_name": "HNK Rijeka",
+      "rank": 7,
+      "points": 3,
+      "goals_diff": -1,
+      "played": 2
+    },
+    {
+      "league_id": 210,
+      "league_name": "HNL",
+      "season": 2026,
+      "team_id": 1068,
+      "team_name": "HNK Gorica",
+      "rank": 8,
+      "points": 0,
+      "goals_diff": -5,
+      "played": 3
+    },
+    {
+      "league_id": 210,
+      "league_name": "HNL",
+      "season": 2026,
+      "team_id": 1018,
+      "team_name": "NK Slaven Belupo",
+      "rank": 9,
+      "points": 0,
+      "goals_diff": -8,
+      "played": 3
+    },
+    {
+      "league_id": 210,
+      "league_name": "HNL",
+      "season": 2026,
+      "team_id": 1019,
+      "team_name": "Rudes",
+      "rank": 10,
+      "points": 0,
+      "goals_diff": -10,
+      "played": 3
+    }
+  ],
+  "2|2026": [],
+  "203|2026": [
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 3579,
+      "team_name": "Amed",
+      "rank": 1,
+      "points": 3,
+      "goals_diff": 3,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 564,
+      "team_name": "Başakşehir",
+      "rank": 2,
+      "points": 3,
+      "goals_diff": 2,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 997,
+      "team_name": "Gençlerbirliği S.K.",
+      "rank": 3,
+      "points": 3,
+      "goals_diff": 1,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 549,
+      "team_name": "Beşiktaş",
+      "rank": 4,
+      "points": 3,
+      "goals_diff": 1,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 1007,
+      "team_name": "Rizespor",
+      "rank": 5,
+      "points": 3,
+      "goals_diff": 1,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 994,
+      "team_name": "Göztepe",
+      "rank": 6,
+      "points": 1,
+      "goals_diff": 0,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 3603,
+      "team_name": "Samsunspor",
+      "rank": 7,
+      "points": 1,
+      "goals_diff": 0,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 645,
+      "team_name": "Galatasaray",
+      "rank": 8,
+      "points": 1,
+      "goals_diff": 0,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 6343,
+      "team_name": "Çorum FK",
+      "rank": 9,
+      "points": 1,
+      "goals_diff": 0,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 996,
+      "team_name": "Alanyaspor",
+      "rank": 10,
+      "points": 1,
+      "goals_diff": 0,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 3573,
+      "team_name": "Gaziantep FK",
+      "rank": 11,
+      "points": 1,
+      "goals_diff": 0,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 1004,
+      "team_name": "Kasımpaşa",
+      "rank": 12,
+      "points": 1,
+      "goals_diff": 0,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 998,
+      "team_name": "Trabzonspor",
+      "rank": 13,
+      "points": 1,
+      "goals_diff": 0,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 611,
+      "team_name": "Fenerbahçe",
+      "rank": 14,
+      "points": 0,
+      "goals_diff": -1,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 3588,
+      "team_name": "Eyüpspor",
+      "rank": 15,
+      "points": 0,
+      "goals_diff": -1,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 607,
+      "team_name": "Konyaspor",
+      "rank": 16,
+      "points": 0,
+      "goals_diff": -1,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 7411,
+      "team_name": "Kocaelispor",
+      "rank": 17,
+      "points": 0,
+      "goals_diff": -2,
+      "played": 1
+    },
+    {
+      "league_id": 203,
+      "league_name": "Süper Lig",
+      "season": 2026,
+      "team_id": 1009,
+      "team_name": "Erzurumspor FK",
+      "rank": 18,
+      "points": 0,
+      "goals_diff": -3,
+      "played": 1
+    }
+  ]
 }
