@@ -1,7 +1,7 @@
 # vSIGMA Shadow Experiments - 2026-08-18
 
 ## Executive Shadow Summary
-- generated_at: 2026-08-18T15:39:15+01:00
+- generated_at: 2026-08-18T17:38:28+01:00
 - shadow_experiments: 1
 - experiment_type_counts: LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=1
 - shadow_status_counts: ACTIVE_SHADOW_ONLY=1
