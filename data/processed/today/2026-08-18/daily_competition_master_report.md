@@ -1,7 +1,7 @@
 # vSIGMA Daily Competition Master Report - 2026-08-18
 
 ## Daily Status
-PRE_LOCK_PENDING
+POST_SETTLED
 
 ## Official Baseline Top Picks
 | accuracy_mode_rank | fixture_id | league | home_team | away_team | market_primary | competition_calibrated_prob | accuracy_confidence_score | accuracy_primary_risk |
@@ -108,22 +108,34 @@ _No stale pre-lock rows excluded._
 ### CLV Summary
 | fixture_id | home_team | away_team | market_primary | experiment_id | pre_price | prelock_price | close_proxy_price | clv_delta | clv_direction | result | profit_units |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1547770 | Independ. Rivadavia | Fluminense | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.57 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1547770 | Independ. Rivadavia | Fluminense | OVER_1_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.57 |  | 1.57 | 0.0 | CLV_FLAT | WIN | 0.57 |
 | 1547770 | Independ. Rivadavia | Fluminense | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.57 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1547770 | Independ. Rivadavia | Fluminense | OVER_1_5 | OFFICIAL_BASELINE | 1.57 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1622620 | Dinamo Zagreb | Viking | OVER_2_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.66 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1622620 | Dinamo Zagreb | Viking | OVER_2_5 | CANDIDATE_V7_PRICE_DISCIPLINE | 1.66 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1547770 | Independ. Rivadavia | Fluminense | OVER_1_5 | OFFICIAL_BASELINE | 1.57 |  | 1.57 | 0.0 | CLV_FLAT | WIN | 0.57 |
+| 1622620 | Dinamo Zagreb | Viking | OVER_2_5 | CANDIDATE_V2_SCHEDULE_ANOMALY | 1.66 |  | 1.66 | 0.0 | CLV_FLAT | WIN | 0.66 |
+| 1622620 | Dinamo Zagreb | Viking | OVER_2_5 | CANDIDATE_V7_PRICE_DISCIPLINE | 1.66 |  | 1.66 | 0.0 | CLV_FLAT | WIN | 0.66 |
 | 1622620 | Dinamo Zagreb | Viking | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.66 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1622620 | Dinamo Zagreb | Viking | OVER_2_5 | OFFICIAL_BASELINE | 1.66 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1622620 | Dinamo Zagreb | Viking | OVER_2_5 | OFFICIAL_BASELINE | 1.66 |  | 1.66 | 0.0 | CLV_FLAT | WIN | 0.66 |
 | 1622621 | Fenerbahçe | Lyon | OVER_2_5 | DEEP_ANALYSIS_CANDIDATES | 1.8 |  |  |  | CLV_UNAVAILABLE |  |  |
-| 1622621 | Fenerbahçe | Lyon | OVER_2_5 | OFFICIAL_BASELINE | 1.8 |  |  |  | CLV_UNAVAILABLE |  |  |
+| 1622621 | Fenerbahçe | Lyon | OVER_2_5 | OFFICIAL_BASELINE | 1.8 |  | 1.8 | 0.0 | CLV_FLAT | LOSS | -1.0 |
 | 1622622 | Levski Sofia | AEK Athens FC | OVER_1_5 | DEEP_ANALYSIS_CANDIDATES | 1.44 |  |  |  | CLV_UNAVAILABLE |  |  |
 
 ### Candidate v7 Calibration Advice
-_No rows._
+| market_family | failure_mode | drift_status | clv_direction | n | profit_units | roi_percent | recommendation | recommendation_reason |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_FLAT | 2 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_1_5 | LOW_CONVERSION | WATCH_PATTERN | CLV_UNAVAILABLE | 3 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_FLAT | 3 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
+| OVER_2_5 | LOW_CONVERSION | NO_DRIFT | CLV_UNAVAILABLE | 2 | 0.0 | 0.0 | SAMPLE_TOO_SMALL | Fewer than 10 settled rows; collect more snapshots before changing thresholds. |
 
 ## Post-Results Summary
-_No rows._
+| mode | pick_count | wins | losses | profit_units | roi_percent | pending_rows | candidate_version |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| OFFICIAL_EXECUTION_SHORTLIST | 3.0 | 2.0 | 1.0 | 0.23 | 7.666667 | 0.0 | OFFICIAL_RESULTS |
+| SHADOW_CANDIDATE_V2 | 2.0 | 2.0 | 0.0 | 1.23 | 61.5 | 0.0 | CANDIDATE_V2_RESULTS |
+| SHADOW_CANDIDATE_V4_O25_LOW_CONVERSION_FIREWALL | 1.0 | 1.0 | 0.0 | 0.57 | 57.0 | 0.0 | CANDIDATE_V4_RESULTS |
+| SHADOW_CANDIDATE_V5_PLAYER_IMPACT | 2.0 | 2.0 | 0.0 | 1.23 | 61.5 | 0.0 | CANDIDATE_V5_RESULTS |
+| SHADOW_CANDIDATE_V6_API_PREDICTIONS_BENCHMARK | 2.0 | 2.0 | 0.0 | 1.23 | 61.5 | 0.0 | CANDIDATE_V6_RESULTS |
+| SHADOW_CANDIDATE_V7_PRICE_DISCIPLINE_CLV_DRIFT_GUARD | 1.0 | 1.0 | 0.0 | 0.66 | 66.0 | 0.0 | CANDIDATE_V7_RESULTS |
 
 ## Pre-Lock Status
 _No rows._
@@ -158,49 +170,49 @@ _No rows._
 - Ledger report: /home/runner/work/vsigma/vsigma/data/processed/today/2026-08-18/vsigma_ledger_daily_report.md
 
 ## Daily Controller Status
-- Next recommended action: WAIT_FOR_PRELOCK
+- Next recommended action: ALL_SETTLED
 - Pre-lock due time: 2026-08-18T17:30:29.400000+00:00
 - Status path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-08-18/daily_controller_status.md
 
 ## Daily Supervisor
 - Supervisor latest status: SUPERVISOR_STATUS_NOT_AVAILABLE
 - Last run mode/time: NOT_AVAILABLE / NOT_AVAILABLE
-- Next recommended action: WAIT_FOR_PRELOCK
+- Next recommended action: ALL_SETTLED
 - Scheduled automation status: REGISTRATION_SCRIPT_AVAILABLE_STATUS_NOT_QUERIED
 - Logs path: C:\vsigma\automation_logs\supervisor
 - Report path: NOT_AVAILABLE
 
 ## Healthcheck
 - Global health status: WARNING
-- Critical warnings: ledger_target_date_rows: WARNING - ledger has no rows for target date
-- Recovery command: `.\.venv\Scripts\python.exe scripts\update_immutable_daily_ledger.py --date 2026-08-17 --stage PRE`
-- Report path: /home/runner/work/vsigma/vsigma/data/processed/health/vsigma_healthcheck_report.md
+- Critical warnings: freshness_report: WARNING - validation report contains warning rows
+- Recovery command: `.\.venv\Scripts\python.exe scripts\validate_daily_output_freshness.py --date 2026-08-18`
+- Report path: /home/runner/work/vsigma/vsigma/data/processed/today/2026-08-18/vsigma_healthcheck_report.md
 
 ### Current Experiment Daily Summary
 | experiment_id | fixture_id | home_team | away_team | market_primary | prelock_decision | result | profit_units | record_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 1547770.0 | Independ. Rivadavia | Fluminense | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| OFFICIAL_BASELINE | 1622620.0 | Dinamo Zagreb | Viking | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1547770.0 | Independ. Rivadavia | Fluminense | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 1622620.0 | Dinamo Zagreb | Viking | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
+| OFFICIAL_BASELINE | 1547770.0 | Independ. Rivadavia | Fluminense | OVER_1_5 |  | WIN | 0.57 | SETTLED |
+| OFFICIAL_BASELINE | 1622620.0 | Dinamo Zagreb | Viking | OVER_2_5 |  | WIN | 0.66 | SETTLED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1547770.0 | Independ. Rivadavia | Fluminense | OVER_1_5 |  | WIN | 0.57 | SETTLED |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 1622620.0 | Dinamo Zagreb | Viking | OVER_2_5 |  | WIN | 0.66 | SETTLED |
 | CANDIDATE_V3_ODDS_DEPTH |  |  |  |  |  |  |  | NO_BET_RECORD |
-| CANDIDATE_V4_O25_FIREWALL | 1547770.0 | Independ. Rivadavia | Fluminense | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1547770.0 | Independ. Rivadavia | Fluminense | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V5_PLAYER_IMPACT | 1622620.0 | Dinamo Zagreb | Viking | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V6_API_PREDICTIONS | 1547770.0 | Independ. Rivadavia | Fluminense | OVER_1_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V6_API_PREDICTIONS | 1622620.0 | Dinamo Zagreb | Viking | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 1622620.0 | Dinamo Zagreb | Viking | OVER_2_5 |  | PENDING |  | PRE_REGISTERED |
+| CANDIDATE_V4_O25_FIREWALL | 1547770.0 | Independ. Rivadavia | Fluminense | OVER_1_5 |  | WIN | 0.57 | SETTLED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1547770.0 | Independ. Rivadavia | Fluminense | OVER_1_5 |  | WIN | 0.57 | SETTLED |
+| CANDIDATE_V5_PLAYER_IMPACT | 1622620.0 | Dinamo Zagreb | Viking | OVER_2_5 |  | WIN | 0.66 | SETTLED |
+| CANDIDATE_V6_API_PREDICTIONS | 1547770.0 | Independ. Rivadavia | Fluminense | OVER_1_5 |  | WIN | 0.57 | SETTLED |
+| CANDIDATE_V6_API_PREDICTIONS | 1622620.0 | Dinamo Zagreb | Viking | OVER_2_5 |  | WIN | 0.66 | SETTLED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 1622620.0 | Dinamo Zagreb | Viking | OVER_2_5 |  | WIN | 0.66 | SETTLED |
 
 ### Experiment Performance Summary
 | experiment_id | status | picks_total | settled_picks | wins | losses | profit_units | roi_percent | current_verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | OFFICIAL | 26 | 11 | 7 | 4 | -0.39 | -3.545455 | FROZEN_OFFICIAL_BASELINE |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 34 | 10 | 6 | 4 | -0.91 | -9.1 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
+| OFFICIAL_BASELINE | OFFICIAL | 26 | 13 | 9 | 4 | 0.84 | 6.461538 | FROZEN_OFFICIAL_BASELINE |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | SHADOW | 34 | 12 | 8 | 4 | 0.32 | 2.666667 | MAIN_SHADOW_RETENDER_NOT_PROMOTED |
 | CANDIDATE_V3_ODDS_DEPTH | NOT_PROMOTED | 0 | 0 | 0 | 0 | 0.0 |  | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V4_O25_FIREWALL | SHADOW | 30 | 9 | 7 | 2 | 0.42 | 4.666667 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V5_PLAYER_IMPACT | SHADOW | 34 | 10 | 7 | 3 | 0.34 | 3.4 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V6_API_PREDICTIONS | AUDIT_ONLY | 27 | 6 | 4 | 2 | -0.18 | -3.0 | PARTIAL_NOT_PROMOTED |
-| CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | 17 | 3 | 2 | 1 | 0.27 | 9.0 | PRICE_DISCIPLINE_UNTESTED |
+| CANDIDATE_V4_O25_FIREWALL | SHADOW | 30 | 10 | 8 | 2 | 0.99 | 9.9 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V5_PLAYER_IMPACT | SHADOW | 34 | 12 | 9 | 3 | 1.57 | 13.083333 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V6_API_PREDICTIONS | AUDIT_ONLY | 27 | 8 | 6 | 2 | 1.05 | 13.125 | PARTIAL_NOT_PROMOTED |
+| CANDIDATE_V7_PRICE_DISCIPLINE | SHADOW | 17 | 4 | 3 | 1 | 0.93 | 23.25 | PRICE_DISCIPLINE_UNTESTED |
 
 ## Promotion & Threshold Governance
 - Official baseline status: KEEP_OFFICIAL_BASELINE
@@ -209,39 +221,40 @@ _No rows._
 ### Candidate Promotion Recommendations
 | experiment_id | settled_picks | roi_percent | brier_score | promotion_recommendation | required_next_evidence |
 | --- | --- | --- | --- | --- | --- |
-| OFFICIAL_BASELINE | 11 | -3.545455 | 0.271763 | KEEP_OFFICIAL_BASELINE | Continue accumulating official settled outcomes and compare challengers against it. |
-| CANDIDATE_V2_SCHEDULE_ANOMALY | 10 | -9.1 | 0.28829 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
+| OFFICIAL_BASELINE | 13 | 6.461538 | 0.233826 | KEEP_OFFICIAL_BASELINE | Continue accumulating official settled outcomes and compare challengers against it. |
+| CANDIDATE_V2_SCHEDULE_ANOMALY | 12 | 2.666667 | 0.24482 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
 | CANDIDATE_V3_ODDS_DEPTH | 0 |  |  | AUDIT_ONLY | Keep as an audit comparator unless registry governance explicitly changes its role. |
-| CANDIDATE_V4_O25_FIREWALL | 9 | 4.666667 | 0.173884 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
-| CANDIDATE_V5_PLAYER_IMPACT | 10 | 3.4 | 0.227385 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
-| CANDIDATE_V6_API_PREDICTIONS | 6 | -3.0 | 0.251104 | AUDIT_ONLY | Keep as an audit comparator unless registry governance explicitly changes its role. |
-| CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 9.0 | 0.237555 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
+| CANDIDATE_V4_O25_FIREWALL | 10 | 9.9 | 0.160137 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
+| CANDIDATE_V5_PLAYER_IMPACT | 12 | 13.083333 | 0.194066 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
+| CANDIDATE_V6_API_PREDICTIONS | 8 | 13.125 | 0.195195 | AUDIT_ONLY | Keep as an audit comparator unless registry governance explicitly changes its role. |
+| CANDIDATE_V7_PRICE_DISCIPLINE | 4 | 23.25 | 0.182795 | SAMPLE_TOO_SMALL | Continue shadow tracking with immutable ledger outcomes. |
 
 ### Threshold Recommendations
 | market_family | failure_mode | experiment_id | settled_rows | roi_percent | clv_direction | threshold_recommendation |
 | --- | --- | --- | --- | --- | --- | --- |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V4_O25_FIREWALL | 9 | 4.666667 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 7 | 1.0 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 6 | -3.0 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 6 | -3.0 |  | SAMPLE_TOO_SMALL |
-| OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 6 | -3.0 |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 5 | -4.2 |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 4 | -18.25 |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 3 | 9.0 |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 9.0 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 8 | 8.0 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 7 | 5.571429 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 7 | 5.571429 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 7 | 5.571429 |  | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | OFFICIAL_BASELINE | 6 | 7.5 |  | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V2_SCHEDULE_ANOMALY | 5 | -1.4 |  | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V5_PLAYER_IMPACT | 4 | 23.25 |  | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 4 | 23.25 |  | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 3 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
+| OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 0.0 | CLV_FLAT | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 2 | 0.0 | CLV_UNAVAILABLE | SAMPLE_TOO_SMALL |
+| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 1 | 66.0 |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | LOW_CONVERSION | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V2_SCHEDULE_ANOMALY | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V4_O25_FIREWALL | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V5_PLAYER_IMPACT | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_1_5 | UNSPECIFIED | CANDIDATE_V6_API_PREDICTIONS | 0 |  |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | LOW_CONVERSION | CANDIDATE_V6_API_PREDICTIONS | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | UNSPECIFIED | CANDIDATE_V2_SCHEDULE_ANOMALY | 0 |  |  | SAMPLE_TOO_SMALL |
 | OVER_2_5 | UNSPECIFIED | CANDIDATE_V5_PLAYER_IMPACT | 0 |  |  | SAMPLE_TOO_SMALL |
-| OVER_2_5 | UNSPECIFIED | CANDIDATE_V7_PRICE_DISCIPLINE | 0 |  |  | SAMPLE_TOO_SMALL |
-| UNDER_3_5 | AVALANCHE_RISK | OFFICIAL_BASELINE | 0 |  |  | SAMPLE_TOO_SMALL |
 
 - CLV data sufficiency: INSUFFICIENT_CLV_DATA
-- Drift alerts: 0
+- Drift alerts: 1
 
 ## Failure Mode Summary
 | failure_mode | rows |
@@ -277,8 +290,14 @@ _No rows._
 | vsigma_today_candidate_v4_match_script_forecasts.csv | FORECAST_CANDIDATE_V4 | PASS | output is fresh for requested target date | 1 |
 | vsigma_today_prelock_competition_top.csv | OFFICIAL_BASELINE_PRELOCK | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
 | vsigma_today_prelock_comparison.csv | PRELOCK_COMPARISON | EMPTY_OK_NO_BET | empty output with headers is valid for a no-bet day | 0 |
-| today_pipeline_report.csv | GLOBAL_LATEST_CONTEXT | PASS | snapshot context file present | 1 |
-| today_post_results_report.csv | GLOBAL_LATEST_CONTEXT | WARNING_STALE_GLOBAL_FILE | snapshot context file not present yet | 0 |
+| vsigma_execution_shortlist_results_ledger.csv | OFFICIAL_RESULTS | PASS | output is fresh for requested target date | 3 |
+| vsigma_execution_shortlist_results_summary.csv | OFFICIAL_RESULTS | PASS | output is fresh for requested target date | 128 |
+| vsigma_today_candidate_v2_results_ledger.csv | CANDIDATE_V2_RESULTS | PASS | output is fresh for requested target date | 2 |
+| vsigma_today_candidate_v2_results_summary.csv | CANDIDATE_V2_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v4_results_ledger.csv | CANDIDATE_V4_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v4_results_summary.csv | CANDIDATE_V4_RESULTS | PASS | output is fresh for requested target date | 1 |
+| vsigma_today_candidate_v5_results_ledger.csv | CANDIDATE_V5_RESULTS | PASS | output is fresh for requested target date | 2 |
+| vsigma_today_candidate_v5_results_summary.csv | CANDIDATE_V5_RESULTS | PASS | output is fresh for requested target date | 1 |
 
 ## Candidate Isolation
 | check_name | file_name | status | detail |

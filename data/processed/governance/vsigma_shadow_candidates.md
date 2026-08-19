@@ -1,13 +1,15 @@
 # vSIGMA Shadow Candidates - 2026-08-18
 
 ## Executive Shadow Candidate Summary
-- generated_at: 2026-08-18T23:29:59+01:00
-- shadow_candidates: 1
-- shadow_decision_counts: SHADOW_DOWNGRADE_REVIEW=1
-- experiment_type_counts: LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=1
+- generated_at: 2026-08-19T08:55:15+01:00
+- shadow_candidates: 3
+- shadow_decision_counts: SHADOW_DOWNGRADE_REVIEW=3
+- experiment_type_counts: LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW=2; LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW=1
 
 ## Shadow Candidate Decisions
 - SHADOW_DOWNGRADE_REVIEW | Independ. Rivadavia vs Fluminense | market=OVER_1_5 | experiment=LOW_CONVERSION_OVER15_SHRINKAGE_SHADOW | production_impact=NONE
+- SHADOW_DOWNGRADE_REVIEW | Fenerbahçe vs Lyon | market=OVER_2_5 | experiment=LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW | production_impact=NONE
+- SHADOW_DOWNGRADE_REVIEW | Dinamo Zagreb vs Viking | market=OVER_2_5 | experiment=LOW_CONVERSION_OVER25_SHRINKAGE_SHADOW | production_impact=NONE
 
 ## Guardrails
 - official picks changed: NO

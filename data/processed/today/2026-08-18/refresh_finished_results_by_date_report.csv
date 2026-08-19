@@ -1,0 +1,7 @@
+date,result,provider,fixtures_returned,fixture_id,status_short,home_team,away_team,score_fulltime_home,score_fulltime_away
+2026-08-18,OK,API-SPORTS_DIRECT,204.0,,,,,,
+2026-08-18T20:00:00+01:00,MATCHED,,,1622620.0,FT,Dinamo Zagreb,Viking,2.0,2.0
+2026-08-18T20:00:00+01:00,MATCHED,,,1622621.0,FT,Fenerbahçe,Lyon,1.0,1.0
+2026-08-18T20:00:00+01:00,MATCHED,,,1622622.0,FT,Levski Sofia,AEK Athens FC,0.0,0.0
+2026-08-18T23:00:00+01:00,MATCHED,,,1547770.0,PEN,Independ. Rivadavia,Fluminense,1.0,1.0
+2026-08-18T23:00:00+01:00,MATCHED,,,1607651.0,FT,Deportivo Recoleta,Boca Juniors,0.0,4.0
