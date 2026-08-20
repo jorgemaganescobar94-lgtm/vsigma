@@ -1,7 +1,7 @@
 # vSIGMA Healthcheck Report - 2026-08-20
 
 - Global health status: WARNING
-- Generated at: 2026-08-20T10:22:37.262006+01:00
+- Generated at: 2026-08-20T11:36:48.693404+01:00
 - Mode: full
 - HEALTHY: 24
 - WARNING: 12
@@ -30,7 +30,7 @@
 | check_name | status | detail | recovery_command | evidence_path |
 | --- | --- | --- | --- | --- |
 | project_root_exists | HEALTHY | project root present |  | /home/runner/work/vsigma/vsigma |
-| venv_python_exists | HEALTHY | cloud runner python active; local .venv not required: /opt/hostedtoolcache/Python/3.11.15/x64/bin/python |  | /opt/hostedtoolcache/Python/3.11.15/x64/bin/python |
+| venv_python_exists | HEALTHY | cloud runner python active; local .venv not required: /opt/hostedtoolcache/Python/3.11.16/x64/bin/python |  | /opt/hostedtoolcache/Python/3.11.16/x64/bin/python |
 | data_raw_exists | HEALTHY | data/raw present | Create data\raw or run the raw data fetch pipeline. | /home/runner/work/vsigma/vsigma/data/raw |
 | data_processed_exists | HEALTHY | data/processed present | Create data\processed or run the PRE pipeline. | /home/runner/work/vsigma/vsigma/data/processed |
 | required_script:scripts/run_daily_competition_controller.py | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/scripts/run_daily_competition_controller.py |
@@ -64,5 +64,5 @@
 | supervisor_latest_report | HEALTHY | present |  | /home/runner/work/vsigma/vsigma/data/processed/daily_supervisor_latest.md |
 | windows_task_registration | NOT_RUN_YET | task registration check unavailable outside Windows | powershell.exe -NoProfile -ExecutionPolicy Bypass -File /home/runner/work/vsigma/vsigma/scripts/register_vsigma_windows_tasks.ps1 |  |
 | recent_automation_logs | WARNING | supervisor log directory missing | .\.venv\Scripts\python.exe scripts\run_daily_competition_controller.py --date 2026-08-20 --timezone Atlantic/Canary --mode status | /home/runner/work/vsigma/vsigma/automation_logs/supervisor |
-| disk_space | HEALTHY | free disk space acceptable: 85.91 GB |  |  |
+| disk_space | HEALTHY | free disk space acceptable: 85.31 GB |  |  |
 | healthcheck_mode | HEALTHY | full mode completed all quick checks plus environment diagnostics |  |  |
