@@ -11,8 +11,8 @@
 
 ## Queue Rows
 - #1 | P1_TRUSTED_MISSING_SCORING | Fenerbahçe vs Lyon | league=UEFA Champions League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #2 | P1_TRUSTED_MISSING_SCORING | Dinamo Zagreb vs Viking | league=UEFA Champions League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
-- #3 | P1_TRUSTED_MISSING_SCORING | Independ. Rivadavia vs Fluminense | league=CONMEBOL Libertadores | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #2 | P1_TRUSTED_MISSING_SCORING | Independ. Rivadavia vs Fluminense | league=CONMEBOL Libertadores | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
+- #3 | P1_TRUSTED_MISSING_SCORING | Dinamo Zagreb vs Viking | league=UEFA Champions League | scoring_needed=YES | reason=trusted raw candidate has no matching scored row
 
 ## Guardrails
 - This queue is diagnostic/planning only.
