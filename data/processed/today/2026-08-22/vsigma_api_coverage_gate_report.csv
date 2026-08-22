@@ -1,4 +1,4 @@
 target_date,generated_at,fixture_id,home_team,away_team,api_readiness_gate,coverage_score,original_final_decision,final_decision,original_execution_permission,execution_permission,gate_action,gate_reason,missing_blocks,auto_apply,production_change
-2026-08-22,2026-08-22T08:54:53+01:00,1622621,Fenerbahçe,Lyon,UNKNOWN,,NO_BET,NO_BET,NO_BET,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
-2026-08-22,2026-08-22T08:54:53+01:00,1622620,Dinamo Zagreb,Viking,UNKNOWN,,NO_BET,NO_BET,NO_BET,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
-2026-08-22,2026-08-22T08:54:53+01:00,1547770,Independ. Rivadavia,Fluminense,UNKNOWN,,NO_BET,NO_BET,NO_BET,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
+2026-08-22,2026-08-22T18:41:59+01:00,1622621,Fenerbahçe,Lyon,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
+2026-08-22,2026-08-22T18:41:59+01:00,1622620,Dinamo Zagreb,Viking,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
+2026-08-22,2026-08-22T18:41:59+01:00,1547770,Independ. Rivadavia,Fluminense,UNKNOWN,,NO_BET,NO_BET,NO,NO,UNKNOWN_COVERAGE_BLOCK,API coverage matrix missing or unknown.,unknown,NO,NO
