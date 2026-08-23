@@ -18,4 +18,4 @@ N=38 partidos liquidados con predicción mx (lock-at-KO, anti-hindsight) · desd
 
 VEREDICTO: con N=38, lidera L3 en log-loss 1X2 (Δ0.0161). El 1X2 mostrado es el ENSEMBLE; sigue acumulando — este marcador + el A/B son la base para revertir (ENSEMBLE_1X2_LIVE / MAXMODEL_LIVE).
 
-generated_at_utc: 2026-08-22T08:32:31+00:00
+generated_at_utc: 2026-08-23T08:33:02+00:00
