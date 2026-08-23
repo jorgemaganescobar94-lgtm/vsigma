@@ -22,7 +22,7 @@
 ## Historical Drift Check
 | Field | Value | Meaning |
 |---|---|---|
-| Previous | date=2026-08-22; action=UNKNOWN; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | data/processed/governance/vsigma_operator_brief.csv |
+| Previous | date=2026-08-23; action=UNKNOWN; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | data/processed/today/2026-08-23/vsigma_operator_brief.csv |
 | Current | date=2026-08-23; action=NONE; risk=NONE; final=NO_OPERATOR_ACTION; active=0 | current_build |
 | Drift | MATERIAL_CHANGE | action_level: UNKNOWN -> NONE |
 | Changed | action_level | Tracked fields: action/final/risk/active |
@@ -103,3 +103,23 @@
 - Use PowerShell -Encoding UTF8 when reading local Markdown files on Windows.
 - Historical drift notifies only on material operator changes: action level, final decision, risk, or active candidates.
 - Alert routing is diagnostic only; this script writes the route but does not send comments or external notifications.
+
+## Calibration / Shadow Governance
+- calibration_shadow_status: UNAVAILABLE
+- shadow_active_candidates: 0
+- shadow_high_priority: 0
+- shadow_metrics: none
+- shadow_decisions: none
+- promotion_readiness: UNAVAILABLE
+- promotion_candidates: 0
+- promotion_decisions: none
+- learning_sanity_status: WARN
+- learning_sanity_counts: EMPTY_NO_FALLBACK=6; PASS=1
+- learning_sanity_severity: WARN=6; OK=1
+- calibration_auto_apply: NO
+- production_change: NO
+
+### Calibration Sources
+- shadow_queue: data/processed/today/2026-08-23/vsigma_calibration_shadow_patch_queue.csv
+- promotion_readiness: data/processed/today/2026-08-23/vsigma_shadow_patch_promotion_readiness.csv
+- learning_sanity: data/processed/governance/vsigma_learning_chain_output_sanity.csv
