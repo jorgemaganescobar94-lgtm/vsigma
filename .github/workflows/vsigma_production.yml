@@ -1,5 +1,8 @@
 name: vSIGMA Production
 
+# LEGACY / MANUAL ONLY.
+# Scheduled production moved to vsigma-data-core on Google Cloud systemd.
+# Keep this workflow for audit, rollback and explicit operator diagnostics only.
 on:
   workflow_dispatch:
     inputs:
@@ -19,27 +22,6 @@ on:
         description: "Fecha YYYY-MM-DD. Vacío = hoy en Atlantic/Canary"
         required: false
         default: ""
-
-  schedule:
-    # 08:15 Atlantic/Canary - backup de resultados de ayer
-    - cron: "15 8 * * *"
-      timezone: "Atlantic/Canary"
-
-    # 09:00 Atlantic/Canary - PRE
-    - cron: "0 9 * * *"
-      timezone: "Atlantic/Canary"
-
-    # 10:00 colchón - preserva la ventana PRELOCK de 90 min para saques tempranos
-    - cron: "0 10 * * *"
-      timezone: "Atlantic/Canary"
-
-    # Checkpoints cada 2h (11,13,15,17,19,21,23) Atlantic/Canary
-    - cron: "0 11-23/2 * * *"
-      timezone: "Atlantic/Canary"
-
-    # 23:55 Atlantic/Canary - POST
-    - cron: "55 23 * * *"
-      timezone: "Atlantic/Canary"
 
 permissions:
   contents: write
@@ -372,5 +354,3 @@ jobs:
 
           git commit -m "vSIGMA ${VSIGMA_MODE} ${VSIGMA_DATE} [skip ci]"
           git push origin HEAD:main
-
-
