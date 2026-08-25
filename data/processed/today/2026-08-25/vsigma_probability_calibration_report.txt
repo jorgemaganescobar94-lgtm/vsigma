@@ -1,0 +1,26 @@
+VSIGMA PROBABILITY CALIBRATION
+
+Method
+Competition probabilities copy primary_model_prob into competition_raw_prob, then apply a capped deterministic reliability adjustment. Lookup order is market+competition bucket, market, bucket, then global competition fallback. Thin samples are reported but not used unless they meet the minimum sample size for that lookup tier.
+
+Mode comparison
+summary_scope                   segment  rows_total  graded_rows  wins  losses hit_rate brier_score brier_score_raw brier_score_calibrated avg_probability avg_probability_raw avg_probability_calibrated  avg_edge  profit_units_total roi_percent
+      overall            FULL_SHORTLIST          20           20    16       4     80.0    0.152535        0.160432               0.152535        0.835079             0.85742                   0.835079  0.177766                4.07       20.35
+         mode COMPETITION_ACCURACY_MODE          10           10     8       2     80.0    0.156817        0.172613               0.156817        0.824418              0.8691                   0.824418  0.214407                2.64        26.4
+
+Usable calibration groups
+   group_type              group_key market_primary accuracy_mode_bucket  sample_size  wins  losses  raw_avg_predicted_probability  empirical_hit_rate  calibration_adjustment  calibrated_avg_probability  min_sample_size  usable_for_lookup calibration_note
+MARKET_BUCKET OVER_1_5|ACCURACY_CORE       OVER_1_5        ACCURACY_CORE            5     4       1                       0.867640            0.800000               -0.067640                    0.800000                3                  1           USABLE
+       MARKET               OVER_1_5       OVER_1_5                                 7     5       2                       0.880886            0.714286               -0.080000                    0.800886                4                  1           USABLE
+       BUCKET          ACCURACY_CORE                       ACCURACY_CORE            8     7       1                       0.857875            0.875000                0.017125                    0.875000                4                  1           USABLE
+       GLOBAL     COMPETITION_GLOBAL                                               10     8       2                       0.869100            0.800000               -0.050000                    0.819100                6                  1           USABLE
+
+Largest absolute adjustments
+   group_type              group_key market_primary accuracy_mode_bucket  sample_size  wins  losses  raw_avg_predicted_probability  empirical_hit_rate  calibration_adjustment  calibrated_avg_probability  min_sample_size  usable_for_lookup calibration_note
+       MARKET               OVER_1_5       OVER_1_5                                 7     5       2                       0.880886            0.714286               -0.080000                    0.800886                4                  1           USABLE
+MARKET_BUCKET OVER_1_5|ACCURACY_CORE       OVER_1_5        ACCURACY_CORE            5     4       1                       0.867640            0.800000               -0.067640                    0.800000                3                  1           USABLE
+       GLOBAL     COMPETITION_GLOBAL                                               10     8       2                       0.869100            0.800000               -0.050000                    0.819100                6                  1           USABLE
+       BUCKET          ACCURACY_CORE                       ACCURACY_CORE            8     7       1                       0.857875            0.875000                0.017125                    0.875000                4                  1           USABLE
+
+Competition calibration verdict
+Rows=10; hit_rate=80.0; ROI=26.4; raw_avg_prob=0.8691; calibrated_avg_prob=0.824418; raw_Brier=0.172613; calibrated_Brier=0.156817.

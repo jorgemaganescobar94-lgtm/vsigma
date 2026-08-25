@@ -631891,5 +631891,4567 @@
         }
       }
     }
+  ],
+  "532|2026": [
+    {
+      "fixture": {
+        "id": 1570352,
+        "referee": "Jesus Gil Manzano, Spain",
+        "timezone": "UTC",
+        "date": "2026-08-22T17:30:00+00:00",
+        "timestamp": 1787419800,
+        "periods": {
+          "first": 1787419800,
+          "second": 1787423400
+        },
+        "venue": {
+          "id": 1497,
+          "name": "Estadio de Mestalla",
+          "city": "Valencia"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 140,
+        "name": "La Liga",
+        "country": "Spain",
+        "logo": "https://media.api-sports.io/football/leagues/140.png",
+        "flag": "https://media.api-sports.io/flags/es.svg",
+        "season": 2026,
+        "round": "Regular Season - 2",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 532,
+          "name": "Valencia",
+          "logo": "https://media.api-sports.io/football/teams/532.png",
+          "winner": null
+        },
+        "away": {
+          "id": 538,
+          "name": "Celta Vigo",
+          "logo": "https://media.api-sports.io/football/teams/538.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1618926,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-08-12T16:00:00+00:00",
+        "timestamp": 1786550400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 532,
+          "name": "Valencia",
+          "logo": "https://media.api-sports.io/football/teams/532.png",
+          "winner": false
+        },
+        "away": {
+          "id": 5278,
+          "name": "Teruel",
+          "logo": "https://media.api-sports.io/football/teams/5278.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1585078,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-08-08T19:00:00+00:00",
+        "timestamp": 1786215600,
+        "periods": {
+          "first": 1786215600,
+          "second": 1786219200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 532,
+          "name": "Valencia",
+          "logo": "https://media.api-sports.io/football/teams/532.png",
+          "winner": false
+        },
+        "away": {
+          "id": 34,
+          "name": "Newcastle",
+          "logo": "https://media.api-sports.io/football/teams/34.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1583593,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-08-01T17:30:00+00:00",
+        "timestamp": 1785605400,
+        "periods": {
+          "first": 1785605400,
+          "second": 1785609000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 75,
+          "name": "Stoke City",
+          "logo": "https://media.api-sports.io/football/teams/75.png",
+          "winner": null
+        },
+        "away": {
+          "id": 532,
+          "name": "Valencia",
+          "logo": "https://media.api-sports.io/football/teams/532.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1567753,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-28T12:00:00+00:00",
+        "timestamp": 1785240000,
+        "periods": {
+          "first": 1785240000,
+          "second": 1785243600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 69,
+          "name": "Derby",
+          "logo": "https://media.api-sports.io/football/teams/69.png",
+          "winner": false
+        },
+        "away": {
+          "id": 532,
+          "name": "Valencia",
+          "logo": "https://media.api-sports.io/football/teams/532.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1563007,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-25T18:00:00+00:00",
+        "timestamp": 1785002400,
+        "periods": {
+          "first": 1785002400,
+          "second": 1785006000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 532,
+          "name": "Valencia",
+          "logo": "https://media.api-sports.io/football/teams/532.png",
+          "winner": false
+        },
+        "away": {
+          "id": 5254,
+          "name": "Castellón",
+          "logo": "https://media.api-sports.io/football/teams/5254.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1562958,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-22T18:00:00+00:00",
+        "timestamp": 1784743200,
+        "periods": {
+          "first": 1784743200,
+          "second": 1784746800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 532,
+          "name": "Valencia",
+          "logo": "https://media.api-sports.io/football/teams/532.png",
+          "winner": true
+        },
+        "away": {
+          "id": 9692,
+          "name": "Eldense",
+          "logo": "https://media.api-sports.io/football/teams/9692.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 3,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1567670,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-18T16:30:00+00:00",
+        "timestamp": 1784392200,
+        "periods": {
+          "first": 1784392200,
+          "second": 1784395800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 10
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 4922,
+          "name": "Petro de Luanda",
+          "logo": "https://media.api-sports.io/football/teams/4922.png",
+          "winner": true
+        },
+        "away": {
+          "id": 532,
+          "name": "Valencia",
+          "logo": "https://media.api-sports.io/football/teams/532.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "543|2026": [
+    {
+      "fixture": {
+        "id": 1570345,
+        "referee": "Isidro Diaz de Mera Escuderos, Spain",
+        "timezone": "UTC",
+        "date": "2026-08-21T19:00:00+00:00",
+        "timestamp": 1787338800,
+        "periods": {
+          "first": 1787338800,
+          "second": 1787342400
+        },
+        "venue": {
+          "id": null,
+          "name": "Estadio de la Cartuja",
+          "city": "Seville"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 140,
+        "name": "La Liga",
+        "country": "Spain",
+        "logo": "https://media.api-sports.io/football/leagues/140.png",
+        "flag": "https://media.api-sports.io/flags/es.svg",
+        "season": 2026,
+        "round": "Regular Season - 2",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 543,
+          "name": "Real Betis",
+          "logo": "https://media.api-sports.io/football/teams/543.png",
+          "winner": true
+        },
+        "away": {
+          "id": 548,
+          "name": "Real Sociedad",
+          "logo": "https://media.api-sports.io/football/teams/548.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1618940,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-08-15T17:30:00+00:00",
+        "timestamp": 1786815000,
+        "periods": {
+          "first": 1786815000,
+          "second": 1786818600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 505,
+          "name": "Inter",
+          "logo": "https://media.api-sports.io/football/teams/505.png",
+          "winner": true
+        },
+        "away": {
+          "id": 543,
+          "name": "Real Betis",
+          "logo": "https://media.api-sports.io/football/teams/543.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1585075,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-08-08T18:30:00+00:00",
+        "timestamp": 1786213800,
+        "periods": {
+          "first": 1786213800,
+          "second": 1786217400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 543,
+          "name": "Real Betis",
+          "logo": "https://media.api-sports.io/football/teams/543.png",
+          "winner": null
+        },
+        "away": {
+          "id": 35,
+          "name": "Bournemouth",
+          "logo": "https://media.api-sports.io/football/teams/35.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1542347,
+        "referee": "R. Hennessey",
+        "timezone": "UTC",
+        "date": "2026-08-05T18:45:00+00:00",
+        "timestamp": 1785955500,
+        "periods": {
+          "first": 1785955500,
+          "second": 1785959100
+        },
+        "venue": {
+          "id": null,
+          "name": "Aviva Stadium",
+          "city": "Dublin"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 42,
+          "name": "Arsenal",
+          "logo": "https://media.api-sports.io/football/teams/42.png",
+          "winner": false
+        },
+        "away": {
+          "id": 543,
+          "name": "Real Betis",
+          "logo": "https://media.api-sports.io/football/teams/543.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 3
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1598580,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-08-01T18:00:00+00:00",
+        "timestamp": 1785607200,
+        "periods": {
+          "first": 1785607200,
+          "second": 1785610800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 543,
+          "name": "Real Betis",
+          "logo": "https://media.api-sports.io/football/teams/543.png",
+          "winner": true
+        },
+        "away": {
+          "id": 723,
+          "name": "Almeria",
+          "logo": "https://media.api-sports.io/football/teams/723.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1583487,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-29T18:00:00+00:00",
+        "timestamp": 1785348000,
+        "periods": {
+          "first": 1785348000,
+          "second": 1785351600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 543,
+          "name": "Real Betis",
+          "logo": "https://media.api-sports.io/football/teams/543.png",
+          "winner": true
+        },
+        "away": {
+          "id": 80,
+          "name": "Lyon",
+          "logo": "https://media.api-sports.io/football/teams/80.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1563056,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-25T18:00:00+00:00",
+        "timestamp": 1785002400,
+        "periods": {
+          "first": 1785002400,
+          "second": 1785006000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 715,
+          "name": "Granada CF",
+          "logo": "https://media.api-sports.io/football/teams/715.png",
+          "winner": true
+        },
+        "away": {
+          "id": 543,
+          "name": "Real Betis",
+          "logo": "https://media.api-sports.io/football/teams/543.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1548016,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-22T18:30:00+00:00",
+        "timestamp": 1784745000,
+        "periods": {
+          "first": 1784745000,
+          "second": 1784748600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 9410,
+          "name": "Recreativo Huelva",
+          "logo": "https://media.api-sports.io/football/teams/9410.png",
+          "winner": false
+        },
+        "away": {
+          "id": 543,
+          "name": "Real Betis",
+          "logo": "https://media.api-sports.io/football/teams/543.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1583378,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-18T13:30:00+00:00",
+        "timestamp": 1784381400,
+        "periods": {
+          "first": 1784381400,
+          "second": 1784385000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1323,
+          "name": "Sportfreunde Lotte",
+          "logo": "https://media.api-sports.io/football/teams/1323.png",
+          "winner": false
+        },
+        "away": {
+          "id": 543,
+          "name": "Real Betis",
+          "logo": "https://media.api-sports.io/football/teams/543.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "413|2026": [
+    {
+      "fixture": {
+        "id": 1552136,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-08-22T18:00:00+00:00",
+        "timestamp": 1787421600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 1140,
+          "name": "Goffertstadion",
+          "city": "Nijmegen"
+        },
+        "status": {
+          "long": "Match Postponed",
+          "short": "PST",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 88,
+        "name": "Eredivisie",
+        "country": "Netherlands",
+        "logo": "https://media.api-sports.io/football/leagues/88.png",
+        "flag": "https://media.api-sports.io/flags/nl.svg",
+        "season": 2026,
+        "round": "Regular Season - 3",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 413,
+          "name": "NEC Nijmegen",
+          "logo": "https://media.api-sports.io/football/teams/413.png",
+          "winner": null
+        },
+        "away": {
+          "id": 196,
+          "name": "Excelsior",
+          "logo": "https://media.api-sports.io/football/teams/196.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1622624,
+        "referee": "F. Letexier",
+        "timezone": "UTC",
+        "date": "2026-08-19T19:00:00+00:00",
+        "timestamp": 1787166000,
+        "periods": {
+          "first": 1787166000,
+          "second": 1787169600
+        },
+        "venue": {
+          "id": null,
+          "name": "Goffertstadion",
+          "city": "Nijmegen"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 2,
+        "name": "UEFA Champions League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/2.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Play-offs",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 413,
+          "name": "NEC Nijmegen",
+          "logo": "https://media.api-sports.io/football/teams/413.png",
+          "winner": false
+        },
+        "away": {
+          "id": 327,
+          "name": "Bodo/Glimt",
+          "logo": "https://media.api-sports.io/football/teams/327.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1552127,
+        "referee": "Serdar Gozubuyuk, Netherlands",
+        "timezone": "UTC",
+        "date": "2026-08-15T14:30:00+00:00",
+        "timestamp": 1786804200,
+        "periods": {
+          "first": 1786804200,
+          "second": 1786807800
+        },
+        "venue": {
+          "id": 1159,
+          "name": "Koning Willem II Stadion",
+          "city": "Tilburg"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 88,
+        "name": "Eredivisie",
+        "country": "Netherlands",
+        "logo": "https://media.api-sports.io/football/leagues/88.png",
+        "flag": "https://media.api-sports.io/flags/nl.svg",
+        "season": 2026,
+        "round": "Regular Season - 2",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 195,
+          "name": "Willem II",
+          "logo": "https://media.api-sports.io/football/teams/195.png",
+          "winner": false
+        },
+        "away": {
+          "id": 413,
+          "name": "NEC Nijmegen",
+          "logo": "https://media.api-sports.io/football/teams/413.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 4
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 4
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1598829,
+        "referee": "M. Mariani",
+        "timezone": "UTC",
+        "date": "2026-08-11T17:30:00+00:00",
+        "timestamp": 1786469400,
+        "periods": {
+          "first": 1786469400,
+          "second": 1786473000
+        },
+        "venue": {
+          "id": null,
+          "name": "Goffertstadion",
+          "city": "Nijmegen"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "AET",
+          "elapsed": 120,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 2,
+        "name": "UEFA Champions League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/2.png",
+        "flag": null,
+        "season": 2026,
+        "round": "3rd Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 413,
+          "name": "NEC Nijmegen",
+          "logo": "https://media.api-sports.io/football/teams/413.png",
+          "winner": true
+        },
+        "away": {
+          "id": 553,
+          "name": "Olympiakos Piraeus",
+          "logo": "https://media.api-sports.io/football/teams/553.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": 1,
+          "away": 0
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1552118,
+        "referee": "Allard Lindhout, Netherlands",
+        "timezone": "UTC",
+        "date": "2026-08-08T14:30:00+00:00",
+        "timestamp": 1786199400,
+        "periods": {
+          "first": 1786199400,
+          "second": 1786203000
+        },
+        "venue": {
+          "id": 1140,
+          "name": "Goffertstadion",
+          "city": "Nijmegen"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 88,
+        "name": "Eredivisie",
+        "country": "Netherlands",
+        "logo": "https://media.api-sports.io/football/leagues/88.png",
+        "flag": "https://media.api-sports.io/flags/nl.svg",
+        "season": 2026,
+        "round": "Regular Season - 1",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 413,
+          "name": "NEC Nijmegen",
+          "logo": "https://media.api-sports.io/football/teams/413.png",
+          "winner": false
+        },
+        "away": {
+          "id": 427,
+          "name": "Telstar",
+          "logo": "https://media.api-sports.io/football/teams/427.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1598824,
+        "referee": "J. Sanchez",
+        "timezone": "UTC",
+        "date": "2026-08-04T18:00:00+00:00",
+        "timestamp": 1785866400,
+        "periods": {
+          "first": 1785866400,
+          "second": 1785870000
+        },
+        "venue": {
+          "id": null,
+          "name": "Georgios Karaiskakis Stadium",
+          "city": "Piraeus"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 2,
+        "name": "UEFA Champions League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/2.png",
+        "flag": null,
+        "season": 2026,
+        "round": "3rd Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 553,
+          "name": "Olympiakos Piraeus",
+          "logo": "https://media.api-sports.io/football/teams/553.png",
+          "winner": null
+        },
+        "away": {
+          "id": 413,
+          "name": "NEC Nijmegen",
+          "logo": "https://media.api-sports.io/football/teams/413.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1583504,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-31T17:00:00+00:00",
+        "timestamp": 1785517200,
+        "periods": {
+          "first": 1785517200,
+          "second": 1785520800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 413,
+          "name": "NEC Nijmegen",
+          "logo": "https://media.api-sports.io/football/teams/413.png",
+          "winner": false
+        },
+        "away": {
+          "id": 536,
+          "name": "Sevilla",
+          "logo": "https://media.api-sports.io/football/teams/536.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1563001,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-25T12:00:00+00:00",
+        "timestamp": 1784980800,
+        "periods": {
+          "first": 1784980800,
+          "second": 1784984400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 413,
+          "name": "NEC Nijmegen",
+          "logo": "https://media.api-sports.io/football/teams/413.png",
+          "winner": false
+        },
+        "away": {
+          "id": 1660,
+          "name": "SV Elversberg",
+          "logo": "https://media.api-sports.io/football/teams/1660.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1560680,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-18T12:00:00+00:00",
+        "timestamp": 1784376000,
+        "periods": {
+          "first": 1784376000,
+          "second": 1784379600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 413,
+          "name": "NEC Nijmegen",
+          "logo": "https://media.api-sports.io/football/teams/413.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2944,
+          "name": "Al-Fayha",
+          "logo": "https://media.api-sports.io/football/teams/2944.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 7,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 3,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 7,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1560608,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-14T17:00:00+00:00",
+        "timestamp": 1784048400,
+        "periods": {
+          "first": 1784048400,
+          "second": 1784052000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 413,
+          "name": "NEC Nijmegen",
+          "logo": "https://media.api-sports.io/football/teams/413.png",
+          "winner": true
+        },
+        "away": {
+          "id": 285,
+          "name": "V-varen Nagasaki",
+          "logo": "https://media.api-sports.io/football/teams/285.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1560568,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-11T08:45:00+00:00",
+        "timestamp": 1783759500,
+        "periods": {
+          "first": 1783759500,
+          "second": 1783763100
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 554,
+          "name": "Anderlecht",
+          "logo": "https://media.api-sports.io/football/teams/554.png",
+          "winner": true
+        },
+        "away": {
+          "id": 413,
+          "name": "NEC Nijmegen",
+          "logo": "https://media.api-sports.io/football/teams/413.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1560549,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-08T12:00:00+00:00",
+        "timestamp": 1783512000,
+        "periods": {
+          "first": 1783512000,
+          "second": 1783515600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 413,
+          "name": "NEC Nijmegen",
+          "logo": "https://media.api-sports.io/football/teams/413.png",
+          "winner": false
+        },
+        "away": {
+          "id": 187,
+          "name": "MSV Duisburg",
+          "logo": "https://media.api-sports.io/football/teams/187.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1560493,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-01T17:00:00+00:00",
+        "timestamp": 1782925200,
+        "periods": {
+          "first": 1782925200,
+          "second": 1782928800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1277,
+          "name": "De Treffers",
+          "logo": "https://media.api-sports.io/football/teams/1277.png",
+          "winner": null
+        },
+        "away": {
+          "id": 413,
+          "name": "NEC Nijmegen",
+          "logo": "https://media.api-sports.io/football/teams/413.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "247|2026": [
+    {
+      "fixture": {
+        "id": 1556645,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-08-22T14:00:00+00:00",
+        "timestamp": 1787407200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 1403,
+          "name": "McDiarmid Park",
+          "city": "Perth"
+        },
+        "status": {
+          "long": "Match Postponed",
+          "short": "PST",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 179,
+        "name": "Premiership",
+        "country": "Scotland",
+        "logo": "https://media.api-sports.io/football/leagues/179.png",
+        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
+        "season": 2026,
+        "round": "Regular Season - 3",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 258,
+          "name": "ST Johnstone",
+          "logo": "https://media.api-sports.io/football/teams/258.png",
+          "winner": null
+        },
+        "away": {
+          "id": 247,
+          "name": "Celtic",
+          "logo": "https://media.api-sports.io/football/teams/247.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1610923,
+        "referee": "S. Scharer",
+        "timezone": "UTC",
+        "date": "2026-08-19T19:00:00+00:00",
+        "timestamp": 1787166000,
+        "periods": {
+          "first": 1787166000,
+          "second": 1787169600
+        },
+        "venue": {
+          "id": null,
+          "name": "Celtic Park",
+          "city": "Glasgow"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 2,
+        "name": "UEFA Champions League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/2.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Play-offs",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 247,
+          "name": "Celtic",
+          "logo": "https://media.api-sports.io/football/teams/247.png",
+          "winner": true
+        },
+        "away": {
+          "id": 1026,
+          "name": "Lask Linz",
+          "logo": "https://media.api-sports.io/football/teams/1026.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1603957,
+        "referee": "S. McLean",
+        "timezone": "UTC",
+        "date": "2026-08-15T16:45:00+00:00",
+        "timestamp": 1786812300,
+        "periods": {
+          "first": 1786812300,
+          "second": 1786815900
+        },
+        "venue": {
+          "id": 1388,
+          "name": "Tannadice Park",
+          "city": "Dundee"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 185,
+        "name": "League Cup",
+        "country": "Scotland",
+        "logo": "https://media.api-sports.io/football/leagues/185.png",
+        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1386,
+          "name": "Dundee Utd",
+          "logo": "https://media.api-sports.io/football/teams/1386.png",
+          "winner": false
+        },
+        "away": {
+          "id": 247,
+          "name": "Celtic",
+          "logo": "https://media.api-sports.io/football/teams/247.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 4
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 4
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1556638,
+        "referee": "R. Lee",
+        "timezone": "UTC",
+        "date": "2026-08-09T12:30:00+00:00",
+        "timestamp": 1786278600,
+        "periods": {
+          "first": 1786278600,
+          "second": 1786282200
+        },
+        "venue": {
+          "id": null,
+          "name": "Rugby Park",
+          "city": "Kilmarnock"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 179,
+        "name": "Premiership",
+        "country": "Scotland",
+        "logo": "https://media.api-sports.io/football/leagues/179.png",
+        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
+        "season": 2026,
+        "round": "Regular Season - 2",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 250,
+          "name": "Kilmarnock",
+          "logo": "https://media.api-sports.io/football/teams/250.png",
+          "winner": false
+        },
+        "away": {
+          "id": 247,
+          "name": "Celtic",
+          "logo": "https://media.api-sports.io/football/teams/247.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 5
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 3
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 5
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1556633,
+        "referee": "M. MacDermid",
+        "timezone": "UTC",
+        "date": "2026-08-03T18:30:00+00:00",
+        "timestamp": 1785781800,
+        "periods": {
+          "first": 1785781800,
+          "second": 1785785400
+        },
+        "venue": {
+          "id": 1386,
+          "name": "Celtic Park",
+          "city": "Glasgow"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 179,
+        "name": "Premiership",
+        "country": "Scotland",
+        "logo": "https://media.api-sports.io/football/leagues/179.png",
+        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
+        "season": 2026,
+        "round": "Regular Season - 1",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 247,
+          "name": "Celtic",
+          "logo": "https://media.api-sports.io/football/teams/247.png",
+          "winner": true
+        },
+        "away": {
+          "id": 253,
+          "name": "Dundee",
+          "logo": "https://media.api-sports.io/football/teams/253.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1563027,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-25T14:00:00+00:00",
+        "timestamp": 1784988000,
+        "periods": {
+          "first": 1784988000,
+          "second": 1784991600
+        },
+        "venue": {
+          "id": null,
+          "name": "Celtic Park",
+          "city": "Glasgow"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 247,
+          "name": "Celtic",
+          "logo": "https://media.api-sports.io/football/teams/247.png",
+          "winner": null
+        },
+        "away": {
+          "id": 489,
+          "name": "AC Milan",
+          "logo": "https://media.api-sports.io/football/teams/489.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1562943,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-18T14:00:00+00:00",
+        "timestamp": 1784383200,
+        "periods": {
+          "first": 1784383200,
+          "second": 1784386800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 247,
+          "name": "Celtic",
+          "logo": "https://media.api-sports.io/football/teams/247.png",
+          "winner": null
+        },
+        "away": {
+          "id": 70,
+          "name": "Middlesbrough",
+          "logo": "https://media.api-sports.io/football/teams/70.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554946,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-14T16:30:00+00:00",
+        "timestamp": 1784046600,
+        "periods": {
+          "first": 1784046600,
+          "second": 1784050200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 228,
+          "name": "Sporting CP",
+          "logo": "https://media.api-sports.io/football/teams/228.png",
+          "winner": true
+        },
+        "away": {
+          "id": 247,
+          "name": "Celtic",
+          "logo": "https://media.api-sports.io/football/teams/247.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554772,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-07T17:00:00+00:00",
+        "timestamp": 1783443600,
+        "periods": {
+          "first": 1783443600,
+          "second": 1783447200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 3854,
+          "name": "Shelbourne",
+          "logo": "https://media.api-sports.io/football/teams/3854.png",
+          "winner": null
+        },
+        "away": {
+          "id": 247,
+          "name": "Celtic",
+          "logo": "https://media.api-sports.io/football/teams/247.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "563|2026": [
+    {
+      "fixture": {
+        "id": 1622623,
+        "referee": "D. Massa",
+        "timezone": "UTC",
+        "date": "2026-08-19T19:00:00+00:00",
+        "timestamp": 1787166000,
+        "periods": {
+          "first": 1787166000,
+          "second": 1787169600
+        },
+        "venue": {
+          "id": null,
+          "name": "Superbet Arena - Giulesti",
+          "city": "Bucharest"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 2,
+        "name": "UEFA Champions League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/2.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Play-offs",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 563,
+          "name": "Hapoel Beer Sheva",
+          "logo": "https://media.api-sports.io/football/teams/563.png",
+          "winner": true
+        },
+        "away": {
+          "id": 13976,
+          "name": "Sabah FA",
+          "logo": "https://media.api-sports.io/football/teams/13976.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1620655,
+        "referee": "G. Levi",
+        "timezone": "UTC",
+        "date": "2026-08-15T17:30:00+00:00",
+        "timestamp": 1786815000,
+        "periods": {
+          "first": 1786815000,
+          "second": 1786818600
+        },
+        "venue": {
+          "id": 868,
+          "name": "Sammy Ofer Stadium",
+          "city": "Haifa"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 385,
+        "name": "Toto Cup Ligat Al",
+        "country": "Israel",
+        "logo": "https://media.api-sports.io/football/leagues/385.png",
+        "flag": "https://media.api-sports.io/flags/il.svg",
+        "season": 2026,
+        "round": "5th Place Final",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 2253,
+          "name": "Hapoel Haifa",
+          "logo": "https://media.api-sports.io/football/teams/2253.png",
+          "winner": true
+        },
+        "away": {
+          "id": 563,
+          "name": "Hapoel Beer Sheva",
+          "logo": "https://media.api-sports.io/football/teams/563.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1607169,
+        "referee": "G. Nyberg",
+        "timezone": "UTC",
+        "date": "2026-08-11T18:00:00+00:00",
+        "timestamp": 1786471200,
+        "periods": {
+          "first": 1786471200,
+          "second": 1786474800
+        },
+        "venue": {
+          "id": null,
+          "name": "Stadion Rajko Mit",
+          "city": "Belgrade"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
+        }
+      },
+      "league": {
+        "id": 2,
+        "name": "UEFA Champions League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/2.png",
+        "flag": null,
+        "season": 2026,
+        "round": "3rd Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 598,
+          "name": "FK Crvena Zvezda",
+          "logo": "https://media.api-sports.io/football/teams/598.png",
+          "winner": false
+        },
+        "away": {
+          "id": 563,
+          "name": "Hapoel Beer Sheva",
+          "logo": "https://media.api-sports.io/football/teams/563.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1607166,
+        "referee": "J. Manzano",
+        "timezone": "UTC",
+        "date": "2026-08-04T17:30:00+00:00",
+        "timestamp": 1785864600,
+        "periods": {
+          "first": 1785864600,
+          "second": 1785868200
+        },
+        "venue": {
+          "id": null,
+          "name": "Haladás Sportkomplexum",
+          "city": "Szombathely"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 8
+        }
+      },
+      "league": {
+        "id": 2,
+        "name": "UEFA Champions League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/2.png",
+        "flag": null,
+        "season": 2026,
+        "round": "3rd Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 563,
+          "name": "Hapoel Beer Sheva",
+          "logo": "https://media.api-sports.io/football/teams/563.png",
+          "winner": true
+        },
+        "away": {
+          "id": 598,
+          "name": "FK Crvena Zvezda",
+          "logo": "https://media.api-sports.io/football/teams/598.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1589422,
+        "referee": "A. Bandic",
+        "timezone": "UTC",
+        "date": "2026-07-29T17:30:00+00:00",
+        "timestamp": 1785346200,
+        "periods": {
+          "first": 1785346200,
+          "second": 1785349800
+        },
+        "venue": {
+          "id": null,
+          "name": "Haladás Sportkomplexum",
+          "city": "Szombathely"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
+        }
+      },
+      "league": {
+        "id": 2,
+        "name": "UEFA Champions League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/2.png",
+        "flag": null,
+        "season": 2026,
+        "round": "2nd Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 563,
+          "name": "Hapoel Beer Sheva",
+          "logo": "https://media.api-sports.io/football/teams/563.png",
+          "winner": true
+        },
+        "away": {
+          "id": 278,
+          "name": "Vikingur Reykjavik",
+          "logo": "https://media.api-sports.io/football/teams/278.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1589420,
+        "referee": "F. Glova",
+        "timezone": "UTC",
+        "date": "2026-07-21T19:00:00+00:00",
+        "timestamp": 1784660400,
+        "periods": {
+          "first": 1784660400,
+          "second": 1784664000
+        },
+        "venue": {
+          "id": null,
+          "name": "Víkingsvollur Stadium",
+          "city": "Reykjavik"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 9
+        }
+      },
+      "league": {
+        "id": 2,
+        "name": "UEFA Champions League",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/2.png",
+        "flag": null,
+        "season": 2026,
+        "round": "2nd Qualifying Round",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 278,
+          "name": "Vikingur Reykjavik",
+          "logo": "https://media.api-sports.io/football/teams/278.png",
+          "winner": true
+        },
+        "away": {
+          "id": 563,
+          "name": "Hapoel Beer Sheva",
+          "logo": "https://media.api-sports.io/football/teams/563.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1557929,
+        "referee": "A. Klein",
+        "timezone": "UTC",
+        "date": "2026-07-16T16:30:00+00:00",
+        "timestamp": 1784219400,
+        "periods": {
+          "first": 1784219400,
+          "second": 1784223000
+        },
+        "venue": {
+          "id": null,
+          "name": "Toto Turner Stadium",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 10
+        }
+      },
+      "league": {
+        "id": 659,
+        "name": "Super Cup",
+        "country": "Israel",
+        "logo": "https://media.api-sports.io/football/leagues/659.png",
+        "flag": "https://media.api-sports.io/flags/il.svg",
+        "season": 2026,
+        "round": "Final",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 563,
+          "name": "Hapoel Beer Sheva",
+          "logo": "https://media.api-sports.io/football/teams/563.png",
+          "winner": false
+        },
+        "away": {
+          "id": 604,
+          "name": "Maccabi Tel Aviv",
+          "logo": "https://media.api-sports.io/football/teams/604.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1562881,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-07T14:30:00+00:00",
+        "timestamp": 1783434600,
+        "periods": {
+          "first": 1783434600,
+          "second": 1783438200
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 339,
+          "name": "Legia Warszawa",
+          "logo": "https://media.api-sports.io/football/teams/339.png",
+          "winner": true
+        },
+        "away": {
+          "id": 563,
+          "name": "Hapoel Beer Sheva",
+          "logo": "https://media.api-sports.io/football/teams/563.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1562880,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-05T15:30:00+00:00",
+        "timestamp": 1783265400,
+        "periods": {
+          "first": 1783265400,
+          "second": 1783269000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 3402,
+          "name": "Omonia Nicosia",
+          "logo": "https://media.api-sports.io/football/teams/3402.png",
+          "winner": null
+        },
+        "away": {
+          "id": 563,
+          "name": "Hapoel Beer Sheva",
+          "logo": "https://media.api-sports.io/football/teams/563.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554659,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-04T08:00:00+00:00",
+        "timestamp": 1783152000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Cancelled",
+          "short": "CANC",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 3488,
+          "name": "Odra Opole",
+          "logo": "https://media.api-sports.io/football/teams/3488.png",
+          "winner": null
+        },
+        "away": {
+          "id": 563,
+          "name": "Hapoel Beer Sheva",
+          "logo": "https://media.api-sports.io/football/teams/563.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1567501,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-07-01T10:30:00+00:00",
+        "timestamp": 1782901800,
+        "periods": {
+          "first": 1782901800,
+          "second": 1782905400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 4248,
+          "name": "Radomiak Radom",
+          "logo": "https://media.api-sports.io/football/teams/4248.png",
+          "winner": false
+        },
+        "away": {
+          "id": 563,
+          "name": "Hapoel Beer Sheva",
+          "logo": "https://media.api-sports.io/football/teams/563.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ],
+  "13976|2025": [
+    {
+      "fixture": {
+        "id": 1446695,
+        "referee": "R. Jabarov",
+        "timezone": "UTC",
+        "date": "2026-05-22T13:00:00+00:00",
+        "timestamp": 1779454800,
+        "periods": {
+          "first": 1779454800,
+          "second": 1779458400
+        },
+        "venue": {
+          "id": 4131,
+          "name": "Şəhər stadionu",
+          "city": "Tovuz"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2025,
+        "round": "Regular Season - 33",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 5499,
+          "name": "Turan",
+          "logo": "https://media.api-sports.io/football/teams/5499.png",
+          "winner": false
+        },
+        "away": {
+          "id": 13976,
+          "name": "Sabah FA",
+          "logo": "https://media.api-sports.io/football/teams/13976.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1446692,
+        "referee": "K. Umudlu",
+        "timezone": "UTC",
+        "date": "2026-05-17T14:00:00+00:00",
+        "timestamp": 1779026400,
+        "periods": {
+          "first": 1779026400,
+          "second": 1779030000
+        },
+        "venue": {
+          "id": null,
+          "name": "Bank Respublika Arena",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2025,
+        "round": "Regular Season - 32",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 13976,
+          "name": "Sabah FA",
+          "logo": "https://media.api-sports.io/football/teams/13976.png",
+          "winner": false
+        },
+        "away": {
+          "id": 2270,
+          "name": "Neftchi Baku",
+          "logo": "https://media.api-sports.io/football/teams/2270.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1542544,
+        "referee": "E. Masiyev",
+        "timezone": "UTC",
+        "date": "2026-05-13T16:00:00+00:00",
+        "timestamp": 1778688000,
+        "periods": {
+          "first": 1778688000,
+          "second": 1778691600
+        },
+        "venue": {
+          "id": null,
+          "name": "Palms Sports Arena",
+          "city": "Baku"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 420,
+        "name": "Cup",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/420.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2025,
+        "round": "Final",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 13976,
+          "name": "Sabah FA",
+          "logo": "https://media.api-sports.io/football/teams/13976.png",
+          "winner": true
+        },
+        "away": {
+          "id": 648,
+          "name": "Zira",
+          "logo": "https://media.api-sports.io/football/teams/648.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1446684,
+        "referee": "E. Bayramov",
+        "timezone": "UTC",
+        "date": "2026-05-08T15:30:00+00:00",
+        "timestamp": 1778254200,
+        "periods": {
+          "first": 1778254200,
+          "second": 1778257800
+        },
+        "venue": {
+          "id": null,
+          "name": "Bank Respublika Arena",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2025,
+        "round": "Regular Season - 31",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 13976,
+          "name": "Sabah FA",
+          "logo": "https://media.api-sports.io/football/teams/13976.png",
+          "winner": false
+        },
+        "away": {
+          "id": 5490,
+          "name": "Kapaz",
+          "logo": "https://media.api-sports.io/football/teams/5490.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1445944,
+        "referee": "K. Umudlu",
+        "timezone": "UTC",
+        "date": "2026-05-03T12:00:00+00:00",
+        "timestamp": 1777809600,
+        "periods": {
+          "first": 1777809600,
+          "second": 1777813200
+        },
+        "venue": {
+          "id": null,
+          "name": "Shamakhi City Stadium",
+          "city": "Shamakhi"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2025,
+        "round": "Regular Season - 30",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 666,
+          "name": "Şamaxı FK",
+          "logo": "https://media.api-sports.io/football/teams/666.png",
+          "winner": false
+        },
+        "away": {
+          "id": 13976,
+          "name": "Sabah FA",
+          "logo": "https://media.api-sports.io/football/teams/13976.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1445934,
+        "referee": "K. Rahimov",
+        "timezone": "UTC",
+        "date": "2026-04-27T16:00:00+00:00",
+        "timestamp": 1777305600,
+        "periods": {
+          "first": 1777305600,
+          "second": 1777309200
+        },
+        "venue": {
+          "id": null,
+          "name": "Bank Respublika Arena",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2025,
+        "round": "Regular Season - 29",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 13976,
+          "name": "Sabah FA",
+          "logo": "https://media.api-sports.io/football/teams/13976.png",
+          "winner": true
+        },
+        "away": {
+          "id": 11239,
+          "name": "Karvan",
+          "logo": "https://media.api-sports.io/football/teams/11239.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1530098,
+        "referee": "R. Hamzazade",
+        "timezone": "UTC",
+        "date": "2026-04-22T16:00:00+00:00",
+        "timestamp": 1776873600,
+        "periods": {
+          "first": 1776873600,
+          "second": 1776877200
+        },
+        "venue": {
+          "id": null,
+          "name": "Bank Respublika Arena",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
+        }
+      },
+      "league": {
+        "id": 420,
+        "name": "Cup",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/420.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2025,
+        "round": "Semi-finals",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 13976,
+          "name": "Sabah FA",
+          "logo": "https://media.api-sports.io/football/teams/13976.png",
+          "winner": true
+        },
+        "away": {
+          "id": 556,
+          "name": "Qarabag",
+          "logo": "https://media.api-sports.io/football/teams/556.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1445931,
+        "referee": "E. Masiyev",
+        "timezone": "UTC",
+        "date": "2026-04-18T15:30:00+00:00",
+        "timestamp": 1776526200,
+        "periods": {
+          "first": 1776526200,
+          "second": 1776529800
+        },
+        "venue": {
+          "id": null,
+          "name": "Azersun Arena",
+          "city": "Baku"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2025,
+        "round": "Regular Season - 28",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 556,
+          "name": "Qarabag",
+          "logo": "https://media.api-sports.io/football/teams/556.png",
+          "winner": false
+        },
+        "away": {
+          "id": 13976,
+          "name": "Sabah FA",
+          "logo": "https://media.api-sports.io/football/teams/13976.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1445926,
+        "referee": "T. Qurbanov",
+        "timezone": "UTC",
+        "date": "2026-04-11T14:00:00+00:00",
+        "timestamp": 1775916000,
+        "periods": {
+          "first": 1775916000,
+          "second": 1775919600
+        },
+        "venue": {
+          "id": null,
+          "name": "Bank Respublika Arena",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2025,
+        "round": "Regular Season - 27",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 13976,
+          "name": "Sabah FA",
+          "logo": "https://media.api-sports.io/football/teams/13976.png",
+          "winner": null
+        },
+        "away": {
+          "id": 648,
+          "name": "Zira",
+          "logo": "https://media.api-sports.io/football/teams/648.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1445918,
+        "referee": "F. Hajiyev",
+        "timezone": "UTC",
+        "date": "2026-04-07T15:30:00+00:00",
+        "timestamp": 1775575800,
+        "periods": {
+          "first": 1775575800,
+          "second": 1775579400
+        },
+        "venue": {
+          "id": null,
+          "name": "Liv Bona Dea Arena",
+          "city": "Baku"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2025,
+        "round": "Regular Season - 26",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 11238,
+          "name": "Araz",
+          "logo": "https://media.api-sports.io/football/teams/11238.png",
+          "winner": false
+        },
+        "away": {
+          "id": 13976,
+          "name": "Sabah FA",
+          "logo": "https://media.api-sports.io/football/teams/13976.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 4
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 4
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1530096,
+        "referee": "R. Jabarov",
+        "timezone": "UTC",
+        "date": "2026-04-03T16:00:00+00:00",
+        "timestamp": 1775232000,
+        "periods": {
+          "first": 1775232000,
+          "second": 1775235600
+        },
+        "venue": {
+          "id": null,
+          "name": "Azersun Arena",
+          "city": "Baku"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 420,
+        "name": "Cup",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/420.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2025,
+        "round": "Semi-finals",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 556,
+          "name": "Qarabag",
+          "logo": "https://media.api-sports.io/football/teams/556.png",
+          "winner": null
+        },
+        "away": {
+          "id": 13976,
+          "name": "Sabah FA",
+          "logo": "https://media.api-sports.io/football/teams/13976.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1445913,
+        "referee": "R. Hamzazade",
+        "timezone": "UTC",
+        "date": "2026-03-19T15:15:00+00:00",
+        "timestamp": 1773933300,
+        "periods": {
+          "first": 1773933300,
+          "second": 1773936900
+        },
+        "venue": {
+          "id": null,
+          "name": "Bank Respublika Arena",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2025,
+        "round": "Regular Season - 25",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 13976,
+          "name": "Sabah FA",
+          "logo": "https://media.api-sports.io/football/teams/13976.png",
+          "winner": true
+        },
+        "away": {
+          "id": 5503,
+          "name": "Sumqayıt",
+          "logo": "https://media.api-sports.io/football/teams/5503.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1445908,
+        "referee": "R. Jabarov",
+        "timezone": "UTC",
+        "date": "2026-03-14T11:00:00+00:00",
+        "timestamp": 1773486000,
+        "periods": {
+          "first": 1773486000,
+          "second": 1773489600
+        },
+        "venue": {
+          "id": null,
+          "name": "Quba OIK stadionu",
+          "city": "Quba"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2025,
+        "round": "Regular Season - 24",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 5570,
+          "name": "Imisli FK",
+          "logo": "https://media.api-sports.io/football/teams/5570.png",
+          "winner": false
+        },
+        "away": {
+          "id": 13976,
+          "name": "Sabah FA",
+          "logo": "https://media.api-sports.io/football/teams/13976.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 5
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 3
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 5
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1445901,
+        "referee": "I. Mammadov",
+        "timezone": "UTC",
+        "date": "2026-03-10T15:15:00+00:00",
+        "timestamp": 1773155700,
+        "periods": {
+          "first": 1773155700,
+          "second": 1773159300
+        },
+        "venue": {
+          "id": null,
+          "name": "Bank Respublika Arena",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2025,
+        "round": "Regular Season - 23",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 13976,
+          "name": "Sabah FA",
+          "logo": "https://media.api-sports.io/football/teams/13976.png",
+          "winner": true
+        },
+        "away": {
+          "id": 627,
+          "name": "Qabala",
+          "logo": "https://media.api-sports.io/football/teams/627.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 7,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 4,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 7,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1489246,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-03-05T14:00:00+00:00",
+        "timestamp": 1772719200,
+        "periods": {
+          "first": 1772719200,
+          "second": 1772722800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": "Gabala"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "PEN",
+          "elapsed": 120,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 420,
+        "name": "Cup",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/420.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2025,
+        "round": "Quarter-finals",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 627,
+          "name": "Qabala",
+          "logo": "https://media.api-sports.io/football/teams/627.png",
+          "winner": false
+        },
+        "away": {
+          "id": 13976,
+          "name": "Sabah FA",
+          "logo": "https://media.api-sports.io/football/teams/13976.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": 2,
+          "away": 4
+        }
+      }
+    }
   ]
 }
