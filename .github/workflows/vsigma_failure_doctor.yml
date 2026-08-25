@@ -1,11 +1,10 @@
 name: vSIGMA Failure Doctor
 
+# LEGACY / MANUAL ONLY.
+# Automatic vSIGMA Production runs were retired after migration to
+# vsigma-data-core on Google Cloud. Keep this tool only for explicit
+# diagnosis of historical workflow run IDs.
 on:
-  workflow_run:
-    workflows:
-      - vSIGMA Production
-    types:
-      - completed
   workflow_dispatch:
     inputs:
       run_id:
@@ -27,18 +26,13 @@ permissions:
   issues: write
 
 concurrency:
-  group: vsigma-failure-doctor-${{ github.event.workflow_run.id || github.event.inputs.run_id }}
+  group: vsigma-failure-doctor-${{ github.event.inputs.run_id }}
   cancel-in-progress: false
 
 jobs:
   diagnose-failure:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: >-
-      ${{
-        github.event_name == 'workflow_dispatch' ||
-        github.event.workflow_run.conclusion == 'failure'
-      }}
 
     steps:
       - name: Checkout repository
@@ -54,13 +48,8 @@ jobs:
       - name: Resolve run ID
         shell: bash
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            RUN_ID="${{ github.event.inputs.run_id }}"
-            DISPATCH="${{ github.event.inputs.dispatch }}"
-          else
-            RUN_ID="${{ github.event.workflow_run.id }}"
-            DISPATCH="true"
-          fi
+          RUN_ID="${{ github.event.inputs.run_id }}"
+          DISPATCH="${{ github.event.inputs.dispatch }}"
 
           if [ -z "$RUN_ID" ]; then
             echo "::error::Missing run_id"
@@ -87,10 +76,7 @@ jobs:
             --run-id "$VSIGMA_FAILED_RUN_ID" \
             $EXTRA_ARGS
 
-      # Telegram POST SILENCIADO (gobernanza 2026-07-01: al canal SOLO predicciones WC + watchdog).
-      # Esto es una alerta del PIPELINE VIEJO de apuestas ("vSIGMA Production"). El diagnóstico +
-      # el GitHub issue (paso anterior, --dispatch) SIGUEN activos; solo se desactiva el POST a Telegram.
-      # Re-activar = quitar `if: false` y re-añadir el env TELEGRAM_*.
+      # Telegram remains intentionally disabled for this legacy diagnostic tool.
       - name: Telegram notify fallo de production (SILENCIADO)
         if: false
         shell: bash
