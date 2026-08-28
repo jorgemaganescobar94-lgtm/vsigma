@@ -1,7 +1,7 @@
-# [vSIGMA SAFE PR] 2026-08-27 - MEDIUM reporting/ops improvements
+# [vSIGMA SAFE PR] 2026-08-28 - MEDIUM reporting/ops improvements
 
 ## Summary
-- target_date: 2026-08-27
+- target_date: 2026-08-28
 - safe_candidates: 1
 - auto_merge: NO
 - production_change: NO
