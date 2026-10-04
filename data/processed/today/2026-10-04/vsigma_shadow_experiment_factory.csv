@@ -1,0 +1,1 @@
+target_date,generated_at,experiment_id,source_readiness_rank,pattern_key,readiness_state,sample_count,closed_sample_count,shadow_status,shadow_hypothesis,shadow_rule,min_review_sample,next_action,auto_apply,production_change,guardrail_status
