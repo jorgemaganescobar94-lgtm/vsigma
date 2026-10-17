@@ -1,4 +1,4 @@
-# vSIGMA Shadow Registry Sync - 2026-10-16
+# vSIGMA Shadow Registry Sync - 2026-10-17
 
 ## Summary
 - factory_rows: 0
