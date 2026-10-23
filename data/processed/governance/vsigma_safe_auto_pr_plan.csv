@@ -1,2 +1,2 @@
 target_date,generated_at,priority,area,status,evidence,recommendation,safe_auto_pr,auto_merge,pr_action
-2026-10-22,2026-10-22T15:02:53+01:00,MEDIUM,health,MISSING,vsigma_automation_health.md missing,Run health monitor before issue/brief workflows.,YES,NO,CREATE_REVIEW_ONLY_PR_PLAN
+2026-10-23,2026-10-23T14:45:47+01:00,MEDIUM,health,MISSING,vsigma_automation_health.md missing,Run health monitor before issue/brief workflows.,YES,NO,CREATE_REVIEW_ONLY_PR_PLAN
