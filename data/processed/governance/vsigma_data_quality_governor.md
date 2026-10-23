@@ -1,7 +1,7 @@
-# vSIGMA Data Quality Governor - 2026-10-22
+# vSIGMA Data Quality Governor - 2026-10-23
 
 ## Executive Data Quality Summary
-- generated_at: 2026-10-22T02:39:52+01:00
+- generated_at: 2026-10-23T02:42:09+01:00
 - executive_status: DATA_QUALITY_BLOCKS_MODEL_CHANGE
 - issues: 18
 - severity_counts: P3=14; P1=3; P2=1
