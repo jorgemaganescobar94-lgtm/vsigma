@@ -1,7 +1,7 @@
-# vSIGMA Learning Issue Lifecycle - 2026-10-26
+# vSIGMA Learning Issue Lifecycle - 2026-10-27
 
 ## Executive Lifecycle Summary
-- generated_at: 2026-10-26T04:34:56+00:00
+- generated_at: 2026-10-27T04:52:53+00:00
 - open_learning_issues_reviewed: 195
 - lifecycle_status_counts: STALE_CONSOLIDATED_REVIEW=195
 - recommended_action_counts: REVIEW_FOR_MANUAL_CLOSE=195
