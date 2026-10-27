@@ -1,7 +1,7 @@
-# vSIGMA Learning Evidence Closer - 2026-10-26
+# vSIGMA Learning Evidence Closer - 2026-10-27
 
 ## Executive Evidence Summary
-- generated_at: 2026-10-26T06:20:57+00:00
+- generated_at: 2026-10-27T06:22:17+00:00
 - executive_status: POST_RESULT_LABELING_REQUIRED
 - close_items: 9
 - severity_counts: P2=6; P3=3
