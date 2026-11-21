@@ -1,7 +1,7 @@
-# vSIGMA Self-Improvement Governor - 2026-11-20
+# vSIGMA Self-Improvement Governor - 2026-11-21
 
 ## Executive Governor Summary
-- generated_at: 2026-11-20T07:20:12+00:00
+- generated_at: 2026-11-21T07:13:07+00:00
 - executive_status: DATA_QUALITY_BLOCKS_MODEL_CHANGE
 - decisions: 12
 - decision_counts: DATA_QUALITY_FIRST=7; OPERATIONAL_REVIEW_REQUIRED=2; SHADOW_FACTORY_ALLOWED=2; COLLECT_MORE_SAMPLES=1
